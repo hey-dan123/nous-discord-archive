@@ -141,17 +141,7 @@ def safe_filename(name: str) -> str:
     return "".join(c if c.isalnum() or c in keep else "-" for c in name).strip("-") or "channel"
 
 
-def archive_channel(session: requests.Session, channel_id: str, state: dict) -> None:
-    meta = get_channel_meta(session, channel_id)
-    name = meta.get("name") or channel_id
-    ctype = meta.get("type")
-    log(f"channel #{name} ({channel_id}) type={ctype}")
-
-    # Type 0 = GUILD_TEXT, 5 = GUILD_ANNOUNCEMENT. Skip threads (10/11/12) and forums (15).
-    if ctype not in (0, 5):
-        log(f"  skipping non-text channel type {ctype}")
-        return
-
+def archive_text_channel(session: requests.Session, channel_id: str, name: str, state: dict) -> None:
     after = state.get(channel_id)
     log(f"  fetching after={after or '(beginning)'}")
     messages = fetch_messages_after(session, channel_id, after)
@@ -171,6 +161,116 @@ def archive_channel(session: requests.Session, channel_id: str, state: dict) -> 
 
     state[channel_id] = messages[-1]["id"]
     log(f"  wrote {len(messages)} messages, last_id={state[channel_id]}")
+
+
+def list_forum_threads(session: requests.Session, guild_id: str, forum_id: str) -> list[dict]:
+    """Enumerate every thread under a forum: active + archived public.
+
+    Active threads come from the guild-wide endpoint filtered by parent_id.
+    Archived public threads are paginated via /threads/archived/public.
+    """
+    threads: dict[str, dict] = {}
+
+    # Active threads (server-wide list, filter to this forum).
+    try:
+        active = discord_get(session, f"/guilds/{guild_id}/threads/active")
+        for t in active.get("threads", []):
+            if str(t.get("parent_id")) == str(forum_id):
+                threads[t["id"]] = t
+    except requests.HTTPError as e:
+        log(f"  warning: active threads fetch failed: {e}")
+
+    # Archived public threads, paginated by `before` (ISO timestamp of oldest seen).
+    before: str | None = None
+    while True:
+        params = {"limit": 100}
+        if before:
+            params["before"] = before
+        try:
+            page = discord_get(session, f"/channels/{forum_id}/threads/archived/public", params=params)
+        except requests.HTTPError as e:
+            log(f"  warning: archived threads fetch failed: {e}")
+            break
+        page_threads = page.get("threads", [])
+        for t in page_threads:
+            threads[t["id"]] = t
+        if not page.get("has_more") or not page_threads:
+            break
+        # API uses thread.archive_timestamp for the `before` cursor.
+        meta = page_threads[-1].get("thread_metadata") or {}
+        before = meta.get("archive_timestamp")
+        if not before:
+            break
+
+    return list(threads.values())
+
+
+def archive_forum_channel(session: requests.Session, channel_id: str, name: str, meta: dict, state: dict) -> None:
+    guild_id = meta.get("guild_id")
+    if not guild_id:
+        log("  ERROR: forum has no guild_id, cannot enumerate active threads")
+        return
+
+    forum_dir = ARCHIVE_DIR / safe_filename(name)
+    forum_dir.mkdir(parents=True, exist_ok=True)
+
+    # Per-forum thread state lives nested under the forum's channel_id key.
+    forum_state: dict = state.setdefault(channel_id, {})
+    if not isinstance(forum_state, dict):
+        # Safety: previous schema may have stored a string here.
+        forum_state = {}
+        state[channel_id] = forum_state
+
+    threads = list_forum_threads(session, str(guild_id), channel_id)
+    log(f"  found {len(threads)} threads in #{name}")
+
+    total_msgs = 0
+    for thread in threads:
+        tid = thread["id"]
+        tname = thread.get("name") or tid
+        after = forum_state.get(tid)
+        try:
+            messages = fetch_messages_after(session, tid, after)
+        except requests.HTTPError as e:
+            log(f"    thread {tid} ({tname}) fetch failed: {e}")
+            continue
+
+        # The thread starter post in a forum has the SAME id as the thread itself
+        # and is fetched via the messages endpoint normally — no special-case needed.
+        if not messages:
+            continue
+
+        out_path = forum_dir / f"{tid}-{safe_filename(tname)}.txt"
+        is_new = not out_path.exists()
+        with out_path.open("a", encoding="utf-8") as f:
+            if is_new:
+                f.write(f"# Thread '{tname}' in forum #{name}\n")
+                f.write(f"# thread_id={tid} forum_id={channel_id}\n")
+                f.write(f"# Started {datetime.now(timezone.utc).isoformat()}\n\n")
+            for msg in messages:
+                f.write(format_message(msg))
+
+        forum_state[tid] = messages[-1]["id"]
+        total_msgs += len(messages)
+        log(f"    {tname[:40]}: +{len(messages)} (last_id={forum_state[tid]})")
+
+    log(f"  forum #{name} total new messages: {total_msgs}")
+
+
+def archive_channel(session: requests.Session, channel_id: str, state: dict) -> None:
+    meta = get_channel_meta(session, channel_id)
+    name = meta.get("name") or channel_id
+    ctype = meta.get("type")
+    log(f"channel #{name} ({channel_id}) type={ctype}")
+
+    # 0 = GUILD_TEXT, 5 = GUILD_ANNOUNCEMENT, 15 = GUILD_FORUM, 16 = GUILD_MEDIA (forum-like)
+    if ctype in (0, 5):
+        archive_text_channel(session, channel_id, name, state)
+    elif ctype in (15, 16):
+        archive_forum_channel(session, channel_id, name, meta, state)
+    else:
+        log(f"  skipping unsupported channel type {ctype}")
+        return
 
 
 def main() -> int:
