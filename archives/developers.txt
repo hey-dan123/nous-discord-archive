@@ -14205,3 +14205,87 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] Gateway turn can silently stop after session_search timeout / initi... https://github.com/NousResearch/hermes-agent/issues/23081
     [embed] fix(gateway): surface incomplete tool turns by quocanh261997 · Pul... https://github.com/NousResearch/hermes-agent/pull/23214
 
+[2026-05-10T16:16:37.361000+00:00] yuanqingzhao_58339 (id=1503068253788836099)
+    FWIW — I ran into this on NVIDIA Inference Hub (NVIDIA's internal platform that proxies Anthropic models via AWS Bedrock). When a client doesn't set max_tokens, the Hub silently stamps in 4096 before the request reaches Bedrock. Every internal NVIDIA user hits this.The litellm-proxy case in the PR description is probably the same class of bug — a proxy layer inserting its own low default instead of leaving max_tokens unset. That's exactly why the model-name/table-driven fix is correct: it doesn't depend on the proxy preserving None semantics.
+    [reply to teknium msg=1503060863417057593]
+
+[2026-05-10T16:16:38.523000+00:00] greenfirst (id=1503068258662748452)
+    Quick update on https://github.com/NousResearch/hermes-agent/pull/22710: rebased on top of #20494 (the per-token short-CJK fallback fix) since it landed. The two compose cleanly - per-token <3-CJK → LIKE, trigram opted-out / dropped → also LIKE. Now mergeable, 222 hermes_state tests still green
+    [embed] Build software better, together https://github.com/NousResearch/hermes-agent/pull/22710:
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/22710:
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/22710:
+    [reply to greenfirst msg=1502720394266677269]
+
+[2026-05-10T16:30:24.440000+00:00] tiny_th_dev (id=1503071722809720942)
+    <@387972437901312000> Is there any appetite for merging a PR that adds nostr to hermes gateway? https://github.com/NousResearch/hermes-agent/pull/16769  I'm using it as main interface to hermes when I'm mobile.
+    [embed] feat(gateway): add Nostr NIP-17 private DM platform adapter by unsa... https://github.com/NousResearch/hermes-agent/pull/16769
+
+[2026-05-10T17:01:46.264000+00:00] naughtytrain (id=1503079615751655584)
+    <@387972437901312000> small fix for #22716 — multi-line `/model` (Matrix Shift+Enter) now returns a clear single-line hint instead of "Model names cannot contain spaces" https://github.com/NousResearch/hermes-agent/pull/23300
+    [embed] fix(gateway): reject multi-line `/model` with clear error by docker... https://github.com/NousResearch/hermes-agent/pull/23300
+
+[2026-05-10T17:05:41.687000+00:00] sylwester0_42058 (id=1503080603187286278)
+    Opened 2 small fixes for Hermes today 
+    
+    * Synced /curator slash completion metadata with the actual supported curator actions and added the missing subcommands (archive, prune, backup, rollback) so they now show up properly in completion.
+    
+    * Also fixed stale terminal environment reuse. Previously environments were cached only by task ID, which could accidentally keep reusing an old local/docker/ssh backend after config changes. Added backend-aware environment signatures so envs get recreated correctly and kept file_tools cache aligned as well.
+    
+    
+    PRs:
+    https://github.com/NousResearch/hermes-agent/pull/23303
+    https://github.com/NousResearch/hermes-agent/pull/23321
+    [embed] fix(commands): sync /curator subcommands with supported curator act... https://github.com/NousResearch/hermes-agent/pull/23303
+    [embed] fix(terminal): recreate cached environments on backend signature ch... https://github.com/NousResearch/hermes-agent/pull/23321
+
+[2026-05-10T17:16:12.342000+00:00] .zmaxx (id=1503083248346075227)
+    <@387972437901312000> small qqbot fix - guarantees temp wav cleanup when self-hosted STT fails. Includes a regression test that fails on main without the patch.
+    
+    https://github.com/NousResearch/hermes-agent/pull/23313
+    [embed] fix(qqbot): unlink temp wav on STT failure path by Zhekinmaksim · ... https://github.com/NousResearch/hermes-agent/pull/23313
+
+[2026-05-10T17:47:57.409000+00:00] selinchu (id=1503091238776213574)
+    Hi <@387972437901312000> , Just opened a PR for a gateway mirroring/session routing issue related to user_id_alt handling. This PR propagates user_id_alt through the mirror path, updates lookup/disambiguation logic, and adds coverage for the related edge cases + session env propagation.
+    https://github.com/NousResearch/hermes-agent/pull/23332
+    [embed] fix(gateway): honor user_id_alt in send_message mirroring and looku... https://github.com/NousResearch/hermes-agent/pull/23332
+
+[2026-05-10T18:25:25.118000+00:00] uzunkuyruk (id=1503100666350932009)
+    hi <@387972437901312000> Fourth PR today — fix for hermes update failing on Windows with Access is denied (os error 5).
+    
+    When uv pip install -e . tries to overwrite hermes.exe while it's running, Windows denies the write. Fix renames hermes.exe to hermes.exe.old before the install step — Windows allows renaming an open executable, releasing the write lock. The .old file is cleaned up in a finally block after install completes.
+    
+    No-op on Linux/macOS.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/23327
+    PR: https://github.com/NousResearch/hermes-agent/pull/23353
+    
+    1 file changed, non-breaking.
+    [embed] [Bug]: hermes update fails on Windows with Access is denied (os err... https://github.com/NousResearch/hermes-agent/issues/23327
+    [embed] fix(update): rename hermes.exe before uv/pip install on Windows by ... https://github.com/NousResearch/hermes-agent/pull/23353
+
+[2026-05-10T18:51:19.759000+00:00] uzunkuyruk (id=1503107186987892826)
+    fix(doctor): false-positive "invalid API key" for Gemini credentials
+    
+    hermes doctor was validating Gemini API keys with Authorization: Bearer, but Google's generativelanguage.googleapis.com requires ?key= query-param auth. Bearer always returns HTTP 401 on /v1beta/models even for a valid key — causing a false-positive invalid-key warning.
+    
+    Fix detects generativelanguage.googleapis.com URLs and switches to params={"key": key}, matching the Gemini REST API contract. All other providers unchanged.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/23354
+    PR: https://github.com/NousResearch/hermes-agent/pull/23364
+    
+    1 file changed, non-breaking.
+    [embed] Hermes Doctor flags Google Gemini API key as invalid even when the ... https://github.com/NousResearch/hermes-agent/issues/23354
+    [embed] fix(doctor): use ?key= auth for Gemini API key validation by uzunku... https://github.com/NousResearch/hermes-agent/pull/23364
+
+[2026-05-10T18:58:08.127000+00:00] eloklam (id=1503108899807563917)
+    Been contributing to Hermes Agent around Kanban + orchestration, pardon me for the AI slops:
+    
+    * #23099: PR/issue creation skill 
+      https://github.com/NousResearch/hermes-agent/pull/23099
+    * #23240: Kanban dashboard QoL
+      https://github.com/NousResearch/hermes-agent/pull/23240
+    * #23311: Kanban webhooks
+      https://github.com/NousResearch/hermes-agent/pull/23311
+    * Ported OhMyOpenCode-Slim to Hermes
+      https://github.com/eloklam/oh-my-hermes-agent
+
