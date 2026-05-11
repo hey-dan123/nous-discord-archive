@@ -471,3 +471,7 @@
 [2026-05-10T16:26:21.903000+00:00] will_e3848 (id=1503070705535946922)
     This is great bro, is it Windows compatible?
 
+[2026-05-10T20:53:06.263000+00:00] w.ock (id=1503137832687108288)
+    I use it on windows it’s local site
+    [reply to will_e3848 msg=1503070705535946922]
+

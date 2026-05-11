@@ -2114,3 +2114,20 @@
     I run Hermes and WebUi on a local VM. Works great through the browser. Webui makes it really useful and accessible. Add Tailscale if you want remote access from your phone too!
     [reply to will_e3848 msg=1503069839558967366]
 
+[2026-05-11T02:48:57.938000+00:00] thienmathanquan (id=1503227388102705295)
+    hey <@933139410281713755>  i updated and it work now bro
+    [reply to avidfuturist msg=1502747195567509534]
+
+[2026-05-11T02:49:35.376000+00:00] avidfuturist (id=1503227545129324851)
+    Great news, thanks for confirming!
+    [reply to thienmathanquan msg=1503227388102705295]
+
+[2026-05-11T02:49:42.516000+00:00] thienmathanquan (id=1503227575076651168)
+    Lean, neat and just work 😄
+
+[2026-05-11T02:53:39.266000+00:00] avidfuturist (id=1503228568077992056)
+    Yeah I think using Kanban use is pretty clean now end to end, but feedback is welcome! I’ve been using it and it’s been nice. Adding  and editing tasks is much more more intuitive now
+
+[2026-05-11T02:54:12.505000+00:00] avidfuturist (id=1503228707492597941)
+    Newcomers: See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or curious why you might use it
+

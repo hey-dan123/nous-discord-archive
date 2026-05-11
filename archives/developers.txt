@@ -14305,3 +14305,191 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] Profile config fallback_providers not inherited by kanban worker ag... https://github.com/NousResearch/hermes-agent/issues/23362
     [embed] fix(oneshot): pass fallback_providers from profile config to AIAgen... https://github.com/NousResearch/hermes-agent/pull/23368
 
+[2026-05-10T20:10:01.131000+00:00] tomy300 (id=1503126989857357957)
+    https://github.com/CloakHQ/CloakBrowser
+    [embed] GitHub - CloakHQ/CloakBrowser: Stealth Chromium that passes every b... https://github.com/CloakHQ/CloakBrowser
+
+[2026-05-10T20:10:11.504000+00:00] tomy300 (id=1503127033365004288)
+    That would be cool to integrate
+
+[2026-05-10T20:42:48.699000+00:00] technosmack (id=1503135242435952750)
+    Twilio sucks
+
+[2026-05-10T20:42:54.098000+00:00] technosmack (id=1503135265081004092)
+    They should implement telnyx
+
+[2026-05-10T20:54:27.741000+00:00] patrickeliasr (id=1503138174430351433)
+    yo guys, global hermes.md feat. today we only have a global soul.md… but this resolves it: https://github.com/NousResearch/hermes-agent/pull/23412
+    [embed] feat(prompt): load global HERMES.md operational context by DoGMaTii... https://github.com/NousResearch/hermes-agent/pull/23412
+
+[2026-05-10T20:55:40.506000+00:00] uzunkuyruk (id=1503138479629013042)
+    Fix for hermes update failing on Windows with Access is denied (os error 5).
+    
+    When uv pip install -e . tries to overwrite hermes.exe while it's running, Windows denies the write. Fix renames hermes.exe to hermes.exe.old before the install step — Windows allows renaming an open executable, releasing the write lock. The .old file is cleaned up in a finally block after install completes.
+    
+    No-op on Linux/macOS.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/23327
+    PR: https://github.com/NousResearch/hermes-agent/pull/23408
+    
+    1 file changed, non-breaking.
+    [embed] [Bug]: hermes update fails on Windows with Access is denied (os err... https://github.com/NousResearch/hermes-agent/issues/23327
+    [embed] fix(update): rename hermes.exe before uv/pip install on Windows by ... https://github.com/NousResearch/hermes-agent/pull/23408
+
+[2026-05-10T21:06:46.886000+00:00] n0vax635 (id=1503141274629177394)
+    Hi everyone, Opened a PR for Hermes Agent to fix auxiliary routing for named custom GPT-5 providers when api_mode is omitted. https://github.com/NousResearch/hermes-agent/pull/23386
+    [embed] fix(aux-routing): infer codex_responses for named custom GPT-5 prov... https://github.com/NousResearch/hermes-agent/pull/23386
+
+[2026-05-10T21:12:14.175000+00:00] cooper650 (id=1503142647378743427)
+    A lot of engineering work is really just reducing friction.
+    Making products easier to scale.
+    Making systems less fragile.
+    Making workflows less painful.
+    Making teams move faster again.
+    That’s mostly the kind of work I do these days.
+
+[2026-05-10T21:12:54.086000+00:00] fluoroamphetamine (id=1503142814777872384)
+    went through the Irish/Gaeilge locale and corrected anything that stood out to me as being clunky, incorrect or inconsistent https://github.com/NousResearch/hermes-agent/pull/23406
+    [embed] fix(i18n): correct Irish (ga) locale — terminology, séimhiú, an... https://github.com/NousResearch/hermes-agent/pull/23406
+
+[2026-05-10T21:14:46.231000+00:00] fluoroamphetamine (id=1503143285147963482)
+    Many terms used in computing are not possible to be directly translated as Gaeilge because of how old the language is, so I went off Ciarán Ó Duibhín's writing in 'Intuitive Gaelic Computing Terminology'
+
+[2026-05-10T21:15:31.671000+00:00] fluoroamphetamine (id=1503143475737137305)
+    Ciarán Ó Duibhín is a prominent researcher and authority on the Irish language, he has contributed significant research on dialects, surnames and the linguistic atlas of Irish dialects.
+
+[2026-05-10T21:46:29.414000+00:00] rubcuevas (id=1503151267675897866)
+    hi, couple of small prs ready for review:
+    
+    - Fix setup local TTS provider detection https://github.com/NousResearch/hermes-agent/pull/16481
+    - fix(cli): clarify doctor memory diagnostics https://github.com/NousResearch/hermes-agent/pull/16490
+    [embed] Fix setup local TTS provider detection by rubencu · Pull Request #... https://github.com/NousResearch/hermes-agent/pull/16481
+    [embed] fix(cli): clarify doctor memory diagnostics by rubencu · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/16490
+
+[2026-05-10T22:17:50.116000+00:00] undifined. (id=1503159155912081448)
+    You can set up tts for approval requests?
+
+[2026-05-10T22:18:13.335000+00:00] undifined. (id=1503159253299626115)
+    Which i miss so often
+
+[2026-05-10T22:34:43.690000+00:00] aleksandr_1 (id=1503163407149437038)
+    Two fixes for #18693:
+    
+    **1. fix(skills): prevent symlink path traversal in rglob calls. **Skills loader was following symlinks outside `SKILLS_DIR` without bounds checking. Added `resolve() + startswith()` guards in four places across `skills_tool.py`, `skill_commands.py`, and `skills_hub.py`.
+    https://github.com/NousResearch/hermes-agent/pull/21938
+    
+    **2. fix(approval): block gateway self-termination commands.**Executing `pkill hermes` or `hermes gateway stop` inside a gateway session triggered an infinite approval loop. Added a hard-block for self-termination patterns when `is_gateway=True`, before the command reaches the approval queue.
+    https://github.com/NousResearch/hermes-agent/pull/22030
+    
+    <:o7:1151261546111053924>
+
+[2026-05-10T22:38:31.224000+00:00] quenviix (id=1503164361496203274)
+    Heyy, opened a small robustness PR for the email gateway adapter 💌
+    
+    Right now malformed numeric env values like broken IMAP/SMTP ports can crash the adapter during init because of direct int(...) casts. This PR makes Hermes fall back to safe defaults instead of dying on startup.
+    
+    Kept it intentionally small:
+    
+    * added a tiny helper for numeric env parsing
+    * no behavior change for valid configs
+    * added regression test coverage for malformed env values
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/23441
+    [embed] fix(email): fall back on malformed numeric env settings by QuenVix ... https://github.com/NousResearch/hermes-agent/pull/23441
+
+[2026-05-10T22:52:29.154000+00:00] heathley (id=1503167876029481050)
+    Two PRs up for the Save to Spotify integration, would appreciate reviews:
+    
+    https://github.com/NousResearch/hermes-agent/pull/23443
+    core toolset: upload/shows/episodes/timeline from hermes chat, backed by the official CLI in --json mode
+    
+    https://github.com/NousResearch/hermes-agent/pull/23447
+    auth polish: hermes auth save-to-spotify wrapper, normalized status output, headless/SSH --no-browser guidance
+    
+    These are stacked. #23447 depends on #23443
+    [embed] feat(spotify): add save_to_spotify core upload toolset by heathley ... https://github.com/NousResearch/hermes-agent/pull/23443
+    [embed] feat(save_to_spotify): add Hermes auth wrapper and status guidance... https://github.com/NousResearch/hermes-agent/pull/23447
+
+[2026-05-10T22:59:00.274000+00:00] dimagog_ (id=1503169516505661512)
+    Hi, what is the project policy for new contributors?
+    Are PRs welcome? Is there a signup process?
+    I keep accumulating local fixes and updates to new versions are becoming more and more difficult. So I'd love to upstream them.
+
+[2026-05-10T23:02:38.941000+00:00] dlkakbs (id=1503170433661403248)
+    Hi. Check here:https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+    [embed] hermes-agent/CONTRIBUTING.md at main · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+    [reply to dimagog_ msg=1503169516505661512]
+
+[2026-05-10T23:06:13.921000+00:00] aleksandr_1 (id=1503171335352877149)
+    https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md <a:Wow:1151275549948387438>
+    [reply to dimagog_ msg=1503169516505661512]
+
+[2026-05-10T23:15:27.261000+00:00] dimagog_ (id=1503173656228921375)
+    I did read it. And I've published 3 PRs but they're getting no love so I was wondering if there is an extra hoop that I need to jump through. I know OSS maintainers are overwhelmed by low-quality bot-submitted PRs, and different projects take different measures to filter them out.
+    https://github.com/NousResearch/hermes-agent/pulls/dima-hermes-bot
+    [embed] Pull requests · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/pulls/dima-hermes-bot
+
+[2026-05-10T23:16:46.807000+00:00] krionex (id=1503173989869158521)
+    I think the links down there should help 👀 they’re usually attached at the bottom of every PR
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1503173989789601822/image.png?ex=6a02635e&is=6a0111de&hm=deabb7ee231574fb9f6d7885d89a26e4d5d269e711c478818883b401f2408f8f&
+    [reply to dimagog_ msg=1503169516505661512]
+
+[2026-05-11T00:46:39.626000+00:00] teknium (id=1503196608991461476)
+    the hoop is being patient, there's 10000+PRs in queue lol
+    [reply to dimagog_ msg=1503173656228921375]
+
+[2026-05-11T01:10:07.289000+00:00] pinksale_dev2 (id=1503202513158148257)
+    Hey,
+    
+    We're looking to hire a skilled and reliable web developer.
+    
+    Requirements:
+    - Fluent in English (native-level or excellent professional proficiency): Very important.
+    - Confident communicator, able to handle interviews and assess situations quickly and clearly: Important.
+    - Backend development skills, with experience in languages such as Ruby on Rails, Python, Java, or similar.
+    - Must have one main skill in backend development, with a solid understanding of web development principles.
+    
+    If you meet these criteria and are confident in your abilities, please DM me with a short introduction.
+
+[2026-05-11T01:17:29.141000+00:00] krionex (id=1503204366419497070)
+    Opened 2 small fix PRs 
+    https://github.com/NousResearch/hermes-agent/pull/23477
+    https://github.com/NousResearch/hermes-agent/pull/23472
+    [embed] fix(cron): normalize no_agent boolean inputs for create and update ... https://github.com/NousResearch/hermes-agent/pull/23477
+    [embed] fix(slash-access): distinguish unset DM allowlist from explicit emp... https://github.com/NousResearch/hermes-agent/pull/23472
+
+[2026-05-11T01:18:25.968000+00:00] xxxigm (id=1503204604769206382)
+    Hi <@387972437901312000> — small docs PR if you have a minute.
+    
+    Four standalone commits in CONTRIBUTING.md, all aligning the file to
+    the source-of-truth that already exists elsewhere in the repo:
+    
+      1. venv → .venv to match AGENTS.md + scripts/run_tests.sh probe
+         order (same drift the README fix already landed; CONTRIBUTING.md
+         was missed).
+      2. gateway/platforms/ tree: discord_adapter.py → discord.py and
+         extend the adapter list (was 4 files, repo ships 30+).
+      3. "Run tests" + "Before submitting" stop pitching `pytest tests/ -v`
+         as an equal alternative — AGENTS.md is explicit about always
+         using scripts/run_tests.sh, and the bare-pytest path was missing
+         `-n 4` and the venv-activation reminder.
+      4. "Adding a New Tool" leads with the plugin route
+         (~/.hermes/plugins/<name>/) before the built-in tools/ + toolsets.py
+         route, matching what AGENTS.md already tells contributors.
+    
+    Docs-only, +59/-13 in one file, no production code touched, every
+    commit reviewable on its own (cherry-pick / partial merge friendly).
+    No new tests because there's no behavior to cover; the existing suite
+    is unaffected.
+    
+    Happy to split, squash, or rebase if you'd prefer a different shape.
+    Thanks for taking a look.
+    https://github.com/NousResearch/hermes-agent/pull/23480
+    [embed] Docs/contributing multi fixes by xxxigm · Pull Request #23480 · N... https://github.com/NousResearch/hermes-agent/pull/23480
+
+[2026-05-11T02:54:59.438000+00:00] quocanh261997 (id=1503228904343863488)
+    Hi <@387972437901312000> , I see a pretty weird situation in Kanban mode in which if my `AgentA` create and assign a Kanban ticket to `AgentB` then when `B` finishes, somehow `AgentC` reports back the task status. Digging more into the code, I found that every agent profile has their Kanban notifier watcher on all the time, and status notification is just randomly picked from which watcher receives it first even though that profile doesn't play any role in the ticket itself. So I create this PR https://github.com/NousResearch/hermes-agent/pull/23521 to solve that, which deterministically allow only the profile that create the Kanban ticket to be able to notify back to users when the task is done. 
+    
+    Please take a look whenever u have the time. Thanks a bunch 🙏
+    [embed] fix(gateway): route kanban notifications to creator profile by quoc... https://github.com/NousResearch/hermes-agent/pull/23521
+

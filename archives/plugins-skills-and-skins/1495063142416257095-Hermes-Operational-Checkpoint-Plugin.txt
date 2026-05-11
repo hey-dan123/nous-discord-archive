@@ -60,3 +60,6 @@
 [2026-05-10T19:49:10.835000+00:00] reyartage (id=1503121745735844045)
     i don't know if anyone tested it, but i updated it alot. should be more stable and more efficient, changed hte base structure from 11 section to 9.. if i still missed some edge case please tell me.
 
+[2026-05-10T19:54:51.081000+00:00] reyartage (id=1503123172831133877)
+    also added tool preambles, so the model tells you what is it goign to do, before callign tools
+

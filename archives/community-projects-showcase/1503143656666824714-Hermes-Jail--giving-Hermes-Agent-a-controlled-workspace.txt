@@ -1,0 +1,25 @@
+# Thread 'Hermes Jail: giving Hermes Agent a controlled workspace' in forum #community-projects-showcase
+# thread_id=1503143656666824714 forum_id=1316137596535177246
+# Started 2026-05-11T02:55:36.131855+00:00
+
+[2026-05-10T21:16:14.808000+00:00] ivanneira (id=1503143656666824714)
+    Hi everyone. I built a small project around Hermes Agent called Hermes Jail.
+    
+    It is not Docker support for Hermes, since Hermes already has Docker/backends. My goal was a bit different: I wanted a controlled workbench where Hermes can install tools, try things, work inside a persistent "/workspace", serve local web output through nginx, and make a mess without making that mess directly on my host.
+    
+    I come from a DevOps/infrastructure background, so my focus was not only “can the agent run?”, but also where it runs, what it can touch, what persists, and how to keep real infrastructure separated from the agent’s experimental work.
+    
+    The basic idea is simple: the container is where the agent experiments. Real infrastructure actions should go through controlled interfaces or brokers instead of giving the model raw host access, SSH keys, cloud credentials, or the Docker socket.
+    
+    Hermes Jail includes localhost-only web exposure by default, no privileged mode, no host network, no Docker socket mount, a persistent web root under "/workspace/web", optional firewall helpers, a seeded environment skill, and a small threat model.
+    
+    It is not a hardened sandbox, and I’m not claiming it makes arbitrary code safe. It is just the baseline I wanted for running a persistent agent in a useful but more controlled local environment.
+    
+    Repo: https://github.com/ivanneira/hermes-jail
+    
+    I’d appreciate feedback from Hermes users, especially on whether the framing is fair, whether this overlaps too much with existing Hermes Docker/backend patterns, and whether any default looks like an obvious footgun.
+    [embed] GitHub - ivanneira/hermes-jail https://github.com/ivanneira/hermes-jail
+
+[2026-05-10T21:18:26.955000+00:00] ivanneira (id=1503144210931515472)
+    I’m not trying to present this as “the right way” to run Hermes. It is just the pattern I wanted for my own setup, and I’d rather get corrected early if the framing or defaults are wrong. Gracias y saludos a todos!
+

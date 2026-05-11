@@ -443,3 +443,15 @@
 [2026-05-10T17:40:03.031000+00:00] floory (id=1503089249090539601)
     even though i do have providers configured in my hermes config
 
+[2026-05-10T20:47:36.064000+00:00] nour_h (id=1503136447731990702)
+    you mean you have more than one provider configured in configs?
+    [reply to floory msg=1503089249090539601]
+
+[2026-05-10T20:53:10.654000+00:00] floory (id=1503137851104166078)
+    yea
+
+[2026-05-10T21:54:00.298000+00:00] nour_h (id=1503153158820466749)
+    <@387972437901312000> if you got some time to look at https://github.com/NousResearch/hermes-agent/pull/23425
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1503153158870794352/image.png?ex=6a024ff8&is=6a00fe78&hm=f1c7b36b2f0502a70e39610516cd54fca9979a903de40fa1b96cde0a9414cac9&
+    [embed] fix(acp): render structured JSON tool output by HenkDz · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/23425
+

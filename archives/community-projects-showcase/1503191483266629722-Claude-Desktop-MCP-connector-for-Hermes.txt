@@ -1,0 +1,18 @@
+# Thread 'Claude Desktop MCP connector for Hermes' in forum #community-projects-showcase
+# thread_id=1503191483266629722 forum_id=1316137596535177246
+# Started 2026-05-11T02:55:35.310902+00:00
+
+[2026-05-11T00:26:17.558000+00:00] monty_13277 (id=1503191483266629722)
+    Claude (Opus 4.7) handles my day-to-day chats: research, planning, working through problems. Hermes runs 24/7 on a mini PC and handles the real-world stuff: email, web browsing, form filling, calendar updates, cron jobs.
+    
+    I started out running Hermes on Opus 4.7 too, but it got expensive fast. Swapped in Kimi K2.6 via OpenRouter and it's been plenty for agent work.
+    
+    The catch: I still wanted Opus 4.7's reasoning for normal conversations. So I wired Claude up to delegate Hermes-specific tasks to Hermes, and keep everything else in-house.
+    
+    No pre-made MCP server existed for this, so I built one and open-sourced it: https://github.com/mlennie/claude-hermes-mcp
+    
+    The result: Claude thinks with me, Hermes does the work, and I save money by not routing every conversation through an agent.
+    
+    Anyone else splitting their stack like this? Curious what setups people are running.
+    [embed] GitHub - mlennie/claude-hermes-mcp: MCP server that lets Claude Des... https://github.com/mlennie/claude-hermes-mcp
+

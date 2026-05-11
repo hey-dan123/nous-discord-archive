@@ -1,0 +1,25 @@
+# Thread 'Wakeword detection model for "Okay Hermes"' in forum #community-projects-showcase
+# thread_id=1503162881233912009 forum_id=1316137596535177246
+# Started 2026-05-11T02:55:35.725342+00:00
+
+[2026-05-10T22:32:38.302000+00:00] neopabo (id=1503162881233912009)
+    I've been working on a system for wakeword/wakephrase detection trained on synthetic data. (Basically, it allows you to do a hands-off activation for hermes, just like you'd do with mainstream phone assistants like Siri, Alexa or Google.
+    
+    It's still the first iteration, so won't be accurate under all conditions. Please ask your hermes agent to implement it, test it out, and tell me how things go 👏
+    
+    (I'm also very open to taking voice samples if your voice happens to not cause a trigger, I'll be more than happy to include your samples in the validation set, which will benefit you, and everyone else!)
+    
+    https://huggingface.co/Neopabo/okay-hermes-repcnn-onnx
+    
+    https://github.com/H-Ali13381/okay-hermes-repcnn-onnx
+    [embed] Neopabo/okay-hermes-repcnn-onnx · Hugging Face https://huggingface.co/Neopabo/okay-hermes-repcnn-onnx
+    [embed] GitHub - H-Ali13381/okay-hermes-repcnn-onnx: Compact ONNX wake-word... https://github.com/H-Ali13381/okay-hermes-repcnn-onnx
+
+[2026-05-10T22:33:44.773000+00:00] sahil_ss9 (id=1503163160033493162)
+    <:catlick:1151260427645366375>  It's finally here 🙏🏾🙏🏾🙏🏾
+
+[2026-05-10T22:35:44.364000+00:00] neopabo (id=1503163661634768976)
+    Yes, please try it out! I had friends and family's samples in the validation dataset, and it's working. 
+    
+    Biggest challenge from here will be certain voice accents & false activations from partial phrases or similar phrases
+
