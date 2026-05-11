@@ -794,3 +794,12 @@
 [2026-05-08T02:46:12.633000+00:00] makoto.snkw (id=1502139531166486538)
     The Hermes Agent was install on macOS Sequioa Macbook Pro Intel
 
+[2026-05-11T03:00:17.256000+00:00] larryzhang7497 (id=1503230237369176184)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1503230236760997899/image.png?ex=6a0297c1&is=6a014641&hm=40fde720e8fb11cb2d85ff05ebd4e6434f0cd8049d11d91a23866820385b9761&
+
+[2026-05-11T03:00:21.718000+00:00] larryzhang7497 (id=1503230256084156426)
+    what's wrong
+
+[2026-05-11T03:03:54.131000+00:00] larryzhang7497 (id=1503231147008594072)
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1489459150235893863/1503231146748674098/message.txt?ex=6a02989a&is=6a01471a&hm=76ebc82e8bb28b18ec2b9a3e7e20ff7c0ceb268711326f8b099d7366e3670dfa&
+

@@ -221,3 +221,17 @@
 [2026-05-10T00:31:09.987000+00:00] t4r10records (id=1502830321937289376)
     Thank you bro you are insane  ❤️ (from france)
 
+[2026-05-11T03:31:17.778000+00:00] rossascends (id=1503238040964042822)
+    this is a great TUI. it has problems with markdown link creation though.  in the attached image I had the agent sent a previous response verbatim in side a codeblock so I could see its markdown. 
+    
+    - it's trying to create link for things even inside codeblocks. ideally codeblocks would not receive any rich formatting beyond code-language highlights. 
+    - as you can see by my cursor, the onhover happens way outside where the link should happen. 
+    - clicking on this results in 'invalid URL'
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1503238040641077248/image.png?ex=6a029f05&is=6a014d85&hm=2fa499329eac31d96dfae8cbac98462070f2ea015c5613b2cb42dd56ad75fb26&
+    [reply to liftaris msg=1502779473446043708]
+
+[2026-05-11T03:33:48.946000+00:00] rossascends (id=1503238675008589865)
+    other ux snafus i ran into as someone who is not very familiar with TUI: 
+    - using ctrl+c to try and copy text inside anything results in the tui closing. that makes sense, of course. a hotkey is a hotkey. I was not aware that selecting and release auto-copies. strangely i've also had it close on my with ther ctrl+v hotkey at times, but only when a tabbed menu was open. 
+    - I've had cases where pressing escape to get out of tabbed menu display has caused the TUI to close as well.
+

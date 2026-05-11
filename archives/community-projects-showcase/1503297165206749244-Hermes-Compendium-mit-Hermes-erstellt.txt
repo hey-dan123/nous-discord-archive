@@ -1,0 +1,8 @@
+# Thread 'Hermes Compendium mit Hermes erstellt' in forum #community-projects-showcase
+# thread_id=1503297165206749244 forum_id=1316137596535177246
+# Started 2026-05-11T09:36:43.593175+00:00
+
+[2026-05-11T07:26:14.096000+00:00] _wavefan (id=1503297165206749244)
+    https://jamgiter.github.io/hermes-compendium/
+    [embed] Hermes Agent Compendium 🧠 | Hermes Compendium https://jamgiter.github.io/hermes-compendium/
+

@@ -14493,3 +14493,48 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Please take a look whenever u have the time. Thanks a bunch 🙏
     [embed] fix(gateway): route kanban notifications to creator profile by quoc... https://github.com/NousResearch/hermes-agent/pull/23521
 
+[2026-05-11T03:04:54.477000+00:00] teknium (id=1503231400118321254)
+    merged
+    [reply to quocanh261997 msg=1503228904343863488]
+
+[2026-05-11T05:00:38.413000+00:00] wesleysimplicio (id=1503260525096599612)
+    <@387972437901312000>  I’m opening the first PR for a cache-aware context execution roadmap in Hermes.
+    
+    V1 introduces a Stable Context Prefix Builder.
+    
+    The idea is simple: before implementing real cache, Hermes needs a deterministic context layout.
+    
+    Stable context should always come first:
+    
+    - system prompt
+    - agent instructions
+    - skills
+    - project summary
+    - repository context
+    - long-lived memory
+    
+    Dynamic context should always come last:
+    
+    - current task
+    - recent tool results
+    - file diffs
+    - temporary execution state
+    
+    This creates a stable prompt prefix that future local runtimes, prompt caches, or KV-cache-aware engines can potentially reuse.
+    
+    This PR does not implement real cache yet. It only introduces the structural foundation needed for future versions:
+    
+    V1: Stable Context Prefix Builder  
+    V2: Context Fingerprinting & Cache Metadata  
+    V3: Provider Cache Capability Hooks  
+    V4: Real Local Prefix Cache  
+    V5: Smart Delta Context  
+    V6: Cache-Aware Runtime Routing
+    
+    The goal is to make Hermes more deterministic, local-runtime-friendly, and ready for future cache-aware execution.
+    
+    Inspiration: ds4 of Antirez(redis)
+    
+    https://github.com/NousResearch/hermes-agent/pull/23479
+    [embed] feat(runtime): add stable context prefix builder by wesleysimplicio... https://github.com/NousResearch/hermes-agent/pull/23479
+

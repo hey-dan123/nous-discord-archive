@@ -857,3 +857,9 @@
     has anyone else had problems with the hermes automated background 'skill improvement' loop exchanges cluttering up the actual memories? I get tons of 'memories' of User telling the AI to refine skills (keyword for finding these is "be ACTIVE"). This is a boilerplate outoing message, and always get an Assistant response with details of whatever skill was refined, or 'nothing to change'. Any strategy to exclude these kinds of messages? would be great if there was a simple 'ignore background tasks' config option in mnemosyne, but i haven't found it yet.
     [reply to nulledvector msg=1502052378986418287]
 
+[2026-05-11T05:16:29.463000+00:00] machrllrogin (id=1503264514089554022)
+    My Hermes agent making a patch so it profile isolation so when using to other profiles now it made their own db instead mixing it into one! 
+    
+    Since i ask, it located in `.hermes/mnemosyne/data` now it in in their own `profiles/agent1/mnemosyne/data` and calling there.
+    [attachment] profile-isolation-patch.md https://cdn.discordapp.com/attachments/1496124109766000690/1503264513804472350/profile-isolation-patch.md?ex=6a02b7ad&is=6a01662d&hm=fb26c9bd44b3f5a89fbc08580d395ccb4910cb4fb6e8f73986d4f051fe6f470c&
+

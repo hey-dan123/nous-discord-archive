@@ -1,0 +1,42 @@
+# Thread 'Kiro Gateway (Plugin)' in forum #plugins-skills-and-skins
+# thread_id=1503292684570333206 forum_id=1485392832154832906
+# Started 2026-05-11T09:39:19.448899+00:00
+
+[2026-05-11T07:08:25.829000+00:00] 74800 (id=1503292684570333206)
+    **Bring your Kiro Pro models in your Hermes model picker natively, including Opus and Sonnet. **
+    
+    Requires a Kiro Plan with Google or GitHub login.
+    -# As of right now, I haven't gotten Builder ID / Enterprise sessions to work properly.
+    
+    Made this plugin since, as of writing, they are offering a 1-month trial for their Pro subscription, including pretty solid limits for Claude models.
+    
+    **## install
+    Inside your Hermes environment, run:**
+    ```curl -fsSL https://raw.githubusercontent.com/TabooHarmony/hermes-kiro-plugin/master/install.sh | bash```
+    
+    **Then, install kiro-cli, and log in.**
+    ```curl -fsSL https://cli.kiro.dev/install | bash
+    kiro-cli login --use-device-flow```
+    
+    After that, you can now select and use Kiro models from `hermes model`.
+    
+    
+    --------------------------------------
+    
+    All questions and feedback are welcome!
+    Please report any issues you run into when using this.
+    
+    -# Huge thanks to <@882540091745112074> for building the repo this is based on, and figuring this out with me.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1503292684570333206/1503292685107073174/image.png?ex=6a02d1e9&is=6a018069&hm=9447063605070b58e35e90c3e3d64e392918715de2e30211e1e8c6d83422b3b5&
+
+[2026-05-11T07:11:10.002000+00:00] 74800 (id=1503293373161668669)
+    Kiro Gateway (Plugin)
+
+[2026-05-11T07:27:39.763000+00:00] irma1925 (id=1503297524520321024)
+    Thx for the free month tip 😉
+
+[2026-05-11T07:49:43.527000+00:00] 74800 (id=1503303076788965506)
+    ## i know it hasnt even been like an hour but dont install this yet
+    I spotted some pretty bad issues and I'm working on some critical fixes, will update this when I push the changes out <:pepecryyay:1368670825640886283>
+    [reply to 74800 msg=1503292684570333206]
+
