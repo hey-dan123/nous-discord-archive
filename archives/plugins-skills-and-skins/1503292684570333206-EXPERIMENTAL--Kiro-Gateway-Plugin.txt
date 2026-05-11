@@ -1,0 +1,24 @@
+# Thread '[EXPERIMENTAL] Kiro Gateway Plugin' in forum #plugins-skills-and-skins
+# thread_id=1503292684570333206 forum_id=1485392832154832906
+# Started 2026-05-11T19:47:50.717652+00:00
+
+[2026-05-11T15:23:55.883000+00:00] 74800 (id=1503417381454745681)
+    [EXPERIMENTAL] Kiro Gateway Plugin
+
+[2026-05-11T16:09:41.776000+00:00] irma1925 (id=1503428898564735138)
+    What's wrong?
+
+[2026-05-11T16:27:16.685000+00:00] 74800 (id=1503433323173642241)
+    Adding support for thinking, allowing enterprise, adding workarounds longer token lifetime (kiro only issues for 5 hours max)
+    [reply to irma1925 msg=1503428898564735138]
+
+[2026-05-11T16:27:27.153000+00:00] 74800 (id=1503433367079878686)
+    And just patching bugs and issues
+
+[2026-05-11T16:27:29.007000+00:00] 74800 (id=1503433374855860456)
+    On it rn
+
+[2026-05-11T16:29:25.790000+00:00] irma1925 (id=1503433864679264331)
+    had this issue too, explaining weird behaviors, but it's not just Kiro apparently
+    [attachment] image.png https://cdn.discordapp.com/attachments/1503292684570333206/1503433864549498930/image.png?ex=6a035565&is=6a0203e5&hm=cf50b2d975afc85f1e253461d3cad5629bfc6598723524bf144ad2a9921bffb9&
+

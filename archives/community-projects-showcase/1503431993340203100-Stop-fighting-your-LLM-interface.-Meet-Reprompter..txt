@@ -1,0 +1,27 @@
+# Thread 'Stop fighting your LLM interface. Meet Reprompter.' in forum #community-projects-showcase
+# thread_id=1503431993340203100 forum_id=1316137596535177246
+# Started 2026-05-11T19:44:21.583414+00:00
+
+[2026-05-11T16:21:59.628000+00:00] ahbeng888 (id=1503431993340203100)
+    Hey everyone! 
+    
+    Build my first project using Hermes.
+    
+    I’ve spent way too many hours in "prompting purgatory"—manually re-typing instructions just to get ChatGPT or Claude to stop being generic.
+    
+    I built Reprompter to kill that friction. It’s a native Chrome extension (we call it the Reprompter Pill) that sits directly inside your favorite LLM UIs.
+    
+    The TL;DR:
+    
+    Speed: Refines your intent in 1.25 seconds flat.
+    
+    Workflow: No tab switching. It lives inside ChatGPT, Claude, and Gemini.
+    
+    Focus: It’s designed to eliminate the "re-prompting tax" that eats up your focus. 
+    
+    Love to hear your feedback. Thanks for looking. 
+    
+    https://www.rprompt.app/
+    [attachment] example_2.png https://cdn.discordapp.com/attachments/1503431993340203100/1503431993575211108/example_2.png?ex=6a0353a7&is=6a020227&hm=58fb3e11d1db077a54d2400d21bddc0d6653ec52e426fdd88b4bc4cb0dd74d99&
+    [attachment] example_1.jpg https://cdn.discordapp.com/attachments/1503431993340203100/1503431993902501999/example_1.jpg?ex=6a0353a7&is=6a020227&hm=84560a646b351fa7c2adc8fc9663666f353d987e0eb4c56b3c26d943835a58bb&
+

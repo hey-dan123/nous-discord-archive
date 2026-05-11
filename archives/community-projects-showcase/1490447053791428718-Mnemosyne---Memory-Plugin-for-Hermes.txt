@@ -2095,3 +2095,7 @@
     What's wrong guys?
     [attachment] image.png https://cdn.discordapp.com/attachments/1490447053791428718/1503376464014348288/image.png?ex=6a031ff0&is=6a01ce70&hm=fb8ef9915e8e242abff860e83e82551b03454b1c6ab5e04cfe9e61907743d7ab&
 
+[2026-05-11T17:04:31.472000+00:00] kohai_ut (id=1503442696549699826)
+    what do you get if you run: pip index versions mnemosyne-memory
+    [reply to david_66 msg=1503376464244899961]
+

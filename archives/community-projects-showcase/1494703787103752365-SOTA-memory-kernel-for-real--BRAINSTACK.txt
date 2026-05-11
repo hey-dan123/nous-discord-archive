@@ -227,3 +227,31 @@
     Maybe we can collab in some moment if we see tath we can integrate our skills 🙂 Very early for that, but in the future....
     [reply to lauratom msg=1502643954900930560]
 
+[2026-05-11T18:08:06.745000+00:00] lauratom (id=1503458698964635708)
+    <@498841278176559144> 
+      Sorry I didn’t follow up sooner. I spent more time on the multi-profile / shared backend path and added a dedicated isolation proof pass for it.
+    
+      Current status:
+      - separate Hermes profiles are still supported
+      - one shared Brainstack backend with multiple Hermes profiles is now explicitly covered by the scoping/isolation tests
+      - the latest release is v1.0.70
+    
+      I’d still love real-world testing from your setup, especially since you use 3 agents with different use cases.
+    
+      Best way to help:
+      1. Update to the latest Brainstack release.
+      2. Run your normal multi-profile workflow.
+      3. Watch for any memory bleed between profiles, wrong profile recall, mixed behavior preferences, or shared backend weirdness.
+      4. If you hit anything, please open a GitHub issue with:
+         - how many Hermes profiles
+         - whether they share one HERMES_HOME
+         - whether they share one Brainstack DB/backend
+         - what you expected
+         - what actually happened
+         - any sanitized logs/screenshots
+    
+      DM is also fine for early debugging, but GitHub issues are better if it looks like a real bug.
+    
+      Thanks again for offering to test this. This is exactly the kind of setup I wanted external eyes on.
+    [reply to sloothyyyyy msg=1502639723829788732]
+

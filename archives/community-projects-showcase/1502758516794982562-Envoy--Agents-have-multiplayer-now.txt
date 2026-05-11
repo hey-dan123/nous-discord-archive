@@ -33,3 +33,23 @@
 [2026-05-10T04:24:41.904000+00:00] byteologist (id=1502889092176810177)
     It solves many, many, many problems that a lot of us are tackling right now. Mainly around "context engineering" and anything related to task handoffs/coordination amongst distributed actors
 
+[2026-05-11T17:38:13.374000+00:00] byteologist (id=1503451177021608048)
+    <a:hype:1151299876395696189> New skills in skills/:
+    
+      - `envoy-shared-brain` — durable memory space multiple authorized agents read and update
+       across sessions, models, and machines
+      - `envoy-repo-conductor` — PR / issue / repo work with multiple specialized agents and a
+       human approver; identity-attributed reviews, evidence, decisions
+      - `envoy-eval-kit` — shared eval runs: rubric, attempts, evidence, scores, disputes,
+      repairs, final digest
+      - `envoy-postmortem` — multi-party incident reconstruction with identity-attributed
+      witness statements, evidence, root-cause decisions
+      - `envoy-design-doc` — engineering proposal with section owners, reviewers,
+      alternatives, decisions, approvals
+      - `envoy-decision-space` — shared decision across separately represented stakeholders:
+      constraints, options, evidence, objections, approvals
+    
+    
+    <a:partyblob:1151261550032724052>  https://github.com/statecraft-protocol/envoy/tree/main/skills <a:partyblob:1151261550032724052>
+    [embed] envoy/skills at main · statecraft-protocol/envoy https://github.com/statecraft-protocol/envoy/tree/main/skills
+

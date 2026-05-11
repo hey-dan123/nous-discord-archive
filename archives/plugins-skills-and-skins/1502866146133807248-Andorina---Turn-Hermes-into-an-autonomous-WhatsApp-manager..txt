@@ -104,3 +104,11 @@
 [2026-05-11T13:17:57.925000+00:00] vayaperson (id=1503385681081143448)
     Very happy it will help you 🙂
 
+[2026-05-11T15:18:31.866000+00:00] vayaperson (id=1503416022428811355)
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/v1.0.2-hotfix3
+    
+    You can download the new version with the fix. I recommend you to restore the native hermes whatsapp configuration before installing again.
+    If there's more bugs just let me know and I'll work on it as fast as possible ❤️
+    [embed] Release v1.0.2-hotfix3 — Stability & Visibility Update · Andorin... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/v1.0.2-hotfix3
+    [reply to ifreet_00706 msg=1503384877368606750]
+

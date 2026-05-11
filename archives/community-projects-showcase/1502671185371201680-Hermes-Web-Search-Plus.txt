@@ -69,3 +69,10 @@
 [2026-05-10T12:12:58.282000+00:00] wysie_ (id=1503006936927441146)
     <@1228037612338679961> It basically allows you to add multiple search providers and web-search-plus will rotate among them based on some priority setting.
 
+[2026-05-11T17:58:35.020000+00:00] colmeio_66868 (id=1503456300976046244)
+    need APIs?
+
+[2026-05-11T19:15:04.404000+00:00] mazak (id=1503475550247981157)
+    Yes; https://github.com/robbyczgw-cla/hermes-web-search-plus/#api-keys
+    [reply to colmeio_66868 msg=1503456300976046244]
+

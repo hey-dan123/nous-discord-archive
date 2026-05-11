@@ -235,3 +235,28 @@
     - using ctrl+c to try and copy text inside anything results in the tui closing. that makes sense, of course. a hotkey is a hotkey. I was not aware that selecting and release auto-copies. strangely i've also had it close on my with ther ctrl+v hotkey at times, but only when a tabbed menu was open. 
     - I've had cases where pressing escape to get out of tabbed menu display has caused the TUI to close as well.
 
+[2026-05-11T15:44:23.880000+00:00] liftaris (id=1503422532047343787)
+    That is annoying and I will look into it more. I did try some fixes, but a lot of this is just how OpenTui renders markdown and codeblocks, my influence over it is minimal, but there are a few more things I can try
+    [reply to rossascends msg=1503238040964042822]
+
+[2026-05-11T15:46:18.350000+00:00] liftaris (id=1503423012169584672)
+    ctrl+c is common for "kill this process" in terminals, but I can do what opencode does and require you to do it twice before quitting. noted!
+    [reply to rossascends msg=1503238675008589865]
+
+[2026-05-11T15:47:41.673000+00:00] liftaris (id=1503423361651577014)
+    **1.4.0 release: fixes and QoL**
+    TLDR:
+    - 4 tab groups instead of 12 top-level tabs. Shift+←/→ for sub-tabs.
+    - Consistent nav everywhere: Tab always walks fields/panes, Space toggles, hints live in a footer and reflect your rebinds.
+    - Kanban diagnostics on cards: severity glyphs + suggested fixes in the side pane.
+    - Profile distributions: i to install from a git URL, Info/Update from the profile menu.
+    - Session reliability: /compress re-hydrates the transcript, /new/switch close the outgoing session cleanly, resume finds compression tips and cli-origin sessions.
+    - Confirm on /clear /new /undo (opt-out via approvals.destructive_slash_confirm).
+    - Snappier input: sidebar/chat/status no longer re-render on every keystroke.
+    https://github.com/liftaris/herm/pull/26
+    [embed] 1.4.0 by liftaris · Pull Request #26 · liftaris/herm https://github.com/liftaris/herm/pull/26
+
+[2026-05-11T19:42:19.862000+00:00] yerts (id=1503482409856012501)
+    Outstanding work. And great organization on your pr workflow structuring.
+    [reply to liftaris msg=1503423361651577014]
+

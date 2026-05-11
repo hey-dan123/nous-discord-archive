@@ -1286,3 +1286,82 @@
     
     For context I do have mnemosyne installed and working as well. Could that be interfering somehow?
 
+[2026-05-11T18:55:55.869000+00:00] austrian_guy (id=1503470732942901391)
+    Eager to give it a try ☝️😀
+
+[2026-05-11T19:47:15.098000+00:00] w0lfgang88 (id=1503483648165544039)
+    <@984772293874036756>, LCM is not expecting the `custom:LCPP/model` form there.
+    
+    For `LCM_SUMMARY_MODEL`, `LCM_EXTRACTION_MODEL`, and `LCM_EXPANSION_MODEL`, use either:
+    
+    ```bash
+    export LCM_SUMMARY_MODEL="4B-Qwen3-2507-compressor"
+    export LCM_EXTRACTION_MODEL="4B-Qwen3-2507-compressor"
+    export LCM_EXPANSION_MODEL="4B-Qwen3-2507-compressor"
+    ```
+    
+    and let Hermes route through your existing `auxiliary.compression` config, or use the named custom provider prefix without `custom:`:
+    
+    ```bash
+    export LCM_SUMMARY_MODEL="lcpp/4B-Qwen3-2507-compressor"
+    export LCM_EXTRACTION_MODEL="lcpp/4B-Qwen3-2507-compressor"
+    export LCM_EXPANSION_MODEL="lcpp/4B-Qwen3-2507-compressor"
+    ```
+    
+    The problematic value is this:
+    
+    ```bash
+    custom:LCPP/4B-Qwen3-2507-compressor
+    ```
+    [reply to rossascends msg=1503391598606549012]
+
+[2026-05-11T19:47:17.280000+00:00] w0lfgang88 (id=1503483657317388448)
+    LCM does not currently split `custom:` provider prefixes in that env var path. So that value can get treated as the literal model string, meaning the request body may effectively contain:
+    
+    ```json
+    "model": "custom:LCPP/4B-Qwen3-2507-compressor"
+    ```
+    
+    If your llama.cpp swapper only recognizes the bare model ID, it will not swap and may just keep using whatever model is already loaded.
+    
+    Also fix this case mismatch:
+    
+    ```yaml
+    auxiliary:
+      compression:
+        model: 4B-Qwen3-2507-Compressor
+    ```
+    
+    versus:
+    
+    ```yaml
+    4B-Qwen3-2507-compressor:
+    ```
+    
+    Use one exact spelling everywhere. If llama.cpp treats model IDs case-sensitively, that alone can cause it to miss the swap.
+    
+    I would change it to:
+    
+    ```yaml
+    auxiliary:
+      compression:
+        provider: custom:LCPP
+        model: 4B-Qwen3-2507-compressor
+        base_url: http://172.19.0.1:8081/v1
+        api_key: llamacpp-local
+        timeout: 120
+        extra_body: {}
+    ```
+    
+    and then either remove the LCM model env vars entirely, or set them to the bare model name:
+    
+    ```bash
+    export LCM_SUMMARY_MODEL="4B-Qwen3-2507-compressor"
+    export LCM_EXTRACTION_MODEL="4B-Qwen3-2507-compressor"
+    export LCM_EXPANSION_MODEL="4B-Qwen3-2507-compressor"
+    ```
+    
+    Restart Hermes after changing these; LCM reads env/config at process startup.
+    
+    Mnemosyne should not be causing the model-routing issue. It may add memory context, but it should not hijack LCM compression routing. LCM is the context engine; Mnemosyne is a memory layer. Different slot.
+

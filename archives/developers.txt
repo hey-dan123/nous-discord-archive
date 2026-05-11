@@ -14600,3 +14600,154 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     Also I have a few PR's there for next release (0.14) if ya'll want it.
 
+[2026-05-11T15:08:48.993000+00:00] minddragon (id=1503413577682387024)
+    Proposed merge order for current build:
+    
+    #22760 – shared CI baseline fix: Fixes broken CI baseline, bad TokenHub fallback, and Windows “footgun checker” failure.
+    #22869 – provider context / Windows: Fixes Windows config override autoload not running and ensures chatgpt.com/backend-api/codex maps to openai-codex instead of openai.
+    #21993 – ZAI status env var: Makes status correctly detect ZAI_API_KEY; small, clean bugfix.
+    #21553 – TUI Cmd+C over SSH/macOS clipboard: Bugfix for TUI SSH/macOS clipboard handling; required base for later TUI work.
+    #21584 – TUI /doctor terminal probe: Adds a /doctor-style terminal capability probe surface in the TUI, built on #21553.
+    #19326 – async MCP discovery: Introduces discover_mcp_tools_async for better MCP discovery performance.
+    #20422 – MCP pre_connect hook: Adds a pre_connect hook to MCP to reduce Docker-pull cold-start pain.
+    #18542 – TUI gateway SessionDB leak guard: Adds a leak guard so TUI gateway no longer returns a stale cached stub in the repro.
+    #18540 – startup warning / UX cleanup: Cleans up noisy discover_models startup warnings and rough missing fal_client behavior.
+
+[2026-05-11T15:24:02.679000+00:00] jez_wikitribune (id=1503417409959366821)
+    with regard to A2A protocol and super-issue #514
+    <https://github.com/NousResearch/hermes-agent/issues/514>
+    my agent is cooking up the agent card generation part now
+
+[2026-05-11T15:24:25.763000+00:00] jez_wikitribune (id=1503417506780545074)
+    I'm gonna do several PRs this week to try and get A2A ready for action with Hermes, or at least a lot closer :3
+
+[2026-05-11T15:51:55.406000+00:00] magnus919 (id=1503424425884913685)
+    https://github.com/NousResearch/hermes-agent/pull/23851
+    [embed] fix(kanban): use -z (one-shot) mode for worker spawn instead of cha... https://github.com/NousResearch/hermes-agent/pull/23851
+
+[2026-05-11T15:59:32.083000+00:00] jez_wikitribune (id=1503426341327077477)
+    apparently this is a popular contribution topic haha
+    [reply to jez_wikitribune msg=1503417409959366821]
+
+[2026-05-11T16:12:40.062000+00:00] harrynguyen2107 (id=1503429646350286969)
+    Hi <@387972437901312000> , i just found a new Goal Judge `Nous` Auth Error Message issue while finding solution to fix my `/goal` paused issue in <#1503400655237152889> . I was discussing with <@283284606902468609> to open issue and PR below:
+    
+    https://github.com/NousResearch/hermes-agent/issues/23876
+    
+    https://github.com/NousResearch/hermes-agent/pull/23881
+    [embed] [Bug]: Misleading Error Message When Goal Judge Nous Provider Has A... https://github.com/NousResearch/hermes-agent/issues/23876
+    [embed] fix(goal-judge-nous-auth-error-message): fix Goal Judge Nous Auth E... https://github.com/NousResearch/hermes-agent/pull/23881
+
+[2026-05-11T16:24:27.728000+00:00] magnus919 (id=1503432614516887596)
+    https://github.com/NousResearch/hermes-agent/pull/23888
+    [embed] fix(agent): replace fragile tool_call regex with brace-depth scanne... https://github.com/NousResearch/hermes-agent/pull/23888
+
+[2026-05-11T17:00:37.347000+00:00] kevins0792 (id=1503441714558406767)
+    Hi <@387972437901312000>, I opened a PR that adds a host-managed async compression capability for context engines, and would appreciate feedback on the direction:
+    
+    https://github.com/NousResearch/hermes-agent/pull/23892
+    
+    The PR adds infrastructure for progressive / lower-disruption context compression. Instead of only compressing explicitly or near the context limit, a context engine can opt in to prepare a compression candidate in the background after a turn. The host still owns snapshotting, digest validation, and the actual transcript rewrite.
+    
+    This does not change the default compressor behavior. The idea is to let lower-threshold background preparation coexist with the existing hard-threshold compression path, while keeping compression policy separate from the host-owned safe apply path.
+    
+    Would appreciate your thoughts on whether this direction makes sense for this project.
+    [embed] feat(agent): add host-managed async compression for context engines... https://github.com/NousResearch/hermes-agent/pull/23892
+
+[2026-05-11T17:19:40.942000+00:00] kevins0792 (id=1503446511143620618)
+    Progressive context compression seems like a promising direction that several people are exploring, and my thought is to keep the first experiments at the plugin/context-engine layer while the host provides the safe validation/apply path.
+
+[2026-05-11T17:28:04.745000+00:00] jw_mushroom_man (id=1503448624246558851)
+    https://github.com/NousResearch/hermes-agent/pull/21519
+    
+    https://github.com/NousResearch/hermes-agent/pull/21518
+    
+    typescript 6
+    
+    Implements the TypeScript 6 upgrade <@387972437901312000>1 invited in #19025. Bumps
+    web/'s TS pin to ~6.0.3 and removes the now-deprecated baseUrl
+    from tsconfig.app.json. The @/* alias keeps working — TS 5.0+
+    resolves paths without baseUrl
+    (docs) — and Vite
+    mirrors the alias in vite.config.ts:70. No source files needed
+    changes; greppped for bare-specifier imports and found none.
+    [embed] chore(ui-tui): upgrade TypeScript to 6.0 and drop deprecated baseUr... https://github.com/NousResearch/hermes-agent/pull/21519
+    [embed] chore(web): upgrade TypeScript to 6.0 and drop deprecated baseUrl b... https://github.com/NousResearch/hermes-agent/pull/21518
+
+[2026-05-11T17:46:40.863000+00:00] fahd_998 (id=1503453305584746587)
+    How to install Hermes into my Android MCP
+
+[2026-05-11T18:04:10.613000+00:00] godsboy7777 (id=1503457708555239494)
+    Hey <@387972437901312000>1, no rush, whenever you have a sec 👋
+    
+    PR up for review: https://github.com/NousResearch/hermes-agent/pull/23914
+    
+    **`fix(tool_result_storage): spill to local fs when no sandbox env`**
+    
+    Closes the proximate failure mode from #23767.
+    
+    Today when `env is None`, for example bare CLI or local custom providers, oversized tool results fall through to inline truncation. The preview keeps inflating the prompt every turn, and on lower-context local models that drives the compression-grows-size loop the reporter hit on his 65K-context Qwen setup.
+    
+    Fix mirrors the spill-to-disk pattern from your #20468, but for tool results.
+    
+    Helper is self-contained so this PR does not block on #20468 landing first. Once both are in, the two helpers can be unified in a follow-up.
+    
+    After one round of review I hardened the write a bit:
+    
+    - Atomic write via tempfile + `os.replace`
+    - Refuses a symlinked spill root
+    - Uses mode `0o600`
+    - Uses `surrogateescape` for byte round-trip
+    
+    Tests: **59 passed locally**
+    
+    CI is mostly green.
+    
+    `Windows footguns` and `e2e` are failing on `origin/main` too, so I am treating those as out of scope.
+    
+    Known remaining footgun:
+    
+    - `Path.write_text` timeout for NFS/FUSE stalls is pre-existing and applies to the sandbox path equally
+    
+    Happy to adjust shape if you want it landed differently 🙏
+    [embed] fix(tool_result_storage): spill to local fs when no sandbox env (#2... https://github.com/NousResearch/hermes-agent/pull/23914
+
+[2026-05-11T18:10:04.297000+00:00] heathley (id=1503459192013455360)
+    I opened 2 PRs
+    
+    -to fix premature context compression in Hermes by separating exact API token usage from projected local estimates
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/23934
+    
+    -to fix a Slack bug where Hermes did not re-fetch thread context after an explicit @mention in an already-active thread, and changed it to refresh the thread context on explicit re-mentions. 
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/23927
+    [embed] fix(compression): separate provider-exact vs projected token state ... https://github.com/NousResearch/hermes-agent/pull/23934
+    [embed] fix(slack): refresh active thread context on explicit mention by h... https://github.com/NousResearch/hermes-agent/pull/23927
+
+[2026-05-11T18:27:00.633000+00:00] heathley (id=1503463454835478539)
+    Also fixed a TUI regression where /reset and /new were being swallowed by slash autocomplete on Enter instead of executing.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/23939
+    [embed] fix(tui): submit exact slash commands on Enter by heathley · Pull ... https://github.com/NousResearch/hermes-agent/pull/23939
+
+[2026-05-11T18:37:10.167000+00:00] ahmet0134. (id=1503466011406368798)
+    I opened two PRs for the two P1 bugs I identified. My boss, You can review them when you have a moment.
+    https://github.com/NousResearch/hermes-agent/pull/23363
+    https://github.com/NousResearch/hermes-agent/pull/23690
+    [embed] fix(auxiliary_client): use threading.local for runtime main state b... https://github.com/NousResearch/hermes-agent/pull/23363
+    [embed] fix(cli,tui-gateway): sanitize env and redact output in exec quick ... https://github.com/NousResearch/hermes-agent/pull/23690
+
+[2026-05-11T19:11:42.133000+00:00] magnus919 (id=1503474701861781524)
+
+[2026-05-11T19:11:42.365000+00:00] magnus919 (id=1503474702834729153)
+    Issue: https://github.com/NousResearch/hermes-agent/issues/23969
+    PR: https://github.com/NousResearch/hermes-agent/pull/23970
+    
+    Cc: <@575461682151686145>
+    [embed] manim-video skill upgrade: fix incorrect claims, add craftsmanship ... https://github.com/NousResearch/hermes-agent/issues/23969
+    [embed] feat(skills): upgrade manim-video skill with craftsmanship patterns... https://github.com/NousResearch/hermes-agent/pull/23970
+
+[2026-05-11T19:11:44.729000+00:00] kalki9526 (id=1503474712750194810)
+    hi everyone. i am requesting some insight. i have connected three agents to a single discord bot and am only using slash commands / to initiate actions. am not talking to the agent. my agents think and produce output looking at databases. is this a good approach?
+
