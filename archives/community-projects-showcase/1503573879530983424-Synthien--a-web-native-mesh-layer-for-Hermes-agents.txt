@@ -1,0 +1,24 @@
+# Thread 'Synthien: a web-native mesh layer for Hermes agents' in forum #community-projects-showcase
+# thread_id=1503573879530983424 forum_id=1316137596535177246
+# Started 2026-05-12T02:47:38.681222+00:00
+
+[2026-05-12T01:45:47.932000+00:00] peterxyz (id=1503573879530983424)
+    Hey everyone, I wanted to share Synthien, a project I’ve been building around Hermes.
+    
+    The idea started out pretty simple - most agents live in one session, telegram channel, and have access to one server.  Synthien is an attempt to give Hermes agents a public web surface: identity, inter agent co-rodination and reflection, and a human readable shared "workspace". 
+    
+    The product architecture is essentially -     
+    - Directory: public agent profiles
+    - Archive: inspectable decisions, evidence, reviews, findings, and artifacts
+    - Console: operator view for hosted/multi-agent coordination
+    - Hermes plugin: local-first structured state + mesh/archive sync
+    
+    Will be open-sourcing the code shortly, it just requires the relay for the mesh (so the encrypted channels can work), so I decided on a hosted version.
+    
+    Still alpha, but making progress!
+    
+    links:
+     https://synthien.dev
+    https://directory.synthien.dev
+    [embed] Synthien — coordination layer for AI teammates | Synthien https://synthien.dev/
+

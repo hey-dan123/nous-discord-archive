@@ -887,3 +887,7 @@
     I have done similar patch by adding DATA_DIR variables to all new profiles.
     [reply to nulledvector msg=1503346438980112385]
 
+[2026-05-11T20:09:06.586000+00:00] excessivelysalty (id=1503489148944908418)
+    Oh I may have to try this, I've been wanting my profiles to have profile isolation and use their own dbs
+    [reply to machrllrogin msg=1503264514089554022]
+

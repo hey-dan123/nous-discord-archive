@@ -1,0 +1,10 @@
+# Thread 'Autonomous AI Needs Accountability' in forum #community-projects-showcase
+# thread_id=1503507375120973954 forum_id=1316137596535177246
+# Started 2026-05-12T02:47:39.045473+00:00
+
+[2026-05-11T21:21:32.045000+00:00] donknights101 (id=1503507375120973954)
+    https://www.asqav.com
+    
+    If you’re running LLM-powered agents that take actions across tools, data, or workflows, Asqav can help you create a clear evidence trail of what the agent did, what was approved, and whether it followed policy.
+    [embed] Asqav - The evidence layer for AI agents https://www.asqav.com/
+

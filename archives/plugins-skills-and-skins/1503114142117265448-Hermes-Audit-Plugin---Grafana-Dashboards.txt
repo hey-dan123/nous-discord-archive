@@ -17,3 +17,6 @@
     https://github.com/nhranitzky/hermes_audit_db_plugin
     [embed] GitHub - nhranitzky/hermes_audit_db_plugin: Local observability plu... https://github.com/nhranitzky/hermes_audit_db_plugin
 
+[2026-05-12T00:32:12.960000+00:00] thetechnomad (id=1503555361796390975)
+    Nice! Currently I use langfuse that’s built into Hermes
+

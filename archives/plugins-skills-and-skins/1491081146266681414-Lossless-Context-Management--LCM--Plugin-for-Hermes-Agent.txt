@@ -1365,3 +1365,61 @@
     
     Mnemosyne should not be causing the model-routing issue. It may add memory context, but it should not hijack LCM compression routing. LCM is the context engine; Mnemosyne is a memory layer. Different slot.
 
+[2026-05-11T19:56:10.368000+00:00] rossascends (id=1503485893250388028)
+    `or use the named custom provider prefix without custom:` <--- yes ultimately this is what fixed it, and yes I caught the case mismatch soon after sending my message. 
+    
+    one thing that was persistently failing though, even after LCMConfig recognized the model, was that it would silently fail after checking for preflight overflow. the whole compress() function went silent after that and I think the compression prompt was sent to the main model without swapping, and compression became no-op without returning any errors. I added logs at all points of compress() branching after that point but none of them ever fired until I added one above and below the ` recovery_assembly_cap = (` line, and also one inside _overflow_recovery_assembly_cap(). 
+    
+    Once those logs were in place everything fired as expected. There might be some kind of race condition involved, since the model swapping can take several seconds and LCM will be waiting in the mean time. As-is, my engine.py now has tons of logs in it, but compression is firing. 
+    
+    I also discovered that manual /compress was not doing anything when LCM is active and there were no valid leafs to fold. That's fine, but it was not informing me of that. It just does an instant no-op with no information feedback in the in-CLI output. Yet it still adds a stub metacomment about tasks being carried over between compressions, which ironically causes token amount to go up slightly after a no-op compression run <:kek:1115608371014410301>
+    [reply to w0lfgang88 msg=1503483648165544039]
+
+[2026-05-11T20:02:20.604000+00:00] w0lfgang88 (id=1503487446132850889)
+    Good catch. That points to two bugs plus one UX gap.
+    
+    **Model routing:**
+    
+    LCM currently wants either:
+    
+    ```text
+    lcpp/4B-Qwen3-2507-compressor
+    ```
+    
+    or:
+    
+    ```text
+    4B-Qwen3-2507-compressor
+    ```
+    
+    not:
+    
+    ```text
+    custom:LCPP/4B-Qwen3-2507-compressor
+    ```
+    
+    We should either support that `custom:<name>/<model>` form or warn clearly.
+    [reply to rossascends msg=1503485893250388028]
+
+[2026-05-11T20:03:29.245000+00:00] w0lfgang88 (id=1503487734034075799)
+    **Silent compression:**
+    
+    If `LCMConfig` saw the model, the next thing to verify is the final aux route after `apply_lcm_model_route()`:
+    
+    ```text
+    provider=lcpp
+    model=4B-Qwen3-2507-compressor
+    ```
+    
+    If it still routes as `auto` or sends the literal `custom:LCPP/...` model string, it can hit the main/current llama.cpp model.
+    
+    The “logs made it work” bit is suspicious. `_overflow_recovery_assembly_cap()` should be deterministic, not model-swap dependent. That smells more like a hidden early return, swallowed exception, timeout/fallback, or session-state issue than a normal llama.cpp race.
+
+[2026-05-11T20:08:27.648000+00:00] w0lfgang88 (id=1503488985626972391)
+    **Manual `/compress`:**
+    
+    Agreed. If LCM has no eligible leaf backlog, no-op is valid, but it should say so. It also should not append the carryover/stub metadata when compression returned unchanged, since that inflates tokens.
+
+[2026-05-11T20:09:03.953000+00:00] w0lfgang88 (id=1503489137901043854)
+    Your immediate model-routing issue was config format + case mismatch, but LCM should handle this better.
+

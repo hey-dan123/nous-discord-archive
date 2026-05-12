@@ -112,3 +112,8 @@
     [embed] Release v1.0.2-hotfix3 — Stability & Visibility Update · Andorin... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/v1.0.2-hotfix3
     [reply to ifreet_00706 msg=1503384877368606750]
 
+[2026-05-11T19:49:41.331000+00:00] vayaperson (id=1503484261510942782)
+    Hey, I finally found what was causing the installation and connection issues. This time I think I’ve really nailed it. I’m trying to fix everything as quickly as possible. Since it’s quite a complex case, it may take me a couple of days to sort everything out properly. Hopefully, in the next version the installer will work correctly.
+    Thank you so much for your support and patience!
+    [reply to ifreet_00706 msg=1503384877368606750]
+

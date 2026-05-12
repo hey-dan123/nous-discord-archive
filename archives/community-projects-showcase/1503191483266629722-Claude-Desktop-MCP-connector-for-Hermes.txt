@@ -16,3 +16,9 @@
     Anyone else splitting their stack like this? Curious what setups people are running.
     [embed] GitHub - mlennie/claude-hermes-mcp: MCP server that lets Claude Des... https://github.com/mlennie/claude-hermes-mcp
 
+[2026-05-11T23:30:04.736000+00:00] goneflyin. (id=1503539724491427901)
+    What makes this specific to Claude? Wouldn’t a Hermes MCP server work with any harness that can connect via MCP? 
+    
+    (Cool idea tho!)
+    [reply to monty_13277 msg=1503191483266629722]
+

@@ -1,0 +1,15 @@
+# Thread 'OverCR, Context Accumulation Generation runtime router' in forum #community-projects-showcase
+# thread_id=1503574266002800851 forum_id=1316137596535177246
+# Started 2026-05-12T02:47:38.332145+00:00
+
+[2026-05-12T01:47:20.074000+00:00] guideboardlabs (id=1503574266002800851)
+    OverCR is a Hermes-first portable AI orchestration substrate built for long-lived, governed AI operations instead of disposable chat sessions. Filesystem state is canonical, workflows are auditable, model output is treated as untrusted until validated, and recovery paths are designed in from the start. The project focuses on operational continuity, governed subagents, workflow choreography, deterministic fallback behavior, and cold-start reconstruction from filesystem artifacts alone.
+    
+    The current release includes four bounded specialist subagents — KnowER, CryER, CodER, and PypER — operating through layered L1-L6 validation, approval-aware governance, packetized routing, audit trails, and Hermes-backed inference infrastructure. CodER and PypER remain advisory-only by design, while workflow execution stays explicitly constrained and operator-controlled. The entire system is runtime-agnostic but Hermes-first, deployment-portable, and built around inspectable filesystem-native state rather than opaque session memory.
+    
+    Repo is now public here: https://github.com/GuideboardLabs/overcr
+    
+    Follow the build progress and future work on X: <@340740781444825088>
+    [attachment] AC5CBFFC-E4A1-477F-8E01-33B45F30AD82.png https://cdn.discordapp.com/attachments/1503574266002800851/1503574266392612995/AC5CBFFC-E4A1-477F-8E01-33B45F30AD82.png?ex=6a03d828&is=6a0286a8&hm=00269f63581155207db980c2eace58117f012dfff1be8d4eb06eb8823db634df&
+    [embed] GitHub - GuideboardLabs/overcr: Hermes-first operational AI substra... https://github.com/GuideboardLabs/overcr
+

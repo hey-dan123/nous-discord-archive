@@ -14751,3 +14751,153 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-11T19:11:44.729000+00:00] kalki9526 (id=1503474712750194810)
     hi everyone. i am requesting some insight. i have connected three agents to a single discord bot and am only using slash commands / to initiate actions. am not talking to the agent. my agents think and produce output looking at databases. is this a good approach?
 
+[2026-05-11T19:50:05.518000+00:00] colmeio_66868 (id=1503484362958835886)
+    https://arxiv.org/abs/2603.19312
+    [embed] LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architec... https://arxiv.org/abs/2603.19312
+
+[2026-05-11T19:53:15.267000+00:00] colmeio_66868 (id=1503485158823563324)
+    <@387972437901312000> 
+    this is what `/exhaust` needs
+    ```
+    current observation → current latent
+    goal observation → goal latent
+    try candidate action sequences
+    roll them forward in latent space
+    pick the sequence whose final latent is closest to the goal latent
+    execute the first action(s)
+    re-observe and replan
+    ```
+
+[2026-05-11T19:53:43.215000+00:00] colmeio_66868 (id=1503485276045967521)
+    ```
+    The paper uses Cross-Entropy Method sampling to optimize action sequences, and only executes part of the plan before replanning, because long rollouts accumulate error.
+    ```
+
+[2026-05-11T19:55:17.529000+00:00] colmeio_66868 (id=1503485671627554957)
+    if you want me to implement it I would love
+
+[2026-05-11T19:58:33.896000+00:00] colmeio_66868 (id=1503486495250448616)
+    /exhaust is JEPA-like persistence for agents: instead of hallucinating the next move, the agent maintains a compressed model of the task state, predicts action outcomes, and keeps searching until reality converges with the goal.
+
+[2026-05-11T19:59:00.189000+00:00] colmeio_66868 (id=1503486605531545661)
+    /exhaust turns failure into a planning loop: observe, compress, simulate, act, verify, repeat.
+
+[2026-05-11T20:00:09.759000+00:00] colmeio_66868 (id=1503486897329143809)
+    long run, sit there until it figures it out hahahaha. like agent on-promise
+
+[2026-05-11T20:01:21.453000+00:00] colmeio_66868 (id=1503487198035579088)
+    gonna lab a bit around this concept
+
+[2026-05-11T20:18:12.299000+00:00] colmeio_66868 (id=1503491437830869052)
+    ```
+    Thinking the first /exhaust slice should be symbolic/text-latent, not visual JEPA:
+    
+    observe → compress state → sample candidate actions → predict outcome → choose lowest-cost next step → execute → re-observe/replan.
+    
+    MPC/CEM-inspired persistence for agent tool-use, with traces first so it’s inspectable before it gets “smart.”
+    ```
+
+[2026-05-11T20:20:28.409000+00:00] colmeio_66868 (id=1503492008717713529)
+    The paper is useful less because Hermes needs a visual JEPA,
+    and more because it gives a planning pattern for /exhaust:
+    
+    compressed state → candidate rollout → goal distance → partial execution → re-observe/replan.
+    
+    For Hermes, the latent can start as symbolic/text state rather than learned visual embeddings.
+
+[2026-05-11T20:23:12.906000+00:00] magnus919 (id=1503492698668138679)
+    have you put together an Issue yet (or Discussion) on GitHub around this yet or just still super high level conceptualizing?
+    [reply to colmeio_66868 msg=1503492008717713529]
+
+[2026-05-11T20:26:40.914000+00:00] magnus919 (id=1503493571116925100)
+    I already had the JEPA paper in my to-read pile (my hermes was already on it) so I just asked how this research would apply to Hermes.
+    [attachment] Screenshot_2026-05-11_at_4.25.20_PM.png https://cdn.discordapp.com/attachments/1491258766648283238/1503493570861207652/Screenshot_2026-05-11_at_4.25.20_PM.png?ex=6a038d00&is=6a023b80&hm=588a0509cbfd2bcdb7b1c014a720cc97b6bf20db4428f5c3e69743c9c4468fc9&
+
+[2026-05-11T21:12:13.561000+00:00] 0zi57 (id=1503505032669167637)
+    Found and fixed in Hermes v0.13.0 on Windows
+    **Problem:** `skill_view()` in `tools/skills_tool.py` uses hardcoded `/` separators for file categorization (references/, templates/, assets/, scripts/). On Windows, `Path.relative_to()` returns `\`-separated paths, so all checks fail and files incorrectly fall into "other".
+    
+    **Fix:** Replaced `str.startswith("dir/")` with `Path.parts[0] == "dir"`. Platform-agnostic, zero behavior change on POSIX, fixes Windows-only bug
+    https://github.com/NousResearch/hermes-agent/pull/24016 <@387972437901312000>
+    [embed] fix(skills_tool): Use Path.parts for platform-agnostic file categor... https://github.com/NousResearch/hermes-agent/pull/24016
+
+[2026-05-11T21:32:11.294000+00:00] gille (id=1503510056325615769)
+    https://github.com/NousResearch/hermes-agent/pull/24019
+    [embed] fix(model): refresh cached model catalogs by helix4u · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/24019
+
+[2026-05-11T22:52:05.311000+00:00] thatswhatshesaid2183 (id=1503530163890032750)
+    Hey team, is there any interest in implementing x402 payments into hermes agent, so that hermes agent can pay for resources online. I'm currently working on an oss project, to handle nuances around x402 payments and would love to be a part of something like this!
+
+[2026-05-11T22:56:09.190000+00:00] yerts (id=1503531186792828929)
+    https://github.com/NousResearch/hermes-agent/pull/21597 guys pls mergeeeee
+    [embed] fix(tui_gateway): event-driven delivery for notify_on_complete + wa... https://github.com/NousResearch/hermes-agent/pull/21597
+
+[2026-05-11T23:20:40.186000+00:00] devlingx (id=1503537356597366876)
+    Heya all and <@387972437901312000>!
+    
+    Small PR that allows the support for a local `web_extract` when using SearXNG (which only supports `web_search`) by releveraging Camofox which people probably already uses in their local stack!
+    
+    If this get merged, I could also upstream some of my work to improve Camofox browser_X tools, and to make them closer to the Cloud API! (Much better browser_X snapshot output, chunking support, browser_find to search on a web page without the agent having to read all chunks etc..)
+    
+    Thanks a lot 🙏
+    
+    https://github.com/NousResearch/hermes-agent/pull/22631
+    [embed] feat(web): add support for local markdown web_extract using local C... https://github.com/NousResearch/hermes-agent/pull/22631
+
+[2026-05-12T00:24:39.343000+00:00] krionex (id=1503553459188793505)
+    opened a tiny fix for Home Assistant bool parsing 
+    
+    watch_all: "false" was being treated as truthy because of raw bool(...) coercion, so the adapter could forward events even when it shouldn’t.
+    
+    swapped it to is_truthy_value(...) + added regression coverage for quoted bool values and unfiltered forwarding behavior
+    
+    https://github.com/NousResearch/hermes-agent/pull/24053
+    [embed] fix(homeassistant): coerce watch_all instead of bool() by kronexoi ... https://github.com/NousResearch/hermes-agent/pull/24053
+
+[2026-05-12T00:37:10.853000+00:00] tiny_th_dev (id=1503556611250323516)
+    There are 5k pull requests open. How can I get a gateway/platform PR addition a little attention? The platform (nostr) is mentioned in an issue (https://github.com/NousResearch/hermes-agent/issues/8950)  filed by BugMaker2 a couple months ago. I've been living on it for the past 2 weeks, keeping the PR fresh. Is there a queue/order for review/rejection/approval? Or is there something I need to do to get it considered?  PR: https://github.com/NousResearch/hermes-agent/pull/16769
+    [embed] feat: add missing messaging channels — IRC, Google Chat, LINE, No... https://github.com/NousResearch/hermes-agent/issues/8950
+    [embed] feat(gateway): add Nostr NIP-17 private DM platform adapter by unsa... https://github.com/NousResearch/hermes-agent/pull/16769
+
+[2026-05-12T01:44:35.576000+00:00] strange._loop (id=1503573576047919285)
+    what about adding a basic context doctor though, fall back to sane defaults on max_tokens.
+    
+    openai compatible endpoint doesn't always mean max_tokens none is recognized or a sane default.
+    
+    I had the same issue with lmstudio until I set max_tokens to 8192.
+    [attachment] fdaf.png https://cdn.discordapp.com/attachments/1491258766648283238/1503573576060633099/fdaf.png?ex=6a03d783&is=6a028603&hm=33bb6e5e5ed5f5151dceb94f18dd3bd1392ea2b38c718da78fecac764416455b&
+    [reply to teknium msg=1503060962557690007]
+
+[2026-05-12T01:45:12.824000+00:00] strange._loop (id=1503573732277485569)
+    (context was confirmed to be 120k on both ends there)
+
+[2026-05-12T01:47:02.518000+00:00] teknium (id=1503574192367337523)
+    context and max_tokens are extremely diff things though but it fallsback on context from 1M->512k->256k->128k->64k before basically failing
+
+[2026-05-12T01:53:41.929000+00:00] selinchu (id=1503575867618627744)
+    https://github.com/NousResearch/hermes-agent/pull/24076
+    
+    https://github.com/NousResearch/hermes-agent/pull/24086
+    
+    fix(context): avoid 100 percent threshold at minimum context length
+    fix(kanban): align board_exists with board discovery rules
+    
+    Both PRs are ready for review
+    [embed] fix(context): avoid 100 percent threshold at minimum context length... https://github.com/NousResearch/hermes-agent/pull/24076
+    [embed] fix(kanban): align board_exists with board discovery rules by soync... https://github.com/NousResearch/hermes-agent/pull/24086
+
+[2026-05-12T01:54:05.899000+00:00] fhsduifisdfbsdifisdfysdfj (id=1503575968156090418)
+    I love hermes, the auto context shrink can be a pain. it overshoots and then over fallsback. if you quit and resume session it picks up the config again
+
+[2026-05-12T01:57:36.031000+00:00] strange._loop (id=1503576849513578616)
+    Ah okay, I was noticing something similar then, that's how I was troubleshooting the 'api error - context exceeded' I was getting even though there was like... 80k/120k context available.
+    
+    I'd just leave the session and come back and it'd be fine, was having to do it a lot.
+
+[2026-05-12T02:27:39.910000+00:00] strange._loop (id=1503584415530487838)
+    I set max_tokens to 8192 and I can just let it run without that api error now, idk... 'requested max tokens' must be part of the context calculation, and maybe lmstudio took 'none' to mean... 32-64k or something?
+    [reply to fhsduifisdfbsdifisdfysdfj msg=1503575968156090418]
+
+[2026-05-12T02:33:18.413000+00:00] frank.martinez (id=1503585835315105812)
+    Will Depue’s newegg dongle trick to keep agents running with laptop lid closed
+

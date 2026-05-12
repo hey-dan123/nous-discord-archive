@@ -260,3 +260,7 @@
     Outstanding work. And great organization on your pr workflow structuring.
     [reply to liftaris msg=1503423361651577014]
 
+[2026-05-11T20:58:34.616000+00:00] yerts (id=1503501597764751501)
+    https://github.com/liftaris/herm/pull/27 sort by activity for sessions
+    [embed] fix(sessions): order /resume picker by last activity, not start tim... https://github.com/liftaris/herm/pull/27
+

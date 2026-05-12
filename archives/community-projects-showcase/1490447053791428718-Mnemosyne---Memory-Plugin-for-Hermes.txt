@@ -2099,3 +2099,8 @@
     what do you get if you run: pip index versions mnemosyne-memory
     [reply to david_66 msg=1503376464244899961]
 
+[2026-05-12T00:54:48.314000+00:00] walterwego (id=1503561046563229906)
+    <@151598363131904000> Just installed Mnemosyne in a separate profile to test it. My main user still uses Openviking for now. I’m impressed so far. Dashboard is a great enhancement to figure out what‘s going on. I‘m using  external LLM deepseek-v4-flash on opencode-go and stumbled upon this issue: 
+    https://github.com/AxDSan/mnemosyne/issues/81
+    [embed] `_call_remote_llm`: support reasoning models via `reasoning_content... https://github.com/AxDSan/mnemosyne/issues/81
+
