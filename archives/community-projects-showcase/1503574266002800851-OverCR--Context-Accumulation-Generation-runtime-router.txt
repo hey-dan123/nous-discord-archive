@@ -13,3 +13,6 @@
     [attachment] AC5CBFFC-E4A1-477F-8E01-33B45F30AD82.png https://cdn.discordapp.com/attachments/1503574266002800851/1503574266392612995/AC5CBFFC-E4A1-477F-8E01-33B45F30AD82.png?ex=6a03d828&is=6a0286a8&hm=00269f63581155207db980c2eace58117f012dfff1be8d4eb06eb8823db634df&
     [embed] GitHub - GuideboardLabs/overcr: Hermes-first operational AI substra... https://github.com/GuideboardLabs/overcr
 
+[2026-05-12T03:59:21.061000+00:00] swagbabyostrich (id=1503607489029996564)
+    is the "Canonical state lives on disk"  different than the native hermes sessions log file which contains session history ? or are they the same thing ?
+

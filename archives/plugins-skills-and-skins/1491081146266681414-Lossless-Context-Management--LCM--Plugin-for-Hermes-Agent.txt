@@ -1423,3 +1423,10 @@
 [2026-05-11T20:09:03.953000+00:00] w0lfgang88 (id=1503489137901043854)
     Your immediate model-routing issue was config format + case mismatch, but LCM should handle this better.
 
+[2026-05-12T06:01:59.162000+00:00] confusedxx (id=1503638351142584340)
+    I was looking for something like this YouTube video to improve memory https://youtu.be/iXd0t60YmMw?is=_xkToOMT8Vofvrub
+    
+    I find in writing a book, I frequently hit usage limits with a back and forth conversation since the entire history is sent back and forth to the LLM. If the YouTube Wiki is not the solution. Does the LCM option improve this?
+    does LCM fill that niche?
+    [embed] Karpathy's LLM Wiki - Full Beginner Setup Guide https://www.youtube.com/watch?v=iXd0t60YmMw
+

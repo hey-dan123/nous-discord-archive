@@ -11,3 +11,6 @@
 [2026-05-05T20:21:29.232000+00:00] arm64be (id=1501317936634138767)
     (i know it's messy, idk how to write skills properly)
 
+[2026-05-12T07:49:19.391000+00:00] samuel.gudi (id=1503665363420713063)
+    Crazy, I'll try this asap
+

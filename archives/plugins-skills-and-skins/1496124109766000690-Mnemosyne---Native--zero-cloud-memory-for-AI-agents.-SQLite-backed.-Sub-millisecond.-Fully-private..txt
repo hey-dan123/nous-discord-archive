@@ -891,3 +891,6 @@
     Oh I may have to try this, I've been wanting my profiles to have profile isolation and use their own dbs
     [reply to machrllrogin msg=1503264514089554022]
 
+[2026-05-12T08:31:10.012000+00:00] beserk_topg (id=1503675893728411730)
+    I’ve installed it, going to try it out as well.
+

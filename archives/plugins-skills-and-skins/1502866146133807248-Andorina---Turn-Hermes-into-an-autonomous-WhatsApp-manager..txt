@@ -117,3 +117,14 @@
     Thank you so much for your support and patience!
     [reply to ifreet_00706 msg=1503384877368606750]
 
+[2026-05-12T05:12:30.882000+00:00] ifreet_00706 (id=1503625901273780295)
+    Oof really sorry I didn't actually set up the WhatsApp bridge before trying this. İ had thought that part of me running the install script would be it taking me through that
+    [reply to vayaperson msg=1503416022428811355]
+
+[2026-05-12T05:12:54.294000+00:00] ifreet_00706 (id=1503625999471083600)
+    So you may not have had a problem in the first place
+    [reply to vayaperson msg=1503484261510942782]
+
+[2026-05-12T05:13:15.765000+00:00] ifreet_00706 (id=1503626089526722580)
+    But I'll set up the WhatsApp gateway and try again then let you know
+

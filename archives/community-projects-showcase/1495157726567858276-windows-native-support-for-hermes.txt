@@ -48,3 +48,6 @@
     I found this and it works... https://github.com/RedWoodOG/Hermes-Desktop
     [embed] GitHub - RedWoodOG/Hermes-Desktop: Hermes_Desktop https://github.com/RedWoodOG/Hermes-Desktop
 
+[2026-05-12T03:38:19.915000+00:00] cappy7419 (id=1503602199400284260)
+    Hi guys I am so excited to try the windows version of Hermes agent, I am an advanced openclaw user and really need windows native set up. Sounds like the build is almost at a stable release as well. We will see a huge increase in agent users once this is live. 🚀
+

@@ -2131,3 +2131,29 @@
 [2026-05-11T02:54:12.505000+00:00] avidfuturist (id=1503228707492597941)
     Newcomers: See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or curious why you might use it
 
+[2026-05-12T06:17:42.780000+00:00] avidfuturist (id=1503642308963205181)
+    🚀 LMStudio providers should now work as a first class provider, additional Kanban improvements, MCP server improvements, worktree support and patch diffs show up properly now in the latest release!
+
+[2026-05-12T06:23:59.246000+00:00] zohqav (id=1503643887976058880)
+    this is an awesome tool. I just updated my hermes and the hermes-webui (just now) in docker and when launching the container for hermes-webui I get this error: == Adding hermes-agent's pyproject.toml base dependencies to the virtual environment
+    Using Python 3.12.13 environment at: venv
+      × No solution found when resolving dependencies:
+      ╰─▶ Because there are no versions of mistralai and hermes-agent[all]==0.13.0
+          depends on mistralai>=2.3.0,<3, we can conclude that
+          hermes-agent[all]==0.13.0 cannot be used.
+          And because only hermes-agent[all]==0.13.0 is available and you
+          require hermes-agent[all], we can conclude that your requirements are
+          unsatisfiable.
+    !! ERROR: Failed to install hermes-agent's requirements
+    !! Exiting script (ID: 39)
+    
+    It's been reliably updating ever since I've been using this webui, first time I've hit an error. If this helps, GPT says "It looks like hermes-agent[all] includes hermes-agent[mistral], which requires mistralai>=2.3.0,<3. PyPI currently appears to have mistralai quarantined/hidden from the simple index, so uv resolves it as “no versions of mistralai”."
+
+[2026-05-12T06:35:18.029000+00:00] avidfuturist (id=1503646734998310912)
+    This isn’t a webUI issue. It’s an active issue with mistralai being quarantined due to the widespread issues. It’ll be resolved once mistralai packages can be installed again
+    
+    See https://github.com/nesquena/hermes-webui/issues/2115#issuecomment-4427577616 for details
+    
+    It’ll resolve on its own once they unquarantine mistral too but that link gives you a workaround
+    [reply to zohqav msg=1503643887976058880]
+

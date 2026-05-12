@@ -14901,3 +14901,85 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-12T02:33:18.413000+00:00] frank.martinez (id=1503585835315105812)
     Will Depue’s newegg dongle trick to keep agents running with laptop lid closed
 
+[2026-05-12T02:48:25.238000+00:00] libo1106 (id=1503589638814830692)
+    Hi <@387972437901312000> , I opened PR to Fix Yuanbao bot's inability to read quoted file and image messages in group chats.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/22742
+    [embed] Fix(yuanbao): quote file media resolve by libo1106 · Pull Request ... https://github.com/NousResearch/hermes-agent/pull/22742
+
+[2026-05-12T02:56:48.238000+00:00] daniel_62414 (id=1503591748549742602)
+    I've encountered this issue as well. when a user quotes a file or image message and @mentions the bot in a group chat, the bot can't access the media content because the quote metadata doesn't carry the resourceId.
+
+[2026-05-12T03:27:44.064000+00:00] frowtek (id=1503599532447895562)
+    Hey, I opened a small PR to harden HERMES_MAX_ITERATIONS parsing in the gateway runtime paths:
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/24143
+    
+    This fixes cases where an invalid or empty env var could crash startup logging, background task execution, or normal message handling with a ValueError. Now the gateway falls back safely to the default 90 and logs a warning instead.
+    [embed] fix(gateway): safely parse HERMES_MAX_ITERATIONS in runtime paths b... https://github.com/NousResearch/hermes-agent/pull/24143
+
+[2026-05-12T03:37:17.807000+00:00] quocanh261997 (id=1503601938900586508)
+    Hi <@387972437901312000> , I've pushed out a PR for the following issue:
+    Root cause: after `hermes update` gracefully drained a systemd-managed gateway, the restart path could wait behind systemd RestartSec or get stuck on one slow profile, delaying other profile gateways from picking up the new code.
+    
+    Fix: update now requests systemctl restart --no-block after drain and restarts multiple gateway profiles through a bounded worker pool (agent.update_gateway_restart_concurrency, default 4). One slow/stuck gateway no longer blocks the rest, while still avoiding a restart stampede on small machines. Tests and docs were added. 
+    
+    Much appreciate for the review. Thanks 🙏 
+    
+    https://github.com/NousResearch/hermes-agent/pull/22469
+    [embed] fix(gateway): update restart after systemd drain by quocanh261997 ... https://github.com/NousResearch/hermes-agent/pull/22469
+
+[2026-05-12T04:54:39.771000+00:00] zin_zin0439 (id=1503621408708628623)
+    https://www.youtube.com/watch?v=RDtdfVNl3aQ
+    [embed] Why Survival Simulation Doesn’t Create Better AI https://www.youtube.com/watch?v=RDtdfVNl3aQ
+
+[2026-05-12T04:59:39.969000+00:00] .elkim (id=1503622667830300813)
+    <@387972437901312000> how about having Hermes as a lawyer? 🙂 https://mikeoss.com/
+    [embed] Mike — open-source legal AI platform https://mikeoss.com/
+
+[2026-05-12T06:39:24.011000+00:00] godsboy7777 (id=1503647766721724486)
+    Hey maintainers 👋
+    
+    Could someone please take a look at this small follow-up PR when you get a chance?
+    
+    Follow-up PR:
+    <https://github.com/NousResearch/hermes-agent/pull/24210>
+    
+    It cleans up advisory `ty` warnings from our already-merged PR:
+    
+    Original merged PR:
+    <https://github.com/NousResearch/hermes-agent/pull/22461>
+    
+    Lint comment being addressed:
+    <https://github.com/NousResearch/hermes-agent/pull/22461#issuecomment-4412204236>
+    
+    What it addresses:
+    - Narrows the Google Chat `service_account` mock before accessing `Credentials`
+    - Adds a small type annotation for the IRC setup test defaults so `PlatformEntry(**defaults)` does not infer a broad union
+    - Uses `importlib.import_module("aiohttp")` for the optional Google Chat standalone sender dependency so `ty` does not report an unresolved import when the messaging extra is not installed
+    
+    PR-specific checks passed:
+    - `ruff + ty diff`
+    - `ruff enforcement`
+    
+    The remaining red checks appear inherited from `main`, not caused by this PR. I added a CI triage comment with the comparison here:
+    <https://github.com/NousResearch/hermes-agent/pull/24210#issuecomment-4427943220>
+    
+    This is not a functional change, just cleanup from our merged work. Thanks!
+
+[2026-05-12T07:04:16.674000+00:00] kevins0792 (id=1503654027404120178)
+    Hi <@387972437901312000>, adding a bit more context on the motivation behind this PR.
+    
+    Dynamic context compression is becoming an important direction for agent runtimes, especially terminal/coding agents. [TACO](<https://arxiv.org/abs/2604.19572>) focuses directly on observational context compression for terminal agents, and [ACON](<https://arxiv.org/abs/2510.00615>) looks at a broader version of the same problem for long-horizon agents: keeping observations and interaction history compact without losing useful task context.
+    
+    For Hermes, progressive compression would be hard to make pleasant if it only uses the current synchronous flow: lower thresholds could mean more frequent visible pauses unless candidate preparation can happen off the main path.
+    
+    This PR does not add a specific compression policy. It adds a host-managed capability for context engines to prepare compression candidates in the background, while the host owns snapshotting, digest validation, and the final transcript rewrite at a safe point.
+    That allows adaptive / progressive compression to be explored at the plugin layer first, without changing default compressor behavior or hardcoding one strategy into core. This seems especially relevant for local LLMs and long-running terminal sessions.
+    
+    Would be interested to hear whether this capability-level approach fits Hermes’ context management direction. Thanks.
+    [reply to kevins0792 msg=1503441714558406767]
+
+[2026-05-12T08:27:05.116000+00:00] ryan_rocket (id=1503674866560139405)
+    hi <@387972437901312000> and Hermes Agent maintainers et al. I was wondering if there was anything on the roadmap to package the agent in pypi?
+

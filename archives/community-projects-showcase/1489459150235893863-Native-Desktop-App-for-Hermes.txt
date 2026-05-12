@@ -803,3 +803,31 @@
 [2026-05-11T03:03:54.131000+00:00] larryzhang7497 (id=1503231147008594072)
     [attachment] message.txt https://cdn.discordapp.com/attachments/1489459150235893863/1503231146748674098/message.txt?ex=6a02989a&is=6a01471a&hm=76ebc82e8bb28b18ec2b9a3e7e20ff7c0ceb268711326f8b099d7366e3670dfa&
 
+[2026-05-12T05:35:37.417000+00:00] fathah. (id=1503631716823339108)
+    Hermes Desktop has crossed 100K+ downloads & 3K Stars within just days 🚀
+    
+    Huge thanks to all the contributors, supporters, and early adopters who made this possible. The response from the community has been incredible.
+    
+    Our next focus is making Hermes Desktop even more high-performance, stable, and effortless to use - while continuing to keep it open, developer-friendly, and fast.
+    
+    This is only the beginning.
+    [attachment] 8790533d-e9f1-4c41-b618-d7024b8b548e.jpg https://cdn.discordapp.com/attachments/1489459150235893863/1503631716542316544/8790533d-e9f1-4c41-b618-d7024b8b548e.jpg?ex=6a040da9&is=6a02bc29&hm=8a1fc8dc20e57bf8a7c194c1afd024d1a8de8300178b938a71de62ee1825ddd7&
+
+[2026-05-12T06:57:29.423000+00:00] larryzhang7497 (id=1503652319269748747)
+    <@703810415972450305>大佬你好，想问下windows支持程度如何了
+
+[2026-05-12T06:57:32.265000+00:00] Translator Bot#1043 (id=1503652331189833738)
+    <@703810415972450305> Hello boss, I would like to ask about the level of Windows support.
+    [reply to larryzhang7497 msg=1503652319269748747]
+
+[2026-05-12T07:10:34.202000+00:00] henrymascot_18739 (id=1503655610871447552)
+    Very nice!
+    Well done
+
+[2026-05-12T08:06:59.141000+00:00] larryzhang7497 (id=1503669808334503937)
+    <@1187177059789852702>大佬你好，想问下您是通过WSL安装hermes的吗，这个桌面端的应用适配WINDOWS吗
+
+[2026-05-12T08:07:02.187000+00:00] Translator Bot#1043 (id=1503669821110358066)
+    <@1187177059789852702> Hello boss, I would like to ask if you installed hermes through WSL. Is this desktop application suitable for WINDOWS?
+    [reply to larryzhang7497 msg=1503669808334503937]
+
