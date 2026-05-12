@@ -16,3 +16,13 @@
 [2026-05-12T03:59:21.061000+00:00] swagbabyostrich (id=1503607489029996564)
     is the "Canonical state lives on disk"  different than the native hermes sessions log file which contains session history ? or are they the same thing ?
 
+[2026-05-12T16:52:37.814000+00:00] guideboardlabs (id=1503802091116953751)
+    They’re related, but not really the same thing. Hermes session logs are basically conversational memory — they remember what was said, what tools were called, the flow of the interaction, etc. OverCR canonical state is more like the operational truth of the system itself.
+    
+    So if Hermes is “the conversation,” OverCR is “the actual system state.”
+    
+    The filesystem-first idea came from not wanting the orchestration layer to depend entirely on chat continuity. Sessions can drift, truncate, fork, or lose structure over time. OverCR is designed so that even if the conversation history gets messy, the system can still reconstruct itself correctly from the operational artifacts on disk — tasks, packets, workflow traces, audit logs, manifests, freezes, all of that.
+    
+    So the Hermes logs are definitely useful as reconstruction context, but they’re not considered authoritative state by themselves.
+    [reply to swagbabyostrich msg=1503607489029996564]
+

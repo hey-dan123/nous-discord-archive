@@ -1,0 +1,34 @@
+# Thread 'Share resources to reduce Hermes token overhead' in forum #community-projects-showcase
+# thread_id=1503828862386049196 forum_id=1316137596535177246
+# Started 2026-05-12T19:48:28.543836+00:00
+
+[2026-05-12T18:39:00.582000+00:00] cygnusignis (id=1503828862386049196)
+    I've noticed that Hermes GUZZLES tokens and subscription usage compared to doing the same thing in other tools. I looked into it and found some reasons why that deserve addressing (mainly the much heavier always-included prompt stack), but thankfully there are some tools to help mitigate them. I'll share some that I found here, and I'd like to open the floor for others to do so as well.
+    
+    ## Awesome Hermes Overhead Reduction? Awesome Hermes Efficiency? idk.
+
+[2026-05-12T18:39:26.018000+00:00] cygnusignis (id=1503828969072361634)
+    ### Hermes Agent Dashboard
+    https://github.com/Bichev/hermes-dashboard
+    "Analytics and cost-monitoring dashboard for Hermes Agent (Aria). Provides real-time visibility into API token consumption, cost breakdowns by model and platform, tool usage analytics, conversation depth analysis, error tracking, cron job monitoring, and system health — all behind HTTPS with secret-code authentication."
+    
+    Can't believe the Reddit post about it doesn't have any upvotes - "Built a token forensics dashboard for Hermes Agent - 73% of every API call is fixed overhead" https://www.reddit.com/r/LocalLLM/comments/1s927mu/built_a_token_forensics_dashboard_for_hermes/ .
+    [embed] GitHub - Bichev/hermes-dashboard: Analytics & cost-monitoring dashb... https://github.com/Bichev/hermes-dashboard
+    [embed] Built a token forensics dashboard for Hermes Agent - 73% of every A... https://www.reddit.com/r/LocalLLM/comments/1s927mu/built_a_token_forensics_dashboard_for_hermes/
+
+[2026-05-12T18:39:35.452000+00:00] cygnusignis (id=1503829008641556783)
+    ### Hermes Tool Slimmer
+    https://github.com/alias8818/hermes-tool-slimmer
+    "Hermes Tool Slimmer reduces repeated tool-schema overhead by selecting the smallest useful tool set for a turn. It builds an indexable corpus from Hermes tool schemas, ranks candidate tools with local BM25 plus explicit boosts, and fails open to the original schema list when anything goes wrong."
+    [embed] GitHub - alias8818/hermes-tool-slimmer: Reduce Hermes Agent tool-sc... https://github.com/alias8818/hermes-tool-slimmer
+
+[2026-05-12T18:39:46.349000+00:00] cygnusignis (id=1503829054346891584)
+    ### Other strategies
+    
+    (This is just stuff AI suggested, and I don't know offhand whether it's correct.)
+    
+    - Adjust the compression threshold from the default 0.5 to a more aggressive setting like 0.3 for high-volume messaging.
+    - Reduce `protect_last_n` to lessen long-term history accumulation.
+    - Use the `hermes tools` command to disable unused tools.
+    - Exclude irrelevant tools (apparently even stripping `browser_ tools` for messaging platforms can save over 1,200 tokens per request)
+

@@ -51,3 +51,10 @@
 [2026-05-12T03:38:19.915000+00:00] cappy7419 (id=1503602199400284260)
     Hi guys I am so excited to try the windows version of Hermes agent, I am an advanced openclaw user and really need windows native set up. Sounds like the build is almost at a stable release as well. We will see a huge increase in agent users once this is live. 🚀
 
+[2026-05-12T18:56:47.481000+00:00] tdamre (id=1503833337284919417)
+    It's native in Hermes now
+    [reply to cappy7419 msg=1503602199400284260]
+
+[2026-05-12T18:56:54.826000+00:00] tdamre (id=1503833368092082210)
+    It's says on readme
+

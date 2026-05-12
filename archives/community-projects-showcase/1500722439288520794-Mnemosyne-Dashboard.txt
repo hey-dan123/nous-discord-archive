@@ -103,3 +103,46 @@
     Pushed 0.9.1, added features and updated backend based on the latest 2.3 Mnemosyne release.
     [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
 
+[2026-05-12T16:18:03.557000+00:00] wysie_ (id=1503793391052259420)
+    Mnemosyne Dashboard v0.11.2 is out 🚀
+    
+    This release focuses on making the local memory dashboard feel properly live, useful, and polished when browsing Agent memory.
+    
+    New features:
+    •⁠  ⁠Live Memory Stream
+      - Replaces the old recent-memory surface with a proper live stream.
+      - Shows newest memories first.
+      - Supports infinite scroll, so older memories load naturally as you scroll.
+    
+    •⁠  ⁠Realtime memory event badges
+      - Memory cards now show live event labels:
+        - new
+        - updated
+        - recalled
+        - invalidated
+        - consolidated
+      - This makes it much easier to see what the memory system is doing as it happens.
+    
+    •⁠  ⁠Cross-process Mnemosyne event detection
+      - Mnemosyne’s native MemoryStream is in-process, so the dashboard would not automatically see memory writes from a separate agent/gateway process.
+      - The dashboard now polls the local SQLite DB and tracks memory signatures, so it can detect new and changed memories across processes.
+      - Still local-first, read-only, and private.
+    
+    •⁠  ⁠Context Bank Pattern Insights
+      - Added a new Pattern insights panel in Context Bank.
+      - Surfaces recurring:
+        - topics
+        - entities
+        - sources
+        - clickable source memory signals
+      - Useful for understanding what the agent is repeatedly learning or remembering.
+    
+    UX polish:
+    •⁠  ⁠Live event badges are now aligned properly with the memory card content.
+    •⁠  ⁠Desktop sidebar is independently scrollable, so the Theme switch remains reachable on shorter screens.
+    •⁠  ⁠Sidebar search spacing improved so it no longer visually touches the Overview nav card.
+    •⁠  ⁠Dashboard version/header now reflects the shipped version correctly.
+    
+    https://github.com/wysie/mnemosyne-dashboard
+    [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
+

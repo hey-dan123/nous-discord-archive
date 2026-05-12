@@ -455,3 +455,19 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1503153158870794352/image.png?ex=6a024ff8&is=6a00fe78&hm=f1c7b36b2f0502a70e39610516cd54fca9979a903de40fa1b96cde0a9414cac9&
     [embed] fix(acp): render structured JSON tool output by HenkDz · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/23425
 
+[2026-05-12T17:31:06.273000+00:00] floory (id=1503811773495513168)
+    bullet points 🙄
+
+[2026-05-12T17:49:52.610000+00:00] nour_h (id=1503816497695424595)
+    have you got a better idea?
+    [reply to floory msg=1503811773495513168]
+
+[2026-05-12T17:51:57.450000+00:00] floory (id=1503817021312339998)
+    -
+
+[2026-05-12T17:52:13.147000+00:00] floory (id=1503817087150457002)
+    >
+
+[2026-05-12T17:52:30.256000+00:00] floory (id=1503817158910804129)
+    maybe even | but that's pushing it
+

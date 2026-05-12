@@ -831,3 +831,15 @@
     <@1187177059789852702> Hello boss, I would like to ask if you installed hermes through WSL. Is this desktop application suitable for WINDOWS?
     [reply to larryzhang7497 msg=1503669808334503937]
 
+[2026-05-12T15:01:49.121000+00:00] jcrabapple (id=1503774204477050970)
+    DUDE this is NIIIIIIICE
+
+[2026-05-12T18:46:16.330000+00:00] chrisb5340 (id=1503830690045624451)
+    Has anyone gotten this to work on desktop? doesn't even work as ssh to mac mini from desktop :/
+
+[2026-05-12T18:50:04.957000+00:00] grah4na (id=1503831648976765164)
+    <@703810415972450305> Is it available for ARM64 systems?
+
+[2026-05-12T18:52:50.853000+00:00] jcrabapple (id=1503832344795287705)
+    I can't get chat to work in it. Keeps saying invalid API key.
+

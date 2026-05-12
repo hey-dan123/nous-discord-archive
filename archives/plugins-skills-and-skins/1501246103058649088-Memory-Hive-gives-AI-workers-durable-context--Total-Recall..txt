@@ -179,3 +179,9 @@
 [2026-05-11T18:01:53.718000+00:00] tourettesgaming (id=1503457134375862332)
     Patched!
 
+[2026-05-12T14:45:46.221000+00:00] tourettesgaming (id=1503770165781729460)
+    Huge improvements with the new memory-recall feature.
+    
+    Threads crater even while usage expands and skill usage expands.
+    [attachment] Screenshot_2026-05-12_at_10.44.57_AM.png https://cdn.discordapp.com/attachments/1501246103058649088/1503770165387460738/Screenshot_2026-05-12_at_10.44.57_AM.png?ex=6a048e9a&is=6a033d1a&hm=d03fbf0117ef6b2a89e1c199c6909024dc0b157bd7d433091c885e270a649f76&
+

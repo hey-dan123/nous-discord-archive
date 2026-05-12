@@ -1436,3 +1436,22 @@
     LLM wiki can store knowledge or information in a durable way.   Keep structure of the book in there, save tha actual pages, your notes and planning all the content level and ideation information.
     [reply to confusedxx msg=1503638351142584340]
 
+[2026-05-12T19:36:32.663000+00:00] _voscko_ (id=1503843341463457953)
+    I watched the whole video. My take is that the LLM Wiki idea and LCM solve related but different parts of the problem.
+    
+    The video is mostly about turning source material into a persistent knowledge base: raw files go in, the agent builds interlinked markdown pages, updates concepts, connects ideas, flags contradictions, and then future questions can work from that already organized wiki instead of doing fresh RAG over raw files every time.
+    
+    LCM is more about the conversation itself. It helps when a long back-and-forth starts hitting context limits because the whole chat history would normally keep getting sent around. Instead of treating the conversation as one giant transcript forever, LCM stores the history, compresses older parts into summaries/DAG context, and reassembles useful context when needed.
+    
+    So yes, LCM does fill that niche for long writing conversations better than a plain chat history does. If you are writing a book and you keep discussing chapters, characters, themes, structure, edits, and decisions with the same agent, LCM can help preserve continuity without constantly dragging the entire conversation through the model window.
+    
+    But I would not treat it as a replacement for a book bible or source of truth. For book writing, I would probably use both:
+    
+    1. A wiki or markdown project for the durable stuff: outline, characters, worldbuilding, timeline, style rules, chapter notes, research.
+    2. LCM for the conversational memory: why we made certain choices, previous critique threads, recurring preferences, unresolved ideas, and long editing discussions.
+    
+    The wiki is the organized library. LCM is the long conversation memory around the work.
+    
+    So if the pain is "my writing chat gets too long and keeps hitting limits," then yes, LCM is aimed much closer at that problem. If the pain is "I need a structured knowledge base for my book/project," then the LLM Wiki pattern is probably the better fit. Best setup is using them together.
+    [reply to confusedxx msg=1503638351142584340]
+

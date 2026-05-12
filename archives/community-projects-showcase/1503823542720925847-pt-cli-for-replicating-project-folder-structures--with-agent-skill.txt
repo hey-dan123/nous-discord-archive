@@ -1,0 +1,19 @@
+# Thread 'pt-cli for replicating project folder structures (with agent skill)' in forum #community-projects-showcase
+# thread_id=1503823542720925847 forum_id=1316137596535177246
+# Started 2026-05-12T19:48:28.930664+00:00
+
+[2026-05-12T18:17:52.275000+00:00] garyritchie (id=1503823542720925847)
+    I’ve been working on a utility called pt-cli, a tool built to streamline the way I kick off new work/experiments by recording directory structures as reusable templates. I developed this with Hermes and Antigravity, and it felt appropriate to share the results back here.
+    
+    The tool is designed for functional utility -- specifically for those who frequently jump between different project types and want to maintain structural consistency. It also includes a dedicated Agent Skill so your agent can directly manage project initialization and directory recording within your workflow.
+    
+    At a glance:
+    - Record: Capture existing directory structures as templates.
+    - Initialize: Rapidly scaffold new projects from your recorded library.
+    - Agent Integration: A pre-configured Agent Skill for seamless CLI-agent interaction.
+    
+    Repo: https://github.com/garyritchie/pt-cli
+    
+    Started on a GUI, too but I'll force that on my designer-friends 😄
+    [embed] GitHub - garyritchie/pt-cli: A CLI tool to record directory structu... https://github.com/garyritchie/pt-cli
+

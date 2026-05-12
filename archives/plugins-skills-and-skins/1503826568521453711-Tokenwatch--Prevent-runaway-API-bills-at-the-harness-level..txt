@@ -1,0 +1,16 @@
+# Thread 'Tokenwatch: Prevent runaway API bills at the harness level.' in forum #plugins-skills-and-skins
+# thread_id=1503826568521453711 forum_id=1485392832154832906
+# Started 2026-05-12T19:51:06.031024+00:00
+
+[2026-05-12T18:29:53.682000+00:00] bowtiedbernard (id=1503826568521453711)
+    I may or may not have woken up to a surprise API bill as I was on a hermes version with kanban but before failure tracking was native, so my agent ran up a huge amount of cached and input tokens. 
+    
+    This plugin is designed to let you set custom limits and display warnings in your home channel or custom channel. 
+    
+    It's a little brittle for my liking as it relies on the same path as /stop command, but hopefully that will get fixed with a paired PR and it'll instead use pre_api_request hook as the entry point. Install, set a limit, your warning message numbers, and then it'll either just warn you, or interrupt sessions until you reset limits or unfreeze. 
+    
+    Please let me know what you think! I'll update this if my PR gets approved.
+    
+    https://github.com/0xBernard/tokenwatch
+    [embed] GitHub - 0xBernard/tokenwatch: A token burn monitoring plugin for H... https://github.com/0xBernard/tokenwatch
+

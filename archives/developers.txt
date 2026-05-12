@@ -15036,3 +15036,55 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-12T14:16:50.498000+00:00] minddragon (id=1503762885631938610)
     [attachment] CleanShot_2026-05-12_at_09.16.442x.png https://cdn.discordapp.com/attachments/1491258766648283238/1503762885417898105/CleanShot_2026-05-12_at_09.16.442x.png?ex=6a0487d2&is=6a033652&hm=b0599324bd4e0414f25fce30f8ed59748c0556b6f29d1e0a047c18fe2d80653a&
 
+[2026-05-12T15:13:48.721000+00:00] tiny_th_dev (id=1503777222698340462)
+    🙏  thank you.
+    [reply to minddragon msg=1503737936049475757]
+
+[2026-05-12T15:48:31.253000+00:00] minddragon (id=1503785957470769285)
+    note to self: If doing an experiment on hermesdev repo - remove it prior to doing a new work and PR. LOL.  This is the most work I've ever done on a codebase
+
+[2026-05-12T16:43:39.980000+00:00] teknium (id=1503799835277398119)
+    No it doesnt work because we require node packages too
+    [reply to ryan_rocket msg=1503674866560139405]
+
+[2026-05-12T17:15:55.823000+00:00] roy097291 (id=1503807954791567390)
+    https://github.com/NousResearch/hermes-agent/pull/23986   Opened #23986 — small Feishu PR. Any eyes appreciated 🙏
+    [embed] feat(feishu): per-chat channel_prompts and AI @-mention syntax by R... https://github.com/NousResearch/hermes-agent/pull/23986
+
+[2026-05-12T17:16:38.446000+00:00] ahmetarif0x (id=1503808133565386924)
+    Boss, whenever you’re available, you can review these fixes.
+    [reply to ahmetarif0x msg=1503466011406368798]
+
+[2026-05-12T17:23:19.810000+00:00] fireboter (id=1503809817007886497)
+    Hey I just joind the community. HERMES HARNESS IS AMAZING, i was wondering after creating some plugins how is it there is no Marketplace for Hermes Plugins yet? I mean I'm pretty sure everyone made hisself an Inbox, right? How is there no place people can publish their plugins. I think this would speed up a lot the Hermes startup configuration time and even allow better Plugins and overall Features
+
+[2026-05-12T17:30:41.126000+00:00] yerts (id=1503811668021481605)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/24467 re: your LSP PR you sent me
+    [embed] consolidation: fix 7 defects in PR #24168 LSP feature (orphan procs... https://github.com/NousResearch/hermes-agent/pull/24467
+
+[2026-05-12T18:06:16.081000+00:00] bowtiedbernard (id=1503820622671904928)
+    https://github.com/NousResearch/hermes-agent/pull/24481
+    [embed] Allow plugins to block pre-api requests by 0xBernard · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/24481
+
+[2026-05-12T18:08:02.634000+00:00] bowtiedbernard (id=1503821069587316827)
+    PR to allow for plugins to be used to set budge or stop runaway model calls during failed loops (I may or may not have a nasty lil api bill that caused this). /stop path for the plugin kind of works here, but is less reliable and struggles with kanban board tasks
+
+[2026-05-12T18:09:32.694000+00:00] bowtiedbernard (id=1503821447326466138)
+    I was on a build from before kanban tasks had the failure tracker and it kinda went crazy with the cached/input tokens and I didn't find out till the next day
+
+[2026-05-12T18:19:08.103000+00:00] jayyao10 (id=1503823860766871572)
+    Hi <@387972437901312000>, this PR gives Hermes a structured long-term memory backend with explicit recall, summary, quota, signup, and feedback tools. Completed turns are captured in the background, including the user request, final assistant response, and Hermes-processed tool trace so Memori can preserve what the agent did, not just what it said 🚀 
+    
+    https://github.com/NousResearch/hermes-agent/pull/24476
+    [embed] Memori memory provider by devwdave · Pull Request #24476 · NousRe... https://github.com/NousResearch/hermes-agent/pull/24476
+
+[2026-05-12T18:53:12.314000+00:00] magnus919 (id=1503832434808983575)
+    [attachment] IMG_2765.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1503832434913837187/IMG_2765.jpg?ex=6a04c898&is=6a037718&hm=6bf8f1fe31ea996ce7a827f2e63ecb25d45ed738965e94cd1d246a4b87b19890&
+
+[2026-05-12T19:30:17.393000+00:00] muskibro (id=1503841767466991717)
+    Opened a PR for the kanban dispatcher bug <@387972437901312000> 
+    Problem: shutil.which("hermes") was returning None in certain environments — even though the binary was installed at /usr/local/bin/hermes and PATH was correctly set. This caused the kanban dispatcher to deadlock with 0 workers spawned.
+    Fix: Added a hardcoded fallback path in _resolve_hermes_bin(). If shutil.which() fails, it now checks whether /usr/local/bin/hermes exists and is executable before falling back to sys.executable.   
+    PR:https://github.com/NousResearch/hermes-agent/pull/24517
+    [embed] fix: add hardcoded fallback path in _resolve_hermes_bin for symlink... https://github.com/NousResearch/hermes-agent/pull/24517
+
