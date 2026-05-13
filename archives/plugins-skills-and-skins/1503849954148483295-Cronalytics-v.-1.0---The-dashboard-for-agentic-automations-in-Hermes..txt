@@ -1,0 +1,54 @@
+# Thread 'Cronalytics v. 1.0 - The dashboard for agentic automations in Hermes.' in forum #plugins-skills-and-skins
+# thread_id=1503849954148483295 forum_id=1485392832154832906
+# Started 2026-05-13T02:56:08.218593+00:00
+
+[2026-05-12T20:02:49.250000+00:00] _8bit64k_ (id=1503849954148483295)
+    🚀 **Cronalytics v1.0 is live**
+    
+    A dashboard plugin for Hermes Agent that turns your cron job cost from a mystery into a number you can act on.
+    
+    ---
+    
+    **What it does**
+    
+    Cronalytics hooks into `on_session_end`, captures every cron-originated run, and writes cost, tokens, model, and duration into a local fact database. A reconciliation scanner backfills historical data so nothing is lost.
+    
+    All of it surfaces in a dedicated `/cronalytics` tab inside the Hermes dashboard.
+    
+    ---
+    
+    **Dashboard surface**
+    
+    • **Summary Board** — total runs, cost, tokens, and pace multiplier with vs-prior-period deltas
+    • **Leader Board** — spotlight cards for top runs, top cost, top tokens, and highest pace (your early-warning signal)
+    • **Per-Model Breakdown** — proportional cost bars so you can spot model bloat at a glance
+    • **Jobs Breakdown** — 8-column sortable table with expandable detail rows showing token splits, schedule metadata, success/failure breakdown, and a "See Runs" modal
+    • **Outcome toggle** — filter All / Success / Failure with conditional card colors
+    • **Mode toggle** — filter All / Agent / No agent (script jobs are finally visible)
+    • **Sync Now** — manual backfill with completion toast
+    
+    
+    ---
+    
+    **Install**
+    
+    Use the Plugins tab → "Install from GitHub" → paste the repo URL or 8bit64k/cronalytics
+    
+    Full docs in the repo: README, DESIGN, FEATURES, USAGE, INSTALL, UNINSTALL.
+    
+    ---
+    
+    **Links**
+    
+    Repo:     github.com/yourname/cronalytics
+    Docs:     github.com/yourname/cronalytics#readme
+    YT Demo: https://youtu.be/nbeViSt9hCk
+    
+    Tested on macOS + iPad, 30+ Omarchy themes, large-font accessibility.
+    
+    83 pytest tests. ruff + mypy clean.
+    
+    Give it a run. If something breaks, I want to know.
+    [attachment] cronalytics-tour.gif https://cdn.discordapp.com/attachments/1503849954148483295/1503849954521907312/cronalytics-tour.gif?ex=6a04d8e9&is=6a038769&hm=fb1261738e8b6a308e2541d10a07e0f48f958b41786c34b6e5159ed54535571f&
+    [embed] Cronalytics v1.0- The dashboard for agentic automations in Hermes. https://www.youtube.com/watch?v=nbeViSt9hCk
+

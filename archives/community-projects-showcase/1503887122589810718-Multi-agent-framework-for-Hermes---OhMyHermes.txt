@@ -1,0 +1,13 @@
+# Thread 'Multi-agent framework for Hermes - OhMyHermes' in forum #community-projects-showcase
+# thread_id=1503887122589810718 forum_id=1316137596535177246
+# Started 2026-05-13T02:53:07.026606+00:00
+
+[2026-05-12T22:30:31.752000+00:00] Translator Bot#1043 (id=1503887126175944715)
+    And
+
+[2026-05-12T22:30:47.362000+00:00] eloklam (id=1503887191649026088)
+    Oh My Hermes Agent is my port of the OhMyOpenCode-Slim workflow to Hermes Agent, adapted around Hermes’ Kanban system. It adds profile-based orchestration so Hermes can break work into roles/tasks, track progress, and manage longer-running workflows more cleanly.
+    
+      https://github.com/eloklam/oh-my-hermes-agent
+    [embed] GitHub - eloklam/oh-my-hermes-agent: OMH repo - private review https://github.com/eloklam/oh-my-hermes-agent
+

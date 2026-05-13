@@ -843,3 +843,6 @@
 [2026-05-12T18:52:50.853000+00:00] jcrabapple (id=1503832344795287705)
     I can't get chat to work in it. Keeps saying invalid API key.
 
+[2026-05-13T02:20:38.399000+00:00] flocka (id=1503945035450941510)
+    Is there support for SSH Tunnel from Windows into hermes in a docker container on a separate ubuntu server in my network?
+

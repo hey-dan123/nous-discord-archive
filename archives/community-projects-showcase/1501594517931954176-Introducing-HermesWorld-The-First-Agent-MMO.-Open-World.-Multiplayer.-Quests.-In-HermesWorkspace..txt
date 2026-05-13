@@ -105,3 +105,19 @@
 [2026-05-12T14:39:42.961000+00:00] colmeio_66868 (id=1503768642158989463)
     isnt godot not enought + more flexble?
 
+[2026-05-12T20:04:33.830000+00:00] outsourc_e (id=1503850392788668577)
+    I can explore send me examples
+    [reply to colmeio_66868 msg=1503768642158989463]
+
+[2026-05-12T20:09:14.517000+00:00] colmeio_66868 (id=1503851570075271219)
+    never heard of godot?
+
+[2026-05-12T20:09:36.251000+00:00] colmeio_66868 (id=1503851661234405508)
+    its like unity/unreal but its opensource (open to create upon)
+
+[2026-05-12T22:28:42.930000+00:00] outsourc_e (id=1503886669743652955)
+    yes i have
+
+[2026-05-12T22:28:50.958000+00:00] outsourc_e (id=1503886703415398420)
+    but as far as what people are using i havent seen much
+

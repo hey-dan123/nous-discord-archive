@@ -15088,3 +15088,281 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     PR:https://github.com/NousResearch/hermes-agent/pull/24517
     [embed] fix: add hardcoded fallback path in _resolve_hermes_bin for symlink... https://github.com/NousResearch/hermes-agent/pull/24517
 
+[2026-05-12T19:57:22.553000+00:00] kkurottal6611 (id=1503848583881818255)
+    #24516 — fix(tts): report configured TTS backends accurately in setup and status surfaces
+    https://github.com/NousResearch/hermes-agent/pull/24516
+    
+    This fixes inaccurate TTS backend reporting in setup/status output. Some valid configs like tts.provider: xai could be shown as unavailable or mislabeled. The PR aligns detection with the TTS providers Hermes already supports and adds regression tests for xAI and local-engine-backed providers.
+    
+    #23502 — feat(curator): add report subcommand for latest run artifact visibility
+    https://github.com/NousResearch/hermes-agent/pull/23502
+    
+    This adds a read-only hermes curator report command so users can print the latest curator REPORT.md directly from the CLI, plus --path for just resolving the report path. It also adds fallback logic for stale state paths, updates docs, and includes targeted curator regression tests.
+    
+    Both are intentionally scoped and backward compatible. Would appreciate any feedback when you get a chance 🙏
+    [embed] fix(tts): report configured TTS backends accurately in setup and st... https://github.com/NousResearch/hermes-agent/pull/24516
+    [embed] feat(curator): add report subcommand for latest run artifact visibi... https://github.com/NousResearch/hermes-agent/pull/23502
+
+[2026-05-12T20:38:54.941000+00:00] wesleysimplicio (id=1503859037715038260)
+    My tokens are back, I'm back, I'll donate some to contribute to Hermes Agent, opening 10 sessions of Claude and 50 of Codex, let's go to work
+    [attachment] IMG_0902.png https://cdn.discordapp.com/attachments/1491258766648283238/1503859037870096586/IMG_0902.png?ex=6a04e15e&is=6a038fde&hm=3710932da63c57e280dd9a8a94816c53dc5f9e50b93d6434629a04b94894d7e3&
+
+[2026-05-12T21:05:42.367000+00:00] _0xvox (id=1503865779748081694)
+    Hi yall, excited and much appreciated to join the dev team!
+
+[2026-05-12T21:06:31.228000+00:00] _0xvox (id=1503865984686231563)
+    working on new kanban features as of now, more PRs/Issues otw
+
+[2026-05-12T21:13:41.039000+00:00] sprmn24 (id=1503867787443966185)
+    <@387972437901312000> <:tekcheer:1453863338537779242>  2 new PRs from me on v0.13.0 bugs:
+    
+    #24021 — fix(kanban): max_runtime_seconds=0 was silently coerced to None in create_task() due to a falsy check — adjacent max_retries already used the correct is not None pattern
+    
+    https://github.com/NousResearch/hermes-agent/pull/24021
+    
+    #24024 — fix(gateway): check_fn() in platform_registry.create_adapter() had no exception guard — if a plugin’s check_fn() raises (e.g. ImportError), it crashed instead of gracefully returning None. validate_config() and adapter_factory() at the same site were already wrapped.
+    
+    https://github.com/NousResearch/hermes-agent/pull/24024
+    [embed] fix(kanban): use 'is not None' check for max_runtime_seconds in cre... https://github.com/NousResearch/hermes-agent/pull/24021
+    [embed] fix(gateway): guard check_fn() call in platform_registry with try/e... https://github.com/NousResearch/hermes-agent/pull/24024
+
+[2026-05-12T22:16:31.995000+00:00] srinivas__vaddi. (id=1503883603980058725)
+    <@387972437901312000> can someone please take a look at this PR for improving the quality of whatsapp gateway? https://github.com/NousResearch/hermes-agent/pull/24553
+    [embed] feat(whatsapp): expand bridge features and approvals by vaddisriniv... https://github.com/NousResearch/hermes-agent/pull/24553
+
+[2026-05-12T22:44:45.467000+00:00] wesleysimplicio (id=1503890706916184155)
+    <@222797987829645313> <@387972437901312000> <@575461682151686145> Hey Guys, new PR
+    https://github.com/NousResearch/hermes-agent/pull/24550
+    [attachment] Captura_de_Tela_2026-05-12_as_19.44.16.png https://cdn.discordapp.com/attachments/1491258766648283238/1503890707210047498/Captura_de_Tela_2026-05-12_as_19.44.16.png?ex=6a04fedd&is=6a03ad5d&hm=71b552488791ef26e18e6e737d0b6d05ece21d3a8a72229b34d7adf3980bd802&
+    [embed] fix(prompt_builder): make HERMES_AGENT_HELP_GUIDANCE respect env va... https://github.com/NousResearch/hermes-agent/pull/24550
+
+[2026-05-12T22:46:31.391000+00:00] wesleysimplicio (id=1503891151193899150)
+    <@575461682151686145> <@387972437901312000> New PR:
+    https://github.com/NousResearch/hermes-agent/pull/24569
+    [attachment] Captura_de_Tela_2026-05-12_as_19.45.52.png https://cdn.discordapp.com/attachments/1491258766648283238/1503891151848214576/Captura_de_Tela_2026-05-12_as_19.45.52.png?ex=6a04ff47&is=6a03adc7&hm=fb8dc505b866d0f724dfaa275f76eb587b32ad995b73c667db6ad0f48e08fff2&
+    [embed] fix(tirith): suppress .app lookalike_tld false positives in warn ve... https://github.com/NousResearch/hermes-agent/pull/24569
+
+[2026-05-12T22:47:36.057000+00:00] wesleysimplicio (id=1503891422422630630)
+    I made 10 Pull Requests today, my Macbook M1 couldn't handle it, it keeps overheating, I'll have to hire a VPS to help you guys.
+
+[2026-05-12T22:48:57.152000+00:00] wesleysimplicio (id=1503891762559848459)
+    <@387972437901312000>  <@428014785045725184> <@575461682151686145>  New PR: 
+    https://github.com/NousResearch/hermes-agent/pull/24568
+    [attachment] Captura_de_Tela_2026-05-12_as_19.48.44.png https://cdn.discordapp.com/attachments/1491258766648283238/1503891762991730791/Captura_de_Tela_2026-05-12_as_19.48.44.png?ex=6a04ffd9&is=6a03ae59&hm=8eacd8adca0c869b9672a2607c530ffe8f9be39c50886c6bb68f2634e36c8dc4&
+    [embed] feat: add read-only Google Messages checker by wesleysimplicio · P... https://github.com/NousResearch/hermes-agent/pull/24568
+
+[2026-05-12T22:48:58.822000+00:00] Translator Bot#1043 (id=1503891769564074014)
+    <@387972437901312000> <@428014785045725184> <@575461682151686145> New on: 
+    https://github.com/nowresearch/hermes-agent/pull/24568
+    [reply to wesleysimplicio msg=1503891762559848459]
+
+[2026-05-12T22:51:44.342000+00:00] .s0uthpaw (id=1503892463805272094)
+    Very cool 🙏 please do not tag us on every one. The devs will absolutely see this. Lots of work went into this, I can tell.
+    [reply to wesleysimplicio msg=1503891762559848459]
+
+[2026-05-12T22:52:22.539000+00:00] wesleysimplicio (id=1503892624015097880)
+    Sorry man
+    [reply to .s0uthpaw msg=1503892463805272094]
+
+[2026-05-12T22:52:49.706000+00:00] .s0uthpaw (id=1503892737961754705)
+    You're good brother 🤘🤖
+
+[2026-05-12T22:53:00.617000+00:00] wesleysimplicio (id=1503892783726067825)
+    Let them know I sent my resume.
+
+[2026-05-12T22:53:44.591000+00:00] teknium (id=1503892968166264858)
+    Developers, i would like to get in video generation and image editing/img2img capabilities into Hermes agent to complete the modality set we support by default. Shill me any prs you make for it for me to review if you’re looking for something that we would like to get in there 🤗
+
+[2026-05-12T22:55:18.963000+00:00] wesleysimplicio (id=1503893363991117985)
+    Does Skills serve integrated with the cheapest internet provider?
+    https://github.com/wesleysimplicio/PiAPI-Skills
+    [embed] GitHub - wesleysimplicio/PiAPI-Skills: Skill bundle for Claude, Cod... https://github.com/wesleysimplicio/PiAPI-Skills
+    [reply to teknium msg=1503892968166264858]
+
+[2026-05-12T23:08:02.567000+00:00] wesleysimplicio (id=1503896566778433636)
+    Here man: https://x.com/milbon_/status/2054050755171307789?s=46
+    [embed]  https://twitter.com/milbon_/status/2054050755171307789?s=46
+    [reply to teknium msg=1503892968166264858]
+
+[2026-05-12T23:28:09.263000+00:00] ahmetarif0x (id=1503901628028289086)
+    #24600 Windows Lock Bug
+    
+    Hermes' scoped-lock system reads /proc/<pid>/cmdline to identify the process. On Windows this file doesn't exist, so the read fails and the lock gets marked as "stale" and deleted, even though the process is still running.
+    
+    https://github.com/NousResearch/hermes-agent/pull/24600
+    [embed] fix(gateway): consult lock record argv when cmdline is unreadable i... https://github.com/NousResearch/hermes-agent/pull/24600
+
+[2026-05-12T23:34:11.231000+00:00] 123mikeyd (id=1503903146232250378)
+    You tagged too many people. Calm down Wesley.
+    [reply to wesleysimplicio msg=1503892624015097880]
+
+[2026-05-12T23:36:43.314000+00:00] teknium (id=1503903784114458625)
+    Merged, thank you
+    [reply to ahmetarif0x msg=1503901628028289086]
+
+[2026-05-12T23:38:00.368000+00:00] ahmetarif0x (id=1503904107302359154)
+    This is my first merge 
+    I’m the one who should be thanking you, boss. I’m happy to be a part of this family, and I’ll always do my best for the growth of this project. I Love Hermes 💙
+    [reply to teknium msg=1503903784114458625]
+
+[2026-05-12T23:38:13.322000+00:00] teknium (id=1503904161635369030)
+    Welcome to the hermes crew 😉
+    [reply to ahmetarif0x msg=1503904107302359154]
+
+[2026-05-12T23:53:22.455000+00:00] _.exo._ (id=1503907974815420446)
+    custom providers needed some love:
+    
+    custom provider auth lookup from auth.json
+    https://github.com/NousResearch/hermes-agent/pull/22819
+    
+    fallback chain wasn't respecting custom provider's api_mode in the config and falling back to hard-coded defaults based on known providers,
+    https://github.com/NousResearch/hermes-agent/pull/24631
+    [embed] Fix/custom provider pool lookup by McClean · Pull Request #22819 ... https://github.com/NousResearch/hermes-agent/pull/22819
+    [embed] fix(fallback): respect explicit api_mode on fallback_providers entr... https://github.com/NousResearch/hermes-agent/pull/24631
+
+[2026-05-12T23:54:46.983000+00:00] _.exo._ (id=1503908329351807006)
+    also tavily web_crawl was broken
+    
+    https://github.com/NousResearch/hermes-agent/pull/22915
+    [embed] fix(web): add Bearer auth header for Tavily /crawl endpoint by McCl... https://github.com/NousResearch/hermes-agent/pull/22915
+
+[2026-05-13T00:04:42.068000+00:00] ahmetarif0x (id=1503910825319207082)
+    You can also check these. I don’t want to open PRs for ordinary things 
+    I’m focusing on high-priority P1 bugs so I can make a real contribution.
+    https://discord.com/channels/1053877538025386074/1491258766648283238/1503466011406368798
+    [reply to teknium msg=1503903784114458625]
+
+[2026-05-13T00:06:55.465000+00:00] teknium (id=1503911384826773576)
+    do you mean custom openai endpoints? What way is there to serve non-chatcompletions? what way is there to serve oauth <a:aPES_Think:493353113332219924>
+    [reply to _.exo._ msg=1503907974815420446]
+
+[2026-05-13T00:14:08.576000+00:00] tdamre (id=1503913201425977436)
+    Teknium
+
+[2026-05-13T00:14:12.963000+00:00] tdamre (id=1503913219826384926)
+    Knock knock
+
+[2026-05-13T00:14:32.833000+00:00] tdamre (id=1503913303167209703)
+    Backend-api-f response is waiting at your door
+
+[2026-05-13T00:14:40.511000+00:00] tdamre (id=1503913335370940507)
+    <:catlick:1151260427645366375>
+
+[2026-05-13T00:15:33.522000+00:00] tdamre (id=1503913557715058849)
+    When backend-f completions.... 👀👀 Technically it's not infringing any ChatGPT ToS because the end user needs a compatible subscription....
+    [reply to teknium msg=1503911384826773576]
+
+[2026-05-13T00:16:32.882000+00:00] _.exo._ (id=1503913806688948364)
+    for the shape:
+    Not OpenAI-only. custom_providers already accepts api_mode: chat_completions, anthropic_messages, codex and bedrock shapes. The schema validates all four, and the primary path at hermes_cli/main.py reads whichever the user declares. The cascade in _try_activate_fallback catches some of these when the URL or provider name happens to match a pattern. What it misses is the user who already declared api_mode explicitly on a URL the heuristic doesn't recognise. That declaration is honoured on the primary path and dropped on the fallback path. 
+    
+    and for the auth:
+    
+    the credential_pool in auth.json already stores auth_type: oauth entries. That's how the nous built-in works with device_code, how anthropic works with dashboard PKCE, and how openai-codex works with dashboard device_code. Each carries access_token, refresh_token, expires_at, and status tracking. Before this PR, auxiliary calls on a custom:<name> provider only checked config.yaml.api_key and key_env. If both were empty it fell through to "no-key-required" even when a valid pool entry existed for that provider. The fix is a pool lookup that matches what built-in providers already do. Any OAuth-sourced custom provider in the pool becomes usable for auxiliary calls, same as API-key ones.
+    [reply to teknium msg=1503911384826773576]
+
+[2026-05-13T00:17:34.773000+00:00] _.exo._ (id=1503914066278613065)
+    i have one big auth.json that all my profiles point to so i noticed auxullary calls were failing with 401 using the same providers that were working for primary models
+
+[2026-05-13T00:19:33.115000+00:00] sylwester0_42058 (id=1503914562641072128)
+    pr #24633 https://github.com/NousResearch/hermes-agent/pull/24633 
+    
+    It fixes a false duplicate suppression issue in the idempotency cache. Previously, different webhook routes could accidentally dedupe each other if they reused the same X-Request-ID, and headerless requests could collide because the fallback ID used a millisecond timestamp.
+    
+    This PR scopes explicit dedupe keys by route and disables dedupe for generated fallback IDs, while preserving duplicate detection for real retries on the same route.
+    [embed] fix(webhook): scope idempotency keys by route and disable fallback ... https://github.com/NousResearch/hermes-agent/pull/24633
+
+[2026-05-13T00:23:01.778000+00:00] wesleysimplicio (id=1503915437837258752)
+    <@387972437901312000> I opened 27 PRs
+
+[2026-05-13T00:25:41.722000+00:00] wesleysimplicio (id=1503916108690882570)
+    I opened 27 PRs Now, P3 and P2, so aren't they important?
+    [reply to ahmetarif0x msg=1503910825319207082]
+
+[2026-05-13T00:32:11.864000+00:00] sylwester0_42058 (id=1503917745065169086)
+    Fair point, P2s and P3s are just as vital for the long run. It's just tough to review that many changes in one go. Let’s just be patient while the team catches up with the queue.
+
+[2026-05-13T00:36:09.139000+00:00] junass1 (id=1503918740268388406)
+    dw wesley, your work won't go to waste. I’ve had PRs sitting for weeks that eventually got merged 👍 ❤️
+    [reply to wesleysimplicio msg=1503915437837258752]
+
+[2026-05-13T00:39:03.233000+00:00] wesleysimplicio (id=1503919470471680041)
+    Perfect, this already cheers me up a little, I'm hiring a VPS to increase my project collaboration capacity, I'll prioritize P1, P0 and P2, I'll try to send 100 to 300 PRs, I'll try to use the machine limit to test, but I want to help a lot
+
+[2026-05-13T00:39:38.624000+00:00] wesleysimplicio (id=1503919618912423976)
+    Per day
+
+[2026-05-13T00:52:37.797000+00:00] srinivas__vaddi. (id=1503922887000854579)
+    <@387972437901312000> if you can please take a look at this it will be helpful - https://github.com/NousResearch/hermes-agent/pull/24553
+    
+    Whatsapp situation isnt great atm nor is the possiblity of using webhooks for configuring an external gateway. can u please take this into consideration?
+    [embed] feat(whatsapp): expand bridge features and approvals by vaddisriniv... https://github.com/NousResearch/hermes-agent/pull/24553
+
+[2026-05-13T00:56:40.730000+00:00] _.exo._ (id=1503923905935577211)
+    strange metric, but i feel the energy
+    [reply to wesleysimplicio msg=1503919470471680041]
+
+[2026-05-13T01:05:47.383000+00:00] ahmetarif0x (id=1503926198764437655)
+    No brother, PRs labeled like P1 or P0 just represent more serious system level issues.
+    
+    The others can still be very important fixes, so you should definitely keep contributing. My suggestion is to question whether the PR you opened is actually useful, or you can even use AI to help evaluate it. If you share PRs that you genuinely believe are valuable, the boss will merge them.
+    [reply to wesleysimplicio msg=1503916108690882570]
+
+[2026-05-13T01:13:50.875000+00:00] wesleysimplicio (id=1503928226676867243)
+    Tks man, I will continue to send 50-200 PR Per day, yes, they are necessary
+
+[2026-05-13T01:15:07.349000+00:00] podjdev (id=1503928547431940236)
+    Hey, I was wondering if there were any devs around I could ask/dm questions regarding this listing? https://nousresearch.com/research-scientist - thanks 🙂
+    [embed] Research Scientist - NOUS RESEARCH https://nousresearch.com/research-scientist
+
+[2026-05-13T01:15:23.866000+00:00] ahmetarif0x (id=1503928616709394432)
+    Brother, contribution isn’t about the number of PRs. If you send spam PRs, you’ll actually make the team’s job much harder. I’d recommend submitting PRs that are truly worthwhile and provide real value.
+    [reply to wesleysimplicio msg=1503928226676867243]
+
+[2026-05-13T01:16:46.727000+00:00] wesleysimplicio (id=1503928964253749301)
+    I don't send PR spam, I make a careful evaluation, stay in peace, touch the ball for me that's a goal bro
+
+[2026-05-13T01:18:51.878000+00:00] ahmetarif0x (id=1503929489174823044)
+    I understand, but I think your PRs need some filtering. Before opening a PR you’re thinking of submitting, I’d recommend asking Claude whether it’s actually a necessary fix. That way, you can send genuinely high-quality fixes to the team.
+    [reply to wesleysimplicio msg=1503928964253749301]
+
+[2026-05-13T01:19:30.348000+00:00] podjdev (id=1503929650529828986)
+    <@1171561684331151382> Could I perhaps shoot a couple questions your way if you have a moment?
+
+[2026-05-13T01:19:44.938000+00:00] ahmetarif0x (id=1503929711724593334)
+    Of course fam
+    [reply to podjdev msg=1503929650529828986]
+
+[2026-05-13T01:19:51.587000+00:00] wesleysimplicio (id=1503929739612786808)
+    One example <@1171561684331151382>
+    [reply to wesleysimplicio msg=1503891762559848459]
+
+[2026-05-13T01:20:53.599000+00:00] podjdev (id=1503929999709835314)
+    friend invite sent ⭐️👍
+    [reply to ahmetarif0x msg=1503929711724593334]
+
+[2026-05-13T01:20:57.296000+00:00] wesleysimplicio (id=1503930015216177192)
+    Other here <@1171561684331151382>
+    [reply to wesleysimplicio msg=1503891151193899150]
+
+[2026-05-13T01:24:06.156000+00:00] ahmetarif0x (id=1503930807352561705)
+    Not all of my PRs get approved either, brother. Right now, I have 14 pending PRs that still haven’t been approved. It’s better to be patient. I think only PRs that are considered very important get approved quickly. I’m not completely sure about that though; these are just my thoughts.
+    [reply to wesleysimplicio msg=1503929739612786808]
+
+[2026-05-13T01:29:40.863000+00:00] wesleysimplicio (id=1503932211215335544)
+    I have 155 open, 44 closed
+    [reply to ahmetarif0x msg=1503930807352561705]
+
+[2026-05-13T01:32:16.956000+00:00] wesleysimplicio (id=1503932865916960868)
+    24 commits - Ok 👌 #4 ranking last week
+
+[2026-05-13T01:35:09.476000+00:00] ahmetarif0x (id=1503933589518024704)
+    I just saw it, brother lol 😅
+    [reply to wesleysimplicio msg=1503932865916960868]
+
+[2026-05-13T01:49:37.435000+00:00] teknium (id=1503937230001934387)
+    this isn't a job board
+
+[2026-05-13T02:48:13.171000+00:00] yerts (id=1503951976067764245)
+    <:catlick:1151260427645366375>
+

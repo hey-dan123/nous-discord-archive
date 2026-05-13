@@ -2117,3 +2117,60 @@
 [2026-05-12T14:36:12.274000+00:00] floory (id=1503767758473662646)
     i appreciate it tho. if i remember i'll hit you up
 
+[2026-05-12T20:19:46.950000+00:00] aquillum (id=1503854222691799240)
+    I tried to install MNEMOSYNE on Ubuntu 24.04 on Oracle Cloud VPS next to hermes:
+    
+    ` **curl -sSL https://raw.githubusercontent.com/AxDSan/mnemosyne/main/deploy_hermes_provider.sh | bash**
+    ✅ Deploy verified.
+    hermes config set memory.provider mnemosyne
+    ✓ Set memory.provider = mnemosyne in /home/ubuntu/.hermes/config.yaml
+    hermes memory status
+    Memory status
+    ────────────────────────────────────────
+      Built-in:  always active
+      Provider:  mnemosyne
+      Plugin:    installed ✓
+      Status:    available ✓
+    `
+    I then tried to separete my work from my home and install the fastembed dependency:
+    
+    `>mnemosyne bank list
+    Command 'mnemosyne' not found, but can be installed with:
+    sudo apt install mnemosyne
+    >pip install fastembed>=0.3.0
+    error: externally-managed-environment
+    
+    >sudo apt install mnemosyne
+    
+    About 100 Packages were installed !
+    
+    ubuntu@clawdbot:~/.hermes/mnemosyne/data$ mnemosyne bank list
+    Warning: Could not import OpenGL. Might cause a black screen on some Linux distributions. Try installing python3-opengl in that case.
+    /usr/lib/python3/dist-packages/mnemosyne/libmnemosyne/__init__.py:377: UserWarning: google_trans package is not installed. Google translate feature will not be available.
+      warnings.warn("google_trans package is not installed. Google translate feature will not be available.")
+    qt.qpa.xcb: could not connect to display
+    qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+    This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+    
+    Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, xcb.`
+    
+    I am stuck here, the deploy_hermes_provider.sh script did not work out of the box for me.
+    The mnemosyne command does not work for me.
+    
+    Thank you !
+
+[2026-05-12T20:21:49.095000+00:00] charanis (id=1503854735004798996)
+    could you tell me in more detail what exactly you are finding impressive? I'm curious about real examples
+    [reply to walterwego msg=1503561046563229906]
+
+[2026-05-12T20:46:30.859000+00:00] kohai_ut (id=1503860949973471332)
+    Interesting gotcha.  'mnemosyne' is also an ubuntu package and it is a flash-card program not related to mnemosyne-memory.  Ubuntu is trying to be helpful and tell you to install what it thinks you are looking for - the flash-card program.  I know pip works as an install method.  There must be something wrong with the deploy_hermes_provider.sh.  <@151598363131904000>
+    [reply to aquillum msg=1503854222691799240]
+
+[2026-05-12T21:10:14.211000+00:00] kohai_ut (id=1503866919944454214)
+    It looks like the mnemosyne cli is not installed when using the curl installation method.
+
+[2026-05-12T22:39:14.123000+00:00] _8bit64k_ (id=1503889317158981785)
+    does this layer on top of existing memory system? e.g. do normal memories get written natively and to your plugin too?
+    [reply to nulledvector msg=1490447053791428718]
+

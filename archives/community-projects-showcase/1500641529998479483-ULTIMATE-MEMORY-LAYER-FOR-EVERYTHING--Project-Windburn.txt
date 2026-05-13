@@ -126,3 +126,45 @@
     IM0 - Multica is a little more mature and polished.  You can only use Hermes agents  as well vs. Multica.  Just depends on the use case.
     [reply to isaaclev msg=1500750749477634128]
 
+[2026-05-12T20:44:44.322000+00:00] _0xvox (id=1503860503125168361)
+    Hey guys, this is my latest X post and now we can use anything in Codex now
+    https://x.com/Synslius/status/2054278614741356913?s=20
+    [embed]  https://twitter.com/Synslius/status/2054278614741356913?s=20
+
+[2026-05-12T20:45:45.419000+00:00] _0xvox (id=1503860759384293396)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1500641529998479483/1503860759635955845/image.png?ex=6a04e2f9&is=6a039179&hm=2eeaebcf1e72302a947db9a1bac066892e92720c36fb6864d6b29266e5a3fb96&
+
+[2026-05-12T21:07:11.321000+00:00] _0xvox (id=1503866152848330843)
+    Yep choosing the right tools instead of using one forever
+    [reply to dalekc72 msg=1502789221314859100]
+
+[2026-05-12T21:13:22.577000+00:00] zer0dayxploit (id=1503867710008856688)
+    Installing it right now. Well Hermes is I'm at work.
+
+[2026-05-12T21:14:52.505000+00:00] zer0dayxploit (id=1503868087194357792)
+    <@407438656043876353> Thanks I have Hermes installing it at home.
+
+[2026-05-12T21:14:58.081000+00:00] _0xvox (id=1503868110581792788)
+    thx man, lmk if u need some debugging infos or anything alse
+    [reply to zer0dayxploit msg=1503867710008856688]
+
+[2026-05-12T21:15:17.408000+00:00] _0xvox (id=1503868191645106228)
+    connect it via SSH?
+    [reply to zer0dayxploit msg=1503868087194357792]
+
+[2026-05-12T21:15:31.552000+00:00] _0xvox (id=1503868250969342103)
+    I think should be good if SSH is setup
+
+[2026-05-12T21:16:10.829000+00:00] zer0dayxploit (id=1503868415709024366)
+    <@407438656043876353> mine is running through tailscale. And administered through Hermes through telegram.
+
+[2026-05-12T21:19:19.934000+00:00] _0xvox (id=1503869208872616007)
+    same here, should be easy to setup with ur hermes
+    [reply to zer0dayxploit msg=1503868415709024366]
+
+[2026-05-12T21:19:44.386000+00:00] _0xvox (id=1503869311431999700)
+    we can dm to debug later
+
+[2026-05-12T21:35:53.245000+00:00] zer0dayxploit (id=1503873375121047562)
+    Okay I appreciate it. I'll contact you if there are any problems.
+

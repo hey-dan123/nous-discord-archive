@@ -263,3 +263,97 @@
     thanks for this, ill try to get you some feedback soon
     [reply to lauratom msg=1503458698964635708]
 
+[2026-05-12T22:01:46.228000+00:00] sloothyyyyy (id=1503879888803725332)
+    hi <@935529517856985088> i had my agent setup everything for me, just had a question 
+    ---
+    
+    **quick config question about per-profile Brainstack isolation.**
+    
+    I have three Hermes profiles: `default`, `coder`, and `titans-agent`. I want `titans-agent` to be fully isolated — its own Brainstack DB, Kuzu graph, proactive state — completely separate from `default`/`coder` (which can share).
+    
+    What I've done:
+    
+    1. Copied the full `plugins.brainstack` block from default's config into `~/.hermes/profiles/titans-agent/config.yaml`, but pointed the paths to `~/.hermes/profiles/titans-agent/brainstack/` instead of the shared `~/.hermes/` space:
+    
+    ```yaml
+    plugins:
+      brainstack:
+        enabled: true
+        # ... all same settings ...
+        stores:
+          sqlite:
+            db_path: ~/.hermes/profiles/titans-agent/brainstack/brainstack.db
+          kuzu:
+            db_path: ~/.hermes/profiles/titans-agent/brainstack/brainstack.kuzu
+        proactive:
+          state_base_dir: ~/.hermes/profiles/titans-agent/brainstack/
+    ```
+    
+    2. Created the directories, restarted the `titans-agent` gateway.
+    
+    Is this the correct/official way to achieve per-profile isolation? Or is there a cleaner approach (e.g., inheriting the plugin config and overriding just the paths, or an env-var-based approach)?
+
+[2026-05-12T23:14:47.744000+00:00] lauratom (id=1503898266213814323)
+    <@498841278176559144>  Yes, your intent is correct, but that nested `stores.*` config is not the official Brainstack config shape right now, and some of those keys
+      may be ignored.
+    
+      For full physical isolation, the safest official approach is a dedicated Hermes profile/home or explicit flat Brainstack paths:
+      `plugins.brainstack.db_path`
+      `plugins.brainstack.graph_db_path`
+      `plugins.brainstack.corpus_db_path`
+    
+      I’m adding clearer doctor/wizard support for this so agents don’t have to copy a big config block manually, and so Brainstack warns loudly if
+      someone uses ignored nested keys like `stores.sqlite.db_path` or `proactive.state_base_dir`.
+    [reply to sloothyyyyy msg=1503879888803725332]
+
+[2026-05-12T23:46:40.307000+00:00] lauratom (id=1503906288084582420)
+    I added better profile-isolation support and stricter config validation in the new release.
+    
+      Can you update/reinstall Brainstack and try again? For `titans-agent`, use the new profile isolation flow rather than manually copying the
+      whole plugin config. If it still fails, send me a redacted config + doctor output or open a GitHub issue and I’ll look at it.
+    [reply to sloothyyyyy msg=1503879888803725332]
+
+[2026-05-12T23:56:13.033000+00:00] sloothyyyyy (id=1503908690271670373)
+    Thanks, this is a message from my agent for  better doctor support. Hope this helps. If you want me to formally create a issue on github, i can do that too. 
+    
+    ---
+    
+    Brainstack v1.0.73 reinstalled, doctor: **all PASS**. Titans-agent profile isolation working:
+    
+    - **Titans-agent**: Brainstack at `$HERMES_HOME/brainstack/` (resolves to `~/.hermes/profiles/titans-agent/brainstack/`), 0 profile_items, 2 transcript entries (test pings)
+    - **Default**: `~/.hermes/brainstack/`, 15 profile_items, 68 transcript entries
+    - Fully isolated — no data bleed
+    
+    Config uses the flat official shape you mentioned (no nested `stores.*`):
+    
+    ```yaml
+    # titans-agent config.yaml
+    memory:
+      provider: brainstack
+    plugins:
+      enabled:
+        - brainstack
+      brainstack:
+        db_path: $HERMES_HOME/brainstack/brainstack.db
+        graph_backend: kuzu
+        graph_db_path: $HERMES_HOME/brainstack/brainstack.kuzu
+        corpus_backend: none
+    ```
+    
+    One note for the doctor/wizard — it'd be helpful if there was a quick way to validate a secondary profile's Brainstack config without the operator having to pass a different `--config` each time. Right now I ran the doctor against the default config — the titans-agent profile leverages the `$HERMES_HOME` env var set in its systemd unit for path resolution. A `--profile <name>` flag on the doctor would be nice for multi-profile setups.
+    [reply to lauratom msg=1503906288084582420]
+
+[2026-05-13T00:03:39.817000+00:00] lauratom (id=1503910564219326576)
+    Thanks, this is useful. The important part is that the flat config shape and full isolation are working, and your default/titans counts are exactly the kind of sanity check I wanted.
+    
+    I agree about doctor UX. Having to pass a different --config manually is clunky for multi-profile setups. I’ll add a --profile <name> path to the Brainstack doctor so it can resolve ~/.hermes/profiles/<name>/config.yaml / profile HERMES_HOME automatically and report the resolved Brainstack DB/graph/proactive paths.
+    
+    No need to open an issue unless you want tracking visibility, but this is a valid feature request and I’ll fold it into the next release.
+    [reply to sloothyyyyy msg=1503908690271670373]
+
+[2026-05-13T00:11:24.149000+00:00] lauratom (id=1503912511769018521)
+    done.
+
+[2026-05-13T00:16:28.981000+00:00] sloothyyyyy (id=1503913790327226442)
+    thank you!!
+

@@ -146,3 +146,15 @@
     https://github.com/wysie/mnemosyne-dashboard
     [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
 
+[2026-05-12T20:54:57.505000+00:00] tydynrain (id=1503863075000946730)
+    This looks great, but these installation instructions are a bit confusing for me:
+    
+    Copy or clone this directory to:
+    
+    ~/.hermes/plugins/mnemosyne-dashboard
+    
+    Does this mean copy the /mnemosyne-dashboard from the cloned repo to that location in the ./hermes/plugins/ directory?
+
+[2026-05-13T01:09:31.699000+00:00] wysie_ (id=1503927139613933708)
+    Thanks for the feedback, I've updated the installation instructions so it's clearer.
+

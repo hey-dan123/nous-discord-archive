@@ -1,0 +1,11 @@
+# Thread 'Hermes Academy website' in forum #community-projects-showcase
+# thread_id=1503900630371008512 forum_id=1316137596535177246
+# Started 2026-05-13T02:53:06.572510+00:00
+
+[2026-05-12T23:24:11.403000+00:00] jcrabapple (id=1503900630371008512)
+    A structured, self-paced learning curriculum for mastering Hermes Agent — the open-source AI agent framework by Nous Research. Built from the official Hermes Agent documentation and community guides.
+    
+    https://github.com/jcrabapple/hermes-academy
+    [attachment] brave_screenshot_hermez-academy.pgs.sh.png https://cdn.discordapp.com/attachments/1503900630371008512/1503900630631317664/brave_screenshot_hermez-academy.pgs.sh.png?ex=6a05081b&is=6a03b69b&hm=72fb2017fe70d346a70e7027e3c4aa4789f89001a3934f4240a20d298409ca61&
+    [embed] GitHub - jcrabapple/hermes-academy: Structured self-paced learning ... https://github.com/jcrabapple/hermes-academy
+

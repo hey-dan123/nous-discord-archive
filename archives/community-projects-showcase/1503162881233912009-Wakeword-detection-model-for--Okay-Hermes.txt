@@ -27,3 +27,6 @@
     Will try it out
     [reply to neopabo msg=1503163661634768976]
 
+[2026-05-13T00:41:40.730000+00:00] neopabo (id=1503920131062108170)
+    I'm currently working on a more complete plug & play patch for hermes to automatically incorporate the wakeword to activate hermes-tts
+

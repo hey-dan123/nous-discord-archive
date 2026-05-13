@@ -58,3 +58,71 @@
 [2026-05-12T18:56:54.826000+00:00] tdamre (id=1503833368092082210)
     It's says on readme
 
+[2026-05-12T22:24:12.368000+00:00] cappy7419 (id=1503885534924116000)
+    Yes but isn’t it an early beta testing still. I was hoping to hear some feedback from people using it so far.
+    [reply to tdamre msg=1503833337284919417]
+
+[2026-05-12T22:26:56.645000+00:00] tdamre (id=1503886223952056451)
+    I see well it works well for me
+    [reply to cappy7419 msg=1503885534924116000]
+
+[2026-05-12T22:31:50.836000+00:00] cappy7419 (id=1503887457878282270)
+    Ok thank you so much. Well I have been waiting for this day to switch over and see how it goes 🔥🥹
+    [reply to tdamre msg=1503886223952056451]
+
+[2026-05-12T22:32:41.796000+00:00] tdamre (id=1503887671620276395)
+    Depending on your GPU vram you may want to try some local models they are fabulous little things that do a good amount of work
+    [reply to cappy7419 msg=1503887457878282270]
+
+[2026-05-12T22:34:16.804000+00:00] cappy7419 (id=1503888070112575549)
+    Yea I have qwen3.6 locally running my whole system. Let’s see how the openclaw migration goes because mine is huge hahaha
+    [reply to tdamre msg=1503887671620276395]
+
+[2026-05-12T22:34:35.467000+00:00] tdamre (id=1503888148390871062)
+    <:licky1:1501892741062332446>
+    [reply to cappy7419 msg=1503888070112575549]
+
+[2026-05-12T22:35:06.811000+00:00] cappy7419 (id=1503888279857008761)
+    Are you one of the main devs for the windows Native project?
+    [reply to tdamre msg=1503888148390871062]
+
+[2026-05-12T22:35:47.572000+00:00] tdamre (id=1503888450821034045)
+    I was but it got taken over the project by teknium and the nous team so now they officially maintain it
+    [reply to cappy7419 msg=1503888279857008761]
+
+[2026-05-12T22:45:36.277000+00:00] cappy7419 (id=1503890920028770414)
+    That’s awesome bro glad to hear you were pushing it. Thank you for your efforts. I have been so curious why the delay in windows launch. Because the market share is there and I honestly believe Hermes could have taken over openclaw months ago with the native launch. Most Openclaw users are windows this is like the final straw. Appreciate the chat my friend, I’ll give it a try today and see how Hermes goes 💯
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1495157726567858276/1503890920322629703/image0.jpg?ex=6a04ff10&is=6a03ad90&hm=5ecd1a6a2e5b5db373e7b1894efc82e4cc71f3df8e5f43fa050883325fe47208&
+    [reply to tdamre msg=1503888450821034045]
+
+[2026-05-12T22:46:10.181000+00:00] tdamre (id=1503891062232584253)
+    Agreed I'm also a windows user
+    [reply to cappy7419 msg=1503890920028770414]
+
+[2026-05-12T22:46:51.244000+00:00] cappy7419 (id=1503891234463285400)
+    I’m way too deep into my windows set up now to switch everything to Linux hahaha
+    [reply to tdamre msg=1503891062232584253]
+
+[2026-05-12T22:48:29.166000+00:00] tdamre (id=1503891645178052689)
+    Whenever I make a plan to switch I find a new YouTube video by Linus tech tips finding a huge breaker in Linux like the ultra wide screen support not working and these things are day 1 deal breakers I need productivity not 100 man hours to start the productivity
+    [reply to cappy7419 msg=1503891234463285400]
+
+[2026-05-12T22:50:20.034000+00:00] cappy7419 (id=1503892110191886438)
+    Yea that’s a goodie
+
+[2026-05-13T00:35:52.912000+00:00] cappy7419 (id=1503918672207544490)
+    dam first error.
+    
+    Hermes can preview what would be imported from opnclaw before making any changes.
+    
+    Would you like to see what can be imported? [Y/n]: y
+    ⚠ Migration preview failed: 'utf-8' codec can't decode byte 0x97 in position 9154: invalid start byte
+
+[2026-05-13T00:48:03.668000+00:00] tdamre (id=1503921737220362240)
+    Damn
+    [reply to cappy7419 msg=1503918672207544490]
+
+[2026-05-13T00:48:21.336000+00:00] tdamre (id=1503921811325321286)
+    Could you open an issue on GitHub for this
+    [reply to cappy7419 msg=1503918672207544490]
+
