@@ -55,3 +55,25 @@
 [2026-05-11T19:59:12.291000+00:00] slava6298 (id=1503486656291016876)
     <@637698381958873118> DM sent
 
+[2026-05-14T02:59:07.104000+00:00] lauratom (id=1504317106726895637)
+    https://github.com/yepyhun/Brainstack here is your solution
+    [embed] GitHub - yepyhun/Brainstack: Memory kernel stack for Hermes agent https://github.com/yepyhun/Brainstack
+
+[2026-05-14T03:21:14.832000+00:00] outbacknash2257 (id=1504322675621761124)
+    study glean
+
+[2026-05-14T03:22:38.494000+00:00] saranshbarua (id=1504323026525622322)
+    <@637698381958873118> I'm doing the same for a gaming company I work for. It's an experimentation project and I'm confused between the memory. I know the default file based memory won't work. So I'm planning to try out Hindsight for the same. And if hermes allows have multiple profiles with different memory providers and then pick the best
+
+[2026-05-14T03:22:51.833000+00:00] saranshbarua (id=1504323082473701456)
+    Glean is expensive
+    [reply to outbacknash2257 msg=1504322675621761124]
+
+[2026-05-14T03:23:55.323000+00:00] outbacknash2257 (id=1504323348769804409)
+    i said study it not buy it
+    [reply to saranshbarua msg=1504323082473701456]
+
+[2026-05-14T03:36:22.457000+00:00] saranshbarua (id=1504326482476929094)
+    Yeah, it's pretty good. That's the first product I landed on while researching for my use-case.
+    [reply to outbacknash2257 msg=1504323348769804409]
+

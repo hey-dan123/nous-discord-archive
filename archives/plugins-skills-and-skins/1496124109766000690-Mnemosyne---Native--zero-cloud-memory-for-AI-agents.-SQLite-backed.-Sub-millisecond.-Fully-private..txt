@@ -924,3 +924,24 @@
     <@151598363131904000> checkout https://github.com/yantrikos/yantrikdb-server
     [embed] GitHub - yantrikos/yantrikdb-server: Cognitive memory database for ... https://github.com/yantrikos/yantrikdb-server
 
+[2026-05-14T06:48:08.609000+00:00] rossascends (id=1504374742776283208)
+    <@151598363131904000> 
+    
+    In `hermes_memory_provider/__init__.py`, `prefetch()` currently hard-truncates recalled memories to 200 chars before injecting them into `<memory-context>`:
+    
+    ```py
+    content = r.get("content", "")[:200]
+    if len(r.get("content", "")) > 200:
+        content += "..."
+    ```
+    
+    The inserted metadata for timestamps and 'importance' also seem to count against this character limit. I hit a case where a normal memory got cut mid-word, ending with something like `only d...`, which made the recall almost useless. I patched locally to:
+    
+    ```py
+    content = r.get("content", "")
+    ```
+    
+    and confirmed the injected memory goes in without truncations.
+    
+    Would you consider adding a config/env knob for this?  Maybe something like `MNEMOSYNE_PREFETCH_CONTENT_CHARS=800`, with `0` meaning “no truncation”? Sentence/word-boundary truncation would also be better than raw character slicing.
+

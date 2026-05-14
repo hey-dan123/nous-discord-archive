@@ -164,3 +164,30 @@
     WARNING hermes_cli.plugins: Failed to load plugin 'mnemosyne-dashboard': No module named 'config'
     [reply to wysie_ msg=1503927139613933708]
 
+[2026-05-14T07:26:20.708000+00:00] rossascends (id=1504384356536549406)
+    I had the same thing. Codex was able to sort it out.
+    [reply to tydynrain msg=1504316239311278182]
+
+[2026-05-14T07:28:20.053000+00:00] rossascends (id=1504384857105629285)
+    ```
+    mnemosyne-dashboard was being loaded by Hermes as a package named something like 
+    hermes_plugins.mnemosyne_dashboard, but its __init__.py had:
+    
+    from config import ...
+    
+    That asks Python for a top-level module named config, not the plugin’s sibling config.py, so Hermes logged:
+    
+    Failed to load plugin 'mnemosyne-dashboard': No module named 'config'
+    
+    I patched:
+    
+    init.py (line 13) to use .config
+    
+    server.py (line 13) to support both package import and direct python server.py execution
+    ``` 
+    
+    <@329427821208535040>
+
+[2026-05-14T07:29:49.234000+00:00] rossascends (id=1504385231157989517)
+    that let the dashboard be loaded in as a plugin, but i could not find much use for the plugin itself. it enables slash commands for start/stop, but i think that's about it. for me, I just leave the server running all the time and have the dash open in a browser window almost constantly.
+

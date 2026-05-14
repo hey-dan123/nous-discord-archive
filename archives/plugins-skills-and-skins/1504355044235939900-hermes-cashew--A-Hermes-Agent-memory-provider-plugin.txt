@@ -1,0 +1,45 @@
+# Thread 'hermes-cashew: A Hermes Agent memory provider plugin' in forum #plugins-skills-and-skins
+# thread_id=1504355044235939900 forum_id=1485392832154832906
+# Started 2026-05-14T08:38:21.011580+00:00
+
+[2026-05-14T05:29:52.111000+00:00] magnus919 (id=1504355044235939900)
+    A Hermes Agent memory provider plugin that stores conversation context in a local Cashew thought graph with semantic search and automatic context recall. Get from zero to a working install in under five minutes.
+    
+    https://github.com/magnus919/hermes-cashew
+    [embed] GitHub - magnus919/hermes-cashew: Memory provider for Hermes Agent ... https://github.com/magnus919/hermes-cashew
+
+[2026-05-14T06:03:51.426000+00:00] magnus919 (id=1504363597743263835)
+    **hermes-cashew — a thought-graph memory provider for Hermes Agent**
+    Most agent memory systems give you a vector database. Store embeddings, retrieve nearest neighbors, hope the semantic space aligns. hermes-cashew takes a different bet.
+    It builds a **thought graph**. Every conversation turn becomes nodes — observations, facts, decisions, beliefs, insights. Those nodes get connected by edges that capture derivation, contradiction, cross-linking, and synthesis. Retrieval walks the graph recursively via BFS: seed with a vector search, then explore neighbors, then neighbors-of-neighbors, scoring at each hop. The graph's topology *is* the retrieval signal — no synthetic summary nodes, no hotspots, no hierarchy to maintain.
+
+[2026-05-14T06:04:04.058000+00:00] magnus919 (id=1504363650725576755)
+    **What makes it different:**
+    • **Persistent across sessions.** Not per-chat context. Not a session-scoped vector store. One SQLite file that grows with you. The same graph queried whether you're in CLI, Telegram, or Discord.
+    • **LLM-powered extraction.** With `llm_aux_role: memory` configured, every turn gets classified by type, domain, and importance. Without it, falls back to heuristics — zero config, zero cost.
+    • **Think cycles.** Every N turns, the system picks a cluster of related nodes and asks the LLM: *what's the non-obvious connection here?* The resulting insight nodes connect islands of knowledge you didn't realize were adjacent.
+    • **Sleep consolidation** (new in v0.8.0). Periodic cross-linking, deduplication, garbage collection, core memory promotion, and dream generation. A 7K-node graph consolidates in ~4 seconds at session end.
+    • **Privacy-respecting.** Everything lives in a local SQLite database. Embeddings use `all-MiniLM-L6-v2` locally. No data leaves your machine unless you configure an LLM for extraction — and even then, only the prompts you choose to send.
+    • **Thin adapter.** Hermes memory provider plugin — delegates to upstream `cashew-brain` for storage and retrieval, with a bounded sync queue, daemon worker, and silent degrade on failure.
+    Two tools: `cashew_query` for recall and `cashew_extract` for explicit sync. Both live alongside the built-in `memory` tool without conflicts.
+    Install: `hermes plugins install magnus919/hermes-cashew`
+    Docs: https://github.com/magnus919/hermes-cashew
+    [embed] GitHub - magnus919/hermes-cashew: Memory provider for Hermes Agent ... https://github.com/magnus919/hermes-cashew
+
+[2026-05-14T06:04:17.375000+00:00] magnus919 (id=1504363706580996157)
+    **hermes-cashew v0.8.0 — Sleep Is Back**
+    We yanked sleep consolidation in v0.7.4 because the upstream ran 100% CPU for **hours** on a 7K-node graph. Full N×N matrix, 24.5M Python loop iterations, one commit per edge. Textbook `O(N²)` bomb.
+    Rewrote it from scratch. Nine-phase pipeline: vectorized numpy, batched 500-edge commits, connected-component dedup, LLM-powered dream nodes, work-capped convergence.
+    **The result: 4 seconds.** Down from hours → timeout. At 7.1K nodes and 61K edges. 100% retrieval overlap with the original. Zero orphan edges.
+    Runs automatically at session end when `sleep_cycles: true`. No cron. No daemon. No dual-path flag. Just fires and logs a one-line summary.
+    **32 new tests.** Install: `hermes plugins install magnus919/hermes-cashew`
+    Release notes: https://github.com/magnus919/hermes-cashew/releases/tag/v0.8.0
+    [embed] Release v0.8.0 — Refactored Sleep Cycle Re-enabled · magnus919/h... https://github.com/magnus919/hermes-cashew/releases/tag/v0.8.0
+
+[2026-05-14T06:35:13.758000+00:00] magnus919 (id=1504371492815765664)
+    https://magnus919.com/2026/05/get-your-agent-a-brain-getting-started-with-hermes-cashew/
+    [embed] Get Your Agent a Brain: Getting Started with hermes-cashew https://magnus919.com/2026/05/get-your-agent-a-brain-getting-started-with-hermes-cashew/
+
+[2026-05-14T06:50:19.255000+00:00] charanis (id=1504375290745327638)
+    I think I need to try it out but how does it fit into a multi agent kanban setup aka developer studio? Do all profiles access the same mem?
+

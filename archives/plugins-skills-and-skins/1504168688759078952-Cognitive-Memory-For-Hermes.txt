@@ -83,3 +83,9 @@
 [2026-05-14T02:27:48.205000+00:00] spranab (id=1504309226053570690)
     Thanks bro, already merged
 
+[2026-05-14T03:03:00.436000+00:00] wysie_ (id=1504318085392371772)
+    another PR. Option B had a bug that stopped it from showing up as a provider in Hermes.
+
+[2026-05-14T04:29:56.671000+00:00] spranab (id=1504339963867566191)
+    <@329427821208535040> merged.
+

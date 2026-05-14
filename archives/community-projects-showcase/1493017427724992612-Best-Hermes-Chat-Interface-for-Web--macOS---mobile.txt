@@ -2178,3 +2178,9 @@
     Ah okay makes sense, good to hear it! Thanks for following up
     [reply to jconcep msg=1504297803713609759]
 
+[2026-05-14T08:24:21.564000+00:00] lemz42 (id=1504398956304662608)
+    sorry for the delay, just finally updated.
+    
+    I had done a local patch and lcm seemed to be working fine but now updated and will monitor but so far seems to look ok. will let you know if I see anything odd. thanks
+    [reply to avidfuturist msg=1502747123089801396]
+
