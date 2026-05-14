@@ -104,3 +104,6 @@
     Hey everyone! Just pushed a new quality-of-life feature to Hermes Client
     You can now configure channels for a specific agent!
 
+[2026-05-14T18:39:55.500000+00:00] dve874 (id=1504553868460036326)
+    i was waiting for this feature, thank you
+

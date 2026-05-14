@@ -16245,3 +16245,149 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     hi <@387972437901312000>, I have reviewed this OpenViking fix for directory uploads. please review and merge it when you have the time. much appreciate it, thanks
     [embed] fix(memory): skip symlinked files in OpenViking directory uploads b... https://github.com/NousResearch/hermes-agent/pull/24202
 
+[2026-05-14T14:47:35.330000+00:00] dthen (id=1504495399149502474)
+    This is genuinely really cool since a phone is an always-on device that everyone already has.
+    [reply to tdamre msg=1504466709220688093]
+
+[2026-05-14T14:48:11.762000+00:00] dthen (id=1504495551956254851)
+    Pocket server
+
+[2026-05-14T14:48:29.974000+00:00] dthen (id=1504495628342792304)
+    Plus I bet half of us mainly use our phones to talk to Hermes anyway.
+
+[2026-05-14T14:51:56.466000+00:00] teknium (id=1504496494433013882)
+    merged
+    [reply to z1gon msg=1504479733608353912]
+
+[2026-05-14T15:21:59.779000+00:00] wesleysimplicio (id=1504504058076069899)
+    Tks, <@387972437901312000> Thank you for approving my 10 contributions, I am adapting and evolving with the project and I intend to continue helping Hermes Agent
+
+[2026-05-14T15:23:32.182000+00:00] teknium (id=1504504445642473613)
+    yw, but also - please dont spam PRs just rebasing other peoples' pr's
+    [reply to wesleysimplicio msg=1504504058076069899]
+
+[2026-05-14T15:23:50.142000+00:00] teknium (id=1504504520971911220)
+    I rebase them when I salvage and review them so its not preferred 🙏
+
+[2026-05-14T15:24:22.274000+00:00] wesleysimplicio (id=1504504655743418419)
+    <@387972437901312000> If you come to Brazil, I will take you to see the best beaches in the world and where there are the most beautiful people in the world
+
+[2026-05-14T15:25:19.215000+00:00] kevins0792 (id=1504504894571417720)
+    Gentle bump on this in case it got buried. Would appreciate a look when convenient. Thanks!
+    [reply to kevins0792 msg=1503441714558406767]
+
+[2026-05-14T15:43:04.078000+00:00] wesleysimplicio (id=1504509360930422785)
+    <@387972437901312000> How could it help Hermes Agent become a better producer for humanity in addition to correcting Pull Requests? What else could I do?
+
+[2026-05-14T16:00:39.146000+00:00] godsboy7777 (id=1504513786206359714)
+    Hi maintainers and <@387972437901312000>, opened a PR for the approval-gate hardening you invited back from GHSA-6cjf-cff6-j9mg, the RG-4 "approval regex class" follow-up.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/25793  
+    PR: https://github.com/NousResearch/hermes-agent/pull/25795
+    
+    It extends the approval gate's pre-match normalization to de-obfuscate shell idioms:
+    
+    - `${IFS}`
+    - ANSI-C `$'...'` quoting
+    - Empty-quote splits
+    - `eval` / `command` / `builtin` wrappers
+    
+    It also widens/adds `DANGEROUS_PATTERNS` entries for:
+    
+    - Octal `chmod`
+    - `dash` / `ash`
+    - Base64-pipe-to-shell
+    - World-writable script paths
+    
+    Includes per-class regression tests.
+    
+    This is pure heuristic hardening under `SECURITY.md` section 3.2, with no posture change.
+    
+    CI status:
+    
+    All CI checks are green except the `test` job, which is red on `main` itself right now due to pre-existing failures in unrelated modules, including Bedrock/TTS missing deps, DingTalk, Feishu, etc.
+    
+    Approval-specific status:
+    
+    - Zero failures in `test_approval.py`
+    - `22904` passed
+    
+    I left a comment on the PR with the full breakdown.
+    
+    Would appreciate a review when someone has a chance. Thanks!
+    [embed] approval gate misses shell-idiom-obfuscated dangerous commands (RG-... https://github.com/NousResearch/hermes-agent/issues/25793
+    [embed] fix(approval): de-obfuscate shell idioms in dangerous-command detec... https://github.com/NousResearch/hermes-agent/pull/25795
+
+[2026-05-14T16:14:43.357000+00:00] orwelleth (id=1504517327083798568)
+    I'm wildpencil, just made my first contributions to hermes-agent.
+    I opened 3 PRs:
+    
+    Bug fix — hermes doctor was showing a duplicate Anthropic health-check (✓ Anthropic API + ⚠ anthropic HTTP 404). Fixed by adding "Anthropic": "anthropic" to _known_canonical in doctor.py. PR #24425
+    New skill — Japanese-Turkish dictionary skill using japoncaturkcesozluk.vaneralper.com (55,000+ words, bidirectional search by kanji/romaji/Turkish). PR #24506
+    New skill — JLPT study skill supporting N1-N5 levels with vocabulary, grammar, and kanji lists from jlptstudy.net. Includes quiz modes and daily study features. PR #24507
+    
+    I'm a Turkish-speaking Japanese learner so I built these skills to help others like me. Happy to improve them based on feedback!
+
+[2026-05-14T16:14:45.685000+00:00] orwelleth (id=1504517336848269422)
+    https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3Awildpencil
+    [embed] Pull requests · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3Awildpencil
+
+[2026-05-14T16:15:04.432000+00:00] orwelleth (id=1504517415479021702)
+    <@387972437901312000>
+
+[2026-05-14T16:17:18.690000+00:00] teknium (id=1504517978597757128)
+
+[2026-05-14T16:26:22.533000+00:00] dan.patterson (id=1504520259640754467)
+    I'd like to see a feature to pace hermes agent by setting an api requests per minute rate so we can stop getting rate limited and locked out of models by nvidia ect
+
+[2026-05-14T16:34:17.116000+00:00] gokhe (id=1504522250185998536)
+    its actually pretty easy set a parameter in env for rpm and rps even if you would like, you can even ask your own hermes agent to edit its config and restart gateway
+    [reply to dan.patterson msg=1504520259640754467]
+
+[2026-05-14T16:38:33.128000+00:00] dan.patterson (id=1504523323978158241)
+    I tried to prompt it to slow down before, it didn't work, I didn't think about having it edit its config file, it always has a hard time restarting the gateway because i have it setup as a service so it runs into problems when it would have to use sudo
+    [reply to gokhe msg=1504522250185998536]
+
+[2026-05-14T17:21:58.445000+00:00] nftpoetrist (id=1504534251469537371)
+    PR #25856 — Telegram slash-confirm prompt silently disappearing
+    
+    The "Approve / Cancel" button prompt for commands like /reload-mcp was silently failing whenever the command contained _, ., [ or similar characters. Telegram throws BadRequest: Can't parse entities, the error gets swallowed — user sees nothing.
+    Root cause: every other dynamic send in the adapter was upgraded to format_message() + MarkdownV2 today, this one was missed. 2-line fix.
+    https://github.com/NousResearch/hermes-agent/pull/25856
+    [embed] fix(telegram): escape send_slash_confirm preview with format_messag... https://github.com/NousResearch/hermes-agent/pull/25856
+
+[2026-05-14T17:43:10.523000+00:00] gokhe (id=1504539586951385209)
+    Hermes can itself restart its gateway I think it’s an inherent skill, if u want I can push a small pr for a rate limited api
+    [reply to dan.patterson msg=1504523323978158241]
+
+[2026-05-14T17:53:20.736000+00:00] dan.patterson (id=1504542146370469928)
+    I had to bypass this by granting my system user specific, passwordless sudo privileges only for that exact systemctl command by editing my sudoers file. I got it figured out and prompted hermes to modify my config after I setup hermes to be able to restart its gateway running as a system service, its up to you if you want to do the pr for a rate limited api, it might be helpful to someone. Thank you for the advice btw.
+    [reply to gokhe msg=1504539586951385209]
+
+[2026-05-14T18:10:33.952000+00:00] kleintje325 (id=1504546479992471652)
+    any news about when the release is of the 0.14 V ?
+
+[2026-05-14T18:58:33.495000+00:00] lucasmagals_30892 (id=1504558557670932550)
+    Hi friends, I need to add my health and exercise information from Garmin. Any suggestions on how I can do that? Maybe using Strava or another tool? Do you know if it’s possible?
+
+[2026-05-14T19:06:52.939000+00:00] _voscko_ (id=1504560652491030781)
+    Hi all! Could we get #21012 merged or cherry-picked first?
+    
+    Short version: this is a CI unblocker, not a risky runtime change. It only touches tests, and it makes the shared PR checks match Hermes’ actual lazy optional-dependency model.
+    
+    Right now several PRs inherit red checks because parts of the test suite assume integrations like Bedrock, DingTalk, Feishu, Matrix, faster-whisper, KittenTTS, etc. are installed or eagerly loaded. Hermes intentionally keeps those optional, so CI should test that contract instead of failing because the environment is lean.
+    
+    What Hermes gets from this: useful CI signal again. PRs stop being blocked by optional-dep noise, and real regressions become easier to spot. I checked the PR: all checks are green, merge state is clean, and the commit cherry-picks cleanly onto current main.
+    
+    https://github.com/NousResearch/hermes-agent/pull/21012
+    
+    <@387972437901312000>
+
+[2026-05-14T19:08:04.548000+00:00] w0lfgang88 (id=1504560952840818899)
+    <@100390510744584192>
+    [reply to _voscko_ msg=1504560652491030781]
+
+[2026-05-14T19:36:44.871000+00:00] gokhe (id=1504568168398717159)
+    no worries man
+    [reply to dan.patterson msg=1504542146370469928]
+

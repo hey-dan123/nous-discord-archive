@@ -1,0 +1,76 @@
+# Thread 'Wakeword training system' in forum #community-projects-showcase
+# thread_id=1504544977076748338 forum_id=1316137596535177246
+# Started 2026-05-14T19:43:54.415848+00:00
+
+[2026-05-14T18:04:35.629000+00:00] neopabo (id=1504544977076748338)
+    Wakeword Forge is like building your own private “Hey Siri” or “Alexa” trigger for a local AI assistant. It listens for your custom wake word directly on the device, using a tiny, highly accurate model that is efficient enough for phones and other low-power hardware. 
+    
+    Here is the v1 version, feel free to try it out, I'll update it soon enough:
+    https://github.com/H-Ali13381/wakeword-forge
+    [embed] GitHub - H-Ali13381/wakeword-forge: Local-first personal wake-word ... https://github.com/H-Ali13381/wakeword-forge
+
+[2026-05-14T18:05:12.039000+00:00] neopabo (id=1504545129791492258)
+    And here's an already trained version for "Okay Hermes" using this system, you can try it out: https://discord.com/channels/1053877538025386074/1503162881233912009
+
+[2026-05-14T18:07:37.310000+00:00] .s0uthpaw (id=1504545739101966449)
+    https://tenor.com/view/matrix-nokia-neo-phone-call-gif-10380727
+    [embed]  https://tenor.com/view/matrix-nokia-neo-phone-call-gif-10380727
+
+[2026-05-14T18:08:09.671000+00:00] .s0uthpaw (id=1504545874834096189)
+    just checking in so I get pinged here, def have both interest and ideas
+
+[2026-05-14T18:09:21.781000+00:00] neopabo (id=1504546177285230704)
+    https://tenor.com/view/you-ask-you%27ll-f---ing-receive-mike-mclusky-mayor-of-kingstown-i-got-you-paramount-plus-gif-6956410158857967925
+    [embed]  https://tenor.com/view/you-ask-you%27ll-f---ing-receive-mike-mclusky-mayor-of-kingstown-i-got-you-paramount-plus-gif-6956410158857967925
+
+[2026-05-14T18:10:26.933000+00:00] .s0uthpaw (id=1504546450552525001)
+    Like, my approach is training a phone-sized omnimodal model on specific tool calls for the phone and then it can register as a secondary Aux model for specifically the phone
+
+[2026-05-14T18:10:50.399000+00:00] .s0uthpaw (id=1504546548975931583)
+    https://github.com/SouthpawIN/burner-phone
+    [embed] GitHub - SouthpawIN/burner-phone: Skill to control an Android devic... https://github.com/SouthpawIN/burner-phone
+
+[2026-05-14T18:11:07.545000+00:00] .s0uthpaw (id=1504546620891598878)
+    i've talked about this Ik
+
+[2026-05-14T18:11:13.105000+00:00] .s0uthpaw (id=1504546644211929238)
+    But it pairs with
+
+[2026-05-14T18:11:33.835000+00:00] .s0uthpaw (id=1504546731159715871)
+    https://huggingface.co/sovthpaw/Omni-Senter-3B
+    [embed] sovthpaw/Omni-Senter-3B · Hugging Face https://huggingface.co/sovthpaw/Omni-Senter-3B
+
+[2026-05-14T18:11:40.817000+00:00] .s0uthpaw (id=1504546760444481567)
+    Needs further training
+
+[2026-05-14T18:11:46.290000+00:00] .s0uthpaw (id=1504546783399907399)
+    Renaming is fine
+
+[2026-05-14T18:12:25.286000+00:00] neopabo (id=1504546946960851115)
+    Btw, you probably found this out already, but most modern phone have tensor chips for local AI
+    [reply to .s0uthpaw msg=1504546450552525001]
+
+[2026-05-14T18:12:49.367000+00:00] neopabo (id=1504547047964020909)
+    It'll work better than CPU or GPU
+
+[2026-05-14T18:13:47.382000+00:00] .s0uthpaw (id=1504547291296432159)
+    Lol so we can probably train up a 333M or whatever from scratch using Hermes a lot cheaper and easier with a better payoff than LORA training an outdated omni model to function call lol
+
+[2026-05-14T18:15:17.638000+00:00] neopabo (id=1504547669857665024)
+    I think it's better to use some sort of local canned response (working on it, give me a moment, etc...) for complex requests, and send them to a home server/PC you have at home with SSH/tailscale
+
+[2026-05-14T18:15:39.499000+00:00] neopabo (id=1504547761549344951)
+    Or a model provider of some sort
+
+[2026-05-14T18:16:36.879000+00:00] .s0uthpaw (id=1504548002218512576)
+    Auto cron jobs come to mind
+
+[2026-05-14T18:17:02.812000+00:00] .s0uthpaw (id=1504548110989267024)
+    Bypasses the model to stdout
+
+[2026-05-14T18:18:04.928000+00:00] .s0uthpaw (id=1504548371522650194)
+    The infrastructure is there to be able to switch cleanly between dummy knee-jerks, small model response, or full on call to local Hermes server
+
+[2026-05-14T18:20:02.915000+00:00] .s0uthpaw (id=1504548866396131390)
+    Lately I've been starting all dev with `/hermes-agent` and doing a lot of object oriented programming with specialized `hermes profile create <specialized-agent>` so I try to get away with using Hermes as a programming language whenever possible; to explain my approach there
+

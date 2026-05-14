@@ -1,0 +1,24 @@
+# Thread 'Better Skill Building Skill' in forum #plugins-skills-and-skins
+# thread_id=1504553695675813958 forum_id=1485392832154832906
+# Started 2026-05-14T19:47:02.514278+00:00
+
+[2026-05-14T18:39:14.305000+00:00] neopabo (id=1504553695675813958)
+    The default skill-creator skill packaged with claude-code provides very low-quality guidance for skill creation, and leads to verbose skills with bad logic. Other skill-building skills also have similar problems, and are poorly thought-out. 
+    
+    To solve this issue, I created a logical framework as a skill, which replaces/complements these skills by providing logical framing for how to best structure skills for consistent quality and reliability.
+    
+    This skill defines skills in 3 tiers, allowing the agent to select the appropriate level of complexity for a skill it wants to build:
+    
+    Tier 1: `SKILL.md` (text-only)
+    Tier 2: `SKILL.md + script(s)` (text + deterministic code)
+    Tier 3: `SKILL.md + script(s) + AI/ML model` (text + deterministic code + purposefully trained specialized model)
+
+[2026-05-14T18:45:25.648000+00:00] neopabo (id=1504555253201375303)
+    https://github.com/H-Ali13381/tier-1-2-3-skill-system
+    [embed] GitHub - H-Ali13381/tier-1-2-3-skill-system: Tier 1/2/3 system for ... https://github.com/H-Ali13381/tier-1-2-3-skill-system
+
+[2026-05-14T19:12:13.116000+00:00] neopabo (id=1504561995410706473)
+    Here's a complimentary skill more focused on the tier 3 skills:
+    https://github.com/H-Ali13381/recursive-agent-improvement
+    [embed] GitHub - H-Ali13381/recursive-agent-improvement: Systematic agent i... https://github.com/H-Ali13381/recursive-agent-improvement
+

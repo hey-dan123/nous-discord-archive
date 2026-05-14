@@ -1458,3 +1458,6 @@
 [2026-05-14T00:08:54.625000+00:00] w0lfgang88 (id=1504274272485380187)
     [attachment] arqhp8.jpg https://cdn.discordapp.com/attachments/1491081146266681414/1504274272611467424/arqhp8.jpg?ex=6a066416&is=6a051296&hm=5da790c54859333b3f5a13728c705ecc74c75d2aff751d9ffcdae398ca455631&
 
+[2026-05-14T14:52:55.948000+00:00] confusedxx (id=1504496743918735534)
+    I have them both working together now and need to test it out on a project
+

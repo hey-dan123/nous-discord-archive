@@ -60,3 +60,30 @@
 [2026-05-14T13:31:08.810000+00:00] charanis (id=1504476161890062548)
     I'm actually perfectly fine with isolated memory, because I'm striving towards more specialized agents with validation loops that recursively learn on their own (well not on their own but by getting feedback from validators, their own mistakes, RCA and helping other agents also give them better context to do their work)
 
+[2026-05-14T16:09:36.092000+00:00] magnus919 (id=1504516038321111162)
+    Minor bugfix release to improve `sleep_cycle()`. Has no impact on interactive sessions.
+    
+    https://github.com/magnus919/hermes-cashew/releases/tag/v0.8.1
+    [embed] Release v0.8.1 — Embedding Gap Closure Fix · magnus919/hermes-ca... https://github.com/magnus919/hermes-cashew/releases/tag/v0.8.1
+
+[2026-05-14T16:12:10.510000+00:00] magnus919 (id=1504516685997150430)
+    `hermes-cashew` tidies up memory in the background so it works more effectively for you in your sessions. Actual log output from my own production use:
+    
+    ```
+    2026-05-14 11:53:01,639 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: selected 2000 nodes (limit=2000)
+    2026-05-14 11:53:01,861 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: 667 cross-link + 3 dedup candidates (670 total / 1999000 pairs)
+    2026-05-14 11:53:01,894 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: cross-links 0 created, 667 skipped in 0.0s
+    2026-05-14 11:53:01,895 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: 1 dedup components to merge
+    2026-05-14 11:53:01,907 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: dedup 1 components merged, 2 nodes decayed
+    2026-05-14 11:53:02,064 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: GC decayed 50 low-fitness nodes
+    2026-05-14 11:53:02,068 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: permanence promoted 0 nodes (threshold=10)
+    2026-05-14 11:53:02,069 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: core memory 0 promoted, 0 demoted (target=84)
+    2026-05-14 11:53:31,424 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: dream node e939d96b471d bridging 7d482022... ↔ a3b17798...
+    2026-05-14 11:53:31,457 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: embedding 1 orphaned nodes...
+    2026-05-14 11:53:32,830 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: embedded 1 orphaned nodes
+    2026-05-14 11:53:32,851 INFO [20260514_115136_7f060f] plugins.memory.cashew.sleep_refactor: sleep: cycle complete in 31.3s — 7158 nodes, 0 cross-links, 2 dedups, 50 GC, 0 permanent, 0 core, 1 dream, 1 embedded
+    ```
+
+[2026-05-14T16:13:31.420000+00:00] magnus919 (id=1504517025358417961)
+    it'll run periodically throughout the day when the gateway is idle.
+
