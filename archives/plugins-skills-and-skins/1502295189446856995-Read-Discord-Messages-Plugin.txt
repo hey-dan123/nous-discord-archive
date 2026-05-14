@@ -37,3 +37,7 @@
 [2026-05-13T18:51:39.019000+00:00] m1crogr00ve (id=1504194431367119120)
     [attachment] Screenshot_2026-05-13-19-51-10-59_572064f74bd5f9fa804b05334aa4f912.jpg https://cdn.discordapp.com/attachments/1502295189446856995/1504194431874764891/Screenshot_2026-05-13-19-51-10-59_572064f74bd5f9fa804b05334aa4f912.jpg?ex=6a0619bb&is=6a04c83b&hm=66039f598efb8e91935baf0322678c3730b2a5e59bd8128dcad3483e133f3e8a&
 
+[2026-05-13T21:17:27.401000+00:00] vayaperson (id=1504231124740866099)
+    I'm just fixing bugs cause I'm not developer and I code with AI, but all script are working correctly and the version I coded today seems to work without problems ^^ Just give me time for learn ❤️ And boost open-source
+    [reply to ejectzero msg=1502752349884514458]
+

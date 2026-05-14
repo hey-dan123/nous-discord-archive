@@ -32,3 +32,54 @@
     hermes memory status reports plugin available + ready
     [embed] GitHub - yantrikos/yantrikdb-hermes-plugin: YantrikDB memory provid... https://github.com/yantrikos/yantrikdb-hermes-plugin
 
+[2026-05-14T00:57:33.224000+00:00] wysie_ (id=1504286513976967341)
+    seems promising! just going through the installation instructions - can you update it so that we can easily install with hermes plugin install command? also, for the pip portion, should we be using hermes venv when installing? will give it a shot later just read through and thought i'd post first.
+
+[2026-05-14T01:20:54.144000+00:00] spranab (id=1504292389861195928)
+    Hi <@329427821208535040> , shipped both of your asks in v0.4.5 (just hit pypi). thanks for catching them, both were real gaps.
+    
+    one-command install via hermes plugins install now works:
+    
+    
+    hermes plugins install yantrikos/yantrikdb-hermes-plugin
+    pip install yantrikdb
+    hermes config set memory.provider yantrikdb
+    
+    hermes drops the plugin source at ~/.hermes/plugins/yantrikdb/ automatically. pip install yantrikdb is the separate step because hermes' plugins-install doesn't auto-pull pip deps yet — that's the engine (~10MB).
+    
+    on the venv question — yes, pip-install yantrikdb into whatever python env hermes runs from. if you're on pipx install hermes-agent, it's:
+    
+    
+    pipx inject hermes-agent yantrikdb
+    regular venv → source it first, then pip. if hermes memory status shows not available ✗ after install, the usual cause is the engine pkg landed in a different python than hermes uses — which hermes && which python confirms. README has both options written up now: https://github.com/yantrikos/yantrikdb-hermes-plugin#install-default--embedded-backend
+    
+    the existing pip install yantrikdb-hermes-plugin + yantrikdb-hermes install path still works if you'd rather have everything land via pip in one shot — same plugin, different drop location.
+    [embed] GitHub - yantrikos/yantrikdb-hermes-plugin: YantrikDB memory provid... https://github.com/yantrikos/yantrikdb-hermes-plugin
+
+[2026-05-14T01:35:48.724000+00:00] wysie_ (id=1504296142001803396)
+    Oh shit I just saw this haha. I submitted some PRs 😂
+
+[2026-05-14T01:37:34.165000+00:00] wysie_ (id=1504296584253280316)
+    Thanks!
+
+[2026-05-14T01:37:40.352000+00:00] wysie_ (id=1504296610203701298)
+    My PR is irrelevant now btw
+
+[2026-05-14T01:39:55.876000+00:00] spranab (id=1504297178632294450)
+    No bro, I am going through it now. I think this will be addition to  my fix earlier.  Thanks for taking time to improve the plugin. Really appreciate it.
+
+[2026-05-14T01:43:15.794000+00:00] wysie_ (id=1504298017149423726)
+    It's a slightly cleaner version of your Option B
+
+[2026-05-14T01:43:19.179000+00:00] wysie_ (id=1504298031347138652)
+    Thank you 🙏
+
+[2026-05-14T01:49:15.685000+00:00] spranab (id=1504299526641553469)
+    Merged
+
+[2026-05-14T02:23:56.678000+00:00] wysie_ (id=1504308254958682142)
+    Submitted another pr to clarify the readme
+
+[2026-05-14T02:27:48.205000+00:00] spranab (id=1504309226053570690)
+    Thanks bro, already merged
+

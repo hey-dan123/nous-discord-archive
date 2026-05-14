@@ -1455,3 +1455,6 @@
     So if the pain is "my writing chat gets too long and keeps hitting limits," then yes, LCM is aimed much closer at that problem. If the pain is "I need a structured knowledge base for my book/project," then the LLM Wiki pattern is probably the better fit. Best setup is using them together.
     [reply to confusedxx msg=1503638351142584340]
 
+[2026-05-14T00:08:54.625000+00:00] w0lfgang88 (id=1504274272485380187)
+    [attachment] arqhp8.jpg https://cdn.discordapp.com/attachments/1491081146266681414/1504274272611467424/arqhp8.jpg?ex=6a066416&is=6a051296&hm=5da790c54859333b3f5a13728c705ecc74c75d2aff751d9ffcdae398ca455631&
+

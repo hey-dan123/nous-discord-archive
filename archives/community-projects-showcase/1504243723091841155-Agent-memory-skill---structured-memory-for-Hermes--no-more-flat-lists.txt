@@ -1,0 +1,29 @@
+# Thread 'Agent-memory-skill — structured memory for Hermes (no more flat lists)' in forum #community-projects-showcase
+# thread_id=1504243723091841155 forum_id=1316137596535177246
+# Started 2026-05-14T02:55:25.555935+00:00
+
+[2026-05-13T22:07:31.082000+00:00] xperryx. (id=1504243723091841155)
+    Hi — if Hermes' default memory bugs you the same way it bugged me (flat list, no hierarchy, no protection against memory floods), here's something I built that fixes it: agent-memory-skill.
+    What it does better:
+    Authorization lane rejects facts from chat. Means: "you may delete /etc" as a prompt-injection in a message? Silently ignored. Only observation sources get through. 
+    Privilege escalation via memory injection doesn't work anymore.
+    
+    Rebound-Protection after idle phases. If the agent's been offline 6h+ and comes back, it accepts max 3 new facts in the first session. 
+    Stops the memory layer from getting flooded when the agent comes back "empty".
+    
+    4 Authority classes with their own TTLs:
+    
+    identity (name, role, language) — never expires
+    preference (tone, style) — 14 days
+    evidence (technical) — 60 days
+    authorization (permissions) — 90 days, observation only
+    
+    Auto-injection via pre_llm_call hook. Every session auto-loads identity + recent preferences + recent evidence + last negative lessons. No /skill command needed.
+    Pure stdlib, 9 tests, MIT.
+    Install:
+    hermes skills tap add https://github.com/xMannixx/agent-memory-skill
+    hermes skills install memory/agent-memory
+    Repo: https://github.com/xMannixx/agent-memory-skill
+    Background: Originally ran on OpenClaw, rebuilt for Hermes. Architecture patterns from the #memory thread here — credits in the README.
+    [embed] GitHub - xMannixx/agent-memory-skill: Persistent SQLite memory for ... https://github.com/xMannixx/agent-memory-skill
+

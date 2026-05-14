@@ -158,3 +158,9 @@
 [2026-05-13T01:09:31.699000+00:00] wysie_ (id=1503927139613933708)
     Thanks for the feedback, I've updated the installation instructions so it's clearer.
 
+[2026-05-14T02:55:40.296000+00:00] tydynrain (id=1504316239311278182)
+    It installed fine, but when I start Hermes gateway, I receive this error: 
+    
+    WARNING hermes_cli.plugins: Failed to load plugin 'mnemosyne-dashboard': No module named 'config'
+    [reply to wysie_ msg=1503927139613933708]
+

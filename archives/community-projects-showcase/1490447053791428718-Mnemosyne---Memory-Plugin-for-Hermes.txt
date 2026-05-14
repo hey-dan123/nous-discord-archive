@@ -2225,3 +2225,36 @@
     Hope that clears it up!
     [reply to _8bit64k_ msg=1503889317158981785]
 
+[2026-05-13T21:08:07.255000+00:00] _8bit64k_ (id=1504228775318126764)
+    Thanks for the answer. I'm looking forward to trying it out.
+    [reply to nulledvector msg=1504204358047502506]
+
+[2026-05-13T21:12:02.294000+00:00] nulledvector (id=1504229761143279761)
+    Sure thing! you're most welcomed! let us know for sure 🙂 give us some feedback after a week of trialing or something
+    [reply to _8bit64k_ msg=1504228775318126764]
+
+[2026-05-13T21:12:03.272000+00:00] nulledvector (id=1504229765245042699)
+    🙂
+
+[2026-05-13T21:44:46.983000+00:00] maxfreedompollard_16654 (id=1504238001645944832)
+    Superb project. I hope it works as describes. Well done. Should be bundled with Hermes natively.
+
+[2026-05-13T22:31:18.779000+00:00] walterwego (id=1504249711287079094)
+    Even if MEMORY.md and USER.md isn‘t updated anymore, their contents are still injected into context. So it‘s possible, that outdated information is processed by LLM. Therefore i‘ve deleted both files.
+    [reply to nulledvector msg=1504204358047502506]
+
+[2026-05-13T22:38:02.660000+00:00] walterwego (id=1504251405286899814)
+    Yes, it‘s the best memory plugin i‘ve used so far. It‘s been a long way: Honcho -> Holographic -> Openviking -> Mnemosyne
+    [reply to maxfreedompollard_16654 msg=1504238001645944832]
+
+[2026-05-13T22:50:16.438000+00:00] nulledvector (id=1504254482975035534)
+    Thanks for the comment! and sure thing, you're welcome to try it out, let us know how it goes and please you're more than welcome to give honest feedback and provide CC! Hope it works out for you 🙂
+    [reply to maxfreedompollard_16654 msg=1504238001645944832]
+
+[2026-05-14T01:41:22.835000+00:00] maxfreedompollard_16654 (id=1504297543365038110)
+    <@151598363131904000> Definitely no honest feedback from me, I don't have refined enough tastes to usefully tell the differences between the memories at this early stage. With that said it's installed for all agents, so hopefully it's good. 😂
+
+[2026-05-14T02:42:51.513000+00:00] nulledvector (id=1504313014801928343)
+    It'd alright man! Appreciate you for using Mnemosyne welcome to the community ! ✨ 🎉
+    [reply to maxfreedompollard_16654 msg=1504297543365038110]
+

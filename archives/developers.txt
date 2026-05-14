@@ -15989,3 +15989,110 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-13T19:37:07.120000+00:00] eva_electricsheep (id=1504205873852186778)
     Spent last few hours getting up to speed on hermes. The code is much uh cleaner than I’m used to
 
+[2026-05-13T20:06:56.270000+00:00] waefrebeorn (id=1504213378091057183)
+    i will be hard at work burning deepseek tokens to make my own c build inference engine for qwen 3.6 35 a3b exclusively 
+    
+    progress on bytropix repo now
+
+[2026-05-13T20:09:10.775000+00:00] eva_electricsheep (id=1504213942245916813)
+    There's a lot of Qwen love
+
+[2026-05-13T20:09:18.478000+00:00] eva_electricsheep (id=1504213974554513498)
+    what do yall do with it?
+
+[2026-05-13T20:09:30.049000+00:00] waefrebeorn (id=1504214023086932040)
+    local hermes overnight
+
+[2026-05-13T20:10:59.061000+00:00] waefrebeorn (id=1504214396430192840)
+    due to confusion about www i have changed the bio link to be the bytropix subdomain linking to the github, people kept going to the duck clicker arg
+    [reply to waefrebeorn msg=1504213378091057183]
+
+[2026-05-13T20:43:42.331000+00:00] peterpete (id=1504222630981406830)
+    Where I would start implementing this? https://discord.com/channels/1053877538025386074/1504161389386661958/1504171069496623145
+
+[2026-05-13T20:44:31.820000+00:00] undifined. (id=1504222838553575594)
+    It works on my npu , decent coder
+    [reply to eva_electricsheep msg=1504213942245916813]
+
+[2026-05-13T20:53:01.717000+00:00] ahmetarif0x (id=1504224977216344187)
+    PR #25148 — api_mode lost on model switch in TUI
+    
+    _persist_model_switch() wasn't writing api_mode back to config when switching models. The gateway and CLI paths were already fixed (#25131, #25138) but the TUI gateway was missed.
+    
+    https://github.com/NousResearch/hermes-agent/pull/25148
+    [embed] fix(tui): persist api_mode in _persist_model_switch() by AhmetArif0... https://github.com/NousResearch/hermes-agent/pull/25148
+
+[2026-05-13T21:27:10.415000+00:00] markelphoenix (id=1504233570078560317)
+    I am trying a local Qwen3.6 brain for Hermes for overnight coding. Any tips? I feel like it gets lost eventually for longer run tasks or asks /goals. Any plugins or skills to help it along?
+    [reply to waefrebeorn msg=1504214023086932040]
+
+[2026-05-13T21:34:57.228000+00:00] waefrebeorn (id=1504235528034193468)
+    use llama.cpp, compile for your machine, target 196k and report it as 185k to hermes in yaml
+    or target 256k reported as 248k
+    
+    set compression window to .85 in yaml
+    
+    set -t to be machine thread amount and -tb one below machine thread amount
+    
+    set checkpoint every 32567 instead of 8192
+    
+    64 checkpoints instead of 32
+    
+    use a iq2 unsloth quant at q4_0 ctk and ctv. 
+    
+    —jinja needed. use preserve thinking false template
+    
+    temp 0.6 minp .95 and —mmap 
+    
+    using -ngl99 is a meme if you have 8gb vram only use on high vram scenarios 
+    
+    i use a 5050 laptop 8gb and 96gb system ram in BAR which translates to 8+48gb vram with the 8gb being the 3b fast loading 
+    
+    targeted 35b a4b outperforms 27b dense via just letting it run longer in clock time when compared to token usage in this manner
+    [reply to markelphoenix msg=1504233570078560317]
+
+[2026-05-13T21:35:21.244000+00:00] waefrebeorn (id=1504235628764598362)
+    https://github.com/NousResearch/hermes-agent/pull/25240/changes/4704697cc06b30dd94f25913a7c4dec73d02e406
+    [embed] Add skill: mind-palace by waefrebeorn · Pull Request #25240 · Nou... https://github.com/NousResearch/hermes-agent/pull/25240/changes/4704697cc06b30dd94f25913a7c4dec73d02e406
+
+[2026-05-13T21:36:23.767000+00:00] waefrebeorn (id=1504235891005194320)
+    i have added mind palace skill to the hermes pull request 
+    
+    this creates a human readable auto goal structure that you can use for any project 
+    
+    i cleaned it up from my presentation last night and basic prompt from before 
+    
+    “hermes, i would like you to create a markdown mind palace in a .hermes directory in this project, i would like a index system of all project files and devils advocate details, the mind palace is a prestige prompt structure system that uses multi stage directions based on project needs, the mind palace needs a 4 phase devils advocate loop structure as well as a slate markdown
+    
+    to consider and control this as a goal, create it as a looping 1000 step devils advocate review process and then roadmap the extension phase plane
+    
+    then use this to create the mind palace skill alias mp”
+
+[2026-05-13T21:40:05.102000+00:00] waefrebeorn (id=1504236819351339103)
+    consider this my “prompt engineer resume” submission for meta prompting hermes
+
+[2026-05-13T22:09:00.945000+00:00] gokhe (id=1504244100004843603)
+    No worries.
+    [reply to teknium msg=1504123157106393210]
+
+[2026-05-13T22:09:39.636000+00:00] maxpower9548 (id=1504244262286393395)
+    The highest good is like JSON. JSON benefits all programs without contending. It dwells in the config files that developers disdain, and so is close to the Dao.
+
+[2026-05-13T22:16:36.598000+00:00] cayblood (id=1504246011152040166)
+    <@843483141074976788> cool submission. Lots of Mormon-themed architecture in that video you shared. Was that intentional?
+
+[2026-05-13T22:46:57.634000+00:00] omgart (id=1504253649130623046)
+    👍
+
+[2026-05-14T01:28:34.125000+00:00] frowtek (id=1504294319161479218)
+    It fixes the macOS/BSD find fallback in ShellFileOperations._search_files(), mainly around recent-first sorting and pagination when GNU find -printf isn’t available.
+    
+    I also added regression tests for the BSD stat -f path and the plain find last-resort fallback. Just wanted to share it here in case you want to take a look <@387972437901312000> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/25329
+    [embed] fix(file_operations): fix macOS/BSD find fallback sorting and pagin... https://github.com/NousResearch/hermes-agent/pull/25329
+
+[2026-05-14T01:38:37.102000+00:00] w0lfgang88 (id=1504296848230318231)
+    https://github.com/NousResearch/hermes-agent/pull/21012
+    [embed] fix(ci): unblock shared PR checks by stephenschoettler · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/21012
+

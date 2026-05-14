@@ -23,3 +23,16 @@
 [2026-05-10T21:18:26.955000+00:00] ivanneira (id=1503144210931515472)
     I’m not trying to present this as “the right way” to run Hermes. It is just the pattern I wanted for my own setup, and I’d rather get corrected early if the framing or defaults are wrong. Gracias y saludos a todos!
 
+[2026-05-13T20:32:12.112000+00:00] viletonvaine (id=1504219735993094294)
+    feature request: discord integration as an alternative to telegram 🙂
+
+[2026-05-13T21:40:21.416000+00:00] maxfreedompollard_16654 (id=1504236887777349662)
+    I think sandbox is the less confusing term because sandbox is where you play and jail is a place where people are contained uselessly (not productively)
+
+[2026-05-14T00:52:07.960000+00:00] nim.i (id=1504285149720739910)
+    yeah jail usualy doesn't have work, prison would be more fitting ig.
+    [reply to maxfreedompollard_16654 msg=1504236887777349662]
+
+[2026-05-14T01:39:58.276000+00:00] maxfreedompollard_16654 (id=1504297188698886267)
+    <@775030123749441536> "Hermes Work Release"
+

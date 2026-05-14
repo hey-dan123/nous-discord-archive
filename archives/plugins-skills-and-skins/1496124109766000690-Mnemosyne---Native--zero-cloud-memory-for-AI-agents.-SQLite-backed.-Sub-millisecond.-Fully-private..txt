@@ -920,3 +920,7 @@
     [embed] feat: per-profile memory isolation via Mnemosyne banks (issue #72) ... https://github.com/WXBR/mnemosyne/commit/7b3a80e37230c29f06facc06289310b111c5cbcd
     [reply to excessivelysalty msg=1503489148944908418]
 
+[2026-05-14T00:32:22.070000+00:00] spranab (id=1504280175737569431)
+    <@151598363131904000> checkout https://github.com/yantrikos/yantrikdb-server
+    [embed] GitHub - yantrikos/yantrikdb-server: Cognitive memory database for ... https://github.com/yantrikos/yantrikdb-server
+

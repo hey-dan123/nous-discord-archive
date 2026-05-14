@@ -44,3 +44,16 @@
 [2026-05-08T01:46:57.549000+00:00] floory (id=1502124620063576138)
     selling it like crack
 
+[2026-05-14T00:40:53.965000+00:00] maxfreedompollard_16654 (id=1504282322780946613)
+    So the basis of this one is that you give it starting directives, and it does whatever you direct it to, to the best of it's ability after that forever? If so, I am in LOVE with the concept. Although I am not trying it because it's not quite clear what or how it works, or if it even works.
+
+[2026-05-14T00:58:35.130000+00:00] nim.i (id=1504286773629550602)
+    yeah i need something like that, i don't think this is it, but i've been trying everything, including hermes to do that
+    [reply to maxfreedompollard_16654 msg=1504282322780946613]
+
+[2026-05-14T01:10:38.370000+00:00] maxfreedompollard_16654 (id=1504289807117979779)
+    That's the goal. It's what everyone wants. I think it's achievable with modern tech but nobody has put it together yet. Definitely can't be that hard to automate some "Within the context of our overall goal and this task, how should I proceed from this moment?" It just needs to have some awesome awesome memory setup.
+
+[2026-05-14T01:35:24.563000+00:00] maxfreedompollard_16654 (id=1504296040663355463)
+    The soul.md file - which for this project should be the end all be all - never reaches the agents mind during Active mode. Plus, there's no memory or anything. In a project like this where you have license to take anything from anywhere, and the point is persistence from first creation, it's a non-starter rn
+
