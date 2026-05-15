@@ -1,0 +1,15 @@
+# Thread 'Omatchy - a plugin that matches Hermes dashboard to your Omarchy desktop theme' in forum #plugins-skills-and-skins
+# thread_id=1504628093187391671 forum_id=1485392832154832906
+# Started 2026-05-15T02:57:59.841787+00:00
+
+[2026-05-14T23:34:52.054000+00:00] _8bit64k_ (id=1504628093187391671)
+    Video shows my Omarchy theme collection and my hermes desktop auto matching it as it cycles through 40 themes.
+    
+    To install just use the dashboard plugin installer w/ repo: 8bit64k/omatchy
+    or 
+    https://github.com/8bit64k/omatchy
+    
+    Enjoy
+    [attachment] dual-plugin-demo-720p.mp4 https://cdn.discordapp.com/attachments/1504628093187391671/1504628095221497956/dual-plugin-demo-720p.mp4?ex=6a07ad9c&is=6a065c1c&hm=883109739d1224ac9dd5e605d1f5084443fa7054c6428ccdce97eed61bf92add&
+    [embed] GitHub - 8bit64k/omatchy: Dynamic Omarchy ↔ Hermes Dashboard them... https://github.com/8bit64k/omatchy
+

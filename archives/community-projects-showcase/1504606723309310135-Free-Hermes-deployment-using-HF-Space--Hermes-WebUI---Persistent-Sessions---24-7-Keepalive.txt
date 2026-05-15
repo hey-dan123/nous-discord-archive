@@ -1,0 +1,31 @@
+# Thread 'Free Hermes deployment using HF Space: Hermes WebUI + Persistent Sessions + 24/7 Keepalive' in forum #community-projects-showcase
+# thread_id=1504606723309310135 forum_id=1316137596535177246
+# Started 2026-05-15T02:55:22.380682+00:00
+
+[2026-05-14T22:09:57.078000+00:00] necrosis._. (id=1504606723309310135)
+    Hey everyone!
+    
+    Just shipped a fork that merges Hermes WebUI into HuggingMes so you get a full three-panel chat agent running on a free HF Space.
+    
+    What you get (all free on HF Spaces):
+    - Full Hermes WebUI at / — sessions, files, profiles, themes, voice input
+    - HF Dataset persistence (backs up every 10 min)
+    - Cloudflare proxy + keepalive for 24/7 uptime
+    - Telegram webhook bridge
+    - OpenAI-compatible API at /v1/*
+    - Dashboard still at /hm, settings at /hm/app/
+    - One GATEWAY_TOKEN for everything
+    
+    Stack:
+    - Nous Research — Hermes Agent
+    - @nesquena — Hermes WebUI
+    - @somratpro — HuggingMes (base HF Space I forked from)
+    - My layer — WebUI integration + auth unification
+    
+    HuggingMes already handled the HF Space deployment. I just added WebUI as the primary interface and unified the auth.
+    
+    Repo: https://github.com/F4bC0d3/huggingmes-hermes-webui
+    
+    Feedback and PRs welcome.****
+    [embed] GitHub - F4bC0d3/huggingmes-hermes-webui: Merged HuggingMes + Herme... https://github.com/F4bC0d3/huggingmes-hermes-webui
+

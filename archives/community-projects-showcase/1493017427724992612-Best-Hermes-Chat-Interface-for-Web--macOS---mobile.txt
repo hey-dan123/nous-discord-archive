@@ -2188,3 +2188,13 @@
     Great to hear that it's working okay now, thanks for following up!
     [reply to lemz42 msg=1504398956304662608]
 
+[2026-05-14T21:45:04.660000+00:00] _123321_ (id=1504600463654391830)
+    webui agents keep on saying "task X is underway, i'll be notified when complete" but they never get notified, is that a known issue or something the matter with my setup ?
+
+[2026-05-14T22:35:16.412000+00:00] avidfuturist (id=1504613095857979554)
+    Thanks for the report I’ll look into it and get back to you!
+    [reply to _123321_ msg=1504600463654391830]
+
+[2026-05-14T22:35:39.740000+00:00] avidfuturist (id=1504613193702703304)
+    For anyone in here if you ever have any questions or bugs, please report them here and I’ll investigate as soon as I can!
+

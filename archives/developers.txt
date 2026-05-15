@@ -16391,3 +16391,214 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     no worries man
     [reply to dan.patterson msg=1504542146370469928]
 
+[2026-05-14T19:50:13.733000+00:00] apyh (id=1504571561011576943)
+    we just had a couple folks from Nous in Rio for ICLR, you missed us :p
+    [reply to wesleysimplicio msg=1504504655743418419]
+
+[2026-05-14T20:05:27.571000+00:00] apyh (id=1504575393925955675)
+    checkin it out
+    [reply to w0lfgang88 msg=1504560952840818899]
+
+[2026-05-14T20:18:53.044000+00:00] apyh (id=1504578772324847797)
+    ok, merged her, but with a note.  body of the PR is totally incorrect wrt what is actually changed, please try to keep these correct in the future :)
+    [reply to _voscko_ msg=1504560652491030781]
+
+[2026-05-14T20:19:30.011000+00:00] _voscko_ (id=1504578927375552723)
+    You rock, thanks for doing this!
+    [reply to apyh msg=1504578772324847797]
+
+[2026-05-14T20:20:25.577000+00:00] apyh (id=1504579160436375614)
+    thank *you* for fixing CI :3
+
+[2026-05-14T20:22:29.318000+00:00] _voscko_ (id=1504579679443484733)
+    going to make sure my open PR's are up to par and not raising any red flag as you mentioned, hopefully i get the beautiful developer role here too one day T_T 😛
+    [reply to apyh msg=1504579160436375614]
+
+[2026-05-14T20:35:04.819000+00:00] gokhe (id=1504582848244486294)
+    fixed a bug when attaching url and discord comes attaches the url preview in llm's context and it errors out.
+    
+    https://github.com/NousResearch/hermes-agent/pull/25936
+    
+    https://github.com/NousResearch/hermes-agent/issues/25935
+    [embed] fix(gateway,image-routing): stop cross-routing docs as images + tra... https://github.com/NousResearch/hermes-agent/pull/25936
+    [embed] Discord image attachments fail with HTTP 400 'Could not process ima... https://github.com/NousResearch/hermes-agent/issues/25935
+
+[2026-05-14T20:51:33.011000+00:00] w0lfgang88 (id=1504586993022009566)
+    The PR was old and got rebuilt/simplified over time. The body still described an earlier broader CI-unblocker diff: lint workflow, gateway media routing, TokenHub metadata, i18n, tools config, e2e confirmation, async cache key work. The final merged diff was mostly hermetic test/CI cleanup: optional SDK mocks, test expectation updates, registry discovery test cleanup, etc. So the body was stale after the final shape changed.
+    [reply to apyh msg=1504578772324847797]
+
+[2026-05-14T21:38:00.313000+00:00] w0lfgang88 (id=1504598683813941248)
+    <@100390510744584192> Follow-up: this is intentionally narrow.
+    
+    It covers shared test-state fixes for:
+    
+    aux provider health
+    update lazy-refresh leakage
+    provider count
+    background review messages
+    compression feasibility
+    summary continuity
+    
+    Thanks in advance!
+    
+    https://github.com/NousResearch/hermes-agent/pull/25957
+    [embed] fix(ci): stabilize shared test state after 21012 by stephenschoettl... https://github.com/NousResearch/hermes-agent/pull/25957
+    [reply to apyh msg=1504579160436375614]
+
+[2026-05-14T21:40:31.972000+00:00] movieplex (id=1504599319917887568)
+    bug : Missing 1: The 11th skill from the curator log was not found in the backup archive. Exact
+         name unknown — the log truncated with "...and 1 more". If you know which one is missing,
+         tell me and I will try to locate it.
+
+[2026-05-14T21:44:21.380000+00:00] sprmn24 (id=1504600282124779660)
+    hey <@387972437901312000>   Can you check it when you have time?
+    
+    5 PR opened today across security and cron reliability:
+    fix(security): IPv6 scope ID bypass in URL safety — both is_always_blocked_url() and is_safe_url() silently skipped IPv6 addresses with scope IDs (fe80::1%eth0), allowing potential SSRF bypass against link-local/metadata endpoints. Stripped scope ID before parsing, fail-closed on unparseable.
+    https://github.com/NousResearch/hermes-agent/pull/25961
+    
+    fix(cron): secrets redaction failure leaks stdout/stderr — when redact_sensitive_text() raises in _run_job_script(), stdout/stderr were left unredacted and could leak API keys/tokens into cron delivery. Replaced bare except Exception: pass with warning log + [REDACTED] fallback.
+    https://github.com/NousResearch/hermes-agent/pull/25904
+    
+    fix(cron): silent channel name resolution failure causes wrong delivery target — resolve_channel_name() failure was silently swallowed, causing cron jobs to use raw chat_id with no indication. Added warning log with platform_key, chat_id, and exception.
+    https://github.com/NousResearch/hermes-agent/pull/25947
+    
+    fix(model_tools): MCP async cleanup failure masks thread leak — asyncio.gather() failure during worker thread cleanup was silently swallowed, masking potential thread leaks. Added warning log, worker_loop.close() still runs unconditionally.
+    https://github.com/NousResearch/hermes-agent/pull/25950
+    
+    fix(cron): grace period computation failure causes long-period jobs to be skipped — croniter parse failure in _compute_grace_seconds() silently fell back to MIN_GRACE (120s). For 6-hour jobs correct grace is ~3h, 120s causes silent job skips on small time drifts.
+    https://github.com/NousResearch/hermes-agent/pull/25952
+    [embed] fix(security): handle IPv6 scope IDs in URL safety checks to preven... https://github.com/NousResearch/hermes-agent/pull/25961
+    [embed] fix(cron): log and redact on secrets-redaction failure by sprmn24 ... https://github.com/NousResearch/hermes-agent/pull/25904
+    [embed] fix(cron): log channel name resolution failures instead of silently... https://github.com/NousResearch/hermes-agent/pull/25947
+    [embed] fix(model_tools): log MCP async cleanup failures instead of silentl... https://github.com/NousResearch/hermes-agent/pull/25950
+    [embed] fix(cron): log grace period computation failures instead of silentl... https://github.com/NousResearch/hermes-agent/pull/25952
+
+[2026-05-14T21:49:13.478000+00:00] gokhe (id=1504601507272851468)
+    Latest run after the Pillow fix: 19 failed, 22873 passed, 161 skipped (the 2 extra skips are the Pillow-soft-dep transcode tests skipping correctly when Pillow isn't on the runner).
+    
+    For sanity I also pulled the most recent Tests workflow run on main itself (run 25883272638, commit cd64bed): 19 failed, 22860 passed, 159 skipped. Same 19 tests, same error messages -- test_auxiliary_client, test_compression_feasibility, test_plugin_discovery, test_update_autostash, test_provider_parity, test_background_review, test_context_compressor_summary_continuity. So all 19 remaining failures pre-exist on main and aren't from this PR.
+    
+    Diff vs main's run: this PR adds 13 passing tests + 2 conditional-skip tests, removes nothing. Net 0 new failures, net +13 coverage. 
+    
+    please check this out <@387972437901312000>
+
+[2026-05-14T22:41:09.271000+00:00] gokhe (id=1504614575855763590)
+    Added a new feature where the smaller model can take advise from bigger model improving the quality of output by 80-90%. Raised a pr, copied the concept from claude code. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/25980
+    [embed] feat(cli,gateway): add /advisor command for on-demand second-opinio... https://github.com/NousResearch/hermes-agent/pull/25980
+
+[2026-05-14T22:53:37.676000+00:00] markelphoenix (id=1504617714893852692)
+    For someone with a 5090 RTX, is Qwen still the best local model for having Hermes Agent do development work?
+
+[2026-05-14T23:03:16.814000+00:00] minddragon (id=1504620143974682805)
+    https://github.com/NousResearch/hermes-agent/pull/25941
+    [embed] feat(providers): add xAI Coding Plan OAuth provider via grok CLI de... https://github.com/NousResearch/hermes-agent/pull/25941
+
+[2026-05-14T23:13:18.207000+00:00] costi0974 (id=1504622666399879298)
+    Grok Build just came out today in early beta. Is it possible to connect it to Hermes
+
+[2026-05-14T23:16:23.536000+00:00] minddragon (id=1504623443725910166)
+    lol look up
+    [reply to costi0974 msg=1504622666399879298]
+
+[2026-05-14T23:16:54.038000+00:00] costi0974 (id=1504623571660439552)
+    <@124163890148802560> Hahahahaha
+
+[2026-05-14T23:30:22.756000+00:00] movieplex (id=1504626963669712976)
+    BuG: Teknium decided to use the word "prune".
+    
+         Git evidence:
+         - Commit 436672de0e by Teknium, dated 2026-05-05, titled: feat(curator):
+         add archive and prune subcommands (#20200)
+         - The commit message explicitly introduces both verbs: "Adds 'hermes
+         curator archive <skill>' and 'hermes curator prune [--days N] [--yes]
+         [--dry-run]'"
+         - The _cmd_prune() function and its docstring naming were added in that
+         single commit.
+    
+         So it was a human naming decision, not an LLM artifact. The word was
+         chosen despite the actual operation being "bulk-archive" — there was no
+         code distinction between what prune does vs what archive does; both call
+         the same archive_skill() function.
+    
+    
+    why use the word prune if it means ARCHVE???????????????
+
+[2026-05-14T23:33:39.003000+00:00] minddragon (id=1504627786789294271)
+    ohh i think prune means just plain kill it
+
+[2026-05-14T23:33:43.347000+00:00] minddragon (id=1504627805009477662)
+    had to read it like 5 times
+
+[2026-05-14T23:34:06.184000+00:00] minddragon (id=1504627900794798200)
+    like kill from 300 days ago
+
+[2026-05-14T23:34:30.149000+00:00] minddragon (id=1504628001311297657)
+    archive = just one skill i think i have to try
+
+[2026-05-15T00:25:11.622000+00:00] k_sze (id=1504640758173532229)
+    quantized DeepSeek 4 Flash or Pro should also be good. Oh wait, I may have mixed things up. DeepSeek 4 still needs tons of RAM after quantization. Only good for Mac with their unified memory arch.
+    [reply to markelphoenix msg=1504617714893852692]
+
+[2026-05-15T00:41:38.392000+00:00] undifined. (id=1504644896986763304)
+    Mac is not the only one,  my amd ryzen 9 with npu has 32 gb of unified memory
+
+[2026-05-15T00:42:37.190000+00:00] w0lfgang88 (id=1504645143603712091)
+    <@100390510744584192> bump on #25957, tiny CI patch :3
+    
+    It’s green, `mergeState CLEAN`, and I rechecked the body against the live diff so no stale-body jumpscare this time. lol
+    
+    Could you merge when you get a minute? **38 additions / 9 deletions**, intentionally narrow, just mopping up the shared test-state fallout after #21012.
+    
+    https://github.com/NousResearch/hermes-agent/pull/25957
+    [embed] fix(ci): stabilize shared test state after 21012 by stephenschoettl... https://github.com/NousResearch/hermes-agent/pull/25957
+
+[2026-05-15T01:27:20.712000+00:00] apyh (id=1504656399110504598)
+    thank you! Left a small comment requesting a follow-up PR with a little bit more testing for your production behavior bug fix changes, but I also merged
+    [reply to w0lfgang88 msg=1504645143603712091]
+
+[2026-05-15T01:39:10.345000+00:00] tiny_th_dev (id=1504659375527170118)
+    I ran into an issue where `foo.local` does not get classified as a local host as far as `is_local_endpoint` is concerned. No big deal unless you take more than 300s for prefill. I submitted a PR to fix the issue. https://github.com/NousResearch/hermes-agent/pull/26032
+    [embed] fix(model_metadata): treat .local mDNS hostnames as local endpoints... https://github.com/NousResearch/hermes-agent/pull/26032
+
+[2026-05-15T01:41:56.495000+00:00] tiny_th_dev (id=1504660072410906824)
+    alt-glitch tagged it as a duplicate. Hopefully we can merge #20359 sooner than later. 👍
+    [reply to tiny_th_dev msg=1504659375527170118]
+
+[2026-05-15T01:52:21.984000+00:00] apyh (id=1504662695901659146)
+    looking into it!
+
+[2026-05-15T02:04:57.826000+00:00] w0lfgang88 (id=1504665866132787240)
+    Thanks, agreed. I got too CI-unblocker-brained and under-tested the two prod behavior pieces.
+    
+    Follow-up is up: https://github.com/NousResearch/hermes-agent/pull/26039
+    
+    It adds regressions for protected-head _previous_summary rehydration and bg-review message capture after close. The bg-review test also caught a tiny teardown-order issue, so that snapshot-before-close fix is included too.
+    [embed] test: cover #25957 production regressions by stephenschoettler · P... https://github.com/NousResearch/hermes-agent/pull/26039
+    [reply to apyh msg=1504656399110504598]
+
+[2026-05-15T02:09:56.877000+00:00] etmost (id=1504667120443723927)
+    Proposing this as a user that mainly uses Discord, who wants to see the tool progress to run, but gets cleaned up later. Just to enhance the experience. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/26055
+    [embed] feat(gateway): auto-delete Discord tool progress bubbles by nazirul... https://github.com/NousResearch/hermes-agent/pull/26055
+
+[2026-05-15T02:20:27.158000+00:00] krionex (id=1504669764033712208)
+    just opened a quick PR to fix the /whoami command in the classic CLI. It was showing up in help but wasn't actually wired to the dispatcher. Here’s the PR https://github.com/NousResearch/hermes-agent/pull/26047
+    [embed] fix(cli): wire /whoami slash command in classic CLI by kronexoi · ... https://github.com/NousResearch/hermes-agent/pull/26047
+
+[2026-05-15T02:41:23.454000+00:00] w0lfgang88 (id=1504675033321177118)
+    Quick follow-up on the failed post-merge checks from #25957:
+    
+    The PR-head checks were green, but the merge commit exposed two shared test-fixture issues.
+    
+    I opened the narrow unblocker here:
+    
+    https://github.com/NousResearch/hermes-agent/pull/26048
+    
+    It fixes the Discord e2e mock surface plus the Nous provider-parity empty-model fixture issue. CI is green and `mergeState` is `CLEAN`.
+    [embed] test: unblock post-25957 shared CI by stephenschoettler · Pull Req... https://github.com/NousResearch/hermes-agent/pull/26048
+    [reply to w0lfgang88 msg=1504665866132787240]
+

@@ -22,3 +22,9 @@
     https://github.com/H-Ali13381/recursive-agent-improvement
     [embed] GitHub - H-Ali13381/recursive-agent-improvement: Systematic agent i... https://github.com/H-Ali13381/recursive-agent-improvement
 
+[2026-05-14T22:10:29.355000+00:00] excessivelysalty (id=1504606858688725024)
+    Very nice, I used this and had my agent optimize a 101kb skill I had, down to 15kb, resulting in going from 25k tokens used to 4,300 tokens used each time I used the skill.
+
+[2026-05-15T00:04:23.528000+00:00] neopabo (id=1504635523287748688)
+    <@71751123148484608> Nice!
+

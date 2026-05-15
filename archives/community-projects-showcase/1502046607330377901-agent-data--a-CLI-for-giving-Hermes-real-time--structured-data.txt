@@ -29,3 +29,20 @@
     agent-data: https://agent-data.dev
     [attachment] agent-data-logo.jpg https://cdn.discordapp.com/attachments/1502046607330377901/1502046607825174739/agent-data-logo.jpg?ex=6a019529&is=6a0043a9&hm=2d2727319d83dfebd0e96b7cf3050bba7d40fe206d94ae8eb8eb17fa2d098c3b&
 
+[2026-05-14T23:28:05.562000+00:00] deepparser (id=1504626388236238930)
+    Update: just added a **Free tier** (100 calls/month, no credit card required). This should make it easier to test with real Hermes workflows (e.g., “monitor fares for a flight to SF under $200”). 
+    
+    I’m planning to add 10-20 new endpoints by the end of the month, with a new job postings endpoint (e.g., LinkedIn, Indeed, Wellfound) next on the list. What else would be useful?
+
+[2026-05-15T00:08:05.470000+00:00] neopabo (id=1504636454180225144)
+    Is there any reason you wouldn't just set a rest api with a skill enabling access? It seems like a more straightforward option
+
+[2026-05-15T00:33:39.307000+00:00] deepparser (id=1504642887558758584)
+    Great question – the reason I went with a CLI is to better support a large and growing number of endpoints without flooding context with API schemas and docs.
+    
+    Specifically, I expose a `search` command that allows agents to semantically search across all available endpoints and progressively discover the one they need. So rather than maintaining a doc of available endpoints and schemas in context, agents can find endpoints (e.g., job postings, flights, social media) at runtime. 
+    
+    Additionally, agents are pretty good at bash (so --help and other flags are pretty intuitive), and I can keep discovery and invocation in the same tool. 
+    
+    That said, I’ve been thinking about ways to expose the underlying endpoints via API / MCP, so I’m not opposed to offering that as an alternative surface. Happy to prioritize that if you think it’d be more useful.
+
