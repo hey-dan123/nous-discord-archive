@@ -1,0 +1,24 @@
+# Thread '🧠 Noxem — Persistent Memory for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1504710919702188052 forum_id=1485392832154832906
+# Started 2026-05-15T08:50:01.017415+00:00
+
+[2026-05-15T05:03:59.434000+00:00] noxerz. (id=1504710919702188052)
+    Tired of your agent forgetting everything between sessions?
+    
+    **I built Noxem.** Local. Fast. Two brains.
+    
+    ## ⚡ The numbers
+    > ~23 ms store · ~25 ms hybrid search · ~18 ms maintenance
+    > Sub-30ms for every operation — no external API round-trips.
+    
+    ## 📦 What's inside
+    🧠 **Brain 1** — semantic search, dedup, auto-categorization, conflict resolution
+    🧠 **Brain 2** *(optional)* — reasoning, drift detection, background research, session extraction
+    
+    ## ✅ What you get
+    🔒 100% local — SQLite, zero cloud
+    🌐 OpenAI-compatible API out of the box
+    🔗 **GitHub:** https://github.com/LVT382009/noxem
+    [attachment] cde3bc19-50a8-4c8e-8a44-20177b499257.png https://cdn.discordapp.com/attachments/1504710919702188052/1504710920029474917/cde3bc19-50a8-4c8e-8a44-20177b499257.png?ex=6a07fabf&is=6a06a93f&hm=069573955c348fc32113ba89d82722b87ab8eb06d6639361a596c0a85bdbd826&
+    [embed] GitHub - LVT382009/noxem https://github.com/LVT382009/noxem
+

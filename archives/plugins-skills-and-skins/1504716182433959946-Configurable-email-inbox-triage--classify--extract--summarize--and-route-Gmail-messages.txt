@@ -1,0 +1,8 @@
+# Thread 'Configurable email inbox triage: classify, extract, summarize, and route Gmail messages' in forum #plugins-skills-and-skins
+# thread_id=1504716182433959946 forum_id=1485392832154832906
+# Started 2026-05-15T08:50:00.539823+00:00
+
+[2026-05-15T05:24:54.167000+00:00] thedavidmurray (id=1504716182433959946)
+    https://github.com/thedavidmurray/hermes-skill-email-intake
+    [embed] GitHub - thedavidmurray/hermes-skill-email-intake: Configurable ema... https://github.com/thedavidmurray/hermes-skill-email-intake
+

@@ -87,3 +87,7 @@
 [2026-05-14T16:13:31.420000+00:00] magnus919 (id=1504517025358417961)
     it'll run periodically throughout the day when the gateway is idle.
 
+[2026-05-15T06:54:06.069000+00:00] magnus919 (id=1504738629937926255)
+    https://github.com/magnus919/hermes-cashew/releases/tag/v0.9.0
+    [embed] Release v0.9.0 — First-Load Bootstrap & Forest-Level Insight Extr... https://github.com/magnus919/hermes-cashew/releases/tag/v0.9.0
+

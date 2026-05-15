@@ -1,0 +1,93 @@
+# Thread '🧠 Noxem — Persistent Memory for Hermes' in forum #community-projects-showcase
+# thread_id=1504698174491856986 forum_id=1316137596535177246
+# Started 2026-05-15T08:47:11.444939+00:00
+
+[2026-05-15T04:13:20.739000+00:00] noxerz. (id=1504698174491856986)
+    Tired of your agent forgetting everything between sessions?
+    
+    **I built Noxem.** Local. Fast. Two brains.
+    
+    ## ⚡ The numbers
+    > ~23 ms store · ~25 ms hybrid search · ~18 ms maintenance
+    > Sub-30ms for every operation — no external API round-trips.
+    
+    ## 📦 What's inside
+    🧠 **Brain 1** — semantic search, dedup, auto-categorization, conflict resolution
+    🧠 **Brain 2** *(optional)* — reasoning, drift detection, background research, session extraction
+    
+    ## ✅ What you get
+    🔒 100% local — SQLite, zero cloud
+    🌐 OpenAI-compatible API out of the box
+    🔗 **GitHub:** https://github.com/LVT382009/noxem
+    [attachment] cde3bc19-50a8-4c8e-8a44-20177b499257.png https://cdn.discordapp.com/attachments/1504698174491856986/1504698174923866112/cde3bc19-50a8-4c8e-8a44-20177b499257.png?ex=6a07eee0&is=6a069d60&hm=9158f2cd2147c00e6970c509123c16289ec37996ca5a9227783604c80e724bb9&
+    [embed] GitHub - LVT382009/noxem https://github.com/LVT382009/noxem
+
+[2026-05-15T05:06:41.122000+00:00] noxerz. (id=1504711597870940160)
+    🧠 Noxem — Persistent Memory for Hermes
+
+[2026-05-15T05:40:37.834000+00:00] dthen (id=1504720140460363916)
+    How does this stand out from other memory solutions?
+
+[2026-05-15T05:40:52.765000+00:00] yaper (id=1504720203085254817)
+    👀
+
+[2026-05-15T05:41:23.508000+00:00] noxerz. (id=1504720332030738522)
+    try and u will see 🙂
+    [reply to dthen msg=1504720140460363916]
+
+[2026-05-15T05:42:30.180000+00:00] dthen (id=1504720611673374810)
+    No, not without knowing anything about it first.
+    [reply to noxerz. msg=1504720332030738522]
+
+[2026-05-15T05:42:45.598000+00:00] tunacookie (id=1504720676341288970)
+    Is it a 4 tier memory?
+
+[2026-05-15T05:42:53.955000+00:00] tunacookie (id=1504720711393218630)
+    Or better?
+
+[2026-05-15T05:43:16.550000+00:00] noxerz. (id=1504720806163386409)
+    i see
+
+[2026-05-15T05:43:32.613000+00:00] dthen (id=1504720873536491591)
+    If the author is not excited about it enough to want to talk about it why would I be interested?
+
+[2026-05-15T05:43:44.402000+00:00] dthen (id=1504720922983272469)
+    I'm reading the readme tho
+
+[2026-05-15T05:44:36.666000+00:00] dthen (id=1504721142194372629)
+    I read the readme. It's a bad readme.
+
+[2026-05-15T05:44:49.113000+00:00] dthen (id=1504721194400878622)
+    If you want people to try this you need to give proper information.
+
+[2026-05-15T05:45:23.627000+00:00] dthen (id=1504721339162820639)
+    There's dozens of these things, everyone has their own vibe coded version.
+
+[2026-05-15T05:50:47.399000+00:00] noxerz. (id=1504722697161150606)
+    okay i'll rewwrite readme
+
+[2026-05-15T07:05:25.059000+00:00] khacquynh92 (id=1504741477828263936)
+    Perfect timing. I've been planning to build a second brain — but for humans, not just for agents. After looking around, I'm leaning toward Neo4j to get graph relationships and semantic search in one place. My Hermes agent has been hitting the limits of plain markdown files for a while. Going to try Noxem and circle back with feedback soon — thanks for putting this out there!
+
+[2026-05-15T07:20:07.339000+00:00] wysie_ (id=1504745178378801262)
+    <@1187146306926411898> For layer 2 must it be qwen 3.6 plus and cloud? What if it's a local llm model like Gemma 4? If small models like Gemma 4 e2b can work or mid sized ones like 26B I think a lot of us may be more interested
+
+[2026-05-15T07:20:29.305000+00:00] wysie_ (id=1504745270511013888)
+    Asking because for hindsight I can use a local model and it works fine. I used Gemma 4 26B
+
+[2026-05-15T07:33:33.338000+00:00] noxerz. (id=1504748558983762071)
+    oh i see
+    [reply to wysie_ msg=1504745270511013888]
+
+[2026-05-15T07:34:22.533000+00:00] noxerz. (id=1504748765322547252)
+    let me add you guy can set brain 2 base url for local model
+
+[2026-05-15T07:36:59.870000+00:00] noxerz. (id=1504749425241882715)
+    cuz right now brain 2 using qwen3.6 plus for free through qwen chat (u only need to have an account on qwen chat by go to and sign up an account then come back fill qwen email and password brain 2 can acess to that chat and send request to it)
+
+[2026-05-15T07:51:46.147000+00:00] noxerz. (id=1504753142556921887)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504698174491856986/1504753142644871228/image.png?ex=6a082212&is=6a06d092&hm=2797bfea48e0969ef12994ea90064ccbd64559269a5c4ae97dcc51bc4a3cef8a&
+
+[2026-05-15T07:52:38.644000+00:00] noxerz. (id=1504753362745167943)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504698174491856986/1504753362799689811/image.png?ex=6a082246&is=6a06d0c6&hm=1f8dbe5f497086c7ac16ce6c2aa84c113fd80ff9f438022a2fb918779cfb8227&
+

@@ -1,0 +1,10 @@
+# Thread 'Livekit plugin for voice and data connection over webrtc.' in forum #plugins-skills-and-skins
+# thread_id=1504728592754413619 forum_id=1485392832154832906
+# Started 2026-05-15T08:50:00.103988+00:00
+
+[2026-05-15T06:14:13.018000+00:00] franci.penov (id=1504728592754413619)
+    A Livekit gateway plugin that let's you have a real-time voice conversation with your agent using any webrtc client. Supports both local Livekit install and Livekit Cloud.
+    
+    https://github.com/kortexa-ai/hermes-livekit
+    [embed] GitHub - kortexa-ai/hermes-livekit: LiveKit WebRTC voice gateway pl... https://github.com/kortexa-ai/hermes-livekit
+

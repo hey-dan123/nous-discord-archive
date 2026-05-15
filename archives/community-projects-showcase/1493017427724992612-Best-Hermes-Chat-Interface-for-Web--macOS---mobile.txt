@@ -2198,3 +2198,7 @@
 [2026-05-14T22:35:39.740000+00:00] avidfuturist (id=1504613193702703304)
     For anyone in here if you ever have any questions or bugs, please report them here and I’ll investigate as soon as I can!
 
+[2026-05-15T08:46:57.765000+00:00] necrosis._. (id=1504767032489672785)
+    In mobile specifically android if i send a message, and then switch to some other app, the task gets cancelled, but ig intended behaviour should be it keeps running and then when i come back answer is ready
+    [reply to avidfuturist msg=1504613193702703304]
+

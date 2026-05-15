@@ -16602,3 +16602,61 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] test: unblock post-25957 shared CI by stephenschoettler · Pull Req... https://github.com/NousResearch/hermes-agent/pull/26048
     [reply to w0lfgang88 msg=1504665866132787240]
 
+[2026-05-15T02:55:20.164000+00:00] m3lon00 (id=1504678542737281127)
+    heres a feature idea maybe - there should be a hermes-native auto bug reporting feature to remove the github barrier. that would create a lot more reporting/qa surface area
+
+[2026-05-15T06:16:10.048000+00:00] .elkim (id=1504729083614072832)
+    hey was Analytics removed from hermes dashboard?
+
+[2026-05-15T06:23:56.267000+00:00] badstyles (id=1504731039078023168)
+    hello guys, where is the link to see cronjobs and configurations online? i log in on the portal but just see my plan and the models
+
+[2026-05-15T06:32:36.123000+00:00] dreww7475 (id=1504733219512389733)
+    https://claude.ai/public/artifacts/7161db91-d7dc-4c53-ac0a-1d4db9d74d5c
+    
+    here is an article claude wrote about long memory benchmarks
+    [embed] Chain-of-Note Prompt Format Trade-offs in LongMemEval https://claude.ai/public/artifacts/7161db91-d7dc-4c53-ac0a-1d4db9d74d5c
+
+[2026-05-15T06:45:45.141000+00:00] magnus919 (id=1504736528893739109)
+    Opens a pattern no proprietary coding agent can match: when Hermes is uncertain about itself, it doesn't just fetch docs — it reads its own source code as ground truth. Open source isn't just a license, it's an architectural advantage for agent self-knowledge.
+    
+    https://github.com/NousResearch/hermes-agent/pull/26168
+    [embed] feat(agent): widen self-knowledge guidance and add live documentati... https://github.com/NousResearch/hermes-agent/pull/26168
+
+[2026-05-15T08:04:59.089000+00:00] loongfay (id=1504756468396593173)
+    Hi, <@387972437901312000>, If you have a moment, please take a look at our fix PR for Yuanbao gateway. Thanks. https://github.com/NousResearch/hermes-agent/pull/22742
+    [embed] Fix(yuanbao): quote file media resolve by libo1106 · Pull Request ... https://github.com/NousResearch/hermes-agent/pull/22742
+
+[2026-05-15T08:17:51.093000+00:00] ajitpriyadarshi (id=1504759706416320513)
+    NEURON 🧠 — an open-source cognitive memory layer for AI agents.
+    
+    Today, most agents “remember” using flat RAG + vector search. Useful, but memory stays shallow, brittle, and forgetful.
+    
+    NEURON treats memory more like a brain:
+    
+    • surprise-based memory formation
+    • semantic belief extraction
+    • synaptic weighting (“myelination”)
+    • consolidation + pruning (“sleep cycles”)
+    • hybrid retrieval (vector + graph walk)
+    • adaptive retrieval strategies
+    
+    Goal: move beyond context windows toward persistent, evolving world models for agents.
+    
+    Works with:
+    Postgres + pgvector
+    Neo4j
+    in-memory graphs
+    
+    Integrates with:
+    LangChain
+    LangGraph
+    CrewAI
+    LlamaIndex
+    
+    Looking for people to test, critique, or break it 😄
+    GitHub: https://github.com/Z-Sigma/neuron
+    
+    #AI #LLMs #Agents #OpenSource #RAG #GraphDB
+    [embed] GitHub - Z-Sigma/neuron: Cognitive memory layer for AI applications https://github.com/Z-Sigma/neuron
+

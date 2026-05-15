@@ -1,0 +1,17 @@
+# Thread 'Oracle Benchmark - How Well can LLM's Interpret the I Ching?' in forum #community-projects-showcase
+# thread_id=1504714170606817280 forum_id=1316137596535177246
+# Started 2026-05-15T08:47:10.678038+00:00
+
+[2026-05-15T05:16:54.510000+00:00] lagomor.ph (id=1504714170606817280)
+    We're measuring how well large language models can function as oracles. Not whether their predictions come true. Whether they can actually interpret.
+    
+    A real I Ching reading takes a hexagram's symbolism and uses it as a lens on your question. It gets specific. It can surprise you, unsettle you, reframe how you see something. A bad one just sounds nice. Vague reassurance dressed in mystical language, applicable to anything and meaningful in no particular way.
+    
+    That's what we're testing. Can these models sit with a question and a hexagram and produce something with real interpretive weight? Or are they just generating the statistically most pleasant-sounding response?
+    
+    Two models get the same cast and the same question. You read both blind and pick the one that speaks best to the question, in your opinion. Over time, the votes build a ranking of interpretive quality across models.
+    
+    Help us out by judging readings at: https://oraclebenchmark.com
+    [attachment] Screenshot_2026-05-15_at_14-15-53_Oracle_Benchmark_Blind_LLM_I_Ching_Arena.png https://cdn.discordapp.com/attachments/1504714170606817280/1504714170757808279/Screenshot_2026-05-15_at_14-15-53_Oracle_Benchmark_Blind_LLM_I_Ching_Arena.png?ex=6a07fdc6&is=6a06ac46&hm=2838f2a32057265169e04cad23077bf7eadfaad7b7e48810a81a064b11eea243&
+    [embed] Oracle Benchmark https://oraclebenchmark.com/
+
