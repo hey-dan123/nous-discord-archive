@@ -1,0 +1,30 @@
+# Thread 'hermes-tool-slimmer — reduce prompt-token overhead from large tool catalogs in Hermes Agent' in forum #community-projects-showcase
+# thread_id=1504976560191438938 forum_id=1316137596535177246
+# Started 2026-05-16T02:44:15.110730+00:00
+
+[2026-05-15T22:39:33.062000+00:00] aliasocracy (id=1504976560191438938)
+    Built a small plugin for Hermes that trims the tool schema list injected into each turn, rather than passing the full catalog every time.
+    
+    The problem: A 57-tool installation serializes to ~73 KB / ~18K tokens per call. Most of those tools are irrelevant to any given turn.
+    
+    What it does:
+    - Builds a BM25-ranked index of your tool schemas
+    - Selects 8–12 relevant tools per turn based on the current prompt
+    - Keeps configured safety tools (always_include) hot regardless of ranking
+    - Supports Anthropic's native Tool Search path (mode: anthropic_tool_search) where available
+    - Falls back to deterministic keyword or hybrid selection for OpenAI/OpenRouter/local providers
+    - fail_open: true by default — any selector error preserves the original full schema list
+    - dry_run mode for validation before you commit to live schema changes
+    
+    Includes a minimal upstreamable patch artifact for the Hermes core selector hook (docs/hermes-core-selector-hook.patch) for anyone who wants to contribute the surface upstream.
+    
+    Install:
+    pip install "git+https://github.com/alias8818/hermes-tool-slimmer.git@v0.1.0"
+    hermes plugins enable tool-slimmer
+    hermes tool-slimmer status
+    
+    GitHub: https://github.com/alias8818/hermes-tool-slimmer
+    
+    Early release — feedback on the core hook contract and provider path behavior especially welcome.
+    [embed] GitHub - alias8818/hermes-tool-slimmer: Reduce Hermes Agent tool-sc... https://github.com/alias8818/hermes-tool-slimmer
+

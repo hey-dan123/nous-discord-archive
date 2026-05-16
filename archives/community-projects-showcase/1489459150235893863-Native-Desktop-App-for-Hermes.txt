@@ -873,3 +873,10 @@
     Discussions and issues: https://t.me/hermes_agent_desktop
     [embed] Hermes Agent Desktop https://t.me/hermes_agent_desktop
 
+[2026-05-16T02:33:26.627000+00:00] larryzhang7497 (id=1505035421229256795)
+    各位大佬，我的终端配置了API，并且终端可以聊天，但是在desktop中无法对话，是怎么回事
+
+[2026-05-16T02:33:28.989000+00:00] Translator Bot#1043 (id=1505035431136198727)
+    Dear friends, my terminal is configured with API, and the terminal can chat, but I cannot have a conversation on the desktop. What's going on?
+    [reply to larryzhang7497 msg=1505035421229256795]
+

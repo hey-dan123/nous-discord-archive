@@ -489,3 +489,43 @@
 [2026-05-15T14:50:12.170000+00:00] nour_h (id=1504858444849610913)
     [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1504858444891558112/image.png?ex=6a088424&is=6a0732a4&hm=42eb2e859f061c1f106c8779ec452386555c03ffb0feece89eb1c89977ff9ff0&
 
+[2026-05-15T19:35:29.486000+00:00] teknium (id=1504930240076447845)
+    looking
+    [reply to nour_h msg=1504853995729195170]
+
+[2026-05-15T19:35:44.225000+00:00] teknium (id=1504930301896429679)
+    we are also doing something with pypi package to be natively listed in zed's thing btw
+    [reply to nour_h msg=1504858444849610913]
+
+[2026-05-15T19:36:00.563000+00:00] teknium (id=1504930370422968442)
+    https://github.com/NousResearch/hermes-agent/pull/26234
+    [embed] feat(acp): hermes acp --setup-browser bootstraps browser tools for ... https://github.com/NousResearch/hermes-agent/pull/26234
+
+[2026-05-15T19:36:07.458000+00:00] teknium (id=1504930399342563418)
+    https://github.com/NousResearch/hermes-agent/pull/26350
+    [embed] feat: PyPI wheel packaging — pip install hermes-agent && hermes b... https://github.com/NousResearch/hermes-agent/pull/26350
+
+[2026-05-15T20:28:16.721000+00:00] nour_h (id=1504943524423139490)
+    Here's the full list I am working on, making ZED+Hermes near native integrations.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1504943524691443722/image.png?ex=6a08d360&is=6a0781e0&hm=453207dfab2e56c0e3cdf3197d3d185192e66310fc98a0d67b858d8e36e67447&
+    [reply to teknium msg=1504930240076447845]
+
+[2026-05-15T20:28:51.270000+00:00] nour_h (id=1504943669332021279)
+    interesting, would this make it a challenge for me to contribute?
+    [reply to teknium msg=1504930301896429679]
+
+[2026-05-15T21:02:22.517000+00:00] teknium (id=1504952105113354450)
+    No it uses hermes agents' pypi package (which I think gets built every commit)
+    [reply to nour_h msg=1504943669332021279]
+
+[2026-05-15T21:02:29.086000+00:00] teknium (id=1504952132665741312)
+    but it doesn't require using that path either
+
+[2026-05-15T21:02:35.689000+00:00] teknium (id=1504952160360599593)
+    it just lists it in some thing of theirs
+
+[2026-05-15T23:00:53.136000+00:00] nour_h (id=1504981929210937466)
+    https://github.com/NousResearch/hermes-agent/pull/26626
+    [embed] feat(acp): require approval for Zed file edits by HenkDz · Pull Re... https://github.com/NousResearch/hermes-agent/pull/26626
+    [reply to canis.xo msg=1500907651121414174]
+

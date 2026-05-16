@@ -16875,3 +16875,146 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Future direction: as the fixture set grows, I also want to explore Hilbert-curve-style locality-preserving mappings for recovery space — so related failure traces, categories, and repair paths can be clustered/traversed without treating every failure as an isolated case.
     [reply to colmeio_66868 msg=1504888344838930567]
 
+[2026-05-15T19:31:46.603000+00:00] teknium (id=1504929305237655693)
+    Advise is necessity first
+    [reply to kylekaster msg=1504889644129456179]
+
+[2026-05-15T19:31:52.450000+00:00] teknium (id=1504929329761615922)
+    If you solve a support issue in <#1485307775444844625>
+
+[2026-05-15T19:31:56.649000+00:00] teknium (id=1504929347373629450)
+    then it will be merged that day
+
+[2026-05-15T19:31:58.671000+00:00] teknium (id=1504929355854250184)
+    over anything else
+
+[2026-05-15T19:33:31.785000+00:00] syedabdurr2hman (id=1504929746402939071)
+    Hey <@387972437901312000> — resolved the merge conflicts on #20660 (desktop control) and #21531 (llama.cpp provider). All 6 PRs are now conflict-free and ready for review when you get a chance:
+    #21554 — config-driven providers.extra_body override
+    #21547 — Docker INCLUDE_BROWSER slim image variant
+    #21550 — fix gateway SSE cap below 128 KB
+    #21531 — llama.cpp first-class provider with zero-config dashboard
+    #20158 — Web-of-Thought multi-agent reasoning engine
+    #20660 — native per-OS desktop control
+    All tests green
+
+[2026-05-15T19:54:53.205000+00:00] 0zi57 (id=1504935121067708488)
+    Just submitted a PR that expands Hermes Agent's video generation capabilities:
+    What added: RunwayML gen4.5 (verified against official SDK)
+    Luma Dream Machine ray-2 / ray-flash-2 (verified against official SDK)
+    Stability AISVD image-to-video
+    Pika 2.2  integrated via FAL.ai <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/26552
+    [embed] feat(video_gen): add RunwayML, Luma, Stability AI, and Pika backend... https://github.com/NousResearch/hermes-agent/pull/26552
+
+[2026-05-15T21:02:18.884000+00:00] gokhe (id=1504952089875583097)
+    I noticed that when users return to an old Discord thread and ping Hermes, the agent starts from a completely blank context with no awareness of what was discussed before. This makes it frustrating to continue a conversation that happened a few days ago, since you have to re-explain everything.
+    
+    This PR adds automatic thread history restoration: the first time Hermes receives a message in a thread that has no existing Hermes session, it fetches the prior messages from Discord's API and injects them as read-only context before responding. The agent can then pick up naturally where the thread left off.
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/26551
+    [embed] feat(discord): restore thread history context on first message in a... https://github.com/NousResearch/hermes-agent/pull/26551
+    [reply to gokhe msg=1504420961343111238]
+
+[2026-05-15T21:02:29.867000+00:00] gokhe (id=1504952135941361786)
+    <@387972437901312000>
+    [reply to gokhe msg=1504952089875583097]
+
+[2026-05-15T21:08:30.424000+00:00] minddragon (id=1504953648227029072)
+    <@387972437901312000> did I do this wrong ?
+    [reply to minddragon msg=1504879230209626252]
+
+[2026-05-15T21:20:27.125000+00:00] amankumarsah (id=1504956654289158226)
+    Hey just need to add support for more browser which you are missing here how to contirbute here ??? 
+    https://hermes-agent.nousresearch.com/docs/user-guide/features/browser <@387972437901312000> <@124163890148802560>
+    [embed] Browser Automation | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/features/browser
+
+[2026-05-15T21:29:08.919000+00:00] teknium (id=1504958842851819590)
+    Just make a PR the docs live in the repo 🙂
+    [reply to amankumarsah msg=1504956654289158226]
+
+[2026-05-15T21:29:25.220000+00:00] teknium (id=1504958911223038024)
+    I doubt it, xAI had their own PR though so, obv choice
+    [reply to minddragon msg=1504953648227029072]
+
+[2026-05-15T21:29:47.533000+00:00] teknium (id=1504959004810412032)
+    I think we already fixed this with <@302254331149811712>'s PR
+    [reply to gokhe msg=1504952089875583097]
+
+[2026-05-15T21:33:02.290000+00:00] snav0 (id=1504959821680607383)
+    I'm actually not 100% sure
+    [reply to teknium msg=1504959004810412032]
+
+[2026-05-15T21:33:10.614000+00:00] snav0 (id=1504959856593866903)
+    It depends how the cold start logic went in
+
+[2026-05-15T21:33:33.561000+00:00] snav0 (id=1504959952840822825)
+    But it's also like. New session count plausibly be desirable as fresh context
+
+[2026-05-15T21:33:41.891000+00:00] teknium (id=1504959987779240077)
+    kk will review
+
+[2026-05-15T21:44:44.616000+00:00] minddragon (id=1504962767449362533)
+    Ahh ok
+    [reply to teknium msg=1504958911223038024]
+
+[2026-05-15T21:46:02.017000+00:00] minddragon (id=1504963092092813414)
+    I kept looking if anyone did PR I must have missed it
+
+[2026-05-15T22:11:49.898000+00:00] m3lon00 (id=1504969584376152285)
+    dependency graph wip
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1504969585244246147/image.png?ex=6a08eba6&is=6a079a26&hm=eba8b5bec35b75322b8235925ea69bf0618cd2b7100bbda66c7d5c03ff522d3a&
+
+[2026-05-15T23:32:28.690000+00:00] sylwester0_42058 (id=1504989879740796959)
+    <@387972437901312000> I just opened a PR that fixes boolean parsing in the API server: https://github.com/NousResearch/hermes-agent/pull/26639
+    Some OpenAI-compatible clients send booleans as strings, so values like "false" could accidentally enable streaming, storing responses, or resolving all run approvals.
+    [embed] fix(api_server): coerce stringified booleans in request payloads by... https://github.com/NousResearch/hermes-agent/pull/26639
+
+[2026-05-15T23:36:39.345000+00:00] eloquentbrush0x (id=1504990931063931092)
+    #26642 — _reconfigure_provider() was missing the _run_post_setup() call that _configure_provider() already has. Browserbase, Browser Use, Firecrawl and Camofox skip npm install when configured via reconfigure, breaking browser tools at runtime. 2-line parity fix.
+    https://github.com/NousResearch/hermes-agent/pull/26642
+    [embed] fix(tools): run post_setup in _reconfigure_provider() for env-var p... https://github.com/NousResearch/hermes-agent/pull/26642
+
+[2026-05-16T00:01:43.251000+00:00] eloquentbrush0x (id=1504997238902886412)
+    #26657 — aiohttp.ClientSession defaults to trust_env=False, silently ignoring HTTP_PROXY/HTTPS_PROXY env vars. SMS (Twilio), Slack response_url, Teams, and Google Chat adapters were all missing it — users behind a corporate proxy got silent connection failures. wecom/weixin/matrix were already fixed; same 1-line parity fix across 4 more adapters.
+    https://github.com/NousResearch/hermes-agent/pull/26657
+    [embed] fix(gateway): honor proxy env vars in SMS, Slack, Teams, and Google... https://github.com/NousResearch/hermes-agent/pull/26657
+
+[2026-05-16T00:31:02.488000+00:00] eloquentbrush0x (id=1505004617677668524)
+    #26674 — MCP OAuth's _redirect_handler was missing the SSH tunnel hint added by #26592 for xAI/Spotify. On a remote SSH session, the OAuth provider redirects to http.://127.0.0.1:<port>/callback — which only the remote machine's listener can catch. Without a port-forward, the flow silently times out. Same 1-block fix, same loopback pattern. https://github.com/NousResearch/hermes-agent/pull/26674
+    [embed] fix(mcp-oauth): print SSH tunnel hint in _redirect_handler by Eloqu... https://github.com/NousResearch/hermes-agent/pull/26674
+
+[2026-05-16T02:00:29.882000+00:00] wesleysimplicio (id=1505027130160054493)
+    Hello guys <@387972437901312000>
+
+[2026-05-16T02:00:49.986000+00:00] wesleysimplicio (id=1505027214482083992)
+    https://github.com/wesleysimplicio/hermes-agent-100x-fast
+    [embed] GitHub - wesleysimplicio/hermes-agent-100x-fast: Hermes Agent 100x ... https://github.com/wesleysimplicio/hermes-agent-100x-fast
+
+[2026-05-16T02:00:56.772000+00:00] wesleysimplicio (id=1505027242944630845)
+    [attachment] e40fbde2-d866-4c6a-be66-e764ec55cb10.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1505027243464855772/e40fbde2-d866-4c6a-be66-e764ec55cb10.jpg?ex=6a092158&is=6a07cfd8&hm=417da1e7c21c7ed91c3daa34e81109b8d90231dc1b05502b1203f4b5b3406b88&
+
+[2026-05-16T02:01:09.095000+00:00] wesleysimplicio (id=1505027294631039088)
+    [attachment] e9ac1469-0d92-4455-880f-cc80aa548052.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1505027294933286982/e9ac1469-0d92-4455-880f-cc80aa548052.jpg?ex=6a092165&is=6a07cfe5&hm=aa31966ed5223d123a03ee3bb4dda0e688ab713c0cb8c099baa4246954a111c4&
+
+[2026-05-16T02:03:40.004000+00:00] cryptoworlldz (id=1505027927589523538)
+    Found another 'hermes doctor' false-positive case.
+    
+    It looks like doctor can still promote a stale direct API key into the final summary even when the matching OAuth path is already healthy, so the setup ends up looking more broken than it actually is.
+    
+    I’m working through the doctor logic now and putting together a fix.
+    
+    https://github.com/NousResearch/hermes-agent/issues/26693
+    [embed] [Bug]: hermes doctor promotes invalid direct API keys into the fina... https://github.com/NousResearch/hermes-agent/issues/26693
+
+[2026-05-16T02:22:01.742000+00:00] cryptoworlldz (id=1505032548613492777)
+    Quick update: I opened a PR for this one.
+    
+    The issue is that `hermes doctor` can still escalate a stale direct API key into the final summary even when the matching OAuth path is already healthy, so the setup looks more broken than it really is.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/26693
+    PR: https://github.com/NousResearch/hermes-agent/pull/26704
+    [embed] [Bug]: hermes doctor promotes invalid direct API keys into the fina... https://github.com/NousResearch/hermes-agent/issues/26693
+    [embed] fix(doctor): suppress stale direct-key issues when oauth is healthy... https://github.com/NousResearch/hermes-agent/pull/26704
+    [reply to cryptoworlldz msg=1505027927589523538]
+

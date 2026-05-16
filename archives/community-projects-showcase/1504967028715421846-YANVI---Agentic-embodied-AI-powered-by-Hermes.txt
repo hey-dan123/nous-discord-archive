@@ -1,0 +1,47 @@
+# Thread 'YANVI - Agentic embodied AI powered by Hermes' in forum #community-projects-showcase
+# thread_id=1504967028715421846 forum_id=1316137596535177246
+# Started 2026-05-16T02:44:15.551879+00:00
+
+[2026-05-15T22:01:40.581000+00:00] heyyanvi (id=1504967028715421846)
+    AI doesn't belong in a tab.
+    
+    YANVI is Agentic Embodied AI powered by Hermes: an always-on physical presence for knowledge workers, with an expression engine, screen awareness, memory, voice, and desktop autonomy.
+    
+    The idea is simple: agents should not only live inside chat windows. They should be able to understand your workspace, show what state they are in, remember context, and act across your Mac when you ask.
+    
+    Hermes powers the agent layer behind YANVI: tools, memory, skills, workflows, and desktop actions. YANVI gives that intelligence a body, a face, and visible state.
+    
+    This thread will be the main YANVI build log inside the Hermes community.
+    
+    I’ll share:
+    - live demos
+    - architecture notes
+    - local-first experiments
+    - expression engine progress
+    - screen awareness and Mac autonomy work
+    - failures and fixes
+    - Kickstarter prep for October 2026
+    
+    Current thesis:
+    
+    AI thinks. YANVI feels.
+    Powered by Hermes.
+    [attachment] Yanvi-icon.png https://cdn.discordapp.com/attachments/1504967028715421846/1504967029285720074/Yanvi-icon.png?ex=6a08e944&is=6a0797c4&hm=4a3ff2dd60c8eb3aa004dab6bcbe6549b40b0e30326909f40c19a1b245e550fe&
+
+[2026-05-15T22:02:34.423000+00:00] heyyanvi (id=1504967254545010789)
+    Hey all,
+    
+    YANVI now has Live Mode via gpt-realtime-2, with the agent layer still on Hermes for tools, memory, and Mac actions.
+    
+    So the split is:
+    - realtime voice for fluid conversation
+    - Hermes for everything that touches the world
+    
+    The result feels near-zero latency. Demo below.
+    
+    Shipping this as “YANVI Live Mode” in the Kickstarter unit. Default mode stays local-first on Hermes. Live Mode is opt-in with your own OpenAI API key, and you choose live vs default every time.
+    [attachment] yanvi-live-demo-final.mp4 https://cdn.discordapp.com/attachments/1504967028715421846/1504967256810193116/yanvi-live-demo-final.mp4?ex=6a08e97a&is=6a0797fa&hm=9f0c352218b2e469d1a042ec1793ed3c7d3f70db4d0559cd70d977b0607e5b51&
+
+[2026-05-15T22:41:03.507000+00:00] aliasocracy (id=1504976939545526502)
+    Loved seeing this one in the community demo event they had! Keep up the great work. I can tell you were really proud, and you should be.
+

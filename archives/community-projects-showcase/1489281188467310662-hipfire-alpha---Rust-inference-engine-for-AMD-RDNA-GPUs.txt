@@ -2486,3 +2486,20 @@
 [2026-05-14T11:27:50.020000+00:00] joeydiaz69 (id=1504445129115701412)
     was this issue identified by anyone else and patched? i might have been isolated with this issue, id like to try and swap back as this was very promising
 
+[2026-05-15T20:47:13.099000+00:00] idkaden (id=1504948290737799188)
+    could you describe the issue?
+    [reply to joeydiaz69 msg=1504445129115701412]
+
+[2026-05-15T20:48:29.444000+00:00] idkaden (id=1504948610951938169)
+    and by that I think we had tool call escaping in the thinking block at one point, which I should have just landed a fix for with full jinja support
+
+[2026-05-15T20:49:11.508000+00:00] idkaden (id=1504948787381272737)
+    and the model quality issue is being looked at on the quant level, we are working on properly calibrated quants for the engine to retain speed while not losing perf
+
+[2026-05-15T20:49:56.214000+00:00] idkaden (id=1504948974891700374)
+    we have a well calibrated one that loses 15% perf, causing us to lose to vulkan but we are testing post-training and ablation now
+
+[2026-05-15T20:50:33.159000+00:00] idkaden (id=1504949129850388710)
+    yeah..thats my bad, today I am going to go through open PRs and actually do my job of cleaning things up for users
+    [reply to floory msg=1502316131669512416]
+

@@ -1,0 +1,14 @@
+# Thread 'Vintage Mac (OS 7, 8, 9) to Hermes Bridge' in forum #plugins-skills-and-skins
+# thread_id=1505038751934709760 forum_id=1485392832154832906
+# Started 2026-05-16T02:47:24.735117+00:00
+
+[2026-05-16T02:46:40.729000+00:00] kalkyl (id=1505038751934709760)
+    I had a ton of fun figuring out how to connect my OS9 iMac to my Hermes instance!
+    
+    Please give the github a star: https://github.com/chorned/Hermes-macinAI/
+    
+    This requires MacinAI: https://oldapplestuff.com/MacinAI/
+    [attachment] img.png https://cdn.discordapp.com/attachments/1505038751934709760/1505038752118997043/img.png?ex=6a092c10&is=6a07da90&hm=fd4c8d7209fc454f4f2fd9c5bcf0c34428744c51b1c82f6b6efb8b91afe1edc1&
+    [embed] GitHub - chorned/Hermes-macinAI: A protocol translation proxy conne... https://github.com/chorned/Hermes-macinAI/
+    [embed] MacinAI - AI Chat for Classic Macintosh https://oldapplestuff.com/MacinAI/
+

@@ -36,3 +36,29 @@
     The tier 1-2-3 one.  My agent analyzed my skill and recommended that it be optimized into a tier 3 skill.
     [reply to hydraxiann msg=1504790038930657401]
 
+[2026-05-15T19:40:46.594000+00:00] neopabo (id=1504931570123935805)
+    Really? What was the task if you don't mind me asking
+    [reply to excessivelysalty msg=1504864276752498931]
+
+[2026-05-15T19:41:20.256000+00:00] neopabo (id=1504931711312461834)
+    If it picks machine learning it's probably something really interesting
+
+[2026-05-15T21:34:33.840000+00:00] neopabo (id=1504960205669273691)
+    Usually for tier 3 it'd be something like complex audiovisual tasks, robotics, or language tasks
+
+[2026-05-15T23:33:02.449000+00:00] fleety13 (id=1504990021336174773)
+    I put this to work yesterday.
+    Thanks for putting in the work and sharing 🫡
+
+[2026-05-15T23:34:29.404000+00:00] neopabo (id=1504990386051879082)
+    No worries man! Glad it's helping people. I honestly didn't expect this much positive feedback, so thank you all so much
+    [reply to fleety13 msg=1504990021336174773]
+
+[2026-05-16T01:36:23.961000+00:00] fleety13 (id=1505021065527689368)
+    i added something today to the skill.  
+    An architectural choice to version control skills since i work with agents to improve their used skills as learn.  Now when an agent changes their skill/s theres a line that tells them to push to the repo.
+
+[2026-05-16T02:12:35.193000+00:00] neopabo (id=1505030172334751754)
+    I set up a cron job to update my .hermes on github every 12 hours, but your methodology is good too
+    [reply to fleety13 msg=1505021065527689368]
+

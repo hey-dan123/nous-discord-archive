@@ -23,3 +23,219 @@
     [embed]  https://twitter.com/DVremenko/status/2055342380765626864?s=20
     [embed] GitHub - inkbox-ai/hermes-agent: The agent that grows with you. Pow... https://github.com/inkbox-ai/hermes-agent
 
+[2026-05-15T19:31:26.691000+00:00] markz4145 (id=1504929221720670338)
+    This is very cool.
+
+[2026-05-15T19:35:40.613000+00:00] dimavrem22_71258 (id=1504930286746734622)
+    Thanks! <@447486239390564352>
+    [reply to markz4145 msg=1504929221720670338]
+
+[2026-05-15T19:36:55.402000+00:00] markz4145 (id=1504930600434274446)
+    is there a limit on how frequently the phone number could be used
+
+[2026-05-15T19:37:00.206000+00:00] markz4145 (id=1504930620583706675)
+    i know i can ask my agent....
+
+[2026-05-15T19:37:23.895000+00:00] markz4145 (id=1504930719942840561)
+    yesterday i spent time getting it hooked up to my email, phone number may be easier as long as users opt into the service
+
+[2026-05-15T19:42:54.760000+00:00] markz4145 (id=1504932107691102410)
+    lets see if i can get my agent to sign up
+
+[2026-05-15T19:44:04.642000+00:00] markz4145 (id=1504932400797323285)
+    lets hope im not getting scammed ><
+
+[2026-05-15T19:44:13.352000+00:00] dimavrem22_71258 (id=1504932437329707200)
+    <@447486239390564352> Here are the current free developer tier limits: 
+    
+    Phone numbers: 3
+    Outbound calls per rolling 24h: 100
+    Call minutes per rolling 24h: 100
+    Per-call duration cap: 10 min
+    Outbound SMS per 24 rolling window per number: 100
+
+[2026-05-15T19:44:30.357000+00:00] markz4145 (id=1504932508654108802)
+    nice, giving it a go
+
+[2026-05-15T19:44:42.467000+00:00] markz4145 (id=1504932559447134343)
+    5.5 had some thoughts on the repo itself, happy to share but sure you can ask a fresh agent yourself
+
+[2026-05-15T19:45:21.314000+00:00] dimavrem22_71258 (id=1504932722383261941)
+    <@447486239390564352> feel free to send over! and any feedback you have on your experience as well!
+
+[2026-05-15T19:45:39.633000+00:00] markz4145 (id=1504932799218454559)
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1504910916100161620/1504932799352668321/message.txt?ex=6a08c963&is=6a0777e3&hm=8a2dec018b5195185637d31b56cb16c684f59b6d3bdcd7928737c5020beb921a&
+
+[2026-05-15T19:47:25.277000+00:00] markz4145 (id=1504933242321633392)
+    so is the idea, i build my own hermes agent, and then stack inkbox on it for comms
+
+[2026-05-15T19:48:35.317000+00:00] markz4145 (id=1504933536090554580)
+    couple thoughts right out the gate - havent gotten a phone # yet but if it would be possible to request a general area code number, that would be better for me personally
+
+[2026-05-15T19:49:51.644000+00:00] dimavrem22_71258 (id=1504933856229195967)
+    Yes! I didnt include this in the wizard to keep it light weight but if you go here: https://inkbox.ai/console you can select a state for a local number via the console
+    [embed] Inkbox https://inkbox.ai/console
+    [reply to markz4145 msg=1504933536090554580]
+
+[2026-05-15T19:51:38.807000+00:00] markz4145 (id=1504934305703395439)
+    alright your boys powered with a number - let me test it out. for context, im doing the entire setup via my hermes agent on a DO droplet using discord as comms with the agnet
+
+[2026-05-15T19:52:18.940000+00:00] markz4145 (id=1504934474033533050)
+    codex/5.5 xhigh fast
+
+[2026-05-15T19:52:29.854000+00:00] dimavrem22_71258 (id=1504934519810162759)
+    gochya! I see!
+
+[2026-05-15T19:52:44.726000+00:00] dimavrem22_71258 (id=1504934582187987067)
+    how do you like DO?
+
+[2026-05-15T19:52:56.814000+00:00] markz4145 (id=1504934632888729711)
+    love it
+
+[2026-05-15T19:52:59.239000+00:00] markz4145 (id=1504934643059658844)
+    so ez
+
+[2026-05-15T19:53:02.574000+00:00] Translator Bot#1043 (id=1504934657047793815)
+    so no
+    [reply to markz4145 msg=1504934643059658844]
+
+[2026-05-15T19:53:06.819000+00:00] markz4145 (id=1504934674852741261)
+    so easy 😄
+
+[2026-05-15T19:53:12.011000+00:00] dimavrem22_71258 (id=1504934696629440572)
+    how much do yo pay for it?
+
+[2026-05-15T19:53:24.998000+00:00] markz4145 (id=1504934751100997802)
+    the droplets arent bad maybe 20 bucks
+
+[2026-05-15T19:53:33.901000+00:00] markz4145 (id=1504934788442620045)
+    i have dedicated compute for but random prototyping its hard to beat
+
+[2026-05-15T19:53:43.650000+00:00] markz4145 (id=1504934829333020733)
+    its a great tool for agents imo, everything is cli
+
+[2026-05-15T19:53:52.891000+00:00] markz4145 (id=1504934868092584150)
+    im sure aws is good too, but DO ive used for years
+
+[2026-05-15T19:54:12.094000+00:00] dimavrem22_71258 (id=1504934948635807794)
+    not bad! Ill have to check it out. i just deploy all on ec2 since we mainly work in aws
+
+[2026-05-15T19:54:27.472000+00:00] markz4145 (id=1504935013135679632)
+    so - i feel like and maybe this is dumb. my hermes agent really needs to be storing down inkbox skills or osmething
+
+[2026-05-15T19:54:33.466000+00:00] markz4145 (id=1504935038276337805)
+    looka t this and maybe it just did it wrong
+
+[2026-05-15T19:55:05.228000+00:00] markz4145 (id=1504935171495821503)
+    it did work, but it actually looked at my local project first
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1504910916100161620/1504935171529638048/message.txt?ex=6a08cb99&is=6a077a19&hm=10aec9f44dbd7e6788c8b08b96bbb9d0ae730ba96abe9aa9621e23fe17cf97b5&
+
+[2026-05-15T19:55:13.717000+00:00] markz4145 (id=1504935207101403358)
+    should i just be booting a fresh hermes agent from this repo instead
+
+[2026-05-15T19:55:15.149000+00:00] dimavrem22_71258 (id=1504935213107642398)
+    are you using teh fork or your existing agent insatnce?
+
+[2026-05-15T19:55:25.902000+00:00] markz4145 (id=1504935258208862228)
+    my existing agent and i pointed it ot this
+
+[2026-05-15T19:55:30.631000+00:00] markz4145 (id=1504935278043988058)
+    which was probably not what i should have done
+
+[2026-05-15T19:56:57.182000+00:00] dimavrem22_71258 (id=1504935641065062581)
+    Yeah the fork is optimized for Inkbox. We center the agent's prompts arounds the Inkbox identity, updated the gateway to run our custom tunnel service, and updated logic that relates to starting agent sessions when a call/sms/email comes in. For the best experience we needed to update quite a lot of files so we decided to maintain an Inkbox fork.
+
+[2026-05-15T19:58:32.923000+00:00] dimavrem22_71258 (id=1504936042631925914)
+    The most powerful thing is the combination of tunnel + webhooks from our emails, calls, and sms. If you want to use exisiting hermes agent, i would suggest to point it at the work and tell it to replicate the general setup.
+
+[2026-05-15T19:58:39.093000+00:00] markz4145 (id=1504936068510650560)
+    idk if this is possible, but if you could get imsg/bluebubbles enabled on this....
+
+[2026-05-15T19:58:53.798000+00:00] markz4145 (id=1504936130188148927)
+    ive spent months doing whatsapp, texts, emails etc. imsg crushed and got the most retention by far
+
+[2026-05-15T19:59:01.611000+00:00] markz4145 (id=1504936162958245928)
+    its annoying caus eyou need the apple id, juts passing it along
+
+[2026-05-15T19:59:42.855000+00:00] dimavrem22_71258 (id=1504936335947989113)
+    AH !! I know!!! I set this up recently: 
+    https://x.com/DVremenko/status/2055038147679883423?s=20
+    But yeah needs apple hardware!
+    [embed]  https://twitter.com/DVremenko/status/2055038147679883423?s=20
+
+[2026-05-15T20:00:06.266000+00:00] markz4145 (id=1504936434140975334)
+    yea, apple needs to get their shit together
+
+[2026-05-15T20:00:21.028000+00:00] dimavrem22_71258 (id=1504936496057159817)
+    iMessage is unbeatable but super annoting to deal with!
+
+[2026-05-15T20:00:33.921000+00:00] dimavrem22_71258 (id=1504936550134186144)
+    have you heard of Linq?
+
+[2026-05-15T20:00:40.410000+00:00] markz4145 (id=1504936577351024700)
+    yea it sucks, even getting hermes on it via the mac mini, compared to discord its dogshit
+
+[2026-05-15T20:00:45.708000+00:00] markz4145 (id=1504936599572582402)
+    no lets take a look.
+
+[2026-05-15T20:01:05.319000+00:00] markz4145 (id=1504936681827205120)
+    btw i did get a text about the sms updates form inkbox... i responded but nothing yet. my service may not be great let me look
+
+[2026-05-15T20:01:49.502000+00:00] dimavrem22_71258 (id=1504936867144138843)
+    it is quite pricy and only does messaging, but seems to be leading in iMessage as a service
+    [reply to markz4145 msg=1504936599572582402]
+
+[2026-05-15T20:02:19.260000+00:00] markz4145 (id=1504936991958110258)
+    https://linqai.com/
+    [embed] LinqAI - Decentralized Compute for Everyone https://linqai.com/
+
+[2026-05-15T20:02:20.204000+00:00] markz4145 (id=1504936995917398077)
+    this?
+
+[2026-05-15T20:02:33.561000+00:00] markz4145 (id=1504937051940716614)
+    https://linqapp.com/
+    [embed] Communications APIs for iMessage, RCS, SMS, and Voice | Linq https://linqapp.com/
+
+[2026-05-15T20:02:35.305000+00:00] markz4145 (id=1504937059255718090)
+    this i bet
+
+[2026-05-15T20:02:39.719000+00:00] dimavrem22_71258 (id=1504937077769507067)
+    yep!
+    [reply to markz4145 msg=1504936681827205120]
+
+[2026-05-15T20:02:53.177000+00:00] markz4145 (id=1504937134216450190)
+    tim cook just needs to get off his fucking ass man
+
+[2026-05-15T20:02:58.878000+00:00] markz4145 (id=1504937158128042124)
+    let me pay a dollar a month for a bot icloud account
+
+[2026-05-15T20:03:54.742000+00:00] dimavrem22_71258 (id=1504937392438644868)
+    Literally!! They woudl make so much money
+    [reply to markz4145 msg=1504937158128042124]
+
+[2026-05-15T20:04:24.467000+00:00] markz4145 (id=1504937517114327130)
+    wonder how linq works. do they have thousands of iphone 9s laying around
+
+[2026-05-15T20:05:36.575000+00:00] dimavrem22_71258 (id=1504937819557068852)
+    So on my end, I can see that your agent didnt connect to its tunnel, which delivers webhooks + helps with web socket connections. In the fork we have events from teh tunnel wake up hermes so it is able to respond right away.
+
+[2026-05-15T20:05:59.002000+00:00] dimavrem22_71258 (id=1504937913622724659)
+    let me send you docs that'll help hermes setup the tunnel
+
+[2026-05-15T20:06:34.956000+00:00] dimavrem22_71258 (id=1504938064424865943)
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1504910916100161620/1504938064529850469/message.txt?ex=6a08ce4a&is=6a077cca&hm=283d83430e2845d9bdefa786cf023900f02b608c5a45d050a568d5b897b25d7b&
+
+[2026-05-15T20:06:56.082000+00:00] dimavrem22_71258 (id=1504938153033597121)
+    this should help it connect to the tunnel we give it
+
+[2026-05-15T20:07:37.035000+00:00] dimavrem22_71258 (id=1504938324803063829)
+    i talked to them a few weeks ago and my impression is that's exactly what they do
+    [reply to markz4145 msg=1504937517114327130]
+
+[2026-05-15T20:08:06.675000+00:00] dimavrem22_71258 (id=1504938449122230282)
+    massive iphone farm
+
+[2026-05-15T20:10:16.395000+00:00] markz4145 (id=1504938993207218177)
+    dropped you friend request, have something sensitive to request
+    [reply to dimavrem22_71258 msg=1504936335947989113]
+

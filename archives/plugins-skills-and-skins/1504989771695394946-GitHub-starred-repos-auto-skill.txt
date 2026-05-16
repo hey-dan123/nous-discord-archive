@@ -1,0 +1,21 @@
+# Thread 'GitHub starred repos auto-skill' in forum #plugins-skills-and-skins
+# thread_id=1504989771695394946 forum_id=1485392832154832906
+# Started 2026-05-16T02:47:25.160698+00:00
+
+[2026-05-15T23:32:02.930000+00:00] okin_17 (id=1504989771695394946)
+    Hey everyone, I wanted to share a pretty cool Hermes Agent skill repo I came up with & have been using for quite some time, a few months now: https://github.com/BigBossRabbit/starlearner-nexus-hermes-skill
+    
+    What this does is basically automate the creation of Hermes skills from GitHub starred repositories. It's got a few scripts that work together:
+    
+    One fetches your starred repos from GitHub
+    Another categorizes them by topic (like AI/ML, dev tools, privacy/security, etc.) using keyword matching, then it generates actual Hermes skill files for each repo using Jinja2 templates
+    
+    The generated skills include things like proper metadata, installation instructions, usage examples, and feature lists based on the repo's stats (stars, forks, language, etc.). It even creates category-specific templates so the skills feel tailored to their domain.
+    
+    I think this could be really useful for anyone who wants to quickly turn their GitHub star collection into a personalized skill library for Hermes. Instead of manually creating skills for each interesting repo you find, this automates most of the work.
+    
+    The repo itself is pretty straightforward to use - you just need to set up a GitHub token for accessing starred repos, then run the scripts. It spits out organized skill directories that you can point Hermes at.
+    
+    Definitely worth checking out if you're into building up your Hermes capabilities with minimal manual effort. Let me know if you have questions about how it works!
+    [embed] GitHub - BigBossRabbit/starlearner-nexus-hermes-skill: StarLearner-... https://github.com/BigBossRabbit/starlearner-nexus-hermes-skill
+

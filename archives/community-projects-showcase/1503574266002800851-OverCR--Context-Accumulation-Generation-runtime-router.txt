@@ -26,3 +26,14 @@
     So the Hermes logs are definitely useful as reconstruction context, but they’re not considered authoritative state by themselves.
     [reply to swagbabyostrich msg=1503607489029996564]
 
+[2026-05-16T00:51:39.850000+00:00] guideboardlabs (id=1505009807550058526)
+    V2 in progress
+    [attachment] IMG_1928.png https://cdn.discordapp.com/attachments/1503574266002800851/1505009807785070712/IMG_1928.png?ex=6a09111b&is=6a07bf9b&hm=797dd48c933da5179601cd97c59d41e1b891611a2f52e5704fd34e468c34665f&
+
+[2026-05-16T01:47:31.111000+00:00] guideboardlabs (id=1505023863757607093)
+    [attachment] 703A01EF-965E-45FD-8421-3A95806A3CDB.png https://cdn.discordapp.com/attachments/1503574266002800851/1505023863933898822/703A01EF-965E-45FD-8421-3A95806A3CDB.png?ex=6a091e33&is=6a07ccb3&hm=44d63fb68758375e9506f43fff49977992af9c89a8b92e295b3acabd936aa6e5&
+
+[2026-05-16T01:47:33.029000+00:00] guideboardlabs (id=1505023871802413177)
+    https://github.com/GuideboardLabs/overcr
+    [embed] GitHub - GuideboardLabs/overcr: Hermes-first operational AI substra... https://github.com/GuideboardLabs/overcr
+

@@ -36,3 +36,7 @@
     
     Like I said, no offense or something, I'm just a total noob and wonder about that 😆
 
+[2026-05-15T23:54:52.875000+00:00] necrosis._. (id=1504995517661450402)
+    Its not exactly a vps, sooo not doesnt serve power users , its a docker container running it, with major customisation u can do through hermes dashboard or the terminal u get in webui, if u need proper ssh access u need to pay 9$ and u can get better vps in that price
+    [reply to gruen23 msg=1504924926229090506]
+

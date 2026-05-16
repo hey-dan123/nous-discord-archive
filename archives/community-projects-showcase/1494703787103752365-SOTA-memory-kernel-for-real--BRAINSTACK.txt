@@ -366,3 +366,46 @@
     Prolem solved!
     [reply to sloothyyyyy msg=1504639876463595621]
 
+[2026-05-15T22:16:52.963000+00:00] sloothyyyyy (id=1504970855522766929)
+    Asked my agent to do a thorough check and give feedback. I've also had the kuzu graph get corrupted (not sure how) which had to be fixed on the first day. 
+    
+    Used Brainstack for a few days across 4 profiles with BRAINSTACK_CHROMA_ALLOW_DEFAULT_EMBEDDING=true. Hermes v2026.5.7 on Linux, Kuzu + Chroma backends. ~37 committed truth records across profile + operating shelves.
+    
+    Issues observed:
+    
+    Graph (kuzu) never returns results. Graph backend shows "active" in brainstack_stats, graph channel provides 0 candidates per query no matter what. After dozens of recalls across queries — never a single graph hit. The graph producer is bound, tier2 is running, but nothing flows into recall. Literally zero graph candidates means either the producer isn't writing triples, or recall can't query them.,
+    
+    Corpus (chroma) active but empty. Semantic channel reports 40 candidates per recall, corpus backend shows "active" — but none of those candidates ever become selected evidence. The final packet's corpus section is consistently []. The built-in Chroma embedding appears to be running but not producing useful semantic matches. No corpus evidence survived the scoring threshold in any query I ran.
+    
+    Recal is profile/operating shelf-only. The only working recall path is structured lookup on profile preferences and operating truth rows. Those work fine — committed facts are retrievable. But semantic + graph paths are dead weight.,
+    
+    No write‑to‑recall parity. Stored a memory via brainstack_remember with committed receipt, queried seconds later with semantically related text — profile shelf found it via key match, corpus didn't. If the corpus is supposed to index committed profile facts, it's not propagating.
+    
+    What I expected: Stored facts should surface via semantic/corpus search within a reasonable latency after commit. Graph triples should accumulate from tier2/extraction and be queryable by subject. Proactive also didn't work because of the graph and corpus. 
+    
+    Setup context: Multi-profile Hermes, Kuzu + Chroma backends, tier2 on internal_extractor with hindsight, brainstack‑or provider for capture/query understanding. If there's a known config gap here, that'd explain it.
+
+[2026-05-15T22:17:16.578000+00:00] sloothyyyyy (id=1504970954571251763)
+    <@935529517856985088> lmk if you need to know anything else
+
+[2026-05-15T23:32:42.602000+00:00] lauratom (id=1504989938092081395)
+    I'M checking it! Give me some time.
+    [reply to sloothyyyyy msg=1504970855522766929]
+
+[2026-05-15T23:32:51.100000+00:00] lauratom (id=1504989973735276555)
+    Ty for your feedback tho!
+
+[2026-05-15T23:39:08.021000+00:00] lauratom (id=1504991554656403620)
+    I think you found a real graph/Kuzu recall parity issue.
+    
+    Corpus being empty after brainstack_remember is currently expected: committed profile/operating truth is not stored as Chroma corpus documents; it is indexed through the semantic evidence shelves. So corpus=[] does not by itself mean those truth records were lost.
+    
+    But the graph side looks like a real bug/diagnostic gap: Kuzu can report active while recall gets zero graph candidates, because the active external backend is trusted and SQLite graph fallback only happens on exception, not on empty/stale readback.
+    
+    I’m going to fix this as graph recall parity + better doctor diagnostics.
+    
+    Useful extra data would be: graph row counts, semantic_evidence counts by shelf, corpus document/section counts, and one redacted brainstack_inspect output for a query where graph/corpus should have matched.
+
+[2026-05-16T00:19:31.605000+00:00] lauratom (id=1505001719904468992)
+    Job done. New release is on github.
+
