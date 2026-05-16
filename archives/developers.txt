@@ -17048,3 +17048,61 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [attachment] ScreenRecording_05-16-2026_04-18-04_1.mov https://cdn.discordapp.com/attachments/1491258766648283238/1505115509224636476/ScreenRecording_05-16-2026_04-18-04_1.mov?ex=6a09738d&is=6a08220d&hm=f3c5e128c50d33195d694de5ec8fe581996036a21fe3f01846417e8eef30c5e2&
     [reply to eloquentbrush0x msg=1504812071148195984]
 
+[2026-05-16T10:14:14.252000+00:00] m0n5t3r (id=1505151383773511791)
+    speaking about slack... is there any chance to have this merged any time soon? https://github.com/NousResearch/hermes-agent/pull/8554
+    [embed] fix(slack): use Block Kit markdown block type instead of legacy mrk... https://github.com/NousResearch/hermes-agent/pull/8554
+
+[2026-05-16T10:18:29.977000+00:00] m0n5t3r (id=1505152456361902202)
+    (also, it seems kanban workers can't talk to slack and tend to get ... creative running python scripts to extract the token from .env and post with curl or inline python... I'm having my bots develop a plugin to offer a tool for this until it gets fixed; if I am to trust hermes,`Target: send_message not available to kanban subprocess workers because Slack lacks standalone_sender_fn`)
+
+[2026-05-16T12:40:57.334000+00:00] scottermonkey (id=1505188306575429722)
+    Asking here because I'm thinking the devs are more likely to know/advise:
+    I'm a fan of using different agents within my Hermes install to do different things. But I'm wondering if there is a point where efficiency of the overall system decreases due to there being too many skills, plugins, and database to feed multiple types of uses and domains.
+    Here's what I mean:
+    Current agents:
+    - Primary - for complex stuff and most self-mods/ mod of other agents. 
+    - Tasky - for various small/med complexity tasks, including all cron jobs so far.
+    - Gobby - hangs out in Telegram in various groups; friendly/chatty.
+    - Planned - general researcher. 
+    - Planned - THIS IS THE BIG ONE - Plan to feed it ENTIRE BOOKS from a specific domain so it becomes deeply knowledgeable on that domain. Thinking about memory / database size.
+    Would the current memory structure be very much impacted by that last use case? Best to create an entirely separate Hermes install?
+
+[2026-05-16T15:23:21.960000+00:00] minddragon (id=1505229178499240026)
+    Sorry for a ping but <@411637224476770325>  - planning a thing in Dallas so asking questions
+
+[2026-05-16T15:24:13.580000+00:00] minddragon (id=1505229395009470485)
+    also this is a nasty one for subagents crashing: https://github.com/NousResearch/hermes-agent/pull/26966
+    [embed] fix(delegation): preserve configured_provider name when runtime ret... https://github.com/NousResearch/hermes-agent/pull/26966
+
+[2026-05-16T15:41:42.949000+00:00] magnus919 (id=1505233796382068758)
+    As someone who does the entire book thing consider having a RAG for this. Like deploy LightRAG in Docker, wire it up with Neo4j/PostgreSQL/etc and drop your pdf files right on its web interface. If you need more of a nuanced workflow you can have Hermes build you a command line tool that does that.
+    
+    Letting Hermes handle whole books directly is a massive waste of tokens
+    [reply to scottermonkey msg=1505188306575429722]
+
+[2026-05-16T17:02:47.546000+00:00] sa3crypto (id=1505254199980593172)
+    hi there . i simple question : dose Hermes documentation updated continually to meet the github updates and issue fixes ?
+
+[2026-05-16T17:33:06.410000+00:00] w0lfgang88 (id=1505261828849270934)
+    <@100390510744584192> quick status while I keep trying to get main green:
+    
+    #26039 is red only because it inherits the current main `Tests` failure. Nothing useful to refresh until the base blockers move.
+    
+    **Current blocker map:**
+    
+    * **#26565** is contributor-owned, green/clean, and appears to be the first unblocker for the xAI dotenv/provider-parity failures.
+    * **#26640** is also contributor-owned. It covers the gateway PATH `PermissionError` failures, but it is currently red because it still inherits the #26565 failures.
+    * After #26565 lands, #26640 likely needs its author to refresh/rerun it.
+    * Once those are through and main settles, I can refresh/rerun my #26039.
+    
+    So the immediate ask is: can we get #26565 reviewed/merged first, then have #26640 refreshed by its author?
+
+[2026-05-16T17:58:03.249000+00:00] minddragon (id=1505268107046817962)
+    Hermes Foundry and Liminal Suite launching this week…
+    
+    Also June will feature Hermes meetup in Dallas TX 🙂
+
+[2026-05-16T18:33:34.441000+00:00] costi0974 (id=1505277045913944175)
+    I have problems connecting Grok OAuth on my VPS. On my local device everything works fine, but on my server I get an error message and a login code. However, there is no place where I can paste the code to complete the login.
+    What do i have to do ?
+

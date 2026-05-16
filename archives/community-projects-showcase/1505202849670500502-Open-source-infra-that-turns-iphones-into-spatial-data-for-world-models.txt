@@ -1,0 +1,8 @@
+# Thread 'Open-source infra that turns iphones into spatial data for world models' in forum #community-projects-showcase
+# thread_id=1505202849670500502 forum_id=1316137596535177246
+# Started 2026-05-16T19:02:14.618768+00:00
+
+[2026-05-16T13:38:44.678000+00:00] reavatar (id=1505202849670500502)
+    https://news.ycombinator.com/item?id=48160091
+    [embed] Stera: Open-Source Infra That Turns iPhones into Spatial Data for World Models https://news.ycombinator.com/item?id=48160091
+

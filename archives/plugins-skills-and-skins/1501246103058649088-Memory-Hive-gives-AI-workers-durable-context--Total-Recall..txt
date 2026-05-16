@@ -192,3 +192,7 @@
 [2026-05-15T15:41:33.488000+00:00] tourettesgaming (id=1504871368833892382)
     Minor update on security and speed coming by EOD
 
+[2026-05-16T17:30:21.747000+00:00] charanis (id=1505261138202333194)
+    Is this purposed to work with sub-agent delegation or kanban?
+    [reply to tourettesgaming msg=1501246103058649088]
+

@@ -57,3 +57,6 @@
 [2026-05-14T01:35:24.563000+00:00] maxfreedompollard_16654 (id=1504296040663355463)
     The soul.md file - which for this project should be the end all be all - never reaches the agents mind during Active mode. Plus, there's no memory or anything. In a project like this where you have license to take anything from anywhere, and the point is persistence from first creation, it's a non-starter rn
 
+[2026-05-16T12:17:28.036000+00:00] floory (id=1505182395551322122)
+    it's not been updated sincce the guy posted it here, i wouldnt recommend using it
+

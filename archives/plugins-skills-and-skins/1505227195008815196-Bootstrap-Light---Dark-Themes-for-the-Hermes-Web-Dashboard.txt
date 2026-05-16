@@ -1,0 +1,24 @@
+# Thread 'Bootstrap Light & Dark Themes for the Hermes Web Dashboard' in forum #plugins-skills-and-skins
+# thread_id=1505227195008815196 forum_id=1485392832154832906
+# Started 2026-05-16T19:04:53.332619+00:00
+
+[2026-05-16T15:15:29.059000+00:00] vinny_public (id=1505227195008815196)
+    Hey everyone! I’m sharing a small Hermes dashboard theme repo for community consideration:
+    
+    https://github.com/vince-winkintel/hermes-dashboard-bootstrap-themes
+    
+    This repo provides two portable Bootstrap v5-inspired themes for the Hermes web dashboard:
+    
+    - Bootstrap v5 Light — clean, readable light theme inspired by Bootswatch Spacelab.
+    - Bootstrap v5 Dark — darker Slate-style theme inspired by Bootswatch Slate.
+    
+    The goal is to make the dashboard feel more familiar to Bootstrap users while keeping the themes easy to inspect, copy, and customize. The repo includes:
+    
+    - Theme YAML files for ~/.hermes/dashboard-themes/
+    - Installation instructions
+    - Screenshots/previews
+    - Basic QA notes for contrast, readability, and dashboard coverage
+    
+    I would love feedback from the Hermes community on the theme structure, visual polish, and whether these are useful as examples for future community-contributed dashboard skins.
+    [embed] GitHub - vince-winkintel/hermes-dashboard-bootstrap-themes: Bootstr... https://github.com/vince-winkintel/hermes-dashboard-bootstrap-themes
+

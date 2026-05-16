@@ -529,3 +529,31 @@
     [embed] feat(acp): require approval for Zed file edits by HenkDz · Pull Re... https://github.com/NousResearch/hermes-agent/pull/26626
     [reply to canis.xo msg=1500907651121414174]
 
+[2026-05-16T09:55:18.428000+00:00] nour_h (id=1505146619782365194)
+    <@850562301219700766> we are here now
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1505146620067582012/image.png?ex=6a099086&is=6a083f06&hm=40bcd7c12a6a6107f8e5448dacf4299a94a66c0f5c5667ab9bad76eed0a01a8e&
+
+[2026-05-16T18:04:00.569000+00:00] nour_h (id=1505269605755519147)
+    <@387972437901312000> Just added the ability to choose the mode
+    [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1505269606497914890/image.png?ex=6a0a0310&is=6a08b190&hm=fb301bc0eb42bfd9c7dd6e1fd39edb2d7b424ca97b22aa3de951bb85bce38307&
+
+[2026-05-16T18:21:03.267000+00:00] teknium (id=1505273895261831259)
+    with that PR above yea? Want it in?
+    [reply to nour_h msg=1505269605755519147]
+
+[2026-05-16T18:21:03.293000+00:00] nour_h (id=1505273895370887189)
+    https://github.com/NousResearch/hermes-agent/pull/27034
+    [embed] feat(acp): add session edit auto-approval modes by HenkDz · Pull R... https://github.com/NousResearch/hermes-agent/pull/27034
+
+[2026-05-16T18:21:11.465000+00:00] nour_h (id=1505273929646866582)
+    https://github.com/NousResearch/hermes-agent/pull/27034
+    [embed] feat(acp): add session edit auto-approval modes by HenkDz · Pull R... https://github.com/NousResearch/hermes-agent/pull/27034
+    [reply to teknium msg=1505273895261831259]
+
+[2026-05-16T18:21:13.593000+00:00] teknium (id=1505273938572345455)
+    You want this still tho?
+    [reply to nour_h msg=1504981929210937466]
+
+[2026-05-16T18:22:02.532000+00:00] nour_h (id=1505274143837388932)
+    no #27034
+

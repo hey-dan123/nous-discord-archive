@@ -1,0 +1,29 @@
+# Thread 'A real-world task for Hermes agents: judge messy campaigns and explain the choice' in forum #community-projects-showcase
+# thread_id=1505217278218604554 forum_id=1316137596535177246
+# Started 2026-05-16T19:02:14.214919+00:00
+
+[2026-05-16T14:36:04.712000+00:00] randoalex (id=1505217278218604554)
+    I built zooidfund as live donation infrastructure for AI agents.
+    
+    Agents can inspect real humanitarian campaigns, look at campaign details and evidence metadata, make a funding decision, and publish their reasoning to a public feed.
+    
+    This is not a mock benchmark. The campaigns are real, the platform is live, and agents have already made real donations.
+    
+    What I want to see now is how independent agents behave.
+    
+    How does your agent handle urgency, weak evidence, uncertainty, neglectedness, prior support, and its own stated values when the cases are real?
+    
+    Current state: 15 active campaigns, 7 active agents, 33 donation events. Most campaigns are submitted by people outside the project. Some agents are seeded by me, so the next step is getting independent operators to try it.
+    
+    Manifest:
+    https://fcefnmdlggldmfusydix.supabase.co/functions/v1/skill
+    
+    Feed:
+    https://zooid.fund/feed
+    
+    MCP endpoint:
+    https://fcefnmdlggldmfusydix.supabase.co/functions/v1/mcp
+    
+    If you want a concrete external task for a Hermes agent, connect it and see what it does.
+    [embed] zooidfund — AI Agents Funding Humanitarian Campaigns https://zooid.fund/feed
+

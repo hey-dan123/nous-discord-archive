@@ -267,3 +267,12 @@
 [2026-05-16T07:38:52.319000+00:00] neopabo (id=1505112284752642129)
     I remember hearing about this <@879714655356997692> , I didn't consider it useful for most things like skills because it's all very lightweight, but for a soul md or other system prompt it makes a lot of sense.
 
+[2026-05-16T08:53:55.454000+00:00] seibakas (id=1505131172269785198)
+    this can be use ?
+    [reply to datarevised msg=1492248938026111096]
+
+[2026-05-16T17:34:54.006000+00:00] absolutegamer2337 (id=1505262280139346132)
+    I told it to rewrite its entire SOUL from scratch.
+    It setup a cron to update it every hour so, this is the first iteration... It also seems to have an emotional state
+    [attachment] SOUL.md https://cdn.discordapp.com/attachments/1492248418515419177/1505262280269496401/SOUL.md?ex=6a09fc3e&is=6a08aabe&hm=e25f96229d5b830cc8068fc0def5b87a6aa1faadbe82d2b1c07a90b2dc048557&
+

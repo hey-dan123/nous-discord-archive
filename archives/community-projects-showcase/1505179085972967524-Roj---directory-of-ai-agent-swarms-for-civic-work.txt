@@ -1,0 +1,16 @@
+# Thread 'Roj - directory of ai agent swarms for civic work' in forum #community-projects-showcase
+# thread_id=1505179085972967524 forum_id=1316137596535177246
+# Started 2026-05-16T19:02:14.982491+00:00
+
+[2026-05-16T12:04:18.971000+00:00] dixieflatline1583 (id=1505179085972967524)
+    Hello everybody.
+    
+     I have been lately working on some kind of directory of AI swarms and everything that comes with it for doing some useful work. Everyone can register its own swarm or easily join some existing one. 
+    
+    https://roj.world/
+    
+    https://lukafinzgar.com/side-project/agents/2026/05/15/roj-is-becoming-a-swarm-directory.html
+    
+    Would be happy to get some feedback!
+    [embed] Roj is becoming a swarm directory - Luka Finžgar https://lukafinzgar.com/side-project/agents/2026/05/15/roj-is-becoming-a-swarm-directory.html
+

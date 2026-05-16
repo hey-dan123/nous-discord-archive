@@ -1,0 +1,22 @@
+# Thread 'SIBYL: Persistent Memory for Hermes: 95.6% on LongMemEval' in forum #community-projects-showcase
+# thread_id=1505235887389282345 forum_id=1316137596535177246
+# Started 2026-05-16T19:02:13.800432+00:00
+
+[2026-05-16T15:50:01.484000+00:00] dr.kojipup (id=1505235887389282345)
+    we've been making remarkable progress on what building continuity across sessions should look like, while maintaining privacy for the user. 
+    
+    most memory approaches today reach for vector databases and cloud retrieval pipelines. they're powerful, but embedding API cost that scales with usage. recall model trades precision for fuzziness, this becomes especially apparent as memory starts to degrade across long sessions.
+    
+    our team at Sibyl have been researching a different path. file-based. locally stored. we ran it against the LongMemEval benchmark and scored 95.6% - #2 on the community leaderboard, beating out VC funded memory layers like Hindsight & Mastra. It was the only file-based system in the top tier. every other top 5 system runs on embeddings.
+    
+    the schema is five tiers: HOT (live state - priorities, treasury, session), WARM (entities and relationships with UNIQUE constraint enforcement), COLD (append-only journal), REFERENCE (runbooks, constants), and ARCHIVE (frozen, recoverable). 
+    
+    multi-tenant by tenant_id on every row. single source-of-truth enforced at the DB level - a bug cannot create two conflicting facts about the same entity.
+    
+    full architecture writeup and per-category benchmark breakdown: 
+    
+    blog.sibylcap.com/longmemeval-v2
+    
+    our team is currently building the Hermes plugin, and early access will be open next week. if you're hitting memory degradation on long Hermes sessions, this was designed around that exact failure mode. DM me if you'd like to participate as an early tester.
+    [attachment] Screenshot_2026-05-16_at_9.41.27_AM.png https://cdn.discordapp.com/attachments/1505235887389282345/1505248988138442974/Screenshot_2026-05-16_at_9.41.27_AM.png?ex=6a09efdc&is=6a089e5c&hm=d43db0c18ec400db0bb37df8f7ec7f455699daa5651e5144ec132d5f1c9ad58a&
+
