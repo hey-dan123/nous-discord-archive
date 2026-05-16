@@ -264,3 +264,6 @@
     Happy to get the feedback from you experts on my soul.md file.
     [attachment] SOUL.md https://cdn.discordapp.com/attachments/1492248418515419177/1504504468002050118/SOUL.md?ex=6a073a79&is=6a05e8f9&hm=c99c88bde4eadb755f3abf29aa3bb96920f4913b268da48bec758983d3cd8628&
 
+[2026-05-16T07:38:52.319000+00:00] neopabo (id=1505112284752642129)
+    I remember hearing about this <@879714655356997692> , I didn't consider it useful for most things like skills because it's all very lightweight, but for a soul md or other system prompt it makes a lot of sense.
+

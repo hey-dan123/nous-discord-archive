@@ -1,0 +1,9 @@
+# Thread 'Sharing my MS-DOS 6.22 Skin' in forum #plugins-skills-and-skins
+# thread_id=1505084351191191614 forum_id=1485392832154832906
+# Started 2026-05-16T08:04:28.009712+00:00
+
+[2026-05-16T05:47:52.439000+00:00] ghostm55 (id=1505084351191191614)
+    Customized this cool theme myself for Hermes, supports both CLI and TUI mode, enjoy  https://github.com/ghosTM55/hermes-ghost-theme
+    [attachment] preview.png https://cdn.discordapp.com/attachments/1505084351191191614/1505084351807885312/preview.png?ex=6a095688&is=6a080508&hm=64e31a4c6e2a1e3c3970e2aeec3e5aa5b79eea691214ad786350330b264bbd7a&
+    [embed] GitHub - ghosTM55/hermes-ghost-theme: My Personal Hermes Agent Theme https://github.com/ghosTM55/hermes-ghost-theme
+

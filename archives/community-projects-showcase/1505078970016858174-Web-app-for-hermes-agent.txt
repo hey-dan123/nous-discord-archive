@@ -1,0 +1,26 @@
+# Thread 'Web app for hermes agent' in forum #community-projects-showcase
+# thread_id=1505078970016858174 forum_id=1316137596535177246
+# Started 2026-05-16T08:01:49.956283+00:00
+
+[2026-05-16T05:26:29.467000+00:00] abboskhonow (id=1505078970016858174)
+    I built a polished Web UI for Hermes Agent
+    
+    Been using Hermes through Telegram and found it uncomfortable for actual work. So I built a proper web interface for it.
+    
+    Features:
+    
+    One-click setup (no Docker required)
+    Multi-profile management (switch between contexts without reconfiguring)
+    Settings & API keys management UI
+    Multiple model support - save and switch between providers/models
+    Full chat sessions with history
+    Memory management (add/edit/remove memories from UI)
+    Skill management (browse, load, enable/disable)
+    
+    https://github.com/abboskhonov/hermium
+    [attachment] demo.png https://cdn.discordapp.com/attachments/1505078970016858174/1505078970612187236/demo.png?ex=6a095185&is=6a080005&hm=0c5bad7b2ec2eb5ec87ff97584ead033ae8190218ba69cf8852583109e9df609&
+    [embed] GitHub - abboskhonov/hermium https://github.com/abboskhonov/hermium
+
+[2026-05-16T05:26:53.145000+00:00] abboskhonow (id=1505079069329592392)
+    Web app for hermes agent
+

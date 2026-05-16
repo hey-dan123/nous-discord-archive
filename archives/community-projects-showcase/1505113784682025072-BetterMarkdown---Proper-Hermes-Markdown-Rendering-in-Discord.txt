@@ -1,0 +1,24 @@
+# Thread 'BetterMarkdown - Proper Hermes Markdown Rendering in Discord' in forum #community-projects-showcase
+# thread_id=1505113784682025072 forum_id=1316137596535177246
+# Started 2026-05-16T08:01:49.556291+00:00
+
+[2026-05-16T07:44:49.930000+00:00] pnivek (id=1505113784682025072)
+    Hello all! 
+    
+    I already posted about this in chat but I figured that I'll also make a thread here. 
+    
+    In short, what I have for you today is a Vencord plugin that improves the markdown rendering experience inside of discord. Hermes (and any agent really) has a habit of returning markdown tables and lists in its replies. Discord will render basic markdown but has no support for tables, lists and other common MD features.
+    
+    My plugin patches Discord's markdown parser to also support these missing features. It leverages Vencord, a popular discord client mod, to do so. I attached some images of before and after applying this plugin.
+    
+    https://github.com/pnivek/BetterMarkdown
+    
+    I hope you all find it as useful as I have 🙂
+    
+    made with love, hermes agent and deepseek v4 flash/pro (150M tokens)
+    [attachment] kw7tkft.png https://cdn.discordapp.com/attachments/1505113784682025072/1505113784870637579/kw7tkft.png?ex=6a0971f1&is=6a082071&hm=7c8886439114cdb47ead8286a8ca9e740c43f98009f7e705e50fa061208e9219&
+    [attachment] s57x4kj.png https://cdn.discordapp.com/attachments/1505113784682025072/1505113785189531778/s57x4kj.png?ex=6a0971f2&is=6a082072&hm=b29119af124651b8a693455ce93444cb03159f16317eb39ff10ad90af370f97e&
+    [attachment] w075t1p.png https://cdn.discordapp.com/attachments/1505113784682025072/1505113785495457853/w075t1p.png?ex=6a0971f2&is=6a082072&hm=910330dfc63b2da88a905d7acee57fa29246d725c4e1b8cd900d69eea8143ef2&
+    [attachment] kv61713.png https://cdn.discordapp.com/attachments/1505113784682025072/1505113785910825022/kv61713.png?ex=6a0971f2&is=6a082072&hm=2e80b2be12cee6de2776375abb4a25fe26ae00da2c82b8becc225e9ff0b83a46&
+    [embed] GitHub - pnivek/BetterMarkdown: Vencord plugin that renders all mar... https://github.com/pnivek/BetterMarkdown
+

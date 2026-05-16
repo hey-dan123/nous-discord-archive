@@ -17018,3 +17018,33 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(doctor): suppress stale direct-key issues when oauth is healthy... https://github.com/NousResearch/hermes-agent/pull/26704
     [reply to cryptoworlldz msg=1505027927589523538]
 
+[2026-05-16T03:29:03.217000+00:00] m3lon00 (id=1505049415902298203)
+    board health with filtering / jump-to
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1505049417189691493/image.png?ex=6a0935ff&is=6a07e47f&hm=445103e4484431419ca7e10701baa344a22f1a6fc45047bec43226fc412977a4&
+    [reply to m3lon00 msg=1504969584376152285]
+
+[2026-05-16T04:47:42.707000+00:00] yuanqingzhao_58339 (id=1505069210877821058)
+    Hey! 👋 Just opened my first PR for hermes-agent — adds a custom OpenAI-compatible web search backend (e.g. Perplexity Sonar) as a plugin under plugins/web/custom/. Built on top of kshitij's #25182 plugin migration. Would really appreciate any eyes on it before I ping reviewers on GitHub 🙏  https://github.com/NousResearch/hermes-agent/pull/8858
+    [embed] feat: add custom OpenAI-compatible search backend by yuanqingz · P... https://github.com/NousResearch/hermes-agent/pull/8858
+
+[2026-05-16T05:15:23.802000+00:00] kylekaster (id=1505076178015223869)
+    wanted to add some hooks surface area for the kanban feature, so that users (and me) can hook into it with plugins to do specific custom actions on certain events, and have agents do things like triage or manage or run workflows for certain movements on the board.
+    
+    PR looks a bit larger than it really is because I also tried to update the docs, and hermes found a few stale facts about hooks as well in doing so.
+    
+    https://github.com/NousResearch/hermes-agent/pull/26416
+
+[2026-05-16T05:39:24.870000+00:00] quenviix (id=1505082222292635648)
+    https://github.com/NousResearch/hermes-agent/pull/26761
+    
+    https://github.com/NousResearch/hermes-agent/pull/26772
+    [embed] fix(transports): use monotonic deadlines in codex app-server turn l... https://github.com/NousResearch/hermes-agent/pull/26761
+    [embed] fix(send_message): preserve Slack and Matrix thread targets resolve... https://github.com/NousResearch/hermes-agent/pull/26772
+
+[2026-05-16T07:51:40.291000+00:00] eloquentbrush0x (id=1505115505860542504)
+    Hermes Agent Showcase is now mobile friendly.
+    I look forward to your feedback.
+    https://hermes-agent-showcase-mocha.vercel.app/
+    [attachment] ScreenRecording_05-16-2026_04-18-04_1.mov https://cdn.discordapp.com/attachments/1491258766648283238/1505115509224636476/ScreenRecording_05-16-2026_04-18-04_1.mov?ex=6a09738d&is=6a08220d&hm=f3c5e128c50d33195d694de5ec8fe581996036a21fe3f01846417e8eef30c5e2&
+    [reply to eloquentbrush0x msg=1504812071148195984]
+

@@ -2503,3 +2503,6 @@
     yeah..thats my bad, today I am going to go through open PRs and actually do my job of cleaning things up for users
     [reply to floory msg=1502316131669512416]
 
+[2026-05-16T07:56:21.918000+00:00] floory (id=1505116687089799178)
+    still haven't tried it out cuz i've seen people call this "not great" with excuses being "experimental" - how are things looking now?
+
