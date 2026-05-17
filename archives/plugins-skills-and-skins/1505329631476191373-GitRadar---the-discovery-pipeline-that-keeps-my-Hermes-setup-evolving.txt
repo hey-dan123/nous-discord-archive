@@ -22,3 +22,11 @@
         Feel free to fork, tweak the stack preferences to match your own tools, or just run the two scripts and see what pops up. Happy to hear any feedback or ideas for improvement!
     [embed] GitHub - Sahil-SS9/GitRadar-Self-Improvement: Automated GitHub repo... https://github.com/Sahil-SS9/gitradar
 
+[2026-05-17T10:03:16.930000+00:00] austrian_guy (id=1505511014630686841)
+    Intriguing 🙏
+
+[2026-05-17T10:27:55.039000+00:00] sahil_ss9 (id=1505517214269177896)
+    Hey dude <@107817559717314560>  cheers for the feedback, had a quick review, the audit was semi right. Pushed fresh changes now -  added regressions tests got CI passing my end. I didn't apply every fix as you've written, they were along the right lines but I've addressed the underlying root cause and also fixed an extra scoring bug around GitHub language casing. 
+    
+    Appreciate the time you took to review it 🫡🫡.
+

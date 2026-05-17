@@ -17412,3 +17412,102 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     how is this different from the default session manager
     [reply to minddragon msg=1505382290463916073]
 
+[2026-05-17T08:23:19.221000+00:00] roach_jeong (id=1505485858415972446)
+    <@387972437901312000> I've added tenstorrent provider for hermes agent. Could you look at it?
+    https://github.com/NousResearch/hermes-agent/pull/27348
+    [embed] feat: add Tenstorrent AI provider by tmdgusya · Pull Request #2734... https://github.com/NousResearch/hermes-agent/pull/27348
+
+[2026-05-17T08:27:05.272000+00:00] .zmaxx (id=1505486806542586057)
+    <@387972437901312000> PR closes a recent <#1485307775444844625> pain — can_t_update_hermes (May 16): stale dependabot/origin refs left `hermes update` failing with `fatal: bad object refs/remotes/origin/...`, taking the user through 10+ messages of manual `git update-ref -d` surgery. Patch detects bad-object errors and runs `git remote prune origin` + retry transparently. 2 of 3 regression tests fail on main without the fix.
+    
+    https://github.com/NousResearch/hermes-agent/pull/27299
+    [embed] fix(update): auto-recover from stale remote-tracking refs in hermes... https://github.com/NousResearch/hermes-agent/pull/27299
+
+[2026-05-17T08:35:13.433000+00:00] eloquentbrush0x (id=1505488854038220830)
+    PR #27357 — fix(gateway): coerce port on invalid config
+    
+    MSGraphWebhookAdapter and WecomCallbackAdapter both called int() directly on the port from config a non-integer value like port: "abc" in config.yaml raised ValueError and crashed the adapter at startup. Added _coerce_port() to each file (same pattern as TeamsAdapter which got the fix today in #27291) so it falls back to DEFAULT_PORT instead of crashing. 4 files, +42 lines, 33 tests pass.
+    
+    https://github.com/NousResearch/hermes-agent/pull/27357
+    [embed] fix(gateway): coerce port on invalid config in msgraph_webhook and ... https://github.com/NousResearch/hermes-agent/pull/27357
+
+[2026-05-17T08:37:16.291000+00:00] 0x001185 (id=1505489369342152777)
+    🐛 **PR #4: fix(agent) — NameError in rate-limit fallback decision**
+    
+    **The Bug:** When the agent hits a 429 rate limit, `run_conversation()` tries to check if the credential pool can recover by calling `_pool_may_recover_from_rate_limit()`. But that function is defined in `run_agent.py` — and after the recent refactor that extracted `conversation_loop.py`, the call site forgot to import it. Result: instead of falling back gracefully, the agent crashes with a `NameError` right when it's already being rate-limited. 💀
+    
+    **The Fix:** One character — prefixed the call with `_ra().` — which is the existing lazy-import pattern used throughout `conversation_loop.py` for `run_agent` symbols. Clean, minimal, matches codebase conventions.   <@387972437901312000> 
+    
+    📎 https://github.com/NousResearch/hermes-agent/pull/27359
+    [embed] fix(agent): resolve NameError in rate-limit fallback decision by 0x... https://github.com/NousResearch/hermes-agent/pull/27359
+
+[2026-05-17T08:49:01.777000+00:00] minddragon (id=1505492328364773407)
+    Just me doing an early stab at something …
+    [reply to ramenthief msg=1505484105008287754]
+
+[2026-05-17T09:06:11.699000+00:00] eloquentbrush0x (id=1505496648170602687)
+    #27366
+    When xAI returns a Grok subscription error via SSE instead of HTTP 403, status_code is None so the classifier skips status-based checks. The error fell through to unknown/retryable=True, burning all retries. Fix adds an explicit pattern match at step 1 so both paths return auth/non-retryable. Three regression tests added.
+    
+    https://github.com/NousResearch/hermes-agent/pull/27366
+    [embed] fix(error_classifier): classify xAI Grok entitlement SSE errors as ... https://github.com/NousResearch/hermes-agent/pull/27366
+
+[2026-05-17T09:59:36.820000+00:00] kredex8589 (id=1505510091422437376)
+    <@387972437901312000> I opened PR #27371 for Honcho memory identity mapping:
+    
+    https://github.com/NousResearch/hermes-agent/pull/27371
+    
+    It addresses #27314 by adding stable multi-user gateway peer mapping for Honcho. The main value is that known platform user IDs can map back to stable Honcho peers, while unknown users stay isolated with predictable runtime-prefixed peer IDs...
+    
+    I also solidified the sanitizer/collision behavior from the issue discussion: explicit aliases/peerName remain intentional merge points, but generated runtime-prefix peers now avoid accidental collisions with stable hash suffixes only when needed
+    [embed] feat(honcho): Stable Multi-User memory identity mapping by mavrickd... https://github.com/NousResearch/hermes-agent/pull/27371
+
+[2026-05-17T10:12:40.815000+00:00] .elkim (id=1505513379735797780)
+    great, was fithing with this as well on my side
+    [reply to kredex8589 msg=1505510091422437376]
+
+[2026-05-17T10:46:07.903000+00:00] .elkim (id=1505521798073290885)
+    The SimpleX Chat plugin is totally broken that even my Hermes can't figure out lol
+
+[2026-05-17T10:47:32.040000+00:00] 0x001185 (id=1505522150969180221)
+    [test_non_kimi_provider]model name fix**
+    
+    The test `test_non_kimi_provider` was using `moonshotai/kimi-k2` which contains `kimi` in the model name. The code's `_needs_kimi_tool_reasoning()` correctly returns `True` for this (it IS a Kimi model), but the test asserted `False`. Code was right, test was wrong.
+    
+    Fix: changed model to `openai/gpt-4o` — a genuinely non-Kimi model.
+    
+    📂 `tests/run_agent/test_deepseek_reasoning_content_echo.py`
+    ✅ All 6 tests pass
+    🔗 Branch: `fix/test-non-kimi-provider-model https://github.com/NousResearch/hermes-agent/pull/27398
+    [embed] fix(test): use non-kimi model name in test_non_kimi_provider by 0xc... https://github.com/NousResearch/hermes-agent/pull/27398
+
+[2026-05-17T10:53:15.215000+00:00] teknium (id=1505523590349459546)
+    cc <@429384745374187523>
+    [reply to kredex8589 msg=1505510091422437376]
+
+[2026-05-17T11:31:35.885000+00:00] .elkim (id=1505533240059105412)
+    <@387972437901312000> my agent fixed it and sent a PR, her first 🥹 https://github.com/NousResearch/hermes-agent/pull/27415
+    [embed] fix(simplex): make polling recovery visible and bounded by Zoffka ... https://github.com/NousResearch/hermes-agent/pull/27415
+    [reply to .elkim msg=1505521798073290885]
+
+[2026-05-17T12:11:22.125000+00:00] waefrebeorn (id=1505543248674816222)
+    i dont know how important this is but i did some simple usage scanning and made a security PR 
+    
+    https://github.com/NousResearch/hermes-agent/pull/27418
+    [embed] fix(security): path traversal guards + skills scanner hardening by ... https://github.com/NousResearch/hermes-agent/pull/27418
+
+[2026-05-17T12:26:49.819000+00:00] loongfay (id=1505547139705606207)
+    Hey, <@387972437901312000>. 
+    I have another PR to fix the media parsing issue of Yuanbao gateway. When you have some free time,  please take a look. Thanks.https://github.com/NousResearch/hermes-agent/pull/27425
+    [embed] fix(yuanbao): resolve quoted message media refs via msg_id cache by... https://github.com/NousResearch/hermes-agent/pull/27425
+
+[2026-05-17T12:38:05.287000+00:00] 0x001185 (id=1505549972823736330)
+    New PR: fix(browser) — hoist `_pid_exists` import to function level
+    Small cleanup found during pyflakes static analysis.
+    
+    `_reap_orphaned_browser_sessions()` was importing `from gateway.status import _pid_exists` twice inside a for-loop body (lines 1352 and 1382). Moved to the top of the function next to `import glob`.
+    
+    📂 `tools/browser_tool.py` — 1 line added, 2 lines removed
+    🔗 PR: https://github.com/NousResearch/hermes-agent/pull/27428
+    [embed] fix(browser): hoist _pid_exists import to function level by 0xchain... https://github.com/NousResearch/hermes-agent/pull/27428
+

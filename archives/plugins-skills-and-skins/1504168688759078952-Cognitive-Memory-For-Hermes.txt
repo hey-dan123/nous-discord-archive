@@ -141,3 +141,13 @@
 [2026-05-17T06:08:58.927000+00:00] wysie_ (id=1505452051092738098)
     Also for storing the data I think it'd be good if we can introduce per channel/user storing (not Hermes profile). E.g. if I'm chatting with Hermes via both telegram and WhatsApp, the memories would record channel:telegram or WhatsApp or cli and user: wysie (or the TG username/WhatsApp id). If my wife is then chatting with Hermes with telegram it'd be stored accordingly. Then allow a way to mention that WhatsApp and TG wysie are the same user (then you've have user specific memories)
 
+[2026-05-17T08:43:26.905000+00:00] wysie_ (id=1505490923809673317)
+    I understand yantrikdb is not hermes-only so my suggestions may not make sense here
+
+[2026-05-17T08:57:32.753000+00:00] wysie_ (id=1505494471553319002)
+    https://github.com/yantrikos/yantrikdb-hermes-plugin/pull/13
+    
+    Submitted a PR for this based off a similar idea I'm working on for my own provider
+    [embed] feat: add optional owner-scoped namespaces by wysie · Pull Request... https://github.com/yantrikos/yantrikdb-hermes-plugin/pull/13
+    [reply to wysie_ msg=1505452051092738098]
+

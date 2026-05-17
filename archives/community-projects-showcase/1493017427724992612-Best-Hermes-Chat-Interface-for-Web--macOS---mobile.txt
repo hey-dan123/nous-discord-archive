@@ -2295,3 +2295,6 @@
 [2026-05-17T00:59:11.550000+00:00] avidfuturist (id=1505374089982775376)
     Newcomers: See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or curious why you might use it
 
+[2026-05-17T09:38:45.671000+00:00] janggemuk (id=1505504843723444255)
+    Is it user error on my side that, when I use another profile with the webui, the memory and user profile somehow get saved to the main Hermes agent's?
+
