@@ -1,0 +1,10 @@
+# Thread 'TERMUX SKILLS TO MAKE YOUR AI AGENT UNDERSTAND THE TERMUX ENVIRNOMENT' in forum #plugins-skills-and-skins
+# thread_id=1505408038545395823 forum_id=1485392832154832906
+# Started 2026-05-17T08:22:39.487079+00:00
+
+[2026-05-17T03:14:05.518000+00:00] txrao (id=1505408038545395823)
+    I went through trial and error using termux and make it understand how to understand proot-distro and fhe termux library. You will need these tools and gpu oassthrough for majority for the open-source projects for hermes. I just felt like maybe there are other termux users trying to use termux to understand it and also being a cheaper option and local(i use ollama host).
+    
+    Github repo:https://github.com/tmrisdaone/hermes-skills
+    [embed] GitHub - tmrisdaone/hermes-skills: 🚀 The ultimate powerhouse of ... https://github.com/tmrisdaone/hermes-skills
+

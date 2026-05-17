@@ -961,3 +961,39 @@
 [2026-05-17T01:35:23.327000+00:00] goldalex26 (id=1505383199075995775)
     mnemosyne memory_sleep is running infinitely, any quick fix?
 
+[2026-05-17T03:04:14.329000+00:00] rossascends (id=1505405558919008286)
+    Using LLM to summarize, or AAAK?
+    [reply to goldalex26 msg=1505383199075995775]
+
+[2026-05-17T03:13:10.711000+00:00] goldalex26 (id=1505407808668172299)
+    told LLM to consolidate and it fired mnemosyne_sleep.  But now it's fixed after some troubleshooting. I created reference so gonna check how it handled the issue
+    [reply to rossascends msg=1505405558919008286]
+
+[2026-05-17T03:16:33.975000+00:00] goldalex26 (id=1505408661219053638)
+    Here's a brief summary of the Mnemosyne consolidation fix:
+    
+    ## Root Cause
+    
+    In session `20260516_190208_b70702`, `mnemosyne_sleep` ran for **47.5 minutes** (2850.66s). The chain:
+    
+    1. **555 working memories** accumulated across 79 sessions — `auto_sleep` was off, and `sleep()` kept returning `no_op` because items were under the 12-hour age cutoff
+    2. When `sleep_all_sessions()` finally ran, it split the backlog into **113 chunks**
+    3. Each chunk triggered a **sequential LLM call** via the Hermes auxiliary backend (deepseek-v4-flash, ~25s each)
+    4. No circuit breaker existed — the tool is synchronous and Hermes' tool call timeout is very high
+    
+    ## Fix Applied (2026-05-17)
+    
+    **Prevention (config change):**
+    - `auto_sleep: true` — consolidate after every session, no more accumulation
+    - `sleep_threshold: 100` — only triggers when 100+ items build up
+    - `MNEMOSYNE_LLM_ENABLED=false` — switches from LLM-based summarization to **AAAK** (much faster, no sequential LLM calls)
+    - `MNEMOSYNE_SESSION_END_TIMEOUT=30` — increased from 15s default to allow session-end consolidation to complete
+    
+    **Upstream fixes** from AxDSan/mnemosyne that also helped:
+    - `62d217b2` — Capped `output_reserve` at `n_ctx // 4` to prevent tiny context windows from exploding chunk counts (was creating 94+ chunks per batch at 2048 context)
+    - `3cfe7c70` — Made hardcoded sleep timeouts configurable via env vars
+    - `66d57061` — Added sleep prompt override for custom summarization prompts
+    
+    **Key takeaway:** The fix was two-pronged — prevent backlog accumulation via auto-sleep, and when consolidation does run, avoid expensive sequential LLM calls by using AAAK instead.
+    [reply to rossascends msg=1505405558919008286]
+

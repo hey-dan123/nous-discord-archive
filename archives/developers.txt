@@ -17321,3 +17321,94 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-17T02:52:03.483000+00:00] wesleysimplicio (id=1505402493528444948)
     <@222797987829645313> <@387972437901312000>  I increased the speed of Hermes Agent by almost 100x, here's the report, I named it Tota Agent, By Hermes Agent.
 
+[2026-05-17T03:05:19.449000+00:00] selinchu (id=1505405832051953868)
+    Yo, opened a small prompt clarification PR for the WhatsApp platform hint https://github.com/NousResearch/hermes-agent/pull/27237
+    [embed] fix(prompt_builder): clarify WhatsApp markdown guidance for image U... https://github.com/NousResearch/hermes-agent/pull/27237
+
+[2026-05-17T03:33:34.612000+00:00] 123mikeyd (id=1505412942081032222)
+    Thanks Wesley.
+    [reply to wesleysimplicio msg=1505402493528444948]
+
+[2026-05-17T03:34:20.595000+00:00] 123mikeyd (id=1505413134947713206)
+    bold claim.
+
+[2026-05-17T03:37:20.077000+00:00] wesleysimplicio (id=1505413887749652520)
+    <@222797987829645313>  here bro
+    [attachment] tota_agent_benchmark_report.pdf https://cdn.discordapp.com/attachments/1491258766648283238/1505413887921623191/tota_agent_benchmark_report.pdf?ex=6a0a8970&is=6a0937f0&hm=5e0b31ba71216cb200d9e9b2bde4c5585bbf413e39665b6661fe2236a86b7c35&
+
+[2026-05-17T03:39:36.493000+00:00] wesleysimplicio (id=1505414459919958106)
+    Tota is Brazilian influencer in USA, Tota Agent THE FLASH`s version of Hermes Agent.
+
+[2026-05-17T03:39:36.851000+00:00] minddragon (id=1505414461421518920)
+    Soooo
+    
+    Ok. I’ll do as asked. But …The pr I did was more than just a ‘re rebase’ but a combine of :
+    
+    main with all of x.ai stuff (to the time of the pr) - and it still had the various issues
+    
+    Salvage of the fixes from my pr
+    Salvage of the fixes from ams
+    Additional testing and fixing (such as oauth instead of oauth2)
+    
+    And perhaps the comment text in pr was not great but we were trying to avoid 5 different pr with each atomic commit. I did this before and they’re still open (and still valid)
+    
+    Will do ask asked tomorrow am. But I maintain that this is why Liminal will help…
+    [reply to teknium msg=1505359950757498940]
+
+[2026-05-17T03:47:35.488000+00:00] wesleysimplicio (id=1505416468970475592)
+    [attachment] Captura_de_Tela_2026-05-17_as_00.47.25.png https://cdn.discordapp.com/attachments/1491258766648283238/1505416469297496104/Captura_de_Tela_2026-05-17_as_00.47.25.png?ex=6a0a8bd7&is=6a093a57&hm=5ef82ae3988d98b497e70ccfeb64933937348da3c3d9f451228efb2268166ba2&
+
+[2026-05-17T03:48:35.278000+00:00] wesleysimplicio (id=1505416719747776574)
+    [attachment] Captura_de_Tela_2026-05-17_as_00.48.28.png https://cdn.discordapp.com/attachments/1491258766648283238/1505416720154759228/Captura_de_Tela_2026-05-17_as_00.48.28.png?ex=6a0a8c13&is=6a093a93&hm=8208cc566b9f7d1640ff9e485abf0154bd1b789e4fab2a341331cea27fa0aba9&
+
+[2026-05-17T03:49:04.636000+00:00] wesleysimplicio (id=1505416842884419625)
+    1 Column - Hermes Agent
+    2 Column - Tota Agent, By Hermes Agent
+    3 Column - OpenClaw
+
+[2026-05-17T03:49:45.619000+00:00] wesleysimplicio (id=1505417014779576430)
+    <@222797987829645313>  We need to make OpenClaw suckle, man.
+
+[2026-05-17T03:51:54.659000+00:00] 123mikeyd (id=1505417556012437688)
+    Do it. I don't know what a Open claw suckle is.
+    [reply to wesleysimplicio msg=1505417014779576430]
+
+[2026-05-17T03:54:17.163000+00:00] wesleysimplicio (id=1505418153717665885)
+    lol
+
+[2026-05-17T03:54:33.774000+00:00] wesleysimplicio (id=1505418223389249597)
+    [attachment] Captura_de_Tela_2026-05-17_as_00.54.27.png https://cdn.discordapp.com/attachments/1491258766648283238/1505418223460290621/Captura_de_Tela_2026-05-17_as_00.54.27.png?ex=6a0a8d79&is=6a093bf9&hm=e5930ed9f7ec8f01fec703f29a34e9c4894586911052aeda79367a7cff973e68&
+
+[2026-05-17T03:55:35.422000+00:00] wesleysimplicio (id=1505418481959436288)
+    [attachment] Captura_de_Tela_2026-05-17_as_00.55.29.png https://cdn.discordapp.com/attachments/1491258766648283238/1505418482030870699/Captura_de_Tela_2026-05-17_as_00.55.29.png?ex=6a0a8db7&is=6a093c37&hm=3e87f3f378645b3978edd081097344d86bfaf861c02f94a993b4cb07faf796e1&
+
+[2026-05-17T04:48:57.787000+00:00] wesleysimplicio (id=1505431913651765248)
+    https://github.com/wesleysimplicio/tota-agent
+    [embed] GitHub - wesleysimplicio/tota-agent: Hermes Agent 100x Fast perform... https://github.com/wesleysimplicio/tota-agent
+
+[2026-05-17T06:11:31.588000+00:00] colmeio_66868 (id=1505452691399376958)
+    Thought OpenClaw was a zombie project... It's creator is now focused in Codex internals
+    [reply to 123mikeyd msg=1505417556012437688]
+
+[2026-05-17T06:12:26.204000+00:00] wesleysimplicio (id=1505452920475484262)
+    [attachment] BD09C46E-0805-4395-AFC5-9FDBFFC31C12.png https://cdn.discordapp.com/attachments/1491258766648283238/1505452920865427609/BD09C46E-0805-4395-AFC5-9FDBFFC31C12.png?ex=6a0aadca&is=6a095c4a&hm=e233df04e372607f5af528f77b04fc4a35dfae9636d9a21bf76a31103cff6743&
+
+[2026-05-17T06:12:30.952000+00:00] wesleysimplicio (id=1505452940389908571)
+    [attachment] 18BA9FF8-B39A-4810-B9B5-AD88D1774256.png https://cdn.discordapp.com/attachments/1491258766648283238/1505452940784177172/18BA9FF8-B39A-4810-B9B5-AD88D1774256.png?ex=6a0aadcf&is=6a095c4f&hm=948f07717ea548300a021f68afe8f0da609b1c0c7415b023cfa331cbccaef9e9&
+
+[2026-05-17T06:12:51.377000+00:00] wesleysimplicio (id=1505453026058567771)
+    Tks Hermes.
+
+[2026-05-17T06:24:13.578000+00:00] colmeio_66868 (id=1505455887417081967)
+    <@416749362090213376> That confuses me bc Hermes just went from 3.11 to 3.14 recently and the major claim if I am not mistaking was due to the speed improvement but now you are claiming 3.11 is faster.
+
+[2026-05-17T06:29:02.460000+00:00] wesleysimplicio (id=1505457099076014110)
+    Python 3.14 is likely the faster runtime baseline. Our current Tota benchmark was run on Python 3.11.14, so it proves the Tota hot-path optimizations on that environment, not that Python 3.11 is faster than Python 3.14. We need to rerun Tota on Python 3.14 for the clean apples-to-apples comparison.
+
+[2026-05-17T06:31:41.442000+00:00] wesleysimplicio (id=1505457765894721596)
+    [attachment] 2E366BD5-E88B-43DA-AE4C-C0DF385EBFFE.png https://cdn.discordapp.com/attachments/1491258766648283238/1505457766511415456/2E366BD5-E88B-43DA-AE4C-C0DF385EBFFE.png?ex=6a0ab24d&is=6a0960cd&hm=6882ba1c58539cb7a080e73fef7d0419dac17e213868c0e460f1edb9c02de8f3&
+
+[2026-05-17T08:16:21.176000+00:00] ramenthief (id=1505484105008287754)
+    how is this different from the default session manager
+    [reply to minddragon msg=1505382290463916073]
+

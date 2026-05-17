@@ -1,0 +1,41 @@
+# Thread 'Asclepius — unofficial Hermes support in Codex app' in forum #community-projects-showcase
+# thread_id=1505454197850767360 forum_id=1316137596535177246
+# Started 2026-05-17T08:19:25.287210+00:00
+
+[2026-05-17T06:17:30.754000+00:00] mdthr (id=1505454197850767360)
+    ollama announced this
+    https://x.com/ollama/status/2055100589428658462
+    
+    so i decided to play around with having hermes instead of ollama, in the Codex app. 
+    
+    launches with a model/provider selection screen for codex ; shows available models, whether they are free/paid, allows search of models.
+    
+    this is extremely experimental and vibe-coded
+    
+    https://github.com/theislampill/asclepius
+    [attachment] asclepius.png https://cdn.discordapp.com/attachments/1505454197850767360/1505454198018408538/asclepius.png?ex=6a0aaefa&is=6a095d7a&hm=00a7cf133a402fd0ac27ec89e3b764079cd244a6d49135046c298430417c6613&
+    [embed]  https://twitter.com/ollama/status/2055100589428658462
+    [embed] GitHub - theislampill/asclepius: unofficial Hermes support in Codex... https://github.com/theislampill/asclepius
+
+[2026-05-17T06:19:22.505000+00:00] mdthr (id=1505454666568437881)
+    i alt tab a lot and can't stand it when the flyout doesn't have a clear indicator, and this is a clear distinction for me that isn't "Codex" again
+    [attachment] image.png https://cdn.discordapp.com/attachments/1505454197850767360/1505454666798989382/image.png?ex=6a0aaf6a&is=6a095dea&hm=8e6f0e2c24f94a4fd7249038944fbcb6b284e674dd8d4fad59b2ee37596644a4&
+
+[2026-05-17T06:20:06.087000+00:00] mdthr (id=1505454849364463616)
+    i.e. if i'm using Codex and Asclepius, and they both say Codex, it's gonna take me too much time to alt-tab and fight the purpose of alt-tabbing
+
+[2026-05-17T06:21:09.901000+00:00] mdthr (id=1505455117019648030)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1505454197850767360/1505455117103792168/image.png?ex=6a0aafd5&is=6a095e55&hm=de2757b58fb5d91c5f2784992dcdef4d5c0c8eb34d22b63d2326c4334fc9ed2c&
+
+[2026-05-17T06:30:45.648000+00:00] mdthr (id=1505457531877851238)
+    https://github.com/theislampill/asclepius/releases/tag/v0.1.1
+    [embed] Release Asclepius v0.1.1 · theislampill/asclepius https://github.com/theislampill/asclepius/releases/tag/v0.1.1
+
+[2026-05-17T06:31:49.936000+00:00] mdthr (id=1505457801521004606)
+    just for posterity, this is basically all vibe-coded
+    [attachment] image.png https://cdn.discordapp.com/attachments/1505454197850767360/1505457802137829427/image.png?ex=6a0ab256&is=6a0960d6&hm=ea1135f2ca54836cd81ecc9489af7ffbc9dc6a166eb59b4f7b4d3606abb0f742&
+
+[2026-05-17T06:35:15.752000+00:00] mdthr (id=1505458664776138893)
+    should have a lil update thingy for when new commit, and since this isn't a new app and doesn't do anything to codex's memory, codex keeps updates too
+    [attachment] image.png https://cdn.discordapp.com/attachments/1505454197850767360/1505458664859766935/image.png?ex=6a0ab323&is=6a0961a3&hm=a9d3add6fbdfaedf1d7f616ae281090a229a533e6a27e6c6fcf3711b165c5aa9&
+

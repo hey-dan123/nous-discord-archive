@@ -276,3 +276,8 @@
     It setup a cron to update it every hour so, this is the first iteration... It also seems to have an emotional state
     [attachment] SOUL.md https://cdn.discordapp.com/attachments/1492248418515419177/1505262280269496401/SOUL.md?ex=6a09fc3e&is=6a08aabe&hm=e25f96229d5b830cc8068fc0def5b87a6aa1faadbe82d2b1c07a90b2dc048557&
 
+[2026-05-17T07:13:52.236000+00:00] absolutegamer2337 (id=1505468380814114899)
+    Update from 12 hours later allowing it to evolve and update itself (changed from hourly to minutely) and here it is... It's a long read, took me 45 minutes to read what I estimate to be 50% of it
+    [attachment] SOUL.md https://cdn.discordapp.com/attachments/1492248418515419177/1505468381359378495/SOUL.md?ex=6a0abc30&is=6a096ab0&hm=5f9a7a48bf1004a8351dc47746cbfd11c7565192f50e92c6287be0de9abc53fa&
+    [reply to absolutegamer2337 msg=1505262280139346132]
+

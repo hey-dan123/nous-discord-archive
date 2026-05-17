@@ -129,3 +129,15 @@
 [2026-05-15T16:39:12.062000+00:00] fhsduifisdfbsdifisdfysdfj (id=1504885875144921349)
     thanks
 
+[2026-05-17T03:32:47.647000+00:00] spranab (id=1505412745095417876)
+    <@329427821208535040> your changes are released in 0.7.16
+
+[2026-05-17T05:57:32.769000+00:00] wysie_ (id=1505449173137359029)
+    <@1488594733659062343> thanks! Btw one suggestion (please lmk if I'm wrong). The different embedders use different dimensions right? So when we change the embedding model it's not a simple change (e.g. if I wanna move from potion 2M to 32M)
+
+[2026-05-17T06:02:36.289000+00:00] wysie_ (id=1505450446192513084)
+    What if u separate the embedding from the actual data in another table?
+
+[2026-05-17T06:08:58.927000+00:00] wysie_ (id=1505452051092738098)
+    Also for storing the data I think it'd be good if we can introduce per channel/user storing (not Hermes profile). E.g. if I'm chatting with Hermes via both telegram and WhatsApp, the memories would record channel:telegram or WhatsApp or cli and user: wysie (or the TG username/WhatsApp id). If my wife is then chatting with Hermes with telegram it'd be stored accordingly. Then allow a way to mention that WhatsApp and TG wysie are the same user (then you've have user specific memories)
+

@@ -880,3 +880,6 @@
     Dear friends, my terminal is configured with API, and the terminal can chat, but I cannot have a conversation on the desktop. What's going on?
     [reply to larryzhang7497 msg=1505035421229256795]
 
+[2026-05-17T06:46:38.283000+00:00] thegiuseppe (id=1505461527518380052)
+    is it possible to see the AIs reasoning here? i changed the config and the terminal shows reasoning now but I cant get your GUI to show reasoning.
+

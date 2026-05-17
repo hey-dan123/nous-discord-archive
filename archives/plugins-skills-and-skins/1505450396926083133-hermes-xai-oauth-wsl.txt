@@ -1,0 +1,15 @@
+# Thread 'hermes-xai-oauth-wsl' in forum #plugins-skills-and-skins
+# thread_id=1505450396926083133 forum_id=1485392832154832906
+# Started 2026-05-17T08:22:38.992442+00:00
+
+[2026-05-17T06:02:24.543000+00:00] spac_wby_actual (id=1505450396926083133)
+    Just shipped a fix for the WSL2 OAuth callback issue a lot of folks have been hitting on hermes auth add xai-oauth. 
+    
+    The "Could not establish connection" page is from xAI's authorize server when the Windows browser → WSL loopback redirect gets dropped by the default Hyper-V Firewall block on the WSL VM. 
+    
+    Repo has a no-admin wrapper script (scripts/hermes-xai-oauth-wsl.sh) and a one-time admin PowerShell rule (docs/permanent-fix.ps1). 
+    
+    MIT, PRs welcome — especially anyone who wants to land a --code flag upstream so this wrapper isn't needed. https://github.com/jettoptx/hermes-xai-oauth-wsl
+    [attachment] image-1778997697352.png https://cdn.discordapp.com/attachments/1505450396926083133/1505450397102379038/image-1778997697352.png?ex=6a0aab70&is=6a0959f0&hm=c120b56026eb3c50a8b477c980202e1e10e3d095f42ed2bf14d47d3202697ec5&
+    [embed] GitHub - jettoptx/hermes-xai-oauth-wsl: Workaround + Hyper-V Firewa... https://github.com/jettoptx/hermes-xai-oauth-wsl
+
