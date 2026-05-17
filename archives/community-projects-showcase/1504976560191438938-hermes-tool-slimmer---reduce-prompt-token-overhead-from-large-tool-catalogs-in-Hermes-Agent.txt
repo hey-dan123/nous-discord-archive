@@ -28,3 +28,6 @@
     Early release — feedback on the core hook contract and provider path behavior especially welcome.
     [embed] GitHub - alias8818/hermes-tool-slimmer: Reduce Hermes Agent tool-sc... https://github.com/alias8818/hermes-tool-slimmer
 
+[2026-05-17T18:21:37.783000+00:00] merlin_0212 (id=1505636427898294364)
+    This seems to be a brilliant idea! Testing with it right now
+

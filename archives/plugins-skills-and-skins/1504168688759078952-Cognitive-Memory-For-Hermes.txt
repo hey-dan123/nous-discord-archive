@@ -151,3 +151,15 @@
     [embed] feat: add optional owner-scoped namespaces by wysie · Pull Request... https://github.com/yantrikos/yantrikdb-hermes-plugin/pull/13
     [reply to wysie_ msg=1505452051092738098]
 
+[2026-05-17T14:12:57.558000+00:00] spranab (id=1505573847938760937)
+    Thanks for the suggestion <@329427821208535040> . Will take a look. And yes YantrikDB is not Hermes only. It’s a generic one.
+
+[2026-05-17T14:26:23.034000+00:00] wysie_ (id=1505577226350100480)
+    I made the PR such that it only affects the Hermes plugin
+
+[2026-05-17T14:26:36.424000+00:00] wysie_ (id=1505577282511835185)
+    Had an earlier one that modified yantrikdb directly but I closed that PR.
+
+[2026-05-17T18:15:32.729000+00:00] spranab (id=1505634896750579803)
+    The PR is merged and available in 0.4.10 release
+

@@ -17511,3 +17511,16 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     🔗 PR: https://github.com/NousResearch/hermes-agent/pull/27428
     [embed] fix(browser): hoist _pid_exists import to function level by 0xchain... https://github.com/NousResearch/hermes-agent/pull/27428
 
+[2026-05-17T13:33:20.308000+00:00] anskhalidm (id=1505563877029580922)
+    Yo guys I have questions about deciding when to create new agent profiles for Hermes and when not to, can someone help me out with this please?
+    
+    https://discord.com/channels/1053877538025386074/1505563607994339451
+
+[2026-05-17T17:51:44.887000+00:00] vivek1787 (id=1505628907947425892)
+    Bros, i been trying to install Hermes, it been weeks, I am just getting errors,can any one help
+
+[2026-05-17T18:00:25.363000+00:00] elkosmas (id=1505631090981863606)
+    <#1485307775444844625> might provide you with more info
+    also check this out https://hermes-agent.nousresearch.com/docs/getting-started/quickstart
+    [embed] Quickstart | Hermes Agent https://hermes-agent.nousresearch.com/docs/getting-started/quickstart
+

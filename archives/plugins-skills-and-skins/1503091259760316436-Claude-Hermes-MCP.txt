@@ -33,3 +33,15 @@
 [2026-05-13T12:18:41.439000+00:00] tourettesgaming (id=1504095539828883579)
     This is nice, shot you a star on github, big dog
 
+[2026-05-17T14:50:49.495000+00:00] monty_13277 (id=1505583377133338827)
+    <@941405197559812097> awesome thank you! Looking for contributers if interested.
+    [reply to samuel.gudi msg=1504061115800485889]
+
+[2026-05-17T14:53:23.505000+00:00] monty_13277 (id=1505584023098101811)
+    <@234139936738115584> yes it will work with codex! TBH I just needed it for claude the day I did it, but it's true it can work with anything that can connect to an MCP.  I'm updating now to be user agnostic.
+    [reply to oninsuka msg=1504072253019783268]
+
+[2026-05-17T14:54:33.261000+00:00] monty_13277 (id=1505584315675971585)
+    Thank you <@938950876419219476> ! Contributors welcome if you or anyone you know are interested.
+    [reply to tourettesgaming msg=1504095539828883579]
+

@@ -2298,3 +2298,7 @@
 [2026-05-17T09:38:45.671000+00:00] janggemuk (id=1505504843723444255)
     Is it user error on my side that, when I use another profile with the webui, the memory and user profile somehow get saved to the main Hermes agent's?
 
+[2026-05-17T16:43:34.325000+00:00] avidfuturist (id=1505611750886609096)
+    Known issue in certain cases, I’m tracking it and we should have a fix in the next few days
+    [reply to janggemuk msg=1505504843723444255]
+

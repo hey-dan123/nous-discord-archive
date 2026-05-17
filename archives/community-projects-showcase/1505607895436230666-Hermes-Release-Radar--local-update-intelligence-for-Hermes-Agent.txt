@@ -1,0 +1,49 @@
+# Thread 'Hermes Release Radar: local update intelligence for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1505607895436230666 forum_id=1316137596535177246
+# Started 2026-05-17T19:06:14.107305+00:00
+
+[2026-05-17T16:28:15.114000+00:00] vampyren (id=1505607895436230666)
+    I’ve been working on a small companion tool for Hermes Agent called **Hermes Release Radar**.
+    
+    **What it does**
+    
+    Hermes Release Radar runs locally and compares your installed Hermes checkout against upstream. It gives you a browser page showing:
+    
+    * what changed since your local version
+    * official release notes when relevant
+    * “what actually matters” impact cards
+    * raw categorized commits for auditability
+    * local review markers so you can track what you already checked
+    * safety notes before deciding whether to update
+    
+    The **review marker** feature is a huge benefit for me personally. Hermes can move fast, and when there are many upstream commits, I do not want to re-review the same changes again and again. Markers let me say: “I reviewed up to here,” then next time I can quickly see what is new since my last pass.
+    
+    It does **not** update Hermes for you. It is intentionally read-only and local-first.
+    
+    **Why I built it**
+    
+    Hermes moves fast, and it can be hard to know whether an update is worth doing right now, what changed, and whether anything might affect your current workflow.
+    
+    I wanted a calm local dashboard that helps answer:
+    
+    > “What changed upstream, what matters to me, what have I already reviewed, and should I update now or wait?”
+    
+    The goal is not automation for the sake of automation. The goal is safer, more informed update decisions.
+    
+    **Safety model**
+    
+    * Runs locally on `127.0.0.1`
+    * Uses your own Hermes checkout
+    * Stores your own review state locally
+    * Does not run `hermes update`
+    * Does not install packages
+    * Does not reset/stash/modify your Hermes checkout
+    * Does not publish private local state
+    
+    **Repo**
+    
+    GitHub: https://github.com/vampyren/Hermes-Release-Radar
+    
+    Feedback welcome, especially from anyone running Hermes regularly and trying to keep up with upstream changes.
+    [embed] GitHub - vampyren/Hermes-Release-Radar https://github.com/vampyren/Hermes-Release-Radar
+

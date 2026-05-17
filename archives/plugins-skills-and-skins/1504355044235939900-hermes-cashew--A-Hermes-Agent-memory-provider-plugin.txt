@@ -96,3 +96,19 @@
     
     I'm running through this right now manually on my own setup to get a sense of the benefits.
 
+[2026-05-17T18:19:19.565000+00:00] magnus919 (id=1505635848169984164)
+    https://github.com/magnus919/hermes-cashew/releases/tag/v0.10.0
+    [embed] Release v0.10.0 — Background Dream Dispatch & Faster Session Ends... https://github.com/magnus919/hermes-cashew/releases/tag/v0.10.0
+
+[2026-05-17T18:45:08.800000+00:00] magnus919 (id=1505642346132275391)
+    There’s a few things going on in this release and a lot of it is under the covers. But we are making fuller use of Hermes Agent memory provider hooks now to do some memory prefetching that we think you might not even notice on the surface except that Hermes will seem more ready to speak from memory when its turn starts.
+    
+    Lots of tuning for the sleep sequence, for dreaming, garbage collection, deduping… looking for more meaningful graph connections in the background. 
+    
+    Take it for a spin. Let me know what you think.
+
+[2026-05-17T18:58:35.515000+00:00] obcyy (id=1505645729740357652)
+    Hey
+     embedding_model does not respect settings and always defaults to all-MiniLM-L6-v2.
+    If I'm not mistaken, the bug is likely in cashew, not the plugin. But there are already fixes — just not in a released version yet ?
+

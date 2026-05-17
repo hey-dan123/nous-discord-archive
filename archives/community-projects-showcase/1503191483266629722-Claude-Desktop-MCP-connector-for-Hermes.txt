@@ -22,3 +22,6 @@
     (Cool idea tho!)
     [reply to monty_13277 msg=1503191483266629722]
 
+[2026-05-17T14:46:29.827000+00:00] monty_13277 (id=1505582288006680706)
+    <@1479726631647056014> Thank you for the comment. TBH I just needed it to work with claude that day but you're right it could work with anything that can connect to an mcp! I'll update to be user agnostic. If you can think of any other ideas or updates please let me know. Thank you!
+

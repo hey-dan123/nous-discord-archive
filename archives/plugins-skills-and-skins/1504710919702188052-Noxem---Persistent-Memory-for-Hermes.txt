@@ -29,3 +29,135 @@
     yes
     [reply to demon6660699 msg=1505549231338033313]
 
+[2026-05-17T15:32:38.590000+00:00] noxerz. (id=1505593901040537691)
+    if u have any problem, you can ask me
+    [reply to demon6660699 msg=1505549231338033313]
+
+[2026-05-17T17:07:39.855000+00:00] twindenis (id=1505617813879128155)
+    I want to test it because my agent is very forgetful with stock.
+
+[2026-05-17T17:07:48.231000+00:00] twindenis (id=1505617849010487407)
+    (even forgot my name T^T)
+
+[2026-05-17T17:09:23.841000+00:00] twindenis (id=1505618250027892756)
+    I will give it a spin.
+
+[2026-05-17T17:37:38.065000+00:00] noxerz. (id=1505625356118392943)
+    ty
+    [reply to twindenis msg=1505618250027892756]
+
+[2026-05-17T17:37:44.685000+00:00] noxerz. (id=1505625383884558478)
+    if u have any problem, ask me
+
+[2026-05-17T17:41:21.919000+00:00] noxerz. (id=1505626295030255786)
+    also brain 2, if you use ubuntu above 24.04, it will not work since playwright isnt supported that version
+
+[2026-05-17T17:41:51.380000+00:00] twindenis (id=1505626418598383808)
+    fedora x11 kde for now on vm
+
+[2026-05-17T17:42:14.476000+00:00] twindenis (id=1505626515470024805)
+    although my agent says because its new it would rather stick with holographic xD
+
+[2026-05-17T17:46:46.894000+00:00] twindenis (id=1505627658074062931)
+    convinced it to get it set up, with the 300mb model and everything.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1505627664759652473/image.png?ex=6a0b5088&is=6a09ff08&hm=02a5a8caa60f122194c94228097830360770a7d3346df3dfa2ffe02ebda217dc&
+
+[2026-05-17T17:48:56.992000+00:00] noxerz. (id=1505628203744759910)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1505628204545605632/image.png?ex=6a0b5109&is=6a09ff89&hm=3046d21c6fe21bd7ca1baac5081bd5c0e69955e7ea2c116e99335ed92f050713&
+    [reply to twindenis msg=1505627658074062931]
+
+[2026-05-17T17:49:12.734000+00:00] noxerz. (id=1505628269771489310)
+    make sure run ts to use
+
+[2026-05-17T17:49:28.982000+00:00] noxerz. (id=1505628337920540732)
+    run "hermes-noxem" to launch hermes with noxem enable
+
+[2026-05-17T17:52:08.361000+00:00] noxerz. (id=1505629006404391023)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1505629006521700372/image.png?ex=6a0b51c8&is=6a0a0048&hm=4e80e725c33b094a967cf3729d7ad7d8ede681959150f34040761e43324fd333&
+
+[2026-05-17T17:52:18.626000+00:00] noxerz. (id=1505629049459052665)
+    also to install u only to run ts in terminal
+
+[2026-05-17T17:52:37.481000+00:00] noxerz. (id=1505629128542523644)
+    then set noxem as your memory provider then run "hermes-noxem"
+
+[2026-05-17T17:52:58.881000+00:00] twindenis (id=1505629218300493995)
+    I made the agent automate the process already so it should be working, just need to fix memory habits.
+
+[2026-05-17T17:53:15.094000+00:00] twindenis (id=1505629286303010887)
+    noxem server is running, I told it to migrade memories from the holographic.
+
+[2026-05-17T17:53:24.049000+00:00] noxerz. (id=1505629323863003411)
+    oh i see
+
+[2026-05-17T17:53:57.648000+00:00] twindenis (id=1505629464787419137)
+    its a fresh install, which is why it was skeptical about getting the setup going, since it only stored 22 facts so far.
+
+[2026-05-17T17:54:07.101000+00:00] noxerz. (id=1505629504436179085)
+    but for brain 2, it require account from qwen chat
+
+[2026-05-17T17:54:28.278000+00:00] twindenis (id=1505629593258688712)
+    free or paid api tokens?
+    [reply to noxerz. msg=1505629504436179085]
+
+[2026-05-17T17:54:48.119000+00:00] noxerz. (id=1505629676478136520)
+    free
+    [reply to twindenis msg=1505629593258688712]
+
+[2026-05-17T17:54:57.822000+00:00] noxerz. (id=1505629717175337213)
+    just create an account and fill email and password
+
+[2026-05-17T17:55:05.804000+00:00] noxerz. (id=1505629750654140607)
+    then it or u can use free qwen 3.6 plus
+
+[2026-05-17T17:56:03.100000+00:00] noxerz. (id=1505629990971244624)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1505629991038357766/image.png?ex=6a0b52b3&is=6a0a0133&hm=af1ca5aeee1ed2835ed009079fff79c4447d087e9ffa89ee9516e869e2d7b1e4&
+
+[2026-05-17T17:56:21.460000+00:00] noxerz. (id=1505630067978670150)
+    by using playwright to interact with qwen chat
+
+[2026-05-17T17:57:05.333000+00:00] twindenis (id=1505630251995238451)
+    issue is most of my qwen accounts are google accounts, hmm, let me look into that.
+    [reply to noxerz. msg=1505629717175337213]
+
+[2026-05-17T17:57:28.252000+00:00] noxerz. (id=1505630348124619015)
+    no don't use google sign up
+    [reply to twindenis msg=1505630251995238451]
+
+[2026-05-17T17:57:36.681000+00:00] noxerz. (id=1505630383478280406)
+    create an accout with password and email
+
+[2026-05-17T17:58:16.227000+00:00] twindenis (id=1505630549346091059)
+    Im pretty sure you can just set a password afterwards
+    [reply to noxerz. msg=1505630383478280406]
+
+[2026-05-17T17:58:32.612000+00:00] noxerz. (id=1505630618069893292)
+    try idk,  haven't test
+
+[2026-05-17T17:58:59.135000+00:00] noxerz. (id=1505630729315549275)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1505630729441251598/image.png?ex=6a0b5363&is=6a0a01e3&hm=961555768cd65777b547be4e088c56f886830a433e89845ee1ef73944ce9920a&
+
+[2026-05-17T17:59:05.304000+00:00] noxerz. (id=1505630755190083645)
+    here it'll let u use free qwen
+
+[2026-05-17T18:00:19.283000+00:00] noxerz. (id=1505631065480368299)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1505631065543544936/image.png?ex=6a0b53b3&is=6a0a0233&hm=af1cf2657dc2dd763625b82058fb6422a5275eeefea27764991ab35d1bb15976&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1505631065841074368/image.png?ex=6a0b53b3&is=6a0a0233&hm=c2277a16901107c3100e6b2fc992a63b7e5acddafb1b3617105cc2dd67c2fdab&
+
+[2026-05-17T18:00:55.044000+00:00] twindenis (id=1505631215473131550)
+    that said I also want something reliable and free for the agent by default, owl rarely falls but it can, and the free ones by nous seem to hit limits on peak.
+
+[2026-05-17T18:06:14.855000+00:00] twindenis (id=1505632556857561204)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1505632557541359817/image.png?ex=6a0b5517&is=6a0a0397&hm=79d30673db84b245935d3346132dd98c1d66e73047bd0d76ba021a40bf827110&
+    [reply to noxerz. msg=1505631065480368299]
+
+[2026-05-17T18:07:38.910000+00:00] twindenis (id=1505632909409910977)
+    I also made a system where I setup a bunch of groq accounts and api keys on each account to give to the agent to rotate through, for other purposes though.
+
+[2026-05-17T18:30:03.732000+00:00] twindenis (id=1505638550001942791)
+    <@1187146306926411898> this happened, read the last few lines.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1505638550467772537/image.png?ex=6a0b5aab&is=6a0a092b&hm=469d5bf5ad4e0121521c436631f3c52e1d24405903d34998536b1dfa73d5e8d3&
+
+[2026-05-17T18:41:39.467000+00:00] twindenis (id=1505641468126171319)
+    so the agent asks for QwenProxy source code or a compiled version to set this up seamlessly.
+
