@@ -1,0 +1,22 @@
+# Thread 'Turbohaul-Manager' in forum #community-projects-showcase
+# thread_id=1505384448223346818 forum_id=1316137596535177246
+# Started 2026-05-17T02:53:00.359804+00:00
+
+[2026-05-17T01:40:21.147000+00:00] mrtrenchtrucker (id=1505384448223346818)
+    https://github.com/MrTrenchTrucker/turbohaul-manager
+    
+    Ollama-shape inference manager using Tom's TurboQuant fork of llama.cpp.
+    
+    FIFO queue + grace + IDLE_HOT hot-hold + model swap on Nvidia RTX GPU's including Blackwell.
+    
+    
+    
+    What it does
+    Accepts OpenAI / Ollama-shape /v1/chat/completions requests
+    Single-slot serial sidecar (one llama-server child holds the model)
+    ACTIVE_MATCH cascade for same-thread follow-ups within a grace window (warm-process reuse)
+    IDLE_HOT 5-minute warm-hold after grace expires: same-model follow-ups inherit the warm process; different-model swap tears down + spawns new
+    Safety guardrails: refuses spawn when VRAM / RAM / CPU / IO-wait would put the host at risk
+    [attachment] Turbohaul-Manager.png https://cdn.discordapp.com/attachments/1505384448223346818/1505384448601096386/Turbohaul-Manager.png?ex=6a0a6e05&is=6a091c85&hm=d2828167c0d5828aef28c74473bd6300c40b7e586874e44a700575e2c82647d1&
+    [embed] GitHub - MrTrenchTrucker/turbohaul-manager: Ollama-shape inference ... https://github.com/MrTrenchTrucker/turbohaul-manager
+

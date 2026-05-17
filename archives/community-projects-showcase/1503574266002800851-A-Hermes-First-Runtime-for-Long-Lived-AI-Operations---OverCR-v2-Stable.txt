@@ -1,0 +1,11 @@
+# Thread 'A Hermes-First Runtime for Long-Lived AI Operations — OverCR v2 Stable' in forum #community-projects-showcase
+# thread_id=1503574266002800851 forum_id=1316137596535177246
+# Started 2026-05-17T02:53:12.860517+00:00
+
+[2026-05-16T23:24:47.823000+00:00] guideboardlabs (id=1505350334590222477)
+    V2 is fully complete
+    [attachment] D594515D-4B61-4306-8577-71AB348274DE.png https://cdn.discordapp.com/attachments/1503574266002800851/1505350334719987902/D594515D-4B61-4306-8577-71AB348274DE.png?ex=6a0a4e3f&is=6a08fcbf&hm=4914da96c306c6a9e5f37332b6c3e729417a47ca429de6c4abbc5d3c29a75b87&
+
+[2026-05-16T23:27:05.630000+00:00] guideboardlabs (id=1505350912594677780)
+    A Hermes-First Runtime for Long-Lived AI Operations — OverCR v2 Stable
+

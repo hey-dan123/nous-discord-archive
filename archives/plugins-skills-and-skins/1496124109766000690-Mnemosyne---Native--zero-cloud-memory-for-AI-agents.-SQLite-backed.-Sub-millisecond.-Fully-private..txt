@@ -958,3 +958,6 @@
     [embed] [FIX] fix inserted memory truncation · Issue #132 · AxDSan/mnemosyne https://github.com/AxDSan/mnemosyne/issues/132
     [reply to nulledvector msg=1504453401088495720]
 
+[2026-05-17T01:35:23.327000+00:00] goldalex26 (id=1505383199075995775)
+    mnemosyne memory_sleep is running infinitely, any quick fix?
+

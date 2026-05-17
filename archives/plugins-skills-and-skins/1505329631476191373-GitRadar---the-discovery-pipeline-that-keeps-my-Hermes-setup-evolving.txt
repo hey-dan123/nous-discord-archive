@@ -1,0 +1,24 @@
+# Thread 'GitRadar — the discovery pipeline that keeps my Hermes setup evolving' in forum #plugins-skills-and-skins
+# thread_id=1505329631476191373 forum_id=1485392832154832906
+# Started 2026-05-17T02:55:40.169935+00:00
+
+[2026-05-16T22:02:31.816000+00:00] sahil_ss9 (id=1505329631476191373)
+    Hey Gang
+    
+        I've put together a little open‑source tool called GitRadar that I've been using to keep my Hermes Agent setup sharp.
+    
+        What it does:
+        - Scans GitHub for new/trending repos (by topic, language, or recency)
+        - Filters out noise (tutorial repos, awesome‑lists, dead projects, etc.)
+        - Scores each repo on relevance (stars, recency, language/framework fit, licence, topic bonus)
+        - Labels them as ADOPT, EXTRACT, FORK/PRODUCT, PLUGIN/SKILL, INSPIRATION, or NOISE
+        - Self‑tunes its star‑threshold over time based on the signal‑to‑noise ratio it sees
+    
+        I’ve wired it into my own Hermes workflow so it continuously feeds me high‑signal repos—I pull the best ideas, patterns, or tools from its output and fold them into my setup, making it more efficient and tuned to what I actually need.
+    
+        If you’d like to give it a try (it’s just Python, zero deps), the repo is here:
+        https://github.com/Sahil-SS9/gitradar
+    
+        Feel free to fork, tweak the stack preferences to match your own tools, or just run the two scripts and see what pops up. Happy to hear any feedback or ideas for improvement!
+    [embed] GitHub - Sahil-SS9/GitRadar-Self-Improvement: Automated GitHub repo... https://github.com/Sahil-SS9/gitradar
+

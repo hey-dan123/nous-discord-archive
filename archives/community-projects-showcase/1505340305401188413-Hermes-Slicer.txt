@@ -1,0 +1,10 @@
+# Thread 'Hermes Slicer' in forum #community-projects-showcase
+# thread_id=1505340305401188413 forum_id=1316137596535177246
+# Started 2026-05-17T02:53:00.836122+00:00
+
+[2026-05-16T22:44:56.678000+00:00] ghenghis_ (id=1505340305401188413)
+    Hermes Agents
+    Base is JusPrin using AI - fork of Orca Slicer.
+    Adding floating chat with Hermes Agents and Hermes Tools
+    [attachment] Hermes_Slicer.png https://cdn.discordapp.com/attachments/1505340305401188413/1505340305740660806/Hermes_Slicer.png?ex=6a0a44e8&is=6a08f368&hm=2616b72df20370dd20d14fcf37eea1aac78fc65867d7e5787956b41dae6b3319&
+

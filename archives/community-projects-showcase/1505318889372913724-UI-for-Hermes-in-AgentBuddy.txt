@@ -1,0 +1,77 @@
+# Thread 'UI for Hermes in AgentBuddy' in forum #community-projects-showcase
+# thread_id=1505318889372913724 forum_id=1316137596535177246
+# Started 2026-05-17T02:53:02.033561+00:00
+
+[2026-05-16T21:19:50.699000+00:00] spankyed (id=1505318889372913724)
+    **AgentBuddy** is more than just a desktop UI for Hermes.  
+    It’s a local-first, end-to-end AI automation platform / sandbox  
+    
+    ⬇️ Download https://github.com/spankyed/AgentBuddy-releases/releases
+    
+    ## ⚡ Getting Started
+    1. Download AgentBuddy
+    2. Go through onboarding
+    3. Select “Yes, setup Hermes” during onboarding
+    
+    ## ✨ Features
+    ### AI & Automation 🤖
+    - Hermes Plugin & integration
+    - Claude Code integration
+    - Create custom workflows + actions
+    - Build your own `/commands` for automations & tooling
+    ### Virtual Library System 📚
+    - Virtual documents & folders
+    - Link real filesystem folders / files directly into the app
+    ### Full IDE Experience 🛠️
+    - Integrated code editor
+    - Built-in terminal
+    - Git integration
+    - View/create/update PRs from inside the app
+    - Manage commits, stashes & switch worktrees
+    ### Productivity 📝
+    - Notes & Todo lists
+    - More tools and features with new ones constantly being added
+    
+    ## 🧪 Currently In Development  
+    - Codex support
+    - Linux support
+    - LSP support in the IDE
+    - Hermes Kanban integration
+    - System for creating and finding plugins
+      - build your own custom UIs!
+    
+    ## ❓ FAQ
+    ### “Is it open source?”
+      - Planned open-source date: 📅 June 19th
+      - Will share the Hermes plugin / system source hopefully sooner 
+    ### “Is it really just you building this?”
+      - Yep 😅
+    ### “How long did this take?”
+      - …a very long time.
+    
+    ## 💬 Looking For Feedback On
+    - Onboarding experience
+    - Bugs or anything confusing or annoying
+    - General UX / feel
+    - Missing features
+    
+    ## 📦 Repositories
+    - Releases 📥  |  https://github.com/spankyed/AgentBuddy-releases
+    - Customization / Default Setup 🎨 |  https://github.com/spankyed/default-setup
+      - clone the repo than point any agent at it to customize the default-setup
+      - `npm run compile` changes
+      - than go to application settings and import a setup pack, pointing to the compiled `/dist` folder
+    [attachment] hermes-abd.mov https://cdn.discordapp.com/attachments/1505318889372913724/1505318890492788847/hermes-abd.mov?ex=6a0a30f6&is=6a08df76&hm=53abaf31985b539c1a24b3661fb746668b800a677766af61b3ca8004b66cb5d6&
+    [attachment] h_editor.png https://cdn.discordapp.com/attachments/1505318889372913724/1505318891348295850/h_editor.png?ex=6a0a30f7&is=6a08df77&hm=cf92f89eedb27e10a9f82aabb0e1e86485e4d2e96b59b9797b739c8e7af3869c&
+    [attachment] h_2.png https://cdn.discordapp.com/attachments/1505318889372913724/1505318891658936371/h_2.png?ex=6a0a30f7&is=6a08df77&hm=98894c13c914db3774e46ada7f805019a5b376a817b038cc6ef50e527952fc06&
+
+[2026-05-16T21:27:34.921000+00:00] spankyed (id=1505320836461232489)
+    ▶️ Longer demo here: https://youtu.be/FDNDm_T3wrc 
+    
+    **Question**: Which icon from Lucide Icons (www.lucide.dev/icons) best suits the hermes project in agentbuddy?
+    
+    Currently using the `bot` icon.
+
+[2026-05-16T23:13:01.700000+00:00] spankyed (id=1505347372895572079)
+    UI for Hermes in AgentBuddy
+

@@ -1,0 +1,25 @@
+# Thread 'Hermes AWS integration (including Lambda)' in forum #community-projects-showcase
+# thread_id=1505296599893545011 forum_id=1316137596535177246
+# Started 2026-05-17T02:53:02.480196+00:00
+
+[2026-05-16T19:51:16.473000+00:00] formnull (id=1505296599893545011)
+    I've been running Hermes on AWS with the below core pieces working end-to-end. Note that the runtime doesn't have to be Lambda as shown in the diagram; EC2, ECS, or any normal Hermes-supported runtime would work. I'm on Lambda because it's simple and only wakes for Telegram webhooks or EventBridge cron, so nothing sits idle burning resources.
+    
+    This is complementary to AWS’s `sample-host-hermesagent-on-amazon-bedrock-agentcore` project. That repo runs Hermes inside AgentCore Runtime on Bedrock Claude with CDK and multi-channel routing. I’m taking a lighter path: stock Hermes on Lambda (or any host), DynamoDB + S3 for state, DeepSeek (or whatever model you choose) for inference, and AgentCore Memory as an optional plugin. Not using Runtime as the process host.
+    
+    In other words: extending Hermes through its plugin and config surfaces (MemoryProvider, session backend, skills storage) instead of hosting a fork/wrapper around the agent. The same pattern should port to other clouds by swapping those backends.
+    
+    What's working:
+    - DynamoDB (multi-turn chat history)
+    - S3 (skills read/write)
+    - EventBridge Scheduler (cron / reminders via the cronjob tool)
+    - DeepSeek V4 Flash for inference (via their API, not Bedrock yet)
+    
+    Still on my list for today are the optional Bedrock bits: AgentCore Memory for long-term recall and Knowledge Base sync for semantic skill search, and looking into supporting Bedrock for model hosting as well (it has some interesting features like guardrails I'd like to explore).
+    
+    The hard part (for me) was getting Hermes' tool loop and session semantics to feel normal without a persistent `~/.hermes` on disk. It is multi-writer-safe, whether Lambda spins up one invocation at a time or you run one or more long-lived hosts.
+    [attachment] AWS_Lambda_Skill_Management-2026-05-16-192535.png https://cdn.discordapp.com/attachments/1505296599893545011/1505296600317034496/AWS_Lambda_Skill_Management-2026-05-16-192535.png?ex=6a0a1c34&is=6a08cab4&hm=e990195962e8915a787981a7b81a2ae2a8651ab089e1736db5ee329117ab36a9&
+
+[2026-05-16T21:23:41.806000+00:00] formnull (id=1505319858706059394)
+    Hermes AWS integration (including Lambda)
+

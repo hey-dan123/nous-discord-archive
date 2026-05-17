@@ -2206,3 +2206,92 @@
     Captured thanks!
     [reply to necrosis._. msg=1504767032489672785]
 
+[2026-05-16T22:55:28.280000+00:00] charanis (id=1505342954531979425)
+    Hi <@933139410281713755> I have been working on the Profiles section overhaul for quite a few days now (still WIP), because I realized how important user friendly profile specific control has become.
+    
+    It has profile specific management for: 
+    - agent and user memory user
+    - skills (you can easily disable skills with a toggle for each agent)
+    - soul editor
+    - Agent Gateway with full user friendly gateway tools config
+    
+    Oh and it supports animated avatars - gifs and webp - eventually I want to make it so that your agents have specific animations for their actions during sessions (idle, thinking, error, success, etc.)
+    
+    What do you think?
+
+[2026-05-16T23:00:09.323000+00:00] charanis (id=1505344133311762492)
+    [attachment] 2026-05-17_00-59-33.mp4 https://cdn.discordapp.com/attachments/1493017427724992612/1505344133533929512/2026-05-17_00-59-33.mp4?ex=6a0a4879&is=6a08f6f9&hm=911fc0bcf47826c028b3119718b81a698ca49af56ff2f987303a003f2c59ad18&
+
+[2026-05-16T23:02:13.850000+00:00] avidfuturist (id=1505344655615721493)
+    This is looking pretty awesome, thanks for working on this!
+    [reply to charanis msg=1505342954531979425]
+
+[2026-05-16T23:03:22.062000+00:00] charanis (id=1505344941717717075)
+    Still quite a few things left to do, but this added ability to customize almost-fully per agent allows for very nice control for your Kanban teams
+
+[2026-05-16T23:03:52.277000+00:00] charanis (id=1505345068448350372)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1505345068540629012/image.png?ex=6a0a4958&is=6a08f7d8&hm=5985646626c11d75deff4e20063d5003d81dd2dd98805e4de03f598f9a8717e4&
+
+[2026-05-16T23:04:04.970000+00:00] charanis (id=1505345121686655158)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1505345122127314954/image.png?ex=6a0a4965&is=6a08f7e5&hm=b8256f684351724b178dc35988f9249a8c8a82a205b033b4d3ba1a05da5c2725&
+
+[2026-05-16T23:13:06.136000+00:00] avidfuturist (id=1505347391501500697)
+    👏 Wow yeah looking really cool!
+
+[2026-05-16T23:14:38.891000+00:00] charanis (id=1505347780544168037)
+    thanks I'll keep you posted on how it's going. I'm limiting the changes to the profile's section only, but eventually I'd like to have the animated avatars displayed and interacting with the user during sessions
+
+[2026-05-16T23:20:36.756000+00:00] hydro._ (id=1505349281538773064)
+    Is there a reason why when using this it is costing vastly more then using the TUI terminal? Running deepseek v4 pro via the Hermes CLI it costs pennies compared to the webui?
+    I was really hoping to replace having to SSH in/use telegram but the usage cost of this is just so ridiculously high (even on medium thinking) <:Sadge:1287475667482443848>
+
+[2026-05-16T23:22:55.173000+00:00] hydro._ (id=1505349862101880958)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1505349862479364266/image0.jpg?ex=6a0a4dcf&is=6a08fc4f&hm=198d84008ffdc13e9e6d17d45b6aeee60037b9d0bbe946966dff7c7f175f50b5&
+
+[2026-05-16T23:30:35.540000+00:00] charanis (id=1505351793020764261)
+    what version are you on?
+    [reply to hydro._ msg=1505349862101880958]
+
+[2026-05-16T23:31:26.790000+00:00] charanis (id=1505352007979110410)
+    there were some bugs that could make you burn more tokens (these should be fixed now), or maybe there's the reasoning mismatch between TUI and webui.
+
+[2026-05-16T23:31:42.679000+00:00] charanis (id=1505352074622406656)
+    other than that, the token usage should be roughly the same
+
+[2026-05-16T23:32:47.726000+00:00] hydro._ (id=1505352347449032857)
+    WebUI: v0.51.77
+    Agent: v2026.5.16-12-gfb05f5d4b
+
+[2026-05-16T23:33:17.088000+00:00] hydro._ (id=1505352470602321943)
+    I just installed it today
+    [reply to charanis msg=1505351793020764261]
+
+[2026-05-16T23:50:11.401000+00:00] avidfuturist (id=1505356724939526145)
+    Okay thanks!
+    [reply to charanis msg=1505347780544168037]
+
+[2026-05-16T23:51:22.870000+00:00] avidfuturist (id=1505357024701976596)
+    It shouldn’t cost many more tokens than the console, but I’ll take a look to see what might be going on. Thanks for flagging.
+    [reply to hydro._ msg=1505349281538773064]
+
+[2026-05-16T23:52:38.865000+00:00] hydro._ (id=1505357343448109278)
+    It’s not using more tokens, it’s costing more than the CLI for an equivalent amount of tokens
+    [reply to avidfuturist msg=1505357024701976596]
+
+[2026-05-16T23:54:19.377000+00:00] hydro._ (id=1505357765026250933)
+    When refreshing the page/going inactive then active on mobile cause the chats to be completely restarted by chance? I’m on my phone at the moment, if that’s why then it probably is the case that it was missing the cache every message as I’m out and about lol
+
+[2026-05-16T23:55:03.804000+00:00] avidfuturist (id=1505357951366463639)
+    Ah thanks that might explain it, I’ll take a look, thanks! Fwiw I don’t see this issue on desktop. But it’s possible it’s something to do with mobile or some edge case caching issue
+    [reply to hydro._ msg=1505357765026250933]
+
+[2026-05-16T23:55:48.995000+00:00] avidfuturist (id=1505358140911124592)
+    Will follow up here
+
+[2026-05-16T23:56:26.101000+00:00] hydro._ (id=1505358296544968704)
+    Thanks! Please let me know what you find, I’d love to use this to control my agent but it’s just not feasible with the cost of a chat costing like 100x what it’d cost via CLI
+    [reply to avidfuturist msg=1505357951366463639]
+
+[2026-05-17T00:59:11.550000+00:00] avidfuturist (id=1505374089982775376)
+    Newcomers: See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or curious why you might use it
+

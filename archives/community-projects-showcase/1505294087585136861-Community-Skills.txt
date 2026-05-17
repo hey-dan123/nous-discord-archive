@@ -1,0 +1,11 @@
+# Thread 'Community-Skills' in forum #community-projects-showcase
+# thread_id=1505294087585136861 forum_id=1316137596535177246
+# Started 2026-05-17T02:53:02.973333+00:00
+
+[2026-05-16T19:41:17.492000+00:00] yasuuk (id=1505294087585136861)
+    Hey everyone, since skills keep getting buried in the scroll, I built a community directory to keep everything in one place:
+    https://github.com/Yasuui/hermes-community-skills
+    Why use this instead of the standard Hermes docs? I'm setting this repo up specifically for agentic use in the near future, making it much easier to integrate long-term.
+    Right now it has a clean web view for easy copy and pasting into your local setup. It's fully open source, so please add whatever you're building. Would really appreciate a star on GitHub if this helps you out.
+    [embed] GitHub - Yasuui/hermes-community-skills https://github.com/Yasuui/hermes-community-skills
+

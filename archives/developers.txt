@@ -17106,3 +17106,218 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I have problems connecting Grok OAuth on my VPS. On my local device everything works fine, but on my server I get an error message and a login code. However, there is no place where I can paste the code to complete the login.
     What do i have to do ?
 
+[2026-05-16T19:17:47.608000+00:00] selinchu (id=1505288174103167126)
+    It fixes a possible MCP parallel-safe prefix collision by tracking the exact tool-to-server provenance instead of relying on prefix parsing. pr: https://github.com/NousResearch/hermes-agent/pull/27060
+    [embed] fix(mcp): prevent parallel-safe prefix collisions by soynchux · Pu... https://github.com/NousResearch/hermes-agent/pull/27060
+
+[2026-05-16T20:12:15.487000+00:00] colmeio_66868 (id=1505301880580997251)
+    final-response-next-step-enforcing-cross-context-compression can short circuit with /goal very nicely by tweaking last output-llm-next-step into your true vision. spawning portals, microkernels, wallhooks, omg... zero-copy .3bytes microkernel-agents PIDs orchestrated by gemma-obliterated-triplequantized-hermes-agent-backed makes a strange omni fabric gnn super computer by wiring up n hardware and making portals between pixels. this federation project is crazy... like getting real power from the electrons... current kernels are not optmized for AI gnns... luckly here in Brazil my silicon is my property and I can change it...
+
+[2026-05-16T20:14:13.884000+00:00] colmeio_66868 (id=1505302377174011904)
+    run 120b in 2gb ram, if getting rid of MCPs or limiting its dashboarding to 60-120fps and exchanging pixels directly is the way so we do not disrupt the microkernel-agents
+
+[2026-05-16T20:21:17.058000+00:00] colmeio_66868 (id=1505304152094281920)
+    `/exhaust` can be the next major leap
+
+[2026-05-16T20:33:39.778000+00:00] colmeio_66868 (id=1505307267287875796)
+    <@808920669147889664> what do you think about it?
+
+[2026-05-16T20:43:51.427000+00:00] minddragon (id=1505309832729591858)
+    well. i had a fix for that but the official got merged ... if you pull my pr and overwrite official it would do it. I'll update my pr.
+    [reply to costi0974 msg=1505277045913944175]
+
+[2026-05-16T21:58:31.032000+00:00] 0x001185 (id=1505328621554761790)
+    https://github.com/NousResearch/hermes-agent/pull/27138  : fix: remove unused import and hoist module-level constant**
+    #27138
+    
+    Two simple fixes:
+    - Removed unused `import signal` from `tts_tool.py` (dead code)
+    - Moved `_BUILTIN_DELIVER_PLATFORMS` to module scope in `webhook.py` (was being recreated on every call)
+    [embed] fix: remove unused import and fix: remove unused import and hoist m... https://github.com/NousResearch/hermes-agent/pull/27138
+
+[2026-05-16T21:59:01.412000+00:00] iftakharr (id=1505328748977979412)
+    Hey Hermes folks — we just added Hermes support to DCP.
+    
+    DCP is a local permission layer for agents: instead of giving Hermes raw wallet keys, API keys, or .env secrets, Hermes can request scoped actions and you approve what matters.
+    
+    Would love a few Hermes users to try it, especially VPS setups.
+    Desktop: https://dcpagent.com
+    Repo: https://github.com/1lystore/dcp
+    
+    Remote Hermes install uses an invite from Desktop, then:
+    curl -fsSL https://dcpagent.com/install.sh | sudo bash -s -- 'dcp_vps_v1_...'
+    
+    Then run /reload-mcp in Hermes. And ask list all DCP tools to see whta DCP can do
+    [embed] DCP gives agents permission, not keys. https://dcpagent.com/
+    [embed] GitHub - 1lystore/dcp: Permission layer for AI agents — wallet si... https://github.com/1lystore/dcp
+
+[2026-05-16T22:13:35.351000+00:00] 0x001185 (id=1505332414543823050)
+    https://github.com/NousResearch/hermes-agent/pull/27147
+    **PR: fix(skills): return None instead of truthy stub when skill load fails**
+    #27147
+    
+    When a skill fails to load, the error message was being injected into the model as a user prompt. Now returns None so callers properly detect the failure.  ## Tests Added
+    
+    - `test_returns_none_when_skill_load_fails` in `tests/agent/test_skill_commands.py` — verifies that `build_skill_invocation_message()` returns `None` when a registered skill exists in the command cache but `_load_skill_payload()` fails.
+    [embed] fix(skills): return None instead of truthy stub when skill load fai... https://github.com/NousResearch/hermes-agent/pull/27147
+
+[2026-05-16T22:40:32.896000+00:00] 0x001185 (id=1505339199019155508)
+    https://github.com/NousResearch/hermes-agent/pull/27154
+    **PR #3: fix(gateway): add missing logger definition to prevent NameError**
+    
+    `hermes_cli/gateway.py:3702` referenced `logger.debug()` but `logger` was never defined in the module. If `discover_plugins()` fails inside `_all_platforms()`, the except block crashes with a `NameError` instead of logging the error gracefully.
+    
+    **Fix:** Added `import logging` and `logger = logging.getLogger(__name__)` at module level.
+    [embed] fix(gateway): add missing logger definition to prevent NameError in... https://github.com/NousResearch/hermes-agent/pull/27154
+
+[2026-05-16T23:04:22.193000+00:00] minddragon (id=1505345193925148672)
+    https://github.com/NousResearch/hermes-agent/pull/27148
+    [embed] chore: rebase #25968 (xai-oauth) on latest main + fix review issues... https://github.com/NousResearch/hermes-agent/pull/27148
+
+[2026-05-16T23:04:35.189000+00:00] minddragon (id=1505345248434585720)
+    <@387972437901312000> the official is kinda broken. this fixes it.
+
+[2026-05-16T23:10:52.577000+00:00] minddragon (id=1505346831314587859)
+    try https://github.com/NousResearch/hermes-agent/pull/27148 - get main then apply this PR
+    [embed] chore: rebase #25968 (xai-oauth) on latest main + fix review issues... https://github.com/NousResearch/hermes-agent/pull/27148
+    [reply to costi0974 msg=1505277045913944175]
+
+[2026-05-16T23:39:46.072000+00:00] krionex (id=1505354102119600138)
+    <@387972437901312000>  I opened a small PR to improve the Teams gateway adapter startup behavior.
+    
+    It fixes an issue where an invalid Teams port value, such as `TEAMS_PORT=abc` or an invalid `platforms.teams.extra.port`, could cause the adapter to throw a `ValueError` during initialization. With this change, it now falls back to the default port `3978` instead of breaking startup.
+    
+    I also added regression tests for invalid `extra.port` and invalid `TEAMS_PORT`.
+    Tests are passing: `46 passed`
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/27167
+    [embed] fix(teams): fall back to default port on invalid port config by kro... https://github.com/NousResearch/hermes-agent/pull/27167
+
+[2026-05-16T23:46:09.033000+00:00] minddragon (id=1505355708374450207)
+    I’m still tinkering with oauth port open and accept post from x.ai … will be a second pr for that because official doesn’t work or doesn’t exist idk
+
+[2026-05-17T00:03:00.496000+00:00] teknium (id=1505359950757498940)
+    https://hermes-agent.nousresearch.com/docs/guides/oauth-over-ssh
+    [embed] OAuth over SSH / Remote Hosts | Hermes Agent https://hermes-agent.nousresearch.com/docs/guides/oauth-over-ssh
+    [reply to minddragon msg=1505355708374450207]
+
+[2026-05-17T00:03:01.791000+00:00] teknium (id=1505359956189122700)
+    this?
+
+[2026-05-17T00:07:43.941000+00:00] minddragon (id=1505361139611996340)
+    Yeah will use that flow actually just hadn’t gotten it atomic enough
+
+[2026-05-17T00:07:54.350000+00:00] minddragon (id=1505361183270764715)
+    But you probably know best lol
+
+[2026-05-17T00:10:02.618000+00:00] minddragon (id=1505361721265754182)
+    It’s not always same port with grok cli
+
+[2026-05-17T00:10:48.855000+00:00] minddragon (id=1505361915197653052)
+    And yes ssh port forwards and all that so wanted to add support for both methods (port forward or paste key) and the other would drop the inbound port
+
+[2026-05-17T00:42:09.050000+00:00] eloquentbrush0x (id=1505369801307193476)
+    #27196 — fix(doctor): suppress stale XAI_API_KEY issue when xAI OAuth is healthy
+    
+    PR merged today added this suppression for Gemini and MiniMax xAI was missed. If you had XAI_API_KEY set but switched to xAI OAuth, hermes doctor would still show a false blocking error. 3-line fix + 3 tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/27196
+    [embed] fix(doctor): suppress stale XAI_API_KEY issue when xAI OAuth is hea... https://github.com/NousResearch/hermes-agent/pull/27196
+
+[2026-05-17T00:47:40.638000+00:00] minddragon (id=1505371192087810048)
+    Might need testing - x.ai or oauth has different usage but I can see it
+    [reply to eloquentbrush0x msg=1505369801307193476]
+
+[2026-05-17T00:49:02.086000+00:00] minddragon (id=1505371533705609257)
+    Mind if I pull in and credit when I go after the oauth port fix ? I’ll be on it in AM. It’s getting late
+
+[2026-05-17T01:01:47.819000+00:00] eloquentbrush0x (id=1505374745422598275)
+    Thanks for your feedback. I’ve updated all the missing parts of the PR and completed all necessary tests. 
+    I’m now waiting for Teknium’s review.
+    [reply to eloquentbrush0x msg=1505369801307193476]
+
+[2026-05-17T01:05:47.666000+00:00] eloquentbrush0x (id=1505375751413829843)
+    Hermes now includes different user groups, and in this area 
+    I’m doing my best to ensure this audience has a smooth experience by fixing issues.
+
+[2026-05-17T01:07:40.811000+00:00] eloquentbrush0x (id=1505376225978486946)
+    #27202 — feat(status): show xAI OAuth login state in hermes status
+    
+    hermes status showed Nous, Codex, Qwen, and MiniMax OAuth but silently skipped xAI OAuth. 
+    If you logged in via hermes auth add xai-oauth, you had no way to check your session state. 
+    Small display fix + 13 tests covering login/logout, error, and import failure isolation.
+    
+    https://github.com/NousResearch/hermes-agent/pull/27202
+    [embed] feat(status): show xAI OAuth login state in hermes status by Eloque... https://github.com/NousResearch/hermes-agent/pull/27202
+
+[2026-05-17T01:09:55.190000+00:00] minddragon (id=1505376789604601866)
+    There we go 🙂 good job
+    [reply to eloquentbrush0x msg=1505376225978486946]
+
+[2026-05-17T01:13:57.178000+00:00] eloquentbrush0x (id=1505377804575838269)
+    Ty Brother, None of my PRs have been merged yet. I’m excited for my first merge 🙂
+    [reply to minddragon msg=1505376789604601866]
+
+[2026-05-17T01:15:46.264000+00:00] minddragon (id=1505378262115811359)
+    None of mine either but Technium did salvage. I just keep contributing where I can. Many of my PR I just keep rebasing to main now on my repo that is tracking origin main so I have local fixes. 
+    
+    Do what you can. I have a tool that will help soon.
+    
+    Dallas meetup coming too…
+
+[2026-05-17T01:17:01.992000+00:00] eloquentbrush0x (id=1505378579742195772)
+    Really? Are you building a tool to make PRs more functional, my friend?
+
+[2026-05-17T01:26:05.685000+00:00] minddragon (id=1505380860155924550)
+    PRATC was a primitive 
+    
+    Pete stole it and … did stupid with the rest.
+    
+    Been cooking Liminal Suite since
+    
+    Alpha launch hopefully this week. Integrations now include 
+    
+    Paperclip
+    Hermes Kanban
+    Obsidian and Notion by Monday
+    
+    Eh may grab a few more
+
+[2026-05-17T01:26:37.674000+00:00] minddragon (id=1505380994327380028)
+    Bonus: Hermes Foundry - just launch and it will optimize Hermes
+
+[2026-05-17T01:28:48.210000+00:00] minddragon (id=1505381541834920027)
+    https://github.com/Mind-Dragon/pratc
+    [embed] GitHub - Mind-Dragon/pratc https://github.com/Mind-Dragon/pratc
+
+[2026-05-17T01:28:59.061000+00:00] minddragon (id=1505381587347312670)
+    Check dates and I was emailing Pete
+
+[2026-05-17T01:29:08.980000+00:00] eloquentbrush0x (id=1505381628950614138)
+    Very cool contributions 🔥
+    [reply to minddragon msg=1505380860155924550]
+
+[2026-05-17T01:29:10.816000+00:00] minddragon (id=1505381636651618354)
+    Rat bastard Pete is
+
+[2026-05-17T01:30:39.400000+00:00] eloquentbrush0x (id=1505382008199581869)
+    #27210 — fix(doctor): show xAI OAuth login state in hermes doctor
+    
+    hermes doctor showed OAuth status for Nous, Codex, Gemini, and MiniMax but silently skipped xAI. If you logged in via hermes auth add xai-oauth, doctor gave you no confirmation. Small display fix + 9 tests covering login/logout, error, import failure isolation, and None-safety.
+    
+    https://github.com/NousResearch/hermes-agent/pull/27210
+    [embed] fix(doctor): show xAI OAuth login state in hermes doctor Auth Provi... https://github.com/NousResearch/hermes-agent/pull/27210
+
+[2026-05-17T01:31:36.165000+00:00] minddragon (id=1505382246289506325)
+    Better to just post commits on original pr. Kinda had to slap my ai around to learn GitHub properly lol
+
+[2026-05-17T01:31:46.697000+00:00] minddragon (id=1505382290463916073)
+    Here’s a fun one : https://github.com/Mind-Dragon/zellijpick
+    [embed] GitHub - Mind-Dragon/zellijpick: Interactive session picker for Zel... https://github.com/Mind-Dragon/zellijpick
+
+[2026-05-17T01:35:01.812000+00:00] eloquentbrush0x (id=1505383108835410042)
+    This is really clever, I hope it works.
+
+[2026-05-17T02:52:03.483000+00:00] wesleysimplicio (id=1505402493528444948)
+    <@222797987829645313> <@387972437901312000>  I increased the speed of Hermes Agent by almost 100x, here's the report, I named it Tota Agent, By Hermes Agent.
+

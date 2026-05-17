@@ -91,3 +91,8 @@
     https://github.com/magnus919/hermes-cashew/releases/tag/v0.9.0
     [embed] Release v0.9.0 — First-Load Bootstrap & Forest-Level Insight Extr... https://github.com/magnus919/hermes-cashew/releases/tag/v0.9.0
 
+[2026-05-16T20:31:23.179000+00:00] magnus919 (id=1505306694350143640)
+    I've got an issue open with upstream `cashew` to explore the idea of making it easy to migrate memories off Claude into `hermes-cashew` so you can benefit from potentially years of Claude history in your Hermes Agent sessions.
+    
+    I'm running through this right now manually on my own setup to get a sense of the benefits.
+
