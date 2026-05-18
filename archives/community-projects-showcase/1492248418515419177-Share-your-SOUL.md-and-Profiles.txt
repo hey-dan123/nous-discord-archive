@@ -293,3 +293,25 @@
     https://git.brandyapple.com/magnus/awesome-souls/raw/branch/main/robin-williams/SOUL.md
     [attachment] SOUL-3.png https://cdn.discordapp.com/attachments/1492248418515419177/1505691138307395765/SOUL-3.png?ex=6a0b8ba5&is=6a0a3a25&hm=e16f645e21297d6145deb81a124b9d96e2699b2d58a4beefc6e78b3b455d4668&
 
+[2026-05-18T18:15:09.257000+00:00] magnus919 (id=1505997186167734282)
+    For when you *really* need your Hermes Agent to get to the bottom of something, no matter how impossible the mystery may seem. I give you... **Sherlock Holmes**!
+    
+    https://git.brandyapple.com/magnus/awesome-souls/raw/branch/main/sherlock-holmes/SOUL.md
+    [attachment] SOUL-4.png https://cdn.discordapp.com/attachments/1492248418515419177/1505997186385842186/SOUL-4.png?ex=6a0ca8ad&is=6a0b572d&hm=d5eda934400e5dd5ed053739c6e54745364d68a236eebb04cb094752a21096d3&
+
+[2026-05-18T18:26:14.825000+00:00] magnus919 (id=1505999977762001026)
+    Bro. Let's talk about your NFT portfolio.
+    
+    https://git.brandyapple.com/magnus/awesome-souls/raw/commit/badcc8c975550a05a051ce20ad8ad4f378728ca5/crypto-bro/SOUL.md
+    [attachment] SOUL-5.png https://cdn.discordapp.com/attachments/1492248418515419177/1505999977946681464/SOUL-5.png?ex=6a0cab46&is=6a0b59c6&hm=f3fd6fafbd98f96f2647ac336fae97ba56f1925fa5aa77022192f08d81291c69&
+
+[2026-05-18T18:30:22.814000+00:00] magnus919 (id=1506001017903513701)
+    ok so I got some novelty ones out there... I'm going to add in some practical ones, too.
+
+[2026-05-18T18:37:33.447000+00:00] magnus919 (id=1506002824109101076)
+    Wire up this **Product Manager** for ideation, discovery, backlog grooming & prioritization. This one is not schtick; she's here to deliver great products.
+    
+    https://git.brandyapple.com/magnus/awesome-souls/src/branch/main/product-manager/SOUL.md
+    [attachment] SOUL-6.png https://cdn.discordapp.com/attachments/1492248418515419177/1506002824281063526/SOUL-6.png?ex=6a0caded&is=6a0b5c6d&hm=1442171cd1d0eb4ebe0e70de48dc53b8b617192b1603bd32238ed28b3b1d5499&
+    [embed] awesome-souls/product-manager/SOUL.md at main https://git.brandyapple.com/magnus/awesome-souls/src/branch/main/product-manager/SOUL.md
+

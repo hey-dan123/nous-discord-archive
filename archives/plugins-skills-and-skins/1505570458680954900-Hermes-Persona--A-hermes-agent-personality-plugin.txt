@@ -30,3 +30,6 @@
     [attachment] ComfyUI_00256_.png https://cdn.discordapp.com/attachments/1505570458680954900/1505570459612348466/ComfyUI_00256_.png?ex=6a0b1b41&is=6a09c9c1&hm=549d48bcc9fd7f9ca67692ea3defb7c333b58cc773ea747557d5b1df6fc9ce17&
     [embed] GitHub - kenyonxu/hermes-persona: 🦊 Hermes Agent 人格注入引... https://github.com/kenyonxu/hermes-persona
 
+[2026-05-18T19:45:18.882000+00:00] runerick_80987 (id=1506019875779252406)
+    Interesting, so you built on top of /personality?
+

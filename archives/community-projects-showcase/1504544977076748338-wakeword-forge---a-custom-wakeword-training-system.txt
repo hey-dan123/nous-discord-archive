@@ -11,3 +11,6 @@
 [2026-05-18T07:42:39.090000+00:00] neopabo (id=1505838011630227627)
     wakeword-forge ~ a custom wakeword training system
 
+[2026-05-18T17:08:50.542000+00:00] oninsuka (id=1505980498227494943)
+    me chatting here also curious about this haha
+

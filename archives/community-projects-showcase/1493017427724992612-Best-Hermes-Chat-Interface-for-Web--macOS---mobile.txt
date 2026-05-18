@@ -2321,3 +2321,29 @@
     This is awesome. I use Webui a lot, but don't have any profiles other than my default. If this gets merged in, I'll be testing the heck out of it!
     [reply to charanis msg=1505678999433773116]
 
+[2026-05-18T18:27:35.465000+00:00] seibakas (id=1506000315990806631)
+    the problem is the webui is actually a split from the terminal right ? so is there a way to sync them ?
+
+[2026-05-18T18:32:00.011000+00:00] charanis (id=1506001425577283847)
+    hmm? wdym?
+    [reply to seibakas msg=1506000315990806631]
+
+[2026-05-18T19:40:42.544000+00:00] charanis (id=1506018716733669497)
+    <@933139410281713755> https://github.com/nesquena/hermes-webui/pull/2552
+    
+    It's a big one, but I made sure there's no conflicts and did some robust manual testing on 2 machines
+    [embed] feat: rebuild profile panel as Profile Ops Console by Charanis · P... https://github.com/nesquena/hermes-webui/pull/2552
+
+[2026-05-18T19:41:27.685000+00:00] avidfuturist (id=1506018906068750577)
+    Thanks again - appreciate all the testing too - will take a look soon!
+    [reply to charanis msg=1506018716733669497]
+
+[2026-05-18T19:43:28.480000+00:00] charanis (id=1506019412719964303)
+    It took quite a bit of tinkering and bugfixing to ensure it's responsive and efficient. I'm sorry I should have been doing smaller contributions earlier but tbh I initially planned to have it only privately for myself
+
+[2026-05-18T19:43:38.203000+00:00] charanis (id=1506019453500915822)
+    btw full reactive avatar support is working
+
+[2026-05-18T19:43:48.161000+00:00] charanis (id=1506019495267930314)
+    both gifs and webp
+

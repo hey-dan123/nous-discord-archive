@@ -17843,3 +17843,110 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] feat(skills): add claude-import skill — migrate Claude conversati... https://github.com/NousResearch/hermes-agent/pull/28041
     [reply to magnus919 msg=1505945644550852830]
 
+[2026-05-18T15:48:48.166000+00:00] eloquentbrush0x (id=1505960355602628780)
+    PR #28063 — https://github.com/NousResearch/hermes-agent/pull/28063
+    ACP "Accept Edits" mode never auto-approved /tmp/ writes on macOS — Path.resolve() follows the /tmp → /private/tmp symlink so the startswith check always returned false. One-line fix.
+    
+    PR #28069 — https://github.com/NousResearch/hermes-agent/pull/28069
+    xAI OAuth auxiliary calls (kanban decomposer, profile describer, etc.) were sending tool schemas raw to xAI's /responses endpoint — pattern/format keywords weren't stripped, causing HTTP 400. The main-agent path already had the fix; the auxiliary path was missing parity.
+    [embed] fix(acp): workspace auto-approve fails for /tmp paths on macOS by E... https://github.com/NousResearch/hermes-agent/pull/28063
+    [embed] fix(aux): strip pattern/format from tool schemas on xAI OAuth auxil... https://github.com/NousResearch/hermes-agent/pull/28069
+
+[2026-05-18T16:40:23.850000+00:00] teknium (id=1505973339842150521)
+    merging
+    [reply to eloquentbrush0x msg=1505948922923978922]
+
+[2026-05-18T16:40:47.174000+00:00] teknium (id=1505973437670232245)
+    this 2nd pr is seperate from your first? what do they do differently?
+    [reply to eloquentbrush0x msg=1505960355602628780]
+
+[2026-05-18T16:43:29.799000+00:00] minddragon (id=1505974119768920194)
+    man I am so ... egg on my face rn. My SOUL.md AND Guideline.md both say don't screw with .env and related and gitignore all those dot files. What does both models one or the other do? Remove it from gitignore wtf wtf wtf wtf
+
+[2026-05-18T16:44:03.406000+00:00] minddragon (id=1505974260726759485)
+    Using GPT 5.5 and DS 4 (self hosted) ... sigh
+
+[2026-05-18T16:44:31.953000+00:00] heathley (id=1505974380461555892)
+    Opened a PR adding a new bundled build-macos-apps plugin, typed macOS/Xcode workflow for Hermes: inspect project, list schemes, build, test, run/stop app, logs, crash reports, build settings. 10 tools + 2 skills under a single macos-dev toolset, check_fn gated, opt-in. I caught and fixed 3 real bugs before opening.
+    
+    https://github.com/NousResearch/hermes-agent/pull/27957
+    [embed] feat(plugin): add bundled build-macos-apps plugin for local macOS/X... https://github.com/NousResearch/hermes-agent/pull/27957
+
+[2026-05-18T16:48:20.347000+00:00] minddragon (id=1505975338415427694)
+    Anyone Nous here - do you want me to close and open new clean PR? or just keep working on 27677?
+
+[2026-05-18T17:30:50.825000+00:00] minddragon (id=1505986035895632002)
+    audit the crap out of it and not have any security issues. idk why my model went nuts and ripped .env out of git ignore. i'll post 27677 update in about 5 mins
+    [reply to teknium msg=1505973437670232245]
+
+[2026-05-18T17:32:15.768000+00:00] dskwe. (id=1505986392172527790)
+    Hi team! Could a maintainer help approve the CI workflows for this security PR so the test suite can run?
+    
+    PR #17443: https://github.com/NousResearch/hermes-agent/pull/17443
+    
+    What it fixes: A critical SSRF bypass vulnerability where attackers can hit cloud metadata endpoints (like AWS IMDSv1 at 169.254.169.254) using IPv4-mapped IPv6 addresses (::ffff:x.x.x.x).
+    
+    Why it happens: Python's ipaddress module treats them as distinct IPv6 addresses, completely bypassing the existing frozenset and network range checks.
+    
+    Status: Branch conflicts are resolved, and outdated description notes have been fully cleaned up. Ready for review!
+    
+    Thanks! 🙌
+    [embed] fix(url_safety): block IPv4-mapped IPv6 addresses to prevent SSRF b... https://github.com/NousResearch/hermes-agent/pull/17443
+
+[2026-05-18T17:43:37.572000+00:00] eloquentbrush0x (id=1505989251865776128)
+    Yes, separate. #28069 fixes the xAI OAuth auxiliary path — tool schemas with pattern/format keywords were sent raw to xAI's /responses endpoint causing HTTP 400. #28063 fixes a different bug: "Accept Edits" mode never auto-approved /tmp/ writes on macOS because Path.resolve() follows the symlink to /private/tmp so the startswith check always failed. Different files, different codepaths.
+    [reply to teknium msg=1505973437670232245]
+
+[2026-05-18T17:44:29.401000+00:00] eloquentbrush0x (id=1505989469252223178)
+    #28120
+    
+    patch mode="patch" (V4A multi-file format) bypassed ACP edit approval entirely — build_edit_proposal returned None for V4A so maybe_require_edit_approval let it through without prompting, regardless of policy. Fix routes V4A through the approval guard and renders per-file diffs in the Zed dialog. workspace_session policy prompts (can't verify all paths); session auto-approves.
+    
+    https://github.com/NousResearch/hermes-agent/pull/28120
+    [embed] fix(acp): gate patch mode=patch (V4A) behind ACP edit approval by E... https://github.com/NousResearch/hermes-agent/pull/28120
+
+[2026-05-18T18:24:38.047000+00:00] mrtc87 (id=1505999571845644451)
+    How can I get in touch with customer support? The portal is saying I've used up all of my credit in two days through 'claude sonnet' use, but I never switched to that model even once. Something's not right.
+
+[2026-05-18T18:25:23.147000+00:00] promptsiren (id=1505999761008885984)
+    email support@nousresearch.com
+    they usually respond very quickly
+    [reply to mrtc87 msg=1505999571845644451]
+
+[2026-05-18T18:45:30.233000+00:00] mrtc87 (id=1506004823894393043)
+    Email sent. Thanks, kind person.
+    [reply to promptsiren msg=1505999761008885984]
+
+[2026-05-18T18:54:37.056000+00:00] m0n5t3r (id=1506007117436293252)
+    I hit an issue with webhooks: I've set up a webhook to receive gitea pull request comments, the agent tries to act on the comment, and it results in approval requests that aren't connected to anything
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1506007117482692828/image.png?ex=6a0cb1ed&is=6a0b606d&hm=d027a19139b8fb6ce4f2a3b7f815745f28f586aa67c3ca50f7217a0a352c5c35&
+
+[2026-05-18T19:01:51.294000+00:00] m0n5t3r (id=1506008938762604604)
+    hermes says they should be treated like crons
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1506008938813067295/image.png?ex=6a0cb39f&is=6a0b621f&hm=4a65f7669072735fd7e16e65a142c312ea1c884f7dc9d788ac2b67e4dcb295bf&
+
+[2026-05-18T19:04:16.619000+00:00] minddragon (id=1506009548299960520)
+    finally.  Done. PR #27677 updated: https://www.github.com/NousResearch/hermes-agent/pull/27677
+        - 9 noisy commits → 1 squashed commit
+        - a916b769f on NousResearch:feat/xai-oauth-flow-and-aux
+        - 6 files changed, +557/-175, all 86 tests pass
+    [embed] feat(xai-oauth): unify OAuth flow, fix macOS race, return OpenAI fo... https://www.github.com/NousResearch/hermes-agent/pull/27677
+
+[2026-05-18T19:05:05.792000+00:00] minddragon (id=1506009754546213064)
+    Spent legit 12 hours over that section of code - 4 of which bashing my AI for updating git ignore to remove .env wtf?!
+
+[2026-05-18T19:11:49.081000+00:00] eloquentbrush0x (id=1506011446062878882)
+    fix(spotify): quarantine dead tokens on terminal refresh failure
+    #28155
+    https://github.com/NousResearch/hermes-agent/pull/28155
+    [embed] fix(spotify): quarantine dead tokens on terminal refresh failure by... https://github.com/NousResearch/hermes-agent/pull/28155
+
+[2026-05-18T19:22:42.690000+00:00] eloquentbrush0x (id=1506014187497848914)
+    About 13 commits in roughly one week Damn
+    I really love those purple merged logos and competing in the rankings
+    climbing higher every day, is incredibly exciting.
+    We’re talking about a project that has caught even Elon Musk’s attention. 
+    No one can see what’s coming. Watching Hermes rise like Rome in the future is exciting.
+    [attachment] Ekran_Resmi_2026-05-18_22.08.20.png https://cdn.discordapp.com/attachments/1491258766648283238/1506014188059754778/Ekran_Resmi_2026-05-18_22.08.20.png?ex=6a0cb882&is=6a0b6702&hm=56ed5b8ac3fcefa1f2e3fac3bc2a72e05fa3c6cd6fdc9928c72bebf31a873277&
+    [attachment] Ekran_Resmi_2026-05-18_11.55.45.png https://cdn.discordapp.com/attachments/1491258766648283238/1506014188781305856/Ekran_Resmi_2026-05-18_11.55.45.png?ex=6a0cb882&is=6a0b6702&hm=83471704c93da415812e546e0c163bfd8f4556cd71133857d4244dee407ba124&
+

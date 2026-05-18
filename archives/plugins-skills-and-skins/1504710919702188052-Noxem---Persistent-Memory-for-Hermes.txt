@@ -266,3 +266,6 @@
     sure
     [reply to twindenis msg=1505949107573887149]
 
+[2026-05-18T15:45:52.182000+00:00] noxerz. (id=1505959617472102400)
+    im fixing ton of bug rn
+

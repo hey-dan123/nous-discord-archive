@@ -154,3 +154,7 @@
 [2026-05-10T18:02:28.573000+00:00] mobai4876162 (id=1503094892702994432)
     My agent said he has a bug
 
+[2026-05-18T17:57:55.151000+00:00] offendingcommit (id=1505992848812544231)
+    Its not too bad if you’re using containers
+    [reply to mobai4876162 msg=1503094543539507230]
+
