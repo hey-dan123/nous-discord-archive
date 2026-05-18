@@ -196,3 +196,9 @@
     Is this purposed to work with sub-agent delegation or kanban?
     [reply to tourettesgaming msg=1501246103058649088]
 
+[2026-05-18T13:56:54.843000+00:00] tourettesgaming (id=1505932197884985376)
+    Doesn’t matter.
+    
+    It’s agnostic.
+    [reply to charanis msg=1505261138202333194]
+

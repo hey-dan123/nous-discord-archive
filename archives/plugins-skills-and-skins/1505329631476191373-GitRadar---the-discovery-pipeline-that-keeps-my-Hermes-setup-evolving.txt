@@ -33,3 +33,7 @@
 [2026-05-18T05:51:01.121000+00:00] .papasoma (id=1505809918312321105)
     This is cool. I'm adding this to my nightly cronjob and potentially adapting it for my own needs regarding improvment scanning. At least Hermes thinks that it would be a step up from my current nightly cron to find quant and algo trading ideas to incorporate into my environment.
 
+[2026-05-18T13:40:19.136000+00:00] iam_rxpii (id=1505928021587263649)
+    I’m always looking for repose to help on projects so I’ll definitely have to add this, I’ll send a PR or comments if I find anything. Appreciate you.
+    [reply to sahil_ss9 msg=1505329631476191373]
+

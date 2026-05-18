@@ -50,3 +50,12 @@
 [2026-05-18T06:33:12.282000+00:00] merlin_0212 (id=1505820534771023944)
     And as a result it makes previously simple tasks a lot more complex and expensive. This issue is big and probably needs to be fixed asap. Maybe it need a robust fallback instruction enforcement
 
+[2026-05-18T11:16:45.798000+00:00] aliasocracy (id=1505891894629236797)
+    I have went through a lot of testing to make sure stuff like that doesn't happen. I have not tested the Anthropic stuff much... which model / endpoint are you using and what all was going on to reproduce it?
+
+[2026-05-18T11:46:32.707000+00:00] aliasocracy (id=1505899389468545138)
+    Pushed an update that may help...
+
+[2026-05-18T11:50:49.882000+00:00] aliasocracy (id=1505900468138934272)
+    Oh and be sure to index the tools too.
+

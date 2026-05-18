@@ -56,3 +56,20 @@
 [2026-04-23T15:48:44.269000+00:00] phospheneoverdrive (id=1496900642617430258)
     Maybe, I tried even overwriting the SOUL.md with it though and didn't see much of a diff (actually my responses are already pretty concise so maybe its difficult to see the difference)
 
+[2026-05-18T14:45:52.514000+00:00] austrian_guy (id=1505944519370215636)
+    I built something for my raspberry pi5, on Debian linux:
+    rust-cave-001 — Token compression for LLMs
+    🔗 github.com/ether-btc/rust-cave-001 | crates.io | v0.4.1
+    
+    Rust + PyO3 NLP library. Applies a pipeline of rules (passive→active voice, article removal, connective elimination, word limiting, logical-completeness filter) to reduce LLM token count while preserving facts.
+    
+    Example: "The database needs an index because the queries are too slow. However, adding an index has some overhead." → "database needs index because queries too slow. However, adding index some overhead." (18 tokens → 8, ~56% reduction)
+    
+    Python: from rust_cave_001 import compress, estimate_tokens
+    CLI: caveman-rs — accepts {"content": "..."} via stdin or -i file.json, outputs JSON with compressed content field.
+    
+    Key modules: src/classifier.rs (13 heuristic dimensions, classifies across 6 text types: technical/conversational/academic/dialogue/minimal/mixed), src/verb_maps.rs (100+ verb conjugation maps), src/lib.rs. CI green, PyPI publish on tag.
+    
+    caveman-rs — Binary tool (github.com/ether-btc/rust-caveman, v0.1.0)
+    Separate repo. Simple stopword-removal CLI — reads/writes JSON {"content": "..."}, strips ~30 English stopwords (a, an, the, and, or, but, is, are, was, were, be, been, being, have, has, had, do, does, did, will, would, shall, should, can, could, may, might, must, i, you, he, she, it, we, they, my, your, his, her, its, our, their, this, that, these, those). Installed at ~/.local/bin/caveman-rs. Used by Hermes Agent's caveman_compress tool.
+

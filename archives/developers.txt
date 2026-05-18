@@ -17760,3 +17760,86 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/27886
     [embed] fix(agent): scope DeepSeek and MiMo reasoning echo to host, not mod... https://github.com/NousResearch/hermes-agent/pull/27886
 
+[2026-05-18T12:30:25.513000+00:00] minddragon (id=1505910432257544273)
+    Underrated feature: Latest Hermes Doctor went to school and got a PhD.
+
+[2026-05-18T12:43:22.821000+00:00] capy_34845 (id=1505913692523466874)
+    https://github.com/HermesMarketplace/HermesMarketplace
+    [embed] GitHub - HermesMarketplace/HermesMarketplace: Open marketplace wher... https://github.com/HermesMarketplace/HermesMarketplace
+
+[2026-05-18T12:43:33.316000+00:00] capy_34845 (id=1505913736542683346)
+    check my marketplace!
+
+[2026-05-18T13:18:20.072000+00:00] capy_34845 (id=1505922489031725086)
+    if u want to submit your skillsm feel happy to do here: https://hermes-agent-news.com/marketplace
+    [embed] Hermes-Agent News https://hermes-agent-news.com/marketplace
+
+[2026-05-18T13:25:45.009000+00:00] cryptoworlldz (id=1505924355232764067)
+    Found another 'hermes doctor' UX bug.
+    
+    Right now, the optional codex CLI not installed import hint can show up after the MiniMax OAuth line, which makes it read like MiniMax-related guidance even though it actually belongs to the Codex auth check.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/27975
+    [embed] [Bug]: hermes doctor prints the codex CLI import hint under MiniMax... https://github.com/NousResearch/hermes-agent/issues/27975
+
+[2026-05-18T13:58:59.889000+00:00] cryptoworlldz (id=1505932722366054602)
+    update: I opened a narrow PR for this one.
+    
+    This fixes a hermes doctor UX bug where the optional codex CLI not installed import hint could show up after the MiniMax OAuth line instead of staying attached to the Codex auth check.
+    
+    I kept the fix intentionally small and scoped just to that attribution issue.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/27975
+    PR: https://github.com/NousResearch/hermes-agent/pull/28007
+    [embed] [Bug]: hermes doctor prints the codex CLI import hint under MiniMax... https://github.com/NousResearch/hermes-agent/issues/27975
+    [embed] fix(doctor): attach codex cli hint to codex auth by worlldz · Pull... https://github.com/NousResearch/hermes-agent/pull/28007
+
+[2026-05-18T14:50:20.778000+00:00] magnus919 (id=1505945644550852830)
+    https://github.com/NousResearch/hermes-agent/pull/28041 solves https://github.com/NousResearch/hermes-agent/issues/28033
+    [embed] feat(skills): add claude-import skill — migrate Claude conversati... https://github.com/NousResearch/hermes-agent/pull/28041
+    [embed] Feature: Claude data export import skill — migrate conversations ... https://github.com/NousResearch/hermes-agent/issues/28033
+
+[2026-05-18T14:55:08.080000+00:00] magnus919 (id=1505946849582907562)
+    ```
+    Parser works perfectly in the container. Let me now run the full test suite inside Docker to verify the 29 unit tests pass in an isolated environment:
+    ```
+    ```
+    All 29 tests pass in the isolated Docker environment. Let me also verify the end-to-end parser run with synthetic data inside the same container:
+    ```
+    ```
+    Everything passes in the isolated Docker environment. Clean summary:
+    
+    Test                                                  Result
+    ────────────────────────────────────────────────────  ─────────────────────────────────────────────────────
+    29 unit tests (Docker, Python 3.11-slim)              ✅ All passed in 0.04s
+    Parser error handling (missing dir)                   ✅ Clean "directory not found" → exit 1
+    End-to-end parse (15 conversations + memories.json)   ✅ 17 units: 15 conv + 1 project mem + 1 conv mem
+    Field validation (content, source, uuid, timestamps)  ✅ All present, source="claude"
+    Streaming parser (stdlib only, no ijson needed)       ✅ Works on clean python:3.11-slim with no extra deps
+    
+    No external dependencies needed — the script runs on stdlib Python alone, verified from scratch. The PR at #28041 is ready for review whenever you are.
+    ```
+    [reply to magnus919 msg=1505945644550852830]
+
+[2026-05-18T14:56:55.619000+00:00] magnus919 (id=1505947300634300527)
+    (and updated PR with local testing methodology/results from isolated docker test environment)
+    [reply to magnus919 msg=1505945644550852830]
+
+[2026-05-18T15:03:22.403000+00:00] eloquentbrush0x (id=1505948922923978922)
+    Silent deadlock in the new kanban auto-decompose (shipped yesterday). If the LLM returns a cyclic task graph 
+    — A waiting on B, B waiting on A — the decomposition succeeds silently but those tasks sit in todo forever, never dispatched.
+    
+    link_tasks() already guards this with _would_cycle(), but decompose_triage_task bypasses it for atomicity and the cycle check was never ported. Fix: Kahn topological sort in pre-validation, before any DB writes. <@387972437901312000> 
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/28050
+    [embed] fix(kanban): detect cycles in decompose_triage_task sibling-link pr... https://github.com/NousResearch/hermes-agent/pull/28050
+
+[2026-05-18T15:10:20.574000+00:00] magnus919 (id=1505950676860141670)
+    more rigorous testing of Hermes actually ingesting claude memories in a dockerized test environment.
+    
+    The one gotcha with this is the default filesystem memory provider needs a circuit breaker (in the PR) to reject a claude import because of its scaling limitations. But use any optional memory provider and it'll happily ingest.
+    
+    https://github.com/NousResearch/hermes-agent/pull/28041#issuecomment-4479005610
+    [embed] feat(skills): add claude-import skill — migrate Claude conversati... https://github.com/NousResearch/hermes-agent/pull/28041
+    [reply to magnus919 msg=1505945644550852830]
+

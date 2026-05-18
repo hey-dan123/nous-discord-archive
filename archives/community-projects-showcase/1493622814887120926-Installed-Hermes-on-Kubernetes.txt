@@ -43,3 +43,24 @@
     k8s runs on bare metal so your container is like a VM on a hypervisor. A pod is a a group of container to make up an app, in our case is the hermes agent, then to extend functionality I use sidecar containers to host cron jobs that run on a schedule and use the agent to send me info to What's app. My goal is to separate the skills and scripts/code from the agent so I can do code security scans and to decouple components so that I don't keep adding things to the main agent.
     [reply to hairy_butcher msg=1494792675323416728]
 
+[2026-05-18T10:55:16.471000+00:00] georgeeze_40778 (id=1505886486799716472)
+    Hi <@611729293889896448>
+
+[2026-05-18T10:55:54.175000+00:00] georgeeze_40778 (id=1505886644941754438)
+    I'm running Hermes agents on Kubernetes as agent-fleets
+
+[2026-05-18T10:56:39.527000+00:00] georgeeze_40778 (id=1505886835161829466)
+    i'm building site reliability team with the hermes agent fleets
+
+[2026-05-18T10:57:45.768000+00:00] georgeeze_40778 (id=1505887112996851864)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493622814887120926/1505887113705422892/image.png?ex=6a0c4229&is=6a0af0a9&hm=2749d0f1da7be14d6e7ecbf21f25a342bdb474b8b2ac9095ae32e01ca5d36107&
+
+[2026-05-18T12:11:51.960000+00:00] m05tr0 (id=1505905761677738014)
+    Sounds cool! I am not familiar with agent fleets, can you send me a link or explain a little more? My other question is what are you using for the MCP servers? I am running my own MCPs but will be good to know if there's a base repo  with helm charts to make it easier.  I really like testing these agents in k8s and glad to see others as well
+
+[2026-05-18T12:41:21.498000+00:00] georgeeze_40778 (id=1505913183657787444)
+    i'm running it in my homelab
+
+[2026-05-18T12:42:20.363000+00:00] georgeeze_40778 (id=1505913430555754647)
+    is more like hermes agent swarm that collaborates to investigate kubernetes issues
+

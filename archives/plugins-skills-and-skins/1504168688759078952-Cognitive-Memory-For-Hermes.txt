@@ -227,3 +227,21 @@
 [2026-05-18T04:53:25.990000+00:00] wysie_ (id=1505795426442412124)
     thanks btw!
 
+[2026-05-18T10:10:57.224000+00:00] sloothyyyyy (id=1505875333109387326)
+    does this support optional per profile memory isolation?
+
+[2026-05-18T10:39:18.135000+00:00] wysie_ (id=1505882467247063100)
+    Think it's by default as theres the namespace. it uses hermes:default usually but if u've a coder profile it'll use another namespace
+    [reply to sloothyyyyy msg=1505875333109387326]
+
+[2026-05-18T10:40:40.376000+00:00] wysie_ (id=1505882812191080518)
+    https://github.com/wysie/yantrikdb-hermes-dashboard/
+    
+    I published the dashboard btw, it's in a good usable state now IMO. Added UI functions to handle scoping, grouping of users so it's easier.
+    
+    <@1488594733659062343> FYI
+    [embed] GitHub - wysie/yantrikdb-hermes-dashboard: Local-first dashboard fo... https://github.com/wysie/yantrikdb-hermes-dashboard/
+
+[2026-05-18T15:22:45.106000+00:00] spranab (id=1505953799653818419)
+    Awesome job <@329427821208535040>
+

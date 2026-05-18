@@ -570,3 +570,27 @@
     Yea I banned him last night <:salute:1072217852385435768>
     [reply to nour_h msg=1505292863137644624]
 
+[2026-05-18T11:49:04.663000+00:00] nour_h (id=1505900026818465893)
+    <@387972437901312000> see:
+    Open Zed/ACP PRs by @HenkDz:
+    
+    #26627 — Zed editor filesystem for file tools
+    https://github.com/NousResearch/hermes-agent/pull/26627
+    
+    #26625 — richer Zed permission cards for dangerous terminal approvals
+    https://github.com/NousResearch/hermes-agent/pull/26625
+    
+    #26573 — mark failed tool completions as failed in Zed
+    https://github.com/NousResearch/hermes-agent/pull/26573
+    
+    #26543 — refresh Zed session title after Hermes auto-title
+    https://github.com/NousResearch/hermes-agent/pull/26543
+    
+    #23425 — render structured JSON tool output instead of raw blobs
+    https://github.com/NousResearch/hermes-agent/pull/23425
+    [embed] feat(acp): use Zed editor filesystem for file tools by HenkDz · Pu... https://github.com/NousResearch/hermes-agent/pull/26627
+    [embed] feat(acp): enrich Zed permission cards by HenkDz · Pull Request #2... https://github.com/NousResearch/hermes-agent/pull/26625
+    [embed] fix(acp): mark failed tool completions by HenkDz · Pull Request #2... https://github.com/NousResearch/hermes-agent/pull/26573
+    [embed] fix(acp): refresh Zed session title after auto-title by HenkDz · P... https://github.com/NousResearch/hermes-agent/pull/26543
+    [embed] fix(acp): render structured JSON tool output by HenkDz · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/23425
+
