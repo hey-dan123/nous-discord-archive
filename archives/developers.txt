@@ -17612,3 +17612,151 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://tenor.com/view/leonardo-dicaprio-clapping-clap-applause-amazing-gif-16078907558888063471
     [embed]  https://tenor.com/view/leonardo-dicaprio-clapping-clap-applause-amazing-gif-16078907558888063471
 
+[2026-05-18T03:36:49.734000+00:00] _dev_random_ (id=1505776148347355338)
+    anyone know what needs to happen to get this merged? https://github.com/NousResearch/hermes-agent/pull/26769
+    [embed] fix(bedrock): add 1M context for Opus 4.6/4.7 + Sonnet 4.6, bump an... https://github.com/NousResearch/hermes-agent/pull/26769
+
+[2026-05-18T03:37:02.271000+00:00] magnus919 (id=1505776200931610664)
+    https://github.com/NousResearch/hermes-agent/pull/27728 kills a nice handful of issues
+    [embed] fix(packaging): add missing package wildcards, manifest grafts, and... https://github.com/NousResearch/hermes-agent/pull/27728
+
+[2026-05-18T03:58:28.943000+00:00] magnus919 (id=1505781597624991814)
+    I might land one more PR tonight... skill+tool for `/fabric`
+
+[2026-05-18T04:06:51.300000+00:00] magnus919 (id=1505783704662835211)
+    Last minute change of direction. `fabric` is just 200 lines of code around `paramiko` so we wrapped that instead.
+    
+    Want your hermes-agent to manage your fleet of VPS's/servers over `ssh`? 
+    
+    https://github.com/NousResearch/hermes-agent/pull/27741
+    [embed] feat(tools): add remote_run — SSH command execution via Paramiko ... https://github.com/NousResearch/hermes-agent/pull/27741
+    [reply to magnus919 msg=1505781597624991814]
+
+[2026-05-18T04:08:46.831000+00:00] magnus919 (id=1505784189235101716)
+    ```
+    3 containers, 1 command, ~1 second:
+    
+    ── node-1 (port 2223) ──
+       exit: 0
+       │ Hello from node-1
+       │ 46988e14d869
+       │ up 34 seconds
+    ── node-2 (port 2224) ──
+       exit: 0
+       │ Hello from node-2
+       │ e3d6f1a24924
+       │ up 19 seconds
+    ── node-3 (port 2225) ──
+       exit: 0
+       │ Hello from node-3
+       │ 583f08fefd0a
+       │ up 10 seconds
+    ```
+    [reply to magnus919 msg=1505783704662835211]
+
+[2026-05-18T05:12:27.132000+00:00] selinchu (id=1505800212738867321)
+    Hey, I opened a small bugfix PR for the MSGraph webhook adapter.
+    
+    The issue was about accepted_resources: when it was configured as a plain string, it was being treated like an iterable and split into individual characters. That made the allowlist fail to match valid Graph resource paths.
+    
+    This PR makes scalar strings behave the same as a single-item list, while keeping the existing list/tuple/set behavior unchanged. 
+    
+    Would appreciate it if someone could take a look when they have a chance. <@387972437901312000> 
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/27767
+    [embed] fix(msgraph_webhook): normalize scalar accepted_resources config by... https://github.com/NousResearch/hermes-agent/pull/27767
+
+[2026-05-18T06:04:35.967000+00:00] wysie_ (id=1505813336024023150)
+    https://github.com/NousResearch/hermes-agent/pull/27759
+    
+    Realize i couldn't load impeccable skill when i symlinked it. fixed.
+    [embed] fix(skills): load symlinked skill slash commands by wysie · Pull R... https://github.com/NousResearch/hermes-agent/pull/27759
+
+[2026-05-18T06:55:37.096000+00:00] jakusimo (id=1505826175329763438)
+    Hi community, I’m deploying Hermes on Kubernetes, I could contribute to Hermes for Kubernetes setup. Unless it’s already on the table?
+
+[2026-05-18T06:58:00.574000+00:00] axmaiqiu (id=1505826777119850496)
+    Hi <@387972437901312000>, I’ve been testing the newer Kanban runtime path on current main and split a few reliability fixes into small focused PRs rather than bundling them together:
+    #26177 fixes a Kanban worker timeout mismatch where long-running worker commands can be killed by the inherited terminal timeout before `task.max_runtime_seconds`. https://github.com/NousResearch/hermes-agent/pull/26177
+    #25591 aligns repeated-failure diagnostics with the actual Kanban failure limit, so the warning appears before the task is effectively blocked. https://github.com/NousResearch/hermes-agent/pull/25591
+    #25640 adds a diagnostic for missing `auxiliary.triage_specifier`, which can otherwise leave triage tasks stuck without an obvious config hint. https://github.com/NousResearch/hermes-agent/pull/25640
+    #25639 makes Kanban worker log retention configurable; the current single `.log.1` rotation can lose early failure context for long-running workers.  https://github.com/NousResearch/hermes-agent/pull/25639
+    All four are rebased on current main, mergeable, one commit each, and include focused tests. Would appreciate a look when you have time.
+
+[2026-05-18T07:21:37.431000+00:00] teknium (id=1505832719849095219)
+    nice will go through all 4 now
+    [reply to axmaiqiu msg=1505826777119850496]
+
+[2026-05-18T07:22:05.979000+00:00] teknium (id=1505832839587823626)
+    I think just docker atm, <@428014785045725184> may have more info
+    [reply to jakusimo msg=1505826175329763438]
+
+[2026-05-18T07:30:34.259000+00:00] definitely_not_cthulhu (id=1505834971468927046)
+    Happy to let someone else handle k8s, I don't have a running cluster any more
+
+[2026-05-18T07:31:57.186000+00:00] jatin_22 (id=1505835319289970718)
+    Hello <@387972437901312000> 
+    I am not able to see Hermes inside the ACP registry in Zen IDE.
+
+[2026-05-18T07:33:05.258000+00:00] kevins0792 (id=1505835604804374620)
+    Bump on this. Would be interested to hear whether this approach fits hermes agent's context management direction. Thanks.
+    [reply to kevins0792 msg=1503441714558406767]
+
+[2026-05-18T07:34:34.129000+00:00] teknium (id=1505835977556627466)
+    merging, welcome to developer role 🙂
+    [reply to wysie_ msg=1505813336024023150]
+
+[2026-05-18T07:38:14.400000+00:00] k1ngsu (id=1505836901439897703)
+    <@387972437901312000> can you please check your dms
+
+[2026-05-18T07:38:19.107000+00:00] teknium (id=1505836921182621777)
+    No
+
+[2026-05-18T07:38:51.503000+00:00] k1ngsu (id=1505837057061158982)
+    I want to ask a few questions about hermes
+
+[2026-05-18T07:48:20.653000+00:00] elkosmas (id=1505839444249411695)
+    You may ask stuff about hermes here <#1476316988992258300> their community is extremely helpful
+    [reply to k1ngsu msg=1505837057061158982]
+
+[2026-05-18T08:01:02.075000+00:00] eloquentbrush0x (id=1505842637884887143)
+    https://github.com/NousResearch/hermes-agent/pull/27850
+    [embed] fix(auxiliary): propagate resolved_model from fallback_chain + fix ... https://github.com/NousResearch/hermes-agent/pull/27850
+
+[2026-05-18T08:03:59.045000+00:00] eloquentbrush0x (id=1505843380150734858)
+    Fix scope:
+    
+    * explicit_base_url / explicit_api_key — kwarg error (#27555) fixed
+    * (client, resolved_model) tuple return — model=None API call prevented
+    * fb_model or fb_resolved_model — parity ensured with sibling _try_main_agent_model_fallback
+
+[2026-05-18T08:20:14.670000+00:00] dlkakbs (id=1505847472218701865)
+    Did you get a chance to see whether this could be useful for hermes? 🙂 <@387972437901312000>
+    [reply to dlkakbs msg=1503388646538084422]
+
+[2026-05-18T08:35:04.312000+00:00] gokhe (id=1505851203647701032)
+    I was thinking of creating a migration assistant for people on wsl to stock windows. Or maybe hermes migration from any system to any other/or same system os. Would be helpful ig?
+
+[2026-05-18T08:50:38.419000+00:00] eloquentbrush0x (id=1505855121576296508)
+    PR #27880 fix summary:
+    
+    Anthropic pool only synced from ~/.claude/.credentials.json when refresh_token changed 
+    — missed silent access-token re-issues (same refresh, new access)
+    Result: stale bearer token → 401s on every request for up to 5 min
+    Fix: check either token changed (parity with Codex/xAI siblings)
+    Also cleared 3 missing error fields so exhausted entries recover immediately after sync
+    
+    https://github.com/NousResearch/hermes-agent/pull/27880
+    [embed] fix(pool): sync Anthropic pool entry on access_token change, not ju... https://github.com/NousResearch/hermes-agent/pull/27880
+
+[2026-05-18T09:02:31.941000+00:00] krionex (id=1505858114304348169)
+    One fixes /footer so on, off, and status are parsed from the actual MessageEvent args instead of falling through to toggle behavior. https://github.com/NousResearch/hermes-agent/pull/27882
+    
+    The other fixes /platform pause and /platform resume parsing so they work correctly with real gateway MessageEvent inputs. https://github.com/NousResearch/hermes-agent/pull/27876
+    [embed] fix(gateway): parse /footer subcommands from MessageEvent args by k... https://github.com/NousResearch/hermes-agent/pull/27882
+    [embed] fix(gateway): unbreak /platform pause and resume parsing by kronexo... https://github.com/NousResearch/hermes-agent/pull/27876
+
+[2026-05-18T09:03:09.282000+00:00] eloquentbrush0x (id=1505858270923984977)
+    https://github.com/NousResearch/hermes-agent/pull/27886
+    [embed] fix(agent): scope DeepSeek and MiMo reasoning echo to host, not mod... https://github.com/NousResearch/hermes-agent/pull/27886
+

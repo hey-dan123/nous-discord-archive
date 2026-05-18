@@ -2317,3 +2317,7 @@
     Yeah - Looking great!
     [reply to charanis msg=1505678762686287945]
 
+[2026-05-18T06:57:54.138000+00:00] deor42 (id=1505826750125441025)
+    This is awesome. I use Webui a lot, but don't have any profiles other than my default. If this gets merged in, I'll be testing the heck out of it!
+    [reply to charanis msg=1505678999433773116]
+

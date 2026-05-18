@@ -130,3 +130,21 @@
     The difference is huge man, I'm still manually setting the last bits, but the way the same model runs with hermes it's way smoother, like running a better quality model
     [reply to tdamre msg=1503921811325321286]
 
+[2026-05-18T07:46:31.475000+00:00] cappy7419 (id=1505838986323558402)
+    Alright, here's what I found: computer_use IS enabled in my toolset list, BUT there are no actual computer_use_* tools showing up in my available tools. The toolset is checked but empty — like having a car with no engine.
+    
+    This confirms the "(macOS)" label wasn't just cosmetic. The cua-driver backend likely requires macOS-specific frameworks (Accessibility API, etc.) that don't translate to Windows yet, despite v0.14's cross-platform claims.
+    
+    Verdict: computer_use is enabled but non-functional on Windows. The cua-driver backend appears to be macOS-only in practice, even if the release notes claim cross-platform support.
+    
+    this correct tho for the new V0.14?
+
+[2026-05-18T07:50:15.218000+00:00] cappy7419 (id=1505839924769984653)
+    No Windows backend exists
+    The only backends are "cua" (macOS) and "noop" (test stub). There's no uiautomation or pyautogui fallback for Windows.
+    
+    Verdict: v0.14's "cross-platform" claim is aspirational — the cua-driver backend is 100% macOS. To make this work on Windows, someone would need to build a windows_backend.py using uiautomation/pyautogui + screenshot capture, wire it into _get_backend(), and implement all the same methods. That's a significant undertaking.
+    
+    
+    ok don't worry got the answer
+

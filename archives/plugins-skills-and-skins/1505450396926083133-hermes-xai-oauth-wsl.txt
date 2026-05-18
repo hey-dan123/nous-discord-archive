@@ -13,3 +13,6 @@
     [attachment] image-1778997697352.png https://cdn.discordapp.com/attachments/1505450396926083133/1505450397102379038/image-1778997697352.png?ex=6a0aab70&is=6a0959f0&hm=c120b56026eb3c50a8b477c980202e1e10e3d095f42ed2bf14d47d3202697ec5&
     [embed] GitHub - jettoptx/hermes-xai-oauth-wsl: Workaround + Hyper-V Firewa... https://github.com/jettoptx/hermes-xai-oauth-wsl
 
+[2026-05-18T05:52:00.908000+00:00] .papasoma (id=1505810169077170328)
+    thank you this worked for me
+

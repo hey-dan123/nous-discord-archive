@@ -41,3 +41,12 @@
 [2026-05-18T01:35:50.496000+00:00] merlin_0212 (id=1505745700896636941)
     Beautiful. These savings can also potentially make the model little abit smarter by having smaller context
 
+[2026-05-18T06:27:17.421000+00:00] merlin_0212 (id=1505819046376112159)
+    Ok I have encountered a problem. If a tool is trimmed yet is actually needed, the agent will not reliably attempt to load the full tool scheme. Instead it will try to build or find new tools on its own
+
+[2026-05-18T06:28:13.935000+00:00] merlin_0212 (id=1505819283412746351)
+    This can happen frequently with tools invoked by skills apparently
+
+[2026-05-18T06:33:12.282000+00:00] merlin_0212 (id=1505820534771023944)
+    And as a result it makes previously simple tasks a lot more complex and expensive. This issue is big and probably needs to be fixed asap. Maybe it need a robust fallback instruction enforcement
+

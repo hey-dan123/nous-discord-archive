@@ -1,0 +1,13 @@
+# Thread 'wakeword-forge ~ a custom wakeword training system' in forum #community-projects-showcase
+# thread_id=1504544977076748338 forum_id=1316137596535177246
+# Started 2026-05-18T09:59:44.833717+00:00
+
+[2026-05-18T06:48:26.093000+00:00] neopabo (id=1505824367572156436)
+    🔥wakeword-forge🔥 --- A wakeword training system
+
+[2026-05-18T07:41:00.528000+00:00] neopabo (id=1505837598231367810)
+    🔥wakeword-forge ~ a wakeword training system
+
+[2026-05-18T07:42:39.090000+00:00] neopabo (id=1505838011630227627)
+    wakeword-forge ~ a custom wakeword training system
+

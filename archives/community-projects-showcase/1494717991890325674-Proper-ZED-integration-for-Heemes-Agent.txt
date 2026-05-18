@@ -566,3 +566,7 @@
     <@387972437901312000> #27034 has this spammy bot reviewer that's hellucinating none existging issues. It looks like a low-quality bot/spam review: author has `authorAssociation: NONE`, it leaked prompt/instructions (“The user wants a code review… in Russian”), and several core claims are plainly false against the actual PR head.
     [attachment] image.png https://cdn.discordapp.com/attachments/1494717991890325674/1505292863364272311/image.png?ex=6a0a18b9&is=6a08c739&hm=eba7b249768ce9ea81b9a78e209242d26c07a32ee7bffa1eb86040376a39de0e&
 
+[2026-05-18T07:31:17.569000+00:00] teknium (id=1505835153124229202)
+    Yea I banned him last night <:salute:1072217852385435768>
+    [reply to nour_h msg=1505292863137644624]
+

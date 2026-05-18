@@ -68,3 +68,6 @@
 [2026-05-13T17:15:47.649000+00:00] tomrevo.x (id=1504170308372795434)
     The reversibility I thought to be useful for that usecase
 
+[2026-05-18T04:59:49.604000+00:00] ifreet_00706 (id=1505797035436019722)
+    You dont seem to have addressed the much heavier always included prompt stack. What should be done about that?
+

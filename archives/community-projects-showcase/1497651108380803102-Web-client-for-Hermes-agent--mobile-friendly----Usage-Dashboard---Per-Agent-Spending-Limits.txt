@@ -110,3 +110,8 @@
 [2026-05-15T11:40:52.547000+00:00] dav05262 (id=1504810799137427536)
     We just hit 150 stars on github 🥳 thank you all for using Hermes Client
 
+[2026-05-18T09:20:41.364000+00:00] dav05262 (id=1505862683675721758)
+    🚀 Hermes Client Update: 
+     - Improved security 
+     - Quality-of-life features
+

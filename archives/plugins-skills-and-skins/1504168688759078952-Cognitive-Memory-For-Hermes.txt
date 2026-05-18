@@ -206,3 +206,24 @@
 [2026-05-18T03:17:01.198000+00:00] wysie_ (id=1505771163266191521)
     or u referring to the 2M / 32M embedding thing?
 
+[2026-05-18T04:01:33.402000+00:00] spranab (id=1505782371302117377)
+    I merged your PR. I am working on something to re-embed if someone opted for it
+
+[2026-05-18T04:39:36.211000+00:00] wysie_ (id=1505791946097168505)
+    thanks!
+
+[2026-05-18T04:51:18.660000+00:00] spranab (id=1505794892381683722)
+    You are helping a lot man. Thank you! Also 0.4.11 is released with your changes.
+
+[2026-05-18T04:52:23.879000+00:00] wysie_ (id=1505795165930000415)
+    eh cause i'm using it haha
+
+[2026-05-18T04:52:56.377000+00:00] wysie_ (id=1505795302236491826)
+    i was working on another provider as well, really like the work you've done here! (+ mnemosyne too tbh)
+
+[2026-05-18T04:53:15.124000+00:00] wysie_ (id=1505795380867235871)
+    i figured a lot of the ideas i had could be added to existing providers too (like owner scoping)
+
+[2026-05-18T04:53:25.990000+00:00] wysie_ (id=1505795426442412124)
+    thanks btw!
+
