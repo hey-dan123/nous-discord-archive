@@ -1,0 +1,34 @@
+# Thread 'Claude/Codex/Cursor => Hermes MCP' in forum #plugins-skills-and-skins
+# thread_id=1503091259760316436 forum_id=1485392832154832906
+# Started 2026-05-18T03:33:35.057985+00:00
+
+[2026-05-17T19:12:07.136000+00:00] samuel.gudi (id=1505649133925437490)
+    I'd love to help! 😄 Something specific you'd need contribution about?
+    [reply to monty_13277 msg=1505583377133338827]
+
+[2026-05-17T21:20:22.318000+00:00] monty_13277 (id=1505681409858076672)
+    <@234139936738115584> it has now been updated to work with both codex and cursor and any other llm client. It's llm agnostic now https://github.com/mlennie/hermes-mcp
+    [embed] GitHub - mlennie/hermes-mcp: MCP server that lets any llm (i.e. Cla... https://github.com/mlennie/hermes-mcp
+
+[2026-05-18T00:37:15.954000+00:00] monty_13277 (id=1505730959838810283)
+    Claude/Codex/Cursor => Hermes MCP
+
+[2026-05-18T00:44:27.067000+00:00] monty_13277 (id=1505732768057921706)
+    Updates: 
+    
+     **hermes-mcp updates**
+      _(the MCP bridge that lets any LLM client delegate tasks to your local Hermes Agent)_
+    
+      **Repo renamed.** `claude-hermes-mcp` → `hermes-mcp` to reflect that it's not Claude-only anymore. New URL: https://github.com/mlennie/hermes-mcp — old links auto-redirect on GitHub     but please update bookmarks and remotes.
+    
+      **Async jobs (v0.3).** Long-running tasks no longer hit the MCP client's ~2-min per-tool-call timeout. Pass `async_mode=true` to `hermes_ask` and you get back a `job_id` immediately;
+      poll with `hermes_check(job_id)`. Hermes keeps running in the background whether you poll or not. Great for browser-driven work, multi-step agentic chains, anything >30s.
+    
+      **Job cancel + reset (v0.3 / v0.4).** `hermes_cancel(job_id)` releases the bookkeeping on a stuck job; `hermes_reset()` wipes the whole queue. Important caveat: cancel/reset don't stop   already-running worker threads — side effects in flight (emails sent, files created) still happen. Use them to release results, not undo work.
+    
+      **LLM agnostic (v0.4 + v0.5 in review).** Server now supports two auth paths in parallel: PKCE-only OAuth and a static bearer token (`MCP_BEARER_TOKEN`, opt-in). Tested end-to-end
+      against Claude (web/desktop/mobile), Codex desktop, and Cursor. v0.5 lands when PR #5 merges.
+    
+      Issues / config questions welcome → github.com/mlennie/hermes-mcp/issues
+    [embed] GitHub - mlennie/hermes-mcp: MCP server that lets any llm (i.e. Cla... https://github.com/mlennie/hermes-mcp
+

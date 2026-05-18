@@ -1,0 +1,17 @@
+# Thread '📢 [Question] Windows native version: open-source & freedom going forward?' in forum #community-projects-showcase
+# thread_id=1505724933173678221 forum_id=1316137596535177246
+# Started 2026-05-18T03:30:40.581411+00:00
+
+[2026-05-18T00:13:19.085000+00:00] dcj0e_92125 (id=1505724933173678221)
+    Just saw v0.14.0 shipped Native Windows beta — exciting stuff. I have a few questions about the long-term direction:
+    
+    1. Will the Windows version always be fully open-source (MIT)? Or is there a plan to ship it as a pre-packaged .exe where users can't modify core behavior (system prompts, safety guardrails, etc.)?
+    
+    2. If a packaged .exe version does come out, will the pip-installable source version still be maintained in parallel? Or is the eventual goal to migrate everyone to the exe?
+    
+    3. Will WSL-level freedom be preserved on Windows native? Currently on WSL I can freely edit SOUL.md, config.yaml, and prompt_builder.py — this is critical for my use case. Will Windows users have the same access?
+    
+    I'll stick with WSL if Windows goes the locked-down route. Just want to know where this is heading.
+    
+    Thanks!
+

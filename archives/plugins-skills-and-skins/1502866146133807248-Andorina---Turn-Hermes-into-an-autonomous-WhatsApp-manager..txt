@@ -176,3 +176,18 @@
     Honest feedback welcome, all experience levels appreciated. The more eyes the better! 🙌
     [embed] Andoriña | Autonomous WhatsApp Manager for Hermes https://andorinaai.github.io/Andorina-WhatsApp-Agent-for-Hermes/
 
+[2026-05-17T21:26:22.499000+00:00] vayaperson (id=1505682920566689863)
+    We've just released Andoriña V1.0.4-Beta1 with full working autoinstaller and fully working scripts!! 
+    Try it and report any issue on GitHub!!
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/V1.0.4-Beta1
+    
+    📤 Send messages to any contact without waiting for them to write first
+    👥 Send messages to groups
+    📁 Send files, images and videos (or ask for them by whatsapp and got them right in the chat).
+    🎙️ Sen audio files as native voice notes (shows "Recording..." to the receiver)
+    ⏰ Schedule messages with date and time (works with native Linux Crontab. No waiting, no token consumption)
+    🔐 100% local, zero telemetry
+    
+    All from natural language. Just tell Hermes "send a WhatsApp to Maria saying I'll be late" and it does it. Schedule a message, go out, cancel it from anywhere. Left home and forgot to copy that file? Ask Hermes from WhatsApp and it will find it on your PC and send it to you — or to anyone else — right in the chat.
+    [embed] Release v1.0.4-Beta1: Core Consolidation, Automated Diagnostics & S... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/V1.0.4-Beta1
+

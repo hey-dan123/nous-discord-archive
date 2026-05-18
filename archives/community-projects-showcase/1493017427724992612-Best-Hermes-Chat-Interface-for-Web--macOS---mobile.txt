@@ -2302,3 +2302,18 @@
     Known issue in certain cases, I’m tracking it and we should have a fix in the next few days
     [reply to janggemuk msg=1505504843723444255]
 
+[2026-05-17T21:09:51.183000+00:00] charanis (id=1505678762686287945)
+    <@933139410281713755>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1505678763030216815/image.png?ex=6a0b801f&is=6a0a2e9f&hm=ba9196f4549186058881c393ff5af2f8afef1ff96ef790353b73b94f614166e9&
+
+[2026-05-17T21:10:47.628000+00:00] charanis (id=1505678999433773116)
+    I think those are basically all option a person could ever want for separate profile customization - easily accessible from the UI
+
+[2026-05-18T00:37:36.788000+00:00] fleety13 (id=1505731047223202022)
+    I'd add a slider for lipstick tone, but i'm superficial 😂
+    [reply to charanis msg=1505678762686287945]
+
+[2026-05-18T01:17:58.909000+00:00] avidfuturist (id=1505741206335000586)
+    Yeah - Looking great!
+    [reply to charanis msg=1505678762686287945]
+

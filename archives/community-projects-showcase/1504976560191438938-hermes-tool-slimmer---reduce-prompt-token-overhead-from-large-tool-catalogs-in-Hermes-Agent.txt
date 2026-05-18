@@ -31,3 +31,13 @@
 [2026-05-17T18:21:37.783000+00:00] merlin_0212 (id=1505636427898294364)
     This seems to be a brilliant idea! Testing with it right now
 
+[2026-05-17T20:01:37.198000+00:00] aliasocracy (id=1505661591268622447)
+    It working ok? 🙂
+    [reply to merlin_0212 msg=1505636427898294364]
+
+[2026-05-18T01:34:53.840000+00:00] merlin_0212 (id=1505745463264022659)
+    [attachment] Screenshot_20260518_113445.jpg https://cdn.discordapp.com/attachments/1504976560191438938/1505745463377399908/Screenshot_20260518_113445.jpg?ex=6a0bbe3d&is=6a0a6cbd&hm=320885c53c426226a86d282240e117cb3d37caaf20dcae9a85760e4d583e6e17&
+
+[2026-05-18T01:35:50.496000+00:00] merlin_0212 (id=1505745700896636941)
+    Beautiful. These savings can also potentially make the model little abit smarter by having smaller context
+

@@ -1,0 +1,29 @@
+# Thread 'Hermes Persona： A hermes agent personality plugin' in forum #community-projects-showcase
+# thread_id=1505745986905968831 forum_id=1316137596535177246
+# Started 2026-05-18T03:30:40.238266+00:00
+
+[2026-05-18T01:36:58.686000+00:00] kai.xu (id=1505745986905968831)
+    I built a super light weight Hermes Agent plugin that gives your agent a persistent character identity. It survives sessions, restarts, and context resets. It's a five-layer personality stack:
+    
+    1. **SOUL.md** — core identity (who your character is)
+    2. **/personality** — how they think, feel, and speak
+    3. **Prefill** — few-shot behavioral anchor (survives context drift)
+    4. **persona-config.json** — dynamic rules, time-slots, relationship dimensions <- my plugin works on this layer
+    5. **Memory** — what they learn across sessions (MCP memory providers)
+    
+    Changes hot-reload on save. No restart needed. 🔁
+    
+    The repo ships with example configs so you can see how it works immediately — including a black cat named Luna who ends every sentence with "nya~" 🐱
+    
+    **Running in 30 seconds from install:**
+    
+    ```
+    hermes plugins install kenyonxu/hermes-persona --enable
+    ```
+    
+    Repo: https://github.com/kenyonxu/hermes-persona
+    
+    Docs in CN + EN. Pick a character or build your own — the five layers fit anything.
+    [attachment] ComfyUI_00256_.png https://cdn.discordapp.com/attachments/1505745986905968831/1505745987375861801/ComfyUI_00256_.png?ex=6a0bbeba&is=6a0a6d3a&hm=119217149fce3257b10a01900bd4ee96e2cc193aadf076b47f48563fc05059cf&
+    [embed] GitHub - kenyonxu/hermes-persona: 🦊 Hermes Agent 人格注入引... https://github.com/kenyonxu/hermes-persona
+

@@ -13,3 +13,17 @@
     [attachment] dual-plugin-demo-720p.mp4 https://cdn.discordapp.com/attachments/1504628093187391671/1504628095221497956/dual-plugin-demo-720p.mp4?ex=6a07ad9c&is=6a065c1c&hm=883109739d1224ac9dd5e605d1f5084443fa7054c6428ccdce97eed61bf92add&
     [embed] GitHub - 8bit64k/omatchy: Dynamic Omarchy ↔ Hermes Dashboard them... https://github.com/8bit64k/omatchy
 
+[2026-05-17T20:18:47.030000+00:00] oninsuka (id=1505665910696841326)
+    Thid is so pretty wtfff
+
+[2026-05-17T21:05:14.833000+00:00] _8bit64k_ (id=1505677603590373577)
+    thank you! please try it out and let me know what you think
+    [reply to oninsuka msg=1505665910696841326]
+
+[2026-05-17T21:55:26.466000+00:00] koshmar__ (id=1505690235294453861)
+    love ur theme! what is it
+
+[2026-05-17T23:14:41.197000+00:00] _8bit64k_ (id=1505710178081964072)
+    that initial theme there is 'Akaito'
+    [reply to koshmar__ msg=1505690235294453861]
+

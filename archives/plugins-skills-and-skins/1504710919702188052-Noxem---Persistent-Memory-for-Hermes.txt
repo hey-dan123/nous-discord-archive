@@ -161,3 +161,23 @@
 [2026-05-17T18:41:39.467000+00:00] twindenis (id=1505641468126171319)
     so the agent asks for QwenProxy source code or a compiled version to set this up seamlessly.
 
+[2026-05-17T20:00:53.681000+00:00] twindenis (id=1505661408744833054)
+    so I figured it out but using playwright caused huge delays between prompts or queries -answers so the agent suggested open router's qwen flash variant, now Im not sure if thats reliable since it *could* hit limits, but will test it out.
+
+[2026-05-17T20:19:38.120000+00:00] twindenis (id=1505666124983832668)
+    and I had it create a local decryption key for sensitive information sent to qwen, in case there is any.
+
+[2026-05-17T22:44:47.990000+00:00] noxerz. (id=1505702656826675272)
+    i see
+
+[2026-05-17T23:53:53.492000+00:00] noxerz. (id=1505720044322164756)
+    mb, i forget upload src file
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1505720044733202432/image.png?ex=6a0ba691&is=6a0a5511&hm=923907fe0137a9074ef5969841296e38e63586d15f50a7a4dadb86951fb40151&
+    [reply to twindenis msg=1505638550001942791]
+
+[2026-05-18T00:08:19.984000+00:00] noxerz. (id=1505723678652895394)
+    all good now, i just install new ubuntu and try install noxem using it. All good
+
+[2026-05-18T00:08:28.614000+00:00] noxerz. (id=1505723714849738852)
+    <@111075253668585472> mb for forget upload src file
+

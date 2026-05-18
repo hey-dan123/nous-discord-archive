@@ -281,3 +281,15 @@
     [attachment] SOUL.md https://cdn.discordapp.com/attachments/1492248418515419177/1505468381359378495/SOUL.md?ex=6a0abc30&is=6a096ab0&hm=5f9a7a48bf1004a8351dc47746cbfd11c7565192f50e92c6287be0de9abc53fa&
     [reply to absolutegamer2337 msg=1505262280139346132]
 
+[2026-05-17T21:41:28.149000+00:00] magnus919 (id=1505686719138238544)
+    **Vanessa Ives**
+    
+    https://git.brandyapple.com/magnus/awesome-souls/raw/branch/main/vanessa-ives/SOUL.md
+    [attachment] SOUL-2.png https://cdn.discordapp.com/attachments/1492248418515419177/1505686719372988496/SOUL-2.png?ex=6a0b8788&is=6a0a3608&hm=e009b3257397509800ddee510974975faef507c1d0fff3935821a18b88beaa28&
+
+[2026-05-17T21:59:01.672000+00:00] magnus919 (id=1505691137933840576)
+    Or maybe you'd prefer **Robin Williams**? 
+    
+    https://git.brandyapple.com/magnus/awesome-souls/raw/branch/main/robin-williams/SOUL.md
+    [attachment] SOUL-3.png https://cdn.discordapp.com/attachments/1492248418515419177/1505691138307395765/SOUL-3.png?ex=6a0b8ba5&is=6a0a3a25&hm=e16f645e21297d6145deb81a124b9d96e2699b2d58a4beefc6e78b3b455d4668&
+

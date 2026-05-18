@@ -112,3 +112,24 @@
      embedding_model does not respect settings and always defaults to all-MiniLM-L6-v2.
     If I'm not mistaken, the bug is likely in cashew, not the plugin. But there are already fixes — just not in a released version yet ?
 
+[2026-05-17T19:39:24.616000+00:00] magnus919 (id=1505656002014351413)
+    I have a PR open with cashew on this. It is indeed upstream.
+    [reply to obcyy msg=1505645729740357652]
+
+[2026-05-17T19:40:27.053000+00:00] magnus919 (id=1505656263894368459)
+    I found this same bug myself. If you ask hermes it will apply the patch in my PR for you but also it’ll need to rebuild the vectors table
+    [reply to obcyy msg=1505645729740357652]
+
+[2026-05-17T20:01:13.063000+00:00] magnus919 (id=1505661490039099492)
+    Merged!
+    
+    https://github.com/rajkripal/cashew/issues/53#issuecomment-4469390288
+    [embed] get_default_service() ignores configured embedding model, always us... https://github.com/rajkripal/cashew/issues/53
+    [reply to obcyy msg=1505645729740357652]
+
+[2026-05-17T20:36:38.173000+00:00] magnus919 (id=1505670403396341880)
+    I have a PR pending upstream, already encouraged by maintainer, to make it easy to import memory exports from **Claude** into **Cashew**. This should be a huge power-up for folks migrating to Hermes from Claude, if they have the good taste to use `hermes-cashew` as their memory provider of choice. 😉 
+    
+    https://github.com/rajkripal/cashew/pull/61
+    [embed] feat: ClaudeArchiveExtractor — ingest claude.ai conversation arch... https://github.com/rajkripal/cashew/pull/61
+

@@ -27,3 +27,6 @@
 [2026-05-16T09:32:30.799000+00:00] charanis (id=1505140883530584125)
     Anyone tried this already? I'm considering giving it a spin
 
+[2026-05-18T01:53:15.939000+00:00] zhirogg (id=1505750085802393671)
+    Sorry, I'm new to this. Is this the same with Swarm ? , I just don't like the workspace.
+

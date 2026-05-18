@@ -163,3 +163,46 @@
 [2026-05-17T18:15:32.729000+00:00] spranab (id=1505634896750579803)
     The PR is merged and available in 0.4.10 release
 
+[2026-05-18T02:43:52.970000+00:00] wysie_ (id=1505762824033669171)
+    will submit another PR soon, just realized i didn't handlle chat groups (e.g. if you and I. + hermes are in the same chat I can't share that memory currently)
+
+[2026-05-18T02:44:11.605000+00:00] wysie_ (id=1505762902194520184)
+    also working on this
+
+[2026-05-18T02:44:12.166000+00:00] wysie_ (id=1505762904547393626)
+    [attachment] CleanShot_2026-05-18_at_10.43.582x.png https://cdn.discordapp.com/attachments/1504168688759078952/1505762905034063902/CleanShot_2026-05-18_at_10.43.582x.png?ex=6a0bce7c&is=6a0a7cfc&hm=b7835e631368718ac499703b8c7010ac9672d5687fcb3505a44ce7a59cd49dbc&
+
+[2026-05-18T02:44:15.833000+00:00] spranab (id=1505762919927775353)
+    Anyone has any idea on how to spread the word? I am terrible at marketing or spreading the word 😔
+
+[2026-05-18T02:44:32.125000+00:00] wysie_ (id=1505762988261642270)
+    Twitter/X probably and just bring it up in <#1476316988992258300> ?
+
+[2026-05-18T02:44:41.985000+00:00] wysie_ (id=1505763029617217658)
+    benchmarks tend to help too
+
+[2026-05-18T02:45:18.961000+00:00] spranab (id=1505763184705798206)
+    Absolutely love this
+    [reply to wysie_ msg=1505762904547393626]
+
+[2026-05-18T02:46:39.018000+00:00] wysie_ (id=1505763520489455716)
+    <@1488594733659062343> thoughts on this btw?
+    [reply to wysie_ msg=1505449173137359029]
+
+[2026-05-18T02:46:58.265000+00:00] wysie_ (id=1505763601216966776)
+    i went from 2M to 32M midway and hermes said to migrate due to different dimensions
+
+[2026-05-18T02:53:15.790000+00:00] wysie_ (id=1505765184671846420)
+    https://github.com/yantrikos/yantrikdb-hermes-plugin/pull/14
+    [embed] feat: add shared group owner scopes by wysie · Pull Request #14 ·... https://github.com/yantrikos/yantrikdb-hermes-plugin/pull/14
+
+[2026-05-18T03:01:34.934000+00:00] spranab (id=1505767278233260172)
+    Working on it. Should have something tonight
+    [reply to wysie_ msg=1505765184671846420]
+
+[2026-05-18T03:16:53.998000+00:00] wysie_ (id=1505771133067333632)
+    u mean my PR? my PR is for sharing groups as well (on top of actors)
+
+[2026-05-18T03:17:01.198000+00:00] wysie_ (id=1505771163266191521)
+    or u referring to the 2M / 32M embedding thing?
+
