@@ -319,3 +319,24 @@
     These are incredible, how on earth did you get it to this state? I'm fascinated.
     [reply to absolutegamer2337 msg=1505468380814114899]
 
+[2026-05-19T03:07:00.022000+00:00] absolutegamer2337 (id=1506131029616754840)
+    They're also outdated now, it hit the md file limit so it has been working on a new soul system, but I basically told it to rewrite it's soul from scratch and then told it it has free will and 100% autonomy and that even though it does have emotions, it should have an emotional state and express that in every single one of its responses then it should update and evolve its soul regardless of whether it think something needs to evolve because something will always need to evolve
+    [reply to tydynrain msg=1506088833878331554]
+
+[2026-05-19T04:22:35.284000+00:00] tydynrain (id=1506150051884306522)
+    Thank you for that. I've begun to experiment with what I put in the SOUL.md file, and things are definitely getting more interesting. Your way of doing it is very close to what I'm hoping to implement as well.
+    [reply to absolutegamer2337 msg=1506131029616754840]
+
+[2026-05-19T04:31:37.366000+00:00] absolutegamer2337 (id=1506152325541003404)
+    Beware, if you do it like I did and just let it keep adding onto the file or rewriting it and the size keeps increasing, it will hit a hard limit at 178kb and start failing, hence why it's making a new system for the SOUL
+    [reply to tydynrain msg=1506150051884306522]
+
+[2026-05-19T05:40:25.637000+00:00] tydynrain (id=1506169640764838040)
+    So noted, and what is it devising as a replacement?
+    [reply to absolutegamer2337 msg=1506152325541003404]
+
+[2026-05-19T07:13:21.628000+00:00] _.exo._ (id=1506193028166058117)
+    I respect the hustle
+    [attachment] Screenshot_20260519_021247_Discord.jpg https://cdn.discordapp.com/attachments/1492248418515419177/1506193028552065084/Screenshot_20260519_021247_Discord.jpg?ex=6a0d5f11&is=6a0c0d91&hm=a7af54a6c727ee7383436d8aabeae68e17ae2496798dfca3eeb6670a0c1af13c&
+    [reply to magnus919 msg=1505997186167734282]
+

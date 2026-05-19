@@ -232,3 +232,28 @@
 [2026-05-18T23:41:26.573000+00:00] glizlack6777 (id=1506079299382280283)
     Feel free to ask I am willing to delete my posts. I am just trying to help others with troubleshooting. The key is chatgpt 5.4 mini couldnt handle the install
 
+[2026-05-19T09:07:36.264000+00:00] aliasocracy (id=1506221778593382401)
+    I found two install-side improvements to make from that report: prefer $HERMES_HOME/hermes-agent/venv/bin/hermes over command -v hermes, and invoke the troubleshooting script through bash so executable-bit restrictions do not break the final health check. I’m patching both.
+    
+    Thank you! Working on this now.
+    [reply to glizlack6777 msg=1506079299382280283]
+
+[2026-05-19T09:24:45.940000+00:00] aliasocracy (id=1506226097367547926)
+    *Pushed.
+    
+      Glizlack’s diagnosis was right: the installer needed to prefer the Hermes venv launcher, not whatever command -v hermes finds first.
+    
+      Committed and pushed 173a73e Prefer Hermes venv launcher in installer.
+    
+      What changed:
+    
+      - Installer and troubleshoot scripts now default to $HOME/.hermes/hermes-agent/venv/bin/hermes when present.
+      - Installer final health check now runs the troubleshoot script via bash, avoiding executable-bit/permission friction.
+      - README, quickstart, dashboard docs, and troubleshooting docs now tell users and Hermes Agent to force HERMES_BIN="$HOME/.hermes/hermes-agent/venv/bin/hermes" when installing or verifying.
+    
+      Verified:
+    
+      - bash -n passed for both scripts.
+      - Both --help outputs show the venv-first default.
+      - Working tree is clean after push.*
+

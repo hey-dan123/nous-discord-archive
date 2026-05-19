@@ -1,0 +1,10 @@
+# Thread 'WAKEWORD-FORGE ~ a custom wakeword training system' in forum #community-projects-showcase
+# thread_id=1504544977076748338 forum_id=1316137596535177246
+# Started 2026-05-19T09:39:31.505649+00:00
+
+[2026-05-19T04:50:39.695000+00:00] neopabo (id=1506157116816097391)
+    @here New version should be out in a few hours (if I don't pass out first)
+
+[2026-05-19T04:51:29.007000+00:00] neopabo (id=1506157323645620416)
+    WAKEWORD-FORGE ~ a custom wakeword training system
+

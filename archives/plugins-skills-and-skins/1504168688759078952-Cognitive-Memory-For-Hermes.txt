@@ -245,3 +245,10 @@
 [2026-05-18T15:22:45.106000+00:00] spranab (id=1505953799653818419)
     Awesome job <@329427821208535040>
 
+[2026-05-19T03:38:09.570000+00:00] spranab (id=1506138871069409301)
+    <@329427821208535040> added your dashboard link to the main site. Hope you dont mind 🙂
+    
+    https://yantrikdb.com
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504168688759078952/1506138871434575933/image.png?ex=6a0d2ca1&is=6a0bdb21&hm=30add30808905202ab70f0bdcf8b39380b48a1e77a7a24b3ec566d970da6338d&
+    [embed] YantrikDB — Cognitive Memory Database for AI Agents https://yantrikdb.com/
+

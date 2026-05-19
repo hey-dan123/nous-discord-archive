@@ -33,3 +33,6 @@
 [2026-05-18T19:45:18.882000+00:00] runerick_80987 (id=1506019875779252406)
     Interesting, so you built on top of /personality?
 
+[2026-05-19T04:39:17.700000+00:00] kai.xu (id=1506154256322007141)
+    it's more of a real-time override of personality with time, conversion turn count awareness with expressional variations. and an update is incoming, stay tuned!
+

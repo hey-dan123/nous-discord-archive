@@ -269,3 +269,27 @@
 [2026-05-18T15:45:52.182000+00:00] noxerz. (id=1505959617472102400)
     im fixing ton of bug rn
 
+[2026-05-19T07:26:44.725000+00:00] twindenis (id=1506196396599148685)
+    I made a private repo with the optimized and fixed hit rate mechanism for the memory cache, it has a tier system. I need to make your a contributor I think so you can check it.
+    [reply to noxerz. msg=1505955164962422966]
+
+[2026-05-19T07:29:20.731000+00:00] noxerz. (id=1506197050935611433)
+    sure
+    [reply to twindenis msg=1506196396599148685]
+
+[2026-05-19T07:42:45.554000+00:00] twindenis (id=1506200426607804519)
+    You are invited.
+    [reply to noxerz. msg=1506197050935611433]
+
+[2026-05-19T07:43:06.281000+00:00] twindenis (id=1506200513543405589)
+    You can take it and see how you can improve it to incorporate it to your project.
+
+[2026-05-19T07:43:49.830000+00:00] twindenis (id=1506200696201023558)
+    You can probably improve it further, because the hard tier tests I made were around 250 pair tests.
+
+[2026-05-19T08:20:42.498000+00:00] noxerz. (id=1506209976803393626)
+    ty
+
+[2026-05-19T09:19:54.621000+00:00] twindenis (id=1506224875487101040)
+    I'm running a few quality checks before I commit a better version, check in like 5 hours to integrate the code to your project
+

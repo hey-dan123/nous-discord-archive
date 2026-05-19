@@ -1,0 +1,41 @@
+# Thread 'Trellis — A Workflow Spine for Every AI Coding Agent' in forum #community-projects-showcase
+# thread_id=1506225901166133258 forum_id=1316137596535177246
+# Started 2026-05-19T09:39:18.374641+00:00
+
+[2026-05-19T09:23:59.162000+00:00] samcui4943 (id=1506225901166133258)
+    Before Trellis, I bounced between Claude Code, Cursor, and Codex — each one a context-amnesiac that forgot what I was building the moment I switched tools. I built Trellis because I wanted a shared spine across every AI coding agent I touch: PRD-driven tasks, persistent specs, multi-agent pipelines — all without leaving the agent of the day.
+    
+    Trellis lives as a `.trellis/` directory in your repo and ships hooks for 11 AI coding platforms (Claude Code, Cursor, OpenCode, iFlow, Codex, Kilo, Kiro, Gemini CLI, Antigravity, Qoder, CodeBuddy). Switch tools mid-task and the state follows you.
+    
+    https://github.com/mindfold-ai/Trellis
+    
+    **5 Layers**
+    Tasks · Specs · Agents · Hooks · Journal
+    
+    **Tasks**
+    PRD-first lifecycle: `planning → in_progress → done → archived`
+    Each task gets its own dir: `prd.md`, `research/`, `implement.jsonl`, `check.jsonl`
+    `trellis-brainstorm` walks you through scope before a single line of code
+    
+    **Specs**
+    Layered by package (`backend/`, `frontend/`, `monitor/`, `packages/`, `sop/`)
+    `update-spec` captures knowledge back into spec after the work ships — so the next task starts smarter than the last
+    
+    **Agents**
+    `trellis-research` — runs as sub-agent, persists findings to `{task}/research/*.md`, keeps main context clean
+    `trellis-implement` — reads the jsonl context bundle, writes code, no commits
+    `trellis-check` — reviews against spec and self-fixes regressions
+    Multi-agent debate (`researcher` / `critic` / `synthesizer`) for hard design calls
+    
+    **Hooks**
+    `SessionStart` auto-injects git status, active tasks, current task, spec index, journal pointer — no `/start` needed
+    Background process watchdog blocks sub-agent exit until tmux processes report ready
+    
+    **Built on**
+    Python helpers (`task.py`, `get_context.py`) — no runtime dependencies beyond stdlib
+    Pure filesystem state — no daemon, no DB, no cloud
+    Per-platform adapter layer — Claude Code hooks, Cursor rules, Codex slash commands, etc., all driving the same task graph
+    
+    In active development. Feedback welcome
+    [embed] GitHub - mindfold-ai/Trellis: The best agent harness. https://github.com/mindfold-ai/Trellis
+

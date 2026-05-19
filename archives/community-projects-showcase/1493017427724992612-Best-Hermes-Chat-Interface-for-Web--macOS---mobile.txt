@@ -2385,3 +2385,23 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1506084542996545667/image.png?ex=6a0cfa08&is=6a0ba888&hm=c01ce73560c4a767c0ea60e1ba47d60a422504925ad10e370f0e1214b759b024&
     [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1506084543688347658/image.png?ex=6a0cfa08&is=6a0ba888&hm=c48c48d670a3e180c9b90da657b73364088232aeada7ac930247db28f1b2e18e&
 
+[2026-05-19T03:41:38.293000+00:00] avidfuturist (id=1506139746517389433)
+    All good now?
+    [reply to hydro._ msg=1506024532106936362]
+
+[2026-05-19T03:43:16.347000+00:00] avidfuturist (id=1506140157785538622)
+    in settings you can enable a check box that will show you all the non-webUI sessions, and you can import them into the web ui. also the web ui can access the same files assuming it has access to those directories but if you notice it's just that it was looking in the workspace rather than in the .hermes directory.
+    [reply to seibakas msg=1506084542707007603]
+
+[2026-05-19T03:50:31.098000+00:00] seibakas (id=1506141981263265864)
+    could i link it or sync it to read those file ?
+    [reply to avidfuturist msg=1506140157785538622]
+
+[2026-05-19T03:52:44.828000+00:00] avidfuturist (id=1506142542167670824)
+    Yes it should be able to see those files depending on your setup. Also on the left side icon rail in the memory tab it exposes the soul.md for you there too
+    [reply to seibakas msg=1506141981263265864]
+
+[2026-05-19T04:19:39.786000+00:00] seibakas (id=1506149315792601228)
+    if you don't mind i pm u xD
+    [reply to avidfuturist msg=1506142542167670824]
+
