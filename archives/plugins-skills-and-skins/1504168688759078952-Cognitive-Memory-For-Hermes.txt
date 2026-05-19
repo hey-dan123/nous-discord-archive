@@ -252,3 +252,9 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1504168688759078952/1506138871434575933/image.png?ex=6a0d2ca1&is=6a0bdb21&hm=30add30808905202ab70f0bdcf8b39380b48a1e77a7a24b3ec566d970da6338d&
     [embed] YantrikDB — Cognitive Memory Database for AI Agents https://yantrikdb.com/
 
+[2026-05-19T09:47:11.302000+00:00] wysie_ (id=1506231740224503908)
+    Thanks!
+
+[2026-05-19T09:54:18.783000+00:00] wysie_ (id=1506233533210034358)
+    I'd add that it's not just for memory inspection. There are settings you can configure using the UI (like enabling per user memory)
+

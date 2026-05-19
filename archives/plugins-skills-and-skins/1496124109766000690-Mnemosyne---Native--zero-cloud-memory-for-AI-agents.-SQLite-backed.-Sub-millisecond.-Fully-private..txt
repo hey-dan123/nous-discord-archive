@@ -997,3 +997,7 @@
     **Key takeaway:** The fix was two-pronged — prevent backlog accumulation via auto-sleep, and when consolidation does run, avoid expensive sequential LLM calls by using AAAK instead.
     [reply to rossascends msg=1505405558919008286]
 
+[2026-05-19T11:12:32.215000+00:00] nulledvector (id=1506253218890649691)
+    tyvm for your contribution!
+    [reply to s1arsky msg=1505408661219053638]
+

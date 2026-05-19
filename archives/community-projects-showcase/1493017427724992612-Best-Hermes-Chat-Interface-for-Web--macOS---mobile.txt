@@ -2405,3 +2405,6 @@
     if you don't mind i pm u xD
     [reply to avidfuturist msg=1506142542167670824]
 
+[2026-05-19T11:21:29.895000+00:00] seibakas (id=1506255474084024440)
+    how could i link it to the webui ?
+

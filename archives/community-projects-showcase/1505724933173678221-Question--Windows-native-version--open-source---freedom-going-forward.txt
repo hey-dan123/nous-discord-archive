@@ -19,3 +19,10 @@
     Windows version works great for me, would recommend! I switched everything over from openclaw
     [reply to dcj0e_92125 msg=1505724933173678221]
 
+[2026-05-19T14:20:29.548000+00:00] al.bellemare (id=1506300519453561045)
+    I've been using the windows version for a few weeks (before it was released).
+    
+    For the most part everything has been working identically to the WSL instance once it was configured, but faster for the windows storage access.
+    
+    The windows implementation is newer though and the hermes team has been Linux first, so once in a while you might need you or your agent to fix some things.
+

@@ -18211,3 +18211,90 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     the result of a bit of yak shaving down a rabbit hole (locally developed web extract plugin not visible, turned out the list was hardcoded) https://github.com/NousResearch/hermes-agent/pull/28652
     [embed] fix(web_tools): delegate backend availability to provider registry ... https://github.com/NousResearch/hermes-agent/pull/28652
 
+[2026-05-19T11:54:20.412000+00:00] scottermonkey (id=1506263739031224411)
+    This update just brought back a bunch of skills I had deleted, even inside all my agents/profiles skills folders! 
+    Now I got my primary agent checking on it:
+    ```
+    It was (and still is) annoying when updates keep bringing back skills I don't use, like "apple," "inference," "smart-home," etc. But now they are also re-added to every agent's profile. Is there a way to stop this? We created a Issue or PR about this in the Hermes repo awhile back. Can you track that down? Or issues/PRs by others that address this?
+    ```
+    It replied:
+    ```Bottom line: Your issue #19986 is the direct ask — "stop seeding unwanted skills across profiles." It hasn't been acted on yet. #27644 just got fixed today, which at least stops bg-review from rewriting bundled skills, but the core problem of sync re-adding deleted skills on every update is still open. #11894 (auto_sync_bundled: false config) might be the nearest workaround until #19986 gets implemented — worth checking if that config knob exists yet.
+    ```
+
+[2026-05-19T11:58:52.133000+00:00] scottermonkey (id=1506264878711836793)
+    Can I get some love from ya'll on this Issue? It's been ignored for 2 weeks and would do a lot of good. https://github.com/NousResearch/hermes-agent/issues/19986
+    [embed] Make non-core bundled skills optional and keep the default install ... https://github.com/NousResearch/hermes-agent/issues/19986
+
+[2026-05-19T12:33:16.716000+00:00] wesleysimplicio (id=1506273538200572075)
+    Hermes with DeepSeek V4 Flash Local LLM?
+    MacBook 48gb RAM
+
+[2026-05-19T12:33:31.942000+00:00] wesleysimplicio (id=1506273602062782634)
+    [attachment] 20E62CEC-F4A6-4009-A68E-3D53D6780641.png https://cdn.discordapp.com/attachments/1491258766648283238/1506273602239070320/20E62CEC-F4A6-4009-A68E-3D53D6780641.png?ex=6a0daa1b&is=6a0c589b&hm=59e4cb942d506a014f7014411c373abfd9a39369c183d47e0fdd682eb3662088&
+
+[2026-05-19T12:34:13.953000+00:00] wesleysimplicio (id=1506273778269946069)
+    https://github.com/wesleysimplicio/us4-v6-simplicio-apple
+    [embed] GitHub - wesleysimplicio/us4-v6-simplicio-apple: US4 V6 — Apple E... https://github.com/wesleysimplicio/us4-v6-simplicio-apple
+
+[2026-05-19T12:39:30.407000+00:00] undifined. (id=1506275105573961799)
+    Kanban is working fantastic, I did a major infrastructure redesign by moving services away from nginx , set it up as a load balancer, and in between nginx and the services now sits a web application firewall
+
+[2026-05-19T12:39:57.759000+00:00] undifined. (id=1506275220296695908)
+    All within 60 turns
+
+[2026-05-19T13:03:01.028000+00:00] _8bit64k_ (id=1506281022147526737)
+    I'm preparing to release an update to a plugin called Cronalytics which has both visual (dshboard) and backend functionality.
+    
+    I'm trying to nail down the best install and upgrade process for users- 
+    
+    install: 
+    instruct user to use the plugins tab on the dashboard and use the install options there with github <owner>/<repo> ....simple.
+    
+    upgrade:
+    what's the best option? to use the plugin tab's "git pull" functionality on the plugin's listing? or to use the hermes plugins update command?
+    
+    In either case, is a hermes dashbard stop/start required? recommended?
+    
+    I'm have mixed results in my local testing and honestly it's been inconsistent but I chalk that up to my dev env, not hermes.
+    
+    What do you do or recommed?
+    
+    Thank you.
+
+[2026-05-19T13:13:52.830000+00:00] undifined. (id=1506283756003135558)
+    If you feel the code is ready and completed,  test it against a default install
+
+[2026-05-19T13:27:31.175000+00:00] _8bit64k_ (id=1506287188390838322)
+    thanks and I have. installs are easy, as I said. The primary item I'm trying to nail down are upgrades. If there aren't any changes on the UI, it's difficult to know if the new code actually has been loaded or if it requires a dashboard/gateway restart. Hoping to just get a correct method by something documented rather than just testing variations that might not match everyones evn.
+    [reply to undifined. msg=1506283756003135558]
+
+[2026-05-19T13:31:51.959000+00:00] undifined. (id=1506288282198081700)
+    Well I am happy to assist anyone testing,  but rn I am working,  it will have to wait a few hours
+
+[2026-05-19T13:44:55.119000+00:00] jez_wikitribune (id=1506291567009464412)
+    big ups on this one
+    [reply to scottermonkey msg=1506264878711836793]
+
+[2026-05-19T13:51:05.377000+00:00] quocanh261997 (id=1506293119984074864)
+    Hi <@387972437901312000> , after `hermes update` today, I found a bug that a commit adds a new column `task.session_id` into the Kanban tables. However, on startup, it tries to create an index on that column first before running migration, causing the issue that the `session_id` wasn't found. I've fixed it by moving index creation until after migration, so legacy boards can open and upgrade normally: https://github.com/NousResearch/hermes-agent/pull/28754
+    
+    Appreciate the review 🙏
+    [embed] fix(kanban): migrate task session index after columns by quocanh261... https://github.com/NousResearch/hermes-agent/pull/28754
+
+[2026-05-19T14:37:49.862000+00:00] 0xprotext (id=1506304882846597200)
+    Hi any devs from Nous Research? We're building a futuristic command center for AI Coding Agents and we need your attention
+
+[2026-05-19T14:47:38.757000+00:00] erhnysr (id=1506307352851124366)
+    Hey everyone, just wanted to drop a quick update on what I’ve been hacking on around hermes-agent lately. 
+    
+    Spent some time digging into core gateway resilience and cross-platform issues. I recently caught a nasty bug where the agent completely stopped updating progress messages permanently after hitting Telegram's flood control limits (RetryAfter). Managed to fix that logic, and shoutout to <@387972437901312000> for cherry-picking the fix into #28484 and merging it through! 
+    
+    Before that, I also spent some time refactoring code to clean up hardcoded ~/.hermes paths to properly respect HERMES_HOME, stabilizing chat session IDs, and rewriting those random print() statements into a proper logger. On the cross-platform side, I previously shipped a fix for macOS fresh env setups (zprofile/zshrc fallbacks), and right now I have two open PRs tackling Windows-specific blockers:
+    - #25200: Forcing UTF-8 output via subprocess kwargs (so text encoding doesn't break on Windows terminals)
+    - #25555: Pinning exact Python versions inside the uv sync / pip install chains.
+    
+    Also, if any of you are looking into localization, I previously built out the Turkish Skill Pack (BIST100, local crypto/news briefs) and wrote a quick tutorial on how to localize skill packs. 
+    
+    If anyone is working on Windows sub-processes or dependency pipelines right now, would love to get your eyes and feedback on #25200 and #25555!  You can track my contributions or connect with me here: https://github.com/erhnysr
+    [embed] erhnysr - Overview https://github.com/erhnysr
+

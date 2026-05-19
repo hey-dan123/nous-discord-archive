@@ -1,0 +1,16 @@
+# Thread '🧠 Git as Memory — store agent memory in Git refs, no external DB' in forum #plugins-skills-and-skins
+# thread_id=1506238104569253909 forum_id=1485392832154832906
+# Started 2026-05-19T15:00:56.534310+00:00
+
+[2026-05-19T10:12:28.680000+00:00] femtowin (id=1506238104569253909)
+    Tired of memory plugins that need a separate service or DB? Git as Memory stores everything directly in your repo's Git object store — no external dependencies, no cloud, no sqlite.
+    Works with Hermes out of the box:
+    npx skills add https://github.com/femto/skills --skill git-as-memory
+    Each memory entry lives under refs/git-as-memory/memory/v1 — you can inspect, diff, and audit with standard Git tools:
+    git log --oneline refs/git-as-memory/memory/v1
+    git show refs/git-as-memory/memory/v1:memories/entity/user-preference-concise/memory.json
+    delete writes a tombstone (history preserved), purge removes current files (Git history remains).
+    GitHub: https://github.com/femto/git-as-memory
+    [embed] GitHub - femto/skills: skills https://github.com/femto/skills
+    [embed] GitHub - femto/git-as-memory: Git-backed memory policy and CLI work... https://github.com/femto/git-as-memory
+

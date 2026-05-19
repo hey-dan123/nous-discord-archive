@@ -1,0 +1,33 @@
+# Thread 'AgentWeb - Web research for your AI agent. 100% free. No API keys.' in forum #community-projects-showcase
+# thread_id=1506306548119371937 forum_id=1316137596535177246
+# Started 2026-05-19T14:58:03.673085+00:00
+
+[2026-05-19T14:44:26.894000+00:00] annguyen175 (id=1506306548119371937)
+    I was tired of paying Browserbase/ Firecrawl, or juggling 4 different free API keys. For a basic thing — search the web, get results, move on.
+    
+    So I built AgentWeb. It calls 12+ free sources (DDG, Jina, GitHub, HN, Reddit, StackExchange, Wikipedia, arXiv, YouTube, Twitter/X, Nominatim...) in parallel, ranks results with BM25 + a tiny ONNX model on your CPU (FlashRank), and outputs clean JSON. Research modes decompose your query, extracts evidence, detects contradictions, writes a report. All local. All free.
+    
+    3 modes
+    
+    **search**: Fires all providers, short-circuits when it has enough, ranks semantically. Takes ~2-8s. `--prefer github / --exclude youtube / --context "whatever"` for your Hermes to steer sources based on job requirements.
+    
+    **research**: Search + fetch + structured evidence pack with coverage scores. Only `--context` for steering (no prefer/exclude here). ~30-60s.
+    
+    **deep-research**: Multi-branch decomposition, per-branch source hints, contradiction detection, full structured report. Also `--context` only. ~60-120s.
+    
+    All three output JSON (or md) with quality scores and provenance. Built to be controlled by your Hermes Agent, not a human clicking buttons.
+    
+    > `agentweb search "MCP server implementation" --prefer github --exclude youtube,arxiv
+    > agentweb deep-research "Claude Code vs Cursor pricing" --context "dev tooling budget" -o report.md
+    > `
+    
+    One command install:
+    
+    `curl -fsSL https://raw.githubusercontent.com/thanhan-a17/agentweb/main/install.sh | bash`
+    The Hermes skill loads automatically after install, ready to use.
+    
+    Project repo:
+    https://github.com/thanhan-a17/agentweb
+    [attachment] Screenshot_2026-05-19_at_21.36.07.png https://cdn.discordapp.com/attachments/1506306548119371937/1506306548430016532/Screenshot_2026-05-19_at_21.36.07.png?ex=6a0dc8ca&is=6a0c774a&hm=3039085d6ef81ba198a48a1067c9cab249a3f37aa591790fa991042fe31c5610&
+    [embed] GitHub - thanhan-a17/agentweb: Web access CLI for AI agents: search... https://github.com/thanhan-a17/agentweb
+
