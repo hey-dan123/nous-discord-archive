@@ -17,3 +17,8 @@
     Started on a GUI, too but I'll force that on my designer-friends 😄
     [embed] GitHub - garyritchie/pt-cli: A CLI tool to record directory structu... https://github.com/garyritchie/pt-cli
 
+[2026-05-18T20:21:04.475000+00:00] garyritchie (id=1506028875048554617)
+    This has been added to npm for convenience: https://www.npmjs.com/package/@garyr/pt-cli
+    
+    `npm i @garyr/pt-cli` to install
+

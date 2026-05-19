@@ -1,0 +1,22 @@
+# Thread 'Overmind Memory MCP — Hermes Plugin' in forum #plugins-skills-and-skins
+# thread_id=1506106554859130950 forum_id=1485392832154832906
+# Started 2026-05-19T03:02:02.553024+00:00
+
+[2026-05-19T01:29:44.785000+00:00] demon6660699 (id=1506106554859130950)
+    🧠 Hermes Memory Plugin
+    
+    > "Your AI forgets everything. Hermes remembers."
+    
+        Hermes Agent stores memory in flat .md files — no search, no embeddings, no context.
+    
+        The Overmind plugin replaces that with a persistent semantic memory layer:
+    
+    > ✅ 4096D Vector Search — Qwen 8B embeddings via OpenRouter + PostgreSQL/pgvector
+    > ✅ Per-agent isolation — Each agent gets its own private database
+    > ✅ Automatic — Stores every exchange, prefetches relevant context before each response
+    > ✅ Explicit tools — memory_store, memory_search, memory_runs
+    
+        One line in config.yaml to activate. No more lost context between sessions.
+    
+        📦 https://github.com/DeamonDev888/overmind-mcp/tree/main/plugins/memory/overmind
+

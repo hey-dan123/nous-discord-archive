@@ -315,3 +315,7 @@
     [attachment] SOUL-6.png https://cdn.discordapp.com/attachments/1492248418515419177/1506002824281063526/SOUL-6.png?ex=6a0caded&is=6a0b5c6d&hm=1442171cd1d0eb4ebe0e70de48dc53b8b617192b1603bd32238ed28b3b1d5499&
     [embed] awesome-souls/product-manager/SOUL.md at main https://git.brandyapple.com/magnus/awesome-souls/src/branch/main/product-manager/SOUL.md
 
+[2026-05-19T00:19:19.774000+00:00] tydynrain (id=1506088833878331554)
+    These are incredible, how on earth did you get it to this state? I'm fascinated.
+    [reply to absolutegamer2337 msg=1505468380814114899]
+

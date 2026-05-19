@@ -71,3 +71,10 @@
 [2026-05-18T04:59:49.604000+00:00] ifreet_00706 (id=1505797035436019722)
     You dont seem to have addressed the much heavier always included prompt stack. What should be done about that?
 
+[2026-05-19T02:09:35.536000+00:00] tomrevo.x (id=1506116582395613184)
+    Skills are lazy loaded into Hermes to the best of my knowledge.  A potential solution to some of that bloat has been proposed here: https://github.com/NousResearch/hermes-agent/issues/6839
+    
+    There's also this project mentioned in the above issue, but I haven't used it yet personally: https://github.com/alias8818/hermes-tool-slimmer
+    [embed] Feature: Lazy Tool Schema Loading — Two-Pass Tool Injection to Re... https://github.com/NousResearch/hermes-agent/issues/6839
+    [embed] GitHub - alias8818/hermes-tool-slimmer: Reduce Hermes Agent tool-sc... https://github.com/alias8818/hermes-tool-slimmer
+

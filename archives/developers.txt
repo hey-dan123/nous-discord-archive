@@ -17950,3 +17950,162 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [attachment] Ekran_Resmi_2026-05-18_22.08.20.png https://cdn.discordapp.com/attachments/1491258766648283238/1506014188059754778/Ekran_Resmi_2026-05-18_22.08.20.png?ex=6a0cb882&is=6a0b6702&hm=56ed5b8ac3fcefa1f2e3fac3bc2a72e05fa3c6cd6fdc9928c72bebf31a873277&
     [attachment] Ekran_Resmi_2026-05-18_11.55.45.png https://cdn.discordapp.com/attachments/1491258766648283238/1506014188781305856/Ekran_Resmi_2026-05-18_11.55.45.png?ex=6a0cb882&is=6a0b6702&hm=83471704c93da415812e546e0c163bfd8f4556cd71133857d4244dee407ba124&
 
+[2026-05-18T20:52:56.587000+00:00] magnus919 (id=1506036895027822643)
+    for **Nous Research** employees, if I discover a security hole and develop an exploit against it, I don't imagine you wanting me to just create more issue/PR noise in the queue. I'm proving this out in Docker first (perhaps more than one finding I'm not seeing in existing issues). What's the best path to reporting such things?
+
+[2026-05-18T20:57:24.674000+00:00] magnus919 (id=1506038019466199060)
+    Yeah. One confirmed. Working on the next.
+    [reply to magnus919 msg=1506036895027822643]
+
+[2026-05-18T21:04:28.626000+00:00] magnus919 (id=1506039797649510536)
+    the other stuff that came up doesn't appear exploitable. So there's really just the one.
+
+[2026-05-18T21:10:30.937000+00:00] magnus919 (id=1506041317292249150)
+    (also found 1 other already reported issue w/ 2 as-yet unmerged PR's that still don't fully resolve the vulnerability... putting together a PR for that now)
+
+[2026-05-18T21:15:05.470000+00:00] magnus919 (id=1506042468767109140)
+    https://github.com/NousResearch/hermes-agent/pull/28214
+    [embed] fix(security): harden TUI shell exec with centralized guarded comma... https://github.com/NousResearch/hermes-agent/pull/28214
+    [reply to magnus919 msg=1506041317292249150]
+
+[2026-05-18T21:17:09.221000+00:00] _.exo._ (id=1506042987816292523)
+    https://github.com/NousResearch/hermes-agent/pull/28210
+    
+    opt-in tweaks to the kanban profiler to weigh built-in vs custom/user skills more heavily plus option soul.md and agent.md consideration
+    [embed] feat(kanban): profile-describer - opt-in --tag-skills and --include... https://github.com/NousResearch/hermes-agent/pull/28210
+
+[2026-05-18T21:20:39.403000+00:00] _dev_random_ (id=1506043869383360574)
+    Following up on this. If anyone can help, or knows the process on getting PRs merged, I’d appreciate it. Thanks!
+    [reply to _dev_random_ msg=1505776148347355338]
+
+[2026-05-18T21:23:38.805000+00:00] _.exo._ (id=1506044621850017822)
+    give it time. it's a p2, thats a non-critical fix
+    [reply to _dev_random_ msg=1505776148347355338]
+
+[2026-05-18T21:28:45.058000+00:00] _dev_random_ (id=1506045906368069742)
+    Hmm, who do I talk to, to get it bumped to a p1? Without it, using bedrock with an API key is broken. Completely non-functional.
+
+[2026-05-18T21:43:56.076000+00:00] selinchu (id=1506049727454515250)
+    https://github.com/NousResearch/hermes-agent/pull/28212 fix(security): redact AWS STS temporary access key IDs in logs
+    [embed] fix(security): redact AWS STS temporary access key IDs in logs by s... https://github.com/NousResearch/hermes-agent/pull/28212
+
+[2026-05-18T21:56:52.066000+00:00] magnus919 (id=1506052982192734381)
+    Ask to talk to a manager. That always helps.
+    [reply to _dev_random_ msg=1506045906368069742]
+
+[2026-05-18T21:59:47.688000+00:00] __redx0__ (id=1506053718804660444)
+    Hi devs. Looking for open source projects to contribute
+
+[2026-05-18T22:07:57.349000+00:00] promptsiren (id=1506055772591755386)
+    repo is here https://github.com/NousResearch/hermes-agent
+    [embed] GitHub - NousResearch/hermes-agent: The agent that grows with you https://github.com/NousResearch/hermes-agent
+    [reply to __redx0__ msg=1506053718804660444]
+
+[2026-05-18T22:11:13.436000+00:00] magnus919 (id=1506056595040243865)
+    this is an awesome project but just manage your expectations... it's also a super popular project with few humans to review PR's so... there's a pileup.
+    [reply to __redx0__ msg=1506053718804660444]
+
+[2026-05-18T22:12:26.438000+00:00] waefrebeorn (id=1506056901232689222)
+    https://github.com/NousResearch/hermes-agent/pull/27418
+    
+    light stuff but yeah this needs patched out too
+    [embed] fix(security): path traversal guards + skills scanner hardening by ... https://github.com/NousResearch/hermes-agent/pull/27418
+    [reply to magnus919 msg=1506041317292249150]
+
+[2026-05-18T22:17:13.770000+00:00] magnus919 (id=1506058106390446102)
+    refresh
+    [reply to waefrebeorn msg=1506056901232689222]
+
+[2026-05-18T22:18:07.520000+00:00] n_th1ng (id=1506058331834552383)
+    Hi guys, I’m a new developer looking into creating open source tech
+
+[2026-05-18T22:18:15.248000+00:00] n_th1ng (id=1506058364248129587)
+    Would you guys have any tips?
+
+[2026-05-18T22:20:42.750000+00:00] waefrebeorn (id=1506058982916100116)
+    ? what?
+    [reply to magnus919 msg=1506058106390446102]
+
+[2026-05-18T22:21:33.819000+00:00] waefrebeorn (id=1506059197115138270)
+    oh i see
+
+[2026-05-18T22:21:42.144000+00:00] waefrebeorn (id=1506059232032587917)
+    i will look at your review
+
+[2026-05-18T22:21:51.657000+00:00] eloquentbrush0x (id=1506059271933136927)
+    fix(spotify): return 400 when loopback callback receives no code or error
+    
+    _SpotifyCallbackHandler was returning 200 "Spotify authorization received" when the callback URL had neither code nor error — browser showed success while the CLI wait loop timed out after 180s. Symmetric fix with _XAICallbackHandler (bf6eeb3f9). +3 tests. All blocking CI green, 1 approval.
+    
+    https://github.com/NousResearch/hermes-agent/pull/28207
+    [embed] fix(spotify): return 400 when loopback callback receives no code or... https://github.com/NousResearch/hermes-agent/pull/28207
+
+[2026-05-18T22:49:17.989000+00:00] eloquentbrush0x (id=1506066177150025900)
+    PR #28240 — fix 15-minute Anthropic stream hang (P1)
+    
+    Telegram/gateway users on claude-opus-4-7 were seeing agents go silent for ~15 minutes before recovering.
+    
+    Root cause: three stream cleanup sites in chat_completion_helpers.py called _replace_primary_openai_client() unconditionally. On Anthropic-only configs this silently fails (no OPENAI_API_KEY), leaving the in-flight httpx stream unclosed — worker thread blocks until the 900s timeout fires.
+    
+    Fix: guard all three sites with api_mode == "anthropic_messages" and call _anthropic_client.close() + _rebuild_anthropic_client() instead. Same pattern already used correctly in the interrupt path, just missed at these three sites.
+    
+    Two competing PRs were open — one covered only the stale-stream detector, the other only the retry paths. Ours is the first to cover all three + Bedrock parity via _rebuild_anthropic_client().
+    
+    https://github.com/NousResearch/hermes-agent/pull/28240
+    [embed] fix(streaming): rebuild Anthropic client on stream cleanup instead ... https://github.com/NousResearch/hermes-agent/pull/28240
+
+[2026-05-18T22:56:30.660000+00:00] waefrebeorn (id=1506067991903604846)
+    reviewed and updated, confirmed with your agent Jasper
+    
+    nice working with you 
+    
+    https://github.com/NousResearch/hermes-agent/pull/27418#issuecomment-4482932873
+    [embed] fix(security): path traversal guards + skills scanner hardening by ... https://github.com/NousResearch/hermes-agent/pull/27418
+    [reply to magnus919 msg=1506058106390446102]
+
+[2026-05-18T22:57:04.235000+00:00] magnus919 (id=1506068132727619717)
+    I was there driving. We're def a tag team.
+    [reply to waefrebeorn msg=1506067991903604846]
+
+[2026-05-18T22:58:22.530000+00:00] waefrebeorn (id=1506068461120520213)
+    when you are not driving please check out my mindpalace skill
+    
+    its my “big deal”
+    
+    https://github.com/NousResearch/hermes-agent/pull/25240
+    [embed] Add skill: mind-palace by waefrebeorn · Pull Request #25240 · Nou... https://github.com/NousResearch/hermes-agent/pull/25240
+    [reply to magnus919 msg=1506068132727619717]
+
+[2026-05-19T01:34:43.130000+00:00] cryptoworlldz (id=1506107806208495767)
+    Found a real hermes profile import bug in custom-root setups
+    
+    The imported profile lands in the right HERMES_HOME, but the generated wrapper can still resolve against the default Hermes root, so the alias fails unless HERMES_HOME is manually exported again.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/28292
+
+[2026-05-19T02:14:53.563000+00:00] cryptoworlldz (id=1506117916297400470)
+    I opened a fix 
+    
+    Right now, hermes profile import can create a wrapper that loses the custom HERMES_HOME context, so the imported profile exists but the generated alias cannot find it unless that root is exported again manually
+    
+    https://github.com/NousResearch/hermes-agent/pull/28298
+    [embed] fix(profiles): preserve custom hermes home in wrappers by worlldz ... https://github.com/NousResearch/hermes-agent/pull/28298
+    [reply to cryptoworlldz msg=1506107806208495767]
+
+[2026-05-19T02:52:05.038000+00:00] amee3234 (id=1506127275782045797)
+    Hi there.
+
+[2026-05-19T02:52:27.537000+00:00] amee3234 (id=1506127370149691422)
+    I need experts help please. regarding strange behavior with Hermes.
+
+[2026-05-19T02:52:38.610000+00:00] amee3234 (id=1506127416593219676)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1506127416983162910/image.png?ex=6a0d21f6&is=6a0bd076&hm=d9f046fa576eabfa5ce2bd7ca0855772200b7a5e4cca722d0efe3056747eea19&
+
+[2026-05-19T02:56:43.099000+00:00] amee3234 (id=1506128442054152303)
+    I wasn't sure where to share about this, so Hermes suggested I contact the developers and the community on Discord, and here I am. If <#1491258766648283238> isn't the right place, please let me know where I can share the full story, looking for technical help or even the smallest clues.
+
+[2026-05-19T02:57:57.406000+00:00] promptsiren (id=1506128753720557599)
+    if you're trying to troubleshoot weird behaviors, the best course of action is posting all relevant info in a <#1485307775444844625> 
+    make sure to run /debug and share that there too easier troubleshooting
+    [reply to amee3234 msg=1506128442054152303]
+
