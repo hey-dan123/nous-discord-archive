@@ -31,3 +31,7 @@
 [2026-04-26T03:56:10.440000+00:00] yaakov_63226 (id=1497808483658109010)
     This is really cool. Can you share the capabilities / specific tools and restrictions of each agent so I can replicate my own?
 
+[2026-05-19T18:19:46.460000+00:00] erol.s (id=1506360736706990312)
+    Hey. This is really cool. I'm just starting planning something like this as well. I want to create a record label with various roles. I'm thinking (like you) of a "main agent" and other "sub" roles, but it seems that profiles are all equal in Hermes. When you talk about "agent sub-profiles", are these just different profiles? What makes one of them the leader? Is it the SOUL.md and memories?
+    [reply to ogiberstein msg=1496117910287024159]
+

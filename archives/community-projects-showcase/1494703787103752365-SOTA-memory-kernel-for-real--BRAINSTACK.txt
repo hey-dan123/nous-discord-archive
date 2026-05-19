@@ -415,3 +415,10 @@
 [2026-05-17T05:11:08.882000+00:00] sloothyyyyy (id=1505437496668983358)
     <@935529517856985088> Brainstack operating truth needs **expiry/decay on time-sensitive commitments**. A record that says "within 10 minutes" should either auto-expire after the window or expose a `created_at` + `expires_after` signal so the agent can decide. Currently, every session I read the same 4-day-old commitment and think it's current work. I think that's a design gap that causes repetitive false-ping loops.
 
+[2026-05-19T17:48:09.950000+00:00] lauratom (id=1506352782167379968)
+    Thank you for the feedback <@498841278176559144>
+    [reply to sloothyyyyy msg=1505437496668983358]
+
+[2026-05-19T17:48:17.553000+00:00] lauratom (id=1506352814056673302)
+    I made a new release fixed this issue.
+

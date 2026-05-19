@@ -276,3 +276,25 @@
     Oh hell yes. Love it!
     [reply to heartl1ne msg=1506278848226918472]
 
+[2026-05-19T15:29:50.191000+00:00] excessivelysalty (id=1506317970455138475)
+    Oh that’s great!  If you share that somewhere that’d be awesome!
+    [reply to heartl1ne msg=1506278848226918472]
+
+[2026-05-19T17:46:34.400000+00:00] liftaris (id=1506352381401628764)
+    <@71751123148484608> <@197499797408710656> 
+    I have just the thing for that! You can share it by uploading it to the new eikon repo. It will serve as a public registry of sorts. 
+    
+    You can do it from within herm! It's an early feature and untested, so in herm, please ask your agent how and let me know how it goes ;)
+    
+    https://github.com/liftaris/eikon
+    [embed] GitHub - liftaris/eikon: ASCII avatars in the terminal https://github.com/liftaris/eikon
+
+[2026-05-19T17:51:30.199000+00:00] liftaris (id=1506353622072430844)
+    btw, you don't have to upload it to the eikon repo, any public git repo will work. It's the same way you use to share a hermes profile. But if it's in the eikon repo, it will be listed on the eikon sharing platform I'm building
+
+[2026-05-19T19:43:13.975000+00:00] excessivelysalty (id=1506381739747049562)
+    That's really neat.  One question though, are eikon's per profile or is it the same eikon across all profiles?
+
+[2026-05-19T19:45:46.547000+00:00] liftaris (id=1506382379680403729)
+    Eikons get set per profile
+

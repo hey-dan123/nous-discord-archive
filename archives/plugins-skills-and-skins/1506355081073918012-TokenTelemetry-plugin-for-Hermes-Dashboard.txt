@@ -1,0 +1,27 @@
+# Thread 'TokenTelemetry plugin for Hermes Dashboard' in forum #plugins-skills-and-skins
+# thread_id=1506355081073918012 forum_id=1485392832154832906
+# Started 2026-05-19T19:52:59.428467+00:00
+
+[2026-05-19T17:57:18.052000+00:00] pulpyhunter (id=1506355081073918012)
+    hey folks, finally shipped a TokenTelemetry plugin for Hermes Dashboard, came out of ddiall's ask in NousResearch/hermes-agent#26696 (https://github.com/NousResearch/hermes-agent/issues/26696). it adds a TokenTelemetry tab inside Hermes Dashboard so you don't have to juggle a second port for cost and trace observability.
+    
+    what it does: six deep link cards inside the tab open the relevant TokenTelemetry page (Hermes Overview, Skills, Memory, Analytics, Projects, All Agents) in a new browser tab. green pill if your local TT is reachable, red pill plus a real onboarding card with a copy paste install command if it isn't.
+    
+    what it covers: TokenTelemetry tracks Hermes Agent across all 38 source platforms (CLI, Telegram, Discord, Feishu, DingTalk, cron, webhook, the works) AND 9 coding agents (Claude Code, Codex, Gemini CLI, Cursor, Copilot, Qwen, OpenCode, Vibe, Antigravity). everything local, no signup, no cloud, MIT.
+    
+    install:
+    curl -fsSL https://tokentelemetry.com/install.sh | bash
+    hermes plugins install VasiHemanth/tokentelemetry-hermes-plugin
+    hermes dashboard
+    then open http://127.0.0.1:9119 and click TokenTelemetry in the sidebar.
+    
+    links:
+    plugin repo: https://github.com/VasiHemanth/tokentelemetry-hermes-plugin
+    TokenTelemetry: https://tokentelemetry.com
+    announcement issue with more context: https://github.com/NousResearch/hermes-agent/issues/28858
+    
+    happy to take any feedback. cheers to the Nous team for Hermes.
+    [embed] Issues · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/issues/26696).
+    [embed] GitHub - VasiHemanth/tokentelemetry-hermes-plugin: TokenTelemetry l... https://github.com/VasiHemanth/tokentelemetry-hermes-plugin
+    [embed] Token Telemetry — Observability for coding & autonomous agents (H... https://tokentelemetry.com/
+

@@ -293,3 +293,18 @@
 [2026-05-19T09:19:54.621000+00:00] twindenis (id=1506224875487101040)
     I'm running a few quality checks before I commit a better version, check in like 5 hours to integrate the code to your project
 
+[2026-05-19T15:33:33.376000+00:00] noxerz. (id=1506318906560872618)
+    i'll add new qwen 3.7 support for brain 2
+    [reply to twindenis msg=1506224875487101040]
+
+[2026-05-19T16:22:29.330000+00:00] twindenis (id=1506331220844220547)
+    if its free, it would be useful yes.
+    [reply to noxerz. msg=1506318906560872618]
+
+[2026-05-19T16:22:44.456000+00:00] twindenis (id=1506331284287262850)
+    did the commit help? (I didnt see you in the git project yet as contributor or anything)
+
+[2026-05-19T16:33:23.126000+00:00] noxerz. (id=1506333963063656478)
+    im currently viewing your repo and already added it into the PR
+    [reply to twindenis msg=1506331284287262850]
+

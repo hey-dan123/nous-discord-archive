@@ -18298,3 +18298,118 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     If anyone is working on Windows sub-processes or dependency pipelines right now, would love to get your eyes and feedback on #25200 and #25555!  You can track my contributions or connect with me here: https://github.com/erhnysr
     [embed] erhnysr - Overview https://github.com/erhnysr
 
+[2026-05-19T15:39:40.483000+00:00] cryptoworlldz (id=1506320446318972928)
+    Found a real sqlite fd leak in the kanban specify helpers.
+    
+    kanban_specify was using with kb.connect() as conn: on sqlite connections, which does not actually close them. In a live repro on current main, 50 calls to list_triage_ids() grew the fd count by 47
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/28802
+    [embed] [Bug]: kanban specify helpers leak sqlite connections in long-lived... https://github.com/NousResearch/hermes-agent/issues/28802
+
+[2026-05-19T15:57:20.115000+00:00] cryptoworlldz (id=1506324890737836243)
+    Tracked down a pretty sneaky sqlite fd leak in the kanban specify flow
+    It turned out the helper was using with kb.connect() as conn: on sqlite connections, which does not close the connection the way it looks like it does. In a quick live repro, 50 calls to list_triage_ids() grew the process fd count by 47
+    Opened the writeup + fix here
+    PR: https://github.com/NousResearch/hermes-agent/pull/28803
+    [embed] fix(kanban): close sqlite connections in specify helpers by worlldz... https://github.com/NousResearch/hermes-agent/pull/28803
+
+[2026-05-19T16:01:07.052000+00:00] minddragon (id=1506325842580607006)
+    Team. I am not going to work on it anymore, but x.ai is still having issues. I'm giving up contribiting there and I'll look to other areas. I will make an actual issue and, in DETAIL, discuss the various issues with X.AI and how it is broken, still. It is NOT a first-class experience now. It is subpar in a few ways after 3 major patches.
+    
+    One example issue that I will make here:
+    
+    ORIGIN MAIN METHOD NOW:
+    
+    - Oauth via web link. Expects callback.
+    - No token accepted for 90+ seconds (idk delay, LONG)
+    - Paste token but you will have to wait. Token bounce is immediate from X.AI. No {enter} or anything.
+    - After 90+ Second delay (some people will control-c out!!) token is accepted
+    - Gateway restart still has to happen - my method refreshed immediate!!
+    - Oauth failure still persistent sometimes. Token refresh not handled still.
+
+[2026-05-19T16:37:13.874000+00:00] minddragon (id=1506334930890920087)
+    <@411637224476770325> I know you're busy. suggest if you and Anton can meet sometime next week even.
+
+[2026-05-19T17:40:34.308000+00:00] helvio88 (id=1506350871066316941)
+    <@387972437901312000> sent you a DM 🙂
+
+[2026-05-19T17:42:27.278000+00:00] noxerz. (id=1506351344896708749)
+    he has ton of dm a day so he may not read
+    [reply to helvio88 msg=1506350871066316941]
+
+[2026-05-19T17:44:58.328000+00:00] helvio88 (id=1506351978446586047)
+    I believe so. Just sharing some code, not sure it's good for a PR, that's all.
+    [reply to noxerz. msg=1506351344896708749]
+
+[2026-05-19T17:48:08.570000+00:00] noxerz. (id=1506352776379240590)
+    send your PR here
+    [reply to helvio88 msg=1506351978446586047]
+
+[2026-05-19T17:52:30.016000+00:00] teknium (id=1506353872963244063)
+    I have hundreds of dms that I can't go through what did you need, tell me here
+    [reply to helvio88 msg=1506350871066316941]
+
+[2026-05-19T17:52:38.342000+00:00] teknium (id=1506353907885019146)
+    🙏
+
+[2026-05-19T18:05:43.940000+00:00] colmeio_66868 (id=1506357202921848967)
+    <@387972437901312000> I think Hermes will eventually hit a serious context-engineering wall.
+    
+    As the harness grows, the hard part won’t just be model intelligence, but orientation: helping agents understand the repo, preserve architectural intent, avoid stale assumptions, and make safe changes without drowning in context.
+    
+    One possible direction is a Hilbert-style repo/context map.
+    
+    Large repos destroy locality: related files, tests, contracts, failures, runtime paths, and assumptions get scattered across token space. Hilbert curves are useful because they can linearize complex/high-dimensional structure while preserving neighborhoods.
+    
+    So instead of feeding the model a flat pile of files, Hermes could maintain a locality-preserving coordinate system for the repo. When an agent works on one area, it retrieves the nearby semantic/architectural neighborhood: relevant modules, contracts, tests, recent failures, memory chunks, and recovery traces.
+    
+    That gives the agent better orientation with fewer tokens, and reduces accidental mutations outside the task boundary.
+    
+    If Hermes is moving toward self-evolving agent infrastructure, the next bottleneck may not be bigger context windows.
+    
+    It may be better coordinates.
+
+[2026-05-19T18:12:16.126000+00:00] teknium (id=1506358847869026334)
+    mmm I'm not sure I agree, context rot is going away even for models with 1M context; 10, 100M context is coming - the only way to achieve that is extremely cheap methods for good context - I honestly expect context issues will be largely a thing of history in a year or so
+
+[2026-05-19T18:36:43.405000+00:00] erhnysr (id=1506365002083340298)
+    opened a security fix PR — custom endpoint provider was leaking OPENAI_API_KEY and OLLAMA_API_KEY to arbitrary hosts
+    
+    keys now only forwarded to their authoritative domains. everything else gets no-key-required
+    
+    PR #28884 with 113 tests passing
+    https://github.com/NousResearch/hermes-agent/pull/28884
+    [embed] fix(security): prevent API key leakage to non-authoritative custom ... https://github.com/NousResearch/hermes-agent/pull/28884
+
+[2026-05-19T18:42:40.197000+00:00] jez_wikitribune (id=1506366498577584279)
+
+[2026-05-19T18:42:45.422000+00:00] jez_wikitribune (id=1506366520492691536)
+
+[2026-05-19T18:44:07.996000+00:00] jez_wikitribune (id=1506366866833018941)
+    it's worth noting that as far as I can find, there is no currently standing trademark ***in the US specifically*** for Doraemon; but it's an international franchise
+    e.g. `79004471, 79003261, 79110369` are all inactive for over a decade
+    - <https://trademarks.justia.com/791/10/doraemon-79110369.html>
+    - <https://www.trademarkelite.com/trademark/trademark-detail/79004471/DORAEMON>
+    - <https://www.trademarkencyclopedia.com/doraemon/>
+
+[2026-05-19T18:48:05.918000+00:00] jez_wikitribune (id=1506367864750473267)
+    I don't love intellectual property law but also I don't want anyone to wrist-slap Hermes/Nous, so I'm raising it here for attention. Credit to <@659176257338081306> for the original note in <#1476316988992258300> channel.
+
+[2026-05-19T18:48:59.312000+00:00] magnus919 (id=1506368088701010041)
+    yeah I am most worried about the project getting DMCA'd off of GitHub
+
+[2026-05-19T19:00:09.378000+00:00] eloquentbrush0x (id=1506370899161514205)
+    https://github.com/NousResearch/hermes-agent/pull/28898
+    [embed] fix(local): remove duplicate creationflags in _run_bash() on Window... https://github.com/NousResearch/hermes-agent/pull/28898
+
+[2026-05-19T19:32:34.199000+00:00] tdamre (id=1506379056332017814)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/28779
+    [embed] fix(tui): termux-gate scrollback/history copy QoL by adybag14-cyber... https://github.com/NousResearch/hermes-agent/pull/28779
+
+[2026-05-19T19:32:48.310000+00:00] tdamre (id=1506379115517972530)
+    To address https://discord.com/channels/1053877538025386074/1506024762353385622
+
+[2026-05-19T19:49:20.477000+00:00] teknium (id=1506383276967985282)
+    merged* 🙂
+    [reply to tdamre msg=1506379056332017814]
+

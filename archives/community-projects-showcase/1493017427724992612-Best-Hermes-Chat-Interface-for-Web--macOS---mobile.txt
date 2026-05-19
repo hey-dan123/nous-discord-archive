@@ -2408,3 +2408,98 @@
 [2026-05-19T11:21:29.895000+00:00] seibakas (id=1506255474084024440)
     how could i link it to the webui ?
 
+[2026-05-19T16:38:04.562000+00:00] horizon03260 (id=1506335143491666031)
+    This has an iphone app?
+
+[2026-05-19T17:29:25.884000+00:00] hydro._ (id=1506348067492990976)
+    Yep! Thanks :)
+    [reply to avidfuturist msg=1506139746517389433]
+
+[2026-05-19T17:29:45.161000+00:00] hydro._ (id=1506348148346458262)
+    Dude… 😭
+    [reply to horizon03260 msg=1506335143491666031]
+
+[2026-05-19T17:31:20.549000+00:00] horizon03260 (id=1506348548432859147)
+    What did i miss?
+    [reply to hydro._ msg=1506348148346458262]
+
+[2026-05-19T17:31:31.926000+00:00] hydro._ (id=1506348596151455907)
+    go to the browser on your iPhone brother
+
+[2026-05-19T17:31:51.048000+00:00] hydro._ (id=1506348676354932896)
+    It works great in browser
+
+[2026-05-19T17:31:54.098000+00:00] horizon03260 (id=1506348689147429025)
+    Ok, am i just supposed to stare at it?
+    [reply to hydro._ msg=1506348596151455907]
+
+[2026-05-19T17:31:58.574000+00:00] hydro._ (id=1506348707921006666)
+    Just add it to your Home Screen
+
+[2026-05-19T17:32:03.451000+00:00] hydro._ (id=1506348728376627474)
+    ???
+
+[2026-05-19T17:32:10.448000+00:00] horizon03260 (id=1506348757724299515)
+    Ah, ok
+    [reply to hydro._ msg=1506348707921006666]
+
+[2026-05-19T17:32:13.576000+00:00] Translator Bot#1043 (id=1506348770843951186)
+    Oh, okay
+    [reply to horizon03260 msg=1506348757724299515]
+
+[2026-05-19T17:32:24.491000+00:00] horizon03260 (id=1506348816624914574)
+    lol
+    [reply to Translator Bot msg=1506348770843951186]
+
+[2026-05-19T17:32:43.387000+00:00] horizon03260 (id=1506348895880351915)
+    But i still need to host the webui
+
+[2026-05-19T17:34:33.695000+00:00] horizon03260 (id=1506349358545899634)
+    So there is no iphone app
+
+[2026-05-19T18:06:55.642000+00:00] avidfuturist (id=1506357503661969469)
+    You can use on iPhone using the PWA from browser and tailscale. It works great that way. You can see details in the readme
+    [reply to horizon03260 msg=1506335143491666031]
+
+[2026-05-19T18:08:55.643000+00:00] horizon03260 (id=1506358006982512823)
+    I'll hop in when someone makes an iphone app. I already use mutiple systems to access Hermes anyway. My intrest would be in an app that could be downloaded kind of like what openclaw did with voiceclaw
+    [reply to avidfuturist msg=1506357503661969469]
+
+[2026-05-19T18:08:55.655000+00:00] avidfuturist (id=1506358007032709160)
+    https://github.com/nesquena/hermes-webui#accessing-on-your-phone-with-tailscale
+    [embed] GitHub - nesquena/hermes-webui: Hermes WebUI: The best way to use H... https://github.com/nesquena/hermes-webui
+
+[2026-05-19T18:09:31.404000+00:00] avidfuturist (id=1506358156975145171)
+    Ah I see, I’m sure someone will beat us to it, but we have that planned eventually too
+    [reply to horizon03260 msg=1506358006982512823]
+
+[2026-05-19T18:09:42.021000+00:00] avidfuturist (id=1506358201506070571)
+    Already have a swift macOS app for desktop
+
+[2026-05-19T18:10:06.575000+00:00] horizon03260 (id=1506358304492748940)
+    Ya, i want the app to be able to use iphone apis
+
+[2026-05-19T18:10:18.042000+00:00] horizon03260 (id=1506358352589095065)
+    Oh nice!
+    [reply to avidfuturist msg=1506358201506070571]
+
+[2026-05-19T18:10:25.203000+00:00] avidfuturist (id=1506358382624378910)
+    Newcomers: See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or curious why you might use it
+
+[2026-05-19T18:11:29.815000+00:00] horizon03260 (id=1506358653626880011)
+    If you ever need help with the iphone app i have swift experience
+
+[2026-05-19T18:12:36.634000+00:00] horizon03260 (id=1506358933885816913)
+    Apple is gonna need to give up their deathgrip on siri because people are litterally building around it to use something that doesn't suck
+
+[2026-05-19T18:12:41.896000+00:00] avidfuturist (id=1506358955956244584)
+    i would definitely be interested in us building out an iphone app to start. it could also just be an ios app with a web bridge kind of like we did for the swift app to begin and then over time it could gradually move fully native
+    [reply to horizon03260 msg=1506358653626880011]
+
+[2026-05-19T18:13:07.425000+00:00] avidfuturist (id=1506359063032627351)
+    friended you in case you are interested in building out an early open source prototype
+
+[2026-05-19T18:13:27.282000+00:00] horizon03260 (id=1506359146319184043)
+    Hell ya!
+    [reply to avidfuturist msg=1506359063032627351]
+

@@ -1,0 +1,40 @@
+# Thread '[Project Showcase] Turkish Locale Skill Pack for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1506312728531173546 forum_id=1316137596535177246
+# Started 2026-05-19T19:50:11.209661+00:00
+
+[2026-05-19T15:09:00.419000+00:00] erhnysr (id=1506312728531173546)
+    Summary
+    A native localization ecosystem for hermes-agent that automatically generates styled Turkish daily briefing cards. It pulls real-time market data, local crypto indices, and major news, delivering them directly via Telegram.
+    
+    Project Details & Tech Stack
+    Data Core: Integrates BIST100 indices and local crypto token pricing in TRY using the CoinGecko API.
+    
+    News Aggregator: Dynamically filters daily briefs from major networks like Hürriyet, Bloomberg HT, and NTV.
+    
+    Dynamic Rendering: Python backend scripts compute the data models and leverage Pillow to render clean, embedded UI cards on the fly.
+    
+    Automation: Fully integrated via automated telegram cron schedules for morning deliveries.
+    
+    Structure: Built completely using standard .SKILL.md specifications to ensure stable prompt execution flows.
+    
+    Global Localization Docs
+    Alongside the skill pack, I authored a comprehensive Localization Tutorial (#1423) to provide a blueprint for international developers looking to adapt and onboard localized skill packs or regional APIs into the ecosystem.
+    
+    Repository Links: * Turkish Skill Pack: #1118
+    
+    Skill Pack Tutorial: #1423
+    
+    Recent Stability Updates
+    To ensure the automated delivery and local developer experience run seamlessly, I've recently pushed a few core fixes:
+    
+    Gateway & Telegram Patch (#25198): Fixed a critical bug where the agent permanently froze progress updates after hitting Telegram's flood control limits (RetryAfter). The logic has been successfully merged into main.
+    
+    OS Compatibility: Shipped macOS path fallbacks earlier, and currently have two active PRs open to unblock Windows environments—forcing UTF-8 subprocess outputs (#25200) and pinning Python versions in uv sync chains (#25555).
+    
+    Feedback on the open Windows PRs is highly appreciated!
+    
+    🔗 GitHub: https://github.com/erhnysr
+    [attachment] turkish_brief.png https://cdn.discordapp.com/attachments/1506312728531173546/1506312728900403290/turkish_brief.png?ex=6a0dce8c&is=6a0c7d0c&hm=06fc7f271662f8df8d346c78f959e6eafef5ba5d87764efed4bb5454ed5a3493&
+    [attachment] proje_small.mp4 https://cdn.discordapp.com/attachments/1506312728531173546/1506312729487478975/proje_small.mp4?ex=6a0dce8c&is=6a0c7d0c&hm=cbe1fed718f1a3a978d338c264a81ee76c001a1b4456fd7b50dda9fef896ccd4&
+    [embed] erhnysr - Overview https://github.com/erhnysr
+
