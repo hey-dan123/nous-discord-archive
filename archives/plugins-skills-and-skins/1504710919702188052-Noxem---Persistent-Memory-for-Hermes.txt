@@ -343,3 +343,113 @@
     [embed]  https://tenor.com/view/kiss-kitty-mwah-love-you-cat-gif-4942856937092589912
     [reply to twindenis msg=1506559435580113027]
 
+[2026-05-20T09:46:05.821000+00:00] twindenis (id=1506593853443145758)
+    done, you can check it again
+    [reply to noxerz. msg=1506567479176990731]
+
+[2026-05-20T09:50:21.591000+00:00] noxerz. (id=1506594926220017736)
+    bet
+    [reply to twindenis msg=1506593853443145758]
+
+[2026-05-20T09:52:11.980000+00:00] noxerz. (id=1506595389225041982)
+    does you create PR?
+    [reply to twindenis msg=1506593853443145758]
+
+[2026-05-20T09:52:53.221000+00:00] twindenis (id=1506595562202468412)
+    oh, no, I only commited two times to the repo I made 😄
+
+[2026-05-20T09:56:05.280000+00:00] twindenis (id=1506596367756431472)
+    problem now is the default memory is near capacity and after updates/restarts etc it doesnt seem to start up so that the agent can remember 😛
+
+[2026-05-20T09:56:33.785000+00:00] twindenis (id=1506596487314804756)
+    https://github.com/MasterDenis/noxem-cache-optimizer
+
+[2026-05-20T09:56:57.806000+00:00] noxerz. (id=1506596588066439239)
+    the server not start?
+    [reply to twindenis msg=1506596367756431472]
+
+[2026-05-20T09:57:33.675000+00:00] twindenis (id=1506596738511933470)
+    not at the same time as hermes so hermes never sees the memories and probably sees holographic memories and falls back to that.
+    [reply to noxerz. msg=1506596588066439239]
+
+[2026-05-20T09:58:17.441000+00:00] noxerz. (id=1506596922079576189)
+    try run "hermes-noxem"
+    [reply to twindenis msg=1506596738511933470]
+
+[2026-05-20T09:58:20.062000+00:00] twindenis (id=1506596933072846868)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1506596933144281108/image.png?ex=6a0ed73c&is=6a0d85bc&hm=ab5a76e3ad58e1a2693df5fbf129465812276ba2595c6b4c12451b632ac42c0c&
+
+[2026-05-20T09:58:26.094000+00:00] noxerz. (id=1506596958373150830)
+    it will start server first then start hermes
+
+[2026-05-20T10:00:27.391000+00:00] twindenis (id=1506597467129647258)
+    I try to make it feel seamless as much as possible, so its like plug and play without needing to do more work.
+
+[2026-05-20T10:01:52.811000+00:00] twindenis (id=1506597825407090708)
+    its designed to be good for both short-term and long-term memory, correct?
+
+[2026-05-20T10:03:28.325000+00:00] noxerz. (id=1506598226021711882)
+    yup
+    [reply to twindenis msg=1506597825407090708]
+
+[2026-05-20T10:03:30.155000+00:00] twindenis (id=1506598233697161309)
+    hermes will plug noxem server as a system service on startup, maybe thats better for now.
+
+[2026-05-20T10:03:45.213000+00:00] noxerz. (id=1506598296855249009)
+    https://tenor.com/view/boss-baby-wow-shock-funny-realization-gif-8940233724330499009
+    [embed]  https://tenor.com/view/boss-baby-wow-shock-funny-realization-gif-8940233724330499009
+    [reply to twindenis msg=1506598233697161309]
+
+[2026-05-20T10:06:30.693000+00:00] twindenis (id=1506598990928412772)
+    why did you use an AI for brain 2? what does it do for brain 2? something on the background or?...
+
+[2026-05-20T10:28:23.202000+00:00] twindenis (id=1506604495990165547)
+    some more suggestions:
+    
+    Proactive consolidation: 
+    Modify the Noxem plugin's on_turn_start to track context fill level. When it crosses a threshold (e.g., 35%), trigger an aggressive consolidation pass that extracts and stores key facts from recent turns before they get compressed away. 
+    This is separate from the normal sync_turn — it's an emergency flush.
+        
+    Associative retrieval: 
+    Modify the memory_search handler in the memory server to, after finding results, also traverse the memory graph edges and include related memories in the response.
+
+[2026-05-20T10:29:45.010000+00:00] noxerz. (id=1506604839117914112)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1506604839474565210/image.png?ex=6a0ede99&is=6a0d8d19&hm=5963c530908b9d6fe69d6665f64dd841e63ef7318e1059522a185293cef9f38d&
+    [reply to twindenis msg=1506598990928412772]
+
+[2026-05-20T10:31:38.443000+00:00] twindenis (id=1506605314890268745)
+    ok the idea is going on the right direction, yes
+
+[2026-05-20T11:31:04.303000+00:00] twindenis (id=1506620271191261254)
+    third commit. https://github.com/MasterDenis/noxem-cache-optimizer
+    [reply to noxerz. msg=1506604839117914112]
+
+[2026-05-20T11:53:24.057000+00:00] twindenis (id=1506625890526691420)
+    how to fix this?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1506625890707308574/image.png?ex=6a0ef234&is=6a0da0b4&hm=f3122e031d10def196adeadcf6246bc9473f10850b8d7ad82e53cc0798949854&
+
+[2026-05-20T11:55:08.718000+00:00] twindenis (id=1506626329506746518)
+    maybe it got fixed... hmm
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1506626329599279164/image.png?ex=6a0ef29c&is=6a0da11c&hm=34e8b694df3f4c8d8a3d5bc5ecd989618e8cec7157c7e0f564bf82e756ca2187&
+
+[2026-05-20T12:14:56.918000+00:00] noxerz. (id=1506631313178890303)
+    the built in memory of hermes is at max char, max char of hermes built in memory is 2000 characters not noxem 🙂
+    [reply to twindenis msg=1506625890526691420]
+
+[2026-05-20T12:19:34.371000+00:00] twindenis (id=1506632476901249125)
+    I told it to switch to noxem, but it supposedly did before and kept defaulting to builtin
+    [reply to noxerz. msg=1506631313178890303]
+
+[2026-05-20T12:20:36.263000+00:00] noxerz. (id=1506632736495108287)
+    also noxem provide a plugin
+    [reply to twindenis msg=1506632476901249125]
+
+[2026-05-20T12:21:01.901000+00:00] noxerz. (id=1506632844028416132)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1506632844095782973/image.png?ex=6a0ef8ad&is=6a0da72d&hm=586b02efec8ae8f3612b5c29be3cbc053c30bc04f7f2fd6d350091864cbd8698&
+
+[2026-05-20T12:21:04.517000+00:00] noxerz. (id=1506632855000973332)
+    with these tool
+
+[2026-05-20T12:22:44.759000+00:00] twindenis (id=1506633275446394940)
+    I think it found them, but yes.
+

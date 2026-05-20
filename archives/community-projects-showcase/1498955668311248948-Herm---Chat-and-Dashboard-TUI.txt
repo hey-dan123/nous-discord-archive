@@ -310,3 +310,6 @@
 [2026-05-20T01:48:42.865000+00:00] liftaris (id=1506473716177961031)
     In eikon studio you load your image, then zoom/pan the image around the part of the picture that you want in the 1:1 square frame
 
+[2026-05-20T13:00:48.958000+00:00] heartl1ne (id=1506642856071401576)
+    may have something cool for you guys, made a hermes skill that takes a base image you provide > converts it to black and white high contrast state base plates with exaggerated expressions using gpt-image-2 > converts it to video with kling > makes them ping-pong loops
+

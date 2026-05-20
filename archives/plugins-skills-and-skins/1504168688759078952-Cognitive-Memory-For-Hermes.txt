@@ -274,3 +274,23 @@
 [2026-05-20T06:55:55.166000+00:00] obcyy (id=1506551026852036689)
     Hello, does yantrikdb-server support embedded models other than the built-in ones? I noticed that the yantrikdb.tom configuration file includes bundled and builtin options.
 
+[2026-05-20T12:21:03.621000+00:00] spranab (id=1506632851242618930)
+    The [embedding] section accepts three values for strategy:
+    
+    builtin (default) — fastembed + ONNX Runtime + Qdrant/all-MiniLM-L6-v2-onnx (384-dim). Downloads the model from HuggingFace on first start, needs an onnxruntime shared library at runtime.
+    bundled — the engine's potion-base-2M static embedder (64-dim). Zero network, zero ONNX dep, ~7 MB baked into the binary via include_bytes!. Quality is ~89% of MiniLM at recall@5. This is the default for the Docker image since v0.8.16. Best for air-gapped / edge deployments.
+    client_only — no server-side embedder; clients compute embeddings on their end and pass them on every /v1/remember and /v1/recall via the embedding field.
+    
+    [embedding]
+    strategy = "builtin"    # or "bundled" or "client_only"
+    dim = 384               # must match whichever embedder you pick
+    Other models? Not via config today. builtin is hardcoded to MiniLM-L6-v2; bundled is hardcoded to potion-base-2M. If you want BGE / jina-embeddings / gte-* / any other model, use strategy = "client_only" and embed on your side — the HTTP API fully supports embedding: [f32; N] on /v1/remember and /v1/recall. Whatever dim you set must match what you POST.
+    
+    Source: crates/yantrikdb-server/src/config/mod.rs#L172-L192.
+    
+    Pluggable embedders via config (e.g. point strategy = "onnx" at a custom model_path = ...) would be a reasonable feature request if there's demand — would need someone to file an issue at https://github.com/yantrikos/yantrikdb-server/issues.
+    [reply to obcyy msg=1506551026852036689]
+
+[2026-05-20T12:31:54.869000+00:00] obcyy (id=1506635582774972547)
+    Thank you for your reply.
+

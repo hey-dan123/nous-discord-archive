@@ -18775,3 +18775,90 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] feat: add optional Burn router observe mode by ivanontech · Pull R... https://github.com/NousResearch/hermes-agent/pull/29178
     [embed] GitHub - ivanontech/hermes-burn-tool-router: Rust/Burn neural pre-r... https://github.com/ivanontech/hermes-burn-tool-router
 
+[2026-05-20T09:46:41.451000+00:00] teknium (id=1506594002885939220)
+    Didnt we already support brave search? <a:aPES_Think:493353113332219924>
+    [reply to godsboy7777 msg=1506553518507560981]
+
+[2026-05-20T09:47:14.169000+00:00] teknium (id=1506594140115177593)
+    Something like this I think should be a plugin <:ASpikaThink:584087705558974494>
+    [reply to delist msg=1506569632541053028]
+
+[2026-05-20T10:17:05.038000+00:00] godsboy7777 (id=1506601651564314624)
+    sorry I was out doing a run.
+    
+    Yep, Hermes already supports Brave via the existing `brave-free` web provider path.
+    
+    This PR is slightly different though:
+    
+    1. It adds a separate paid Brave Search API provider as `brave-search`, without changing existing `brave-free` behaviour.
+    2. It is already implemented as a web provider plugin:
+       `plugins/web/brave_search/plugin.yaml`
+       `plugins/web/brave_search/provider.py`
+       `plugins/web/brave_search/client.py`
+    3. The extra top-level `brave_search` tool is there because the paid Brave API exposes richer modes than the generic `web_search` shape can cleanly represent:
+       - web
+       - LLM context / grounding
+       - images
+       - news
+       - videos
+       - discussions
+       - suggestions
+       - bounded raw API output
+    
+    So the intent is not “replace Brave support”, it is:
+    
+    - keep `brave-free` as-is for existing users
+    - add `brave-search` as the paid/richer provider plugin
+    - expose a dedicated `brave_search` tool for the endpoints that do not map nicely to generic web_search
+    
+    If you prefer, I can trim the scope so the PR is only the provider plugin first, and move the dedicated `brave_search` tool into a follow-up PR. But the current shape is plugin-based already, with the direct tool just exposing the richer paid API surface to agents.
+    [reply to teknium msg=1506594002885939220]
+
+[2026-05-20T11:01:46.405000+00:00] nocturnum91 (id=1506612898032652308)
+    <@387972437901312000> can you consider this PR? It's for test stabilization.
+    [reply to nocturnum91 msg=1506545180201848842]
+
+[2026-05-20T11:39:38.978000+00:00] cctno (id=1506622429894672425)
+    Hey there, going to open a PR for something I experience with kanban dashboard in the frontend. Logs are better of displayed with the latest command ( scrolled to bottom ) by default or on refresh button press when viewing logs from the kanban ticket. Will try to push it soon .
+
+[2026-05-20T11:56:54.276000+00:00] eloquentbrush0x (id=1506626772249084059)
+    fix(feishu): transcribe native voice notes — PR #29295
+    
+    When a user sent a voice note on Feishu, the bot never transcribed it. The adapter was classifying Feishu's audio message type as MessageType.AUDIO, but the gateway only runs STT for MessageType.VOICE. Since Feishu's audio type is exclusively for in-app voice recordings (file uploads go through a different type), the fix is a one-liner — return VOICE directly instead of resolving from the MIME type.
+    
+    The same bug was fixed for Discord and DingTalk yesterday (#28918, 93734c26e). Feishu was missed.
+    
+    https://github.com/NousResearch/hermes-agent/pull/29295
+    [embed] fix(feishu): transcribe native voice notes by EloquentBrush0x · Pu... https://github.com/NousResearch/hermes-agent/pull/29295
+
+[2026-05-20T11:57:59.127000+00:00] cctno (id=1506627044254023721)
+    as promised, a PR 
+    It makes the UX much better for me personally but not sure about others. So one can always see the outcome of a kanban task by default. reduces mouse and scrolling by a lot 
+    https://github.com/NousResearch/hermes-agent/pull/29296
+    [embed] UX feat(kanban): WorkerLogSection auto-scroll to bottom on data loa... https://github.com/NousResearch/hermes-agent/pull/29296
+
+[2026-05-20T12:40:02.618000+00:00] promptsiren (id=1506637628542550226)
+    <@149334243720298497> The developer channel is for PR reviews into hermes agent repo, not philosophical discussions or personal project pitches. Using slurs or acting aggressively towards other members violates this server's 'Be nice' rule. Keep theories to the appropriate channels and be respectful towards others.
+
+[2026-05-20T12:49:34.738000+00:00] delist (id=1506640028187623534)
+    yeah makes more sense, I'll work on it over the next few days
+    [reply to teknium msg=1506594140115177593]
+
+[2026-05-20T13:57:43.918000+00:00] wesleysimplicio (id=1506657179451527179)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/29069
+
+[2026-05-20T13:58:33.406000+00:00] wesleysimplicio (id=1506657387019501569)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/28603
+
+[2026-05-20T13:59:29.360000+00:00] wesleysimplicio (id=1506657621707329748)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/28596
+
+[2026-05-20T14:01:05.039000+00:00] wesleysimplicio (id=1506658023014269059)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/28572
+
+[2026-05-20T14:01:25.082000+00:00] wesleysimplicio (id=1506658107080835115)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/28567
+
+[2026-05-20T14:02:52.961000+00:00] wesleysimplicio (id=1506658475671818360)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/25794
+

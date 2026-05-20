@@ -2535,3 +2535,9 @@
     
     Is it triggered automatically when `hermes-webui` is launched?
 
+[2026-05-20T11:46:44.441000+00:00] deathspate (id=1506624214415966248)
+    <@933139410281713755> just a point of feedback. I find the current tasks panel implementation a bit useless. In my experience it's mostly empty whenever I open it (even when having a plan running) and it being a separate panel from the "agent explorer tab" doesn't make much sense to me because the tasks are bound to the individual agent instance (at least from what i can tell). A better implementation would be to add it to the right similar to the workspace panel, maybe add it as a tab there.
+
+[2026-05-20T11:49:45.502000+00:00] deathspate (id=1506624973840584755)
+    Also I use plans a lot, it would be nice if we could reliably review plans without me manually opening the file with vim. Idk if there's a viable way to do this but it would be nice to have an "artifacts" tab which tracks created resources in a session and allow for the previewing of these files.
+

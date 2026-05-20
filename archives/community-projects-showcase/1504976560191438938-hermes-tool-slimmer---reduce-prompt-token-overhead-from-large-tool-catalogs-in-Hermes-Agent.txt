@@ -264,3 +264,39 @@
     Tried the new version, got my scheduled task broken..
     [attachment] Screenshot_20260520_131040.jpg https://cdn.discordapp.com/attachments/1504976560191438938/1506494481891987526/Screenshot_20260520_131040.jpg?ex=6a0e77d1&is=6a0d2651&hm=65ea90bfd98f512de7bced8c151e93cfd8a550509fd061c72353ac26b826ddca&
 
+[2026-05-20T11:10:42.751000+00:00] aliasocracy (id=1506615147630694481)
+    *Fixed and released as v0.4.7:
+    
+      https://github.com/alias8818/hermes-tool-slimmer/releases/tag/v0.4.7
+    
+      What the screenshot exposed:
+    
+      - tool_slimmer_request_full_tools was too short-lived. If the model called it, then replied “send anything again,” the next user retry could already be back to slimmed tools.
+      - skill_manage could be selected without its companion tools, especially skill_view.
+      - Ambiguous retry messages like 12 had no useful text for the selector, even though the previous assistant message clearly said it needed skill_view.
+    
+      What changed:
+    
+      - Full-tool fallback now persists through the first user retry after the fallback tool is called.
+      - Recent assistant/tool mentions of known tool names are included in the selection query for ambiguous retries.
+      - Skill tools are kept together: skill_manage brings skill_view and skills_list when present.
+    
+      Validated:
+    
+      - Full test suite passes.
+      - Ruff passes.
+      - Mypy passes.
+      - Compileall passes.
+      - Build produced 0.4.7 wheel/sdist.
+      - Release assets are uploaded.
+      - Installed checkout updated cleanly via git.
+      - hermes tool-slimmer doctor passes.
+      - Gateway and dashboard restarted and are active.
+    
+      Live Hermes now reports:
+    
+      tool-slimmer enabled 0.4.7 Source: git
+    *
+    [embed] Release v0.4.7 · alias8818/hermes-tool-slimmer https://github.com/alias8818/hermes-tool-slimmer/releases/tag/v0.4.7
+    [reply to merlin_0212 msg=1506494481774678056]
+
