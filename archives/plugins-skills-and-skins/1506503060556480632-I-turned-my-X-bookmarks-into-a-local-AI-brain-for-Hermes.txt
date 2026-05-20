@@ -1,0 +1,44 @@
+# Thread 'I turned my X bookmarks into a local AI brain for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1506503060556480632 forum_id=1485392832154832906
+# Started 2026-05-20T09:31:38.704190+00:00
+
+[2026-05-20T03:45:19.110000+00:00] iftakharr (id=1506503060556480632)
+    You save great posts on X.
+    
+    Launch ideas. Growth tactics. AI agent examples. Product insights. Market signals. Then they disappear into the bookmark graveyard.
+    
+    So I built **Awaek** — a Hermes skill that turns your saved X bookmarks into local AI context.
+    
+    Not just bookmark search. The point is action: Hermes can use what you already saved to help you:
+    
+    - find market signals
+    - generate content angles
+    - write posts from your own taste
+    - plan launches
+    - surface product ideas
+    - decide what to build next
+    
+    Your bookmarks become source material for your agent.
+    
+    It runs locally with SQLite + `xurl`, and your saved-post library stays on your machine.
+    
+    Repo:
+    https://github.com/1lystore/awaek
+    
+    Would love feedback from Hermes users:
+    
+    1. Is the positioning clear?
+    2. What would you want Hermes to do with your saved posts?
+    3. Where does onboarding feel confusing?
+    [attachment] Awaek_intro.mp4 https://cdn.discordapp.com/attachments/1506503060556480632/1506503472428875836/Awaek_intro.mp4?ex=6a0e8031&is=6a0d2eb1&hm=ac4fafe29d4fa3efddbb6a20ff9c08ae6bf6d74c20bb61757fa82f4bfde417b3&
+    [embed] GitHub - 1lystore/awaek: Chat with your X bookmarks. Turn saved pos... https://github.com/1lystore/awaek
+
+[2026-05-20T03:52:29.005000+00:00] 1lystore (id=1506504863666671616)
+    If you use X bookmarks as a swipe file, Awaek is for you.
+    
+    Save great posts.
+    Ask your agent for patterns.
+    Draft new posts from your saved examples.
+    
+    Your taste becomes usable context.
+

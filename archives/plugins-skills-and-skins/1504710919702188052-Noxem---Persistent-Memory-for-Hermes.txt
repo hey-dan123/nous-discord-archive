@@ -308,3 +308,38 @@
     im currently viewing your repo and already added it into the PR
     [reply to twindenis msg=1506331284287262850]
 
+[2026-05-20T04:22:21.854000+00:00] twindenis (id=1506512383420665926)
+    Great, do another request, I made it slightly better, you can use that and test it if you want, it should be more reliable now.
+
+[2026-05-20T04:57:31.590000+00:00] twindenis (id=1506521232294805574)
+    Try to delete the previous clone and copy the new one if you can, because it had a small bug.
+    [reply to noxerz. msg=1506333963063656478]
+
+[2026-05-20T05:17:39.749000+00:00] twindenis (id=1506526299680800868)
+    Just to make sure you get a clean version, I had to run some tests to make sure its clean, the new version is cleanest.
+
+[2026-05-20T05:46:05.600000+00:00] noxerz. (id=1506533454538477679)
+    https://tenor.com/view/gif-gifkk-anime-kiss-gif-15452416972381341195
+    [embed]  https://tenor.com/view/gif-gifkk-anime-kiss-gif-15452416972381341195
+    [reply to twindenis msg=1506526299680800868]
+
+[2026-05-20T07:05:59.864000+00:00] twindenis (id=1506553563139276851)
+    I think the memory system needs a temporal structure, I will try to have my agent work on it, temporal means to know when a piece of information was stored, and temporal correlation means when something happened. for example this information was stored today (timestamp) and the thing that happened (lets say today I told the agent that a car got repaired last tuesday) it should also record the time and if something else happened that day, it should know. etc, temporal mapping and temporal awareness basically should probably be improved, and also in case a session crashes or something happens, it should remember to be able to resume, my current default hermes couldnt do that and there were many sessions where it crashed and then I couldnt resume (because I didnt have the session ID and couldnt do anything about it manually)
+    [reply to noxerz. msg=1506533454538477679]
+
+[2026-05-20T07:09:19.425000+00:00] twindenis (id=1506554400158519316)
+    temporal structure should also have awareness about that specific day
+    lets say I told it today that something happened monday and tuesday, If I asked it in another session what I told it today, it should know that I told it about what happened last monday and tuesday, if tomorrow I say something else about the last monday, it should know when I said each entry, and if I ask for a summary of what happened last monday it should have both pieces of information linked to monday, so it will tell me both thing, if I tell it today that last monday I went to school and then to dance lessons, but the next day I tell it that I made a mistake and I went first to dance lessons and then to school, it should know to fix it and if I ask of a summary, it should know when things happened during monday and when I told it the information, etc etc etc.
+
+[2026-05-20T07:13:37.753000+00:00] noxerz. (id=1506555483664941178)
+    i think you can fork my repo then push what you did/improve as a PR
+    [reply to twindenis msg=1506553563139276851]
+
+[2026-05-20T07:29:19.963000+00:00] twindenis (id=1506559435580113027)
+    last hermes updated caused some issues so I try to fix first, but I will post here if I improve it.
+
+[2026-05-20T08:01:17.706000+00:00] noxerz. (id=1506567479176990731)
+    https://tenor.com/view/kiss-kitty-mwah-love-you-cat-gif-4942856937092589912
+    [embed]  https://tenor.com/view/kiss-kitty-mwah-love-you-cat-gif-4942856937092589912
+    [reply to twindenis msg=1506559435580113027]
+

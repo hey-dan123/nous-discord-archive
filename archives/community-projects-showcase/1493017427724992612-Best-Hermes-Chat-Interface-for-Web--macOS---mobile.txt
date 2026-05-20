@@ -2503,3 +2503,35 @@
     Hell ya!
     [reply to avidfuturist msg=1506359063032627351]
 
+[2026-05-20T05:09:00.641000+00:00] luckhmaan_63389 (id=1506524122384175144)
+    Its a perfect for hermes but it has few bugs and i made clear those bugs
+    [reply to avidfuturist msg=1500206945850626121]
+
+[2026-05-20T05:09:47.096000+00:00] avidfuturist (id=1506524317230563338)
+    Thanks did you file them on GitHub? Or where? We’ll get them fixed!
+    [reply to luckhmaan_63389 msg=1506524122384175144]
+
+[2026-05-20T05:10:35.409000+00:00] luckhmaan_63389 (id=1506524519869845604)
+    I made changes on my local itself,
+    [reply to avidfuturist msg=1506524317230563338]
+
+[2026-05-20T05:16:56.695000+00:00] luckhmaan_63389 (id=1506526119099105372)
+    Like i implemented a few new things 
+    1. 2fa authentication 
+    2. Right side file manager is now can able to view the html viewer not just text we can able to view the ui and ux of the html file
+    3. Auto filling the text in the workspace
+    [reply to avidfuturist msg=1506524317230563338]
+
+[2026-05-20T05:17:38.343000+00:00] avidfuturist (id=1506526293783740487)
+    Cool man sounds like good improvements! Best part of open source
+    [reply to luckhmaan_63389 msg=1506526119099105372]
+
+[2026-05-20T05:18:17.050000+00:00] luckhmaan_63389 (id=1506526456132665386)
+    Thanks
+    [reply to avidfuturist msg=1506526293783740487]
+
+[2026-05-20T09:00:09.444000+00:00] lemoussel (id=1506582292359938169)
+    <@933139410281713755> How is the script `api/updates.py` (https://github.com/nesquena/hermes-webui/blob/master/api/updates.py), which checks if the Hermes web interface and agent Git repositories are up to date, triggered?
+    
+    Is it triggered automatically when `hermes-webui` is launched?
+

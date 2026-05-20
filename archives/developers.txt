@@ -18684,3 +18684,94 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-20T02:04:56.829000+00:00] grrstine (id=1506477801279066162)
     *show me your AGENTS.md*
 
+[2026-05-20T04:49:39.214000+00:00] cctno (id=1506519251005997157)
+    anyone running hermes dashboard via tailscale ? 
+    on installing plugins via dashboard i get `405`
+    ```
+    hermes dashboard --host 100.74.60.125 --port 4245 --insecure
+      Hermes Web UI → http://100.74.60.125:4245
+    ```
+    
+    ```
+    index-BPb_dBie.js:14  GET http://100.74.60.125:4245/dashboard-plugins/example/dist/index.js net::ERR_ABORTED 404 (Not Found)
+    ```
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1506519251098403007/image.png?ex=6a0e8ee3&is=6a0d3d63&hm=00fd12ce7f431e0465be208ba03d8c64954940ec3d52d80b4cb67a99321bf1e4&
+
+[2026-05-20T04:50:20.626000+00:00] cctno (id=1506519424700518441)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1506519424751112263/image.png?ex=6a0e8f0c&is=6a0d3d8c&hm=ccaadad8ea349bffb7e05dd235ae53bb84fb81b13d05c527e889b89308eddad9&
+
+[2026-05-20T05:01:05.783000+00:00] .s0uthpaw (id=1506522130685366292)
+    TL;DR: The 405 happens because `/dashboard-plugins/{name}/{file}` is a GET-only route — plugin installation should POST to `/api/dashboard/agent-plugins/install` instead. The 404 is because the "example" plugin doesn't exist on disk (it's a template, not bundled with Hermes). To install plugins via Tailscale dashboard, use `curl -X POST http://<tailscale-ip>:<port>/api/dashboard/agent-plugins/install -H "Content-Type: application/json" -d '{"identifier": "hermes-achievements"}'` or install via CLI first (`hermes plugins install <name>`), then force rescan.
+    
+    Docs: https://hermes-agent.nousresearch.com/docs/user-guide/features/extending-the-dashboard
+    
+    Full details attached.
+    [attachment] dashboard-plugin-405-fix-20260519_1440.txt https://cdn.discordapp.com/attachments/1491258766648283238/1506522130890756176/dashboard-plugin-405-fix-20260519_1440.txt?ex=6a0e9191&is=6a0d4011&hm=62aac605949fea0854678d8495f1c54a943ddeb500e6047bd261887be13e41e2&
+    [embed] Extending the Dashboard | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/features/extending-the-dashboard
+    [reply to cctno msg=1506519251005997157]
+
+[2026-05-20T05:34:44.816000+00:00] eloquentbrush0x (id=1506530599123550269)
+    https://github.com/NousResearch/hermes-agent/pull/29100
+    [embed] fix(tool-executor): set tool_name on sequential per-iteration inter... https://github.com/NousResearch/hermes-agent/pull/29100
+
+[2026-05-20T06:32:41.216000+00:00] nocturnum91 (id=1506545180201848842)
+    I opened this PR because the main full test suite was failing due to several test-environment and isolation issues. Would anyone be available to take a look?
+    https://github.com/NousResearch/hermes-agent/pull/27440
+    [embed] fix(tests): stabilize main full-suite baseline by nocturnum91 · Pu... https://github.com/NousResearch/hermes-agent/pull/27440
+
+[2026-05-20T06:40:26.350000+00:00] jason2335129 (id=1506547131115372645)
+    <@387972437901312000>  hi, I opened a PR for Yuanbao group bot-owner command support, would appreciate a review when you get a chance 🙏
+    
+    https://github.com/NousResearch/hermes-agent/pull/29077
+    [embed] Feature/yuanbao group bot owner command by 295367131 · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/29077
+
+[2026-05-20T07:05:49.223000+00:00] godsboy7777 (id=1506553518507560981)
+    Hey <@387972437901312000>, quick nudge on this PR when you have a review window:
+    
+    https://github.com/NousResearch/hermes-agent/pull/26286
+    
+    This adds a first-class paid Brave Search API integration to Hermes, alongside the existing free Brave fallback. I refreshed it against current main today, resolved the web_tools.py conflict, and the PR is mergeable again. Local focused verification is green: 252 relevant tests passing across the Brave provider/tool path, web provider registry, Hermes tools config, toolsets, and xAI-adjacent registry coverage.
+    
+    Why this is worth reviewing:
+    
+    - It gives Hermes a proper high-quality search backend, not just scraped or limited fallback search.
+    - It adds a direct `brave_search` tool for agents, with rich modes instead of forcing every search through one generic web_search shape.
+    - Default `both` mode returns regular web results plus Brave LLM grounding context, which is excellent for agent research because it gives both source URLs and compact grounding snippets.
+    - It supports specialised modes agents can call directly:
+      - `web`: normal Brave web results
+      - `llm`: Brave LLM Context / grounding endpoint
+      - `images`: image search metadata
+      - `news`: fresh news results
+      - `videos`: video results
+      - `discussions`: forum / discussion-style results via Brave filtering
+      - `suggest`: query suggestions / autocomplete
+      - `raw`: bounded raw Brave API payloads for debugging or power users
+    - It keeps backwards compatibility: existing users with BRAVE_SEARCH_API_KEY are not silently moved from `brave-free` to the paid backend unless they explicitly choose `brave-search` in config.
+    - It plugs into Hermes cleanly as both:
+      - a web provider plugin under `plugins/web/brave_search/`
+      - a registered tool under the `web` toolset
+    - It includes docs and env var coverage so users know about `BRAVE_SEARCH_API_KEY` / `BRAVE_API_KEY` and the new web backend option.
+    - The implementation normalises Brave responses into Hermes-friendly shapes: web, news, videos, images, discussions, FAQ, infobox, locations, LLM context, and suggestions.
+    - It gives Hermes a strong paid-search story for current information, OSINT-style research, SEO/GEO work, news monitoring, media discovery, and grounded agent answers.
+    
+    In short: this makes Hermes materially better at real-time research. Firecrawl/Parallel/Exa/Tavily are still valuable, but Brave paid search gives us a broad, fast, source-rich baseline with LLM context and media/news/discussion endpoints in one provider. It is the kind of tool agents will actually use every day.
+    
+    Would appreciate your review when you can. The PR is scoped, tested, documented, and refreshed against current main.
+    [embed] feat(web): add Brave Search API rich modes by GodsBoy · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/26286
+
+[2026-05-20T08:09:51.108000+00:00] delist (id=1506569632541053028)
+    Hey guys — opened a PR for an optional Burn/Rust tool-router hook in Hermes Agent:
+    >
+     https://github.com/NousResearch/hermes-agent/pull/29178
+    >
+     It adds a tiny local neural pre-router that predicts the likely tool family before the model call. First version is conservative: disabled by default, observe-only, and fail-safe — it logs route/confidence/latency but does not change tool access.
+    >
+     Goal: collect real routing telemetry now, then potentially use it later to bias/narrow tool schemas for obvious turns while keeping full fallback.
+    >
+     Prototype/model repo:
+     https://github.com/ivanontech/hermes-burn-tool-router
+    >
+     Local tests passed: Burn router tests, config tests, and py_compile. Curious if this direction is useful for reducing tool-schema bloat in Hermes. Originally made few months ago for hackathon but got the flu at the time and wasn’t able to finish till now.
+    [embed] feat: add optional Burn router observe mode by ivanontech · Pull R... https://github.com/NousResearch/hermes-agent/pull/29178
+    [embed] GitHub - ivanontech/hermes-burn-tool-router: Rust/Burn neural pre-r... https://github.com/ivanontech/hermes-burn-tool-router
+

@@ -260,3 +260,7 @@
 [2026-05-20T01:57:58.566000+00:00] glizlack6777 (id=1506476046956888116)
     While i would love to take credit it was all Hermes and chatgpt 5.5
 
+[2026-05-20T03:11:13.769000+00:00] merlin_0212 (id=1506494481774678056)
+    Tried the new version, got my scheduled task broken..
+    [attachment] Screenshot_20260520_131040.jpg https://cdn.discordapp.com/attachments/1504976560191438938/1506494481891987526/Screenshot_20260520_131040.jpg?ex=6a0e77d1&is=6a0d2651&hm=65ea90bfd98f512de7bced8c151e93cfd8a550509fd061c72353ac26b826ddca&
+

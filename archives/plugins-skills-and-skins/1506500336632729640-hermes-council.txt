@@ -1,0 +1,18 @@
+# Thread 'hermes-council' in forum #plugins-skills-and-skins
+# thread_id=1506500336632729640 forum_id=1485392832154832906
+# Started 2026-05-20T09:31:39.105458+00:00
+
+[2026-05-20T03:34:29.676000+00:00] magnus919 (id=1506500336632729640)
+    Spawn a panel of custom-composed expert agents to debate any question. Agents are designed specifically for each topic — not generic archetypes — and engage in structured rounds of debate to surface genuine multi-perspective analysis.
+    
+    https://github.com/magnus919/hermes-council
+    [attachment] openai_gpt-image-2-medium_20260519_233316_e6e88e88.png https://cdn.discordapp.com/attachments/1506500336632729640/1506500337543024692/openai_gpt-image-2-medium_20260519_233316_e6e88e88.png?ex=6a0e7d45&is=6a0d2bc5&hm=f5c00d70b4b0083bdc6e44a2f6fc89c4bf3cf24afd02759365e4f51cf0041a23&
+    [embed] GitHub - magnus919/hermes-council: Multi-agent debate system for He... https://github.com/magnus919/hermes-council
+
+[2026-05-20T04:44:40.911000+00:00] magnus919 (id=1506517999832666132)
+    I'm working up a couple of blog posts for this. I wish I didn't suck at video because I feel like this skill really deserves a long walk-through video.
+
+[2026-05-20T05:30:53.614000+00:00] magnus919 (id=1506529629392076880)
+    https://www.groktop.us/hermes-council/
+    [embed] AI Strategy Needs a Second Opinion - Hermes Council Open Source https://www.groktop.us/hermes-council/
+

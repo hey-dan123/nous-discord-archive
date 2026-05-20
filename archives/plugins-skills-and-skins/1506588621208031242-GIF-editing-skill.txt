@@ -1,0 +1,15 @@
+# Thread 'GIF editing skill' in forum #plugins-skills-and-skins
+# thread_id=1506588621208031242 forum_id=1485392832154832906
+# Started 2026-05-20T09:31:38.337466+00:00
+
+[2026-05-20T09:25:18.359000+00:00] neopabo (id=1506588621208031242)
+    Reusable Hermes skills and scripts for editing GIFs, especially the hard case: pinning a transparent logo or sticker to a moving object so it stays snapped instead of floating.
+    
+    https://github.com/H-Ali13381/hermes-gif-overlay-skills
+
+[2026-05-20T09:26:13.336000+00:00] neopabo (id=1506588851798409217)
+    Example result:
+
+[2026-05-20T09:26:17.692000+00:00] neopabo (id=1506588870068928573)
+    [attachment] openclaw_coffin_dance_deadge_snapped_stabilized.gif https://cdn.discordapp.com/attachments/1506588621208031242/1506588870702006323/openclaw_coffin_dance_deadge_snapped_stabilized.gif?ex=6a0ecfb9&is=6a0d7e39&hm=183e3c21f4785b3ba9ab1cb7b1b5b558d79357e0f0823b12188827114e733ee1&
+

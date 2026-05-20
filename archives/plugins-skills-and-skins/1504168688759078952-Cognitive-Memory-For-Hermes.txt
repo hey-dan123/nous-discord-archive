@@ -262,3 +262,15 @@
     My bad, updated the description.
     [reply to wysie_ msg=1506233533210034358]
 
+[2026-05-20T03:46:41.184000+00:00] fhsduifisdfbsdifisdfysdfj (id=1506503404799791255)
+    FYI THIS ROCKS, working great IRL
+
+[2026-05-20T04:00:28.320000+00:00] spranab (id=1506506874059493386)
+    <@329427821208535040> create a PR for dashboard to support the server mode:
+    
+    https://github.com/wysie/yantrikdb-hermes-dashboard/pull/1
+    [embed] Add optional HTTP backend mode for yantrikdb-server v0.8.17+ cluste... https://github.com/wysie/yantrikdb-hermes-dashboard/pull/1
+
+[2026-05-20T06:55:55.166000+00:00] obcyy (id=1506551026852036689)
+    Hello, does yantrikdb-server support embedded models other than the built-in ones? I noticed that the yantrikdb.tom configuration file includes bundled and builtin options.
+

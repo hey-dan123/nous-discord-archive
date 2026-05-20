@@ -887,3 +887,79 @@
     Cant wait for the updated version for  remote access mode. thx
     [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1505868280865230928/image.png?ex=6a0c309f&is=6a0adf1f&hm=f36ae47887555b05ede92d787f3a054f59e5e3e50721e79286ed166f5a0a0249&
 
+[2026-05-20T06:21:03.908000+00:00] fathah. (id=1506542255480111184)
+    Desktop App:
+    
+    0.4.5 Released
+    
+    https://github.com/fathah/hermes-desktop/releases/tag/v0.4.5
+    [embed] Release Hermes Desktop v0.4.5 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.4.5
+
+[2026-05-20T06:21:18.675000+00:00] fathah. (id=1506542317417267312)
+    Bug Fixes and Reliability issues
+
+[2026-05-20T06:22:03.391000+00:00] fathah. (id=1506542504969896036)
+    📎 File Attachments and Drop Files Support ✅
+
+[2026-05-20T06:30:13.222000+00:00] fathah. (id=1506544559470022726)
+    ## Changelog — v0.4.5
+    Features
+    ✅ Chat attachments — image and text-file attachments via click, drag-and-drop, and paste; arbitrary file attachments via path references
+    ✅ Session deletion — delete sessions from the Sessions screen
+    ✅ OpenAI Codex provider — setup card for CLI/OAuth-based Codex plan (no API key required)
+    Models: provider auto-detect — auto-detects provider from Base URL in Add/Edit dialog
+    ✅ Kanban in SSH tunnel mode — Kanban board now works when connected via SSH tunnel
+    ✅ Office: remote Claw3D auto-detect — detects and connects to remote Claw3D instance in SSH tunnel mode
+    ✅ Providers expanded — added NVIDIA NIM, Gemini CLI, MiniMax OAuth, and more OpenAI-compatible endpoints
+    ✅ Settings: API key mask — key mask sized to match the actual stored key length
+    i18n: European Portuguese (pt-PT) — new locale with native-speaker review
+    i18n: Traditional Chinese (zh-TW) — new locale
+    Persist interface locale — language selection now survives app restarts
+    
+    Security
+    ✅  Remote API keys kept in main process — keys no longer exposed to the renderer process
+    
+    Bug Fixes
+    ✅  Chat & Models
+    Remote mode URL doubling + local-spawn process leak
+    ✅ Remote API key wiped when only the URL is edited
+    ✅ URL normalization in health probe and API key lookup
+    ✅ Stale base_url not cleared when switching named providers
+    ✅ Stale baseUrl when selecting a named-provider model from the model picker
+    ✅  Models: entries not reloading when tab becomes visible
+    ✅ Models: intermediate/debounced writes to model library
+    ✅ Models: Add/Remove/Update not routed through SSH in tunnel mode
+    
+    Install Gate & Providers
+    ✅ OAuth-backed active profiles not recognized by install gate
+    ✅ Install gate not recognizing all known providers in .env
+    ✅ Providers: API keys not persisted on change (only on blur)
+
+[2026-05-20T06:30:31.873000+00:00] fathah. (id=1506544637697851542)
+    Config
+    ✅ Nested YAML paths not supported in getConfigValue
+    ✅ Model fields reading/writing outside the model: block scope
+    ✅ Dotted YAML paths in getConfig / setConfig
+    ✅ Empty env var values rejected in readEnv
+    ✅ SSH config helpers not supporting dotted 
+    ✅ YAML paths
+    
+    SSH & Gateway
+    ✅ Tunnel state reset when ControlMaster takes over SSH process
+    ✅ sudo-wrapper bypass missing for non-mutating commands (doctor/update/dump/version)
+    ✅ Gateway: platform enabled state not detected from env vars on Windows
+    ✅ Gateway: EPERM not treated as alive + Python image verification on Windows
+    ✅ SSH tunnel multiplexing disabled for tunnel processes
+    
+    Installer & Windows
+    ✅ %LOCALAPPDATA% not matched correctly on Windows
+    ✅ Office stack start reliability on Windows
+    
+    Session & Database
+    ✅ Session cache: messageCount stale for old sessions on sync
+    ✅ deleteSession using a read-only DB connection (fixed to use writable)
+    
+    Other
+    ✅ API auth not sent correctly for desktop chat in server mode
+    ✅ Interface locale not persisted across restarts
+
