@@ -2541,3 +2541,16 @@
 [2026-05-20T11:49:45.502000+00:00] deathspate (id=1506624973840584755)
     Also I use plans a lot, it would be nice if we could reliably review plans without me manually opening the file with vim. Idk if there's a viable way to do this but it would be nice to have an "artifacts" tab which tracks created resources in a session and allow for the previewing of these files.
 
+[2026-05-20T15:09:11.278000+00:00] avidfuturist (id=1506675161942982817)
+    Yes periodically checked automatically and also can force a check in settings -> system
+    [reply to lemoussel msg=1506582292359938169]
+
+[2026-05-20T15:11:04.254000+00:00] avidfuturist (id=1506675635798544465)
+    Thanks for the suggestions, good ones - captured and will look into them both
+    [reply to deathspate msg=1506624214415966248]
+
+[2026-05-20T15:21:05.426000+00:00] deathspate (id=1506678157296799744)
+    Regarding this, I noticed recently that you no longer capture hermes-agent updates. Was this on purpose?
+    I previously use webui as my main update point but since like Monday, I've been having to manually run it in my CLI
+    [reply to avidfuturist msg=1506675161942982817]
+

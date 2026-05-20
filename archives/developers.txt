@@ -18862,3 +18862,107 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-20T14:02:52.961000+00:00] wesleysimplicio (id=1506658475671818360)
     <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/25794
 
+[2026-05-20T16:13:46.740000+00:00] mr.isotonic (id=1506691416808624298)
+    Live mas with 1M context window on openai subscription
+    https://github.com/NousResearch/hermes-agent/pull/29352
+    [embed] feat(auth): split Codex and OpenAI OAuth lanes — Live Más on 1M-... https://github.com/NousResearch/hermes-agent/pull/29352
+
+[2026-05-20T17:08:55.663000+00:00] erhnysr (id=1506705295437467658)
+    updated PR #28884 after review feedback from @pmos69
+    
+    fixed two edge cases: OpenRouter mirror/proxy configs now correctly preserve OPENROUTER_API_KEY, and named custom providers no longer leak OPENAI_API_KEY to local endpoints like localhost:1234
+    
+    113 tests passing
+    https://github.com/NousResearch/hermes-agent/pull/28884
+    [embed] fix(security): prevent API key leakage to non-authoritative custom ... https://github.com/NousResearch/hermes-agent/pull/28884
+    [reply to erhnysr msg=1506365002083340298]
+
+[2026-05-20T17:46:52.161000+00:00] georgeeze_40778 (id=1506714843762266193)
+    Hi Simon, Kubestronaut here. I'm doing the same thing too. I built SRE team with Hermes
+    [reply to axmaiqiu msg=1505826777119850496]
+
+[2026-05-20T18:23:08.528000+00:00] undifined. (id=1506723972106948638)
+    My llm-wiki just picked it up.  Qwen 3.7 https://share.google/YcfOia7OL5syPup5a
+    [embed] Qwen Studio https://share.google/YcfOia7OL5syPup5a
+
+[2026-05-20T18:42:15.813000+00:00] eloquentbrush0x (id=1506728784169275533)
+    PR #29416:
+    🐛 hermes migrate xai --apply always exited 0 on failure
+    
+    cmd_migrate_xai returned int exit codes but main()'s dispatch
+    (args.func(args)) silently discards return values — so config-not-found
+    and apply errors looked like success to any script checking $?
+    
+    Fix: return 1/2 → sys.exit(1/2), matching how cmd_doctor already works.
+    
+    https://github.com/NousResearch/hermes-agent/pull/29416
+    
+    PR #29417:
+    🐛 xAI auto speech tags: double [pause] on multi-paragraph replies
+    
+    _apply_xai_auto_speech_tags ran two pause passes unconditionally —
+    paragraph breaks added [pause], then first-sentence detection added
+    another one on top. Result: "Hello. [pause] [pause] Second paragraph."
+    
+    Fix: re-check for existing tags after the paragraph pass, skip
+    first-sentence substitution if a pause was already inserted.
+    
+    https://github.com/NousResearch/hermes-agent/pull/29417
+    [embed] fix(migrate): propagate non-zero exit codes from hermes migrate xai... https://github.com/NousResearch/hermes-agent/pull/29416
+    [embed] fix(tts): prevent double [pause] in xAI auto speech tags for multi-... https://github.com/NousResearch/hermes-agent/pull/29417
+
+[2026-05-20T18:55:11.182000+00:00] mstolarzblaxelai (id=1506732036302442588)
+    <@387972437901312000> following up on Vikram's earlier ping for https://github.com/NousResearch/hermes-agent/pull/20809: Copilot feedback is addressed on `9a2e58ac`, and the PR is mergeable. Need next: maintainer approval/rerun for the GitHub workflows when you have a chance.
+    [embed] Build software better, together https://github.com/NousResearch/hermes-agent/pull/20809:
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/20809:
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/20809:
+
+[2026-05-20T19:30:33.038000+00:00] eloquentbrush0x (id=1506740936011415674)
+    https://github.com/NousResearch/hermes-agent/pull/29441
+    [embed] fix(skills-hub): deduplicate search results by identifier, not name... https://github.com/NousResearch/hermes-agent/pull/29441
+
+[2026-05-20T19:35:01.352000+00:00] eloquentbrush0x (id=1506742061401903184)
+    I’m currently reviewing the codebase in detail to help ensure the newly announced 
+    Browserbase integration continues smoothly. When you have some time, I’d recommend taking a look as well.
+
+[2026-05-20T19:58:02.890000+00:00] tdamre (id=1506747855992258722)
+    <@387972437901312000> we will have to overhaul the Gemini Oauth when Gemini CLI is deprecated on June 18
+
+[2026-05-20T19:59:07.090000+00:00] teknium (id=1506748125266710529)
+    good that thang was crummy anyways
+
+[2026-05-20T20:00:01.093000+00:00] teknium (id=1506748351771836596)
+    this is a good one, thanks - reviewing
+    [reply to eloquentbrush0x msg=1506740936011415674]
+
+[2026-05-20T20:03:36.440000+00:00] oxebuka (id=1506749255002624054)
+    https://github.com/NousResearch/hermes-agent/pull/29424
+    [embed] Guard move patches against sensitive paths by UgwujaGeorge · Pull ... https://github.com/NousResearch/hermes-agent/pull/29424
+
+[2026-05-20T20:03:56.855000+00:00] oxebuka (id=1506749340629209150)
+    plz check this
+
+[2026-05-20T20:04:18.268000+00:00] eloquentbrush0x (id=1506749430441705703)
+    I think reacting to a message with an emoji triggers everyone 🙂
+
+[2026-05-20T20:04:19.518000+00:00] minddragon (id=1506749435684585556)
+    Ever have one of those days where there's so many brain melting new features that ... well... it's like wow? Yeah, that's today for me.
+
+[2026-05-20T20:04:46.852000+00:00] sprmn24 (id=1506749550331691141)
+    **PR #29448** / Issue: redact.py returns None for None input (type violation) + ENV regex fails on quoted secrets with spaces, allowing secrets to leak unredacted / Fix: return "" for None input; replace \S+ with [^\r\n]+? in _ENV_ASSIGN_RE / 
+    https://github.com/NousResearch/hermes-agent/pull/29448
+    
+    **PR #29450** / Issue: ClawHubSource._download_zip trusts attacker-controlled ZIP metadata for file size check — zf.read() loads full decompressed content into memory, enabling OOM via crafted ZIP / Fix: replaced zf.read() with zf.open() streaming loop with hard 500KB byte counter / 
+    
+    https://github.com/NousResearch/hermes-agent/pull/29450
+    [embed] fix(redact): return empty string for None input and fix ENV regex f... https://github.com/NousResearch/hermes-agent/pull/29448
+    [embed] fix(skills-hub): stream ZIP extraction to prevent zip bomb via mani... https://github.com/NousResearch/hermes-agent/pull/29450
+
+[2026-05-20T20:08:15.266000+00:00] eloquentbrush0x (id=1506750424483369130)
+    fix(sessions): _save_session_log silently drops the JSON snapshot on tool-use / multimodal turns
+    
+    When write_json_snapshots = true, any session that includes tool calls produces no session_{sid}.json and no error — _clean_session_content expects a str but gets a list, re.sub throws TypeError, outer try/except swallows it. One-line fix: isinstance(content, str) guard. Regression test added.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/29451
+    [embed] fix(sessions): guard _save_session_log against list-type assistant ... https://github.com/NousResearch/hermes-agent/pull/29451
+

@@ -1001,3 +1001,9 @@
     tyvm for your contribution!
     [reply to s1arsky msg=1505408661219053638]
 
+[2026-05-20T16:01:17.829000+00:00] ramenthief (id=1506688275648221264)
+    any beginner friendly open issues/bugs? this has been useful for me i wanna give back
+
+[2026-05-20T18:21:06.907000+00:00] oberonskiiv6 (id=1506723461991759874)
+    hey. does this actually make hermes function better in practise or does it just create junk memories? just installed it but i'm scared of it breaking more than it is bringing value in
+

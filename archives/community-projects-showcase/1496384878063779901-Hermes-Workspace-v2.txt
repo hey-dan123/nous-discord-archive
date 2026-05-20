@@ -481,3 +481,10 @@
 [2026-05-20T02:34:48.069000+00:00] vangoghcomplex (id=1506485314284294154)
     Hey all - I really like this UI, but I'm having an issue with it. It's creating a new session instead of continuing an existing session every time the browser window is suspended. I'll choose an existing session and reply to it, but Workspace creates a new session with my reply as the first prompt, prepended with `<workspace_context active="true" name="Home" path="/home/user/workspace" />`
 
+[2026-05-20T17:00:17.467000+00:00] outsourc_e (id=1506703121966039223)
+    what version are you on
+    [reply to vangoghcomplex msg=1506485314284294154]
+
+[2026-05-20T17:41:00.227000+00:00] vangoghcomplex (id=1506713367644213418)
+    Should be current, I only installed it a couple days ago
+

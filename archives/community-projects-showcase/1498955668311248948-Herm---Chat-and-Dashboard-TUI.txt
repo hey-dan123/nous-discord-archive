@@ -313,3 +313,31 @@
 [2026-05-20T13:00:48.958000+00:00] heartl1ne (id=1506642856071401576)
     may have something cool for you guys, made a hermes skill that takes a base image you provide > converts it to black and white high contrast state base plates with exaggerated expressions using gpt-image-2 > converts it to video with kling > makes them ping-pong loops
 
+[2026-05-20T15:36:00.192000+00:00] pvpsk (id=1506681910217281717)
+    This will be Hermes skill? Or Hermes integration? Very useful for high contrast image generation and looping, so far I am able to use only static images, as image generation with FAL doesn’t work properly on my end
+    [reply to heartl1ne msg=1506642856071401576]
+
+[2026-05-20T15:37:17.236000+00:00] heartl1ne (id=1506682233363366008)
+    Hermes skill I just wanna perfect it first. All you need to give it is the fal.ai key and static image you want as your base and it does the rest
+
+[2026-05-20T15:38:06.628000+00:00] pvpsk (id=1506682440528429117)
+    Will try again today
+
+[2026-05-20T17:31:47.066000+00:00] liftaris (id=1506711047518552234)
+    <@197499797408710656> have you tried the /eikon-create skill? And the eikon studio has contrast setting slider--i want to know if it's useful or if you've had any issues with it
+
+[2026-05-20T17:36:11.922000+00:00] heartl1ne (id=1506712158405398599)
+    I have eikon-create is v good, I used it in combination with instructions on using fal and the style of the base image plates to create mine. Quick video attached of Johnny in action
+    [attachment] 9c1cb14fb6285e523aaf25a838f2e9b0.mov https://cdn.discordapp.com/attachments/1498955668311248948/1506712158774235318/9c1cb14fb6285e523aaf25a838f2e9b0.mov?ex=6a0f428c&is=6a0df10c&hm=1d2f3771152e368c8949c83993cbe8464e87423742cc01f4c45f7be07c85aeb4&
+    [reply to liftaris msg=1506711047518552234]
+
+[2026-05-20T17:37:38.880000+00:00] liftaris (id=1506712523133685921)
+    Duuude! The video looks great!!
+    [reply to heartl1ne msg=1506712158405398599]
+
+[2026-05-20T17:39:00.591000+00:00] heartl1ne (id=1506712865854197831)
+    Thanks! I want to improve it more but v happy with it so far. The contrast slider is v useful, I usually have the invert turned on too, I think it’d be cool if the contrast slider had a bit more granular fine tuning but overall it works great
+
+[2026-05-20T18:31:22.997000+00:00] liftaris (id=1506726046060511273)
+    Noted--yeah there's a few ways to do contrast, and since it's so important for getting good Unicode rasters it's worth exposing more tuning knobs for it
+

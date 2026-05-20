@@ -67,3 +67,11 @@
     https://github.com/Ufonik88/Hermes-VaultKnox/releases/tag/v0.4.0
     [embed] Release VaultKnox v0.4.0: Chat Secret Detection and Agent Autonomy ... https://github.com/Ufonik88/Hermes-VaultKnox/releases/tag/v0.4.0
 
+[2026-05-20T20:04:38.777000+00:00] ufonik88 (id=1506749516462686278)
+    https://x.com/EnTr0pY_88/status/2057166469784539231
+    [embed]  https://twitter.com/EnTr0pY_88/status/2057166469784539231
+
+[2026-05-20T20:05:21.730000+00:00] ufonik88 (id=1506749696620888074)
+    https://github.com/Ufonik88/Hermes-VaultKnox
+    [embed] GitHub - Ufonik88/Hermes-VaultKnox https://github.com/Ufonik88/Hermes-VaultKnox
+

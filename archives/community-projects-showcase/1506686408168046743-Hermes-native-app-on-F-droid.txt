@@ -1,0 +1,7 @@
+# Thread 'Hermes native app on F-droid' in forum #community-projects-showcase
+# thread_id=1506686408168046743 forum_id=1316137596535177246
+# Started 2026-05-20T20:12:03.088223+00:00
+
+[2026-05-20T15:53:52.587000+00:00] tdamre (id=1506686408168046743)
+    [attachment] Screenrecorder-20260520-165259.mp4 https://cdn.discordapp.com/attachments/1506686408168046743/1506686408557990110/Screenrecorder-20260520-165259.mp4?ex=6a0f2a90&is=6a0dd910&hm=d74deccbffd4492b7406237c453f73295a77cd638550021e921753a3abd348ea&
+

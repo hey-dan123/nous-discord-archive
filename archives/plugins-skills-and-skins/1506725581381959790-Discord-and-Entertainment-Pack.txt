@@ -1,0 +1,16 @@
+# Thread 'Discord and Entertainment Pack' in forum #plugins-skills-and-skins
+# thread_id=1506725581381959790 forum_id=1485392832154832906
+# Started 2026-05-20T20:15:12.274751+00:00
+
+[2026-05-20T18:29:32.209000+00:00] meyjean (id=1506725581381959790)
+    Interact with your Discord directly from the Hermes Dashboard. Works with your Hermes Bot Token. 
+    Hermes TV and Nous Boy: Embed your own channels, comes with 10 presets (Retro Weather, Stocks, Ambient Music, ect) and 4 Built in games including Pong and Flappy Bird. 
+    Art Gallery and Music Mixtape that works with Spotify.
+    
+    https://github.com/meyjeancodes/hermes-entertainment-pack.git
+    [attachment] Screenshot_2026-05-18_at_8.23.26_PM.png https://cdn.discordapp.com/attachments/1506725581381959790/1506725582195523796/Screenshot_2026-05-18_at_8.23.26_PM.png?ex=6a0f4f0c&is=6a0dfd8c&hm=fbe1e5853df59f50a0f0d3b50f24f562474fc87279fad7c771f5abf4248a08ec&
+    [attachment] Screenshot_2026-05-18_at_8.23.18_PM.png https://cdn.discordapp.com/attachments/1506725581381959790/1506725583470596238/Screenshot_2026-05-18_at_8.23.18_PM.png?ex=6a0f4f0c&is=6a0dfd8c&hm=4b00186918ae0cf2680aacc7d0d0bebefc3b196b9925f9b5c0d17947d4f7944c&
+    [attachment] Screenshot_2026-05-18_at_8.22.50_PM.png https://cdn.discordapp.com/attachments/1506725581381959790/1506725584255057960/Screenshot_2026-05-18_at_8.22.50_PM.png?ex=6a0f4f0c&is=6a0dfd8c&hm=bbb9a4d15481ad54a4f9c448f3b7d3730ea4ae22065d01280209c04da252fe1f&
+    [attachment] Screenshot_2026-05-18_at_8.22.31_PM.png https://cdn.discordapp.com/attachments/1506725581381959790/1506725585198645248/Screenshot_2026-05-18_at_8.22.31_PM.png?ex=6a0f4f0d&is=6a0dfd8d&hm=3d58e0d02195b7f2895339236078b9f451b8f5c18f32b7509cc18931f5efb4b2&
+    [embed] GitHub - meyjeancodes/hermes-entertainment-pack: Hermes Dashboard E... https://github.com/meyjeancodes/hermes-entertainment-pack.git
+

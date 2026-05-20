@@ -1465,3 +1465,6 @@
     im also using mnemosyne and icarus on top of it but man its nice
     [reply to w0lfgang88 msg=1504274272485380187]
 
+[2026-05-20T16:46:06.111000+00:00] terminalsausage (id=1506699551120294048)
+    I just setup mnemosyne recently over the built in memory system. everything was able to be migrated over fine so that was cool. im not familiar with icarus though.
+
