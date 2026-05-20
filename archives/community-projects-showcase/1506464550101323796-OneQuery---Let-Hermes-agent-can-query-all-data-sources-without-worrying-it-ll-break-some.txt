@@ -1,0 +1,40 @@
+# Thread 'OneQuery — Let Hermes agent can query all data sources without worrying it'll break some' in forum #community-projects-showcase
+# thread_id=1506464550101323796 forum_id=1316137596535177246
+# Started 2026-05-20T02:59:13.661511+00:00
+
+[2026-05-20T01:12:17.502000+00:00] nickel32 (id=1506464550101323796)
+    I have a Postgres warehouse, a BigQuery project, a Mixpanel workspace, and a PostHog instance. Before this, asking my agent to "check yesterday's signups" meant giving it raw database credentials and hoping it wouldn't run something destructive.
+    
+    So I built **OneQuery** — one CLI to connect all your data sources with read-only enforcement, query cost limits, and a full audit trail. Then I wrapped it as a Hermes skill.
+    
+    **Setup takes about 30 seconds:**
+    ```
+    hermes skills install skills-sh/wordbricks/skills/onequery-cli --yes --force
+    hermes chat --skills onequery-cli
+    ```
+    
+    Now I can just say things like:
+    - *"List my data sources"*
+    - *"Use the warehouse source and get yesterday's DAU"*
+    - *"Check the last 10 errors from Sentry"*
+    
+    The skill handles auth context, source discovery, SQL validation, and safe execution. For gnarly SQL, it writes to a temp file and uses `--file` instead of trying to shell-escape everything — a lesson I learned the hard way.
+    
+    Currently supports 15+ connectors: Postgres, Supabase, MySQL, MongoDB, BigQuery, Athena, Google Analytics, Amplitude, Mixpanel, PostHog, Sentry, GitHub, Linear, and more.
+    
+    It's open source (Apache 2.0, written in Rust) and self-hostable.
+    
+    🔗 GitHub: https://github.com/wordbricks/onequery
+    🔗 Site: https://onequery.dev
+    
+    Feedback, bug reports, and new connector PRs all welcome.
+    [attachment] openclaw-demo-video-discord.mp4 https://cdn.discordapp.com/attachments/1506464550101323796/1506464550487326870/openclaw-demo-video-discord.mp4?ex=6a0e5bf1&is=6a0d0a71&hm=17f0a1fc47df666c78287c125d3020db3a6371b8250816f125b2d178cd20c180&
+    [embed] GitHub - wordbricks/onequery: One interface for your whole data sta... https://github.com/wordbricks/onequery
+    [embed] OneQuery | Governed Data Access for AI Agents https://onequery.dev/
+
+[2026-05-20T01:13:48.905000+00:00] nickel32 (id=1506464933473161368)
+    OneQuery — stop juggling 6 database clients (open source, Rust, self-hostable)
+
+[2026-05-20T01:19:00.034000+00:00] nickel32 (id=1506466238442770522)
+    OneQuery — Let Hermes agent can query all data sources without worrying it'll break some
+

@@ -20,3 +20,6 @@
     [attachment] Turbohaul-Manager.png https://cdn.discordapp.com/attachments/1505384448223346818/1505384448601096386/Turbohaul-Manager.png?ex=6a0a6e05&is=6a091c85&hm=d2828167c0d5828aef28c74473bd6300c40b7e586874e44a700575e2c82647d1&
     [embed] GitHub - MrTrenchTrucker/turbohaul-manager: Ollama-shape inference ... https://github.com/MrTrenchTrucker/turbohaul-manager
 
+[2026-05-20T01:42:24.324000+00:00] mrtrenchtrucker (id=1506472128462061780)
+    V0.2.3 now available!
+

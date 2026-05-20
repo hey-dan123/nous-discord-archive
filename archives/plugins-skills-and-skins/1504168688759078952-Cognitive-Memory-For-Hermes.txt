@@ -258,3 +258,7 @@
 [2026-05-19T09:54:18.783000+00:00] wysie_ (id=1506233533210034358)
     I'd add that it's not just for memory inspection. There are settings you can configure using the UI (like enabling per user memory)
 
+[2026-05-19T20:30:43.305000+00:00] spranab (id=1506393690703269948)
+    My bad, updated the description.
+    [reply to wysie_ msg=1506233533210034358]
+

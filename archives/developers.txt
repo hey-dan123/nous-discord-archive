@@ -18413,3 +18413,274 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     merged* 🙂
     [reply to tdamre msg=1506379056332017814]
 
+[2026-05-19T19:53:57.174000+00:00] helvio88 (id=1506384437519319240)
+    would it be against xAI's TOS to have an API Proxy on their OAuth?
+    [reply to teknium msg=1506383276967985282]
+
+[2026-05-19T19:55:18.167000+00:00] colmeio_66868 (id=1506384777228583058)
+    I am claiming that it is already fixed and moving from 1M to 100M is not the way bc it becomes more expensive
+    [reply to teknium msg=1506358847869026334]
+
+[2026-05-19T19:57:27.150000+00:00] colmeio_66868 (id=1506385318222499880)
+    ```
+    yool = the smallest callable capability atom, basically an action/tool opcode. Example: read sector, open page, spawn
+      agent, scan index, route packet.
+    
+      tuple = the addressable envelope that binds yools to map position, authority, lane, agent terms, source pointers, and
+      receipts. So yes: tuple is closer to “map plus routing key plus context,” and yool is closer to “action atom,” but in
+      this system maps can themselves be tuple-addressed.
+    
+      The fundamentals I’d point him at:
+    
+      - Tuple spaces: Gelernter’s Linda is the closest ancestor for “tuples as coordination substrate”: Generative Communic
+      - Hilbert indexing: why multidimensional catalogs can map to compact locality-preserving keys: Jagadish Linear Cluste
+        ring of Objects with Multiple Attributes (https://dl.acm.org/doi/pdf/10.1145/93605.98742), plus Moon/Jagadish/Falou
+        tsos/Saltz clustering analysis (https://drum.lib.umd.edu/items/c713788f-517c-4c2e-a6a2-7ea9d7e69c5b).
+      - HAMT/hash-trie fundamentals: why catalogs are not limited to 256 tools: Bagwell, Ideal Hash Trees
+        (https://lampwww.epfl.ch/papers/idealhashtrees.pdf).
+      - Token/compression foundation: Shannon, A Mathematical Theory of Communication
+        (https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf).
+      - For the MCP point: official MCP tools are model-invoked and cacheable, which supports your design decision to keep
+        MCP as edge/snapshot/dashboard surface, not inner loop: MCP tools spec
+        (https://modelcontextprotocol.io/specification/draft/server/tools).
+    
+      Short answer to his “256x256?”: no. Base-256 glyphs are alphabet slots, not the whole address space. A tuple of length
+      k gives 256^k symbol paths before you even count pointer catalogs, recursive cubes, maps, and authority layers. That
+      is why one yool can be one atom, while tuples can expand into effectively unbounded catalogs.
+    ```
+
+[2026-05-19T19:59:52.165000+00:00] colmeio_66868 (id=1506385926459490375)
+    but that is just one fundamental that compounds... scale from 1M to 100M can sole couple problems but there are limits there in which using tuples/yool can fix categorically the context
+
+[2026-05-19T20:04:24.997000+00:00] aperrix (id=1506387070799581297)
+    Hi everyone! I'm new to Hermes and I have a few questions:
+    - What system requirements does Hermes need to run 24/7?
+    - Do you have any feedback or advice on mistakes you've made that should be avoided?
+    - Do you have any recommendations for tools or settings to make Hermes more efficient?
+    
+    This tool looks awesome, and I’d love to explore it
+
+[2026-05-19T21:11:38.713000+00:00] teknium (id=1506403989430997256)
+    <:Shrug:1062899514249330738>
+    [reply to helvio88 msg=1506384437519319240]
+
+[2026-05-19T21:12:08.255000+00:00] teknium (id=1506404113339121754)
+    an always on machine with probably 1GB of RAM and at least ~15GB of storage would be probably a minimal good setup
+    [reply to aperrix msg=1506387070799581297]
+
+[2026-05-19T21:12:57.360000+00:00] aperrix (id=1506404319300292609)
+    it'll work like a charm on my NUC mini-pc with proxmox then
+    [reply to teknium msg=1506404113339121754]
+
+[2026-05-19T21:15:50.513000+00:00] teknium (id=1506405045556482249)
+    If its super heavy user (or many users) you may want more space for the session DB, depends on how much you dont want anything pruned
+
+[2026-05-19T21:17:24.759000+00:00] aperrix (id=1506405440852983868)
+    I have a NAS for storage, so that should be fine
+    [reply to teknium msg=1506405045556482249]
+
+[2026-05-19T21:20:20.178000+00:00] oleegg (id=1506406176613601391)
+    developers, developers, developers
+
+[2026-05-19T21:23:04.341000+00:00] aperrix (id=1506406865163124837)
+    i'm a freelance developer so a home lab is very useful ^^
+    [reply to oleegg msg=1506406176613601391]
+
+[2026-05-19T21:29:14.126000+00:00] tdamre (id=1506408416153829446)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/28942
+    https://github.com/NousResearch/hermes-agent/pull/28926
+    [embed] fix(tui): termux-gate composer rendering and linux-skill notes by a... https://github.com/NousResearch/hermes-agent/pull/28942
+    [embed] fix(cli): termux-gate composer rendering and skill compat notes by ... https://github.com/NousResearch/hermes-agent/pull/28926
+
+[2026-05-19T21:29:46.253000+00:00] tdamre (id=1506408550904238182)
+    Addresses some other issues and also the skill issue <@1307458949745737849> wanted fixed
+
+[2026-05-19T21:31:26.117000+00:00] teknium (id=1506408969764343889)
+    lol
+    [reply to oleegg msg=1506406176613601391]
+
+[2026-05-19T21:31:32.432000+00:00] teknium (id=1506408996251238574)
+    https://tenor.com/bqjVG.gif
+    [embed]  https://tenor.com/view/asleep-steve-ballmer-yes-meme-microsoft-gif-18627126
+
+[2026-05-19T21:31:36.447000+00:00] teknium (id=1506409013091373127)
+    me every day
+
+[2026-05-19T21:35:06.305000+00:00] sprmn24 (id=1506409893299621929)
+    I'm sure of it 😄
+
+[2026-05-19T21:37:12.147000+00:00] sprmn24 (id=1506410421119094944)
+    <@387972437901312000>  , I opened a few PRs today , take a look when you get a chance:
+    
+    **PR #28917**
+    Issue: socket.getaddrinfo() has no timeout — a slow or unresponsive DNS server blocks the SSRF safety check for up to 30s, stalling the gateway request handler.
+    Fix: Wrapped both call sites in ThreadPoolExecutor with a 5s fail-closed timeout.
+    https://github.com/NousResearch/hermes-agent/pull/28917
+    
+    **PR #28923**
+    Issue: _extract_retry_delay_seconds returned an unbounded float from provider error messages — a response of "retry after 999999999 seconds" would freeze the credential for 31+ years.
+    Fix: Capped both return paths at 3600s.
+    https://github.com/NousResearch/hermes-agent/pull/28923
+    
+    **PR #28932**
+    Issue: Proxy retry gate only triggered on 401 — a 429 from xAI was silently forwarded to the client with no key rotation or cooldown.
+    Fix: Widened gate to {401, 429}, added mark_exhausted_and_rotate on rate-limit so the offending key gets its cooldown and the next key is tried.
+    https://github.com/NousResearch/hermes-agent/pull/28932
+    **
+    PR #28935**
+    Issue: Bare except Exception in channel name resolution silently dropped the real error — import failures, DB errors, and permission issues all returned the same generic message.
+    Fix: Bound the exception, added logger.warning(exc_info=True), and surfaced str(e) to the caller.
+    https://github.com/NousResearch/hermes-agent/pull/28935
+    [embed] fix(url_safety): add 5s timeout to socket.getaddrinfo() calls by sp... https://github.com/NousResearch/hermes-agent/pull/28917
+    [embed] fix(credential_pool): cap retry delay at 3600s to prevent indefinit... https://github.com/NousResearch/hermes-agent/pull/28923
+    [embed] fix(xai-proxy): handle 429 rate-limit responses in proxy retry path... https://github.com/NousResearch/hermes-agent/pull/28932
+    [embed] fix(send_message): log and surface channel resolution errors by spr... https://github.com/NousResearch/hermes-agent/pull/28935
+
+[2026-05-19T21:38:11.443000+00:00] oleegg (id=1506410669824671965)
+    me too, I am always rallying the troops tek
+    [reply to teknium msg=1506408969764343889]
+
+[2026-05-19T21:38:22.010000+00:00] oleegg (id=1506410714146013194)
+    let's go nous, let's go hermes
+
+[2026-05-19T21:38:27.007000+00:00] oleegg (id=1506410735104823396)
+    <:tekcheer:1453863338537779242>
+
+[2026-05-19T21:49:15.800000+00:00] aperrix (id=1506413456339763240)
+    someone already created a proxmox install script, yay !
+    https://community-scripts.org/scripts/hermesagent
+    [embed] Hermes Agent | Proxmox VE Helper Scripts https://community-scripts.org/scripts/hermesagent
+
+[2026-05-19T22:18:13.440000+00:00] helvio88 (id=1506420744530428085)
+    I made a few changes to xai.py and ../server.py to accommodate /audio/speech mapping (openai standard) to /tts (xai standard). Do you want those snippets?
+    [reply to sprmn24 msg=1506410421119094944]
+
+[2026-05-19T22:35:20.197000+00:00] helvio88 (id=1506425051061420134)
+    this goes after `body = await request.read()`
+
+[2026-05-19T22:35:47.506000+00:00] helvio88 (id=1506425165603410042)
+    ```
+            # ============================================================
+            # Safely apply optional adapter transformations.
+            # Adapters that don't implement map_path() / transform_request_body()
+            # will fall back to identity (no-op). This keeps Nous + other
+            # adapters working without modification.
+            # ============================================================
+            map_path_fn = getattr(adapter, "map_path", lambda p: p)
+            rel_path = map_path_fn(rel_path)
+    
+            transform_body_fn = getattr(adapter, "transform_request_body", lambda p, b: b)
+            body = transform_body_fn(rel_path, body)
+    ```
+
+[2026-05-19T22:37:04.502000+00:00] helvio88 (id=1506425488548040795)
+    `xai.py` map functions:
+    
+    ```python
+        # ============================================================
+        # PATH REWRITING - Grok uses /tts instead of /audio/speech
+        # ============================================================
+        def map_path(self, requested_path: str) -> str:
+            """
+            Translate incoming paths to what xAI actually expects.
+            """
+            path = requested_path.lower().rstrip("/")
+    
+            if path == "/audio/speech":
+                logger.debug("proxy: rewriting /audio/speech → /tts for xAI")
+                return "/tts"
+    
+            if path == "/tts":
+                return "/tts"
+    
+            return requested_path
+    ```
+
+[2026-05-19T22:37:19.745000+00:00] helvio88 (id=1506425552482074726)
+    and
+    
+    ```python
+        # ============================================================
+        # REQUEST BODY TRANSFORMATION - OpenAI TTS → xAI TTS
+        # ============================================================
+        def transform_request_body(self, path: str, body: bytes) -> bytes:
+            """
+            Convert OpenAI-compatible TTS request body to xAI format.
+    
+            Mappings:
+                input     → text
+                voice     → voice_id
+                model     → dropped (irrelevant for xAI)
+                + text_normalization: true
+                + language: "auto"
+            """
+            normalized_path = path.lower().rstrip("/")
+    
+            # Only transform TTS paths
+            if normalized_path not in {"/audio/speech", "/tts"}:
+                return body
+    
+            if not body:
+                return body
+    
+            try:
+                data = json.loads(body)
+                if not isinstance(data, dict):
+                    return body
+    
+                # input -> text
+                if "input" in data:
+                    data["text"] = data.pop("input")
+    
+                # voice -> voice_id
+                if "voice" in data:
+                    data["voice_id"] = data.pop("voice")
+    
+                # model is not used by xAI TTS
+                data.pop("model", None)
+    
+                # Add text_normalization
+                data.setdefault("text_normalization", True)
+    
+                # Add language
+                data.setdefault("language", "auto")
+    
+                transformed = json.dumps(data, ensure_ascii=False).encode("utf-8")
+                logger.debug("proxy: transformed OpenAI TTS body → xAI format")
+                return transformed
+    
+            except (json.JSONDecodeError, TypeError, KeyError) as exc:
+                logger.warning("proxy: failed to transform TTS body, forwarding original: %s", exc)
+                return body
+    ```
+
+[2026-05-19T22:38:15.841000+00:00] helvio88 (id=1506425787765756145)
+    I am not sure whether unecessary params are bad or not, decided to remove them anyways. Might not hurt
+
+[2026-05-19T22:38:47.742000+00:00] 0zi57 (id=1506425921568112691)
+    I fixed 3 ABC compliance issues in the context engine/compressor area:
+    1. last_total_tokens was never populated from API responses (only last_prompt_tokens and last_completion_tokens` were set), violating the ABC contract. Fixed.
+    2. Plugin context engines were missing api_mode in the update_model() call, which could cause the wrong summarization transport to be selected. Fixed.
+    3. Three logging.warning() calls in context_compressor.py used the root logger instead of the module-level logger, bypassing log filtering. Fixed. <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/28969
+    [embed] fix(compressor): ABC compliance last_total_tokens, api_mode, logger... https://github.com/NousResearch/hermes-agent/pull/28969
+
+[2026-05-20T00:24:20.336000+00:00] magnus919 (id=1506452482392457338)
+    ok a PR got closed w/ suggestion to approach this as an issue for discussion by maintainers first before any code gets submitted. Heard. https://github.com/NousResearch/hermes-agent/issues/28992
+    [embed] [Feature]: Use -z (oneshot) mode for kanban worker spawn instead of... https://github.com/NousResearch/hermes-agent/issues/28992
+
+[2026-05-20T00:25:05.902000+00:00] magnus919 (id=1506452673510248449)
+    I'm experiencing this more as a bug than as a feature request, BTW... with kanban workers getting silently stuck.
+    [reply to magnus919 msg=1506452482392457338]
+
+[2026-05-20T00:28:06.868000+00:00] technosmack (id=1506453432536666142)
+    hello
+
+[2026-05-20T00:28:58.195000+00:00] technosmack (id=1506453647817703455)
+    im trying to mod the harness, i might need some help with it without having to go through feature request, i can mostly handle all the heavy lifting, i do use ai to help me write snippets
+
+[2026-05-20T00:34:37.955000+00:00] technosmack (id=1506455072874172446)
+    just trying to figure out the pipeline
+
+[2026-05-20T02:04:56.829000+00:00] grrstine (id=1506477801279066162)
+    *show me your AGENTS.md*
+

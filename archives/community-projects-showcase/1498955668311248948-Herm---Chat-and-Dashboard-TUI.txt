@@ -298,3 +298,15 @@
 [2026-05-19T19:45:46.547000+00:00] liftaris (id=1506382379680403729)
     Eikons get set per profile
 
+[2026-05-19T19:56:42.435000+00:00] heartl1ne (id=1506385130673934409)
+    Is there a public repo for themes too? I made a cyberpunk theme with red, teal, and yellow
+
+[2026-05-19T22:08:37.232000+00:00] liftaris (id=1506418327738777721)
+    There isn't, but the eikon repo can be coopted for sharing themes as well, just haven't set it up for easy import/export within herm yet 🤔
+
+[2026-05-20T00:21:13.024000+00:00] pvpsk (id=1506451696749117520)
+    if 48x24 is the space/resolution, how can i get my own images to accurately be described in that resolution without losing any information?
+
+[2026-05-20T01:48:42.865000+00:00] liftaris (id=1506473716177961031)
+    In eikon studio you load your image, then zoom/pan the image around the part of the picture that you want in the 1:1 square frame
+
