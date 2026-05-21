@@ -597,3 +597,7 @@
 [2026-05-21T02:01:03.432000+00:00] teknium (id=1506839210206957578)
     <@428014785045725184> learn everything about zed from <@764835653883658270> here
 
+[2026-05-21T09:19:24.001000+00:00] nour_h (id=1506949522788450424)
+    <@387972437901312000> I have addressed your notes on https://github.com/NousResearch/hermes-agent/pull/26627 some time ago, give it a look as this is a decent adition
+    [embed] feat(acp): use Zed editor filesystem for file tools by HenkDz · Pu... https://github.com/NousResearch/hermes-agent/pull/26627
+

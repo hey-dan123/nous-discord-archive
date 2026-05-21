@@ -1,0 +1,10 @@
+# Thread 'Scrolling titlebar' in forum #plugins-skills-and-skins
+# thread_id=1506873245662576670 forum_id=1485392832154832906
+# Started 2026-05-21T09:40:26.767371+00:00
+
+[2026-05-21T04:16:18.117000+00:00] jimn235 (id=1506873245662576670)
+    titlebar sits for a minute then scrolls
+    
+    https://github.com/jnorthrup/hermes-scrolling-titlebar/tree/master
+    [embed] GitHub - jnorthrup/hermes-scrolling-titlebar https://github.com/jnorthrup/hermes-scrolling-titlebar/tree/master
+

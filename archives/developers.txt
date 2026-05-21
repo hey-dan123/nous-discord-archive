@@ -19002,3 +19002,185 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-21T02:14:08.971000+00:00] kinh0. (id=1506842504996192448)
     i just got inspired by the image and did my own just now
 
+[2026-05-21T03:37:18.775000+00:00] wesleysimplicio (id=1506863433751068685)
+    <@387972437901312000>  feat(skills): validate Obsidian vault path on load
+    https://github.com/NousResearch/hermes-agent/pull/29616
+    [embed] feat(skills): validate Obsidian vault path on load by wesleysimplic... https://github.com/NousResearch/hermes-agent/pull/29616
+
+[2026-05-21T03:47:20.917000+00:00] elkosmas (id=1506865959317536860)
+    Awesome would be nice for matrix as well imho
+    [reply to kinh0. msg=1506840452479975517]
+
+[2026-05-21T04:05:18.501000+00:00] selinchu (id=1506870479032422440)
+    https://github.com/NousResearch/hermes-agent/pull/29627
+    
+    fix(gateway/slack): enforce allow_from restrictions on block kit interactive callbacks
+    [embed] fix(gateway/slack): enforce allow_from restrictions on block kit in... https://github.com/NousResearch/hermes-agent/pull/29627
+
+[2026-05-21T04:11:03.117000+00:00] wesleysimplicio (id=1506871924456685688)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/29632
+    [embed] docs(mcp): add iFlow Search server example by wesleysimplicio · Pu... https://github.com/NousResearch/hermes-agent/pull/29632
+
+[2026-05-21T04:11:24.011000+00:00] wesleysimplicio (id=1506872012092608564)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/29633
+    [embed] docs(goals): clarify Kanban boundary by wesleysimplicio · Pull Req... https://github.com/NousResearch/hermes-agent/pull/29633
+
+[2026-05-21T04:19:20.727000+00:00] wesleysimplicio (id=1506874011584430120)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/29638
+    [embed] docs(gateway): clarify multi-profile setup by wesleysimplicio · Pu... https://github.com/NousResearch/hermes-agent/pull/29638
+
+[2026-05-21T04:19:30.200000+00:00] wesleysimplicio (id=1506874051316945008)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/29640
+    [embed] fix(gateway): normalize false reply mode by wesleysimplicio · Pull... https://github.com/NousResearch/hermes-agent/pull/29640
+
+[2026-05-21T04:35:07.634000+00:00] selinchu (id=1506877983200379042)
+    fix(gateway/telegram): resolve gmail triage scripts via active hermes home
+    https://github.com/NousResearch/hermes-agent/pull/29642
+    [embed] fix(gateway/telegram): resolve gmail triage scripts via active herm... https://github.com/NousResearch/hermes-agent/pull/29642
+    [reply to selinchu msg=1506870479032422440]
+
+[2026-05-21T05:50:20.330000+00:00] the_answers (id=1506896910819000381)
+    Hi <@387972437901312000> 
+    
+    Bumping this PR (whenever you get a chance) 
+    
+    https://github.com/NousResearch/hermes-agent/pull/22398
+    
+    It's a very tiny code change. It's the only thing that makes sure my hermes stays running with discord. Otherwise discord keeps erroring, and then causing gateway restarts (which leads to a wholeslew of problems)
+    [embed] fix: handle Discord typing indicator 429 gracefully by nycomar · P... https://github.com/NousResearch/hermes-agent/pull/22398
+
+[2026-05-21T06:07:08.225000+00:00] selinchu (id=1506901138237030521)
+    fix(skills-hub): expose stable identifier in browse API and TUI outputs
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/29668
+    [embed] fix(skills-hub): expose stable identifier in browse API and TUI out... https://github.com/NousResearch/hermes-agent/pull/29668
+
+[2026-05-21T06:16:03.944000+00:00] teknium (id=1506903385205506079)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1506903385453105212/image.png?ex=6a0ff4a4&is=6a0ea324&hm=957b86d2d03eb8b110fa42cfccad4870e1593847290f0ec7d6f775fab0b26439&
+    [reply to the_answers msg=1506896910819000381]
+
+[2026-05-21T06:30:04.675000+00:00] the_answers (id=1506906911486902376)
+    Image is not related to my PR, I don't think, but I did see you did a PR for mine too, so for that, ❤️ for you
+    [reply to teknium msg=1506903385205506079]
+
+[2026-05-21T06:30:21.494000+00:00] teknium (id=1506906982030774322)
+    woops <a:roflmao:393566686965530678>
+    [reply to the_answers msg=1506906911486902376]
+
+[2026-05-21T06:31:30.773000+00:00] the_answers (id=1506907272607961128)
+    well speaking of openclaw, if you're in NYC, you should come to my event on Friday (not linking here because i don't want to be acused of shamless spamming)
+    [reply to teknium msg=1506906982030774322]
+
+[2026-05-21T06:31:45.658000+00:00] the_answers (id=1506907335040172042)
+    if you're in NYC, you probably know which event it is. I'll be talking about hermes there
+
+[2026-05-21T06:31:53.949000+00:00] teknium (id=1506907369815146496)
+    I'm not but several of the team is
+    [reply to the_answers msg=1506907272607961128]
+
+[2026-05-21T06:31:57.143000+00:00] teknium (id=1506907383212015687)
+    <@265269014148808716>
+
+[2026-05-21T06:32:48.399000+00:00] the_answers (id=1506907598195261510)
+    ahh, i see. yea i thought you were part of the NYC team. Well, please share the info with them. Friday at 6PM in downtown Brooklyn. They can find the info on luma, if they search (or DM me for the link)
+    [reply to teknium msg=1506907369815146496]
+
+[2026-05-21T06:33:07.629000+00:00] the_answers (id=1506907678851731539)
+    hermes will definitely be getting some good coverage
+
+[2026-05-21T06:33:47.127000+00:00] eloquentbrush0x (id=1506907844518088796)
+    (My King <@387972437901312000> , we struggled a lot with Claude on this fix. Hopefully it works.)
+    
+    PR #29683 — Telegram observe mode: location & media parity fix
+    
+    The recent "observe unmentioned group messages" feature (a9db0e2) only wired up text and command handlers. Location pins and media messages (photo, voice, video, sticker, etc.) had two bugs:
+    
+    Observe gap: unmentioned messages were silently dropped instead of being stored as shared group context
+    Attribution gap: when the bot was triggered via a media/location message, it used the per-user session instead of the shared group session — so it couldn't see any of the previously observed group chatter
+    Fix adds the observe check and _apply_telegram_group_observe_attribution call to both _handle_location_message and _handle_media_message. Sticker path is handled separately since _handle_sticker overwrites event.text with the vision description. 4 new tests, all 35 pass.
+    
+    https://github.com/NousResearch/hermes-agent/pull/29683
+    [embed] fix(gateway): extend observe+attribution to location and media hand... https://github.com/NousResearch/hermes-agent/pull/29683
+
+[2026-05-21T06:35:47.015000+00:00] teknium (id=1506908347364933734)
+    How did you already find all this when I merged the PR you'd be using just 10 minutes ago?
+    [reply to eloquentbrush0x msg=1506907844518088796]
+
+[2026-05-21T06:36:14.071000+00:00] the_answers (id=1506908460846022806)
+    Fast inference API is a helluva drug 😆
+    [reply to teknium msg=1506908347364933734]
+
+[2026-05-21T06:36:50.316000+00:00] the_answers (id=1506908612868706365)
+    I wonder if they're using groq on their coding agents
+
+[2026-05-21T06:38:21.484000+00:00] eloquentbrush0x (id=1506908995254882304)
+    “Claude, don’t make mistakes, don’t assume anything.” 😁
+    [reply to teknium msg=1506908347364933734]
+
+[2026-05-21T06:38:28.649000+00:00] teknium (id=1506909025307070605)
+    this one's for yours
+    [attachment] ZBIioYtRjgpMGweq2aCM4_zybj6e6a.png https://cdn.discordapp.com/attachments/1491258766648283238/1506909031795523736/ZBIioYtRjgpMGweq2aCM4_zybj6e6a.png?ex=6a0ff9e6&is=6a0ea866&hm=0de3e106930f3bf0979ee744954428c4188e39c5650282ff779f18e89bfbe8c2&
+    [reply to the_answers msg=1506896910819000381]
+
+[2026-05-21T06:40:14.626000+00:00] eloquentbrush0x (id=1506909469806821427)
+    I’m checking in every hour to review the missing parts in the patterns you merged, brother 
+    your back is safe, don’t worry <:tekcheer:1453863338537779242>
+    [reply to teknium msg=1506908347364933734]
+
+[2026-05-21T06:40:15.436000+00:00] the_answers (id=1506909473204080751)
+    looove it! Thanks! 🙂
+    [reply to teknium msg=1506909025307070605]
+
+[2026-05-21T06:49:03.462000+00:00] zest5626 (id=1506911687905775667)
+    This is so cool how are you guys creating this?
+    [reply to teknium msg=1506909025307070605]
+
+[2026-05-21T06:53:23.354000+00:00] eloquentbrush0x (id=1506912777971957821)
+    Was this picture just for me 😊
+    [reply to teknium msg=1506842295457284146]
+
+[2026-05-21T06:53:49.772000+00:00] teknium (id=1506912888777084980)
+    the baoyu-infographic skill with my own themes
+    [reply to zest5626 msg=1506911687905775667]
+
+[2026-05-21T06:54:35.198000+00:00] teknium (id=1506913079307407472)
+    (that skill is built-in btw)
+
+[2026-05-21T06:56:09.171000+00:00] loongfay (id=1506913473458733136)
+    Hi, <@387972437901312000> . This PR from our team  performs strict permission verification on custom slash commands, enhancing security. Please have a look when you are free. Thanks. https://github.com/NousResearch/hermes-agent/pull/29077
+    [embed] Feature/yuanbao group bot owner command by 295367131 · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/29077
+
+[2026-05-21T06:56:22.732000+00:00] teknium (id=1506913530337558538)
+    Don't we already have this
+    [reply to loongfay msg=1506913473458733136]
+
+[2026-05-21T06:56:33.851000+00:00] teknium (id=1506913576974286958)
+    we added user/admin user selection with user role permissionlisted slash commands a week or two ago
+
+[2026-05-21T06:58:27.434000+00:00] loongfay (id=1506914053375660132)
+    Okay, we will take a look at how to use it.
+    Thanks。
+
+[2026-05-21T07:07:04.434000+00:00] grrstine (id=1506916221830955122)
+    how many other people had their entire project workspace deleted when they were experimenting with Hermes' Kanban boards.
+
+[2026-05-21T07:07:10.748000+00:00] grrstine (id=1506916248313794690)
+    it happened to me
+
+[2026-05-21T07:07:32.304000+00:00] grrstine (id=1506916338726080562)
+    luckily i had a time machine backup
+
+[2026-05-21T07:10:54.605000+00:00] sahil_ss9 (id=1506917187238101013)
+    https://github.com/Sahil-SS9/hermes-multichannel-prompt-optimizer
+    [embed] GitHub - Sahil-SS9/hermes-multichannel-prompt-optimizer: Hermes Age... https://github.com/Sahil-SS9/hermes-multichannel-prompt-optimizer
+
+[2026-05-21T07:48:11.543000+00:00] amorfati (id=1506926569636106413)
+    is there an official json schema for `plugins.yaml` ?
+
+[2026-05-21T08:31:45.155000+00:00] marcuss2 (id=1506937531919241337)
+    Small thing I noticed, maybe hermes supports it but it is badly documented: Repository-local skills. It would be nice if hermes looked for those in the local folder. Codex seems to use `.agents/skills` which seems reasonable.
+
+[2026-05-21T08:31:55.173000+00:00] marcuss2 (id=1506937573938036786)
+    I can implement it if needed.
+
