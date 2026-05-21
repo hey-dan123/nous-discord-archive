@@ -1,0 +1,14 @@
+# Thread 'Hivemind: Turn Hermes Agent Traces into Re-Usable Skills' in forum #plugins-skills-and-skins
+# thread_id=1507090932565278720 forum_id=1485392832154832906
+# Started 2026-05-21T19:55:05.207920+00:00
+
+[2026-05-21T18:41:18.719000+00:00] penguinfeet1 (id=1507090932565278720)
+    Sharing something we've been working on for Hermes in case it's useful.
+    
+    Hivemind is a plugin for Hermes: a continual learning layer that turns agent traces into reusable skills, so agents get better with use instead of resetting.
+    
+    Still early. Curious what people here think, especially edge cases where this would or wouldn't help.
+    
+    deeplake.ai/hivemind
+    [attachment] HIDBfkJaMAAbYB1.jpeg https://cdn.discordapp.com/attachments/1507090932565278720/1507090932825063527/HIDBfkJaMAAbYB1.jpeg?ex=6a10a34e&is=6a0f51ce&hm=0c775a15436411cce2b7dcedf0025f59ed763d12babf92620235d141ea933d7d&
+

@@ -26,3 +26,6 @@
     [embed]  https://github.com/NousResearch/hermes-agent/pull/29526.
     [embed]  https://github.com/NousResearch/hermes-agent/pull/29526.
 
+[2026-05-21T17:55:07.458000+00:00] pipichan1499 (id=1507079309053919303)
+    Does this plugin support multiple languages?
+

@@ -19286,3 +19286,41 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     That was my first PR here. I wanna thank you guys for addressing it so fast. It will help with my own workflow (B2B automation). gotta also say I was banned from Openclaw apparently from contributing to much. I was in the top #20 contributors and got ALL my contributions/credits removed with no chance to appeal and kicked out. That broke my heart and closed the doors for me in many ways. Happy to find a new home here. love to all.
     [reply to teknium msg=1506903385205506079]
 
+[2026-05-21T15:21:19.569000+00:00] eddlm (id=1507040604482441417)
+    This the right place? I expect to put hermes in a group chat. I'd like to allow the system to choose _silence_, choose not to reply. That middleground between forcing a reply with @mention and hermes not even noticing a new message showed up.
+    
+    I'm working with it to find a solution as we speak, but thought I'd ask, if its possible and how could I attack the matter.
+
+[2026-05-21T16:37:32.348000+00:00] dskwe. (id=1507059784107430049)
+    Hi everyone! 👋 I submitted a PR yesterday to fix the Chromium orphan process leakage issue in hermes-agent: 
+    https://github.com/NousResearch/hermes-agent/pull/29343
+    
+    I've verified the fix on Linux (Docker) by simulating a daemon with 3 child processes:
+    - Old code: Left 3 orphaned children running.
+    - New code (`_terminate_host_pid`): Successfully terminates all children before the parent, fixing the leak.
+    
+    All tests in `test_browser_orphan_reaper.py` pass cleanly. There's one pre-existing CI failure (`Tests / test`) on the main branch that seems unrelated to this change. 
+    
+    Whenever someone has a moment to check it out, I'd appreciate any feedback or a review. Thanks! 😊
+    [embed] fix(browser): use process-tree termination for daemon cleanup by ds... https://github.com/NousResearch/hermes-agent/pull/29343
+
+[2026-05-21T17:17:07.455000+00:00] psbd_ (id=1507069746028478675)
+    <@387972437901312000> , team 
+    
+    just submitted 2 PRs to make x_search tool better integrate into hermes-agent ecosystem. I personally had to struggle a lot to set up and use and I don’t want that to happen to others. 
+    
+    1. feat (dashboard) : add xai oauth onboarding - PR #29927
+    
+    2. feat (xsearch) : add cross-surface slash command family - PR #29929
+
+[2026-05-21T17:29:37.726000+00:00] .s0uthpaw (id=1507072892893003997)
+    Sorry, was 5 am for me
+    [reply to tdamre msg=1506969666718007377]
+
+[2026-05-21T17:33:01.537000+00:00] tdamre (id=1507073747738165431)
+    No worries
+    [reply to .s0uthpaw msg=1507072892893003997]
+
+[2026-05-21T19:15:43.886000+00:00] gille (id=1507099594503229590)
+    that full ci test suite keeps trying to nuke my cpu and disk when it doesn't run with a modified number of workers. think i'll stop doing the full suite for now. tired of restarting wsl, my ide and everything running on wsl when this happens. sigh. basically, it pegs my disk and cpu, my ide goes unresponsive, docker starts failing and my machine sits there trying to die a thermal overload death. no fun. pinning it to 4 workers works, but if you prompt the ai and it misses that part, or the pyproject.toml gets rewritten without the modification, then you're back to locking the machine up bad time. it seems to use os.cpu_count() and just resource starve the rest of the system.
+

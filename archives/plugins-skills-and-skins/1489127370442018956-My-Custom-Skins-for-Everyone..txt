@@ -331,3 +331,11 @@
 [2026-05-09T16:17:02.709000+00:00] leggui (id=1502705972240711711)
     beautiful
 
+[2026-05-21T17:15:19.134000+00:00] falkonsnow (id=1507069291697143819)
+    Need this in my life but then named Kenshi
+    [reply to sahil_ss9 msg=1502192297608216676]
+
+[2026-05-21T17:18:06.882000+00:00] sahil_ss9 (id=1507069995283251230)
+    In the file you can update it to call this swift winded warrior whatever you like  :). A little bit of tinkering. Give it a go let me know if you have issues with it.
+    [reply to falkonsnow msg=1507069291697143819]
+

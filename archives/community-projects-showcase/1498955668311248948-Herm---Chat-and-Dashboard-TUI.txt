@@ -347,3 +347,9 @@
 [2026-05-21T10:40:10.296000+00:00] heartl1ne (id=1506969849623220406)
     <@209037396983939072> just a suggestion but one thing that would make me literally never use anything but Herm to interact with my agent - togglable session sidebar so I can switch between different chats easily for multiple tasks
 
+[2026-05-21T15:35:23.791000+00:00] excessivelysalty (id=1507044145406148810)
+    To go along with that, a profile switcher on the sidebar if it could be done would be great, I'd never use anything else.
+
+[2026-05-21T17:44:14.450000+00:00] liftaris (id=1507076570140119180)
+    Thank you, I think it's time to give the sidebar some love too. It's underdeveloped, and I've been collecting use cases for what it should be, so thank you <@197499797408710656> <@71751123148484608> !
+

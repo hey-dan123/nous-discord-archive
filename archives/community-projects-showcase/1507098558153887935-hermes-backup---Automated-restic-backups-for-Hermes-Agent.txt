@@ -1,0 +1,28 @@
+# Thread 'hermes-backup — Automated restic backups for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1507098558153887935 forum_id=1316137596535177246
+# Started 2026-05-21T19:51:44.234413+00:00
+
+[2026-05-21T19:11:36.801000+00:00] amphetti (id=1507098558153887935)
+    I accidentally nuked my Hermes install a few days ago and lost all my custom skills and config. It sucked. I wrote `hermes-backup` so a restore takes five minutes instead of re-doing everything from scratch.
+    
+    It's a self-contained backup system for Hermes Agent that only saves what you can't re-clone from GitHub. About 8 MiB total, encrypted with restic to S3 storage (DO Spaces, AWS S3, anything restic supports).
+    
+    **What it backs up:**
+    - Hermes config.yaml, .env, auth.json, honcho.json
+    - Custom skills in ~/.hermes/skills/
+    - Cron schedule, kanban state
+    - Dotfiles (.zshrc, .gitconfig, .config/tmux/)
+    - LaunchAgent plists
+    
+    **How it works:**
+    - idempotent install.sh / uninstall.sh
+    - launchd runs backup daily at 3AM, maintenance Sunday 4AM
+    - Every backup validates itself by restoring critical files to /tmp and checking them
+    - Optional Hermes cron job pings latest.json every 2 hours for monitoring
+    
+    **Hermes skill included:**
+    After install you can say "backup status", "force backup", "backup logs", or "check backup" and Hermes handles it.
+    
+    GitHub: https://github.com/xlyk/hermes-backup
+    [embed] GitHub - xlyk/hermes-backup https://github.com/xlyk/hermes-backup
+

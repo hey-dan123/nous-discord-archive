@@ -488,3 +488,13 @@
 [2026-05-20T17:41:00.227000+00:00] vangoghcomplex (id=1506713367644213418)
     Should be current, I only installed it a couple days ago
 
+[2026-05-21T17:14:00.957000+00:00] outsourc_e (id=1507068963799171133)
+    Idm me
+    [reply to vangoghcomplex msg=1506713367644213418]
+
+[2026-05-21T17:44:07.393000+00:00] marine88 (id=1507076540540784783)
+    very nice i just discover hermes and installing on may unraid
+
+[2026-05-21T17:44:45.829000+00:00] marine88 (id=1507076701753049299)
+    im facing some issues with workspace
+

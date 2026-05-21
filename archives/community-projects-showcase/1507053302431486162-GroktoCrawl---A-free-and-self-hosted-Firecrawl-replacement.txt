@@ -1,0 +1,19 @@
+# Thread 'GroktoCrawl - A free and self-hosted Firecrawl replacement' in forum #community-projects-showcase
+# thread_id=1507053302431486162 forum_id=1316137596535177246
+# Started 2026-05-21T19:51:45.262010+00:00
+
+[2026-05-21T16:11:46.996000+00:00] magnus919 (id=1507053302431486162)
+    GroktoCrawl implements the Firecrawl v2 API surface — scrape, search, map, crawl, extract, browser sessions, monitors, and the Agent endpoint (autonomous web research) — without the closed-source dependencies. Runs entirely in Docker on your own hardware. Bring your own LLM or use the built-in fixtures.
+    
+    https://github.com/groktopus/groktocrawl
+    [attachment] groktopus-400x400.jpg https://cdn.discordapp.com/attachments/1507053302431486162/1507053304671375450/groktopus-400x400.jpg?ex=6a108043&is=6a0f2ec3&hm=3000051e71dec6a879a92f0647412d4818c78f0915c15aa3a6cc02e6da8406da&
+    [embed] GitHub - groktopus/groktocrawl: Self-hosted, API-compatible Firecra... https://github.com/groktopus/groktocrawl
+
+[2026-05-21T16:21:34.362000+00:00] magnus919 (id=1507055766022914078)
+    First release! If it's in the Firecrawl API, it's in here. Even the paywalled endpoints. And it's free.
+    
+    Comes bundled with a skill and a CLI tool for your hermes agent. Special instructions for Hermes Agent users in the `README.md` to implement in Hermes.
+    
+    https://github.com/groktopus/groktocrawl/releases/tag/v0.1.0
+    [embed] Release v0.1.0 — Debut Release 🚀 · groktopus/groktocrawl https://github.com/groktopus/groktocrawl/releases/tag/v0.1.0
+

@@ -2563,3 +2563,44 @@
     Noted will take a look thanks!
     [reply to huhu1030 msg=1506766384930095198]
 
+[2026-05-21T18:17:40.898000+00:00] deathspate (id=1507084985792860200)
+    <@933139410281713755>  I've been getting a lot of this issue
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1507084985839128577/image.png?ex=6a109dc4&is=6a0f4c44&hm=4991d3ae22f30d6f1cab902b131bb226611bf430579aa99d4db7e3983bec5057&
+
+[2026-05-21T18:18:55.169000+00:00] deathspate (id=1507085297307877456)
+    I have already re-configured, stopped the webui process manually and restarted etc. This error just happens randomly in a conversation and from there it just bricks the remainder of the conversation. In order for me to continue, I need to fork the previous response and then it can continue working.
+
+[2026-05-21T18:19:09.382000+00:00] deathspate (id=1507085356921655406)
+    No issue like this with vanilla hermes or hermes --tui
+
+[2026-05-21T18:21:53.143000+00:00] deathspate (id=1507086043785203712)
+    Some other notes, I can resume the conversation in hermes on the CLI and it works.
+    In the image, this bubble is from the webui rendering the conversation I resumed on the CLI.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1507086043843789022/image.png?ex=6a109ec1&is=6a0f4d41&hm=943e7785e4e2627cc3d5bb8978fb24a29c66b998b719eea5ecb5e77d9e025c50&
+
+[2026-05-21T18:23:20.503000+00:00] deathspate (id=1507086410199335114)
+    One last note, I've noticed my model reverting to "gpt-5.4-mini" whenever these errors occur.
+    My default is set as "gpt-5.5" so I don't even know how it's falling back to that model.
+
+[2026-05-21T18:23:23.041000+00:00] deathspate (id=1507086420844609766)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1507086420932563074/image.png?ex=6a109f1b&is=6a0f4d9b&hm=c46627d4d122e3440c7bf064669c7ae6f43abbbbea9dfcd20be3ef40931eedf3&
+
+[2026-05-21T18:23:38.945000+00:00] deathspate (id=1507086487550689511)
+    I use the Codex subscription if this is important debugging info
+
+[2026-05-21T19:08:29.759000+00:00] deathspate (id=1507097773642616854)
+    Another common issue is that for some reason, when the request is completed and it runs the compression step, the response message disappears and you only see the compression notification message at the bottom. In such a case, I need to re-request so that I can see the response, but for some reason, the compression has to run **again**. This image is me making the request once again after the compression "deleted" the past response message.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1507097773823098992/image.png?ex=6a10a9ad&is=6a0f582d&hm=fee810297bd5cfca03957ae4369b26f194b6b9645757e79947a5fb154fb6bd60&
+
+[2026-05-21T19:08:47.302000+00:00] deathspate (id=1507097847223550145)
+    And it just happened again...
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1507097847693185124/image.png?ex=6a10a9bf&is=6a0f583f&hm=d7ffcb1107a6959e324edd6c58bfe1ec98a387a10133637b26abcd87a1fe3fb0&
+
+[2026-05-21T19:19:44.001000+00:00] deathspate (id=1507100601618534481)
+    Ok, so the conversation started back working once I got the green compaction chat bubble.
+    It seems like these blue ones just caused the message missing error, but when I saw the bubble green, the conversation continued working.
+
+[2026-05-21T19:20:59.599000+00:00] deathspate (id=1507100918699528422)
+    This one I mean
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1507100918737408160/image.png?ex=6a10ac9b&is=6a0f5b1b&hm=5cbc7d6c2178d5bb6f8bede6e7f7b1cd0d3dbb8a619f5529cf610506482a1b26&
+

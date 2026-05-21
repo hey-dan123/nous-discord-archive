@@ -453,3 +453,6 @@
 [2026-05-20T12:22:44.759000+00:00] twindenis (id=1506633275446394940)
     I think it found them, but yes.
 
+[2026-05-21T19:47:28.181000+00:00] twindenis (id=1507107581695492158)
+    I like the fact that you didnt make the symbol a brain, so its easier to recognize if its up or not witht he thunder symbol 😄
+
