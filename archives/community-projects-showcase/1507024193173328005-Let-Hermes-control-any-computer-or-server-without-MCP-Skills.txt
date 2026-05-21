@@ -1,0 +1,21 @@
+# Thread 'Let Hermes control any computer or server without MCP/Skills' in forum #community-projects-showcase
+# thread_id=1507024193173328005 forum_id=1316137596535177246
+# Started 2026-05-21T15:19:55.971526+00:00
+
+[2026-05-21T14:16:06.808000+00:00] wastu (id=1507024193173328005)
+    I just make this app that lets any AI Agent (like Hermes) control any computer with only single prompt.
+    
+    No need runtime, proxy or anything, just single script and you ready to go :)
+    
+    It leaves no trace since sessions run in-memory only.
+    
+    Try them at: https://connectyouragent.com/
+    Source code: https://github.com/bgwastu/cya
+    
+    Thanks everyone. Feedback is really appreciated! :)
+    [attachment] demo.mp4 https://cdn.discordapp.com/attachments/1507024193173328005/1507024193596821715/demo.mp4?ex=6a106526&is=6a0f13a6&hm=cfe0ed31d19462331ba4607b3a4bd30d8883369d6896e24a4b2af40a7b40b678&
+
+[2026-05-21T14:18:29.891000+00:00] wastu (id=1507024793306796062)
+    Directly on the Hermes Agent with no MCP, Skills, or plugin:
+    [attachment] aqksShOe2x.png https://cdn.discordapp.com/attachments/1507024193173328005/1507024793449533490/aqksShOe2x.png?ex=6a1065b5&is=6a0f1435&hm=0655b6b86bc41ade17fb3041f27fe8d14a231a0efb57944a26d758edfb8061c6&
+

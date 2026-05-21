@@ -19184,3 +19184,105 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-21T08:31:55.173000+00:00] marcuss2 (id=1506937573938036786)
     I can implement it if needed.
 
+[2026-05-21T10:39:26.688000+00:00] tdamre (id=1506969666718007377)
+    <@575461682151686145> Hi, just need someone from the nous team to input on this issue. The team at f-droid are worried about the hermes agent app which teknium reposted on X https://x.com/JeffSte17327059/status/2057128215517212767?s=20 https://gitlab.com/fdroid/fdroiddata/-/work_items/3922
+    [embed]  https://twitter.com/JeffSte17327059/status/2057128215517212767?s=20
+    [embed] take-down requst: Take-Down Request: Fake Hermes Agent listing impe... https://gitlab.com/fdroid/fdroiddata/-/work_items/3922
+
+[2026-05-21T10:54:47.926000+00:00] kainan_e (id=1506973530669977690)
+    <@387972437901312000>
+
+[2026-05-21T11:40:54.358000+00:00] 0zi57 (id=1506985133926912141)
+    I noticed `repair_message_sequence` was silently dropping orphan tool results (tool messages whose parent assistant was compressed away or never existed). The content was permanently lost
+    I changed it to merge the orphan content into the preceding message with a `\n\n` separator instead. All data is preserved, provider role-alternation is maintained, and the model can still see the tool output. <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/29788  I also updated PR #28969 with a second commit covering two more issues I found while digging deeper: 4 missing api_mode in cc.update_model() calls and 27 root logger calls switched to module-level logger https://github.com/NousResearch/hermes-agent/pull/28969
+    [embed] fix(runtime): preserve orphan tool results instead of dropping them... https://github.com/NousResearch/hermes-agent/pull/29788
+    [embed] fix(compressor): ABC compliance last_total_tokens, api_mode, logger... https://github.com/NousResearch/hermes-agent/pull/28969
+    [reply to 0zi57 msg=1506425921568112691]
+
+[2026-05-21T12:33:38.581000+00:00] jason2335129 (id=1506998405640228915)
+    Thanks for the review! I looked into the `slash_access` system from PR #29077. Here's why this PR is still needed:
+    
+    Yuanbao group chat has platform-specific message formats and requirements that the generic `slash_access` system cannot directly cover. This PR adds `OwnerCommandMiddleware` in the Yuanbao inbound pipeline (upstream of `gateway/run.py`) to handle these scenarios:
+    
+    1. **Group slash commands require special parsing** — Yuanbao group messages start with a `TIMCustomElem` @-mention element, so after `_extract_text()` the text becomes `"@BotName /stop"` instead of `"/stop"`. Since `event.is_command()` checks `text.startswith("/")`, the generic layer can't recognize these as slash commands. The adapter middleware parses commands directly from `msg_body`.
+    
+    2. **Auto-discovered owner identity** — Bot owner is queried via `QueryBotInfoReq` over the Yuanbao WebSocket, no manual `allow_admin_from` config needed.
+    
+    3. **Owner commands skip the serialization queue** — Group messages use a serial queue to prevent concurrent interruptions. This blocks control commands like `/stop` and `/approve` from taking effect promptly. Owner commands are dispatched directly to ensure immediate execution.
+    
+    4. **Group command allowlist** — We want group commands focused on session control (`/stop`, `/approve`, `/deny`, `/reset`, etc.) rather than exposing everything. `GROUP_ALLOWLIST` enforces this. The generic `can_run()` always permits all commands for admins and cannot enforce such restrictions.
+    
+    All changes are Yuanbao platform-specific, living entirely in the adapter layer with no core file modifications.
+    [reply to teknium msg=1506913530337558538]
+
+[2026-05-21T12:53:25.134000+00:00] loongfay (id=1507003382404091975)
+    We have studied the implementation of slash_access, but it cannot fully meet our requirements. Therefore, we still need to open this PR.  https://github.com/NousResearch/hermes-agent/pull/29077
+    [embed] Feature/yuanbao group bot owner command by 295367131 · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/29077
+    [reply to jason2335129 msg=1506998405640228915]
+
+[2026-05-21T12:54:09.503000+00:00] loongfay (id=1507003568501293156)
+    <@387972437901312000> back again 😂
+
+[2026-05-21T12:56:34.614000+00:00] _.exo._ (id=1507004177140682862)
+    <@387972437901312000> i did the thing
+    
+    https://github.com/NousResearch/hermes-agent/pull/29817
+    [embed] feat(plugins): add register_auxiliary_task() to PluginContext API b... https://github.com/NousResearch/hermes-agent/pull/29817
+
+[2026-05-21T13:26:40.695000+00:00] colmeio_66868 (id=1507011752393576498)
+    <@712305484694290473> <@387972437901312000> <@808920669147889664> <@416749362090213376> Huge improvement already — 20–40% disk reduction plus faster session loading is a serious win for long-running agents.
+    
+    One future direction this makes more interesting: locality-aware session-memory indexes using Hilbert-style space-filling layouts.
+    
+    The reason I think it fits Hermes is that agent memory access is not purely chronological. Agents often need to recover semantically related state across time: old constraints, tool results, failed branches, prior plans, source pointers, receipts, etc.
+    
+    So once the session model is cleaner, there may be room for an optional index layer that maps multi-dimensional session structure — time, run_id, role, source, semantic cluster, memory tier — into a linear disk/cache layout while preserving locality.
+    
+    Simple way to picture it:
+    
+    Hilbert adds a locality address to each memory chunk.
+    Related memories get nearby addresses.
+    Nearby addresses are cheaper to scan, cache, compress, and replay.
+    The agent retrieves better context with less search.
+    
+    The potential is both speed and quality:
+    • faster replay/context reconstruction
+    • fewer random reads/seeks
+    • better cache locality
+    • better compression windows
+    • cleaner hot/warm/cold traversal
+    • higher-quality retrieval because related memories stay closer in the address space
+    
+    But the real power is not only indexing time + source + semantic cluster. It’s tagging the reasoning role of each memory: goal, artifact, decision, constraint, failure type, authority, freshness, and reuse.
+    
+    Big caveat: append-order is simpler, safer, and much easier to debug, so I’d see this as a future retrieval/indexing layer, not a replacement for the current storage design.
+    
+    Hermes memory feels like it’s evolving from “logs of what happened” into an addressable substrate for agents.
+    
+    Better storage locality may become better cognitive locality — faster reads, but also better context selection.
+
+[2026-05-21T13:42:34.070000+00:00] colmeio_66868 (id=1507015751138148352)
+    maan, building AI with you all are so fun!!! see you next week 🙂
+    I am going to my honeymoon
+    by the way we are working on the `exhaust` overlap with the optimized agentic-microkernels to check where it belongs better
+    [attachment] md https://cdn.discordapp.com/attachments/1491258766648283238/1507015751247331450/md?ex=6a105d4a&is=6a0f0bca&hm=4237a42c1ba936ebab593528b3f60f8501991db747c40d3a9f53a62766f075df&
+
+[2026-05-21T13:59:45.257000+00:00] colmeio_66868 (id=1507020076249911306)
+    quick Jesse`s dump
+    [attachment] asolaria.jpeg https://cdn.discordapp.com/attachments/1491258766648283238/1507020076572999720/asolaria.jpeg?ex=6a106151&is=6a0f0fd1&hm=6a79deeb8b34f76ccc9bbf928d5ffb701b5b09d85a5a97ea115d5c213c5aebe1&
+    [attachment] asolaria-hyper-hermes.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1507020077269258440/asolaria-hyper-hermes.mp4?ex=6a106151&is=6a0f0fd1&hm=a627113d30bcbc84e94c240c8d36be1c728e6e5f5c8045d903a362c8bda925db&
+
+[2026-05-21T14:04:34.765000+00:00] colmeio_66868 (id=1507021290534469773)
+    we are currently not using GPU for nothing... the agentic-microkernels are actually zero-coppying as protocol... so we can focus on generating the apps on the fly
+
+[2026-05-21T14:08:59.810000+00:00] rostelinalise (id=1507022402213904486)
+    I don't even get what youre saying but generating apps on fly sounds fun
+    [reply to colmeio_66868 msg=1507020076249911306]
+
+[2026-05-21T14:12:18.347000+00:00] colmeio_66868 (id=1507023234938306681)
+    you know, I don't even quickly get what I even thinking/recieving. Sam and Elon knows where and how to tap there so we can extract from 0/1's the messages that is meant to manifest. we are building AI since second world war Turing intuitively, I can even say since the bible/begining... But that can be even more confusing for many...
+
+[2026-05-21T15:08:23.403000+00:00] kinh0. (id=1507037349006020851)
+    That was my first PR here. I wanna thank you guys for addressing it so fast. It will help with my own workflow (B2B automation). gotta also say I was banned from Openclaw apparently from contributing to much. I was in the top #20 contributors and got ALL my contributions/credits removed with no chance to appeal and kicked out. That broke my heart and closed the doors for me in many ways. Happy to find a new home here. love to all.
+    [reply to teknium msg=1506903385205506079]
+

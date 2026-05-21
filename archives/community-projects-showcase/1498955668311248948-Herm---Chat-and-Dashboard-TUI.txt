@@ -344,3 +344,6 @@
 [2026-05-20T22:40:24.982000+00:00] linuxfertxo (id=1506788717287833702)
     This is the best interface Hermes could have
 
+[2026-05-21T10:40:10.296000+00:00] heartl1ne (id=1506969849623220406)
+    <@209037396983939072> just a suggestion but one thing that would make me literally never use anything but Herm to interact with my agent - togglable session sidebar so I can switch between different chats easily for multiple tasks
+

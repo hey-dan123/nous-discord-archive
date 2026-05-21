@@ -42,3 +42,12 @@
     
     Your taste becomes usable context.
 
+[2026-05-21T13:22:03.279000+00:00] latteaulait (id=1507010588826402949)
+    Cool project! Do you use x official api to get bookmark data?
+    [reply to iftakharr msg=1506503060556480632]
+
+[2026-05-21T13:47:17.363000+00:00] iftakharr (id=1507016939354980352)
+    Hey, thanks
+    
+    Yes, it uses x official api through xurl . Hermes handles the X connection through xurl; Awaek pulls the user’s bookmarked posts, stores them locally, indexes them, and turns them into searchable evidence for the agent
+
