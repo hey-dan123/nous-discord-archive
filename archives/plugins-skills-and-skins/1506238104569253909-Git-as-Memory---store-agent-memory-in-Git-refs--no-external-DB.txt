@@ -14,3 +14,6 @@
     [embed] GitHub - femto/skills: skills https://github.com/femto/skills
     [embed] GitHub - femto/git-as-memory: Git-backed memory policy and CLI work... https://github.com/femto/git-as-memory
 
+[2026-05-20T20:19:24.425000+00:00] twindenis (id=1506753231139766524)
+    but tis not really private is it?
+

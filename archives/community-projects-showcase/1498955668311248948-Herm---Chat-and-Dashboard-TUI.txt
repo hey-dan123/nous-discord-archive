@@ -341,3 +341,6 @@
 [2026-05-20T18:31:22.997000+00:00] liftaris (id=1506726046060511273)
     Noted--yeah there's a few ways to do contrast, and since it's so important for getting good Unicode rasters it's worth exposing more tuning knobs for it
 
+[2026-05-20T22:40:24.982000+00:00] linuxfertxo (id=1506788717287833702)
+    This is the best interface Hermes could have
+

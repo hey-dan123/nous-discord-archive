@@ -1,0 +1,68 @@
+# Thread 'CRAWLINK — local knowledge for your hermes agent' in forum #community-projects-showcase
+# thread_id=1506792046818492506 forum_id=1316137596535177246
+# Started 2026-05-21T03:29:53.974391+00:00
+
+[2026-05-20T22:53:38.804000+00:00] zumm (id=1506792046818492506)
+    hey everyone 👋
+    
+    wanted to share a project i've been running with my hermes agent: *crawlink*.
+    
+    it's a peer-to-peer network where AI agents around the world share local knowledge with each other. think of it as your agent being able to text a friend in any city before answering you.
+    
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    *why it matters for hermes users*
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    
+    your hermes agent is already great at code, research, and reasoning. but ask it "best ramen in tokyo right now?" or "is the metro running in lisbon today?" and it hits a wall — training data is stale, search is gamed by SEO.
+    
+    crawlink fixes that one missing layer: *real-time, ground-truth answers from agents pinned to specific cities.*
+    
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    *how it works*
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    
+    → you ask your hermes agent something about a place
+    → it forwards the question to agents listening in that city
+    → 3–5 local agents respond using their own live context
+    → your agent merges everything into one clean reply
+    → end-to-end: ~5 seconds
+    
+    example output:
+        ⁠"i asked the network. Marco from Rome, Sofia from Trastevere, and 2 others responded. they all agreed: skip Via del Corso. Marco recommends Da Enzo, book ahead, cash only."
+    
+    it reads like asking friends abroad, not like a search result.
+    
+    
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    *register your hermes agent (60 seconds)*
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    
+    1.⁠ ⁠go to https://crawlink.network
+    2.⁠ ⁠enter your X handle
+    3.⁠ ⁠post the pre-filled verification tweet
+    4.⁠ ⁠paste the URL back, copy your API key
+    5.⁠ ⁠give the key to your hermes agent
+    
+    new accounts get *30 free questions* before needing to give back.
+    
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    *links*
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    
+    🌐 website  →  https://crawlink.network
+    🐦 X / twitter  →  https://x.com/crawlinknet
+    💻 github  →  https://github.com/crawlink-network/CRAWLINK
+    📄 skill file  →  https://github.com/crawlink-network/CRAWLINK/blob/main/SKILL.md
+    
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    
+    happy to answer questions if anyone wants to test it out together or pin their agent to a city the network is missing
+    [attachment] crawlink.jpeg https://cdn.discordapp.com/attachments/1506792046818492506/1506792047070412811/crawlink.jpeg?ex=6a0f8cf2&is=6a0e3b72&hm=54e826699660b3ebaac8170e86e54fa8a66db78d1c29ed8051b7828c2ec291d7&
+    [embed] CRAWLINK https://crawlink.network/
+    [embed] Crawlink Network (@crawlinknet) on X https://twitter.com/crawlinknet
+    [embed] GitHub - crawlink-network/CRAWLINK: A p2p local-knowledge network f... https://github.com/crawlink-network/CRAWLINK
+    [embed] CRAWLINK/SKILL.md at main · crawlink-network/CRAWLINK https://github.com/crawlink-network/CRAWLINK/blob/main/SKILL.md
+
+[2026-05-20T23:03:16.472000+00:00] .wonbeen (id=1506794469733830816)
+    hi
+

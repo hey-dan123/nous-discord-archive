@@ -1,0 +1,28 @@
+# Thread 'Hermes - MultiChannel - In App Prompt Optimizer' in forum #plugins-skills-and-skins
+# thread_id=1506791627031576777 forum_id=1485392832154832906
+# Started 2026-05-21T03:32:44.869157+00:00
+
+[2026-05-20T22:51:58.719000+00:00] sahil_ss9 (id=1506791627031576777)
+    Hey team! Just shipped something I've been cooking for weeks and I think a lot of you will love it.
+    
+      hermes-multichannel-prompt-optimizer → https://github.com/Sahil-SS9/hermes-multichannel-prompt-optimizer
+     
+     Sits invisibly in front of your agent and rewrites every prompt you send into something tailored to whatever model's listening.
+     You keep typing how your brain wants ("hey could you maybe explain..."), the model receives something it
+     actually knows what to do with. 
+    
+    Works with practically any model and across every Hermes surface (CLI, TUI, Discord, Telegram, Slack).
+      
+       Bonus: it logs every rewrite locally so /prompt-insights shows you exactly where your prompts are leaking tokens or quality. Honestly the analytics alone changed how I write.
+      
+       Tiny upstream PR for full CLI/TUI support → https://github.com/NousResearch/hermes-agent/pull/29526. Gateway
+       surfaces work today on vanilla Hermes.
+      
+       Cheeky ask: if it clicks for you, drop a ⭐ and chuck a PR in for anything you'd improve. 
+    
+    Loads of folks quietly struggle with prompt-craft and word of mouth here goes a long way 🙏
+    [embed] GitHub - Sahil-SS9/hermes-multichannel-prompt-optimizer: Hermes Age... https://github.com/Sahil-SS9/hermes-multichannel-prompt-optimizer
+    [embed] Build software better, together https://github.com/NousResearch/hermes-agent/pull/29526.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/29526.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/29526.
+

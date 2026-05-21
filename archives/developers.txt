@@ -18966,3 +18966,39 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     PR: https://github.com/NousResearch/hermes-agent/pull/29451
     [embed] fix(sessions): guard _save_session_log against list-type assistant ... https://github.com/NousResearch/hermes-agent/pull/29451
 
+[2026-05-20T20:12:06.833000+00:00] newmanrem (id=1506751395745890506)
+    opened a pr here .....validate skill uninstall lock paths 
+    
+    https://github.com/NousResearch/hermes-agent/pull/29437
+    [embed] Validate skill uninstall lock paths by rayasa07 · Pull Request #29... https://github.com/NousResearch/hermes-agent/pull/29437
+
+[2026-05-20T20:40:37.599000+00:00] quantitative_analyst (id=1506758571218436196)
+    Could a connection be developed and implemented with OpenAI/ChatGPT chat conversations so that Hermes could interact with and use them directly? Is there a specific MCP or something similar for this?
+
+[2026-05-20T21:45:12.748000+00:00] mes_ninja (id=1506774824771391559)
+    you mean agents speaking between themselves?
+
+[2026-05-20T22:31:38.142000+00:00] eloquentbrush0x (id=1506786507560583309)
+    Is this our new style?
+    Damn, my nickname looks so cool, bro.
+    Hermes Style <:tekcheer:1453863338537779242>
+    [attachment] Ekran_Resmi_2026-05-21_01.29.12.png https://cdn.discordapp.com/attachments/1491258766648283238/1506786508600901834/Ekran_Resmi_2026-05-21_01.29.12.png?ex=6a0f87ca&is=6a0e364a&hm=fde640d841a48f934fc6436a3a4cfd3b4fa10707f8461cb1b295d3d5268ee642&
+
+[2026-05-20T23:20:09.426000+00:00] 0xmisturi (id=1506798718370709546)
+    opened a pr
+    
+    https://github.com/NousResearch/hermes-agent/pull/29428
+    [embed] Reject non-regular files before reading by haileymarshall · Pull R... https://github.com/NousResearch/hermes-agent/pull/29428
+
+[2026-05-21T02:05:59.613000+00:00] kinh0. (id=1506840452479975517)
+    Guys I just sent a PR that I think will improve telegram experience by a LOT. https://github.com/NousResearch/hermes-agent/pull/29564
+    [attachment] pr-29564.png https://cdn.discordapp.com/attachments/1491258766648283238/1506840453688070326/pr-29564.png?ex=6a0fba07&is=6a0e6887&hm=d00ccefa5e412577420a573a1964f1c8bc4a827ef3f161940c10cd09ba19a319&
+    [embed] Observe unmentioned Telegram group messages by Glucksberg · Pull R... https://github.com/NousResearch/hermes-agent/pull/29564
+
+[2026-05-21T02:13:19.013000+00:00] teknium (id=1506842295457284146)
+    ha I was just about to send the image to ya 😄
+    [reply to eloquentbrush0x msg=1506786507560583309]
+
+[2026-05-21T02:14:08.971000+00:00] kinh0. (id=1506842504996192448)
+    i just got inspired by the image and did my own just now
+

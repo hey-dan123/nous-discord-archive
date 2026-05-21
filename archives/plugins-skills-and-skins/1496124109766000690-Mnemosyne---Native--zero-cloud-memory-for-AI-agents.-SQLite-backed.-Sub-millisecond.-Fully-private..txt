@@ -1007,3 +1007,10 @@
 [2026-05-20T18:21:06.907000+00:00] oberonskiiv6 (id=1506723461991759874)
     hey. does this actually make hermes function better in practise or does it just create junk memories? just installed it but i'm scared of it breaking more than it is bringing value in
 
+[2026-05-20T20:17:59.839000+00:00] twindenis (id=1506752876360368168)
+    afaik default holo memory can cap pretty fast, does this help with that and does it have associative memory, and temporal awareness? (when entry was made, when a described event happened and what other events happened the same day or hour etc etc).
+
+[2026-05-20T23:45:34.648000+00:00] nihp_ (id=1506805115615707246)
+    Can join the discord and take a look<a:partyblob:1151261550032724052>
+    [reply to ramenthief msg=1506688275648221264]
+

@@ -46,3 +46,10 @@
     
     That said, I’ve been thinking about ways to expose the underlying endpoints via API / MCP, so I’m not opposed to offering that as an alternative surface. Happy to prioritize that if you think it’d be more useful.
 
+[2026-05-20T23:21:09.807000+00:00] deepparser (id=1506798971626979348)
+    Update: just shipped the job postings endpoint — live search across LinkedIn Jobs with full posting details returned on demand (title, company, location, posting date, description). Support for Indeed and Wellfound coming soon.  
+    
+    Example prompt: "Use agent-data to search for new SWE roles at seed to series B startups in Austin. Check daily and send me a Telegram if anything comes through."
+    
+    Discoverable via `agent-data search "jobs"`
+

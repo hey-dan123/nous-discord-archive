@@ -2554,3 +2554,12 @@
     I previously use webui as my main update point but since like Monday, I've been having to manually run it in my CLI
     [reply to avidfuturist msg=1506675161942982817]
 
+[2026-05-20T21:11:40.533000+00:00] huhu1030 (id=1506766384930095198)
+    Anyone has any problem with the update feature? I used to receive notification on the chat saying update is available + check now in the settings. However, I no longer get any messages, and the check now shows the latest version. 
+    I have to git pull and restart the process manually. I checked the issues on GitHub, but no report. Anyone else ? Thank you.
+    [attachment] Capture_decran_2026-05-20_a_23.09.50.png https://cdn.discordapp.com/attachments/1493017427724992612/1506766385303261326/Capture_decran_2026-05-20_a_23.09.50.png?ex=6a0f750c&is=6a0e238c&hm=4a3d2283a5971844f8473c71f3347d0868e90048413ff13b548c6e04b53552d3&
+
+[2026-05-20T21:47:16.130000+00:00] avidfuturist (id=1506775342273138810)
+    Noted will take a look thanks!
+    [reply to huhu1030 msg=1506766384930095198]
+

@@ -19,3 +19,6 @@
     Tested. Linted. Zero deps. No personal info leaking. Go break it and tell me what I missed.
     [embed] GitHub - forgedcontextlabs/skills: Hermes Agent skills — reusable... https://github.com/forgedcontextlabs/skills
 
+[2026-05-20T20:28:24.829000+00:00] twindenis (id=1506755497758298122)
+    I have been saying this for all the memory module creators for weeks now, temporal awareness is super important for mnemonic modules.
+

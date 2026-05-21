@@ -140,3 +140,6 @@
 [2026-05-09T00:08:30.101000+00:00] drewsni (id=1502462230296526928)
     Dcape plots are out along with a training pipeline for a nvidia stormscope type ML weather model except instead of only training on GOES satellite and MRMS gridded data, it’s setup to also train on nexrad level 2 data and hrrr gridded data with any hrrr variable you want to train on
 
+[2026-05-20T20:24:17.036000+00:00] twindenis (id=1506754458439258192)
+    I keep asking my agent about the weather today, classic question with so much depth hidden behind, maybe this can help? 😄
+

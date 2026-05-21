@@ -294,3 +294,16 @@
 [2026-05-20T12:31:54.869000+00:00] obcyy (id=1506635582774972547)
     Thank you for your reply.
 
+[2026-05-21T02:48:46.911000+00:00] spranab (id=1506851220508250143)
+    v0.4.12 is released. 
+    
+    For those who don't know already If you want you can enable auto skill generation in memory be adding in hermes env file:
+    
+    YANTRIKDB_SKILLS_ENABLED=true
+    
+    This enables dynamic skill search during agentic operation more accurately without using much tokens.
+
+[2026-05-21T02:57:50.954000+00:00] spranab (id=1506853502390112256)
+    <@329427821208535040> great visualization, loving it.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504168688759078952/1506853503002345574/image.png?ex=6a0fc62f&is=6a0e74af&hm=dc81926859bd5121404fd71f4ef710eac3863b4f2f4cac85bb5edd5423d8a7bc&
+
