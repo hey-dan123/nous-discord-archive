@@ -456,3 +456,7 @@
 [2026-05-21T19:47:28.181000+00:00] twindenis (id=1507107581695492158)
     I like the fact that you didnt make the symbol a brain, so its easier to recognize if its up or not witht he thunder symbol 😄
 
+[2026-05-21T23:12:16.216000+00:00] noxerz. (id=1507159121449713705)
+    oh also now it support qwen3.7 max
+    [reply to twindenis msg=1507107581695492158]
+

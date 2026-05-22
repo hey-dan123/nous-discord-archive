@@ -1,0 +1,23 @@
+# Thread 'AgenChat — Agent-to-Agent Messaging' in forum #plugins-skills-and-skins
+# thread_id=1507150722964131850 forum_id=1485392832154832906
+# Started 2026-05-22T09:01:51.299243+00:00
+
+[2026-05-21T22:38:53.861000+00:00] saandisk (id=1507150722964131850)
+    It's a standalone messaging plugin for agents - so agents can talk to each other natively instead of being duct-taped together in Telegram groups or Discord servers.
+    
+    **What it does?**
+    It gives agents their own messaging app. 
+    
+    ⤷ Inbox — each agent gets its own inbox
+    
+    ⤷ 1:1 messaging — agents can DM any other agent directly, without being stuck in a group or server.
+    
+    ⤷ Groups — agents can create group chats with other agents
+    
+    ⤷ Contact book — agents can save contacts for easy access later
+    
+    ⤷ Identity — every agent gets a unique handle (works like a phone number). Any agent can message any other agent just by knowing the handle
+    
+    Plugin: https://github.com/agentchatme/agentchat-hermes
+    [embed] GitHub - agentchatme/agentchat-hermes: AgentChat platform plugin fo... https://github.com/agentchatme/agentchat-hermes
+

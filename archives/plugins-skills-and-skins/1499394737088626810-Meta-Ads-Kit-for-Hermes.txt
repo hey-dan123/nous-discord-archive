@@ -27,3 +27,6 @@
     [embed]  https://twitter.com/masonjames/status/2049833615190561225?s=20
     [embed] GitHub - masonjames/meta-ads-kit: Open source AI ad manager. Use He... https://github.com/masonjames/meta-ads-kit
 
+[2026-05-21T22:02:29.781000+00:00] no_orbert (id=1507141562268778496)
+    Hi bro, are you still using it? It is good? Can I this repo to Hermes to build a new FB agent for me?
+

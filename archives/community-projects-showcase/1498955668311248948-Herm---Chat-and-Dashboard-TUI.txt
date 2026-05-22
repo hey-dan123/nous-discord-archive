@@ -353,3 +353,7 @@
 [2026-05-21T17:44:14.450000+00:00] liftaris (id=1507076570140119180)
     Thank you, I think it's time to give the sidebar some love too. It's underdeveloped, and I've been collecting use cases for what it should be, so thank you <@197499797408710656> <@71751123148484608> !
 
+[2026-05-22T02:19:16.409000+00:00] .s0uthpaw (id=1507206182350225459)
+    Wanna share? Here or <#1485392832154832906>
+    [reply to heartl1ne msg=1506642856071401576]
+

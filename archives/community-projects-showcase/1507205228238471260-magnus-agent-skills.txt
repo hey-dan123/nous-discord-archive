@@ -1,0 +1,165 @@
+# Thread 'magnus/agent-skills' in forum #community-projects-showcase
+# thread_id=1507205228238471260 forum_id=1316137596535177246
+# Started 2026-05-22T08:58:59.064283+00:00
+
+[2026-05-22T02:15:28.931000+00:00] magnus919 (id=1507205228238471260)
+    I make a lot of skills. I need to do a better job of sharing them. That's what this thread will keep track of.
+    
+    https://git.brandyapple.com/magnus/agent-skills
+    [attachment] IMG_2799.jpeg https://cdn.discordapp.com/attachments/1507205228238471260/1507205228590534667/IMG_2799.jpeg?ex=6a110dc1&is=6a0fbc41&hm=3e48fdb0a2379f7886ab2fbde2fa1419bbe89ee8500ca39289aeaa3beeec29f3&
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills
+
+[2026-05-22T02:16:12.681000+00:00] magnus919 (id=1507205411739275305)
+    The `/agent-skills` skill will... help you make skills that are compliant with agentskills.io specification.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/agent-skills
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/agent-skills
+
+[2026-05-22T02:23:33.081000+00:00] magnus919 (id=1507207258910625933)
+    and by special request ... <@575461682151686145> asked for this one. This is not the exact version that I use because my personal copy has evolved into something *personalized*. This is a clean room re-implementation of the `cli-builder`. My power move here is to point it at an OpenAPI spec and tell it to build me a CLI & skill that fully implement every endpoint on the API.
+    
+    I've found it's useful for some more advanced skills coming out of this one to suggest that it research tutorials for best practices otherwise the skills coming out of it can be more like a functional reference.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/cli-builder
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/cli-builder
+
+[2026-05-22T02:24:00.699000+00:00] .s0uthpaw (id=1507207374748909588)
+    Thank you so much 🙏
+
+[2026-05-22T02:24:33.819000+00:00] magnus919 (id=1507207513664262144)
+    now I have to look through my skills and find some more good ones. The Tempest Weather Station skill is really dope.
+    [reply to .s0uthpaw msg=1507207374748909588]
+
+[2026-05-22T02:25:20.633000+00:00] .s0uthpaw (id=1507207710016274454)
+    I have a use case with that which combines the /polymarket skill
+
+[2026-05-22T02:38:26.704000+00:00] magnus919 (id=1507211007037280446)
+    > When this skill is loaded, I become a virtual data architect — someone who's seen enough data platforms go wrong to recognize the patterns early. I don't wait for you to know the right questions. If you're not sure where to start, tell me and I'll run a discovery.
+    
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/data-architect
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/data-architect
+
+[2026-05-22T02:40:00.432000+00:00] magnus919 (id=1507211400160743525)
+    > Query live weather data from a WeatherFlow Tempest station. Supports REST API access to current conditions, forecasts, and history via the cloud, plus local UDP broadcast reception from your hub on the same LAN.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/tempest-cli
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/tempest-cli
+    [reply to .s0uthpaw msg=1507207710016274454]
+
+[2026-05-22T02:41:10.915000+00:00] magnus919 (id=1507211695787872256)
+    # Software Architecture Analysis — Codebase Reverse Engineering to Design Document
+    
+    ## When to Use
+    
+    - A reference implementation exists and you need to understand its architecture for design inspiration
+    - You need a PRD, design document, or specification for a system in the same problem space
+    - The output must be clean-room: zero source code samples copied from the reference codebase
+    - You're designing a system with different architectural constraints (local-first, privacy-first, self-hosted) than the reference
+    - You need to extract an implicit contract — the storage operations a codebase performs — to design a formal provider abstraction
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/software-architecture-analysis
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/software-architecture-analysis
+
+[2026-05-22T02:42:14.308000+00:00] magnus919 (id=1507211961677385889)
+    this is how I created a firecrawl-compatible <#1507053302431486162> without copying a single line of code.
+    [reply to magnus919 msg=1507211695787872256]
+
+[2026-05-22T02:49:53.589000+00:00] magnus919 (id=1507213888041648178)
+    # Systematic Debugging
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/systematic-debugging
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/systematic-debugging
+
+[2026-05-22T03:07:47.860000+00:00] magnus919 (id=1507218393860673566)
+    # jira-cli — Jira Issue Tracker from the Terminal
+    
+    Interact with Atlassian Jira Cloud via the REST API v3. Search issues, view details, create issues, add comments, list projects, and transition status.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/jira-cli
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/jira-cli
+
+[2026-05-22T03:13:39.891000+00:00] magnus919 (id=1507219870385963009)
+    # confluence-cli — Confluence Wiki from the Terminal
+    
+    Interact with Atlassian Confluence Cloud via the REST API. List spaces, browse pages, view page content with body, search with CQL, and create pages.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/confluence-cli
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/confluence-cli
+
+[2026-05-22T03:15:34.018000+00:00] magnus919 (id=1507220349069299874)
+    # forgejo-cli — Forgejo/Gitea Git Forge from the Terminal
+    
+    Interact with a self-hosted Forgejo or Gitea server via the REST API v1. List repositories, search, manage issues, and view pull requests.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/forgejo-cli
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/forgejo-cli
+
+[2026-05-22T03:30:49.414000+00:00] magnus919 (id=1507224188518137866)
+    # tmdb-cli — Movie & TV Discovery from the Terminal
+    
+    Search movies and TV shows by keyword, discover by genre/certification/rating/date, check trending and upcoming releases, browse genre lists, and view US certification ratings — all from TMDb's v3 API.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/tmdb-cli
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/tmdb-cli
+
+[2026-05-22T03:31:12.493000+00:00] magnus919 (id=1507224285318742067)
+    # openlibrary-cli — Book Metadata from Open Library
+    
+    Search books and authors, look up works and ISBNs, and fetch detailed metadata from the public Open Library API. No API key, no registration — just works.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/openlibrary-cli
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/openlibrary-cli
+
+[2026-05-22T03:31:34.966000+00:00] magnus919 (id=1507224379577204963)
+    # jellyfin-cli — Jellyfin Media Server from the Terminal
+    
+    Query recently added movies and TV episodes, search your media library, list libraries, check server info, and view library statistics — all from your Jellyfin server's REST API.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/jellyfin-cli
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/jellyfin-cli
+
+[2026-05-22T03:32:12.504000+00:00] magnus919 (id=1507224537022992505)
+    # ghost-cli — Ghost CMS from the Terminal
+    
+    Manage content on a Ghost CMS site: view site info, list and create posts and pages, manage tags — all via the Ghost Admin API (v5/v6).
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/ghost-cli
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/ghost-cli
+
+[2026-05-22T03:38:15.195000+00:00] magnus919 (id=1507226058259169302)
+    # arr-cli — Radarr + Sonarr Media Library Management
+    
+    Two CLIs, one skill wrapper. `radarr-cli` for movies, `sonarr-cli` for TV series. 
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/arr-cli
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/arr-cli
+
+[2026-05-22T03:48:45.026000+00:00] magnus919 (id=1507228699961851964)
+    # trakt-cli — Trakt.tv Media Discovery
+    
+    Discover trending, anticipated, and popular movies and TV shows from the terminal. Uses the Trakt.tv API v2 with a read-only Client ID — no user authentication required.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/trakt
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/trakt
+
+[2026-05-22T03:49:13.596000+00:00] magnus919 (id=1507228819793383475)
+    # transistor-cli — Transistor.fm Podcast Hosting
+    
+    Manage your Transistor.fm podcast shows, episodes, subscribers, and analytics from the terminal. Uses the Transistor.fm v1 REST API.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/transistor
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/transistor
+
+[2026-05-22T03:49:34.905000+00:00] magnus919 (id=1507228909169803364)
+    # peertube-cli — PeerTube Federated Video
+    
+    Browse videos, channels, and server info on any PeerTube instance. Search across the fediverse, list channels, check your account stats, and manage authentication — all from the terminal.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/peertube
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/peertube
+
+[2026-05-22T04:08:38.102000+00:00] magnus919 (id=1507233704085553227)
+    https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.1.0
+    [embed] v0.1.0 — Initial Release - magnus/agent-skills https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.1.0
+

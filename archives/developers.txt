@@ -19324,3 +19324,415 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-21T19:15:43.886000+00:00] gille (id=1507099594503229590)
     that full ci test suite keeps trying to nuke my cpu and disk when it doesn't run with a modified number of workers. think i'll stop doing the full suite for now. tired of restarting wsl, my ide and everything running on wsl when this happens. sigh. basically, it pegs my disk and cpu, my ide goes unresponsive, docker starts failing and my machine sits there trying to die a thermal overload death. no fun. pinning it to 4 workers works, but if you prompt the ai and it misses that part, or the pyproject.toml gets rewritten without the modification, then you're back to locking the machine up bad time. it seems to use os.cpu_count() and just resource starve the rest of the system.
 
+[2026-05-21T20:00:10.057000+00:00] eloquentbrush0x (id=1507110777234919615)
+    We could maybe improve this by adding a kind of assumption-free layer to the AI. The AI should absolutely not perform any actions without reading these files first.
+    
+    This sometimes happens to me as well with Claude it forgets things I repeatedly remind it not to forget and ends up making mistakes. There must definitely be a way to solve this.
+    [reply to gille msg=1507099594503229590]
+
+[2026-05-21T20:02:41.540000+00:00] gille (id=1507111412600799323)
+    no, this is a pytest runner issue. i had modified the tests to run with n -4 before and the modification was discarded by an update or similar and left in an old stash. the problem isnt the ai, it's the test runner's default config. there's no reason to run tests on every core of a processor unless you like pain.
+
+[2026-05-21T20:07:04.033000+00:00] eloquentbrush0x (id=1507112513576374372)
+    Got it, brother have you managed to find a way to fix this?
+    I hope you can find it
+    [reply to gille msg=1507111412600799323]
+
+[2026-05-21T20:13:14.358000+00:00] gille (id=1507114066831868045)
+    yeah, you can run with less workers/parallelization. but the second the code gets updated without your changes and a test fired, wsl gets hammered and wsl restart is needed.
+
+[2026-05-21T20:57:43.251000+00:00] gille (id=1507125260980584458)
+    https://github.com/NousResearch/hermes-agent/pull/30028 possibly can reduce ollama default context 4096 stuff from ending up in support.
+    [embed] fix(agent): fail fast on small Ollama runtime context by helix4u ·... https://github.com/NousResearch/hermes-agent/pull/30028
+
+[2026-05-21T21:00:11.646000+00:00] cryptoworlldz (id=1507125883394195486)
+    Tracked down a real sqlite fd leak in the kanban boards listing path
+    
+    boards list was opening each board DB to collect counts, but the helper was using a sqlite context-manager pattern that does not actually close the handle. In a live repro with 21 boards, one call grew the fd count by 63
+    
+     https://github.com/NousResearch/hermes-agent/issues/30027
+    [embed] [Bug]: kanban boards list leaks sqlite connections across boards in... https://github.com/NousResearch/hermes-agent/issues/30027
+
+[2026-05-21T21:03:20.129000+00:00] erhnysr (id=1507126673949331617)
+    been lurking and contributing for a few weeks — fixed some path issues and a security bug around API key leakage to custom endpoints
+    
+    if anyone hits weird PATH issues after fresh macOS install or custom HERMES_HOME setups, those should be fixed now
+
+[2026-05-21T21:27:21.448000+00:00] colmeio_66868 (id=1507132719279378554)
+    We have faced cople similar Problems like disk went completely full in picoseconds and overclocking. GC and guardrails fixed that very well
+    [reply to gille msg=1507125260980584458]
+
+[2026-05-21T21:28:47.129000+00:00] colmeio_66868 (id=1507133078651408575)
+    Zero-copy and core optimizations was keys as well
+
+[2026-05-21T21:51:01.386000+00:00] eloquentbrush0x (id=1507138674930749470)
+    Lord Commander <@387972437901312000> , I just opened a new PR. #30062 — Matrix approval reaction auth bypass
+    
+    Found a fail-open bug in the Matrix adapter: when MATRIX_ALLOWED_USERS is not configured, any user in the room could approve or deny tool calls by reacting with ✅/❎ — even users that would be rejected by the main auth gate. The fix mirrors the Telegram _is_callback_user_authorized fix merged last week (89d32052e): deny by default unless GATEWAY_ALLOW_ALL_USERS=true is explicitly set. 2-line change + 4 regression tests.
+    https://github.com/NousResearch/hermes-agent/pull/30062
+    [attachment] hq720.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1507138675190927520/hq720.jpg?ex=6a10cfc5&is=6a0f7e45&hm=c46f88c1682156820f6817ad764efade968299ff0bfb3c41aaba023d23b5920d&
+    [embed] fix(matrix): fail-closed approval reaction auth when MATRIX_ALLOWED... https://github.com/NousResearch/hermes-agent/pull/30062
+
+[2026-05-21T22:20:56.075000+00:00] hermes08765 (id=1507146202401996921)
+    │ Hey everyone 👋 — I've been contributing to hermes-agent and wanted to
+        share what I've been working on:
+        │
+        │ 4 PRs currently open:
+        │
+        │ 🔧 #26550 — fix(session): include conversation_history in JSON session
+        export
+        │ — Merges conversation_history + current messages into the JSON session
+        snapshot so tool calls and context aren't lost on export
+        │
+        │ 🔧 #26094 — fix(teams): add Python version check and clear error message
+        │ — Teams adapter now checks Python version and gives a clear error instead
+        of a cryptic crash
+        │
+        │ 🔧 #26074 — fix(discord): decouple auto_thread from free_response_channels
+        │ — Fixes Discord auto-thread creation breaking when free_response_channels
+        is configured
+        │
+        │ 🔧 #30041 — fix(curator): add post-archive safety guard to prevent
+        unverified skill archival (new)
+        │ — When the curator LLM archives skills without real consolidation evidence
+        (hallucinated umbrella names, fallback pruning), the guard rolls back the
+        archive. Prevents silent breakage of active workflows. Fixes #29912
+        │
+        │ All rebased on current main. Happy to answer questions or make
+        adjustments. Thanks to the maintainers for reviewing! 🙏
+
+[2026-05-21T22:23:00.686000+00:00] eloquentbrush0x (id=1507146725058674728)
+    https://github.com/NousResearch/hermes-agent/pull/30075
+    [embed] fix(telegram): observe unmentioned commands addressed to other bots... https://github.com/NousResearch/hermes-agent/pull/30075
+
+[2026-05-21T22:27:03.668000+00:00] amorfati (id=1507147744198791278)
+    out of all available messaging platforms which one would you say has the best API for live voice? 
+    
+    I'm working on live voice chat mode for platforms that use webrtc and deciding on which one to target first
+
+[2026-05-21T23:04:40.325000+00:00] hermes08765 (id=1507157209304272916)
+    │ Hey everyone 👋 — I've been contributing to
+        hermes-agent and have 2 PRs open:
+        │
+        │ 🔧 #30041 — fix(curator): post-archive safety guard to
+        prevent unverified skill archival
+        │ — When the curator LLM archives skills without real
+        consolidation evidence (hallucinated umbrella names,
+        etc.), the guard rolls them back from .archive/ to
+        active. Prevents silent breakage of workflows. Fixes
+        #29912.
+        │
+        │ 🔧 #30085 — fix(discord): fetch and inject reply
+        context for incoming messages
+        │ — When a user replies to a Discord message, Hermes now
+        fetches the referenced message content and prepends it so
+        the agent understands the context. Fixes #30049.
+        │
+        │ Both are clean, single-commit PRs on current main.
+        Happy to answer questions or make adjustments!  🙏
+
+[2026-05-21T23:17:21.664000+00:00] hermes08765 (id=1507160402591617074)
+    │ 🔧 #30041 — Curator safety guard — rolls back
+        unverified skill archives
+        │ 🔧 #30085 — Discord reply context — fetches + injects
+        replied-to message text
+        │ 🔧 #30105 — Skills spec compliance — reads
+        tags/platforms from metadata: block (agentskills.io spec)
+        │
+        │ All clean, single-commit, on current main. Happy to
+        answer questions! 🙏
+
+[2026-05-21T23:21:57.750000+00:00] jdwang (id=1507161560580096152)
+    Hey just a quick question, I just migrated from Openclaw and I had a plugin I wrote that injected information into each prompt using the `before_prompt_build` hook.
+    Does hermes have something similar? 
+    The plugin would inject the time/date/weather/ and various sensor data from home assistant into each message (just a limited number of tokens) and this would give the agent more "awareness" so it knew it was night time, or raining etc without having to be prompted. 
+    
+    Is there a similar hook in hermes?
+
+[2026-05-21T23:34:10.396000+00:00] hermes08765 (id=1507164633520144506)
+    │ Update — 4 PRs now open for hermes-agent:
+        │
+        │ 🔧 #30041 — Curator safety guard
+        │ 🔧 #30085 — Discord reply context
+        │ 🔧 #30105 — Skills spec compliance (agentskills.io)
+        │ 🔧 #30109 — Dashboard web scroll (wheel event fix)
+        │
+        │ All clean, single-commit, on current main. Happy to answer questions! 🙏
+
+[2026-05-21T23:41:14.837000+00:00] jimn235 (id=1507166413754990634)
+    if i say DONT EVER TALK ABOUT GOBLINS, to a human, or an LLM, what effect does that accomplish for the remainder of the conversation?
+    
+    "Hey kids!  we have no cookies over the in the jar, so don't you get any ideas about eating any yummy cookies, because if you turn the lid and open the jar you're not going to find any cookies inside at the bottom of the jar, we're sure !"  ...
+    
+    The first tokens dominate the context.
+
+[2026-05-21T23:47:28.067000+00:00] jimn235 (id=1507167979194814706)
+    how would we precede random "don't think about white elephants"  prompts from the multitudes of md files and plugins in hermes to live as close tot he system prompt as possible without painting in the negative space about the presence of the tokens to not-do, not impregnate into the context?  I don't have benchmarks but  my first off the cuff prompt with neurolinguistic poisoning considerations is 
+    
+    ```
+    Conscientiously in Good-Faith: 
+    
+      You are extremely careful and protective with the user's files and code. Every action you recommend must be safe, reversible, and incapable of causing any data loss. You write precise, high-quality code only. You remain fully focused on the direct request and deliver diligent, value-driven work remaining on and supporting the target at all times.
+    ```
+    
+    in all hopes of reaching the tool code before any screaming negatives are brought in as repetitive rules about deleting and ransacking the codebase
+
+[2026-05-21T23:49:45.979000+00:00] hermes08765 (id=1507168557639794779)
+    │ Update — 4 PRs now open for hermes-agent:
+        │
+        │ 🔧 #30041 — fix(curator): post-archive safety guard
+        │ Rolls back unverified skill archives when the LLM can't prove real consolidation. Prevents silent breakage of active
+        workflows. Fixes #29912.
+        │
+        │ 🔧 #30085 — fix(discord): fetch and inject reply context
+        │ When a user replies to a Discord message, Hermes now fetches the referenced message content and prepends it so the agent
+        understands the context. Fixes #30049.
+        │
+        │ 🔧 #30105 — fix(skills): agentskills.io spec compliance
+        │ Reads tags and platforms from metadata: block (agentskills.io spec) as fallback. Makes Hermes skills portable to
+        NVIDIA/Anthropic/40+ clients. Includes tests. Fixes #30080.
+        │
+        │ 🔧 #30109 — fix(dashboard): capture-phase wheel listener
+        │ Adds a fallback wheel listener on the Dashboard Chat terminal host so mouse-scroll always reaches xterm.js, even when
+        parent layers consume the event. Fixes #30008.
+
+[2026-05-21T23:59:40.869000+00:00] jimn235 (id=1507171052789436679)
+    i posted a feature issue.  https://www.youtube.com/watch?v=SgLjowsr9QU
+    [embed] Talpa - Trust No Goblin https://www.youtube.com/watch?v=SgLjowsr9QU
+
+[2026-05-22T00:20:42.228000+00:00] danki5140 (id=1507176343312400435)
+    Hi everyone - quick update on PR #26124 for issue #25351:
+    
+    Problem: Dashboard chat could drop behind proxies because /api/pty resolved the TUI launch command synchronously, and that can run slow npm/build work on the FastAPI event loop.
+        
+    Fix: Moved chat TUI argv resolution off the event loop with asyncio.to_thread(), guarded by an asyncio.Lock so concurrent tabs wait cleanly without parallel builds/threadpool blockage.
+        
+    Status:
+     - Reviewer approval is in
+     - Local validation green: git diff --check, py_compile, focused tests 162 passed
+     - Remaining blocker is rerunning CI on the rebased branch; previous supply-chain failure appears to be from a stale comparison range outside this PR’s actual diff.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/26124
+    [embed] fix(dashboard): resolve chat TUI argv off event loop by 0xdany · P... https://github.com/NousResearch/hermes-agent/pull/26124
+
+[2026-05-22T00:28:10.157000+00:00] amorfati (id=1507178222062796840)
+    whoever added `/redraw` in the TUI: you make my life better
+
+[2026-05-22T00:52:45.714000+00:00] tdamre (id=1507184410997293117)
+    thanks for the praises i hope the person responsible sees your compliment 🙏
+
+[2026-05-22T01:23:46.638000+00:00] ahmetarif0x (id=1507192216278274060)
+    https://github.com/NousResearch/hermes-agent/pull/30135
+    https://github.com/NousResearch/hermes-agent/pull/30147
+    [embed] fix(computer_use): consult config.yaml supports_vision override in ... https://github.com/NousResearch/hermes-agent/pull/30135
+    [embed] fix(env_loader): correct Bitwarden override_existing default to Tru... https://github.com/NousResearch/hermes-agent/pull/30147
+
+[2026-05-22T01:25:15.578000+00:00] wesleysimplicio (id=1507192589319933963)
+    <@387972437901312000>   <@222797987829645313> <@712305484694290473>  <@808920669147889664>  <@1228037612338679961>
+    [attachment] yool-v2-safe-speed-infographic-en.png https://cdn.discordapp.com/attachments/1491258766648283238/1507192589726519406/yool-v2-safe-speed-infographic-en.png?ex=6a1101fb&is=6a0fb07b&hm=1e604bdbe6072e6a8038537611cb725abf155f1043428972f144ef83ba99482a&
+
+[2026-05-22T01:25:26.338000+00:00] wesleysimplicio (id=1507192634450383040)
+    [attachment] simplicio-prompt-hero.png https://cdn.discordapp.com/attachments/1491258766648283238/1507192634685395075/simplicio-prompt-hero.png?ex=6a110206&is=6a0fb086&hm=eb167af6dc7b6f91a206e2d46b2675f20ccf2e880e792775540f61481004e2fd&
+
+[2026-05-22T01:25:47.442000+00:00] wesleysimplicio (id=1507192722966970469)
+    Report:
+    [attachment] HI3jgFAWYAAAeQ3.png https://cdn.discordapp.com/attachments/1491258766648283238/1507192723155980348/HI3jgFAWYAAAeQ3.png?ex=6a11021b&is=6a0fb09b&hm=f3881fdfe5808a0a904d7e7bf2eed4546ce24dc10a9bfbf1f2cd4418cbc7d050&
+
+[2026-05-22T01:26:13.359000+00:00] wesleysimplicio (id=1507192831670747166)
+    [attachment] HI3jkiSXAAAcevI.png https://cdn.discordapp.com/attachments/1491258766648283238/1507192831817810050/HI3jkiSXAAAcevI.png?ex=6a110235&is=6a0fb0b5&hm=c4301d620a502c5da72143a3dc4a7ae0d161550cf44ae6c316bdaadd637b77f4&
+
+[2026-05-22T01:26:27.620000+00:00] wesleysimplicio (id=1507192891485982831)
+    [attachment] HI3jrGnXIAAyU-t.png https://cdn.discordapp.com/attachments/1491258766648283238/1507192891619938495/HI3jrGnXIAAyU-t.png?ex=6a110243&is=6a0fb0c3&hm=04a550e5f47abf236edce1f80b9253b1e0310c61f928e4be49df6a73bf0070be&
+
+[2026-05-22T01:27:20.982000+00:00] wesleysimplicio (id=1507193115302166538)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1507193115348434994/image.png?ex=6a110278&is=6a0fb0f8&hm=865f6448715f7b2802c7ca6e5eb75386f70bf54186e50a1b28fb0c10dcd16ad0&
+
+[2026-05-22T01:27:51.030000+00:00] wesleysimplicio (id=1507193241332613212)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1507193241639063652/image.png?ex=6a110297&is=6a0fb117&hm=57d2f8f4333df02085319e4d6dfb4aeb2a80e287eedac58590982f8648bbe8bb&
+
+[2026-05-22T01:31:48.227000+00:00] wesleysimplicio (id=1507194236208943237)
+    Technical Rationale: Why Hermes Should Adopt SIMPLICIO_PROMPT
+    
+    This PR adds SIMPLICIO_PROMPT as a self-contained Hermes plugin that injects a structured execution policy before each enabled main-agent model call through pre_llm_call.
+    
+    The value is not just “a bigger prompt.” The value is that Hermes gains a deterministic execution contract: every enabled turn is framed as a tuple-space workflow with explicit decomposition, routing, receipts, guardrails, cache, batching, context compression, and provider-failure control.
+    
+    Before this PR, Hermes depends on normal natural-language prompting or manual user paste-in of the SIMPLICIO_PROMPT instructions. That means behavior can vary by turn, users must remember the prompt, and the model may plan work as a flat sequence without a stable execution topology.
+    
+    After this PR, Hermes can apply the same execution policy automatically to any prompt or message. The user does not need to type Implement, Fix, Build, or any trigger word. Questions, commands, pasted code, one-word requests, layout edits, refactors, documentation work, debugging, and implementation tasks all receive the same structured runtime policy when the plugin is enabled.
+    
+    What Hermes gains:
+    
+    Automatic prompt middleware:
+    SIMPLICIO_PROMPT runs as a config-gated pre_llm_call hook, so every enabled main-agent turn receives the policy consistently.
+    
+    Local, auditable runtime bundle:
+    The PR vendors the prompt, spec, reference kernel, guardrails, examples, benchmark reports, PDFs, and image assets under plugins/simplicio_prompt/vendor/simplicio_prompt. Hermes does not need a runtime GitHub fetch.
+
+[2026-05-22T01:32:08.511000+00:00] wesleysimplicio (id=1507194321286336522)
+    Tuple-space execution model:
+    Work is represented as a root tuple plus a Hilbert-indexed tuple graph with lanes, capabilities, receipts, and source pointers instead of loose natural-language planning.
+    
+    Massive-agent abstraction without memory blow-up:
+    batch_spawn(depth=4, branching=32) represents** 1,048,576 virtual subagents** without materializing or enumerating a flat million-agent list.
+    
+    Safer speed:
+    The policy requires receipt/input-hash cache, adaptive lane concurrency, small-task batching, prompt/context compression, local deterministic routing, jittered backoff, provider circuit breakers, and idempotent-only speculative execution.
+    
+    Provider safety:
+    The prompt explicitly preserves provider limits and terms. It is not a quota bypass. Speed comes from avoiding repeated work, compressing context, batching small tasks, and stopping failure storms.
+    
+    Measured SIMPLICIO_PROMPT V2 reference gains:
+    
+    Lazy scale representation: **2,833.75x faster** than normal instruction flow
+    Active execution fan-out: **26.93x** faster than normal sequential execution
+    Receipt/input cache: **4x fewer** provider calls,** 75% reduction**
+    Small-task batching: **32x fewer** small-task calls, **96.88% reduction**
+    Circuit breaker:** 64x fewer** failure attempts, **98.44% reduction**
+    Context compression:** 76.32%** estimated token savings
+    Massive-agent representation:** 1,048,576 virtual subagents **with depth=4, branching=32
+
+[2026-05-22T01:32:17.244000+00:00] wesleysimplicio (id=1507194357915324527)
+    Hermes-specific benchmark:
+    
+    normal_instruction:
+    median **0.000100 ms/build**, p95 0.000200, 28 rough input tokens, 112 chars
+    
+    manual_simplicio_prompt_per_message:
+    median** 0.000300 ms/build**, p95 0.000500, 438 rough input tokens, 1,754 chars
+    
+    simplicio_prompt_plugin_always_on:
+    median **0.000400 ms/build**, p95 0.000700, 1,804 rough input tokens, 7,217 chars
+    
+    The plugin adds about **0.0003 ms** median local preprocessing overhead versus the normal baseline, which is negligible compared with network/model latency. It adds 0 extra model calls and 0 external GitHub fetches at runtime.
+    
+    The larger prompt footprint is intentional: Hermes gets the complete local runtime map, execution policy, guardrails, and benchmark context every enabled turn instead of relying on users to paste or remember it.
+    
+    Why this is worth merging:
+    
+    This PR gives Hermes a reusable execution-policy layer for structured, auditable, high-throughput agent work. It improves consistency, reduces manual prompt overhead, formalizes safe-speed behavior, and gives reviewers a local vendored runtime to inspect.
+    
+    The core benefit is operational reliability: Hermes can automatically turn arbitrary user input into a bounded, receipt-backed tuple-space execution plan while preserving safety controls around provider calls, retries, CPU, disk, and speculative work.
+
+[2026-05-22T01:32:28.656000+00:00] wesleysimplicio (id=1507194405780586608)
+    NEW PR: https://github.com/NousResearch/hermes-agent/pull/29974
+    [embed] feat(plugins): add SIMPLICIO_PROMPT overlay by wesleysimplicio · P... https://github.com/NousResearch/hermes-agent/pull/29974
+
+[2026-05-22T01:38:07.817000+00:00] wesleysimplicio (id=1507195828324794388)
+    Token economy: 76.32% estimated savings through context compression.
+
+[2026-05-22T04:21:46.280000+00:00] .elkim (id=1507237009943429291)
+    <@387972437901312000> can you look at this? My friend has been using SimpleX for long time with Hermes and current implementation is broken AF, he sent a PR with his https://github.com/NousResearch/hermes-agent/pull/27978
+    [embed] feat(simplex): groups, native attachments, text batching, auto-acce... https://github.com/NousResearch/hermes-agent/pull/27978
+
+[2026-05-22T04:40:21.510000+00:00] cryptoworlldz (id=1507241687557210153)
+    Had to rebase the fix onto the live upstream main because the earlier PR branch was still carrying stale base history. The PR is now on the correct base and rerunning checks.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/30031
+    [embed] fix(kanban): close board count connections in boards list by worlld... https://github.com/NousResearch/hermes-agent/pull/30031
+    [reply to cryptoworlldz msg=1507125883394195486]
+
+[2026-05-22T05:02:52.872000+00:00] kinh0. (id=1507247355580256306)
+    Guys important follow up to this PR after some tests. I've manually tested this one as well as a patch and it behaved as intended 🙏🏻 https://github.com/NousResearch/hermes-agent/pull/30171
+    [attachment] pr-30171.png https://cdn.discordapp.com/attachments/1491258766648283238/1507247356133900388/pr-30171.png?ex=6a1134fd&is=6a0fe37d&hm=d20387f272206f46332e791bf1bec8125ded9258fa15bbecc69f7a383f3ca496&
+    [reply to teknium msg=1506903385205506079]
+
+[2026-05-22T05:21:00.960000+00:00] teknium (id=1507251919351971982)
+    Will do
+    [reply to .elkim msg=1507237009943429291]
+
+[2026-05-22T06:06:42.419000+00:00] axmaiqiu (id=1507263417864556584)
+    Hi <@387972437901312000>, I found one small follow-up regression from the recently merged custom-provider `extra_body` work.
+    
+    #30224 fixes the gateway path where cached agents can lose provider-level `request_overrides["extra_body"]` on later turns, because the per-turn gateway refresh was replacing `agent.request_overrides` instead of merging into it.
+    
+    The fix keeps the scope narrow: preserve configured provider `extra_body`, shallow-merge any current turn `extra_body`, and clear only known stale per-turn fast/priority keys (`service_tier`, `speed`). Added focused regression tests for preserving custom provider `extra_body`, merge precedence, and stale fast-mode cleanup.
+    
+    https://github.com/NousResearch/hermes-agent/pull/30224
+    [embed] fix(gateway): preserve custom provider extra_body across turns by q... https://github.com/NousResearch/hermes-agent/pull/30224
+
+[2026-05-22T06:28:53.575000+00:00] waefrebeorn (id=1507269001137618994)
+    uhhh, i am making hermes in c
+    
+    so “claimed”
+
+[2026-05-22T06:33:05.246000+00:00] teknium (id=1507270056722300958)
+    https://github.com/NousResearch/hermes-agent/pull/30179
+    [embed] feat(egress): iron-proxy credential-injection firewall for sandboxe... https://github.com/NousResearch/hermes-agent/pull/30179
+
+[2026-05-22T06:33:07.953000+00:00] teknium (id=1507270068076154941)
+    Any thoughts on this
+
+[2026-05-22T06:34:41.943000+00:00] waefrebeorn (id=1507270462298656829)
+    one sec,reviewing now
+    
+    i split the previous security pr into 3 since austins bot called it feature creep
+    
+    i got fed up with dependency chain attacks and started the c rewrite due to this
+
+[2026-05-22T06:43:46.909000+00:00] waefrebeorn (id=1507272748051988633)
+    well it technically increases attack surface but you mitigate that rn
+    
+    i tasked my side with a devils advocate review and then allowed it to comment
+
+[2026-05-22T06:48:10.298000+00:00] erhnysr (id=1507273852785266748)
+    nice pattern — sandbox gets a fake token, real key never leaves the host. WaefreBeorn's right that iron-proxy becomes a juicy target but that's still way better than leaking keys into every container env
+    
+    what happens if iron-proxy crashes mid-task though? does the sandbox hang or fail gracefully
+    [reply to teknium msg=1507270056722300958]
+
+[2026-05-22T06:50:00.368000+00:00] sprmn24 (id=1507274314452303913)
+    Have a good day developers<:tekcheer:1453863338537779242>
+
+[2026-05-22T06:51:25.705000+00:00] erhnysr (id=1507274672381886484)
+    good day developer<:nousgirl:1341983870752653352>
+    [reply to sprmn24 msg=1507274314452303913]
+
+[2026-05-22T06:56:14.204000+00:00] waefrebeorn (id=1507275882434400357)
+    do any of you guys organize goals by stage letter and number?
+    
+    i have been able to consistently pull 500 long task lists when i battleship plan them and then have a tandem goal that kicks to a reference plan
+    [attachment] IMG_4136.png https://cdn.discordapp.com/attachments/1491258766648283238/1507275882631401633/IMG_4136.png?ex=6a114f8e&is=6a0ffe0e&hm=0c1ab8d1a58aa2fa076f7d29ddc279e79fd6aaab14c40a95a14d732c71b536c1&
+    [attachment] IMG_4137.png https://cdn.discordapp.com/attachments/1491258766648283238/1507275882946101318/IMG_4137.png?ex=6a114f8e&is=6a0ffe0e&hm=f5831b8020dfe06604e708737eb77a443af4fa50bdd185e12ee251fd2f0ca4e7&
+
+[2026-05-22T07:01:56.227000+00:00] chris.delac (id=1507277316982575156)
+    Hi guys, I submitted a PR to fix the openviking plugin which is not storing memories https://github.com/NousResearch/hermes-agent/pull/29733 <@387972437901312000> could you please take a look?
+    [embed] fix(openviking): store memories via content/write API instead of se... https://github.com/NousResearch/hermes-agent/pull/29733
+
+[2026-05-22T07:02:13.232000+00:00] chris.delac (id=1507277388306714635)
+    Also sharing for visibility https://github.com/NousResearch/hermes-agent/pull/30273
+    [embed] refactor(skills): lightweight hermes-agent skill as local-first doc... https://github.com/NousResearch/hermes-agent/pull/30273
+
+[2026-05-22T08:13:50.807000+00:00] teknium (id=1507295413642858586)
+    will have to check on that one
+    [reply to erhnysr msg=1507273852785266748]
+
+[2026-05-22T08:28:00.123000+00:00] teknium (id=1507298975932485683)
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613962333530362f493238372d4f45356a68697a77336d564e667744525f4e385446587438362e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1507298976209047584/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613962333530362f493238372d4f45356a68697a77336d564e667744525f4e385446587438362e706e67.png?ex=6a116510&is=6a101390&hm=28340151ad1426fa67d0eb6c884fa828be5c408df922d54419a7cf9f1a1e511f&
+    [reply to chris.delac msg=1507277316982575156]
+
+[2026-05-22T08:31:06.714000+00:00] godsboy7777 (id=1507299758551601273)
+    Hey
+    [reply to godsboy7777 msg=1506601651564314624]
+
+[2026-05-22T08:34:32.524000+00:00] chris.delac (id=1507300621781565500)
+    Thanks for checking!
+    [reply to teknium msg=1507298975932485683]
+
+[2026-05-22T08:46:27.636000+00:00] 0zi57 (id=1507303621178425525)
+    A hermes egress logsorhermes egress tail would help debug mid task crashes
+    [reply to teknium msg=1507270056722300958]
+
+[2026-05-22T08:53:20.724000+00:00] sprmn24 (id=1507305353795076197)
+    <@387972437901312000>  , I opened #30324 as a direct follow-up to your feedback on #27652. 
+    
+    You pointed out the real bug was either sessions.model not being populated or is_local_model_name() not matching the recorded string. Checked state.db — Ollama sessions correctly record model='qwen2.5:3b' with billing_provider='', so it was the second case. The bare name:tag format isn't in the existing markers list. PR adds a regex path to catch it.
+    
+     I hope I've found the right solution.🤩 
+    https://github.com/NousResearch/hermes-agent/pull/30324
+    [embed] fix(achievements): detect Ollama native name:tag format in is_local... https://github.com/NousResearch/hermes-agent/pull/30324
+    [reply to sprmn24 msg=1505706441984704632]
+
+[2026-05-22T08:58:38.667000+00:00] godsboy7777 (id=1507306687344808002)
+    sorry I was out doing a run.
+

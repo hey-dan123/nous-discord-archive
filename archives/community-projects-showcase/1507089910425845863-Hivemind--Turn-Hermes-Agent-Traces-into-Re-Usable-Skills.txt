@@ -12,3 +12,10 @@
     deeplake.ai/hivemind
     [attachment] HIDBfkJaMAAbYB1.jpeg https://cdn.discordapp.com/attachments/1507089910425845863/1507089910820241428/HIDBfkJaMAAbYB1.jpeg?ex=6a10a25b&is=6a0f50db&hm=4a713eef2ee7cf39063675c3ec4737182840998984c0f5f50b4f0d57066b7a25&
 
+[2026-05-22T00:11:50.292000+00:00] mes_ninja (id=1507174112210981025)
+    Hermes comes packed with a similar thing already though, doesn't it?
+
+[2026-05-22T01:45:56.820000+00:00] jimpickens3203 (id=1507197795466219530)
+    Yeah I’m pretty sure this does no different
+    [reply to mes_ninja msg=1507174112210981025]
+

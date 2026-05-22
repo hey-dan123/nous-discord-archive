@@ -320,3 +320,18 @@
 [2026-05-21T16:36:37.236000+00:00] bloom9952 (id=1507059552950943764)
     Is this any good? Someone tested it?
 
+[2026-05-21T23:06:42.026000+00:00] spranab (id=1507157719755259964)
+    I can't comment on this since this is mine, but some folks over here are using it. Specificaly <@329427821208535040> has been really helpful to fix few bugs and creating the visualization dashboard. I can however provide the benchmarks:
+    
+    YantribDB paper: https://zenodo.org/records/18793952
+    Benchmark: 
+    
+    https://github.com/yantrikos/yantrikdb-server/tree/main/benchmarks/skill_recall
+    DOI: doi.org/10.5281/zenodo.20128887
+    
+    Core engine PyPi: https://pypistats.org/packages/yantrikdb
+    [embed] YantrikDB: A Cognitive Memory Engine for Persistent AI Systems https://zenodo.org/records/18793952
+    [embed] yantrikdb-server/benchmarks/skill_recall at main · yantrikos/yantr... https://github.com/yantrikos/yantrikdb-server/tree/main/benchmarks/skill_recall
+    [embed] PyPI Download Stats https://pypistats.org/packages/yantrikdb
+    [reply to bloom9952 msg=1507059552950943764]
+

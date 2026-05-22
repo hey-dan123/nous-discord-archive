@@ -1,0 +1,37 @@
+# Thread 'Looking for Feedback on a Hermes + Paperclip + Google Workspace Agent Setup for Legal Clients' in forum #community-projects-showcase
+# thread_id=1507169416217890927 forum_id=1316137596535177246
+# Started 2026-05-22T08:58:59.462392+00:00
+
+[2026-05-21T23:53:10.680000+00:00] chicho99. (id=1507169416217890927)
+    Hi everyone, I’m Pablo.
+    
+    I’m working on an automation project for a law firm in Guadalajara. The client liked using Hermes as the foundation, so I open-sourced the template as **We Law OS**:
+    
+    https://github.com/cuentadeservicio377-cell/we-law-open-source
+    
+    The goal is to turn a law firm’s knowledge, workflows, intake, document production, and team structure into an agentic legal operations system a lawyer can actually use.
+    
+    The architecture is:
+    
+    - the lawyer remains the firm owner / managing partner;
+    - Hermes acts as the managing partner reflection and orchestration layer;
+    - Paperclip acts as structured legal staff;
+    - Google Workspace is the familiar office surface;
+    - the dashboard is the human trust layer.
+    
+    The part I’m struggling with is integration quality. Hermes alone can produce strong legal documentation, especially when combined with Kami-style editorial/PDF rendering. But when I combine Hermes + Paperclip + autonomous worker delegation, the system is harder to control. Workers sometimes skip context, produce shallow outputs, or mark work done before the legal package is truly ready.
+    
+    So my main question is:
+    
+    **Am I overcomplicating the architecture?**
+    
+    Should Hermes remain the main orchestrator? Should Paperclip own more of the workflow, or only act as the org chart / staff ledger? Should I focus more on Hermes profiles, a stronger Legal Brain, stricter command packets, or deterministic validators around evidence maps, cross-document review, and final document rendering?
+    
+    I’m attaching a longer technical explanation with the full architecture and the problems I’m trying to solve.
+    
+    I’d really appreciate feedback from anyone working with Hermes, Paperclip, multi-agent systems, legal tech, document automation, Google Workspace automation, or agentic workflows.
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1507169416217890927/1507169416889106605/message.txt?ex=6a10ec66&is=6a0f9ae6&hm=74251e5e816c9b32378ff1f2d4d74e9e01a019d38c7c2cb5d7cfee76d79f4ebc&
+    [attachment] Generated_image_1.png https://cdn.discordapp.com/attachments/1507169416217890927/1507169417237237811/Generated_image_1.png?ex=6a10ec66&is=6a0f9ae6&hm=de47db821fa3be99d7b5a9f71519b537aaf75a9818fe618070c097b6066508c5&
+    [attachment] Screenshot_2026-05-21_at_5.52.38_p.m..png https://cdn.discordapp.com/attachments/1507169416217890927/1507169417568456705/Screenshot_2026-05-21_at_5.52.38_p.m..png?ex=6a10ec67&is=6a0f9ae7&hm=d4cbdfc966f5709d7f2d942417184403182ed6b50aaeb95e68f2d2887c78f146&
+    [embed] GitHub - cuentadeservicio377-cell/we-law-open-source: Open-source l... https://github.com/cuentadeservicio377-cell/we-law-open-source
+
