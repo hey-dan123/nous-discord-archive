@@ -8,3 +8,11 @@
 [2026-05-19T04:51:29.007000+00:00] neopabo (id=1506157323645620416)
     WAKEWORD-FORGE ~ a custom wakeword training system
 
+[2026-05-22T15:34:09.019000+00:00] neopabo (id=1507406219654991882)
+    Example (but still very rough, lacking polish)  implemenation for hermes-voice on linux:
+    https://github.com/H-Ali13381/okay-hermes-voice
+    [embed] GitHub - H-Ali13381/okay-hermes-voice: Always-on Okay Hermes wakewo... https://github.com/H-Ali13381/okay-hermes-voice
+
+[2026-05-22T18:22:58.954000+00:00] codename_11 (id=1507448707681882353)
+    Super cool! Following!!
+

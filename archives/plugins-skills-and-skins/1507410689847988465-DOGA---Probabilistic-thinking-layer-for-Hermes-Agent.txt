@@ -1,0 +1,15 @@
+# Thread 'DOGA - Probabilistic thinking layer for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1507410689847988465 forum_id=1485392832154832906
+# Started 2026-05-22T19:45:41.511552+00:00
+
+[2026-05-22T15:51:54.796000+00:00] 0zi57 (id=1507410689847988465)
+    A small thinking layer plugin i put together for Hermes. Nothing too ambitious, just gets the job done. Small steps 🙂
+    
+    • Detects user goals (Information / Understanding / Action) • Generates multiple scenarios before answering • Runs Monte Carlo simulation (10K-50K iterations, 0 LLM tokens) • Shows a [DOGA: Thinking Process] panel in responses
+    
+    Depth 1-5, /doga slash commands, simulate tool included. Plugin-based, no core changes. Any feedback appreciated.
+    
+    [github.com/0z1-ghb/doga-hermes](https://github.com/0z1-ghb/doga-hermes)
+    [attachment] DOGA.png https://cdn.discordapp.com/attachments/1507410689847988465/1507410690036465964/DOGA.png?ex=6a11cd1a&is=6a107b9a&hm=c13ed28082db6bf553819c4b85a4a770e346b785f162eab66885f2ecae762de6&
+    [embed] GitHub - 0z1-ghb/doga-hermes https://github.com/0z1-ghb/doga-hermes
+

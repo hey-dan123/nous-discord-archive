@@ -51,3 +51,7 @@
 [2026-05-14T13:23:58.682000+00:00] nihilys_14396 (id=1504474357802471565)
     Update: A brand new version with a refactored architecture has been released. It has been officially renamed as "soul link". The new version incorporates a long-term memory system and a context system, and the state machine has been refactored to retain only three major states. The new memory system can selectively inject important memories from the database as needed.
 
+[2026-05-22T18:00:51.223000+00:00] blue.torch (id=1507443138774433904)
+    Please share the personality description. I want to try this top 😂
+    [reply to zinkdifferent_49268 msg=1503100856227070083]
+

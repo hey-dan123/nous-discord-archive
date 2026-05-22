@@ -1,0 +1,53 @@
+# Thread 'Mozart' in forum #community-projects-showcase
+# thread_id=1507445237398769978 forum_id=1316137596535177246
+# Started 2026-05-22T19:42:06.265119+00:00
+
+[2026-05-22T18:09:11.574000+00:00] abdooou78 (id=1507445237398769978)
+    Hey everyone,
+    
+    I’m building an open-source project called Mozart.
+    
+    Mozart is not another LLM gateway.
+    
+    The idea is simple: most AI builders already use tools like OpenCode, OpenClaw, Hermes, Cursor, LiteLLM, OpenRouter, Ollama, local models, cloud providers, etc.
+    
+    But once you use multiple models/providers, the real pain becomes:
+    
+    - choosing the right model for each task,
+    - avoiding unnecessary premium calls,
+    - dealing with quotas and rate limits,
+    - keeping sensitive context local,
+    - switching providers without breaking workflows,
+    - understanding why a model was selected.
+    
+    Mozart is designed as a local conductor for AI agents.
+    
+    It integrates as a skill, tool, adapter or lightweight middleware into existing gateways/agents.
+    It does not try to replace gateways or duplicate what they already do.
+    
+    The core principle is:
+    
+    Gateways execute. Mozart decides.
+    
+    Mozart aims to:
+    
+    - detect your existing AI stack,
+    - read available providers/models from your current setup,
+    - route tasks based on cost, context, latency, privacy and quotas,
+    - protect sensitive context,
+    - explain every routing decision,
+    - work locally and transparently.
+    
+    The project is open-source and available here:
+    
+    https://github.com/ucav/mozart-router
+    
+    It’s still early, but the goal is to build something genuinely useful for agent builders.
+    
+    I’d love feedback from people working with agents, local/cloud models, gateways, routing, OpenCode/OpenClaw/Hermes-style workflows, or multi-provider setups.
+    
+    What would you expect from a tool like this?
+    
+    Powered by @DealsForge with love ❤️
+    [embed] GitHub - ucav/mozart-router: Local orchestration and routing for AI... https://github.com/ucav/mozart-router
+

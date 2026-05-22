@@ -163,3 +163,6 @@
     https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.1.0
     [embed] v0.1.0 — Initial Release - magnus/agent-skills https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.1.0
 
+[2026-05-22T17:08:48.343000+00:00] neopabo (id=1507430040466624614)
+    <@659176257338081306> For the cli-builder skill, isn't it best to write things to a /scripts folder alongside a SKILL.md? Unless you need things to be global (for other agents, human users, etc)
+

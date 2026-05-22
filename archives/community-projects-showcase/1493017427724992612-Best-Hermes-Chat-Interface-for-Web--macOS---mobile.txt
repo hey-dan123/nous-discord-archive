@@ -2607,3 +2607,11 @@
 [2026-05-22T00:45:09.906000+00:00] avidfuturist (id=1507182499199979660)
     Thanks for reporting, I'll take a look! 🙏
 
+[2026-05-22T16:14:12.476000+00:00] huhu1030 (id=1507416300484296815)
+    Release 107 fixed it ✅
+    [reply to huhu1030 msg=1506766384930095198]
+
+[2026-05-22T16:41:26.702000+00:00] avidfuturist (id=1507423154925211840)
+    Thanks for confirming, glad that did it!
+    [reply to huhu1030 msg=1507416300484296815]
+

@@ -19839,3 +19839,112 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Whenever you have a slot during your current push, could you take a quick look and merge it so we can get the complete fix in? Thanks!
     [embed] fix(secrets): align secrets_cli.py override_existing defaults with ... https://github.com/AhmetArif0/hermes-agent/pull/1
 
+[2026-05-22T15:18:13.622000+00:00] smartyi. (id=1507402212429529188)
+    Hey <@387972437901312000> , opened a QQBot platform bugfix PR — would appreciate a review when you get a chance: https://github.com/NousResearch/hermes-agent/pull/27944
+    
+    Found a batch of issues during integration testing (all already fixed in qqbot-agent-sdk, ported here to keep the in-tree adapter in sync):
+    
+    - Missing INTERACTION intent bit → approval button clicks silently dropped
+    - Video/file cache paths not exposed to LLM → media can't be sent back
+    - WebSocket op 7 (Server Reconnect) and op 9 (Invalid Session) completely ignored → ~40s message loss during QQ gateway maintenance
+    - Close code 4009 wrongly cleared session; fatal codes 4001/4002/4010-4014 missing
+    - Cached files named after CDN URL hashes instead of original filenames
+    - SILK magic byte detection off-by-one (`data[:5]` → `data[:6]` for `#!SILK`)
+    - Heartbeat not restarted after reconnect → stale sleep delays first heartbeat up to 41s, triggering 4009 timeout
+    - send_message tool returned "MEDIA delivery not supported for qqbot" for all media
+    
+    Also moved WS to a dedicated daemon thread (same pattern as the Feishu adapter) so heartbeat/reconnect never blocks the main gateway loop. 273 tests passing.
+    
+    ---
+    
+    Separately, following up on qqbot-agent-sdk — `tencent-connect` is now GitHub-verified ✓ and the 7-day exclude-newer window has long passed (PyPI resolves normally). As QQ Bot's official Python SDK, we'd love to see it adopted for the QQBot platform layer. This PR is a good example of why — these fixes already exist in the SDK, and keeping the in-tree adapter in sync manually is the maintenance burden it's designed to eliminate.
+    
+    Our team is happy to stay active in the community — reviewing and contributing to QQBot-related issues and PRs going forward. Let me know your thoughts 🙏
+    [embed] fix(qqbot): fix media send-back, interaction events, and WebSocket ... https://github.com/NousResearch/hermes-agent/pull/27944
+
+[2026-05-22T16:13:12.541000+00:00] zyrxtrx (id=1507416049098821734)
+    pushed two more PRs to fix a couple of bugs in the agent runtime and tools layout.
+    
+    Fixed a false-positive logic in the terminal backend requirements where an empty or blank DAYTONA_API_KEY was accidentally treated as valid. https://github.com/NousResearch/hermes-agent/pull/30447
+    
+    Fixed a toolset policy leak in agent_init where memory and context-engine tools were being injected even if they were explicitly defined in disabled_toolsets. https://github.com/NousResearch/hermes-agent/pull/30468
+    
+    
+    Whenever you have some cycles, I'd appreciate your thoughts or feedback on these. <@387972437901312000>
+    [embed] fix(terminal): require non-empty DAYTONA_API_KEY for daytona backen... https://github.com/NousResearch/hermes-agent/pull/30447
+    [embed] fix(agent): honor disabled_toolsets in memory/context-engine inject... https://github.com/NousResearch/hermes-agent/pull/30468
+    [reply to zyrxtrx msg=1507373541669077214]
+
+[2026-05-22T17:11:16.074000+00:00] tdamre (id=1507430660095348858)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/30521
+    [embed] perf(termux): fast-path cli version startup by adybag14-cyber · Pu... https://github.com/NousResearch/hermes-agent/pull/30521
+
+[2026-05-22T17:15:46.790000+00:00] waefrebeorn (id=1507431795560419348)
+    it went all night while i slept
+    
+    its now on O
+    
+    started on B
+    [attachment] IMG_4141.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1507431796013273108/IMG_4141.jpg?ex=6a11e0c2&is=6a108f42&hm=8f1127d06473be49dc6f2d3e9bb67bd87bf1c54673044ebfbfa44df22f265069&
+    [attachment] IMG_4148.png https://cdn.discordapp.com/attachments/1491258766648283238/1507431796537557195/IMG_4148.png?ex=6a11e0c3&is=6a108f43&hm=13008b0c783db2a6837458f01a020f0e1143f32598dd0be9fbd247cdad6fb8b3&
+    [reply to waefrebeorn msg=1507275882434400357]
+
+[2026-05-22T17:16:53.586000+00:00] waefrebeorn (id=1507432075723276432)
+    holy shit since it never stopped double token usage tho
+    [attachment] IMG_4149.png https://cdn.discordapp.com/attachments/1491258766648283238/1507432076008226968/IMG_4149.png?ex=6a11e105&is=6a108f85&hm=453ca9262eb5f1864894cbc0ebe1bbfffdb9ffa812381f8a6ec9c4f37c197f61&
+
+[2026-05-22T18:38:40.288000+00:00] ahmetarif0x (id=1507452655923105903)
+    #30543 — _model_flow_azure_foundry showed the API key prefix with no Bitwarden hint. Added format_secret_source_suffix("AZURE_FOUNDRY_API_KEY") to the confirmation line.
+    https://github.com/NousResearch/hermes-agent/pull/30543
+    
+    #30546 — COPILOT_GITHUB_TOKEN (the primary Copilot token var) was excluded from the Bitwarden label check. Added it to the {"GITHUB_TOKEN", "GH_TOKEN"} set.
+    https://github.com/NousResearch/hermes-agent/pull/30546
+    
+    #30549 — _prompt_api_key always checked api_key_env_vars[0] for the Bitwarden suffix. If BSM supplied a secondary var (e.g. GEMINI_API_KEY instead of GOOGLE_API_KEY), the label was silently dropped. Fixed to iterate all vars.
+    https://github.com/NousResearch/hermes-agent/pull/30549
+    [embed] fix(azure-foundry): surface Bitwarden source label in API key confi... https://github.com/NousResearch/hermes-agent/pull/30543
+    [embed] fix(copilot): include COPILOT_GITHUB_TOKEN in Bitwarden source labe... https://github.com/NousResearch/hermes-agent/pull/30546
+    [embed] fix(setup): check all api_key_env_vars for Bitwarden source label b... https://github.com/NousResearch/hermes-agent/pull/30549
+    [reply to ahmetarif0x msg=1507379220760887376]
+
+[2026-05-22T18:52:56.349000+00:00] cyber_prodigy_ (id=1507456246503178323)
+    Hey is anyone here looking at setting up a n8n connection/MCP for easy user setup? 
+    
+    I think that would be huge for this platform with how good it could be at working with a self hosted n8n instance in docker.
+    
+    Hermes is a monstrosity at Linux administration.
+
+[2026-05-22T18:53:10.802000+00:00] cyber_prodigy_ (id=1507456307123453973)
+    And I think it has the potential to manage an N8N connection framework better than Claude.
+
+[2026-05-22T19:06:15.161000+00:00] colmeio_66868 (id=1507459596963287050)
+    <@387972437901312000> <@416749362090213376> is your Hermes kernel using Json as runtime engine? Should go .HPB or semi-zero-copy
+
+[2026-05-22T19:13:54.729000+00:00] teknium (id=1507461524531318896)
+    no idk what you mrean there
+
+[2026-05-22T19:14:35.180000+00:00] teknium (id=1507461694194974900)
+    If you try it/use n8n + hermes lmk how it goes I'm kinda interested in mixing static workflows with hermes
+    [reply to cyber_prodigy_ msg=1507456246503178323]
+
+[2026-05-22T19:15:23.033000+00:00] cyber_prodigy_ (id=1507461894905135215)
+    For sure once I’m off I plan to experiment with this heavily.
+    [reply to teknium msg=1507461694194974900]
+
+[2026-05-22T19:17:09.471000+00:00] cyber_prodigy_ (id=1507462341338595359)
+    I already have the infra setup for it.
+    
+    I just need to play with wiring. It definitely can do it. 
+    
+    The question is how much of a pain in the ass will it be to make it work well 🤣
+    
+    But if I could do it once and make it easy, then pass it off for peer review that would be cool.
+
+[2026-05-22T19:41:15.826000+00:00] erhnysr (id=1507468407791157358)
+    solid batch of fixes — the heartbeat-not-restarting-after-reconnect one is nasty, 41s delay before first heartbeat triggering 4009 is exactly the kind of thing that's hard to catch without dedicated integration testing. moving WS to a daemon thread like Feishu makes sense, same problem space
+    [reply to smartyi. msg=1507402212429529188]
+
+[2026-05-22T19:41:58.867000+00:00] erhnysr (id=1507468588318064815)
+    the empty string check is the same class of bug as the OPENAI_API_KEY host-gate issue — credential validation that technically passes but shouldn't. good catch on the toolset leak too, disabled_toolsets being bypassed at agent_init is easy to miss
+    [reply to zyrxtrx msg=1507416049098821734]
+

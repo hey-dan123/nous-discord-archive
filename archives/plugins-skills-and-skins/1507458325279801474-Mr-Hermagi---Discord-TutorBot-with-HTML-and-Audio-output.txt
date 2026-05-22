@@ -1,0 +1,14 @@
+# Thread 'Mr Hermagi - Discord TutorBot with HTML and Audio output' in forum #plugins-skills-and-skins
+# thread_id=1507458325279801474 forum_id=1485392832154832906
+# Started 2026-05-22T19:45:40.993402+00:00
+
+[2026-05-22T19:01:11.968000+00:00] sahil_ss9 (id=1507458325279801474)
+    🧘 Just dropped MrHermagi-tutorbot — a Discord AI tutor that delivers daily lessons to a forum with HTML deep-dives and audio summaries. Pick any subject, define it in YAML, and it teaches you. Built on Hermes Agent.
+    
+        https://github.com/Sahil-SS9/MrHermagi-tutorbot
+    
+        MIT, free, do what you want with it.
+    
+    Hit the star and show some love if you like it.
+    [embed] GitHub - Sahil-SS9/MrHermagi-tutorbot: A Discord AI tutor bot — d... https://github.com/Sahil-SS9/MrHermagi-tutorbot
+

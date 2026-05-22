@@ -112,3 +112,7 @@
     
     Health and companion sync got major fixes too, including better sleep data, raw sleep details, workout handling, HealthKit stability, movement timelines, stay labeling, overlap handling, and iOS companion releases.
 
+[2026-05-22T18:34:43.998000+00:00] jodfie (id=1507451664851013825)
+    Do you have a TestFlight invite link for the iOS app or would I need to build it from the GitHub
+    [reply to _albertjames msg=1500562814257856734]
+

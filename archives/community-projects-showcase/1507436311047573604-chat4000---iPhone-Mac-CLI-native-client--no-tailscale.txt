@@ -1,0 +1,43 @@
+# Thread 'chat4000 - iPhone/Mac/CLI native client (no tailscale)' in forum #community-projects-showcase
+# thread_id=1507436311047573604 forum_id=1316137596535177246
+# Started 2026-05-22T19:42:07.304449+00:00
+
+[2026-05-22T17:33:43.366000+00:00] haimbender (id=1507436311047573604)
+    Built a fully native iPhone, Mac, and CLI chat client for Hermes — same conversation across every device, E2E encrypted, no account, free, open source.
+    
+    Think "iMessage for your AI agent."
+    
+    Action Button on iPhone: map it to chat4000 and one press from the lock screen jumps straight into chat — hold to dictate, release to send, or type instead. No unlock → find chat → tap → type.
+    
+    E2E-encrypted relay built in — no Tailscale, no port-forwarding to reach Hermes from anywhere. And you can run a regular VPN on your phone now — no more burning your VPN slot on Tailscale.
+    
+    Android, Windows, and Linux clients coming soon — waitlists open at https://chat4000.com/platforms
+    
+    🔗 Site: https://chat4000.com
+    📱 App Store: https://apps.apple.com/app/chat4000/id6763445283
+    💻 Hermes plugin: https://github.com/chat4000/chat4000-hermes-plugin
+    🐦 X: https://x.com/chat4000app
+    
+    What do you want to see next? Drop your asks in this thread — voice, file uploads, image gen, search, anything. Contributors welcome too, especially for the Android/Windows/Linux ports.
+    
+    🙏🏻🙏🏻❤️✨🌟💜🌈🦄🐧🎉🥳💖🍀🐰🌸
+    
+    
+    
+    .
+    [attachment] Screenshot_2026-05-22_at_19.17.25.png https://cdn.discordapp.com/attachments/1507436311047573604/1507436315476623510/Screenshot_2026-05-22_at_19.17.25.png?ex=6a11e4f8&is=6a109378&hm=b1908635ba352a876a021d7c269777184994b923d19a4345e5bbf4915ff4ee45&
+    [attachment] 4524b33e-31dc-4704-aad2-b93396d4f095.png https://cdn.discordapp.com/attachments/1507436311047573604/1507436317137702992/4524b33e-31dc-4704-aad2-b93396d4f095.png?ex=6a11e4f8&is=6a109378&hm=a8f03e512a08553e0290197a97f9a5d4685e7a384cd8ca033600d06c8db9e7a1&
+    [attachment] CleanShot_2026-05-22_at_19.17.44_22x.png https://cdn.discordapp.com/attachments/1507436311047573604/1507436317623980072/CleanShot_2026-05-22_at_19.17.44_22x.png?ex=6a11e4f8&is=6a109378&hm=35a3f9a260e65c7094917ab0e5670cd4db1fdf8f6cc6d41d67e008a683da52c0&
+
+[2026-05-22T17:36:58.517000+00:00] timestoper42 (id=1507437129570058240)
+    damn, i like the colors, installing this
+
+[2026-05-22T17:40:20.110000+00:00] dworfd (id=1507437975112253491)
+    Do /slash commands work including approvals? And some more info on how connection works if not on same LAN like from outside network access?
+
+[2026-05-22T17:43:35.293000+00:00] haimbender (id=1507438793769353388)
+    yeah slash commands work, do you need a feature that shows all of em?
+    
+    the connections go though the relay, all data is E2E encrypted with your key, generated on the plugin you install when u pair it
+    [reply to dworfd msg=1507437975112253491]
+
