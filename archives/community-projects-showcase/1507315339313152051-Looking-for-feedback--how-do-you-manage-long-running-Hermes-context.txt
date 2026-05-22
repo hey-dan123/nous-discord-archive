@@ -1,0 +1,48 @@
+# Thread 'Looking for feedback: how do you manage long-running Hermes context?' in forum #community-projects-showcase
+# thread_id=1507315339313152051 forum_id=1316137596535177246
+# Started 2026-05-22T14:35:27.748185+00:00
+
+[2026-05-22T09:33:01.457000+00:00] ha_nori (id=1507315339313152051)
+    Hey everyone..!!! 
+     I’ve been building something for my own Hermes workflow, and I’d love feedback from people who run longer agent tasks.
+    
+    The problem I kept running into is context continuity.
+    
+    When I work with an agent for a long time, pause, come back later, or split work across subagents, the chat is technically still there but the actual work context often gets blurry.
+    
+    Things like:
+    1.  decisions we already made
+    2.  criteria we agreed on
+    3.  prompts or skills that worked well
+    4.  handoffs to subagents
+    5.  why we chose one direction over another
+    
+    The tricky part is that even when the context is lost, the agent can still continue confidently — just not always in the same direction.
+    
+    So I started building Alexandria-Hermes.
+    prompts, skills, decisions, handoffs, memory compacts, and captured context that Hermes or other agents can recall later.
+    
+    The goal is not to build another autonomous agent runtime.
+    I’m trying to make AI collaboration less fragile when work spans multiple sessions, pauses, and handoffs.
+    
+    I also added a librarian idea:
+    if Hermes needs a skill or context that isn’t available yet, the librarian can help search, draft, or prepare candidates while Hermes keeps working.
+    
+    I built it first because I personally needed it  but I’m curious if this resonates with others here.
+    
+    I’d love to know:
+    1.   Do you run into this context-continuity problem too?
+    2.  How are you currently managing long-running Hermes workflows?
+    3.  How do you store prompts, skills, decisions, and handoffs today?
+    4.  Would something like this be useful in your workflow?
+    5.  What feels missing or unclear?
+    
+    thank you for read my write  
+    
+    thank you!
+    
+    Repo:
+    https://github.com/limhaneul12/alexandria-hermes
+    [attachment] alexandria-hermes-cover.png https://cdn.discordapp.com/attachments/1507315339313152051/1507315340097622086/alexandria-hermes-cover.png?ex=6a11744d&is=6a1022cd&hm=c5343324f8481ffe5e659f1240b6d701f35f6b750909d8e1d9eb4d282a2b0e94&
+    [embed] GitHub - limhaneul12/alexandria-hermes https://github.com/limhaneul12/alexandria-hermes
+

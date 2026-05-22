@@ -26,3 +26,8 @@
     [embed]  https://github.com/NousResearch/hermes-agent/pull/29526.
     [embed]  https://github.com/NousResearch/hermes-agent/pull/29526.
 
+[2026-05-22T10:14:16.540000+00:00] sahil_ss9 (id=1507325720563683359)
+    Hey team..... just pushed multi-language support to the prompt-optimizer plugin. If you type prompts in French, Arabic, Chinese, Spanish, etc., the optimizer now auto-detects the language and keeps the rewrite in the same language instead of translating to English. It uses langid under the hood with a fallback for non-Latin scripts.
+    
+        You'll need pip install langid if you want full coverage for all 97 languages. Without it, CJK/Arabic/Cyrillic etc. are still picked up via Unicode heuristics.
+

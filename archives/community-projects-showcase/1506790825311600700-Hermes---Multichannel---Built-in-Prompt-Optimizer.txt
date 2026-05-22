@@ -29,3 +29,23 @@
 [2026-05-21T17:55:07.458000+00:00] pipichan1499 (id=1507079309053919303)
     Does this plugin support multiple languages?
 
+[2026-05-22T09:42:38.625000+00:00] sahil_ss9 (id=1507317760131334214)
+    The original version didn't, however I'm just pushing changes for this should be up soon
+
+[2026-05-22T09:44:03.977000+00:00] sahil_ss9 (id=1507318118123442206)
+    What it covers
+    
+        | Language family                        | Detected by                                |
+        |----------------------------------------|--------------------------------------------|
+        | French, German, Spanish, Italian, etc. | langid                                     |
+        | Arabic, Urdu, Hebrew (RTL scripts)     | langid + Unicode heuristic                 |
+        | Chinese, Japanese, Korean              | langid + Unicode heuristic                 |
+        | Russian, Ukrainian (Cyrillic)          | langid + Unicode heuristic                 |
+        | Mixed-language prompts                 | langid returns dominant language           |
+        | Very short prompts (< 10 chars)        | langid still works; heuristic returns None |
+
+[2026-05-22T10:14:00.004000+00:00] sahil_ss9 (id=1507325651206803506)
+    Hey team...   just pushed multi-language support to the prompt-optimizer plugin. If you type prompts in French, Arabic, Chinese, Spanish, etc., the optimizer now auto-detects the language and keeps the rewrite in the same language instead of translating to English. It uses langid under the hood with a fallback for non-Latin scripts.
+    
+        You'll need pip install langid if you want full coverage for all 97 languages. Without it, CJK/Arabic/Cyrillic etc. are still picked up via Unicode heuristics.
+

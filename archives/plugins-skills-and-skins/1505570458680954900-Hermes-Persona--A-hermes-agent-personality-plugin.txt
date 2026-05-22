@@ -36,3 +36,10 @@
 [2026-05-19T04:39:17.700000+00:00] kai.xu (id=1506154256322007141)
     it's more of a real-time override of personality with time, conversion turn count awareness with expressional variations. and an update is incoming, stay tuned!
 
+[2026-05-22T13:03:08.706000+00:00] kai.xu (id=1507368217947934751)
+    new version ver 1.0 out! 
+    
+    --fullly configurable setup
+    --debug mode at no token cost (require PR #21235 which is pending review)
+    --fuzzy utility based expression vector system: let your agent feel your intention
+

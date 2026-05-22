@@ -335,3 +335,9 @@
     [embed] PyPI Download Stats https://pypistats.org/packages/yantrikdb
     [reply to bloom9952 msg=1507059552950943764]
 
+[2026-05-22T13:17:14.117000+00:00] bloom9952 (id=1507371763858673684)
+    I just told my agent to install it, i will come back with feedback, i tried Mnemosyne, but my agent said that your memory plugin/skill is better
+
+[2026-05-22T13:17:17.034000+00:00] bloom9952 (id=1507371776093589504)
+    So yeah
+

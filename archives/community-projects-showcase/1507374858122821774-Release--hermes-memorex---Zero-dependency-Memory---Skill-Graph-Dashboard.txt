@@ -1,0 +1,24 @@
+# Thread '🚀 Release: hermes-memorex — Zero-dependency Memory & Skill Graph Dashboard' in forum #community-projects-showcase
+# thread_id=1507374858122821774 forum_id=1316137596535177246
+# Started 2026-05-22T14:35:27.362661+00:00
+
+[2026-05-22T13:29:31.847000+00:00] somto8720 (id=1507374858122821774)
+    Hey everyone! 👋
+    
+    I noticed there's been a lot of demand for better memory visualization and observability tools for Hermes (specifically addressing the gaps mentioned in Issue #346), so I spent some time building a solution: hermes-memorex.
+    
+    It's a native, zero-dependency plugin that adds a premium local SPA dashboard for memory visualization and skill evolution tracking. I wanted to make sure it didn't bloat the core agent, so the backend is built entirely using Python's standard library.
+    
+    Key Features: 🧠 Knowledge Graph Explorer: A D3.js force-directed graph that parses MEMORY.md, USER.md, and SQLite databases to automatically extract entities and map their relationships. 📈 Skill Evolution Timeline: Parses Git diffs and Curator logs to build a visual timeline of the agent's self-authored skills and modifications. 🔍 Memory Search: Full-text semantic search engine with relevance scoring and highlight snippets.
+    
+    The backend daemon runs silently in the background, and the UI is responsive glassmorphism. It’s fully tested (100% pytest coverage) and ready to use!
+    
+    I just opened a PR to add it to the awesome-hermes-agent list here: https://github.com/0xarkstar/awesome-hermes-agent/pull/2
+    
+    You can check out the source code directly here: https://github.com/somto8720/hermes-memorex
+    
+    Would love to get your feedback on this! Let me know if you run into any issues trying it out or if there are specific memory abstractions you'd like to see visualized next.
+    [attachment] Screenshot_22-5-2026_142711_github.com.jpeg https://cdn.discordapp.com/attachments/1507374858122821774/1507374858541994135/Screenshot_22-5-2026_142711_github.com.jpeg?ex=6a11abbb&is=6a105a3b&hm=218cffcdb2cfb3653c12af12034ac1e6cdaa9b0464a183d811281e25060057d7&
+    [embed] docs: Add hermes-memorex plugin by somto8720 · Pull Request #2 · ... https://github.com/0xarkstar/awesome-hermes-agent/pull/2
+    [embed] GitHub - somto8720/hermes-memorex https://github.com/somto8720/hermes-memorex
+

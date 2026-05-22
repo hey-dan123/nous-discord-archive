@@ -19736,3 +19736,106 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-22T08:58:38.667000+00:00] godsboy7777 (id=1507306687344808002)
     sorry I was out doing a run.
 
+[2026-05-22T09:42:23.680000+00:00] chris.delac (id=1507317697447198740)
+    Submitted pr for another bug, but this one is related to memory injection https://github.com/NousResearch/hermes-agent/pull/30340
+    [embed] fix(openviking): fallback to content/read when search returns empty... https://github.com/NousResearch/hermes-agent/pull/30340
+    [reply to teknium msg=1507298975932485683]
+
+[2026-05-22T10:13:19.740000+00:00] colmeio_66868 (id=1507325482327212112)
+    Well done very proud!
+    [reply to wesleysimplicio msg=1507195828324794388]
+
+[2026-05-22T10:16:09.586000+00:00] colmeio_66868 (id=1507326194712838206)
+    There still couple things  more to add to V3 and so on that compounds.
+
+[2026-05-22T10:43:35.069000+00:00] heathley (id=1507333096368771152)
+    Opened a PR adding a WordPress plugin for Hermes covering site probe + post CRUD over the REST API.
+    If it lands, happy to follow up with media upload / featured image and taxonomy support.
+    
+    https://github.com/NousResearch/hermes-agent/pull/30367
+    [embed] feat(WordPress): Add WordPress plugin with site probe and post CRUD... https://github.com/NousResearch/hermes-agent/pull/30367
+
+[2026-05-22T10:59:58.711000+00:00] yoniebans (id=1507337222062473277)
+    thanks, the disk and load-time wins came from no longer writing sessions out twice and some changes to session search (removing llm summarisation and optimising how lookups are done). the db always had everything (aparts from th very early days); the json and jsonl files were duplicates. default is now db-only, the others opt-in. 
+    
+    on the hilbert thing... I'm not an expert on it, but my read is that putting "related" stuff next to each other on disk only helps if you already know what counts as related. figuring that out is the hard part. for things like archiving or cold storage it may be useful at scale, but for the day-to-day "find the right past memory" job, Hermes already has session_search, memory, and skills, and they cover most of what people need. 
+    
+    the bigger thing for me is what belongs in the core. Hermes core touches a lot of people, so anything we bake in there is something everyone has to live with. there's also a whole memory-provider ecosystem (mem0, honcho, supermemory, and others are already wired in as plugins) that exists exactly for people who want a different flavour of memory, without the rest of the user base having to carry it.
+    [reply to colmeio_66868 msg=1507011752393576498]
+
+[2026-05-22T11:36:25.059000+00:00] wesleysimplicio (id=1507346392270770247)
+    Measured SIMPLICIO_PROMPT V2 reference gains:
+    
+    Lazy scale representation: **2,833.75x faster** than normal instruction flow
+    Active execution fan-out: **26.93x** faster than normal sequential execution
+    Receipt/input cache: **4x fewer** provider calls,** 75% reduction**
+    Small-task batching: **32x fewer** small-task calls, **96.88% reduction**
+    Circuit breaker:** 64x fewer** failure attempts, **98.44% reduction**
+    Context compression:** 76.32%** estimated token savings
+    Massive-agent representation:** 1,048,576 virtual subagents **with depth=4, branching=32
+    [reply to colmeio_66868 msg=1507326194712838206]
+
+[2026-05-22T12:10:19.529000+00:00] heathley (id=1507354925456298135)
+    I also have a few additional PRs open in case maintainers have time to review them:
+    
+    Plugins / features
+    
+    https://github.com/NousResearch/hermes-agent/pull/23443
+    https://github.com/NousResearch/hermes-agent/pull/23447
+    https://github.com/NousResearch/hermes-agent/pull/27957
+    https://github.com/NousResearch/hermes-agent/pull/22484
+    https://github.com/NousResearch/hermes-agent/pull/22474
+    
+    Bug fixes
+    
+    https://github.com/NousResearch/hermes-agent/pull/24351
+    https://github.com/NousResearch/hermes-agent/pull/24341
+    https://github.com/NousResearch/hermes-agent/pull/23939
+    https://github.com/NousResearch/hermes-agent/pull/23934
+    https://github.com/NousResearch/hermes-agent/pull/23927
+    
+    Open to any feedback or changes. Thank you
+    [embed] feat(spotify): add save_to_spotify core upload toolset by heathley ... https://github.com/NousResearch/hermes-agent/pull/23443
+    [embed] feat(save_to_spotify): add Hermes auth wrapper and status guidance... https://github.com/NousResearch/hermes-agent/pull/23447
+    [embed] feat(plugin): add bundled build-macos-apps plugin for local macOS/X... https://github.com/NousResearch/hermes-agent/pull/27957
+    [embed] feat(feishu): best-effort normalize unsupported outbound videos to ... https://github.com/NousResearch/hermes-agent/pull/22484
+    [embed] feat(feishu): add opt-in reaction shortcuts by heathley · Pull Req... https://github.com/NousResearch/hermes-agent/pull/22474
+
+[2026-05-22T12:42:50.898000+00:00] loongfay (id=1507363110091227247)
+    Hi, <@387972437901312000> , This PR reconstructs the parsing and caching logic of media URLs. Please take a look when you have time. PS: What you said about #27425 was right.  👍 
+    https://github.com/NousResearch/hermes-agent/pull/30418
+    [embed] refactor(Yuanbao): consolidate media resolution into dedicated pipe... https://github.com/NousResearch/hermes-agent/pull/30418
+
+[2026-05-22T13:24:17.980000+00:00] zyrxtrx (id=1507373541669077214)
+    Hey <@387972437901312000> , just opened a quick PR to fix a security loophole on the webhook dynamic hot-reload path. Basically, INSECURE_NO_AUTH was bypassing loopback validation during runtime reloads, which could expose dynamic endpoints on public binds. Aligned it with the startup safety rails and threw in a regression test. Here's the link if you want to take a look https://github.com/NousResearch/hermes-agent/pull/30429
+    [embed] fix(webhook): enforce INSECURE_NO_AUTH safety rail on dynamic route... https://github.com/NousResearch/hermes-agent/pull/30429
+
+[2026-05-22T13:25:30.391000+00:00] anthonycodeinplace (id=1507373845382955018)
+    does it make sense to give an agent its own profile and compact memory?
+
+[2026-05-22T13:46:51.981000+00:00] ahmetarif0x (id=1507379220760887376)
+    Boss <@387972437901312000> , I made some adjustments. You can check them when you have time.
+    
+    #30409 — pairing.py: legacy-only pending entries no longer trigger lockout after hash migration
+    https://github.com/NousResearch/hermes-agent/pull/30409
+    
+    #30412 — file_safety.py: pairing/ directory now write-denied alongside mcp-tokens/
+    https://github.com/NousResearch/hermes-agent/pull/30412
+    
+    #30426 — aux-vision routing: cap element list before JSON serialization (parity with AX path)
+    https://github.com/NousResearch/hermes-agent/pull/30426
+    
+    #30433 — bedrock native auth: show "(from Bitwarden)" suffix when AWS key is BSM-injected
+    https://github.com/NousResearch/hermes-agent/pull/30433
+    
+    #30446 — tui: verbose thinking blocks now surface even when reasoning display is off
+    https://github.com/NousResearch/hermes-agent/pull/30446
+
+[2026-05-22T14:15:17.248000+00:00] dskwe. (id=1507386373168955413)
+    @ahmet Hey mate! Regarding your Bitwarden PR #30147, alt-glitch previously suggested merging my additional secrets_cli.py fixes into your branch.
+    
+    I've already opened a PR against your fork here: https://github.com/AhmetArif0/hermes-agent/pull/1
+    
+    Whenever you have a slot during your current push, could you take a quick look and merge it so we can get the complete fix in? Thanks!
+    [embed] fix(secrets): align secrets_cli.py override_existing defaults with ... https://github.com/AhmetArif0/hermes-agent/pull/1
+

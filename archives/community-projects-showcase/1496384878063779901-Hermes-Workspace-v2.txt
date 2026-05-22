@@ -498,3 +498,6 @@
 [2026-05-21T17:44:45.829000+00:00] marine88 (id=1507076701753049299)
     im facing some issues with workspace
 
+[2026-05-22T11:37:38.128000+00:00] seibakas (id=1507346698744107128)
+    does it have auto update ?
+

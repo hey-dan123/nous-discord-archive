@@ -27,3 +27,10 @@
     [attachment] ComfyUI_00256_.png https://cdn.discordapp.com/attachments/1505745986905968831/1505745987375861801/ComfyUI_00256_.png?ex=6a0bbeba&is=6a0a6d3a&hm=119217149fce3257b10a01900bd4ee96e2cc193aadf076b47f48563fc05059cf&
     [embed] GitHub - kenyonxu/hermes-persona: 🦊 Hermes Agent 人格注入引... https://github.com/kenyonxu/hermes-persona
 
+[2026-05-22T13:03:38.313000+00:00] kai.xu (id=1507368342128951527)
+    new version ver 1.0 out! 
+    
+    --fullly configurable setup
+    --debug mode at no token cost (require PR #21235 which is pending review)
+    --fuzzy utility based expression vector system: let your agent feel your intention
+

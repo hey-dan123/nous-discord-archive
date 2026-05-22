@@ -357,3 +357,10 @@
     Wanna share? Here or <#1485392832154832906>
     [reply to heartl1ne msg=1506642856071401576]
 
+[2026-05-22T12:36:10.079000+00:00] heartl1ne (id=1507361428934496338)
+    <@575461682151686145> <@323859322599768065> <@71751123148484608> <@209037396983939072> heres the skill my agent made, it creates cool animated eikons from just a single base image - https://github.com/lucassynnott/hermes-eikon-skills
+    [embed] GitHub - lucassynnott/hermes-eikon-skills: Private Hermes skills sh... https://github.com/lucassynnott/hermes-eikon-skills
+
+[2026-05-22T12:36:19.554000+00:00] heartl1ne (id=1507361468675526776)
+    needs fal.ai key
+
