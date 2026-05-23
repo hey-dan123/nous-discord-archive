@@ -507,3 +507,27 @@
 [2026-05-22T17:48:39.158000+00:00] marine88 (id=1507440068271411290)
     I think so the problem is on permission some lack of support
 
+[2026-05-23T00:41:56.941000+00:00] pluton0477 (id=1507544077711835147)
+    Hello guys, im new here.  is it possible to like have the full capability of Hermes Agent if i install it and control thru telegram?
+
+[2026-05-23T00:42:48.103000+00:00] pluton0477 (id=1507544292300951602)
+    Anyone here manage to direct install it thru Termux (F-droid)?
+    [reply to pluton0477 msg=1507544077711835147]
+
+[2026-05-23T01:15:13.760000+00:00] outsourc_e (id=1507552452977889340)
+    what do you need?
+    [reply to marine88 msg=1507439996280377436]
+
+[2026-05-23T01:15:26.041000+00:00] outsourc_e (id=1507552504488136744)
+    it has an update flow if not you can always ask your agent to update
+
+[2026-05-23T01:15:35.540000+00:00] outsourc_e (id=1507552544329826404)
+    sory guys im a solo dev on this and working on hermes world rn
+
+[2026-05-23T01:15:42.798000+00:00] outsourc_e (id=1507552574772088922)
+    ill be focused on workspace after this release
+
+[2026-05-23T01:31:16.276000+00:00] pluton0477 (id=1507556490062463136)
+    Anyone here manage to direct install it thru Termux (F-droid)?
+    [reply to pluton0477 msg=1507544077711835147]
+

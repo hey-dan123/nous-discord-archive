@@ -2615,3 +2615,10 @@
     Thanks for confirming, glad that did it!
     [reply to huhu1030 msg=1507416300484296815]
 
+[2026-05-23T01:48:36.456000+00:00] hydro._ (id=1507560852893601843)
+    Did you ever find a fix for this?
+    [reply to primco msg=1496399912571506728]
+
+[2026-05-23T01:49:02.819000+00:00] hydro._ (id=1507560963468038194)
+    I really want to continue using this but i just setup honcho self hosted so if it doesn't work I'm cooked :(
+

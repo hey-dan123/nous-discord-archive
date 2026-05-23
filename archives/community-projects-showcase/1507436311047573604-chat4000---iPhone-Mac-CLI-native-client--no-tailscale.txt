@@ -41,3 +41,6 @@
     the connections go though the relay, all data is E2E encrypted with your key, generated on the plugin you install when u pair it
     [reply to dworfd msg=1507437975112253491]
 
+[2026-05-22T19:58:52.662000+00:00] badbunny2222 (id=1507472840482492426)
+    was looking for this, tailscale fucks with my vpn
+

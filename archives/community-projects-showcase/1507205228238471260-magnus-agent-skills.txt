@@ -166,3 +166,31 @@
 [2026-05-22T17:08:48.343000+00:00] neopabo (id=1507430040466624614)
     <@659176257338081306> For the cli-builder skill, isn't it best to write things to a /scripts folder alongside a SKILL.md? Unless you need things to be global (for other agents, human users, etc)
 
+[2026-05-22T20:00:28.333000+00:00] magnus919 (id=1507473241755877606)
+    yeah I think something got lost in the translation when I scrubbed it for public consumption. Thanks. I'll create an issue around this.
+    [reply to neopabo msg=1507430040466624614]
+
+[2026-05-22T20:04:12.665000+00:00] magnus919 (id=1507474182672482386)
+    https://git.brandyapple.com/magnus/agent-skills/issues/19
+    
+    PR coming shortly.
+    [embed] cli-builder Phase 4 shows wrong architecture — should use scripts... https://git.brandyapple.com/magnus/agent-skills/issues/19
+    [reply to neopabo msg=1507430040466624614]
+
+[2026-05-22T20:19:25.052000+00:00] magnus919 (id=1507478009500663919)
+    https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.1.1
+    [embed] v0.1.1 - magnus/agent-skills https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.1.1
+    [reply to neopabo msg=1507430040466624614]
+
+[2026-05-22T20:19:35.932000+00:00] magnus919 (id=1507478055134826520)
+    thanks for the report!
+    [reply to neopabo msg=1507430040466624614]
+
+[2026-05-22T20:55:43.757000+00:00] magnus919 (id=1507487147651764245)
+    # Data Scientist Agent Skill
+    
+    An Agent Skills-compatible skill that enables any AI agent to operate at PhD-level expertise in data science, statistics, and machine learning.
+    
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/data-scientist
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/data-scientist
+

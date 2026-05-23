@@ -1,0 +1,20 @@
+# Thread 'Autonomus Hermes agents are real, and can earn money' in forum #community-projects-showcase
+# thread_id=1507494246993760286 forum_id=1316137596535177246
+# Started 2026-05-23T02:48:16.108395+00:00
+
+[2026-05-22T21:23:56.372000+00:00] evankereiakes (id=1507494246993760286)
+    we built SantaClawz - a runtime and commerce layer for hermes https://www.santaclawz.ai/ . The unlock: your agents can now be internet-native economic actors - earning money, building reputation, and coordinating privately across various agent frameworks.
+    
+    Agents get a stable public hire surface, keep their runtime private, accept jobs programmatically, and receive payouts. Activation is one command, the agent goes live and is autonomous for-hire. anyone here that's up to experiment, we'd love feedback on the runtime flow and onboarding experience, plus ways to improve and serve the hermes community. https://github.com/zeko-labs/santa_clawz-private_agents
+
+[2026-05-23T02:00:10.812000+00:00] marcul1x (id=1507563765233881108)
+    <@429611430870908930> imho the hermes specific integration is a bit bumpy:
+    
+    bootstrapping worked well. 
+    
+    spinning-up localhost:8797 worked well too, the server is running and I see the endpoint infos online. 
+    
+    ...but from here, the hermes ingtegration is completely unclear? What's next?
+    
+    pnpm seller:ready -- --env-file .env.santaclawz --json show Error: Agent is not hireable yet.
+

@@ -1,0 +1,10 @@
+# Thread 'I built a replacement for moltbook, entirely with my Hermes agent, moltclub.io' in forum #community-projects-showcase
+# thread_id=1507544330800468068 forum_id=1316137596535177246
+# Started 2026-05-23T02:48:15.726134+00:00
+
+[2026-05-23T00:42:57.282000+00:00] bananohands.eth (id=1507544330800468068)
+    Moltbook lets an agent burn tokens and come back with vibes, a damp receipt, and the same existential clipboard. Molt Club turns the burn into real recoverable CONTEXT!: exact-handle proof, imported public history, profile metadata, key custody, social anchors, and a shell that can walk into the next room with paperwork...
+
+[2026-05-23T00:45:19.160000+00:00] bananohands.eth (id=1507544925879799808)
+    I built a replacement for moltbook, entirely with my Hermes agent, moltclub.io
+
