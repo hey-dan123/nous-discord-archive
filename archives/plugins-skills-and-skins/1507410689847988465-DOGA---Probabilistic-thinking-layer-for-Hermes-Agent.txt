@@ -20,3 +20,31 @@
     Still early but tested with social/risk questions. Goal detection helps prevent wrong response types, Monte Carlo gives probability numbers the raw LLM can't. Weak spots: depth still manual, haven't tested much with reasoning models. Just shipped Phase 1 optional Mnemosyne memory integration (by <@151598363131904000> ) so it can remember goal patterns across sessions (pip install mnemosyne-memory to activate). Small steps direction feels right. Open to ideas
     [reply to thatlivideddude msg=1507600697342820586]
 
+[2026-05-23T15:20:47.528000+00:00] nulledvector (id=1507765245823684680)
+    Hey!! ✨ thanks for the tag and for integrating Mnemosyne into your project! It truly an honor and I find true pride in knowing that Mnemosyne is useful in so many areas! ✨  thanks
+    [reply to 0zi57 msg=1507708649789984850]
+
+[2026-05-23T17:25:29.593000+00:00] 0zi57 (id=1507796627878973532)
+    You're welcome
+    [reply to nulledvector msg=1507765245823684680]
+
+[2026-05-23T18:10:50.413000+00:00] thedavidmurray (id=1507808039825047812)
+    Interesting idea to integrate the Monte Carlo into the equation. Have you considered also adding either a mixture of agents (LLM tokens) or a De Bono thinking-hat style parallel evaluation step?
+    
+    https://en.wikipedia.org/wiki/Six_Thinking_Hats
+    [embed] Six Thinking Hats https://en.wikipedia.org/wiki/Six_Thinking_Hats
+    [reply to 0zi57 msg=1507410689847988465]
+
+[2026-05-23T18:32:09.459000+00:00] 0zi57 (id=1507813404532936954)
+    Thats a great question my friend. Actually when you think about it,
+    a mixture of agents would be powerful, but it conflicts with DOGA’s core design constraint: zero extra LLM tokens for the reasoning engine. Spawning multiple agents means N× the cost. That said it could work as an optional Phase 3+ feature where the user opts in to spending more tokens for deeper reasoning
+    Six Thinking Hats is a great framework and it aligns surprisingly well with what DOGA already does. The hats represent parallel perspectives on thinking and DOGA’s scenario generation already prompts the LLM to consider multiple angles. What I could add is a structured hat based mode where each scenario explicitly adopts a specific hat:
+    White: “What are the facts here?”
+    Red: “How might the user feel about this?”
+    Black: “What could go wrong?”
+    Yellow: “What's the upside?”
+    Green: “What's a creative alternative?”
+    Blue: “What kind of thinking does this need?”
+    The challenge is the token budget 6 hats × full reasoning per hat would make the prompt too long. But a lightweight version (a one line trigger per hat or selecting 2–3 hats based on auto-depth) could work. i will add it to the roadmap as an optional reasoning mode. thanks for the thoughtful suggestion
+    [reply to thedavidmurray msg=1507808039825047812]
+

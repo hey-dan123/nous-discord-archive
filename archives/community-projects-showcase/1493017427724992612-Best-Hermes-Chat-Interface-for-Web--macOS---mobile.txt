@@ -2622,3 +2622,7 @@
 [2026-05-23T01:49:02.819000+00:00] hydro._ (id=1507560963468038194)
     I really want to continue using this but i just setup honcho self hosted so if it doesn't work I'm cooked :(
 
+[2026-05-23T14:11:51.943000+00:00] avidfuturist (id=1507747899923103858)
+    I’d try it again, let me know if it’s still an issue. I applied a few fixes back then and I wasn’t able to easily reproduce it after that
+    [reply to hydro._ msg=1507560963468038194]
+

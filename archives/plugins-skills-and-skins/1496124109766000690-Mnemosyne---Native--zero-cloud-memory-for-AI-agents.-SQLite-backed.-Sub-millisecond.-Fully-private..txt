@@ -1035,3 +1035,26 @@
 [2026-05-23T10:10:57.671000+00:00] 0xlfg (id=1507687274312110241)
     Hows everyone experience with this tool vs gbrain?
 
+[2026-05-23T13:25:27.595000+00:00] 0xlfg (id=1507736221521281025)
+    Like to get more feedback before using as well. Any thots
+    [reply to oberonskiiv6 msg=1506723461991759874]
+
+[2026-05-23T15:48:22.782000+00:00] oberonskiiv6 (id=1507772188462415914)
+    I feel like any memory system ive tried just created more bloat and made hermes unusuable
+    [reply to 0xlfg msg=1507736221521281025]
+
+[2026-05-23T15:57:23.203000+00:00] excessivelysalty (id=1507774455152115783)
+    I like Mmemosyne the most so far out of all the memory systems I’ve tried.  Feels the least bloated and I don’t need to mess around with Docker or anything else.
+    
+    I haven’t tried gbrain though so can’t really compare with that.
+
+[2026-05-23T16:04:56.694000+00:00] nulledvector (id=1507776357231235153)
+    To be true to you guys I think it was recently I gotten feedback someone felt Mnemosyne was being too redundant with memories, but honestly that's the only feedback I have received... But we are doing extremely well with issues and PRs so if you find anything uncomfortable we will take a look at it promptly
+
+[2026-05-23T16:16:26.120000+00:00] nulledvector (id=1507779248893591592)
+    We also iterate fast on versions (some people might find that annoying 🥲🤣) but just making sure everything is corrected and addressed promptly and so we take care of issues appropriately so we keep enjoying the best experience with Mnemosyne instead of drowning in bugs and inconveniences! ✨ 🎉 🙏
+
+[2026-05-23T19:02:21.305000+00:00] excessivelysalty (id=1507821003965861899)
+    I actually asked my agent, and they told me to roll with both Mnemosyne & gbrain simultaneously because Mnemosyne is a memory system while gbrain is the knowledgebase.
+    [reply to 0xlfg msg=1507687274312110241]
+

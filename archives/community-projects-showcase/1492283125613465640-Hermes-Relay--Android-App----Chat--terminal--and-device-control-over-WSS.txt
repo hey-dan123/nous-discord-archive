@@ -139,3 +139,6 @@
 [2026-04-30T12:53:51.460000+00:00] oabdulnaby (id=1499393347645603900)
     Finally Installed it on my mobile, Play protect was stopping the install, had to disable it first
 
+[2026-05-23T16:42:43.884000+00:00] praveenjoseph (id=1507785866515447829)
+    can you share me the playstore link?
+

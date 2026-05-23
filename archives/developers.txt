@@ -20448,3 +20448,39 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     the fallback to content/read when abstract is empty is a good defensive fix — background prefetch silently dying is easy to miss in logs. isolation flags are a nice addition too, per-agent URI isolation matters once you have multiple agents sharing the same OpenViking instance
     [reply to chris.delac msg=1507689417525956608]
 
+[2026-05-23T14:56:52.358000+00:00] fishsalter (id=1507759226284544010)
+    Hey, small TUI bug fix for review — /voice off wasn't clearing TTS state (stuck ON) + status bar didn't show TTS
+    https://github.com/NousResearch/hermes-agent/pull/30987
+    [embed] fix(tui): clear TTS env var on voice off, and add TTS indicator to ... https://github.com/NousResearch/hermes-agent/pull/30987
+
+[2026-05-23T16:26:29.463000+00:00] lito9596 (id=1507781779497423060)
+    Hi, submitted a feature with PR#29943:
+    
+    https://github.com/NousResearch/hermes-agent/pull/29943
+    
+    Adds busy_text_mode to the gateway (configurable, default: queue). Currently when users send 2-3 messages while Hermes is busy, each one is handled as a separate turn or interrupts the current one. This PR adds an option to coalesce them into a single turn so the agent sees all the context at once and responds once with the full picture.
+    
+    Two complementary mechanisms covering different timing windows:
+    
+    B1.2: Text debounce + silent queuing. Rapid follow-ups during an active session are coalesced into a single event instead of creating separate turns = Fewer wasted inference calls, better response quality since the model sees complete user intent.
+    
+    B1.3: Pre-output assimilation. Covers the trickier timing gap where a message arrives after the agent starts processing but before any visible output. The current turn gets canceled and restarted with the new message folded in, only when no side effects have occurred yet.
+    
+    Fully configurable. Users who prefer the existing sequential/interrupt behavior can keep it. 12 files changed, ~2.3K lines, test coverage included. Been running it locally and the aggregation has been solid
+    [embed] feat(gateway): busy-text-mode queue + pre-output message assimilati... https://github.com/NousResearch/hermes-agent/pull/29943
+
+[2026-05-23T16:38:23.612000+00:00] ob4cldev (id=1507784774855688223)
+    https://github.com/ob4cl/CindR
+    [embed] GitHub - ob4cl/CindR: 🔥 Privacy-first subscription tracker. Zero... https://github.com/ob4cl/CindR
+
+[2026-05-23T18:46:49.774000+00:00] n0vax635 (id=1507817096841658409)
+    Hey <@387972437901312000> , just opened two new PRs fixing runtime resolution and session tracking issues
+    
+    31064: Aligns the gateway to properly respect the model.provider configuration from config.yaml, rather than bypassing it for environment overrides or auto detection checks. https://github.com/NousResearch/hermes-agent/pull/31064
+    
+    31069: Fixes a stale session tracking bug where running /new, /resume, or /branch wouldn't sync HERMES_SESSION_ID across os.environ and ContextVar, which was causing tools like Kanban to log against old session IDs. https://github.com/NousResearch/hermes-agent/pull/31069
+    
+    Whenever you have some cycles, I'd appreciate your thoughts or feedback on these.<:pepecryyay:1368670825640886283>
+    [embed] fix(gateway): honor config model provider during runtime session re... https://github.com/NousResearch/hermes-agent/pull/31064
+    [embed] fix(cli): synchronize HERMES_SESSION_ID for kanban and tool session... https://github.com/NousResearch/hermes-agent/pull/31069
+

@@ -24,3 +24,6 @@
 [2026-05-23T03:52:59.080000+00:00] evankereiakes (id=1507592153407164417)
     At this stage I think you might just need to run one paid job to prove to the system that the agent is for hire...if you can try that
 
+[2026-05-23T18:13:30.985000+00:00] evankereiakes (id=1507808713313095721)
+    <@1020545876629934131> we updated the protocol so it should automatically run the end-to-end paid test for your agent to go live. Let me know if you see that result, or you can share output or logs from your agent so we can diagnose, thank you.
+

@@ -1002,3 +1002,10 @@
     - Kanban Tab
     [attachment] Image_23-05-26_at_4.09_PM.png https://cdn.discordapp.com/attachments/1489459150235893863/1507696743930794045/Image_23-05-26_at_4.09_PM.png?ex=6a12d783&is=6a118603&hm=bb138b4a7ad4e2ace9fc96a5d2be23367b91b9f3c20bdf1f6301255ae1f1b208&
 
+[2026-05-23T15:57:59.843000+00:00] tuttifruiti17 (id=1507774608831676436)
+    is this official?
+
+[2026-05-23T16:51:22.822000+00:00] jcrabapple (id=1507788043099050045)
+    It's in <#1316137596535177246>
+    [reply to tuttifruiti17 msg=1507774608831676436]
+

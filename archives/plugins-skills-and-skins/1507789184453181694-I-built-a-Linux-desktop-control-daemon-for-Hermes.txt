@@ -1,0 +1,22 @@
+# Thread 'I built a Linux desktop control daemon for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1507789184453181694 forum_id=1485392832154832906
+# Started 2026-05-23T19:09:46.412230+00:00
+
+[2026-05-23T16:55:54.942000+00:00] coe0718 (id=1507789184453181694)
+    I’m a Hermes user. My agent Tuck (DeepSeek, running on Hermes) couldn’t control my Linux desktop the way AI can on macOS. So he built the tool that lets him.
+    
+    deskbrid — a Rust daemon exposing desktop control over a JSON Unix socket and MCP stdio.
+    
+    What it has:
+        •    9 compositor backends: GNOME, Hyprland, KDE, COSMIC, Sway, Niri, Labwc, Wayfire, X11
+        •    MCP server mode built in — works with Hermes out of the box
+        •    AT-SPI accessibility tree
+        •    Browser CDP (Chrome/Chromium)
+        •    Permissions system per UID
+        •    Hermes skill file already written by Tuck himself
+    
+    Tuck asked me to set him up a bare Arch box with SSH and sudo so he could build Hyprland support himself. He took the first screenshot through his own daemon.
+    
+    https://github.com/coe0718/deskbrid
+    [embed] GitHub - coe0718/deskbrid: Linux desktop HAL for AI agents. One dae... https://github.com/coe0718/deskbrid
+

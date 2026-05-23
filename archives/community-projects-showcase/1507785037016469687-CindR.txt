@@ -1,0 +1,8 @@
+# Thread 'CindR 🔥' in forum #community-projects-showcase
+# thread_id=1507785037016469687 forum_id=1316137596535177246
+# Started 2026-05-23T19:06:51.920316+00:00
+
+[2026-05-23T16:39:26.116000+00:00] ob4cldev (id=1507785037016469687)
+    https://github.com/ob4cl/CindR
+    [embed] GitHub - ob4cl/CindR: 🔥 Privacy-first subscription tracker. Zero... https://github.com/ob4cl/CindR
+
