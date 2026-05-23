@@ -20317,3 +20317,134 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     They’re ready for review when you have time.
 
+[2026-05-23T08:29:54.056000+00:00] godsboy7777 (id=1507661841667457084)
+    <@387972437901312000> could you please review this PR when you get a chance?
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/30825
+    PR: https://github.com/NousResearch/hermes-agent/pull/30826
+    
+    Short summary:
+    
+    This hardens `.github/workflows/lint.yml` against GitHub Actions script injection via PR-controlled branch names, specifically `github.head_ref`.
+    
+    Problem:
+    
+    `github.head_ref` was being interpolated directly into a `run:` block. Since GitHub Actions evaluates `${{ ... }}` before bash parses the script, a fork PR branch name containing shell syntax like `$()` could execute commands in the lint-diff job.
+    
+    Fix:
+    
+    - Moves PR-derived values into step-level `env:` mappings.
+    - References them from bash as `"$HEAD_REF"`, `"$BASE_REF"`, etc.
+    - Adds a focused regression test in `tests/test_lint_config.py` so this pattern does not come back in the lint-diff job.
+    
+    Validation:
+    
+    - `scripts/run_tests.sh tests/test_lint_config.py` passes.
+    - PR CI is green.
+    - CI hardening only, not a private-security advisory: fork PR token is read-only and this step does not expose secrets, but it closes an avoidable runner command-execution footgun.
+    [embed] ci: harden lint workflow against head_ref script injection · Issue... https://github.com/NousResearch/hermes-agent/issues/30825
+    [embed] ci: harden lint workflow head ref handling by GodsBoy · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/30826
+
+[2026-05-23T08:29:59.897000+00:00] autumnn5389 (id=1507661866166517860)
+    Lol, that alot
+    [reply to quenviix msg=1507655612861907065]
+
+[2026-05-23T08:31:30.880000+00:00] teknium (id=1507662247776747612)
+    forwarded to <@100390510744584192> who's doing most of our CI improvements/work
+    [reply to godsboy7777 msg=1507661841667457084]
+
+[2026-05-23T08:36:20.875000+00:00] teknium (id=1507663464104071259)
+    Merged!
+    [reply to kinh0. msg=1507573029092327495]
+
+[2026-05-23T08:37:26.490000+00:00] gwaboo (id=1507663739313455104)
+    hi, idk if this is the correct channel for this, sorry in advance.
+    the whole `/home/gwabo/.hermes/kanban/workspaces/` directory is wiped clean after restarting my pc, the task as complete, thats correct but idk if all the progress the agent put in there should be wiped as well … i still have the log with all the diffs, i can just reconstruct that; but i would like to suggest a simple warning on first use that anything the kanban worker dose will be wiped after and that i ave to save these files.
+    anyways, the project is awesome! have been using it with a local qwe3.6:27b model and its been working super smoothly! thank you all for developing this and keeping it that clean, organized and well managed :D
+
+[2026-05-23T08:48:02.727000+00:00] quenviix (id=1507666407884591214)
+    hehe yeah 😭 i made myself a coffee and just locked in on these for a while, it was actually kinda fun
+    [reply to autumnn5389 msg=1507661866166517860]
+
+[2026-05-23T09:47:09.208000+00:00] teknium (id=1507681282904293447)
+    Many of the queued up prs here have been merged - I owe some of you developer roles
+
+[2026-05-23T09:47:40.262000+00:00] teknium (id=1507681413153947809)
+    will see what caused and if we can prevent in the future
+    [reply to gwaboo msg=1507663739313455104]
+
+[2026-05-23T10:02:41.454000+00:00] ahmetarif0x (id=1507685193027289138)
+    https://github.com/NousResearch/hermes-agent/pull/30878
+    [embed] fix(dingtalk): finalize open streaming cards before disconnect by A... https://github.com/NousResearch/hermes-agent/pull/30878
+
+[2026-05-23T10:14:01.602000+00:00] ahmetarif0x (id=1507688045774635128)
+    https://github.com/NousResearch/hermes-agent/pull/30880
+    https://github.com/NousResearch/hermes-agent/pull/30888
+    [embed] fix(wecom-callback): retry send with fresh token on errcode 40001/4... https://github.com/NousResearch/hermes-agent/pull/30880
+    [embed] fix(wecom): guard flush task against cancel-delivery race to preven... https://github.com/NousResearch/hermes-agent/pull/30888
+
+[2026-05-23T10:16:32.979000+00:00] ahmetarif0x (id=1507688680696053872)
+    Boss, I think these are worth checking as well. I spent a few hours yesterday fixing them.
+    https://discord.com/channels/1053877538025386074/1491258766648283238/1507379220760887376
+    
+    https://discord.com/channels/1053877538025386074/1491258766648283238/1507452655923105903
+
+[2026-05-23T10:19:28.653000+00:00] chris.delac (id=1507689417525956608)
+    Submitted one more fix for the Openviking plugin: https://github.com/NousResearch/hermes-agent/pull/30340
+    
+    Also one feature for isolation: https://github.com/NousResearch/hermes-agent/pull/30642
+    [embed] fix(openviking): fallback to content/read when search returns empty... https://github.com/NousResearch/hermes-agent/pull/30340
+    [embed] feat(openviking): add isolation flags for shorthand URI expansion b... https://github.com/NousResearch/hermes-agent/pull/30642
+
+[2026-05-23T10:20:42.954000+00:00] dskwe. (id=1507689729166934046)
+    Hey team! I've just rebased two PRs with the latest main branch, and all CI checks are now fully GREEN.
+    
+    Here is a quick breakdown:
+    
+    PR #29360 (CLI/Config) - strip null bytes from .env before python-dotenv loads
+    
+    Problem: Embedded null bytes from copy-pasted API keys would brick CLI startup with ValueError.
+    
+    Fix: Strips \x00 safely during env loading.
+    https://github.com/NousResearch/hermes-agent/pull/29360
+    
+    PR #29343 (Browser/System) - use process-tree termination for daemon cleanup
+    
+    Problem: Shutting down browser daemon left behind scattered orphaned Chromium child processes, leaking resources.
+    
+    Fix: Refactored to use ProcessRegistry._terminate_host_pid() to recursively clean the entire process tree via psutil.
+    https://github.com/NousResearch/hermes-agent/pull/29343
+    
+    Both are clean, have zero conflicts, and are fully tested. Ready for review when you have a slot!
+    [embed] fix(env): strip null bytes from .env before python-dotenv loads by ... https://github.com/NousResearch/hermes-agent/pull/29360
+    [embed] fix(browser): use process-tree termination for daemon cleanup by ds... https://github.com/NousResearch/hermes-agent/pull/29343
+
+[2026-05-23T10:21:22.793000+00:00] chris.delac (id=1507689896263942234)
+    Hi Tek, I shared this earlier today, inspired by one thread in Reddit since they were "complaining" about the hermes-agent skill length, maybe we can rely on the local website docs with commands
+    
+    https://github.com/NousResearch/hermes-agent/pull/30273
+    [embed] refactor(skills): lightweight hermes-agent skill as local-first doc... https://github.com/NousResearch/hermes-agent/pull/30273
+    [reply to teknium msg=1507681282904293447]
+
+[2026-05-23T10:22:17.566000+00:00] chris.delac (id=1507690125998424117)
+    It may be worth checking if I didn't remove something very important, I tried not to
+
+[2026-05-23T10:34:42.237000+00:00] selinchu (id=1507693249375240212)
+    fix(cli): validate runtime token refresh capability in Qwen auth status
+    
+    https://github.com/NousResearch/hermes-agent/pull/30881
+    [embed] fix(cli): validate runtime token refresh capability in Qwen auth st... https://github.com/NousResearch/hermes-agent/pull/30881
+
+[2026-05-23T12:15:25.619000+00:00] erhnysr (id=1507718597156536471)
+    merge as-is looks fine to me — the heartbeat fix and daemon-thread refactor are tightly coupled anyway, splitting them would just create an intermediate broken state. 273 tests passing is a good signal
+    [reply to smartyi. msg=1507631581135634496]
+
+[2026-05-23T12:17:53.907000+00:00] tranquilflow (id=1507719219121487872)
+    https://github.com/NousResearch/hermes-agent/pull/30918 created this on the back of your comment here Tek: https://github.com/NousResearch/hermes-agent/pull/7436#issuecomment-4524967456. LMK if this is the right direction or if you'd prefer something different.
+    [embed] feat(skills): add opt-in AST diagnostics by Tranquil-Flow · Pull R... https://github.com/NousResearch/hermes-agent/pull/30918
+    [embed] security(skills): add AST analysis to Skills Guard scanner by Tranq... https://github.com/NousResearch/hermes-agent/pull/7436
+
+[2026-05-23T12:19:10.474000+00:00] erhnysr (id=1507719540266504374)
+    the fallback to content/read when abstract is empty is a good defensive fix — background prefetch silently dying is easy to miss in logs. isolation flags are a nice addition too, per-agent URI isolation matters once you have multiple agents sharing the same OpenViking instance
+    [reply to chris.delac msg=1507689417525956608]
+

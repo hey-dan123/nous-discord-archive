@@ -16,3 +16,7 @@
 [2026-05-23T04:26:56.113000+00:00] thatlivideddude (id=1507600697342820586)
     Interesting, what specific areas have you seen improvement in with your models and what have you tested so far?
 
+[2026-05-23T11:35:53.982000+00:00] 0zi57 (id=1507708649789984850)
+    Still early but tested with social/risk questions. Goal detection helps prevent wrong response types, Monte Carlo gives probability numbers the raw LLM can't. Weak spots: depth still manual, haven't tested much with reasoning models. Just shipped Phase 1 optional Mnemosyne memory integration (by <@151598363131904000> ) so it can remember goal patterns across sessions (pip install mnemosyne-memory to activate). Small steps direction feels right. Open to ideas
+    [reply to thatlivideddude msg=1507600697342820586]
+

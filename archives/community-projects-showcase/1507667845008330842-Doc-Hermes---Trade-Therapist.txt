@@ -1,0 +1,11 @@
+# Thread 'Doc Hermes - Trade Therapist' in forum #community-projects-showcase
+# thread_id=1507667845008330842 forum_id=1316137596535177246
+# Started 2026-05-23T13:21:09.063924+00:00
+
+[2026-05-23T08:53:45.364000+00:00] .space.fox (id=1507667845008330842)
+    https://dochermes.xyz - water-bear86/dochermes
+    
+    Nearly complete with development.
+    Follow the repo at water-bear86/dochermes  or join the wait list on the site.
+    [embed] Doc Hermes | Trading Coach https://dochermes.xyz/
+

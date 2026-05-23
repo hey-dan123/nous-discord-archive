@@ -200,3 +200,15 @@
 [2026-05-23T06:36:10.588000+00:00] decent999666 (id=1507633221968461844)
     What about skills which can manage CAD programs - Autocad, Revit etc? To learn an agent how to draw there having background expertise of big LLM?
 
+[2026-05-23T11:31:49.325000+00:00] neopabo (id=1507707623623884860)
+    Set this up inside a skill as a subsystem skill ( You'll probably need a decent local GPU)
+    https://huggingface.co/ADSKAILab/Zero-To-CAD-Qwen3-VL-2B
+    [embed] ADSKAILab/Zero-To-CAD-Qwen3-VL-2B · Hugging Face https://huggingface.co/ADSKAILab/Zero-To-CAD-Qwen3-VL-2B
+    [reply to decent999666 msg=1507633221968461844]
+
+[2026-05-23T11:33:35.408000+00:00] neopabo (id=1507708068568498326)
+    See this as reference for the mental model:
+    https://discord.com/channels/1053877538025386074/1504553695675813958
+    
+    The example skill I suggested is a tier 3 skill
+

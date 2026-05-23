@@ -963,3 +963,42 @@
     ✅ API auth not sent correctly for desktop chat in server mode
     ✅ Interface locale not persisted across restarts
 
+[2026-05-23T10:31:04.027000+00:00] fathah. (id=1507692334136164353)
+    # 🚀 Hermes Desktop v0.5.0
+    
+    ## ✨ What's New
+    
+    - **In-app OAuth sign-in** — sign in to Codex, Grok, Gemini CLI, Qwen & MiniMax directly from the Providers screen. Codex device-code flow auto-opens the browser and copies the code to your clipboard.
+    - **Per-conversation context folder** — pin a local folder to any conversation for persistent file context.
+    - **Tool calls & reasoning in chat history** — collapsible sections show tool invocations, results, and model reasoning.
+    - **Right-click context menu** — native copy / paste / select-all / copy-chat in the chat view.
+    - **Live model autocomplete** — works for OAuth/subscription providers now too.
+    - **Claw3D HQ board** — read-only second Kanban view surfacing the HQ board.
+    - **Portable Windows build** — new portable `.exe` artifact in every release.
+    - **GitHub Actions CI** — typecheck + tests run on every push and PR.
+    
+    ## 🐛 Bug Fixes
+    - Sessions read the active profile's DB (not root)
+    - Gateway session ID synced on session switch
+    - Skill install failures surfaced instead of silently dropped
+    - OpenClaw migration false-positive on empty dir stubs fixed
+    - Auto-updater lifecycle logged to file
+    - SSH gateway routed through systemd when `hermes.service` exists
+    - Office services authenticated to gateway
+    - IPC crash guard on destroyed renderer sender
+    
+    ## 👏 Contributors
+    **@pmos69** · **@andreab67** · **@Ricardo-M-L** · **@ytfh44** · **@leejamesss** · **@jason-edstrom**
+    
+    ## 📥 Download
+    https://github.com/fathah/hermes-desktop/releases/tag/v0.5.0
+    [embed] Release Hermes Desktop v0.5.0 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.5.0
+
+[2026-05-23T10:48:35.366000+00:00] fathah. (id=1507696743771537468)
+    *Hermes Desktop v0.5.0* now supports,
+    - Drag & Drop/Add Attachments.
+    - Connect Working Directory to Chat Session
+    - Context Menu
+    - Kanban Tab
+    [attachment] Image_23-05-26_at_4.09_PM.png https://cdn.discordapp.com/attachments/1489459150235893863/1507696743930794045/Image_23-05-26_at_4.09_PM.png?ex=6a12d783&is=6a118603&hm=bb138b4a7ad4e2ace9fc96a5d2be23367b91b9f3c20bdf1f6301255ae1f1b208&
+

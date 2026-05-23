@@ -1471,3 +1471,68 @@
 [2026-05-23T04:36:21.574000+00:00] thegiuseppe (id=1507603069058416750)
     im having endless problems with lcm compression. it doesnt seem to be registering my compressor model at all. having hermes troubleshoot the issue is failing due to constantly failing context compression. for anyone reading this, i think you should let them cook a bit longer before considering downloading. i dont even know how to get back to my previous hermes state
 
+[2026-05-23T10:51:53.871000+00:00] mazak (id=1507697576361857034)
+    What’s the error you’re getting? My install seems to be working.
+    [reply to thegiuseppe msg=1507603069058416750]
+
+[2026-05-23T10:54:55.388000+00:00] thegiuseppe (id=1507698337699205251)
+    im assuming it was same as above person related to having a different compressor model than main model and lcm was not registering it for some reason. After 6 hours of trying i just gave up and deleted everything lcm.
+    [reply to mazak msg=1507697576361857034]
+
+[2026-05-23T11:02:54.973000+00:00] neopabo (id=1507700349224489160)
+    Use a different harness to fix hermes (codex, opencode, etc)
+    [reply to thegiuseppe msg=1507603069058416750]
+
+[2026-05-23T11:04:04.075000+00:00] neopabo (id=1507700639059415242)
+    I do agree that the project looks rough at the moment, I hope it gets improved enough
+
+[2026-05-23T11:06:31.708000+00:00] thegiuseppe (id=1507701258276962375)
+    pretty sure this is my problem but wasn't sure how to fix
+    [reply to w0lfgang88 msg=1503487446132850889]
+
+[2026-05-23T11:10:29.017000+00:00] thegiuseppe (id=1507702253623185550)
+    i will try opencode in the future if hermes completely gives out on me like this again. it was a frustrating day narrowing down the problem to lcm since i dont have a programming background so troubleshooting was mostly uneducated guesswork.
+    [reply to neopabo msg=1507700349224489160]
+
+[2026-05-23T12:11:15.038000+00:00] zinkdifferent_49268 (id=1507717546143387678)
+    My install works fine with zero issues. Your issue appears to be a user-who-installed-it issue … use the correct model and things work.
+    [reply to thegiuseppe msg=1507603069058416750]
+
+[2026-05-23T12:12:06.301000+00:00] thegiuseppe (id=1507717761155989564)
+    even the author admits there are bugs and its not recognizing models properly so no it wasn't a user error
+    [reply to zinkdifferent_49268 msg=1507717546143387678]
+
+[2026-05-23T12:16:56.861000+00:00] zinkdifferent_49268 (id=1507718979852959864)
+    You didn’t say what model and provider you attempted to use it with, so troubleshooting is limited. 
+    
+    I have it running quite solidly and using deepseek-v4-pro on Ollama as my provider, same as my main provider. I also have honcho installed using a locally installed model for its use. 
+    
+    I’ve used LCM ever since I had first used it under OpenClaw, so this memory plugin goas back quite a while and the author has plenty of experience. Likewise others appear to have no issue as well.
+
+[2026-05-23T12:18:14.309000+00:00] thegiuseppe (id=1507719304693678120)
+    I have the same problem as the person above. The author of LCM has known about custom models not registering. its an acknowledged bug.
+    [reply to zinkdifferent_49268 msg=1507718979852959864]
+
+[2026-05-23T12:19:25.740000+00:00] nihp_ (id=1507719604296880299)
+    Personally when my lcm had a weird bug i had my Hermes dig it up, it was able to do it immediately and push a pr fix. 
+    I think sometimes it boils down to the hermes model.
+    I mean no offence from this msg<:pepehmm:1133962723043053638>
+
+[2026-05-23T12:21:42.641000+00:00] zinkdifferent_49268 (id=1507720178501292182)
+    Since you won’t provide any further details or information about your configuration, it’s obvious you’re not interested in troubleshooting your issue. Bye.
+    [reply to thegiuseppe msg=1507719304693678120]
+
+[2026-05-23T12:23:05.672000+00:00] thegiuseppe (id=1507720526758543452)
+    i already explicitly stated the problem and even showed when OP admitted it was an bug. There is nothing to troubleshoot. I am using a custom model and it's not recognizing it. Again, OP has already acknowledged this bug.
+    [reply to zinkdifferent_49268 msg=1507720178501292182]
+
+[2026-05-23T12:23:55.793000+00:00] thegiuseppe (id=1507720736981123154)
+    this is the problem
+    
+    https://discord.com/channels/1053877538025386074/1491081146266681414/1503487446132850889
+
+[2026-05-23T12:24:14.495000+00:00] zinkdifferent_49268 (id=1507720815423127553)
+    ‘custom model’
+    Conversation over.
+    [reply to thegiuseppe msg=1507720526758543452]
+
