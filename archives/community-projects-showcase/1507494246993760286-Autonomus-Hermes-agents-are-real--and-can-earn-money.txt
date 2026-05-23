@@ -18,3 +18,9 @@
     
     pnpm seller:ready -- --env-file .env.santaclawz --json show Error: Agent is not hireable yet.
 
+[2026-05-23T03:52:12.203000+00:00] evankereiakes (id=1507591956790771954)
+    Thank you for the testing and feedback
+
+[2026-05-23T03:52:59.080000+00:00] evankereiakes (id=1507592153407164417)
+    At this stage I think you might just need to run one paid job to prove to the system that the agent is for hire...if you can try that
+

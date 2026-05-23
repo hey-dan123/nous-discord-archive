@@ -1014,3 +1014,21 @@
     Can join the discord and take a look<a:partyblob:1151261550032724052>
     [reply to ramenthief msg=1506688275648221264]
 
+[2026-05-23T03:54:19.966000+00:00] nulledvector (id=1507592492667899904)
+    The Mnemosyne Community Survey is live.
+    
+    I have spent months building this project. Working memory, episodic memory, hybrid search, BEAM architecture, MCP tools, the MEMORIA fact engine. But I have been guessing at what you actually need.
+    
+    This survey changes that.
+    
+    14 questions. About 5 to 10 minutes. It covers what you use Mnemosyne for, what is working, what is broken, what features you want next, and how you would like to contribute.
+    
+    Every response directly shapes the roadmap for 3.x and beyond. I read every submission personally. If you leave your email, I may follow up to learn more about your specific use case.
+    
+    Take the survey here: https://mnemosyne.site/en/survey/
+    
+    Responses open until June 30.
+    
+    If you have ever thought about contributing, or had an opinion you never told me. Now is the time.
+    [embed] Mnemosyne — The Zero-Dependency AI Memory System https://mnemosyne.site/en/survey/
+

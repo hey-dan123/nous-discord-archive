@@ -344,3 +344,10 @@
 [2026-05-22T19:02:55.069000+00:00] irregular_angle (id=1507458757716742235)
     hi there, this looks super interesting. Do you have views on how to integrate this with Claude Chat or Cowork? Both have a pretty good sense of the user archetype, current projects, things on horizon - would it be possible to ask them to spit out a handoff prompt/briefing of the user that then gets integrated into your tool?
 
+[2026-05-23T03:38:21.954000+00:00] spranab (id=1507588474474336427)
+    I use the MCP server with Claude and other coding agents. I have a dedicated server and every workspace and different systems connect to it. So have the unified brain and great companion.
+    
+    https://github.com/yantrikos/yantrikdb-mcp
+    [embed] GitHub - yantrikos/yantrikdb-mcp: Persistent cognitive memory for A... https://github.com/yantrikos/yantrikdb-mcp
+    [reply to irregular_angle msg=1507458757716742235]
+

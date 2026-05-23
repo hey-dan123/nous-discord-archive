@@ -194,3 +194,9 @@
     https://git.brandyapple.com/magnus/agent-skills/src/branch/main/data-scientist
     [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/data-scientist
 
+[2026-05-23T06:21:25.209000+00:00] oninsuka (id=1507629508419784825)
+    thank you so much for thesee <@659176257338081306>   goated
+
+[2026-05-23T06:36:10.588000+00:00] decent999666 (id=1507633221968461844)
+    What about skills which can manage CAD programs - Autocad, Revit etc? To learn an agent how to draw there having background expertise of big LLM?
+

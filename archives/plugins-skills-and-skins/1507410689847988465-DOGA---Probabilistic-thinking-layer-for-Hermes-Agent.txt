@@ -13,3 +13,6 @@
     [attachment] DOGA.png https://cdn.discordapp.com/attachments/1507410689847988465/1507410690036465964/DOGA.png?ex=6a11cd1a&is=6a107b9a&hm=c13ed28082db6bf553819c4b85a4a770e346b785f162eab66885f2ecae762de6&
     [embed] GitHub - 0z1-ghb/doga-hermes https://github.com/0z1-ghb/doga-hermes
 
+[2026-05-23T04:26:56.113000+00:00] thatlivideddude (id=1507600697342820586)
+    Interesting, what specific areas have you seen improvement in with your models and what have you tested so far?
+

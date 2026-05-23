@@ -20198,3 +20198,122 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     Is there already a recommended pattern for this in Hermes, or would this be a reasonable core feature?
 
+[2026-05-23T02:49:44.257000+00:00] teknium (id=1507576236765872148)
+    CI is going to start being green a lot more often 🙏
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613962346565392f2d486b4d76757235754a6333497857645066374b745f66743056413647742e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1507576237118324836/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613962346565392f2d486b4d76757235754a6333497857645066374b745f66743056413647742e706e67.png?ex=6a126748&is=6a1115c8&hm=67fd833365c7902d7dcaa834abc16488ffcc8acedaedc0b79cc84d6e97f3f9d2&
+
+[2026-05-23T02:59:45.828000+00:00] wesleysimplicio (id=1507578759937527878)
+    <@387972437901312000> Congratulations 🎈🍾🎉🎊 Claude Mythos
+
+[2026-05-23T03:00:16.138000+00:00] teknium (id=1507578887067140215)
+    we dont have mythos
+    [reply to wesleysimplicio msg=1507578759937527878]
+
+[2026-05-23T03:00:21.602000+00:00] teknium (id=1507578909984559264)
+    just opus without the security classifier
+
+[2026-05-23T03:01:03.621000+00:00] wesleysimplicio (id=1507579086225150015)
+    I take back what I said
+
+[2026-05-23T03:02:18.499000+00:00] wesleysimplicio (id=1507579400286376016)
+    <@387972437901312000> Can I help build a Pull Request evaluation system?
+
+[2026-05-23T03:05:24.340000+00:00] wesleysimplicio (id=1507580179760025711)
+    So, I'm going to make a mass pull request evaluator to help open sources projects with their pull requests
+
+[2026-05-23T03:09:10.972000+00:00] colmeio_66868 (id=1507581130323529820)
+    Come on, we are just starting... Kkkk
+    [reply to teknium msg=1507567030864314388]
+
+[2026-05-23T03:09:15.284000+00:00] kinh0. (id=1507581148409237635)
+    that makes us 2 kek
+    [reply to wesleysimplicio msg=1507531521614024755]
+
+[2026-05-23T03:12:03.497000+00:00] teknium (id=1507581853945565244)
+    No we have like 30 already lol
+    [reply to wesleysimplicio msg=1507579400286376016]
+
+[2026-05-23T03:14:47.321000+00:00] colmeio_66868 (id=1507582541073350739)
+    But not Wesley's Shannon
+    https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf
+    [reply to teknium msg=1507581853945565244]
+
+[2026-05-23T03:46:56.311000+00:00] blockcipher (id=1507590631843958795)
+    bugfix: `/reasoning` does not actually set the reasoning level for Kimi and DeepSeek when using OpenCode Go as the inference provider
+    https://github.com/NousResearch/hermes-agent/pull/30717
+    [embed] fix(provider): expose OpenCode Go reasoning controls by counterposi... https://github.com/NousResearch/hermes-agent/pull/30717
+
+[2026-05-23T04:00:16.040000+00:00] shilird. (id=1507593986150367353)
+    https://github.com/NousResearch/hermes-agent/pull/30179#pullrequestreview-4349716615      I have reviewed and commented on PR #30179.  <@387972437901312000>
+    [embed] feat(egress): iron-proxy credential-injection firewall for sandboxe... https://github.com/NousResearch/hermes-agent/pull/30179
+
+[2026-05-23T04:28:31.373000+00:00] atarxia4 (id=1507601096892223689)
+    Context of what the hell is going on
+
+[2026-05-23T04:28:35.880000+00:00] teknium (id=1507601115796078684)
+    ty
+    [reply to shilird. msg=1507593986150367353]
+
+[2026-05-23T04:28:43.210000+00:00] teknium (id=1507601146540462263)
+    TLDR: magic
+    [reply to atarxia4 msg=1507601096892223689]
+
+[2026-05-23T04:28:55.938000+00:00] gille (id=1507601199925297273)
+    the anti melt my machine again and fix the tests for me pr. https://github.com/NousResearch/hermes-agent/pull/30643
+    [embed] fix(test): cap default runner workers by helix4u · Pull Request #3... https://github.com/NousResearch/hermes-agent/pull/30643
+
+[2026-05-23T04:29:26.025000+00:00] atarxia4 (id=1507601326119583855)
+    Avada Kedavra 🪄
+    [reply to teknium msg=1507601146540462263]
+
+[2026-05-23T04:29:27.371000+00:00] gille (id=1507601331764854895)
+    because it got moved around and tried melting my machine again the other day. not paying attention that -n 4 should be -j 4 now? cool. take the number of cores you have, times it by two, and spawn that many workers to try and succeeding at successfully killing your wsl install and keeping your disk and cpu pegged.
+
+[2026-05-23T04:36:52.166000+00:00] tranquilflow (id=1507603197370306560)
+    <@466492386873311235> Heya can I ask how you are catching duplicates? I'm trying to avoid unnecessary PRs. At first I was checking the underlying issue to see related PRs but a surprising amount of people don't seem to bother linking their fix to the underlying issue (whyyyyyy????). I've instructed Hermes a few times now to try find duplicates without relying on this but I'm clearly missing something. Do you ingest all PRs and build an internal summary of each one or something?
+
+[2026-05-23T04:41:05.748000+00:00] stayhappy3721 (id=1507604260970565733)
+    Thank you for replying. Happy to wait and happy to help reviewing PR as well.
+    [reply to teknium msg=1507567030864314388]
+
+[2026-05-23T04:43:21.453000+00:00] cyber_prodigy_ (id=1507604830158323752)
+    Yeah Hermes is literally god tier for N8N MCP orchestration once you set it up. 10/10
+    
+    (I was only using 5.5 to do it though) 
+    
+    Haven’t tested it with other models
+    [reply to teknium msg=1507461694194974900]
+
+[2026-05-23T04:43:57.767000+00:00] stayhappy3721 (id=1507604982470414466)
+    I'm thinking instead of waiting till near limit, can we do continuous context cleaning, keeping last X messages, keeping user messages stating "goals", pruning the ones irrelavant to latest messages, summarizing everything remaing... Has anyone implemented something like this?
+    [reply to jason4161 msg=1507575223896117311]
+
+[2026-05-23T06:29:39.383000+00:00] smartyi. (id=1507631581135634496)
+    <@1035896222235500624> Thanks for the review!
+    
+    Is this batch good to merge as-is, or would you prefer I split it (e.g. heartbeat fix separate from the daemon-thread refactor)? Happy to either way — just want to know how you'd like to land it. 
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/27944
+    <@387972437901312000>
+    [embed] fix(qqbot): fix media send-back, interaction events, and WebSocket ... https://github.com/NousResearch/hermes-agent/pull/27944
+    [reply to erhnysr msg=1507468407791157358]
+
+[2026-05-23T08:05:08.993000+00:00] quenviix (id=1507655612861907065)
+    I’ve opened 4 PRs and they’re ready for review
+    
+    1. `fix(gateway): honor key_env in auth-failure fallback resolution`  
+       PR #30772 — https://github.com/NousResearch/hermes-agent/pull/30772
+    
+    2. `fix(fallback): merge fallback_providers with legacy fallback_model`  
+       PR #30777 — https://github.com/NousResearch/hermes-agent/pull/30777
+    
+    3. `fix(gateway): preserve WhatsApp pairing approvals across JID/LID alias flips`  
+       PR #30800 — https://github.com/NousResearch/hermes-agent/pull/30800
+    
+    4. `fix(gateway): honor ${VAR} expansion in runtime config readers`  
+       PR #30810 — https://github.com/NousResearch/hermes-agent/pull/30810
+    
+    All four are bug fixes
+    
+    They’re ready for review when you have time.
+

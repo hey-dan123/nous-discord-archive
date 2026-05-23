@@ -2268,3 +2268,21 @@
     Awesome sauce! Good stuff, thanks for being part of the community, welcome in and hope Mnemosyne does a great service! Also please give us some feedback after some time, we'd appeciate it 🙂 You can also hop in our own dedicated channel where we're most active there, we keep this one as a bridge now... https://discord.com/channels/1053877538025386074/1490447053791428718/1502001118056681482 🙂
     [reply to aquillum msg=1504506525606219846]
 
+[2026-05-23T03:54:34.284000+00:00] nulledvector (id=1507592552721940501)
+    The Mnemosyne Community Survey is live.
+    
+    I have spent months building this project. Working memory, episodic memory, hybrid search, BEAM architecture, MCP tools, the MEMORIA fact engine. But I have been guessing at what you actually need.
+    
+    This survey changes that.
+    
+    14 questions. About 5 to 10 minutes. It covers what you use Mnemosyne for, what is working, what is broken, what features you want next, and how you would like to contribute.
+    
+    Every response directly shapes the roadmap for 3.x and beyond. I read every submission personally. If you leave your email, I may follow up to learn more about your specific use case.
+    
+    Take the survey here: https://mnemosyne.site/en/survey/
+    
+    Responses open until June 30.
+    
+    If you have ever thought about contributing, or had an opinion you never told me. Now is the time.
+    [embed] Mnemosyne — The Zero-Dependency AI Memory System https://mnemosyne.site/en/survey/
+

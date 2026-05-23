@@ -1,0 +1,8 @@
+# Thread 'If you run Hermes on a Docker Container in a VPS: This can help you authenticate SuperGrok' in forum #community-projects-showcase
+# thread_id=1507635233099481118 forum_id=1316137596535177246
+# Started 2026-05-23T08:16:11.527014+00:00
+
+[2026-05-23T06:44:10.079000+00:00] pdgrizzles (id=1507635233099481118)
+    https://gist.github.com/idealockin/67d564d32220a19903104e062d79575c
+    [embed] Survivor guide — Connecting Super Grok OAuth to Hermes Agent on a... https://gist.github.com/idealockin/67d564d32220a19903104e062d79575c
+

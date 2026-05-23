@@ -1468,3 +1468,6 @@
 [2026-05-20T16:46:06.111000+00:00] terminalsausage (id=1506699551120294048)
     I just setup mnemosyne recently over the built in memory system. everything was able to be migrated over fine so that was cool. im not familiar with icarus though.
 
+[2026-05-23T04:36:21.574000+00:00] thegiuseppe (id=1507603069058416750)
+    im having endless problems with lcm compression. it doesnt seem to be registering my compressor model at all. having hermes troubleshoot the issue is failing due to constantly failing context compression. for anyone reading this, i think you should let them cook a bit longer before considering downloading. i dont even know how to get back to my previous hermes state
+

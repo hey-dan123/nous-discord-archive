@@ -1,0 +1,9 @@
+# Thread 'Hermes Turbo Agent' in forum #community-projects-showcase
+# thread_id=1507607972321169409 forum_id=1316137596535177246
+# Started 2026-05-23T08:16:11.903751+00:00
+
+[2026-05-23T04:55:50.603000+00:00] wesleysimplicio (id=1507607972321169409)
+    Hermes 100x fast performance 
+    https://github.com/wesleysimplicio/hermes-turbo-agent
+    [embed] GitHub - wesleysimplicio/hermes-turbo-agent: Hermes Agent 100x Fast... https://github.com/wesleysimplicio/hermes-turbo-agent
+
