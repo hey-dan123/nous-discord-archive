@@ -52,3 +52,35 @@
     Yeah certainly was thinking along the lines of an optional piece given the token requirement. Just thinking about how it could structurally align
     [reply to 0zi57 msg=1507813404532936954]
 
+[2026-05-24T10:44:10.446000+00:00] 0zi57 (id=1508058020481859646)
+    🧠 DOGA  Probabilistic, Goal Aware Thinking Plugin for Hermes Agent
+    v1.1.0 - MIT - https://github.com/0z1-ghb/doga-hermes
+    
+    pip install git+https://github.com/0z1-ghb/doga-hermes.git
+    
+    What is it?
+    A Hermes plugin that adds probabilistic, baby-brain-like reasoning to LLM responses. Before answering DOGA forces the model to simulate multiple scenarios, weigh probabilities, critique itself from different angles, and only then produce the final answer All reasoning happens through a structured <world_model> thinking panel.
+    
+    Core Features
+    Goal Detection  Identifies if user needs Information, Understanding, or Action before responding
+    Monte Carlo Simulation  Pure Python engine, 10K-50K iterations, AST-safe, evaluates probabilistic scenarios with entropy uncertainty metrics
+    De Bono Six Thinking Hats  Depth aware parallel thinking lenses. Each depth level activates different hats
+    Recursive Reasoning  reason_deeper tool for self-critique, each recursion level rotates a different De Bono hat. Hard break safety stops runaway loops after 3 ignored signals
+    Auto Depth Complexity-based depth selection, pure Python heuristics, 0 token cost
+    Memory (optional) Mnemosyne integration for goal pattern persistence across sessions
+    Configurable 5 depth levels, auto/manual mode, hats on/off, show/hide panel, max recursion 1-5
+    Token Efficient Core engine uses 0 LLM tokens; total prompt overhead 730 tokens at depth 5 with full hats
+    Architecture
+    3 Hermes hooks: pre_llm_call, transform_llm_output, post_tool_call
+    2 registered tools: simulate (Monte Carlo), reason_deeper (recursive self-critique)
+    Pure plugin zero core Hermes modifications
+    Thread safe, concurrency-safe, adversarial audit cleared
+    Stats
+    116 tests, 0 failures, CI green (Python 3.10/3.11/3.12)
+    7 audit cycles + runtime analysis + edge case stress test
+    1500 source lines, 6 Python modules
+    10 bug fixes in closing round
+    Zero crash risks all regex/division/indexing guarded
+    [embed] GitHub - 0z1-ghb/doga-hermes https://github.com/0z1-ghb/doga-hermes
+    [embed] GitHub - 0z1-ghb/doga-hermes https://github.com/0z1-ghb/doga-hermes.git
+

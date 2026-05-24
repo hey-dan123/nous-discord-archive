@@ -1540,3 +1540,18 @@
     Mine too
     [reply to zinkdifferent_49268 msg=1507717546143387678]
 
+[2026-05-24T13:15:28.017000+00:00] saltminerrook (id=1508096094574219334)
+    Yes, you are correct. "Custom Model" is the problem.
+    [reply to thegiuseppe msg=1507720526758543452]
+
+[2026-05-24T13:22:14.063000+00:00] theotreshaut (id=1508097797654843462)
+    Hey so i can basicly tell hermes (last version update) here is the repo Link, instal it and config it for you ? 
+    Or do i need to tell Claude to do it for me ^^
+
+[2026-05-24T13:24:31.306000+00:00] nihp_ (id=1508098373293445230)
+    personally i just tell my hermes update lcm.
+
+[2026-05-24T13:25:39.758000+00:00] theotreshaut (id=1508098660401942672)
+    Im giving it a try as honcho seems to work well for memory user etc 
+    The contexte management may be helpful to optimize api call to a big frontier model like gpt5.5 and make my codex sub be drained more slower lô
+

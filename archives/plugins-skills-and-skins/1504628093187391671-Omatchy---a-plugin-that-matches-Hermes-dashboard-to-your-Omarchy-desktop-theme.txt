@@ -27,3 +27,9 @@
     that initial theme there is 'Akaito'
     [reply to koshmar__ msg=1505690235294453861]
 
+[2026-05-24T10:53:11.508000+00:00] neopabo (id=1508060289860505610)
+    I love this!
+
+[2026-05-24T10:53:54.158000+00:00] neopabo (id=1508060468747567194)
+    I've been working a linux ricing skill, this would be an amazing addition
+

@@ -2634,3 +2634,14 @@
     Thanks for the kind words! Glad you’ve been liking it
     [reply to mindcraft3r msg=1507877402670403676]
 
+[2026-05-24T09:12:30.648000+00:00] mindcraft3r (id=1508034952657371157)
+    I'm curious do u have any plans to integrate a goals section into the webui eventually? I think for projects and longer running tasks that would work really well here.
+    [reply to avidfuturist msg=1507924700662206474]
+
+[2026-05-24T09:25:40.702000+00:00] charanis (id=1508038266383765564)
+    I'm feeling frisky. Sent u a friend request. Can you tell me more what do you mean by integrating goals section into webui? What specifically needs integrating here?
+    [reply to mindcraft3r msg=1508034952657371157]
+
+[2026-05-24T11:57:15.861000+00:00] necrosis._. (id=1508076414245671094)
+    Terminal is not working for me now
+

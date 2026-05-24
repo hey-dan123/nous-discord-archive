@@ -20701,3 +20701,136 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] Comparing NousResearch:main...borski:mcp-picker-tty-stability · No... https://github.com/NousResearch/hermes-agent/compare/main...borski:hermes-agent:mcp-picker-tty-stability
     [reply to teknium msg=1507958396916207658]
 
+[2026-05-24T09:06:57.151000+00:00] godsboy7777 (id=1508033553869308004)
+    <@387972437901312000>, second-round review on PR #30179 is up:
+    https://github.com/NousResearch/hermes-agent/pull/30179#pullrequestreview-4352008998
+    
+    Re-ran a deep review against the fix delta, `128a6837b` + `4833acf04`.
+    
+    The fix round cleanly closed almost every prior thread. Nice work.
+    
+    I strictly deduped against our 24 prior findings plus the open threads from @arshkumarsingh, @stephenschoettler, @erhnysr, and CodeQL.
+    
+    **18 net-new inline findings:**
+    **4 P1 / 9 P2 / 5 P3**
+    
+    Posted as **COMMENT**, not **REQUEST_CHANGES**, since this is a follow-up pass.
+    
+    ## The four P1s are pre-merge work
+    
+    **1. `_detect_docker_bridge_ip` sanity check is only `ip.count('.') == 3`**
+    
+    That would happily return `0.0.0.0`, `999.999.999.999`, or multicast as the bridge bind address.
+    
+    A hostile `ip` on PATH or malformed kernel output re-opens the LAN exposure your P0 #2 just closed.
+    
+    Fix: use `ipaddress.IPv4Address` and reject `is_unspecified`, `is_loopback`, `is_multicast`, and `is_reserved`.
+    
+    **2. `cmd_setup` overwrites `credential_source` on every re-run**
+    
+    Example flow:
+    
+    Operator runs:
+    
+    ```bash
+    hermes egress setup --from-bitwarden
+    ```
+    
+    Later they run:
+    
+    ```bash
+    hermes egress setup
+    ```
+    
+    to add a provider.
+    
+    BW mode is silently flipped back to env. The rotation guarantee the docs promise quietly breaks.
+    
+    Different mode than Stephen's E1, novel surface.
+    
+    **3. `fail_on_uncovered_providers` docstring says fail-closed, behaviour is fail-open**
+    
+    The module docstring at `iron_proxy.py:135` says "default true, refuses to start".
+    
+    Actual default is false in:
+    
+    * `cmd_setup`
+    * Runtime check
+    * `DEFAULT_CONFIG`
+    
+    Operators reading the security comment believe fail-closed. Actual behaviour is fail-open.
+    
+    Either flip the default or fix the docstring.
+    
+    **4. `start_proxy` poll loop treats grace-window expiry as success**
+    
+    If the binary is running but never binds the port within 5s, the function still writes a pidfile and `get_status()` returns with `pid` set but `listening=False`.
+    
+    Docker container creation proceeds, then the sandbox 401s with no clear signal.
+    
+    Needs an explicit `_port_listening` check after the loop, plus kill-child on fail.
+    
+    ## P2 highlights
+    
+    Mostly defensive symmetry gaps and reliability holes around startup:
+    
+    * `iron-proxy.log` lacks `O_NOFOLLOW` while audit-log and pidfile got it
+    * Concurrent-start pidfile race
+    * `_VERSION_CACHE` is not invalidated by `install_iron_proxy(force=True)` and caches empty string on subprocess silence
+    * `ensure_audit_log` warns-and-continues, so the daemon then creates the file under default umask
+    * No SIGINT handler during the startup poll, so operator Ctrl-C orphans the child
+    * IPv6 deny-list misses `::ffff:0:0/96` and `100.64.0.0/10`
+    * `AWS_*` / `GOOGLE_*` in `_NON_BEARER_PROVIDERS` will brick anyone with the AWS CLI installed if the docstring/default mismatch above is resolved by flipping default to true
+    
+    ## P3 highlights
+    
+    * `--rotate-tokens` has no confirmation, no backup, and no no-op feedback on first-time setup
+    * `_reset_for_tests` is a documented no-op while module globals leak
+    * New `test_iron_proxy_cli.py` reintroduces hardcoded `/tmp/...` paths, the same anti-pattern that prior fix #24 just closed in `test_iron_proxy.py`
+    * Unused `extra_env` parameter on `start_proxy`
+    * PID-recycle defence from fix #16 ships with zero test coverage
+    
+    Full bodies and fixes are inline on the PR.
+    
+    Solid round overall. Once these land, this is in good shape.
+    [embed] feat(egress): iron-proxy credential-injection firewall for sandboxe... https://github.com/NousResearch/hermes-agent/pull/30179
+
+[2026-05-24T09:12:25.349000+00:00] kai.xu (id=1508034930431623208)
+    Here is my fix for the plugin tansform_llm_output bug under streaming mode
+    https://github.com/NousResearch/hermes-agent/pull/29119
+    [embed] fix: deliver plugin-transformed final_response through streaming ga... https://github.com/NousResearch/hermes-agent/pull/29119
+
+[2026-05-24T09:17:40.520000+00:00] sylwester0_42058 (id=1508036252354482187)
+    <:suprise:1151275539789774898>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1508036252723839106/image.png?ex=6a1413b4&is=6a12c234&hm=3e1bc095494aaefe1de71d58207dc08dbd1d5d707e8f169c838974772ffdc1d1&
+
+[2026-05-24T09:21:38.582000+00:00] noxerz. (id=1508037250858881106)
+    💀
+    [reply to sylwester0_42058 msg=1508036252354482187]
+
+[2026-05-24T09:22:47.995000+00:00] teknium (id=1508037541998235722)
+    uh yea I think you did it wrong lol
+    [reply to kai.xu msg=1508034930431623208]
+
+[2026-05-24T09:22:56.082000+00:00] teknium (id=1508037575917437079)
+    2.7M changes is not gonna work 😄
+
+[2026-05-24T09:23:18.730000+00:00] kai.xu (id=1508037670910034002)
+    sorry, cleanning it
+    [reply to teknium msg=1508037575917437079]
+
+[2026-05-24T09:35:18.898000+00:00] kai.xu (id=1508040691513556992)
+    fixed~
+
+[2026-05-24T09:36:55.190000+00:00] heathley (id=1508041095391481906)
+    Hi <@387972437901312000> ,
+    Opened a bug fix PRs:
+    
+    https://github.com/NousResearch/hermes-agent/pull/31391
+    [embed] fix(install): detect actual Hermes install target by heathley · Pu... https://github.com/NousResearch/hermes-agent/pull/31391
+
+[2026-05-24T11:09:30.454000+00:00] anthonycodeinplace (id=1508064395857625189)
+    Sorry I was heads down, I went on a four day marathon with no prior experience after doing some eval turns out some aspects were intuitive for me but I had completely overlooked a horizontal authority gate and now im working through appropriately misusing openhands to create the authority gates. Funny how systems mimic their creators lol this explains why the agent violates injection and hard rules  when “pressure is high”. I will replace myself as the in-action pre action and post action verification audit with another agent or injection , then onto the next challenge!
+    [attachment] IMG_9624.png https://cdn.discordapp.com/attachments/1491258766648283238/1508064396302090320/IMG_9624.png?ex=6a142dea&is=6a12dc6a&hm=f07a79b5575dc5a92ea1834ddf63667c3fc31843214f01996301a568673f77d4&
+    [reply to teknium msg=1507949479712784405]
+

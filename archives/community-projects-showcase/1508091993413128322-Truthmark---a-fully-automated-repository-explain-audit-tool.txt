@@ -1,0 +1,25 @@
+# Thread 'Truthmark - a fully automated repository explain/audit tool' in forum #community-projects-showcase
+# thread_id=1508091993413128322 forum_id=1316137596535177246
+# Started 2026-05-24T13:21:51.402352+00:00
+
+[2026-05-24T12:59:10.224000+00:00] merlin_0212 (id=1508091993413128322)
+    Hi guys. I built this tool that automatically audits Agent's changes to your project, and summarises them in ordinary language. It also audits your instructions/decisions made to AI regarding to the project. 
+    
+    You only need to install it for once, and no need to call it again yourself. The Agent will know to use it automatically in the future. It supports Claude, CodeX, OpenCode, Gemini and theoretically should support Cursor too.
+    
+    You can also ask Hermes to install the truthmark for your repository.
+    
+    https://github.com/merlinhu1/truthmark
+    
+    The basic idea is simple: AI coding agents can write code quickly, but after they make changes, it can be hard to understand what actually happened, why it happened, and whether the project docs still match the code.
+    
+    Truthmark helps with that.
+    
+    Instead of leaving important context buried in a chat session, Truthmark makes the AI’s work more visible inside the repo itself. When AI changes code, Truthmark helps connect that change to the relevant project “truth” — docs, decisions, behavior notes, architecture context, and ownership areas — so humans can review not just the code diff, but also the reasoning/context around it.
+    
+    It is not trying to replace tests, code review, or human judgment. It is more like a lightweight “make the AI work understandable” layer that lives in the repo.
+    
+    The project is local-first, Git-native, and doesn’t require a hosted service or database. You install it, set up the repo, and it gives both humans and AI coding tools a shared structure for keeping code and project truth aligned.
+    [attachment] truthmark-banner.png https://cdn.discordapp.com/attachments/1508091993413128322/1508091993723769004/truthmark-banner.png?ex=6a14479e&is=6a12f61e&hm=a6fc13f66d40c43d031b6bb296dde0b2ed750a341588710c883706c5175f98e6&
+    [embed] GitHub - merlinhu1/truthmark: Makes AI agent behavior visible and r... https://github.com/merlinhu1/truthmark
+
