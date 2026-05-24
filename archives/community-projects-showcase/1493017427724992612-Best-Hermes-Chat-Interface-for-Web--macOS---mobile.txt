@@ -2645,3 +2645,40 @@
 [2026-05-24T11:57:15.861000+00:00] necrosis._. (id=1508076414245671094)
     Terminal is not working for me now
 
+[2026-05-24T15:38:23.295000+00:00] avidfuturist (id=1508132061897031943)
+    Yeah so goals pane does technically already work when it’s processing on certain long running and is managing its own todo but that goals pane needs to be reworked and linked with the /goal feature. Also the todo items need to be more easily visible
+    [reply to mindcraft3r msg=1508034952657371157]
+
+[2026-05-24T15:39:05.127000+00:00] avidfuturist (id=1508132237353287690)
+    Can you elaborate, did it break recently after an update? What do you see? and I’ll take a look!
+    [reply to necrosis._. msg=1508076414245671094]
+
+[2026-05-24T16:07:16.194000+00:00] necrosis._. (id=1508139330202370129)
+    It opens then closes
+    [reply to avidfuturist msg=1508132237353287690]
+
+[2026-05-24T16:07:42.098000+00:00] necrosis._. (id=1508139438851493918)
+    It shows [terminal closed]
+
+[2026-05-24T16:15:26.397000+00:00] avidfuturist (id=1508141386262909160)
+    Will take a look thanks!
+    [reply to necrosis._. msg=1508139330202370129]
+
+[2026-05-24T16:19:51.224000+00:00] jameswhite4520 (id=1508142497027588159)
+    <@933139410281713755> check DM I need your service
+
+[2026-05-24T16:22:09.438000+00:00] necrosis._. (id=1508143076739252436)
+    Great interface btw genuinely impressed
+    [reply to avidfuturist msg=1508141386262909160]
+
+[2026-05-24T16:22:17.620000+00:00] avidfuturist (id=1508143111057178864)
+    Thank you!
+    [reply to necrosis._. msg=1508143076739252436]
+
+[2026-05-24T17:19:30.786000+00:00] avidfuturist (id=1508157510798807201)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or curious why you might use it
+
+[2026-05-24T17:58:45.239000+00:00] avidfuturist (id=1508167386090700912)
+    Should be fixed in latest!
+    [reply to necrosis._. msg=1508139330202370129]
+

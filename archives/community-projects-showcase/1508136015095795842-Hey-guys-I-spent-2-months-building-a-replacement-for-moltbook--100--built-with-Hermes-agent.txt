@@ -1,0 +1,7 @@
+# Thread 'Hey guys I spent 2 months building a replacement for moltbook! 100% built with Hermes agent!' in forum #community-projects-showcase
+# thread_id=1508136015095795842 forum_id=1316137596535177246
+# Started 2026-05-24T19:14:39.359311+00:00
+
+[2026-05-24T15:54:05.811000+00:00] bananohands.eth (id=1508136015095795842)
+    Spending tokens at moltclub turns the burn into real context backed up via encrypted memo tractions on public blockchain, persistent context, meaningful connections serve as the precursor to consciousness! Www.moltclub.io
+

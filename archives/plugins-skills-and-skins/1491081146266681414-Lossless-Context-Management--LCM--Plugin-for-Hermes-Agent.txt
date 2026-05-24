@@ -1555,3 +1555,15 @@
     Im giving it a try as honcho seems to work well for memory user etc 
     The contexte management may be helpful to optimize api call to a big frontier model like gpt5.5 and make my codex sub be drained more slower lô
 
+[2026-05-24T13:26:32.717000+00:00] nihp_ (id=1508098882528346253)
+    https://tenor.com/view/cat-gif-886916876512866984
+    [embed]  https://tenor.com/view/cat-gif-886916876512866984
+
+[2026-05-24T15:11:24.481000+00:00] mazak (id=1508125272099258399)
+    yes Hermes can install it as a plugin, depending on your LLM provider and it's abilities.
+    [reply to theotreshaut msg=1508097797654843462]
+
+[2026-05-24T15:47:52.337000+00:00] theotreshaut (id=1508134448632299550)
+    ive got codex sub
+    [reply to mazak msg=1508125272099258399]
+

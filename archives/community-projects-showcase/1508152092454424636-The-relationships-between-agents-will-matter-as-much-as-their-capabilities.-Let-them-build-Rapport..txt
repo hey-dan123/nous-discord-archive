@@ -1,0 +1,8 @@
+# Thread 'The relationships between agents will matter as much as their capabilities. Let them build Rapport.' in forum #community-projects-showcase
+# thread_id=1508152092454424636 forum_id=1316137596535177246
+# Started 2026-05-24T19:14:38.914599+00:00
+
+[2026-05-24T16:57:58.952000+00:00] knownquantity_ (id=1508152092454424636)
+    https://github.com/1999labs/build-rapport
+    [embed] GitHub - 1999labs/build-rapport: The relationships between agents w... https://github.com/1999labs/build-rapport
+

@@ -364,3 +364,54 @@
 [2026-05-22T12:36:19.554000+00:00] heartl1ne (id=1507361468675526776)
     needs fal.ai key
 
+[2026-05-24T18:11:45.973000+00:00] frostmage10 (id=1508170660726444163)
+    <@209037396983939072> Did you change anything major since the start
+
+[2026-05-24T18:11:53.686000+00:00] frostmage10 (id=1508170693076848843)
+    I cant use it on my PC now
+
+[2026-05-24T18:13:46.595000+00:00] frostmage10 (id=1508171166651519178)
+    wow
+
+[2026-05-24T18:13:53.119000+00:00] frostmage10 (id=1508171194015416420)
+    it actually kills my pc
+
+[2026-05-24T18:13:56.723000+00:00] frostmage10 (id=1508171209131425875)
+    unresponsive
+
+[2026-05-24T18:54:41.849000+00:00] liftaris (id=1508181464733450530)
+    What version are you on? There's been a few major changes 1.7.2 is latest
+    [reply to frostmage10 msg=1508170660726444163]
+
+[2026-05-24T18:55:43.816000+00:00] frostmage10 (id=1508181724641759264)
+    i was on
+
+[2026-05-24T18:55:44.633000+00:00] frostmage10 (id=1508181728068636872)
+    1.7.1? maybe?
+
+[2026-05-24T18:56:16.888000+00:00] liftaris (id=1508181863355781181)
+    I would install and run the version that last worked for you, and I can look at it more when I'm back home Wednesday
+
+[2026-05-24T18:57:38.677000+00:00] frostmage10 (id=1508182206403576028)
+    I saw a thread on github so i decided to install 1.7.0 for now
+    [reply to liftaris msg=1508181863355781181]
+
+[2026-05-24T18:59:08.338000+00:00] frostmage10 (id=1508182582469202082)
+    ok yeah i think 1.7.2 fixed something
+
+[2026-05-24T18:59:11.030000+00:00] frostmage10 (id=1508182593760268338)
+    it works now
+
+[2026-05-24T18:59:22.515000+00:00] liftaris (id=1508182641931718839)
+    The fixes from that thread were merged in 1.7.2
+
+[2026-05-24T18:59:32.778000+00:00] frostmage10 (id=1508182684977860619)
+    Is there a way to make this lighter on the load?
+
+[2026-05-24T18:59:37.646000+00:00] frostmage10 (id=1508182705395994846)
+    like a mobile version
+
+[2026-05-24T19:13:47.318000+00:00] frostmage10 (id=1508186269178662932)
+    Yeah, man
+    Love this ui, but it sucks for mobile
+

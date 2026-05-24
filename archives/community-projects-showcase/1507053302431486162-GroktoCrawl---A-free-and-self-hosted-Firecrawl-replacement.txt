@@ -30,3 +30,105 @@
     https://github.com/groktopus/groktocrawl/releases/tag/v0.2.0
     [embed] Release v0.2.0 — Five-Tier Pipeline, Binary Support, LLM Recovery... https://github.com/groktopus/groktocrawl/releases/tag/v0.2.0
 
+[2026-05-24T15:41:13.529000+00:00] pvpsk (id=1508132775910441122)
+    hello, can this be extended to any social media platform? i want to scrape/search on substack for resources
+
+[2026-05-24T15:43:55.761000+00:00] noxerz. (id=1508133456360771777)
+    why i feel like you are talking in mocking tone
+    [reply to pvpsk msg=1508132775910441122]
+
+[2026-05-24T15:47:27.406000+00:00] pvpsk (id=1508134344064106586)
+    mock? nope. i was recommended by the github repo creator and came to clarify doubts that I had or have now with this introduction. i have yet to study this tool to the fullest. My apologies if any1 thought i had offended them
+    [reply to noxerz. msg=1508133456360771777]
+
+[2026-05-24T15:47:42.304000+00:00] magnus919 (id=1508134406550982897)
+    Have you tried it?
+    [reply to pvpsk msg=1508132775910441122]
+
+[2026-05-24T15:47:51.418000+00:00] pvpsk (id=1508134444777865316)
+    i will now
+    [reply to magnus919 msg=1508134406550982897]
+
+[2026-05-24T15:48:13.451000+00:00] pvpsk (id=1508134537190969536)
+    i saw this message and thought will substack scraping work already
+    [reply to magnus919 msg=1507994308257775749]
+
+[2026-05-24T15:48:18.266000+00:00] magnus919 (id=1508134557386277075)
+    Good place to start before asking for features is to make sure it’s not already working 😆
+
+[2026-05-24T15:48:39.706000+00:00] magnus919 (id=1508134647312285869)
+    It won’t bust through paywalls if that’s what you’re asking
+
+[2026-05-24T15:49:13.536000+00:00] noxerz. (id=1508134789205463200)
+    no because of your pfp
+    [reply to pvpsk msg=1508134344064106586]
+
+[2026-05-24T15:49:29.865000+00:00] magnus919 (id=1508134857694380093)
+    But it will bust through a lot of anti bot measures. CAPTCHA isn’t covered yet but that’s next.
+
+[2026-05-24T15:50:09.859000+00:00] pvpsk (id=1508135025441243247)
+    nthg like that, just want resources/guides base don my interest and freely, readily available ones 
+    
+    but thank you for clarifying and i will go through this shortly
+    [reply to magnus919 msg=1508134647312285869]
+
+[2026-05-24T15:52:17.587000+00:00] magnus919 (id=1508135561171308665)
+    started something out of curiosity...
+    ```
+    I'll test groktocrawl against a popular Substack site — let me run through the key commands: scrape, search, and agent. I'll start with a well-known Substack
+    ```
+
+[2026-05-24T15:53:41.394000+00:00] magnus919 (id=1508135912683606046)
+    ```
+    Interesting — scrape hit issues on Substack proper (redirects through auth frames). Let me dig deeper with different URLs and the agent command.
+    ```
+    Hermes is rolling with it and adapting...
+
+[2026-05-24T15:54:59.359000+00:00] magnus919 (id=1508136239692513512)
+    ```
+    Substack content is proving tricky with the auth frame redirects. Let me try different angles — the agent command and a few more known Substacks.
+    ```
+    I like running these kinds of tests because I learn about different anti-bot measures and improve groktocrawl to work through them.
+
+[2026-05-24T15:59:28.992000+00:00] magnus919 (id=1508137370615152820)
+    ```
+    The article content is fully accessible through the browser session. Now let me test the full extraction and try the other Substack variant.
+    ```
+    heheheheheh
+
+[2026-05-24T16:02:18.236000+00:00] magnus919 (id=1508138080476074145)
+    I'm working on a substack workflow reference file to add to the skill... so if it detects you're trying to operate on a substack site, it doesn't have to take so long figuring out the fast path to the content you want.
+
+[2026-05-24T16:04:32.468000+00:00] magnus919 (id=1508138643485757511)
+    ok I figured some stuff out. Substack extraction is about to get a lot easier.
+
+[2026-05-24T16:07:00.403000+00:00] magnus919 (id=1508139263970119700)
+    https://github.com/groktopus/groktocrawl/issues/52
+    [embed] Stealth Playwright configuration for scraper-svc (Substack, Cloudfl... https://github.com/groktopus/groktocrawl/issues/52
+
+[2026-05-24T16:15:01.353000+00:00] pvpsk (id=1508141281220628570)
+    fine-tuning skills, i kind of like it
+    [reply to magnus919 msg=1508138080476074145]
+
+[2026-05-24T17:40:42.292000+00:00] magnus919 (id=1508162843881635973)
+    ```
+    All in. 5/5 Substack sites returning full content:
+    
+    Site                            Content       Source
+    ──────────────────────────────  ────────────  ──────────
+    Letters from an American (HCR)  10,485 chars  playwright
+    Astral Codex Ten                5,293 chars   playwright
+    The Free Press                  7,380 chars   playwright
+    Understanding AI                4,232 chars   playwright
+    Noahpinion                      7,311 chars   playwright
+    
+    Everything coming through playwright source, no recovery chain fallbacks needed.
+    ```
+
+[2026-05-24T17:40:49.136000+00:00] magnus919 (id=1508162872587583769)
+    going to cut a release for this
+
+[2026-05-24T17:53:40.840000+00:00] magnus919 (id=1508166109348499507)
+    https://github.com/groktopus/groktocrawl/releases/tag/v0.3.0
+    [embed] Release v0.3.0 — Substack Scraping Improvements 🎯 · groktopus... https://github.com/groktopus/groktocrawl/releases/tag/v0.3.0
+

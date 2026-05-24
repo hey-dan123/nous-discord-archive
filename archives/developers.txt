@@ -20834,3 +20834,43 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [attachment] IMG_9624.png https://cdn.discordapp.com/attachments/1491258766648283238/1508064396302090320/IMG_9624.png?ex=6a142dea&is=6a12dc6a&hm=f07a79b5575dc5a92ea1834ddf63667c3fc31843214f01996301a568673f77d4&
     [reply to teknium msg=1507949479712784405]
 
+[2026-05-24T13:59:06.818000+00:00] ahmetarif0x (id=1508107078621986888)
+    https://github.com/NousResearch/hermes-agent/pull/31496
+    [embed] fix(gateway): prevent third-sender message drop in queue-mode debou... https://github.com/NousResearch/hermes-agent/pull/31496
+
+[2026-05-24T14:39:21.581000+00:00] ahmetarif0x (id=1508117206872096959)
+    PR #31521 — duplicate message bug in plugin-transformed replies. <@387972437901312000> 
+    
+    When transform_llm_output rewrote the final response on platforms without edit support, the gateway called edit_message("__no_edit__"), it failed silently, and the message was sent again via the normal path. Users received every transformed reply twice. One-line sentinel check fixes it.
+    
+    https://github.com/NousResearch/hermes-agent/pull/31521
+    [embed] fix(gateway): skip edit_message when stream consumer carries __no_e... https://github.com/NousResearch/hermes-agent/pull/31521
+
+[2026-05-24T15:28:41.935000+00:00] ahmetarif0x (id=1508129623496458361)
+    LiteLLM Bug Fix — PR #28752
+    
+    /team/block and /team/unblock were writing blocked=True/False to the DB but never flushing the in-memory cache. Result: a just-blocked team kept receiving requests until the cache TTL expired, and a just-unblocked team stayed blocked in practice.
+    
+    Root cause: PR #28683 introduced _refresh_cached_team with an explicit rule — "every endpoint that mutates litellm_teamtable must call this" — but block_team and unblock_team were left out of scope.
+    
+    Fix: added _refresh_cached_team + include={"object_permission": True} to both handlers, pinned with 2 regression tests.
+    
+    → https://github.com/BerriAI/litellm/pull/28752
+    [embed] fix(team): refresh cache in block_team and unblock_team after DB wr... https://github.com/BerriAI/litellm/pull/28752
+
+[2026-05-24T16:08:58.490000+00:00] 0x001185 (id=1508139759262765218)
+    thank youu : )
+    [reply to teknium msg=1507949577150533785]
+
+[2026-05-24T17:39:42.213000+00:00] fishsalter (id=1508162591892050051)
+    Opened #31592 to patch up the last TUI voice PR:
+    setVoiceTts landed in the interface but got missed in one of three construction sites inside useMainApp.ts. TS flagged it but CI wasn't running type-check, so nobody saw it.
+    
+    Fixed the missing prop + the test helper, cleared out 18 pre-existing tsc errors in ui-tui, then added a blocking tui-type-check job to lint.yml—this class of bug dies in CI from now on.
+    https://github.com/NousResearch/hermes-agent/pull/31592
+    [embed] fix(tui): add missing setVoiceTts to SlashHandlerContext + enforce ... https://github.com/NousResearch/hermes-agent/pull/31592
+
+[2026-05-24T19:03:56.646000+00:00] sylwester0_42058 (id=1508183791720595557)
+    just put up a fix for a wrong auth state bug in the MiniMax OAuth path https://github.com/NousResearch/hermes-agent/pull/31624
+    [embed] fix(auth): make MiniMax OAuth status refresh-aware by Sylw3ster · ... https://github.com/NousResearch/hermes-agent/pull/31624
+
