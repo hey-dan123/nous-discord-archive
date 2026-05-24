@@ -1,0 +1,23 @@
+# Thread 'Meet Hermesita: The easiest way to set up your Hermes Agent (need beta testers)' in forum #community-projects-showcase
+# thread_id=1507935218143723540 forum_id=1316137596535177246
+# Started 2026-05-24T03:25:33.342641+00:00
+
+[2026-05-24T02:36:12.087000+00:00] dav05262 (id=1507935218143723540)
+    I’ve been working on a new project to solve the biggest headache I hear about: setting up servers and HTTPS.
+    I just launched Hermesita (https://hermesita.com) — a fully managed, one-click deploy for the Hermes Client.
+    
+    What it does:
+    **Zero DevOps**: Instantly spins up a dedicated AMD-powered DigitalOcean Droplet.
+    **Instant HTTPS**: You get a secure, dedicated subdomain out of the box.
+    **No Setup**: Pre-configured and ready to use immediately.
+    I need a few folks to test out the end-to-end flow. I've set it up with hourly billing, so if you spin one up, test it for an hour, and delete it, you'll be automatically refunded and it will only cost you pennies.
+    
+    If anyone is willing to run through the deployment and give me feedback on the flow, I'd hugely appreciate it!
+    
+    🔗 https://hermesita.com
+    [attachment] Screen_Recording_2026-05-23_at_23.19.26.mov https://cdn.discordapp.com/attachments/1507935218143723540/1507935222241431562/Screen_Recording_2026-05-23_at_23.19.26.mov?ex=6a13b59d&is=6a12641d&hm=82a28c8c77487da55046bbe1aac3412c0004f70cec13c60e1412f3d375ad352c&
+    [embed] Hermesita — Your own AI agent server, deployed in minutes https://hermesita.com/
+
+[2026-05-24T02:51:18.447000+00:00] dve874 (id=1507939019693228092)
+    checking it, looks grate!
+

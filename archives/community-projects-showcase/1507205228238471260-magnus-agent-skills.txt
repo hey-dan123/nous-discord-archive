@@ -219,3 +219,9 @@
     This sounds really cool but I’m so far removed from this I wouldn’t know if I was making slop or something useful.
     [reply to decent999666 msg=1507633221968461844]
 
+[2026-05-23T22:15:08.407000+00:00] magnus919 (id=1507869519907913821)
+    New `/epub` skill and massive improvements to `/data-scientist`
+    
+    https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.2.0
+    [embed] v0.2.0 — Data Scientist + EPUB Skills - magnus/agent-skills https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.2.0
+

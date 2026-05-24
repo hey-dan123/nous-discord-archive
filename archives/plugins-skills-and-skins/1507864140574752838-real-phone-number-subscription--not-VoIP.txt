@@ -1,0 +1,11 @@
+# Thread 'real phone number subscription, not VoIP' in forum #plugins-skills-and-skins
+# thread_id=1507864140574752838 forum_id=1485392832154832906
+# Started 2026-05-24T03:28:29.640292+00:00
+
+[2026-05-23T21:53:45.874000+00:00] jooshmayer (id=1507864140574752838)
+    twilio can give you a VoIP number, but if you want to give your agent a real identity online that won’t really work
+    
+    VoIPs are pretty easily blocked and rejected for stuff like 2FA codes and phone verifications. 
+    
+    https://op.inc/skills.md can let u get a real mobile number for free to use for anything on the web
+

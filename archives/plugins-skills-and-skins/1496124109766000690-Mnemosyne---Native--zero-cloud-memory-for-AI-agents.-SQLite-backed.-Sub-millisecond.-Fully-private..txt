@@ -1058,3 +1058,17 @@
     I actually asked my agent, and they told me to roll with both Mnemosyne & gbrain simultaneously because Mnemosyne is a memory system while gbrain is the knowledgebase.
     [reply to 0xlfg msg=1507687274312110241]
 
+[2026-05-24T01:35:59.293000+00:00] 0xlfg (id=1507920064987533443)
+    I also asked it, it ask to me to try mnemosyne but I am afraid it will cause me more issues.
+    [reply to excessivelysalty msg=1507821003965861899]
+
+[2026-05-24T02:10:18.747000+00:00] 0xlfg (id=1507928702963679442)
+    How often do we need to update ?
+    [reply to nulledvector msg=1507779248893591592]
+
+[2026-05-24T02:11:07.628000+00:00] nulledvector (id=1507928907985326200)
+    Some weeks gets busier than others, ie right now everything is calmed down, pretty much have taken good care of existing bugs and issues... So we're thriving
+
+[2026-05-24T02:12:15.967000+00:00] nulledvector (id=1507929194619732009)
+    But when things gets clunky could be a week or so... So every other week? Sometimes multiple times in 24-48 hrs
+

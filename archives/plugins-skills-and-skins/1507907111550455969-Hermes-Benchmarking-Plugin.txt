@@ -1,0 +1,59 @@
+# Thread 'Hermes Benchmarking Plugin' in forum #plugins-skills-and-skins
+# thread_id=1507907111550455969 forum_id=1485392832154832906
+# Started 2026-05-24T03:28:28.467935+00:00
+
+[2026-05-24T00:44:30.953000+00:00] .omgg (id=1507907111550455969)
+    Features
+        Per-call profiling — Tracks latency, token usage, and estimated cost for every LLM call and tool execution
+        Dynamic pricing — Fetches real-time rates from OpenRouter API with automatic caching
+        Local model costs — Track true electricity + hardware amortization for Ollama, LM Studio, vLLM
+        User overrides — Configure custom rates via ~/.hermes/profiler_overrides.yaml
+        Zero core modifications — Pure plugin using Hermes hook system
+        Persistent storage — SQLite database at ~/.hermes/profiler.db
+        Benchmark runner — Compare models/providers side-by-side
+        CLI integration — hermes profiler and hermes benchmark commands
+    
+    
+        What the Plugin Does
+    
+        Hooks registered:
+        - pre_api_request — records start time
+        - post_api_request — records latency, tokens, cost (via RateEngine)
+        - pre_tool_call — records start time
+        - post_tool_call — records latency, success/failure
+        - on_session_end — cleans up in-memory state
+    
+        CLI commands registered:
+        - hermes profiler session <id> — show session stats
+        - hermes profiler compare <a> <b> — compare two sessions
+        - hermes profiler list — list recent sessions
+        - hermes profiler refresh-rates — force fetch from OpenRouter
+        - hermes profiler local-config — show local model config path
+        - hermes benchmark run — run cross-model benchmarks
+    
+        Pricing engine:
+        - Tier 1: OpenRouter API cache (24h TTL)
+        - Tier 2: User overrides (~/.hermes/profiler_overrides.yaml)
+        - Tier 3: Static fallback (40+ models)
+        - Local models: electricity + hardware amortization
+      hermes benchmark run \
+          --prompts prompts.txt \
+          --models "openrouter/gpt-4o,anthropic/claude-sonnet-4" \
+          --iterations 3 \
+          --output report.json \
+          --format json
+    
+    
+        Command Options
+    
+        | Option              | Required | Default | Description                                  |
+        |---------------------|----------|---------|----------------------------------------------|
+        | --prompts FILE      | Yes      | -       | Path to prompts file (.txt or .jsonl)        |
+        | --models LIST       | Yes      | -       | Comma-separated model specs (provider/model) |
+        | --iterations N      | No       | 1       | Number of iterations per prompt              |
+        | --output FILE       | No       | -       | Export results to file                       |
+        | --format {json,csv} | No       | json    | Export format                                |
+    
+    https://github.com/spfcraze/Hermes-profile-benchmark
+    [embed] GitHub - spfcraze/Hermes-profile-benchmark: Hermes Benchmark testin... https://github.com/spfcraze/Hermes-profile-benchmark
+

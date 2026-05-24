@@ -191,3 +191,7 @@
     All from natural language. Just tell Hermes "send a WhatsApp to Maria saying I'll be late" and it does it. Schedule a message, go out, cancel it from anywhere. Left home and forgot to copy that file? Ask Hermes from WhatsApp and it will find it on your PC and send it to you — or to anyone else — right in the chat.
     [embed] Release v1.0.4-Beta1: Core Consolidation, Automated Diagnostics & S... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/V1.0.4-Beta1
 
+[2026-05-23T20:35:41.974000+00:00] vayaperson (id=1507844494874120212)
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/discussions/9
+    [embed] ⚒️We’re Working on Something HUUUUUUUGE. · AndorinaAI Andori... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/discussions/9
+

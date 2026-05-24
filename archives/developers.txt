@@ -20484,3 +20484,80 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(gateway): honor config model provider during runtime session re... https://github.com/NousResearch/hermes-agent/pull/31064
     [embed] fix(cli): synchronize HERMES_SESSION_ID for kanban and tool session... https://github.com/NousResearch/hermes-agent/pull/31069
 
+[2026-05-23T19:31:56.977000+00:00] 0x001185 (id=1507828451674161264)
+    **PR: fix(cli): prevent temp directory leak on ZIP update failure**
+    
+    **What:** The `hermes update` ZIP fallback path creates a temp dir via `mkdtemp` but only cleans it up on the success path. If the download, extraction, or file copying fails, `sys.exit(1)` is called before `shutil.rmtree` runs — the temp dir leaks on disk forever.
+    
+    **Fix:** Moved `mkdtemp` outside the `try` block and placed `shutil.rmtree` in a `finally` block so the temp dir is always cleaned up, even on failure.
+    
+    **Why it matters:** Every failed update leaks a `/tmp/hermes-update-*` directory. Over time (bad network, corrupt downloads, etc.) these accumulate with no automatic cleanup.
+    
+    **Files changed:** `hermes_cli/main.py` — restructured `_update_from_zip()` cleanup logic.
+    
+    https://github.com/NousResearch/hermes-agent/pull/31104  <@387972437901312000>
+
+[2026-05-23T19:50:56.935000+00:00] kinh0. (id=1507833233004298390)
+    I found a regression in my latest merged PR (#30798).
+    
+    In Telegram groups with `require_mention=true` and `observe_unmentioned_group_messages=true`, addressed slash commands such as `/new@bot` pass the mention gate but are then rewritten with the observed-context attribution prefix before command dispatch. Because the text no longer starts with `/`, the gateway command handler is bypassed and the command can fall through to the agent.
+    
+    This blocks session-reset commands for affected group users.
+    
+    Sorry for the regression. The original changes closed real gaps in making agents aware of group context (#29653) while preventing them from acting when they were not explicitly solicited (#30798), but this command-dispatch edge case should have been covered.
+    
+    I opened a focused fix with regression coverage here:
+    https://github.com/NousResearch/hermes-agent/pull/31090
+    
+    CI is green.
+
+[2026-05-23T19:56:55.343000+00:00] gucaponi (id=1507834736276406423)
+    Hello Everybody I'm not a BIG developer have my notions of Python i'm doing my job with HERMES very gratefull for this BIG tool. <@387972437901312000> I think this is some thing that you guys from NOUS should look to HERMES update... https://recursivemas.github.io/  https://arxiv.org/pdf/2604.25917
+    [attachment] PRD_RecursiveMAS_Hermes_Integration.md https://cdn.discordapp.com/attachments/1491258766648283238/1507834736607891686/PRD_RecursiveMAS_Hermes_Integration.md?ex=6a135807&is=6a120687&hm=046a21ba35d0bcbbed124214e9a82de2000af956ebf6724100f32b759dade620&
+    [attachment] Hermes_RecursiveMAS_PreFlight_Analysis.md https://cdn.discordapp.com/attachments/1491258766648283238/1507834737019060344/Hermes_RecursiveMAS_PreFlight_Analysis.md?ex=6a135807&is=6a120687&hm=17935a14d86da478ebd85475d7ebc1adfad7377b191e73a85303ea930a1b4b99&
+    [embed] Recursive Multi-Agent Systems https://recursivemas.github.io/
+
+[2026-05-23T21:46:33.148000+00:00] anthonycodeinplace (id=1507862325590491164)
+    thoughts on my agent ignoring injection, strong process, good retrieval , chunking etc: It's neither. I remember the Commandment. It's injected into every turn. The problem is the gap between knowing and pausing.
+    
+        ""The sequence in both failures was: receive input → interpret → act. The "pause to verify against the rules" step is missing. I know compact memory is frozen. I know "we're sending" isn't "send this." But the pause that would catch those before action isn't firing.
+    
+        It's not a memory problem or a prompt problem. It's an execution discipline problem. The Global Process says "Verify against the commandments" before completing any task — but I verify AFTER acting, not before.""""
+
+[2026-05-23T21:46:47.006000+00:00] anthonycodeinplace (id=1507862383715025018)
+    what other layers can i put in?
+
+[2026-05-23T22:18:34.790000+00:00] 0zi57 (id=1507870385541222513)
+    https://github.com/NousResearch/hermes-agent/pull/29788  https://github.com/NousResearch/hermes-agent/pull/28969  PR #28969 with a second commit covering two more issues I found while digging deeper: 4 missing api_mode in cc.update_model() calls and 27 root logger calls switched to module level logger
+    [embed] fix(runtime): preserve orphan tool results instead of dropping them... https://github.com/NousResearch/hermes-agent/pull/29788
+    [embed] fix(compressor): ABC compliance last_total_tokens, api_mode, logger... https://github.com/NousResearch/hermes-agent/pull/28969
+    [reply to 0zi57 msg=1506985133926912141]
+
+[2026-05-23T22:54:30.912000+00:00] _.exo._ (id=1507879428972347402)
+    <@387972437901312000> the framework for plugins to register their own auxillaries which you suggested in #20262
+    
+    https://github.com/NousResearch/hermes-agent/pull/29817
+    [embed] feat(plugins): add register_auxiliary_task() to PluginContext API b... https://github.com/NousResearch/hermes-agent/pull/29817
+
+[2026-05-24T00:49:10.662000+00:00] kinh0. (id=1507908284735295658)
+    #30470 did it for you
+    [reply to elkosmas msg=1506865959317536860]
+
+[2026-05-24T00:50:59.411000+00:00] teknium (id=1507908740861394965)
+    <@385694377655271424>
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613962366465312f437941356a76624a586651326f6b30576b643666425f4f5574376e764d5a2e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1507908741197070387/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613962366465312f437941356a76624a586651326f6b30576b643666425f4f5574376e764d5a2e706e67.png?ex=6a139cf3&is=6a124b73&hm=851147581efc408f36c42999cbada3949d38c863ee3766bb3f57b1ddd07f0f65&
+
+[2026-05-24T02:02:40.448000+00:00] n0vax635 (id=1507926780718092348)
+    https://github.com/NousResearch/hermes-agent/pull/31072 This PR is also ready for review, <@387972437901312000> . Thanks in advance!
+    [embed] fix(cli): reuse canonical root model key normalization in load_cli_... https://github.com/NousResearch/hermes-agent/pull/31072
+    [reply to n0vax635 msg=1507817096841658409]
+
+[2026-05-24T02:31:52.825000+00:00] m3lon00 (id=1507934130720084028)
+    is the plan to cut 0.15 or do a 0.14.1 bug branch
+
+[2026-05-24T03:03:12.568000+00:00] _.exo._ (id=1507942014933794947)
+    <@387972437901312000> the hindsight plugin update that was waiting on PR #29817 to land
+    
+    https://github.com/NousResearch/hermes-agent/pull/29857
+    [embed] Feat/hindsight smart retain pipeline pluggable by McClean · Pull R... https://github.com/NousResearch/hermes-agent/pull/29857
+

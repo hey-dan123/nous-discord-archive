@@ -1,0 +1,120 @@
+# Thread 'N8N Skill' in forum #plugins-skills-and-skins
+# thread_id=1507877053775483081 forum_id=1485392832154832906
+# Started 2026-05-24T03:28:29.193512+00:00
+
+[2026-05-23T22:45:04.621000+00:00] .omgg (id=1507877053775483081)
+    https://github.com/spfcraze/Hermes-n8n-skills
+    What This Skill Covers
+    1. Expression Syntax
+    
+        Double curly brace {{}} syntax
+        Core variables: $json, $node, $now, $env, $input, $workflow, $execution
+        Webhook data structure (the .body gotcha)
+        Advanced patterns: conditionals, date manipulation, string/array operations
+        When NOT to use expressions (Code nodes, webhook paths, credentials)
+    
+    2. Code Nodes
+    
+        JavaScript: Mode selection, data access patterns, return format, built-in helpers
+        Python (Beta): Limitations, standard library, data access, return format
+        Built-in functions: $helpers.httpRequest(), DateTime (Luxon), $jmespath(), $getWorkflowStaticData()
+        Production patterns: Aggregation, filtering, transformation, regex, reporting
+        Error prevention: Top 5 errors for each language with fixes
+    
+    3. Node Configuration
+    
+        Progressive discovery approach (essentials → dependencies → full schema)
+        Operation-aware configuration (required fields change per operation)
+        Property dependencies and displayOptions
+        Node type prefixes (nodes-base.* vs n8n-nodes-base.*)
+        Common node patterns: Resource/Operation, HTTP, Database, Conditional
+    
+    4. Workflow Patterns
+    
+        5 core patterns: Webhook Processing, HTTP API Integration, Database Operations, AI Agent Workflow, Scheduled Tasks
+        Data flow architectures: Linear, Branching, Parallel, Loop, Error Handler
+        Workflow creation checklist (Planning → Implementation → Validation → Deployment)
+        Error handling strategies: Per-node, IF-check, Error Trigger, Try-Catch
+    
+    5. Validation
+    
+        Validation profiles: minimal, runtime (recommended), ai-friendly, strict
+        The validation loop (iterate 2-3 times)
+        Error severity: Errors, Warnings, Suggestions
+        Auto-sanitization system
+        False positives and when to ignore them
+        Top 10 error catalog with quick fixes
+    
+    6. MCP Tools (if available)
+    
+        20+ tool reference with availability matrix
+        Node discovery workflow: search → get → validate
+        Workflow editing: iterative building with 15+ operation types
+        Smart parameters for multi-output nodes
+        Template library: 2,700+ templates
+        Common mistakes and best practices
+    
+    7. AI & LangChain
+    
+        AI node types: Agent, Language Model, Tool, Memory, Chain, Output Parser
+        AI Agent workflow pattern with example
+        Memory options: Window Buffer, Vector Store, No Memory
+        Tool configuration best practices
+        Expression variables for AI nodes
+    
+    8. Trigger Data Structures
+    
+        Webhook: data under .body
+        Schedule: data at root
+        Manual: data at root
+        Error Trigger: error object structure
+        Trigger comparison table
+    
+    9. Testing & Debugging
+    
+        Test data injection and mock executions
+        Pinning data for testing
+        Execution log analysis
+        Step-by-step execution
+        Expression editor debugging
+        Code node debugging with console.log
+    
+    10. Credentials & Deployment
+    
+        399+ credential types overview
+        Creating and using credentials
+        Docker deployment basics
+        Key environment variables
+        Backup/restore workflows
+    
+    11. Performance & Scaling
+    
+        Batch processing with recommended sizes
+        Rate limiting and retry strategies
+        Memory management
+        Execution timeouts
+        Scaling considerations by volume
+    [embed] GitHub - spfcraze/Hermes-n8n-skills: N8n Skills for hermes https://github.com/spfcraze/Hermes-n8n-skills
+
+[2026-05-23T22:45:45.659000+00:00] .omgg (id=1507877225901461605)
+    N8N Skill
+
+[2026-05-23T23:56:58.757000+00:00] oninsuka (id=1507895148573626489)
+    goate dbro! i can make n8n workflows and just handoff them as wel with this right?
+    [reply to .omgg msg=1507877053775483081]
+
+[2026-05-23T23:58:50.258000+00:00] .omgg (id=1507895616242450573)
+    yeap and What i was doing before is enabling n8n api's and hermes can write and create the workflows right in n8n once it has API access on my n8n server
+    [reply to oninsuka msg=1507895148573626489]
+
+[2026-05-23T23:59:41.323000+00:00] oninsuka (id=1507895830424588300)
+    oh nice thanks so much!  would love to see if we can make an agent builder skill as well with hermes like a handoff and full on from different agent sdks and frameworks
+    [reply to .omgg msg=1507895616242450573]
+
+[2026-05-24T00:00:32.964000+00:00] .omgg (id=1507896047022768358)
+    definatly can with the webhooks and n8n calls tell hermes what you want and can use crons as well
+
+[2026-05-24T00:03:01.806000+00:00] oninsuka (id=1507896671311237210)
+    alright will try it out thank you! haah i gotta find ways to make money so i got curious
+    [reply to .omgg msg=1507896047022768358]
+

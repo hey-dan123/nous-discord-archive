@@ -22,3 +22,10 @@
     
     `npm i @garyr/pt-cli` to install
 
+[2026-05-23T19:58:01.520000+00:00] garyritchie (id=1507835013842993182)
+    The latest version can also "learn" from remotes like a git repo or zip over http, for example:
+    
+    `pt learn https://github.com/garyritchie/pt_godot` (template for Godot)
+    
+    Template for Blender projects coming soon.
+

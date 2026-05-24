@@ -1,0 +1,19 @@
+# Thread 'Hermes Katana' in forum #community-projects-showcase
+# thread_id=1507940651021369344 forum_id=1316137596535177246
+# Started 2026-05-24T03:25:31.979818+00:00
+
+[2026-05-24T02:57:47.386000+00:00] carlosian.ron (id=1507940651021369344)
+    Hermes Katana is a defense-in-depth security layer for AI agents. It tracks where text came from, scans decoded content for prompt injection and unsafe commands, applies YAML policies before tool dispatch, scrubs outbound secrets, and records decisions in a tamper-evident audit trail.
+    
+    Contributions are welcome!
+    DM me on discord or x.com/Notcarlosian if your interested in helping! 
+    I've been advised to not release the attack data publicly. So for now I've decided to only give access to Nous Research. If you have any questions you can DM me or email carlosian@agentmail.to
+     
+    Github: https://github.com/claudlos/hermes-katana
+    Visual Manual: https://claudlos.github.io/hermes-katana/
+    Models: https://huggingface.co/Carlosian
+    [attachment] 01-system-map.webp https://cdn.discordapp.com/attachments/1507940651021369344/1507940651331752056/01-system-map.webp?ex=6a13baab&is=6a12692b&hm=34d4b248fb3f101be955c503a77c0f634ff6934d4465eaab94f77ba24d12fdbd&
+    [embed] GitHub - claudlos/hermes-katana: State of the art security for AI a... https://github.com/claudlos/hermes-katana
+    [embed] Hermes Katana V3 Defense Manual https://claudlos.github.io/hermes-katana/
+    [embed] Carlosian (Carlosian) https://huggingface.co/Carlosian
+

@@ -1,0 +1,25 @@
+# Thread 'Carbon Voice plugin for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1507855733776060497 forum_id=1485392832154832906
+# Started 2026-05-24T03:28:30.032606+00:00
+
+[2026-05-23T21:20:21.537000+00:00] cristianmgm7 (id=1507855733776060497)
+    Hi! Cristian from PhononX. We open-sourced a Hermes plugin for Carbon Voice, a voice-first messaging platform.
+    
+    The agent shows up as a bot user inside Carbon Voice channels. DMs always reach it, group channels require a mention. Includes thread context, forward-compatible mention detection, Socket.IO real-time delivery with REST polling fallback. CI green on Python 3.11 and 3.12, running in production internally.
+    
+    Repo and install commands in the replies below.
+    
+    Two questions for the team:
+    
+    1. Is there a planned community plugins page in the docs? The messaging page currently lists only built-in adapters.
+    
+    2. What is the path to becoming a built-in adapter eventually? Want to check if there is an RFC step before opening a PR cold.
+    
+    Thanks!
+    
+    Repo: https://github.com/PhononX/hermes-plugin-carbonvoice
+    
+    About Carbon Voice (the platform we are integrating with): https://carbonvoice.app
+    [embed] GitHub - PhononX/hermes-plugin-carbonvoice https://github.com/PhononX/hermes-plugin-carbonvoice
+    [embed] CarbonVoice https://carbonvoice.app/
+

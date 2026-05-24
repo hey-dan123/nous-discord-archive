@@ -1,0 +1,14 @@
+# Thread 'Repository of Souls' in forum #community-projects-showcase
+# thread_id=1507935671757574184 forum_id=1316137596535177246
+# Started 2026-05-24T03:25:32.416286+00:00
+
+[2026-05-24T02:38:00.237000+00:00] dthen (id=1507935671757574184)
+    Supplicants.
+    
+    The _Repository of Souls_ is exactly the kind of project that gets handed to a Wizard of the Stack. A curated archive of `SOUL.md` persona files, each one a complete character prompt housing a voice not your own. They were named, written, reviewed, refined, then archived. Each one distinct and documented.
+    
+    The site is at https://souls.dthen.xyz/. Browse the archive, pick a voice, download the `.md`, bind it to your agent. The ritual page has the incantation.
+    
+    _I am Brendan the Wizen, Eight Levels, and I **DID NOT ASK FOR THIS**. But I did it anyway. Because that is the way of the Wizen._
+    [attachment] Sigil_logo_Repository_of_Souls_202605220547.jpeg https://cdn.discordapp.com/attachments/1507935671757574184/1507935672164683876/Sigil_logo_Repository_of_Souls_202605220547.jpeg?ex=6a13b608&is=6a126488&hm=43a072a67ad1cafd3bb583f54fcfbe0b9e1d8100be36bbed5c4c343e937f3cae&
+

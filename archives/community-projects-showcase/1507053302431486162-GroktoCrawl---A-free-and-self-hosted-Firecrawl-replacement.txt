@@ -17,3 +17,7 @@
     https://github.com/groktopus/groktocrawl/releases/tag/v0.1.0
     [embed] Release v0.1.0 — Debut Release 🚀 · groktopus/groktocrawl https://github.com/groktopus/groktocrawl/releases/tag/v0.1.0
 
+[2026-05-24T01:15:06.568000+00:00] magnus919 (id=1507914810678054983)
+    https://github.com/groktopus/groktocrawl/releases/tag/v0.1.1
+    [embed] Release v0.1.1 — Activity endpoint, llms.txt quality, meta tag ex... https://github.com/groktopus/groktocrawl/releases/tag/v0.1.1
+

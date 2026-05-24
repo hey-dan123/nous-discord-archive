@@ -2626,3 +2626,11 @@
     I’d try it again, let me know if it’s still an issue. I applied a few fixes back then and I wasn’t able to easily reproduce it after that
     [reply to hydro._ msg=1507560963468038194]
 
+[2026-05-23T22:46:27.804000+00:00] mindcraft3r (id=1507877402670403676)
+    I just started using hermes webui and It's my new favorite place to interact with Hermes on, it's very polished with a native app feel. Great stuff bro. I got a feeling this one will go far 🙌
+    [reply to avidfuturist msg=1493017427724992612]
+
+[2026-05-24T01:54:24.524000+00:00] avidfuturist (id=1507924700662206474)
+    Thanks for the kind words! Glad you’ve been liking it
+    [reply to mindcraft3r msg=1507877402670403676]
+

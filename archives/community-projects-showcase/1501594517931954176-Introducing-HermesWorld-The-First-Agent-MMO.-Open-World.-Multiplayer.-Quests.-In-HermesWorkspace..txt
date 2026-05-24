@@ -128,3 +128,24 @@
     yes v1 release soon
     [reply to maxfreedompollard_16654 msg=1504238785293062248]
 
+[2026-05-23T20:24:40.963000+00:00] hugo.girard (id=1507841722393301062)
+    <@1470639051819319367> # Bug Report — HermesWorld v1.0 (Windows)
+    **Date:** 2026-05-23
+    **Setup:** HP Z440 Workstation, Intel Xeon E5-1660 v4, 64 GB RAM, Radeon RX 570 4 GB, Windows 11
+    ## Issues
+    ### 1. Cannot connect to game server
+    The game launches but stays stuck on a static image. The master server (`100.90.212.55:19010`) is unreachable (ping failed, TCP connection refused). This IP does not appear on the user's Tailscale network either, even though Tailscale is running.
+    ### 2. Hardcoded paths in batch file
+    `HermesWorld-Manual.bat` contains hardcoded paths pointing to `C:\HermesWorld-builds\latest\`. This directory does not exist after extracting the zip. The user has to manually edit the file to point to the correct location.
+    ### 3. Website sign-up broken
+    The page https://hermes-world.ai/signin/ returns a `Failed to fetch` error when attempting to create an account. The site's backend appears to be down.
+    ## Conclusion
+    The game requires a remote server to function, but no server is reachable. The entire infrastructure (website + game server) is currently offline.
+
+[2026-05-23T20:55:55.464000+00:00] outsourc_e (id=1507849584620212285)
+    [attachment] telegram-cloud-photo-size-1-4940705106743725241-y.jpg https://cdn.discordapp.com/attachments/1501594517931954176/1507849584720740413/telegram-cloud-photo-size-1-4940705106743725241-y.jpg?ex=6a1365db&is=6a12145b&hm=43e15ad036532d0a40ce278e303849621e79d9f0d16845ba728a2c312519630f&
+
+[2026-05-23T20:56:02.683000+00:00] outsourc_e (id=1507849614898888785)
+    fixing
+    [reply to hugo.girard msg=1507841722393301062]
+

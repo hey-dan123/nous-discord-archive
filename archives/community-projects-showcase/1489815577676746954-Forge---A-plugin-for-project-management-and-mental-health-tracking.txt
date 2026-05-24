@@ -116,3 +116,7 @@
     Do you have a TestFlight invite link for the iOS app or would I need to build it from the GitHub
     [reply to _albertjames msg=1500562814257856734]
 
+[2026-05-23T22:21:46.357000+00:00] _albertjames (id=1507871189031321651)
+    Im fighting with the workout sync rn but I’ll share a link this weekend once im done 🙂
+    [reply to jodfie msg=1507451664851013825]
+
