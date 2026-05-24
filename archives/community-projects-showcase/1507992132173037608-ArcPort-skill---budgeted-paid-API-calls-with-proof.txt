@@ -1,0 +1,43 @@
+# Thread 'ArcPort skill - budgeted paid API calls with proof' in forum #community-projects-showcase
+# thread_id=1507992132173037608 forum_id=1316137596535177246
+# Started 2026-05-24T08:27:13.798983+00:00
+
+[2026-05-24T06:22:21.449000+00:00] .zmaxx (id=1507992132173037608)
+    I built a small Hermes skill for testing paid tool/API usage with explicit budgets and proof.
+    
+    The skill connects Hermes to ArcPort, my own payment runtime experiment. The goal isn't to make Hermes "crypto-first". It's narrower: give an agent a controlled way to use paid APIs without unlimited spend, and without asking a human to approve every tiny request.
+    
+    **The flow:**
+    1. Hermes opens a bounded session
+    2. Hermes calls paid tools/APIs inside that budget
+    3. each call updates cumulative spend
+    4. Hermes closes the session when the task is done
+    5. unused budget is returned
+    6. the run can be inspected later by channel ID
+    
+    For the first demo, Hermes evaluates a few social trading signals and then calls Gemini for a short decision memo. But the trading example isn't the point. The point is the skill interface:
+    - open a budgeted session
+    - call paid APIs through that session
+    - enforce allowed tools
+    - track spend
+    - close cleanly
+    - return proof
+    
+    **Links**
+    Skill: https://github.com/Zhekinmaksim/arcport/tree/main/integrations/hermes-skill
+    Instructions: https://github.com/Zhekinmaksim/arcport/blob/main/integrations/hermes-skill/SKILL.md
+    Demo: https://youtu.be/Ym_TzgJFzY0
+    Control plane: https://arcport.xyz
+    
+    I'm mainly sharing this to get feedback on the skill design:
+    - Is the command interface natural for Hermes?
+    - Should budget/session state be exposed differently?
+    - What proof should the skill return after a paid run?
+    - How would you want Hermes to handle paid API/tool calls safely?
+    
+    This is my first Hermes integration, so feedback on the skill shape matters more to me than the demo use case. Happy to answer anything.
+    [embed] arcport/integrations/hermes-skill at main · Zhekinmaksim/arcport https://github.com/Zhekinmaksim/arcport/tree/main/integrations/hermes-skill
+    [embed] arcport/integrations/hermes-skill/SKILL.md at main · Zhekinmaksim/... https://github.com/Zhekinmaksim/arcport/blob/main/integrations/hermes-skill/SKILL.md
+    [embed] ArcPort V3: Session Payments for AI Agents on Arc https://www.youtube.com/watch?v=Ym_TzgJFzY0
+    [embed] ArcPort — API Marketplace on Arc https://arcport.xyz/
+

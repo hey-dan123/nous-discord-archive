@@ -225,3 +225,11 @@
     https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.2.0
     [embed] v0.2.0 — Data Scientist + EPUB Skills - magnus/agent-skills https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.2.0
 
+[2026-05-24T03:35:52.938000+00:00] decent999666 (id=1507950237321400360)
+    But it is LLM, not a skill
+    [reply to neopabo msg=1507707623623884860]
+
+[2026-05-24T04:43:59.100000+00:00] neopabo (id=1507967375927152851)
+    You can download the LLM locally, and launch it as a CLI tool through a skill
+    [reply to decent999666 msg=1507950237321400360]
+

@@ -2286,3 +2286,6 @@
     If you have ever thought about contributing, or had an opinion you never told me. Now is the time.
     [embed] Mnemosyne — The Zero-Dependency AI Memory System https://mnemosyne.site/en/survey/
 
+[2026-05-24T05:46:59.159000+00:00] thegiuseppe (id=1507983230643474443)
+    mnenosyne worked very well. installed it yesterday and already found it useful on my next hermes usage. goodjob
+

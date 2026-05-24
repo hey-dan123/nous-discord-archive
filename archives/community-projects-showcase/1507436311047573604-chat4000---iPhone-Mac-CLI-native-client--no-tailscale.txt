@@ -47,3 +47,7 @@
 [2026-05-23T15:51:00.542000+00:00] badbunny2222 (id=1507772850155688010)
     <@1445264578878640129> how do i setup the Mac app too? do i pair with the plugin or iphone?
 
+[2026-05-24T07:46:10.639000+00:00] haimbender (id=1508013226124771400)
+    you can pair them without connecting to the plugin, just go to the phone settings -> add device and use that pairing code to pair with the mobile device ❤️
+    [reply to badbunny2222 msg=1507772850155688010]
+

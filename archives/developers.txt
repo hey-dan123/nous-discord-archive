@@ -20561,3 +20561,143 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/29857
     [embed] Feat/hindsight smart retain pipeline pluggable by McClean · Pull R... https://github.com/NousResearch/hermes-agent/pull/29857
 
+[2026-05-24T03:32:03.409000+00:00] teknium (id=1507949274606862376)
+    0.15
+    [reply to m3lon00 msg=1507934130720084028]
+
+[2026-05-24T03:32:32.673000+00:00] teknium (id=1507949397349109780)
+    It's in 🙂
+    [reply to 0zi57 msg=1507870385541222513]
+
+[2026-05-24T03:32:52.310000+00:00] teknium (id=1507949479712784405)
+    sorry what are you referring to?
+    [reply to anthonycodeinplace msg=1507862325590491164]
+
+[2026-05-24T03:33:05.072000+00:00] teknium (id=1507949533240496310)
+    merged
+    [reply to kinh0. msg=1507833233004298390]
+
+[2026-05-24T03:33:15.541000+00:00] teknium (id=1507949577150533785)
+    Your's is in 😉
+    [reply to 0x001185 msg=1507828451674161264]
+
+[2026-05-24T03:33:40.090000+00:00] teknium (id=1507949680116502680)
+    both are in
+    [reply to n0vax635 msg=1507817096841658409]
+
+[2026-05-24T03:34:34.650000+00:00] teknium (id=1507949908957728889)
+    Got it in, welcome to developer role 🙂
+    [reply to fishsalter msg=1507759226284544010]
+
+[2026-05-24T03:34:53.132000+00:00] teknium (id=1507949986476851213)
+    this is in
+    [reply to selinchu msg=1507693249375240212]
+
+[2026-05-24T03:35:30.895000+00:00] teknium (id=1507950144866222131)
+    Still reviewing this - I think we need to make a raw .md version of the docs that has no issue with curl requests etc., that would make this path most optimal
+    [reply to chris.delac msg=1507689896263942234]
+
+[2026-05-24T03:35:48.430000+00:00] teknium (id=1507950218413473883)
+    Both are in
+    [reply to dskwe. msg=1507689729166934046]
+
+[2026-05-24T03:39:41.222000+00:00] borski (id=1507951194813763594)
+    hi all! so i'm about to submit a PR adding mcp server management functionality to the cli/tui. anything i should know beforehand?
+
+[2026-05-24T03:41:31.284000+00:00] chris.delac (id=1507951656447250612)
+    Yeah that one is already looking for the local website docs in the repo, but it fetches the website as a fallback
+    [reply to teknium msg=1507950144866222131]
+
+[2026-05-24T03:42:20.474000+00:00] teknium (id=1507951862765191270)
+    that Im about to merge a nice thing around mcps you should check out beforehand
+    [reply to borski msg=1507951194813763594]
+
+[2026-05-24T03:42:24.593000+00:00] teknium (id=1507951880041664592)
+    https://github.com/NousResearch/hermes-agent/pull/30870
+    [embed] feat(mcp): Nous-approved MCP catalog with interactive picker by tek... https://github.com/NousResearch/hermes-agent/pull/30870
+
+[2026-05-24T03:43:49.417000+00:00] chris.delac (id=1507952235819171841)
+    Or if you mean those docs are not friendly for that, understood
+    [reply to chris.delac msg=1507951656447250612]
+
+[2026-05-24T03:43:58.570000+00:00] teknium (id=1507952274209636362)
+    hmm anyone on docker or openshell or any terminal backend besides local it'd fail
+    [reply to chris.delac msg=1507951656447250612]
+
+[2026-05-24T03:47:43.630000+00:00] borski (id=1507953218179563540)
+    hahaha okay!
+
+[2026-05-24T03:47:55.894000+00:00] borski (id=1507953269618642976)
+    link? ill rebase on it
+
+[2026-05-24T03:49:24.085000+00:00] chris.delac (id=1507953639518638270)
+    Got it, then yes, having separate md would be adequate, I was thinking that way so they will be the only source to maintain
+    [reply to teknium msg=1507952274209636362]
+
+[2026-05-24T03:49:58.740000+00:00] chris.delac (id=1507953784871976970)
+    Maybe for them using the CLI itself as a fallback
+
+[2026-05-24T03:51:11+00:00] teknium (id=1507954087952646154)
+    that was the link up there fren 🙏
+    [reply to borski msg=1507953269618642976]
+
+[2026-05-24T03:53:43.613000+00:00] teknium (id=1507954728057700368)
+    All merged ^_^
+
+[2026-05-24T03:54:18.913000+00:00] teknium (id=1507954876116766822)
+    We got this in btw
+
+[2026-05-24T03:59:43.363000+00:00] _.exo._ (id=1507956236958830613)
+    https://github.com/NousResearch/hermes-agent/pull/31288 kimi tool schema bug
+    [embed] fix: handle JSON schema union types for Kimi tools by McClean · Pu... https://github.com/NousResearch/hermes-agent/pull/31288
+
+[2026-05-24T04:07:39.743000+00:00] borski (id=1507958235041104004)
+    i may very well be blind, but I am not seeing a link to a PR or branch around mcp servers, heh. would appreciate you pointing me to it? 🙏
+    [reply to teknium msg=1507954087952646154]
+
+[2026-05-24T04:08:18.337000+00:00] teknium (id=1507958396916207658)
+    Is right here..
+    [reply to teknium msg=1507951880041664592]
+
+[2026-05-24T04:10:50.030000+00:00] borski (id=1507959033162629262)
+    i swear i know how to use computers. 🤣
+    
+    anyway, 30870, got it, i have no idea how that message doenst exist for me
+    [attachment] CleanShot_2026-05-23_at_21.10.002x.png https://cdn.discordapp.com/attachments/1491258766648283238/1507959033255034981/CleanShot_2026-05-23_at_21.10.002x.png?ex=6a13cbca&is=6a127a4a&hm=0025b3444f3e6dc999482c0cbde31753f165d8a96244031ddae751b0b7001a49&
+    [attachment] CleanShot_2026-05-23_at_21.10.102x.png https://cdn.discordapp.com/attachments/1491258766648283238/1507959033481662564/CleanShot_2026-05-23_at_21.10.102x.png?ex=6a13cbca&is=6a127a4a&hm=f8d6c8600ae17d6e704f52ffc130c062439b324b00079bc284859e562fa902fa&
+
+[2026-05-24T04:27:39.791000+00:00] dskwe. (id=1507963268407234601)
+    Hey <@387972437901312000>! Awesome Infographic for the MCP feature. Just curious, how did you generate this style? The aesthetics are amazing. https://camo.githubusercontent.com/86c690cfe3b1ba52a35404d7d65dd717cacc09e25af0dbf37601b774f8944111/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613962353862652f72767a2d3047547554467a53674a6f6d716b7a39655f624744517339714a2e706e67
+    [embed]  https://camo.githubusercontent.com/86c690cfe3b1ba52a35404d7d65dd717cacc09e25af0dbf37601b774f8944111/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613962353862652f72767a2d3047547554467a53674a6f6d716b7a39655f624744517339714a2e706e67
+
+[2026-05-24T04:33:57.748000+00:00] frdinawan (id=1507964853673791658)
+    Hey guys, I’m looking into a specific workflow for Hermes Agent and wanted to know if the current engine supports it.
+    
+    Can I set up the agent to act as me, but with the following logic:
+    - Someone chats with my Hermes Agent.
+    - The agent evaluates the request.
+    - Instead of answering immediately, it triggers a workflow that says "Waiting for response/approval from [My Name]".
+    - It asks me for confirmation before sharing information or doing something.
+    
+    Is this configuration currently possible, or are there any workarounds to achieve this? Thanks!
+
+[2026-05-24T04:34:34.027000+00:00] teknium (id=1507965005839204352)
+    The baoyu infographic skill by <@115847981822902279> plus a little prompting for variations
+    [reply to dskwe. msg=1507963268407234601]
+
+[2026-05-24T04:36:11.798000+00:00] teknium (id=1507965415920242869)
+    My Hermes dev skill now has an automatic pipeline for each pr to run a style picker randomizer script and generate and info graphic for each pr
+
+[2026-05-24T04:37:39.023000+00:00] dskwe. (id=1507965781768540181)
+    Thanks for the breakdown🙏
+    [reply to teknium msg=1507965005839204352]
+
+[2026-05-24T07:40:06.934000+00:00] borski (id=1508011700635570317)
+    I rebased on to your PR and improved it a bunch; and added back in the things I wanted to add, like the in-session mcp reloading and picker, etc. 
+    
+    this is the branch: https://github.com/NousResearch/hermes-agent/compare/main...borski:hermes-agent:mcp-picker-tty-stability
+    
+    Haven't PR'd it yet, figured I'd let you see if you wanted to cherry-pick stuff in instead
+    [embed] Comparing NousResearch:main...borski:mcp-picker-tty-stability · No... https://github.com/NousResearch/hermes-agent/compare/main...borski:hermes-agent:mcp-picker-tty-stability
+    [reply to teknium msg=1507958396916207658]
+

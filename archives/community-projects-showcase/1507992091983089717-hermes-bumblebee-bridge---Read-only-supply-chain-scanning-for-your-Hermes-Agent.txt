@@ -1,0 +1,15 @@
+# Thread 'hermes-bumblebee-bridge - Read-only supply-chain scanning for your Hermes Agent' in forum #community-projects-showcase
+# thread_id=1507992091983089717 forum_id=1316137596535177246
+# Started 2026-05-24T08:27:14.236871+00:00
+
+[2026-05-24T06:22:11.867000+00:00] deconstruct. (id=1507992091983089717)
+    powered by Perplexity's Bumblebee released today. Hermes scans daily, narrates the result in its own voice, and pings you the moment anything new appears on TG or anywhere else you wish to get pinged at. 24/7 security bee ready to sting
+    
+    Git:
+    https://github.com/Deconstruct2021/hermes-bumblebee-bridge
+    
+    X post:
+    https://x.com/spydenator/status/2058431880207454467?s=20
+    [embed] GitHub - Deconstruct2021/hermes-bumblebee-bridge: Read-only supply-... https://github.com/Deconstruct2021/hermes-bumblebee-bridge
+    [embed]  https://twitter.com/spydenator/status/2058431880207454467?s=20
+

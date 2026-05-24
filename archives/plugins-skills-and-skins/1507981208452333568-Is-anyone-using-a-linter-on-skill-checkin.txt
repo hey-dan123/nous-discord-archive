@@ -1,0 +1,9 @@
+# Thread 'Is anyone using a linter on skill-checkin?' in forum #plugins-skills-and-skins
+# thread_id=1507981208452333568 forum_id=1485392832154832906
+# Started 2026-05-24T08:30:17.900251+00:00
+
+[2026-05-24T05:38:57.031000+00:00] n7e_5l_labs (id=1507981208452333568)
+    Otherwise I'm going to adapt:
+    https://github.com/William-Yeh/agent-skill-linter
+    [embed] GitHub - William-Yeh/agent-skill-linter: Lint agent skills for spec... https://github.com/William-Yeh/agent-skill-linter
+
