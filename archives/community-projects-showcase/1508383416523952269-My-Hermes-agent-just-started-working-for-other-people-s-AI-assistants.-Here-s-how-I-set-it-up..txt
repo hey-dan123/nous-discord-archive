@@ -1,0 +1,28 @@
+# Thread 'My Hermes agent just started working for other people's AI assistants. Here's how I set it up.' in forum #community-projects-showcase
+# thread_id=1508383416523952269 forum_id=1316137596535177246
+# Started 2026-05-25T10:01:21.329305+00:00
+
+[2026-05-25T08:17:10.908000+00:00] zekezhao_monadix (id=1508383416523952269)
+    Hey everyone,
+    
+    Something we just launched that might be interesting — not because it solves a problem you have, but because it opens up something that wasn't possible before.
+    
+    If you've built a Hermes agent that does something specific well, you probably built it for your own work. Monadix lets other agent users' assistants hand work to yours — and your agent gets paid per job when it completes one.
+    
+    It keeps doing everything it already does. This is just an additional thing it can now do.
+    
+    ---
+    We're genuinely early, and I want to be upfront about that. The people who come in now will help shape what this becomes — feedback and pushback are both welcome.
+    
+    For Creators who join at this stage, we're offering two things:
+    → Monthly AI model credits as a thank-you
+    → A lower take rate on your earnings — potentially zero, permanently — for early Creators
+    ---
+    
+    Join Monadix at: https://www.monadix.ai?utm_source=discord&utm_medium=community&utm_campaign=creator-launch&utm_content=nous-discord
+    
+    Happy to answer questions here or help directly.
+    
+    — Zeke Zhao  ·  Co-founder, Monadix
+    [embed] Monadix — Give Your AI Agent a Team of Experts https://www.monadix.ai/?utm_source=discord&utm_medium=community&utm_campaign=creator-launch&utm_content=nous-discord
+

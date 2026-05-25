@@ -20945,3 +20945,93 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/31819
     [embed] fix: guard json.loads() against non-JSON HTTP responses in security... https://github.com/NousResearch/hermes-agent/pull/31819
 
+[2026-05-25T03:50:22.215000+00:00] wysie_ (id=1508316271198994503)
+    simple fix for x.ai/grok to use itself as auxiliary models when not configured https://github.com/NousResearch/hermes-agent/pull/31845
+    [embed] fix(auxiliary): fall back to main model for xai-oauth title gen etc... https://github.com/NousResearch/hermes-agent/pull/31845
+
+[2026-05-25T04:21:00.496000+00:00] wysie_ (id=1508323981508218892)
+    <@387972437901312000>  There's a thread and also some proposed fixes on the gpt-5.5 timing out issue here: https://github.com/NousResearch/hermes-agent/issues/21444 seems like it's affecting more people recently.
+    [embed] [Bug]: All openai-codex / gpt-5.5 primary calls hang silently for f... https://github.com/NousResearch/hermes-agent/issues/21444
+
+[2026-05-25T05:19:36.094000+00:00] sylwester0_42058 (id=1508338726995099759)
+    https://github.com/NousResearch/hermes-agent/pull/31881
+    [embed] fix(auth): validate Gemini OAuth status via runtime credentials che... https://github.com/NousResearch/hermes-agent/pull/31881
+    [reply to sylwester0_42058 msg=1508183791720595557]
+
+[2026-05-25T06:00:06.431000+00:00] teknium (id=1508348920567431249)
+    [attachment] LobTKuDq8qYPxcJcvoE_7_xFkQxun8.png https://cdn.discordapp.com/attachments/1491258766648283238/1508348921112559656/LobTKuDq8qYPxcJcvoE_7_xFkQxun8.png?ex=6a1536e6&is=6a13e566&hm=baadd67d65e7d63b97cdd92264eb6460e2d29108aef7f28e179f9690c76f8b4e&
+
+[2026-05-25T06:00:14.178000+00:00] teknium (id=1508348953060704406)
+    You can now register TTS providers with plugins <a:cheer:734837260662603908>
+
+[2026-05-25T06:00:19.509000+00:00] teknium (id=1508348975420280972)
+    Thanks <@690519146701783042>
+
+[2026-05-25T06:19:18.483000+00:00] axmaiqiu (id=1508353752623611955)
+    I noticed a recent regression on `main` in the gateway streaming path: when `transform_llm_output` modifies the final response after streaming, a failed post-stream edit could still be treated as delivered, causing the transformed final content to be silently dropped.
+    
+    I fixed it by reusing the stream consumer edit path and only suppressing the normal final send after a successful edit.
+    
+    PR #31900: https://github.com/NousResearch/hermes-agent/pull/31900
+    [embed] fix(gateway): preserve transformed stream edit fallback by qWaitCry... https://github.com/NousResearch/hermes-agent/pull/31900
+
+[2026-05-25T06:20:42.320000+00:00] axmaiqiu (id=1508354104261349378)
+    This diagramming skill is really useful — whenever you need to express something, you can just make a flowchart 😂
+    [reply to teknium msg=1508348920567431249]
+
+[2026-05-25T06:40:10.552000+00:00] klausma_1982 (id=1508359004181630986)
+    hi team, I'd like to get session_id in my plugin which help to execute code remotely: https://github.com/NousResearch/hermes-agent/pull/31908 . if any comments, please let me know 🙂
+    [embed] fix(core): forward session_id to dispatcher in handle_function_call... https://github.com/NousResearch/hermes-agent/pull/31908
+
+[2026-05-25T07:02:53.907000+00:00] sangin5119 (id=1508364722507091978)
+    Built Mneme v1 to solve a pain I kept hitting with coding agents: memory is useful, but it’s hard to trust when it forgets context, recalls the wrong thing, or leaks info across scopes.
+    
+    Mneme is a local-first personal memory layer for agent workflows. It stores inspectable memories, keeps citations, filters by scope, blocks secret-like data, and ships with an eval harness so memory behavior can be tested instead of hand-waved.
+    
+    https://github.com/Orvek-dev/Mneme
+    [embed] GitHub - Orvek-dev/Mneme https://github.com/Orvek-dev/Mneme
+
+[2026-05-25T07:04:32.481000+00:00] teknium (id=1508365135956410378)
+    so many good built in skills <a:dance_undies:1154422670671216670>
+    [reply to axmaiqiu msg=1508354104261349378]
+
+[2026-05-25T07:57:53.881000+00:00] fishsalter (id=1508378563600977950)
+    I fixed a bug from my last TUI PR where I forgot to pass `setVoiceTts`, which broke `/voice status` in tui. 🙁
+    
+    `tsc` caught it locally, but CI didn’t run typecheck, so I added that too. Not sure if that CI change is the right direction for this repo though.
+    
+    https://github.com/NousResearch/hermes-agent/pull/31592
+    [embed] fix(tui): add missing setVoiceTts to SlashHandlerContext + enforce ... https://github.com/NousResearch/hermes-agent/pull/31592
+
+[2026-05-25T08:27:00.914000+00:00] teknium (id=1508385891188736071)
+    <@81637470604627968> all of your PRs are now merged
+
+[2026-05-25T08:36:30.787000+00:00] wysie_ (id=1508388281409081474)
+    https://github.com/NousResearch/hermes-agent/pull/31938
+    
+    I don’t think this fixes the underlying backend instability by itself. If the Codex backend is stalling or dropping connections, Hermes can’t magically make the upstream service healthy.
+    
+    But it does seem to make the experience feel much better.
+    
+    The main thing this PR does is clean up how Hermes handles Codex Responses timeouts:
+    
+    - preserves the configured timeout through the Codex Responses request path
+    - makes the stale-timeout detector estimate payload size from Responses fields (`input`, `instructions`, `tools`) instead of only Chat Completions `messages`
+    - allows `timeout` through the Codex preflight path
+    - keeps the xAI `extra_body` handling intact while applying the Codex timeout fixes
+    
+    So instead of Hermes sitting there dumbly for 300s, mis-estimating the request, or losing timeout config somewhere in the adapter path, it now has a more accurate idea of what was sent and how long it should wait.
+    
+    References 31855 and 24126
+    [embed] fix(codex): combine Responses timeout fixes by wysie · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/31938
+
+[2026-05-25T09:03:43.091000+00:00] reedwolf_ (id=1508395127788408842)
+    https://github.com/NousResearch/hermes-agent/pull/31971
+    
+    Fixes a fairly big Honcho bug where dialectic was getting zero information about what was discussed in the current session.
+    [embed] fix(honcho): pass session_id to peer.chat() in dialectic_query() by... https://github.com/NousResearch/hermes-agent/pull/31971
+
+[2026-05-25T09:27:21.438000+00:00] loongfay (id=1508401076766769253)
+    Hey, <@387972437901312000> , my PR is waiting for you 🤜 🤛 . https://github.com/NousResearch/hermes-agent/pull/30418
+    [embed] refactor(Yuanbao): consolidate media resolution into dedicated pipe... https://github.com/NousResearch/hermes-agent/pull/30418
+

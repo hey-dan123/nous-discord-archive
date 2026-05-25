@@ -424,3 +424,11 @@
 [2026-05-24T20:06:04.319000+00:00] gille (id=1508199426714238996)
     yerp. i installed hermes on termux and then had 5.5 install herm. had to use some other arm based proot to get bun installed and then i've been messing around with the mobile layouts for landscape and portrait and some additional functionality. added myself speak buttons for each response, a voice input button, just tinker away when i get the chance. good fun.
 
+[2026-05-25T05:00:16.001000+00:00] nat2r (id=1508333861212389399)
+    this is rad, ty
+    [reply to heartl1ne msg=1507361428934496338]
+
+[2026-05-25T06:48:18.869000+00:00] frostmage10 (id=1508361052331704420)
+    via ssh
+    [reply to liftaris msg=1508197646584778902]
+

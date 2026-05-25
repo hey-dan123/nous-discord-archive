@@ -1,0 +1,10 @@
+# Thread 'Memory recommendations' in forum #plugins-skills-and-skins
+# thread_id=1508346129861841026 forum_id=1485392832154832906
+# Started 2026-05-25T10:04:21.884384+00:00
+
+[2026-05-25T05:49:01.075000+00:00] matchaix_95697 (id=1508346129861841026)
+    Can you please give me your recommendation for the best memory plugin?
+
+[2026-05-25T08:01:19.555000+00:00] noxerz. (id=1508379426260520960)
+    https://discord.com/channels/1053877538025386074/1504710919702188052
+

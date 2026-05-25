@@ -1,0 +1,18 @@
+# Thread 'Kokorogotchi' in forum #community-projects-showcase
+# thread_id=1508363119225864402 forum_id=1316137596535177246
+# Started 2026-05-25T10:01:21.749642+00:00
+
+[2026-05-25T06:56:31.655000+00:00] ajaylakhani (id=1508363119225864402)
+    hey all 👋
+     I've been  building something for the past few weeks and I think it's ready to share — Kokorogotchi, a Tamagotchi-style virtual pet that lives inside your Hermes instance. Kokoro starts as a hatchling and evolves based on how you actually treat it — consistent care takes it through 11 stages mapped to Japanese yokai lore. Neglect it long enough and it drifts feral → phantom → void. It's not punishing, it's just... responsive. It remembers.
+    
+    Practically, it's got:
+    - Chat with Kokoro directly through the Hermes agent
+    - Optional PWA dashboard with care buttons, live state, and the full journal
+    - full open source — genuinely would love contributions 
+    
+    repo: https://github.com/kokorogotchi/kokorogotchi-hermes
+    landing : https://kokorogotchi.github.io/kokorogotchi-hermes
+    curious what you all think
+    [embed] GitHub - kokorogotchi/kokorogotchi-hermes: Kokorogotchi — a drift... https://github.com/kokorogotchi/kokorogotchi-hermes
+
