@@ -142,3 +142,10 @@
 [2026-05-23T16:42:43.884000+00:00] praveenjoseph (id=1507785866515447829)
     can you share me the playstore link?
 
+[2026-05-24T21:20:59.373000+00:00] codename_11 (id=1508218280337215498)
+    Had trouble getting approved due to the Bridge capabilities - i.e the remote control abilities and what nots. I've released/re-submitted a seeprate GooglePlay track now that makes the Bridge read-only. All other features remain. The APK/Sideload path would offer unrestricted function. Hopefully Google is quick to approve!
+
+[2026-05-24T21:22:36.744000+00:00] codename_11 (id=1508218688740921384)
+    I've spent a lot of time working on Chat/Voice modes - including supporting a persistant realtime agent loop via OpenAI/xAI initially. Hermes is called as a tool call and can do so as a background task if needed to keep the reatime chat loop live. I wanted to be able to have fluid conversation with my Hermes agent, especially if I asked it to run CI or a long running task similar. 
+    Let me know what you guys think!  ❤️
+

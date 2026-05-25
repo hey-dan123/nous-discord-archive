@@ -2682,3 +2682,15 @@
     Should be fixed in latest!
     [reply to necrosis._. msg=1508139330202370129]
 
+[2026-05-24T19:16:56.027000+00:00] charanis (id=1508187060681310219)
+    <@933139410281713755>
+    [attachment] 2026-05-24_21-15-29.mp4 https://cdn.discordapp.com/attachments/1493017427724992612/1508187061226836078/2026-05-24_21-15-29.mp4?ex=6a14a028&is=6a134ea8&hm=16d9a833063ca2615dbfdd6c188720367d262a26f3684690ece52e6d7c7a51e2&
+
+[2026-05-24T20:00:53.353000+00:00] necrosis._. (id=1508198122428563526)
+    Yess fixed thanks broo
+    [reply to avidfuturist msg=1508167386090700912]
+
+[2026-05-24T23:32:12.754000+00:00] avidfuturist (id=1508251303690895380)
+    Great glad that worked!
+    [reply to necrosis._. msg=1508198122428563526]
+

@@ -351,3 +351,11 @@
     [embed] GitHub - yantrikos/yantrikdb-mcp: Persistent cognitive memory for A... https://github.com/yantrikos/yantrikdb-mcp
     [reply to irregular_angle msg=1507458757716742235]
 
+[2026-05-25T03:03:46.517000+00:00] wysie_ (id=1508304545191690300)
+    <@1488594733659062343> do u use twitter
+
+[2026-05-25T03:15:35.617000+00:00] spranab (id=1508307519372656790)
+    I do. https://x.com/developerpranab
+    [embed] Pranab Sarkar (@developerpranab) on X https://twitter.com/developerpranab
+    [reply to wysie_ msg=1508304545191690300]
+

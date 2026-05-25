@@ -538,3 +538,23 @@
 [2026-05-24T17:59:28.090000+00:00] marine88 (id=1508167565820563707)
     I trying to make all work on my unraid server
 
+[2026-05-25T00:31:10.380000+00:00] outsourc_e (id=1508266141569519696)
+    i pushed some isseus and prs
+    [reply to marine88 msg=1508167402654011492]
+
+[2026-05-25T00:31:18.049000+00:00] outsourc_e (id=1508266173735632906)
+    check lmk open anything you have will patch
+
+[2026-05-25T00:31:20.723000+00:00] outsourc_e (id=1508266184951464078)
+    im bundling the native app atm
+
+[2026-05-25T00:31:40.063000+00:00] outsourc_e (id=1508266266069303457)
+    [attachment] Screenshot_2026-05-24_at_8.31.26_PM.png https://cdn.discordapp.com/attachments/1496384878063779901/1508266266542997575/Screenshot_2026-05-24_at_8.31.26_PM.png?ex=6a14e9ec&is=6a13986c&hm=f75f2a006e4b351c5612903378195e0e20174b2efc33273d7cebdd8b150015d1&
+
+[2026-05-25T00:34:56.004000+00:00] marine88 (id=1508267087905423501)
+    i will try maybe viartual machine
+
+[2026-05-25T00:41:43.690000+00:00] outsourc_e (id=1508268797864448060)
+    lmk
+    [reply to marine88 msg=1508267087905423501]
+

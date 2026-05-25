@@ -237,3 +237,7 @@
     https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.2.1
     [embed] v0.2.1 — Nous Branding Skill - magnus/agent-skills https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.2.1
 
+[2026-05-24T23:16:57.474000+00:00] magnus919 (id=1508247464728334348)
+    https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.2.2
+    [embed] v0.2.2 — Add brand-designer skill - magnus/agent-skills https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.2.2
+

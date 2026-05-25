@@ -1567,3 +1567,7 @@
     ive got codex sub
     [reply to mazak msg=1508125272099258399]
 
+[2026-05-24T22:18:06.631000+00:00] thegiuseppe (id=1508232655299154093)
+    i only saw the older messages after deleting lcm so I have no idea if its actually a good program or not but im pretty sure that was my problem. ill try again in a few days. the frustration of spending nearly my entire day troubleshooting and not getting any error messages aside from compression failure made me not want to retry for a bit. I had added lcm at the end of the prior day so it didn't even occur to me that it could be related to the problem. weird thing is the changelog says its fixed. maybe hermes changed how custom models are labeled during installation and lcm didn't update yet? doesn't seem like anyone else, aside from custom model installers, are having problems.
+    [reply to saltminerrook msg=1508096094574219334]
+

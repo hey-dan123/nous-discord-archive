@@ -132,3 +132,20 @@
     https://github.com/groktopus/groktocrawl/releases/tag/v0.3.0
     [embed] Release v0.3.0 — Substack Scraping Improvements 🎯 · groktopus... https://github.com/groktopus/groktocrawl/releases/tag/v0.3.0
 
+[2026-05-24T21:57:23.241000+00:00] magnus919 (id=1508227440143761610)
+    If you pull from `origin/main` and make sure all of your local artifacts are up to date, I’m trying a new system prompt for the LLM in `groktocrawl agent` flow that should give much better outcomes there.
+
+[2026-05-25T03:11:55.216000+00:00] magnus919 (id=1508306594943729745)
+    # WEIRD ZONE WARNING
+    
+    FYI, I'm thinking Exa & Firecrawl are each kinda ok on their own. But what if they had a baby with the best features of both parents?
+    
+    Groktocrawl started out *days ago* as a Firecrawl replacement. And that was stupidly easy to accomplish.
+    
+    Research is a BIG part of my agentic workflow, and I want the best tools. I'm just happy to give them away when I make them. That's why I'm thinking that GroktoCrawl may very well grow to exceed the tiny boundaries of "Firecrawl replacement".
+    
+    I've got Jasper checking out all of the Exa API endpoints now, trying to figure out what Exa does better, and filing issues against the project to consider adding a subset of their endpoints. There's a little bit of overlap with Firecrawl's API so in cases where there's duplication, I'm thinking of cherry picking "who does it best". And then try to do it better than they do.
+
+[2026-05-25T03:16:47.581000+00:00] magnus919 (id=1508307821211680961)
+    There are several issues filed on GitHub to consider this direction. I'm not going to start working on this tonight so there's a little time to weigh in.
+

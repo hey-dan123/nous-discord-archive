@@ -1,0 +1,16 @@
+# Thread 'EBA: Workflow sweetner' in forum #community-projects-showcase
+# thread_id=1508245569301250279 forum_id=1316137596535177246
+# Started 2026-05-25T03:37:26.362105+00:00
+
+[2026-05-24T23:09:25.569000+00:00] frank.martinez (id=1508245569301250279)
+    My small biz friends wanted to try Hermes but didn’t have nor cared to learn the setup.
+    
+    I built this for them. The LlamaParse integration is the sweetner, because if you run a small biz it’s like drowning in paperwork. 
+    
+    Also found out it’s highly useful for small construction companies that need to process client’s photos and hand sketches; to turn them into accurate bids.
+    
+    HMU for a promo code!
+    
+    https://www.evalbox.ai/
+    [embed] EvalBox Automate https://www.evalbox.ai/
+

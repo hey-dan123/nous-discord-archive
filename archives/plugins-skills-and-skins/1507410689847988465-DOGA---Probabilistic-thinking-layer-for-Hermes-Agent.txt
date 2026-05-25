@@ -84,3 +84,11 @@
     [embed] GitHub - 0z1-ghb/doga-hermes https://github.com/0z1-ghb/doga-hermes
     [embed] GitHub - 0z1-ghb/doga-hermes https://github.com/0z1-ghb/doga-hermes.git
 
+[2026-05-24T22:19:26.184000+00:00] 0zi57 (id=1508232988968620073)
+    While DOGA was active, there was a glitch in panel output
+    This issue has been fixed
+
+[2026-05-24T22:23:57.827000+00:00] 0zi57 (id=1508234128321937510)
+    The small steps have grown, so I’ve updated the post. I’m not making any grand claims but I think its useful. I look forward to your feedback
+    [reply to 0zi57 msg=1507410689847988465]
+

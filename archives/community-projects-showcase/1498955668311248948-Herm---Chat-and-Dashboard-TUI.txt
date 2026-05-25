@@ -415,3 +415,12 @@
     Yeah, man
     Love this ui, but it sucks for mobile
 
+[2026-05-24T19:38:46.508000+00:00] liftaris (id=1508192557237010533)
+    It surely can be improved, but mobile was never the intended target. So, being honest it's not a priority. PRs welcome though
+
+[2026-05-24T19:58:59.903000+00:00] liftaris (id=1508197646584778902)
+    You're talking about herm + Hermes running directly on your phone right, not ssh? I know <@81637470604627968> has done some mods to use herm on the phone
+
+[2026-05-24T20:06:04.319000+00:00] gille (id=1508199426714238996)
+    yerp. i installed hermes on termux and then had 5.5 install herm. had to use some other arm based proot to get bun installed and then i've been messing around with the mobile layouts for landscape and portrait and some additional functionality. added myself speak buttons for each response, a voice input button, just tinker away when i get the chance. good fun.
+

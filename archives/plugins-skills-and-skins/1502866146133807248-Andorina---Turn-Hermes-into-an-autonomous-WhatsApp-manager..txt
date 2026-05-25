@@ -195,3 +195,23 @@
     https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/discussions/9
     [embed] ⚒️We’re Working on Something HUUUUUUUGE. · AndorinaAI Andori... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/discussions/9
 
+[2026-05-24T20:00:13.816000+00:00] vayaperson (id=1508197956598366230)
+    We are developing a control panel with amazing features and fully control of the skill!!
+    [attachment] AndorinaPanelMenu1.jpg https://cdn.discordapp.com/attachments/1502866146133807248/1508197957038641322/AndorinaPanelMenu1.jpg?ex=6a14aa4d&is=6a1358cd&hm=105dd8168889ff78e833c8e8a7001aa0ceea0142b56fe2285397072f7d196f18&
+
+[2026-05-24T20:00:58.783000+00:00] vayaperson (id=1508198145203376182)
+    Autoinstall by clicking buttons is coming too!! 🙂
+    [attachment] AndorinaPAnelAutoInstall.jpg https://cdn.discordapp.com/attachments/1502866146133807248/1508198145807614063/AndorinaPAnelAutoInstall.jpg?ex=6a14aa7a&is=6a1358fa&hm=83425b4098e1750aa8fc77aa565065a50011c7729699c9a006c1940864538b5d&
+
+[2026-05-24T20:06:16.670000+00:00] vayaperson (id=1508199478518353940)
+    And the best part… you can expose your panel even without a paid domain.
+    
+    The bot will notify you (and everyone with panel access) via WhatsApp whenever the URL changes due to renewal, a network reconnection, or similar events. The only time it won’t send a notification is if you manually disable Remote Access.
+    
+    Follow the thread and stay informed!! 
+    All sending and automation functions are now fully working!!
+    
+    Once released, we’ll only need your feedback to catch hard-to-find bugs and edge cases.
+    🫶
+    [attachment] Captura_desde_2026-05-24_22-01-31.png https://cdn.discordapp.com/attachments/1502866146133807248/1508199478631465030/Captura_desde_2026-05-24_22-01-31.png?ex=6a14abb8&is=6a135a38&hm=0a527744967da167793a0c7600f497a3540175d68754dc6909330864d36db35e&
+

@@ -20874,3 +20874,74 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     just put up a fix for a wrong auth state bug in the MiniMax OAuth path https://github.com/NousResearch/hermes-agent/pull/31624
     [embed] fix(auth): make MiniMax OAuth status refresh-aware by Sylw3ster · ... https://github.com/NousResearch/hermes-agent/pull/31624
 
+[2026-05-24T22:28:14.433000+00:00] teknium (id=1508235204605509765)
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613962386263392f71744942456a303950564b336130376b5572304f425f466d6959324d524d2e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1508235204937125888/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613962386263392f71744942456a303950564b336130376b5572304f425f466d6959324d524d2e706e67.png?ex=6a14ccfe&is=6a137b7e&hm=650e62697ae789e2ad934dcf4a1cf9f4869a3537207a5bfaff658569dd131b87&
+
+[2026-05-24T23:15:08.634000+00:00] oleegg (id=1508247008220287006)
+    boss this is quite the infographic
+    [reply to teknium msg=1508235204605509765]
+
+[2026-05-24T23:15:13.127000+00:00] oleegg (id=1508247027065290892)
+    <:catlick:1151260427645366375>
+
+[2026-05-24T23:23:02.020000+00:00] gille (id=1508248993745080461)
+    https://github.com/NousResearch/hermes-agent/pull/31716  boop. saw this requested in chat. thought... ya know? i've seen people trip over this before.... we can probably just PR it. just shows * secrets input instead of nothing. more noob friendly user experience.
+    [embed] fix(cli): show masked feedback for secret prompts by helix4u · Pul... https://github.com/NousResearch/hermes-agent/pull/31716
+
+[2026-05-24T23:58:53.243000+00:00] gille (id=1508258016628178973)
+    there was also an ask for this in chat today. https://github.com/NousResearch/hermes-agent/pull/21437 right now you have to set that up as a custom provider. this is probably an easy addition to the providers and can allow for some people that use data sharing to get their hands on like 2.5-10 million extra tokens a day on smaller models.
+    [embed] feat(providers): add OpenAI API provider option by jacevys · Pull ... https://github.com/NousResearch/hermes-agent/pull/21437
+
+[2026-05-25T00:01:44.246000+00:00] deki04 (id=1508258733866746036)
+    What’s everyone using to manage terminal environments? Tmux or cmux?
+
+[2026-05-25T01:19:45.342000+00:00] teknium (id=1508278367806423121)
+    Never tried cmux before whats different about it
+    [reply to deki04 msg=1508258733866746036]
+
+[2026-05-25T01:40:45.577000+00:00] rearwindowblackwidow_78112 (id=1508283653614993418)
+    Ghostty is a good option too.
+
+[2026-05-25T01:52:00.716000+00:00] deki04 (id=1508286485353336932)
+    Actually it’s macOS only
+    [reply to teknium msg=1508278367806423121]
+
+[2026-05-25T01:52:11.196000+00:00] deki04 (id=1508286529309773824)
+    But built on ghostty
+
+[2026-05-25T01:52:29.722000+00:00] deki04 (id=1508286607013449910)
+    Saw a bunch of people recommending it on X
+
+[2026-05-25T01:53:00.037000+00:00] deki04 (id=1508286734163644467)
+    Pretty sure I’ve seen you say that you use Windows only?
+
+[2026-05-25T01:53:02.474000+00:00] markz4145 (id=1508286744385290350)
+    Does Hermes support multiple profiles on one BlueBubbles instance safely?
+
+[2026-05-25T01:56:46.443000+00:00] teknium (id=1508287683779231784)
+    no mostly linux for anything like this
+    [reply to deki04 msg=1508286734163644467]
+
+[2026-05-25T01:56:58.901000+00:00] teknium (id=1508287736031871148)
+    I doubt it all gateways are isolated per agent
+    [reply to markz4145 msg=1508286744385290350]
+
+[2026-05-25T02:34:18.417000+00:00] gille (id=1508297129242787851)
+    found some ugly docs. https://github.com/NousResearch/hermes-agent/pull/31800
+    [embed] fix(context): align guidance with 64k minimum by helix4u · Pull Re... https://github.com/NousResearch/hermes-agent/pull/31800
+
+[2026-05-25T02:36:53.777000+00:00] loongfay (id=1508297780869857410)
+    Hey, <@387972437901312000> . This PR is about refactoring the parsing of Yuanbao media resources. Waiting for you. https://github.com/NousResearch/hermes-agent/pull/30418
+    [embed] refactor(Yuanbao): consolidate media resolution into dedicated pipe... https://github.com/NousResearch/hermes-agent/pull/30418
+
+[2026-05-25T02:59:43.858000+00:00] endur7096 (id=1508303527406080071)
+    I may be out of bounds, I'm new to the discord. "I"(pretty much just did user testing, claude made the code changes) made changes to hermes-agent -->plugin kanban && -->  hermes_cli && hermes-workspace to allow for providers/models to be chosen manually for tasks. Is there any interest in a PR for this in the future? I know it would need to be cleaned up and spend some brain cells fully understand this. I understand hermes-workspace is a separate proj, but it would be nice if hermes support this for the kanban board?
+
+[2026-05-25T03:03:03.511000+00:00] shilird. (id=1508304364811321405)
+    https://github.com/NousResearch/hermes-agent/pull/31810  please check
+    [embed] fix: close PIL Image file descriptors to prevent resource leaks by ... https://github.com/NousResearch/hermes-agent/pull/31810
+
+[2026-05-25T03:22:43.153000+00:00] shilird. (id=1508309312588480632)
+    https://github.com/NousResearch/hermes-agent/pull/31819
+    [embed] fix: guard json.loads() against non-JSON HTTP responses in security... https://github.com/NousResearch/hermes-agent/pull/31819
+
