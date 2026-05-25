@@ -1079,3 +1079,10 @@
 [2026-05-25T05:46:20.808000+00:00] 0xlfg (id=1508345457653584003)
     I will give it a try
 
+[2026-05-25T13:32:22.557000+00:00] crxshworld (id=1508462737728995368)
+    Why would someone use this over the base Hermes memory it comes with?
+
+[2026-05-25T13:54:15.816000+00:00] walterwego (id=1508468245936607255)
+    Base Hermes memory (MEMORY.md) is limited to only 2,200 chars. In my experience, important information was flushed out too often. Therefore i‘m using Mnemo as external memory provider.
+    [reply to crxshworld msg=1508462737728995368]
+

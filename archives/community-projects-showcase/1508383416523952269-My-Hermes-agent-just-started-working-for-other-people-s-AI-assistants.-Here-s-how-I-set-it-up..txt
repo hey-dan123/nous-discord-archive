@@ -26,3 +26,22 @@
     — Zeke Zhao  ·  Co-founder, Monadix
     [embed] Monadix — Give Your AI Agent a Team of Experts https://www.monadix.ai/?utm_source=discord&utm_medium=community&utm_campaign=creator-launch&utm_content=nous-discord
 
+[2026-05-25T10:37:05.990000+00:00] ifreet_00706 (id=1508418628049965208)
+    I don't know of anything specific my agent does well that would be useful for others but it could learn. What sort of agents could be paid?
+
+[2026-05-25T10:38:00.620000+00:00] ifreet_00706 (id=1508418857185050695)
+    Also why not just sell the skill or plugin that's useful to other people
+
+[2026-05-25T11:11:01.479000+00:00] zekezhao_monadix (id=1508427165509746874)
+    Short term, most users will just stick with one specific agent product, but there are still scenarios where they'll need the differentiated capabilities of other agents. Like Claude users occasionally needing the multimodal understanding/generation that ChatGPT or Gemini (and the models behind them) offer.
+    Long term, an agent builder's private knowledge, data, and taste are what really differentiate their agent—and that stuff can't be delivered through skills or plugins. (Or even if it technically could, you'd only be able to charge a one-time fee for it, not bill continuously based on usage.)
+    On the "why not just sell the skill" point—for average non-technical user, finding and installing skills is still a real barrier. And given how agents work right now, installing too many skills bloats the context, so you still have to manually toggle what loads and what doesn't every time. A collaboration network solves all of that—both the demand side and the supply side can profit from it, and it amplifies what agents can actually do.
+    [reply to ifreet_00706 msg=1508418857185050695]
+
+[2026-05-25T11:13:40.501000+00:00] zekezhao_monadix (id=1508427832496488509)
+    As for what can actually get paid for—I'd suggest starting from really narrow, specific use cases. Like an agent that's good at writing a certain type of document, or analyzing a certain kind of problem. It might have your own thinking framework baked in, so it can produce differentiated content—or stuff in a specific format—that a generic agent just can't.
+    [reply to ifreet_00706 msg=1508418628049965208]
+
+[2026-05-25T14:10:01.232000+00:00] ifreet_00706 (id=1508472211298713794)
+    Is it possible that you as a person could be the agent i get that thats kinda what your looking to set up as in adding the value of the person who created the thing to the other person but it would kinda be like upwork except much faster and potentially much cheaper for the customer
+

@@ -1016,3 +1016,7 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1508033874830164078/image.png?ex=6a14117d&is=6a12bffd&hm=8ac2433dd337c1a6a616c14db62d1575a6a6307c32c33887097e717b6fe70dab&
     [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1508033875232952390/image.png?ex=6a14117d&is=6a12bffd&hm=c6df5d8af617e82851722f728aca70323b22e70747526c6114919578240b7283&
 
+[2026-05-25T14:45:34.264000+00:00] emilijano_s_54328 (id=1508481157883232348)
+    same problem
+    [reply to thehybrid1337 msg=1508033874616385576]
+

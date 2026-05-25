@@ -1,0 +1,17 @@
+# Thread 'Dream Server' in forum #community-projects-showcase
+# thread_id=1508475870380032020 forum_id=1316137596535177246
+# Started 2026-05-25T14:50:17.388962+00:00
+
+[2026-05-25T14:24:33.625000+00:00] signals_alt (id=1508475870380032020)
+    Turns your PC, Mac, or Linux box into a private AI server.  Easy Hermes installer and ecosystem.
+    
+    You could trigger an install, go grab a cup of coffee, and have Hermes Agent running and ready to go with a full ecosystem all piped in and set up in the background.  Pretty cool.  
+    
+    Just added a feature where you can do secure chats with your Hermes agent on your phone over local LAN with a QR code scanner key.  Having a lot of fun with it.  
+    
+    Hermes ships live on every install.  We are averaging 200 new downloads per day right now and all of those users are becoming new Hermes users by default.
+    
+    https://github.com/Light-Heart-Labs/DreamServer
+    [attachment] image.png https://cdn.discordapp.com/attachments/1508475870380032020/1508475870954913802/image.png?ex=6a15ad21&is=6a145ba1&hm=2f5eeb676ff2feb896e3427533df41a555ed77b384cdf30a989b4ac0019f0e67&
+    [embed] GitHub - Light-Heart-Labs/DreamServer: Turn your PC, Mac, or Linux ... https://github.com/Light-Heart-Labs/DreamServer
+

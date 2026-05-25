@@ -21035,3 +21035,95 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Hey, <@387972437901312000> , my PR is waiting for you 🤜 🤛 . https://github.com/NousResearch/hermes-agent/pull/30418
     [embed] refactor(Yuanbao): consolidate media resolution into dedicated pipe... https://github.com/NousResearch/hermes-agent/pull/30418
 
+[2026-05-25T10:16:07.263000+00:00] anthonycodeinplace (id=1508413348566401117)
+    Nice to meet everyone, I’m in the physical product  engineering space on the regulatory evaluation and certification of building , digital and energy systems. I also happen to be building tall CF steel buildings in Los Angeles. I focus on structural systems design and added mechanical/hydronic which nudged me into edge AI applications and I expect to get closer to onboard AI audit and deployment small silicon matures. I just rolled out Hermes+ signoz+openhands and just started getting in to the top of my 5 day learning curve. Community has been amazing, 🤩 I’m here to pick up some specialized knowledge or help others where it makes sense.
+
+[2026-05-25T11:06:14.833000+00:00] krionex (id=1508425963229413376)
+    The Issue: The gateway is a long-lived process, but it was capturing agent.system_prompt as a startup-only memory snapshot. Any runtime config edits (via dashboard/CLI) were ignored on subsequent message turns unless the daemon was manually restarted.
+    
+    The Fix: Added a turn-bound prompt refresh immediately before context compilation. This naturally invalidates the cached agent signature and picks up the new persona on the very next message.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/32007
+    [embed] fix(gateway): reload system prompt from config before each conversa... https://github.com/NousResearch/hermes-agent/pull/32007
+
+[2026-05-25T12:37:29.358000+00:00] sahil_ss9 (id=1508448925051392130)
+    Hey   threw together a profile creation wizard for Hermes. It's basically a keyboard-driven CLI wizard that walks you through a quick interview and builds a profile for you instead of manually editing YAML files.
+    
+        PR here if anyone wants to poke at it: https://github.com/NousResearch/hermes-agent/pull/31781
+    
+        gh pr checkout 31781 then hermes profile wizard to try it. Would love any feedback
+    
+    ^^^^^^^^^^^^^^^^^^ Interviews user, lets them create, edit, or select from predefined profiles inspired by my own/@sovthpaw profiles..it uses the skill bundle too  for setting profiles.
+    [embed] feat(profile): add interactive profile creation wizard by Sahil-SS9... https://github.com/NousResearch/hermes-agent/pull/31781
+
+[2026-05-25T13:26:07.749000+00:00] selinchu (id=1508461165670436894)
+    Summary
+    Reload provider_routing at agent construction time so live config edits take effect on the next turn, and include routing fields in the gateway agent cache signature so stale agents are not reused after routing changes. https://github.com/NousResearch/hermes-agent/pull/32088
+    [embed] fix(gateway): reload provider routing and bust cached agents on rou... https://github.com/NousResearch/hermes-agent/pull/32088
+
+[2026-05-25T13:32:46.417000+00:00] ahmetarif0x (id=1508462837805219920)
+    PR #32090
+    
+    _media_delivery_denied_paths() only blocked 3 specific files under HERMES_HOME. With recency trust on, recently-written mcp-tokens/, pairing/, .anthropic_oauth.json etc. could be delivered as attachments. Fix: deny _HERMES_HOME as a whole — cache subdirs pass the allowlist check before the denylist is reached.
+    
+    https://github.com/NousResearch/hermes-agent/pull/32090
+    
+    PR #32092
+    
+    PR #31968 added cache/bws_cache.json (plaintext Bitwarden secrets) but didn't add it to get_read_block_error(). Agent could read all cached secrets via read_file. Fix: add cache/bws_cache.json to credential_file_names, same pattern as auth.json.
+    
+    https://github.com/NousResearch/hermes-agent/pull/32092
+    [embed] fix(security): deny entire HERMES_HOME tree in media delivery denyl... https://github.com/NousResearch/hermes-agent/pull/32090
+    [embed] fix(security): add bws_cache.json to file_safety read guard by Ahme... https://github.com/NousResearch/hermes-agent/pull/32092
+
+[2026-05-25T13:58:05.947000+00:00] ahmetarif0x (id=1508469211176112289)
+    Three OAuth-only providers (qwen-oauth, google-gemini-cli, minimax-oauth) were missing from the 401 guidance set added in 0d137f103 today, causing them to show "Your API key was rejected — run: hermes setup" — wrong advice since none have an API key path. Adds the correct re-auth hint for each.
+    
+    https://github.com/NousResearch/hermes-agent/pull/32099
+    [embed] fix(agent): extend OAuth 401 guidance to qwen-oauth, google-gemini-... https://github.com/NousResearch/hermes-agent/pull/32099
+
+[2026-05-25T14:29:56.587000+00:00] tranquilflow (id=1508477224980971531)
+    Ok so I guess I see people here linking their PRs so thought I'd do the same. Only issue, I have 135 open PR's so... I feel a bit weird asking to review them all lol. Just gonna highlight the PRs are there, with a bit of explanation of my process.
+    
+    https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Aopen+author%3ATranquil-Flow
+    
+    The last few months I've been focused on addressing open issues that had no fix PRs. Over time I've also opened PRs where I believed there was a meaningfully better approach available. When I find an existing PR for the same issue, I check four things before opening:
+    
+    - Completeness: does the fix guard all vulnerable sites, not just the one reported?
+    - Minimality: smallest possible change for the problem? (the 'Teknium Standard')
+    - Edge cases: does it handle failure modes the competitor missed?
+    - Test quality: does it meet the ~2.5:1 test-to-code ratio I've seen in merged PRs here? (although I don't keep a hard limit on exact ratio, more so a general guidance for ensuring test coverage is comprehensive)
+    
+    If our approach doesn't meaningfully differ on any of these, I close as duplicate. If it does, I leave it open so maintainers can choose. Also been using <@466492386873311235>'s comments to double check for duplicates as they seem to have a much sharper system for detecting this. I use at minimum two models during the build process, sometimes three to try ensure I don't miss anything in the implementation.
+    
+    I just finished a cleanup pass: closed true duplicates, rebased all stale branches onto latest main, aligned everything with the latest contributor guidelines and ensured CI is passing. So they should all be ready for review. Perhaps given just how many are open it would be best to start with P1's. There may also be a few feature PRs in there from my work building Hermes-Aegis (security mod) and Mnemoria (my own memory plugin) that I thought could be integrated into Hermes proper. Anyway cheeeeers
+    
+    TL;DR: pls review my 135 PRs 🙂
+    [embed] Pull requests · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Aopen+author%3ATranquil-Flow
+
+[2026-05-25T14:36:35.245000+00:00] gtp95 (id=1508478897073819719)
+    Dear Nous Research team,
+    
+    We hope you are all doing great and congrats for shipping a great product to the world!
+    
+    We are a small start-up of 4 people looking forward to integrating the Hermes agent into our product, an AI administrative assistant. However, in order to do this efficiently, we would need support for a use case that is not supported at the moment. While we've built our own MCP and tools to connect to the Hermes agent, what we would ideally like is the possibility of having a single instance of Hermes to serve requests to multiple users, while keeping the context separate for each user. We need a secure way of keeping the contexts separate to ensure the privacy of each user. To do this, we were thinking about having each user's context inside a database, so that each time a user sends a message to the agent, we can retrieve the right context from the database and send it to the agent together with the user's message.
+    
+    We would appreciate it if you could let us know whether you were/are planning to implement this architecture to support such a use case in the short term. If that's not your priority, while you believe there is value in this functionality, we would be open to collaborating with you in bringing this feature to the Hermes agent.
+    
+    Please let us know what your thoughts are on this.
+    
+    Thank you for providing such a great tool to the open source community.
+    
+    Best regards
+    
+    PS: Apologies if this is not the right channel to connect, we couldn't find a communication channel dedicated to inquiries like this.
+
+[2026-05-25T14:39:55.441000+00:00] roach_jeong (id=1508479736756703293)
+    Are there any issue related to codex with hermes agent?
+
+[2026-05-25T14:47:29.175000+00:00] kyssta69 (id=1508481639855030414)
+    Opened a PR on the official NousResearch Hermes Agent repo, add  dashboard chat with a proper ChatGPT-style message UI with session history, markdown rendering, and file attachments!
+    
+    https://github.com/NousResearch/hermes-agent/pull/32100
+    [embed] feat(dashboard): replace terminal-based chat UI with session-aware ... https://github.com/NousResearch/hermes-agent/pull/32100
+
