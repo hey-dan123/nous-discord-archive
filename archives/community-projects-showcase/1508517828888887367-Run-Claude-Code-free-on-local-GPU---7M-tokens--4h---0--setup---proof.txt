@@ -1,0 +1,21 @@
+# Thread 'Run Claude Code free on local GPU — 7M tokens, 4h, $0 (setup + proof)' in forum #community-projects-showcase
+# thread_id=1508517828888887367 forum_id=1316137596535177246
+# Started 2026-05-25T19:27:31.853451+00:00
+
+[2026-05-25T17:11:17.313000+00:00] todseinvater (id=1508517828888887367)
+    **7,256,671 tokens | $0 cost** | Claude Opus 4.7 equivalent would have been ~$94
+    
+    **Stack:**
+    → llama.cpp (AMD HIP/ROCm, NVIDIA CUDA, or Vulkan)
+    → LiteLLM proxy (Anthropic API bridge — Claude Code thinks it's talking to Anthropic)
+    → Hermes Agent + Claude Code + Telegram bot for mobile control
+    
+    **Model:** Qwen3.6-27B-MTP Q4_K_M on AMD Radeon AI PRO R9700 (32 GB VRAM)
+    
+    **Key fix for Qwen models:** use `--chat-template-file` with the correct Jinja template, not just `--jinja` — without this you get garbled output.
+    
+    Setup: https://github.com/KaiFelixBennett/hermes-claude-code-local
+    
+    Curious what speeds others get on NVIDIA / Apple Silicon.
+    [embed] GitHub - KaiFelixBennett/hermes-claude-code-local: Run Hermes Agent... https://github.com/KaiFelixBennett/hermes-claude-code-local
+

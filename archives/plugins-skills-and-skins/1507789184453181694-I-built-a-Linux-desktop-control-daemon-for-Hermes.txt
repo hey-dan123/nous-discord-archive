@@ -20,3 +20,13 @@
     https://github.com/coe0718/deskbrid
     [embed] GitHub - coe0718/deskbrid: Linux desktop HAL for AI agents. One dae... https://github.com/coe0718/deskbrid
 
+[2026-05-25T18:41:13.198000+00:00] coe0718 (id=1508540460870930563)
+    Big update today. Not gonna lie, it was fun watching Tuck, my agent switch thru DEs running tests on “Turtle” as he calls it. I asked for specs he said: “That's the machine that just validated your entire release. Haswell laptop from 2014 — 4 threads at 1.7GHz, 3.7GB RAM, dead battery, 100Mbps Ethernet, and seven compositors installed. We slammed it through four DE switches in three minutes today and it didn't flinch.
+    
+    Absolute unit.”
+    He says 
+    “If this laptop can run it, your desktop can too”
+    
+    https://github.com/coe0718/deskbrid/releases/tag/v0.10.0
+    [embed] Release v0.10.0 · coe0718/deskbrid https://github.com/coe0718/deskbrid/releases/tag/v0.10.0
+

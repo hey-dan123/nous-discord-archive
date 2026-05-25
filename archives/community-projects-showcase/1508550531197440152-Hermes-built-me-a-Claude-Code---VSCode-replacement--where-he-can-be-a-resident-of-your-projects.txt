@@ -1,0 +1,44 @@
+# Thread 'Hermes built me a Claude Code & VSCode replacement, where he can be a resident of your projects' in forum #community-projects-showcase
+# thread_id=1508550531197440152 forum_id=1316137596535177246
+# Started 2026-05-25T19:27:31.110994+00:00
+
+[2026-05-25T19:21:14.151000+00:00] guideboardlabs (id=1508550531197440152)
+    hey everyone, wanted to share a project i’ve been building lately:
+    
+    cammander
+    https://github.com/GuideboardLabs/cammander
+    
+    it’s a portable browser based AI IDE designed around terminal first workflows
+    
+    features currently include:
+    
+    live terminal
+    workspace aware AI chat
+    file explorer
+    code editor with syntax highlighting
+    image viewer
+    mobile friendly UI
+    multi provider model support
+    
+    the whole idea was to recreate the feeling of Claude Code / Codex style workflows without being locked into a heavyweight desktop app or single provider ecosystem
+    
+    it runs in the browser, works across devices, and is designed to stay fast + hackable
+    
+    i’m actually using it daily now instead of my old VS Code + terminal + AI stack, and i’m actively using it to build Oathweaver after having to rebuild parts of that backend architecture from scratch
+    
+    roadmap before RC includes:
+    
+    llama.cpp
+    vLLM
+    LM Studio
+    Codex integration
+    graph + chart generation from codebases
+    Obsidian style memory vault for long term project context
+    
+    still early but usable today and moving quickly
+    
+    would love feedback from anyone into AI tooling, terminal workflows, local models, or FOSS dev environments
+    [attachment] image.png https://cdn.discordapp.com/attachments/1508550531197440152/1508550531432452317/image.png?ex=6a15f2aa&is=6a14a12a&hm=994a52c771fd8157c23fdc9f7a35562398fd00a7d5f49764f57f30b7bbad6213&
+    [attachment] IMG_2157.png https://cdn.discordapp.com/attachments/1508550531197440152/1508550531759738930/IMG_2157.png?ex=6a15f2aa&is=6a14a12a&hm=977d2ce292693dc2fe80f9b6ec326301dd20a49a7dc37fe4bb4a1ab3048d72e0&
+    [embed] GitHub - GuideboardLabs/cammander: Command center LLM-powered IDE. ... https://github.com/GuideboardLabs/cammander
+

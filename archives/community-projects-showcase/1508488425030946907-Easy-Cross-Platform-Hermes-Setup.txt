@@ -1,0 +1,10 @@
+# Thread 'Easy Cross Platform Hermes Setup' in forum #community-projects-showcase
+# thread_id=1508488425030946907 forum_id=1316137596535177246
+# Started 2026-05-25T19:27:32.221678+00:00
+
+[2026-05-25T15:14:26.887000+00:00] signals_alt (id=1508488425030946907)
+    Turns your PC, Mac, or Linux box into an AI server.  Easy Hermes installer and ecosystem setup.  Grab a cup of coffee, and have Hermes Agent running and ready to go.  Pretty cool.  
+    
+    https://github.com/Light-Heart-Labs/DreamServer
+    [embed] GitHub - Light-Heart-Labs/DreamServer: Turn your PC, Mac, or Linux ... https://github.com/Light-Heart-Labs/DreamServer
+

@@ -1086,3 +1086,17 @@
     Base Hermes memory (MEMORY.md) is limited to only 2,200 chars. In my experience, important information was flushed out too often. Therefore i‘m using Mnemo as external memory provider.
     [reply to crxshworld msg=1508462737728995368]
 
+[2026-05-25T15:39:14.924000+00:00] 0xlfg (id=1508494666310353099)
+    Is it necessary for pip install sqlite-vec
+
+[2026-05-25T15:40:32.460000+00:00] 0xlfg (id=1508494991520174190)
+    Is embedding auto created?
+
+[2026-05-25T17:41:02.196000+00:00] crxshworld (id=1508525315230535832)
+    Interesting, I recently connected Obsidian though this seems like a much different approach. Are you running local or vps? curious how that might affect the setup too
+    [reply to walterwego msg=1508468245936607255]
+
+[2026-05-25T17:59:28.166000+00:00] walterwego (id=1508529954004930701)
+    Hermes local setup. I‘m using Obsidian with llm-wiki skill additionaly. Obsidian as knowledge base and Mnemo as longterm memory.
+    [reply to crxshworld msg=1508525315230535832]
+

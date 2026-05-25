@@ -432,3 +432,43 @@
     via ssh
     [reply to liftaris msg=1508197646584778902]
 
+[2026-05-25T16:12:15.210000+00:00] nat2r (id=1508502972231979079)
+    <@197499797408710656> theres some improvements that can be made to that eikon skill. Primarily, 6 different plates can result in 6 different starting points for animations, which will make the transitions pretty jarring. I think the skill would be better off generating a single plate and basing 6 different animations off that starting point
+
+[2026-05-25T16:12:58.596000+00:00] heartl1ne (id=1508503154205917407)
+    Agreed I’ve actually modified it since to do exactly that, I’ll update it!
+    [reply to nat2r msg=1508502972231979079]
+
+[2026-05-25T16:50:28.264000+00:00] nat2r (id=1508512589997539338)
+    <@197499797408710656> thanks again 🙂
+    [attachment] 2026-05-25_12-48-50.mp4 https://cdn.discordapp.com/attachments/1498955668311248948/1508512590463111340/2026-05-25_12-48-50.mp4?ex=6a15cf54&is=6a147dd4&hm=a6e1a21e2f3c1b8e78ac57807f02bb98272b98c63de7ad2471ecbff35b05c026&
+
+[2026-05-25T16:51:50.597000+00:00] heartl1ne (id=1508512935327039630)
+    Yooooo that’s sick!! But all credit to <@209037396983939072> for this sick tui
+
+[2026-05-25T16:52:34.769000+00:00] nat2r (id=1508513120598102136)
+    facts
+
+[2026-05-25T16:53:08.330000+00:00] nat2r (id=1508513261363003423)
+    inspo: https://en.wikipedia.org/wiki/Death_of_the_Endless
+    [embed] Death of the Endless https://en.wikipedia.org/wiki/Death_of_the_Endless
+
+[2026-05-25T16:55:48.210000+00:00] heartl1ne (id=1508513931948458105)
+    incredible choice
+
+[2026-05-25T16:56:24.319000+00:00] nat2r (id=1508514083400319047)
+    yeah i tried some others but they were too intricate
+
+[2026-05-25T16:56:27.843000+00:00] nat2r (id=1508514098181308598)
+    lot of wasted API spend
+
+[2026-05-25T17:13:34.621000+00:00] heartl1ne (id=1508518404800123063)
+    Skill updated!
+    https://github.com/lucassynnott/hermes-eikon-skills
+    [embed] GitHub - lucassynnott/hermes-eikon-skills: Private Hermes skills sh... https://github.com/lucassynnott/hermes-eikon-skills
+
+[2026-05-25T18:28:12.630000+00:00] nat2r (id=1508537186931441774)
+    Here's the Eikon files for Death from Sandman, feel free to do whatever you want with it 🙂
+    [attachment] HERM-DeathEndless-Eikon.zip https://cdn.discordapp.com/attachments/1498955668311248948/1508537187296088094/HERM-DeathEndless-Eikon.zip?ex=6a15e63c&is=6a1494bc&hm=76aa0b27e920bf4f03fbe4fc4a37c691b3fc325a24f05d7eb9411dfe48d90085&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1508537187585626203/image.png?ex=6a15e63c&is=6a1494bc&hm=64a5bdcedb1f074ecfdff7bbcf5a5ba2d36d4edd876db88e9a8e7c6f5a1a660d&
+

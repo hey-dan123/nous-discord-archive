@@ -1,0 +1,7 @@
+# Thread 'Hermes-agent merch - Shopify' in forum #community-projects-showcase
+# thread_id=1508531389002289212 forum_id=1316137596535177246
+# Started 2026-05-25T19:27:31.457714+00:00
+
+[2026-05-25T18:05:10.296000+00:00] brovo1111 (id=1508531389002289212)
+    I want to create a demo site to showcase Hermes-agent capabilities. I was thinking of a Shopify Hermes-agent merch site that is run solely by Hermes-agent. Can I get permission to use Hermes-agent brand/assets? Who can I talk to? Thanks
+

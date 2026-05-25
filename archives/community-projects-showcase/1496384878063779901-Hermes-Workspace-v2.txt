@@ -562,3 +562,9 @@
     You’re doing awesome! Great job!
     [reply to outsourc_e msg=1507552544329826404]
 
+[2026-05-25T18:30:39.929000+00:00] ifreet_00706 (id=1508537804748226640)
+    What is Hermes world
+
+[2026-05-25T18:31:39.629000+00:00] ifreet_00706 (id=1508538055148048565)
+    Also why is it that i can 't use nous on the portal do i need to setup https
+

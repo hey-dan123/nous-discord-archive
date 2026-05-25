@@ -1,0 +1,17 @@
+# Thread 'Reflect Theme' in forum #plugins-skills-and-skins
+# thread_id=1508488303668625628 forum_id=1485392832154832906
+# Started 2026-05-25T19:30:33.178323+00:00
+
+[2026-05-25T15:13:57.952000+00:00] dalekc72 (id=1508488303668625628)
+    I am not a fan of the UI in Hermes.  These is my first attempt at building a theme I push to Github.  
+    
+    https://github.com/daletkc/hermes-theme-reflect
+    [attachment] sessions.png https://cdn.discordapp.com/attachments/1508488303668625628/1508488304058830868/sessions.png?ex=6a15b8b6&is=6a146736&hm=40e8fcd0347c28ce566d105ebd12fe68f436c3731d5353d24bcb208ce87e5a3c&
+    [attachment] logs.png https://cdn.discordapp.com/attachments/1508488303668625628/1508488304419672146/logs.png?ex=6a15b8b6&is=6a146736&hm=1caea064f6b2ea796454538d84898ccb701295efe339c3a899ade6ac53ddcf6f&
+    [attachment] models.png https://cdn.discordapp.com/attachments/1508488303668625628/1508488304868196483/models.png?ex=6a15b8b6&is=6a146736&hm=955c0ffe030e5d341ff3429147965c631c31793aaa34cd21279e8a2e6de4cc34&
+    [attachment] cron.png https://cdn.discordapp.com/attachments/1508488303668625628/1508488305501671484/cron.png?ex=6a15b8b6&is=6a146736&hm=61eae40642fc7ad5a43cb3870ba21ad2b76c0df423cb0193ed92e94fdda497dc&
+    [attachment] skills.png https://cdn.discordapp.com/attachments/1508488303668625628/1508488308706250782/skills.png?ex=6a15b8b7&is=6a146737&hm=dc133b91c300e3f1f3ea1a5097f2d0b83f32cebe9a87dd8bfd57199eafdbf88e&
+    [attachment] plugins.png https://cdn.discordapp.com/attachments/1508488303668625628/1508488309255438467/plugins.png?ex=6a15b8b7&is=6a146737&hm=d4372990947614d05a9edf9f66024104970161ce5b608f6ccb451e3309e866e7&
+    [attachment] kanban.png https://cdn.discordapp.com/attachments/1508488303668625628/1508488309641445527/kanban.png?ex=6a15b8b7&is=6a146737&hm=dfa220b26f779b93f86baf9f21841cb49a3942eed3613c82076cf38848ea1323&
+    [embed] GitHub - daletkc/hermes-theme-reflect: Premium dark theme for the H... https://github.com/daletkc/hermes-theme-reflect
+

@@ -1,0 +1,18 @@
+# Thread 'MyChatArchive memory provider: cross-model chat archive as Hermes memory' in forum #plugins-skills-and-skins
+# thread_id=1508516263398215721 forum_id=1485392832154832906
+# Started 2026-05-25T19:30:32.732124+00:00
+
+[2026-05-25T17:05:04.071000+00:00] _chan8910 (id=1508516263398215721)
+    Built a memory provider plugin that integrates MyChatArchive (open-source, AGPL, local-first) as a Hermes backend.
+    
+    The wedge: every other provider builds the archive itself. This one assumes you already have years of cross-model chat history (ChatGPT, Claude, Cursor, Grok) and exposes it as Hermes memory. Read-heavy by design.
+    
+    Tested end-to-end via the Telegram gateway. 49 passing tests. About to open a PR on the main repo.
+    
+    Plugin lives at github.com/1ch1n/mychatarchive, integration code under integrations/hermes/.
+    
+    Two quick questions before I PR:
+    1. Anyone aware of prior attempts at chat-archive-style memory providers I should reference?
+    2. Is there a maintainer who handles memory provider PRs specifically?
+    [attachment] mychatarchive-book-logo.png https://cdn.discordapp.com/attachments/1508516263398215721/1508516263809519808/mychatarchive-book-logo.png?ex=6a15d2c0&is=6a148140&hm=7a1b84ead50f03c044db64dd06d1e367e2914c8c25c4e4c7f32f9142c6f55e1c&
+

@@ -464,3 +464,9 @@
     Ooo nice.
     [reply to noxerz. msg=1507159121449713705]
 
+[2026-05-25T18:15:28.577000+00:00] twindenis (id=1508533982260756490)
+    I used it for a while, so far so good, the only problem I actively noticed is that it is prone to falling back to the base memory when for some reason an agent doesnt have it accessible and even with the soul.md saying to prioritize it, AND a health check working upon gateway start, it still happens occasionally.
+
+[2026-05-25T18:16:16.988000+00:00] twindenis (id=1508534185311080559)
+    I still think it can be better than obsidian though, unless Im wrong, at least less cluttered? unsure.
+
