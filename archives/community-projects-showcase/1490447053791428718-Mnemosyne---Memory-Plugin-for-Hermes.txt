@@ -2289,3 +2289,19 @@
 [2026-05-24T05:46:59.159000+00:00] thegiuseppe (id=1507983230643474443)
     mnenosyne worked very well. installed it yesterday and already found it useful on my next hermes usage. goodjob
 
+[2026-05-25T21:54:55.346000+00:00] zendar_ (id=1508589207692644442)
+    Hi, I've integrated it here https://github.com/scicco/hermzner It works perfectly 👍
+    [embed] GitHub - scicco/hermzner: Provision a hardened Hermes Agent on Hetz... https://github.com/scicco/hermzner
+
+[2026-05-25T22:48:20.913000+00:00] nulledvector (id=1508602652815134770)
+    Awesome!!! ✨ 🎉 thanks for the feedback! Glad is working out for you!
+    [reply to thegiuseppe msg=1507983230643474443]
+
+[2026-05-25T22:49:12.861000+00:00] nulledvector (id=1508602870700834987)
+    Wow! That's really cool and a great idea to ship hermes like that I saw something similar for fly io a while back I was using it but since migrated to Contabo
+    [reply to zendar_ msg=1508589207692644442]
+
+[2026-05-25T23:47:12.712000+00:00] zendar_ (id=1508617466253803602)
+    thank you, Hermes did that 😉
+    [reply to nulledvector msg=1508602870700834987]
+

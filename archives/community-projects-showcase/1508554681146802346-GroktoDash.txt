@@ -1,0 +1,17 @@
+# Thread 'GroktoDash' in forum #community-projects-showcase
+# thread_id=1508554681146802346 forum_id=1316137596535177246
+# Started 2026-05-26T02:56:17.379017+00:00
+
+[2026-05-25T19:37:43.576000+00:00] magnus919 (id=1508554681146802346)
+    A native macOS desktop client for Hermes Agent. Uses a Tahoe Citizen architecture approach, which is a fancy way of saying it's designed to be a good desktop citizen rather than a web wrapper. MIT licensed.
+    
+    https://github.com/groktopus/groktodash
+    [attachment] groktopus-logo-vintage.png https://cdn.discordapp.com/attachments/1508554681146802346/1508554681452990645/groktopus-logo-vintage.png?ex=6a15f687&is=6a14a507&hm=8c5c729b74b28db16bedcc4d5a3d3e49a2637dd4e23ee74cc1a25f3b46e3f5d3&
+    [embed] GitHub - groktopus/groktodash: Native macOS desktop client for Herm... https://github.com/groktopus/groktodash
+
+[2026-05-25T19:42:25.052000+00:00] magnus919 (id=1508555861742584058)
+    I'm bootstrapping the project right now so there's not a lot to see yet.
+
+[2026-05-25T21:24:58.848000+00:00] magnus919 (id=1508581672633766040)
+    ok it builds in XCode and kinda runs. But I'm out of my depth here with macOS desktop apps and hitting a bit of a wall. Putting this down for now. Will come back to it with fresh eyes & enthusiasm another day.
+

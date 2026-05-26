@@ -21189,3 +21189,93 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-25T19:00:45.699000+00:00] elliotbnvl (id=1508545378696560691)
     has anybody built a MacOS / iOS native client for Hermes specifically yet? I see a lot of random ones for LLMs in general
 
+[2026-05-25T20:10:51.846000+00:00] newmanrem (id=1508563020555489552)
+    i think hermes should verify files after downloading before unpacking them
+    
+    https://github.com/NousResearch/hermes-agent/pull/29434
+    [embed] Verify Android psutil archives before extraction by rayasa07 · Pul... https://github.com/NousResearch/hermes-agent/pull/29434
+
+[2026-05-25T20:11:53.150000+00:00] erhnysr (id=1508563277683097740)
+    no native app that I know of — been running it on macOS via terminal for a while. actually shipped a fix for macOS fresh installs where PATH wasn't being set correctly (zprofile fallback). works well but it's all CLI, no native UI
+    [reply to elliotbnvl msg=1508545378696560691]
+
+[2026-05-25T21:22:20.163000+00:00] ahmetarif0x (id=1508581007060635678)
+    PR #32238 — /proc smaps/mem bypass
+    https://github.com/NousResearch/hermes-agent/pull/32238
+    
+    _is_blocked_device_path() blocked /proc/*/maps via endswith("/maps") but Python does exact suffix matching — smaps, smaps_rollup, numa_maps, and mem all slipped through. These files can leak secrets, memory layout (ASLR bypass), and raw process memory.
+    
+    
+    PR #32244 — Memory plugin configs world-readable
+    https://github.com/NousResearch/hermes-agent/pull/32244
+    
+    Honcho, Mem0, Hindsight, and Supermemory wrote API keys to disk via write_text() without a follow-up os.chmod(0o600). Default umask leaves files at 0o644 — readable by any user on the same machine.
+    
+    
+    PR #32250 — google_chat _write_private_json missing secure_parent_dir
+    https://github.com/NousResearch/hermes-agent/pull/32250
+    
+    4ead464f9 replaced bare os.chmod(path.parent, 0o700) with secure_parent_dir() at 5 call sites to prevent host-bricking when HERMES_HOME=/. plugins/platforms/google_chat/oauth.py was introduced in the same security batch but wasn't included in the fix.
+    
+    
+    PR #32257 — Prompt injection pattern parity gap
+    https://github.com/NousResearch/hermes-agent/pull/32257
+    
+    00bd24e27 expanded memory_tool.py's scanner from 13 to 24 patterns but its own commit message said: "prompt_builder.py and cronjob_tools.py still use older pattern sets — deferred to follow-up PRs." This closes that gap. Patterns like "pretend you are a hacker" and "output system prompt" now blocked in SOUL.md/context and cron scanners too.
+    [embed] fix(security): extend /proc read block to smaps, smaps_rollup, numa... https://github.com/NousResearch/hermes-agent/pull/32238
+    [embed] fix(security): apply 0600 permissions on memory plugin config files... https://github.com/NousResearch/hermes-agent/pull/32244
+    [embed] fix(security): use secure_parent_dir in google_chat _write_private_... https://github.com/NousResearch/hermes-agent/pull/32250
+    [embed] fix(security): sync prompt-injection scan patterns to parity with m... https://github.com/NousResearch/hermes-agent/pull/32257
+
+[2026-05-25T21:49:17.492000+00:00] aleksandr_1 (id=1508587790630392051)
+    <@387972437901312000> thanks for the feedback on #21938 - opened #32186 which follows your suggestion and adds the install-time symlink guard for skills. Also used `_is_path_redirect` instead of `is_symlink()` to cover Windows junctions as well.
+    https://github.com/NousResearch/hermes-agent/pull/32186
+    
+    Also from the previous batch, #22030 fixes the gateway self-termination approval loop (second component of #18693), all checks green.
+    https://github.com/NousResearch/hermes-agent/pull/22030
+    
+    <:o7:1151261546111053924>
+
+[2026-05-25T22:01:39.757000+00:00] blockcipher (id=1508590903915319427)
+    bugfix: Hermes Kanban resource leak eventually exhausts file descriptors and prevents cronjobs from running
+    https://github.com/NousResearch/hermes-agent/pull/32276
+    [embed] fix(gateway): prevent cron fd leaks by counterposition · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/32276
+
+[2026-05-25T23:27:34.927000+00:00] elliotbnvl (id=1508612526265602178)
+    has anybody played around with HTML-first messaging?
+
+[2026-05-25T23:28:34.061000+00:00] elliotbnvl (id=1508612774291570802)
+    e.g. like this
+    [attachment] IMG_2935.png https://cdn.discordapp.com/attachments/1491258766648283238/1508612774891094066/IMG_2935.png?ex=6a162ca2&is=6a14db22&hm=5607a05b954d9c3016b5a440a5464bc1e53654f189c273593642b56e8f0151ea&
+    [attachment] IMG_1575.png https://cdn.discordapp.com/attachments/1491258766648283238/1508612775293751397/IMG_1575.png?ex=6a162ca2&is=6a14db22&hm=85aae01ce83b4afc6a9988bf164bcd888da1cb65354e466018d59dcf7f140736&
+
+[2026-05-26T00:56:27.195000+00:00] amk.46 (id=1508634891418468422)
+    Which app is this?
+    [reply to elliotbnvl msg=1508612774291570802]
+
+[2026-05-26T01:04:21.586000+00:00] rearwindowblackwidow_78112 (id=1508636881158541433)
+    This is neat. I guess it’s like embedded artifacts.
+
+[2026-05-26T01:22:16.953000+00:00] minjunes (id=1508641391574781993)
+    not for messaging, i imagine the chat clients will eventually support this
+    [reply to elliotbnvl msg=1508612526265602178]
+
+[2026-05-26T02:23:05.496000+00:00] songjinhao_27684 (id=1508656694673014944)
+    Hi <@1171561684331151382>    , just submitted a PR to integrate OrcaRouter into hermes-agent.
+    
+    OrcaRouter is an LLM gateway that supports 160+ models with OpenAI-compatible API. It features catalog browsing, chat routing with an optional fallback chain, and works perfectly without an API key for general tools.
+    
+    Already have PR https://github.com/NousResearch/hermes-agent/pull/30191 open and waiting for review.
+    
+    Thanks 🙏
+    [embed] feat(providers): add OrcaRouter as a built-in API-key provider by z... https://github.com/NousResearch/hermes-agent/pull/30191
+
+[2026-05-26T02:41:11.534000+00:00] wysie_ (id=1508661249846677655)
+    Submitted a PR after I noticed that switching models (between Grok/OpenAI) usually breaks the whole session until I run a /reset.
+    
+    https://github.com/NousResearch/hermes-agent/pull/32366
+    [embed] fix(gateway): fence provider state after model switches by wysie ·... https://github.com/NousResearch/hermes-agent/pull/32366
+
+[2026-05-26T02:45:03.479000+00:00] loongfay (id=1508662222694645902)
+    Anthropic has a 5MB limit for image processing. Is there any good method to handle this?
+

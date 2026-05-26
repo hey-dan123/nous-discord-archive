@@ -19,3 +19,6 @@
     Curious what speeds others get on NVIDIA / Apple Silicon.
     [embed] GitHub - KaiFelixBennett/hermes-claude-code-local: Run Hermes Agent... https://github.com/KaiFelixBennett/hermes-claude-code-local
 
+[2026-05-25T21:40:54.951000+00:00] lambino0999 (id=1508585682820661409)
+    Got a 16 gb ram mac mini. No hope for local LLMs. yet
+

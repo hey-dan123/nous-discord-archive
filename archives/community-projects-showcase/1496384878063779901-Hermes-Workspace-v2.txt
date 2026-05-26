@@ -568,3 +568,15 @@
 [2026-05-25T18:31:39.629000+00:00] ifreet_00706 (id=1508538055148048565)
     Also why is it that i can 't use nous on the portal do i need to setup https
 
+[2026-05-25T22:13:26.789000+00:00] outsourc_e (id=1508593869422329876)
+    hermesworld is an ai agent mmorpg
+    [reply to ifreet_00706 msg=1508537804748226640]
+
+[2026-05-25T22:13:33.308000+00:00] outsourc_e (id=1508593896764997652)
+    and with workspace for nous portal?
+    [reply to ifreet_00706 msg=1508538055148048565]
+
+[2026-05-26T02:03:31.983000+00:00] ifreet_00706 (id=1508651772603007149)
+    To clarify i tried using nous as a provider on Hermes workspace but when I pressed start oauthit said invalid client
+    [reply to outsourc_e msg=1508593896764997652]
+

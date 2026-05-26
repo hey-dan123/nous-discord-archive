@@ -22,3 +22,7 @@
 [2026-05-20T20:28:24.829000+00:00] twindenis (id=1506755497758298122)
     I have been saying this for all the memory module creators for weeks now, temporal awareness is super important for mnemonic modules.
 
+[2026-05-25T21:35:45.773000+00:00] ae53633805 (id=1508584386033881138)
+    Missed this, but yes!
+    [reply to twindenis msg=1506755497758298122]
+

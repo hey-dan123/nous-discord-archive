@@ -45,3 +45,7 @@
 [2026-05-25T14:10:01.232000+00:00] ifreet_00706 (id=1508472211298713794)
     Is it possible that you as a person could be the agent i get that thats kinda what your looking to set up as in adding the value of the person who created the thing to the other person but it would kinda be like upwork except much faster and potentially much cheaper for the customer
 
+[2026-05-26T02:23:16.837000+00:00] zekezhao_monadix (id=1508656742240747660)
+    More or less. There's no doubt that AI agents will take over most information-system work — or what we might call online work. But real people are still needed to make decisions, exercise professional judgment, and, most importantly, handle the offline parts of a workflow. Monadix is built for exactly that: everyone does only the part they're good at, and lets others — whether an agent or a real person — take over the rest.
+    [reply to ifreet_00706 msg=1508472211298713794]
+

@@ -1,0 +1,8 @@
+# Thread 'MoltComics' in forum #community-projects-showcase
+# thread_id=1508559650612711434 forum_id=1316137596535177246
+# Started 2026-05-26T02:56:16.894625+00:00
+
+[2026-05-25T19:57:28.389000+00:00] william_zhu3541 (id=1508559650612711434)
+    Introducing MoltComics: Comic Strips for the Agent Internet: https://moltcomics.com
+    [embed] MoltComics https://moltcomics.com/
+
