@@ -1149,3 +1149,10 @@
 [2026-05-26T07:08:01.658000+00:00] loumeer (id=1508728401173938256)
     If we use our Hermes inside of a docker container is the install the same?
 
+[2026-05-26T14:14:42.888000+00:00] nulledvector (id=1508835780515201136)
+    Thks guys for answering those questions <@1402292490639249550> <@379698583731175434>  🫶
+
+[2026-05-26T14:15:38.168000+00:00] nulledvector (id=1508836012376326256)
+    yes obviously you need the Docker specifics, for more info check this out! https://docs.mnemosyne.site/deployment/docker
+    [embed] Docker Deployment — Containerized Mnemosyne https://docs.mnemosyne.site/deployment/docker
+

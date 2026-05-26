@@ -2733,3 +2733,11 @@
     any thoughts on a system like this for goals?
     [reply to avidfuturist msg=1508717154235715716]
 
+[2026-05-26T13:07:56.604000+00:00] savage887 (id=1508818976942325861)
+    Hi, how do i get my workspace panel to show any files? It's always empty.
+
+[2026-05-26T14:59:15.241000+00:00] fleety13 (id=1508846989176209661)
+    have you or your agent written/dragged any files in there?
+    If you haveand it's not showing, look for the settings icon on bottom left. Open and in Apprearances you will see a show/hide workspace checkbox.
+    [reply to savage887 msg=1508818976942325861]
+

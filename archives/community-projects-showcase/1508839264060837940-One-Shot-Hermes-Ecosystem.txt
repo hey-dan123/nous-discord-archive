@@ -1,0 +1,11 @@
+# Thread 'One Shot Hermes Ecosystem' in forum #community-projects-showcase
+# thread_id=1508839264060837940 forum_id=1316137596535177246
+# Started 2026-05-26T15:21:29.858967+00:00
+
+[2026-05-26T14:28:33.430000+00:00] signals_alt (id=1508839264060837940)
+    Deploy an entire Hermes ecosystem on any machine with one command.  RAG, voice agents, LAN based web portals to talk on the phone, n8n backend preconfigured, smart tools aware, one install and you are done.  Free and OSS, Apache 2.0.  Fork it, steal it, mod it, borrow from it, put it on your French fries.
+    
+    https://github.com/Light-Heart-Labs/DreamServer
+    [attachment] Dream_Server_Dashboard.png https://cdn.discordapp.com/attachments/1508839264060837940/1508839264643842239/Dream_Server_Dashboard.png?ex=6a16ff91&is=6a15ae11&hm=b25d82f0216c97eafe809fcfe6286f5f26d45456c2e3105393357489f8088507&
+    [embed] GitHub - Light-Heart-Labs/DreamServer: Turn your PC, Mac, or Linux ... https://github.com/Light-Heart-Labs/DreamServer
+

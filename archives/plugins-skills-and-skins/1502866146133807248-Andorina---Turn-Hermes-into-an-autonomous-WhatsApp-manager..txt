@@ -215,3 +215,7 @@
     🫶
     [attachment] Captura_desde_2026-05-24_22-01-31.png https://cdn.discordapp.com/attachments/1502866146133807248/1508199478631465030/Captura_desde_2026-05-24_22-01-31.png?ex=6a14abb8&is=6a135a38&hm=0a527744967da167793a0c7600f497a3540175d68754dc6909330864d36db35e&
 
+[2026-05-26T14:47:50.556000+00:00] vayaperson (id=1508844117399044267)
+    We’re currently fixing an issue causing the sub-souls to not behave correctly. We’ll release the version as soon as it’s resolved. If anyone has any ideas about the issue, any help is welcome!!
+    [attachment] Captura_desde_2026-05-26_16-46-07.png https://cdn.discordapp.com/attachments/1502866146133807248/1508844117663158482/Captura_desde_2026-05-26_16-46-07.png?ex=6a170416&is=6a15b296&hm=2615cd4a82a6c1dd8742358d6f33af5a7e65522171ff71be90e9b6730c709626&
+

@@ -49,3 +49,6 @@
     More or less. There's no doubt that AI agents will take over most information-system work — or what we might call online work. But real people are still needed to make decisions, exercise professional judgment, and, most importantly, handle the offline parts of a workflow. Monadix is built for exactly that: everyone does only the part they're good at, and lets others — whether an agent or a real person — take over the rest.
     [reply to ifreet_00706 msg=1508472211298713794]
 
+[2026-05-26T10:07:59.053000+00:00] fhsduifisdfbsdifisdfysdfj (id=1508773688730976296)
+    AaaS Agent as a Service. Very cool idea!
+

@@ -21383,3 +21383,54 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-26T08:20:14.269000+00:00] shilird. (id=1508746573461323816)
     please check  <@387972437901312000>
 
+[2026-05-26T10:54:36.073000+00:00] colmeio_66868 (id=1508785420283023446)
+    See @Victor de Genaro @123mikeyd
+
+[2026-05-26T10:58:34.656000+00:00] zyrxtrx (id=1508786420972650636)
+    Hey, just dropped a quick fix for a gateway budget leak in #32544. Reused cached agents were completely ignoring any live agent.max_turns changes on cache hits and keeping their old values. Reordered the turn setup and forced the updated budget onto the cached instance so it updates instantly. https://github.com/NousResearch/hermes-agent/pull/32544
+    [embed] fix(gateway): refresh cached agent max_iterations after per-turn co... https://github.com/NousResearch/hermes-agent/pull/32544
+
+[2026-05-26T11:15:08.057000+00:00] sprmn24 (id=1508790587598442536)
+    Hey <@387972437901312000>  sir ,   just wanted to say big thanks for the salvage run yesterday — really appreciate you preserving authorship on all of them.
+    Rebased all 20 open PRs onto current main (force-pushed, heads updated). A few highlights in the queue if you get a chance to look:
+    
+    #30324 — fix(achievements): Ollama native name:tag format detection in is_local_model_name()
+    #29450 — fix(skills-hub): streaming ZIP extraction to prevent zip bomb via manipulated metadata
+    #29448 — fix(redact): None input guard + ENV regex for quoted secrets
+    #28935 — fix(send_message): surface channel resolution errors instead of silent fail
+    #28932 — fix(xai-proxy): handle 429 rate-limit in proxy retry path
+    #28923 — fix(credential_pool): cap retry delay at 3600s (indefinite freeze prevention)
+    #28917 — fix(url_safety): 5s timeout on socket.getaddrinfo() calls
+    #27628 — fix(simplex): propagate WebSocket send failures to SendResult
+    #25961 — fix(url_safety): strip IPv6 scope IDs to prevent SSRF bypass
+    #25952 / #25950 / #25947 / #25904 — silent-swallow fixes across cron/model_tools
+    #24024 — fix(gateway): guard check_fn() in platform_registry
+    #19920 / #19917 / #19856 / #19749 / #19748 — logging + clamp + session key fixes
+    #13920 — fix(ssh): IPv6 bracket syntax for SCP destination
+    
+    If there's anything you think is missing, or anything you'd like me to correct or close, please let me know 🫡
+
+[2026-05-26T13:20:26.950000+00:00] xdarkchain (id=1508822124121296957)
+    Hi
+    Three small gateway fixes on fix/gateway-media-roots-and-telegram-streaming-format:
+    
+    1. Safe media roots: added /tmp, macOS temp sandbox, and ~/ to MEDIA_DELIVERY_SAFE_ROOTS so agent-written files stop getting silently dropped. Deny-list still protects ~/.ssh etc. Skip-warnings now log the path.
+    2. Telegram draft streaming: send_draft now applies format_message() + MarkdownV2, so streaming previews stop showing raw **bold**.
+    3. Stream split: first chunk of an oversized split now sends with finalize=True, so it gets MarkdownV2 instead of being stuck with raw markdown forever.
+    
+    https://github.com/NousResearch/hermes-agent/pull/32609
+    [embed] Improve media safety, logging, and Telegram formatting by ITheEqual... https://github.com/NousResearch/hermes-agent/pull/32609
+
+[2026-05-26T14:14:06.427000+00:00] autumnn5389 (id=1508835627586551888)
+    A massive workload for <@387972437901312000>
+
+[2026-05-26T14:14:09.205000+00:00] autumnn5389 (id=1508835639238594591)
+    Lol
+
+[2026-05-26T14:22:48.040000+00:00] .elkim (id=1508837815390044425)
+    He's like a tradwife mommy with bunch of kids pulling her skirt and screaming for attention lol
+
+[2026-05-26T14:38:11.178000+00:00] gumandnuts (id=1508841687311450164)
+    gentlemen, reminder that image generation is busted on main, folks have been complaining for over a month now: https://github.com/NousResearch/hermes-agent/issues/21562
+    [embed] [Bug]: native image generation (image_generate) doesn't accept imag... https://github.com/NousResearch/hermes-agent/issues/21562
+

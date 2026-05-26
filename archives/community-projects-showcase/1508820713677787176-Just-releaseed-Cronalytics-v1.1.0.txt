@@ -1,0 +1,30 @@
+# Thread 'Just releaseed Cronalytics v1.1.0' in forum #community-projects-showcase
+# thread_id=1508820713677787176 forum_id=1316137596535177246
+# Started 2026-05-26T15:21:30.267009+00:00
+
+[2026-05-26T13:14:50.674000+00:00] _8bit64k_ (id=1508820713677787176)
+    ## Cronalytics v1.1.0 released
+    
+    Changelog highlights:
+    
+    **New interfaces:**
+    - Dashboard tab with cards, leaderboard, sortable jobs table, model breakdown, and failure-state analysis
+    - CLI tool — eight commands (summary, jobs, models, trends, health, runs, all, sync), `--json` output
+    - Agent skill for guided cron health diagnostics with confidence-graded anomaly detection
+    
+    **i18n:**
+    - Spanish, Simplified Chinese, Traditional Chinese — all UI, modals, and metrics
+    - Multi-model 2/4 consensus validation pipeline for translation quality
+    - Self-hosted catalog architecture (no Hermes framework dependency for i18n)
+    
+    **Quality:**
+    - 149 tests, ruff clean, mypy clean
+    - CI pipeline on every push/PR
+    - Full documentation overhaul: FAQ, community templates, doc contracts
+    
+    **Install:** `pip install cronalytics` or clone into `~/.hermes/plugins/`
+    **Upgrade from v1.0:** See UPGRADE.md — namespace restructured, cost fields renamed with "estimated" qualifier.
+    **Docs:** https://github.com/8bit64k/cronalytics
+    [attachment] releast-test-420P.mp4 https://cdn.discordapp.com/attachments/1508820713677787176/1508820715686723584/releast-test-420P.mp4?ex=6a16ee4b&is=6a159ccb&hm=67df3f6ea0d35a1e0fb14946c2aae1b8d88f29947140189c22998d7c623a87f0&
+    [embed] GitHub - 8bit64k/cronalytics: Hermes Agent plugin for cron analytic... https://github.com/8bit64k/cronalytics
+
