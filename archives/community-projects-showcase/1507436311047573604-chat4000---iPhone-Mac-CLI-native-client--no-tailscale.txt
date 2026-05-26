@@ -68,3 +68,45 @@
 [2026-05-26T01:02:57.991000+00:00] dennis048863 (id=1508636530535829534)
     <@1445264578878640129>  hello
 
+[2026-05-26T05:25:23.220000+00:00] .vansken (id=1508702570812543058)
+    This actually sick, for only quick chats with agent, I think it's an alternative compare to discord/telegram
+
+[2026-05-26T05:25:51.345000+00:00] .vansken (id=1508702688777338933)
+    Maybe in the future you can add multi-chats or channels to differentiate context, like how discord and telegram topics are
+
+[2026-05-26T05:26:22.759000+00:00] .vansken (id=1508702820537208942)
+    anyone the UX really blazing fast <@1445264578878640129> kudos
+
+[2026-05-26T05:44:33.193000+00:00] haimbender (id=1508707394148896768)
+    Ty sir 🙏🏻 Yeah, adding sessions soon, anything else you need?
+    [reply to .vansken msg=1508702688777338933]
+
+[2026-05-26T05:46:59.087000+00:00] .vansken (id=1508708006072684615)
+    just joined your telegram channel, yeah basic UI improvement like response streaming, simplified tool calling, multi-session/context chats, and projects (for specific context adding system prompt for every projects)
+    [reply to haimbender msg=1508707394148896768]
+
+[2026-05-26T05:48:50.448000+00:00] haimbender (id=1508708473154834452)
+    Writing all of this down! Great 👍🏻
+    [reply to .vansken msg=1508708006072684615]
+
+[2026-05-26T05:49:26.749000+00:00] haimbender (id=1508708625412128798)
+    https://tenor.com/view/writing-notes-checklist-spongebob-squarepants-gif-16129592
+    [embed]  https://tenor.com/view/writing-notes-checklist-spongebob-squarepants-gif-16129592
+
+[2026-05-26T08:15:39.918000+00:00] bondanadnob. (id=1508745422750093422)
+    Based on my usage there are some note (which hopefully can improve the app, only if you agree of course)
+    
+    - when using the macos app and switching to ios, it fetches the message like crazy. Lol. Not that it bothers and affect experience. But maybe can make it more seamless?
+    
+    - i use hermes with multiple profiles, and often i use attachment. Do you see think it would be good if we have attachment & profile feature within both app and macos? 
+    
+    Nevertheless, cool app!
+
+[2026-05-26T08:24:01.101000+00:00] .vansken (id=1508747524863688774)
+    also for approval exec
+    [attachment] image.png https://cdn.discordapp.com/attachments/1507436311047573604/1508747525182722160/image.png?ex=6a16aa21&is=6a1558a1&hm=bfbddf3ff217c404f183d0b7d696fcfeb6675ac3f12d72205ceb0aa2493ae473&
+
+[2026-05-26T08:30:27.640000+00:00] bondanadnob. (id=1508749146125762631)
+    second this. from my POV would be 100% faster to approve in a popup selection instead of needing to type the command
+    [reply to .vansken msg=1508747524863688774]
+

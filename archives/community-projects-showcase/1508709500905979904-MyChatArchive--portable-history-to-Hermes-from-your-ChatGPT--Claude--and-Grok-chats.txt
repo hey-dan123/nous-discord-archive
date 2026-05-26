@@ -1,0 +1,14 @@
+# Thread 'MyChatArchive: portable history to Hermes from your ChatGPT, Claude, and Grok chats' in forum #community-projects-showcase
+# thread_id=1508709500905979904 forum_id=1316137596535177246
+# Started 2026-05-26T09:52:50.414994+00:00
+
+[2026-05-26T05:52:55.483000+00:00] _chan8910 (id=1508709500905979904)
+    Imports your frontier chat history into one local SQLite archive with embeddings. The Hermes plugin queries it on demand and auto-injects relevant chunks per turn.
+    Local-first. AGPL core, MIT plugin.
+    Plugin: https://github.com/1ch1n/hermes-mychatarchive
+    Archive system: https://github.com/1ch1n/mychatarchive
+    [attachment] mychatarchive-book-logo.png https://cdn.discordapp.com/attachments/1508709500905979904/1508709501140729856/mychatarchive-book-logo.png?ex=6a1686b7&is=6a153537&hm=44ebdf0b4a29aa159f829476278c8f1c27eaf55d4befc506a124e93c53d04723&
+    [attachment] mychatarchive-hermes.png https://cdn.discordapp.com/attachments/1508709500905979904/1508709501774336121/mychatarchive-hermes.png?ex=6a1686b7&is=6a153537&hm=2d3ac1ad4eb1381587ae78eae9a9fcabb67e6ac0faf9715494aa3055f2f8c792&
+    [embed] GitHub - 1ch1n/hermes-mychatarchive: MyChatArchive memory provider ... https://github.com/1ch1n/hermes-mychatarchive
+    [embed] GitHub - 1ch1n/mychatarchive: Local-first AI memory archive. Import... https://github.com/1ch1n/mychatarchive
+

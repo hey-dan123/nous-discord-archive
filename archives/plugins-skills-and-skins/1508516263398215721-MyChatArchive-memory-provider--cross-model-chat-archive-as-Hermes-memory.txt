@@ -16,3 +16,11 @@
     2. Is there a maintainer who handles memory provider PRs specifically?
     [attachment] mychatarchive-book-logo.png https://cdn.discordapp.com/attachments/1508516263398215721/1508516263809519808/mychatarchive-book-logo.png?ex=6a15d2c0&is=6a148140&hm=7a1b84ead50f03c044db64dd06d1e367e2914c8c25c4e4c7f32f9142c6f55e1c&
 
+[2026-05-26T04:43:59.383000+00:00] _chan8910 (id=1508692152845340702)
+    Update: PR was closed since new memory providers ship as standalone plugin repos now per CONTRIBUTING.md. Will publish the standalone version and re-post in <#1316137596535177246> when it's up.
+
+[2026-05-26T05:21:30.979000+00:00] _chan8910 (id=1508701596723449916)
+    shipped it. github.com/1ch1n/hermes-mychatarchive
+    install: pip install git+https://github.com/1ch1n/hermes-mychatarchive && hermes-mychatarchive-install && hermes memory setup
+    [embed] GitHub - 1ch1n/hermes-mychatarchive: MyChatArchive memory provider ... https://github.com/1ch1n/hermes-mychatarchive
+

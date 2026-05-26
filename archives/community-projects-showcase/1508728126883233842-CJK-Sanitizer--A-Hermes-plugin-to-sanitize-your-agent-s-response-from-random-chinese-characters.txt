@@ -1,0 +1,17 @@
+# Thread 'CJK Sanitizer: A Hermes plugin to sanitize your agent's response from random chinese characters' in forum #community-projects-showcase
+# thread_id=1508728126883233842 forum_id=1316137596535177246
+# Started 2026-05-26T09:52:50.017236+00:00
+
+[2026-05-26T07:06:56.262000+00:00] .vansken (id=1508728126883233842)
+    If you use Chinese LLM providers (MiniMax, DeepSeek, GLM, Qwen), you've probably noticed Chinese characters leaking into output mid-sentence. It's a known quirk from CJK-heavy training data.
+    
+    This plugin hooks into Hermes' transform_llm_output pipeline and strips those characters automatically. Korean and Japanese are preserved by design — it only targets Chinese ideographs and Cyrillic (the scripts that tend to glitch).
+    
+    Zero config. Install and forget:
+    `hermes plugins install evanyudis/cjk_sanitizer --enable
+    hermes gateway restart`
+    
+    MIT, open, 30 lines of Python: https://github.com/evanyudis/cjk_sanitizer
+    [attachment] ChatGPT_Image_May_26_2026_01_38_58_PM.png https://cdn.discordapp.com/attachments/1508728126883233842/1508728127147212850/ChatGPT_Image_May_26_2026_01_38_58_PM.png?ex=6a169810&is=6a154690&hm=8c5b2e7f3645cf716a0ba6ee920499e43aed9c6734a572c06fd7d828d21e308d&
+    [embed] GitHub - evanyudis/cjk_sanitizer: Hermes Agent plugin: strip unwant... https://github.com/evanyudis/cjk_sanitizer
+

@@ -1108,3 +1108,44 @@
     Of course it can be increased. But the complete content is always injected into context. I‘d rather prefer an external memory plugin, that only injects relevant information.
     [reply to s1arsky msg=1508562498515632178]
 
+[2026-05-26T03:17:43.288000+00:00] bordio (id=1508670442729111593)
+    is it ok if it doesnt appear in hermes memory?
+    this is what is shown and it is enabled 
+     Installed plugins:
+        • byterover  (requires API key)
+        • hindsight  (API key / local)
+        • holographic  (local)
+        • honcho  (API key / local)
+        • mem0  (API key / local)
+        • openviking  (API key / local)
+        • retaindb  (API key / local)
+        • supermemory  (requires API key)
+
+[2026-05-26T03:26:51.766000+00:00] nihp_ (id=1508672743212847245)
+    Those are inbuilt supported providers. After installing mnemo it will pop up. It im not mistaken
+
+[2026-05-26T03:28:16.259000+00:00] bordio (id=1508673097601913012)
+    it does show up in ◆ Tool Availability when doing hermes doctor but the commands arent showing when doing for example /mnemosyne_remember
+    [reply to nihp_ msg=1508672743212847245]
+
+[2026-05-26T03:31:19.872000+00:00] nihp_ (id=1508673867730915398)
+    i believe thats hermes's tool. its tools exposed to ur hermes, not you. you can ask it to run that and it should be able to.
+    [reply to bordio msg=1508673097601913012]
+
+[2026-05-26T03:31:39.124000+00:00] bordio (id=1508673948479393883)
+    oh ok thanks for the info
+    [reply to nihp_ msg=1508673867730915398]
+
+[2026-05-26T04:36:55.240000+00:00] 0xlfg (id=1508690373860655175)
+    Anyone can answer this? How often do you consolidate your memory
+    [reply to 0xlfg msg=1508494666310353099]
+
+[2026-05-26T05:25:49.578000+00:00] walterwego (id=1508702681366007878)
+    sqlite-vec is optional. But if you install it, you get a faster vector search. 
+    
+    You don’t need to consolidate memory manually. When you end a session with /new, memory is consolidated automatically. Keep in mind, that entries in working memory have to be at least 12h old, before they are consolidated into episodic memory.
+    [reply to 0xlfg msg=1508690373860655175]
+
+[2026-05-26T07:08:01.658000+00:00] loumeer (id=1508728401173938256)
+    If we use our Hermes inside of a docker container is the install the same?
+

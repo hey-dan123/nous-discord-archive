@@ -1,0 +1,37 @@
+# Thread 'Stop polling, wake agents on matching events' in forum #plugins-skills-and-skins
+# thread_id=1508746944280002672 forum_id=1485392832154832906
+# Started 2026-05-26T09:56:02.277568+00:00
+
+[2026-05-26T08:21:42.679000+00:00] singhcoder (id=1508746944280002672)
+    Background agents hit a pretty annoying tradeoff when they need to react to future events.
+    
+    If you poll often, they waste tokens checking if anything happened.
+    And, if you poll slowly, they react late.
+    Use a cheaper model for the polling loop and the actual event handling can get worse too.
+    
+    this comes up whenever an agent is waiting on things like:
+    
+    - an email/reply
+    - a repo update
+    - a customer message
+    - a task state change
+    - any external event that may or may not happen soon
+    
+    so i made a small hermes plugin that moves the is something relevant happened part outside the agent loop.
+    
+    the agent registers what it’s waiting for.
+    then it only gets continued when something matches.
+    
+    plugin:
+    https://github.com/qordinate-ai/watchline-hermes-plugin
+    
+    i also made a benchmark around incoming-email filters.
+    
+    on a 50-event x 5-watch slice:
+    - 68.2% fewer source calls
+    - 91.0% fewer downstream agent tokens vs polling
+    
+    mostly sharing because this feels like the right shape for async/background agent workflows: don’t keep the agent awake to ask if anything happened; wake it when something relevant actually happens.
+    [attachment] watchline-mark.png https://cdn.discordapp.com/attachments/1508746944280002672/1508746944711753758/watchline-mark.png?ex=6a16a996&is=6a155816&hm=9dcab9d2dc54b0c27da0a26024fbf90339144c99ffc8869d6597a1066094516e&
+    [embed] GitHub - qordinate-ai/watchline-hermes-plugin: Hermes plugin for re... https://github.com/qordinate-ai/watchline-hermes-plugin
+

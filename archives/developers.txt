@@ -21279,3 +21279,107 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-26T02:45:03.479000+00:00] loongfay (id=1508662222694645902)
     Anthropic has a 5MB limit for image processing. Is there any good method to handle this?
 
+[2026-05-26T03:43:23.699000+00:00] orlandoburli (id=1508676903681396808)
+    Hi! I created a plugin for hermes cost analysis, for the moment there is a adapter for opencode only. https://github.com/orlandoburli/hermes-kanban-insights
+    
+    Open to contributions if anyone wants other providers (claude, cursor, etc)
+    [embed] GitHub - orlandoburli/hermes-kanban-insights: Hermes Agent dashboar... https://github.com/orlandoburli/hermes-kanban-insights
+
+[2026-05-26T04:08:28.622000+00:00] magnus919 (id=1508683215785689181)
+    this one is pretty cool but has been sitting around for awhile. I just rebased it to make sure it stays mergeable. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/28041
+    [embed] feat(skills): add claude-import skill — migrate Claude conversati... https://github.com/NousResearch/hermes-agent/pull/28041
+
+[2026-05-26T04:38:14.129000+00:00] songjinhao_27684 (id=1508690704744845352)
+    Hi <@387972437901312000>    , just submitted a PR to integrate OrcaRouter into hermes-agent.
+    
+    OrcaRouter is an LLM gateway that supports 160+ models with OpenAI-compatible API. It features catalog browsing, chat routing with an optional fallback chain, and works perfectly without an API key for general tools.
+    
+    Already have PR https://github.com/NousResearch/hermes-agent/pull/30191 open and waiting for review.
+    
+    Thanks 🙏
+    [embed] feat(providers): add OrcaRouter as a built-in API-key provider by z... https://github.com/NousResearch/hermes-agent/pull/30191
+
+[2026-05-26T04:43:01.080000+00:00] magnus919 (id=1508691908304572434)
+    Cleanup on aisle 8... (wipes out a number of narrower PR's & related issues with one fix).
+    
+    https://github.com/NousResearch/hermes-agent/issues/32408
+    https://github.com/NousResearch/hermes-agent/pull/32411
+    [embed] Proposal: consolidate ~12 auxiliary fallback PRs into per-task fall... https://github.com/NousResearch/hermes-agent/issues/32408
+    [embed] feat(auxiliary): add per-task fallback_providers config for transpa... https://github.com/NousResearch/hermes-agent/pull/32411
+
+[2026-05-26T05:06:48.314000+00:00] elliotbnvl (id=1508697894557847714)
+    <@1469473837291667728> an experimental iOS app I vibe coded up to see how HTML-first feels
+    [reply to amk.46 msg=1508634891418468422]
+
+[2026-05-26T05:10:54.339000+00:00] elliotbnvl (id=1508698926461485107)
+    **Proposal: structured tool callbacks for messaging-platform adapters**
+    
+    I'm building a desktop client (iOS/macOS) and paired adapter on Hermes using the plugin path (`BasePlatformAdapter` + `ctx.register_platform`) so I get session unity with slash commands.
+    
+    I'd like to render tool calls as rich correlated cards (`running` → `completed` keyed by `tool_call_id`), like `api_server.py:1162-1202` does for `/v1/chat/completions`. But that's api-server-only — `_handle_message_with_agent` only wires `agent.tool_progress_callback` (~line 16324), which carries `(event_type, name, preview, args)` with no `tool_call_id`. The structured `tool_start_callback` / `tool_complete_callback` the agent already supports never get attached for messaging platforms.
+    
+    Today a plugin's only options are (a) parse the formatted `🔍 tool: "..."` strings out of `adapter.send()` (fragile, no completion lifecycle) or (b) monkey-patch `agent_init` (ugly coupling).
+    
+    **Would y'all take a small PR adding `on_tool_started` / `on_tool_completed` optional methods on `BasePlatformAdapter`?** It would following the existing pattern of default to no-op stubs, wired in `_handle_message_with_agent` when overridden — zero behavior change for existing adapters. Same payload shape as api_server's `_on_tool_start`/`_on_tool_complete`. ~30-50 LOC + tests and one row in `ADDING_A_PLATFORM.md`.
+    
+    Happy to write it, just want to gauge interest first.
+
+[2026-05-26T05:30:20.238000+00:00] .elkim (id=1508703816596586557)
+    hey mate, just bumping this 🙂
+    [reply to teknium msg=1507251919351971982]
+
+[2026-05-26T05:49:54.525000+00:00] rubdottocom (id=1508708741912985690)
+    Hermes was mixing topics on Telegram (I dunno if Topics was the issue) and I deactivate Topic in Bothfather. Now Hermes think that I on the main/system-messages channel and I can't communicate with the agent
+    [attachment] Screenshot_20260526_074608_Telegram.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1508708742017978519/Screenshot_20260526_074608_Telegram.jpg?ex=6a168602&is=6a153482&hm=546dc4f16502bfc71d86a0ae638bcb1068fd43e504eef03af8b5ecd874c72e2c&
+
+[2026-05-26T07:05:40.592000+00:00] marcelowa (id=1508727809499992094)
+    Hi
+    I submitted a PR that adds "/workspace" capabilities to Hermes
+    The pain point I was addressing is the following:
+    I am working with Telegram, basically I created a group with topics where each topic is a different conversation/project that I am working on with Hermes
+     every time I hit "/new" on a topic the next thing I need to do is to start explaining what we're working on
+    So I added to my Hermes the "/workspace"  command that allows me to create a workspace with it's own system prompt  skills and default model and I can link this workspace to the specific topic/channel/thread and continue working on it
+    https://github.com/NousResearch/hermes-agent/pull/30968
+    [embed] feat(workspace): add /workspace command for per-topic prompts, skil... https://github.com/NousResearch/hermes-agent/pull/30968
+
+[2026-05-26T07:06:55.390000+00:00] wesleysimplicio (id=1508728123225669744)
+    <@387972437901312000> Your tasks with 99% accuracy using Hermes
+    
+    Repo: https://github.com/wesleysimplicio/simplicio-cli
+    [attachment] simplicio-cli-readme-hero.png https://cdn.discordapp.com/attachments/1491258766648283238/1508728123888504892/simplicio-cli-readme-hero.png?ex=6a16980f&is=6a15468f&hm=b67cce04e9a55b33b5e324b13b4bc5e24d08707e8741e442a04e353ec25653ea&
+    [embed] GitHub - wesleysimplicio/simplicio-cli: Your tasks with 99% accurac... https://github.com/wesleysimplicio/simplicio-cli
+
+[2026-05-26T07:09:31.540000+00:00] wesleysimplicio (id=1508728778166370315)
+    Report:
+    [attachment] results.pdf https://cdn.discordapp.com/attachments/1491258766648283238/1508728778258518087/results.pdf?ex=6a1698ab&is=6a15472b&hm=d71096cc65bd888cee09d9d4db4de7bcd5d9efcf7498a417ae16b15b2af391a5&
+
+[2026-05-26T07:09:47.233000+00:00] wesleysimplicio (id=1508728843987320832)
+    [attachment] page-1-web.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1508728844159418429/page-1-web.jpg?ex=6a1698bb&is=6a15473b&hm=c4a2b90a321105f81f400d8c502513b258633709654f4edf92a87008c9fba688&
+    [attachment] page-5-web.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1508728844457087066/page-5-web.jpg?ex=6a1698bb&is=6a15473b&hm=4bced332fc9a002455df293331d3e10681fc0d539b1273d2c5d4ae1216135ff0&
+    [attachment] page-4-web.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1508728845031968838/page-4-web.jpg?ex=6a1698bb&is=6a15473b&hm=9a385ec02798be8f553e383e159de611e163962812cc960669aa63304fbba14a&
+    [attachment] page-3-web.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1508728845300273242/page-3-web.jpg?ex=6a1698bb&is=6a15473b&hm=db387dc2de311631531a469328906ba425daa8bc650ad82bca97882d2ab9d291&
+    [attachment] page-2-web.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1508728845648527480/page-2-web.jpg?ex=6a1698bb&is=6a15473b&hm=cac02338ad26b9e18d3edcf712e65c64d80d5644ed407207cdaf66dcd986e315&
+
+[2026-05-26T07:53:02.404000+00:00] wesleysimplicio (id=1508739728923557968)
+    See <@1228037612338679961> <@222797987829645313>
+
+[2026-05-26T08:13:41.821000+00:00] singhcoder (id=1508744927415238656)
+    i made a small hermes plugin: https://github.com/qordinate-ai/watchline-hermes-plugin
+    the idea is: an agent can register what it’s waiting for, and only get continued when something matches.
+    helps avoid burning tokens on heartbeat/polling loops, without having to downgrade the model that handles the actual event.
+    i also ran it on a small incoming-email benchmark: 91% fewer downstream agent tokens vs polling on a 50-event x 5-watch slice.
+    [embed] GitHub - qordinate-ai/watchline-hermes-plugin: Hermes plugin for re... https://github.com/qordinate-ai/watchline-hermes-plugin
+
+[2026-05-26T08:19:33.634000+00:00] shilird. (id=1508746403025911818)
+    https://github.com/NousResearch/hermes-agent/pull/32356    https://github.com/NousResearch/hermes-agent/pull/32450    https://github.com/NousResearch/hermes-agent/pull/32458 https://github.com/NousResearch/hermes-agent/pull/32482  https://github.com/NousResearch/hermes-agent/pull/32484
+    [embed] fix: use atomic writes for JSON state files (voice_mode, spawn_tree... https://github.com/NousResearch/hermes-agent/pull/32356
+    [embed] fix: correct operator precedence in or-expression truncation (7 loc... https://github.com/NousResearch/hermes-agent/pull/32450
+    [embed] fix: guard float() env var casts against ValueError (16 locations) ... https://github.com/NousResearch/hermes-agent/pull/32458
+    [embed] fix: remove logging.basicConfig() from library __init__ methods by ... https://github.com/NousResearch/hermes-agent/pull/32482
+    [embed] fix: guard json.loads on network input and add subprocess timeouts ... https://github.com/NousResearch/hermes-agent/pull/32484
+
+[2026-05-26T08:20:14.269000+00:00] shilird. (id=1508746573461323816)
+    please check  <@387972437901312000>
+

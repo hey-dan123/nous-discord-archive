@@ -580,3 +580,19 @@
     To clarify i tried using nous as a provider on Hermes workspace but when I pressed start oauthit said invalid client
     [reply to outsourc_e msg=1508593896764997652]
 
+[2026-05-26T03:14:05.859000+00:00] outsourc_e (id=1508669530766053446)
+    open a pr for it will fix! mainly ask your hermes agent to pair
+    [reply to ifreet_00706 msg=1508651772603007149]
+
+[2026-05-26T03:18:01.418000+00:00] noxerz. (id=1508670518771843163)
+    how u can use qwen3.7 max?
+    [reply to outsourc_e msg=1508266266069303457]
+
+[2026-05-26T03:18:45.461000+00:00] outsourc_e (id=1508670703501836439)
+    go to https://modelstudio.alibabacloud.com
+    [embed] Alibaba Cloud Model Studio https://modelstudio.alibabacloud.com/
+    [reply to noxerz. msg=1508670518771843163]
+
+[2026-05-26T03:18:50.602000+00:00] outsourc_e (id=1508670725064622130)
+    free qwen 3.7 access
+
