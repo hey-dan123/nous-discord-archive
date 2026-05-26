@@ -1,0 +1,8 @@
+# Thread 'free account won't connect' in forum #plugins-skills-and-skins
+# thread_id=1508892597140062208 forum_id=1485392832154832906
+# Started 2026-05-26T20:10:04.916496+00:00
+
+[2026-05-26T18:00:29.027000+00:00] .sirash (id=1508892597140062208)
+    so I'm not sure how i got -0.02 on a free account. but it won't let me connect my Hermes anymore
+    [attachment] image.png https://cdn.discordapp.com/attachments/1508892597140062208/1508892597345718525/image.png?ex=6a17313d&is=6a15dfbd&hm=9f78f2d2b4d17225bdab70f4a2113902edbc476c266716faddf429e9270b5a5a&
+

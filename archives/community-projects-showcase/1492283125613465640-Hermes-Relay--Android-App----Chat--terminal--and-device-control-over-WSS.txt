@@ -149,3 +149,26 @@
     I've spent a lot of time working on Chat/Voice modes - including supporting a persistant realtime agent loop via OpenAI/xAI initially. Hermes is called as a tool call and can do so as a background task if needed to keep the reatime chat loop live. I wanted to be able to have fluid conversation with my Hermes agent, especially if I asked it to run CI or a long running task similar. 
     Let me know what you guys think!  ❤️
 
+[2026-05-26T16:32:18.172000+00:00] aquillum (id=1508870405685772338)
+    Hi, my sideloaded APK (latest) Crashes when trying to voice Chat. As soon AS Hermes tries to answer i hear Just 2 Letters and IT Crashes. Thats the Output: 
+    java.lang.IllegalStateException: Player is accessed on the wrong thread.
+    Current thread: 'DefaultDispatcher-worker-4'
+    Expected thread: 'main'
+    See https://developer.android.com/guide/topics/media/issues/player-accessed-on-wrong-thread
+        at b81.o(Unknown Source:2)
+        at me1.C(Unknown Source:71)
+        at sw4.invoke(Unknown Source:22)
+        at at.c(Unknown Source:55)
+        at at.a(Unknown Source:55)
+        at v.invokeSuspend(Unknown Source:1340)
+        at ot.resumeWith(Unknown Source:7)
+        at c41.run(Unknown Source:110)
+        at a5.run(Unknown Source:587)
+        at qh4.run(Unknown Source:2)
+        at bu0.run(Unknown Source:86)
+        Suppressed: e31: [va4{Cancelling}@f9246cf, Dispatchers.IO]
+    [embed] Getting started  |  Android media  |  Android Developers https://developer.android.com/guide/topics/media/issues/player-accessed-on-wrong-thread
+
+[2026-05-26T17:17:03.730000+00:00] praveenjoseph (id=1508881669732700221)
+    Can you possible to explain how this relay works? How secure it is?
+

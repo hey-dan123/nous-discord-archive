@@ -1,0 +1,7 @@
+# Thread 'Skill for extracting from x / twitter' in forum #plugins-skills-and-skins
+# thread_id=1508867472583823430 forum_id=1485392832154832906
+# Started 2026-05-26T20:10:05.293963+00:00
+
+[2026-05-26T16:20:38.866000+00:00] examplos (id=1508867472583823430)
+    Hi guys, any skill to extract info from x / twitter via hermes? I have a bunch of links to extract and I tried with supergrok suscription conected to hermes, but it keeps failing
+

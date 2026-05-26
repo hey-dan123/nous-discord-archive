@@ -1,0 +1,15 @@
+# Thread 'My home setup running Hermes Agent on a Raspberry Pi (reports, recipes, smart home)' in forum #community-projects-showcase
+# thread_id=1508871282924716193 forum_id=1316137596535177246
+# Started 2026-05-26T20:06:51.190665+00:00
+
+[2026-05-26T16:35:47.322000+00:00] bert_71849 (id=1508871282924716193)
+    My home setup running Hermes Agent on a Raspberry Pi (reports, recipes, smart home)
+    
+    I've been running Hermes Agent on a headless Raspberry Pi 5 at home for a couple of months now: daily news reports, recipe search, shopping lists, smart home, all in Docker.
+    
+    I finally wrote the whole thing up: my setup, the CLIs and skills I built, the models I tried (and switched between), and what it actually costs to run:
+    
+    
+    https://nhranitzky.github.io/My_Life_with_Hermes.html
+    [embed] My Life with Hermes Agent https://nhranitzky.github.io/My_Life_with_Hermes.html
+

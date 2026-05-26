@@ -21434,3 +21434,135 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     gentlemen, reminder that image generation is busted on main, folks have been complaining for over a month now: https://github.com/NousResearch/hermes-agent/issues/21562
     [embed] [Bug]: native image generation (image_generate) doesn't accept imag... https://github.com/NousResearch/hermes-agent/issues/21562
 
+[2026-05-26T15:49:29.966000+00:00] muddlebee (id=1508859633849335838)
+    oh no
+    [reply to gumandnuts msg=1508841687311450164]
+
+[2026-05-26T15:51:15.381000+00:00] chadbrewbaker (id=1508860075991896164)
+    Stupid question - I'm trying to debug a /goal flow.  I fixed most of the the things wasting the agent's time but I'm stuck on what this is. Is the agent halucinating the command or does it need to be whitelisted? ========================================
+    STALL DETAILS
+    ========================================
+    Time: 2026-05-26 10:38:04
+    Type: API (1243.1s)
+    Context Snippet:
+    Model: Qwen3.6-27B-UD-Q4_K_XL.gguf
+    Last Context: {"error": "Background review denied non-whitelisted tool: read_file. Only memory/skill tools are allowed."}...
+
+[2026-05-26T15:52:47.757000+00:00] chadbrewbaker (id=1508860463444656148)
+    This could probably be generalized into a /log-doctor commad that tries to understand where the agent is wasting it's time. https://gist.github.com/chadbrewbaker/8277662fc3701e4b076731318caa5133
+
+[2026-05-26T16:25:57.261000+00:00] teknium (id=1508868808029376513)
+    The background auto skill improvement system doesn’t allow it to do anything but skill management
+    [reply to chadbrewbaker msg=1508860075991896164]
+
+[2026-05-26T16:26:07.768000+00:00] teknium (id=1508868852099059863)
+    So that it doesn’t go off randomly messing with things
+
+[2026-05-26T16:28:59.328000+00:00] .elkim (id=1508869571673587883)
+    Did something happen to Codex like two days ago? Getting tons of ⚠️ No first byte from provider in 45s (codex stream, model: gpt-5.5). Reconnecting.
+
+[2026-05-26T16:35:47.165000+00:00] teknium (id=1508871282266083510)
+    Yes, OpenAI became unreliable
+    [reply to .elkim msg=1508869571673587883]
+
+[2026-05-26T16:36:05.896000+00:00] teknium (id=1508871360829718568)
+    Hundreds of issues even for codex users
+
+[2026-05-26T16:36:35.573000+00:00] .elkim (id=1508871485303947368)
+    ah good, wasn't sure if it's Hermes or them 🙂
+
+[2026-05-26T16:45:13.488000+00:00] dskwe. (id=1508873657596772516)
+    Just opened #32579 — fixes silent file corruption in the patch tool's replace_all mode.
+    
+     Three bugs in fuzzy_match.py that all cause the same symptom: agent does a batch replace, file comes back with missing spaces or wrong content, and nobody notices until something breaks downstream.
+    
+         Bug 1: _strategy_exact scanned with pos+1 stride instead of len(pattern), finding overlapping matches. "aaaa" replacing "aa" → 3 matches instead of 2, splice in reverse order = corrupt output.
+    
+         Bug 2: _map_normalized_positions checked == before space-collapsing, so when both chars were spaces the mapping drifted — trailing spaces landed in the wrong zone.
+    
+         Bug 3: A while-loop that was a broken workaround for Bug 2. It greedily ate spaces past the match boundary, so 'foo bar   baz' replacing 'foo bar' → 'Xbaz' (spaces before "baz" vanished).
+    
+         Quick demo:
+    
+         OLD: 'Xbaz'     ← 3 spaces eaten
+         NEW: 'X   baz'  ← correct
+         fuzzy_find_and_replace("foo   bar   baz", "foo  bar", "X")
+    
+    Would appreciate a review — this is the code path behind every replace_all=True patch operation.
+    
+    https://github.com/NousResearch/hermes-agent/pull/32579
+    [embed] fix(patch): prevent file corruption from overlapping matches in fuz... https://github.com/NousResearch/hermes-agent/pull/32579
+
+[2026-05-26T17:01:51.076000+00:00] m3lon00 (id=1508877841784242317)
+    Food for thought but we want to use Hermes in production but given the speed and size of updates we are stuck at n-2 or more updates for security and stability reasons. Hermes Moving too fast today but eventually bug branches post version release would be helpful to commercial efforts
+
+[2026-05-26T17:26:10.389000+00:00] lts_kayak (id=1508883962586730556)
+    getting a ton of these today already
+    [reply to .elkim msg=1508869571673587883]
+
+[2026-05-26T17:30:06.074000+00:00] m0n5t3r (id=1508884951121133779)
+    is there some contest on who sends more PRs? otherwise I fail to understand how you see 3-4 PRs fixing the same issue (**and people adding PRs after there's a comment saying "here are 3 more PRs that fix this"**), despite the instructions saying to search for similar PRs / issues before submitting...
+
+[2026-05-26T17:31:27.762000+00:00] swanand_69854 (id=1508885293745307731)
+    Hello Everyone,
+    Tool Forge is now open source in developer preview.
+    I’ve been working on a problem that keeps showing up as agents become more useful: agents need tools, but turning “the model wrote a script” into something reusable, governed, validated, and safe enough to plug into workflows is still too manual.
+    Tool Forge focuses on two connected pieces:
+    1. Governed, sandbox-verified intent-to-tool generation
+    You describe the tool you want, and Tool Forge generates a Python tool bundle with CLI support, tests, metadata, dependency policy checks, API-doc grounding, deterministic review, and sandbox validation before it enters the catalog.
+    2. Token-optimized MCP/tool routing
+    Instead of giving an agent a giant tool schema dump, Tool Forge Router exposes a compact MCP-compatible surface. Agents can resolve the right tools for the current intent, inspect schemas lazily, and invoke tools through catalog/session boundaries.
+    It is still an OSS alpha/developer preview, not a “finished production platform.” The roadmap is busy: JS/TS generation, stronger sandbox guardrails, deeper API-doc grounding, more Router governance, benchmark expansion, and broader MCP/client compatibility.
+    Why this might be interesting for this community: Tool Forge is designed to complement agent frameworks like LangGraph/LangChain rather than replace them. Frameworks orchestrate agents and workflows; Tool Forge helps produce, validate, catalog, and route the tools those agents depend on.
+    Repo: https://github.com/nextmoca/tool-forge
+    I’d love feedback from people building agent workflows, especially around MCP routing, tool catalog design, sandbox validation, and what “production-ready generated tools” should actually mean in practice.
+    [embed] GitHub - nextmoca/tool-forge: Open-source AI-powered Python tool ge... https://github.com/nextmoca/tool-forge
+
+[2026-05-26T17:34:47.215000+00:00] m0n5t3r (id=1508886130311827629)
+    I was referring to this https://github.com/NousResearch/hermes-agent/issues/31873 (even ignoring the fact that it's a duplicate of an issue from last week, just ... why mindlessly add PRs clogging up the maintainer queue and making the issue slower to resolve)
+    [embed] [Bug]: check_web_api_key() hardcodes built-in backends — third-pa... https://github.com/NousResearch/hermes-agent/issues/31873
+    [reply to m0n5t3r msg=1508884951121133779]
+
+[2026-05-26T17:54:07.756000+00:00] z1gon (id=1508890997973712996)
+    Hey <@387972437901312000> , I’m part of the ByteDance team that developed these features. Appreciate it if you could review them when you have the time. Cheers! 🙂
+    
+    1) Add VolcanoEngine and BytePlus providers (Effectively closes #14070, #8952, #32114 and #29331):
+    https://github.com/NousResearch/hermes-agent/pull/32549 
+    
+    2) Improve OpenViking setup flow:
+    https://github.com/NousResearch/hermes-agent/pull/32445
+    
+    3) Sanitize skill OpenViking memory input:
+    https://github.com/NousResearch/hermes-agent/pull/32663
+    [embed] Add Volcengine and BytePlus providers by ehz0ah · Pull Request #32... https://github.com/NousResearch/hermes-agent/pull/32549
+    [embed] feat(memory): improve OpenViking setup UX by ehz0ah · Pull Request... https://github.com/NousResearch/hermes-agent/pull/32445
+    [embed] fix(openviking): sanitize skill memory input by ehz0ah · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/32663
+
+[2026-05-26T19:46:06.568000+00:00] grieschbrei (id=1508919178713763851)
+    Can somebody explain what's the difference between Opencode, Openhands, PI, Codex?
+
+[2026-05-26T19:48:36.845000+00:00] mstolarzblaxelai (id=1508919809021182055)
+    hey, Michael from Blaxel Inc. PR #20809 is refreshed and mergeable now; it adds Blaxel as a Hermes sandbox backend. Could someone approve/rerun checks and review/merge if it looks good? https://github.com/NousResearch/hermes-agent/pull/20809
+    [embed] feat(tools): add Blaxel cloud sandbox terminal backend by cploujoux... https://github.com/NousResearch/hermes-agent/pull/20809
+
+[2026-05-26T19:54:15.145000+00:00] godsboy7777 (id=1508921227954360321)
+    <@387972437901312000> Could you please review this one when you get a gap?
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/31733
+    PR: https://github.com/NousResearch/hermes-agent/pull/31764
+    
+    Short version: generated images are saved under `~/.hermes/cache/images/...`, but Telegram media delivery may only allow the legacy `~/.hermes/image_cache/...` path in installs where the legacy dir exists. I reproduced it today on Linux/Telegram DM:
+    
+    -  did not show as an attachment.
+    - Retrying did not show.
+    - `send_message` reported success but still did not visibly deliver.
+    - Copying the same PNG to `/root/.hermes/image_cache/...` and sending from there worked reliably.
+    
+    PR #31764 looks like the right fix direction: explicitly add canonical cache roots like `cache/images`, `cache/audio`, `cache/videos`, etc. to `MEDIA_DELIVERY_SAFE_ROOTS`.
+    
+    Only concern: the PR is currently conflicting, and the tests mostly monkeypatch `MEDIA_DELIVERY_SAFE_ROOTS`, so they don’t fully prove the real default safe roots include `cache/images` when legacy `image_cache` also exists.
+    
+    My take: correct fix direction. Best path is probably to get #31764 rebased and strengthened rather than opening a duplicate PR. If it stalls, I’m happy to help put up a clean replacement PR that credits #31764.
+    [embed] Generated images under cache/images may not deliver via Telegram ME... https://github.com/NousResearch/hermes-agent/issues/31733
+    [embed] fix(gateway): add canonical cache paths to MEDIA_DELIVERY_SAFE_ROOT... https://github.com/NousResearch/hermes-agent/pull/31764
+

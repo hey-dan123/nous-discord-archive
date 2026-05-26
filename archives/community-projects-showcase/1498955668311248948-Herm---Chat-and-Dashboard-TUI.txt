@@ -503,3 +503,6 @@
 [2026-05-25T19:58:38.466000+00:00] gille (id=1508559944536952854)
     ok, i haven't tested with herm.
 
+[2026-05-26T20:07:08.755000+00:00] anibal3608 (id=1508924472709611660)
+    hey bro !! thats amazing, this is what I was looking for, to replace opencode/pi-agent by hermes !!
+

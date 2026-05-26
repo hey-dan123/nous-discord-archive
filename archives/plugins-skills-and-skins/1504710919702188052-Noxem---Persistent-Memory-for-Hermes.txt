@@ -476,3 +476,7 @@
 [2026-05-26T01:01:16.579000+00:00] noxerz. (id=1508636105183072327)
     ic
 
+[2026-05-26T20:09:03.723000+00:00] twindenis (id=1508924954920616096)
+    is it possible currently to access and use qwen 3.7 /max for free somehow?
+    I think it would be great for this.
+

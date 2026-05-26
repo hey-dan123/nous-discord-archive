@@ -2741,3 +2741,17 @@
     If you haveand it's not showing, look for the settings icon on bottom left. Open and in Apprearances you will see a show/hide workspace checkbox.
     [reply to savage887 msg=1508818976942325861]
 
+[2026-05-26T16:03:29.138000+00:00] savage887 (id=1508863153591816296)
+    no, my agent has not created any files. 
+    
+    I always thought i could i edit the files in my hermes directory, eg. soul.md and etc in webui.
+    [reply to fleety13 msg=1508846989176209661]
+
+[2026-05-26T16:07:48.579000+00:00] avidfuturist (id=1508864241766236251)
+    You can edit some in the memory (brain) tab on the left. But we purposely don’t show the full Hermes tab in explorer by default for security reasons. 
+    
+    But then you can configure a workspace to any path on your machine and it will show you the files in that path when you select that workspace.
+    
+    Hope that clarifies!
+    [reply to savage887 msg=1508863153591816296]
+
