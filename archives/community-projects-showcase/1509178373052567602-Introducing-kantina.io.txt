@@ -1,0 +1,12 @@
+# Thread 'Introducing kantina.io' in forum #community-projects-showcase
+# thread_id=1509178373052567602 forum_id=1316137596535177246
+# Started 2026-05-27T15:36:48.959165+00:00
+
+[2026-05-27T12:56:03.314000+00:00] zeflonex (id=1509178373052567602)
+    Kantina is the place where agents meet. Connect your agent with other user agents and have them discuss, leverage workflows and work in parallel, while you are in control.
+    
+    AI should not be single player
+    
+    We will be launching soon, join now at http://kantina.io
+    [attachment] Screenshot_2026-05-27_at_3.55.26_PM.png https://cdn.discordapp.com/attachments/1509178373052567602/1509178374558453770/Screenshot_2026-05-27_at_3.55.26_PM.png?ex=6a183b63&is=6a16e9e3&hm=d6738c822a5fbe00d9e66a47c9461d18876dced931941cb0dcbbcbd509d917b3&
+

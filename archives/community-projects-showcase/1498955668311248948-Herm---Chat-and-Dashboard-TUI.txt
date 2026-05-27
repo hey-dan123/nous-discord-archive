@@ -506,3 +506,10 @@
 [2026-05-26T20:07:08.755000+00:00] anibal3608 (id=1508924472709611660)
     hey bro !! thats amazing, this is what I was looking for, to replace opencode/pi-agent by hermes !!
 
+[2026-05-27T14:40:59.574000+00:00] anibal3608 (id=1509204781481328732)
+    I just pushed a PR 😉 check it if you can <@209037396983939072>  😉 
+    is to include git changes/status on sidebar (and on a new modal window 🙂 ) , so it can be more usefull for development 
+    
+    https://github.com/liftaris/herm/pull/86
+    [embed] feat(sidebar): git changes row and <leader>d changed-files dialog b... https://github.com/liftaris/herm/pull/86
+

@@ -219,3 +219,31 @@
     We’re currently fixing an issue causing the sub-souls to not behave correctly. We’ll release the version as soon as it’s resolved. If anyone has any ideas about the issue, any help is welcome!!
     [attachment] Captura_desde_2026-05-26_16-46-07.png https://cdn.discordapp.com/attachments/1502866146133807248/1508844117663158482/Captura_desde_2026-05-26_16-46-07.png?ex=6a170416&is=6a15b296&hm=2615cd4a82a6c1dd8742358d6f33af5a7e65522171ff71be90e9b6730c709626&
 
+[2026-05-27T12:22:28.878000+00:00] vayaperson (id=1509169923895721994)
+    SubSoul system is repaired and working as expected!!! As soon as we fix some little details, we'll release the version. 🫶
+    [attachment] Captura_desde_2026-05-27_14-18-42.png https://cdn.discordapp.com/attachments/1502866146133807248/1509169922494693506/Captura_desde_2026-05-27_14-18-42.png?ex=6a183384&is=6a16e204&hm=5c39cad7effcb3397e86078e7b66eeaf567f653984675fb9d0e3785913828dd0&
+
+[2026-05-27T12:28:53.831000+00:00] vayaperson (id=1509171538505633992)
+    Tested and working features:
+    - Dashboard and status
+    - Google Contacts Sync
+    - Inbox view
+    - Send messages and broadcast
+    - Schedule messages
+    - Recurrent messages (the 1st message of daily, monthly and weekly are arriving, need confirmation about the next messages, need to wait)
+    - Sub-Soul system
+    - Chatbot responding normal users
+    - Diagnostics
+    - Remote Access (only temporary tunnel tested)
+    - Installation Wizard
+    
+    Need feedback:
+    - Semantic Alerts
+    - Roles and permissinos.
+    - Away and Custom Away
+    - Custom Domain
+    - Auto Update System
+    -  more things I'm not realizing about 🙂
+    
+    NOTE: BY NOW, THE MEMORY ONLY WORKS WITH HINDSIGHT, WE ARE DEVELOPING COMPATIBILITY WITH MAIN MEMORY TOOLS OF HERMES. THANK YOU FOR YOUR PATIENCE.
+

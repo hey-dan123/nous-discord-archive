@@ -13,3 +13,10 @@
     https://nhranitzky.github.io/My_Life_with_Hermes.html
     [embed] My Life with Hermes Agent https://nhranitzky.github.io/My_Life_with_Hermes.html
 
+[2026-05-27T14:19:11.422000+00:00] rupert888_ (id=1509199294693904625)
+    Cool stuff dude! I really love the way you explain your processes so clearly and all of the visuals are excellent.
+    
+    I’m also using Raspberry Pi for running Hermes and it works really well! One thing I have started to use and constantly improve is a local web app for all the apps I use daily (Chat interface, cron jobs, Hermes notes, investments, logging and reading previous journals (from obsidian), Gym progress through Hevy MCP, Garmin MCP for my sleep & runs etc. It really is addicting to build stuff with Hermes.
+    
+    And I haven't had any problems coding with the GPT-5.5 model through Codex Oauth so definitely worth to try it out.
+

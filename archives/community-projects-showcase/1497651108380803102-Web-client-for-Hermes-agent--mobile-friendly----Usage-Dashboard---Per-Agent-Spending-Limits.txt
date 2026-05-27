@@ -115,3 +115,7 @@
      - Improved security 
      - Quality-of-life features
 
+[2026-05-27T13:22:19.652000+00:00] dav05262 (id=1509184984693477396)
+    The Hermes Client is now available as the default client on https://hermesita.com
+    [embed] Hermesita — Your own AI agent server, deployed in minutes https://hermesita.com/
+

@@ -21663,3 +21663,153 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-27T09:12:47.187000+00:00] vitalmuffin (id=1509122185623634010)
     Hey so i have a question: is it possible to use skill wide llm definition (model overwrite) or just agent wide?
 
+[2026-05-27T09:42:36.918000+00:00] whoishs (id=1509129692299657340)
+    Hello. Since today I am receiving 404 on nous portal endpoints for models. Yesterday all was working fine. Http requests to https://inference-api.nousresearch.com/v1 responds with 404
+
+[2026-05-27T09:43:12.837000+00:00] whoishs (id=1509129842954862662)
+    Am I doing something wrong?
+
+[2026-05-27T10:04:04.725000+00:00] knox6969 (id=1509135093753577593)
+    Would this work for mobile too ? Native mobile development*
+    [reply to .elkim msg=1509121366878851207]
+
+[2026-05-27T10:10:29.097000+00:00] knox6969 (id=1509136705926598798)
+    My experience with Claude 4.7 is.... trash. Absolute gargabe, even. I look at what Claude built me this 2 weeks and it looks like the most generic bs ive ever seen. Work in progress. Lets see if I can have everything done for the next 3 months. Gonna be hard because I wanna enjoy summer, but I think the project is worth building. 
+    And people will be able to sub to everything they do on the terminal, but just on iOS first, for now.
+    [attachment] Screenshot_2026-05-27_at_11.06.53_2.png https://cdn.discordapp.com/attachments/1491258766648283238/1509136705704165467/Screenshot_2026-05-27_at_11.06.53_2.png?ex=6a181495&is=6a16c315&hm=abfce4e060f2b1714486ad08e3191e7c860b02bd64f19057c3aeec92510baa60&
+
+[2026-05-27T10:21:25.118000+00:00] wysie_ (id=1509139457478230016)
+    Made a small bugfix https://github.com/NousResearch/hermes-agent/pull/33177
+    [embed] fix: preserve nested official skill install paths by wysie · Pull ... https://github.com/NousResearch/hermes-agent/pull/33177
+
+[2026-05-27T10:34:08.891000+00:00] minddragon (id=1509142660974121082)
+    howdy. just wanted to say amazing work 🙂
+
+[2026-05-27T10:49:03.637000+00:00] wysie_ (id=1509146413811109999)
+    Another bugfix to ensure skills that are now marked as optional skills but installed previously are marked as optional skills properly (otherwise they're treated as user skills and will get curated by curator). Also added a repair-official option to 'hermes skills' so any such skill that's already curated by accident can be fixed. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/33188
+    [embed] fix: backfill official optional skill provenance by wysie · Pull R... https://github.com/NousResearch/hermes-agent/pull/33188
+
+[2026-05-27T10:50:17.167000+00:00] sahil_ss9 (id=1509146722218278913)
+    Hey  can someone have a quick glance at security-guidance plugin (#33131): https://github.com/NousResearch/hermes-agent/pull/33186
+    
+    Adds severity-ranked output, on-demand `security_scan` tool, and coverage for `execute_code`/`terminal`. References #41 and #7826 H7.
+    ```
+    [embed] feat(plugins): enhance security-guidance with severity tiers, audit... https://github.com/NousResearch/hermes-agent/pull/33186
+
+[2026-05-27T12:08:09.114000+00:00] .elkim (id=1509166317784137829)
+    still getting a lot of it despite the patch you shipped, even Codex alone feels slows as fuck
+    [reply to teknium msg=1508871282266083510]
+
+[2026-05-27T12:08:46.161000+00:00] .elkim (id=1509166473170522294)
+    guys are running out of compute I guess
+
+[2026-05-27T12:14:30.459000+00:00] minddragon (id=1509167917260865548)
+    there's a nasty crash in latest when running multisession or something idk or maybe with this particular gateway. crash fix coming in ab out 10 mins or less.
+
+[2026-05-27T12:25:51.066000+00:00] wysie_ (id=1509170771933794335)
+    Submitted another PR primarily for curation 
+    
+    https://github.com/NousResearch/hermes-agent/pull/33209
+    [embed] fix: preserve skill packages during curator consolidation by wysie ... https://github.com/NousResearch/hermes-agent/pull/33209
+
+[2026-05-27T12:34:34.529000+00:00] teknium (id=1509172967496744981)
+    inb4 they shut off the subsidies 🙁
+    [reply to .elkim msg=1509166473170522294]
+
+[2026-05-27T12:34:41.513000+00:00] teknium (id=1509172996789506098)
+    we are tracking their issues in <#1508979076025552896>
+
+[2026-05-27T13:01:43.398000+00:00] codecrusader. (id=1509179799468249189)
+    Has anybody tried the hermes desktop ?
+
+[2026-05-27T13:01:57.166000+00:00] minddragon (id=1509179857215422647)
+    https://github.com/NousResearch/hermes-agent/pull/33250  - fixes a nasty crash. (how to make it happen: run 10 hermes running full tilt on same machine) ... yes im that crazy
+    [embed] fix: guard against None timestamps in active-session arithmetic by ... https://github.com/NousResearch/hermes-agent/pull/33250
+
+[2026-05-27T13:02:21.566000+00:00] minddragon (id=1509179959556440165)
+    discussed in hermes-agent a lot
+    [reply to codecrusader. msg=1509179799468249189]
+
+[2026-05-27T13:10:02.324000+00:00] minddragon (id=1509181892115824781)
+    xai oauth fixes PR soon. to discuss...users are ... fun creatures. They will 1. start it and wander over to another terminal for 2 minutes. then do the auth and then come back and it's timed out.  2. start it on a headless machine and expect 127.0.0.1 to catch callback yeah right. 3. do the headless and paste in the code and not wait 175 seconds. 4. do all kinds of stupid stuff.    -- This x.ai oauth is something i was trying to post a while back but was competing with the xai team unsuccessfully. now that it's been a while and the hubub has died off... i am, once again, asking for your support (insert MEME here) for a comprehensive and clean x.ai oauth procedure.   -- i am still testing 33250 to be sure but it's been at least 30 minutes longer than the last crash...
+
+[2026-05-27T13:15:38.961000+00:00] djabin (id=1509183304073609268)
+    Hey folks, Anyone staying around San Jose this Friday afternoon?
+    Two dev friends and I organized a casual AI Agent session. We’ll mainly talk about practical usage of Hermes Agent, also cover agent workflows and supply chain security. Just a chill space to connect and discuss tech together.  
+    📍 1199 Coleman Ave, San Jose, CA 95110
+    🔗 Register：https://luma.com/nigfy3vc
+    [embed] Agent Campus: The First Offline University for AI Agents · Luma https://luma.com/nigfy3vc
+
+[2026-05-27T13:21:50.617000+00:00] godsboy7777 (id=1509184862911991878)
+    <@387972437901312000> Follow-up on yesterday's MEDIA delivery question, Issue #31733 / PR #31764.
+    
+    The bug surface is broader than the generated-image cache root mismatch.
+    
+    Repro'd today with a valid PDF under `/tmp` on Linux / Telegram DM, screenshot attached above:
+    
+    1. Agent confirms the PDF exists at `/tmp/pool_evidence/Cosmo_Pools_Quotation_PFA30971.pdf`.
+    2. Agent's final response says "Here it is" with a `MEDIA:<path>` tag. No attachment appears in Telegram.
+    3. I reply, "There is no pdf here?" because the text shows but the file does not.
+    4. Agent recovers by running `mkdir -p /root/.hermes/document_cache`, copying the PDF in, and invoking `send_message` against the new path. Telegram delivers it natively.
+    5. The bot's own self-narration nails the diagnosis: "Telegram didn't attach it from the /tmp path. I copied it into the document cache and sent it directly."
+    
+    The gateway log for step 2 today just says:
+    
+    ```text
+    Skipping unsafe MEDIA directive path outside allowed roots
+    ```
+    
+    with no path and no reason, so the agent has nothing to act on except blind retry to a different directory.
+    
+    Per yesterday's offer, I have opened #33251 as a complementary PR to #31764. It is ready for review and CI is green, 18/18.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/33251
+    Issue: https://github.com/NousResearch/hermes-agent/issues/31733
+    Related PR: https://github.com/NousResearch/hermes-agent/pull/31764
+    Walkthrough comment on screenshot: https://github.com/NousResearch/hermes-agent/pull/33251#issuecomment-4554794390
+    
+    ## What #33251 adds on top of #31764's canonical-cache-roots direction
+    
+    * Kebab-string rejection reasons surfaced from the validator and logged by `filter_media_delivery_paths` / `filter_local_delivery_paths` with a redacted path.
+    * The `/tmp` PDF case in the screenshot would log:
+    
+    ```text
+    Skipping unsafe MEDIA directive path /tmp/.../Cosmo_Pools_Quotation_PFA30971.pdf, reason=outside-allowlist-stale-mtime
+    ```
+    
+    That is actionable for operators, via Grafana / log search, and for the agent if or when we surface the reason back into the tool return value. I am tracking that as a deferred follow-up.
+    
+    * Control-character sanitisation in the redacted log, so a model-emitted path with an embedded newline cannot forge a second log line.
+    * The strengthened legacy-and-canonical co-exist regression test the #31764 review asked for.
+    * Legacy `image_cache/` and canonical `cache/images/` both exist on disk.
+    * The canonical file is deliverable through the default safe-roots tuple, no monkeypatch.
+    * PDF / document delivery regression tests under canonical `cache/documents` and legacy `document_cache`.
+    * `send_message` / final-response extraction parity verified via source introspection, so a future split surfaces in tests.
+    
+    Scope is intentionally narrow: gateway media delivery only.
+    
+    It does not touch the extension-derivation refactor, #32472, or the markdown attachment work, #31561 / #33206.
+    
+    If #31764 lands first, the safe-roots block in #33251 is a clean merge against it.
+    
+    Which path do you prefer?
+    
+    1. Take #33251 as the consolidated PR and close or supersede #31764.
+    2. Fold the diagnosable-logging additions and the strengthened tests from #33251 into #31764, and I will close #33251.
+    
+    Happy either way. Whichever lands faster and easier for the maintainers.
+    [attachment] Screenshot_20260527_134730_Telegram.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1509184863071113327/Screenshot_20260527_134730_Telegram.jpg?ex=6a18416e&is=6a16efee&hm=e952844588fc944fb99f3284caa175ce3fe90d141f6b57aa22fe1846da6061a9&
+    [embed] fix(gateway): diagnosable MEDIA delivery + canonical cache roots (#... https://github.com/NousResearch/hermes-agent/pull/33251
+    [embed] Generated images under cache/images may not deliver via Telegram ME... https://github.com/NousResearch/hermes-agent/issues/31733
+    [embed] fix(gateway): add canonical cache paths to MEDIA_DELIVERY_SAFE_ROOT... https://github.com/NousResearch/hermes-agent/pull/31764
+
+[2026-05-27T14:43:12.266000+00:00] minddragon (id=1509205338031788064)
+    https://github.com/NousResearch/hermes-agent/pull/33231
+    [embed] fix(xai-oauth): fall back to manual paste on loopback timeout (#330... https://github.com/NousResearch/hermes-agent/pull/33231
+
+[2026-05-27T15:06:41.220000+00:00] _welliv (id=1509211247613182153)
+    https://github.com/NousResearch/hermes-agent/pull/33297
+    [embed] fix: improve xAI Grok OAuth manual paste flow (#26923) by welliv ·... https://github.com/NousResearch/hermes-agent/pull/33297
+

@@ -1206,3 +1206,20 @@
     Your feedback will be so much helpful
     [reply to grrstine msg=1509046307401240706]
 
+[2026-05-27T10:41:30.708000+00:00] mightguy.nq (id=1509144514088931479)
+    how does this compare to brainstack? https://github.com/yepyhun/Brainstack
+    [embed] GitHub - yepyhun/Brainstack: Memory kernel stack for Hermes agent https://github.com/yepyhun/Brainstack
+
+[2026-05-27T12:30:24.119000+00:00] twindenis (id=1509171917200949420)
+    which embeds did you have the best results with for this?
+
+[2026-05-27T12:34:00.131000+00:00] twindenis (id=1509172823220818070)
+    especially for multi-lingual.
+
+[2026-05-27T12:51:43.149000+00:00] sdsops_25196 (id=1509177281841729606)
+    If you embark on the crazed purity of writing your own - feel free to hit me up - I can make some things simpler.
+    [reply to ae53633805 msg=1496292433624039494]
+
+[2026-05-27T12:52:07.299000+00:00] sdsops_25196 (id=1509177383133909092)
+    okay well at least it wasn't a whole month old
+

@@ -1,0 +1,22 @@
+# Thread 'Predict the future!' in forum #plugins-skills-and-skins
+# thread_id=1509183972335292628 forum_id=1485392832154832906
+# Started 2026-05-27T15:39:58.699582+00:00
+
+[2026-05-27T13:18:18.287000+00:00] neopabo (id=1509183972335292628)
+    I built a skill based on prediction research by Philip E. Tetlock  - this allows your agent to make in-depth predictions on future outcomes based on current events, and turn it into an easy-to-read html document.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1509183972335292628/1509183972700323850/image.png?ex=6a18409a&is=6a16ef1a&hm=cb19c0efae3f8da3cab3c7dd625e26757398acfccfac279b39ecccd3f43d1141&
+
+[2026-05-27T13:58:42.502000+00:00] sshadowfaxx.eth (id=1509194140229959777)
+    Is this available somewhere? Seems really interesting.
+    [reply to neopabo msg=1509183972335292628]
+
+[2026-05-27T13:58:52.882000+00:00] neopabo (id=1509194183766704138)
+    OH
+
+[2026-05-27T13:59:09.910000+00:00] neopabo (id=1509194255187574955)
+    I forgot to link the GitHub repo <@155425092422074378> 😂
+
+[2026-05-27T13:59:20.302000+00:00] neopabo (id=1509194298774781953)
+    https://github.com/H-Ali13381/historical-bayesian-html-briefing
+    [embed] GitHub - H-Ali13381/historical-bayesian-html-briefing: Agent skill ... https://github.com/H-Ali13381/historical-bayesian-html-briefing
+

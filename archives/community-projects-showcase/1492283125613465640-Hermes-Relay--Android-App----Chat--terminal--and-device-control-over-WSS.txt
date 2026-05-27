@@ -200,3 +200,27 @@
 [2026-05-27T03:29:48.031000+00:00] txrao (id=1509035870387437619)
     About to try this app. Telegram was great but this could change how i use hermes
 
+[2026-05-27T15:13:38.448000+00:00] aquillum (id=1509212997594386603)
+    Thank you for the patch, it now doesn't crash anymore. 👍 
+    My observation testing in TAP to speak and CONTINOUS mode ist:
+    - first dialog (Q/A) usually works, second sometimes but then it hangs on Listening... - i can talk whatever i want
+    - Sometimes a STOP/START get it working again, but most of the time I have to chose EXIT from Top-Menue to start again
+    - I tried my best to get a continuing handsfree conversation but I'm sorry, I couldn't manage it.
+    
+    - I tried to switch to Realtime but I get API error (401) "Invalid API key" - I go with defaults (xai-realtime, grok, eve)
+    
+    **My goal would be:**
+    - GERMAN STT (working 90%) 
+    - edge provider with a german voice model:
+    `Name: Microsoft Server Speech Text to Speech Voice (de-AT, IngridNeural)
+    ShortName: de-AT-IngridNeural
+    Gender: Female
+    Locale: de-AT
+    VoiceTag: {'ContentCategories': ['General'], 'VoicePersonalities': ['Friendly', 'Positive']}`
+    - Barge-in (works somehow) to continue a fluent dialog
+    
+    - if edge voice is not an option then maybe a custom openai compatiple TTS voice endpoint (I have an openai compatible Piper-voice FastApi Endpoint running)
+    
+    Loved the **remote Terminal** today ! helped me to run `hermes update` after a broken oauth config to get it runnin again 👍
+    [reply to codename_11 msg=1509011924929745068]
+

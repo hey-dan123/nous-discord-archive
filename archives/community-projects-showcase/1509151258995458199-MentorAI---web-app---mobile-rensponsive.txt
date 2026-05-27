@@ -1,0 +1,10 @@
+# Thread 'MentorAI - web app + mobile rensponsive' in forum #community-projects-showcase
+# thread_id=1509151258995458199 forum_id=1316137596535177246
+# Started 2026-05-27T15:36:49.373375+00:00
+
+[2026-05-27T11:08:18.819000+00:00] mikewazowski3505 (id=1509151258995458199)
+    Vibecoded "learning/guidance" chatbot app in 2 days at Hackaton 2026. Free, private, fast to use, Looking for feedback, thanks.
+
+[2026-05-27T11:08:29.992000+00:00] mikewazowski3505 (id=1509151305858416741)
+    https://nuffyofc.github.io/pocketmentorxyz/#
+

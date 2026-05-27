@@ -167,3 +167,21 @@
     for me personally, that really helps when im multitasking while waiting for it to be done or need approval, while also working on another task in another window.
     [reply to haimbender msg=1509123058084872244]
 
+[2026-05-27T09:43:29.046000+00:00] .vansken (id=1509129910940209283)
+    I'll fork and try to modify it myself if thats okaay <@1445264578878640129>
+
+[2026-05-27T09:53:47.910000+00:00] haimbender (id=1509132506644090992)
+    yeah if ur PR is good I'll merge it
+    [reply to .vansken msg=1509129910940209283]
+
+[2026-05-27T10:33:20.851000+00:00] solitude01 (id=1509142459479887952)
+    Can this be used to send iMessages to family / friends.  Totally looking for a way to automate that while I'm working...  🤣
+
+[2026-05-27T11:03:42.381000+00:00] .vansken (id=1509150099530321960)
+    I have a lot of UIUX idea for that, let me fork it instead of clone it and request PR, I'm afraid breaking your code haha
+    [reply to haimbender msg=1509132506644090992]
+
+[2026-05-27T14:54:51.714000+00:00] haimbender (id=1509208271729332305)
+    yeah it's OSS, fork away 🙌 also down for PRs if u wanna get stuff merged upstream — happy to look at sketches first before u sink hours
+    [reply to .vansken msg=1509150099530321960]
+

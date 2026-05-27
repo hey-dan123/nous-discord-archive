@@ -1,0 +1,15 @@
+# Thread '4b model with 10% solved on terminal bench2' in forum #community-projects-showcase
+# thread_id=1509131272125939762 forum_id=1316137596535177246
+# Started 2026-05-27T15:36:49.725012+00:00
+
+[2026-05-27T09:48:53.578000+00:00] alexworteega (id=1509131272125939762)
+    So, i trained a model on hermes + piagent + cc traces, 3.5 4b qwen as a base and it scores 10% on tbench2 (comparable with GPT-5-Nano and qwen 30bA3b) and i put model(and pi agent) on zero gpu, so you can vibecode apps in HF spaces
+    
+    https://huggingface.co/spaces/AlexWortega/my_pi_agent
+    [attachment] tiny-model-for-pi-agent-free-demo-sota-on-terminal-bench-in-v0-6sns5huzgn3h1.png https://cdn.discordapp.com/attachments/1509131272125939762/1509131272424001638/tiny-model-for-pi-agent-free-demo-sota-on-terminal-bench-in-v0-6sns5huzgn3h1.png?ex=6a180f85&is=6a16be05&hm=516f0a7d48ea60af53e7b4800945e5851ad3e3f23a04d93e5a0a7ac1f2a479e0&
+    [embed] My Pi Agent - a Hugging Face Space by AlexWortega https://huggingface.co/spaces/AlexWortega/my_pi_agent
+
+[2026-05-27T09:49:07.930000+00:00] alexworteega (id=1509131332322590882)
+    and uncesored OFC https://huggingface.co/AlexWortega/qwen35-4b-soyuz-abliterated-v8_cfact
+    [embed] AlexWortega/qwen35-4b-soyuz-abliterated-v8_cfact · Hugging Face https://huggingface.co/AlexWortega/qwen35-4b-soyuz-abliterated-v8_cfact
+
