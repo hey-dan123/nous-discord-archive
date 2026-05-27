@@ -185,3 +185,18 @@
     yeah it's OSS, fork away 🙌 also down for PRs if u wanna get stuff merged upstream — happy to look at sketches first before u sink hours
     [reply to .vansken msg=1509150099530321960]
 
+[2026-05-27T15:49:00.977000+00:00] .vansken (id=1509221900126130196)
+    yes I might sketch the prototype for you as reference, do you have any figms file that I can use? I'll send the prototype once it done. I have these plan to add tool calling, text styling, streaming and clarify
+    [reply to haimbender msg=1509208271729332305]
+
+[2026-05-27T17:52:10.332000+00:00] haimbender (id=1509252893327364159)
+    unfortunately i don't have figma files, i just use claude code and codex
+    [reply to .vansken msg=1509221900126130196]
+
+[2026-05-27T19:09:38.794000+00:00] thnzone6 (id=1509272390390120619)
+    I will try this out - how does it work with more than one Mac? I’m running Hermes on 2 machines rn
+
+[2026-05-27T19:24:57.827000+00:00] haimbender (id=1509276245094039662)
+    do you have 2 hermes agents connected to 1 phone?
+    [reply to thnzone6 msg=1509272390390120619]
+

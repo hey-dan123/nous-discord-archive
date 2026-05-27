@@ -1,0 +1,35 @@
+# Thread 'Open Second Brain — persistent memory for Hermes 🧠' in forum #plugins-skills-and-skins
+# thread_id=1509228633636475131 forum_id=1485392832154832906
+# Started 2026-05-27T20:16:17.162552+00:00
+
+[2026-05-27T16:15:46.371000+00:00] techmeat (id=1509228633636475131)
+    A long‑term memory layer for your AI workflow. Hermes drives it; Claude Code and Codex plug in over MCP and read the same brain.
+    
+    🌙 **Dream - your memory consolidates overnight, by rule not by guess**
+    A nightly pass turns repeat signals into rules, boosts what proved useful, retires what's stale - no LLM in the loop, just counters and file moves, so it never invents a fact you never taught it.
+    
+    🕒 **A real timeline of your agent's beliefs**
+    Every fact carries a "valid from / valid to" history - when something changes the old version is superseded, not overwritten, so you can ask what you believed last month and get an honest answer.
+    
+    🧩 **One brain, many agents**
+    Teach one tool a rule and the next already knows - no re‑teaching context three times.
+    
+    🔍 **Search that explains itself**
+    Lexical (FTS5) and link‑graph retrieval out of the box, plus an optional semantic layer with an embedding key. Every result shows _why_retrieved_ - which layer ranked it, not black‑box recall.
+    
+    🩺 **A brain that checks itself**
+    Built‑in checks surface contradictions, orphaned notes, decaying confidence, and stale topics - it tells you when it needs maintenance instead of silently rotting.
+    
+    🛡️ **Your memory can't be silently corrupted**
+    The `Brain/` tree is write-protected via each runtime's permission rules - an agent adds signals but can't overwrite confirmed rules, logs, or snapshots. Every mutation is snapshotted, so `o2b brain rollback` restores yesterday's state.
+    
+    💻 **Works with your code graph**
+    Open Second Brain owns the prose - decisions, context, the "why". Pair it with codegraph and one agent reads both: code structure from codegraph, reasoning from the brain - not loose chunks.
+    
+    📁 **Yours, forever**
+    Plain Markdown in a folder you own - the same Obsidian vault you open every day, so wikilinks, backlinks and graph view just work. Portable, no vendor account or subscription. Stop tomorrow and it's still just files on disk.
+    
+    https://github.com/itechmeat/open-second-brain
+    [attachment] readme-poster.jpg https://cdn.discordapp.com/attachments/1509228633636475131/1509228636337868850/readme-poster.jpg?ex=6a186a33&is=6a1718b3&hm=843d44e671d828c98464905601d522dc4b643b6b743b2f63fbddc3845a66ba56&
+    [embed] GitHub - itechmeat/open-second-brain: Local-first 🧠 memory for H... https://github.com/itechmeat/open-second-brain
+

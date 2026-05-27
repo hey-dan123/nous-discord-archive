@@ -32,3 +32,7 @@
 [2026-05-27T05:06:00.608000+00:00] .s0uthpaw (id=1509060082329980979)
     I'm going to work this into my server and test it tonight
 
+[2026-05-27T17:17:17.911000+00:00] magnus919 (id=1509244117077459044)
+    I've been running it like once or twice a day for weighty things. I think the lens I'm developing now is using it midway into a longer session, giving it full context of the conversation, and asking the council "what questions should I be asking?"
+    [reply to .s0uthpaw msg=1509060082329980979]
+

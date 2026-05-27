@@ -1,0 +1,13 @@
+# Thread 'Agentic FreeCAD engineering using Hermes Agent' in forum #community-projects-showcase
+# thread_id=1507863289680498698 forum_id=1316137596535177246
+# Started 2026-05-27T20:12:59.966289+00:00
+
+[2026-05-27T16:01:19.634000+00:00] marcul1x (id=1509224998278004917)
+    My speed optimized MCP bridge to connect FreeCAD to hermes agent.
+    
+    https://github.com/marcgloor/freecad-hermes-mcp-server
+    [embed] GitHub - marcgloor/freecad-hermes-mcp-server: FreeCAD MCP server an... https://github.com/marcgloor/freecad-hermes-mcp-server
+
+[2026-05-27T16:02:00.179000+00:00] marcul1x (id=1509225168336322580)
+    Agentic FreeCAD engineering using Hermes Agent
+

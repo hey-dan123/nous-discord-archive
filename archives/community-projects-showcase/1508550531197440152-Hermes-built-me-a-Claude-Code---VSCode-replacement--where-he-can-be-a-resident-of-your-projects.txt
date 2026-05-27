@@ -42,3 +42,10 @@
     [attachment] IMG_2157.png https://cdn.discordapp.com/attachments/1508550531197440152/1508550531759738930/IMG_2157.png?ex=6a15f2aa&is=6a14a12a&hm=977d2ce292693dc2fe80f9b6ec326301dd20a49a7dc37fe4bb4a1ab3048d72e0&
     [embed] GitHub - GuideboardLabs/cammander: Command center LLM-powered IDE. ... https://github.com/GuideboardLabs/cammander
 
+[2026-05-27T17:56:43.363000+00:00] guideboardlabs (id=1509254038502506618)
+    [attachment] IMG_2176.png https://cdn.discordapp.com/attachments/1508550531197440152/1509254037910982656/IMG_2176.png?ex=6a1881db&is=6a17305b&hm=851f7fb906e6e39c526affbb0466f829f1f9be20f97baec8cad6cc05c1f5e4af&
+    [attachment] IMG_2168.png https://cdn.discordapp.com/attachments/1508550531197440152/1509254038208909372/IMG_2168.png?ex=6a1881db&is=6a17305b&hm=0d06887c21a799489a0d7f2a853672a3a769798f0035e7af36cfc86bb93bdfe5&
+
+[2026-05-27T17:57:16.593000+00:00] guideboardlabs (id=1509254177878966507)
+    cammander 0.1.1 coming tonight with new providers and obsidian like lightweight vault
+

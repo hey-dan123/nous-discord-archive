@@ -1612,3 +1612,34 @@
     
     Any guidance would be appreciated! Happy to share my full config or logs if useful. Thx.
 
+[2026-05-27T17:06:02.421000+00:00] w0lfgang88 (id=1509241283867316345)
+    This looks like a tuning issue, not a bug.
+    
+    With a 1,048,576 token window, `0.45` triggers around **472K tokens**. If MiMo Pro gets slow around **70–120K**, lower the LCM threshold to the token budget you actually want:
+    
+    ```bash
+    LCM_CONTEXT_THRESHOLD=0.12  # ~126K
+    ```
+    
+    or:
+    
+    ```bash
+    LCM_CONTEXT_THRESHOLD=0.15  # ~157K
+    ```
+    
+    For summaries, using faster `mimo-v2.5` on Xiaomi is the right idea. I’d pin the provider too, not just the model name:
+    
+    ```yaml
+    auxiliary:
+      compression:
+        provider: xiaomi
+        model: mimo-v2.5
+    ```
+    
+    When `context.engine: lcm` is active, I’d use `LCM_CONTEXT_THRESHOLD` as the explicit LCM knob. Keep `compression.enabled: true` as the global compaction gate.
+    
+    LCM should not be doing expensive summarization before every main-model call. It mainly compacts when threshold/preflight or overflow recovery says to. So the 124K latency difference is probably MiMo Pro processing the live prompt, even with cache hit.
+    
+    If it still does not trigger, check `lcm_status` for `last_compression_noop_reason`. Common causes are protected fresh tail or raw backlog outside the tail being below `LCM_LEAF_CHUNK_TOKENS`.
+    [reply to wordsmachine666 msg=1509111032436490341]
+

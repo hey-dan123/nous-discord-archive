@@ -21813,3 +21813,102 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/33297
     [embed] fix: improve xAI Grok OAuth manual paste flow (#26923) by welliv ·... https://github.com/NousResearch/hermes-agent/pull/33297
 
+[2026-05-27T15:47:02.325000+00:00] ophermcar00_70039 (id=1509221402463568014)
+    Hey all — I’m debugging a Hermes Agent / Telegram issue and I think I’ve narrowed it to the Python OpenAI Codex response parser.
+    
+    Setup:
+    
+    * Hermes Agent running locally on macOS
+    * Process: `python -m hermes_cli.main gateway run --replace`
+    * State/config: `~/.hermes`
+    * Telegram bot: IGotHermesBot
+    * Provider: `openai-codex`
+    * Model: `gpt-5.4`
+    * Codex OAuth is valid and refreshed
+    
+    What works:
+    
+    * Hermes gateway starts cleanly
+    * Telegram slash commands work
+    * Codex OAuth is present and valid
+    * Clean/new session was tested
+    * The request reaches `https://chatgpt.com/backend-api/codex/responses`
+    * HTTP call completes in ~3–5 seconds
+    
+    What fails:
+    
+    * Any normal Telegram message fails with:
+      `The model provider failed after retries`
+      and:
+      `TypeError: 'NoneType' object is not iterable`
+    
+    What we ruled out:
+    
+    * Not OpenClaw — separate stack, OpenClaw/HauseBot works
+    * Not Telegram connectivity — slash commands work
+    * Not Codex auth — OAuth is valid
+    * Not poisoned session state — deleted/exported the broken session and tested clean history
+    * Not model id — changed from `gpt-5.4-mini` to `gpt-5.4`; request now shows `model: gpt-5.4`, same failure
+    
+    Latest evidence:
+    
+    * Fresh session with `history=0`
+    * Single user message: `Reply with only: OK`
+    * Model: `gpt-5.4`
+    * Codex backend request completes
+    * Hermes throws `TypeError: 'NoneType' object is not iterable`
+    * Request dump only stores request + error summary, not raw response or traceback
+    
+    Question:
+    Where in Hermes should I inspect or patch the OpenAI Codex Responses client/parser to capture the raw response/SSE events and full traceback safely? It looks like the backend is returning a response shape Hermes doesn’t handle, possibly `output: null` or empty/malformed events.
+    
+    I can provide redacted logs/request dump details, but I do not want to expose OAuth tokens, Telegram token, cookies, auth headers, or full config.
+
+[2026-05-27T15:59:23.992000+00:00] thadreber (id=1509224513240432843)
+    BadHost (CVE-2026-48710) — Starlette < 1.0.1                                                                                                                                       
+    Single-character Host header injection bypasses path-based auth in Starlette. Trivial to exploit, no auth required. Affects anything built on FastAPI/Starlette — vLLM,     LiteLLM, MCP servers, agent harnesses, eval dashboards.                                                                                                                            
+    This includes us — Hermes runs Starlette. Just upgraded our venvs from 1.0.0 → 1.1.0.                                                                                              
+    If you're running any Python AI infra on Starlette, check your version and upgrade:                                                                                                
+                                                                                                                                                                                            
+     pip install 'starlette>=1.0.1'                                                                                                                                                     
+                                                                                                                                                                                            
+     Online scanner: https://badhost.org                                                                                                                                                
+     Advisory: https://www.secwest.net/starlette                                                                                                                                        
+    X41 writeup: https://www.x41-dsec.de/lab/advisories/x41-2026-002-starlette
+    [embed] BadHost - CVE-2026-48710 Starlette Host-Header Auth Bypass https://badhost.org/
+    [embed] starlette  - secwest.net - secure virtual engagement https://www.secwest.net/starlette
+    [embed] Advisory X41-2026-002: Request Host Header not Validated in Starlette https://www.x41-dsec.de/lab/advisories/x41-2026-002-starlette
+
+[2026-05-27T16:10:09.251000+00:00] .zmaxx (id=1509227219652968560)
+    Glad to see the queue moving 🙏 If you happen to swing back to comp/cli, 
+    my two PRs are both ready and rebased: 
+    - #27299 (fix(update): auto-recover from stale remote-tracking refs, support-thread driven, P2)
+    - #23313 (fix(qqbot): unlink temp wav on STT failure path, P3)
+    Both have regression tests that fail on main without the patch. No rush.
+
+[2026-05-27T16:32:43.527000+00:00] dr_membrane (id=1509232899897954313)
+    Hello everyone, I'm new, I just switched from OpenClaw to Hermes about a week ago. After dealing with a database corruption error multiple times I think I've pined down what's going on and opened a bug report #3334. It looks like several people have been dealing with this issue but nobody was able to figure out exactly what was happening. I 'think' I've narrowed it down. I'm going to start working on fixing it on my own device. I don't know how open everyone is to massive changes like pulling out the Kanban database and moving it to something else like postgres instead of sqlite.
+
+[2026-05-27T18:46:47.425000+00:00] junggoq (id=1509266638451642368)
+    <:nousgirl:1341983870752653352>
+
+[2026-05-27T19:01:39.832000+00:00] minddragon (id=1509270381477892269)
+    https://www.github.com/NousResearch/hermes-agent/pull/33231 polished - fixes issue 33006
+    [embed] fix(xai-oauth): fall back to manual paste on loopback timeout (#330... https://www.github.com/NousResearch/hermes-agent/pull/33231
+
+[2026-05-27T19:20:58.591000+00:00] lito9596 (id=1509275241665532126)
+    Two PRs addressing #30565 (toolsets silently disappearing when env vars are only in ~/.hermes/.env):
+    
+    **#30580 — Diagnostic logging for filtered toolsets**
+    https://github.com/NousResearch/hermes-agent/pull/30580
+    Adds a one-shot WARNING per filtered toolset naming the missing env vars. Deduped per process. Already labeled by @alt-glitch.
+    
+    **#33423 — Root-cause fix: invalidate tool caches on dotenv reload**
+    https://github.com/NousResearch/hermes-agent/pull/33423
+    `load_hermes_dotenv()` reloads `.env` but never invalidated `_check_fn_cache` or `_tool_defs_cache`, so stale availability results persisted across reloads. This clears both caches after every dotenv reload. Root-cause trace with file:line evidence posted on the issue: https://github.com/NousResearch/hermes-agent/issues/30565#issuecomment-4557380468
+    
+    Both PRs have passing tests and no conflicts with main.
+    [embed] fix(tools): warn when toolsets are filtered by missing env vars by ... https://github.com/NousResearch/hermes-agent/pull/30580
+    [embed] fix(tools): invalidate tool caches on dotenv reload by pnascimento9... https://github.com/NousResearch/hermes-agent/pull/33423
+    [embed] discord/discord_admin tools silently hidden when DISCORD_BOT_TOKEN ... https://github.com/NousResearch/hermes-agent/issues/30565
+

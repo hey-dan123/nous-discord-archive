@@ -22,3 +22,13 @@
 [2026-05-25T21:40:54.951000+00:00] lambino0999 (id=1508585682820661409)
     Got a 16 gb ram mac mini. No hope for local LLMs. yet
 
+[2026-05-27T18:26:20.848000+00:00] todseinvater (id=1509261493814694048)
+    Update: I posted deeper benchmark notes + constraints (context overhead at 64k, Dense vs MoE tradeoff in long tool loops) here:
+
+[2026-05-27T18:26:22.623000+00:00] todseinvater (id=1509261501259714812)
+    https://www.linkedin.com/posts/kai-bennett-698732276_ai-opensource-developertools-activity-7465455904142864385-nbAJ
+    [embed] #ai #opensource #developertools | Kai Bennett https://www.linkedin.com/posts/kai-bennett-698732276_ai-opensource-developertools-activity-7465455904142864385-nbAJ
+
+[2026-05-27T18:26:24.601000+00:00] todseinvater (id=1509261509556178985)
+    If anyone replicated this on NVIDIA or Apple Silicon, I’d love a short comment there so we can compare results in one place.
+
