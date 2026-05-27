@@ -21566,3 +21566,74 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] Generated images under cache/images may not deliver via Telegram ME... https://github.com/NousResearch/hermes-agent/issues/31733
     [embed] fix(gateway): add canonical cache paths to MEDIA_DELIVERY_SAFE_ROOT... https://github.com/NousResearch/hermes-agent/pull/31764
 
+[2026-05-26T21:40:17.460000+00:00] sprmn24 (id=1508947913437614261)
+    <@387972437901312000> , I opened a few PRs today — take a look when you get a chance:
+    
+    **fix(agent): wrap list-type untrusted content in untrusted_tool_result**
+    `web_extract` and `browser_*` tools can return multimodal content lists instead of plain strings. `_maybe_wrap_untrusted()` was skipping the `<untrusted_tool_result>` wrapper entirely for list-type content — any injection payload inside a text chunk reached the model unguarded. Fixed by wrapping each `{"type": "text"}` part individually while leaving image parts untouched.
+    https://github.com/NousResearch/hermes-agent/pull/32771
+    
+    **fix(tools): fall back to Python read on Windows where head is unavailable**
+    `_detect_file_line_ending()` uses `head -c 4096` to sample file content, but `head` doesn't exist on Windows. On a local backend + Windows setup this always failed silently, returning `None` and disabling CRLF preservation for every write. Added a `platform.system() == "Windows"` check that falls back to Python's built-in `open().read(4096)`.
+    https://github.com/NousResearch/hermes-agent/pull/32789
+    
+    **fix(tools): clamp patch failure counter to 10 to prevent unbounded growth**
+    `_record_patch_failure()` increments a per-file failure counter with no upper bound. In long sessions the counter grows indefinitely, producing misleading escalation messages. Clamped to 10 with `min(count, 10)` — the escalation hint already triggers at 3 so no caller needs a higher value.
+    https://github.com/NousResearch/hermes-agent/pull/32792
+    
+    **fix(agent): call scan_for_threats on untrusted tool results to log promptware hits**
+    `tools/threat_patterns.py` is documented as "shared with the tool-result delimiter system" but `tool_dispatch_helpers.py` never imported or called `scan_for_threats()`. Known C2, role-hijack and promptware patterns passed through silently with no log entry. Wired the missing call with a guarded import; matches are logged at WARNING level.
+    https://github.com/NousResearch/hermes-agent/pull/32793
+    
+    **fix(env_loader): add threading.Lock to _APPLIED_HOMES to prevent TOCTOU race**
+    The idempotency guard in `_apply_external_secret_sources()` uses a bare check-then-set on a module-level set with no lock. Two threads calling `load_hermes_dotenv()` concurrently can both pass the `in` check before either executes the `add`, causing the Bitwarden CLI to be invoked twice simultaneously. Wrapped the guard in `threading.Lock()`.
+    https://github.com/NousResearch/hermes-agent/pull/32796
+
+[2026-05-26T22:02:55.715000+00:00] kkurottal6611 (id=1508953610371858653)
+    opened two quick bug fixes
+    
+    #32833 (Gateway Auth Policy): Fixed a regression where an explicit top-level unauthorized_dm_behavior: pair was getting ignored and falling back to allowlist-derived ignore behaviors. Centralized config signals to fix the evaluation precedence. https://github.com/NousResearch/hermes-agent/pull/32833
+    
+    #32807 (File Sync Python 3.11): Fixed sync_back() crashes on Python 3.11 setups caused by unconditional 3.12-only filter="data" extraction calls. Added safe member extraction fallback + sorted out cross-platform temp locks. https://github.com/NousResearch/hermes-agent/pull/32807
+    [embed] fix(gateway): respect explicit global unauthorized_dm_behavior: pai... https://github.com/NousResearch/hermes-agent/pull/32833
+    [embed] fix(file-sync): preserve sync_back on Python 3.11 by Que0x · Pull ... https://github.com/NousResearch/hermes-agent/pull/32807
+
+[2026-05-26T22:12:22.706000+00:00] auragenx (id=1508955988504481952)
+    whats the best way to run an image creator/video creator for cheap but comparable to grok? if you only have native GPU
+
+[2026-05-26T23:54:34.780000+00:00] r__o___m__a__i___n (id=1508981708286853200)
+    Error: 'NoneType' object is not iterable
+
+[2026-05-26T23:54:43.929000+00:00] r__o___m__a__i___n (id=1508981746660544574)
+    codex message through hermes
+
+[2026-05-27T00:01:06.603000+00:00] wiry8698 (id=1508983351711760544)
+    getting this too likely issue with openai rn
+    [reply to r__o___m__a__i___n msg=1508981746660544574]
+
+[2026-05-27T01:14:59.585000+00:00] anduril0202 (id=1509001944986030261)
+    Opened three PRs for two creative skills and new CommandCode provider:
+    
+    https://github.com/NousResearch/hermes-agent/pull/32909
+    
+    https://github.com/NousResearch/hermes-agent/pull/31540
+    
+    https://github.com/NousResearch/hermes-agent/pull/32298
+    [embed] feat: add CommandCode provider plugin by plntrprotocol · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/32909
+    [embed] feat(creative): add codex-vision skill for image analysis and gener... https://github.com/NousResearch/hermes-agent/pull/31540
+    [embed] feat(creative): add nous-branding skill v2.1.0 by plntrprotocol · ... https://github.com/NousResearch/hermes-agent/pull/32298
+
+[2026-05-27T02:29:16.764000+00:00] loongfay (id=1509020639749472306)
+    <@387972437901312000> Do you have one moment to take a look for Yuanbao gateway PR? Thanks.  https://github.com/NousResearch/hermes-agent/pull/30418
+    [embed] refactor(Yuanbao): consolidate media resolution into dedicated pipe... https://github.com/NousResearch/hermes-agent/pull/30418
+
+[2026-05-27T02:56:35.283000+00:00] anthonycodeinplace (id=1509027512196268062)
+    Dum question but after we max out 200 for the month - how do I fund more
+
+[2026-05-27T02:57:15.209000+00:00] promptsiren (id=1509027679658315889)
+    if you topup with api credits, the sub is setup to consume those after you run out of subscription credits
+    [reply to anthonycodeinplace msg=1509027512196268062]
+
+[2026-05-27T02:58:08.257000+00:00] anthonycodeinplace (id=1509027902157623306)
+    Oh that’s logical , thx I since managed the burn bit by doing some work local
+

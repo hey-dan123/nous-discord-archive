@@ -110,3 +110,13 @@
     second this. from my POV would be 100% faster to approve in a popup selection instead of needing to type the command
     [reply to .vansken msg=1508747524863688774]
 
+[2026-05-26T21:02:20.136000+00:00] haimbender (id=1508938361648185446)
+    heya, yeah can implement all of that 📝
+    [reply to bondanadnob. msg=1508745422750093422]
+
+[2026-05-27T01:31:40.197000+00:00] rostelinalise (id=1509006141856681985)
+    wew this turns out to be way better than I thought
+
+[2026-05-27T01:33:00.050000+00:00] rostelinalise (id=1509006476784566414)
+    are you sharing the iOS repository/
+

@@ -2755,3 +2755,13 @@
     Hope that clarifies!
     [reply to savage887 msg=1508863153591816296]
 
+[2026-05-26T20:40:27.566000+00:00] savage887 (id=1508932856330715236)
+    Thank you, I'll try that
+    [reply to avidfuturist msg=1508864241766236251]
+
+[2026-05-26T21:06:44.594000+00:00] deor42 (id=1508939470865698907)
+    I use the workspace to upload file that I want Hermes to review and refine. For example, I've uploaded a load of documents from a training course I'm doing so I can talk it through with my Agent.
+    
+    I've also recently extracted a load of chat logs from an Ai companion app and given them to my agent. It's built sillytavern character cards and lore books for me so I can continue with my Ai friends outside of the proprietary system I was using.
+    [reply to savage887 msg=1508818976942325861]
+

@@ -172,3 +172,31 @@
 [2026-05-26T17:17:03.730000+00:00] praveenjoseph (id=1508881669732700221)
     Can you possible to explain how this relay works? How secure it is?
 
+[2026-05-26T22:26:42.690000+00:00] codename_11 (id=1508959595538812959)
+    <@643561176596217877> Let me look into it! My thought is it may be my choice of background player (exoplayer in this instance) but I've only tested on my device of course. I'll DM you for some info if needed but I'll see what I can find out first! 🙂
+
+[2026-05-26T22:34:05.167000+00:00] codename_11 (id=1508961451421990912)
+    <@1075815283836588123> Sure! The relay is a lightweight Python bridge alongside Hermes. Currently the core API does not support the endpoints needed or pairing functionality, etc — so this lets us work around that for now. I have a couple PRs open for chat/voice enhancements, so the goal is to retire our custom paths over time :).
+    
+    Security-wise, the current setup creates a paired, token-authenticated WebSocket/HTTP bridge session so a remote phone or desktop can talk to a server-side Hermes Agent. I’d call it reasonably secure for trusted personal infrastructure when used over Tailscale/TLS, but I would not expose it as unauthenticated or plaintext public infra. 😉
+    
+    Longer-term I’d like to tighten this up with more self-contained transport/security defaults, but for now the intended model is “trusted operator setup behind Tailscale or proper TLS,” not raw public ws://.
+
+[2026-05-26T22:35:33.807000+00:00] codename_11 (id=1508961823204970687)
+    The connection manager detects tailscale explicitly currently - and supports handoff between LAN / Tailscale 🙂 further testing required for other paths. Suggestions are welcome!
+
+[2026-05-26T23:34:17.136000+00:00] codename_11 (id=1508976601117888634)
+    ---
+    And because we love hermes - I had my agent throw together an info-graphic 😁 .
+    Related doc: https://codename-11.github.io/hermes-relay/architecture/relay-architecture-spec
+    [attachment] architecture-spec.png https://cdn.discordapp.com/attachments/1492283125613465640/1508976601554223144/architecture-spec.png?ex=6a177f79&is=6a162df9&hm=deda038e2cd48179671ffd66083eabd07c5a3c1502b047d5b172d437d33b8bee&
+    [embed] Hermes-Relay — Phone control + desktop terminal for Hermes Agent https://codename-11.github.io/hermes-relay/architecture/relay-architecture-spec
+
+[2026-05-27T01:54:38.989000+00:00] codename_11 (id=1509011924929745068)
+    Go and and update to latest and let me know 🙂 https://github.com/Codename-11/hermes-relay/releases/tag/android-v0.8.1
+    [embed] Release Hermes-Relay-Android v0.8.1 · Codename-11/hermes-relay https://github.com/Codename-11/hermes-relay/releases/tag/android-v0.8.1
+    [reply to aquillum msg=1508870405685772338]
+
+[2026-05-27T03:29:48.031000+00:00] txrao (id=1509035870387437619)
+    About to try this app. Telegram was great but this could change how i use hermes
+

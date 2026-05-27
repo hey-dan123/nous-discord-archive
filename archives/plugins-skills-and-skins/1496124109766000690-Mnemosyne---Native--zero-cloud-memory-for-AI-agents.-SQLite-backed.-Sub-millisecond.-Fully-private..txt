@@ -1156,3 +1156,16 @@
     yes obviously you need the Docker specifics, for more info check this out! https://docs.mnemosyne.site/deployment/docker
     [embed] Docker Deployment — Containerized Mnemosyne https://docs.mnemosyne.site/deployment/docker
 
+[2026-05-27T00:32:47.374000+00:00] twindenis (id=1508991324123168798)
+    sent a PR to help with temporal awareness, and some other small additions included.
+
+[2026-05-27T03:02:42.666000+00:00] grrstine (id=1509029053112254575)
+    I want to try this, i'm spending more money on memory than my codex subscription!
+
+[2026-05-27T03:26:33.030000+00:00] nihp_ (id=1509035052493963314)
+    Which memory provider is this?
+    [reply to grrstine msg=1509029053112254575]
+
+[2026-05-27T03:26:41.763000+00:00] nihp_ (id=1509035089122558103)
+    That you are spending money on
+

@@ -1,0 +1,26 @@
+# Thread '🟢 HERMATRIX — Premium Matrix Skin for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1508987156667043950 forum_id=1485392832154832906
+# Started 2026-05-27T03:40:11.893275+00:00
+
+[2026-05-27T00:16:13.775000+00:00] lipebez (id=1508987156667043950)
+    A cinematic cyberpunk skin inspired by The Matrix — deep black aesthetics, green digital rain, operator boot text, and a bold HERMATRIX identity.
+    
+    Features:
+    
+    • ASCII art HERMATRIX banner with iconic Matrix dialogue.
+    • Digital rain hero with katakana/number accents (ﾊ ﾒ 0 ﾄ ｶ ﾂ ﾗ ﾅ).
+    • Binary spinner (0, 1, 01, 10, ▓▒░).
+    • Custom prompt ﾎ> and response label ⣿ OPERATOR.
+    • Deep green-on-black gradient palette.
+    • 14 thinking verbs — random Matrix-themed messages while the agent thinks: "following the white rabbit", "dodging bullets", "consulting the oracle", "jacking in", "choosing the red pill", "defying gravity", "seeing through the code" and more
+    
+    **Personalize — replace "Operator" with your name or nickname via one command.**
+    
+    Repo + Install: https://github.com/lipebez/hermes-matrix-skin
+    [attachment] matrix.png https://cdn.discordapp.com/attachments/1508987156667043950/1508987156851462285/matrix.png?ex=6a17894d&is=6a1637cd&hm=2fe706d4eb8c458969ffe99eea61ee483f8d0ae6da6760183bd3c01161cc984b&
+    [embed] GitHub - lipebez/hermes-matrix-skin: Premium Matrix-inspired skin f... https://github.com/lipebez/hermes-matrix-skin
+
+[2026-05-27T00:31:51.127000+00:00] nat2r (id=1508991088206020628)
+    https://tenor.com/view/keanu-reeves-whoa-matrix-bro-neo-gif-12028915
+    [embed]  https://tenor.com/view/keanu-reeves-whoa-matrix-bro-neo-gif-12028915
+

@@ -202,3 +202,7 @@
     It’s agnostic.
     [reply to charanis msg=1505261138202333194]
 
+[2026-05-27T00:45:40.557000+00:00] fleety13 (id=1508994567087591444)
+    most likely a lack of understanding/config error on my part. The memory block gets continually deleted on my main agent. I have a daily cron set to check so i get notified, but i don't know when or why it happens despite sending my agent under the hood to try and troubleshoot several times.  
+    Has anyone else had this happen and know why this occurs?
+

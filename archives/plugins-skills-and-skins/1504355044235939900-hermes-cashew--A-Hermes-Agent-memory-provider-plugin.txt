@@ -137,3 +137,7 @@
     https://github.com/magnus919/hermes-cashew/releases/tag/v0.10.1
     [embed] Release v0.10.1 — GC Grace Period, Keyword Decay Filter & Thresho... https://github.com/magnus919/hermes-cashew/releases/tag/v0.10.1
 
+[2026-05-27T00:17:30.922000+00:00] magnus919 (id=1508987480245014610)
+    https://github.com/magnus919/hermes-cashew/releases/tag/v0.10.2
+    [embed] Release v0.10.2 — Contract, Sleep, Embedding & Docs Fixes · magn... https://github.com/magnus919/hermes-cashew/releases/tag/v0.10.2
+

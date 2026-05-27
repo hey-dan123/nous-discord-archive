@@ -1571,3 +1571,22 @@
     i only saw the older messages after deleting lcm so I have no idea if its actually a good program or not but im pretty sure that was my problem. ill try again in a few days. the frustration of spending nearly my entire day troubleshooting and not getting any error messages aside from compression failure made me not want to retry for a bit. I had added lcm at the end of the prior day so it didn't even occur to me that it could be related to the problem. weird thing is the changelog says its fixed. maybe hermes changed how custom models are labeled during installation and lcm didn't update yet? doesn't seem like anyone else, aside from custom model installers, are having problems.
     [reply to saltminerrook msg=1508096094574219334]
 
+[2026-05-27T02:14:27.674000+00:00] w0lfgang88 (id=1509016910635991130)
+    I checked the LCM side.
+    
+    The bug you’re referring to was real, but it has already been fixed. The specific `custom:LCPP/4B-Qwen3-2507-compressor` routing issue was fixed in `hermes-lcm` PR #163 (`5806efd`) and released in `v0.10.4+`. Current LCM should normalize that form to provider `lcpp` and model `4B-Qwen3-2507-compressor` when `LCPP` is a configured named custom provider.
+    
+    So if this is based on the day you deleted LCM, you’re arguing from an old build. Update LCM, restart Hermes, and check `/lcm status`.
+    
+    If it still fails on current LCM, post actual debugging info:
+    
+    * `/lcm status`
+    * `hermes-lcm` version/commit
+    * `LCM_SUMMARY_MODEL`, `LCM_EXTRACTION_MODEL`, `LCM_EXPANSION_MODEL`
+    * `auxiliary.compression`
+    * relevant compression logs
+    * exact local model ID/casing from the provider
+    
+    Without that, there isn’t anything useful to troubleshoot. “Custom model doesn’t work” was a valid complaint when the bug existed; after the fix, it needs current config/logs or it’s just stale diagnosis.
+    [reply to thegiuseppe msg=1508232655299154093]
+

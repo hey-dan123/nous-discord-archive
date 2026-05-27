@@ -480,3 +480,15 @@
     is it possible currently to access and use qwen 3.7 /max for free somehow?
     I think it would be great for this.
 
+[2026-05-26T22:23:54.442000+00:00] noxerz. (id=1508958889855422565)
+    ofc
+    [reply to twindenis msg=1508924954920616096]
+
+[2026-05-26T22:24:45.959000+00:00] twindenis (id=1508959105933508608)
+    ah, how? aside from headless chat 😛
+    [reply to noxerz. msg=1508958889855422565]
+
+[2026-05-26T22:25:39.215000+00:00] noxerz. (id=1508959329305366638)
+    use qwen chat and connect it to hermes\ is only way to use qwen 3.7 max for free
+    [reply to twindenis msg=1508959105933508608]
+

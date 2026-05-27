@@ -43,3 +43,34 @@
     --debug mode at no token cost (require PR #21235 which is pending review)
     --fuzzy utility based expression vector system: let your agent feel your intention
 
+[2026-05-26T21:46:36.263000+00:00] runerick_80987 (id=1508949502252552313)
+    Do you know much about chat templates? In hermes my agent persona is awesome with models like kimi2.6 or deepseek, but if I try something like qwen or Llama or gemma it seems to completely ignore soul.md. suggestions?
+
+[2026-05-26T23:47:46.627000+00:00] kai.xu (id=1508979996369227806)
+    Hey! You've hit on something real — it's less a chat-template issue
+    and more about training-side specialization.
+    
+    Kimi and DeepSeek likely saw heavy roleplay fine-tuning, so they
+    treat system-level persona instructions as a strong signal. Qwen
+    leans instruction-following, Llama is more general-purpose, and
+    Gemma's safety guardrails can sometimes suppress strong identity
+    directives — the model isn't "ignoring" soul.md, it's just not wired
+    to prioritize it the same way.
+    
+    Two practical options:
+    
+    1. Without a plugin: multi-point anchoring. Don't rely on system
+       prompt alone — inject key persona rules into the first user
+       message as well, and reinforce in prefill. When the same "who
+       you are" signal appears in multiple positions, Qwen/Llama/Gemma
+       treat it more like a hard constraint.
+    
+    2. With hermes-persona (the plugin from the repo you're commenting
+       on): its persona-config lets you distribute soul-level rules
+       across different injection points in context — system, prefill,
+       per-turn append. That way you're not betting everything on
+       system-role obedience. Works especially well for models that
+       need the persona "ribbon-woven" rather than declared once.
+    
+    hope this helps！ps: I personally use kimi and deepseek, too
+
