@@ -1169,3 +1169,40 @@
 [2026-05-27T03:26:41.763000+00:00] nihp_ (id=1509035089122558103)
     That you are spending money on
 
+[2026-05-27T04:11:16.409000+00:00] grrstine (id=1509046307401240706)
+    LLM is google gemini 2.5 flash lite with hindsight docker + mid budget
+    [reply to nihp_ msg=1509035052493963314]
+
+[2026-05-27T04:12:47.401000+00:00] grrstine (id=1509046689049350144)
+    i had to sneak into my mother's casino stash
+
+[2026-05-27T04:24:19.195000+00:00] nihp_ (id=1509049590643560569)
+    Ouuushi
+    [reply to grrstine msg=1509046307401240706]
+
+[2026-05-27T04:24:22.953000+00:00] Translator Bot#1043 (id=1509049606405886205)
+    Ou beef
+    [reply to nihp_ msg=1509049590643560569]
+
+[2026-05-27T04:24:24.706000+00:00] nihp_ (id=1509049613758500925)
+    Ts cost a bomb twin
+
+[2026-05-27T04:24:43.943000+00:00] nihp_ (id=1509049694444327012)
+    There is hindsight import. Made by yours truely
+
+[2026-05-27T04:24:47.562000+00:00] nihp_ (id=1509049709623513218)
+    Hope u enjoy mnemo
+
+[2026-05-27T04:47:10.426000+00:00] grrstine (id=1509055342003228753)
+    https://tenor.com/view/theodoros-gif-18371963
+    [embed]  https://tenor.com/view/theodoros-gif-18371963
+
+[2026-05-27T05:50:38.263000+00:00] 0xlfg (id=1509071313229054113)
+    I see I manually did it so it was not necessary?
+    [reply to walterwego msg=1508702681366007878]
+
+[2026-05-27T07:13:20.365000+00:00] machrllrogin (id=1509092125793320970)
+    excited to know and compared with exact comparison between Hindsight and Mnemo <a:hype:1151299876395696189> 
+    Your feedback will be so much helpful
+    [reply to grrstine msg=1509046307401240706]
+

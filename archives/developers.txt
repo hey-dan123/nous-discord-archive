@@ -21637,3 +21637,29 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-27T02:58:08.257000+00:00] anthonycodeinplace (id=1509027902157623306)
     Oh that’s logical , thx I since managed the burn bit by doing some work local
 
+[2026-05-27T04:16:43.639000+00:00] sabtain0926 (id=1509047679903072307)
+    Hey, new here and on discord as well. Wanted to ask if there is a subset of community interested in enterprise aspect?
+
+[2026-05-27T05:21:24.214000+00:00] colorado.rob1459 (id=1509063956214448308)
+    Just went full `/yolo` -- AMA
+
+[2026-05-27T07:02:05.551000+00:00] dakid.poor (id=1509089295418527906)
+    how is it
+
+[2026-05-27T07:02:18.932000+00:00] dakid.poor (id=1509089351542509730)
+    whats your goal
+
+[2026-05-27T07:36:23.680000+00:00] .elkim (id=1509097927836958861)
+    <@387972437901312000> which skill do you use for the graphical interpretation of PRs/implementations?
+
+[2026-05-27T08:23:09.292000+00:00] teknium (id=1509109695426859058)
+    baoyu infographic
+    [reply to .elkim msg=1509097927836958861]
+
+[2026-05-27T09:09:31.983000+00:00] .elkim (id=1509121366878851207)
+    Btw this would be great addition in the toolset. My Hermes has been using it for all front-end work. It has certain skills like Design Jury or Design Theatre which evaluates and redesign whatever is needed. It has support form many 0auth providers/api keys. Works both as a daemon and web. https://github.com/nexu-io/open-design
+    [embed] GitHub - nexu-io/open-design: 🎨 Local-first, open-source  Claude... https://github.com/nexu-io/open-design
+
+[2026-05-27T09:12:47.187000+00:00] vitalmuffin (id=1509122185623634010)
+    Hey so i have a question: is it possible to use skill wide llm definition (model overwrite) or just agent wide?
+

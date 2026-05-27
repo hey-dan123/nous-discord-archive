@@ -1590,3 +1590,25 @@
     Without that, there isn’t anything useful to troubleshoot. “Custom model doesn’t work” was a valid complaint when the bug existed; after the fix, it needs current config/logs or it’s just stale diagnosis.
     [reply to thegiuseppe msg=1508232655299154093]
 
+[2026-05-27T08:28:28.060000+00:00] wordsmachine666 (id=1509111032436490341)
+    Hi <@427613574995771414> I've been using hermes-lcm on my setup and I'm running into some issues that I think are misconfiguration rather than bugs.
+    **My setup:**
+    - **Hermes Agent:** `0.14.0 (2026.5.16)` 
+    - **Main model:** `mimo-v2.5-pro` from Xiaomi 1M Contexts
+    - **LCM plugin:** v0.12.0, installed via `git clone` to `~/.hermes/plugins/hermes-lcm/`
+    
+    **What's happening:**
+    
+    1. **LCM compression never triggers.** From `lcm_status`, the context_threshold is 0.45 and context_length is 1,048,576. So compression would trigger at ~471K tokens. But my context usually stays around 70-120K tokens, and MiMo starts getting slow at ~70K. By the time compression would trigger, the session is already painful. Am I supposed to lower the threshold? Or any env var override I should be using instead.
+    
+    2. **Summary model .** The summary model defaulted to `qwen3.5-397b-a17b` on DigitalOcean, while my main model is on Xiaomi. This was causing timeouts during compression attempts. I'm planning to switch it to `mimo-v2.5` on Xiaomi. Is this the right approach?
+    
+    3. **Latency correlation with model size.** When I switch to `mimo-v2.5` (non-Pro), the same 124K-token context processes in 12-31 seconds. With `mimo-v2.5-pro`, it's 73-80 seconds, both with 100% cache hit. Is LCM's compression doing any processing before the main model call, or does it only compress after the context fills up?
+    
+    4. **About config priority.** I see LCM reads from `compression.threshold` in `~/.hermes/config.yaml`, env vars (`LCM_CONTEXT_THRESHOLD`, `LCM_SUMMARY_MODEL`), & has defaults in `LCMConfig`. What's the recommended way to configure for a 1M context models that gets slow well before the default threshold?
+    
+    **What I'm trying to achieve:**
+    Keep 1M Contexts models (for quality), use a faster model for LCM summarization, and have compression kick in early enough that context stays manageable without losing too much history.
+    
+    Any guidance would be appreciated! Happy to share my full config or logs if useful. Thx.
+

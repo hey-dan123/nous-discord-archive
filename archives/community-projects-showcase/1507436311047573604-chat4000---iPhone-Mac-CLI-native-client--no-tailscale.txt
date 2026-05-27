@@ -120,3 +120,50 @@
 [2026-05-27T01:33:00.050000+00:00] rostelinalise (id=1509006476784566414)
     are you sharing the iOS repository/
 
+[2026-05-27T05:03:07.175000+00:00] haimbender (id=1509059354899255456)
+    thanks!, what did u think it was initially? https://github.com/chat4000/chat4000-client-swift <- here's the iOS repo
+    [embed] GitHub - chat4000/chat4000-client-swift https://github.com/chat4000/chat4000-client-swift
+    [reply to rostelinalise msg=1509006476784566414]
+
+[2026-05-27T06:08:00.040000+00:00] rostelinalise (id=1509075682758623244)
+    I think a lot of the iOS apps are trying to do to much thing, and is not made as a phone app but rather make the mobile as an afterthought
+    [reply to haimbender msg=1509059354899255456]
+
+[2026-05-27T08:46:41.089000+00:00] rostelinalise (id=1509115616932401202)
+    would it be possible for it to continue any of the previous chat on all of the agents of hermes??
+
+[2026-05-27T08:46:54.027000+00:00] rostelinalise (id=1509115671198306365)
+    or would it even make sense to do so?
+
+[2026-05-27T08:50:00.218000+00:00] haimbender (id=1509116452139962368)
+    didn't quite understand what ur trying to say
+    [reply to rostelinalise msg=1509075682758623244]
+
+[2026-05-27T08:50:14.004000+00:00] haimbender (id=1509116509962899586)
+    i will check if it's possible
+    [reply to rostelinalise msg=1509115616932401202]
+
+[2026-05-27T08:52:52.284000+00:00] rostelinalise (id=1509117173837070346)
+    as in, those website that are also able to install as a native react for iOS/android.. ended up being hard to use for mobile device as that wasn't their priority
+    [reply to haimbender msg=1509116452139962368]
+
+[2026-05-27T09:02:12.168000+00:00] bondanadnob. (id=1509119522160906361)
+    i notice that in mobile, there's notif when the agent are done, but in mac, no notif are showing up. Or it's just me?
+    
+    Just asking,  is it possible to have notif as well when it needs approval?
+
+[2026-05-27T09:16:15.198000+00:00] haimbender (id=1509123058084872244)
+    do you need notif for mac?
+    [reply to bondanadnob. msg=1509119522160906361]
+
+[2026-05-27T09:17:02.498000+00:00] haimbender (id=1509123256475451463)
+    i feel like whatsapp and tg don't have notifications on the desktop, or am i wrong?
+
+[2026-05-27T09:27:03.541000+00:00] bondanadnob. (id=1509125777432645722)
+    tg do have silent notif before the agent done, and and normal notif when it is done
+    [reply to haimbender msg=1509123256475451463]
+
+[2026-05-27T09:27:56.345000+00:00] bondanadnob. (id=1509125998908801126)
+    for me personally, that really helps when im multitasking while waiting for it to be done or need approval, while also working on another task in another window.
+    [reply to haimbender msg=1509123058084872244]
+

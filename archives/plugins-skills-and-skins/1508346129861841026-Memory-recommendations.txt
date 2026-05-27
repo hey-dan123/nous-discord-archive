@@ -18,3 +18,36 @@
 [2026-05-27T03:00:33.575000+00:00] grrstine (id=1509028511665492058)
     I ditched openviking for hindsight. i switched to hindsight cloud. I couldn't afford it so I went to hindsight local ebedded. Not much to see there, so now I am on Hindsight local external (docker). This gives you the cloud-like backend
 
+[2026-05-27T03:42:58.088000+00:00] deviantcoffee (id=1509039184126410892)
+    Yeah I am also looking for a memory system
+
+[2026-05-27T03:43:16.177000+00:00] deviantcoffee (id=1509039259997442048)
+    I keep resetting my hermes trying out different setup idk i can't seem to nail it to something that works well
+
+[2026-05-27T06:39:31.512000+00:00] rostelinalise (id=1509083616167071805)
+    which one have you tried so far
+    [reply to deviantcoffee msg=1509039184126410892]
+
+[2026-05-27T06:40:23.826000+00:00] deviantcoffee (id=1509083835588018287)
+    Only hindsight selfhosted
+    [reply to rostelinalise msg=1509083616167071805]
+
+[2026-05-27T06:40:33.496000+00:00] deviantcoffee (id=1509083876147069028)
+    Im gonna try  mnemosyne now
+
+[2026-05-27T06:44:38.001000+00:00] rostelinalise (id=1509084901675368598)
+    hindsight
+    [attachment] image.png https://cdn.discordapp.com/attachments/1508346129861841026/1509084901469851718/image.png?ex=6a17e455&is=6a1692d5&hm=1e8a154119fada48f65582d7ea2c75024dffe24f2c226469122da6410a94fade&
+
+[2026-05-27T06:46:21.461000+00:00] rostelinalise (id=1509085335618064505)
+    brainstack has hindsight integrated to it's system
+    [attachment] image.png https://cdn.discordapp.com/attachments/1508346129861841026/1509085335370469386/image.png?ex=6a17e4bd&is=6a16933d&hm=f80632c1ddb044af439e17f03334436db55a7409a8e8dd7c5462b5393e73cdd0&
+
+[2026-05-27T06:48:21.353000+00:00] rostelinalise (id=1509085838481293333)
+    mnemosyne
+    [attachment] image.png https://cdn.discordapp.com/attachments/1508346129861841026/1509085838187696128/image.png?ex=6a17e535&is=6a1693b5&hm=e7046a9295e5672a817f37cd04a5871b1455f22cb592378827f85a1f7d2f3d0c&
+
+[2026-05-27T06:50:45.242000+00:00] rostelinalise (id=1509086441995767870)
+    from mnemosyne
+    [attachment] image.png https://cdn.discordapp.com/attachments/1508346129861841026/1509086442326855881/image.png?ex=6a17e5c5&is=6a169445&hm=07d38b5053e82427960617a7bd8bf86c52d5dcc7cbc2d688f7045de7e20a6157&
+
