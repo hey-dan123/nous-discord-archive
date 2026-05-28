@@ -233,3 +233,16 @@
     
     On it 😎
 
+[2026-05-28T11:36:40.039000+00:00] praveenjoseph (id=1509520782294777866)
+    <@643561176596217877>  Simply curious about where you have hosted your agent?
+    [reply to aquillum msg=1509212997594386603]
+
+[2026-05-28T12:38:41.199000+00:00] aquillum (id=1509536389971312690)
+    It runs on an Oracle ARM VPS (Free Tier) with tailscale. Yesterday I asked him to ssh into my termux on android and look around for configs and best practice.
+    I asked for storage (hermes workspace placement), wakelock, autostart hermes gateway and webui, prloot auto login..all that termux stuff 🙂 
+    But I see that the bridge shell of Hermes-relay comes handy when the VPS-Hermes hangs (failed Model, failed Gateway start...) the other way round
+    [reply to praveenjoseph msg=1509520782294777866]
+
+[2026-05-28T13:26:05.372000+00:00] praveenjoseph (id=1509548319297241201)
+    <@470346695587135489>  My concern is whether it is truly secure within the corporate network.? and when it will available in play store?
+

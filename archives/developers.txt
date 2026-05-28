@@ -21943,3 +21943,80 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     each agent profile comes with its own gateway
     [reply to bkornpob msg=1509488686314815578]
 
+[2026-05-28T10:21:24.747000+00:00] teknium (id=1509501843787485224)
+    Hey all developers - Our team will be focusing exclusively on QoL, Bug Fixes, and Reliability improvements until Computex (next monday)
+
+[2026-05-28T10:21:38.485000+00:00] teknium (id=1509501901409095770)
+    Will be very difficult to get feature requests in until after then.
+
+[2026-05-28T11:19:27.900000+00:00] minddragon (id=1509516453190303856)
+    awesome! would love to get xai bugfix and crash guard bug fixes in 🙂  (PR's up and checked AFAIK)
+
+[2026-05-28T11:19:45.377000+00:00] minddragon (id=1509516526493896875)
+    Well. My soul leaks but that's a personal problem >.>
+    [reply to teknium msg=1509472557688946810]
+
+[2026-05-28T11:52:12.706000+00:00] mach50 (id=1509524694183972985)
+    will this sort of service hardening in any way affect the working of hermes (native service, no docker)
+    ```
+      systemd.services.hermes-agent.serviceConfig = {
+        # Filesystem
+        ProtectSystem = "strict";
+        ProtectHome = true;
+        PrivateTmp = true;
+    
+        StateDirectory = "/var/lib/hermes";
+    
+        # Namespace
+        PrivateIPC = true;
+        ProtectHostname = true;
+        PrivateUsers = true;
+        RestrictNamespaces = true;
+    
+        # Process and Informational Privacy
+        ProtectProc = "invisible";
+        ProcSubset = "pid";
+    
+        # Kernel & Hardware Shielding
+        ProtectKernelTunables = true;
+        ProtectKernelModules = true;
+        ProtectKernelLogs = true;
+        ProtectClock = true;
+        ProtectControlGroups = true;
+        PrivateDevices = true;
+    
+        # Privileges
+        CapabilityBoundingSet = "";
+        NoNewPrivileges = true;
+        RestrictSUIDSGID = true;
+        LockPersonality = true;
+        SystemCallArchitectures = "native";
+    
+        # System Calls
+        SystemCallFilter = [ "@system-service" "~@privileged" "~@resources" ];
+      };
+    ```
+
+[2026-05-28T11:52:40.480000+00:00] mach50 (id=1509524810676310056)
+    this is the systemd service config defined in nix code
+
+[2026-05-28T14:17:07.495000+00:00] pinched_nerve (id=1509561162772254810)
+    Just submitted a pull request (33910) that would make the shutdown notify spam optional.  (While setting things up, I am getting incredible amounts of spam notifications from telegram, etc, each time I restart a gateway. This lets me toggle that off.)
+
+[2026-05-28T15:22:34.202000+00:00] fgtomas3 (id=1509577632574869627)
+    hey guys, anyone have a free great web scrapper?
+
+[2026-05-28T15:23:11.039000+00:00] kaya_west (id=1509577787080441866)
+    for what
+    [reply to fgtomas3 msg=1509577632574869627]
+
+[2026-05-28T15:23:44.614000+00:00] fgtomas3 (id=1509577927904202882)
+    I want to use Hermes to find an apartment for rent
+
+[2026-05-28T15:23:57.051000+00:00] fgtomas3 (id=1509577980068761840)
+    in multiple sites daily
+
+[2026-05-28T15:47:07.079000+00:00] _.exo._ (id=1509583810268762114)
+    if you know the sites you want it to check just tell it to check those sites. just ask
+    [reply to fgtomas3 msg=1509577927904202882]
+

@@ -1,0 +1,29 @@
+# Thread 'Give your Hermes Agent access to models, skills, endpoints, and payment rails' in forum #community-projects-showcase
+# thread_id=1509526561206964376 forum_id=1316137596535177246
+# Started 2026-05-28T15:48:35.080241+00:00
+
+[2026-05-28T11:59:37.839000+00:00] femyn.eth (id=1509526561206964376)
+    Hey everyone, sharing AIsa here because it should be useful for people building with Hermes Agent.
+    
+    AIsa is a unified API gateway for AI agents. Instead of wiring different providers, model keys, skills, and endpoints one by one, you can route your agent through one API layer and give it access to multiple models and useful capabilities from one gateway.
+    
+    For all Hermes builders, this is important because your agents usually need more than one model. A research agent may need a strong reasoning model. A coding agent may need a different model. A content agent may need faster and cheaper inference. A tool using agent may need endpoints for search, social data, financial data, media, or other external actions.
+    
+    AIsa is built for that: one layer for models, skills, endpoints, and agent payments
+    
+    Useful for:
+    
+    - Running Hermes with multiple LLMs from a single gateway
+    - Reducing provider switching stress
+    - Giving agents access to reusable skills and endpoints
+    - Building workflows that need more than plain chat completion
+    - Avoiding lock in to one model provider
+    
+    Agents are becoming more useful, meaning they need infrastructure around them. Models are only one part. They also need tools, skills, data access, and eventually payment rails.
+    
+    That is what we built with AIsa!
+    
+    Check it out here:
+    https://www.aisa.one/
+    [embed] AIsa - Capability Layer for the Agentic Economy https://www.aisa.one/
+

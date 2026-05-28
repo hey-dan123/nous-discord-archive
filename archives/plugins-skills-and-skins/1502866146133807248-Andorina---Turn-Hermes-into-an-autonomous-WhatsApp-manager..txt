@@ -247,3 +247,12 @@
     
     NOTE: BY NOW, THE MEMORY ONLY WORKS WITH HINDSIGHT, WE ARE DEVELOPING COMPATIBILITY WITH MAIN MEMORY TOOLS OF HERMES. THANK YOU FOR YOUR PATIENCE.
 
+[2026-05-28T13:56:47.010000+00:00] vayaperson (id=1509556043686875277)
+    We are making the last improvements and fixings. 
+    We've implemented knowledge to the sub-soul system, every soul can have his only documents adn extract information from them for responses.
+    Keep watching!! Release will be available soon on GitHub!!
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+    [attachment] Captura_desde_2026-05-28_15-53-27.png https://cdn.discordapp.com/attachments/1502866146133807248/1509556043808772176/Captura_desde_2026-05-28_15-53-27.png?ex=6a199b1f&is=6a18499f&hm=47203b0718381ffd866692d5051f3a2544d4971a8f601782496b34c34c3d57a9&
+    [attachment] Captura_desde_2026-05-28_15-55-04.png https://cdn.discordapp.com/attachments/1502866146133807248/1509556044161089617/Captura_desde_2026-05-28_15-55-04.png?ex=6a199b1f&is=6a18499f&hm=bb30459e954144a9ef1a2149fc49f5ac80a48c19eddcb3e3b6a38f7a610561c2&
+    [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+

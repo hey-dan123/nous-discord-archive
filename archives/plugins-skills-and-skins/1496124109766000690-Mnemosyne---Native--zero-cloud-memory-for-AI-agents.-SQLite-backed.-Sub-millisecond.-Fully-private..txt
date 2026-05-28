@@ -1255,3 +1255,7 @@
     Nope.
     [reply to 0xlfg msg=1509435994602995743]
 
+[2026-05-28T12:46:40.121000+00:00] ae53633805 (id=1509538398715510845)
+    It's been a minute, but I've abandoned the project. Between Brainstack and Mnemosyne, we've got enough memory provider awesomeness to take Hermes to the next level. They've both made Hermes so much better for thier efforts.
+    [reply to sdsops_25196 msg=1509177281841729606]
+

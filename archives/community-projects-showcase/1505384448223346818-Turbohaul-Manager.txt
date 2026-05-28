@@ -23,3 +23,8 @@
 [2026-05-20T01:42:24.324000+00:00] mrtrenchtrucker (id=1506472128462061780)
     V0.2.3 now available!
 
+[2026-05-28T14:22:41.108000+00:00] mrtrenchtrucker (id=1509562562046460074)
+    v3.0 now available! Now supports TurboQuant AND MTP!
+    https://github.com/MrTrenchTrucker/turbohaul-manager
+    [embed] GitHub - MrTrenchTrucker/turbohaul-manager: Ollama-shape inference ... https://github.com/MrTrenchTrucker/turbohaul-manager
+

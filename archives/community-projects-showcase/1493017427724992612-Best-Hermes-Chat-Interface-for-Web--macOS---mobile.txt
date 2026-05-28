@@ -2784,3 +2784,7 @@
     The folder you want to find is .hermes/profiles/<agent-name>
     [reply to savage887 msg=1509481663967793233]
 
+[2026-05-28T12:47:15.559000+00:00] deor42 (id=1509538547353522276)
+    What version of Webui are you on? We had a few issues but they are resolved for me so far. Easiest fix was to connect into my server, switch in to the Webui folder, then do a "git pull" that brought me up to date and it now updates from Webui again.
+    [reply to .vansken msg=1509408480291983580]
+
