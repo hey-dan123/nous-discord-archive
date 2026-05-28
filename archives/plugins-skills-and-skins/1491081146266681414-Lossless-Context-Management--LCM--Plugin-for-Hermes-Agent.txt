@@ -1730,3 +1730,9 @@
     https://x.com/SteveSchoettler/status/2060022538525343846?s=20
     [embed]  https://twitter.com/SteveSchoettler/status/2060022538525343846?s=20
 
+[2026-05-28T18:29:25.867000+00:00] kganse7 (id=1509624657706352680)
+    Nice this seems like a big update!
+
+[2026-05-28T19:22:07.888000+00:00] kohai_ut (id=1509637920183812108)
+    Sweet, time to jump in and give lcm a try.
+

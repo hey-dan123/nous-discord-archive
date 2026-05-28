@@ -245,3 +245,7 @@
     https://git.brandyapple.com/magnus/agent-skills/src/branch/main/bundles/tailscale/SKILL.md
     [embed] agent-skills/bundles/tailscale/SKILL.md at main https://git.brandyapple.com/magnus/agent-skills/src/branch/main/bundles/tailscale/SKILL.md
 
+[2026-05-28T17:33:20.395000+00:00] magnus919 (id=1509610541893681172)
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/lastfm/SKILL.md
+    [embed] agent-skills/lastfm/SKILL.md at main https://git.brandyapple.com/magnus/agent-skills/src/branch/main/lastfm/SKILL.md
+

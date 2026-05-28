@@ -43,3 +43,6 @@
     [embed] GitHub - KaleLjl/My-news https://github.com/KaleLjl/my-news.git
     [embed] GitHub - KaleLjl/My-news https://github.com/KaleLjl/my-news
 
+[2026-05-28T17:51:28.582000+00:00] hector_podcast (id=1509615106080641064)
+    Could this be used to poll YouTube videos as well? I don't think they're technically rss feeds
+

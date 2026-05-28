@@ -1259,3 +1259,11 @@
     It's been a minute, but I've abandoned the project. Between Brainstack and Mnemosyne, we've got enough memory provider awesomeness to take Hermes to the next level. They've both made Hermes so much better for thier efforts.
     [reply to sdsops_25196 msg=1509177281841729606]
 
+[2026-05-28T16:54:19.507000+00:00] kyklooppi (id=1509600723497910494)
+    agree. There is no need for using build-in memory with Mnemosyme. Just trust the process 🙂
+    [reply to nihp_ msg=1509454181809918033]
+
+[2026-05-28T18:12:52.998000+00:00] _bashell (id=1509620493311938611)
+    you can use hermes dashboard and look for memory and deactivate there
+    [reply to nihp_ msg=1509454181809918033]
+

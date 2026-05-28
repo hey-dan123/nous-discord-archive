@@ -1,0 +1,9 @@
+# Thread 'Runway x Hermes' in forum #community-projects-showcase
+# thread_id=1509589039261679778 forum_id=1316137596535177246
+# Started 2026-05-28T20:20:59.638254+00:00
+
+[2026-05-28T16:07:53.768000+00:00] mihkamusic (id=1509589039261679778)
+    Hooked up the Runway MCP server to my agent. Results!
+    https://x.com/miku_diffract/status/2060025386197524793?s=20
+    [embed]  https://twitter.com/miku_diffract/status/2060025386197524793?s=20
+

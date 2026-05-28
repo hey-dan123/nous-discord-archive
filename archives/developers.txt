@@ -22020,3 +22020,68 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     if you know the sites you want it to check just tell it to check those sites. just ask
     [reply to fgtomas3 msg=1509577927904202882]
 
+[2026-05-28T16:00:52.426000+00:00] danielesalatti (id=1509587272025116802)
+    Hey
+    As far as I can tell there’s no way to use the dangerous action approval flow to queue something for approval from a plugin.
+    Is this a planned feature, or a feature that folks would find useful? If yes, would a PR be welcome?
+
+[2026-05-28T16:05:46.401000+00:00] dr_membrane (id=1509588505045500096)
+    My friend and I are doing something similar looking for a house in Japan. I suggest doing it in two parts. First, ask Hermes to find all the best methods and websites it can access for discovering cheap apartments. Take a look at the list and prune or append it as necessary (this is a human in the middle approach) Once it has the list have it build a search skill and test that skill out a few times having it do a search. Once you are happy with the results, tell Hermes to send you daily updates of new locations it finds on whatever medium you choose (email, telegram, etc...)
+    [reply to fgtomas3 msg=1509577927904202882]
+
+[2026-05-28T16:06:49.877000+00:00] fgtomas3 (id=1509588771283275936)
+    okay great, yeah I connected it to airtable
+
+[2026-05-28T16:06:54.322000+00:00] fgtomas3 (id=1509588789926957277)
+    so I am keeping them there
+
+[2026-05-28T16:07:51.800000+00:00] fgtomas3 (id=1509589031007027250)
+    but for some reason only firecrawl can crawl some of the famouse websites here cause others are being blocked. I found also a skill but nothing as good as firecrawl for now, wondering if anyone had a better one
+
+[2026-05-28T16:34:25.682000+00:00] _.exo._ (id=1509595716232941618)
+    tavily has a crawl aswell. but theres also the option of having your agent use playwright and actually USE website directly to perform the search and return results. give those a try
+    [reply to fgtomas3 msg=1509589031007027250]
+
+[2026-05-28T18:47:57.635000+00:00] anthonycodeinplace (id=1509629320799191120)
+    What was the best work that came out of the event yesterday? I unfortunately missed it
+
+[2026-05-28T18:49:54.269000+00:00] godsboy7777 (id=1509629809997910078)
+    <@387972437901312000> quick one for review when you have a gap.
+    
+    I noticed the bundled `baoyu-infographic` skill could be interpreted loosely enough that an agent may create a scripted/handmade infographic instead of actually prompting the configured Hermes `image_generate` tool.
+    
+    In our case, Hermes image gen was correctly configured to:
+    - provider: `openai-codex`
+    - model: `gpt-image-2-high`
+    
+    …but the skill guidance was not strict enough to prevent silent substitution when the agent tried to improve text readability.
+    
+    Issue:
+    https://github.com/NousResearch/hermes-agent/issues/34046
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/34047
+    
+    PR summary:
+    - Clarifies that `baoyu-infographic` must use the Hermes `image_generate` tool with the assembled prompt.
+    - States that the configured Hermes image-generation backend should not be bypassed silently.
+    - Adds guidance that if exact readable text needs HTML/SVG/Pillow overlay, the agent should tell the user before switching away from image gen.
+    - Updates both the skill and bundled docs mirror.
+    
+    CI so far:
+    - `check-common-ancestor` passed.
+    - Docs/Nix checks were still pending when I last checked.
+    
+    This is a small docs/skill-instruction fix, but I think it prevents a confusing user-facing behaviour.
+    [embed] [Bug]: baoyu infographic skill should not silently bypass image_gen... https://github.com/NousResearch/hermes-agent/issues/34046
+    [embed] fix(skills): clarify infographic image generation by GodsBoy · Pul... https://github.com/NousResearch/hermes-agent/pull/34047
+
+[2026-05-28T18:52:08.785000+00:00] teknium (id=1509630374198907002)
+    <@115847981822902279> any comment on this before I review? Happy with this?
+    [reply to godsboy7777 msg=1509629809997910078]
+
+[2026-05-28T19:56:54.178000+00:00] jezzzzzzzzzz (id=1509646670718304459)
+    PR to fix issue #33860 about tool progress display:
+    https://github.com/NousResearch/hermes-agent/pull/34075
+    [embed] fix(cli): decouple quiet_mode from -v flag, derive from tool_progre... https://github.com/NousResearch/hermes-agent/pull/34075
+

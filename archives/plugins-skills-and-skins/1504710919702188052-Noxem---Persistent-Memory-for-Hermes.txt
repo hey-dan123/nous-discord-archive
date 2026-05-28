@@ -492,3 +492,6 @@
     use qwen chat and connect it to hermes\ is only way to use qwen 3.7 max for free
     [reply to twindenis msg=1508959105933508608]
 
+[2026-05-28T15:58:07.399000+00:00] austrian_guy (id=1509586579851579463)
+    This is very interesting 🙏
+
