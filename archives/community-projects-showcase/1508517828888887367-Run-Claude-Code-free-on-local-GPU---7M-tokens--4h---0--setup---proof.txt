@@ -32,3 +32,6 @@
 [2026-05-27T18:26:24.601000+00:00] todseinvater (id=1509261509556178985)
     If anyone replicated this on NVIDIA or Apple Silicon, I’d love a short comment there so we can compare results in one place.
 
+[2026-05-28T01:47:37.246000+00:00] fhsduifisdfbsdifisdfysdfj (id=1509372543876993165)
+    I did LM Studio + Nvidia with Qwen 3.6
+

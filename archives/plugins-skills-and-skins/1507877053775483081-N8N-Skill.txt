@@ -121,3 +121,19 @@
 [2026-05-25T01:32:45.836000+00:00] teknium (id=1508281641435398205)
     Would love to see the kinds of things people build with this
 
+[2026-05-27T23:42:48.229000+00:00] oninsuka (id=1509341132663033897)
+    hundred percent tek! im making my agent builder profile with this and making it ingest a lot of best practices for frameworks and leveraging llm-wikii also or my obisidan vault in general on the side as well. still a work in proigress tho
+    [reply to teknium msg=1508281641435398205]
+
+[2026-05-28T00:59:25.527000+00:00] teknium (id=1509360415128424639)
+    Did you see we now have built-in n8n mcp today
+    [reply to oninsuka msg=1509341132663033897]
+
+[2026-05-28T01:28:34.634000+00:00] oninsuka (id=1509367751414911047)
+    gonna check it out! haven’t had the time yet since I’ve been testing some enterprise reliability stuff for a Claw variant at my current job, but built-in n8n MCP sounds super useful. also Tek, quick question if you don’t mind. I sent an open application to recruiting last week because I genuinely really want to contribute to Nous, especially around Hermes Agent, community, onboarding, docs, workflow examples, product feedback, and helping more people actually use what’s being built.
+    
+    I’ve also been really interested in getting closer to the more technical and research side of AI, and honestly the way Nous builds feels like the kind of place where I’d learn way faster by being around the work and contributing to it. I’m not trying to force myself into a role that doesn’t fit, but I do think I could be useful around the builder/community/product side of Hermes while continuing to level up technically.
+    
+    since I’m not applying for a super specific posted role, should I just wait for recruiting, or is there a better path/person to reach out to? no pressure at all, I just wanted to ask properly because I’m serious about contributing and would move fast if there’s ever a fit.
+    [reply to teknium msg=1509360415128424639]
+

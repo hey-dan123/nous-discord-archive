@@ -1643,3 +1643,9 @@
     If it still does not trigger, check `lcm_status` for `last_compression_noop_reason`. Common causes are protected fresh tail or raw backlog outside the tail being below `LCM_LEAF_CHUNK_TOKENS`.
     [reply to wordsmachine666 msg=1509111032436490341]
 
+[2026-05-28T00:55:47.152000+00:00] teknium (id=1509359499197022258)
+    Hey <@427613574995771414> I heard we need to update some stuff for LCM
+
+[2026-05-28T00:55:59.924000+00:00] teknium (id=1509359552766677123)
+    Been a bit distracted with openai woes the last 2 days but can you lmk if so and what is needed
+

@@ -1,0 +1,17 @@
+# Thread 'agent-data: a CLI for giving Hermes structured web data' in forum #community-projects-showcase
+# thread_id=1502046607330377901 forum_id=1316137596535177246
+# Started 2026-05-28T02:56:31.116054+00:00
+
+[2026-05-27T22:19:47.458000+00:00] deepparser (id=1509320241795305604)
+    **Update:** Reddit is now available as a new endpoint on agent-data! Point Hermes at any subreddit and you'll get back structured data on posts (including title, author, and engagement) as well as comments.
+    
+    A few ways to use it with Hermes:
+    - **Feature discovery:** "Use agent-data to pull the top posts in r/ProductManagement and r/SaaS where users are asking for features or complaining about missing functionality in our products. Analyze each post's comments, and group requests by theme."
+    - **Competitor tracking:** "Use agent-data to monitor posts and comments in r/SaaS and r/Entrepreneur that mention our competitors, then send me a daily brief on user sentiment."
+    - **Launch reaction monitoring:** "Use agent-data to monitor r/startups for any discussions of our new product launch. Summarize the reception and highlight what people liked and didn't like."
+    
+    As a reminder, we’re adding new sources and endpoints every week, so if there are any you’d like us to prioritize, please let me know!
+
+[2026-05-27T22:31:14.853000+00:00] deepparser (id=1509323124938637463)
+    agent-data: a CLI for giving Hermes structured web data
+

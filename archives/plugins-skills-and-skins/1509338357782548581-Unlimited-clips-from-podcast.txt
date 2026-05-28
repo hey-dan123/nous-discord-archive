@@ -1,0 +1,23 @@
+# Thread 'Unlimited clips from podcast' in forum #plugins-skills-and-skins
+# thread_id=1509338357782548581 forum_id=1485392832154832906
+# Started 2026-05-28T02:58:56.646857+00:00
+
+[2026-05-27T23:31:46.646000+00:00] hector_podcast (id=1509338357782548581)
+    Use case: Have your hermes create captioned clips with no other api keys or services.
+    
+    https://github.com/hector-ai-91/video-podcast-clipper.git
+    
+    Note:
+    
+    Hey everyone!
+    
+    I've ran a podcast production and marketing co for almost a decade a clipping is a big part of our operations. I've been working on integrating our clipping operations into Hermes over the last few weeks and am really excited to have built something that has 5x'd our video output with almost zero overhead.
+    
+    Am hoping one day it'll be in the standard Hermes ship so please send any feedback for the next version.
+    
+    To Bringing Out Your Genius,
+    
+    Hector Podcast
+    [attachment] video-podcast-clipper.jpg https://cdn.discordapp.com/attachments/1509338357782548581/1509338357933539379/video-podcast-clipper.jpg?ex=6a18d062&is=6a177ee2&hm=c0f5fd78c3e74af8548ca89b98c216ffa7a3d4bcb73e9f5c0dc519e48b0c19f1&
+    [embed] GitHub - hector-ai-91/video-podcast-clipper: Your long-form video ... https://github.com/hector-ai-91/video-podcast-clipper.git
+

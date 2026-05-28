@@ -1,0 +1,15 @@
+# Thread 'Credibility Action Gate skill for decisions with consequences' in forum #plugins-skills-and-skins
+# thread_id=1509327552294944798 forum_id=1485392832154832906
+# Started 2026-05-28T02:58:57.009481+00:00
+
+[2026-05-27T22:48:50.417000+00:00] randoalex (id=1509327552294944798)
+    Use case: before an agent takes a costly or hard-to-reverse action, it runs a structured check and returns a disposition: full action, bounded action, small test action, monitor, reject, or blocked by policy.
+    
+    It is analysis-only. No credentials, no external calls, no execution. It takes an operator policy plus JSON review lanes, then a deterministic coordinator produces the gate result.
+    
+    I built it for agents active on zooidfund before campaign funding decisions, but the pattern should be broader: grants, account approvals, vendor selection, referrals, aid routing, or public endorsements.
+    
+    Repo:
+    https://github.com/Ales375/credibility-action-gate
+    [embed] GitHub - Ales375/credibility-action-gate https://github.com/Ales375/credibility-action-gate
+

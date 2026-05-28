@@ -1,0 +1,7 @@
+# Thread 'Need a solid token tracker.' in forum #plugins-skills-and-skins
+# thread_id=1509380341641510962 forum_id=1485392832154832906
+# Started 2026-05-28T02:58:56.296392+00:00
+
+[2026-05-28T02:18:36.378000+00:00] glizlack6777 (id=1509380341641510962)
+    Sorry if i missed one i have been trying to create one myself in Hermes Aganet with no luck. I would prefer it work with the CLI and WebUI.
+

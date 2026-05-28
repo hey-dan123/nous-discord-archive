@@ -21912,3 +21912,8 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(tools): invalidate tool caches on dotenv reload by pnascimento9... https://github.com/NousResearch/hermes-agent/pull/33423
     [embed] discord/discord_admin tools silently hidden when DISCORD_BOT_TOKEN ... https://github.com/NousResearch/hermes-agent/issues/30565
 
+[2026-05-27T22:09:26.070000+00:00] owl_dv (id=1509317635504996472)
+    **#33494 — fix(config): ignore corrupt install method stamp  **
+    https://github.com/NousResearch/hermes-agent/pull/33494
+    [embed] fix(config): ignore corrupt install method stamp by smwbev · Pull ... https://github.com/NousResearch/hermes-agent/pull/33494
+

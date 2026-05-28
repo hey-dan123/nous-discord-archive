@@ -224,3 +224,12 @@
     Loved the **remote Terminal** today ! helped me to run `hermes update` after a broken oauth config to get it runnin again 👍
     [reply to codename_11 msg=1509011924929745068]
 
+[2026-05-27T23:21:34.721000+00:00] codename_11 (id=1509335791183073320)
+    <@643561176596217877> I definitely agree the voice modes could use some polish. One of the issues I was having on the last run was properly handling start/stop and background noise disturbing ending the mic record run. I'll spend some time on that again and see if I can polish those up a bit. My intent was fluent interaction indeed - so we shall pursue! lol. 😁
+    
+    I'll also see about surfacing errors a little better so we can more easily articulate the source. 
+    
+    As for your suggestions - I'd love to open up compatibility to more providers - and an openai endpoint for generic compatibility is a great idea! 
+    
+    On it 😎
+

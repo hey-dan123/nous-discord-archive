@@ -1223,3 +1223,6 @@
 [2026-05-27T12:52:07.299000+00:00] sdsops_25196 (id=1509177383133909092)
     okay well at least it wasn't a whole month old
 
+[2026-05-28T01:49:43.890000+00:00] cspiritsong (id=1509373075060297840)
+    Is it possible/ supposed to use this to replace the built in memory?
+
