@@ -241,3 +241,7 @@
     https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.2.2
     [embed] v0.2.2 — Add brand-designer skill - magnus/agent-skills https://git.brandyapple.com/magnus/agent-skills/releases/tag/v0.2.2
 
+[2026-05-28T04:16:53.815000+00:00] magnus919 (id=1509410110450040885)
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/bundles/tailscale/SKILL.md
+    [embed] agent-skills/bundles/tailscale/SKILL.md at main https://git.brandyapple.com/magnus/agent-skills/src/branch/main/bundles/tailscale/SKILL.md
+

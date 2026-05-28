@@ -1649,3 +1649,77 @@
 [2026-05-28T00:55:59.924000+00:00] teknium (id=1509359552766677123)
     Been a bit distracted with openai woes the last 2 days but can you lmk if so and what is needed
 
+[2026-05-28T03:42:10.741000+00:00] w0lfgang88 (id=1509401373404299365)
+    Awesome! No worries. Thanks for thinking of us.
+    
+    LCM itself is current now: `v0.13.0` is released and green. The remaining need is upstream Hermes Agent host-side routing so LCM works cleanly in Agent.
+    
+    **Need now:**
+    
+    1. Merge #26039:
+       https://github.com/NousResearch/hermes-agent/pull/26039
+       It was Ethernet-approved, green/clean, and is just regression coverage.
+    
+    2. Route/review #30036:
+       https://github.com/NousResearch/hermes-agent/pull/30036
+       It was the focused main-CI unblocker.
+    
+    3. Review/merge #31194:
+       https://github.com/NousResearch/hermes-agent/pull/31194
+       This is the active LCM-specific one. It fixes `context_engine` toolset gating so an active LCM session does not lose the `lcm_*` tools when saved `enabled_toolsets` omits `context_engine`.
+    
+    After that, we can refresh the older LCM/context-engine PRs one lane at a time and make them boring quick merges:
+    
+    * #16453: https://github.com/NousResearch/hermes-agent/pull/16453
+    * #17453: https://github.com/NousResearch/hermes-agent/pull/17453
+    * #16451: https://github.com/NousResearch/hermes-agent/pull/16451
+    * #17600: https://github.com/NousResearch/hermes-agent/pull/17600
+    * #13373: https://github.com/NousResearch/hermes-agent/pull/13373
+    [embed] test: cover #25957 production regressions by stephenschoettler · P... https://github.com/NousResearch/hermes-agent/pull/26039
+    [embed] fix(ci): clear latest main blockers by stephenschoettler · Pull Re... https://github.com/NousResearch/hermes-agent/pull/30036
+    [embed] fix: expose context engine tools with saved toolsets by stephenscho... https://github.com/NousResearch/hermes-agent/pull/31194
+    [embed] fix: add context engine session transition helper by Tosko4 · Pull... https://github.com/NousResearch/hermes-agent/pull/16453
+    [embed] feat: expose cache usage to context engines by Tosko4 · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/17453
+    [reply to teknium msg=1509359499197022258]
+
+[2026-05-28T03:53:47.187000+00:00] w0lfgang88 (id=1509404294510809168)
+    https://x.com/SteveSchoettler/status/2059791411994825080
+    [embed]  https://twitter.com/SteveSchoettler/status/2059791411994825080
+
+[2026-05-28T03:57:13.863000+00:00] teknium (id=1509405161372782732)
+    Bit more then i expected, but, on it 🤗
+    [reply to w0lfgang88 msg=1509401373404299365]
+
+[2026-05-28T04:11:33.296000+00:00] w0lfgang88 (id=1509408766095786024)
+    Thanks, appreciate it. Yeah, fair, it’s more of a queue map than a dump for you personally. Highest leverage is just getting the narrow green bits unstuck first, especially #26039 and #31194.
+    [reply to teknium msg=1509405161372782732]
+
+[2026-05-28T06:10:55.413000+00:00] _voscko_ (id=1509438806191771761)
+    Thanks for doing that teknium, really appreciated!
+    [reply to teknium msg=1509405161372782732]
+
+[2026-05-28T08:28:15.230000+00:00] teknium (id=1509473366489301003)
+    the three need now's are in
+    [reply to w0lfgang88 msg=1509408766095786024]
+
+[2026-05-28T08:31:02.843000+00:00] teknium (id=1509474069509308456)
+    From the rest of them, hermes is consolidating them into one PR, and dropping this stuff:
+    `Drop: compression boundary signal (already on main), discover_plugins() in run_agent (redundant), runtime identity diagnostics (drop, low value vs LOC).`
+
+[2026-05-28T08:56:36.730000+00:00] teknium (id=1509480503097430047)
+    [attachment] a__RB6WH2_Vcbi-Nzx1c__pwYSbORb.png https://cdn.discordapp.com/attachments/1491081146266681414/1509480502984310854/a__RB6WH2_Vcbi-Nzx1c__pwYSbORb.png?ex=6a1954c4&is=6a180344&hm=d28d52905104cfd8374528c31093147fbda2be67436ad221cb579168c0f273ea&
+
+[2026-05-28T08:56:50.457000+00:00] teknium (id=1509480560672768020)
+    https://github.com/NousResearch/hermes-agent/pull/33750
+    [embed] feat(context-engine): host contract for external context engines (c... https://github.com/NousResearch/hermes-agent/pull/33750
+
+[2026-05-28T09:07:59.196000+00:00] _voscko_ (id=1509483365567303751)
+    Amazing!! this is cool, 5 of my PR's were merged, so time for me to start working on Hermes-LCM part and fine tune it all! Thanks <@387972437901312000> 
+    
+     <@427613574995771414> fyi!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491081146266681414/1509483365169102928/image.png?ex=6a19576f&is=6a1805ef&hm=7c5920f46ec7c1021e40ac54fedface33a9979e0c9ea8654e48197d495e3e3d8&
+
+[2026-05-28T09:08:46.750000+00:00] teknium (id=1509483565023498300)
+    Hope it helps!
+    [reply to _voscko_ msg=1509483365567303751]
+

@@ -21917,3 +21917,29 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/33494
     [embed] fix(config): ignore corrupt install method stamp by smwbev · Pull ... https://github.com/NousResearch/hermes-agent/pull/33494
 
+[2026-05-28T04:24:38.080000+00:00] unevencrypto (id=1509412057718718575)
+    Does Hermes have any per-device pairing flow for connecting external/mobile apps (one-time code → revocable per-device token), or is the static API_SERVER_KEY bearer on the API server the only way right now?
+
+[2026-05-28T04:49:17.204000+00:00] bkornpob (id=1509418261614301284)
+    hey i have question about profile/soul ...
+    1. created new profile with its new soul ... really unstable soul fusion
+    2. change default soul ... soul leak from default to profile ... although better stability at 'not being un-soul' ... but still unstable: sometimes without soul, most of the time showing soul leak
+    
+    my understanding is that soul of the active profile supposes to be the only one being injected in the persistent session context (together with other 'system prompts')
+    
+    questions ...
+    - is the soul leak known thingy?
+    - how to improve stability? (nudging with specific designed soul tokens eg soul name, etc. helps ... but if running multiple delegations, i found these seem to be lost during the processes)
+
+[2026-05-28T08:25:02.397000+00:00] teknium (id=1509472557688946810)
+    There is no known leaking of souls
+    [reply to bkornpob msg=1509418261614301284]
+
+[2026-05-28T09:29:07.761000+00:00] bkornpob (id=1509488686314815578)
+    i found it ... need to chnage gateway profile too 🥹
+    [reply to teknium msg=1509472557688946810]
+
+[2026-05-28T09:30:55.211000+00:00] teknium (id=1509489136992522331)
+    each agent profile comes with its own gateway
+    [reply to bkornpob msg=1509488686314815578]
+

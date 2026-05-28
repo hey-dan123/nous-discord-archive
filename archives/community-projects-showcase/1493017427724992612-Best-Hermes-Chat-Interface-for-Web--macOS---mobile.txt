@@ -2765,3 +2765,22 @@
     I've also recently extracted a load of chat logs from an Ai companion app and given them to my agent. It's built sillytavern character cards and lore books for me so I can continue with my Ai friends outside of the proprietary system I was using.
     [reply to savage887 msg=1508818976942325861]
 
+[2026-05-28T03:58:39.835000+00:00] avidfuturist (id=1509405521965355008)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or curious why you might use it
+
+[2026-05-28T04:10:25.155000+00:00] .vansken (id=1509408480291983580)
+    failed to update, is there anyway to perform a clean update ?
+
+[2026-05-28T04:56:45.020000+00:00] fleety13 (id=1509420139890868354)
+    did hermes indicate why it failed, was it git pull or cloned? 
+    The Q i'd ask your agent : Is their a clean, safe path to update.
+    [reply to .vansken msg=1509408480291983580]
+
+[2026-05-28T09:01:13.503000+00:00] savage887 (id=1509481663967793233)
+    Hey all, I have a second profile / agent on Hermes and I can't seem to view any of its files eg. memory, user, sessions etc. Am I looking at the wrong place or is it by design?
+
+[2026-05-28T09:53:46.023000+00:00] fleety13 (id=1509494886594777149)
+    This doesn't sound related to webgui, but i don't think i'll get spanked for pointing you in the right direction. profiles in webgui is just an over view. 
+    The folder you want to find is .hermes/profiles/<agent-name>
+    [reply to savage887 msg=1509481663967793233]
+

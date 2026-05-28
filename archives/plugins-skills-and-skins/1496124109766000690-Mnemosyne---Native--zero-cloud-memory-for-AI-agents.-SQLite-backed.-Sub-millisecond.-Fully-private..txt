@@ -1226,3 +1226,32 @@
 [2026-05-28T01:49:43.890000+00:00] cspiritsong (id=1509373075060297840)
     Is it possible/ supposed to use this to replace the built in memory?
 
+[2026-05-28T03:06:06.819000+00:00] nihp_ (id=1509392297257730100)
+    Personally i turn off inbuilt memory and run mnemosyne. So yes it is possible.
+    [reply to cspiritsong msg=1509373075060297840]
+
+[2026-05-28T04:22:03.995000+00:00] grrstine (id=1509411411439124601)
+    I tweaked my llm models for hindsight to be half as costly
+    [reply to machrllrogin msg=1509092125793320970]
+
+[2026-05-28T04:47:03.126000+00:00] cspiritsong (id=1509417699250540554)
+    Thanks I did that as well because the inbuilt memory decided to hallucinate my email address etc. I also don't want to spend money to subscribe to obsidian then spend more money on services like n8n. Thanks!
+    [reply to nihp_ msg=1509392297257730100]
+
+[2026-05-28T05:59:34.898000+00:00] 0xlfg (id=1509435951905247232)
+    Whn you guys say turn off built in i assume you meant you change memory provider?
+
+[2026-05-28T05:59:45.078000+00:00] 0xlfg (id=1509435994602995743)
+    Do you guys find token usage increase switching ove
+
+[2026-05-28T05:59:52.252000+00:00] 0xlfg (id=1509436024693063892)
+    Or similar
+
+[2026-05-28T07:12:01.246000+00:00] nihp_ (id=1509454181809918033)
+    Turn off. You can turn off inbuilt memory. I forgot the command but you can ask ur agent to turn it off
+    [reply to 0xlfg msg=1509435951905247232]
+
+[2026-05-28T07:12:21.600000+00:00] nihp_ (id=1509454267180777554)
+    Nope.
+    [reply to 0xlfg msg=1509435994602995743]
+

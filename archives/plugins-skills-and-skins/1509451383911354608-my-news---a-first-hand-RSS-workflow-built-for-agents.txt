@@ -1,0 +1,45 @@
+# Thread 'my-news — a first-hand RSS workflow built for agents' in forum #plugins-skills-and-skins
+# thread_id=1509451383911354608 forum_id=1485392832154832906
+# Started 2026-05-28T10:01:38.125990+00:00
+
+[2026-05-28T07:00:54.175000+00:00] jialecaleb (id=1509451383911354608)
+    **What it does**
+    You talk to your agent in plain language and it handles the whole loop:
+    • Pulls your subscribed RSS feeds and shows what's new
+    • Fetches the full text of any article (strips the page down to clean body text)
+    • Summarizes it all into a readable digest, saved to disk for later
+    • Manages subscriptions (add / remove / list feeds) and health-checks broken ones — all by you just asking
+    
+    **Two pieces:**
+    • CLI (my-news) — wraps newsboat, emits clean JSON. No LLM calls, no rendering. Pure data layer.
+    • Skill — mounts into Claude Code / Hermes / any shell-capable agent and turns that JSON into the digest.
+    
+    **Install (one line):**
+    npx skills add https://github.com/KaleLjl/my-news.git
+    
+    First trigger, the skill self-checks its deps (uv / newsboat) and tells you what to install.
+    
+    **Examples — just talk to your agent:**
+    Add a source
+    🧑 "subscribe me to https://simonwillison.net/atom/everything/, tag it 'ai'"
+    🤖 adds the feed, confirms it's pulling, shows the latest few items
+    
+    Remove a source
+    🧑 "I'm done with the hnrss feed, drop it"
+    🤖 removes it from your subscriptions and confirms
+    
+    Daily summary
+    🧑 "every morning at 9, pull all my feeds and give me a digest"
+    🤖 schedules it — each morning you get a fresh summary of everything new, written to disk so you can scroll back through past days
+    
+    One-off reads
+    🧑 "give me the full text of id 1042"
+    🧑 "which feed is broken?" → it runs a health check for you
+    
+    State lives in XDG user dirs (agent-agnostic), digests get written to disk, and every command is JSON-first so you can wire it into your own scripts too.
+    
+    MIT licensed. Feedback welcome 🙏
+    → https://github.com/KaleLjl/my-news
+    [embed] GitHub - KaleLjl/My-news https://github.com/KaleLjl/my-news.git
+    [embed] GitHub - KaleLjl/My-news https://github.com/KaleLjl/my-news
+

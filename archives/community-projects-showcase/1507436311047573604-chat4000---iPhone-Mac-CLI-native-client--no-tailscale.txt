@@ -200,3 +200,14 @@
     do you have 2 hermes agents connected to 1 phone?
     [reply to thnzone6 msg=1509272390390120619]
 
+[2026-05-28T04:17:04.294000+00:00] rostelinalise (id=1509410154402025642)
+    just putting it out here but yeah me too so this use case make sense i guess
+    for me it's mac server with hermes + my personal mac + my phone
+    [reply to thnzone6 msg=1509272390390120619]
+
+[2026-05-28T08:19:24.009000+00:00] thnzone6 (id=1509471138387071036)
+    I have a similar setup - a Mac Mini server that runs MCPs and some other home utilities, a Mac Studio that runs Hermes and some local AI models, and then a personal Mac, phone, etc. I started with OpenClaw, then NanoClaw, ClaudeClaw, then installed Hermes on the Studio and full gateway to Telegram. Then I wanted to make some changes on the Mini so I had Studio Hermes write install and setup docs for the Mini and then it set it up. Telegram access works for both, so one app for both machines. 
+    
+    One thing about telegram is that it doesn’t work that well in the car. CarPlay Siri can never find any of my bots to send them messages, it has trouble with reading all new messages, voice messages don’t play like they do in iMessage etc. So an app that feels Apple native but has the features of telegram like topics and / commands and works with multiple Macs would be super.
+    [reply to rostelinalise msg=1509410154402025642]
+

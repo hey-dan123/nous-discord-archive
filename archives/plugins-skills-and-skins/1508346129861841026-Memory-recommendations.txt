@@ -59,3 +59,8 @@
     https://yantrikdb.com/server/quickstart/
     [embed] YantrikDB Server Quick Start — Single-Node in 60 Seconds https://yantrikdb.com/server/quickstart/
 
+[2026-05-28T06:43:15.534000+00:00] techmeat (id=1509446943649169559)
+    https://discord.com/channels/1053877538025386074/1509228633636475131
+    https://github.com/itechmeat/open-second-brain
+    [embed] GitHub - itechmeat/open-second-brain: Local-first 🧠 memory for H... https://github.com/itechmeat/open-second-brain
+
