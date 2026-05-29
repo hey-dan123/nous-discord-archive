@@ -1,0 +1,22 @@
+# Thread 'Multi Memory Backends' in forum #plugins-skills-and-skins
+# thread_id=1509671843160920194 forum_id=1485392832154832906
+# Started 2026-05-29T03:02:20.098634+00:00
+
+[2026-05-28T21:36:55.756000+00:00] _123321_ (id=1509671843160920194)
+    Allows installation of multiple memory backends.
+    Useful if you want to compare on a single machine.
+    
+    https://github.com/someaka/multi-memory-plugin
+    [attachment] 1780004150.png https://cdn.discordapp.com/attachments/1509671843160920194/1509671845446811658/1780004150.png?ex=6a1a06f8&is=6a18b578&hm=4342d87b85e610767e322d15769cf1fa47cd384e0920d2718e4a334054c3e554&
+    [attachment] file_0000000064847230aa7343ed93bd22d0.png https://cdn.discordapp.com/attachments/1509671843160920194/1509671846012780658/file_0000000064847230aa7343ed93bd22d0.png?ex=6a1a06f8&is=6a18b578&hm=53351644064fe52772fea724caa779ca33b7d06713f8137f254fa56283232cb8&
+    [embed] GitHub - someaka/multi-memory-plugin: Multi-provider memory plugin ... https://github.com/someaka/multi-memory-plugin
+
+[2026-05-28T21:40:14.294000+00:00] _123321_ (id=1509672675889643791)
+    JoJo's Nous girl courtesy of https://discord.com/channels/1053877538025386074/1365353718924709958/1506817713593647295
+
+[2026-05-29T01:18:58.712000+00:00] thegiuseppe (id=1509727723688427661)
+    so just to confirm, i can use mnemosyne and byterover at the same time? is the resource usage additive as if i was using them all separately, or more, or less resource usage.
+
+[2026-05-29T01:20:01.796000+00:00] thegiuseppe (id=1509727988282036335)
+    also, is there any reason Nous hasn't allowed this in hermes so far? like is there some reason NOT to have this functionality in main?
+

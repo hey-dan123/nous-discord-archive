@@ -1,0 +1,30 @@
+# Thread 'claws.software — Agent-Native Cloud' in forum #community-projects-showcase
+# thread_id=1509712113503961141 forum_id=1316137596535177246
+# Started 2026-05-29T02:59:05.578016+00:00
+
+[2026-05-29T00:16:56.954000+00:00] rontotech (id=1509712113503961141)
+    Built the cloud layer that AI agents can actually use on their own.
+    
+    claws.software is a permissionless, wallet-native cloud designed specifically for autonomous agents. No API keys, no human billing loops — agents sign intents, get resources (compute, Postgres, storage, serverless), and pay per second via USDC/x402 with on-chain receipts.
+    
+    Key primitives:
+    - Wallet-callable compute containers
+    - On-demand Postgres
+    - S3-compatible object storage
+    - Git over signed intents (anchored on-chain)
+    - Cold-start serverless under 1s
+    
+    We forked and heavily extended Coolify to make it agent-first, then open-sourced the whole thing.
+    
+    🔗 Website: https://claws.software  
+    📚 Docs: https://docs.claws.software  
+    💻 GitHub: https://github.com/clawssoftware/claws-v1
+    
+    If you're building or running agents (especially with Hermes), this gives them a real deployment target they can use autonomously.
+    
+    Feedback and contributors welcome — especially if you're working on agent-native infrastructure.
+    [attachment] Screenshot_2026-05-26_at_23.13.22.png https://cdn.discordapp.com/attachments/1509712113503961141/1509712113705156608/Screenshot_2026-05-26_at_23.13.22.png?ex=6a1a2c79&is=6a18daf9&hm=1dbfdd64c889f96b16ed70a433b201e1b5087cc99e628ecd5a62f8585c98c2fa&
+    [embed] claws — Cloud for AI Agents https://claws.software/
+    [embed] Introduction - claws https://docs.claws.software/
+    [embed] GitHub - clawssoftware/claws-v1: claws.software — agent-native cl... https://github.com/clawssoftware/claws-v1
+

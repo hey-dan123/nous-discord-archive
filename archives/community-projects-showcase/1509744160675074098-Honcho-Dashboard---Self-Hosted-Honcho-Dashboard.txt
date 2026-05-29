@@ -1,0 +1,21 @@
+# Thread 'Honcho Dashboard - Self Hosted Honcho Dashboard' in forum #community-projects-showcase
+# thread_id=1509744160675074098 forum_id=1316137596535177246
+# Started 2026-05-29T02:59:05.218140+00:00
+
+[2026-05-29T02:24:17.595000+00:00] hydro._ (id=1509744160675074098)
+    I built a self-hosted Honcho Dashboard to fit my own needs, OpenConcho is great and got me most of the way there, but I wanted something that matched my taste a bit more on aesthetics and filled a few functionality gaps. (shoutout nodaylight <3)
+    
+    It's a fast, privacy-first web UI for a self-hosted Honcho v3 server, built on Next.js + the official @honcho-ai/sdk. A few things it does:
+    
+    - Browse workspaces, peers, sessions, messages, and conclusions
+    - Edit workspace & peer config (reasoning, peer cards, summaries, dreams) right from the UI
+    - Semantic search over conclusions + schedule dreams / watch the reasoning queue
+    - Webhooks management
+    - An operator panel that reads your Postgres read-only — db size, pgvector status, throughput, a 52-week activity heatmap, log tail, and diagnostics
+    - Multi-instance (point it at several Honcho servers), same-origin proxy with a server-side allowlist, one-command Docker deploy
+    
+    All open source, would love feedback, ideas, or contributions:
+    https://github.com/outpoints/honcho-dashboard
+    [attachment] w7ph6zw.png https://cdn.discordapp.com/attachments/1509744160675074098/1509744161174192291/w7ph6zw.png?ex=6a1a4a51&is=6a18f8d1&hm=43c7ce1f865b23448dcd6fa850ee6bdc3929ec0a5e8170a751dc880ac7e9bd88&
+    [embed] GitHub - outpoints/honcho-dashboard: Self Hosted Dashboard for Honcho https://github.com/outpoints/honcho-dashboard
+

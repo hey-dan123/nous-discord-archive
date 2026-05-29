@@ -2788,3 +2788,6 @@
     What version of Webui are you on? We had a few issues but they are resolved for me so far. Easiest fix was to connect into my server, switch in to the Webui folder, then do a "git pull" that brought me up to date and it now updates from Webui again.
     [reply to .vansken msg=1509408480291983580]
 
+[2026-05-28T21:28:41.765000+00:00] _123321_ (id=1509669771212230829)
+    the webui keeps on dying on one specific machine, i'll go and check on it tomorrow, any /debug that'd be useful for here ?
+
