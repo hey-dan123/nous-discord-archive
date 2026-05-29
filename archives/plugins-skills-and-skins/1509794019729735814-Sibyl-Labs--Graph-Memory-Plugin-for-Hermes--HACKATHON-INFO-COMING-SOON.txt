@@ -1,0 +1,32 @@
+# Thread 'Sibyl Labs: Graph-Memory Plugin for Hermes (HACKATHON INFO COMING SOON)' in forum #plugins-skills-and-skins
+# thread_id=1509794019729735814 forum_id=1485392832154832906
+# Started 2026-05-29T09:54:13.543614+00:00
+
+[2026-05-29T05:42:24.920000+00:00] dr.kojipup (id=1509794019729735814)
+    Hey guys!
+    
+    We've built a graph-structured memory layer for hermes agents. 
+    
+    What it does:
+    — Reduces token consumption via auto-compression 
+    — Improves recall accuracy across long sessions — on LongMemEval Oracle at 95.6%
+    — Five-tier schema: HOT / WARM / COLD / REFERENCE / ARCHIVE
+    — Local-first, zero vectors, zero infra cost
+    — Multi-tenant namespace isolation — no context bleed between projects
+    
+    We are running an incentivized beta program that is open to any hermes user interested in running Sibyl memory. All we ask is that you provide feedback throughout the program. DM me if you're interested in participating.
+    
+    Website: https://sibyllabs.org/
+    Github: https://github.com/Sibyl-Labs/Sibyl-Memory
+    Benchmark: https://blog.sibylcap.com/longmemeval-v2
+    
+    We'll be hosting a Hackathon within the coming weeks. Details will be released (with permission from <@387972437901312000>) once finalized.
+    [attachment] 0527_1.mp4 https://cdn.discordapp.com/attachments/1509794019729735814/1509794021852184716/0527_1.mp4?ex=6a1a78c1&is=6a192741&hm=3da30266c9aa34ea16954d9ecee92c222883052bd194f1d6476025a49c56ae31&
+    [attachment] 0526.mp4 https://cdn.discordapp.com/attachments/1509794019729735814/1509794024020508853/0526.mp4?ex=6a1a78c1&is=6a192741&hm=9de8cd2cfb5de91d5844cbef678e2988dce98cfaaf9811090e381645472e841a&
+
+[2026-05-29T06:21:28.167000+00:00] dr.kojipup (id=1509803848020136046)
+    Sibyl Labs: Graph-Memory Plugin for Hermes (HACKATHON INFO COMING SOON)
+
+[2026-05-29T06:52:00.034000+00:00] dr.kojipup (id=1509811531427090553)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1509794019729735814/1509811531116974100/image.png?ex=6a1a890f&is=6a19378f&hm=ddc2c345509e93c9eef69c848c9a42638ded82bc4c7e9fa3f1fd029c5063c6fd&
+

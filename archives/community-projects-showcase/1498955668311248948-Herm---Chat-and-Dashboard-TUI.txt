@@ -541,3 +541,21 @@
     thank you!
     [reply to liftaris msg=1509739410738905289]
 
+[2026-05-29T04:35:28.098000+00:00] liftaris (id=1509777171957153813)
+    I did briefly look into it, didn't see what could point to your specific issue, but update to dev again and see if the latest fix also addresses your issue
+    [reply to echoeclipse msg=1509743995407044728]
+
+[2026-05-29T04:35:49.151000+00:00] liftaris (id=1509777260259840021)
+    if not we can look into it deeper and you can send me logs
+
+[2026-05-29T04:46:37.684000+00:00] nat2r (id=1509779980404396234)
+    that was me 🙂
+    [reply to liftaris msg=1509739410738905289]
+
+[2026-05-29T05:33:24.535000+00:00] liftaris (id=1509791753191030926)
+    ~~oh woops~~ Oh you meant the issue was yours, not that I was responding to the wrong person. I responded quickly without realizing lol
+    [reply to nat2r msg=1509779980404396234]
+
+[2026-05-29T06:01:42.800000+00:00] nat2r (id=1509798876230717531)
+    haha yeah my bug
+

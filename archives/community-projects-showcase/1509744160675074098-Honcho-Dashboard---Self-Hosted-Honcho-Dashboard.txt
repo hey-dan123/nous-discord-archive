@@ -19,3 +19,12 @@
     [attachment] w7ph6zw.png https://cdn.discordapp.com/attachments/1509744160675074098/1509744161174192291/w7ph6zw.png?ex=6a1a4a51&is=6a18f8d1&hm=43c7ce1f865b23448dcd6fa850ee6bdc3929ec0a5e8170a751dc880ac7e9bd88&
     [embed] GitHub - outpoints/honcho-dashboard: Self Hosted Dashboard for Honcho https://github.com/outpoints/honcho-dashboard
 
+[2026-05-29T03:49:29.667000+00:00] jwalkersf7273 (id=1509765602259239082)
+    just installed it. you dont know how badly i needed exactly this.
+
+[2026-05-29T03:49:40.374000+00:00] jwalkersf7273 (id=1509765647167524986)
+    rocking hindsight, honcho, and mneopsyne or however thats spelled. when you eventually get the routing calls right, they compliment each other perfectly
+
+[2026-05-29T03:49:51.850000+00:00] jwalkersf7273 (id=1509765695301357578)
+    honcho for keeping track of a sales teams personalities and preferences, hindsight for the profiles to recall all the orders and company intel stuff, and mnemosyne or however thats spelled for the profiles working memory
+

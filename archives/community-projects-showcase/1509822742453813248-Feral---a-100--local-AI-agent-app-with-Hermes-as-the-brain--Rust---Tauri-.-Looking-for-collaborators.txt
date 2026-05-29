@@ -1,0 +1,32 @@
+# Thread 'Feral - a 100% local AI agent app with Hermes as the brain (Rust + Tauri). Looking for collaborators' in forum #community-projects-showcase
+# thread_id=1509822742453813248 forum_id=1316137596535177246
+# Started 2026-05-29T09:51:06.174728+00:00
+
+[2026-05-29T07:36:32.951000+00:00] bloom9952 (id=1509822742453813248)
+    Hey 👋
+    
+    I'm building Feral — an open-source desktop app (Rust + Tauri + Svelte) that's evolving from a local LLM runner into a native Hermes Agent frontend.
+    
+    🔗 https://github.com/bloom500/feral
+    
+    What Feral aims to be:
+    • LLM runner (like Jan) + Hermes Agent GUI
+    • Persistent memory + cron scheduling + skill management
+    • OpenClaw integration for MCP/tools
+    • 100% local. Zero cloud. Zero account.
+    
+    Why not OpenHuman?
+    → Requires account + cloud by default
+    → No real scheduling (Hermes + cron destroys this)
+    → No self-improving agent loop
+    → OAuth to email/calendar/payments = security risk
+    
+    Current state: v0.1.0 — LLM runner works, agent layer is next.
+    
+    I've been running Hermes Agent with cron jobs in production for months (lead hunting, ads optimization). Now I want to give Hermes a proper native desktop home.
+    
+    Looking for: feedback, collaborators (Rust/Tauri/Svelte), and guidance on integrating Hermes Agent into Tauri.
+    
+    PRs, ideas, roasts — all welcome. <@387972437901312000> or any other staff member, I would love to hear your opinions, I will also need help implementing Hermes Agent natively into my app.
+    [embed] GitHub - bloom500/feral https://github.com/bloom500/feral
+

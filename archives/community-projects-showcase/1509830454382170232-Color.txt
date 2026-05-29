@@ -1,0 +1,13 @@
+# Thread 'Color' in forum #community-projects-showcase
+# thread_id=1509830454382170232 forum_id=1316137596535177246
+# Started 2026-05-29T09:51:05.768485+00:00
+
+[2026-05-29T08:07:11.618000+00:00] beni086693 (id=1509830454382170232)
+    Built Colors — an open-source AI agent with a structural fix for indirect prompt injection.
+    The core idea: tag every instruction with it source (user / agent / external_content) and block external content from triggering ool calls at the execution gate. Normal agents can't distinguish between a user instruction and a malicious instruction embedded in a webpage they're reading. Colors blocks that architecturally, not through prompt filtering.
+    Live demo: huggingface.co/colour-foundation-ai/Colors-security-gate
+    Research + code: github.com/thecolourfoundation/Color
+    Also opened a proposal to bring this upstream to Hermes: https://github.com/NousResearch/hermes-agent/issues/33997
+    Would love feedback from anyone who's thought about the injection attack surface."
+    [embed] [Feature]: Source-aware instruction gate — architectural mitigati... https://github.com/NousResearch/hermes-agent/issues/33997
+

@@ -359,3 +359,15 @@
     [embed] Pranab Sarkar (@developerpranab) on X https://twitter.com/developerpranab
     [reply to wysie_ msg=1508304545191690300]
 
+[2026-05-29T05:43:57.854000+00:00] spranab (id=1509794409523449886)
+    v0.4.17 of yantrikdb-hermes-plugin is out.
+    
+    Before this release, when an agent crystallized a skill via yantrikdb_skill_define, the body was correctly stored but the fact of learning was silent — no future session knew the skill existed unless it happened to call skill_search with the right query.
+    
+    v0.4.17 closes the loop. On a successful skill_define, the plugin persists (skill_id, type, ts) to $HERMES_HOME/yantrikdb-recent-skills.json. The next session's system_prompt_block() surfaces a "Recently learned skills" block, so the incoming model sees its own prior learning the moment it boots.
+    
+    Also new: yantrikdb_recall results now expose the per-component score breakdown (similarity / recency / importance / decay → contributions → total). The engine always returned it; the plugin was dropping it on the way out. No more opaque ranking.
+    
+    pip install -U yantrikdb-hermes-plugin
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504168688759078952/1509794409078849596/image.png?ex=6a1a791d&is=6a19279d&hm=4299b7b1db91c6337c768c744969b08a9334436e45977c9fc492e3495c0206e8&
+

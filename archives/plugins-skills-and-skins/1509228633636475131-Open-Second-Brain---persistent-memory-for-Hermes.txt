@@ -33,3 +33,23 @@
     [attachment] readme-poster.jpg https://cdn.discordapp.com/attachments/1509228633636475131/1509228636337868850/readme-poster.jpg?ex=6a186a33&is=6a1718b3&hm=843d44e671d828c98464905601d522dc4b643b6b743b2f63fbddc3845a66ba56&
     [embed] GitHub - itechmeat/open-second-brain: Local-first 🧠 memory for H... https://github.com/itechmeat/open-second-brain
 
+[2026-05-29T07:20:05.870000+00:00] techmeat (id=1509818602336026664)
+    Hey! The plugin has grown quite a bit since this post — several updates have shipped (from 0.15.0 through 0.19.0). Here's a quick rundown of what's new and why it matters:
+    
+    **🧩 You can now see who "taught" the brain what**
+    Ask what Claude, Codex, or Hermes each contributed and compare them side by side — spot where one agent has context another doesn't. Memory stopped being a shared "dump" and became a map: who suggested which rule and where topics overlap.
+    
+    **🛡️ Personal space and cleaner boundaries arrived**
+    You can pin temporary notes for the current session (they won't turn into permanent memory), and wrap sensitive text in private blocks that get stripped out before anything is saved long-term. Links can now adapt to the client too: plain Markdown where Obsidian-style links aren't needed.
+    
+    **🩺 Tidying up and "reviewing" memory got easier**
+    New review surfaces help you sort through what's ready to process, what's gone stale, and what to keep, improve, or prune — all as recommendations, with no auto-deletion. There's a monthly overview of events, plus a smart warning when your vault's structure grows faster than the actual value it brings.
+    
+    **💾 Big responses no longer flood your context**
+    Heavy results now come back as a short preview, with the full version available on demand — nothing is lost. Search also gained a one-line hint so you can tell what was found at a glance.
+    
+    **🔍 Links between notes got smarter**
+    You can now mark the type of a connection — whether something supersedes, extends, or contradicts another note — and search takes that into account. You can also hide certain notes from regular search and only surface them when needed.
+    
+    Overall: more transparency, more control over privacy, and a noticeably smoother experience when working with large amounts of memory. 👍
+

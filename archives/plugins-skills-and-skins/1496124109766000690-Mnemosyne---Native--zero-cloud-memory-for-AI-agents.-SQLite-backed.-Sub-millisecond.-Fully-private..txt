@@ -1275,3 +1275,21 @@
     ```hermes tools disable memory```
     [reply to nihp_ msg=1509454181809918033]
 
+[2026-05-29T04:18:15.012000+00:00] nat2r (id=1509772838880415754)
+    I'm working on moving my Hermes installation to the cloud and am going to give this a whirl
+
+[2026-05-29T04:42:05.410000+00:00] 0xlfg (id=1509778838404730880)
+    Did this too
+    [reply to grrstine msg=1509713293214879816]
+
+[2026-05-29T04:44:49.549000+00:00] grrstine (id=1509779526853591101)
+    eww, your hermes will be stuck in a data center then
+    [reply to nat2r msg=1509772838880415754]
+
+[2026-05-29T04:45:52.840000+00:00] nat2r (id=1509779792315289691)
+    https://tenor.com/view/oh-no-top-gear-jeremy-clarkson-no-one-cares-gif-18925814
+    [embed]  https://tenor.com/view/oh-no-top-gear-jeremy-clarkson-no-one-cares-gif-18925814
+
+[2026-05-29T05:17:44.441000+00:00] 0xlfg (id=1509787810150744236)
+    Anyone know what is tinylama model for? I says its unused
+

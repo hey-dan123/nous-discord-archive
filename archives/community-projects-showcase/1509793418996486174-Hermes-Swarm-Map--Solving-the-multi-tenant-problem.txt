@@ -1,0 +1,16 @@
+# Thread 'Hermes Swarm Map: Solving the multi-tenant problem' in forum #community-projects-showcase
+# thread_id=1509793418996486174 forum_id=1316137596535177246
+# Started 2026-05-29T09:51:06.990274+00:00
+
+[2026-05-29T05:40:01.694000+00:00] juniper_28214 (id=1509793418996486174)
+    This is the culmination of a year of work and our gift to the hermes community (who i deeply respect and appreciate). An admin panel for managing swarms of Hermes agents in *multiplayer* environments. 
+    https://www.nimbleco.ai/field-research/hermes-swarm-map 
+    
+    Accompanying this is deeply researched (and possibly controversial??) issue tying together numerous outstanding issues:
+    https://github.com/NousResearch/hermes-agent/issues/34352
+    [attachment] Screenshot_2026-05-22_at_9.19.48_pm.png https://cdn.discordapp.com/attachments/1509793418996486174/1509793420183605309/Screenshot_2026-05-22_at_9.19.48_pm.png?ex=6a1a7831&is=6a1926b1&hm=41f8a33c10dda4e1c88f295d6ac409b596b464852652abeba3935cc0c9206e7e&
+    [attachment] Screenshot_2026-05-27_at_2.50.56_pm.png https://cdn.discordapp.com/attachments/1509793418996486174/1509793423287259136/Screenshot_2026-05-27_at_2.50.56_pm.png?ex=6a1a7832&is=6a1926b2&hm=cee22e226d995dcc929fe315a3f5e1ed18c72a5f8f6a3a422de59995d7e9e840&
+    [attachment] Screenshot_2026-05-26_at_4.52.55_pm.png https://cdn.discordapp.com/attachments/1509793418996486174/1509793423786246194/Screenshot_2026-05-26_at_4.52.55_pm.png?ex=6a1a7832&is=6a1926b2&hm=7cb574c53ba725163c29f9b32123f2f5361b7faf114e33a6437682150aabbb27&
+    [embed] Multi-player ai is here — nimbleco ai https://www.nimbleco.ai/field-research/hermes-swarm-map
+    [embed] Solving the Multi-Tenant Hermes Problem · Issue #34352 · NousRese... https://github.com/NousResearch/hermes-agent/issues/34352
+

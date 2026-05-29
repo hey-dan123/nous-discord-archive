@@ -1,0 +1,11 @@
+# Thread 'A noctalia-shell plugin of Hermes' in forum #plugins-skills-and-skins
+# thread_id=1509851954342264862 forum_id=1485392832154832906
+# Started 2026-05-29T09:54:12.745972+00:00
+
+[2026-05-29T09:32:37.608000+00:00] mel_srk (id=1509851954342264862)
+    This isn't an agent plugin, but it's related to agents. I think it's okay to post it here, but it might be inappropriate.
+    https://github.com/Mel-SRK/noctalia-hermes
+    I've only created a noctalia-shell plugin—it displays the real-time running status of the Hermes Agent in the status bar. If you're also a noctalia-shell user, you're very welcome to try it.
+    [attachment] README_20260529162507901.png https://cdn.discordapp.com/attachments/1509851954342264862/1509851956422774966/README_20260529162507901.png?ex=6a1aaeb6&is=6a195d36&hm=2d14f35764b0499778e1b5e3b0405e8783e5510c022a0a286aed99e7f1615b71&
+    [embed] GitHub - Mel-SRK/noctalia-hermes: Noctalia plugin for Hermes Agent ... https://github.com/Mel-SRK/noctalia-hermes
+

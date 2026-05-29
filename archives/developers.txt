@@ -22189,3 +22189,174 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/30418
     [embed] refactor(Yuanbao): consolidate media resolution into dedicated pipe... https://github.com/NousResearch/hermes-agent/pull/30418
 
+[2026-05-29T03:08:10.091000+00:00] kylekaster (id=1509755202163572836)
+    incredible timing I just ran into this today and was wondering how others were getting such beautiful results 😅
+    [reply to godsboy7777 msg=1509629809997910078]
+
+[2026-05-29T03:12:44.949000+00:00] icin9500 (id=1509756355001716889)
+    https://github.com/openlit/openlit  I ran into this while I was perusing git.....I just may have to try, has anyone?
+    [embed] GitHub - openlit/openlit: Open source platform for AI Engineering: ... https://github.com/openlit/openlit
+
+[2026-05-29T05:51:17.176000+00:00] godsboy7777 (id=1509796252173336686)
+    Hi <@115847981822902279> please remember to check when you get a chance and let <@387972437901312000> know if he can proceed.  Thanks
+    [reply to teknium msg=1509630374198907002]
+
+[2026-05-29T06:07:11.005000+00:00] teknium (id=1509800252821999768)
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613963316236322f593635586639356c426a6739384979394f4c3333785f723070746f6c7a352e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1509800252704690196/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613963316236322f593635586639356c426a6739384979394f4c3333785f723070746f6c7a352e706e67.png?ex=6a1a7e8e&is=6a192d0e&hm=d774db34ae6ab24bdc8029e7fcaccbeda5e8ebc58167d5e8b07794cccb1bc7e9&
+
+[2026-05-29T06:07:13.818000+00:00] teknium (id=1509800264620576859)
+    More cleanups <a:cheer:734837260662603908>
+
+[2026-05-29T06:33:54.485000+00:00] wysie_ (id=1509806978304573471)
+    Forgot to share this: https://github.com/NousResearch/hermes-agent/pull/33363. Can someone merge this?
+    
+    This fixes "hermes plugins" and allows it to be scrollable in terminal.
+    [embed] Build software better, together https://github.com/NousResearch/hermes-agent/pull/33363.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/33363.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/33363.
+
+[2026-05-29T07:17:57.527000+00:00] godsboy7777 (id=1509818064026472558)
+    <@387972437901312000> could you take a look at PR #33251 when you get a chance?
+    
+    It is the MEDIA delivery diagnosability + canonical cache roots fix. It is now rebased cleanly on top of #34022 and mergeable.
+    
+    ## Why it still matters after the recent denylist-only change
+    
+    #34022 flipped the default to denylist-only, which restored stale / outside delivery and fixed the most visible "MEDIA didn't attach" reports.
+    
+    But three gaps are still live on `main` right now:
+    
+    ## 1. Rejections are still undiagnosable
+    
+    `filter_media_delivery_paths` still logs the blind message:
+    
+    ```text
+    Skipping unsafe MEDIA directive path outside allowed roots
+    ```
+    
+    with no path and no reason.
+    
+    This PR logs a redacted path plus a kebab reason tag for both default and strict modes, for example:
+    
+    ```text
+    denylist-cleared
+    outside-allowlist-stale-mtime
+    does-not-resolve
+    ```
+    
+    That is the exact gap the Linux Telegram repro and @shashb27's Windows repro both hit:
+    
+    * Reply looks successful
+    * Attachment never lands
+    * Log says nothing actionable
+    
+    ## 2. Live batch-abort bug
+    
+    A model-emitted `~\x00...` path raises `ValueError` in `os.path.expanduser` before `.resolve()`.
+    
+    The filter loops have no per-item guard, so one bad path silently drops every attachment in the response.
+    
+    Reproduced against current `main`. This PR guards it.
+    
+    ## 3. Canonical cache roots still bite in strict mode
+    
+    #31733 is still open, and #31764 / #33238 are unmerged.
+    
+    This PR adds the canonical roots so generated images under:
+    
+    ```text
+    ~/.hermes/cache/images
+    ```
+    
+    deliver under strict mode too.
+    
+    It also adds U+2028 / U+2029 / NEL log-forging hardening, which does not exist on `main` at all.
+    
+    ## Why this is the right shape
+    
+    This is the broadest of the canonical-roots PRs. #31764 and #33238 are narrower subsets.
+    
+    It complements #34022 rather than fighting it.
+    
+    It is also orthogonal to:
+    
+    * #32472
+    * #31561 / #33206
+    * The separate #23760 / #18686 `_send_via_adapter` drop
+    
+    So it does not block or overlap any of them.
+    
+    ## Tests
+    
+    ```text
+    tests/gateway/test_platform_base.py
+    136 passing
+    ```
+    
+    Broader gateway + scheduler suite:
+    
+    ```text
+    6127 passing
+    0 failed
+    ```
+    
+    Happy to split the hardening into its own PR if you'd rather land the diagnosability piece first.
+
+[2026-05-29T07:59:45.753000+00:00] teknium (id=1509828584288682075)
+    merged ^_^
+    [reply to wysie_ msg=1509806978304573471]
+
+[2026-05-29T08:03:13.874000+00:00] teknium (id=1509829457211424918)
+    [attachment] 66V1iXv2xjvMJLRQhBx_f_tUwA2P2x.png https://cdn.discordapp.com/attachments/1491258766648283238/1509829456892526732/66V1iXv2xjvMJLRQhBx_f_tUwA2P2x.png?ex=6a1a99c1&is=6a194841&hm=053cf8545952ed283ab32655ceff587db48948b75afe64318828ec16c6f70360&
+
+[2026-05-29T08:10:26.696000+00:00] teknium (id=1509831272598474782)
+    merged
+    [reply to loongfay msg=1509746145595883610]
+
+[2026-05-29T08:18:15.690000+00:00] loongfay (id=1509833239701884948)
+    Thank you very much! ButI have some different opinions:
+    This refactoring clarifies the media parsing process and atomizes the middleware functions. I think it is necessary.
+    [reply to teknium msg=1509831272598474782]
+
+[2026-05-29T08:19:05.645000+00:00] teknium (id=1509833449228472370)
+    what do you mean?
+    [reply to loongfay msg=1509833239701884948]
+
+[2026-05-29T08:23:21.085000+00:00] loongfay (id=1509834520621351054)
+    I think all the code from this refactoring should be merged.  It optimizes the message processing workflow.
+    🥹
+
+[2026-05-29T08:25:28.081000+00:00] loongfay (id=1509835053281312878)
+    Could you please take a look again? sorry~~~ <@387972437901312000>
+
+[2026-05-29T09:01:35.534000+00:00] teknium (id=1509844144237973605)
+    I did merge it
+    [reply to loongfay msg=1509834520621351054]
+
+[2026-05-29T09:02:29.468000+00:00] teknium (id=1509844370453430312)
+    <@81637470604627968> I met you in the middle and made default TTFB 120s
+
+[2026-05-29T09:07:51.555000+00:00] godsboy7777 (id=1509845721384353832)
+    Hey <@387972437901312000>, small attribution correction on https://github.com/NousResearch/hermes-agent/pull/34485: the original PR #33251 was authored by me as @GodsBoy, not @wysie. I added a comment on the PR just so the record is clear. Thanks for salvaging/slimming the fix.
+    [embed] Build software better, together https://github.com/NousResearch/hermes-agent/pull/34485:
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/34485:
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/34485:
+
+[2026-05-29T09:08:55.979000+00:00] teknium (id=1509845991598063636)
+    [attachment] DDvP9kZECntF48LDmLoCE_0xtdBBXY.png https://cdn.discordapp.com/attachments/1491258766648283238/1509845991254134925/DDvP9kZECntF48LDmLoCE_0xtdBBXY.png?ex=6a1aa927&is=6a1957a7&hm=0ed046f567ae37102690bca92fed4ae45f2c0addb692df6a958dc0f4d317dfca&
+
+[2026-05-29T09:09:09.269000+00:00] teknium (id=1509846047340367883)
+    cant have an mcp catalog that allows adding a bazillion tools without this
+
+[2026-05-29T09:11:27.223000+00:00] heathley (id=1509846625961640026)
+    Follow-up to #34474: cache hits skipped downloads, but still resolved resource URLs first. This moves the cache check earlier. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/34513
+    [embed] fix(yuanbao): skip resource resolve on cache hits by heathley · Pu... https://github.com/NousResearch/hermes-agent/pull/34513
+
+[2026-05-29T09:28:02.361000+00:00] frowtek (id=1509850799872802906)
+    #34515 (Gateway Config-Driven Auth): Fixed an issue where documented platform policies (dm_policy, allow_from, group_allow_from, etc.) were getting short-circuited by the legacy env-based fallback checks. This was causing early rejections on WeCom, Weixin, Yuanbao, and QQBot before the adapter-level policy logic could evaluate.
+    
+    Centralized config policy mapping inside gateway/run.py and aligned unauthorized DM behaviors to stop leaking into implicit pairing loops. https://github.com/NousResearch/hermes-agent/pull/34515
+    [embed] fix(gateway): honor config-driven access policies over legacy env f... https://github.com/NousResearch/hermes-agent/pull/34515
+

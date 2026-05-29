@@ -1,0 +1,28 @@
+# Thread 'Hermes Sound Alerts - 331+ packs with PeonPing adapter' in forum #community-projects-showcase
+# thread_id=1509808056618319942 forum_id=1316137596535177246
+# Started 2026-05-29T09:51:06.554065+00:00
+
+[2026-05-29T06:38:11.575000+00:00] brucestarlove (id=1509808056618319942)
+    I built a Hermes Agent plugin for PeonPing: Sound Alerts for Hermes CLI.
+        
+    PeonPing is a local sound/voice-pack system, built for other harnesses. I discovered it recently, immediately wanted it inside Hermes, and since Hermes support didn’t exist yet, I made an adapter + standard Hermes plugin.
+        
+    What it does:
+    - plays PeonPing sound/voice-pack events for Hermes lifecycle hooks
+    - supports session start/end, turn completion, approval prompts, selected tool progress, terminal failures, and subagent completion
+    - adds a Sound Alerts dashboard tab for browsing/installing/switching/previewing packs
+    - fails open if peon isn’t installed, so Hermes won’t break
+        
+    If you don’t have PeonPing installed yet, the README includes install instructions for macOS and Linux/WSL.
+        
+    I kept the dashboard aligned with Hermes’ existing design and tuned it from there. I personally built this because I wanted custom voice packs for my own Hermes setup, and it’s been surprisingly fun giving the CLI a more present “voice” while working.
+        
+    Repo:
+          https://github.com/brucestarlove/hermes-peonping
+        
+    Would love install reports, issues, PRs, and suggestions — especially from anyone trying it on devices I haven’t tested yet.
+    [attachment] Screenshot_2026-05-28_at_10.07.38_PM.png https://cdn.discordapp.com/attachments/1509808056618319942/1509808057893523557/Screenshot_2026-05-28_at_10.07.38_PM.png?ex=6a1a85d3&is=6a193453&hm=39a98cdcca19f78d627d81344c8d95b917d654cc6919fe1073f774f206e2a8c1&
+    [attachment] Screenshot_2026-05-29_at_1.36.31_AM.png https://cdn.discordapp.com/attachments/1509808056618319942/1509808059491549204/Screenshot_2026-05-29_at_1.36.31_AM.png?ex=6a1a85d4&is=6a193454&hm=34488b0b64cd3325b39d1054475dd593038600ea9eff19d0787956c23a2a9a4d&
+    [attachment] Screenshot_2026-05-29_at_1.36.41_AM.png https://cdn.discordapp.com/attachments/1509808056618319942/1509808061592764537/Screenshot_2026-05-29_at_1.36.41_AM.png?ex=6a1a85d4&is=6a193454&hm=f9bc6f9b2ef084607d1ec87dcbdf6a74344629ec0ed1ad70ea159e543bad4676&
+    [embed] GitHub - brucestarlove/hermes-peonping: PeonPing (Sound Alerts) plu... https://github.com/brucestarlove/hermes-peonping
+

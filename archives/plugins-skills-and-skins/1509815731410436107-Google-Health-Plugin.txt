@@ -1,0 +1,12 @@
+# Thread 'Google Health Plugin' in forum #plugins-skills-and-skins
+# thread_id=1509815731410436107 forum_id=1485392832154832906
+# Started 2026-05-29T09:54:13.115418+00:00
+
+[2026-05-29T07:08:41.388000+00:00] wysie_ (id=1509815731410436107)
+    Wrote this for my Fitbit Air :): https://github.com/wysie/google-health-local-sync
+    
+    Pull your Google Health data into a database and (optionally) have it as a Hermes plugin.
+    
+    This pulls in more data than via Health Connect too.
+    [embed] GitHub - wysie/google-health-local-sync: Local-first Google Health ... https://github.com/wysie/google-health-local-sync
+
