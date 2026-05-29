@@ -317,3 +317,23 @@
     I am working on making this more fail-proof and am adding features people want. So if you want something - add an issue. Ask the world, don't worry about the details or how it could be possible (that is my job), and I will deliver what I can.
     [reply to glizlack6777 msg=1509756189951660195]
 
+[2026-05-29T17:30:41.878000+00:00] glizlack6777 (id=1509972264890925098)
+    I like counters. That way i have proof of concept. But that is just me.
+    [reply to aliasocracy msg=1509934082182877340]
+
+[2026-05-29T17:34:58.583000+00:00] glizlack6777 (id=1509973341589737624)
+    Hermes gave me this suggestion. If you could somehow build a function in to make this easy that would be fantastic. Native "Description Minification"
+    Standard tool schemas are often written for humans, containing verbose sentences like "This tool is used by the agent to carefully read the contents of a file from the local filesystem provided a path..."
+    
+    The Move: Rewrite your tool descriptions in Telegraphic Style.
+    
+    Before: "A tool that allows you to execute shell commands in the terminal." (14 tokens)
+    
+    After: "Run shell commands." (3 tokens)
+    
+    Why it works: hermes-tool-slimmer still has to include the descriptions of the top_k tools it selects. If your 8 selected tools have long-winded descriptions, you're wasting tokens. Shaving 20 tokens off each description saves 160 tokens per turn—which adds up to thousands over a long session.
+
+[2026-05-29T17:54:29.102000+00:00] davidg1982 (id=1509978251102261399)
+    My PR makes it possible to have a bunch of agent specialists instead of needing a ton of tools under the main agent, but adding tool-slimmer with the PR, we would then see distinct agent_id values in the pre_llm_call hook and could apply per-agent selection logic, allowing even further tool reduction. https://github.com/NousResearch/hermes-agent/pull/34741
+    [embed] feat(gateway): single gateway, multiple agents by davidgut1982 · P... https://github.com/NousResearch/hermes-agent/pull/34741
+

@@ -46,3 +46,16 @@
 [2026-05-28T17:51:28.582000+00:00] hector_podcast (id=1509615106080641064)
     Could this be used to poll YouTube videos as well? I don't think they're technically rss feeds
 
+[2026-05-29T19:35:10.343000+00:00] neka75. (id=1510003589903421570)
+    Almost installed it but a part of the skill is in chinese
+
+[2026-05-29T19:35:54.510000+00:00] neka75. (id=1510003775153246248)
+    拉取用户订阅的一手 RSS 源里的内容，按需整理成中文简报、列出全量条目、或返回某条原文。触发：用户提到"简报"、"news digest"、"看看 RSS"、"my-news"、"今日新闻"、"有什么新的"、"刷一下源"、"列出文章"、"给我 X 的原文"、"总结 X 这一条"等，或斜杠/at 形式如 `/my-news`、`@my-news`。Agent 无关，Claude Code / Hermes / 其他 agent 都可用。
+
+[2026-05-29T19:35:57.637000+00:00] Translator Bot#1043 (id=1510003788268830932)
+    Pull the content from the primary RSS feed subscribed by users, organize it into Chinese briefings, list all items, or return a certain original text as needed. Trigger: The user mentions "briefing", "news digest", "look at RSS", "my-news", "today's news", "what's new", "refresh the source", "list articles", "give me the original text of Agent is irrelevant, Claude Code / Hermes / other agents are available.
+    [reply to neka75. msg=1510003775153246248]
+
+[2026-05-29T19:36:48.741000+00:00] neka75. (id=1510004002614677615)
+    So make a full english version...
+

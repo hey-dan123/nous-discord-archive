@@ -222,3 +222,10 @@
 [2026-05-29T08:40:18.240000+00:00] thnzone6 (id=1509838786878771230)
     I'm just using the native iPhone/Apple/CarPlay/Telegram setup, so that's all I meant by Siri (who in general doesn't do well with lots of things, including often calling the wrong people when I ask to make a phone call, or sometimes I say "take me to my kid's house", and siri will reply "what do you want to know about your kid?" and that's from the maps app siri button.) The really nice thing about how Messages works in the car is that it will read the message, and then ask me if I want to reply, and it will transcribe my voice and send a text reply. All I really have to do is touch a persons name on the car screen, and it will ask me "what do you want to say to___". Telegram is on CarPlay, but none of those features work. I thought the solution was to get the agent to message me using text to speech, but Telegram won't recognize those the same way it sees Telegram initiated voice messages. It seems them as media or attachments, and so it won't play them automatically. I have to unlock the phone and tap on the message. Not a great idea when driving. I'm not complaing at all, and I have no expectations that any of this should work at all. In some ways we really are living in the future, a future I kind of imagine,but not at all too.
 
+[2026-05-29T16:21:05.254000+00:00] haimbender (id=1509954746860175492)
+    ill check out Siri CarPlay intergration them haha
+    [reply to thnzone6 msg=1509838786878771230]
+
+[2026-05-29T16:21:12.731000+00:00] haimbender (id=1509954778220728533)
+    ** not promising anything
+

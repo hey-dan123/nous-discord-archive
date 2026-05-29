@@ -22512,3 +22512,49 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     PR: <https://github.com/NousResearch/hermes-agent/pull/34656>
 
+[2026-05-29T15:22:36.872000+00:00] k_sze (id=1509940031639388362)
+    Just curious: What happened to Tinker Atropos RL stuff? Why was it removed?
+
+[2026-05-29T15:52:59.704000+00:00] naterchrdsn (id=1509947677150806206)
+    yay first PR!
+
+[2026-05-29T15:53:05.856000+00:00] naterchrdsn (id=1509947702954299673)
+    well to hermes-agent that is
+
+[2026-05-29T15:54:07.379000+00:00] naterchrdsn (id=1509947961000591673)
+    i assume we dont call them out, i can't believe the size of the f-ing backlog
+
+[2026-05-29T16:10:52.542000+00:00] .blockops (id=1509952176959520788)
+    Hello all, I've seen some folks post about this:
+    https://github.com/fathah/hermes-desktop
+    
+    I think this is a great way to make Hermes more approachable for the standard user but I'm concerned about the threat model. As far as I can tell this dev has no affiliation with Nous Research. He made a nice electron control plane for Hermes. The implementation is fairly decent Electron hardening. I don't love the code signing, admin password handling (temp scripts, sudo shims to path, unix socket server that receives passwords through the socket then returns to sudo... socket is chmodded 0600 and dialog is reasonably hardened through sandboxing and strict CSP but the password flow through electron's app process still gives me worry), the access to secrets from Electron and the automatic updates (given the amount of supply chain attacks we're seeing these days). 
+    
+    I'd love to see Nous potentially take over a project similar to this one to make Hermes even more approachable and be able to trust that it's supported by the core dev team and not some third party dev. 
+    
+    Love to hear Nous's teams feedback on it.
+    [embed] GitHub - fathah/hermes-desktop: Desktop Companion for Hermes Agent https://github.com/fathah/hermes-desktop
+
+[2026-05-29T16:29:01.160000+00:00] savino9.eth (id=1509956742954352730)
+    and the 5k+ issues on github
+    [reply to naterchrdsn msg=1509947961000591673]
+
+[2026-05-29T16:29:19.389000+00:00] naterchrdsn (id=1509956819412451481)
+    Ooof
+
+[2026-05-29T16:29:31.158000+00:00] naterchrdsn (id=1509956868775219402)
+    Can outsiders help in any way?
+
+[2026-05-29T17:04:48.776000+00:00] teknium (id=1509965750708867133)
+    We announced no new features going in until computex so that will have to wait until next week
+    [reply to godsboy7777 msg=1509895026044309554]
+
+[2026-05-29T17:15:24.421000+00:00] godsboy7777 (id=1509968416797360278)
+    Thanks, I appreciate it. I have to say everyone here makes people feel welcome and like we are one big family. I believe only greater things are to come.
+    [reply to teknium msg=1509965750708867133]
+
+[2026-05-29T17:16:58.484000+00:00] .blockops (id=1509968811326177461)
+    Still making the dogfood build but this will be a great addition to Hermes/OpenClaw and other agents once complete:
+    https://browserbridge.pages.dev/
+    [embed] BrowserBridge Private Alpha RC1 https://browserbridge.pages.dev/
+

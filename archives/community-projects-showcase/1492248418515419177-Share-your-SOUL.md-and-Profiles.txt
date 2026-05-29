@@ -366,3 +366,10 @@
 [2026-05-29T12:13:01.381000+00:00] houtarooreki (id=1509892319371984996)
     And I don't know what to set in it
 
+[2026-05-29T18:15:53.651000+00:00] _.exo._ (id=1509983638891270204)
+    https://hermes-agent.nousresearch.com/docs/guides/use-soul-with-hermes
+    
+    you dont need anything techinical or fancy
+    [embed] Use SOUL.md with Hermes | Hermes Agent https://hermes-agent.nousresearch.com/docs/guides/use-soul-with-hermes
+    [reply to houtarooreki msg=1509892319371984996]
+

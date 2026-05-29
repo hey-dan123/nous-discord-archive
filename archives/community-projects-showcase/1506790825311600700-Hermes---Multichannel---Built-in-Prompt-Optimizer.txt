@@ -49,3 +49,16 @@
     
         You'll need pip install langid if you want full coverage for all 97 languages. Without it, CJK/Arabic/Cyrillic etc. are still picked up via Unicode heuristics.
 
+[2026-05-29T16:27:03.127000+00:00] davidg1982 (id=1509956247888330958)
+    I am going to give this a try. Thanks for sharing.
+
+[2026-05-29T16:29:21.289000+00:00] sahil_ss9 (id=1509956827381497937)
+    Share the love, 😘 😘 and raise any issues you find
+
+[2026-05-29T16:32:07.297000+00:00] sahil_ss9 (id=1509957523669651467)
+    I do have a few more optimizations lined up, currently testing and tweaking. To quantify the token savings
+
+[2026-05-29T17:38:01.263000+00:00] natsu_draganeel (id=1509974107804926184)
+    That's great 😃
+    [reply to sahil_ss9 msg=1509957523669651467]
+

@@ -1302,3 +1302,36 @@
     let us know how it goes! ty for using Mnemosyne
     [reply to nat2r msg=1509772838880415754]
 
+[2026-05-29T16:42:16.703000+00:00] skylinx79 (id=1509960079703670925)
+    How do I upgrade? I get
+    
+    ```
+    ❯ pip install mnemosyne-memory
+    
+    Requirement already satisfied: mnemosyne-memory in /Users/vito/.hermes/hermes-agent/venv/lib/python3.11/site-packages (3.0.0)
+    
+    [notice] A new release of pip is available: 24.0 -> 26.1.1
+    [notice] To update, run: pip3 install --upgrade pip
+    ```
+
+[2026-05-29T16:42:31.969000+00:00] skylinx79 (id=1509960143733915789)
+    Even though there have been new releases since 3.0.0
+
+[2026-05-29T16:51:42.641000+00:00] nat2r (id=1509962453419819231)
+    Have you tried asking Hermes to update to https://github.com/AxDSan/mnemosyne/releases/tag/v3.1.2
+    [embed] Release v3.1.2 · AxDSan/mnemosyne https://github.com/AxDSan/mnemosyne/releases/tag/v3.1.2
+
+[2026-05-29T18:26:00.122000+00:00] nulledvector (id=1509986182614876283)
+    `pip install -U mnemosyne-memory` should be suffice
+    [reply to skylinx79 msg=1509960079703670925]
+
+[2026-05-29T18:26:23.550000+00:00] nulledvector (id=1509986280879034428)
+    also depends on what version you are... but docs is the most complete source of truth to date
+
+[2026-05-29T18:26:43.092000+00:00] nulledvector (id=1509986362844254378)
+    https://docs.mnemosyne.site/getting-started/updating
+    [embed] Mnemosyne Documentation https://docs.mnemosyne.site/getting-started/updating
+
+[2026-05-29T19:26:16.969000+00:00] skylinx79 (id=1510001352770850947)
+    Thanks, I asked Hermes and it did it for me
+

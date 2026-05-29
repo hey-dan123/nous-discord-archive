@@ -31,3 +31,11 @@
 [2026-05-29T10:04:29.709000+00:00] hydro._ (id=1509859974275403896)
     <@740022244499128402> just shipped light mode, go ahead and lmk what you think :)
 
+[2026-05-29T15:38:01.587000+00:00] _bashell (id=1509943910175211570)
+    So, you are using 3 memories at the same time? how can you do that?
+    [reply to jwalkersf7273 msg=1509765602259239082]
+
+[2026-05-29T19:28:04.135000+00:00] hydro._ (id=1510001802257367240)
+    Maybe scoped per agent? I'm not sure why you would lmao
+    [reply to _bashell msg=1509943910175211570]
+

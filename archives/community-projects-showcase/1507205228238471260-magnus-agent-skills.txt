@@ -253,3 +253,13 @@
     https://git.brandyapple.com/magnus/agent-skills/src/branch/main/opensource-contributions/SKILL.md
     [embed] agent-skills/opensource-contributions/SKILL.md at main https://git.brandyapple.com/magnus/agent-skills/src/branch/main/opensource-contributions/SKILL.md
 
+[2026-05-29T16:54:59.099000+00:00] neopabo (id=1509963277424263460)
+    <@659176257338081306> https://microsoft.github.io/SkillOpt/
+    [embed] SkillOpt | Executive Strategy for Self-Evolving Agent Skills https://microsoft.github.io/SkillOpt/
+
+[2026-05-29T16:55:29.707000+00:00] neopabo (id=1509963405803520040)
+    Have you seen this already?
+
+[2026-05-29T16:56:22.640000+00:00] neopabo (id=1509963627820617911)
+    It seems like a great way to optimize skills in a more robust way. If you're down for it, I can help you experiment with it on some of your skills
+
