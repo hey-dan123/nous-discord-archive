@@ -559,3 +559,36 @@
 [2026-05-29T06:01:42.800000+00:00] nat2r (id=1509798876230717531)
     haha yeah my bug
 
+[2026-05-29T11:39:30.951000+00:00] twindenis (id=1509883887017263104)
+    who is the developer of this project?
+
+[2026-05-29T11:40:33.706000+00:00] twindenis (id=1509884150231076906)
+    I had it revert the normal nous mascot because it was obviously reverted but I think it could be improved further, for now here it is: https://discord.com/channels/1053877538025386074/1476316988992258300/1509496417679446058
+
+[2026-05-29T11:41:53.731000+00:00] twindenis (id=1509884485880119387)
+    also I noticed there are issues with recognizing the models and providers already set up in the original tui, fixed it (sort of) locally but it should be done probably on your level because you are more familiar with the project than I am.
+
+[2026-05-29T11:44:00.648000+00:00] twindenis (id=1509885018208473129)
+    is fal free?
+    [reply to heartl1ne msg=1508518404800123063]
+
+[2026-05-29T11:44:36.575000+00:00] heartl1ne (id=1509885168897490965)
+    No, just an easy way to access image and video models. Have to make an account at fal.ai and add credits
+    [reply to twindenis msg=1509885018208473129]
+
+[2026-05-29T11:49:21.180000+00:00] twindenis (id=1509886362617384991)
+    hmm, any alternatives? (so far got gptplus and gemini pro)
+    [reply to heartl1ne msg=1509885168897490965]
+
+[2026-05-29T11:49:56.035000+00:00] heartl1ne (id=1509886508809715772)
+    Can have codex use its image tool to generate the base image
+
+[2026-05-29T11:50:23.555000+00:00] heartl1ne (id=1509886624236961943)
+    But for animation it needs a video model like Kling
+
+[2026-05-29T11:53:08.681000+00:00] twindenis (id=1509887316825477303)
+    I think I can access flow but its very inconsistent I think.
+
+[2026-05-29T11:53:50.746000+00:00] twindenis (id=1509887493259137075)
+    btw is there like a gallery to access such brail animated arts?
+

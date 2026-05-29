@@ -10,3 +10,6 @@
     This pulls in more data than via Health Connect too.
     [embed] GitHub - wysie/google-health-local-sync: Local-first Google Health ... https://github.com/wysie/google-health-local-sync
 
+[2026-05-29T11:45:16.928000+00:00] jcrabapple (id=1509885338150240266)
+    Dude I was just about to start building something like this!
+

@@ -356,3 +356,13 @@
     4. If unsure about scope, ASK. "Did you mean X only, or X + Y + Z?"
     5. Be direct. Skip fluff. No hedging — say "I'm not sure" plainly.
 
+[2026-05-29T12:12:38.313000+00:00] houtarooreki (id=1509892222617653391)
+    Can you tell me what are those instructions doing?
+    [reply to datarevised msg=1492248938026111096]
+
+[2026-05-29T12:12:52.975000+00:00] houtarooreki (id=1509892284114796696)
+    I don't have any soul.md setup I'm new to it
+
+[2026-05-29T12:13:01.381000+00:00] houtarooreki (id=1509892319371984996)
+    And I don't know what to set in it
+

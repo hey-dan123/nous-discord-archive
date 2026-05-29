@@ -22360,3 +22360,155 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Centralized config policy mapping inside gateway/run.py and aligned unauthorized DM behaviors to stop leaking into implicit pairing loops. https://github.com/NousResearch/hermes-agent/pull/34515
     [embed] fix(gateway): honor config-driven access policies over legacy env f... https://github.com/NousResearch/hermes-agent/pull/34515
 
+[2026-05-29T09:58:23.165000+00:00] floory (id=1509858436878434355)
+    can i get role :3
+
+[2026-05-29T09:58:25.994000+00:00] floory (id=1509858448743993394)
+    yooooo
+
+[2026-05-29T09:58:28.639000+00:00] floory (id=1509858459838058566)
+    i has roleee
+
+[2026-05-29T09:58:32.323000+00:00] floory (id=1509858475289608213)
+    aura as fuck
+
+[2026-05-29T10:51:13.516000+00:00] heathley (id=1509871734294184018)
+    Matrix SSRF fix: block unsafe image redirects.
+    
+    https://github.com/NousResearch/hermes-agent/pull/34526
+    [embed] fix(matrix): block unsafe image redirects by heathley · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/34526
+
+[2026-05-29T11:00:22.096000+00:00] teknium (id=1509874035205345290)
+    merged
+    [reply to heathley msg=1509846625961640026]
+
+[2026-05-29T11:03:21.820000+00:00] kkurottal6611 (id=1509874789022433351)
+    Fixed a couple of quiet config footguns in the gateway paths
+    
+    Completed the missing config-to-env bridge for Discord allowlists in #34557 so allow_from structures don't get silently dropped by the adapter, and fixed the configuration loader matrix in #34565 to fully resolve nested gateway.platforms.* keys.
+    
+    Discord Fix: https://github.com/NousResearch/hermes-agent/pull/34557
+    
+    Config Loader: https://github.com/NousResearch/hermes-agent/pull/34565
+    [embed] Fix Discord allow_from config bridge for gateway auth by Que0x · P... https://github.com/NousResearch/hermes-agent/pull/34557
+    [embed] fix(gateway): load nested gateway.platforms config by Que0x · Pull... https://github.com/NousResearch/hermes-agent/pull/34565
+
+[2026-05-29T12:23:46.702000+00:00] godsboy7777 (id=1509895026044309554)
+    Hey <@387972437901312000>, I know I have flagged this one before, so sorry for circling back.
+    
+    The reason I am raising it again is that it is in a genuinely different state now: fully green and mergeable, so it should be a one-click merge whenever you have a window.
+    
+    https://github.com/NousResearch/hermes-agent/pull/26286
+    
+    ## What changed since the last ping
+    
+    * Rebased cleanly against current `main`
+    * Previous conflict is resolved
+    * All CI checks now pass
+    * Focused web/tool suite is green: **268 tests**
+    * GitHub reports it as **CLEAN / mergeable**
+    
+    ## What it adds
+    
+    A first-class paid Brave Search API backend alongside the existing free `brave-free` fallback.
+    
+    Fully additive and opt-in.
+    
+    ### Highlights
+    
+    * Adds a direct `brave_search` tool for agents with richer modes:
+    
+      * Web
+      * LLM grounding
+      * Images
+      * News
+      * Videos
+      * Discussions
+      * Suggest
+      * Bounded raw
+    
+    * Avoids routing everything through one generic `web_search` shape.
+    
+    * Default `both` mode returns web results plus Brave LLM grounding context in one call, so agents get source URLs and compact grounding snippets together.
+    
+    * Backward compatible:
+    
+      * Existing `BRAVE_SEARCH_API_KEY` users stay on `brave-free`
+      * Users only switch if they explicitly pick `brave-search`
+    
+    * Clean plugin integration under:
+    
+    ```text
+    plugins/web/brave_search/
+    ```
+    
+    * Registered web-toolset tool
+    * Docs and env-var coverage included
+    
+    No rush, and totally fine to squash-push or adopt it however is easiest.
+    
+    Just wanted to flag that it is finally in a ready, mergeable state.
+    [embed] feat(web): add Brave Search API rich modes by GodsBoy · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/26286
+
+[2026-05-29T13:46:44.630000+00:00] sprmn24 (id=1509915904987889825)
+    <@387972437901312000>  sir, opened a couple of PRs today — take a look when you get a chance:
+    
+    PR #34114 Issue: _fresh_account_info() in nous_account.py reads/writes _account_info_cache without a lock — concurrent threads can both pass the None check and make redundant network calls to Nous Portal (TOCTOU race) 
+    
+    Fix: Added threading.Lock(), wrapped cache read/write — same pattern as #32796 https://github.com/NousResearch/hermes-agent/pull/34114
+    
+    PR #34119 Issue: HERMES_UID/HERMES_GID in stage2-hook.sh passed directly to usermod/groupmod without numeric validation — HERMES_UID=0 silently grants root privileges to the hermes user 
+    
+    Fix: Added validate_uid_gid() helper, rejects non-numeric values, enforces range 1000–65534 https://github.com/NousResearch/hermes-agent/pull/34119
+    [embed] fix(nous_account): add threading lock to prevent TOCTOU race on cac... https://github.com/NousResearch/hermes-agent/pull/34114
+    [embed] fix(docker): validate HERMES_UID/GID to prevent privilege escalatio... https://github.com/NousResearch/hermes-agent/pull/34119
+
+[2026-05-29T14:03:09.891000+00:00] z1gon (id=1509920037471780985)
+    Hey <@387972437901312000> , just bringing this back to the top of the pile. Let me know if any changes are needed on my end to get this merged. Hope you all have a good weekend ahead!
+    [reply to z1gon msg=1508890997973712996]
+
+[2026-05-29T14:03:54.382000+00:00] jez_wikitribune (id=1509920224080560344)
+    welcome to the club 😛
+    [reply to floory msg=1509858459838058566]
+
+[2026-05-29T14:06:34.013000+00:00] kaya_west (id=1509920893621637141)
+    if u bytedance add tiktok video watching support
+    [reply to z1gon msg=1509920037471780985]
+
+[2026-05-29T14:11:35.723000+00:00] promptsiren (id=1509922159084961802)
+    Cluster: **Silent response loss after agent tool calls**
+    6 active items (3 issues, 3 PRs) / agent, agent/transports, gateway, hermes_cli
+    Reported theme: agent responses silently dropped or frozen after tool calls complete, with no output delivered to the user.
+    
+    Root cause: this is two unrelated bugs plus one already-fixed issue. The #29346 drops are gateway-side: a streamed preamble finalized at a tool boundary marks the turn delivered, so the gateway suppresses the genuine answer the next API call produces; and the extract pipeline can reduce a non-empty response to empty text with no attachment, after which the `if text_content` send guard skips delivery with no log. #28834 is a separate CLI bug, and #7968 was already fixed on main.
+    • Scope the stream consumer's final-delivery flags to the turn-final segment, cleared at every tool boundary, so a preamble can no longer suppress the real answer (duplicate-safe by construction)
+    • Recover extract-stripped responses on every platform, taken from the post-extract body so a spaced MEDIA path can't leak — supersedes #33842 (Discord-only) and #29499 (unsafe raw fallback)
+    • Loud delivery invariant (response_delivery_recovered / response_delivery_dropped) so a non-empty response no longer vanishes silently — closes #29346
+    • #28834/#29004 — a separate bug (tool-call freeze after idle; CLI-side, not gateway delivery), not addressed here. The keepalive approach in #29004 won't fix it (httpx already recycles the idle socket at its 5s expiry; the socket-option change is a no-op on the reporter's Python 3.9) — but we couldn't reproduce the freeze to pin the real cause, so #28834 stays open with a repro protocol
+    • #7968 already fixed on main by #10472 — ticket just needs closing
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/34336
+
+[2026-05-29T14:35:35.674000+00:00] heathley (id=1509928198677205172)
+    thanks for role 🙌
+    [reply to teknium msg=1509874035205345290]
+
+[2026-05-29T14:43:19.343000+00:00] xxxigm (id=1509930143445942282)
+    Hi <@387972437901312000> .Opened a small docs-only PR: https://github.com/NousResearch/hermes-agent/pull/34665
+    Fixes stale contributor docs (toolset list, missing skill ref, wrong paths in CONTRIBUTING.md project tree). would appreciate a look when you have time, thanks!
+    [embed] docs(contributor): fix stale toolset list, missing skill ref, wrong... https://github.com/NousResearch/hermes-agent/pull/34665
+
+[2026-05-29T14:55:27.369000+00:00] promptsiren (id=1509933197008441437)
+    Cluster: **Gateway MEDIA regex missing file extension support**
+    19 active items (6 issues, 13 PRs) / gateway
+    Reported theme: The gateway's MEDIA extraction regex/allowlist is missing or dropping certain file extensions (notably .md and .html), causing attachments of those types to be silently ignored or fail to send.
+    
+    Root cause: the gateway grew ~5 independent copies of "what counts as a deliverable file" (extract_media, extract_local_files, the two run.py tool-dedup sites, stream_consumer, and the dispatch strip), and they drifted. Commit ea49b3862 tightened extract_media into a hard, case-sensitive allowlist that dropped .md/.html, and the other copies never matched it — so .md/.html, uppercase, bold-wrapped, and spaced paths silently failed to attach while send_message still reported success. A second, related silent failure: a MEDIA path outside the delivery roots was filtered out while the text still sent, so the tool reported success with no attachment (#32644).
+    • One curated _DELIVERY_MEDIA_EXTS frozenset + shared compiled regexes collapse the ~5 drifted copies onto a single source of truth; broaden delivery to .md/.html, uppercase, bold/quoted/spaced paths, dedup, and GIS (.kml/.kmz/.geojson/.gpx) — consolidates ~30 stalled extension PRs and closes the extension-drift issues
+    • Recognize Windows (C:\, C:/) and UNC (\\server\share) MEDIA: paths so the raw path is stripped from the message instead of leaking as plain text (the #28989 / #24032 symptom) — delivery of those still fail-closes
+    • Loud media_dropped result so a path outside the delivery roots is reported instead of a silent text-only success — closes the silent-success half of #32644, supersedes #34178
+    • Source/script/config exts (.py/.sh/.toml/.log/…) stay excluded — the curated set is the union of what was already deliverable; auto-delivering those outbound is a separate product decision (out of scope)
+    • Out of scope / future work: actually delivering files from new locations — native-Windows delivery and safe-roots honoring — touches the path-validation exfiltration boundary, so it's left for a separate security-reviewed change; the delivery halves of #24032 / #28989 / #32644 stay open
+    
+    PR: <https://github.com/NousResearch/hermes-agent/pull/34656>
+

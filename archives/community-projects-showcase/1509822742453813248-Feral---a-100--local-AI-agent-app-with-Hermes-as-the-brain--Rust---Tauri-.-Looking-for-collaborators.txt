@@ -30,3 +30,6 @@
     PRs, ideas, roasts — all welcome. <@387972437901312000> or any other staff member, I would love to hear your opinions, I will also need help implementing Hermes Agent natively into my app.
     [embed] GitHub - bloom500/feral https://github.com/bloom500/feral
 
+[2026-05-29T11:51:31.802000+00:00] bloom9952 (id=1509886910485762172)
+    Working hard now to make the app stable and launchable (through .exe) for anyone who wishes to test it out (Disclaimer: might be buggy since this is a personal project and it v0.1.0
+

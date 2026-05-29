@@ -1293,3 +1293,12 @@
 [2026-05-29T05:17:44.441000+00:00] 0xlfg (id=1509787810150744236)
     Anyone know what is tinylama model for? I says its unused
 
+[2026-05-29T12:22:50.777000+00:00] nulledvector (id=1509894791478120540)
+    https://youtu.be/yupPvZF6oBw?t=52
+    [embed] That's the Way (I Like It) https://www.youtube.com/watch?v=yupPvZF6oBw&start=52
+    [reply to 0xlfg msg=1509778838404730880]
+
+[2026-05-29T12:23:31.594000+00:00] nulledvector (id=1509894962676764824)
+    let us know how it goes! ty for using Mnemosyne
+    [reply to nat2r msg=1509772838880415754]
+

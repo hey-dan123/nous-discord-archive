@@ -22,3 +22,18 @@
         Feel free to fork, tweak the stack preferences to match your own tools, or just run the two scripts and see what pops up. Happy to hear any feedback or ideas for improvement!
     [embed] GitHub - Sahil-SS9/GitRadar-Self-Improvement: Automated GitHub repo... https://github.com/Sahil-SS9/gitradar
 
+[2026-05-29T14:34:14.621000+00:00] sahil_ss9 (id=1509927858716541162)
+    New changes
+    
+    What
+    Adds a configurable spam_name_patterns noise rule, matched against the repo name, to catch star-farmed spam that the existing description-keyword filter misses.
+    
+    Why
+    Farmed repos with date/version-suffixed names (e.g. FL-Product-Version-26, WorpGPT-Latest-2026-AllPrompts, DeepFake-AI-2026-RealTime) and cracked-software bait often carry a clean-looking description, so they slip past noise_description_keywords and waste a slot in the daily output.
+    
+    How
+    New spam_name_patterns default in DEFAULT_THRESHOLDS and the spam_name rule in build_noise_patterns / NOISE_ORDER.
+    Patterns are high-precision: they match year/version suffixes and crack/keygen/nulled bait, but are deliberately conservative so legitimate names like llama-3, gpt-4, next.js are not caught.
+    Configurable via thresholds (schema updated with the new field).
+    New test covers both positive (spam caught) and negative (legit names untouched) cases.
+
