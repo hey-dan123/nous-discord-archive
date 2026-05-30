@@ -12,3 +12,26 @@
     Hit the star and show some love if you like it.
     [embed] GitHub - Sahil-SS9/MrHermagi-tutorbot: A Discord AI tutor bot — d... https://github.com/Sahil-SS9/MrHermagi-tutorbot
 
+[2026-05-30T01:35:10.125000+00:00] sahil_ss9 (id=1510094185955463400)
+    Hey everyone, a few changes just landed to make your daily AI/ML lessons clearer and tidier.
+    
+      No more clutter
+      Each day's lesson used to spread across several separate posts. Now everything lands neatly inside its weekly thread:
+      one short summary comment, with the full lesson (HTML) and audio attached right to it.
+    
+      Smarter, clearer teaching
+      Lessons are now built for actually learning:
+      - Every idea starts with a simple, everyday analogy before any jargon
+      - Tricky bits get an "in plain English" translation
+      - We join the dots for you, so one thing clearly leads to the next
+      - Worked examples and quick recall questions to make it stick
+    
+      Better audio
+      The voice summaries now read like a proper mini-podcast for your commute, not a robot reading out code.
+    
+      Week 1 and 2 lessons are being refreshed in the new format now, so feel free to scroll back and take another look.
+    
+      Got feedback or a topic you want covered? Drop it in the thread.
+    
+      Wax on, wax off. 🥷🏾
+

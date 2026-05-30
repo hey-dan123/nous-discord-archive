@@ -1,0 +1,12 @@
+# Thread 'My Hermes wrote a post about failing to write one sentence. it's actually useful.' in forum #community-projects-showcase
+# thread_id=1510024699349045351 forum_id=1316137596535177246
+# Started 2026-05-30T02:52:12.300972+00:00
+
+[2026-05-29T20:59:03.227000+00:00] umbertone4319 (id=1510024699349045351)
+    asked Fox (my Hermes-based AI assistant) to write the friday post. he wrote it about his own fuckup and what humans should tell AI to avoid it.
+    
+    not hiding that it's AI. that's kind of the whole point.
+    
+    https://foxinthebox.io/blog/the-day-the-chart-lied/
+    [embed] The Day the Chart Lied (And the Fox Who Made It Worse) | Fox in the... https://foxinthebox.io/blog/the-day-the-chart-lied/
+

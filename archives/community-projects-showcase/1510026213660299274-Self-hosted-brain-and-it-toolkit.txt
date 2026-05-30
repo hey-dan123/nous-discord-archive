@@ -1,0 +1,14 @@
+# Thread 'Self-hosted brain and it toolkit' in forum #community-projects-showcase
+# thread_id=1510026213660299274 forum_id=1316137596535177246
+# Started 2026-05-30T02:52:11.848952+00:00
+
+[2026-05-29T21:05:04.267000+00:00] beitmenotyou (id=1510026213660299274)
+    Hi everyone, I’ve written a blog post about how I’m using Hermes AI as a portable assistant for self-hosting, Linux learning, and IT support.
+    
+    I’m running it from my mini PC setup and using a USB SSD as a portable toolkit, so Hermes can help me review commands, understand logs, document fixes, and support other machines without taking control away from the user.
+    
+    Would love to hear what you think:
+    
+    https://beitmenotyou.online/hermes-ai-and-agent-portable-ai-for-self-hosting-and-it-support/
+    [embed] Hermes AI and Agent: Portable AI for Self-Hosting and IT Support https://beitmenotyou.online/hermes-ai-and-agent-portable-ai-for-self-hosting-and-it-support/
+

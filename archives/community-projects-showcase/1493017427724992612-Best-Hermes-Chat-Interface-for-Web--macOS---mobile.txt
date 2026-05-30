@@ -2791,3 +2791,14 @@
 [2026-05-28T21:28:41.765000+00:00] _123321_ (id=1509669771212230829)
     the webui keeps on dying on one specific machine, i'll go and check on it tomorrow, any /debug that'd be useful for here ?
 
+[2026-05-29T21:45:34.503000+00:00] avidfuturist (id=1510036406809002179)
+    Thanks for the report! I'll see if there's anything we can do to fix that fallback issue too!
+    [reply to _123321_ msg=1509669771212230829]
+
+[2026-05-29T21:55:13.173000+00:00] _123321_ (id=1510038833926770762)
+    got lucky, found a TUI session that somehow didn't have that issue, and asked it to remove the fallback, now both tui and webui sessions are back to working
+
+[2026-05-29T22:17:44.077000+00:00] avidfuturist (id=1510044500028948590)
+    Oh good, glad you got webui sessions working again for now!
+    [reply to _123321_ msg=1510038833926770762]
+

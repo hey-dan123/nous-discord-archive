@@ -1736,3 +1736,6 @@
 [2026-05-28T19:22:07.888000+00:00] kohai_ut (id=1509637920183812108)
     Sweet, time to jump in and give lcm a try.
 
+[2026-05-29T23:33:39.795000+00:00] w0lfgang88 (id=1510063608095047730)
+    [attachment] hermes-lcm-minimal-music-demo-v2.mp4 https://cdn.discordapp.com/attachments/1491081146266681414/1510063607658975292/hermes-lcm-minimal-music-demo-v2.mp4?ex=6a1b73d3&is=6a1a2253&hm=12e32e6f5304edafced41e60f39c8644c8d460b05a7fe4d06ed00de9f82dde1d&
+

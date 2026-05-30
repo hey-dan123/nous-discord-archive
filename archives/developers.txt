@@ -22558,3 +22558,63 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://browserbridge.pages.dev/
     [embed] BrowserBridge Private Alpha RC1 https://browserbridge.pages.dev/
 
+[2026-05-29T21:21:56.681000+00:00] kylekaster (id=1510030460032647230)
+    trying to use the remainder of my codex usage to help give back to the great team that's helped me so much <3 
+    
+    https://github.com/NousResearch/hermes-agent/pull/34829
+    https://github.com/NousResearch/hermes-agent/pull/34830
+    https://github.com/NousResearch/hermes-agent/pull/34831
+    
+    found 3 small github issues that looked like small stability wins and didn't already have PR's for them (at least at the time I started 😅 )
+
+[2026-05-29T21:51:53.127000+00:00] sprmn24 (id=1510037994873294941)
+    bug killer
+
+[2026-05-29T21:53:28.026000+00:00] cryptoworlldz (id=1510038392908550184)
+    Tracked down a pretty serious API server bug
+    
+    `POST /v1/runs` is still accepting `previous_response_id` when `API_SERVER_KEY` is unset, which means an open server can attach a new run to stored response history without auth.
+    
+    https://github.com/NousResearch/hermes-agent/issues/34969
+    [embed] [Bug]: runs api accepts previous_response_id without auth when API_... https://github.com/NousResearch/hermes-agent/issues/34969
+
+[2026-05-29T22:06:45.713000+00:00] cryptoworlldz (id=1510041738650325012)
+    fix for the Runs API continuation auth gap.
+    
+    `POST /v1/runs` was still accepting `previous_response_id` with no `API_SERVER_KEY` set, so an open server could attach a new run to stored response state without auth. The fix closes that path and adds a regression test.
+    
+    https://github.com/NousResearch/hermes-agent/pull/34976
+    [embed] fix(api-server): require auth for runs continuation by worlldz · P... https://github.com/NousResearch/hermes-agent/pull/34976
+    [reply to cryptoworlldz msg=1510038392908550184]
+
+[2026-05-29T23:28:50.350000+00:00] promptsiren (id=1510062394074730729)
+    **PR #35028 Gateway working-directory fix**
+    https://github.com/NousResearch/hermes-agent/pull/35028
+    Root cause: the system prompt emitted `os.getcwd()` (daemon launch dir) instead of the configured `TERMINAL_CWD`, so the agent `cd`'d to the wrong place (gateway/cron/Telegram). Fix: one reader resolver `agent/runtime_cwd.py` as single source of truth, routing the 2 prompt read sites through it. Reader-only; behavior-preserving for local-CLI + remote backends.
+    Closes #24882 #24969 #27383 · supersedes PRs #24888 #24985 #27488 #29365 — dropped their per-session "re-bridge" (TERMINAL_CWD is never lost, so it patched a non-bug; refs #10817 #10225). #11312 is a separate service-manager env-loss issue (→ landed #34805), not closed here.
+    3 core + 4 test files · 146 passed, 1 skipped · ruff clean.
+
+[2026-05-29T23:29:08.242000+00:00] promptsiren (id=1510062469119213679)
+    ===============================
+    **PR #35033 — `delegate_task` per-task model/provider overrides**
+    <https://github.com/NousResearch/hermes-agent/pull/35033>
+    Adds `tasks[].model` / `tasks[].provider` (precedence: per-task > `delegation.*` config > parent). Also fixes 2 latent bugs that silently made `delegation.*` inert:
+    • **A:** `_load_config` swallowed config-load failures silently → now warns.
+    • **B:** a child pinned to explicit `delegation.base_url` got a credential pool whose `_swap_credential` redirected it off-endpoint → pool now skipped for literal config endpoints (provider-resolved keeps key rotation).
+    
+    Tight scope: `delegate_tool.py` + tests only (+245/−11, 7 commits, 146+17 green). No top-level `model=` arg by design — that surface was deliberately removed upstream (fb0f579b1).
+    Closes #7833 #15789 #17685 #18591 #12440 #27294 #27295 #27296
+
+[2026-05-30T00:26:15.352000+00:00] champagne_papad (id=1510076843460661388)
+    Super smol docs update - https://github.com/NousResearch/hermes-agent/pull/34825
+    [embed] docs(teams): drop @preview tag from @microsoft/teams.cli install co... https://github.com/NousResearch/hermes-agent/pull/34825
+
+[2026-05-30T00:59:12.566000+00:00] promptsiren (id=1510085136497119372)
+    PR #35056 **Custom-provider fallback fix**
+    https://github.com/NousResearch/hermes-agent/pull/35056
+    Root cause behind 6 issues: provider/credential resolution lived in parallel paths (CLI/gateway/ACP/aux) that had drifted, all terminating in OpenRouter → a configured custom/local provider got silently dropped to OpenRouter (or credential-mixed).
+    **Fix:** one offline resolver → one `ResolvedProvider` → one alias table → one `/v1` normalizer → one path-scoped api_mode detector; **fail-closed** on custom intent; zero network during resolve.
+    **Closes** #3263 #4600 #5358 #8919 #12146 #13489 · **supersedes** #17072 · GHSA-76xc-57q6-vm5m host-gating preserved + hardened.
+    26 files (11 core / 15 test), 5 semantic commits.
+    ⚠️ **Behavior:** `OPENAI_BASE_URL` no longer routes (warn-only) · ambient OPENAI/OPENROUTER keys no longer override a configured provider · bare `custom` with no base_url+key now errors instead of silently using OpenRouter.
+

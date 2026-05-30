@@ -62,3 +62,6 @@
     That's great 😃
     [reply to sahil_ss9 msg=1509957523669651467]
 
+[2026-05-30T02:04:49.821000+00:00] pipichan1499 (id=1510101650541379686)
+    I try using it but it changed all the subjects to "you", so if I said, for example, "What do I (the user) need to do to move forward with the plan?" it would become something like "List what's needed from you (Hermes Agent) for the plan"
+

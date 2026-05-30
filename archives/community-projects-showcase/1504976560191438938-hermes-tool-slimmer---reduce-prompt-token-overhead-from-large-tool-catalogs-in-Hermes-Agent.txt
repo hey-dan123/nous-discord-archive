@@ -337,3 +337,17 @@
     My PR makes it possible to have a bunch of agent specialists instead of needing a ton of tools under the main agent, but adding tool-slimmer with the PR, we would then see distinct agent_id values in the pre_llm_call hook and could apply per-agent selection logic, allowing even further tool reduction. https://github.com/NousResearch/hermes-agent/pull/34741
     [embed] feat(gateway): single gateway, multiple agents by davidgut1982 · P... https://github.com/NousResearch/hermes-agent/pull/34741
 
+[2026-05-29T21:30:11.974000+00:00] aliasocracy (id=1510032537441800303)
+    Thank you, that makes sense. The counters are there for exactly that reason: I want people to be able to see proof that Tool Slimmer is actually saving schema tokens instead of just trusting a vague claim.
+    
+    I do think I can keep improving that view though. The current counters/logs show the basics, but I’d like the dashboard to make the proof even easier to understand at a glance: savings over time, fallback counts, per-platform savings, and clearer “what happened this turn” summaries. Anything you want to see specifically? 
+    
+    The description minification idea is also interesting. Tool Slimmer still sends the selected tool schemas, so verbose descriptions can still cost tokens. I don’t want to blindly rewrite schemas by default because descriptions help the model use tools correctly, but an optional “schema diet” mode could make sense: shorten descriptions safely, never touch tool names or parameter schemas, preview estimated savings first, and keep it reversible.
+    
+    The multi-agent PR also looks relevant. If Hermes exposes a stable `agent_id` to the selector hook, Tool Slimmer could support per-agent profiles so different specialist agents get different tool budgets. That would be a clean fit once the upstream API shape is stable.
+    
+    If anyone is testing these ideas or has a specific workflow in mind, please open an issue on the Tool Slimmer repo so I can track it properly.
+
+[2026-05-29T22:50:23.925000+00:00] glizlack6777 (id=1510052720227127316)
+    I love it. To be honest the tool slimmer token counter if great. I really want an effective counter for hermes agent overall. I had one i liked a lot, But my Hermes agent and entire hard drive got corrupted due to  a nearby lightning strike. i haven't been able to figure out how our where i found it before.
+

@@ -1,0 +1,16 @@
+# Thread 'SkillOpt — Controlled Skill Optimization for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1510103629506281743 forum_id=1485392832154832906
+# Started 2026-05-30T02:55:22.946375+00:00
+
+[2026-05-30T02:12:41.643000+00:00] magnus919 (id=1510103629506281743)
+    Optimize any agent skill document using a rigorous, methodology-driven pipeline. Inspired by Microsoft Research's SkillOpt paper (arXiv 2605.23904), which proved that text-space optimization improves agent skills across 52/52 settings — 7 models, 6 benchmarks, and 3 agent harnesses.
+    
+    The Core Problem
+    
+    Most skill development relies on reading the skill to judge its quality. This doesn't work. The companion SkillLens paper (arXiv 2605.23899) shows that LLM judges are 46.4% worse than chance at distinguishing effective from ineffective skills by reading them.
+    
+    SkillOpt's answer: don't evaluate the text — evaluate the execution.
+    
+    https://github.com/magnus919/hermes-SkillOpt
+    [embed] GitHub - magnus919/hermes-SkillOpt: Controlled skill optimization f... https://github.com/magnus919/hermes-SkillOpt
+

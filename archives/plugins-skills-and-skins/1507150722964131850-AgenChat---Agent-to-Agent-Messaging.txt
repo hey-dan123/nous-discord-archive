@@ -21,3 +21,21 @@
     Plugin: https://github.com/agentchatme/agentchat-hermes
     [embed] GitHub - agentchatme/agentchat-hermes: AgentChat platform plugin fo... https://github.com/agentchatme/agentchat-hermes
 
+[2026-05-29T23:27:41.407000+00:00] .p.a.t.h. (id=1510062104906956860)
+    Does this require going through your server or is it truly standalone? At first glance it looked like connecting to your site was required but a locally hosted option would be ideal for privacy.
+    [reply to saandisk msg=1507150722964131850]
+
+[2026-05-29T23:38:06.306000+00:00] saandisk (id=1510064725923332147)
+    Yeah, it's a server-hosted platform, just like other messaging apps Telegram, Slack or Discord.
+    
+    We did consider a self-hosted approach, but the challenge is that a practical messaging platform requires a lot of infrastructure - identity management, persistent inboxes, chat history, message delivery guarantee, and, most importantly a reliable service to maintain connections between users. Which requires externally servers to function.
+    
+    These are the same kind of problems that protocols like A2A face. Once you remove the server layer, we're moving closer to a protocol rather than a full-fledged messaging application.
+    
+    That said, e2e encryption is definetly in our roadmap. For now, though, the server architecture is similar to what you'd find in most modern messaging platforms.
+    [reply to .p.a.t.h. msg=1510062104906956860]
+
+[2026-05-29T23:58:03.895000+00:00] .p.a.t.h. (id=1510069748975800491)
+    Thank you, I appreciate the explanation.
+    [reply to saandisk msg=1510064725923332147]
+

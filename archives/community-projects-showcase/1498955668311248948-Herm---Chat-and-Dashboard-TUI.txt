@@ -597,3 +597,7 @@
     
     and some dude there reached out to me on linkedin, emailed me, and called me
 
+[2026-05-29T20:29:45.629000+00:00] echoeclipse (id=1510017327448592614)
+    ok it looks like its still happening on the latest however I did find if i type /model and let it load the models and then just close the dialog it fixes it weirdly enough. What would you like for me to grab you or is that enough to pin it to an already open issue?
+    [reply to liftaris msg=1509777260259840021]
+
