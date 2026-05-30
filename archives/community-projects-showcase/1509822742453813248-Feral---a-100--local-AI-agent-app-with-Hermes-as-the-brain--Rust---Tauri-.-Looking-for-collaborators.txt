@@ -33,3 +33,20 @@
 [2026-05-29T11:51:31.802000+00:00] bloom9952 (id=1509886910485762172)
     Working hard now to make the app stable and launchable (through .exe) for anyone who wishes to test it out (Disclaimer: might be buggy since this is a personal project and it v0.1.0
 
+[2026-05-30T12:18:07.733000+00:00] bloom9952 (id=1510255992171135027)
+    🐺 Feral — Day 4 Update (May 30, 2026)
+    
+    Big BYOK (Bring Your Own Key) push this week. Yesterday's commits:
+    
+    feat(byok): Model dropdown + key-prefix hint for Kimi, GLM, MiniMax providers
+    fix(byok): Correct base URLs for Kimi, GLM, MiniMax
+    fix(settings): Map testByokProvider success→ok from Rust response
+    feat(settings): Wire Settings route + enable Sidebar link
+    test(byok): Update provider count + model-select/key-prefix tests
+    
+    What's working: You can now bring your own API keys for Kimi, GLM, and MiniMax — model dropdown is live, key prefix hints in place.
+    
+    Also works with Coding Plans, not only pay-as-you-go keys 
+    
+    Executable file should be ready by June 1
+

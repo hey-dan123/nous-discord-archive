@@ -1,0 +1,20 @@
+# Thread 'Singer Simulacra with Hermes Agents' in forum #community-projects-showcase
+# thread_id=1510256561447239891 forum_id=1316137596535177246
+# Started 2026-05-30T13:25:08.194060+00:00
+
+[2026-05-30T12:20:23.459000+00:00] thomukas1 (id=1510256561447239891)
+    Yo, I'm developing a game-like simulacra of hermes agents as singers, who live in a digital world, experience things, and create songs when they feel inspired.
+    
+    Currently in MVP phase, with one agent in a singleplayer simulation, but it already works pretty well hehe
+    
+    Here's how it works: https://x.com/thomukas1/status/2059281684344787183
+    
+    Simulation runs fully local on my GPU. I'm presimulating the day and the content unlocks on frontend based on timestamps
+    
+    If you want to take a closer look, check https://www.slopbop.com
+    
+    Would appreciate any feedback and suggestions!🫡
+    [attachment] IMG_9361.png https://cdn.discordapp.com/attachments/1510256561447239891/1510256561858150510/IMG_9361.png?ex=6a1c2787&is=6a1ad607&hm=935b584de3078b38cd56f5338fab4c8520eb4d44c9522c9260990b661fa44c9b&
+    [embed]  https://twitter.com/thomukas1/status/2059281684344787183
+    [embed] Slop Bop https://www.slopbop.com/
+

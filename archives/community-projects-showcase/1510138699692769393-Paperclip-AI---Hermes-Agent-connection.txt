@@ -17,3 +17,43 @@
     [attachment] Video_2026-05-30_14-04-35.mp4 https://cdn.discordapp.com/attachments/1510138699692769393/1510138700498210876/Video_2026-05-30_14-04-35.mp4?ex=6a1bb9c3&is=6a1a6843&hm=ab37b5931616d697cc38bcbe43b0eb6941ca18280c29b5c156a10c2e02f72c25&
     [embed] Josh Thomson (@Josh_is_regen) on X https://twitter.com/Josh_is_regen
 
+[2026-05-30T09:54:23.607000+00:00] dalekc72 (id=1510219819964960881)
+    Not to sound like a smart ass, but does Paperclip actually DO anything for you?  That's a serious question.  I love the concept.  And I have tried using it several times.  But to me, and for me, it's a time and token suck that doesn't produce any results.
+
+[2026-05-30T11:34:00.282000+00:00] splosh123 (id=1510244887956557945)
+    Hey Dale, for me it's far more about the organisation of agents and issues than the agents themselves, especially for building a project from the ground up and having to market that product. I like to compartmentalise my workflow and it allows it to do so. In rgeards to token usage I've attached a screenshot, i think it's fair token usage - I use Superpowers skills with my opencode which is known to be token heavy and I'm managing it will. Deepseek v4-flash handles the bulk of the work and then V4 Pro or sometime GLM 5.1 will jump in for more heavy duty applications. 
+    
+    Project details for context: TypeScript 23.7K lines, TSX (React) 5.4K, HTML 3.4K, CSS 1.9K, SQL 1.1K, bash 1K, markdown 1.6K.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1510138699692769393/1510244887545643079/image.png?ex=6a1c1ca8&is=6a1acb28&hm=03241d37a34493171826a6fe7328b66df9162902cf44af96f79522f24cdb0966&
+    [reply to dalekc72 msg=1510219819964960881]
+
+[2026-05-30T11:47:36.051000+00:00] dalekc72 (id=1510248309539999867)
+    I need to look at the Superpowers skills.  I keep forgetting to do that!  UGH.  Too many things!
+    [reply to splosh123 msg=1510244887956557945]
+
+[2026-05-30T11:54:48.890000+00:00] splosh123 (id=1510250124998082800)
+    Yes, it's worth it. But if you're really token conscious it may not be the best. I got overwhelmed with skills overloads and so did my agents, so I've just been running Superpowers + /coreyhaines31/marketingskills. Keep it simple.
+    [reply to dalekc72 msg=1510248309539999867]
+
+[2026-05-30T12:28:25.289000+00:00] dalekc72 (id=1510258582388604998)
+    I am not overly concerned about tokens, I mainly Ollama Cloud models.  My biggest issue with PaperClip, and granted I may not be using right as, I would give a goal to the CEO, it would start creating roles, work begins, conversations happen, more roles created, more conversations, even more conversations, me being annoyed frustrated and yelling, then it looks like it is just cooking, but 4 days later and 300 millions tokens blown the Hello World document I wanted would be blank.  
+    
+    I love Multica.ai as I thought it was the happy medium between PaperClip and me trying to manage everything.  But I would have the same thought using Hermes with Multica or PaperClip was, if Hermes creates it's own skills, and granted I can create them and both Multica and PC have their own skills for their agents even if the agent is running through Hermes am I just creating more work for myself trying to build skills in these tool vs. just having Hermes as the source of truth and managing it's own skills?   And with the Hermes Kanban I am really shying away from any other tool like Multica or PC. ( wait, I may have just completely talked myself out of using any other tool. 🙂 )
+    [reply to splosh123 msg=1510250124998082800]
+
+[2026-05-30T12:38:52.677000+00:00] splosh123 (id=1510261213844607087)
+    I love Hermes, and I have it listening to the Paperclip API so it's always got it's finger on the pulse and it's building conctext of the project (it also it connected to the projects github repo for full code exposure when required), but I feel it is absolute chaos trying to build an app in Hermes,. I started, and I was messaging it through Telegram while I was at work, and it was just getting wild and I'd get home to test it out and it was loose + my Hermes agent lives on a seperate device. Whereas now I just sit down, riase issues, and bring up ideas and we code away. I did have to baby it for the first week - it wanted to create like an army of 50 agents and it was too much. So it's still a human in the loop process - which I want with a project like it. And the list style of issues makes it easy to pick up on threads.
+    
+    I'm going to look up Multica.ai though. What model are you running locally?
+
+[2026-05-30T12:42:45.499000+00:00] dalekc72 (id=1510262190370717879)
+    Multica is really cool.  But it's a early beta product like PC and Hermes.  I use Ollama Cloud models.  I don't bother running models on my local machine even though I have a beefy machine.  it so much more efficient to just spend the $100 a month on Ollama. ( I could probably get away with their $20 a month plan. ) With Anthropic changing up their pricing and I do have their Max plan, it still makes more sense for me to run through ollama cloud.
+    [reply to splosh123 msg=1510261213844607087]
+
+[2026-05-30T12:44:17.609000+00:00] splosh123 (id=1510262576708190359)
+    Ah sorry, misread your Ollama comment. Well great chatting to you Dale! Best of luck in your AI journey.
+
+[2026-05-30T12:47:50.045000+00:00] dalekc72 (id=1510263467729354804)
+    This is my current Hermes Dashboard with a custom theme.  It runs basically how Multica runs where once I give it an issue and it just gets assigned to the right profile.   Currently it's building an analytics dashboard for my website which I have up on Cloudflare.  The challenges I am seeing here, I see in Paperclip.  It's telling me things are done when they aren't.  The blocking issue isn't a true blocking issues.  Even when I try and get QA to review issues.  it's not perfect. The wheel on the bus....
+    [attachment] image.png https://cdn.discordapp.com/attachments/1510138699692769393/1510263467750461500/image.png?ex=6a1c2df6&is=6a1adc76&hm=150725096c9c15687da34132c556f42d9569f52646e9eae1b2d418d48d7b08d3&
+

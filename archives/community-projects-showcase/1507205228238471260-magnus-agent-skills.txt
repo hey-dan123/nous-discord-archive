@@ -362,3 +362,90 @@
     Validation pass rate  1.0      1.0      1.0
     ```
 
+[2026-05-30T10:41:26.452000+00:00] fleety13 (id=1510231659834900480)
+    I've given it a run, found important holes to plug
+
+[2026-05-30T10:41:30.038000+00:00] neopabo (id=1510231674875678852)
+    <@659176257338081306> The skill-opt skill seems to be broken
+
+[2026-05-30T12:54:13.825000+00:00] magnus919 (id=1510265077419343943)
+    Say more?
+    [reply to neopabo msg=1510231674875678852]
+
+[2026-05-30T13:01:30.634000+00:00] magnus919 (id=1510266909528948826)
+    Just ran a code audit and found some things. Filing issues and pushing an omnibus PR for those
+
+[2026-05-30T13:06:37.990000+00:00] magnus919 (id=1510268198673449012)
+    11 issues filed
+
+[2026-05-30T13:12:56.515000+00:00] magnus919 (id=1510269786322501652)
+    All done. Here's the full execution summary:
+    
+    ---
+    
+    ✅ Completed — Omnibus Bugfix
+    
+    Repo: github.com/magnus919/hermes-SkillOpt
+    Branch: fix/omnibus-bugfix-issues-1-11
+    PR: #12
+    
+    Issues Filed (11)
+    
+    #1
+    • Severity: 🔴 Critical
+    • Finding: Validate phase env var starvation
+    
+    #2
+    • Severity: 🔴 Critical
+    • Finding: Merge phase env var starvation
+    
+    #3
+    • Severity: 🔴 Critical
+    • Finding: Test suite template/schema mismatch
+    
+    #4
+    • Severity: 🟡 Moderate
+    • Finding: grep interprets slug as regex
+    
+    #5
+    • Severity: 🟡 Moderate
+    • Finding: SKILL.md documents unimplemented features
+    
+    #6
+    • Severity: 🟡 Moderate
+    • Finding: os.popen() deprecation
+    
+    #7
+    • Severity: 🟡 Moderate
+    • Finding: None crash risk on edit text
+    
+    #8
+    • Severity: 🟢 Minor
+    • Finding: Stderr hidden on oneshot calls
+    
+    #9
+    • Severity: 🟢 Minor
+    • Finding: Triple-quote JSON injection risk
+    
+    #10
+    • Severity: 🟢 Minor
+    • Finding: Unquoted DESC in kanban body
+    
+    #11
+    • Severity: 🟢 Minor
+    • Finding: Glob literal on empty match
+    
+    Commits (5)
+    
+    1. fix: pass data to validate/merge phases via temp files and exports — Fixes #1, #2, #6
+    2. fix: moderate fixes — grep -F, None guards, test suite schema — Fixes #3, #4, #7
+    3. fix: minor fixes — stderr logging, triple-quote, DESC safety, nullglob — Fixes #8, #9, #10, #11
+    4. feat: implement budget decay and plateau detection — Fixes #5
+    5. docs: update SKILL.md to match implemented features — Part of #5
+    
+    Verification
+    
+    - bash -n scripts/*.sh — all 3 scripts pass
+    - 198 insertions, 52 deletions across 5 files
+    - Each commit references its corresponding issues
+

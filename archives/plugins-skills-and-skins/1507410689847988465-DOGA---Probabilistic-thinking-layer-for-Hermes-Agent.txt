@@ -104,3 +104,9 @@
 [2026-05-26T19:30:31.214000+00:00] templeofmoon (id=1508915255554867244)
     I will report back
 
+[2026-05-30T09:06:27.191000+00:00] templeofmoon (id=1510207755401826344)
+    Overall I think this has been an improvement to Hermes. Responses are sharper and more nuanced especially when I discuss science with Hermes.
+
+[2026-05-30T09:58:55.022000+00:00] templeofmoon (id=1510220958361980998)
+    I will say sometimes the reasoning time can be a bit a long
+

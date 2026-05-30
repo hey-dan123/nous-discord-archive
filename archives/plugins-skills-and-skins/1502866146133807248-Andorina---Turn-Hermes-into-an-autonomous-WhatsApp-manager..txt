@@ -256,3 +256,27 @@
     [attachment] Captura_desde_2026-05-28_15-55-04.png https://cdn.discordapp.com/attachments/1502866146133807248/1509556044161089617/Captura_desde_2026-05-28_15-55-04.png?ex=6a199b1f&is=6a18499f&hm=bb30459e954144a9ef1a2149fc49f5ac80a48c19eddcb3e3b6a38f7a610561c2&
     [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
 
+[2026-05-30T11:36:01.149000+00:00] vayaperson (id=1510245394909499443)
+    We're almost there!
+    
+    We're making the final adjustments to the new features to ensure they work correctly and are as reliable and secure as possible (while always keeping in mind that bugs can still exist. Everyone should be aware of how they use the skill and on which systems, with access to what information, they choose to run it).
+    
+    We're currently working on the following issues:
+    
+    1. **Bot LID resolution error**
+       The bot's LID is not being resolved correctly, causing user messages and bot responses to appear as two separate conversations in the inbox.
+    
+    2. **Session fragmentation = amnesia effect**
+       Because the LID is not being resolved properly (see point 1), JID extraction fails, resulting in an empty `session_key`. Memory itself is working, but session fragmentation combined with the LID resolution issue causes this behavior.
+    
+    3. **Souls behaving like generic assistants**
+       Personalities are being applied correctly, but when a subsoul is loaded it is currently added as additional context. This means the model may remain anchored to its original role if the override is not reinforced in a more effective way.
+    
+    4. **Permissions and Knowledge system refactor**
+       We're restructuring the permissions system. Currently, if a user only has permission to interact with the bot, any request requiring access to the Knowledge system may be rejected because the user lacks file read permissions. We're also redesigning how command flags/arguments are handled and how their usage is managed through permissions.
+    
+    5. **Spaces in soul names**
+       A simple parsing issue with an easy fix.
+    
+    We'll have everything sorted out soon!! Stay tuned!! 👀
+

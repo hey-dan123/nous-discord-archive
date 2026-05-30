@@ -495,3 +495,14 @@
 [2026-05-28T15:58:07.399000+00:00] austrian_guy (id=1509586579851579463)
     This is very interesting 🙏
 
+[2026-05-30T10:10:42.042000+00:00] twindenis (id=1510223923818528828)
+    that was like only one message hmm
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1510223923575394374/image.png?ex=6a1c0921&is=6a1ab7a1&hm=065266461bb64cd83da296c6b732f07ec5e7d2ac189f3480cc654e574f30060b&
+
+[2026-05-30T12:55:17.473000+00:00] noxerz. (id=1510265344378404894)
+    idk i use normal
+    [reply to twindenis msg=1510223923818528828]
+
+[2026-05-30T12:55:43.043000+00:00] noxerz. (id=1510265451626627082)
+    i use qwen 3.7 max free
+

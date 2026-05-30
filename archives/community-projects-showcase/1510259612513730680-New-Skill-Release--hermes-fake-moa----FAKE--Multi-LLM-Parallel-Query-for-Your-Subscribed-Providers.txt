@@ -1,0 +1,43 @@
+# Thread 'New Skill Release: hermes-fake-moa — "FAKE" Multi-LLM Parallel Query for Your Subscribed Providers' in forum #community-projects-showcase
+# thread_id=1510259612513730680 forum_id=1316137596535177246
+# Started 2026-05-30T13:25:07.818681+00:00
+
+[2026-05-30T12:32:30.890000+00:00] kgmkm_mkgm (id=1510259612513730680)
+    I just released **hermes-fake-moa**, a skill that allows you to send the same prompt to multiple LLMs simultaneously using your own subscribed providers.
+    
+    📍 Repo: https://github.com/kgmkm/hermes-fake-moa
+    
+    **Mainly targets** subscription / private providers such as:
+    - **OpenCode Go**
+    - **Nous Portal**
+    - **NVIDIA NIM**
+    - and many others (currently supports 12 providers / 600+ models)
+    
+    ### Why I made it
+    The built-in `moa` tool in Hermes Agent is unfortunately hardcoded to OpenRouter only. I accidentally used it and lost **$6 LUL**
+    That sad moment became the birth of this skill.
+    
+    ### What it does
+    - Automatically scans the providers you have registered in Hermes Agent
+    - Shows you a clean list of available **Provider + Model** combinations
+    - Recommends models while taking your subscriptions and pricing into account
+    - Lets you select 2–5 models and fires the same prompt to all of them in parallel
+    - Displays the responses side-by-side for easy human comparison
+    
+    ### Origin Story
+    This skill started as a small subset of the skills I was developing for **Japanese novel writing and revision** in Hermes Agent.  
+    Thanks to this tool, I can now get critiques from completely different LLMs than the one that wrote the draft. It dramatically improved my ability to catch setting contradictions and receive fresh, sensory-style feedback — resulting in noticeably higher novel quality.
+    [attachment] ChatGPT_Image_2026530_21_31_16.png https://cdn.discordapp.com/attachments/1510259612513730680/1510259612975235234/ChatGPT_Image_2026530_21_31_16.png?ex=6a1c2a5f&is=6a1ad8df&hm=bf022cb371ba9f446c0b50acac753ba8041366b1e5a3216b55b9e92288f384c9&
+    [embed] GitHub - kgmkm/hermes-fake-moa: Multi-LLM parallel orchestrator for... https://github.com/kgmkm/hermes-fake-moa
+
+[2026-05-30T12:33:28.073000+00:00] kgmkm_mkgm (id=1510259852356620339)
+    **I’d love to expand it further.**
+    
+    I especially want to add solid **Claude (Anthropic)** support (both API key and OAuth if possible).  
+    If you have any knowledge or working examples of integrating Claude with Hermes skills, I would really appreciate your input!
+    
+    Contributions, issues, and suggestions are all very welcome 🙌
+
+[2026-05-30T12:34:02.725000+00:00] kgmkm_mkgm (id=1510259997697642586)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1510259612513730680/1510259997387391086/image.png?ex=6a1c2aba&is=6a1ad93a&hm=a8197c3c5e3c8555dc0c1a90674776923a8160e4a4d5c7ad3fc7ca0c29080d06&
+

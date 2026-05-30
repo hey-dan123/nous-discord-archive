@@ -605,3 +605,16 @@
     I think I know what the issue is. working on a fix now
     [reply to echoeclipse msg=1510017327448592614]
 
+[2026-05-30T12:42:51.105000+00:00] houtarooreki (id=1510262213883986110)
+    How can I create my own animation of the character
+
+[2026-05-30T12:43:13.295000+00:00] houtarooreki (id=1510262306955591780)
+    I have a character I want create and use that animation
+
+[2026-05-30T12:53:42.205000+00:00] echoeclipse (id=1510264944795324516)
+    There is a tab on the Herm dashboard called eikon. Then there's a subtab called studio that lets you use the vids or gifs.
+    [reply to houtarooreki msg=1510262306955591780]
+
+[2026-05-30T13:10:12.667000+00:00] houtarooreki (id=1510269099094311174)
+    Ohh okay
+

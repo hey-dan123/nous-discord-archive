@@ -22623,3 +22623,33 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     #30179 (Teknium)                     →  the iron-proxy core
     #35149 (Bartok9, already mergeable)  →  doctor + audit + Anthropic
 
+[2026-05-30T11:22:29.178000+00:00] godsboy7777 (id=1510241989256548422)
+    Hey <@387972437901312000>, I did a follow-up review on the iron-proxy egress PR, #30179, against current HEAD now that the v0.39 realignment landed.
+    
+    Found one **P0** worth a look before merge:
+    
+    The single-bind switch drops the docker-bridge listener, so with `enforce_on_docker` on, which is the default, sandboxes get connection-refused on Linux Docker because the proxy only binds loopback.
+    
+    Also found a couple of **P2** operability traps around `audit.log` and the Bitwarden fallback flag.
+    
+    Verified your earlier round-1 and v3 fixes landed cleanly, so this is just the new stuff.
+    
+    Comment is here whenever you get a sec:
+    https://github.com/NousResearch/hermes-agent/pull/30179#issuecomment-4582643701
+    [embed] feat(egress): iron-proxy credential-injection firewall for sandboxe... https://github.com/NousResearch/hermes-agent/pull/30179
+
+[2026-05-30T11:29:39.507000+00:00] teknium (id=1510243794186928232)
+    Thank you!
+    [reply to kylekaster msg=1510030460032647230]
+
+[2026-05-30T11:31:24.424000+00:00] teknium (id=1510244234240983050)
+    lgtm
+    [reply to xxxigm msg=1509930143445942282]
+
+[2026-05-30T13:10:10.490000+00:00] priv8_code (id=1510269089963315255)
+    hi <@387972437901312000> finally joined the discord lol
+
+[2026-05-30T13:22:16.078000+00:00] teknium (id=1510272133299965992)
+    <a:BlobWave:1199039210938708048>
+    [reply to priv8_code msg=1510269089963315255]
+
