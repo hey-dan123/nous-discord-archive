@@ -1345,3 +1345,10 @@
 [2026-05-30T03:53:36.616000+00:00] nat2r (id=1510129025904021625)
     I wonder if forcing tinyllama use would speed things up
 
+[2026-05-30T17:51:12.201000+00:00] nat2r (id=1510339813105209456)
+    Yeah Sleep and Remember are realling taking quite a while. I need to look into some ways to speed these up
+
+[2026-05-30T17:51:50.981000+00:00] nat2r (id=1510339975760187627)
+    I believe its fallback for summarizing conversations for memory writing
+    [reply to 0xlfg msg=1509787810150744236]
+

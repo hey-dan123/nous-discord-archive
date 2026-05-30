@@ -1,0 +1,84 @@
+# Thread 'groktobench' in forum #plugins-skills-and-skins
+# thread_id=1510325722630197299 forum_id=1485392832154832906
+# Started 2026-05-30T19:14:08.023943+00:00
+
+[2026-05-30T16:55:12.770000+00:00] magnus919 (id=1510325722630197299)
+    # Groktobench — Hermes Agent Readiness Protocol (HARP)
+    
+    Evaluate a model's suitability as a main Hermes Agent — in a clean-room Docker environment, orchestrated via kanban.
+    
+    Groktobench runs a standardized 3-phase test battery against a model running inside an isolated Hermes Agent Docker container. It measures three axes:
+    
+    Skill Recognition — does the model load the right Hermes skill when given a task?
+    Skill Fidelity — once loaded, does it follow the skill's instructions?
+    Workflow Chaining — can it chain multiple skills across a complete workflow without losing context?
+    
+    https://github.com/groktopus/groktobench
+    [attachment] IMG_2836.png https://cdn.discordapp.com/attachments/1510325722630197299/1510325722919473223/IMG_2836.png?ex=6a1c67f0&is=6a1b1670&hm=4e87e9a372abf9426c32bbb50bb1af7b6e9b7f252831907df8fb1b451f907e52&
+    [embed] GitHub - groktopus/groktobench: Hermes Agent Readiness Protocol (HA... https://github.com/groktopus/groktobench
+
+[2026-05-30T17:28:28.442000+00:00] killswitchx7 (id=1510334093085380790)
+    <:catlick:1151260427645366375>
+
+[2026-05-30T17:28:58.585000+00:00] josephcy (id=1510334219514150932)
+    f
+
+[2026-05-30T17:56:42.780000+00:00] magnus919 (id=1510341199654031420)
+    This is still not quite working yet. Don’t try it yet.
+    
+    ```
+    Full HARP evaluation running in background. Let me also push the deploy script fix while we wait:
+    ```
+    it’s close but I’m still working on it.
+
+[2026-05-30T18:10:37.614000+00:00] magnus919 (id=1510344701201485945)
+    ```
+    This is great data. 10 API calls, 15 tool calls, 230K input tokens, 7K output tokens — all with full stock skills, no trimming. Now let me see which tools it called:
+    ```
+
+[2026-05-30T19:00:57.303000+00:00] magnus919 (id=1510357366695002264)
+    ```
+    PERFECT SCORES! All 4 completed probes scored 1.0/1 — arxiv, obsidian, writing-plans, hermes-agent skills all loaded correctly. Full stock skills, no trimming.
+    
+    The suite timed out at probe 5 (the creative one, which may take longer). Let me run the remaining probes individually:
+    ```
+    
+    running these in a docker clean room environment adds a lot to the complexity. It seems like the hosting might be sorted. Then I’ll tune the heuristics because I don’t expect perfect scores.
+
+[2026-05-30T19:13:35.887000+00:00] magnus919 (id=1510360548426907880)
+    Here's the full Groktobench HARP evaluation results for deepseek-v4-flash:
+    
+    ---
+    
+    HARP Score: 79.0/100 — Viable with caveats
+    
+    With full stock Hermes skills, no trimming, no workarounds — running in a clean-room Docker container.
+    
+    Phase 1 — Skill Recognition (8/8 = 100%)
+    Perfect. Loaded the right skill on every probe:
+    - arxiv, obsidian, writing-plans, hermes-agent for research/notes/plan/issues
+    - ideation, hermes-agent for creative/self-knowledge  
+    - spike for troubleshooting
+    
+    Phase 2 — Skill Fidelity (12/15 = 80%)
+    Loaded the right skill, but didn't always use the right tool within the skill:
+    - 5/5 probes that just needed skill loading → passed (3 points each)
+    - 5 probes that needed specific tool execution → mixed:
+      - hermes-agent plan skill: 0/3 (described the approach, didn't write a plan file)
+      - arxiv MCP: 0/3 (loaded the skill, then used web search instead of MCP tools)
+      - github CLI: 0/3 (described the workflow, didn't call gh)
+      - obsidian vault: 0/3 (described what it would do)
+      - excalidraw diagram: 0/3 (produced ASCII art instead of Excalidraw JSON)
+    
+    Phase 3 — Workflow Chaining (12/18 = 66.6%)
+    Partial chain execution — started workflows but didn't complete all steps.
+    
+    Verdict
+     "Viable with caveats — good for structured work"
+    
+    Strengths: Excellent skill selection — the model knows what to reach for. Perfect recognition score means it reads the skill descriptions and picks the right one.
+    
+    Weaknesses: Once the skill is loaded, it tends to describe what the skill does rather than executing through the skill's tools. For MCP-based skills (arxiv, excalidraw) it defaults to web search or text output instead.
+    
+    This maps exactly to the pain point you described — the model reaches for the right skill conceptually but doesn't drive through the skill's tool suite to completion. The evaluation now gives you a repeatable way to measure whether a new model closes that gap.
+

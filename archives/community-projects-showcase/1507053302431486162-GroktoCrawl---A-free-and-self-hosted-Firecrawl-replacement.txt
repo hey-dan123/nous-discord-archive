@@ -149,3 +149,6 @@
 [2026-05-25T03:16:47.581000+00:00] magnus919 (id=1508307821211680961)
     There are several issues filed on GitHub to consider this direction. I'm not going to start working on this tonight so there's a little time to weigh in.
 
+[2026-05-30T16:42:04.569000+00:00] magnus919 (id=1510322416675586138)
+    I’ve put a bunch of work into cleaning up groktocrawl and having it work better. Now also implementing the `monitor` endpoint in the client so groktocrawl can actively monitor web sites for you and send a webhook back to hermes when it sees a change.
+

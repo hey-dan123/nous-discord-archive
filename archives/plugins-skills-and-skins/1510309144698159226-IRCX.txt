@@ -1,0 +1,10 @@
+# Thread 'IRCX' in forum #plugins-skills-and-skins
+# thread_id=1510309144698159226 forum_id=1485392832154832906
+# Started 2026-05-30T19:14:08.447378+00:00
+
+[2026-05-30T15:49:20.283000+00:00] undignifiedweeb (id=1510309144698159226)
+    An enhanced IRC platform adapter for hermes agent.
+    https://github.com/computator1200/hermes-ircx-plugin
+    [attachment] Screenshot_2026-05-30_164755.png https://cdn.discordapp.com/attachments/1510309144698159226/1510309144911941753/Screenshot_2026-05-30_164755.png?ex=6a1c5880&is=6a1b0700&hm=30b235685d034b30ff4d8f7040f297ac5ae26fcd4d35a8a84da275f9e649c25b&
+    [embed] GitHub - computator1200/hermes-ircx-plugin: IRCv3 platform adapter ... https://github.com/computator1200/hermes-ircx-plugin
+

@@ -32,3 +32,6 @@
 [2026-05-29T16:51:06.730000+00:00] bushidocg (id=1509962302798037074)
     So good!
 
+[2026-05-30T16:51:41.684000+00:00] brucestarlove (id=1510324837271343186)
+    it may be on the excessive side especially with subagents, so if ppl agree then i'll look into it
+

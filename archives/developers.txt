@@ -22653,3 +22653,50 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     <a:BlobWave:1199039210938708048>
     [reply to priv8_code msg=1510269089963315255]
 
+[2026-05-30T14:24:31.765000+00:00] sylwester0_42058 (id=1510287801906630837)
+    Hey <@387972437901312000> , dropped 2 PRs below. Please review them whenever you get a chance. Much appreciated
+    
+    https://github.com/NousResearch/hermes-agent/pull/35377
+    https://github.com/NousResearch/hermes-agent/pull/35360
+    [embed] fix(managed-gateway): keep tool availability scans off the Nous tok... https://github.com/NousResearch/hermes-agent/pull/35377
+    [embed] perf(cli): stop eager MCP discovery from blocking agent-capable sta... https://github.com/NousResearch/hermes-agent/pull/35360
+
+[2026-05-30T14:28:56.360000+00:00] teknium (id=1510288911698628709)
+    This looks like this PR we merged a bit ago: https://x.com/Teknium/status/2060694832608403460
+    [embed]  https://twitter.com/Teknium/status/2060694832608403460
+    [reply to sylwester0_42058 msg=1510287801906630837]
+
+[2026-05-30T14:41:16.343000+00:00] sylwester0_42058 (id=1510292015412281376)
+    Yep, that post is exactly what pushed me to look into these paths. Thanks for the quick review<:pepecryyay:1368670825640886283>
+    [reply to teknium msg=1510288911698628709]
+
+[2026-05-30T15:10:13.757000+00:00] promptsiren (id=1510299302654771452)
+    redoots after flaky CI fixeded:
+    <https://github.com/NousResearch/hermes-agent/pull/34336>
+    <https://github.com/NousResearch/hermes-agent/pull/35028>
+    <https://github.com/NousResearch/hermes-agent/pull/35056>
+    <https://github.com/NousResearch/hermes-agent/pull/35117>
+
+[2026-05-30T15:15:13.696000+00:00] nullsense (id=1510300560690249888)
+    Not sure if this is the right place to ask but, I am not sure if I'm just not setting up hermes agent right with agent-vault (infisical) or if it's just not designed to be this way. I run agent-vault run -- hermes and I still can't seem to set up my tools without writing my keys in there raw. 
+    
+    However if I do set up mcps traditionally then it works.... is this intended?
+
+[2026-05-30T15:51:00.523000+00:00] sprmn24 (id=1510309565135192134)
+    hey bug killersss
+
+[2026-05-30T17:38:35.965000+00:00] liftaris (id=1510336641221398670)
+    I see references to a kanban v2 in the code:
+    1. Is v2 WIP?
+    2. If so, is there a PR or branch where I can track its progress?
+
+[2026-05-30T18:05:00.473000+00:00] newmanrem (id=1510343287129506056)
+    <@387972437901312000>
+    [reply to newmanrem msg=1508563020555489552]
+
+[2026-05-30T18:39:28.662000+00:00] therealprops (id=1510351961742905494)
+    Quik question. Is stepAI availble on the Nous free plan?
+
+[2026-05-30T19:08:57.815000+00:00] jezzzzzzzzzz (id=1510359382108405760)
+    https://discord.com/channels/1053877538025386074/1510358222660173957
+

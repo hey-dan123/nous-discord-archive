@@ -1,0 +1,29 @@
+# Thread 'Meet Minnie' in forum #community-projects-showcase
+# thread_id=1510344124916826413 forum_id=1316137596535177246
+# Started 2026-05-30T19:10:51.501539+00:00
+
+[2026-05-30T18:08:20.217000+00:00] liinx (id=1510344124916826413)
+    hermes-embodiment is the embodiment layer for Hermes Agent. It takes the agent's real per-turn state — thinking, calling a tool, speaking — and renders it as a physical presence:
+    
+    an animated face on a screen (a browser, or a kiosk display),
+    case RGB LEDs that change color with the agent's state,
+    a voice that speaks the agent's replies,
+    and a status wordmark that shows what the agent is actually doing right now ("searching the web…").
+    None of this is faked or scripted. The plugin registers Hermes lifecycle hooks (pre_llm_call, pre_tool_call, post_llm_call, …) and fans each transition out over Server-Sent Events to the face and to any attached hardware. When the agent starts thinking, the eyes look up and the LEDs go amber. When it calls web_search, the wordmark reads "searching the web…". When it answers, it speaks and the aura pulses green.
+    
+    Minnie is the flagship example persona — a feminine, intelligent, cyberpunk face with cat-eye glasses (think Evy, the librarian). She's just config: the plugin code is fully generic and persona-agnostic, so you can point it at any persona, voice, and theme. Minnie ships as examples/minnie/config.yaml so you have a complete, opinionated showcase to copy from.
+    
+    It runs anywhere Hermes runs (the face is a self-contained web app in a browser, audio on the default sink), and it fully lights up on a SunFounder Pironman 5 (Pro MAX) Raspberry Pi — RGB case LEDs over SPI plus a DSI touchscreen kiosk.
+    https://github.com/webdevtodayjason/hermes-embodiment
+    [attachment] minnie-faces-animated-optimized.gif https://cdn.discordapp.com/attachments/1510344124916826413/1510344125440856204/minnie-faces-animated-optimized.gif?ex=6a1c7914&is=6a1b2794&hm=7630a57560a6f0290b025f62991099633e6bea95804437b255d4a2bae78be426&
+    [embed] GitHub - webdevtodayjason/hermes-embodiment: Give your Hermes agent... https://github.com/webdevtodayjason/hermes-embodiment
+
+[2026-05-30T18:11:16.586000+00:00] liinx (id=1510344864661901404)
+    Mett Minnie
+
+[2026-05-30T18:11:30.188000+00:00] liinx (id=1510344921712693460)
+    Meet Minnie
+
+[2026-05-30T18:17:08.550000+00:00] liinx (id=1510346340905910484)
+    [attachment] IMG_1478.jpg https://cdn.discordapp.com/attachments/1510344124916826413/1510346340616507604/IMG_1478.jpg?ex=6a1c7b24&is=6a1b29a4&hm=64450808d7911dbef03267347746bb292508b0f75383202da2f06014e87070fd&
+

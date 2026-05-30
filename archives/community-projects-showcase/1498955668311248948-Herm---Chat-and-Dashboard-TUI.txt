@@ -618,3 +618,58 @@
 [2026-05-30T13:10:12.667000+00:00] houtarooreki (id=1510269099094311174)
     Ohh okay
 
+[2026-05-30T14:50:43.865000+00:00] houtarooreki (id=1510294395772207155)
+    Herm keep showing connecting not even changing models with /model on this command only showing loading
+    [attachment] rn_image_picker_lib_temp_26a13c66-5806-443c-ba71-cc209aa9ceaf.jpg https://cdn.discordapp.com/attachments/1498955668311248948/1510294395298255122/rn_image_picker_lib_temp_26a13c66-5806-443c-ba71-cc209aa9ceaf.jpg?ex=6a1c4ac3&is=6a1af943&hm=9d453b9cad80f21345f3b10e6cbd4f1ac4b8e61af6e209902e1830673f8031b1&
+
+[2026-05-30T14:51:27.703000+00:00] houtarooreki (id=1510294579641847908)
+    On previous session
+    [reply to houtarooreki msg=1510294395772207155]
+
+[2026-05-30T14:51:33.508000+00:00] houtarooreki (id=1510294603989913601)
+    New session is working
+
+[2026-05-30T15:04:16.829000+00:00] houtarooreki (id=1510297805590102096)
+    [attachment] rn_image_picker_lib_temp_351f250c-f1d5-4064-ae13-20e03e69636c.jpg https://cdn.discordapp.com/attachments/1498955668311248948/1510297805053366413/rn_image_picker_lib_temp_351f250c-f1d5-4064-ae13-20e03e69636c.jpg?ex=6a1c4df0&is=6a1afc70&hm=a7f852a879e4ba224dc9b16b37028f415e06f8b78cb8aa7d9118d20a9ab37e7a&
+
+[2026-05-30T15:04:19.296000+00:00] houtarooreki (id=1510297815937450076)
+    🫠🫠
+
+[2026-05-30T15:42:03.800000+00:00] houtarooreki (id=1510307313955635422)
+    There are still lots of bug
+
+[2026-05-30T15:42:36.550000+00:00] houtarooreki (id=1510307451319357602)
+    Like when I open herm and type any command the welcome screen it show doesn't disappear
+
+[2026-05-30T15:42:59.626000+00:00] houtarooreki (id=1510307548107112538)
+    If I give it second command it shows the chat
+
+[2026-05-30T15:43:43.931000+00:00] houtarooreki (id=1510307733935751302)
+    If I select previous session i have to select the model again else it will keep showing connecting and won't work
+
+[2026-05-30T15:45:42.001000+00:00] houtarooreki (id=1510308229156966400)
+    🫡🫡
+
+[2026-05-30T15:46:42.298000+00:00] houtarooreki (id=1510308482061172827)
+    And I'm unable to properly generate the character I want to animate
+
+[2026-05-30T15:46:51.225000+00:00] houtarooreki (id=1510308519503462481)
+    If anyone can generate it for me and send me
+
+[2026-05-30T15:46:58.629000+00:00] houtarooreki (id=1510308550558355467)
+    🥰
+
+[2026-05-30T17:02:29.873000+00:00] nat2r (id=1510327555973185687)
+    If you're using the skill that was provided in here to do that, you'll need to generate a fal API key and drop it into your .env
+
+[2026-05-30T18:03:57.068000+00:00] liftaris (id=1510343021189927053)
+    released fixes in 1.8.1 https://github.com/liftaris/herm/pull/108 <@796958841899581441> <@95617422995750912> <@221727702992945152> please check to see if latest herm still has the issues you were seeing
+    [embed] 1.8.1 by liftaris · Pull Request #108 · liftaris/herm https://github.com/liftaris/herm/pull/108
+
+[2026-05-30T18:09:48.456000+00:00] nat2r (id=1510344495017758890)
+    I think one QOL improvement is around how code is displayed in HERM. Any code written is written in green text can be long enough to obfuscate any command approvals that Hermes might be waiting for approval on. These have timeouts so can result in some sub-par results.
+
+[2026-05-30T18:25:20.856000+00:00] liftaris (id=1510348405786808501)
+    That's true, diffs should be collapsible and start collapsed
+    [reply to nat2r msg=1510344495017758890]
+

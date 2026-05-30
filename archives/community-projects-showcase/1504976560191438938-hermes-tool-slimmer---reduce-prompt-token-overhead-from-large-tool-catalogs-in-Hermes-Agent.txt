@@ -351,3 +351,24 @@
 [2026-05-29T22:50:23.925000+00:00] glizlack6777 (id=1510052720227127316)
     I love it. To be honest the tool slimmer token counter if great. I really want an effective counter for hermes agent overall. I had one i liked a lot, But my Hermes agent and entire hard drive got corrupted due to  a nearby lightning strike. i haven't been able to figure out how our where i found it before.
 
+[2026-05-30T15:20:41.971000+00:00] aliasocracy (id=1510301937575137330)
+    Honest Compatibility Note
+    Recent Hermes Agent builds include a native progressive tool loader that exposes tool_search, tool_describe, and tool_call when MCP/plugin tools cross Hermes' own schema budget threshold.
+    
+    That native Hermes feature is probably the better default for very large MCP/plugin catalogs because it lives in Hermes core and can lazily reach deferred tools. Tool Slimmer is still useful for deterministic one-pass slimming, dashboard visibility, counters, diagnostics, config profiles, evals, and installs where Hermes native Tool Search is unavailable or does not activate.
+    
+    Tool Slimmer detects Hermes' native bridge and will not double-slim those requests. In that case Hermes keeps control of lazy loading, while Tool Slimmer keeps the dashboard, diagnostics, counters, advisor, and local ranking/eval tools useful.
+    
+    Do not run Tool Slimmer two_pass mode on top of Hermes native Tool Search unless you are intentionally testing. If you want Tool Slimmer to be the active selector instead, disable Hermes native Tool Search in Hermes config first; otherwise the safe default is to let Hermes' built-in bridge handle the request.
+
+[2026-05-30T15:21:08.649000+00:00] aliasocracy (id=1510302049470906389)
+    Give me more of a description. I can see if I can find it for you or just make something lol
+    [reply to glizlack6777 msg=1510052720227127316]
+
+[2026-05-30T15:32:46.619000+00:00] aliasocracy (id=1510304976969273554)
+    https://github.com/L1f4Is6o0d2Yuu/tokenusage
+    https://github.com/GumbyEnder/hermes-dashboard-analytics-plus
+    https://github.com/mudrii/hermesd
+    
+    ChatGPT found those 3.
+

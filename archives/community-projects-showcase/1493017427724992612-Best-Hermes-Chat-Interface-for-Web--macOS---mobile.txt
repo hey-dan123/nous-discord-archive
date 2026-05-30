@@ -2802,3 +2802,26 @@
     Oh good, glad you got webui sessions working again for now!
     [reply to _123321_ msg=1510038833926770762]
 
+[2026-05-30T17:40:45.896000+00:00] avidfuturist (id=1510337186191642844)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you might use it alongside your Hermes agent.
+
+[2026-05-30T18:33:22.775000+00:00] avidfuturist (id=1510350427101728878)
+    📱 Any iOS developers willing to work with <@1467985670415978668> on testing and/or developing the new WebUI iOS app bridge? https://github.com/hermes-webui/hermes-swift-ios
+    
+    could use help! Want to expand this to all platforms (Android, Windows desktop) and looking for more contributors!
+    [embed] GitHub - hermes-webui/hermes-swift-ios: The best way to use Hermes ... https://github.com/hermes-webui/hermes-swift-ios
+
+[2026-05-30T18:35:07.947000+00:00] avidfuturist (id=1510350868225069248)
+    We already have a great swift Mac app and our webUI which works across any browser desktop or mobile. But our next step will include native apps across the board!
+
+[2026-05-30T18:38:08.095000+00:00] horizon03260 (id=1510351623820415107)
+    Yes, there are a lot of people smarter than me that could make this app truly impressive!
+    [reply to avidfuturist msg=1510350427101728878]
+
+[2026-05-30T18:38:53.986000+00:00] horizon03260 (id=1510351816301351102)
+    I'm working on realtime audio that doesn't suck. I need to get a PR approved to have it land in Hermes Agent but i am working on it
+
+[2026-05-30T18:52:42.789000+00:00] horizon03260 (id=1510355292553089034)
+    Currently it uses a tailscale ip plus port to populate within webkit on iphone. it has minimal settings for interacting with iphone but i imagine the more it get's improved the more webui functionality can interact with the iphone apis. Apple needs to stop trying to hold back a Siri alternative and let people download useful apps that work better than siri and interact with the iphone. AI agents have 100x surpassed siri so much so that siri looks pathetic
+    [reply to avidfuturist msg=1510350427101728878]
+
