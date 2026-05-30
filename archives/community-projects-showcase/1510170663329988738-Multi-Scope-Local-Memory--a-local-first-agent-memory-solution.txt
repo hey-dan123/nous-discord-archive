@@ -1,0 +1,24 @@
+# Thread 'Multi Scope Local Memory, a local first agent memory solution' in forum #community-projects-showcase
+# thread_id=1510170663329988738 forum_id=1316137596535177246
+# Started 2026-05-30T08:25:57.591354+00:00
+
+[2026-05-30T06:39:03.752000+00:00] kai.xu (id=1510170663329988738)
+    MSLM — Multi-Scope Local Memory for Hermes Agent
+    
+    Ever spent an afternoon teaching your Hermes Agent your entire tech stack, only to have it forget everything the next session? Same.
+    
+    MSLM builds on the SuperLocalMemory engine with one key addition: three-layer scope — personal / shared / global. Your agent keeps private memories (API keys, preferences) separate from shared team knowledge (project conventions, domain facts). Multiple agents, independent personalities, shared wisdom.
+    
+     Local-first — Mode A runs on pure math. Zero cloud calls. EU AI Act ready.
+     MCP native — hermes mcp add mslm --command mslm --args mcp
+     One-liner — pip install mslm-memory && mslm setup
+     4500+ tests passed — Fisher-Rao geometry, Sheaf topology, Langevin dynamics. All on CPU.
+    
+    GitHub: https://github.com/kenyonxu/superlocalmemory/
+    this is a custom fork from https://github.com/qualixar/superlocalmemory
+    
+    If you've been looking for a memory backend that knows who should remember what — give MSLM a spin. Issues and PRs welcome
+    [attachment] MSLM_.png https://cdn.discordapp.com/attachments/1510170663329988738/1510170663908933804/MSLM_.png?ex=6a1bd787&is=6a1a8607&hm=f86143da2de1a73f2c50b6ff16ea8f28f352df9a63609f400e020ecd451d676e&
+    [embed] GitHub - kenyonxu/superlocalmemory: World's first local-only AI mem... https://github.com/kenyonxu/superlocalmemory/
+    [embed] GitHub - qualixar/superlocalmemory: World's first local-only AI mem... https://github.com/qualixar/superlocalmemory
+

@@ -1,0 +1,9 @@
+# Thread 'Guide: Run Honcho and Gbrain together' in forum #community-projects-showcase
+# thread_id=1510131099081113612 forum_id=1316137596535177246
+# Started 2026-05-30T08:25:58.393919+00:00
+
+[2026-05-30T04:01:50.900000+00:00] .elkim (id=1510131099081113612)
+    Hey guys, I made a guide how to run Honcho and Garry Tan's Gbrain together https://github.com/elkimek/hermes-gbrain-honcho
+    [attachment] hermes-honcho-gbrain-bio-wiring.clean.png https://cdn.discordapp.com/attachments/1510131099081113612/1510131100456980531/hermes-honcho-gbrain-bio-wiring.clean.png?ex=6a1bb2af&is=6a1a612f&hm=1285b07da88917c7d52e6805d358f352364a66b4ec7c9e471d4b9607e221e00a&
+    [embed] GitHub - elkimek/hermes-gbrain-honcho: Hermes + Honcho + GBrain int... https://github.com/elkimek/hermes-gbrain-honcho
+

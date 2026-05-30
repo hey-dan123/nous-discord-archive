@@ -1,0 +1,19 @@
+# Thread 'Paperclip AI + Hermes Agent connection' in forum #community-projects-showcase
+# thread_id=1510138699692769393 forum_id=1316137596535177246
+# Started 2026-05-30T08:25:58.002988+00:00
+
+[2026-05-30T04:32:03.027000+00:00] splosh123 (id=1510138699692769393)
+    Connecting my  Hermes Agent into my Paperclip AI application via Tailscale & API access. Now my Hermes can sit and watch my project unfold adding more context for Hermes. The more context Hermes has the better it can assist.
+    
+    I prefer the workflow of Paperclip running on top of my existing Opencode CLI - it allows me to build in a style that works for my brain - delegate agent tasks into different sections of my build.
+    
+    And this is Hermes agent explaining how it was done: 
+    
+    "Paperclip is locked to loopback-only (local_trusted mode), so it refuses any external connection by design. We dropped a TCP proxy on the same machine that listens on the network and relays traffic to Paperclip's local port, preserving the original headers so Paperclip's host validation doesn't reject it. Then we daemonised it as a systemd user service so it survives reboots and crashes automatically. That's it — a stateless forwarding layer that gives external agents read access to Paperclip's API without changing Paperclip's own security model."
+    
+    Always having fun connecting the dots.
+    
+    Follow me on X for more fun things like this: https://x.com/Josh_is_regen
+    [attachment] Video_2026-05-30_14-04-35.mp4 https://cdn.discordapp.com/attachments/1510138699692769393/1510138700498210876/Video_2026-05-30_14-04-35.mp4?ex=6a1bb9c3&is=6a1a6843&hm=ab37b5931616d697cc38bcbe43b0eb6941ca18280c29b5c156a10c2e02f72c25&
+    [embed] Josh Thomson (@Josh_is_regen) on X https://twitter.com/Josh_is_regen
+

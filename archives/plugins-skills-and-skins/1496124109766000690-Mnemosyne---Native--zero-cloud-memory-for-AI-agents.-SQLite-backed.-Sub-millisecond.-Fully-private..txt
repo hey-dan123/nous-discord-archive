@@ -1335,3 +1335,13 @@
 [2026-05-29T19:26:16.969000+00:00] skylinx79 (id=1510001352770850947)
     Thanks, I asked Hermes and it did it for me
 
+[2026-05-30T03:37:28.086000+00:00] nat2r (id=1510124963594502206)
+    I am running into long mnemosyne_sleep times, anyone know any solutions to improve this?
+
+[2026-05-30T03:40:56.649000+00:00] nat2r (id=1510125838371393747)
+    <@1196633756832907327> since then, have you seen speed improvements?
+    [reply to s1arsky msg=1505408661219053638]
+
+[2026-05-30T03:53:36.616000+00:00] nat2r (id=1510129025904021625)
+    I wonder if forcing tinyllama use would speed things up
+

@@ -16,3 +16,12 @@
 [2026-05-29T16:33:25.820000+00:00] jcrabapple (id=1509957853018853537)
     Works great! I had my agent ingest all the data, create a weekly health report, and make a website with a stats dashboard.
 
+[2026-05-30T05:34:58.642000+00:00] wysie_ (id=1510154535770001458)
+    Ooo send screenshots of the dashboard pls
+
+[2026-05-30T05:35:05.064000+00:00] wysie_ (id=1510154562705686700)
+    Maybe send a PR haha
+
+[2026-05-30T05:35:26.334000+00:00] wysie_ (id=1510154651918405753)
+    I'm using Fitbit air with whoop side by side intending to move away from whoop entirely
+

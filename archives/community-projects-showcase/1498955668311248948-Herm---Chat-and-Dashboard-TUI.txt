@@ -601,3 +601,7 @@
     ok it looks like its still happening on the latest however I did find if i type /model and let it load the models and then just close the dialog it fixes it weirdly enough. What would you like for me to grab you or is that enough to pin it to an already open issue?
     [reply to liftaris msg=1509777260259840021]
 
+[2026-05-30T04:39:53.412000+00:00] liftaris (id=1510140672630325278)
+    I think I know what the issue is. working on a fix now
+    [reply to echoeclipse msg=1510017327448592614]
+

@@ -22618,3 +22618,8 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     26 files (11 core / 15 test), 5 semantic commits.
     ⚠️ **Behavior:** `OPENAI_BASE_URL` no longer routes (warn-only) · ambient OPENAI/OPENROUTER keys no longer override a configured provider · bare `custom` with no base_url+key now errors instead of silently using OpenRouter.
 
+[2026-05-30T05:21:08.521000+00:00] lordbartok (id=1510151053990170694)
+    Some possible security improvements, if helpful: 
+    #30179 (Teknium)                     →  the iron-proxy core
+    #35149 (Bartok9, already mergeable)  →  doctor + audit + Anthropic
+
