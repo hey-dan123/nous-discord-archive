@@ -2825,3 +2825,28 @@
     Currently it uses a tailscale ip plus port to populate within webkit on iphone. it has minimal settings for interacting with iphone but i imagine the more it get's improved the more webui functionality can interact with the iphone apis. Apple needs to stop trying to hold back a Siri alternative and let people download useful apps that work better than siri and interact with the iphone. AI agents have 100x surpassed siri so much so that siri looks pathetic
     [reply to avidfuturist msg=1510350427101728878]
 
+[2026-05-31T03:41:53.121000+00:00] latipun (id=1510488463097598044)
+    Hi, I'm just trying out this webui.
+    What do you mean by a built-in terminal? 🙏
+    [reply to avidfuturist msg=1500206945850626121]
+
+[2026-05-31T03:42:56.707000+00:00] avidfuturist (id=1510488729796743178)
+    There’s a built in terminal to the webUI! Try it with “/terminal” - super handy feature
+    [reply to latipun msg=1510488463097598044]
+
+[2026-05-31T03:44:38.750000+00:00] latipun (id=1510489157795844227)
+    Ohh it's hidden in the command 😅 that's why I'm confused didn't found the terminal
+
+[2026-05-31T03:45:09.260000+00:00] latipun (id=1510489285764059157)
+    I'll try it.
+
+[2026-05-31T03:45:31.277000+00:00] latipun (id=1510489378110181467)
+    Thanks 👍
+
+[2026-05-31T04:28:38.677000+00:00] avidfuturist (id=1510500230452215909)
+    Yup all good, it’s a more hidden feature, but I use it all the time!
+    [reply to latipun msg=1510489157795844227]
+
+[2026-05-31T05:53:18.546000+00:00] fleety13 (id=1510521536967348345)
+    Good for sneaky gateway restarts
+

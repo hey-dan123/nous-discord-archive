@@ -371,3 +371,13 @@
     pip install -U yantrikdb-hermes-plugin
     [attachment] image.png https://cdn.discordapp.com/attachments/1504168688759078952/1509794409078849596/image.png?ex=6a1a791d&is=6a19279d&hm=4299b7b1db91c6337c768c744969b08a9334436e45977c9fc492e3495c0206e8&
 
+[2026-05-31T07:22:20.355000+00:00] spranab (id=1510543942138204331)
+    yantrikdb-hermes-plugin v0.5.0
+    
+    Define a skill. Next session, ask something related - the model quotes the skill body verbatim, no skill_search call needed.
+    
+    First Hermes memory provider that auto-surfaces skills. Auto-recall, auto-extract, time-aware recall, opt-in cross-agent brain too.
+    
+    https://github.com/yantrikos/yantrikdb-hermes-plugin/
+    [embed] GitHub - yantrikos/yantrikdb-hermes-plugin: YantrikDB memory provid... https://github.com/yantrikos/yantrikdb-hermes-plugin/
+

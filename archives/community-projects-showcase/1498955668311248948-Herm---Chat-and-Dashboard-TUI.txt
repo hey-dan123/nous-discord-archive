@@ -729,3 +729,21 @@
     doin it.
     [reply to liftaris msg=1510394279695225043]
 
+[2026-05-31T05:00:11.050000+00:00] houtarooreki (id=1510508167639994508)
+    how can i see subagent tab and see its working?
+
+[2026-05-31T05:23:11.681000+00:00] houtarooreki (id=1510513958426120386)
+    [attachment] VID_20260531_105240.mp4 https://cdn.discordapp.com/attachments/1498955668311248948/1510513957985849475/VID_20260531_105240.mp4?ex=6a1d173f&is=6a1bc5bf&hm=79042d33e722d6527ab7aa1430b2bbe7f399a112d4d4533d728f3eca3d3bec91&
+
+[2026-05-31T05:23:27.682000+00:00] houtarooreki (id=1510514025539305483)
+    Can you fix this too 🫠
+    [reply to houtarooreki msg=1510513958426120386]
+
+[2026-05-31T05:45:32.465000+00:00] liftaris (id=1510519582081814680)
+    there is a barebones "Delegation" Pane in Profiles & Automation -> Profiles tab that lists active subagents, but there is not session attach feature--yet
+    [reply to houtarooreki msg=1510508167639994508]
+
+[2026-05-31T06:05:27.713000+00:00] houtarooreki (id=1510524595315413012)
+    Okayy
+    [reply to liftaris msg=1510519582081814680]
+

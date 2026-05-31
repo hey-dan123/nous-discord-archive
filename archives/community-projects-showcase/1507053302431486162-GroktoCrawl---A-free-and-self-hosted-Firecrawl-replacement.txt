@@ -158,3 +158,37 @@
 [2026-05-31T02:33:48.701000+00:00] thadreber (id=1510471331798323200)
     Agreed groktocrawl is superb
 
+[2026-05-31T05:27:47.865000+00:00] magnus919 (id=1510515116825907420)
+    Thank you, friends. 
+    
+    GitHub stars are welcome. I think that's how other people find stuff?
+    
+    I don't make any $ off of this and don't ever plan to. I just want to share.
+
+[2026-05-31T05:47:47.449000+00:00] magnus919 (id=1510520148245610597)
+    # GroktoCrawl v0.4.0 — 2026-05-31
+    *GroktoCrawl is a self-hosted, API-compatible Firecrawl alternative with Agent endpoint. MIT licensed. One docker compose up and you're running.*
+    
+    ## 14 files changed, 1,341 insertions, 274 deletions since v0.3.0.
+    
+    ## CLI
+    
+    - **monitor, parse, generate-llmstxt subcommands** — three new CLI entry points (#79, #81)
+    - **50x search speedup** — removed redundant per-result scraping from /v2/search (#69)
+    - **Search format fix** — CLI reads from data.web per Firecrawl v2 spec, no more silent empty results (#71, #66)
+    
+    ## API
+    
+    - **Agent system prompt upgrade** — comprehensive research prompt with source authority ladder, contradiction detection, and citation requirements
+    - **Extract prompt upgrade** — extracts ALL instances, flags missing values
+    - **Model selection passthrough** — model field in agent requests now respected, overrides env default
+    - **Domain metadata** — each source tagged with (domain: ...) for credibility evaluation
+    
+    ## Documentation
+    
+    - **Skill document overhaul** — comprehensive workflow-oriented skill doc spanning 4 SkillOpt epochs: browser lifecycle, structured extraction, multi-source fallback chain, domain exploration strategy, change monitoring, error recovery across all commands
+    - **Decision tables** — "When to use which" and tool selection guides
+    
+    https://github.com/groktopus/groktocrawl/releases/tag/v0.4.0
+    [embed] Release v0.4.0 · groktopus/groktocrawl https://github.com/groktopus/groktocrawl/releases/tag/v0.4.0
+

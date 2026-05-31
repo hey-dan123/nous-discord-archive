@@ -1356,3 +1356,34 @@
     Hey there! currently looking into this, can you please head over the repo, file an issue with the template, help me understand better whats going on, also diagnostics would help, even some system logs if possible.
     [reply to nat2r msg=1510124963594502206]
 
+[2026-05-31T04:48:42.515000+00:00] 0xlfg (id=1510505279714885744)
+    How long? Mine at most 5min?
+    [reply to nat2r msg=1510124963594502206]
+
+[2026-05-31T07:06:55.348000+00:00] 12345_15 (id=1510540062377377927)
+    Good afternoon! Could you please tell me how to fix this or what's really wrong? 
+    
+    
+    "What was found:
+    - Mnemosyne v3.1.2 is installed
+    - fastembed — not installed (as in “not at all”)
+    - Current embedding model — BAAI/bge-small-en-v1.5, but embeddings_available = NO
+    - numpy is also missing
+    - embeddings_available: NO — meaning embeddings aren't working at all right now
+    "
+    Also, how do I replace the BAAI/bge-small-en-v1.5 with a Gemma 300m?
+
+[2026-05-31T07:14:54.636000+00:00] 12345_15 (id=1510542072657088584)
+    Mnemosyne Diagnostics
+    
+      Checks passed: 6/25
+    
+      Key findings:
+        - Both fastembed and sqlite-vec are available but episodic vectors=0 - memories may not have been consolidated yet. Run: hermes mnemosyne sleep
+    root@hermes-agent:~# hermes mnemosyne sleep
+    {
+      "status": "no_op",
+      "message": "No old working memories to consolidate"
+    }
+    [reply to 12345_15 msg=1510540062377377927]
+
