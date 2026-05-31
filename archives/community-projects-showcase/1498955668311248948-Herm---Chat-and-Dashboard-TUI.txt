@@ -747,3 +747,11 @@
     Okayy
     [reply to liftaris msg=1510519582081814680]
 
+[2026-05-31T13:25:50.231000+00:00] twindenis (id=1510635419388215416)
+    Eikon Marketplace/Gallery is coming along, will update soon here.
+    [reply to twindenis msg=1510391267694219321]
+
+[2026-05-31T13:36:19.130000+00:00] tf0rd (id=1510638057181937755)
+    are there any plans to show some extra information in this area? not sure what kind of info, but it looks a little empty in tall terminals haha
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1510638056799994016/image.png?ex=6a1d8ad3&is=6a1c3953&hm=065633d04e17bbcfc1477e4201e4517ff15c29bb645d64ea5321021babe27f27&
+

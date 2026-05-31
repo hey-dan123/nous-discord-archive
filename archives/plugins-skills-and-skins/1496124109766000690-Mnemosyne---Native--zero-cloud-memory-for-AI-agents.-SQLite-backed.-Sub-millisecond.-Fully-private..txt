@@ -1387,3 +1387,40 @@
     }
     [reply to 12345_15 msg=1510540062377377927]
 
+[2026-05-31T12:38:28.264000+00:00] s1arsky (id=1510623499314528336)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1510623499029577870/image.png?ex=6a1d7d44&is=6a1c2bc4&hm=82865bdf3f1eed3638288dcfeac7b020b6c4a035bb1321d6305c0498bd314510&
+    [reply to nat2r msg=1510125838371393747]
+
+[2026-05-31T12:38:45.015000+00:00] s1arsky (id=1510623569573449879)
+    it doesnt feel like it ever finishes ...
+
+[2026-05-31T12:39:05.529000+00:00] s1arsky (id=1510623655615528981)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1510623655284183190/image.png?ex=6a1d7d69&is=6a1c2be9&hm=678912da496500eeb421a8b23cfde196c4728992c71aaed668300340bd5afa79&
+
+[2026-05-31T13:01:35.645000+00:00] s1arsky (id=1510629318412472391)
+    but now I messed up a bit with settings and seems to kinda work ok
+
+[2026-05-31T13:01:38.349000+00:00] s1arsky (id=1510629329753739305)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1510629329363664896/image.png?ex=6a1d82b2&is=6a1c3132&hm=746248657d119f0ddfd2afd07e55c6347a1381745ace6f8446be383e6509a599&
+
+[2026-05-31T13:02:42.098000+00:00] s1arsky (id=1510629597136290002)
+    important things is to set explicit timeout (default is 5 seconds ?!) and set specific consolidation model I guess in .env
+
+[2026-05-31T13:02:44.321000+00:00] s1arsky (id=1510629606460489878)
+    MNEMOSYNE_AUTO_SLEEP_ENABLED=true
+    MNEMOSYNE_AUTO_SLEEP_TIMEOUT=150
+    MNEMOSYNE_HOST_LLM_ENABLED=true
+    MNEMOSYNE_LLM_ENABLED=true
+    MNEMOSYNE_HOST_LLM_PROVIDER=opencode-go
+    MNEMOSYNE_HOST_LLM_MODEL=deepseek-v4-flash
+
+[2026-05-31T13:11:38.125000+00:00] s1arsky (id=1510631845396746321)
+    I guess my host model used for consolidation failed to auth , or in other way - but setting stable reliable explicit model for consolidations decreases risk of this issue
+
+[2026-05-31T13:41:53.884000+00:00] s1arsky (id=1510639461241979091)
+    i ran agent through error logs to seek out and it comes with : • sqlite3.OperationalError: no such column: data — a terminal command tried to query Mnemosyne's SQLite database directly (~/.hermes/mnemosyne/data/mnemosyne.db) and hit a schema mismatch. The column data doesn't existin the current schema.
+    • Bitwarden secrets fetch timed out (180s) — slowing down execution before the consolidation commands ran.
+
+[2026-05-31T13:43:09.614000+00:00] s1arsky (id=1510639778876489890)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1510639778461122632/image.png?ex=6a1d8c6d&is=6a1c3aed&hm=5be259d618b907c4a338c5c3b4d4d7f05ac1f5bdce45498e5bed4282e846e159&
+

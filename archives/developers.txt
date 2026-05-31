@@ -22810,3 +22810,41 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I've created AI assistants, business management systems, automation tools, and custom software that saves teams time and improves productivity.
     Feel free to reach out if you're exploring a new project.
 
+[2026-05-31T09:04:11.096000+00:00] alelpoan (id=1510569572443488425)
+    I'm just starting my journey in develop currently finding small bugs and trying to contribute where I can. Recently got my first PR merged into Hermes and I'm really glad to be here. Looking forward to learning and being useful to the project
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1510569572183445554/image.png?ex=6a1d4b0b&is=6a1bf98b&hm=e032eb665ab08e50d62eb2f695a152b0e8efacd7ab01c77d5dfd1b828d5f4612&
+
+[2026-05-31T09:13:00.303000+00:00] alelpoan (id=1510571792098656287)
+    Also have two open docs PRs if they're helpful for the team <@387972437901312000> 
+    https://github.com/NousResearch/hermes-agent/pull/30540
+    https://github.com/NousResearch/hermes-agent/pull/30561
+    [embed] docs: correct BotFather /setprivacy command and standardize Camofox... https://github.com/NousResearch/hermes-agent/pull/30540
+    [embed] docs(cron): move send_message delivery details from Schedule format... https://github.com/NousResearch/hermes-agent/pull/30561
+
+[2026-05-31T12:33:18.234000+00:00] fesalfayed (id=1510622198954590258)
+    ```❌ Non-retryable error (HTTP 400): HTTP 400: messages.1.content.9: `thinking` or `redacted_thinking` blocks in the latest assistant message cannot be modified. These blocks must remain as they were in the original response.```
+    
+    <@387972437901312000> Submitted a pr. Using opus 4.8 extended thinking causes a crash-loop on the gateway with a non-retryable HTTP 400 when a parallel tool batch is interrupted before every tool result returns
+    
+    documented issue:
+    https://github.com/NousResearch/hermes-agent/issues/35847
+    
+    submitted pr: 
+    https://github.com/NousResearch/hermes-agent/pull/35846
+    [embed] [Bug]: extended-thinking + interrupted parallel tool batch → non-... https://github.com/NousResearch/hermes-agent/issues/35847
+    [embed] fix(anthropic): demote dead thinking signature when orphan-strip mu... https://github.com/NousResearch/hermes-agent/pull/35846
+
+[2026-05-31T12:34:45.170000+00:00] teknium (id=1510622563590737960)
+    ey this is a good idea so long as it renders right!
+    [reply to alelpoan msg=1510569572443488425]
+
+[2026-05-31T12:34:56.434000+00:00] teknium (id=1510622610835112087)
+    can you link me this PR
+    [reply to alelpoan msg=1510569572443488425]
+
+[2026-05-31T13:05:20.747000+00:00] kickass0197 (id=1510630262558425188)
+    Does the kanban still have agents directly communicating is this possible ?
+
+[2026-05-31T13:06:06.207000+00:00] kickass0197 (id=1510630453231747216)
+    I have an mcp for Polymarket and want all agents which 3 subagents to communicate with each other
+

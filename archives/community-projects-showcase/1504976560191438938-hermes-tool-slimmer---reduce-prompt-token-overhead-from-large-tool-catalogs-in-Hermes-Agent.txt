@@ -376,3 +376,91 @@
     I am going to try the token usage one thank you. Can you give me a better idea of how to set up tool slimmer to work with Hermes tool? I don't want to give up on tool slimmer i was getting great results!!
     [attachment] image.png https://cdn.discordapp.com/attachments/1504976560191438938/1510427001834569858/image.png?ex=6a1cc643&is=6a1b74c3&hm=539c4453a262c07e2d353d25777500799744554b41ad5ddb45d104a617333bec&
 
+[2026-05-31T13:14:11.719000+00:00] aliasocracy (id=1510632489616412682)
+    Absolutely. First thing: I’m not asking anyone to give up on Tool Slimmer. The newer Hermes native Tool Search and Tool Slimmer can coexist, but they do slightly different things.
+    
+    Current recommended setup:
+    
+    1. Update Tool Slimmer from a real git checkout, not an old /tmp folder:
+    
+    `cd "$HOME"
+    if [ -d "$HOME/hermes-tool-slimmer/.git" ]; then
+      cd "$HOME/hermes-tool-slimmer"
+      git pull --ff-only
+    else
+      git clone https://github.com/alias8818/hermes-tool-slimmer.git "$HOME/hermes-tool-slimmer"
+      cd "$HOME/hermes-tool-slimmer"
+    fi`
+    
+    `HERMES_BIN="$HOME/.hermes/hermes-agent/venv/bin/hermes" \
+      bash "$HOME/hermes-tool-slimmer/scripts/install-hermes-tool-slimmer.sh"`
+    
+    `$HOME/.hermes/hermes-agent/venv/bin/hermes tool-slimmer doctor`
+    
+    2. Open the Hermes dashboard -> Tool Slimmer.
+    
+    3. Click “Rebuild From Hermes Tools”.
+    
+    4. Click “Apply Recommended Config” in Guided Setup.
+    
+    5. Restart the gateway once after that.
+    
+    The important part: if Hermes’ built-in native Tool Search is active, Tool Slimmer intentionally steps out of the way for that request so it does not break Hermes’ own lazy loading. That is expected. Tool Slimmer still gives you dashboard visibility, counters, diagnostics, config profiles, advisor tooling, and deterministic slimming when Hermes native Tool Search is not active.
+    
+    The setup I’d use right now is:
+    - mode: keyword
+    - top_k: 8
+    - fail_open: true
+    - keep tool_slimmer_request_full_tools in always_include
+    - do not use two_pass unless you are intentionally testing it
+    
+    If you want, paste the output of:
+    
+    `$HOME/.hermes/hermes-agent/venv/bin/hermes tool-slimmer doctor`
+    
+    and a screenshot of the Tool Slimmer dashboard status card. That will tell me whether it is actively slimming, skipping because Hermes native Tool Search is active, or only installed as diagnostics/dashboard.
+    [reply to glizlack6777 msg=1510427001926848564]
+
+[2026-05-31T13:19:29.507000+00:00] davidg1982 (id=1510633822516150282)
+    Hey — wanted to share something: the thing your hermes-tool-slimmer was going after is basically native in hermes now, and it works really well.
+    A few upstream PRs landed it — progressive disclosure + an embedding reranker baked into tool_search (#35457), plus delegation / profile-toolset isolation (#35526, #32727). It defers the whole catalog behind 3 bridge tools right in assemble_tool_defs() — no plugin, no extra infra to stand up. On a 226-tool setup the model sees ~4 tools (~2.3k tokens) instead of the full ~54k — about 95.8% less.
+    
+    The reranker is what makes slimming actually safe: on semantically-phrased queries it beat BM25 4/5 vs 1/5 (R@5 0.810 overall, 0.849 semantic, 1.0 lexical), ~144 ms warm, with graceful BM25 fallback if the embed endpoint dies. And with the delegation PRs, each agent only ever sees its own slice of tools. So you can pile in as many tools as you want and it surfaces just the handful that matter — which is exactly the outcome you were building toward.
+    
+    PRs if you want to dig in (validation write-ups are in each description):
+    - reranker + progressive disclosure → https://github.com/NousResearch/hermes-agent/pull/35457
+    - delegation + security hardening → https://github.com/NousResearch/hermes-agent/pull/35526
+    - profile / MCP toolset isolation → https://github.com/NousResearch/hermes-agent/pull/32727
+    [embed] feat(tool_search): optional embedding reranker for progressive tool... https://github.com/NousResearch/hermes-agent/pull/35457
+    [embed] feat(delegate): profile toolset isolation + MCP bypass for no_mcp o... https://github.com/NousResearch/hermes-agent/pull/35526
+    [embed] fix(delegate): lazy MCP discovery + profile toolset bypass for no_m... https://github.com/NousResearch/hermes-agent/pull/32727
+
+[2026-05-31T13:33:38.530000+00:00] aliasocracy (id=1510637383576719372)
+    That is genuinely good news, and it is basically the outcome I wanted Hermes core to have.
+    
+    Small clarification: when I checked the PRs just now, GitHub still shows those PRs as open, not merged. But if someone is running a Hermes build that includes that progressive Tool Search path, I agree with the direction completely: Hermes native progressive disclosure should be the default answer for very large tool catalogs.
+    
+    That is why I added the compatibility note to Tool Slimmer. Tool Slimmer now detects Hermes’ native `tool_search` / `tool_describe` / `tool_call` bridge and steps out of the way for that request. I do not want to double-slim or break Hermes’ own lazy loading.
+    
+    Where I still see Tool Slimmer fitting:
+    
+    - deterministic one-pass slimming when Hermes native Tool Search is not active
+    - dashboard visibility and counters
+    - doctor/diagnostics/support reports
+    - local ranking/eval tooling
+    - config/profile guidance
+    - smaller installs or provider paths where native progressive disclosure is not active
+    - a fallback/safety tool for people who want explicit control and observability
+    
+    So for Glizlack: you can keep using Tool Slimmer, but the right setup is not “force Tool Slimmer to beat Hermes.” The right setup is:
+    
+    1. Update to the latest Tool Slimmer.
+    2. Run `tool-slimmer doctor`.
+    3. Use the dashboard Guided Setup.
+    4. Keep `mode: keyword`, `fail_open: true`, and `tool_slimmer_request_full_tools` always available.
+    5. If Hermes native Tool Search activates, Tool Slimmer should skip active slimming and let Hermes core handle it.
+    
+    That way you still get the counters/visibility/config help, while Hermes native Tool Search handles the huge-catalog lazy-loading case when available.
+    
+    I’m happy to keep Tool Slimmer useful, but I’m not going to pretend it should replace a better native Hermes path. If Hermes core has the stronger mechanism for a given setup, people should use that.
+

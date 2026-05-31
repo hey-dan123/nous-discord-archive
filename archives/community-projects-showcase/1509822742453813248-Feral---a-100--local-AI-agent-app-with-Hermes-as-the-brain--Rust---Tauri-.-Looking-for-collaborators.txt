@@ -66,3 +66,15 @@
     [embed] Release Feral v0.1.1 · bloom500/feral https://github.com/bloom500/feral/releases/tag/v0.1.1
     [embed] Issues · bloom500/feral https://github.com/bloom500/feral/issues
 
+[2026-05-31T12:01:56.561000+00:00] bloom9952 (id=1510614306645999668)
+    Feral v0.1.2 is out.
+    
+    Models, perf and UI got a serious upgrade.
+    
+    Models tab rework — smart Download pills pre-set to your VRAM (e.g. Q4_K_M on 8 GB), one-click download, expand for variant-level controls, fit/won’t-fit indicators with hover details
+    Perf fix — GPU/RAM info at startup, Windows GPU detection no longer pops console windows, local model detection doesn’t block other calls anymore
+    Frameless window overhaul — custom title bar controls on Chat, Models and Settings tabs, dark dialog fixes, themed scrollbars, delete animation for local models
+    
+    Repo & release: https://github.com/bloom500/feral/releases
+    [embed] Releases · bloom500/feral https://github.com/bloom500/feral/releases
+
