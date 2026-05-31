@@ -82,3 +82,9 @@
     
     This maps exactly to the pain point you described — the model reaches for the right skill conceptually but doesn't drive through the skill's tool suite to completion. The evaluation now gives you a repeatable way to measure whether a new model closes that gap.
 
+[2026-05-30T19:24:02.947000+00:00] magnus919 (id=1510363178507309236)
+    Early alpha. Not production ready yet but in a controlled environment it runs end to end and offers results.
+    
+    https://github.com/groktopus/groktobench/releases/tag/v0.0.1
+    [embed] Release v0.0.1 — Alpha · groktopus/groktobench https://github.com/groktopus/groktobench/releases/tag/v0.0.1
+

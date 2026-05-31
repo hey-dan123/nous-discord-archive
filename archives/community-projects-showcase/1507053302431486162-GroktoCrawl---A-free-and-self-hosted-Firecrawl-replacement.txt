@@ -152,3 +152,9 @@
 [2026-05-30T16:42:04.569000+00:00] magnus919 (id=1510322416675586138)
     I’ve put a bunch of work into cleaning up groktocrawl and having it work better. Now also implementing the `monitor` endpoint in the client so groktocrawl can actively monitor web sites for you and send a webhook back to hermes when it sees a change.
 
+[2026-05-30T22:46:49.861000+00:00] thegiuseppe (id=1510414210243367055)
+    can confirm for anyone wondering, groktocrawl is excellent
+
+[2026-05-31T02:33:48.701000+00:00] thadreber (id=1510471331798323200)
+    Agreed groktocrawl is superb
+

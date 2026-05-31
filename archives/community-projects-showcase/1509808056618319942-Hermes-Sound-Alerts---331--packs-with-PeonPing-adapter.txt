@@ -35,3 +35,12 @@
 [2026-05-30T16:51:41.684000+00:00] brucestarlove (id=1510324837271343186)
     it may be on the excessive side especially with subagents, so if ppl agree then i'll look into it
 
+[2026-05-30T20:48:55.093000+00:00] twindenis (id=1510384536515776642)
+    I think that version of the dashboard is an older one, they added chat!
+
+[2026-05-30T20:49:25.511000+00:00] twindenis (id=1510384664097980517)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1509808056618319942/1510384663716302878/image.png?ex=6a1c9ed5&is=6a1b4d55&hm=6d6861c9b96c269b7eba8da74875474dde42da7a2fab4a024d6043ded370ff4a&
+
+[2026-05-30T23:09:13.904000+00:00] brucestarlove (id=1510419847568162886)
+    interesting, both show v0.15.1 in the bottom-left. maybe i i have to turn it on but i also wouldn't use it.
+

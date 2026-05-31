@@ -673,3 +673,59 @@
     That's true, diffs should be collapsible and start collapsed
     [reply to nat2r msg=1510344495017758890]
 
+[2026-05-30T19:30:15.894000+00:00] liftaris (id=1510364742760530082)
+    <@176135812948164608> https://github.com/liftaris/herm/pull/109 collapse diff tabs are in herm-tui@next (dev)
+    [embed] fix(chat): collapse inline diff tabs by liftaris · Pull Request #1... https://github.com/liftaris/herm/pull/109
+
+[2026-05-30T20:44:24.438000+00:00] twindenis (id=1510383401306296472)
+    because I like herm, I added a toggle to dashboard in a recent PR and also when the normal hermes tui is used there is an option for colored or desaturated versions as well, also changed the font that was almost impossible to read into a similarly elegantly styled readable font.
+    The herm/hermes toggle will be visible only if herm is installed.
+    I dont know if they will accept the PR but here is the link:
+    https://github.com/NousResearch/hermes-agent/pull/35029
+    (if for whatever reason you wish to use herm and dashboard which is useful either way for various reasons)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1510383401876590742/image.png?ex=6a1c9da8&is=6a1b4c28&hm=f241c5bdea2412c9e89d9d591f676c22386d81289ffebfc3ce3a08c670525006&
+    [embed] fix(dashboard): terminal colors, theme variant toggle, herm detecti... https://github.com/NousResearch/hermes-agent/pull/35029
+
+[2026-05-30T20:45:22.021000+00:00] twindenis (id=1510383642827030538)
+    oh and made various adjustments to help it because the original chat had issues with stretching herm and making it misbehave or even having unclickable buttons (top ones) inside of herm, all fixed (and its currently on the same version as the original and hopefully will be merged).
+
+[2026-05-30T20:47:53.820000+00:00] twindenis (id=1510384279518056529)
+    (Even made their odd grain effect more evened out, more random and overall feel better while keeping the overall aesthetic intact).
+
+[2026-05-30T20:57:59.317000+00:00] oabdulnaby (id=1510386819156410628)
+    Bro this is amazing! I recommend creating a hub for herm users to share their eikons
+
+[2026-05-30T21:14:30.406000+00:00] twindenis (id=1510390976084967454)
+    yes.
+    [reply to oabdulnaby msg=1510386819156410628]
+
+[2026-05-30T21:15:39.931000+00:00] twindenis (id=1510391267694219321)
+    I wanted that too, since I wanted that, I will make it, probably, will see, if I will, I will also post here 🙂
+    [reply to oabdulnaby msg=1510386819156410628]
+
+[2026-05-30T21:16:18.732000+00:00] twindenis (id=1510391430437273641)
+    I hope it will be ready by monday.
+
+[2026-05-30T21:25:46.764000+00:00] liftaris (id=1510393812936036492)
+    Dw guys it's already in the making :) in fact there's already an eikon repo to store and submit your eikons to, if you want a head start
+
+[2026-05-30T21:26:47.910000+00:00] liftaris (id=1510394069401079868)
+    But I can get a working gallery platform today/tomorrow, I have pieces of it done already
+
+[2026-05-30T21:27:38.048000+00:00] liftaris (id=1510394279695225043)
+    But don't let that stop you if you just want to build!
+    [reply to twindenis msg=1510391267694219321]
+
+[2026-05-30T21:29:02.534000+00:00] liftaris (id=1510394634055188652)
+
+[2026-05-30T21:29:03.235000+00:00] liftaris (id=1510394636995137676)
+    This is what I'm referring to
+
+[2026-05-30T21:29:49.471000+00:00] twindenis (id=1510394830923235328)
+    if you are already on it, thats good enough, no need to even host the eikons, can use services for uploading, you just need a preview feature, unless its not a total marketplace/gallery.
+    [reply to liftaris msg=1510394279695225043]
+
+[2026-05-30T21:35:23.985000+00:00] twindenis (id=1510396233976516670)
+    doin it.
+    [reply to liftaris msg=1510394279695225043]
+

@@ -1,0 +1,15 @@
+# Thread 'Office templates for Hermes-Desktop' in forum #community-projects-showcase
+# thread_id=1510376671059116233 forum_id=1316137596535177246
+# Started 2026-05-31T03:37:07.618407+00:00
+
+[2026-05-30T20:17:39.822000+00:00] stoikol (id=1510376671059116233)
+    I'm experimenting with Hermes Desktop by @fathah_cr
+    , working on two versions of the offices, one for 2D and another for ASCII with an integrated console. I hope to contribute these templates on GitHub soon. 
+    
+    If anyone wants to play around, please let me know.
+    https://x.com/air_codex/status/2060816928650764564/photo/1
+    [embed]  https://twitter.com/air_codex/status/2060816928650764564/photo/1
+
+[2026-05-30T20:18:29.681000+00:00] stoikol (id=1510376880182792302)
+    Office templates for Hermes-Desktop
+

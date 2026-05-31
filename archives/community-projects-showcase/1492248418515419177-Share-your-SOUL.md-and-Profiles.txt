@@ -373,3 +373,6 @@
     [embed] Use SOUL.md with Hermes | Hermes Agent https://hermes-agent.nousresearch.com/docs/guides/use-soul-with-hermes
     [reply to houtarooreki msg=1509892319371984996]
 
+[2026-05-31T01:02:20.476000+00:00] pinched_nerve (id=1510448312514379957)
+    [attachment] marvin.SOUL.md https://cdn.discordapp.com/attachments/1492248418515419177/1510448311847616542/marvin.SOUL.md?ex=6a1cda1c&is=6a1b889c&hm=74cd77e077c52844e55808bb045ad210184665c80ada60f2dbbfa7a805217d55&
+

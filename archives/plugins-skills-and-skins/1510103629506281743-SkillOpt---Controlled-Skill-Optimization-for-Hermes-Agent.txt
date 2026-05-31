@@ -14,3 +14,29 @@
     https://github.com/magnus919/hermes-SkillOpt
     [embed] GitHub - magnus919/hermes-SkillOpt: Controlled skill optimization f... https://github.com/magnus919/hermes-SkillOpt
 
+[2026-05-30T23:37:45.574000+00:00] magnus919 (id=1510427026832494672)
+    I just ran this against a special skill I use for my blog that draws *mermaid diagrams*. Until now the output has been a little hit-or-miss.
+    ```
+    🎉 SkillOpt Run Complete — mermaid-magnus919
+    
+    v1.0.0 → v1.0.4 across 4 epochs, 24 tasks, zero regressions.
+    
+    What Changed
+    
+    Area                Before                         After
+    ──────────────────  ─────────────────────────────  ───────────────────────────────────────────────────
+    Embedding pattern   Had Ghost CMS comment markers  Clean Hugo-native <div> only
+    Diagram types       4 types, no decision guidance  4 types + "When to pick" column
+    References          1 file (flowchart)             4 files (flowchart, sequence, gantt, classDiagram)
+    Special characters  Not documented                 Full table with brackets, braces, quotes, pipes
+    Rendering paths     CDN only, mmdc buried          CDN vs. mmdc decision table
+    Multi-diagram       Not documented                 Full pattern with example
+    Edge cases          Not covered                    Special chars, multi-line labels, goldmark pitfalls
+    
+    Artifacts Saved
+    
+    • State directory: ~/.hermes/SkillOpt/mermaid-magnus919/ — all epochs, baselines, trajectories
+    • Slow-meta: slow-meta.md — full run reflection with empty reject buffer and structural observations
+    • Skill: ~/.hermes/skills/content/mermaid-magnus919/SKILL.md — v1.0.4 with 4 reference files
+    ```
+

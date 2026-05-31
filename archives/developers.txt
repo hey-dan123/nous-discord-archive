@@ -22700,3 +22700,108 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-30T19:08:57.815000+00:00] jezzzzzzzzzz (id=1510359382108405760)
     https://discord.com/channels/1053877538025386074/1510358222660173957
 
+[2026-05-30T20:05:30.910000+00:00] priv8_code (id=1510373613780598906)
+    anyone building some stuff with x402 for hermes?
+
+[2026-05-30T20:37:16.938000+00:00] dusk.1e (id=1510381608241205359)
+    Dropped 3 focused terminal/code exec state fixes
+    
+    -  terminal_tool preserves live session cwd - https://github.com/NousResearch/hermes-agent/pull/35510
+    -  execute_code project mode respects task/session cwd - https://github.com/NousResearch/hermes-agent/pull/35513
+    -  execute_code project mode inherits active session venv - https://github.com/NousResearch/hermes-agent/pull/35516
+
+[2026-05-30T20:57:21.802000+00:00] teknium (id=1510386661807226951)
+    no idk what put that in there or where it is 😄
+    [reply to liftaris msg=1510336641221398670]
+
+[2026-05-30T21:26:25.477000+00:00] ahmetarif0x (id=1510393975310258247)
+    https://github.com/NousResearch/hermes-agent/pull/35525
+    get_nous_auth_status() had no threading lock on its process-level cache. Concurrent callers on a cold cache all called _compute_nous_auth_status() simultaneously — a synchronous OAuth refresh POST (~350ms) that burns single-use Nous refresh tokens. Added _NOUS_AUTH_STATUS_CACHE_LOCK, mirroring the identical fix applied to _account_info_cache in PR #35337.
+    
+    https://github.com/NousResearch/hermes-agent/pull/35528
+    check_fal_api_key(), _has_openai_audio_backend(), and _check_fal_video_available() are called by the tool/model picker on every UI render. All three called resolve_managed_tool_gateway() which defaults to read_nous_access_token — a synchronous OAuth refresh POST on every availability scan. Switched to is_managed_tool_gateway_ready() which uses peek_nous_access_token instead. Parity with PR #35401 (browser-use + firecrawl).
+    
+    https://github.com/NousResearch/hermes-agent/pull/35531
+    _apply_yaml_config() in the Mattermost adapter translated require_mention, free_response_channels, and allowed_channels from config.yaml to env vars — but was missing allow_from → MATTERMOST_ALLOWED_USERS. Users who set mattermost.allow_from in config.yaml got no user filtering; the bot responded to everyone. Parity with PR #35329 (Discord allow_from bridge).
+    
+    https://github.com/NousResearch/hermes-agent/pull/35533
+    In tui_gateway/server.py, /compress here 3 passed "here 3" directly as focus_topic to the full compress — the boundary-aware split was silently ignored. Added parse_partial_compress_args() parsing to mirror cli.py and gateway/run.py's /compress here [N] implementation from PR #35252.
+    [embed] fix(auth): add threading lock to get_nous_auth_status() cache by Ah... https://github.com/NousResearch/hermes-agent/pull/35525
+    [embed] fix(tools): use is_managed_tool_gateway_ready in FAL/TTS availabili... https://github.com/NousResearch/hermes-agent/pull/35528
+    [embed] fix(mattermost): bridge allow_from config key to MATTERMOST_ALLOWED... https://github.com/NousResearch/hermes-agent/pull/35531
+    [embed] fix(tui-gateway): parse partial compress args in /compress here [N]... https://github.com/NousResearch/hermes-agent/pull/35533
+
+[2026-05-30T22:21:13.486000+00:00] elkosmas (id=1510407766219690179)
+    Made my first PR for Hermes after it suggested it wow that's so awesome. 
+    Even if it isn't useful I'm more or less amazed. Sorry for the excitement.
+
+[2026-05-30T22:25:42.991000+00:00] priv8_code (id=1510408896605458562)
+    <@387972437901312000> are people integrating n8n templates, or creating n8n templates specifically for hermes agents yet.
+    do you know by any chance?
+
+[2026-05-30T22:31:55.747000+00:00] teknium (id=1510410460057309215)
+    There's a thread about it but havent followed much - <#1507877053775483081>
+    [reply to priv8_code msg=1510408896605458562]
+
+[2026-05-30T22:32:58.361000+00:00] priv8_code (id=1510410722679586926)
+    thanks didnt see this!
+    will develop some stuff which hermes owners can build with or use
+    [reply to teknium msg=1510410460057309215]
+
+[2026-05-30T22:35:03.382000+00:00] priv8_code (id=1510411247055667222)
+    just built my first x402 node, will make some plug-and -play templates for hermes agents with it
+    [attachment] Image_31-05-2026_at_00.16.jpeg https://cdn.discordapp.com/attachments/1491258766648283238/1510411246837567488/Image_31-05-2026_at_00.16.jpeg?ex=6a1cb797&is=6a1b6617&hm=86cdf0ea4e3d1574f1f7b5f9d0b83d3455714abb7b9839c85e0bead495f19a18&
+
+[2026-05-31T00:28:54.089000+00:00] sprmn24 (id=1510439897117233294)
+    Hey <@387972437901312000> <:tekcheer:1453863338537779242> , I opened a few PRs today — take a look when you get a chance:
+    
+    **PR #35585** 
+    **Issue**: Resource leak in extract_pymupdf.py — pymupdf.open() called without context manager in 4 functions 
+    **Fix**: Replaced all bare open() calls with with pymupdf.open(path) as doc: https://github.com/NousResearch/hermes-agent/pull/35585
+    
+    **PR #35594**  
+    **Issue:** Non-atomic restore of cron/jobs.json in backup.py — shutil.copy2 can leave a partial file on crash 
+    **Fix**: Replaced with mkstemp + fsync + os.replace for atomic write / https://github.com/NousResearch/hermes-agent/pull/35594
+    
+    **
+    PR #35596 **
+    ** Issue**: OSError in kanban plugin plugin_api.py leaves orphaned temp file on disk 
+    **Fix:** Added dest_path.unlink(missing_ok=True) in except block for cleanup / https://github.com/NousResearch/hermes-agent/pull/35596
+    [embed] fix: use context manager for pymupdf.open() to prevent resource lea... https://github.com/NousResearch/hermes-agent/pull/35585
+    [embed] fix(backup): atomically restore cron/jobs.json via tempfile + renam... https://github.com/NousResearch/hermes-agent/pull/35594
+    [embed] fix(kanban): delete partial attachment file on OSError during uploa... https://github.com/NousResearch/hermes-agent/pull/35596
+
+[2026-05-31T00:39:22.455000+00:00] magnus919 (id=1510442532675256480)
+    https://github.com/NousResearch/hermes-agent/pull/35602
+    [embed] feat(swarm): add /swarm slash command for in-harness multi-agent or... https://github.com/NousResearch/hermes-agent/pull/35602
+
+[2026-05-31T00:44:16.778000+00:00] magnus919 (id=1510443767155523775)
+    hold off on this... I want to polish it some more
+    [reply to magnus919 msg=1510442532675256480]
+
+[2026-05-31T00:48:08.577000+00:00] magnus919 (id=1510444739391127763)
+    (kanban is hard sometimes)
+
+[2026-05-31T00:57:36.047000+00:00] frowtek (id=1510447119532556308)
+    What does this PR do?
+    Fixes legacy messaging setup flows that tell operators "leave empty for open access" but do not actually persist an open-access flag. At runtime, those platforms then fall back to DM pairing or denial behavior instead of the access mode the wizard promised.
+    
+    The fix centralizes DM access-policy setup into a shared helper and updates the affected setup flows so a blank allowlist now explicitly branches into one of two persisted modes:
+    
+    open access: writes the platform-scoped *_ALLOW_ALL_USERS=true
+    DM pairing: writes the platform-scoped *_ALLOW_ALL_USERS=false
+    When an explicit allowlist is provided, the setup now also forces *_ALLOW_ALL_USERS=false so stale open-access state cannot survive a reconfiguration.
+    
+    https://github.com/NousResearch/hermes-agent/pull/35608
+    [embed] fix(setup): persist open access vs pairing for blank allowlists by ... https://github.com/NousResearch/hermes-agent/pull/35608
+
+[2026-05-31T01:59:39.433000+00:00] gille (id=1510462736545349633)
+    eh, i just tried installing bluebubbles on mac to see about helping someone with an issue... it won't even launch. apple says they cant ensure it's free from malware. i used the link we provide in the docs... the installer says it's deprecated and going away in august... how and why are people still using it?
+
+[2026-05-31T03:18:21.789000+00:00] dskwe. (id=1510482543542141069)
+    Gave both PRs a refresh — #32579 rebased onto latest main, #32039 narrowed scope after discovering upstream a29d64e50 already covers orphan cleanup. Left with just the zombie detection fix in _pid_exists. Give them a look when you get a chance.
+    https://github.com/NousResearch/hermes-agent/pull/32579
+    https://github.com/NousResearch/hermes-agent/pull/32039
+    [embed] fix(patch): prevent file corruption from overlapping matches in fuz... https://github.com/NousResearch/hermes-agent/pull/32579
+    [embed] fix(gateway): return False for zombie processes in _pid_exists by d... https://github.com/NousResearch/hermes-agent/pull/32039
+

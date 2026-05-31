@@ -50,3 +50,19 @@
     
     Executable file should be ready by June 1
 
+[2026-05-30T21:35:02.097000+00:00] bloom9952 (id=1510396142171586630)
+    Feral v0.1.1 — Windows build live
+    
+    Feral v0.1.1 shipped https://github.com/bloom500/feral/releases/tag/v0.1.1
+    Sidebar now floats as a pill with a larger model selector
+    Cloud streaming fixed for MiniMax / Kimi
+    “Check for Updates” button finally works in Settings
+    Messages no longer hidden behind the input bar
+    Feral mascot icon added
+    
+    waiting for feedback here or in https://github.com/bloom500/feral/issues
+    
+    (it's most likely gonna be buggy, but hey, your feedback it's precious in building a solid product)
+    [embed] Release Feral v0.1.1 · bloom500/feral https://github.com/bloom500/feral/releases/tag/v0.1.1
+    [embed] Issues · bloom500/feral https://github.com/bloom500/feral/issues
+

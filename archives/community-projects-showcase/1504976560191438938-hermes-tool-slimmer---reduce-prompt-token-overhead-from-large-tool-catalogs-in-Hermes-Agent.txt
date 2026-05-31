@@ -372,3 +372,7 @@
     
     ChatGPT found those 3.
 
+[2026-05-30T23:37:39.636000+00:00] glizlack6777 (id=1510427001926848564)
+    I am going to try the token usage one thank you. Can you give me a better idea of how to set up tool slimmer to work with Hermes tool? I don't want to give up on tool slimmer i was getting great results!!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1504976560191438938/1510427001834569858/image.png?ex=6a1cc643&is=6a1b74c3&hm=539c4453a262c07e2d353d25777500799744554b41ad5ddb45d104a617333bec&
+

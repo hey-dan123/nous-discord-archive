@@ -110,3 +110,20 @@
 [2026-05-30T09:58:55.022000+00:00] templeofmoon (id=1510220958361980998)
     I will say sometimes the reasoning time can be a bit a long
 
+[2026-05-30T19:34:37.174000+00:00] 0zi57 (id=1510365838648148058)
+    Thank you for your feedback my friend  i will be able to fine tune this in the coming days
+    [reply to templeofmoon msg=1510220958361980998]
+
+[2026-05-30T19:39:36.122000+00:00] templeofmoon (id=1510367092527071344)
+    No worries I think this is a cool idea and I don't want you to drop it
+    [reply to 0zi57 msg=1510365838648148058]
+
+[2026-05-31T01:50:45.294000+00:00] thatlivideddude (id=1510460496204136498)
+    Been using, same feedback, it seems like its been very good at improving reasoning of it
+
+[2026-05-31T01:55:48.611000+00:00] templeofmoon (id=1510461768407716021)
+    I will say I noticed Hermes sometimes ignores the injected prompt
+
+[2026-05-31T02:02:01.264000+00:00] thatlivideddude (id=1510463331427946576)
+    The dumber models did struggle with it I've noticed
+

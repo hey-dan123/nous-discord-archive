@@ -1,0 +1,30 @@
+# Thread 'HermesBench — practical evals for Hermes / personal agent setups' in forum #community-projects-showcase
+# thread_id=1510415230637969498 forum_id=1316137596535177246
+# Started 2026-05-31T03:37:07.248806+00:00
+
+[2026-05-30T22:50:53.142000+00:00] verky5025 (id=1510415230637969498)
+    I’ve started working on HermesBench, a practical eval suite for Hermes and personal AI agent configurations.
+    
+    Repo: https://github.com/verkyyi/hermesbench
+    
+    This is early/WIP. The goal is not another leaderboard benchmark. I’m trying to evaluate whether an agent setup actually works as a day-to-day operating system.
+    
+    The kinds of things I want to test:
+    
+    - front-desk behavior: answer simple questions directly, route real work correctly
+    - Kanban/background task result return
+    - cron/report quality without spam
+    - AgentFeeds/current-context freshness checks
+    - memory usefulness vs stale-memory mistakes
+    - provider fallback behavior
+    - delivery failure detection
+    - privacy boundaries across DM/group/durable output
+    - cost/latency/retry behavior
+    
+    My thesis: personal agents often fail in the surrounding system — routing, memory, freshness, notifications, retries, tool policy — not just in model reasoning.
+    
+    I’m collecting real-world workflows people think HermesBench should include.
+    
+    What’s one small repeatable scenario you’d expect a serious Hermes/personal agent setup to pass after config/model/profile changes?
+    [embed] GitHub - verkyyi/hermesbench: Reliability-first benchmark and evalu... https://github.com/verkyyi/hermesbench
+
