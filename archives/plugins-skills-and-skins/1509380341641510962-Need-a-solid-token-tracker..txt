@@ -5,3 +5,7 @@
 [2026-05-28T02:18:36.378000+00:00] glizlack6777 (id=1509380341641510962)
     Sorry if i missed one i have been trying to create one myself in Hermes Aganet with no luck. I would prefer it work with the CLI and WebUI.
 
+[2026-05-31T17:15:24.481000+00:00] sulika111 (id=1510693192779956357)
+    Hi, there is an open source project you can try on: https://docs.litellm.ai/docs/simple_proxy - i think it will be something you will need. It let's you build you own LLM hub as a proxy and track exact usage not only per model but also by a source you use that
+    [embed] LiteLLM AI Gateway (LLM Proxy) | liteLLM https://docs.litellm.ai/docs/simple_proxy
+

@@ -1,0 +1,23 @@
+# Thread 'PolyGnosis - adversarial multi-model consensus Hermes skill' in forum #plugins-skills-and-skins
+# thread_id=1510681464411263027 forum_id=1485392832154832906
+# Started 2026-05-31T19:17:49.849166+00:00
+
+[2026-05-31T16:28:48.220000+00:00] d0ggyw00f (id=1510681464411263027)
+    Built a system where models argue with each other before you see any output.
+    
+    3 solvers run the same problem in parallel with dynamically assigned expert personas (Security Auditor, Backend Architect, DBA Consultant) - each with different tool access. A hostile critic then tears every solution apart. RRF + Borda Count ranking decides the winner. A synthesizer merges the best elements. A Constitutional Quality Gate rejects the merge if it made anything worse.
+    
+    If all 3 solvers agree from the start, the Early Resolution circuit skips critique entirely. No wasted compute.
+    
+    The whole thing was built on Hermes through agentic prompt-driven development. 136 API calls. 16.8M tokens. No manual code.
+    
+    Built on top of PolyBrain (multi-model orchestration skill).
+    
+    GitHub: https://github.com/mosesman831/polygnosis
+    
+    Keen to hear feedback from anyone building multi-agent systems on Hermes 👇
+    [embed] GitHub - mosesman831/PolyGnosis: Adversarial multi-model consensus ... https://github.com/mosesman831/polygnosis
+
+[2026-05-31T18:22:04.726000+00:00] d0ggyw00f (id=1510709971023564880)
+    PolyGnosis - adversarial multi-model consensus Hermes skill
+

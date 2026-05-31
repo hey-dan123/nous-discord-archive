@@ -22848,3 +22848,86 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-05-31T13:06:06.207000+00:00] kickass0197 (id=1510630453231747216)
     I have an mcp for Polymarket and want all agents which 3 subagents to communicate with each other
 
+[2026-05-31T14:24:09.539000+00:00] uzunkuyruk (id=1510650096549630002)
+    fix(google-workspace): gmail_reply loses To/Subject when using gws binary — removed unsupported metadataHeaders from params dict
+    
+    In gmail_reply, the _run_gws binary path was passing metadataHeaders inside the params dict. The gws binary doesn't recognize this key via --params JSON, so headers came back empty and the reply lost To and Subject.
+    
+    Fixes #34806
+    
+    https://github.com/NousResearch/hermes-agent/pull/35894
+    [embed] fix(google-workspace): remove unsupported metadataHeaders from gws ... https://github.com/NousResearch/hermes-agent/pull/35894
+
+[2026-05-31T14:29:29.809000+00:00] alelpoan (id=1510651439859630121)
+    Yes, sure https://github.com/NousResearch/hermes-agent/pull/30328
+    [embed] fix(docs): replace YouTube channel link with actual playlist in Qui... https://github.com/NousResearch/hermes-agent/pull/30328
+    [reply to teknium msg=1510622610835112087]
+
+[2026-05-31T14:36:24.827000+00:00] kkurottal6611 (id=1510653180571025518)
+    Thank you for merging both PRs. I have submitted 2 more pull requests here. They are ready for your review and merge whenever you're free. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/35874 , https://github.com/NousResearch/hermes-agent/pull/35879
+    [embed] fix(gateway): normalize idle /queue into a regular prompt by Que0x ... https://github.com/NousResearch/hermes-agent/pull/35874
+    [embed] fix(gateway): route /sessions through the resume flow by Que0x · P... https://github.com/NousResearch/hermes-agent/pull/35879
+    [reply to kkurottal6611 msg=1509874789022433351]
+
+[2026-05-31T14:49:16.108000+00:00] uzunkuyruk (id=1510656415558139954)
+    fix(file-safety): extend cross-profile guard to cover top-level profile state files
+    
+    classify_cross_profile_target only guarded skills/plugins/cron/memories but missed SOUL.md, config.yaml, .env, auth.json — letting cross-profile writes slip through silently.
+    
+    Fixes #32049
+    
+    https://github.com/NousResearch/hermes-agent/pull/35902
+    [embed] fix(file-safety): extend cross-profile guard to cover top-level pro... https://github.com/NousResearch/hermes-agent/pull/35902
+
+[2026-05-31T15:05:11.565000+00:00] champagne_papad (id=1510660423035129886)
+    <@387972437901312000> tiny docs update https://github.com/NousResearch/hermes-agent/pull/34825
+    [embed] docs(teams): drop @preview tag from @microsoft/teams.cli install co... https://github.com/NousResearch/hermes-agent/pull/34825
+
+[2026-05-31T16:32:44.427000+00:00] kxee (id=1510682455135354920)
+    <@466492386873311235>
+    [reply to nucleosynth msg=1500138666390192238]
+
+[2026-05-31T16:32:58.735000+00:00] alelpoan (id=1510682515147329788)
+    Thanks for the merge 🫡  <@387972437901312000>
+    [reply to alelpoan msg=1510651439859630121]
+
+[2026-05-31T17:03:50.772000+00:00] fesalfayed (id=1510690283153657898)
+    <@387972437901312000> I found another one in the anthropic thinking tool turn that’s throwing http 400’s - documented bug + pr
+    
+    Issue #35975 — `[Bug]: extended-thinking + interleaved multi-thinking tool turn → non-retryable HTTP 400 crash-loop (reordered thinking signature)`
+    
+    https://github.com/NousResearch/hermes-agent/issues/35975
+    
+    PR #35976 — `fix(anthropic): demote reordered thinking signatures on interleaved multi-thinking turns`, 
+    
+    https://github.com/NousResearch/hermes-agent/pull/35976
+    [embed] [Bug]: extended-thinking + interleaved multi-thinking tool turn →... https://github.com/NousResearch/hermes-agent/issues/35975
+    [embed] fix(anthropic): demote reordered thinking signatures on interleaved... https://github.com/NousResearch/hermes-agent/pull/35976
+
+[2026-05-31T18:34:12.312000+00:00] rfv370_65340 (id=1510713022740562050)
+    **Hermes update governance pattern — feedback welcome**
+    
+    Hi all,
+    Sharing an operational note from a long-lived Hermes deployment.
+    I recently audited our hermes' weekly update process and found that a direct scheduled `hermes update` path could hit `approval_required`, while our governed maintenance path worked reliably.
+    
+    The working pattern is:
+    1. Policy/governance check
+    2. Runtime backup/checkpoint
+    3. Off-host backup push
+    4. Hermes update
+    5. Version/status verification
+    6. Rollback point preserved
+    
+    This seems like a useful pattern for long-running Hermes installs with external integrations, SSH access, email, etc.
+    
+    Curious how others handle this:
+    * Is there a recommended Nous pattern for backup → update → verify → rollback?
+    * Are others using systemd/wrapper-based maintenance flows?
+    * Is a native `hermes maintenance` workflow something already discussed?
+    
+    Not a bug report — just sharing field experience and checking whether we are aligned with existing best practice.
+    Let me know if I am not in the right thread.
+

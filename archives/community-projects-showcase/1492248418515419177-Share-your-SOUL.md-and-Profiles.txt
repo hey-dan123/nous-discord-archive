@@ -376,3 +376,10 @@
 [2026-05-31T01:02:20.476000+00:00] pinched_nerve (id=1510448312514379957)
     [attachment] marvin.SOUL.md https://cdn.discordapp.com/attachments/1492248418515419177/1510448311847616542/marvin.SOUL.md?ex=6a1cda1c&is=6a1b889c&hm=74cd77e077c52844e55808bb045ad210184665c80ada60f2dbbfa7a805217d55&
 
+[2026-05-31T17:16:15.844000+00:00] zeshhaan (id=1510693408212259008)
+    is soul file necessary? did anyone have before/after experience to share?
+
+[2026-05-31T17:58:08.442000+00:00] _.exo._ (id=1510703946811834470)
+    Not necessary, but it does help tune behaviour. Remember that these LLMs are just a blank canvas and the context you send over in your conversations is just one part of what is sent over on every request. The other part is what frames the behaviour of the blank canvas your request is getting painted on, and soul.md is a part of that
+    [reply to zeshhaan msg=1510693408212259008]
+

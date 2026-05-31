@@ -1424,3 +1424,9 @@
 [2026-05-31T13:43:09.614000+00:00] s1arsky (id=1510639778876489890)
     [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1510639778461122632/image.png?ex=6a1d8c6d&is=6a1c3aed&hm=5be259d618b907c4a338c5c3b4d4d7f05ac1f5bdce45498e5bed4282e846e159&
 
+[2026-05-31T19:03:48.856000+00:00] s1arsky (id=1510720474106040493)
+    Is there explicitely said anywhere how to turn off legacy memory without breaking mnemosyne (specifically mnemosyne write/remember) ? Because I have hard time of figuring that out (same my agent with docs is kinda forever helpless).
+
+[2026-05-31T19:06:03.936000+00:00] s1arsky (id=1510721040672882830)
+    My agent come to conclusion that memory tool has to be at once enabled and disabled (in config)  to make the thing actually work, which is super hard mode configuration case. Plus there is memory and user profile settings on top of it in another place, apart of the tool, which is supposed to be legacy settings related only. Context: legacy memory and mnemosyne in my experience are like dog and cat. Technically they coexist.
+

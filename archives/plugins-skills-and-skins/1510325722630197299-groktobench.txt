@@ -88,3 +88,20 @@
     https://github.com/groktopus/groktobench/releases/tag/v0.0.1
     [embed] Release v0.0.1 — Alpha · groktopus/groktobench https://github.com/groktopus/groktobench/releases/tag/v0.0.1
 
+[2026-05-31T18:20:44.030000+00:00] killswitchx7 (id=1510709632560009278)
+    Wow this is very insightful data, I was thinking along the same lines, is there any way we can mitigate the issues? Especially with skills just being regurgitated rather than being used?
+    [reply to magnus919 msg=1510360548426907880]
+
+[2026-05-31T19:02:11.228000+00:00] magnus919 (id=1510720064624791624)
+    not sure... I'm going to come back to this tool. I'm working on something now that should really level this up, and all of my other open source tools and skills.
+    
+    I've been building a `profiles` army. In my day job, I'm a VP Engineering so I'm used to having a bunch of different kinds of specialists reporting to me that I can delegate work to. 🙂 So I've been working on something similar in Hermes. I'm having some mixed but promising early results... there are some critical gaps right now in the hermes kanban that's frustrating the effort but I created an umbrella issue upstream to track the ~7 critical gaps in Kanban, all of the issues & PR's floating around that address them in some way.
+    
+    Anyway that is to say... I'm close to having a coding worklow whereby it's not just me and my main agent coding together. But my main agent delegating to a whole technology organization of specialist agents. 
+    
+    And I think once I've got that... this specific product and a few others that I run should be in WAY better shape.
+    [reply to killswitchx7 msg=1510709632560009278]
+
+[2026-05-31T19:06:18.356000+00:00] killswitchx7 (id=1510721101154615388)
+    Cool
+

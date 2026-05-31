@@ -2850,3 +2850,32 @@
 [2026-05-31T05:53:18.546000+00:00] fleety13 (id=1510521536967348345)
     Good for sneaky gateway restarts
 
+[2026-05-31T13:47:35.986000+00:00] latipun (id=1510640896121503774)
+    Nice, this is the 1st thing I'm looking for when trying out hermes-webui 😅
+    But, I use nerd-fonts on regular terminal, so opening terminal in webui didn't show the glyphs properly <:pepe_think:1151261558043848785>  If the font can be configured too, nice to add
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1510640895391961318/image.png?ex=6a1d8d77&is=6a1c3bf7&hm=b795d550978a9aadb395a390d16ae8eaf3b14006677b8f314fb01c016ed2ce9e&
+    [reply to avidfuturist msg=1510500230452215909]
+
+[2026-05-31T15:59:49.588000+00:00] latipun (id=1510674172060373164)
+    Sorry <@933139410281713755> , when I tried to run `/insights` command, it didn't return from hermes-agent, it actually goes to LLM?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1510674171753926896/image.png?ex=6a1dac75&is=6a1c5af5&hm=fdef757bbeb16d1e7d8ef63f8c78c75bf2f5f61d978210b8651a9ce4ed9804d4&
+
+[2026-05-31T16:00:27.768000+00:00] avidfuturist (id=1510674332198637749)
+    You’re right - That one doesn’t work through the slash command. But check out the insights tab on the left rail. I’ll fix it though!
+    [reply to latipun msg=1510674172060373164]
+
+[2026-05-31T16:01:59.549000+00:00] latipun (id=1510674717156311191)
+    Ohhh okay. Thanks.
+    So, that `/insights` is the only slash command that didn't work atm right?
+
+[2026-05-31T17:15:45.882000+00:00] avidfuturist (id=1510693282542256318)
+    Yeah 💯 Most slash commands should work as expected but if you see any that don’t lmk!
+    [reply to latipun msg=1510674717156311191]
+
+[2026-05-31T18:25:33.660000+00:00] mathewsstar (id=1510710847356276876)
+    Please add compatibility with Skills bundles
+
+[2026-05-31T18:33:10.915000+00:00] avidfuturist (id=1510712765223014552)
+    Good suggestion, planned!
+    [reply to mathewsstar msg=1510710847356276876]
+

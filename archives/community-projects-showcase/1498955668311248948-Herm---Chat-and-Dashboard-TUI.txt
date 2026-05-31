@@ -755,3 +755,43 @@
     are there any plans to show some extra information in this area? not sure what kind of info, but it looks a little empty in tall terminals haha
     [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1510638056799994016/image.png?ex=6a1d8ad3&is=6a1c3953&hm=065633d04e17bbcfc1477e4201e4517ff15c29bb645d64ea5321021babe27f27&
 
+[2026-05-31T14:30:41.902000+00:00] tunacookie (id=1510651742239326208)
+    You can add your own things, i added an overhead gauge, i plan to add a session timer as well
+    [reply to tf0rd msg=1510638057181937755]
+
+[2026-05-31T14:31:25.937000+00:00] tunacookie (id=1510651926935634172)
+    [attachment] image.jpg https://cdn.discordapp.com/attachments/1498955668311248948/1510651926734311444/image.jpg?ex=6a1d97bd&is=6a1c463d&hm=1af48fccc5d0563f4e30ce1cab70dabef48e04919097e38d2f9128e0d0c7c6ac&
+
+[2026-05-31T17:45:14.255000+00:00] liftaris (id=1510700699636334692)
+    Fyi the built in herm marketplace is in the works too, we should combine forces. My WIP pr is at https://github.com/liftaris/herm/pull/116 if you're curious and have suggestions
+    [embed] Eikon marketplace by liftaris · Pull Request #116 · liftaris/herm https://github.com/liftaris/herm/pull/116
+    [reply to twindenis msg=1510635419388215416]
+
+[2026-05-31T17:46:52.871000+00:00] twindenis (id=1510701113261822194)
+    I was about to deploy a normal website fo rit, but you could just plug my netlify deploy in it and it can preview like it would on the website.
+    [reply to liftaris msg=1510700699636334692]
+
+[2026-05-31T17:47:31.885000+00:00] twindenis (id=1510701276898525224)
+    database schema etc are already all in place.
+
+[2026-05-31T17:47:41.554000+00:00] liftaris (id=1510701317453119659)
+    Yes it is very bare. The plan is to make it more useful by default, yes, but I also envision it being used like <@221727702992945152> is using it--customizing it with different pre built widgets and stuff
+    [reply to tf0rd msg=1510638057181937755]
+
+[2026-05-31T18:01:58.557000+00:00] liftaris (id=1510704911984234567)
+    Sick, looking forward to seeing it. I also have a website going up, but it's mostly just a mirror for the terminal previews/public discovery point. No DB, just git/gh backed publish & install flow via herm
+    [reply to twindenis msg=1510701113261822194]
+
+[2026-05-31T18:02:23.097000+00:00] twindenis (id=1510705014912319661)
+    I will try to adjust it for herm, we will see how it looks, I may send a PR.
+    [reply to liftaris msg=1510704911984234567]
+
+[2026-05-31T18:16:23.976000+00:00] twindenis (id=1510708541814734848)
+    <@209037396983939072>could you help with this part? we could use a braille (Gardner–Salinas/8ver) thinking bubble layer.
+
+[2026-05-31T18:16:35.545000+00:00] twindenis (id=1510708590338507025)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1510708590363676873/image.png?ex=6a1dcc83&is=6a1c7b03&hm=9083ae9ed03180be52e9f7c31102034e441230f3facde0eafdae4b1bacb77cab&
+
+[2026-05-31T18:17:24.770000+00:00] twindenis (id=1510708796802994367)
+    alternatively the same one with a stroke effect and transparency for its background.
+

@@ -1,0 +1,13 @@
+# Thread 'Mead batch tracking website' in forum #community-projects-showcase
+# thread_id=1510661612732678184 forum_id=1316137596535177246
+# Started 2026-05-31T19:14:08.280553+00:00
+
+[2026-05-31T15:09:55.211000+00:00] jcrabapple (id=1510661612732678184)
+    For home brewers like me I had my agent build a mead batch tracking website to keep track of gravity readings, nutrient schedules, recipes, and more. 
+    
+    https://github.com/jcrabapple/mead-tracker
+    [embed] GitHub - jcrabapple/mead-tracker: Lightweight Flask app for trackin... https://github.com/jcrabapple/mead-tracker
+
+[2026-05-31T15:10:35.338000+00:00] jcrabapple (id=1510661781037518938)
+    I encourage anyone to take this and add more features like beer and wine.
+
