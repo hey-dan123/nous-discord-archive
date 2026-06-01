@@ -68,3 +68,7 @@
     good shi
     [reply to rostelinalise msg=1509086441995767870]
 
+[2026-06-01T05:13:46.191000+00:00] rostelinalise (id=1510873974454620190)
+    https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers turns out they have the whole article guys
+    [embed] Memory Providers | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers
+

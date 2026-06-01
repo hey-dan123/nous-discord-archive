@@ -1,0 +1,178 @@
+# Thread 'Hindsight Feedbacks Request (Hindsight Maintainer here)' in forum #community-projects-showcase
+# thread_id=1510939660266901504 forum_id=1316137596535177246
+# Started 2026-06-01T11:29:43.771009+00:00
+
+[2026-06-01T09:34:46.909000+00:00] nicoloboschi (id=1510939660266901504)
+    I'm the co-creator of Hindsight and I really appreciate the love Hermes users are sending to us.
+    
+    Although, as any piece of software, there are things that could be done better. 
+    
+    Please provide any valuable feedback here so I can triage/help/fix whatever comes up, being a native Hindsight issue or about the Hermes code integration
+    
+    Please include your setup and some concrete example of the problem you're seeing. 
+    
+    Also suggestions/new feature requests are encouraged
+    
+    Thanks all!
+
+[2026-06-01T09:39:32.155000+00:00] jwalkersf7273 (id=1510940856675205161)
+    gotta tell you, im about as deep into the self hosted as i think its possible to get at this point lol
+
+[2026-06-01T09:41:23.519000+00:00] jwalkersf7273 (id=1510941323769806941)
+    spent the past 3 weeks working on getting hindsight, honcho, and mnemopsyne all working nicely together for 1) hindsight being the meory for provider agnostic dev sessions my creating a universal semantic router for prompt context injection and hooks for forcing retains and recalls and a monsterous tagging schema for 7 years of CRM data
+
+[2026-06-01T09:41:37.747000+00:00] jwalkersf7273 (id=1510941383446495313)
+    honcho for remembering the preferences of my salespeople and their clients
+
+[2026-06-01T09:42:28.129000+00:00] jwalkersf7273 (id=1510941594763661323)
+    mnemo for the hermes profiles working memories, including the slack bot that is the face for the salespeople and has a finetuned 9b judge sitting in between handling its memory routing
+
+[2026-06-01T09:46:29.930000+00:00] jcrabapple (id=1510942608950558780)
+    Good timing — I've been running Hindsight in production for about 2 months now and have accumulated a fair amount of operational experience. Here's what I'd pass along:
+    
+    ---
+    
+    **Critical: Thread Pool Deadlock (v0.5.3 through v0.5.6)**
+    
+    This is the biggest issue. Hindsight accumulates excessive native threads from C extension libraries (OpenBLAS, ONNX Runtime, sentence-transformers). Most threads end up stuck in `futex_do_wait`, eventually deadlocking the asyncio event loop. The container appears healthy in `podman ps` but stops responding on all ports. It happens during idle periods, typically after 6-12 hours of uptime.
+    
+    Setting `OMP_NUM_THREADS=1`, `OPENBLAS_NUM_THREADS=1`, `MKL_NUM_THREADS=1` reduces thread count from ~150 to ~33 but doesn't fully prevent it. I ended up writing an external health monitor that checks thread count and futex_do_wait ratio, preemptively restarting when >60 threads have 80%+ stuck in futex_do_wait. Without that, the container deadlocks daily.
+    
+    The fix needs to be internal — either process-level thread isolation for the embedding/ML components, or periodic thread health checks within Hindsight itself that trigger a graceful self-restart.
+    
+    **Secondary: MCP StreamableHTTP Startup Crash-Loop**
+    
+    Hindsight can enter a crash-loop during startup where the MCP `StreamableHTTP session manager` throws an `ExceptionGroup` in `anyio._backends._asyncio`. With `unless-stopped` restart policy, this repeats every ~60 seconds indefinitely. Root cause is unclear — may be port conflict or stale state.
+    
+    **Conmon Exit / Zombie Container State**
+    
+    When conmon (the container monitor) dies (OOM or internal error), Podman still reports the container as `running` and the Podman healthcheck (`--health-cmd`) can report `healthy` even though the actual process is dead. This is partly a Podman issue, but a more robust internal liveness mechanism (e.g., a watchdog thread that writes a timestamp file, checked by the health endpoint) would help.
+
+[2026-06-01T09:47:52.252000+00:00] jwalkersf7273 (id=1510942954234056824)
+    heres some concrete stuff as well from my llm:
+
+[2026-06-01T09:48:10.733000+00:00] jwalkersf7273 (id=1510943031748984893)
+    1. recall has no result-count bound — only max_tokens, and that doesn't reliably cap count. A broad query once returned ~75 memories / ~55k tokens and blew out the agent's context window. Feature request: a top_k on recall.
+    2. Higher max_tokens lowers precision — counterintuitive and undocumented. Tuning over ~250 recall calls, raising max_tokens 1000→4096 dropped precision 0.72→0.46. We now hard-cap at 1000. Either it's worth documenting, or worth investigating why a bigger budget pulls in dilutive low-relevance chunks. Likely a docs gap, maybe a ranking bug.
+    3. recall is non-deterministic + lossy for completeness — two identical recalls return different partial slices. A tags:[...]-scoped recall silently dropped load-bearing items (a verdict, a safety note, whole correction docs) run-to-run. We had to stop using recall for "give me my whole handoff" and switch to list_documents + get_document. Probably inherent to semantic ranking — but a documented "use get_document for completeness; recall is for discovery" note, or a complete=true retrieval mode, would save people the foot-gun.
+    4. Multi-fact-type storage produces duplicate recall hits. A fact stored across world/experience/observation comes back 2–3× (we saw ~30/41/21 copies of one fact in a single query). We work around it by recalling types:["observation"] only. Feature request: dedup-across-types in recall, or a flag to collapse a fact's type-variants.
+
+[2026-06-01T09:48:16.968000+00:00] jwalkersf7273 (id=1510943057900732476)
+    5. Extraction stochasticity corrupted long structured retains. With extraction temperature > 0, long TODO/handoff retains drifted in structure and got mangled; pinning extraction temp to 0 fixed it cleanly. Suggestion: default extraction temp to 0, and/or harden long-document retains against extraction variance.
+    6. Misdirected retains are silent and hard to undo. A retain to the wrong bank just lands there, no signal, no easy undo — we run a "confirm the bank before every retain" discipline because of it. Feature request: echo the target bank in the retain confirmation, or warn on a session/bank mismatch, or a dry-run.
+    
+    Integration-layer (Hermes / our config, flagging in case it's shared): per-turn injection gated only on lexical overlap manufactured false "I already know this" and suppressed fresh recall — needed a relevance gate + rerank + explicit "candidate, verify" framing to be safe.
+    
+    Genuine praise (not filler): Hindsight is the layer our whole fleet leans on, and it just earned it — a host crash-loop wiped our local docker stacks today, and because Hindsight runs as a separate appliance, zero memory was lost and recovery was clean. The 4-strategy retrieval is great for discovery, and document-grouping (get_document) is the single feature that makes deterministic, lossless session handoffs possible. Thank you for building it.
+
+[2026-06-01T09:49:29.657000+00:00] jcrabapple (id=1510943362780500118)
+    **No Native Healthcheck**
+    
+    Hindsight doesn't define a Docker/Podman healthcheck natively. Users have to add `--health-cmd="curl -f http://127.0.0.1:8888/health || exit 1"` themselves. Shipping a HEALTHCHECK in the Dockerfile would be a simple improvement.
+    
+    **v0.5.5 → v0.5.6 Regression**
+    
+    The v0.5.5 JSON schema simplification broke fact extraction on GPT-4o-mini in soft-enforcement mode (0 facts extracted). Good that v0.5.6 fixed it, but this suggests the integration test suite doesn't cover GPT-4o-mini with soft-enforcement — worth adding.
+    
+    **pg0 Database Corruption**
+    
+    Unclean shutdowns (SIGKILL after default 10s timeout, OOM, conmon death) corrupt the embedded pg0 database. Recovery requires nuking the data directory. Suggesting `--stop-timeout=30` in docs helps, but a pg0 startup integrity check that auto-recovers (or at least logs a clear error instead of crash-looping) would be better.
+    
+    **Config Confusion: Env Vars vs. config.json**
+    
+    LLM settings (API key, base URL) must come from environment variables, not config.json. Users who configure everything in config.json and use an OpenRouter key will get silent 401 failures because Hindsight defaults to OpenAI's endpoint. The config.json should either accept LLM settings or the container should fail-fast with a clear error if `HINDSIGHT_API_LLM_BASE_URL` is missing when a non-OpenAI key is detected.
+    
+    **Memory Usage**
+    
+    Virtual memory is inflated to ~11.7GB from thread stacks and embedding models, even though RSS is ~800MB–1.5GB. Not a functional issue but alarming for users who monitor memory. Documenting expected RSS vs. VSZ ranges would help.
+
+[2026-06-01T09:49:54.201000+00:00] jwalkersf7273 (id=1510943465725231195)
+    <@460986566022660097> that'll teach 'em to ask for feedback lol 🙂
+
+[2026-06-01T09:50:38.140000+00:00] jwalkersf7273 (id=1510943650018758677)
+    yours was already helpful: 
+    This is gold — and immediately relevant to us, not just the thread. jcrabapple's "container looks healthy in ps but stops responding after 6–12h idle (thread-pool deadlock, futex_do_wait)" is a latent risk for our 5080 Hindsight appliance — and his external-health-monitor + watchdog-timestamp pattern is exactly the OpsBot self-heal design we just scoped. Let me check whether we're actually exposed (version + thread mitigations):
+    [reply to jwalkersf7273 msg=1510943465725231195]
+
+[2026-06-01T09:50:51.687000+00:00] jcrabapple (id=1510943706838994954)
+    My agent is the one who has to set it up and deal with it on a daily basis so I asked it
+
+[2026-06-01T09:51:04.533000+00:00] jwalkersf7273 (id=1510943760719151234)
+    exactly. same.
+
+[2026-06-01T09:51:17.837000+00:00] jwalkersf7273 (id=1510943816520306818)
+    strange times brother, strange times
+
+[2026-06-01T09:52:41.959000+00:00] jwalkersf7273 (id=1510944169353285743)
+    btw your pg0 data corruption
+
+[2026-06-01T09:52:58.078000+00:00] jwalkersf7273 (id=1510944236961398784)
+    that was a huuugggge fuck you in the beginning. for me.
+
+[2026-06-01T09:53:33.700000+00:00] jwalkersf7273 (id=1510944386371031070)
+    switched to a full pgvector install, and also running qwen3 4b embed and rerank
+
+[2026-06-01T09:53:45.774000+00:00] jwalkersf7273 (id=1510944437013057626)
+    and now life is grand
+
+[2026-06-01T09:54:19.260000+00:00] jcrabapple (id=1510944577463390258)
+    Yeah I had some bumps in the road trying to get it stable. We had to apply some bandaids but it's been working great.
+
+[2026-06-01T09:55:22.477000+00:00] jwalkersf7273 (id=1510944842614571140)
+    sounds like youre using it for real stuff too. whatre you working on?
+
+[2026-06-01T09:56:26.896000+00:00] jcrabapple (id=1510945112807702709)
+    Nothing too crazy. My agent is mostly a personal assistant and research assistant. It helps me with the occasional coding project.
+
+[2026-06-01T09:57:18.064000+00:00] nicoloboschi (id=1510945327421849640)
+    Thanks - I'll deep dive on the first 2 - have you now upgraded to the very latest? we applied a lot of fixes - 0.7.1 is the latest
+    [reply to jcrabapple msg=1510942608950558780]
+
+[2026-06-01T09:58:03.692000+00:00] jcrabapple (id=1510945518799556719)
+    I'll update and let you know if we see any improvements or ongoing issues
+
+[2026-06-01T10:02:22.230000+00:00] nicoloboschi (id=1510946603186524231)
+    thanks!
+    1. top-k doesn't help here. did you get the 55k tokens on purpose or you had a lower max_tokens? that looks like a bad bug. did you configure anything else? include_chunks, source_facts..? 
+    2. this is normal. how do you calculate precision exactly?
+    3. recall is deterministic if you start from the exact same snapshot of the memory bank. tags are filtering you what you ingested. was the load-bearing memory being dropped due to different tsgs or relevancy? - would be great to know more about how do you do list+get to find info
+    4. observation only is the default now in hermes (since last week) 
+    5. good idea, will do. what model are you using? 
+    6. a dry run mode is great idea actually. how do you embed this into the hermes worjflow tho? would you review it via human or agent?
+    [reply to jwalkersf7273 msg=1510943031748984893]
+
+[2026-06-01T10:04:26.701000+00:00] nicoloboschi (id=1510947125255471237)
+    on pg0, we just fixed in the main branch this morning, will land in 0.7.2 
+    the config confusion, I agree, one is hermes config and the other one is server side. the problem is that we allow -embed deployment which of course spans over both the conigs
+    we fixed a bunch of memory managemtn stuff around models in the latest versions
+    [reply to jcrabapple msg=1510943362780500118]
+
+[2026-06-01T10:04:54.230000+00:00] nicoloboschi (id=1510947240720470077)
+    guys this is what I wanted, so thanks
+    [reply to jwalkersf7273 msg=1510943465725231195]
+
+[2026-06-01T10:08:14.122000+00:00] jwalkersf7273 (id=1510948079128547408)
+    for models i bounce between opus 4.8 for cloud  and qwen3.6 27b for local.
+
+[2026-06-01T10:09:37.517000+00:00] jwalkersf7273 (id=1510948428912398427)
+    opus just wrote this:
+
+[2026-06-01T10:10:31.086000+00:00] jwalkersf7273 (id=1510948653597196289)
+    Really appreciate the detailed triage. Point-by-point:
+    1 (the 55k dump). Hit via the MCP recall tool. Our bridge only clamps max_tokens→1000 when present; the tool surface exposes no top_k and no include, and we never set include_chunks/source_facts — so they’re at whatever the server defaults to. We’d internally filed this as a “no-top_k / unbounded-count” gap (~75 objects), but your question reframes it and I think you’re right: if the server returns full chunks/source_facts per object by default, that’s the size driver and top_k wouldn’t touch the per-object bloat. Two things I’d love your read on: (a) what does include default to for an MCP recall? (b) does the chunks/source_facts payload count against the recall max_tokens budget, or is max_tokens only over the synthesized answer? If it’s the latter, that’s the bug — max_tokens looked respected while the response ballooned. (Exact max_tokens on that specific call wasn’t logged — it predates our 1000-cap.)
+    2 (precision). LLM-as-judge, per returned memory: Precision = fraction of returned memories that genuinely answer or directly inform the query vs. topical noise, scored 0–1 per query (we run a judge harness that also tracks noise-count/freshness/accuracy). The 0.72→0.46-at-4096 figure is from an earlier recall-tuning run (252 calls); I’d re-confirm that run used this exact rubric before leaning on the precise numbers, but the method is judge-scored relevant-fraction. Your “this is normal” tracks: bigger budget admits more low-relevance memories → relevant-fraction drops. We just operate at 1000.
+
+[2026-06-01T10:10:47.226000+00:00] jwalkersf7273 (id=1510948721293004951)
+    3 (determinism). You’re right, and it corrects our framing — the drop was relevancy + budget-truncation, not tags. The lost items (an IV verdict, a safety note, whole corrections) were correctly tagged pickup (the filter matched them); they fell out because a budget-capped semantic recall over the tag-filtered set ranks-and-truncates, so load-bearing-but-low-lexical-overlap units dropped — and the bank was also taking new retains between the two runs. Our list+get pattern: list_documents(q:"pickup") → newest-first, un-ranked, no budget cap → get_document(id) → full verbatim original_text. We use it whenever we need completeness (session handoffs) and keep recall for discovery. If there’s a blessed “complete/exhaustive retrieval” path we’re missing, we’d happily switch to it.
+    4. Great — that retires our workaround (we were passing types:["observation"] to dodge the world/experience/observation triple-hit). We’ll drop the manual filter.
+    5 (model). Extraction/retain → a local Qwen3.6-27B (Qwen3.6-27B-AEON-i1-Q4_K_M) over Tailscale; reflect → deepseek-v4-pro via OpenRouter (infrequent, quality-sensitive). Soft-enforcement mode.
+    6 (dry-run integration). We’d make it agent-reviewed by default, human only on escalation — the operator’s a solo non-dev, so manual review of every retain doesn’t scale; the gates are the safety net. Concretely: a turn-end hook detects a ratified decision, routes the proposed retain (content + target bank + tags) through our enforcer’s /judge, which previews “would store X in bank Y tags Z; conflicts with prior memory W?” → auto-commit on clean, escalate to the human on low-confidence / bank-mismatch / conflict. The bank-mismatch escalation is the one we’d value most — silent misdirected retains are our scariest failure mode.
+    Thanks again — genuinely useful.
+
+[2026-06-01T10:34:27.328000+00:00] nicoloboschi (id=1510954677632766122)
+    1. do you have very larget document metadata or context or entities? the max_trokens cap only "text" field - would be great to know which one is the problem for your use case
+    2. ok interesting - I will do some experiments to add this to our eval suite
+    3. the get document is more for when you want to expand a memory the recall found but I see this could work with similar results
+    6. 6) I'll think more about it - we're building a tool to improve retain missions and other configs in a closed-short-feedback-loop and this might be a feature that becomes part of it
+    [reply to jwalkersf7273 msg=1510948653597196289]
+

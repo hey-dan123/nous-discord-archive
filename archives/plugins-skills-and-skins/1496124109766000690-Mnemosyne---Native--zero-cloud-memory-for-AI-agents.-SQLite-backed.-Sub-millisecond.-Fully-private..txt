@@ -1454,3 +1454,30 @@
     I decided to turn it off because I had repeatedly  in error logs information that: memory update failed because memory file is too large (looked like legacy consolidation didnt work). Plus mnemosyne can store retrievable info that the legacy memory USER/MEMORY  covers (in theory).
     [reply to phospheneoverdrive msg=1510778480869249195]
 
+[2026-06-01T04:10:50.916000+00:00] timothy7900 (id=1510858139803713616)
+    I installed it and testing now
+
+[2026-06-01T04:11:09.196000+00:00] timothy7900 (id=1510858216475590806)
+    diched Honcho for it
+
+[2026-06-01T04:11:56.672000+00:00] timothy7900 (id=1510858415604498493)
+    am running also a Obsidian auto synch via OMI in addition, lets see how it work. Thanks for the great software. Love that it has no depencies or additional monthly fees
+
+[2026-06-01T04:46:14.412000+00:00] s1arsky (id=1510867046391611422)
+    i posted issue in hermes discord that in the end is related to Mnemosyne (now closed)
+
+[2026-06-01T04:53:38.604000+00:00] s1arsky (id=1510868909467762688)
+    i cant post on github issues atm so here is how to reproduce 1. hermes --tui ; 2. /hermes-agent high five?
+
+[2026-06-01T04:54:20.339000+00:00] s1arsky (id=1510869084517040259)
+    this results in indefinite hang (maybe mnemosyne memory prefetch related)
+
+[2026-06-01T04:58:42.028000+00:00] s1arsky (id=1510870182120259624)
+    my setup: memory tool enabled, memory/user profile enabled to false in config yaml; hermes memory setup - mnemosyne (all enter-default except auto sleep timeout to 150)
+
+[2026-06-01T05:02:12.581000+00:00] s1arsky (id=1510871065243549736)
+    Mnemosyne is cool btw
+
+[2026-06-01T06:13:41.159000+00:00] me.franx (id=1510889052843540492)
+    Installing today and will be testing and providing feedback
+

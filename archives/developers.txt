@@ -22967,3 +22967,36 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-01T02:09:42.420000+00:00] minddragon (id=1510827653522001930)
     MiniMax-M3 on hermes needs 1mb in providers but also on the user question block needs an update
 
+[2026-06-01T05:32:07.801000+00:00] fesalfayed (id=1510878594941849650)
+    <@387972437901312000> 1 more anthropic bug fix, applying to amz bedrock
+    Issue: https://github.com/NousResearch/hermes-agent/issues/36260
+    PR: https://github.com/NousResearch/hermes-agent/pull/36261
+    [embed] [Bug]: Bedrock Converse drops reasoning signatures + reads wrong sc... https://github.com/NousResearch/hermes-agent/issues/36260
+    [embed] fix(bedrock): preserve reasoning signature on Converse interleaved-... https://github.com/NousResearch/hermes-agent/pull/36261
+
+[2026-06-01T09:48:30.565000+00:00] .elkim (id=1510943114930556979)
+    Teaser: Best platform plugin in the making 🙂
+    [attachment] Screenshot_2026-06-01_11-40-23.png https://cdn.discordapp.com/attachments/1491258766648283238/1510943114645475369/Screenshot_2026-06-01_11-40-23.png?ex=6a1ea6ee&is=6a1d556e&hm=09eab664c3c5d1b736c860d7e6bd4913142fd6dc3c12b3c979e43e2d12bb2847&
+
+[2026-06-01T10:33:00.392000+00:00] tdamre (id=1510954312996622376)
+    you mean best pfp for an agent
+    [reply to .elkim msg=1510943114930556979]
+
+[2026-06-01T10:37:09.395000+00:00] .elkim (id=1510955357391032371)
+    both hermes and user, it's like Discord but FOSS and self hosted relays coming this month
+
+[2026-06-01T10:37:42.842000+00:00] .elkim (id=1510955497677787196)
+    its so fast a feels so good just making the plugin with it
+
+[2026-06-01T11:04:31.695000+00:00] ancientalies (id=1510962245696225281)
+    This will bypass all api restraints within Kimi-CLI. This Is my own project that I personally made. 
+    
+    https://github.com/spearchucker667/kimiko
+    [embed] GitHub - spearchucker667/kimiko: Bypass all api restraints within K... https://github.com/spearchucker667/kimiko
+
+[2026-06-01T11:08:07.051000+00:00] wysie_ (id=1510963148964888667)
+    Fixed an issue with whatsapp. this issue causes the whole whatsapp session to hang if you accidentally type something other than /approve, /deny, etc. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/36747
+    [embed] fix(gateway): bypass WhatsApp batching for slash commands by wysie ... https://github.com/NousResearch/hermes-agent/pull/36747
+

@@ -394,3 +394,8 @@
 [2026-06-01T02:34:03.330000+00:00] fleety13 (id=1510833781022654505)
     Agents can help you write their SOUL
 
+[2026-06-01T08:25:39.486000+00:00] zeshhaan (id=1510922264714018917)
+    Thanks folks. Coming from CC and Codex, I was quite impressed how powerful hermes is with lighter models and I didn't find any usecase to level up so far. 
+    
+    Anyways, I will try exploring it and see.
+

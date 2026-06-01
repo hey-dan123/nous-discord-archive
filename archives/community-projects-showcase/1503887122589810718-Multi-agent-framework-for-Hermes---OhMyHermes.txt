@@ -44,3 +44,6 @@
     I have a PR that I released and should do what you want it to do. It's related to PR# 25660.  I am running this in my production forked and it works. Give it a try.  https://github.com/NousResearch/hermes-agent/pull/34741
     [embed] feat(gateway): single gateway, multiple agents by davidgut1982 · P... https://github.com/NousResearch/hermes-agent/pull/34741
 
+[2026-06-01T06:09:32.776000+00:00] eloklam (id=1510888011049730128)
+    <@357756277209825291> <@514885421163872256> I think you guys has misunderstood. I didnt create any new code. It is just a bunch of SOUL.md that regulates how agents should work based on their role. I utilise the Kanban tool only. There’s no code change to Hermes.
+

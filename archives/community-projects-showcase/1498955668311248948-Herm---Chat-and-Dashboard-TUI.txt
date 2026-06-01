@@ -887,3 +887,7 @@
     
     also this
 
+[2026-06-01T07:56:13.375000+00:00] liftaris (id=1510914857107456020)
+    The fix I had pushed was related to boot/startup session handling, idk if it was enough to fix what you were experiencing though
+    [reply to tunacookie msg=1510835021286473818]
+

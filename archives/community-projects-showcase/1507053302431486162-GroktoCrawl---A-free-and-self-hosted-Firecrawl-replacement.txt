@@ -196,3 +196,14 @@
     https://github.com/groktopus/groktocrawl/releases/tag/v0.5.0
     [embed] Release v0.5.0 — Security Hardening Release · groktopus/groktocrawl https://github.com/groktopus/groktocrawl/releases/tag/v0.5.0
 
+[2026-06-01T06:03:40.462000+00:00] wysie_ (id=1510886533337583717)
+    does it support openai auth via hermes so i don't need to configure a separate LLM?
+
+[2026-06-01T10:40:55.442000+00:00] wysie_ (id=1510956305500868639)
+    submitted a PR: https://github.com/groktopus/groktocrawl/pull/86
+    [embed] fix: make compose config portable and enable SearXNG JSON by wysie ... https://github.com/groktopus/groktocrawl/pull/86
+
+[2026-06-01T10:44:36.844000+00:00] wysie_ (id=1510957234128162987)
+    another: https://github.com/groktopus/groktocrawl/pull/87
+    [embed] docs: document uv setup for CLI dependencies by wysie · Pull Reque... https://github.com/groktopus/groktocrawl/pull/87
+

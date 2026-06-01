@@ -2946,3 +2946,11 @@
 [2026-06-01T02:56:16.098000+00:00] latipun (id=1510839371056545993)
     Hi <@933139410281713755> , I just noticed. If I click new conversation, does the model using last selected session chat? Didn't automatically using the default model.
 
+[2026-06-01T04:42:36.391000+00:00] avidfuturist (id=1510866131945128107)
+    Yeah what people expect when they hit new conversation varies in what they think is correct, so it bounces around a lot. I need to turn the behavior into a another setting, thanks for the reminder will take another look
+    [reply to latipun msg=1510839371056545993]
+
+[2026-06-01T06:45:33.998000+00:00] deor42 (id=1510897075871682673)
+    Damn I didn't know that was a thing! Very useful!
+    [reply to avidfuturist msg=1510488729796743178]
+
