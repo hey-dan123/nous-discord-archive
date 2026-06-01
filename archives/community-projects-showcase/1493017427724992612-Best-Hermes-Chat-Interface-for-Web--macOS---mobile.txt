@@ -2879,3 +2879,70 @@
     Good suggestion, planned!
     [reply to mathewsstar msg=1510710847356276876]
 
+[2026-05-31T20:28:30.340000+00:00] avidfuturist (id=1510741787394703393)
+    Getting close to 10k ⭐️ on GitHub in less than 2 months. Thanks to everyone that provided me feedback or helped support the project!
+    
+    Committed to leveling up reliability going forward - Added the Ruff linter, added 3 new regression gates, new smoke tests, and richer browser based testing ahead of every release
+    [attachment] IMG_5376.png https://cdn.discordapp.com/attachments/1493017427724992612/1510741787453689936/IMG_5376.png?ex=6a1deb6e&is=6a1c99ee&hm=a866875ee772d37987661725c2ff12c76a9cc150c800d47250d82365262c3008&
+
+[2026-05-31T20:28:41.474000+00:00] avidfuturist (id=1510741834094350396)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you might use it alongside your Hermes agent.
+
+[2026-05-31T21:48:21.923000+00:00] ajmorr (id=1510761884750581980)
+    I saw this yesterday and today looks amazing
+    [reply to avidfuturist msg=1510741834094350396]
+
+[2026-06-01T01:54:07.003000+00:00] pinched_nerve (id=1510823730098606180)
+    <@933139410281713755> example:  if I tell my agent to use image generation to make a pic, it'll send the pic to discord or telegram so I can view it.  for the webui, I just get the path on the hermes machine it exists at
+
+[2026-06-01T01:54:48.747000+00:00] avidfuturist (id=1510823905185763439)
+    Weird… here’s what it looks like for me. See the image generated inline
+    [attachment] IMG_5370.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1510823905072513084/IMG_5370.jpg?ex=6a1e37e8&is=6a1ce668&hm=bc72208a6f0adc69ccd4deb4a4ca6fe93596564ac14d09d4846d045d4ad4c090&
+    [reply to pinched_nerve msg=1510823730098606180]
+
+[2026-06-01T01:55:12.002000+00:00] pinched_nerve (id=1510824002724298773)
+    one sec:  running image gen right now
+
+[2026-06-01T01:55:25.282000+00:00] avidfuturist (id=1510824058424655923)
+    Yeah - Can you ask it to generate an image and then screenshot what you see come back? I’ll take a look at what might be going on
+    [reply to pinched_nerve msg=1510823730098606180]
+
+[2026-06-01T01:55:48.119000+00:00] pinched_nerve (id=1510824154209718272)
+    yep... still generating.  I'm using gpt-image-2 so it takes a bit longer
+    [reply to avidfuturist msg=1510824058424655923]
+
+[2026-06-01T01:56:19.591000+00:00] avidfuturist (id=1510824286212980786)
+    Okay thanks I’ll take a look because it should support images inline no problem
+    [reply to pinched_nerve msg=1510824154209718272]
+
+[2026-06-01T01:56:23.653000+00:00] pinched_nerve (id=1510824303250378802)
+    mother... and of course THIS time it embedded a thumbnail of the image
+
+[2026-06-01T01:56:33.508000+00:00] avidfuturist (id=1510824344585113761)
+    You can click to zoom it too
+
+[2026-06-01T01:56:38.869000+00:00] pinched_nerve (id=1510824367070777455)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1510824367213379614/image.png?ex=6a1e3856&is=6a1ce6d6&hm=66966a78fbda1a8cd1568ed4a4bfd8896189abb65b4b09a7e2e7f626a527b9a7&
+
+[2026-06-01T01:56:40.377000+00:00] pinched_nerve (id=1510824373395787876)
+    yeah
+
+[2026-06-01T01:56:53.728000+00:00] avidfuturist (id=1510824429393936394)
+    Okay… all good then?
+
+[2026-06-01T01:57:10.971000+00:00] pinched_nerve (id=1510824501716193320)
+    no idea why that didn't work earlier today.  Maybe I just had a broken version for a few hours.  lol
+
+[2026-06-01T01:57:15.279000+00:00] pinched_nerve (id=1510824519785517307)
+    I keep updating. 😄
+
+[2026-06-01T01:57:47.338000+00:00] avidfuturist (id=1510824654250578042)
+    Haha okay well either way glad it’s working now!
+
+[2026-06-01T01:57:54.901000+00:00] pinched_nerve (id=1510824685971964055)
+    yeah, thanks. 🙂
+    [reply to avidfuturist msg=1510824654250578042]
+
+[2026-06-01T02:56:16.098000+00:00] latipun (id=1510839371056545993)
+    Hi <@933139410281713755> , I just noticed. If I click new conversation, does the model using last selected session chat? Didn't automatically using the default model.
+

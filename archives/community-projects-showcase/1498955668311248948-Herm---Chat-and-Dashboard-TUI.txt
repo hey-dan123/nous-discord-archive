@@ -795,3 +795,95 @@
 [2026-05-31T18:17:24.770000+00:00] twindenis (id=1510708796802994367)
     alternatively the same one with a stroke effect and transparency for its background.
 
+[2026-05-31T19:33:38.825000+00:00] twindenis (id=1510727981780172971)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1510727981448953986/image.png?ex=6a1dde92&is=6a1c8d12&hm=bce2835223c523f1148f76d0645b833e1f22d80572c440ab149e71bcdb59d01e&
+
+[2026-05-31T20:28:55.285000+00:00] liftaris (id=1510741892021879006)
+    Hmm yeah, I think the right approach is to have a light/dark variant of the bubbles so it looks better against a light or dark background fill
+    [reply to twindenis msg=1510708541814734848]
+
+[2026-05-31T20:29:51.188000+00:00] liftaris (id=1510742126495793252)
+    You can't layer characters on top of each other in the terminal, you can give chars a background/highlight though
+
+[2026-05-31T20:30:05.178000+00:00] twindenis (id=1510742185174241422)
+    I just make a different version for the herm tui which will be more suitable, but people can just submit their braille animations directly from the website as well, its connected to the same base anyways.
+    [reply to liftaris msg=1510741892021879006]
+
+[2026-05-31T20:30:19.211000+00:00] twindenis (id=1510742244032905399)
+    hmm
+    [reply to liftaris msg=1510742126495793252]
+
+[2026-05-31T23:16:01.762000+00:00] tunacookie (id=1510783946114469969)
+    <@209037396983939072> is there a way to like make the editted file smaller or minimize it or do i really need to scroll up to see what my ai said
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1510783945858486382/image.png?ex=6a1e12b1&is=6a1cc131&hm=29be4029263d900700f011e1c0379cd2297a1bbc8a24738ccb804af316650bf2&
+
+[2026-05-31T23:18:34.194000+00:00] liftaris (id=1510784585460486274)
+
+[2026-05-31T23:18:34.719000+00:00] liftaris (id=1510784587662626836)
+    <@221727702992945152>
+
+[2026-05-31T23:42:55.963000+00:00] tunacookie (id=1510790716563919088)
+    oog oog aag aag, a skill for updating herm that updates herm to latest and applies our local commits on top(turned it into a py script instead)
+
+[2026-05-31T23:46:36.219000+00:00] tunacookie (id=1510791640384802947)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1510791640120426716/image.png?ex=6a1e19dc&is=6a1cc85c&hm=ab98e8c634213d607308fb70fbcdbe89b1d245704bddd621fd9b58ecc2d42ef6&
+
+[2026-06-01T00:30:12.240000+00:00] liftaris (id=1510802612772143245)
+    I hope you/your agent knows about herm plugins? you should be able to extend herm without altering the repo, like your custom context gauge is a good example of a plugin. not saying you shouldn't--just wanted you to know that it's there
+    [reply to tunacookie msg=1510790716563919088]
+
+[2026-06-01T00:36:00.253000+00:00] tunacookie (id=1510804072444203038)
+    https://tenor.com/view/ocean-park-roy-chiken-chicken-rooster-gif-15719325597742543552
+    [embed]  https://tenor.com/view/ocean-park-roy-chiken-chicken-rooster-gif-15719325597742543552
+    [reply to liftaris msg=1510802612772143245]
+
+[2026-06-01T00:37:16.234000+00:00] liftaris (id=1510804391131877407)
+    if it works it works! 😂
+
+[2026-06-01T00:37:40.089000+00:00] tunacookie (id=1510804491186864239)
+    most likely no, but i will have it update the script now to look into plugins and change whatevers needed
+    [reply to liftaris msg=1510804391131877407]
+
+[2026-06-01T01:01:00.061000+00:00] tunacookie (id=1510810363094892704)
+    hmmm noticing 2 bugs, when i open sessions and want to resume something, it stays on connecting, but then if i go to sessions again and press the session again it resumes properly, so i need to do it 2 times. 
+    2nd bug is when resuming the session my context is on 256k even though it should be 1m, i tested on normal hermes --tui and it works fine for the same session,  the context does load to 1m just to test its not my provider problem. 
+    <@209037396983939072>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1510810362340180059/image.png?ex=6a1e2b4b&is=6a1cd9cb&hm=0718ae9517b4363a7cead822cd57345958e3894f8f105e788f32ed35443ddf53&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1510810362679791770/image.png?ex=6a1e2b4b&is=6a1cd9cb&hm=7f63f1b2ab7e53816d476c28ea93c2e95acff979f5a49ba4c072a9a12fe70d10&
+
+[2026-06-01T01:02:06.673000+00:00] liftaris (id=1510810642486133004)
+    ill have my agent file as an issue
+    [reply to tunacookie msg=1510810363094892704]
+
+[2026-06-01T01:02:45.501000+00:00] tunacookie (id=1510810805342441554)
+    its making it kick into compressin because of this on herm,  but on the normal --tui its fine, 110k/1m so the context is reading properly
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1510810805074133002/image.png?ex=6a1e2bb5&is=6a1cda35&hm=0b433d49ba0938b5b2e3d57069eb15aaafa9a582c4f34469d3fce986d675690c&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1510810805401157692/image.png?ex=6a1e2bb5&is=6a1cda35&hm=f052ab4de8d8116a598ac47499a88e60d47ba0335ac4800d13689e7a32962a84&
+
+[2026-06-01T01:21:57.322000+00:00] liftaris (id=1510815636429996032)
+    on it 👍 that's not good
+
+[2026-06-01T02:00:07.623000+00:00] tunacookie (id=1510825242648383488)
+    wondering is it a me thing ?
+
+[2026-06-01T02:31:51.438000+00:00] liftaris (id=1510833227827515452)
+    I dont think so. pull dev now, see if it's better. I pushed a fix but there may be more to it
+    [reply to tunacookie msg=1510825242648383488]
+
+[2026-06-01T02:38:10.210000+00:00] tunacookie (id=1510834816512294943)
+    i will try fix it first before trying yours
+    [reply to liftaris msg=1510833227827515452]
+
+[2026-06-01T02:38:59.032000+00:00] tunacookie (id=1510835021286473818)
+    Good instinct. Here's the key difference:
+    **Built-in TUI's `handleReady`** (line 281 of `createGatewayEventHandler.ts`):
+    - Has a **`recoverSidRef`** pattern — when gateway exits unexpectedly, the exit handler saves the current session ID
+    - On `gateway.ready`, it checks: `recoverSidRef.current` → `resumeById(recoverSid)` (resume the interrupted session)
+    - Only falls through to `newSession()` if there's nothing to recover
+    **Herm's `onReady`**:
+    - Always calls `boot()` which creates a **new** session (or resumes based on `launchRef`, which is the cold-boot intent)
+    - No recovery mechanism — if gateway respawns mid-switch, `boot()` creates a new session that overwrites the target
+    The built-in TUI treats `gateway.ready` as a **recovery opportunity**, not a fresh boot. Herm treats it as always-fresh-boot. My `switchRef` guard is the right defensive fix for the race condition (prevents `boot()` during switches), but the built-in's approach is architecturally cleaner — it would also handle the case where gateway crashes mid-session without a switch in flight.
+    
+    also this
+

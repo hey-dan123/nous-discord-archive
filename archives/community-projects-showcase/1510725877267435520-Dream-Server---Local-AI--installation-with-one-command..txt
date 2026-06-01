@@ -1,0 +1,23 @@
+# Thread 'Dream Server - Local AI, installation with one command.' in forum #community-projects-showcase
+# thread_id=1510725877267435520 forum_id=1316137596535177246
+# Started 2026-06-01T03:52:02.192396+00:00
+
+[2026-05-31T19:25:17.070000+00:00] katsufx_ (id=1510725877267435520)
+    About > 
+    Turn your PC, Mac, or Linux box into an AI server. LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.
+    
+    There are several resources available, and especially the addition of the Hermes Agent to the project. We would be happy to receive more feedback on the project.
+    https://github.com/Light-Heart-Labs/DreamServer
+    [attachment] 30_de_abr._de_2026_16_17_59.png https://cdn.discordapp.com/attachments/1510725877267435520/1510725877737062492/30_de_abr._de_2026_16_17_59.png?ex=6a1ddc9d&is=6a1c8b1d&hm=43dc64b70d09689bb013a29ca7a93ce3e48d1743640dfc92c5b5b6e80f97a855&
+
+[2026-05-31T19:27:36.452000+00:00] katsufx_ (id=1510726461877784739)
+    [attachment] ChatGPT_Image_13_de_mai._de_2026_22_40_14.png https://cdn.discordapp.com/attachments/1510725877267435520/1510726460720156913/ChatGPT_Image_13_de_mai._de_2026_22_40_14.png?ex=6a1ddd28&is=6a1c8ba8&hm=f4b933f77dff8aa81244e141168e08fc63b1563e16bc06167cb786cd95d33ab3&
+    [attachment] Captura_de_tela_2026-05-13_220811.png https://cdn.discordapp.com/attachments/1510725877267435520/1510726461235924992/Captura_de_tela_2026-05-13_220811.png?ex=6a1ddd28&is=6a1c8ba8&hm=58fbf730faaa4b113ce080b4baac3058ce554652c3321b830d396db3e62607bf&
+
+[2026-05-31T19:28:10.200000+00:00] katsufx_ (id=1510726603427024958)
+    Github + discord server > https://github.com/Light-Heart-Labs/DreamServer
+    [embed] GitHub - Light-Heart-Labs/DreamServer: Turn your PC, Mac, or Linux ... https://github.com/Light-Heart-Labs/DreamServer
+
+[2026-06-01T01:22:30.773000+00:00] katsufx_ (id=1510815776733528154)
+    <:ds_logo_roxa_transparente_real:1510815663164227584>
+

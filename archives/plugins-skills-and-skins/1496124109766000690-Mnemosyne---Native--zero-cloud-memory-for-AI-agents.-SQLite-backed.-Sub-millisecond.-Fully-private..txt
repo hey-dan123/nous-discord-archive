@@ -1430,3 +1430,27 @@
 [2026-05-31T19:06:03.936000+00:00] s1arsky (id=1510721040672882830)
     My agent come to conclusion that memory tool has to be at once enabled and disabled (in config)  to make the thing actually work, which is super hard mode configuration case. Plus there is memory and user profile settings on top of it in another place, apart of the tool, which is supposed to be legacy settings related only. Context: legacy memory and mnemosyne in my experience are like dog and cat. Technically they coexist.
 
+[2026-05-31T19:23:48.063000+00:00] s1arsky (id=1510725503944888541)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1510725503504617572/image.png?ex=6a1ddc43&is=6a1c8ac3&hm=498ed9083ce618db79d6a5aa7551e1ae7f3e395597ac0fd7d7e71ab869fac440&
+
+[2026-05-31T20:13:08.097000+00:00] s1arsky (id=1510737919227330630)
+    ok, figured that out. To disable legacy memory while enjoying mnemosyne one needs to: 1. have memory tool turned on ('hermes tools' command), 2. in config.yaml under 'memory:' set: memory_enabled: false AND user_profile_enabled:false;  3. run hermes memory setup and set/configure  mnemosyne.  (having mnemosyne provider in config.yaml is NOT enough) 4. Then restart gate, new session and it works without legacy memory (so I suppose).
+
+[2026-05-31T22:54:18.746000+00:00] phospheneoverdrive (id=1510778480869249195)
+    Sorry, what's the reason to turn off legacy? Is it competely unnecessary when using mnmosynce?
+    [reply to s1arsky msg=1510737919227330630]
+
+[2026-06-01T02:51:36.078000+00:00] nulledvector (id=1510838196567539842)
+    That's what I've been also trying to hunt down for big time but it will be addressed soon! Thing is that I'm thinking is that NousResearch lowkey don't want people to disable the builtin memory engine for some reason...`hermes tools disable memory` is not even properly  documented
+
+[2026-06-01T03:17:20.832000+00:00] nat2r (id=1510844675735683083)
+    I just saw this and ran it lol
+    [reply to grrstine msg=1509713293214879816]
+
+[2026-06-01T03:17:32.508000+00:00] nat2r (id=1510844724708114482)
+    guess I got lucky that I saw it
+
+[2026-06-01T03:18:13.960000+00:00] s1arsky (id=1510844898570666165)
+    I decided to turn it off because I had repeatedly  in error logs information that: memory update failed because memory file is too large (looked like legacy consolidation didnt work). Plus mnemosyne can store retrievable info that the legacy memory USER/MEMORY  covers (in theory).
+    [reply to phospheneoverdrive msg=1510778480869249195]
+

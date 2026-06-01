@@ -192,3 +192,7 @@
     https://github.com/groktopus/groktocrawl/releases/tag/v0.4.0
     [embed] Release v0.4.0 · groktopus/groktocrawl https://github.com/groktopus/groktocrawl/releases/tag/v0.4.0
 
+[2026-05-31T22:14:33.383000+00:00] magnus919 (id=1510768475931545641)
+    https://github.com/groktopus/groktocrawl/releases/tag/v0.5.0
+    [embed] Release v0.5.0 — Security Hardening Release · groktopus/groktocrawl https://github.com/groktopus/groktocrawl/releases/tag/v0.5.0
+

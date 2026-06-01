@@ -22931,3 +22931,39 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Not a bug report — just sharing field experience and checking whether we are aligned with existing best practice.
     Let me know if I am not in the right thread.
 
+[2026-05-31T21:36:26.568000+00:00] eykd (id=1510758884334375052)
+    Is there a blessed path for a plugin to declare dependencies when installing via `hermes plugins install`?
+
+[2026-05-31T23:46:38.912000+00:00] helvio88 (id=1510791651680059523)
+    Just submitted this PR:
+    https://github.com/NousResearch/hermes-agent/pull/36130
+    
+    First contribution 🙂 hopefully I filled the checklist correctly
+    [embed] Enable TTS support for xai-auto by Helvio88 · Pull Request #36130 ... https://github.com/NousResearch/hermes-agent/pull/36130
+
+[2026-06-01T00:32:28.715000+00:00] frowtek (id=1510803185189654608)
+    https://github.com/NousResearch/hermes-agent/pull/36148
+    [embed] fix(gateway): preserve pending /restart confirmation until the targ... https://github.com/NousResearch/hermes-agent/pull/36148
+    [reply to frowtek msg=1510447119532556308]
+
+[2026-06-01T00:33:48.947000+00:00] frowtek (id=1510803521707049161)
+    What does this PR do?
+    Fixes a lost /restart confirmation. The requester's routing info is saved to
+    .restart_notify.json and delivered once at startup. If the requester's platform
+    adapter hadn't reconnected yet, _send_restart_notification() returned early but
+    the finally block still deleted the marker, and the reconnect watcher never
+    retried — so the "Gateway restarted successfully" message promised in the
+    slash-command docs was permanently lost on a late reconnect.
+
+[2026-06-01T00:48:01.964000+00:00] xxxigm (id=1510807099519795341)
+    I just opened 3 critical bug-fix PRs. Could you help review when you have a moment?
+    https://github.com/NousResearch/hermes-agent/pull/36143
+    https://github.com/NousResearch/hermes-agent/pull/36135
+    https://github.com/NousResearch/hermes-agent/pull/36146
+    [embed] fix(scripts): prevent Open WebUI first-admin LAN race (#36121) by x... https://github.com/NousResearch/hermes-agent/pull/36143
+    [embed] fix(agent,cli): surface empty-body API errors and failed oneshot ex... https://github.com/NousResearch/hermes-agent/pull/36135
+    [embed] fix(honcho): self-hosted localhost config and dialectic errors (#36... https://github.com/NousResearch/hermes-agent/pull/36146
+
+[2026-06-01T02:09:42.420000+00:00] minddragon (id=1510827653522001930)
+    MiniMax-M3 on hermes needs 1mb in providers but also on the user question block needs an update
+

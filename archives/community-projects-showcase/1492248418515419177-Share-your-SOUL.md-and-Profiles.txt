@@ -383,3 +383,14 @@
     Not necessary, but it does help tune behaviour. Remember that these LLMs are just a blank canvas and the context you send over in your conversations is just one part of what is sent over on every request. The other part is what frames the behaviour of the blank canvas your request is getting painted on, and soul.md is a part of that
     [reply to zeshhaan msg=1510693408212259008]
 
+[2026-06-01T02:21:52.214000+00:00] fleety13 (id=1510830714499760219)
+    not leveraging SOUL and AGENT.md files is like wanting to run with your shoelaces tied together
+    [reply to zeshhaan msg=1510693408212259008]
+
+[2026-06-01T02:33:42.553000+00:00] fleety13 (id=1510833693877473360)
+    It's worth a  few minutes of reading learn what to set up.
+    [attachment] HJGPYPiboAAsUqE.png https://cdn.discordapp.com/attachments/1492248418515419177/1510833693504311406/HJGPYPiboAAsUqE.png?ex=6a1e4106&is=6a1cef86&hm=77cac96ccbd8dcb27844208ee61354c73e587cc502dc0cca86604cad5ff15d3f&
+
+[2026-06-01T02:34:03.330000+00:00] fleety13 (id=1510833781022654505)
+    Agents can help you write their SOUL
+

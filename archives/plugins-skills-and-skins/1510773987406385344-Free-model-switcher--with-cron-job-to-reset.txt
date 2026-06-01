@@ -1,0 +1,14 @@
+# Thread 'Free-model switcher (with cron job to reset)' in forum #plugins-skills-and-skins
+# thread_id=1510773987406385344 forum_id=1485392832154832906
+# Started 2026-06-01T03:55:17.613734+00:00
+
+[2026-05-31T22:36:27.421000+00:00] raithlin (id=1510773987406385344)
+    I'm not sure who else would use this, but I wanted to give back, so here we are. I like to try out free models as they come out, but the problem with limited period trials is, well, they stop after a period of time. I keep forgetting about this, or I'm not at my machine, so I wrote this to automatically revert my setup.
+    
+    It's probably far from perfect, but I'm open to feedback.
+    
+    https://www.npmjs.com/package/hermes-free-model-switch
+
+[2026-05-31T22:40:42.279000+00:00] raithlin (id=1510775056358441011)
+    I am still learning how to present a proper wizard, so that part isn't ideal. Just a headsup.
+

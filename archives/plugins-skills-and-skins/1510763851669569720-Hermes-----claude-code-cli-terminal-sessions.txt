@@ -1,0 +1,14 @@
+# Thread 'Hermes <-> claude code cli terminal sessions' in forum #plugins-skills-and-skins
+# thread_id=1510763851669569720 forum_id=1485392832154832906
+# Started 2026-06-01T03:55:17.980449+00:00
+
+[2026-05-31T21:56:10.873000+00:00] feelings3635 (id=1510763851669569720)
+    Agent to agent communication, give hermes the ability to remotely control and chat with claude code cli sessions
+    
+    https://github.com/kent-ai-dev/bidirectional_agent_2_agent_claude_cli
+    [attachment] forexashley.jpg https://cdn.discordapp.com/attachments/1510763851669569720/1510763851870765106/forexashley.jpg?ex=6a1dfffa&is=6a1cae7a&hm=983ea946935dec2e9bc7e1dff59c776e9b5e7de26fbcb655852419522d2851b9&
+    [embed] GitHub - kent-ai-dev/bidirectional_agent_2_agent_claude_cli: allow ... https://github.com/kent-ai-dev/bidirectional_agent_2_agent_claude_cli
+
+[2026-05-31T21:56:58.716000+00:00] feelings3635 (id=1510764052337393784)
+    Hermes <-> claude code cli terminal sessions
+
