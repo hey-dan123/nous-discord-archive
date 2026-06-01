@@ -1,0 +1,10 @@
+# Thread 'DietCode - Gives Hermes Super Powers For Software Architecture' in forum #plugins-skills-and-skins
+# thread_id=1511026093765951690 forum_id=1485392832154832906
+# Started 2026-06-01T17:39:26.209892+00:00
+
+[2026-06-01T15:18:14.261000+00:00] oleegg (id=1511026093765951690)
+    DietCode is a local-first agentic pair programmer that analyzes your codebase, creates implementation plans, and executes tasks across your terminal, browser, and filesystem in parallel Git worktrees—all while enforcing architectural guardrails and keeping you in full control.
+    https://github.com/CardSorting/dietcode-plugin
+    [attachment] 5ae48bc4-0932-44d5-bd23-ed70b30232c1.jpg https://cdn.discordapp.com/attachments/1511026093765951690/1511026093996511242/5ae48bc4-0932-44d5-bd23-ed70b30232c1.jpg?ex=6a1ef436&is=6a1da2b6&hm=049bf8d82d9e58a176dd736b4d2b95716b0276e47c356cc41b6c41d9566b0030&
+    [embed] GitHub - CardSorting/dietcode-plugin: DietCode is a standalone Herm... https://github.com/CardSorting/dietcode-plugin
+

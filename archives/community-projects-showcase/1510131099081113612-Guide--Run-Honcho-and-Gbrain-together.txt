@@ -7,3 +7,6 @@
     [attachment] hermes-honcho-gbrain-bio-wiring.clean.png https://cdn.discordapp.com/attachments/1510131099081113612/1510131100456980531/hermes-honcho-gbrain-bio-wiring.clean.png?ex=6a1bb2af&is=6a1a612f&hm=1285b07da88917c7d52e6805d358f352364a66b4ec7c9e471d4b9607e221e00a&
     [embed] GitHub - elkimek/hermes-gbrain-honcho: Hermes + Honcho + GBrain int... https://github.com/elkimek/hermes-gbrain-honcho
 
+[2026-06-01T16:45:15.674000+00:00] thomasrenkert (id=1511047993959383171)
+    have you tried this setup with mnemosyne?
+

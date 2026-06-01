@@ -127,3 +127,9 @@
 [2026-05-31T02:02:01.264000+00:00] thatlivideddude (id=1510463331427946576)
     The dumber models did struggle with it I've noticed
 
+[2026-06-01T13:12:49.744000+00:00] thatlivideddude (id=1510994533654204416)
+    Works great with MiniMax M3 btw
+
+[2026-06-01T13:15:13.770000+00:00] templeofmoon (id=1510995137742897285)
+    That's on open code go now right? I've just been using dsv4 flash
+

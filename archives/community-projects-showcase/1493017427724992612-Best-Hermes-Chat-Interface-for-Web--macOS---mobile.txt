@@ -2954,3 +2954,11 @@
     Damn I didn't know that was a thing! Very useful!
     [reply to avidfuturist msg=1510488729796743178]
 
+[2026-06-01T15:16:37.690000+00:00] trojector13 (id=1511025688717557852)
+    <@933139410281713755> thank you for your work. It's the best webui around. Just posted a request in https://github.com/nesquena/hermes-webui/issues/268#issuecomment-4593924490 .I have 2 profiles, with different set of skills, and I would definately love to control them through the webui.
+    [embed] Feature: manage Skills in sidebar (archive/disable/delete similar t... https://github.com/nesquena/hermes-webui/issues/268
+
+[2026-06-01T15:17:00.427000+00:00] avidfuturist (id=1511025784083578990)
+    Thanks will take a look!
+    [reply to trojector13 msg=1511025688717557852]
+

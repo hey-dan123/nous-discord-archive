@@ -1,0 +1,12 @@
+# Thread 'Presenting Mazemaker. Rivals top memories. But way better. Free. Local. Not mine, my friend's. :)' in forum #community-projects-showcase
+# thread_id=1510974702082981908 forum_id=1316137596535177246
+# Started 2026-06-01T17:35:28.234024+00:00
+
+[2026-06-01T11:54:01.529000+00:00] valiendovrga (id=1510974702082981908)
+    https://github.com/itsXactlY/mazemaker
+    
+    https://mazemaker.online/
+    [attachment] IMG_9804.png https://cdn.discordapp.com/attachments/1510974702082981908/1510974702460473457/IMG_9804.png?ex=6a1ec459&is=6a1d72d9&hm=aab797ca046e89ffda40e0416ebe39fec6151338a46eb5339e36b28affac3e04&
+    [embed] GitHub - itsXactlY/mazemaker: Semantic memory system with knowledge... https://github.com/itsXactlY/mazemaker
+    [embed] Mazemaker — an operating system for AI agents https://mazemaker.online/
+

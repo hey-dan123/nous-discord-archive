@@ -1,0 +1,13 @@
+# Thread 'Mnemon Memory Provider Plugin' in forum #plugins-skills-and-skins
+# thread_id=1511018738164695171 forum_id=1485392832154832906
+# Started 2026-06-01T17:39:26.718855+00:00
+
+[2026-06-01T14:49:00.549000+00:00] tradericko (id=1511018738164695171)
+    Just showcasing the mnemo provider https://github.com/gitricko/hermes-plugin-mnemon
+    
+    If you wanna give it a test... Use this codespace to try it.. it is preconfigure with this plugin + mnemon is install by default
+    
+    https://github.com/gitricko/hermes-webtop
+    [embed] GitHub - gitricko/hermes-plugin-mnemon https://github.com/gitricko/hermes-plugin-mnemon
+    [embed] GitHub - gitricko/hermes-webtop: An agent that grows with you https://github.com/gitricko/hermes-webtop
+

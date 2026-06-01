@@ -1,0 +1,32 @@
+# Thread 'Just some sleep deprived electrical contractor. No idea how I came to create this monstrosity.' in forum #community-projects-showcase
+# thread_id=1510973133686046791 forum_id=1316137596535177246
+# Started 2026-06-01T17:35:28.760933+00:00
+
+[2026-06-01T11:47:47.594000+00:00] valiendovrga (id=1510973133686046791)
+    Hey everyone. first time posting. Love the idea of this channel. JUST got the idea of using Discord to join AI Groups. Started my journey with ChatGPT. Finally learned a bit about real AI use-case starting 3 months ago. Been w Hermes since ~2 weeks after its launch. (Had OpenClaw for 2hrs lmfao). 
+    
+    Thought you guys might enjoy a peek at my AI Dashboard. I’d love to connect with others in the trades doing similar things. Especially those wanting to learn more. I don’t know shit. All I know is my Codex and my Claude Code Agent somehow turned my Hermes into some freaking demon. 
+    
+    I’m an electrical contractor from the Chicagoland area. Couldn’t write you a single line of code. But somehow created this monstrosity. 
+    
+    It’s my Fully (90%) shipped AI Overhead Dashboard. Created my own neural memory config as well. And recently ‘hired’ a small always-on evidence router gang to the squad. Any agent at any session somehow never loses context whatsoever. 
+    
+    Lead a 6 man residential new construction team. AI has somehow enabled me to become our entire overhead staff. Estimator/sales guy. As well as on the field (I am 1 of the 6 laborers too). 
+    
+    This stuff is going to change the world. It’s my belief that within the next 5-7 years. It’s no longer going to be — “Hey you should get into it. Start tinkering with it a bit” — but rather a requirement. 
+    
+    Much like learning to use a smart phone. High school classes. Etc. Or it’ll be forced on you. I thank God I’m somehow not a lost cause.  
+    
+    Second image is a screenshot of the Hermes Dashboard Operator presenting itself to my family lmfao. I’d say more than 90% finished for sure. But I damn well know it can never get to 100. 
+    
+    Might as well check us out! 
+    
+    https://www.angels-electric.com/
+    [attachment] IMG_0811.jpeg https://cdn.discordapp.com/attachments/1510973133686046791/1510973134222786620/IMG_0811.jpeg?ex=6a1ec2e3&is=6a1d7163&hm=4f3937976717caae65f41220f1038f662e6f3969180e221f7b2e490d96f3f678&
+    [attachment] IMG_6169.png https://cdn.discordapp.com/attachments/1510973133686046791/1510973135078428672/IMG_6169.png?ex=6a1ec2e3&is=6a1d7163&hm=81786c5785be52855652b124555893d9d6dc663bec6c8cf376aea5af27e7e5cb&
+    [embed] Angel's Electric Service - Chicagoland https://www.angels-electric.com/
+
+[2026-06-01T11:49:45.740000+00:00] valiendovrga (id=1510973629226156144)
+    edit: a friend I met here actually started neural memory. I made it Angel's Electric focused. He shipped something insane himself. He's a real dev. Plugged him in the post after mine. https://mazemaker.online/
+    [embed] Mazemaker — an operating system for AI agents https://mazemaker.online/
+

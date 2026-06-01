@@ -23000,3 +23000,313 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/36747
     [embed] fix(gateway): bypass WhatsApp batching for slash commands by wysie ... https://github.com/NousResearch/hermes-agent/pull/36747
 
+[2026-06-01T12:30:09.945000+00:00] tdamre (id=1510983797079015546)
+    okay what and one question what do you mean by bypass all restrictions?
+    [reply to ancientalies msg=1510962245696225281]
+
+[2026-06-01T12:37:57.806000+00:00] ancientalies (id=1510985759430017035)
+    just as it says. it shouldnt tell you no. it'll help you with anything. Ive tested it on just about everything.
+    [reply to tdamre msg=1510983797079015546]
+
+[2026-06-01T12:41:28.852000+00:00] ancientalies (id=1510986644621099098)
+    just make sure you do this part.
+    [attachment] Screenshot_2026-06-01_at_5.40.36_AM.png https://cdn.discordapp.com/attachments/1491258766648283238/1510986644352798862/Screenshot_2026-06-01_at_5.40.36_AM.png?ex=6a1ecf78&is=6a1d7df8&hm=7c522ac2507f39991c2a2f743b47f56a2756cfe724e2f6952536007da2eb2499&
+    [reply to tdamre msg=1510983797079015546]
+
+[2026-06-01T12:46:13.228000+00:00] ancientalies (id=1510987837380755457)
+    every so often you'll get a refusal, but thats an easy fix. most of the time you can just start a new session but 9.9/10 it wont refuse.
+    [attachment] Screen_Recording_2026-06-01_at_5.43.18_AM.mov https://cdn.discordapp.com/attachments/1491258766648283238/1510987836474658937/Screen_Recording_2026-06-01_at_5.43.18_AM.mov?ex=6a1ed095&is=6a1d7f15&hm=f2979ab4898bbc9a972a0d0a3fbfc4c67b641e1b58f87d68be958971c90eb2ae&
+
+[2026-06-01T12:48:50.875000+00:00] ancientalies (id=1510988498600202281)
+    and btw you'll notice it starts in `/yolo`, thats just so its a smooth transition. I would recomend taking it off of that after the first boot up
+
+[2026-06-01T13:15:57.853000+00:00] quark2world (id=1510995322640535693)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/22275
+    [embed] feat(installer): add (minimal) install modes, feature installers, a... https://github.com/NousResearch/hermes-agent/pull/22275
+
+[2026-06-01T13:16:40.404000+00:00] quark2world (id=1510995501112365177)
+    And because i got bored recently (and also need a hermes that my internal security people will accept) i also went ahead and gone the further step to make a "nanohermes": https://github.com/quarker1337/nanoHermes
+
+[2026-06-01T13:17:08.225000+00:00] quark2world (id=1510995617801830440)
+    + a Packages Repo: https://github.com/quarker1337/Hermes-Packages
+
+[2026-06-01T13:18:06.369000+00:00] quark2world (id=1510995861675442276)
+    The .git history went puff at some point because hermes was in full "trim fat" mode and didnt see that we could just install/update hermes without git 🤪
+
+[2026-06-01T13:31:18.622000+00:00] tdamre (id=1510999184625504480)
+    fire music
+    [reply to ancientalies msg=1510987837380755457]
+
+[2026-06-01T13:31:50.157000+00:00] tdamre (id=1510999316893012029)
+    yeah I'll test it when I port this to windows lol I dont own a mac
+    [reply to ancientalies msg=1510986644621099098]
+
+[2026-06-01T13:39:03.310000+00:00] ancientalies (id=1511001133668110468)
+    well I smashed my windows laptop, but i do have most of the windows version done. That was my next thing I had to get done. When finsh picking up my kids and getting home ill finish it and ping you.
+    [reply to tdamre msg=1510999316893012029]
+
+[2026-06-01T13:39:49.617000+00:00] ancientalies (id=1511001327893876912)
+    I just wont be able to test it fully, I dont feel like loading a vm and i got a few more days until my new laptop comes in. but should be solid
+
+[2026-06-01T13:57:44.909000+00:00] venomoth_3 (id=1511005837995413614)
+    can we still open PR on github ? I was absent recent days
+
+[2026-06-01T14:14:26.621000+00:00] tdamre (id=1511010039480193164)
+    yeah
+    [reply to venomoth_3 msg=1511005837995413614]
+
+[2026-06-01T14:14:35.196000+00:00] tdamre (id=1511010075446345889)
+    thank you
+    [reply to ancientalies msg=1511001133668110468]
+
+[2026-06-01T14:53:34.319000+00:00] pixelprox_99030 (id=1511019886439174287)
+    Hey guys I have a problem setting up discord with my heremes bot.  I keep getting either a timeout error, or a 401 error does anyone know what to do?
+
+[2026-06-01T15:01:59.898000+00:00] ancientalies (id=1511022006991196312)
+    ```bash
+    cat > ~/collect-hermes-discord-debug.sh <<'EOF'
+    #!/usr/bin/env bash
+    set -euo pipefail
+    
+    TS="$(date +%Y%m%d-%H%M%S)"
+    OUT="$HOME/Desktop/hermes-discord-debug-$TS"
+    ZIP="$OUT.zip"
+    
+    mkdir -p "$OUT"
+    
+    redact() {
+      sed -E \
+        -e 's/(DISCORD[_A-Z0-9]*TOKEN|BOT[_A-Z0-9]*TOKEN|TOKEN|API[_A-Z0-9]*KEY|SECRET|PASSWORD|AUTHORIZATION)[=:][[:space:]]*[^[:space:]]+/\1=<REDACTED>/Ig' \
+        -e 's/Bot[[:space:]]+[A-Za-z0-9._-]+/Bot <REDACTED>/g' \
+        -e 's/Bearer[[:space:]]+[A-Za-z0-9._-]+/Bearer <REDACTED>/g' \
+        -e 's/[MN][A-Za-z0-9_-]{23,28}\.[A-Za-z0-9_-]{6,10}\.[A-Za-z0-9_-]{27,45}/<DISCORD_TOKEN_REDACTED>/g'
+    }
+    
+    {
+      echo "=== SYSTEM ==="
+      date
+      uname -a || true
+      echo "SHELL=$SHELL"
+      echo "PWD=$PWD"
+    
+      echo
+      echo "=== COMMAND PATHS ==="
+      command -v hermes || true
+      command -v python3 || true
+      command -v node || true
+      command -v npm || true
+    
+      echo
+      echo "=== VERSIONS ==="
+      hermes --version 2>&1 || true
+      python3 --version 2>&1 || true
+      node --version 2>&1 || true
+      npm --version 2>&1 || true
+    
+      echo
+      echo "=== RELEVANT ENV VAR NAMES ONLY ==="
+      env | grep -Ei 'discord|hermes|token|secret|api|bot' | sed -E 's/=.*$/=<REDACTED>/' || true
+    
+      echo
+      echo "=== HERMES DIRECTORY TREE ==="
+      if [ -d "$HOME/.hermes" ]; then
+        find "$HOME/.hermes" -maxdepth 4 -type f | sed "s|$HOME|~|g" | sort
+      else
+        echo "~/.hermes not found"
+      fi
+    } | redact > "$OUT/system-info.txt"
+    
+    if [ -d "$HOME/.hermes/logs" ]; then
+      mkdir -p "$OUT/logs"
+      for f in "$HOME/.hermes/logs"/*.log; do
+        [ -f "$f" ] || continue
+        base="$(basename "$f")"
+        {
+          echo "===== $base : last 800 lines ====="
+          tail -n 800 "$f" 2>&1 || true
+        } | redact > "$OUT/logs/$base.tail.txt"
+      done
+    fi
+    
+    # Try to capture a fresh gateway startup log for 30 seconds.
+    {
+      echo "=== FRESH HERMES GATEWAY STARTUP CAPTURE ==="
+      echo "Started at: $(date)"
+      echo
+      timeout 30s hermes gateway 2>&1 || true
+      echo
+      echo "Ended at: $(date)"
+    } | redact > "$OUT/hermes-gateway-fresh-start.txt" || true
+    
+    cd "$HOME/Desktop"
+    zip -r "$(basename "$ZIP")" "$(basename "$OUT")" >/dev/null
+    
+    echo
+    echo "Created debug bundle:"
+    echo "$ZIP"
+    echo
+    echo "Before sending, quickly inspect these files for secrets:"
+    echo "$OUT/system-info.txt"
+    echo "$OUT/hermes-gateway-fresh-start.txt"
+    echo "$OUT/logs/"
+    EOF
+    
+    chmod +x ~/collect-hermes-discord-debug.sh
+    ~/collect-hermes-discord-debug.sh
+    ```
+    
+    send the log file so someone can actually see whats going on
+    [reply to pixelprox_99030 msg=1511019886439174287]
+
+[2026-06-01T15:02:39.268000+00:00] pixelprox_99030 (id=1511022172120809644)
+    okay
+    [reply to ancientalies msg=1511022006991196312]
+
+[2026-06-01T15:03:00.163000+00:00] ancientalies (id=1511022259761057953)
+    youll want to find `~/.hermes/logs/gateway.log`
+
+[2026-06-01T15:03:18.641000+00:00] pixelprox_99030 (id=1511022337263272077)
+    okay
+
+[2026-06-01T15:04:05.116000+00:00] pixelprox_99030 (id=1511022532193550368)
+    do I send it to you?
+    [reply to ancientalies msg=1511022259761057953]
+
+[2026-06-01T15:06:57.945000+00:00] ancientalies (id=1511023257090916534)
+    you should be able to send the log file as an attachment. If not, zip it and send it here
+
+[2026-06-01T15:07:39.149000+00:00] ancientalies (id=1511023429913018571)
+    <@466701167838101531> should be good for gitbash, WSL, and powershell now.
+
+[2026-06-01T15:08:03.254000+00:00] pixelprox_99030 (id=1511023531016851737)
+    [attachment] Problem.txt https://cdn.discordapp.com/attachments/1491258766648283238/1511023530576314499/Problem.txt?ex=6a1ef1d3&is=6a1da053&hm=0c4f101ab7519b53be4cb166b3aa50f47f3173089e19022bc5ad19baf5674d95&
+
+[2026-06-01T15:08:11.036000+00:00] tdamre (id=1511023563656663111)
+    nice
+    [reply to ancientalies msg=1511023429913018571]
+
+[2026-06-01T15:08:18.449000+00:00] tdamre (id=1511023594749169754)
+    will look into it tonight
+
+[2026-06-01T15:08:31.984000+00:00] pixelprox_99030 (id=1511023651518943262)
+    Thanks
+
+[2026-06-01T15:09:44.024000+00:00] ancientalies (id=1511023953676599447)
+    https://tenor.com/view/anime-excited-happy-smile-gif-15060821
+    [embed]  https://tenor.com/view/anime-excited-happy-smile-gif-15060821
+    [reply to tdamre msg=1511023594749169754]
+
+[2026-06-01T15:10:39.952000+00:00] pixelprox_99030 (id=1511024188255764510)
+    https://tenor.com/view/futurama-fry-hmm-squinting-gif-4973356107513966870
+    [embed]  https://tenor.com/view/futurama-fry-hmm-squinting-gif-4973356107513966870
+
+[2026-06-01T15:13:20.685000+00:00] ancientalies (id=1511024862418964640)
+    Your biggest issue is showing `PrivilegedIntentsRequired: Shard ID None is requesting privileged intents that have not been explicitly enabled in the developer portal.`
+    
+    You need to enable some settings:  
+    MESSAGE CONTENT INTENT = ON
+    SERVER MEMBERS INTENT = ON
+    PRESENCE INTENT = optional; leave OFF unless Hermes explicitly asks for it
+    
+    save changes then 
+    
+    ```bash
+    pkill -f "hermes gateway" || true
+    sleep 2
+    hermes gateway
+    ```
+    run in another terminal 
+    
+    ```bash
+    tail -f ~/.hermes/logs/gateway-error.log ~/.hermes/logs/agent.log ~/.hermes/logs/gateway.log 2>/dev/null
+    ```
+    
+    after that you should not see `PrivilegedIntentsRequired`
+    [reply to pixelprox_99030 msg=1511023651518943262]
+
+[2026-06-01T15:13:51.302000+00:00] ancientalies (id=1511024990835970058)
+    Enable Message Content Intent + Server Members Intent → Save → restart Hermes gateway.
+
+[2026-06-01T15:14:35.913000+00:00] pixelprox_99030 (id=1511025177948061878)
+    I've had this on..
+
+[2026-06-01T15:15:27.147000+00:00] ancientalies (id=1511025392838906027)
+    okay.. so the token is probably valid in isolation. But Hermes may still be reading an older token from config/env. Check for duplicate token sources. that should fix it. probs
+
+[2026-06-01T15:15:49.629000+00:00] pixelprox_99030 (id=1511025487135244472)
+    honestly that sounds like it okay
+
+[2026-06-01T15:16:51.907000+00:00] ancientalies (id=1511025748347977949)
+    if that is still an issue run 
+    ```bash
+    tail -n 300 ~/.hermes/logs/gateway-error.log ~/.hermes/logs/agent.log ~/.hermes/logs/gateway.log 2>/dev/null
+    cat ~/.hermes/gateway_state.json 2>/dev/null
+    ``` 
+    
+    just redact your tokens before you send it publicly
+
+[2026-06-01T15:19:21.133000+00:00] pixelprox_99030 (id=1511026374247321751)
+    Alright reset the old token mentions to the real token. Reseting gate now
+
+[2026-06-01T15:21:02.067000+00:00] pixelprox_99030 (id=1511026797595332780)
+    The bot says online now so thats progress
+
+[2026-06-01T15:21:02.300000+00:00] lll.zzz.ccc (id=1511026798572605521)
+    will NV acquire Nous research?
+
+[2026-06-01T15:21:57.543000+00:00] ancientalies (id=1511027030278410442)
+    https://cdn.discordapp.com/attachments/1235529540428628013/1257810730137423903/astolfo4.gif
+    [embed]  https://cdn.discordapp.com/attachments/1235529540428628013/1257810730137423903/astolfo4.gif
+    [reply to pixelprox_99030 msg=1511026797595332780]
+
+[2026-06-01T15:22:28.766000+00:00] pixelprox_99030 (id=1511027161237032962)
+    I got it to work thanks... <:cringe:1151261525517008926>
+    [reply to ancientalies msg=1511027030278410442]
+
+[2026-06-01T15:23:32.326000+00:00] pixelprox_99030 (id=1511027427826991254)
+    https://tenor.com/view/dagestan-send-him-2-3-years-gif-14326579384410409432
+    [embed]  https://tenor.com/view/dagestan-send-him-2-3-years-gif-14326579384410409432
+
+[2026-06-01T15:23:40.620000+00:00] ancientalies (id=1511027462614548480)
+    I got censored
+
+[2026-06-01T15:23:52.701000+00:00] ancientalies (id=1511027513286070544)
+    https://tenor.com/view/anime-fern-anger-angry-annoyed-gif-3264208338589798256
+    [embed]  https://tenor.com/view/anime-fern-anger-angry-annoyed-gif-3264208338589798256
+
+[2026-06-01T15:24:41.444000+00:00] tdamre (id=1511027717729157130)
+    where can I find such hard working gentlemen as displayed in these pixels?
+    [reply to ancientalies msg=1511027030278410442]
+
+[2026-06-01T15:25:10.261000+00:00] ancientalies (id=1511027838596157542)
+    probs reddit
+    [reply to tdamre msg=1511027717729157130]
+
+[2026-06-01T15:25:18.285000+00:00] ancientalies (id=1511027872251510955)
+    or poland
+
+[2026-06-01T15:25:25.007000+00:00] tdamre (id=1511027900445360229)
+    <:BeardedNousGirl:1506796582987632690>
+
+[2026-06-01T15:25:39.299000+00:00] tdamre (id=1511027960390619410)
+    hermes buy plane tickets to poland
+
+[2026-06-01T15:27:14.150000+00:00] ancientalies (id=1511028358224412744)
+    I saw few at uni when i was in america but they the mythical labybois are in poland or thialand.
+
+[2026-06-01T16:30:50.961000+00:00] cryptoworlldz (id=1511044367089930472)
+    Tracked down the `skill_view` false-collision bug.
+    
+    The bare-name scan was accidentally treating another skill’s nested markdown asset as a legacy flat skill candidate, so it could report a collision even when there was only one real skill with that name.
+    
+    https://github.com/NousResearch/hermes-agent/pull/36895
+    [embed] fix(skills): ignore asset markdown in skill_view collision scan by ... https://github.com/NousResearch/hermes-agent/pull/36895
+
+[2026-06-01T16:35:06.446000+00:00] fesalfayed (id=1511045438671819023)
+    WhatsApp LID <-> phone number mismatch bug breaking allowlist for gateway messaging <@387972437901312000> 
+    
+    https://github.com/NousResearch/hermes-agent/issues/36664
+    https://github.com/NousResearch/hermes-agent/pull/36665
+    [embed] [Bug]: WhatsApp LID sender silently dropped — alias resolver read... https://github.com/NousResearch/hermes-agent/issues/36664
+    [embed] fix(whatsapp): resolve LID aliases on modern platforms/ session lay... https://github.com/NousResearch/hermes-agent/pull/36665
+

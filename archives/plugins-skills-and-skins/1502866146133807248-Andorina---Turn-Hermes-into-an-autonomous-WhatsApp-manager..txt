@@ -283,3 +283,19 @@
 [2026-05-31T13:00:12.508000+00:00] ifreet_00706 (id=1510628969710485545)
     We are quite tuned
 
+[2026-06-01T14:09:09.846000+00:00] vayaperson (id=1511008710829539419)
+    Bot LID resolution error ✅SOLVED✅
+    The bot's LID is not being resolved correctly, causing user messages and bot responses to appear as two separate conversations in the inbox.,
+    
+    Session fragmentation = amnesia effect ✅SOLVED✅
+    Because the LID is not being resolved properly (see point 1), JID extraction fails, resulting in an empty session_key. Memory itself is working, but session fragmentation combined with the LID resolution issue causes this behavior.
+    
+    Souls behaving like generic assistants ✅SOLVED✅
+    Personalities are being applied correctly, but when a subsoul is loaded it is currently added as additional context. This means the model may remain anchored to its original role if the override is not reinforced in a more effective way.
+    
+    Permissions and Knowledge system refactor ⚒️WORKING...⚒️ Permissions are solved, we are fixing knowledge access.
+    We're restructuring the permissions system. Currently, if a user only has permission to interact with the bot, any request requiring access to the Knowledge system may be rejected because the user lacks file read permissions. We're also redesigning how command flags/arguments are handled and how their usage is managed through permissions.
+    
+    Spaces in soul names ✅SOLVED✅
+    A simple parsing issue with an easy fix.
+
