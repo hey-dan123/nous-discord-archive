@@ -133,3 +133,7 @@
 [2026-06-01T13:15:13.770000+00:00] templeofmoon (id=1510995137742897285)
     That's on open code go now right? I've just been using dsv4 flash
 
+[2026-06-01T18:44:13.865000+00:00] thatlivideddude (id=1511077933702320319)
+    Yup
+    [reply to templeofmoon msg=1510995137742897285]
+

@@ -23310,3 +23310,23 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] [Bug]: WhatsApp LID sender silently dropped — alias resolver read... https://github.com/NousResearch/hermes-agent/issues/36664
     [embed] fix(whatsapp): resolve LID aliases on modern platforms/ session lay... https://github.com/NousResearch/hermes-agent/pull/36665
 
+[2026-06-01T18:26:46.657000+00:00] gucaponi (id=1511073541393612992)
+    Hi everybody, do we have some news abot this requests?
+    #5850 — Richiesta parser PDF per workspace (PyMuPDF/pdfplumber) — P3 bassa priorità
+    #15595, #16979, #12845 — Problemi PDF su QQBot, Signal
+    #26306 — "Add file upload/download API endpoints" (aperta, 15 maggio 2026)
+
+[2026-06-01T19:05:50.916000+00:00] w0lfgang88 (id=1511083373928513567)
+    <@387972437901312000> Bump on #35191: green, mergeState CLEAN, and scoped to the context-engine status hook only. Thanks in advance. https://github.com/NousResearch/hermes-agent/pull/35191
+    [embed] fix(context-engine): honor quiet compaction status by stephenschoet... https://github.com/NousResearch/hermes-agent/pull/35191
+
+[2026-06-01T19:53:47.694000+00:00] gowtham6822 (id=1511095440009859152)
+    i wish there is screen-reader mode like qwen-code or gemini-cli
+
+[2026-06-01T20:12:14.096000+00:00] tdamre (id=1511100080596324576)
+    ok im home now
+    [reply to ancientalies msg=1511023953676599447]
+
+[2026-06-01T21:02:46.054000+00:00] nebulam78 (id=1511112797550022877)
+    Hey, good day all. Any ideas on how to implement a custom router provider instead of Open Router? I want to use self hosted LiteLLM
+

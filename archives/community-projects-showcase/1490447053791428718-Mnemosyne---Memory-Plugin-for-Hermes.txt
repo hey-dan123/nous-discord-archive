@@ -2347,3 +2347,49 @@
 [2026-06-01T15:16:43.034000+00:00] jetpippo (id=1511025711132180681)
     or i can just send it here if its allowed?
 
+[2026-06-01T20:17:46.202000+00:00] pinched_nerve (id=1511101473549848717)
+    Tried to install this today and it instantly failed.  Debian/trixie doesn't like to allow running pip, so tried to follow the documentation and run:
+    `curl -sSL https://raw.githubusercontent.com/AxDSan/mnemosyne/main/deploy_hermes_provider.sh`
+    
+    Result?  Curl responded with "404: Not Found"
+    
+    There's something comical about a "not found" error with a memory provider. 😄
+    [reply to nulledvector msg=1490447053791428718]
+
+[2026-06-01T20:19:03.069000+00:00] naroh091 (id=1511101795953414195)
+    I've been using this for weeks and it's great ☺️
+
+[2026-06-01T20:21:45.200000+00:00] nulledvector (id=1511102475979980840)
+    Did it worked out
+    [reply to phospheneoverdrive msg=1511024344250187948]
+
+[2026-06-01T20:21:46.579000+00:00] nulledvector (id=1511102481764061315)
+    ??
+
+[2026-06-01T20:22:13.203000+00:00] nulledvector (id=1511102593433338029)
+    Where you got that from.. That route / path / alternative is outdated
+    [reply to pinched_nerve msg=1511101473549848717]
+
+[2026-06-01T20:22:33.483000+00:00] nulledvector (id=1511102678493565039)
+    Thank you very much for the feedback! ✨ glad it's rocking out for you!
+    [reply to naroh091 msg=1511101795953414195]
+
+[2026-06-01T20:23:37.458000+00:00] nulledvector (id=1511102946824290325)
+    This should be addressed soon!
+    [reply to pinched_nerve msg=1511101473549848717]
+
+[2026-06-01T20:37:02.067000+00:00] pinched_nerve (id=1511106321598906509)
+    docs/getting_started.md  (I entered a github issue for it)
+    [reply to nulledvector msg=1511102593433338029]
+
+[2026-06-01T20:37:41.987000+00:00] pinched_nerve (id=1511106489035657268)
+    I'm so good at finding bugs, I find them before I even get a program installed. 😄
+    [reply to nulledvector msg=1511102946824290325]
+
+[2026-06-01T20:55:07.625000+00:00] pinched_nerve (id=1511110874759172098)
+    in the meantime, can you tell me the correct shell script for installing it?  So.. you know.. I can install it? 🙂
+
+[2026-06-01T21:26:18.049000+00:00] phospheneoverdrive (id=1511118719886163999)
+    Nah, even the pm'ed invite did the same.
+    [reply to nulledvector msg=1511102475979980840]
+

@@ -1,0 +1,15 @@
+# Thread 'Hermes War Room: a multilingual visual UI for Hermes orchestration/delegation system' in forum #community-projects-showcase
+# thread_id=1511100028444479748 forum_id=1316137596535177246
+# Started 2026-06-01T21:31:06.203207+00:00
+
+[2026-06-01T20:12:01.662000+00:00] naroh091 (id=1511100028444479748)
+    A browser dashboard on top of Hermes multi-profile delegation and kanban systems. 
+    
+    Hermes already gives you everything you need to run a fleet of specialised agents that hand work to each other — the Orchestration War Room just **makes that fleet visible, legible, and directable from a single screen** instead of a forest of terminal sessions and hermes kanban tail invocations.
+    
+    **Hire a leader and a team, brief the leader, watch the team work. **The War Room handles all the wiring (kanban delegation, status tracking, notifications) underneath.
+    
+    https://github.com/Naroh091/hermes-war-room
+    [attachment] ssstwitter.com_1780344681855.mp4 https://cdn.discordapp.com/attachments/1511100028444479748/1511100029270753560/ssstwitter.com_1780344681855.mp4?ex=6a1f3911&is=6a1de791&hm=a2cf9a5e5016c5fc87bf034c7a292b5ccb2fbde8bcccc53090d6cfdd2d60a593&
+    [embed] GitHub - Naroh091/hermes-war-room: UI layer for the native Hermes o... https://github.com/Naroh091/hermes-war-room
+

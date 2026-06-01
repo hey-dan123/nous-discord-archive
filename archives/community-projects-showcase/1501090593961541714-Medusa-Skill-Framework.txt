@@ -24,3 +24,10 @@
 [2026-05-06T00:21:34.910000+00:00] m3nt8l (id=1501378358426996807)
     This looks promising 🍻
 
+[2026-06-01T21:27:45.643000+00:00] lorddetracy1782 (id=1511119087282028555)
+    Just started a fresh install and its going over the 1k skills I have. Making improvements.  Might be worth looking to how to implment this into Hermes in general.
+    [attachment] Screenshot_2026-06-01_151819.jpg https://cdn.discordapp.com/attachments/1501090593961541714/1511119087005073518/Screenshot_2026-06-01_151819.jpg?ex=6a1f4ad1&is=6a1df951&hm=57b198fe47b17442ac25aca77413ca0d4ae53f3c813c7bb97236df874337875b&
+
+[2026-06-01T21:28:14.450000+00:00] lorddetracy1782 (id=1511119208107212800)
+    <@387972437901312000>
+
