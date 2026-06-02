@@ -19,3 +19,6 @@
     [attachment] UTF-8_B_QW5pbWHDp8Ojby5naWY_.gif https://cdn.discordapp.com/attachments/1511374159543013406/1511374159970697236/UTF-8_B_QW5pbWHDp8Ojby5naWY_.gif?ex=6a20385f&is=6a1ee6df&hm=e0112be7a9722779b1ef58cba3569585aa96c25a059776910666389b86a05640&
     [embed] GitHub - theopitori/hermeskill: External agent-supervision system: ... https://github.com/theopitori/hermeskill
 
+[2026-06-02T19:04:51.422000+00:00] chengduum (id=1511445512258064605)
+    Woah. With a title like that, someone's clearly not concerned about Roko's Basilisk
+

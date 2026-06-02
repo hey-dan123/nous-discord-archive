@@ -3003,3 +3003,76 @@
     You can fall back to command line to set the default model for a profile using embedded “/terminal” on WebUI. And then the WebUI should inherit at least after a server restart
     [reply to pinched_nerve msg=1511357413280845895]
 
+[2026-06-02T16:22:48.805000+00:00] pinched_nerve (id=1511404732646948864)
+    I can normally use "/model <model-name>" after browsing on nous research's site for what I want to try.  Of course, that hits up against the bug I reported about model names and substrings.  I hope that one gets fixed soon so I can mess around with mimo-v2.5 without having to jump through hoops to set it.
+    [reply to avidfuturist msg=1511401738568208525]
+
+[2026-06-02T16:30:41.665000+00:00] avidfuturist (id=1511406715965407294)
+    Yup will fix that one today!
+    [reply to pinched_nerve msg=1511404732646948864]
+
+[2026-06-02T19:11:04.150000+00:00] _123321_ (id=1511447075592601663)
+    would be great to have GPU too in here
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1511447075294937228/image.png?ex=6a207c48&is=6a1f2ac8&hm=3d83bd0bb82a0477a8c0187657d6a68928610026d6e53d70e69005a802efe2c9&
+
+[2026-06-02T19:11:19.733000+00:00] _123321_ (id=1511447140952576242)
+    also not just a stop server button but also a restart button so it stops and restarts automatically
+
+[2026-06-02T19:16:35.150000+00:00] avidfuturist (id=1511448463907225640)
+    Thanks for all the feedback!
+    [reply to _123321_ msg=1511447075592601663]
+
+[2026-06-02T20:10:41.531000+00:00] pinched_nerve (id=1511462080216301608)
+    If I click "update now", which project am I updating?  If the answer is "both", how can I update only 1?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1511462079951929446/image.png?ex=6a208a41&is=6a1f38c1&hm=9c444c2451b73bdd19aba1d8d87674c2fd3f048440a3c3625c95e48460266eaf&
+
+[2026-06-02T20:13:52.240000+00:00] pinched_nerve (id=1511462880107561020)
+    btw, that substring thing wasn't fixed.  Attached is the command I ran, the result, and the output of git log so you can see that I'm updated
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1511462878945738922/image.png?ex=6a208aff&is=6a1f397f&hm=dc6340c2b3912f363ecb72e82031f0541d9d3310f7fc82da002cb3a527f815fb&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1511462879415632113/image.png?ex=6a208b00&is=6a1f3980&hm=c5d055586d120de8b473f9a8ad3dc6d19dd1a3cab23b11940cb53366b07e6b07&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1511462879721820251/image.png?ex=6a208b00&is=6a1f3980&hm=530242f9c1672a837452bad8a46966d2844e5e901f5f02cbb18a6bc4b90aa3a7&
+
+[2026-06-02T20:18:24.778000+00:00] pinched_nerve (id=1511464023215046657)
+    I don't have permission to reopen https://github.com/nesquena/hermes-webui/issues/3368, but it's not fixed.
+    [reply to avidfuturist msg=1511448463907225640]
+
+[2026-06-02T20:18:45.121000+00:00] avidfuturist (id=1511464108539777024)
+    Reopened!
+    [reply to pinched_nerve msg=1511464023215046657]
+
+[2026-06-02T20:18:48.814000+00:00] pinched_nerve (id=1511464124029079595)
+    I did comment in it with info
+
+[2026-06-02T20:18:54.544000+00:00] avidfuturist (id=1511464148062703767)
+    Thanks!
+    [reply to pinched_nerve msg=1511464124029079595]
+
+[2026-06-02T20:19:06.244000+00:00] pinched_nerve (id=1511464197135929344)
+    btw, thank you for being so attentive.
+    [reply to avidfuturist msg=1511464148062703767]
+
+[2026-06-02T20:19:24.629000+00:00] avidfuturist (id=1511464274248335632)
+    Not possible yet, if you want to update just the UI then you can just pull the git repo and restart the server. Will add support in the future
+    [reply to pinched_nerve msg=1511462080216301608]
+
+[2026-06-02T20:19:56.808000+00:00] avidfuturist (id=1511464409216581772)
+    All good, will see what else needs to be fixed to resolve that issue fully
+    [reply to pinched_nerve msg=1511464197135929344]
+
+[2026-06-02T20:20:48.974000+00:00] pinched_nerve (id=1511464628016910597)
+    I'd offer to help, but I can't look at your javascript code.  At my paying job, I have to maintain js that's IE5 compatible (no, I'm not joking.)  If I look at modern js, it'll screw me up.
+    [reply to avidfuturist msg=1511464409216581772]
+
+[2026-06-02T20:22:41.417000+00:00] avidfuturist (id=1511465099637030994)
+    IE5 wow, I have bad memories of having to support the pos that was IE6 - RIP. Job security tho I bet lol
+    [reply to pinched_nerve msg=1511464628016910597]
+
+[2026-06-02T20:23:21.956000+00:00] avidfuturist (id=1511465269669789746)
+    I pity the folks still on IE5 in 2026
+
+[2026-06-02T20:23:31.636000+00:00] pinched_nerve (id=1511465310270525450)
+    What's worse is that that ancient crap has to actually run in windows 11.  edge using IE mode, and stepped back to IE5 compatibility.
+
+[2026-06-02T20:24:28.113000+00:00] pinched_nerve (id=1511465547152363672)
+    I asked my hermes agent about it once.  It told me that it was trained in the 21st century, but it did have some ancient history training.
+

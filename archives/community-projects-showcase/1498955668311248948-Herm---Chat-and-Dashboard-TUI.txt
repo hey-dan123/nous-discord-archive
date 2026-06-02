@@ -994,3 +994,36 @@
 [2026-06-02T05:24:23.518000+00:00] twindenis (id=1511239035463405769)
     I just need people to post their art now it works!
 
+[2026-06-02T20:23:03.922000+00:00] echoeclipse (id=1511465194029842483)
+    <@209037396983939072> I left it here for about 20 minutes before i started the video but this shows whats going on. Also ignore my funny previous session, i was testing memory lol
+    [attachment] WindowsTerminal_x1kc0Fyuak.mp4 https://cdn.discordapp.com/attachments/1498955668311248948/1511465193539113171/WindowsTerminal_x1kc0Fyuak.mp4?ex=6a208d27&is=6a1f3ba7&hm=f62a38a3a45c58aeab230bb4269769a8fdb68bc16cf2855fba19f773b3ac5685&
+
+[2026-06-02T20:25:03.838000+00:00] echoeclipse (id=1511465696993742968)
+    I think its pretty much any model / tab switch fixes the connecting, model is just what i do as its really fast for me
+
+[2026-06-02T20:26:28.730000+00:00] excessivelysalty (id=1511466053056860332)
+    I noticed sometimes it gets stuck on "connecting" when it's having problems connecting to mcp servers.
+
+[2026-06-02T20:26:50.088000+00:00] excessivelysalty (id=1511466142638542951)
+    On your video it looks like on the sidebar, once the mcp servers showed up, it went to ready
+
+[2026-06-02T20:27:19.984000+00:00] echoeclipse (id=1511466268031717588)
+    That is a good thing to rule out, ill remove all MCP connections and try now so we can get some good data
+
+[2026-06-02T20:31:08.773000+00:00] echoeclipse (id=1511467227642073129)
+    looks like its the same as the video, no mcps this time
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1511467226916585553/image.png?ex=6a208f0c&is=6a1f3d8c&hm=6015851a76c7976f7019c405d701f8d59ef34a92e7c0264767f4d0e188c866c5&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1511467227336147045/image.png?ex=6a208f0c&is=6a1f3d8c&hm=05d4c322d513a73f22479b1000c0fcb6aa3e8288bbab6412adf9d4da14c107c7&
+
+[2026-06-02T20:31:59.428000+00:00] excessivelysalty (id=1511467440104669339)
+    Hmm that's really odd, yeah something in that model popup must be triggering something
+
+[2026-06-02T20:37:00.488000+00:00] echoeclipse (id=1511468702841966593)
+    That was a good thought of something to check though, i woulda felt silly if it was that hehe
+
+[2026-06-02T20:44:00.780000+00:00] excessivelysalty (id=1511470465674383371)
+    lol yeah definitely still was good to check.  If you just use the hermes tui and not herm, it doesn't have the same problem?
+
+[2026-06-02T20:45:42.876000+00:00] echoeclipse (id=1511470893896040571)
+    hermes tui works pretty instantly every time
+

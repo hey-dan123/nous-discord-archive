@@ -23712,3 +23712,118 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://discord.com/channels/1053877538025386074/1504710919702188052
     [reply to blackestk msg=1511353844196708425]
 
+[2026-06-02T17:36:02.128000+00:00] gokhe (id=1511423159579185343)
+    Is there a way to migrate from hermes installed in wsl to native windows version? Any one has a skills or maybe some tips. 
+    
+    If not I can implement one and open a pr.
+
+[2026-06-02T17:43:31.969000+00:00] kyssta69 (id=1511425046349090859)
+    **Problem**: The launchd plist shipped with KeepAlive.SuccessfulExit=false, which meant launchd only restarted the gateway on non-zero exit. When gateway run --replace triggered a clean exit (code 0), launchd did not relaunch it, leaving the gateway down indefinitely until manually restarted.
+    
+    https://github.com/NousResearch/hermes-agent/pull/37534
+    [embed] fix(launchd): use unconditional KeepAlive so gateway restarts after... https://github.com/NousResearch/hermes-agent/pull/37534
+
+[2026-06-02T17:53:22.895000+00:00] kylekaster (id=1511427524872114176)
+    https://github.com/NousResearch/hermes-agent/pull/37525 found an issue with openai-codex auth not getting persisted during onboarding for hermes-desktop, fix proposed here
+    
+    https://discord.com/channels/1053877538025386074/1511387215308128386 relevant <#1485307775444844625> and corresponding issue https://github.com/NousResearch/hermes-agent/issues/37515
+
+[2026-06-02T17:56:31.180000+00:00] harrynguyen2107 (id=1511428314596642948)
+    Hi <@387972437901312000> , i cannot use `hermes desktop` after updating latest version. My OS machine is Linux - Ubuntu 24.04. Therefore, i just created an issue and proposed a PR to solve these issues related to Electron.
+    
+    https://github.com/NousResearch/hermes-agent/issues/37544
+    https://github.com/NousResearch/hermes-agent/pull/37545
+    [embed] [Bug]: `hermes desktop` build fails on Linux with `ENOENT: rename '... https://github.com/NousResearch/hermes-agent/issues/37544
+    [embed] fix(linux-desktop): fix Electron download cache corruption handling... https://github.com/NousResearch/hermes-agent/pull/37545
+
+[2026-06-02T18:01:07.056000+00:00] kkurottal6611 (id=1511429471704580107)
+    Hey 👋 opened a couple of small desktop fixes
+    `#37535` — boot overlay's "Use local gateway" button is a dead end when remote mode is forced via env vars → now hidden + shows real recovery steps. https://github.com/NousResearch/hermes-agent/pull/37535
+    `#37541` — packaged Linux "Update now" updated the backend but never the GUI shell yet said "done" → now reports honestly + a stuck-spinner fix. https://github.com/NousResearch/hermes-agent/pull/37541
+    All green, just waiting on review 🙏
+    [embed] fix(desktop): hide dead "Use local gateway" recovery under env-forc... https://github.com/NousResearch/hermes-agent/pull/37535
+    [embed] fix(desktop): stop falsely reporting GUI self-update on packaged Li... https://github.com/NousResearch/hermes-agent/pull/37541
+
+[2026-06-02T18:23:42.994000+00:00] gokhe (id=1511435158920757309)
+    any ideas???
+    [reply to gokhe msg=1511423159579185343]
+
+[2026-06-02T18:25:34.699000+00:00] minddragon (id=1511435627445354686)
+    <@704895484795420682> do export then import
+
+[2026-06-02T18:28:17.401000+00:00] minddragon (id=1511436309867266219)
+    <@387972437901312000> because this is my second ban for no reason. First was for building / supporting OpenClaw or something. Anthropic and Github banned me. IDK why no email or anything. Now this is my second banning and I was supporting Hermes and doing other open source projects and support. And about to release Hermes Foundry, Liminal Suite and Bridge Sessions. 
+    
+    So as of now, I will no longer maintain anything on Github. They are "DEAD" to me. 
+    
+    I will mirror all of Hermes-Agent to Codeberg. I will also mirror other selected projects like Hermes Vault or other ones that are useful. 
+    
+    I will encourage people to download from there - and I'm happy to coordinate dedicated access or to propose ideas on how to stay in sync. But I am tired - VERY tired - of having to rebuild everything ... it's hours of my time wasted on - who knows why. I did nothing wrong other than build open source software
+
+[2026-06-02T18:32:52.196000+00:00] teknium (id=1511437462440906823)
+    ban from our discord? or where
+
+[2026-06-02T18:41:11.952000+00:00] gokhe (id=1511439558569623693)
+    Are you talking about api ban?
+    [reply to minddragon msg=1511436309867266219]
+
+[2026-06-02T18:41:20.478000+00:00] gokhe (id=1511439594330128675)
+    Export how?
+    [reply to minddragon msg=1511435627445354686]
+
+[2026-06-02T18:42:18.352000+00:00] minddragon (id=1511439837071147132)
+    # Basic: export a profile to <name>.tar.gz in the current directory
+    hermes profile export <name>
+    
+    # Example
+    hermes profile export work
+    # -> creates work.tar.gz
+    
+    # Custom output path / filename
+    hermes profile export work -o ./work-backup-2026-06-02.tar.gz
+    [reply to gokhe msg=1511439594330128675]
+
+[2026-06-02T18:52:02.381000+00:00] gokhe (id=1511442286666322022)
+    does it export user memories skills cron jobs gateway status etc
+    [reply to minddragon msg=1511439837071147132]
+
+[2026-06-02T18:52:21.994000+00:00] gokhe (id=1511442368929333448)
+    btw i asked hermes itself to migrate lol, I hope it doesnt break anything
+
+[2026-06-02T18:52:29.150000+00:00] minddragon (id=1511442398943903824)
+    well. it's either that or just ask the bot to backup everything hermes related. it should be fine
+
+[2026-06-02T19:13:07.489000+00:00] lito9596 (id=1511447592913993871)
+    Update on #33423 (Fixes #30565), rebased on latest main + CI green. Root-cause fix for env-gated toolsets going silently unavailable after a .env reload (stale tool caches weren't invalidated). Distinct from #30580 (P3 warning only), set to close the issue.
+    https://github.com/NousResearch/hermes-agent/pull/33423
+    [embed] fix(tools): invalidate tool caches on dotenv reload by pnascimento9... https://github.com/NousResearch/hermes-agent/pull/33423
+
+[2026-06-02T19:38:06.753000+00:00] fgtomas3 (id=1511453881282990130)
+    Hey guys, question. is the new hermes app mac, installing hermes on my laptop? What is the real use and how can it be connected to hermes running in a server like aws. I love hermes running on cloud doing cron work for me, but the app I dont understand how it could be useful? can it be connected to a running hermes instance somewhere else?
+
+[2026-06-02T19:39:30.284000+00:00] ahmetarif0x (id=1511454231637528748)
+    https://github.com/NousResearch/hermes-agent/pull/37600 — hermes auth add xai-oauth never called _save_xai_oauth_tokens(), so active_provider was never set in auth.json. Setup wizard showed "No inference provider configured" after a successful OAuth login. Fix: replace pool.add_entry() with the canonical save function already used by the hermes model xAI flow.
+    
+    https://github.com/NousResearch/hermes-agent/pull/37601 — Same bug for google-gemini-cli. Adds _mark_google_gemini_cli_active() which sets active_provider with minimal state (email only — tokens stay in the Google OAuth credential file, not auth.json).
+    
+    https://github.com/NousResearch/hermes-agent/pull/37602 — Same bug for qwen-oauth. Adds _mark_qwen_oauth_active() which sets active_provider with minimal state (base_url only — tokens stay in the Qwen CLI credential file).
+    All three triggered by #37517 which fixed the identical pattern for openai-codex.
+    [embed] fix(auth): use _save_xai_oauth_tokens in auth_commands to set activ... https://github.com/NousResearch/hermes-agent/pull/37600
+    [embed] fix(auth): set active_provider after hermes auth add google-gemini-... https://github.com/NousResearch/hermes-agent/pull/37601
+    [embed] fix(auth): set active_provider after hermes auth add qwen-oauth by ... https://github.com/NousResearch/hermes-agent/pull/37602
+
+[2026-06-02T19:47:26.979000+00:00] fmultiman (id=1511456231041007626)
+    Where do I obtain the value agent:{instance_id} for HERMES_DASHBOARD_OAUTH_CLIENT_ID in a self-hosted installation?
+
+[2026-06-02T20:03:03.043000+00:00] yerts (id=1511460157178253373)
+    https://github.com/NousResearch/hermes-agent/pull/37616/changes
+    [embed] fix(desktop): remove session search aux model by scubamount · Pull... https://github.com/NousResearch/hermes-agent/pull/37616/changes
+
+[2026-06-02T20:10:01.711000+00:00] jezzzzzzzzzz (id=1511461913199116340)
+    <@387972437901312000> (sorry-not-sorry for the ping, I know you get flooded especially on a day like today 😅 )
+    
+    speaking of the desktop app is there any big priorities for testing the desktop build alongside existing installations of Hermes Agent? Is this a thing that needs experimentation and reports from a semi-experienced contributor?
+
+[2026-06-02T20:10:58.542000+00:00] jezzzzzzzzzz (id=1511462151565348966)
+    I have a machine that I would be glad to mess around with it and make issue reports and possibly PRs, but if supporting Desktop installations on top of prior Hermes Agent installations is not a high priority for the roadmap, that's totally fair
+

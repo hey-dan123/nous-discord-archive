@@ -202,3 +202,13 @@
     you can pass "entities" to each document, it's just not bound to hermes. how would you let Hindsight know about the entity ? we could add a merge-entities feature
     [reply to ruffer3000 msg=1511354334942728292]
 
+[2026-06-02T16:52:53.302000+00:00] ruffer3000 (id=1511412301255933992)
+    How would that work with per-turn and session extractions? 
+    
+    Anyways, once I realized it's creating an entity for every declension of my name or combination of my first name, last name, nickname and words like "user"... I started using "multi-values" entity labels and it seems to have the effect of assigning them to user:Rudy, or person:Josefine or agent:Rolf entities and so on. Works most of the time, that being said I do have historical data and entity labels don't work 100% of the time for me either.
+    
+    If I understand correctly, entity extraction only happens at the retain and not at consolidation, so it's not something that will fix itself over time. I also have accumulated about 350 documents (actual documents and sessions), so reprocessing them isn't really an option either, manual tagging less so.
+    
+    So yeah... some kind of a way to merge existing entities would be pretty nice 🙂
+    [reply to nicoloboschi msg=1511375249571188907]
+

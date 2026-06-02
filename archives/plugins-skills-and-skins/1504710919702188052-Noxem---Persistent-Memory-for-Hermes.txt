@@ -520,3 +520,7 @@
 [2026-06-02T16:21:28.690000+00:00] lordfunks3375 (id=1511404396620156989)
     which best? noxem or mnemosyne ??
 
+[2026-06-02T16:28:54.934000+00:00] noxerz. (id=1511406268303147078)
+    idk i haven't tested mnemosyne
+    [reply to lordfunks3375 msg=1511404396620156989]
+
