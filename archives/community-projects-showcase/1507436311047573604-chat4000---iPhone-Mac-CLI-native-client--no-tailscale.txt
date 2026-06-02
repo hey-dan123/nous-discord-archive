@@ -232,3 +232,6 @@
 [2026-05-31T23:15:10.988000+00:00] timestoper42 (id=1510783733152616549)
     are we gonna have session bro?
 
+[2026-06-02T05:07:27.086000+00:00] gendal6935 (id=1511234772238733404)
+    Is there no way to have Siri send a text message to Chat4000? I saw 2 Shortcuts but I don't want to send a voice sample and I don't want to type - I want a hands off way to send text to Hermes. Right now I would settle for a one way bridge to take notes, especially in the car, but Telegram, Discord, and now Chat4000 don't seem to cover this use case. Otherwise pretty neat.
+

@@ -43,3 +43,7 @@
     Added a new function to the reasoning tab. You can now view what each actual call was via the payload!
     [attachment] r0k06d1.png https://cdn.discordapp.com/attachments/1509744160675074098/1511165718874554492/r0k06d1.png?ex=6a1f763f&is=6a1e24bf&hm=9a9440bf60f98ee011b7fcde735e565a349e9e0241f2800e58a31428a588ec0f&
 
+[2026-06-02T09:00:56.812000+00:00] jwalkersf7273 (id=1511293533288398888)
+    kind of. theres a few things going  on. salespeople on slack, talking to a hermes profile slack bot that farms the work out to all the other profiles via kanban.  so that slackbot uses honcho for storing  personal preferances and profiles about the reps and their clients, it uses mnemopsyne for its  real time memory (as do the other  agents), and it uses hindsight to get information about orders and clients. hindsight is also used on the dev side for cross session memory.
+    [reply to hydro._ msg=1510001802257367240]
+

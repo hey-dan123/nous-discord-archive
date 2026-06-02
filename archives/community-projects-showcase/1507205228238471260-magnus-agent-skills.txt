@@ -449,3 +449,10 @@
     - 198 insertions, 52 deletions across 5 files
     - Each commit references its corresponding issues
 
+[2026-06-02T07:34:23.264000+00:00] neopabo (id=1511271749969379338)
+    <@659176257338081306> Fixed https://github.com/magnus919/hermes-SkillOpt/pull/14
+    [embed] fix: align SkillOpt runner with Hermes CLI by H-Ali13381 · Pull Re... https://github.com/magnus919/hermes-SkillOpt/pull/14
+
+[2026-06-02T07:34:54.313000+00:00] neopabo (id=1511271880198328522)
+    These improvements make it sooooo good
+

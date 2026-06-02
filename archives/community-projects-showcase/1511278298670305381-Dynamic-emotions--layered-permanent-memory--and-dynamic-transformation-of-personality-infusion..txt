@@ -1,0 +1,11 @@
+# Thread 'Dynamic emotions, layered permanent memory, and dynamic transformation of personality infusion.' in forum #community-projects-showcase
+# thread_id=1511278298670305381 forum_id=1316137596535177246
+# Started 2026-06-02T10:20:26.511819+00:00
+
+[2026-06-02T08:00:24.596000+00:00] nihilys_14396 (id=1511278298670305381)
+    https://github.com/miyamoriaoi1997-del/Soul-Llink/tree/main
+    
+    
+    The new version has added hierarchical memory management, referencing the Letta project. It no longer uses context management or context compression. It will never suffer from amnesia or lose its goal.
+    [embed] GitHub - miyamoriaoi1997-del/Soul-Llink: Dynamic emotion system fra... https://github.com/miyamoriaoi1997-del/Soul-Llink/tree/main
+

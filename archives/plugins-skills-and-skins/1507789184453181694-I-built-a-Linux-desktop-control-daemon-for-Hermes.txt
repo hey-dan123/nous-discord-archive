@@ -68,3 +68,10 @@
 [2026-06-02T02:09:28.662000+00:00] coe0718 (id=1511189983682367540)
     Also a live demo dashboard at https://deskbrid.patchhive.dev/live
 
+[2026-06-02T05:51:42.721000+00:00] tradericko (id=1511245910779105310)
+    is this computer-use ?
+
+[2026-06-02T07:58:49.394000+00:00] coe0718 (id=1511277899364438097)
+    what you mean computer-use?
+    [reply to tradericko msg=1511245910779105310]
+

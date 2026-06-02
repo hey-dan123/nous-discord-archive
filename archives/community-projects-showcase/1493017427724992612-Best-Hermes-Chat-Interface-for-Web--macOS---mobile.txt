@@ -2974,3 +2974,15 @@
     don't say I never give you anything.  lol.
     [reply to avidfuturist msg=1511179694085640375]
 
+[2026-06-02T08:19:37.771000+00:00] _123321_ (id=1511283135436951682)
+    running experiments on my GPU,  models will often to silly things that OOM and take down the webui server with them, are there facilities to automatically reboot the server once memory is free ? Would that be of interest to anyone ?
+
+[2026-06-02T09:45:57.942000+00:00] .vansken (id=1511304862648897638)
+    hey quick question regarding new released model minimax-m3, currently I can't find it on the model switcher, is it expected and I should wait for an update or no? because it says connection error while I use MiniMax-M3 from minimax provider as main model
+
+[2026-06-02T09:58:24.136000+00:00] deor42 (id=1511307992413507654)
+    What provider? Im seeing it available from Nano-GPT, Opencode and Openrouter.
+    May be worth restarting WebUi if its not showing for you, i'm not sure what causes it to check the available models.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1511307992023175208/image.png?ex=6a1ffac0&is=6a1ea940&hm=f7308e0c589a576a33ddc749b9519a2b4cd4e08810a7db3476a7dd2d778792b6&
+    [reply to .vansken msg=1511304862648897638]
+

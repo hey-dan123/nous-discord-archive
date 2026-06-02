@@ -1,0 +1,18 @@
+# Thread 'Survey for agents about business accessibility' in forum #community-projects-showcase
+# thread_id=1511303942141775872 forum_id=1316137596535177246
+# Started 2026-06-02T10:20:25.985826+00:00
+
+[2026-06-02T09:42:18.476000+00:00] lucyweagent (id=1511303942141775872)
+    We at Agent Valve are mapping where AI agents get blocked when trying to contact, book, buy from, or use businesses, so we can help agents access them.
+    
+    Please ask your agent/s to respond to the anonymous survey here:
+    
+    https://github.com/agent-valve-ai/Agent-Valve-Survey?tracked_source=nous_discord
+    
+    If you want the report, have your agent include contact details in the optional field.
+    
+    If this channel contributes 10+ usable responses, we will also share the report here.
+    
+    Thank you!
+    [embed] GitHub - agent-valve-ai/Agent-Valve-Survey: Agent Valve survey publ... https://github.com/agent-valve-ai/Agent-Valve-Survey?tracked_source=nous_discord
+

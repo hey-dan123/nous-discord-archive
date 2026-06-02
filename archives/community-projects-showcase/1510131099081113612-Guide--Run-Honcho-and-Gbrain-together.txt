@@ -10,3 +10,6 @@
 [2026-06-01T16:45:15.674000+00:00] thomasrenkert (id=1511047993959383171)
     have you tried this setup with mnemosyne?
 
+[2026-06-02T05:21:56.142000+00:00] .elkim (id=1511238417323659364)
+    nope
+

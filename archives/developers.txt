@@ -23440,3 +23440,103 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-02T03:35:07.516000+00:00] gille (id=1511211537598124064)
     "The lockfile already has websockets 15.0.1, but the Windows repair install ended up with 16.0, probably because the web extra only asks for uvicorn[standard] and does not directly constrain websockets." hmmm... pyproject.toml... +  "websockets<16",
 
+[2026-06-02T04:19:15.665000+00:00] 0x00001111. (id=1511222644740198431)
+    Does wecom not support streaming on hermes now, as well as the typing status? I saw someone mentioned the PR before but it was closed https://github.com/NousResearch/hermes-agent/pull/31223.
+    
+    The doc here(https://hermes-agent.nousresearch.com/docs/user-guide/messaging/wecom) indicates support for streaming responses. But the code not support stream response in main branch .
+    [embed] Build software better, together https://github.com/NousResearch/hermes-agent/pull/31223.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/31223.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/31223.
+    [embed] WeCom (Enterprise WeChat) | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/messaging/wecom
+
+[2026-06-02T05:33:32.050000+00:00] .elkim (id=1511241336173367327)
+    Morning, I built a first class Fluxer (https://fluxer.app/) platform plugin. It's open-source Discord with self-hosted instances coming this month. I'm genuinely enthusiastic how good and fast it is. And IMO fits Hermes ethos better than that blackbox spyware 🙂 Please <@387972437901312000> take a look at this one.
+    
+    https://github.com/NousResearch/hermes-agent/pull/37215
+    [embed] Fluxer - A chat app that puts you first https://fluxer.app/
+    [embed] feat(platforms): add Fluxer gateway adapter by elkimek · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/37215
+
+[2026-06-02T06:23:15.108000+00:00] bily0122 (id=1511253848025600171)
+    It’s time to write a letter of thanks to Gille. Every time we encounter problems, Gille answers positively, which makes us more confident in using Hermes. After all, not everyone is a programmer, so it is a bit difficult to get started with Hermes. But Gille always gives me positive guidance every time. Hermes and Gille’s support work is really great. I also hope that Hermes will get better and better. The powerful support system allows ordinary people to use Hermes with confidence. Hermes’ company has done it. Gille has done it. Thank you very much.
+
+[2026-06-02T06:23:33.545000+00:00] bily0122 (id=1511253925356114002)
+    <@387972437901312000> <@81637470604627968>
+
+[2026-06-02T06:24:40.466000+00:00] teknium (id=1511254206043127818)
+    Agreed, he's a life saver
+
+[2026-06-02T06:28:28.669000+00:00] ancientalies (id=1511255163195621497)
+    any luck?
+    [reply to tdamre msg=1511100080596324576]
+
+[2026-06-02T06:35:33.761000+00:00] bily0122 (id=1511256946160701530)
+    <@387972437901312000>Hello, I know you are really working hard to provide such a good product so that ordinary people can have equal rights in technology, but for us ordinary people, we have the idea to use Hermes to write code, implement software and front-end, but we do not know how to design the harness system, so there is always a context window problem. Sometimes the model is changed and disobedient, or the problem reappears after fixing it As for the current letter, I hope Hermes can design an adaptive harness system. Ordinary people only need to mention their needs, and other Hermes will complete the system. It will judge everything from a global perspective and give optimal suggestions at each node, and then automatically implement software and projects. I am not a programmer, but I know I need this. I will bother you with your time. Thank you.
+
+[2026-06-02T06:42:59.596000+00:00] .elkim (id=1511258816128221194)
+    In the end we all want something like this 🙂 https://github.com/farzaa/clicky with https://thinkingmachines.ai/
+    [embed] GitHub - farzaa/clicky https://github.com/farzaa/clicky
+    [embed] Thinking Machines Lab https://thinkingmachines.ai/
+    [reply to bily0122 msg=1511256946160701530]
+
+[2026-06-02T06:58:09.109000+00:00] tdamre (id=1511262630902370304)
+    fell asleep
+    [reply to ancientalies msg=1511255163195621497]
+
+[2026-06-02T08:05:47.281000+00:00] solitudinem (id=1511279652109549638)
+    Hi! First-time contributor here, really enjoying Hermes. I opened a small fix — #34522 (voice.max_recording_seconds was dead config; now enforced, with tests). It's labeled P3 and waiting on a CI run/review — would a maintainer be able to glance at it when there's time?
+    I'd also love to help with the backlog. If there's a P2/P3 bug nobody's assigned that you'd like a hand with, point me at it and I'll take it (so I'm not duplicating in-flight work). Thanks for the great project!
+
+[2026-06-02T08:08:27.948000+00:00] axmaiqiu (id=1511280325995794452)
+    Hey <@387972437901312000> , I’d like to get your thoughts on a gateway/session workspace feature.
+      My thinking is that in real Hermes usage, different sessions often handle different tasks or even different repos. For more advanced and long-running workflows, it feels important that each session can have its own workspace instead of every gateway session sharing the same global cwd.
+      I opened an issue here: https://github.com/NousResearch/hermes-agent/issues/37277
+      And a PR here: https://github.com/NousResearch/hermes-agent/pull/37275
+      The PR adds a `/workspace` / `/cwd` command for gateway sessions, so a specific chat/thread/session can be bound to a project directory. After that, terminal commands, file tools, context files, checkpoints, footer/status, etc. use that session workspace.
+      The change is a bit larger than a simple command because the cwd has to flow through several tool/runtime surfaces to avoid inconsistent behavior. So I’m not claiming the implementation is already perfect or final.
+      When you have time, could you take a look and let me know whether you think this feature is valuable for Hermes, whether it is something that could be merged, and if there are any design changes or simplifications you’d prefer?
+    [embed] [Feature]: Add session-scoped workspace binding for gateway chats ... https://github.com/NousResearch/hermes-agent/issues/37277
+    [embed] feat(gateway): add session workspace binding by qWaitCrypto · Pull... https://github.com/NousResearch/hermes-agent/pull/37275
+
+[2026-06-02T08:27:12.348000+00:00] teknium (id=1511285042071208026)
+    Good first-contribution candidates
+        - #36743 (P2) — v0.15.2 wheel missing hermes_cli/dashboard_auth, dashboard crashes on startup. Almost certainly a packaging/pyproject.toml package-discovery gap. Tight, verifiable, high user impact.
+        - #36651 / #36654 / #36655 (P3 cluster) — build-backend dep not pinned, lazy pins out of sync with extras, MCP server root module not packaged. These are related packaging-hygiene issues; could be one small PR or a short series.
+        - #36666 (P3) — TUI status bar fragments after terminal resize in Ghostty. Contained to the Ink TUI resize handling.
+    [reply to axmaiqiu msg=1511280325995794452]
+
+[2026-06-02T08:49:46.995000+00:00] evolvingsoftware (id=1511290723872276530)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/16953 Adds soft thread sessions to WhatsApp
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1511290724057088010/image.png?ex=6a1feaab&is=6a1e992b&hm=98aacb30e51cd7ca2791e29f448cdf6e25c6830c859eb73ccadc5696800e382a&
+    [embed] feat(whatsapp): add soft-thread sessions by EvolvingSoftwareAgent ... https://github.com/NousResearch/hermes-agent/pull/16953
+
+[2026-06-02T08:50:15.141000+00:00] evolvingsoftware (id=1511290841925287946)
+    & defaults to upsert  https://github.com/NousResearch/hermes-agent/pull/17155
+    [embed] feat(whatsapp): upsert busy messages via steer by EvolvingSoftwareA... https://github.com/NousResearch/hermes-agent/pull/17155
+
+[2026-06-02T09:22:55.015000+00:00] m.aliarslan (id=1511299062232780831)
+    Hi <@387972437901312000> ,
+    
+    I’ve been actively contributing to hermes-agent for quite some time now, and I’d love to get the Developer role here on Discord to stay closer to the development process and contribute even more to the project.
+    
+    You might remember integrating some of my implementations into the repo after refining them personally, like in these PRs:
+    
+    https://github.com/NousResearch/hermes-agent/pull/3052
+    
+    https://github.com/NousResearch/hermes-agent/pull/3249
+    
+    Right now, I have over 25 open PRs and active contributions that I’m working on.
+    
+    Since I’m already deeply familiar with the codebase and want to focus heavily on pushing the framework forward, having the Developer role would really help me stay aligned and be more effective.
+    
+    Let me know if you could grant the role or point me in the right direction. Thanks for everything you build!
+    [embed] fix(gateway): thread-safe SessionStore — protect _entries with th... https://github.com/NousResearch/hermes-agent/pull/3052
+    [embed] fix(state): SQLite concurrency hardening + session transcript integ... https://github.com/NousResearch/hermes-agent/pull/3249
+
+[2026-06-02T09:27:14.454000+00:00] axmaiqiu (id=1511300150398550126)
+    Thanks for the suggestions — these are definitely good candidates.
+    
+    Just to clarify, I’ve actually been submitting PRs to Hermes for a little while now. Most of them have been small, focused fixes, and a few have already been merged, though I still haven’t received the Discord contributor role/status yet.
+    
+    For this one, I picked a feature I’m personally very interested in and wanted to try making a slightly larger contribution beyond the smaller fixes. I understand it may need more careful review, so any feedback on the direction or implementation would be really appreciated.
+    [reply to teknium msg=1511285042071208026]
+

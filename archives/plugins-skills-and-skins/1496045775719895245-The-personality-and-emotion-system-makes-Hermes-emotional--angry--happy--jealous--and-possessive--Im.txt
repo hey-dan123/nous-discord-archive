@@ -58,3 +58,10 @@
 [2026-05-22T20:01:53.820000+00:00] zinkdifferent_49268 (id=1507473600314085376)
     Can this be installed and operated while disabling the personality window dressing?
 
+[2026-06-02T07:54:27.073000+00:00] nihilys_14396 (id=1511276799110156308)
+    Updated and refactored the memory system, completely abandoning context management and adopting a layered memory system similar to Letta. Context compression is no longer used.
+
+[2026-06-02T08:00:56.396000+00:00] nihilys_14396 (id=1511278432049303552)
+    Try the new version.
+    [reply to zinkdifferent_49268 msg=1507473600314085376]
+
