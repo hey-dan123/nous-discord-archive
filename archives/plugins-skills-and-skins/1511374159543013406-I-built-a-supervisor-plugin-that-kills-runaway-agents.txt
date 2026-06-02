@@ -1,0 +1,21 @@
+# Thread 'I built a supervisor plugin that kills runaway agents' in forum #plugins-skills-and-skins
+# thread_id=1511374159543013406 forum_id=1485392832154832906
+# Started 2026-06-02T16:24:17.668145+00:00
+
+[2026-06-02T14:21:19.609000+00:00] r.o0t_ (id=1511374159543013406)
+    Hermeskill watches every tool call + LLM turn and terminates the agent the
+    moment it goes wrong.
+    Tool-call loops, cost/token runaway, wall-clock
+    overruns, out-of-scope tool calls, heartbeat loss: when one (or multiple) of these symptoms fires hermeskill pulls the plug(apoptosis protocol) and files a "death certificate" including exactly which symptom tripped, the
+    shutdown sequence, and what it spent.
+    
+    Hermeskill is a drop-in plugin without glue code, using Hermes' canonical pre_tool_call block
+    directive so the kill is clean the instant a check fires, no more tools run,
+    no more spend. The SDK never ships your args or transcripts; only metadata
+    (cost, tokens, model id) leaves the box, to a control plane you self-host.
+    Feedback is welcome and encouraged!
+    
+    Repo: https://github.com/theopitori/hermeskill
+    [attachment] UTF-8_B_QW5pbWHDp8Ojby5naWY_.gif https://cdn.discordapp.com/attachments/1511374159543013406/1511374159970697236/UTF-8_B_QW5pbWHDp8Ojby5naWY_.gif?ex=6a20385f&is=6a1ee6df&hm=e0112be7a9722779b1ef58cba3569585aa96c25a059776910666389b86a05640&
+    [embed] GitHub - theopitori/hermeskill: External agent-supervision system: ... https://github.com/theopitori/hermeskill
+

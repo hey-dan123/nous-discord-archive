@@ -186,3 +186,19 @@
     [attachment] message.txt https://cdn.discordapp.com/attachments/1510939660266901504/1511312313104338944/message.txt?ex=6a1ffec6&is=6a1ead46&hm=0ecbce9ca53935fb010e44a6497b7e0aa9318047282f85f856faff573b429cef&
     [reply to lucky1105 msg=1511175256541495417]
 
+[2026-06-02T11:10:35.940000+00:00] lucky1105 (id=1511326161316220948)
+    You rock man. I'll have a look at the feedback. Definitely cool to see devs like you the team from nous here involved in the back and fourth around your product. I can tell you guys put a lot of work in on this.
+
+[2026-06-02T13:02:33.056000+00:00] ruffer3000 (id=1511354334942728292)
+    Can I do a feature request? I’ll do a feature request!
+    
+    I’m letting Hindsight automatically create entities. Which works well… except now I have 5-10 entities for one real entity.
+    
+    I’m aware of the labels thing and it works more often than not.
+    
+    But!!! I want to be able to either merge or alias entities!
+
+[2026-06-02T14:25:39.492000+00:00] nicoloboschi (id=1511375249571188907)
+    you can pass "entities" to each document, it's just not bound to hermes. how would you let Hindsight know about the entity ? we could add a merge-entities feature
+    [reply to ruffer3000 msg=1511354334942728292]
+

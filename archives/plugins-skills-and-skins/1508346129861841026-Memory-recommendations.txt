@@ -72,3 +72,11 @@
     https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers turns out they have the whole article guys
     [embed] Memory Providers | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers
 
+[2026-06-02T12:36:22.049000+00:00] techmeat (id=1511347745661915300)
+    Thanks for the link <@338366360545394689> 🙌 That memory-providers doc was exactly what I needed, and Open Second Brain is now adapted to it and plugs into Hermes as a native memory provider (one registration, full memory lifecycle).
+    
+    Along the way I also opened a small upstream PR with a fix that lets external providers load fully natively: https://github.com/NousResearch/hermes-agent/pull/37366
+    It should help any developer building a similar plugin, not just OSB.
+    [embed] fix(memory): register parent packages for user-installed provider i... https://github.com/NousResearch/hermes-agent/pull/37366
+    [reply to rostelinalise msg=1510873974454620190]
+

@@ -1,0 +1,11 @@
+# Thread 'Faro.io A Financial Search Engine built for the self-sovereign agent-centric future' in forum #community-projects-showcase
+# thread_id=1511315168259215400 forum_id=1316137596535177246
+# Started 2026-06-02T16:20:14.991996+00:00
+
+[2026-06-02T10:26:54.991000+00:00] abiswell (id=1511315168259215400)
+    We've been big users of Hermes across our growth and engineering workflows, and we're now making it the core agent framework for Faro (https://faro.io/).
+    
+    The vision: give every Faro user their own Hermes agent that learns how they trade and surfaces the data we aggregate that's actually relevant to them. Hermes is a perfect fit for that.
+    
+    Happy to answer any questions about what we're building and how we're using Hermes.
+

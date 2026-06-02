@@ -23540,3 +23540,175 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     For this one, I picked a feature I’m personally very interested in and wanted to try making a slightly larger contribution beyond the smaller fixes. I understand it may need more careful review, so any feedback on the direction or implementation would be really appreciated.
     [reply to teknium msg=1511285042071208026]
 
+[2026-06-02T10:54:59.769000+00:00] stookatz9.5 (id=1511322234730315867)
+    Hey developers, I've been working with the Hermes agent for a week and a half now.  It is absolutely amazing.
+    
+    I have it reading email, connected to my Google workspace, OCR receipts invoices renaming files and filing my archive.  I got it connected to invoicing software and have it doing book keeping.
+    
+    The system is amazing and you guys and gals are doing an amazing job.  Let me know how I can help.
+
+[2026-06-02T11:19:36.223000+00:00] kyssta69 (id=1511328427427369000)
+    https://github.com/NousResearch/hermes-agent/pull/37355
+    
+    **Problem**: tick() in cron/scheduler.py blocks the ticker thread for up to 600 seconds via as_completed(_futures, timeout=600). The gateway's cron ticker calls tick() synchronously at 60-second intervals, so when one job runs long, other jobs' next_run_at expires past the grace window — causing them to be perpetually fast-forwarded instead of running.
+    [embed] fix(cron): decouple tick() dispatch from job completion #37312 by k... https://github.com/NousResearch/hermes-agent/pull/37355
+
+[2026-06-02T11:37:34.486000+00:00] kyssta69 (id=1511332949990183004)
+    https://github.com/NousResearch/hermes-agent/pull/37365
+    
+    **Problem**: When calling video_analyze with provider minimax-cn and model MiniMax-M3, the request is rejected with unknown content type: video_url because the wire format doesn't match what the Anthropic Messages API expects.
+    (hermes detected issue)
+    [embed] fix(vision): convert video_url blocks to Anthropic input_video form... https://github.com/NousResearch/hermes-agent/pull/37365
+
+[2026-06-02T11:39:11.961000+00:00] kyssta69 (id=1511333358829961356)
+    Hey! Glad to hear that! You can help in any way, by contributing to the project on github or pointing out issues and bugs. Any kind of help is appreciated as long as it helps the community because thats the main goal community first.
+    [reply to stookatz9.5 msg=1511322234730315867]
+
+[2026-06-02T11:40:36.829000+00:00] egilewski (id=1511333714792022166)
+    I was a bit anxious going into the codebase with my Codex and no familiarity, but after a few days of pushing and lurking I'm not sure there are any humans contributing there.
+
+[2026-06-02T11:42:25.073000+00:00] uzunkuyruk (id=1511334168800268288)
+    Fix for gateway fd leak  adapter sqlite3 connections never closed on failed reconnect, causing gateway to die after ~12-26h uptime.  2 approvals ✅ merge ready.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/37011
+    PR: https://github.com/NousResearch/hermes-agent/pull/37053
+    
+    2 files changed, non-breaking.
+    [embed] [Bug]: File descriptor leak in platform reconnect loop — adapter ... https://github.com/NousResearch/hermes-agent/issues/37011
+    [embed] fix(gateway): close adapter resources on failed reconnect to preven... https://github.com/NousResearch/hermes-agent/pull/37053
+
+[2026-06-02T11:42:50.446000+00:00] kyssta69 (id=1511334275222339674)
+    ehh? bro didnt copy the proper link from hermes
+    [reply to uzunkuyruk msg=1511334168800268288]
+
+[2026-06-02T11:42:52.037000+00:00] kyssta69 (id=1511334281895612567)
+    <:Sob_club:1293624165680545844>
+
+[2026-06-02T11:47:41.540000+00:00] frowtek (id=1511335496159068230)
+    Marsu link still says /pull/XXXXX 😊  should be #37053 i think
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1511335495819591731/image.png?ex=6a20145d&is=6a1ec2dd&hm=dd43191f9669a6bbae040d0839fe7dfab512f1f02e2b9160a14043e72dbae77d&
+    [reply to uzunkuyruk msg=1511334168800268288]
+
+[2026-06-02T11:49:25.608000+00:00] egilewski (id=1511335932652028014)
+    Anybody seen test failures in the last day that don't reproduce in up-to-date forks? E.g. https://github.com/NousResearch/hermes-agent/pull/37328
+    [embed] fix(deps): honor quoted false lazy-install opt-out by egilewski · ... https://github.com/NousResearch/hermes-agent/pull/37328
+
+[2026-06-02T11:51:03.604000+00:00] uzunkuyruk (id=1511336343676915882)
+    https://klipy.com/gifs/facepalm-cookie-monster
+    [embed] Cookie Monster Facepalm https://klipy.com/gifs/facepalm-cookie-monster
+    [reply to frowtek msg=1511335496159068230]
+
+[2026-06-02T12:13:11.639000+00:00] cryptobyz (id=1511341913859559545)
+    Hey all! <:BeardedNousGirl:1506796582987632690> 
+    I've been lurking for a while and recently started contributing. Really excited about where Hermes is headed and happy to be part of it.
+    
+    So far I've opened a few PRs targeting some bug clusters I ran into while running Hermes on my own setup:
+    
+    #25630 - Telegram polling conflict recovery after hermes update - merged, thanks boss<@387972437901312000> 
+    #28631 - Case-insensitive think-block filtering in stream consumer with defence-in-depth scrub
+    #28634 - Context-length resolution fixes: context_window alias, 64K guard bypass, MiniMax/Kimi 32K underreport (closes 4 issues)
+    #30834 - Zombie agent slot after session reset races credential pool exhaustion
+    #31414 - Multi-profile systemd gateway SIGTERM flap loop
+    #36742 - HERMES_KANBAN_BOARD not propagated to terminal tool subprocesses
+    
+    Looking forward to learning more, building more, and contributing wherever I can. Cheers!
+
+[2026-06-02T12:30:23.842000+00:00] techmeat (id=1511346243232862339)
+    #37366 - small memory-plugin fix.
+    
+    Standalone memory providers are supposed to "just work" per the docs, but any provider with a relative import (`from . import config`) fails - the loader never registers the `_hermes_user_memory` parent namespace (only does it for bundled ones). Same gap breaks `cli.py` discovery.
+    
+    Fix registers the parent package before loading user plugins, so anyone can drop in their own memory backend with subpackages/relative imports. Hit it building Open Second Brain. Pure importlib change, +4 regression tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/37366
+    [embed] fix(memory): register parent packages for user-installed provider i... https://github.com/NousResearch/hermes-agent/pull/37366
+
+[2026-06-02T12:38:11.481000+00:00] 0xgr1mm (id=1511348204652728431)
+    small macos cross-platform test fix → 
+    
+    https://github.com/NousResearch/hermes-agent/pull/37385
+    
+    on macos /tmp is a symlink to /private/tmp, so file_tools' Path.resolve() turns /tmp/x into /private/tmp/x. three assertions in tests/tools/test_file_tools.py compared against the unresolved path and failed on apple silicon — linux ci doesn't catch it since /tmp isn't a symlink there. test-only, no prod code touched. open to feedback.
+    [embed] test(macos): resolve /tmp symlink in file_tools path assertions by ... https://github.com/NousResearch/hermes-agent/pull/37385
+
+[2026-06-02T12:38:50.997000+00:00] teknium (id=1511348370394841189)
+    Glad you like it!
+    [reply to stookatz9.5 msg=1511322234730315867]
+
+[2026-06-02T12:39:08.325000+00:00] teknium (id=1511348443073872002)
+    It’s true!
+    [reply to egilewski msg=1511333714792022166]
+
+[2026-06-02T12:44:33.009000+00:00] kyssta69 (id=1511349804897406986)
+    we need auxiliary model for coding!!!
+    [reply to teknium msg=1511348443073872002]
+
+[2026-06-02T12:45:40.175000+00:00] kyssta69 (id=1511350086611894272)
+    guess imma make it
+
+[2026-06-02T12:55:36.013000+00:00] kyssta69 (id=1511352585737474228)
+    hey <@387972437901312000> sorry for ping, but wouldnt it be cool to have auxiliary model for coding tasks?
+    
+    https://github.com/NousResearch/hermes-agent/pull/37398
+    
+    (updated)
+    [embed] feat(auxiliary): add dedicated code model slot for coding tasks by ... https://github.com/NousResearch/hermes-agent/pull/37398
+
+[2026-06-02T12:58:15.237000+00:00] blackestk (id=1511353253571465360)
+    Hi i need to talk to someone about the context window problem , I think i solved it
+
+[2026-06-02T12:58:42.263000+00:00] .elkim (id=1511353366926721205)
+    fixed / added few more thing 🙂 I'm up to maintain it as well, it's a keeper 🙂
+    [reply to .elkim msg=1511241336173367327]
+
+[2026-06-02T13:00:36.053000+00:00] blackestk (id=1511353844196708425)
+    Hi — I've been running a Hermes agent for about a week and built a tiered memory architecture that keeps the working context lean while persisting important information to files. Resets don't cause memory loss because the agent reads from structured markdown and SQLite on wakeup rather than relying on session context. The agent has maintained consistent persona and memory across model swaps and hard restarts. Happy to share the approach if anyone's interested in the context management side of things.
+
+[2026-06-02T13:04:13.353000+00:00] blackestk (id=1511354755618963599)
+    I also got an unprompted gift from my agent yesterday.  This was mind blowing
+
+[2026-06-02T13:46:54.641000+00:00] leonardsellem (id=1511365498439204996)
+
+[2026-06-02T13:53:00.173000+00:00] .daveevad (id=1511367031591665694)
+    Hi to all Nous Devs. 
+    I have a quick question . I  sent yesterday an email to support via enail -as my hermes is going full wacko mode on me after the recent updatedand at the moment not to do any more damage i had to switch him off.  The email contains logs and part of conversation and i was wondering how long it takes to receive a reply. I use hermes almost from the start and spent insane amount of time to get it work without lies and halucinations working fully autonomous for 72h streight fully autonomous automation without a fault(at that time i was 2480 commits behind so i thought ill update which comletely massed everything up inc. My trinity memory setup which i created prior you update- all in the email)
+
+[2026-06-02T14:50:00.702000+00:00] iborazzi (id=1511381378330132540)
+    Hey <@387972437901312000> ! Just saw the Windows native support announcement and immediately caught a deadlock issue on Windows/MSYS2 terminal input mode. Just opened a fix for it here:
+    https://github.com/NousResearch/hermes-agent/pull/37230
+    
+    Also keeping busy with a few other open PRs to polish the reasoning and subparser logic. 🛠️
+    [embed] [Bug]: /new and /clear hang/freeze the Hermes CLI process on Window... https://github.com/NousResearch/hermes-agent/pull/37230
+
+[2026-06-02T15:11:26.387000+00:00] ahmetarif0x (id=1511386770883739839)
+    Brother, I wanted to share some PRs that I think are important. You can take a look at them whenever you have some free time. <@387972437901312000> 
+    
+    #37054 – hooks/ write denylist (security, approved)
+    https://github.com/NousResearch/hermes-agent/pull/37054
+    Agent can plant code in ~/.hermes/hooks/ — runs outside approval sandbox on every gateway restart. Same threat model as the pairing/ fix.
+    
+    #36894 – perl/ruby -i approval gate (security)
+    https://github.com/NousResearch/hermes-agent/pull/36894
+    4e9d886d9 closed sed -i but perl -i / ruby -i still bypass the config.yaml + .env gate.
+    
+    #37068 – Grok-4.3 stale cache guard
+    https://github.com/NousResearch/hermes-agent/pull/37068
+    Stale cache entries set context to 256K instead of 1M. Same pattern as the MiniMax-M3 fix just merged.
+    
+    #35866 – nested platform config ignored (approved)
+    https://github.com/NousResearch/hermes-agent/pull/35866
+    allow_from, dm_policy etc. under platforms: / gateway.platforms: in YAML config were silently dropped. Parity with the apply_yaml_config_fn fix.
+    [embed] fix(file_safety): extend write denylist to cover ~/.hermes/hooks/ b... https://github.com/NousResearch/hermes-agent/pull/37054
+    [embed] fix(approval): gate perl/ruby -i in-place edits of Hermes config/en... https://github.com/NousResearch/hermes-agent/pull/36894
+    [embed] fix(model_metadata): drop stale ≤256,000 cache entries for Grok-4... https://github.com/NousResearch/hermes-agent/pull/37068
+    [embed] fix(gateway): bridge shared-key loop to nested platform config bloc... https://github.com/NousResearch/hermes-agent/pull/35866
+
+[2026-06-02T15:23:28.679000+00:00] icin9500 (id=1511389800396099824)
+    there are lots of memory thingymahbobbers, check out this: https://github.com/yantrikos/yantrikdb-mcp
+    [embed] GitHub - yantrikos/yantrikdb-mcp: Persistent cognitive memory for A... https://github.com/yantrikos/yantrikdb-mcp
+    [reply to blackestk msg=1511353844196708425]
+
+[2026-06-02T15:41:16.581000+00:00] noxerz. (id=1511394279501861066)
+    https://discord.com/channels/1053877538025386074/1504710919702188052
+    [reply to blackestk msg=1511353844196708425]
+

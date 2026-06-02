@@ -2986,3 +2986,20 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1511307992023175208/image.png?ex=6a1ffac0&is=6a1ea940&hm=f7308e0c589a576a33ddc749b9519a2b4cd4e08810a7db3476a7dd2d778792b6&
     [reply to .vansken msg=1511304862648897638]
 
+[2026-06-02T13:14:46.989000+00:00] pinched_nerve (id=1511357413280845895)
+    I'm curious how people with nous portal subscriptions are using the webui model picker.  For me, it's only showing the top 15 models (out of over 200.)  Is there any way to show more?  I'd like to explore some of the available models, but I have to find them first...
+
+[2026-06-02T16:07:03.606000+00:00] avidfuturist (id=1511400768194875392)
+    Will work on getting that fixed today!
+    [reply to .vansken msg=1511304862648897638]
+
+[2026-06-02T16:08:57.690000+00:00] avidfuturist (id=1511401246697852938)
+    Yeah some of them show M3 automatically and most don’t rely on me adding them manually, it would be helpful to know which provider didn’t <@215800200147501056> - should show up at least after a server restart
+    [reply to deor42 msg=1511307992413507654]
+
+[2026-06-02T16:10:54.961000+00:00] avidfuturist (id=1511401738568208525)
+    Fair point, afaik the huge model lists like that with 200+ models are not solved yet on WebUI, it’s a legitimate issue, hope to be able to have a better way soon
+    
+    You can fall back to command line to set the default model for a profile using embedded “/terminal” on WebUI. And then the WebUI should inherit at least after a server restart
+    [reply to pinched_nerve msg=1511357413280845895]
+

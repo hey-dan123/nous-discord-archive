@@ -75,3 +75,16 @@
     what you mean computer-use?
     [reply to tradericko msg=1511245910779105310]
 
+[2026-06-02T10:54:51.067000+00:00] tradericko (id=1511322198231744643)
+    Meaning controlling the desktop using point and click and type in the app widget
+
+[2026-06-02T11:13:58.066000+00:00] coe0718 (id=1511327009094242324)
+    It can do that — screenshot + OCR + click coordinates. But the main approach is protocol-level: window focus by app_id, type text directly, read clipboard, AT-SPI for semantic UI element clicks. Faster and more reliable than pixel hunting when the protocol supports it. Falls back to visual when it doesn’t.
+
+[2026-06-02T13:16:21.464000+00:00] tradericko (id=1511357809537581197)
+    hmm, i wonder how performance this is... but it is relative. Can be useful for apps that cant be automated by MCP
+
+[2026-06-02T13:33:45.897000+00:00] coe0718 (id=1511362190207226007)
+    Performance is pretty good — most actions are sub-100ms, screenshots under a second even on a 2014 Haswell laptop. The Unix socket keeps overhead minimal. And yeah exactly — MCP tools can call deskbrid for anything that needs actual desktop interaction: clicking buttons in apps with no API, reading screen content, responding to visual state. It’s the layer underneath MCP agents.
+    [reply to tradericko msg=1511357809537581197]
+

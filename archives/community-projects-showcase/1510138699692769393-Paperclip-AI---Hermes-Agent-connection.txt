@@ -57,3 +57,7 @@
     This is my current Hermes Dashboard with a custom theme.  It runs basically how Multica runs where once I give it an issue and it just gets assigned to the right profile.   Currently it's building an analytics dashboard for my website which I have up on Cloudflare.  The challenges I am seeing here, I see in Paperclip.  It's telling me things are done when they aren't.  The blocking issue isn't a true blocking issues.  Even when I try and get QA to review issues.  it's not perfect. The wheel on the bus....
     [attachment] image.png https://cdn.discordapp.com/attachments/1510138699692769393/1510263467750461500/image.png?ex=6a1c2df6&is=6a1adc76&hm=150725096c9c15687da34132c556f42d9569f52646e9eae1b2d418d48d7b08d3&
 
+[2026-06-02T11:17:21.801000+00:00] splosh123 (id=1511327863620632576)
+    Update for you <@795826252425854977> Dale, you were right. Things went really pear shaped over the weekend. I don't know if you jinxed me... But something went bonkers and I had agents running loose everywhere. Back to Opencode where things are calm again.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1510138699692769393/1511327863197138994/image.png?ex=6a200d41&is=6a1ebbc1&hm=59348f9c4d007b02ff7c7c60ae2229369cc81490ca0108abd43faf543df847f9&
+

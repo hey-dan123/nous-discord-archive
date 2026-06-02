@@ -1,0 +1,32 @@
+# Thread 'Website Security Scanner' in forum #community-projects-showcase
+# thread_id=1511372298513416222 forum_id=1316137596535177246
+# Started 2026-06-02T16:20:14.478128+00:00
+
+[2026-06-02T14:13:55.905000+00:00] jonkomet (id=1511372298513416222)
+    built something for people shipping websites too fast lol
+    
+    VibeLeak scans your public site and gives it an S–F trust grade
+    
+    it checks the stuff people usually forget before launch:
+    
+    - headers
+    - cookies/CORS
+    - exposed files
+    - open redirects
+    - error leaks
+    - public API/data exposure
+    - cloud/backend leaks
+    - AI key exposure
+    - AI-readiness signals
+    
+    it also has VibeSignal for AI visibility and VibeRank for Pro/Agency users to see if AI
+    answer engines actually mention/cite your business for buyer-style prompts
+    you can export fixes as markdown and hand them to Claude/Cursor/Codex/ Hermes
+    
+    free scan:
+    https://vibeleak.app
+    
+    drop your grade if you try it
+    [attachment] IMG_4843.jpg https://cdn.discordapp.com/attachments/1511372298513416222/1511380059381043401/IMG_4843.jpg?ex=6a203dde&is=6a1eec5e&hm=eb0a934d441011eb9ae8b35f613b9aca30788fe5833e34e9749b5e6df2982f99&
+    [embed] VibeLeak — Website Security Scanner https://vibeleak.app/
+

@@ -53,3 +53,17 @@
     
     Overall: more transparency, more control over privacy, and a noticeably smoother experience when working with large amounts of memory. 👍
 
+[2026-06-02T12:28:59.184000+00:00] techmeat (id=1511345888151212224)
+    Hey everyone 👋 Another batch of updates landed since the last post (v0.19.0 → v0.32.x). The big one this time is native Hermes support 👇
+    
+    🧠 **Native Hermes memory provider - the headliner**
+    Open Second Brain now plugs into Hermes as a first-class memory provider, not a bolt-on. A single registration opens the full Hermes memory lifecycle: `Brain/active.md` lands in the system prompt, every turn passes a recall gate before the model call, completed turns feed the nightly dream pass, and Hermes' own `MEMORY.md`/`USER.md` writes mirror straight into your Brain. Activate with `hermes memory setup open-second-brain` - and it persists across plugin updates, no re-activation needed. Claude Code and Codex keep their MCP path unchanged.
+    
+    🔌 **Full compatibility - upstream PR**
+    To make external providers with relative imports load fully natively (the same path bundled providers use), I opened a small fix upstream: NousResearch/hermes-agent#37366 - <@387972437901312000> would love your eyes on it 🙏 The plugin already works on a stock Hermes install today via a self-bootstrap loader; the PR just removes the last workaround.
+    
+    A few other things along the way: self-learning **procedural memory** (the brain now learns *how* work repeatedly gets done, review-first), a **context-safety layer** that screens untrusted note content before it reaches an agent, **environment-based credential pointers** so sensitive values stay outside the vault, **recall control / evidence packs** so you can see *why* something was surfaced, **CJK search**, and **hands-off post-upgrade migrations** (updates never need manual steps).
+    
+    Repo + full changelogs: https://github.com/itechmeat/open-second-brain
+    [embed] GitHub - itechmeat/open-second-brain: Local-first 🧠 memory for H... https://github.com/itechmeat/open-second-brain
+
