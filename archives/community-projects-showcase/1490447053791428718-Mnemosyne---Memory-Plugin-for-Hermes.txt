@@ -2393,3 +2393,6 @@
     Nah, even the pm'ed invite did the same.
     [reply to nulledvector msg=1511102475979980840]
 
+[2026-06-02T02:22:39.874000+00:00] _bashell (id=1511193302265888798)
+    I try to install the memory but i dont know how, i can use uv? or i need to install direclty with pip?
+

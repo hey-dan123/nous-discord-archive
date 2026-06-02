@@ -23330,3 +23330,113 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-01T21:02:46.054000+00:00] nebulam78 (id=1511112797550022877)
     Hey, good day all. Any ideas on how to implement a custom router provider instead of Open Router? I want to use self hosted LiteLLM
 
+[2026-06-01T22:19:20.877000+00:00] jazz1828 (id=1511132069634510868)
+    https://github.com/skilled-coderAI/cryptographic-memory
+    
+    Let me know how this can help. It really is a tested solution to work with hermes agent. Since I see a lot of cryptography related factual verification so brought up a side car solution.
+    [embed] GitHub - skilled-coderAI/cryptographic-memory: Cryptographically ve... https://github.com/skilled-coderAI/cryptographic-memory
+
+[2026-06-01T22:19:55.708000+00:00] uzunkuyruk (id=1511132215726047512)
+    <@387972437901312000> 
+    Fix for MCP HTTP discovery blocking startup for 60s on non-MCP content type responses.
+    
+    When a misconfigured HTTP MCP URL returns text/html, Hermes waited the full 60s connect_timeout before surfacing CancelledError with no actionable context. Fix adds an httpx response event hook that detects non-MCP content types immediately and a non-retryable error class to skip the 3x retry loop entirely.
+    
+    All checks passed ✅
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/36052
+    PR: https://github.com/NousResearch/hermes-agent/pull/36064
+    
+    2 files changed (fix + tests), non-breaking.
+    [embed] Bad HTTP MCP endpoint returning HTML blocks discovery for 60s befor... https://github.com/NousResearch/hermes-agent/issues/36052
+    [embed] fix(mcp): fail fast on non-MCP HTTP content type instead of waiting... https://github.com/NousResearch/hermes-agent/pull/36064
+
+[2026-06-01T22:24:04.088000+00:00] tiny_th_dev (id=1511133257507410084)
+    I have a PR open to add nostr to the gateway. https://github.com/NousResearch/hermes-agent/pull/16769 Austin Pickett reviewed it 2 weeks ago and I addressed his `Should fix before merge` and his `Significant test gaps` and his `Minor items` 2 weeks ago. The PR is sitting in `Merging is blocked: 1 review requesting changes by reviewers with write access.` state. Does this mean maintainers will eventually get around to this PR again, or have I fallen into a gap in the process? There is almost daily conflicts I need to resolve to keep the PR fresh. Is this normal?
+    [embed] feat(gateway): add Nostr NIP-17 private DM platform adapter by unsa... https://github.com/NousResearch/hermes-agent/pull/16769
+
+[2026-06-01T22:24:59.045000+00:00] teknium (id=1511133488013901875)
+    We're on a hold for new features until computex ends but will get to it
+    [reply to tiny_th_dev msg=1511133257507410084]
+
+[2026-06-01T22:25:30.700000+00:00] tiny_th_dev (id=1511133620784468240)
+    Thank you. That is helpful. I appreciate the reply 👍
+    [reply to teknium msg=1511133488013901875]
+
+[2026-06-01T23:40:50.884000+00:00] kinh0. (id=1511152579810431057)
+    This is a follow-up to the already merged PRs #29653, which made unmentioned Telegram group messages observable as context, and #30798, which separated observed Telegram group context from addressed user turns.
+    
+    I observed that unmentioned group messages with attachments were being recorded as context, but the attached files/media were not cached. This meant that if a user later mentioned the bot and referred to “the file above,” the agent could see the prior text context but not access the actual file.
+    
+    I opened #36957 to cache observed Telegram group media/documents and expose their local paths in the observed context, while keeping the same require-mention and chat allowlist gates.
+    
+    https://github.com/NousResearch/hermes-agent/pull/36957
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1511152580087124168/image.png?ex=6a1f6a02&is=6a1e1882&hm=7335add5f984f05540c4499eafb2345c2da831ced103c21c39d49d0766bcffcc&
+
+[2026-06-01T23:51:30.779000+00:00] zyrxtrx (id=1511155263724326984)
+    👀
+
+[2026-06-01T23:53:07.434000+00:00] zyrxtrx (id=1511155669124907068)
+    hey <@387972437901312000> 🙏 opened 2 small access-policy fixes when you get a sec
+    
+    • #37066 (whatsapp) — adapter gates access at intake but never set
+      enforces_own_access_policy, so the gateway re-applied env-only default-deny →
+      dm_policy/group_policy: open didnt actually work. one-liner, same contract
+      wecom/weixin/yuanbao/qqbot already use. +tests https://github.com/NousResearch/hermes-agent/pull/37066
+    
+    • #37069 (wecom) — read dm_policy from WECOM_DM_POLICY but pulled allow_from
+      only from config, so env-only allowlist setups ran with an empty list and
+      dropped every dm at intake. added the WECOM_ALLOWED_USERS fallback, config
+      still wins. +tests https://github.com/NousResearch/hermes-agent/pull/37069
+
+[2026-06-02T00:15:33.208000+00:00] kyssta69 (id=1511161313710178465)
+    **If any useful merge ☺️**
+    
+    1. https://github.com/NousResearch/hermes-agent/pull/37065 — jobs.json crash fix
+    2. https://github.com/NousResearch/hermes-agent/pull/36843 — unclosed log file
+    3. https://github.com/NousResearch/hermes-agent/pull/36840 — DELETE /api/env ValueError→400
+    4. https://github.com/NousResearch/hermes-agent/pull/36808 — duplicate import threading
+    5. https://github.com/NousResearch/hermes-agent/pull/36807 — PUT /api/env ValueError→400
+    6. https://github.com/NousResearch/hermes-agent/pull/36806 — ls antipattern in completions
+    7. https://github.com/NousResearch/hermes-agent/pull/36805 — tail_token_budget not restored
+    8. https://github.com/NousResearch/hermes-agent/pull/36804 — FD leak in gateway
+    9. https://github.com/NousResearch/hermes-agent/pull/36803 — compression never retried after failure
+    10. https://github.com/NousResearch/hermes-agent/pull/36802 — xai backend missing from check
+    11. https://github.com/NousResearch/hermes-agent/pull/36796 — test env var leak flake
+    12. https://github.com/NousResearch/hermes-agent/pull/36795 — `hermes stop` → `hermes gateway stop`
+    [embed] fix(cron): handle non-dict jobs.json gracefully instead of crashing... https://github.com/NousResearch/hermes-agent/pull/37065
+    [embed] fix(web): close log_file after Popen in _spawn_hermes_action by kys... https://github.com/NousResearch/hermes-agent/pull/36843
+    [embed] fix(web): return 400 for invalid env var key in DELETE /api/env by ... https://github.com/NousResearch/hermes-agent/pull/36840
+    [embed] chore(terminal-tool): remove duplicate 'import threading' by kyssta... https://github.com/NousResearch/hermes-agent/pull/36808
+    [embed] fix(web-server): return 400 for invalid env var names instead of 50... https://github.com/NousResearch/hermes-agent/pull/36807
+
+[2026-06-02T00:59:06.769000+00:00] davidg1982 (id=1511172275779403796)
+    https://github.com/NousResearch/hermes-agent/pull/37095
+    [embed] feat(dashboard): add terminalBackground field to DashboardTheme by ... https://github.com/NousResearch/hermes-agent/pull/37095
+
+[2026-06-02T01:58:17.034000+00:00] teknium (id=1511187166670360698)
+    [attachment] O9pd6WmMTWT83Zv7ZvVta_sMmNoSsQ.png https://cdn.discordapp.com/attachments/1491258766648283238/1511187166708105216/O9pd6WmMTWT83Zv7ZvVta_sMmNoSsQ.png?ex=6a1f8a39&is=6a1e38b9&hm=3a7714acba58b2278fa1a846d71dbd0f430f7db786a16fbbdecb94f00293a0b7&
+
+[2026-06-02T01:58:19.324000+00:00] teknium (id=1511187176275054744)
+    Some fixes from the community here
+
+[2026-06-02T02:05:43.946000+00:00] teknium (id=1511189041154887680)
+    <@1342642860612386897> <@1068770268660629574> welcome to dev status 😉
+
+[2026-06-02T02:06:14.716000+00:00] kyssta69 (id=1511189170213617724)
+    Woohoo thanks!
+    [reply to teknium msg=1511189041154887680]
+
+[2026-06-02T03:04:19.520000+00:00] missedshotik (id=1511203786541109358)
+    PR for showing cache hit for model in insights. Using it for a while now, would be awesome to have this in main Hermes 
+    
+    https://github.com/NousResearch/hermes-agent/pull/25044
+    [embed] feat(insights): show prompt cache efficiency by MissedShot · Pull ... https://github.com/NousResearch/hermes-agent/pull/25044
+
+[2026-06-02T03:14:04.659000+00:00] teknium (id=1511206240792088667)
+    Merged! welcome to developer 😉
+    [reply to davidg1982 msg=1511172275779403796]
+
+[2026-06-02T03:35:07.516000+00:00] gille (id=1511211537598124064)
+    "The lockfile already has websockets 15.0.1, but the Windows repair install ended up with 16.0, probably because the web extra only asks for uvicorn[standard] and does not directly constrain websockets." hmmm... pyproject.toml... +  "websockets<16",
+

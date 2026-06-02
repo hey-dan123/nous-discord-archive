@@ -30,3 +30,41 @@
     https://github.com/coe0718/deskbrid/releases/tag/v0.10.0
     [embed] Release v0.10.0 · coe0718/deskbrid https://github.com/coe0718/deskbrid/releases/tag/v0.10.0
 
+[2026-06-02T02:08:55.323000+00:00] coe0718 (id=1511189843848466552)
+    v0.12.0 — Print, Desktop Settings, Backlight & Dashboard
+    
+    17 commits since v0.11.3 · 63 files changed · 1,990 insertions · 227 deletions
+    
+    Major feature release. CUPS printing pipeline, desktop settings read/write across all 9 backends, backlight control via sysfs, and three new live dashboard cards.
+    
+    🖨️ CUPS Printing
+    
+    system.print_file action: send any file to a CUPS printer. Full stack: protocol, backend trait, CUPS CLI, MCP tool, CLI subcommand, execute dispatch
+    CLI: print-list, print-file, print-cancel, print-pause, print-resume, print-set-default
+    Dashboard: Printers card with SSE live updates
+    
+    ⚙️ Desktop Settings
+    
+    desktop_settings.get/set/list across all 9 backends: GNOME (gsettings), KDE (kreadconfig5), Hyprland/Sway/Niri/Wayfire (config files), COSMIC (gsettings), Labwc (config files), X11 (xsettings) 
+    
+    💡 Backlight
+    
+    backlight.list/get/set via sysfs
+    Install script: udev rule for video group access 
+    Dashboard: Backlight card with brightness slider 
+    
+    📊 Dashboard
+    
+    Desktop Settings card, Backlight card, Printers card — all SSE live
+    
+    ♿ Accessibility
+    
+    AT-SPI2: all 12 action variants, bypasses backend check
+    Full Changelog
+    
+    https://github.com/coe0718/deskbrid/blob/main/CHANGELOG.md
+    [embed] deskbrid/CHANGELOG.md at main · coe0718/deskbrid https://github.com/coe0718/deskbrid/blob/main/CHANGELOG.md
+
+[2026-06-02T02:09:28.662000+00:00] coe0718 (id=1511189983682367540)
+    Also a live demo dashboard at https://deskbrid.patchhive.dev/live
+

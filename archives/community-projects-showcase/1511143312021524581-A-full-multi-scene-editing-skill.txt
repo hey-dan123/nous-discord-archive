@@ -1,0 +1,17 @@
+# Thread 'A full multi scene editing skill' in forum #community-projects-showcase
+# thread_id=1511143312021524581 forum_id=1316137596535177246
+# Started 2026-06-02T03:43:56.059261+00:00
+
+[2026-06-01T23:04:01.271000+00:00] .salt555 (id=1511143312021524581)
+    I was paying a gazillion dollars for artlist so I’ve been working on porting all multi scene video generation capabilities over to Hermes in skill form.
+    [attachment] RoughCut.mov https://cdn.discordapp.com/attachments/1511143312021524581/1511143313342861483/RoughCut.mov?ex=6a1f6161&is=6a1e0fe1&hm=c64f3ef99a68799db90b8bbab5e541fb11207154be101267f82d5d67889b58d0&
+
+[2026-06-01T23:56:24.466000+00:00] .salt555 (id=1511156495537147996)
+    The skill will include creating character sheets for continuity, linking those character folders to a voice.
+    
+    And letting you call them dynamically in comfy UI generations.
+    
+    To make coherent scenes Hermes can pick starting frames. 
+    
+    Picking the end frame of the last scene allows for seamless transitions and infinite extension of a scene. The begining two cuts of the video were made before this addition, the last 4 are invisible. 🫥
+

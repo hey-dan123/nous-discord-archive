@@ -39,3 +39,7 @@
     Maybe scoped per agent? I'm not sure why you would lmao
     [reply to _bashell msg=1509943910175211570]
 
+[2026-06-02T00:33:03.547000+00:00] hydro._ (id=1511165719151116308)
+    Added a new function to the reasoning tab. You can now view what each actual call was via the payload!
+    [attachment] r0k06d1.png https://cdn.discordapp.com/attachments/1509744160675074098/1511165718874554492/r0k06d1.png?ex=6a1f763f&is=6a1e24bf&hm=9a9440bf60f98ee011b7fcde735e565a349e9e0241f2800e58a31428a588ec0f&
+
