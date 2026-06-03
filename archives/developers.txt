@@ -24231,3 +24231,61 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/issues/38323
     [embed] [Bug]: kanban --board uses process-global state and can cross-write... https://github.com/NousResearch/hermes-agent/issues/38323
 
+[2026-06-03T17:03:30.487000+00:00] sahil_ss9 (id=1511777361669001456)
+    Any chance we can get a review on https://github.com/NousResearch/hermes-agent/pull/31781
+    
+    I want to start working on the desktop version and addressing the rest of the CLI,TUI profile set up. Happy to chat about it  got some awesome ideas how to make really user friendly for new- comers looking to set up profile agents regardless of entry point
+    [embed] feat(profile): add interactive profile creation wizard by Sahil-SS9... https://github.com/NousResearch/hermes-agent/pull/31781
+
+[2026-06-03T17:57:36.019000+00:00] jw_mushroom_man (id=1511790974416719892)
+    https://github.com/NousResearch/hermes-agent/pull/38397
+    
+    Opened a PR for the Windows hermes update brick (#37881) — the one where the venv rebuild nukes site-packages/certifi and leaves you with FileNotFoundError on every model call. Heads up: the two existing PRs (#37895, #38051) just add --clear, but that's not enough — when the gateway/desktop is running, the locked python.exe is inside the venv being rebuilt, so uv venv --clear can't delete it either and rmtree has already gutted it. Real fix is to move the venv aside atomically (os.replace) so it bails before deleting anything when it's in use, plus restore-on-failure. Tests included. Hit this in prod today on Windows 11.
+    [embed] fix(uv): never gut the venv in place when rebuilding on Windows by ... https://github.com/NousResearch/hermes-agent/pull/38397
+
+[2026-06-03T18:15:43.360000+00:00] naqerl (id=1511795535055425543)
+    Perhaps I'm missing something, but I commented on two issues today noting my work in progress, yet saw two PRs opened by other users on those exact issues without any feedback.
+    
+    What do you think about adding a section to AGENTS.md instructing agents to read issue comments before opening a PR? Or is this fast-paced, uncoordinated behavior intentional for Nous Research?
+    
+    As I don't see an assignment flow, contributing currently feels a bit like racing. And racing without a clear prize doesn't feel great.
+
+[2026-06-03T19:30:07.091000+00:00] godsboy7777 (id=1511814257300209778)
+    Hey <@387972437901312000>, could you please review this when you get a chance?
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/38429
+    Issue: https://github.com/NousResearch/hermes-agent/issues/38424
+    
+    It fixes incomplete Mem0 recall / profile results.
+    
+    Hermes writes Mem0 memories with both "user_id" and "agent_id", but reads them back with only "user_id".
+    
+    On Mem0 Platform that means "mem0_profile", "mem0_search", and prefetch can miss agent-attributed memories.
+    
+    The PR changes the read filter from:
+    
+    {"user_id": self._user_id}
+    
+    to:
+    
+    {
+        "OR": [
+            {"user_id": self._user_id},
+            {"user_id": self._user_id, "agent_id": self._agent_id},
+        ]
+    }
+    
+    This keeps older unattributed memories visible and restores recall for memories saved by the active agent.
+    
+    Verification done:
+    
+    - Focused Mem0 tests: "17 passed"
+    - Ruff: passed
+    - Local Hermes test slice: "4913 passed, 0 failed"
+    - GitHub CI: all blocking checks passed
+    - PR is "MERGEABLE" and "CLEAN"
+    
+    Thanks.
+    [embed] fix(mem0): read agent-attributed memories by GodsBoy · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/38429
+    [embed] Mem0 provider read filter misses agent-attributed memories · Issue... https://github.com/NousResearch/hermes-agent/issues/38424
+

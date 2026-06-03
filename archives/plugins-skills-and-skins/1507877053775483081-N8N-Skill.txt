@@ -137,3 +137,6 @@
     since I’m not applying for a super specific posted role, should I just wait for recruiting, or is there a better path/person to reach out to? no pressure at all, I just wanted to ask properly because I’m serious about contributing and would move fast if there’s ever a fit.
     [reply to teknium msg=1509360415128424639]
 
+[2026-06-03T19:50:17.639000+00:00] pierstar (id=1511819334706532644)
+    That's a great idea! But it always depends on the model you use, right? If you use a stupid local model, the result will be terrible... I'd be curious to try it with qwen code 🤘😁
+

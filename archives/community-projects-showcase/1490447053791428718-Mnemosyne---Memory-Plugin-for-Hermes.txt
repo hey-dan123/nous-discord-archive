@@ -2396,3 +2396,22 @@
 [2026-06-02T02:22:39.874000+00:00] _bashell (id=1511193302265888798)
     I try to install the memory but i dont know how, i can use uv? or i need to install direclty with pip?
 
+[2026-06-03T18:14:10.884000+00:00] prayagmatic (id=1511795147183095921)
+    Was it a bad idea to import hindsight stuff? I see all those memories are termed as episodic memories in mnemosyne and running sleep is a no op. Just set it up today though
+
+[2026-06-03T18:14:26.689000+00:00] prayagmatic (id=1511795213474205757)
+    Asking the LLM how episodic memories are dealt with.
+
+[2026-06-03T18:16:06.929000+00:00] prayagmatic (id=1511795633910976553)
+    Seems like what I imported from hindsight is classified as a pre-processed memory unit here. Which is not exactly what I wanted given the junk in hindsight lol. Though I can see there's a decay over time thing so it's fine.
+
+[2026-06-03T18:16:41.464000+00:00] prayagmatic (id=1511795778761265293)
+    Are there any plans to add an interface for the user to browse memories? I guess I can query the DB directly for now
+
+[2026-06-03T18:51:30.518000+00:00] ruffer3000 (id=1511804540889071707)
+    https://github.com/wysie/mnemosyne-dashboard
+    
+    there is this thing, it’s quite alright
+    [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
+    [reply to prayagmatic msg=1511795778761265293]
+
