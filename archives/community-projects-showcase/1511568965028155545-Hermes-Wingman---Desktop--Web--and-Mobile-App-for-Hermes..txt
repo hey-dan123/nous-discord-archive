@@ -5,3 +5,14 @@
 [2026-06-03T06:36:45.948000+00:00] synthalorian (id=1511619636800655481)
     Hermes Wingman - Desktop, Web, and Mobile App for Hermes.
 
+[2026-06-03T14:34:44.617000+00:00] .blockops (id=1511739923856752791)
+    This looks really cool... sorry it got nerfed by their announcement. Maybe it can serve as a donor spike to the project.
+
+[2026-06-03T15:39:55.750000+00:00] 0x_stubbs (id=1511756328337670325)
+    Nice work on this! Agreed that it is too bad that nous released theirs right now…
+    
+    But this still looks like a beaut.
+
+[2026-06-03T15:53:47.169000+00:00] atlasmorphoenix (id=1511759815561576468)
+    This is awesome!!! How do we install the mobile app?
+

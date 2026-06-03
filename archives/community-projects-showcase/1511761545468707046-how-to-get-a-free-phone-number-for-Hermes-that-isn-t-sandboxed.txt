@@ -1,0 +1,22 @@
+# Thread 'how to get a free phone number for Hermes that isn't sandboxed' in forum #community-projects-showcase
+# thread_id=1511761545468707046 forum_id=1316137596535177246
+# Started 2026-06-03T16:45:01.621929+00:00
+
+[2026-06-03T16:00:39.611000+00:00] jooshmayer (id=1511761545468707046)
+    me and my friend are working on https://op.inc, which let's Hermes send real texts and calls
+    
+    this is by far the quickest way to get Hermes to send texts
+    
+    all you need to do is run
+    
+    `hermes plugins install JoshMayerr/hermes-op-plugin --enable`
+    
+    then 
+    
+    `hermes op setup --phone +14155551234 --webhook-url https://your-tunnel.trycloudflare.com/webhooks/op`
+    
+    and your agent can start texting you from any phone!
+    
+    link to plugin: https://github.com/JoshMayerr/hermes-op-plugin
+    [embed] GitHub - JoshMayerr/hermes-op-plugin: Hermes Agent plugin for using... https://github.com/JoshMayerr/hermes-op-plugin
+

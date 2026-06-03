@@ -1,0 +1,17 @@
+# Thread 'Hermes OmniVoice-Studio Bridge' in forum #plugins-skills-and-skins
+# thread_id=1511739394674135232 forum_id=1485392832154832906
+# Started 2026-06-03T16:49:01.875296+00:00
+
+[2026-06-03T14:32:38.450000+00:00] .blockops (id=1511739394674135232)
+    I wasn't too thrilled with the voice providers built in to Hermes so I decided to build a bridge for Omnivoice Studio (aka FOSS ElevenLabs equivalent) to give Hermes users some more options. If my agent can't yell at me while I workout as Arnold Schwarzenegger, I don't want it. DO IT! DO IT NOW!!!
+    
+    Still in MVP status but it is usable both locally and hosted on another machine. Not to the point where I reccomend it as the default voice provider but that should be coming along soon.
+    
+    Looking for community feedback as to what they'd like to see with this integration.
+    
+    Read more at the project github:
+    
+    https://github.com/MahdiHedhli/hermes-omnivoice-studio-bridge
+    [attachment] Fz4Mn9taQAEDTGS.jpg https://cdn.discordapp.com/attachments/1511739394674135232/1511739395139571732/Fz4Mn9taQAEDTGS.jpg?ex=6a218c86&is=6a203b06&hm=c101c0439df76146eb3c57340438e54d7ad8eb1eff1d89f3b0ad226a97f45c57&
+    [embed] GitHub - MahdiHedhli/hermes-omnivoice-studio-bridge: Hermes command... https://github.com/MahdiHedhli/hermes-omnivoice-studio-bridge
+

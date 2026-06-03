@@ -1,0 +1,27 @@
+# Thread 'Minimal, Fast and Feature rich Reading app' in forum #community-projects-showcase
+# thread_id=1511693310920495114 forum_id=1316137596535177246
+# Started 2026-06-03T16:45:02.043914+00:00
+
+[2026-06-03T11:29:31.227000+00:00] _.edwixx._ (id=1511693310920495114)
+    I was tired with chrome and firefox's default pdf viewer, i built this with hermes with deepseek v4 flash.
+    
+    the app have some cool features like
+    
+    1. Multiple reading layouts
+    2. multiple reading themes
+    3. importing papers directly from url.
+    4. progress tracking, tags, folder, annotation
+    5. supports local models with ollama cloud
+    6. artifacts which shows all kinds of links from pdf into a good place to skim through/
+    
+    and it's available for windows and linux system to download here
+    https://github.com/anurag12-webster/Reader/releases
+    
+    Project link
+    https://github.com/anurag12-webster/Reader
+    [attachment] image.png https://cdn.discordapp.com/attachments/1511693310920495114/1511693311122079754/image.png?ex=6a21619b&is=6a20101b&hm=a00c0810ac686ffd2a04b5ca09464b771dc405ee564fbdeaafc1e17fd82fe61b&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1511693310920495114/1511693311591579839/image.png?ex=6a21619b&is=6a20101b&hm=c6cd0eab086ae0c2998a374a226e4dff0a9ec79b611e1af6db0db191a1ef1187&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1511693310920495114/1511693311969071204/image.png?ex=6a21619b&is=6a20101b&hm=fe19015d399cfd58cd49e1360cfbea6fec63798d6e259bff4f89d59b282859a6&
+    [embed] Releases · anurag12-webster/Reader https://github.com/anurag12-webster/Reader/releases
+    [embed] GitHub - anurag12-webster/Reader: A fast, minimal PDF reader with a... https://github.com/anurag12-webster/Reader
+

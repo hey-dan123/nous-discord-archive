@@ -9,3 +9,11 @@
 [2026-06-03T09:19:45.790000+00:00] dworfd (id=1511660656431202385)
     did you manage to do this fully in Hermes native stuff or any additional custom patches, plugins, mcp,...
 
+[2026-06-03T12:44:52.189000+00:00] oninsuka (id=1511712273209622608)
+    what does this do bro seems cool if its a full on peptide company
+
+[2026-06-03T15:45:38.155000+00:00] 0x_stubbs (id=1511757764488073256)
+    Ok, hot damn! You have no idea how curious I am about what went into this. Just the uber high-level thought process and then implementation would be fascinating. That’s the kind of reality show that I want. 
+    
+    A start to finish of all the iteration, the evolving architectures, etc. god I bet it would be great
+

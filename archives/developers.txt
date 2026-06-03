@@ -24131,3 +24131,103 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(gateway): stage safe local MEDIA files before delivery by GodsB... https://github.com/NousResearch/hermes-agent/pull/38108
     [embed] [Bug]: Gateway silently drops safe local MEDIA files from working d... https://github.com/NousResearch/hermes-agent/issues/38106
 
+[2026-06-03T11:03:34.851000+00:00] .elkim (id=1511686783006543962)
+    Guys what compresssion treshold and target ratio do you use for coding with Hermes?
+
+[2026-06-03T11:04:01.570000+00:00] kyssta69 (id=1511686895074152569)
+    https://github.com/NousResearch/hermes-agent/pull/38132
+    
+    fix(gateway): visually expire Discord interactive views on timeout #38022
+    [embed] fix(gateway): visually expire Discord interactive views on timeout ... https://github.com/NousResearch/hermes-agent/pull/38132
+
+[2026-06-03T11:05:49.687000+00:00] shilird. (id=1511687348549718066)
+    https://github.com/NousResearch/hermes-agent/pull/38125
+    https://github.com/NousResearch/hermes-agent/pull/38142
+    https://github.com/NousResearch/hermes-agent/pull/38145
+    [embed] fix(api-server): guard json.loads against corrupted SQLite data in ... https://github.com/NousResearch/hermes-agent/pull/38125
+    [embed] fix(tools): add raise_for_status for MiniMax t2a_v2 TTS path by ann... https://github.com/NousResearch/hermes-agent/pull/38142
+    [embed] fix(gateway): guard kanban dispatcher against malformed config and ... https://github.com/NousResearch/hermes-agent/pull/38145
+
+[2026-06-03T11:47:45.047000+00:00] dirty_al (id=1511697898734354534)
+    https://github.com/NousResearch/hermes-agent/pull/38177
+    [embed] fix(slack): pass thread_ts in standalone send_message tool path by ... https://github.com/NousResearch/hermes-agent/pull/38177
+
+[2026-06-03T11:48:39.807000+00:00] dirty_al (id=1511698128414310460)
+    Think you could have this fied merged? The poluting of channels in slack by hermes-agent is not so UX friendly. Guarantee it answer inside a thread would be very nice.
+    [reply to dirty_al msg=1511697898734354534]
+
+[2026-06-03T12:52:28.453000+00:00] .blockops (id=1511714186919415889)
+    Well… now I know why no one from Nous replied to this. 😂🤫
+    [reply to .blockops msg=1509952176959520788]
+
+[2026-06-03T13:05:34.507000+00:00] colmeio_66868 (id=1511717483868983458)
+    <@387972437901312000> 
+    https://arxiv.org/abs/2605.22166
+    [embed] Adapting the Interface, Not the Model: Runtime Harness Adaptation f... https://arxiv.org/abs/2605.22166
+
+[2026-06-03T13:11:54.560000+00:00] colmeio_66868 (id=1511719077926666400)
+    Life-Harness suggests the next Hermes reliability layer should be runtime-side, not model-side: a small harness around the agent loop that validates tool calls, detects repeated failures, regulates trajectories, injects environment contracts, and turns solved failures into skill candidates.
+    
+    Hermes already has tools + skills + trajectories + memory. This would connect them into a feedback loop where failed trajectories become executable runtime wisdom.
+
+[2026-06-03T13:29:22.440000+00:00] dannyboy676767 (id=1511723473053941812)
+    Just flagging this new windows feature for you guys, should definitely look into this
+    [attachment] Screenshot_20260603_092812_Chrome.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1511723472638836880/Screenshot_20260603_092812_Chrome.jpg?ex=6a217db2&is=6a202c32&hm=1e8573a04a213d272f505af14cec40256b4986789c20e62135090cf0130ab710&
+
+[2026-06-03T13:29:27.830000+00:00] dannyboy676767 (id=1511723495661240424)
+    https://venturebeat.com/security/microsoft-launches-mxc-an-os-level-sandbox-for-ai-agents-with-openai-and-nvidia-already-on-board
+    
+    https://blogs.windows.com/windowsdeveloper/2026/06/02/build-2026-furthering-windows-as-the-trusted-platform-for-development/
+
+[2026-06-03T13:43:13.597000+00:00] z1gon (id=1511726959179337791)
+    https://github.com/NousResearch/hermes-agent/pull/32549
+    hi <@387972437901312000>, could you take a look at this when you have the time? I believe adding more providers could help support a wider audience, cheers :)
+    [embed] Add Volcengine and BytePlus providers by ehz0ah · Pull Request #32... https://github.com/NousResearch/hermes-agent/pull/32549
+
+[2026-06-03T14:15:14.647000+00:00] nktpavlenko9176 (id=1511735016647032933)
+    Hello everyone. This is a question, has anyone used hermes agent in corporations? How possible is it?)
+
+[2026-06-03T14:36:34.797000+00:00] .blockops (id=1511740385985298674)
+    https://www.youtube.com/watch?v=pgQDbRMa2Eg
+    [embed] Self-Evolving Hermes Agents: Enterprise AI That Gets Better With Us... https://www.youtube.com/watch?v=pgQDbRMa2Eg
+    [reply to nktpavlenko9176 msg=1511735016647032933]
+
+[2026-06-03T14:37:15.929000+00:00] .blockops (id=1511740558505414757)
+    Would love to be able to use Grok for Image and Video gen.
+
+[2026-06-03T15:01:11.836000+00:00] cryptoworlldz (id=1511746581135884339)
+    Found a pretty nasty sqlite fd leak in the kanban streaming path
+    
+    Both `kanban tail` and `kanban watch` were opening a fresh sqlite connection on every poll without closing it. On current main, a 50-iteration repro pushed the fd count from 5 to 64 in both cases.
+    
+    https://github.com/NousResearch/hermes-agent/issues/38277
+
+[2026-06-03T15:09:18.274000+00:00] cryptoworlldz (id=1511748621404475513)
+    I'm not opening a PR for this one after all.
+    
+    The leak was real on the older code I started from, but it no longer reproduces on current `main`, so upstream seems to have already fixed that path. Sorry
+    [reply to cryptoworlldz msg=1511746581135884339]
+
+[2026-06-03T15:20:18.806000+00:00] ahmetarif0x (id=1511751391876743309)
+    3 Hermes Desktop bug fixes
+    
+    #38289 — connection-config:apply sent SIGTERM then reloaded after a hard-coded 150ms delay. If the backend took longer to die the port was still bound when the new connection started. Now waits for actual process exit with a 5s SIGKILL fallback.
+    https://github.com/NousResearch/hermes-agent/pull/38289
+    
+    #38291 — Profile creation discarded the API response entirely, so a silent model write failure (model_set: false) showed a success toast with no warning. Now surfaces the failure to the user.
+    https://github.com/NousResearch/hermes-agent/pull/38291
+    
+    #38294 — handleSaveDesc / handleAutoDescribe cleared the saving indicator unconditionally in finally. If two saves overlapped, the first to finish cleared the spinner while the second was still in-flight. Fixed with an in-flight counter.
+    https://github.com/NousResearch/hermes-agent/pull/38294
+    [embed] fix(desktop): wait for backend exit before reloading on connection-... https://github.com/NousResearch/hermes-agent/pull/38289
+    [embed] fix(dashboard): surface model-write failure when creating a profile... https://github.com/NousResearch/hermes-agent/pull/38291
+    [embed] fix(dashboard): prevent stale saving indicator when desc requests o... https://github.com/NousResearch/hermes-agent/pull/38294
+
+[2026-06-03T15:53:37.701000+00:00] cryptoworlldz (id=1511759775850041556)
+    Tracked down a kanban board-isolation bug.
+    
+    Concurrent `kanban --board ...` calls in the same process can overwrite each other’s board pin and cross-write tasks into the wrong board. In my live repro on current main, `alpha-task` ended up in the `beta` board even though both commands returned success
+    
+    https://github.com/NousResearch/hermes-agent/issues/38323
+    [embed] [Bug]: kanban --board uses process-global state and can cross-write... https://github.com/NousResearch/hermes-agent/issues/38323
+

@@ -1062,3 +1062,11 @@
 [2026-06-03T09:29:42.986000+00:00] twindenis (id=1511663161252642997)
     totally not nous mascot girl pixel art making me creeped out during errors and thinking lol
 
+[2026-06-03T15:07:49.866000+00:00] echoeclipse (id=1511748250594705528)
+    You should include some guides on creating eikons here. I know we have a bunch of resources already and its in the studio as well but being able to be browsing and want to make one to upload I think would be cool. I want to create one but now I have to go back and search through the docs again
+    [reply to twindenis msg=1511662977135280148]
+
+[2026-06-03T15:08:26.088000+00:00] twindenis (id=1511748402520789033)
+    thats the plan.
+    [reply to echoeclipse msg=1511748250594705528]
+

@@ -1,0 +1,26 @@
+# Thread 'OP: give your agent a real free phone number (not a twilio wrapper)' in forum #plugins-skills-and-skins
+# thread_id=1511760071703396574 forum_id=1485392832154832906
+# Started 2026-06-03T16:49:01.138924+00:00
+
+[2026-06-03T15:54:48.238000+00:00] jooshmayer (id=1511760071703396574)
+    me and my friend made a plugin called OP because all SMS providers are just Twilio wrappers that have terrible free tiers, and make you sign up as a business in order to send texts.
+    
+    instead of filling out a 10DLC form on twilio, with OP you can start sending texts to yourself from Hermes in two commands.
+    
+    you can also use OP to receive 2FA codes for creating accounts for your Hermes.
+    
+    all you need to do is run
+    
+    `hermes plugins install JoshMayerr/hermes-op-plugin --enable`
+    
+    then 
+    
+    `hermes op setup --phone +14155551234 --webhook-url https://your-tunnel.trycloudflare.com/webhooks/op`
+    
+    and your agent can start texting you from any phone!
+    
+    link to plugin: https://github.com/JoshMayerr/hermes-op-plugin
+    
+    you dont even need an api key to start, the plugin will do it all for you
+    [embed] GitHub - JoshMayerr/hermes-op-plugin: Hermes Agent plugin for using... https://github.com/JoshMayerr/hermes-op-plugin
+

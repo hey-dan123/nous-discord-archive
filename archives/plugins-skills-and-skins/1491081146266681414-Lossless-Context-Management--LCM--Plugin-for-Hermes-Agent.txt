@@ -1743,3 +1743,11 @@
     I see an update: https://github.com/stephenschoettler/hermes-lcm/releases/tag/v0.15.0
     [embed] Release v0.15.0 · stephenschoettler/hermes-lcm https://github.com/stephenschoettler/hermes-lcm/releases/tag/v0.15.0
 
+[2026-06-03T16:26:02.718000+00:00] w0lfgang88 (id=1511767933842493471)
+    Thank you! I fell asleep last night before I made an X post.
+    [reply to kohai_ut msg=1511585979025330206]
+
+[2026-06-03T16:46:07.049000+00:00] w0lfgang88 (id=1511772985172824145)
+    https://x.com/SteveSchoettler/status/2062213601692385712
+    [embed]  https://twitter.com/SteveSchoettler/status/2062213601692385712
+
