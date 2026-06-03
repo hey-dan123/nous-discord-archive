@@ -235,3 +235,19 @@
 [2026-06-02T05:07:27.086000+00:00] gendal6935 (id=1511234772238733404)
     Is there no way to have Siri send a text message to Chat4000? I saw 2 Shortcuts but I don't want to send a voice sample and I don't want to type - I want a hands off way to send text to Hermes. Right now I would settle for a one way bridge to take notes, especially in the car, but Telegram, Discord, and now Chat4000 don't seem to cover this use case. Otherwise pretty neat.
 
+[2026-06-02T20:51:55.635000+00:00] wordsmachine666 (id=1511472457360605344)
+    Hi <@1445264578878640129>  Love the E2EE approach, been looking to migrate from Signal specifically because of the lack of features like slash commands, etc, and my Hermes live on VPS so I must use Tailscale all the time. This "No Tailscale Dependency" seems great.
+    
+    I'm not real developer myself, just tech enthusiast, but I've clone the repo and run a CodeGraph audit on the crrript00 stack. Good news: the XChaCha20-Poly1305 + X25519 implementation looks solid: Signal-grade cipher, no backdoors, key stored locally with proper permissions.
+    
+    But a few things I didn't see mentioned that I think are worth being transparent about (especially since this is security-focused):
+    
+    Metadata: The website (https://chat4000.com/) says "no metadata leaks" which is great. But the relay must still see connection-level metadata (IPs, timestamps, connection patterns, etc) since it's a relay-based architecture. Just want to clarify: does "no metadata leaks" mean the relay itself retains zero connection metadata, or that it doesn't share metadata with advertisers/third parties? Either way is fine, just want to know the trust model.
+    
+    Key rotation : The shared 32-byte group key stays static after pairing. Is there a plan for rotation, or is re-pairing the only way to rotate?
+    
+    Relay infrastructure: Where is the relay hosted? Who operates it? Just want to know the trust model.
+    
+    Not trying to FUD, genuinely excited about this. But for a security tool, I think these should be documented upfront so users know exactly what they're trusting. Would appreciate any clarity! Thank you.  😊👌🏼
+    [embed] chat4000 — Native iPhone, Mac and CLI app for OpenClaw or Hermes https://chat4000.com/
+

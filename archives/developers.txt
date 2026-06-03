@@ -23827,3 +23827,74 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-02T20:10:58.542000+00:00] jezzzzzzzzzz (id=1511462151565348966)
     I have a machine that I would be glad to mess around with it and make issue reports and possibly PRs, but if supporting Desktop installations on top of prior Hermes Agent installations is not a high priority for the roadmap, that's totally fair
 
+[2026-06-02T21:28:55.560000+00:00] iatetoomanybeans (id=1511481768400654488)
+    So I'm working on something that blends between the current "plugin" system and an "apc". Effectively, I have a realtime system feeding data back to the hermes ctx which may or may not trigger a chat response or a tool call.
+    
+    Is there a simple way to make different custom "ui" elements in the cli/tui/desktop triggered by a plugin?
+
+[2026-06-02T22:04:21.115000+00:00] frowtek (id=1511490683624751235)
+    https://github.com/NousResearch/hermes-agent/pull/37669
+    
+    The docs promise sessions auto resume after a gateway restart, but if a platform wasn't connected yet at startup, its interrupted sessions just got skipped and never retried you'd only recover by sending a new message. I hooked the auto resume into the reconnect path so a platform coming back online picks its own sessions back up.
+    [embed] fix(gateway): retry startup auto-resume when a failed platform reco... https://github.com/NousResearch/hermes-agent/pull/37669
+
+[2026-06-02T22:10:53.704000+00:00] _0xvox (id=1511492330262237375)
+    https://github.com/NousResearch/hermes-agent/pull/37679
+    
+    Fixed MiniMax-M3 and few other chores for gateway.
+    
+    cc <@387972437901312000> because Contributor Attribution check failed? 😞
+    [attachment] IMG_4347.png https://cdn.discordapp.com/attachments/1491258766648283238/1511492330392129668/IMG_4347.png?ex=6a20a66d&is=6a1f54ed&hm=d040827bf8d337ece39cf4c6c2fe225b3d25e5faef72e66fd7d1479f1197f9ad&
+    [embed] fix(gateway): close ResponseStore + dispose unowned adapter on reco... https://github.com/NousResearch/hermes-agent/pull/37679
+
+[2026-06-02T22:13:24.780000+00:00] _0xvox (id=1511492963920908378)
+    MiniMax referencing my another PR, sorry for the confusion 
+    
+    https://github.com/NousResearch/hermes-agent/pull/37664
+    [embed] fix(minimax): align default_aux_model with M3 frontier on minimax +... https://github.com/NousResearch/hermes-agent/pull/37664
+    [reply to _0xvox msg=1511492330262237375]
+
+[2026-06-02T22:20:45.969000+00:00] _0xvox (id=1511494814401564874)
+    Author map was using noreply email address, amending PRs now
+
+[2026-06-02T22:36:21.610000+00:00] pay.eth (id=1511498738764480693)
+    yo <@387972437901312000> can i throw a dm
+
+[2026-06-02T22:51:06.685000+00:00] tdamre (id=1511502451037962400)
+    wait a second you look familiar
+
+[2026-06-02T23:48:29.198000+00:00] kyssta69 (id=1511516889984139426)
+    **Problem**:
+    Anthropic enforces two independent ceilings per image:
+    
+    1. 5 MB encoded byte size → "image exceeds 5 MB maximum"
+    2. 8000 px longest side → "image dimensions exceed max allowed size: 8000 pixels"
+    Hermes only guarded #1. A tall screenshot (e.g. 1200×12000 at 0.06 MB) passes every byte check but fails the pixel check, returning a non-retryable HTTP 400 that permanently bricks the conversation thread — every subsequent turn replays the oversized image and gets rejected.
+    
+    **Solved**: https://github.com/NousResearch/hermes-agent/pull/37727
+    **Resolves**: https://github.com/NousResearch/hermes-agent/issues/37677
+    [embed] fix(vision): guard image pixel dimensions, not just bytes #37677 by... https://github.com/NousResearch/hermes-agent/pull/37727
+    [embed] Oversized image (>8000px) permanently bricks a conversation thread ... https://github.com/NousResearch/hermes-agent/issues/37677
+
+[2026-06-03T01:19:29.766000+00:00] lazeewhalee (id=1511539793266475048)
+    Sorry for that, many PRs are explicitly fair and dangerous at the same time
+    [reply to minddragon msg=1511436309867266219]
+
+[2026-06-03T01:20:29.520000+00:00] _0xvox (id=1511540043892920471)
+    Merged. <@387972437901312000> Thanks!
+    https://github.com/NousResearch/hermes-agent/pull/37679
+    [embed] fix(gateway): close ResponseStore + dispose unowned adapter on reco... https://github.com/NousResearch/hermes-agent/pull/37679
+
+[2026-06-03T01:21:04.083000+00:00] _0xvox (id=1511540188860649562)
+    Infographic
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613963626565642f6750325a4a577a626b53556a496d365235635a566f5f506e5434646578462e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1511540188571107379/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613963626565642f6750325a4a577a626b53556a496d365235635a566f5f506e5434646578462e706e67.png?ex=6a20d300&is=6a1f8180&hm=1f74583ab7d2dfe49cd94c7604b8ed371303532d4b185d158125c1cc87bf06f0&
+    [reply to _0xvox msg=1511540043892920471]
+
+[2026-06-03T03:17:57.536000+00:00] zhaoleidb (id=1511569605414621234)
+    Hi maintainers, could someone please take a look at this PR when you have a chance?
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/37826
+    
+    It adds Feishu/Lark meeting invitation event handling for `vc.bot.meeting_invited_v1`, including inviter/meeting number validation, identity normalization through the existing Feishu gateway flow, tests, and user-facing documentation.
+    [embed] feat(gateway): handle Feishu meeting invitations by zhaoleibd · Pu... https://github.com/NousResearch/hermes-agent/pull/37826
+

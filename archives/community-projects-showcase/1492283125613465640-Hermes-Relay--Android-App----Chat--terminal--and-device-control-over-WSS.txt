@@ -246,3 +246,7 @@
 [2026-05-28T13:26:05.372000+00:00] praveenjoseph (id=1509548319297241201)
     <@470346695587135489>  My concern is whether it is truly secure within the corporate network.? and when it will available in play store?
 
+[2026-06-03T01:15:53.300000+00:00] codename_11 (id=1511538885342134422)
+    Google Play is live 🙂 https://play.google.com/store/apps/details?id=com.axiomlabs.hermesrelay
+    [embed] Hermes-Relay - Apps on Google Play https://play.google.com/store/apps/details?id=com.axiomlabs.hermesrelay
+

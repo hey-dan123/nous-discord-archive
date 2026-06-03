@@ -1,0 +1,12 @@
+# Thread 'Hermes Wingman' in forum #community-projects-showcase
+# thread_id=1511568965028155545 forum_id=1316137596535177246
+# Started 2026-06-03T03:54:08.758773+00:00
+
+[2026-06-03T03:15:24.856000+00:00] synthalorian (id=1511568965028155545)
+    I had been working on this project for a few, before Hermes released their own desktop app. It is a full standalone Desktop, Webapp, and Mobile app. Desktop and webapp work as standalones and pair with the mobile app. Would love to hear some feedback! Hope you enjoy! https://github.com/synthalorian/hermes-wingman
+    [attachment] hermeswingman.png https://cdn.discordapp.com/attachments/1511568965028155545/1511568965497782433/hermeswingman.png?ex=6a20edcc&is=6a1f9c4c&hm=780a870a11cd1763a0dbdce22d90ae94c5e279bbfeea634e1143e6628caf64f9&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1511568965028155545/1511568966106222713/image.png?ex=6a20edcd&is=6a1f9c4d&hm=c90c3f34cd4ff703cbba017127b7e9fd081fb2081b563e74d62251ad67d263f9&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1511568965028155545/1511568966710067341/image.png?ex=6a20edcd&is=6a1f9c4d&hm=1f55b436466988f6428297005b27bdffd6d30729b4f5a247d9708f62c69126a3&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1511568965028155545/1511568967150604479/image.png?ex=6a20edcd&is=6a1f9c4d&hm=0769c001ba6a2e115f0672793c890141968f72a14062ea268627c0e6f8fc74a1&
+    [embed] GitHub - synthalorian/hermes-wingman: The complete Hermes Agent GUI... https://github.com/synthalorian/hermes-wingman
+

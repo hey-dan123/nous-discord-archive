@@ -3076,3 +3076,6 @@
 [2026-06-02T20:24:28.113000+00:00] pinched_nerve (id=1511465547152363672)
     I asked my hermes agent about it once.  It told me that it was trained in the 21st century, but it did have some ancient history training.
 
+[2026-06-03T00:33:36.824000+00:00] avidfuturist (id=1511528246590574654)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you might use it alongside your Hermes agent.
+

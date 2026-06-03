@@ -212,3 +212,6 @@
     So yeah... some kind of a way to merge existing entities would be pretty nice 🙂
     [reply to nicoloboschi msg=1511375249571188907]
 
+[2026-06-02T23:34:29.281000+00:00] jcrabapple (id=1511513367116775546)
+    Things are going much better on the latest version
+

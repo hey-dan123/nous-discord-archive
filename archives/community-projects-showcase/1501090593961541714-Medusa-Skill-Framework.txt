@@ -31,3 +31,6 @@
 [2026-06-01T21:28:14.450000+00:00] lorddetracy1782 (id=1511119208107212800)
     <@387972437901312000>
 
+[2026-06-02T23:01:04.248000+00:00] jimpickens3203 (id=1511504957398978741)
+    I don't understand. What is the point of this plugin? It sounds like its just a visual only thing.
+

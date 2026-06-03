@@ -1027,3 +1027,30 @@
 [2026-06-02T20:45:42.876000+00:00] echoeclipse (id=1511470893896040571)
     hermes tui works pretty instantly every time
 
+[2026-06-02T23:19:13.078000+00:00] liftaris (id=1511509524283129966)
+    <@95617422995750912> This looks like a UI readiness/render bug, probably related to something in WSL (I assume you're using WSL?)
+    
+    Can you repro and DM me logs? But this time, don’t switch model/tabs yet. From another shell, grab:
+    
+    pgrep -af 'tui_gateway.entry|herm|bun'
+    hermes --version 2>/dev/null || true
+    bun --version
+    python3 --version
+    uname -a
+    tail -250 ~/.hermes/logs/agent.log ~/.hermes/logs/errors.log ~/.hermes/logs/gateway.log 2>/dev/null
+    
+    Also try typing a tiny message while it still says `Connecting...`.
+    If it sends, the session is already connected and only the ready/render label is stale.
+    If it doesn’t send, the client never got a usable session id..
+
+[2026-06-02T23:20:52.748000+00:00] echoeclipse (id=1511509942329278628)
+    sure ill get that for you here in a little bit!
+    [reply to liftaris msg=1511509524283129966]
+
+[2026-06-02T23:22:36.618000+00:00] liftaris (id=1511510377991508150)
+    No rush. I'm still technically at work but having Hermes look at it
+    [reply to echoeclipse msg=1511509942329278628]
+
+[2026-06-03T01:10:02.364000+00:00] echoeclipse (id=1511537413409870016)
+    oh hey, it is visually only now, it wasnt visual only before but that means your fix actually did work and its just visual now. I just finished getting all the logs though
+

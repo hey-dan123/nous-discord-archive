@@ -9,3 +9,6 @@
     Hi, there is an open source project you can try on: https://docs.litellm.ai/docs/simple_proxy - i think it will be something you will need. It let's you build you own LLM hub as a proxy and track exact usage not only per model but also by a source you use that
     [embed] LiteLLM AI Gateway (LLM Proxy) | liteLLM https://docs.litellm.ai/docs/simple_proxy
 
+[2026-06-02T23:22:47.027000+00:00] glizlack6777 (id=1511510421650018425)
+    Sorry i missed this answer thank you I will look into it 🙂
+
