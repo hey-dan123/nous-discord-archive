@@ -251,3 +251,13 @@
     Not trying to FUD, genuinely excited about this. But for a security tool, I think these should be documented upfront so users know exactly what they're trusting. Would appreciate any clarity! Thank you.  😊👌🏼
     [embed] chat4000 — Native iPhone, Mac and CLI app for OpenClaw or Hermes https://chat4000.com/
 
+[2026-06-03T07:55:47.313000+00:00] haimbender (id=1511639523526836414)
+    heya, thanks for the kinda words and smart questions!, 
+    
+    We are thinking about key rotation, currently there isn't any but I don't think its a big issue, we are swapping out the infra soon, so feel free to come back and ask more about key questions soon.
+    
+    About meta data collection we strip out the IP address all incoming connections at the ngnix layer - the moment it hits our severs, and we do not work with any 3rd parties, everything is hosted on herzner, planing to move to no disk at all in the future.
+    
+    Always feel free to ask any question you might have! ❤️🙏🏻📝
+    [reply to wordsmachine666 msg=1511472457360605344]
+

@@ -6,3 +6,6 @@
     dont want to put much detail but took me 300 hours to build and it does it all saving 880k- 1million dollars a year of salaries payable if i were to hire employees.
     [attachment] content.png https://cdn.discordapp.com/attachments/1511507077334433812/1511507077678239965/content.png?ex=6a20b429&is=6a1f62a9&hm=8d00fff68d03249f4483cdb1d4ebdfbb7695eeb11a09919e8246f73ab53b6ab5&
 
+[2026-06-03T09:19:45.790000+00:00] dworfd (id=1511660656431202385)
+    did you manage to do this fully in Hermes native stuff or any additional custom patches, plugins, mcp,...
+

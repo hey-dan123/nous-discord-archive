@@ -1,0 +1,17 @@
+# Thread 'Nostromo Hermes Skin (Ghostty enhanced)' in forum #plugins-skills-and-skins
+# thread_id=1511632757967818882 forum_id=1485392832154832906
+# Started 2026-06-03T10:58:46.697572+00:00
+
+[2026-06-03T07:28:54.278000+00:00] thinkyhead (id=1511632757967818882)
+    Point your Hermes at these:
+    
+    **Nostromo Hermes Skin**
+    https://gist.github.com/thinkyhead/f3f69a17ed2bad512ceb4af18a26032f
+    
+    **Ghostty Cursor Shaders**
+    https://github.com/sahaj-b/ghostty-cursor-shaders
+    
+    **Terminess Nerd Font Mono**
+    https://www.nerdfonts.com/font-downloads
+    [attachment] image.png https://cdn.discordapp.com/attachments/1511632757967818882/1511632758332588082/image.png?ex=6a212936&is=6a1fd7b6&hm=7f005788a380e7ecbbfa120cc7a5a42342a91f2af116f19a78add3906d44ca5b&
+

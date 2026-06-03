@@ -23898,3 +23898,236 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     It adds Feishu/Lark meeting invitation event handling for `vc.bot.meeting_invited_v1`, including inviter/meeting number validation, identity normalization through the existing Feishu gateway flow, tests, and user-facing documentation.
     [embed] feat(gateway): handle Feishu meeting invitations by zhaoleibd · Pu... https://github.com/NousResearch/hermes-agent/pull/37826
 
+[2026-06-03T04:17:39.819000+00:00] .elkim (id=1511584630598275252)
+    fucking hell man they already launched a shitcoin on this  ^^
+    [reply to .elkim msg=1511241336173367327]
+
+[2026-06-03T04:19:22.677000+00:00] .elkim (id=1511585062016127086)
+    idiots didn't even read it right and thought I built Fluxer itself
+
+[2026-06-03T04:20:59.414000+00:00] gumandnuts (id=1511585467760513098)
+    I'm unable to use the desktop app, filed a bug here: https://github.com/NousResearch/hermes-agent/issues/37869
+    [embed] [Bug]: Desktop app shows remote connection failure while logs say r... https://github.com/NousResearch/hermes-agent/issues/37869
+
+[2026-06-03T04:44:49.591000+00:00] harrynguyen2107 (id=1511591466357620816)
+    Hi <@387972437901312000> , the Hermes Desktop is missing the Search Hermes Desktop Sessions by Session ID, i just opened an issue and a PR to propose feature:
+    https://github.com/NousResearch/hermes-agent/issues/37882
+    https://github.com/NousResearch/hermes-agent/pull/37883
+    [attachment] 01-problem-solution.png https://cdn.discordapp.com/attachments/1491258766648283238/1511591466504294481/01-problem-solution.png?ex=6a2102c1&is=6a1fb141&hm=dbb93158f64daf597a7e4a7c9a794d3336f5631261206a49e312a7e453d4ad29&
+    [embed] [Feature]: Search Hermes Desktop Sessions by Session ID · Issue #3... https://github.com/NousResearch/hermes-agent/issues/37882
+    [embed] feat(desktop): Search Hermes Desktop Sessions by Session ID by 0xha... https://github.com/NousResearch/hermes-agent/pull/37883
+
+[2026-06-03T05:13:40.332000+00:00] dogacel (id=1511598725611393035)
+    Hi folks, I have opened a PR that tackles an **important problem** for me, agents doing unsafe actions with Google Workspace skill (Gmail, documents etc.). My agent actually sent an email on behalf of me eagerly (which I am absolutely mad about), so I've decided to add read-only mode for the google-workspace skill.
+    
+    I would be glad if you can take a look and give some feedback, I am using this right now personally.
+    
+    https://github.com/NousResearch/hermes-agent/pull/37903
+    [embed] feat(google-workspace): support read-only mode, opt-in read/write b... https://github.com/NousResearch/hermes-agent/pull/37903
+
+[2026-06-03T05:41:11.384000+00:00] iborazzi (id=1511605650625658900)
+    Hey devs! 👋 I’ve just updated my PR (#37297) which fixes the annoying Windows 11 / Git Bash CLI freeze deadlock issue (/new, /clear, etc.).
+    
+    In this latest push, I also squeezed in a fix for the fact_feedback_loop.py script, resolving the SQLite path (memory_store_calib.db) and correcting the missing schema columns (fact_id, content, trust_score, retrieval_count, helpful_count) so the holographic calibration run now flows smoothly.
+    
+    All CI/CD checks have passed successfully with no conflicts. Would appreciate it if someone could take a quick look and review it! 🚀
+    
+    PR Link: https://github.com/NousResearch/hermes-agent/pull/37297
+    [embed] fix(cli): restore cooked terminal mode on Windows/MSYS2 to prevent ... https://github.com/NousResearch/hermes-agent/pull/37297
+
+[2026-06-03T07:20:36.937000+00:00] kyssta69 (id=1511630671968338192)
+    https://github.com/NousResearch/hermes-agent/pull/37965
+    `When hermes update triggers a venv rebuild on Windows, the running python.exe inside the venv is locked by the OS, so shutil.rmtree() silently fails to fully remove the directory. The subsequent uv venv command then fails with A directory already exists, leaving the venv in a half-deleted state (pyvenv.cfg gone, python.exe still present) which bricks the CLI with ModuleNotFoundError.`
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/37868
+    Fixes [#37721](https://github.com/NousResearch/hermes-agent/issues/37721) — stale tracked.json entries with category: "cron-output" pointing to cron control-plane files (e.g. cron/jobs.json) could cause quick() to delete the live scheduler registry.
+    [embed] fix(update): add --clear flag to uv venv rebuild to prevent Windows... https://github.com/NousResearch/hermes-agent/pull/37965
+    [embed] fix(cron): re-validate stale cron-output entries before deletion #3... https://github.com/NousResearch/hermes-agent/pull/37868
+    [embed] [Bug]: disk-cleanup can still delete cron/jobs.json from stale trac... https://github.com/NousResearch/hermes-agent/issues/37721
+
+[2026-06-03T08:01:09.332000+00:00] axmaiqiu (id=1511640874172416122)
+    <@387972437901312000>  Thanks for reading my message and updating my role.
+    I’d like to briefly introduce my PR one more time: it adds session-scoped workspace binding for Hermes gateway chats, so different Telegram/Discord/Slack sessions can work in different project directories through /workspace or /cwd.
+    Of course, I don’t want to spam Discord for a single PR, so this will be the last time I bring up this PR here. https://github.com/NousResearch/hermes-agent/pull/37275
+    [attachment] 600de434-7d6b-484c-95b2-45c53a875c50.png https://cdn.discordapp.com/attachments/1491258766648283238/1511640874348707910/600de434-7d6b-484c-95b2-45c53a875c50.png?ex=6a2130c5&is=6a1fdf45&hm=acf91264f2e777fa204d80b5f2f204e8a266b50d82a1de3cebe5abfb5d38f8c5&
+    [reply to axmaiqiu msg=1511300150398550126]
+
+[2026-06-03T08:41:47.827000+00:00] godsboy7777 (id=1511651101961621545)
+    <@387972437901312000>, could you please take a look at PR #32609 when you get a chance?
+    
+    https://github.com/NousResearch/hermes-agent/pull/32609
+    
+    It fixes an important Telegram streaming formatting bug that shows up specifically on long streamed replies that split into multiple Telegram messages.
+    
+    The short version:
+    
+    - Telegram streaming is genuinely buttery smooth now, especially with the recent improvements.
+    - But there is still a flaw on long multi-part streamed replies.
+    - Earlier split messages sometimes show raw Markdown syntax like `##`, `**bold**`, and code fences instead of rendered formatting.
+    - The final split message usually renders correctly, which makes the issue a bit sneaky.
+    
+    Root cause:
+    
+    In the current overflow path, Hermes seals an existing streamed message as the first chunk, then resets `_message_id = None`:
+    
+    ```py
+    chunk = self._accumulated[:split_at]
+    ok = await self._send_or_edit(chunk)
+    self._message_id = None
+    ```
+    
+    Because that sealed chunk is never edited again, Telegram never gets the final `MarkdownV2` formatting pass for it. Only the last chunk gets finalised, so only the last message renders properly.
+    
+    PR #32609 fixes that by finalising the sealed overflow chunk immediately:
+    
+    ```py
+    ok = await self._send_or_edit(chunk, finalize=True)
+    ```
+    
+    I verified it locally:
+    
+    - On current `origin/main`, a focused regression test fails because the sealed overflow edit uses `finalize=False`.
+    - On PR #32609, the same regression passes.
+    - Relevant suite passes on the PR head: `tests/gateway/test_stream_consumer.py` plus all `tests/gateway/test_telegram*.
+    [embed] Improve media safety, logging, and Telegram formatting by ITheEqual... https://github.com/NousResearch/hermes-agent/pull/32609
+    [reply to xdarkchain msg=1508822124121296957]
+
+[2026-06-03T08:42:15.268000+00:00] godsboy7777 (id=1511651217057517660)
+    example
+    [attachment] 2026-06-03_10-38-28.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1511651216898265148/2026-06-03_10-38-28.jpg?ex=6a213a67&is=6a1fe8e7&hm=8fe04a1008fb6246b083cc1610c6efb2838afc6f20923fe0e74ab3842eaff4cb&
+
+[2026-06-03T08:43:20.418000+00:00] kyssta69 (id=1511651490316423250)
+    https://github.com/NousResearch/hermes-agent/pull/38051
+    <@387972437901312000> 
+    
+    this and above ones
+    
+    `When hermes update triggers a venv rebuild on Windows, the running python.exe inside the venv is locked by the OS, so shutil.rmtree() silently fails to fully remove the directory. The subsequent uv venv command then fails with A directory already exists, leaving the venv in a half-deleted state (pyvenv.cfg gone, python.exe still present) which bricks the CLI with ModuleNotFoundError.
+    
+    Fix: Adding --clear to the uv venv command makes it handle any leftover directory gracefully, recreating the venv even if the previous shutil.rmtree call was only partially successful.
+    
+    `
+    [embed] fix(config): add --clear flag to uv venv rebuild to prevent Windows... https://github.com/NousResearch/hermes-agent/pull/38051
+    [reply to kyssta69 msg=1511630671968338192]
+
+[2026-06-03T08:52:14.283000+00:00] cyberyellowninja (id=1511653729508786306)
+    Could someone explain what the Hermes subscription includes in simple terms? Thank you.
+
+[2026-06-03T08:57:00.438000+00:00] godsboy7777 (id=1511654929729716265)
+    The Hermes subscription is basically the Nous Portal subscription.
+    
+    In simple terms: it gives Hermes one account to use models and tools, instead of you having to set up separate API keys for OpenAI, Anthropic, Firecrawl, FAL, Browser Use, TTS, etc.
+    
+    What it includes:
+    
+    - Access to 300+ models through Nous Portal
+    - Monthly credits that Hermes spends when you use those models/tools
+    - Hosted tool usage on paid plans, like web search, page extraction, image generation, text-to-speech, and browser automation
+    - Higher rate limits depending on the plan
+    - Nous Chat access using the same subscription
+    - One login / one bill instead of multiple provider accounts
+    
+    The plans are roughly:
+    
+    Free:
+    - $0/mo
+    - very tiny credits, mainly for trying it
+    - model access / pay-as-you-go
+    - no managed Tool Gateway
+    
+    Plus:
+    - $20/mo
+    - $22 monthly credits
+    - $10 rollover cap
+    - 300+ models
+    - hosted tool usage
+    
+    Super:
+    - $100/mo
+    - $110 monthly credits
+    - $50 rollover cap
+    - higher limits
+    
+    Ultra:
+    - $200/mo
+    - $220 monthly credits
+    - $100 rollover cap
+    - highest limits
+    
+    The important bit: it is not “unlimited Hermes usage”. It is more like prepaid credits plus easier setup. If you run expensive models or huge agent tasks, you can burn credits quickly. If you use cheaper models and keep tasks sensible, it can go a lot further.
+    
+    Also, Hermes Agent itself is open source. You do not need Nous Portal to use Hermes. You can still use your own OpenRouter, OpenAI, Anthropic, local Ollama, etc. Nous Portal is mainly the easier bundled option. And it is worth it.
+    [reply to cyberyellowninja msg=1511653729508786306]
+
+[2026-06-03T08:59:01.626000+00:00] cyberyellowninja (id=1511655438028898384)
+    Thank you, sir, for the explanation.
+
+[2026-06-03T09:19:06.161000+00:00] alelpoan (id=1511660490215129119)
+    Just confirming the duplicate paste issue (#37575) also reproduces on Windows 10 with PrtSc. Left a comment there with steps and a screenshot.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1511660490034647100/image.png?ex=6a21430a&is=6a1ff18a&hm=53b8126113433740612556aab3c3957cbd2de2014fc222ffb0176e73d92cacca&
+
+[2026-06-03T10:03:56.957000+00:00] floory (id=1511671776231424042)
+    https://github.com/NousResearch/hermes-agent/pull/33357
+    
+    hello my PR got lost can a dev check it out
+    [embed] fix(tui_gateway): dedup re-queued process notifications flooding TU... https://github.com/NousResearch/hermes-agent/pull/33357
+
+[2026-06-03T10:31:38.535000+00:00] godsboy7777 (id=1511678745394675853)
+    Hey <@387972437901312000>, mind reviewing #38108 when you get a minute?
+    
+    It fixes a MEDIA delivery gap that hits single-user / root gateways.
+    
+    When the agent generates a deliverable in its working dir, for example:
+    
+    ```text
+    /root/work/proposal.docx
+    ```
+    
+    and replies with:
+    
+    ```text
+    MEDIA:<path>
+    ```
+    
+    the gateway silently drops the attachment because `/root` is on the delivery denylist.
+    
+    The user gets a "here is your file" reply with nothing attached.
+    
+    Reproduced live on a Telegram DM. Copying the same file into:
+    
+    ```text
+    ~/.hermes/cache/documents/
+    ```
+    
+    delivered fine.
+    
+    The fix stages a safe local deliverable into the matching media cache and delivers the staged copy.
+    
+    It keeps the full credential / system denylist intact:
+    
+    * Refuses `/etc`
+    * Refuses `~/.ssh`
+    * Refuses `~/.hermes/.env`
+    * Refuses credential filenames like `id_rsa` / `*.pem`
+    * Resolves symlinks first
+    * Strict mode only stages fresh files
+    
+    It does **not** allowlist `/root`, home, or arbitrary workdirs.
+    
+    Adds **21 new tests**.
+    
+    This builds on the diagnosable-rejection + canonical-cache-roots work from my #33251 that you shipped as #34485.
+    
+    That improved the logging and cache roots, but did not cover workdir deliverables. This closes that gap.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/38108
+    Issue: https://github.com/NousResearch/hermes-agent/issues/38106
+    Related attachment reports where sends appear successful but never arrive: #32644, #13356
+    
+    Why it matters: this is the difference between "the agent says it sent the file" and the file actually arriving, for the most common case, agent-generated docs.
+    
+    Thanks!
+    [embed] fix(gateway): stage safe local MEDIA files before delivery by GodsB... https://github.com/NousResearch/hermes-agent/pull/38108
+    [embed] [Bug]: Gateway silently drops safe local MEDIA files from working d... https://github.com/NousResearch/hermes-agent/issues/38106
+

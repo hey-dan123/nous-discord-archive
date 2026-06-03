@@ -1,0 +1,7 @@
+# Thread 'Hermes Wingman - Desktop, Web, and Mobile App for Hermes.' in forum #community-projects-showcase
+# thread_id=1511568965028155545 forum_id=1316137596535177246
+# Started 2026-06-03T10:55:14.066094+00:00
+
+[2026-06-03T06:36:45.948000+00:00] synthalorian (id=1511619636800655481)
+    Hermes Wingman - Desktop, Web, and Mobile App for Hermes.
+
