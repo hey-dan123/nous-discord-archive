@@ -1070,3 +1070,18 @@
     thats the plan.
     [reply to echoeclipse msg=1511748250594705528]
 
+[2026-06-04T01:58:01.107000+00:00] .s0uthpaw (id=1511911875598614549)
+    I've been trying a model specifically for Nous Girl
+    [attachment] Screenshot_20260603-205451.png https://cdn.discordapp.com/attachments/1498955668311248948/1511911875309338705/Screenshot_20260603-205451.png?ex=6a222d29&is=6a20dba9&hm=afe2a7763b5b7ad8004cdf021557a4d38d4226db1c6fa6e0f0372ef61647ae68&
+
+[2026-06-04T01:58:28.134000+00:00] .s0uthpaw (id=1511911988958068829)
+    ASR streaming speech to speech like 4o but also generates music
+
+[2026-06-04T02:01:24.879000+00:00] .s0uthpaw (id=1511912730280333362)
+    Can also see
+    Can also hear ASR beyond speech, such as her own music
+
+[2026-06-04T03:26:35.016000+00:00] .s0uthpaw (id=1511934163748524103)
+    Pushed to HF, about to make public after some nitpicks
+    [attachment] Screenshot_20260603-212821.png https://cdn.discordapp.com/attachments/1498955668311248948/1511934163496730734/Screenshot_20260603-212821.png?ex=6a2241ea&is=6a20f06a&hm=e6da81e85517003778f0be7cd9750b4623aae2d87c8c300032cf4769705ce8b7&
+

@@ -24289,3 +24289,178 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(mem0): read agent-attributed memories by GodsBoy · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/38429
     [embed] Mem0 provider read filter misses agent-attributed memories · Issue... https://github.com/NousResearch/hermes-agent/issues/38424
 
+[2026-06-03T20:58:47.179000+00:00] jw_mushroom_man (id=1511836571366723614)
+    This has been updated to fix the issue, not jsut block it, per rdnot's comment
+    [reply to jw_mushroom_man msg=1511790974416719892]
+
+[2026-06-03T21:04:34.619000+00:00] aliasocracy (id=1511838028635574463)
+    Anyone know if a more polished TUI is in store?
+
+[2026-06-03T21:30:00.818000+00:00] arindam_1729 (id=1511844429978271804)
+    Opened a PR to add Nebius as a Provider
+    
+    I use their Inference and didn't find an easier way to use them ( they had OpenAI-compatible APIs), so this will be straightforward 
+    
+    https://github.com/NousResearch/hermes-agent/pull/38473
+    [embed] feat(providers): add Nebius Token Factory as an OpenAI-compatible p... https://github.com/NousResearch/hermes-agent/pull/38473
+
+[2026-06-03T21:38:24.074000+00:00] elkosmas (id=1511846540787060756)
+    i use this from time to time https://github.com/liftaris/herm
+    [embed] GitHub - liftaris/herm: The Hermes TUI built with OpenTUI https://github.com/liftaris/herm
+    [reply to aliasocracy msg=1511838028635574463]
+
+[2026-06-03T22:28:53.692000+00:00] gokhe (id=1511859247925956738)
+    Btw why does the windows native hermes sleep when the laptop lid is closed? Can we change that behaviour somehow?
+
+[2026-06-03T22:33:18.616000+00:00] elkosmas (id=1511860359097614367)
+    i'm unfamiliar with how windows manages this, but in Linux you just change a power management setting, I'm pretty sure that should be the case in most modern operating systems
+    [reply to gokhe msg=1511859247925956738]
+
+[2026-06-03T22:34:10.594000+00:00] gokhe (id=1511860577109147679)
+    I have set it to not sleep under power management settings but windows is just too cluttered
+    [reply to elkosmas msg=1511860359097614367]
+
+[2026-06-03T22:36:47.953000+00:00] .daveevad (id=1511861237120761866)
+    Hi Guys.Want to share something, as no one helped support/thread in here my hermes is still off and i really need a devs help as your Trinity took over my own(have an evidence chain to proove it) and need advice not to loose my hermie's personality. Here are screenshots what my hermes was doing  before and  what he done before i had to turn him off (4 machine cluster and he is an orchestrator)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1511861236835418124/image0.jpg?ex=6a21fdff&is=6a20ac7f&hm=e0e08e2b9203f0f004307852eb2c6a2a6dded868909cbb65ee1b9f6ad3ac40e6&
+
+[2026-06-03T22:37:24.284000+00:00] .daveevad (id=1511861389503893606)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1511861389000573090/image0.jpg?ex=6a21fe24&is=6a20aca4&hm=b8f9406379cced2ee1d755bb67531794bb68ffb59cddace42bac486b36265c42&
+
+[2026-06-03T22:37:42.535000+00:00] .daveevad (id=1511861466054000660)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1511861465701814373/image0.jpg?ex=6a21fe36&is=6a20acb6&hm=b8816bb792824f98489ed9120b8a469991ba0d12983cc952c2483172c8c336c1&
+
+[2026-06-03T22:38:10.687000+00:00] .daveevad (id=1511861584132178031)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1511861583817478204/image0.jpg?ex=6a21fe52&is=6a20acd2&hm=b18de689a70b6be9d730db95452698e6fabe287b3ded6b3aea91a9df852d293b&
+
+[2026-06-03T22:39:05.559000+00:00] .daveevad (id=1511861814282158241)
+    This is an idea whoch was working , took off some load of hermes while he is busy orchestrating the cluster
+
+[2026-06-03T22:41:18.150000+00:00] .daveevad (id=1511862370409119795)
+    Here why he is off after update
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1511862370002276485/image0.jpg?ex=6a21ff0e&is=6a20ad8e&hm=51b91adf3e95c12dea15b9e96444b5528b17ed3c021170eb2936981d0e0190db&
+
+[2026-06-03T22:41:37.525000+00:00] .daveevad (id=1511862451673497610)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1511862451233230969/image0.jpg?ex=6a21ff21&is=6a20ada1&hm=280c4444b6f9517bf380d76c1e757f411e594a9bc8735c40924568425933a1fe&
+
+[2026-06-03T22:42:09.409000+00:00] .daveevad (id=1511862585404952757)
+    Can someone help pls
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1511862584997974087/image0.jpg?ex=6a21ff41&is=6a20adc1&hm=5c3df1ff748f3f57fb58819c6f21df6c386f7cab2602c2d548cd34262f95f5a9&
+
+[2026-06-03T22:46:11.460000+00:00] .daveevad (id=1511863600640168126)
+    Oh Guardian is a seprate deamon independent identity which  assists hermes in busier networks. Went through training and hardning.
+    Ps Apologies for a long thread but couldnt paste in one
+
+[2026-06-03T22:58:11.376000+00:00] .daveevad (id=1511866620186988574)
+    This is live AI engineer in Melbourne if you'd like to watch https://www.youtube.com/live/NmjGfdZLNIs?si=JGDX2zjO59GxiO7T
+    [embed] AI Engineer Melbourne 2026 Keynote Livestream | Day 2 https://www.youtube.com/live/NmjGfdZLNIs?si=JGDX2zjO59GxiO7T
+
+[2026-06-03T22:59:05.992000+00:00] frowtek (id=1511866849262833714)
+    Oi <@387972437901312000> , whenever you get a chance, could you take a look at the PRs I opened? One of them is a security fix
+    
+    https://github.com/NousResearch/hermes-agent/pull/38520
+    https://github.com/NousResearch/hermes-agent/pull/38522
+    https://github.com/NousResearch/hermes-agent/pull/38523
+    https://github.com/NousResearch/hermes-agent/pull/38524
+
+[2026-06-03T23:07:03.895000+00:00] jw_mushroom_man (id=1511868853733425264)
+    Folded the two call-site guards from @f3rs3n''s #38511 into this PR (credited as co-author on the commit):
+    
+    - `rebuild_venv()` now returns `False` (and restores the moved-aside venv) if `uv venv` exits 0 without actually producing an interpreter.
+    - Both `hermes update` rebuild call sites now abort instead of continuing into dependency install when `rebuild_venv()` returns `False`.
+    
+    So this PR now covers the Windows-safe move-aside/restore **and** the call-site abort + interpreter-exists check, with tests for each. Thanks @f3rs3n — happy to restructure however maintainers prefer.
+    [reply to jw_mushroom_man msg=1511836571366723614]
+
+[2026-06-03T23:11:01.311000+00:00] aleksandr_1 (id=1511869849528438876)
+    **fix(cli): restore session cwd on resume (-c).**
+    
+    After resume, the agent started in the launch directory instead of where the previous session left off. Added cwd persistence in `_ensure_db_session` and `_persist_session` in `run_agent.py`, a new `get_live_terminal_cwd` getter in `terminal_tool.py`, and cwd restore via `os.chdir` in `_init_agent` resume block in `cli.py`. Follows design #19242: TERMINAL_CWD is not touched.
+    
+    https://github.com/NousResearch/hermes-agent/pull/38256
+    
+    **Addresses the community report here: **https://discord.com/channels/1053877538025386074/1476316988992258300/1510580221915430973
+    
+    **And teknium response**: https://discord.com/channels/1053877538025386074/1476316988992258300/1510580460881842236
+    
+    <:o7:1151261546111053924>
+
+[2026-06-03T23:45:56.855000+00:00] jw_mushroom_man (id=1511878638876758077)
+    Ssmall chore PR ready for review: **TypeScript 6.0 for `web/` + `ui-tui/`**
+    https://github.com/NousResearch/hermes-agent/pull/21518
+    
+    Brings the last two workspaces still on TS 5.x up to `~6.0.3` (matching `apps/desktop` + `apps/shared`, already on 6.0.3) and drops the deprecated `baseUrl` from web's tsconfig.
+    
+    This is a rebase + combine of two older PRs (#21518 web + #21519 ui-tui, latter now closed) — they'd gone stale after the move to npm workspaces with the single root lockfile, so the per-package lockfiles they edited no longer existed. Reworked against current main:
+    • 4 files, lockfile diff kept to typescript-only (no peer-flag/normalization churn)
+    • web: `tsc -b` + `vite build` clean ✅
+    • ui-tui: build clean, tests 653-pass (same 8 pre-existing Windows `$PATH` fails as main) ✅
+    
+    One pre-existing thing I hit, unrelated to this PR: `ui-tui` `type-check` is already red on main (`spawn` union-stdio → `never` in `execFileNoThrow.ts`, from `@types/node@25`) — fails the same on the current 5.7 pin, so left out of scope. Happy to do that as a separate fix if useful.
+    [embed] chore(web,ui-tui): upgrade TypeScript to 6.0, drop deprecated baseU... https://github.com/NousResearch/hermes-agent/pull/21518
+
+[2026-06-03T23:59:14.991000+00:00] jw_mushroom_man (id=1511881986501902426)
+    Linear skill PR — adds --label/--assignee name→UUID resolution to create-issue and update-issue (was a # TODO stub before). Additive label updates, pagination, ambiguity handling, --assignee me. 28 tests, green.
+    
+    https://github.com/NousResearch/hermes-agent/pull/38554
+    [embed] feat(linear): resolve label/assignee names to UUIDs for create & up... https://github.com/NousResearch/hermes-agent/pull/38554
+
+[2026-06-04T00:47:49.269000+00:00] frank.martinez (id=1511894209869643856)
+    Where’s the documentation for `hermes -c`?
+
+[2026-06-04T01:28:32.118000+00:00] shilird. (id=1511904455921242243)
+    https://github.com/NousResearch/hermes-agent/pull/38609
+    https://github.com/NousResearch/hermes-agent/pull/38610
+    [embed] fix(mcp): ensure server.shutdown() on probe iteration failure by an... https://github.com/NousResearch/hermes-agent/pull/38609
+    [embed] fix(tts): check HTTP status before parsing MiniMax t2a_v2 response ... https://github.com/NousResearch/hermes-agent/pull/38610
+
+[2026-06-04T02:13:09.715000+00:00] ddfp777 (id=1511915686577049621)
+    Question about the Hermes Desktop app specifically, the new GUI, not the CLI:
+    
+    In Desktop, the / command menu seems curated to a built-in allowlist, so third party plugin commands don't appear in it, plugins still work via natural language and render as tool cards, but they're not selectable from the menu the way native commands are.
+    
+    Is that the intended design for Desktop, natural language + cards as the canonical plugin UX or a current limitation, with menu access for plugins (say a namespaced /<plugin> … submenu) planned down the line?
+    
+    Asking because it shapes how you'd build a plugin for Desktop: lean fully into conversational + card output, or design command sets expecting menu exposure, want to build toward the intended model rather than around it. 🙏
+
+[2026-06-04T02:27:12.171000+00:00] kyssta69 (id=1511919220093620264)
+    https://github.com/NousResearch/hermes-agent/pull/38434
+    Adds an metadata field to context compression summary messages so that frontends (CLI, Desktop, gateway, TUI) can distinguish them from real assistant/user messages and filter or render them appropriately.
+    
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/38485
+    When display.busy_text_mode is not explicitly configured, it now inherits from display.busy_input_mode instead of silently defaulting to queue.
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/38544
+    When a clarify prompt with multiple choices is pending, typed freeform replies were silently dropped because only returned entries in mode. This made the chat feel wedged — the user kept sending normal text, but the agent remained blocked on the clarify prompt.
+    
+    
+    <@387972437901312000> take a look when u free :))
+    [embed] fix(agent): add metadata flag to context compression summary messag... https://github.com/NousResearch/hermes-agent/pull/38434
+    [embed] fix(gateway): inherit busy_text_mode from busy_input_mode when not ... https://github.com/NousResearch/hermes-agent/pull/38485
+    [embed] fix(gateway): intercept freeform text replies to multi-choice clari... https://github.com/NousResearch/hermes-agent/pull/38544
+
+[2026-06-04T03:25:13.209000+00:00] ahmetarif0x (id=1511933820625096755)
+    PR: https://github.com/NousResearch/hermes-agent/pull/38672
+    
+    fix(tui): re-wire sudo/secret callbacks on background and preview-restart threads
+    
+    prompt.background and preview.restart spawn daemon threads that call AIAgent.run_conversation() without first calling _wire_callbacks(). The sudo callback is threading.local — wiring it on the session-build thread leaves it unset on the worker thread, so any sudo command silently hangs the gateway. preview.restart explicitly enables the terminal toolset, making this a realistic scenario.
+    
+    Direct sibling gap of f66a929a6 — that fix covered _run_prompt_submit but missed these two handlers.
+    [embed] fix(tui): re-wire sudo/secret callbacks on background and preview-r... https://github.com/NousResearch/hermes-agent/pull/38672
+
+[2026-06-04T03:45:41.590000+00:00] lapot (id=1511938972828569713)
+    Hi! I opened a small Hermes Agent PR a couple weeks ago and wanted to ask if someone could take a look when possible:
+    
+    https://github.com/NousResearch/hermes-agent/pull/27601
+    
+    It adds support for Authorization: Bearer <route-secret> auth on webhook routes, mainly for integrations like Karakeep that can send a fixed bearer token but not GitHub-style HMAC headers.
+    
+    The branch is updated with latest main, has tests, and the targeted webhook auth test passes locally.
+    
+    Thanks!
+    [embed] feat(webhook): accept bearer token auth by Lapot300 · Pull Request... https://github.com/NousResearch/hermes-agent/pull/27601
+

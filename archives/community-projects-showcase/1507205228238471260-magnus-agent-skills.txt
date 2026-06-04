@@ -481,3 +481,58 @@
 [2026-06-03T17:40:12.289000+00:00] magnus919 (id=1511786596695801866)
     <@1451389295280525354> I see another PR! Thank you! Reviewing now.
 
+[2026-06-04T00:53:41.221000+00:00] techno.ghost (id=1511895686063591444)
+    Yo you’re also using forgejo!!!! I just discovered it a few days ago since I wanted to host Dockhand advertises git support but didn’t want my compose and other private files in GitHub so I looked for self hosted options and ended with Forgejo. Then I hosted Hermes and learned about distribution so now also hosting a Hermes agent repo and I kept going. Forgejo is amazing so far
+
+[2026-06-04T00:56:11.721000+00:00] techno.ghost (id=1511896317306343495)
+    Then I wanted Hermes agent to have access to Forgejo and best way I found was https://codeberg.org/goern/forgejo-mcp/releases
+    
+    been working amazing hopefully more people find out about Forgejo Hermes workflow
+    [embed] forgejo-mcp https://codeberg.org/goern/forgejo-mcp/releases
+
+[2026-06-04T01:31:47.309000+00:00] magnus919 (id=1511905274611503257)
+    I spent like 5 minutes with this very repo (agent-skills) and made a skill and CLI for working with Forgejo.
+    [reply to techno.ghost msg=1511896317306343495]
+
+[2026-06-04T01:32:36.989000+00:00] magnus919 (id=1511905482984652820)
+    So… look in the repo and just install the skill. No MCP needed.
+    [reply to techno.ghost msg=1511896317306343495]
+
+[2026-06-04T02:47:56.379000+00:00] techno.ghost (id=1511924438680076409)
+    Woooooo whatttttt😭😭
+    [reply to magnus919 msg=1511905482984652820]
+
+[2026-06-04T02:48:13.746000+00:00] techno.ghost (id=1511924511522554036)
+    🙇🙇🙇
+    [reply to magnus919 msg=1511905482984652820]
+
+[2026-06-04T02:57:40.551000+00:00] techno.ghost (id=1511926888875032626)
+    And you also did arr?? Damn you basically working on what I was thinking. Literally made a Hermes agent profile as a media buddy in hopes of doing everything media. I was going to set it up with arr stack somehow when I could self host it since idk about letting it do that plus  letting it automate privet. 
+    
+    Right now hopping for implementation of Yumtracks API because I listen to a lot of audiobooks (audiobookshelf is the best), and even for anime, games and movies I’d like to keep track of which ones to watch next and make notes on them to I can remember if they are a series for when a new book or episode is released 
+    
+    I think the whole Hermes Agent media assistant is a one of the best examples I’ve seen for self host community
+    That an troubleshoot Homelab by going straight to the logs and editing git forgejo to fix compose if needed
+
+[2026-06-04T02:58:17.507000+00:00] magnus919 (id=1511927043879862455)
+    don't forget jellyfin
+    [reply to techno.ghost msg=1511926888875032626]
+
+[2026-06-04T02:59:55.067000+00:00] techno.ghost (id=1511927453076164639)
+    Yeah I got Jellyfin running, honestly was put off only because of reaching outside network but this year decided to learn more and there are tons of ways of going about it, I went with Pangolin reverse proxy in VPS
+    [reply to magnus919 msg=1511927043879862455]
+
+[2026-06-04T03:00:48.911000+00:00] techno.ghost (id=1511927678914265108)
+    If people knew how to expose jellyfin that’s 80% of the battle there. Most know tailscale but it’s kind of a dealbreaker for setting up with family sometimes
+
+[2026-06-04T03:02:29.183000+00:00] techno.ghost (id=1511928099485520083)
+    Feeding Hermes API for Jellyfin, Audiobookshelf 👌 basically got my preferences down then with arr stack in the lookout 🤯 
+    Got an actual assistant
+
+[2026-06-04T03:38:46.803000+00:00] magnus919 (id=1511937233085796403)
+    just added lidarr
+    [reply to techno.ghost msg=1511926888875032626]
+
+[2026-06-04T03:43:08.972000+00:00] techno.ghost (id=1511938332702019745)
+    Will keep an eye out for any of your stuff seems like we’re thinking in the same lines
+

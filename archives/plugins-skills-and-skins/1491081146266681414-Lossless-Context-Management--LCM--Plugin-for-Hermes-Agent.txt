@@ -1751,3 +1751,9 @@
     https://x.com/SteveSchoettler/status/2062213601692385712
     [embed]  https://twitter.com/SteveSchoettler/status/2062213601692385712
 
+[2026-06-04T01:16:18.322000+00:00] exer91 (id=1511901378157608970)
+    Is it possible that this plugin is not working on windows host since i am running hermes on windows due to `os.statvfs` being POSIX-only and raises AttributeError on Windows, so i cannot use it?
+
+[2026-06-04T01:50:12.006000+00:00] thegiuseppe (id=1511909908046676058)
+    thatd be interesting if its the case. i was having problems before and assumed it was because i was using a custom model provider and for some reason it wasnt reading it properly but I also am on native windows install too so maybe I was having the same problem. i havent had a chance to try and reinstall this, Ive been too busy.
+

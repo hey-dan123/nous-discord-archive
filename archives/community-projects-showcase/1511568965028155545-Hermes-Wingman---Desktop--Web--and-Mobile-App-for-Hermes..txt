@@ -16,3 +16,16 @@
 [2026-06-03T15:53:47.169000+00:00] atlasmorphoenix (id=1511759815561576468)
     This is awesome!!! How do we install the mobile app?
 
+[2026-06-03T23:07:21.259000+00:00] synthalorian (id=1511868926563323934)
+    https://github.com/synthalorian/hermes-wingman/releases the mobile app should work with the desktop app...Was in beta and I only have the apk built, but the code should translate to iOS if you want to build it for that.
+    [embed] Releases · synthalorian/hermes-wingman https://github.com/synthalorian/hermes-wingman/releases
+    [reply to atlasmorphoenix msg=1511759815561576468]
+
+[2026-06-03T23:07:54.621000+00:00] synthalorian (id=1511869066493825157)
+    Thanks! yeah I figured I'd post the project anyway since they released theirs.
+    [reply to 0x_stubbs msg=1511756328337670325]
+
+[2026-06-03T23:08:40.646000+00:00] synthalorian (id=1511869259536400476)
+    Thank you! It's all good! The official desktop app doesn't actually scale well with my system (I use hyprland) so I'm still using mine in the meantime.
+    [reply to .blockops msg=1511739923856752791]
+

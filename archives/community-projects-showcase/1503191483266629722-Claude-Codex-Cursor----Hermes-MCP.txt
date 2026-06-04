@@ -28,3 +28,6 @@
       Issues / config questions welcome → github.com/mlennie/hermes-mcp/issues
     [embed] GitHub - mlennie/hermes-mcp: MCP server that lets any llm (i.e. Cla... https://github.com/mlennie/hermes-mcp
 
+[2026-06-03T21:50:02.879000+00:00] ballach_99_27107 (id=1511849471787405312)
+    what about the opposite direction? Hermes calling codex?
+

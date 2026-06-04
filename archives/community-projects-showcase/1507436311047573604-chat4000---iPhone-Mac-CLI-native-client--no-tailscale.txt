@@ -265,3 +265,6 @@
     sorry forgot to reply, yes, will check on this
     [reply to gendal6935 msg=1511234772238733404]
 
+[2026-06-04T00:39:11.221000+00:00] catsbackdogshow (id=1511892037018845184)
+    How do I enable the action button functionality? Not seeing chat4000 listed in controls
+

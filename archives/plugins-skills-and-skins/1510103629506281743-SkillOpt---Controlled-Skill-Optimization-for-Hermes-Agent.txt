@@ -40,3 +40,45 @@
     • Skill: ~/.hermes/skills/content/mermaid-magnus919/SKILL.md — v1.0.4 with 4 reference files
     ```
 
+[2026-06-03T21:47:16.126000+00:00] magnus919 (id=1511848772374888479)
+    https://github.com/magnus919/hermes-SkillOpt/releases/tag/v1.1.0
+    [embed] Release v1.1.0 — Controlled Skill Optimization for Hermes Agent ... https://github.com/magnus919/hermes-SkillOpt/releases/tag/v1.1.0
+
+[2026-06-04T00:52:40.381000+00:00] _.exo._ (id=1511895430881869884)
+    <@659176257338081306> can you give me an example of what a before/after for this would look like?
+
+[2026-06-04T01:10:51.405000+00:00] magnus919 (id=1511900006968332429)
+    No but my clanker can.
+    [attachment] Screenshot_2026-06-03_at_9.10.39_PM.png https://cdn.discordapp.com/attachments/1510103629506281743/1511900006674596010/Screenshot_2026-06-03_at_9.10.39_PM.png?ex=6a22221b&is=6a20d09b&hm=a1fe065c180ca92c0355a616a0953abe0e6d96b1da332ff71d6d01b35cf0a318&
+
+[2026-06-04T01:25:11.894000+00:00] _.exo._ (id=1511903616120918108)
+    hmm. so the quality of the improvement would be better improved by a mechanical benchmark on the result?
+
+[2026-06-04T01:33:21.543000+00:00] magnus919 (id=1511905669857673246)
+    It doesn’t cost any money. You can just try it and see for yourself 🤷
+    [reply to _.exo._ msg=1511903616120918108]
+
+[2026-06-04T01:35:50.156000+00:00] _.exo._ (id=1511906293185646694)
+    yea i'll give it a try i'm just looking for use-cases before, i'm a big optimization junkie i just want to know where something like this could slot in
+
+[2026-06-04T01:55:15.143000+00:00] magnus919 (id=1511911179495280842)
+    SkillOpt maybe does the most heavy lifting... The other is `workflow-architect`. https://git.brandyapple.com/magnus/agent-skills/src/branch/main/bundles/workflow-architect
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/bundles/workflow-architect
+    [reply to _.exo._ msg=1511906293185646694]
+
+[2026-06-04T02:00:24.872000+00:00] _.exo._ (id=1511912478592729149)
+    https://klipy.com/gifs/batman-thinking-16
+    [embed] Batman Deep in Thought https://klipy.com/gifs/batman-thinking-16
+    [reply to magnus919 msg=1511911179495280842]
+
+[2026-06-04T02:05:26.241000+00:00] _.exo._ (id=1511913742625935431)
+    seems like a skill for the agent i'd interact with directly, not for the mecahnical role-based agents right?
+    [reply to magnus919 msg=1511911179495280842]
+
+[2026-06-04T02:47:17.492000+00:00] magnus919 (id=1511924275576049815)
+    I just gave a full demo in the streaming channel.
+    [reply to _.exo._ msg=1511913742625935431]
+
+[2026-06-04T03:18:34.332000+00:00] _.exo._ (id=1511932147613696031)
+    welp. guess i'll catch the next one
+

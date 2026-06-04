@@ -1,0 +1,14 @@
+# Thread 'Made iMessage work for Hermes without a Mac. Run on your Phone. Hosted, live now.' in forum #community-projects-showcase
+# thread_id=1511862753424445561 forum_id=1316137596535177246
+# Started 2026-06-04T03:48:22.298178+00:00
+
+[2026-06-03T22:42:49.468000+00:00] moneymarker (id=1511862753424445561)
+    Been running Hermes for a while and iMessage was the one channel I actually wanted, since that's where everything in my life already happens. The BlueBubbles / Mac relay path works but it's a pain to keep alive.
+    
+    So I built a hosted version: you text a number and it's your Hermes agent on the other end. No Mac, no SIM, no infra to babysit. Pretty much everything you'd do with Hermes you can now do from iMessage on your iPhone. The daily stuff is the sweet spot, family calendar, reminders, household logistics, the things you'd want an agent for but never set up because the install is too much friction.
+    
+    Honest caveats: US phone numbers only right now, and there's some wonkiness we're actively fixing. There's a capped free trial to try it, and after that it's pay-as-you-go credits, this is aimed at folks who don't want to run their own infra. Core loop works.
+    
+    It's live at **hermesweb.ai**. Would love for people here to try it and tell me where it falls over, since you all already know what Hermes can do. Bug reports in thread are gold.
+    [attachment] Screenshot_2026-06-03_at_3.39.34_PM.png https://cdn.discordapp.com/attachments/1511862753424445561/1511862753638481971/Screenshot_2026-06-03_at_3.39.34_PM.png?ex=6a21ff69&is=6a20ade9&hm=8d19c18f821fda8a8d483fcafacb03413472b55ad7f874278186febf8f07607e&
+

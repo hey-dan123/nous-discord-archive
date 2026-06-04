@@ -17,3 +17,7 @@
     
     A start to finish of all the iteration, the evolving architectures, etc. god I bet it would be great
 
+[2026-06-04T00:17:05.220000+00:00] wagmibrothernaz (id=1511886475367546933)
+    yes - spent lots of time doing tons of research mapping architecture re-iterations parsing through github etc a whole bunch.
+    [reply to dworfd msg=1511660656431202385]
+
