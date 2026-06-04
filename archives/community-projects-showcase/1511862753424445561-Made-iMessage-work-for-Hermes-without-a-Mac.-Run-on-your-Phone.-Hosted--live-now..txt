@@ -12,3 +12,12 @@
     It's live at **hermesweb.ai**. Would love for people here to try it and tell me where it falls over, since you all already know what Hermes can do. Bug reports in thread are gold.
     [attachment] Screenshot_2026-06-03_at_3.39.34_PM.png https://cdn.discordapp.com/attachments/1511862753424445561/1511862753638481971/Screenshot_2026-06-03_at_3.39.34_PM.png?ex=6a21ff69&is=6a20ade9&hm=8d19c18f821fda8a8d483fcafacb03413472b55ad7f874278186febf8f07607e&
 
+[2026-06-04T03:56:32.337000+00:00] starw1 (id=1511941702259314800)
+    Awesome!
+
+[2026-06-04T03:57:30.474000+00:00] starw1 (id=1511941946103304234)
+    How does it work?
+
+[2026-06-04T03:58:08.555000+00:00] starw1 (id=1511942105826590760)
+    Since it's not a local fork, what is the privacy policy?
+

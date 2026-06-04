@@ -3079,3 +3079,31 @@
 [2026-06-03T00:33:36.824000+00:00] avidfuturist (id=1511528246590574654)
     👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you might use it alongside your Hermes agent.
 
+[2026-06-04T03:59:14.694000+00:00] .vansken (id=1511942383233667143)
+    <@933139410281713755> can we use web ui as cron job target?
+
+[2026-06-04T03:59:56.093000+00:00] avidfuturist (id=1511942556873785494)
+    I like how you think, not right now, but I’ll look into what it would take to add that! Thanks for the suggestion
+    [reply to .vansken msg=1511942383233667143]
+
+[2026-06-04T04:02:18.003000+00:00] .vansken (id=1511943152087339019)
+    because I actually building a native iOS app that uses hermes web ui backend, I just realized I can't send cron jobs message to the web ui session, so the native iOS app now only uses for chats and configure haha. Thanks btw!
+    [reply to avidfuturist msg=1511942556873785494]
+
+[2026-06-04T04:18:32.891000+00:00] avidfuturist (id=1511947241064103972)
+    Oh very cool! Yeah that’s a good point never thought about using WebUI posting output from my CRON tasks, I’ll look into it!
+    
+    Of course WebUI does let you look at all your cron tasks on the left side rail menu and see their runs and output that way!
+    [reply to .vansken msg=1511943152087339019]
+
+[2026-06-04T04:19:12.665000+00:00] .vansken (id=1511947407888224347)
+    yes, but it's not yet reliable for receiving CRON tasks output, but anyway thank you for listening!
+
+[2026-06-04T04:26:12.380000+00:00] avidfuturist (id=1511949168300523641)
+    Keep me updated on your iOS app too!
+    [reply to .vansken msg=1511947407888224347]
+
+[2026-06-04T05:34:45.836000+00:00] .vansken (id=1511966421385609236)
+    Might need sometime but I'll let you know, I didn't have apple developer program account to publish yet
+    [reply to avidfuturist msg=1511949168300523641]
+

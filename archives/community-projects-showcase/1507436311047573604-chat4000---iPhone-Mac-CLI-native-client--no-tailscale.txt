@@ -268,3 +268,25 @@
 [2026-06-04T00:39:11.221000+00:00] catsbackdogshow (id=1511892037018845184)
     How do I enable the action button functionality? Not seeing chat4000 listed in controls
 
+[2026-06-04T03:59:48.668000+00:00] starw1 (id=1511942525730951219)
+    Hey! one small nitpick: This points to the volume up button, not the action button
+    [attachment] image.png https://cdn.discordapp.com/attachments/1507436311047573604/1511942525357654076/image.png?ex=6a2249b4&is=6a20f834&hm=bde4bd95a741c5c0a9ac9ad3d8b145c705ed6e26cd35093dd3c51ad6a885063b&
+
+[2026-06-04T05:19:14.143000+00:00] starw1 (id=1511962513581932544)
+    I encountered another potential improvement: Have the audio recordings be sent as MessageType.VOICE rather than audio so it is automatically transcribed into text before being sent to the agent.
+    
+    From my agent:
+    ```chat4000_hermes_plugin/adapter.py  line 452
+    - message_type = MessageType.AUDIO
+    + message_type = MessageType.VOICE
+    
+    
+    no other platform is affected — discord, telegram, whatsapp, etc. all keep their existing behavior. only chat4000 audio messages will now be auto-transcribed via STT.
+    
+    restart the gateway for it to take effect:
+    
+    hermes gateway restart
+    
+    
+    then send another voice message through chat4000 and it should auto-transcribe```
+

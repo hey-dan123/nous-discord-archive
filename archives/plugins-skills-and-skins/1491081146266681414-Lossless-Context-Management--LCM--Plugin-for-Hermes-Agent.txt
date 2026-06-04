@@ -1757,3 +1757,15 @@
 [2026-06-04T01:50:12.006000+00:00] thegiuseppe (id=1511909908046676058)
     thatd be interesting if its the case. i was having problems before and assumed it was because i was using a custom model provider and for some reason it wasnt reading it properly but I also am on native windows install too so maybe I was having the same problem. i havent had a chance to try and reinstall this, Ive been too busy.
 
+[2026-06-04T05:18:14.500000+00:00] w0lfgang88 (id=1511962263420928100)
+    Yes, that’s very possible. `os.statvfs` is POSIX-only, so on native Windows it can raise `AttributeError`.
+    
+    That would be a plugin portability bug, not necessarily anything you did wrong. The plugin should guard that call and use a cross-platform fallback like `shutil.disk_usage()`, or skip disk-space reporting on platforms that do not support `statvfs`.
+    
+    For now, the likely workaround is to run Hermes through WSL/Linux/macOS, or disable that plugin path until we patch it. If you can share the traceback and plugin version/commit, I can confirm the exact failing path and get a fix opened.
+    [reply to exer91 msg=1511901378157608970]
+
+[2026-06-04T05:45:04.320000+00:00] w0lfgang88 (id=1511969015495524513)
+    https://x.com/SteveSchoettler/status/2062409498279678281?s=20
+    [embed]  https://twitter.com/SteveSchoettler/status/2062409498279678281?s=20
+

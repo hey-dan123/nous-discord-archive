@@ -1085,3 +1085,50 @@
     Pushed to HF, about to make public after some nitpicks
     [attachment] Screenshot_20260603-212821.png https://cdn.discordapp.com/attachments/1498955668311248948/1511934163496730734/Screenshot_20260603-212821.png?ex=6a2241ea&is=6a20f06a&hm=e6da81e85517003778f0be7cd9750b4623aae2d87c8c300032cf4769705ce8b7&
 
+[2026-06-04T05:41:08.596000+00:00] liftaris (id=1511968026797281451)
+    <@575461682151686145> that looks insanely cool. I _think_ I can picture it, but we need a demo from you! 🤘
+
+[2026-06-04T05:44:32.607000+00:00] .s0uthpaw (id=1511968882481434634)
+    Okay so I'm working on the hugging face page because honestly it's a little complicated for the average person to just pick it up and watch how they're going to want to expect it to so I'm actually working with someone else who has a specific launcher for specific specialized quons in llama CPP like prism and TurboQuant ( <#1505384448223346818>  and I mean like presently I'm in my editor right now) and I'm making just a nice and clean like a llama style launcher where they can just launch it and it has a voice going and they just pick between personalities and it has a couple of Laura set for like Lo-Fi and maybe movie orchestral stuff and just some base genre stuff
+    
+    But
+    
+    Both the model and the radio are available right now so you can actually test this out right now and this has the Darwin family Evolution script and paper and breakdown in the first part and these are both as Army skills and the second one is the Evolution radio that OmniStepsteps into
+    https://github.com/SouthpawIN/evolutionary-model-merging
+    https://github.com/SouthpawIN/evolutionary-radio
+    [embed] GitHub - SouthpawIN/evolutionary-model-merging: Training-free weigh... https://github.com/SouthpawIN/evolutionary-model-merging
+    [embed] GitHub - SouthpawIN/evolutionary-radio: Continuous-play generative ... https://github.com/SouthpawIN/evolutionary-radio
+
+[2026-06-04T05:45:08.518000+00:00] .s0uthpaw (id=1511969033103081502)
+    Now Stay With Me Now, one second
+
+[2026-06-04T05:49:28.255000+00:00] liftaris (id=1511970122519023707)
+    oh hell yeah. I gotta try it once I finally squeeze out the full eikon release
+
+[2026-06-04T06:39:24.018000+00:00] tradericko (id=1511982687659884654)
+    question, did hermes-agent-desktop using this codebase... looks very similar... frankly, i like this better being hosted as a webapp
+
+[2026-06-04T06:39:59.012000+00:00] tradericko (id=1511982834435227758)
+    it is a good addition to my package in https://github.com/gitricko/hermes-webtop
+    [embed] GitHub - gitricko/hermes-webtop: An agent that grows with you https://github.com/gitricko/hermes-webtop
+
+[2026-06-04T06:42:12.114000+00:00] liftaris (id=1511983392705609729)
+    I'm not quite sure what you're saying
+    [reply to tradericko msg=1511982687659884654]
+
+[2026-06-04T06:43:21.948000+00:00] tradericko (id=1511983685610635384)
+    NousResearch just release desktop version of HermesAgent... I think it is an Electron app... UI very similar to this project
+
+[2026-06-04T06:47:24.624000+00:00] liftaris (id=1511984703467683840)
+    the electron app looks similar to herm tui? 🤔 I don't see it personally, but I know a couple people at Nous have tried herm, at least.
+
+[2026-06-04T06:48:00.772000+00:00] liftaris (id=1511984855083384925)
+    feel free to put it in your package! go wild, MIT license
+
+[2026-06-04T06:48:18.180000+00:00] tradericko (id=1511984928097701999)
+    for sure i will put it... cos it is very useful... just found this recently!
+
+[2026-06-04T06:50:38.291000+00:00] tradericko (id=1511985515765956749)
+    i am using my own project productively... i have a version in OpenClaw and now migrating it to this. I am a developer, so i need vscode interface... i also need webtop interface so that i can do this
+    [attachment] tradingview-with-claude.gif https://cdn.discordapp.com/attachments/1498955668311248948/1511985515371560960/tradingview-with-claude.gif?ex=6a2271be&is=6a21203e&hm=5123733a84b458ca50a6ceecf7d74a30097e4d955ca1f2df99df816d487ad962&
+

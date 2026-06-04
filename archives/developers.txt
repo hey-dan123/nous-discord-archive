@@ -24464,3 +24464,104 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Thanks!
     [embed] feat(webhook): accept bearer token auth by Lapot300 · Pull Request... https://github.com/NousResearch/hermes-agent/pull/27601
 
+[2026-06-04T03:49:28.873000+00:00] kyssta69 (id=1511939926122561536)
+    https://github.com/NousResearch/hermes-agent/pull/38689
+    only recognized Anthropic's keyword, causing it to return for OpenRouter/Nous errors that use the breakdown format. This led to the input-too-large recovery path (compression) being triggered instead of the correct output-cap reduction, resulting in infinite auto-reset loops.
+    [embed] fix(model_metadata): parse OpenRouter/Nous 'in the output' format i... https://github.com/NousResearch/hermes-agent/pull/38689
+    [reply to kyssta69 msg=1511919220093620264]
+
+[2026-06-04T04:25:03.184000+00:00] .elkim (id=1511948878071730390)
+    Morning. <@387972437901312000> do you think we could make this in? Took a lot of work and it's pretty good FOSS Discord alternative with self-hosted relays coming soon. https://github.com/NousResearch/hermes-agent/pull/37215
+    [embed] feat(platforms): add Fluxer gateway adapter by elkimek · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/37215
+
+[2026-06-04T04:30:49.126000+00:00] teknium (id=1511950329057378354)
+    I think for now since it will be a low prio thing, you should make it a standalone plugin while the PR awaits - and share in <#1485392832154832906>
+    [reply to .elkim msg=1511948878071730390]
+
+[2026-06-04T04:35:24.096000+00:00] .elkim (id=1511951482365411330)
+    ok, thanks what are the chanes to get it merged eventually? some of my earlier PRs are hanging sine march
+    [reply to teknium msg=1511950329057378354]
+
+[2026-06-04T04:43:32.022000+00:00] ddfp777 (id=1511953528875388988)
+    Question about the Hermes Desktop app specifically, the new GUI, not the CLI:
+    
+    In Desktop, the / command menu seems curated to a built-in allowlist, so third party plugin commands don't appear in it, plugins still work via natural language and render as tool cards, but they're not selectable from the menu the way native commands are.
+    
+    Is that the intended design for Desktop, natural language + cards as the canonical plugin UX or a current limitation, with menu access for plugins (say a namespaced /<plugin> … submenu) planned down the line?
+    
+    Asking because it shapes how you'd build a plugin for Desktop: lean fully into conversational + card output, or design command sets expecting menu exposure, want to build toward the intended model rather than around it. 🙏
+    [reply to teknium msg=1511950329057378354]
+
+[2026-06-04T04:52:42.892000+00:00] yunofoot (id=1511955839391371325)
+    There is an issue where LLM keeps saying "It is corrupted" while editing a file, and the file actually ends up having quite a few problems. https://github.com/NousResearch/hermes-agent/pull/38510 Could anyone please review this PR? <@387972437901312000> <@119192111202566149>
+    [embed] fix(patch): unescape \\n in fuzzy matcher when file region has newl... https://github.com/NousResearch/hermes-agent/pull/38510
+
+[2026-06-04T05:06:59.991000+00:00] btdoverclock (id=1511959434325397555)
+    I'd definitely use this if it makes it in
+    [reply to .elkim msg=1511948878071730390]
+
+[2026-06-04T05:07:12.369000+00:00] meissa2 (id=1511959486242361374)
+    There's some minor things here and there that require fixing (mislabeling of parent/child in the dashboard, having a default work dir for kanban boards, etc.) do you take contributions from strangers
+
+[2026-06-04T06:30:20.210000+00:00] yunofoot (id=1511980406763946136)
+    Good afternoon. <@387972437901312000> <@119192111202566149>  Could you please review this PR? We have enabled upstream agents to monitor the progress of downstream agents in real-time, rather than as a black box. https://github.com/NousResearch/hermes-agent/pull/38770
+    [embed] feat(delegate): stream subagent tool events to parent via streaming... https://github.com/NousResearch/hermes-agent/pull/38770
+
+[2026-06-04T07:09:02.989000+00:00] cryptoworlldz (id=1511990149205200896)
+    Fix for this 
+    
+    The root cause was that `kanban --board ...` stored its board pin in process-global environment state, so concurrent in-process calls could stomp each other and write to the wrong board. The fix moves that override to a context-local scope and adds a regression test for the concurrent create case.
+    
+    https://github.com/NousResearch/hermes-agent/pull/38325
+    [embed] fix(kanban): isolate board override per concurrent call by worlldz ... https://github.com/NousResearch/hermes-agent/pull/38325
+    [reply to cryptoworlldz msg=1511759775850041556]
+
+[2026-06-04T07:15:03.330000+00:00] yunofoot (id=1511991660584636527)
+    Fix this : block closes suddenly when thinking text gets long enough, during active streaming.
+    
+    https://github.com/NousResearch/hermes-agent/pull/38809
+    [embed] fix(desktop): prevent thinking block from closing mid-streaming by ... https://github.com/NousResearch/hermes-agent/pull/38809
+
+[2026-06-04T07:20:26.919000+00:00] .elkim (id=1511993017815535657)
+    I can try to make it into standalone plugin as Teknium suggested if i find a room
+    [reply to btdoverclock msg=1511959434325397555]
+
+[2026-06-04T07:21:16.829000+00:00] xdarkchain (id=1511993227153244303)
+    <@387972437901312000> Hello!
+    Sorry for the mention as I know you get a lot of those. 🙂
+    
+    The PR I mentioned is really small but fixes a big issue, can you please look into it?
+    [reply to xdarkchain msg=1508822124121296957]
+
+[2026-06-04T07:57:10.886000+00:00] cryptobyz (id=1512002261922877501)
+    Found a dead-code path in conversation_loop.py while reading through the v0.15.0 refactor:
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/38282
+    [embed] fix(agent): activate _budget_grace_call so grace-call path runs thr... https://github.com/NousResearch/hermes-agent/pull/38282
+
+[2026-06-04T08:48:27.453000+00:00] kyssta69 (id=1512015165980410029)
+    https://github.com/NousResearch/hermes-agent/pull/38867
+    
+    When Hermes sends Markdown messages containing pipe tables to Feishu, the message content is displayed as raw Markdown source code instead of rendered output.
+    [embed] fix(feishu): remove outdated markdown table fallback, always use po... https://github.com/NousResearch/hermes-agent/pull/38867
+
+[2026-06-04T09:05:28.663000+00:00] fgtomas3 (id=1512019449245339760)
+    can we have an "assign" to a profile here in the crons?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512019448658132992/image.png?ex=6a229158&is=6a213fd8&hm=2c82c3a72a6b9bd82b1a1c2b310e9f7fb4fd7c9636974151e0f35abcd44ea464&
+
+[2026-06-04T09:05:59.831000+00:00] kyssta69 (id=1512019579973668934)
+    you need to switch profile and create cron jobs
+    [reply to fgtomas3 msg=1512019449245339760]
+
+[2026-06-04T09:06:03.768000+00:00] kyssta69 (id=1512019596486377522)
+    in those
+
+[2026-06-04T09:06:27.123000+00:00] fgtomas3 (id=1512019694444482680)
+    ohhh okok
+
+[2026-06-04T09:06:32.605000+00:00] fgtomas3 (id=1512019717437788230)
+    thank you king
+
+[2026-06-04T09:06:46.597000+00:00] kyssta69 (id=1512019776124354661)
+    mp
+

@@ -1,0 +1,25 @@
+# Thread 'I made a GPS for AI Agents' in forum #plugins-skills-and-skins
+# thread_id=1511948873487093830 forum_id=1485392832154832906
+# Started 2026-06-04T09:56:57.959926+00:00
+
+[2026-06-04T04:25:02.091000+00:00] raysunkr (id=1511948873487093830)
+    🧵 I built SparkGlobe — an open-source skill navigator for AI agents. Here's why it matters.
+    
+    🧵 The problem: agents don't know what skills exist. They guess. SparkGlobe gives them a structured index they can browse — and auto-recommends the right tools for any task.
+    
+    🧵 How it works:
+    1️⃣ User describes a task
+    2️⃣ SparkGlobe decomposes it into sub-tasks
+    3️⃣ Matches each sub-task to skill categories
+    4️⃣ Recommends specific skills with install commands
+    
+    🧵 Three resources, one system:
+    🧩 200+ skills from @skillsdotsh
+    ⚡ Superpowers by @stevebot_obra (mandatory coding workflows)
+    🎭 The Agency — 144+ specialist agent personalities
+    
+    🧵 Try it now:
+    npx skills add RaysunKR/SparkGlobe
+    
+    ⭐ github.com/RaysunKR/SparkGlobe
+

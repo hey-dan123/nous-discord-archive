@@ -536,3 +536,31 @@
 [2026-06-04T03:43:08.972000+00:00] techno.ghost (id=1511938332702019745)
     Will keep an eye out for any of your stuff seems like we’re thinking in the same lines
 
+[2026-06-04T04:11:28.044000+00:00] magnus919 (id=1511945459126767626)
+    and now also prowlarr
+    [reply to techno.ghost msg=1511938332702019745]
+
+[2026-06-04T04:14:05.263000+00:00] techno.ghost (id=1511946118550786108)
+    😭 which one are you even missing, not sure if seerr is needed hermes has access to the others
+    [reply to magnus919 msg=1511945459126767626]
+
+[2026-06-04T04:15:26.291000+00:00] magnus919 (id=1511946458407108678)
+    readarr is dead. not bothering with bazarr
+    [reply to techno.ghost msg=1511946118550786108]
+
+[2026-06-04T04:15:56.713000+00:00] techno.ghost (id=1511946586005966868)
+    Yea I think LazyLibrarian is what people are using
+    [reply to magnus919 msg=1511946458407108678]
+
+[2026-06-04T04:19:39.709000+00:00] techno.ghost (id=1511947521318981632)
+    Honestly if it all works together it’ll be amazing, I haven’t self hosted the arr stack for long but felt like it was a lot of moving parts
+    
+    Having hermes not only be media attentive but also being able to troubleshoot 🤯
+    
+    Currently using this https://github.com/Tecnativa/docker-socket-proxy
+    
+    to give hermes docker troubleshooting access 
+    I’d like to know how other people are letting hermes help in the homelab 
+    I was thinking low access Ubuntu user specifically for hermes
+    [embed] GitHub - Tecnativa/docker-socket-proxy: Proxy over your Docker sock... https://github.com/Tecnativa/docker-socket-proxy
+

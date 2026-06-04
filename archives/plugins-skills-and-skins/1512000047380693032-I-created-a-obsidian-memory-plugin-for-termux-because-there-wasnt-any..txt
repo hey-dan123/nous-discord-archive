@@ -1,0 +1,17 @@
+# Thread 'I created a obsidian memory plugin for termux because there wasnt any.' in forum #plugins-skills-and-skins
+# thread_id=1512000047380693032 forum_id=1485392832154832906
+# Started 2026-06-04T09:56:57.587932+00:00
+
+[2026-06-04T07:48:22.898000+00:00] txrao (id=1512000047380693032)
+    I Was SEARCHING FOR A MEMORY PLUGIN AND I COULDNT FIND ONE FOR OBSIDIAN so i made my own.
+    It continues to the onsidian directly on your phone so u see all the files in graph mode. 
+    Looks pretty cool to.
+    Great memory plugin overall, easy to make/i made it with hermes😭🙏 so ye install my plugin if your a termux users looking for a obsidian memory plugin
+    
+    https://github.com/tmrisdaone/obsidian-hermes-memoryfortermux
+    [attachment] Screenshot_20260601_203919_Obsidian.jpg https://cdn.discordapp.com/attachments/1512000047380693032/1512000047611383948/Screenshot_20260601_203919_Obsidian.jpg?ex=6a227f46&is=6a212dc6&hm=f4520ca6113c4ae528ed838c89eb454adfe920aee601ff632b9e1697a8161aa8&
+    [embed] GitHub - tmrisdaone/obsidian-hermes-memoryfortermux: Obsidian-vault... https://github.com/tmrisdaone/obsidian-hermes-memoryfortermux
+
+[2026-06-04T07:51:01.434000+00:00] txrao (id=1512000712329138196)
+    [attachment] Screen_Recording_20260603_192817_Obsidian.mp4 https://cdn.discordapp.com/attachments/1512000047380693032/1512000711460786336/Screen_Recording_20260603_192817_Obsidian.mp4?ex=6a227fe5&is=6a212e65&hm=501fa5485442474e6408a481c2761b0964614d3b3b2ee3906c677a4294248e75&
+
