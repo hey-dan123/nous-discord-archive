@@ -1484,3 +1484,6 @@
 [2026-06-01T13:46:25.385000+00:00] nulledvector (id=1511002987865178122)
     Ty appreciate feedback!!
 
+[2026-06-04T14:35:41.105000+00:00] sloothyyyyy (id=1512102548650332230)
+    <@151598363131904000> hermes update nuked the mnemosyne packages cuz it rebuilt the venv, so i don’t think it’s every hermes update and is a one time thing
+

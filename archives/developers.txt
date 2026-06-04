@@ -24565,3 +24565,199 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-04T09:06:46.597000+00:00] kyssta69 (id=1512019776124354661)
     mp
 
+[2026-06-04T10:06:57.285000+00:00] .daveevad (id=1512034920447344670)
+    I see Nous developers and support does not want to help me , so my next step is youtube video  explaining how Nous support works when they update break things and they can expect model erasing their work as it did to my app. Will see how that will work..
+
+[2026-06-04T10:07:40.182000+00:00] yunofoot (id=1512035100370665533)
+    What's happening?
+    [reply to .daveevad msg=1512034920447344670]
+
+[2026-06-04T10:11:44.863000+00:00] tdamre (id=1512036126636900463)
+    https://discord.com/channels/1053877538025386074/1485307775444844625
+    [reply to .daveevad msg=1511367031591665694]
+
+[2026-06-04T10:12:17.065000+00:00] tdamre (id=1512036261702013050)
+    this channel is mostly pr's https://discord.com/channels/1053877538025386074/1485307775444844625 is where people submit tickets
+
+[2026-06-04T10:12:32.883000+00:00] .daveevad (id=1512036328047509625)
+    <@1495103417838731445>i had prior update my own trunity mem set up  after the update when you hardcoded it the agent erased things and done loads of stupid stuff. I added screenshots (they are higher on the channel) i have sent logs and rest to support and had to swotch ofc the whole cluster
+
+[2026-06-04T10:12:37.024000+00:00] yunofoot (id=1512036345416257546)
+    <:catlick:1151260427645366375>
+
+[2026-06-04T10:13:08.385000+00:00] .daveevad (id=1512036476953694278)
+    I sent it to support few days ago .md file + convers but but no answer at all.
+
+[2026-06-04T10:15:41.091000+00:00] yunofoot (id=1512037117449076826)
+    Trinity memory provider?  right?
+
+[2026-06-04T10:15:47.927000+00:00] .daveevad (id=1512037146121474129)
+    <@466701167838101531> i thought the dev channel is for devs ideas
+
+[2026-06-04T10:15:57.331000+00:00] yunofoot (id=1512037185564446811)
+    I am not on the core team, but I will look into the related issues.
+
+[2026-06-04T10:16:32.105000+00:00] yunofoot (id=1512037331417305198)
+    Could you send me the relevant files as well? By DM.
+
+[2026-06-04T10:17:00.160000+00:00] tdamre (id=1512037449088503919)
+    some people put those too
+    [reply to .daveevad msg=1512037146121474129]
+
+[2026-06-04T10:18:29.294000+00:00] .daveevad (id=1512037822943727646)
+    <@1495103417838731445> sure. Send me DM please and ill send you releavant info with questions etc which hermie needs
+
+[2026-06-04T10:23:17.810000+00:00] yunofoot (id=1512039033067274411)
+    anyone can review this?? https://github.com/NousResearch/hermes-agent/pull/38499 I did mention a few people earlier... Anyway, I'm sorry for talking about this so often.
+    [embed] fix(tui): eliminate TOCTOU race between goal followup and concurren... https://github.com/NousResearch/hermes-agent/pull/38499
+
+[2026-06-04T10:56:44.004000+00:00] dante.sparras (id=1512047447654797472)
+    On Windows Native, when running `hermes gateway start`, a new cmd.exe window appears when it should be hidden. I found the  pull request for this issue, but it was closed and not merged, why?? What could I do to get this pull request more prioritized and merged?  https://github.com/NousResearch/hermes-agent/pull/30312
+    [embed] fix(gateway): resolve uv-managed pythonw for Windows scheduled-task... https://github.com/NousResearch/hermes-agent/pull/30312
+
+[2026-06-04T11:03:24.464000+00:00] kyssta69 (id=1512049127306035343)
+    **Problem**:
+    `cron/scheduler.py::_deliver_result` could deliver a cron job's message twice when the live-adapter send succeeded on the wire but its confirmation timed out after 60s. The TimeoutError propagated to the fallback handler, which re-sent the message via the standalone path producing a duplicate.
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/38937
+    [embed] fix(cron): treat confirmation timeout as delivered to prevent dupli... https://github.com/NousResearch/hermes-agent/pull/38937
+
+[2026-06-04T11:19:29.207000+00:00] tdamre (id=1512053173731459263)
+    <@387972437901312000> it has been merged, the previous hermes agent will be deprecated on the f-droid marketplace and the new one with the fork label will be listed in its placehttps://gitlab.com/fdroid/fdroiddata/-/merge_requests/39459
+    [embed] Update Hermes Agent Fork to 0.13.127 (!39459) · Merge requests · ... https://gitlab.com/fdroid/fdroiddata/-/merge_requests/39459
+
+[2026-06-04T11:50:29.291000+00:00] teknium (id=1512060975489093662)
+    I got a LOT of prs here to review 😮
+
+[2026-06-04T11:52:45.138000+00:00] gumandnuts (id=1512061545272709141)
+    have you considered using AI to make your job easier?
+    [reply to teknium msg=1512060975489093662]
+
+[2026-06-04T11:55:49.038000+00:00] tdamre (id=1512062316605214721)
+    he already does
+    [reply to gumandnuts msg=1512061545272709141]
+
+[2026-06-04T12:14:13.608000+00:00] teknium (id=1512066949507579945)
+    how would it know its a coding task in advance..?
+    [reply to kyssta69 msg=1511352585737474228]
+
+[2026-06-04T12:14:37.047000+00:00] kyssta69 (id=1512067047817875627)
+    the default model determines it and transfers it
+    [reply to teknium msg=1512066949507579945]
+
+[2026-06-04T12:14:37.079000+00:00] teknium (id=1512067047951958157)
+    <@411637224476770325> can help sorry for the delay
+    [reply to .daveevad msg=1511367031591665694]
+
+[2026-06-04T12:14:41.067000+00:00] kyssta69 (id=1512067064678977597)
+    if that can work
+
+[2026-06-04T12:15:03.646000+00:00] teknium (id=1512067159382032447)
+    oof just repro'd yes it does
+    [reply to iborazzi msg=1511381378330132540]
+
+[2026-06-04T12:16:51.464000+00:00] kyssta69 (id=1512067611603501188)
+    i forgot to add that didnt i
+
+[2026-06-04T12:20:02.523000+00:00] kyssta69 (id=1512068412963160154)
+    Auto-routing in delegation (tools/delegate_tool.py)
+    _is_code_task(goal, toolsets): heuristic detection via keyword matching and word-pair analysis (e.g. fix+bug, write+test, build+api)
+    _resolve_auxiliary_code_config(): reads config; only activates when provider/model explicitly set
+    Per-task routing: code-heavy subagents route through auxiliary.code instead of delegation/parent model
+    
+    for now its only this i can add that model determine thingy but idk if its good
+    [reply to kyssta69 msg=1512067047817875627]
+
+[2026-06-04T12:22:23.064000+00:00] teknium (id=1512069002434711682)
+    Did anyone answer yet? We have `hermes backup` and `hermes import` commands
+    [reply to gokhe msg=1511423159579185343]
+
+[2026-06-04T12:22:58.929000+00:00] gokhe (id=1512069152863424663)
+    Yeah I read the docs and found this out last night, though migrating bugged out the windows so I had to do it gradually, but finally worked out
+    [reply to teknium msg=1512069002434711682]
+
+[2026-06-04T12:24:16.360000+00:00] gokhe (id=1512069477632573621)
+    Btw wsl used to stay on when my laptop lid was closed but windows native immediately disconnects with the gateway and shuts down <@387972437901312000> 🥲
+
+[2026-06-04T12:32:58.256000+00:00] teknium (id=1512071666623320104)
+    we do need an uninstall path 🙃
+    [reply to jezzzzzzzzzz msg=1511461913199116340]
+
+[2026-06-04T12:33:17.128000+00:00] teknium (id=1512071745778221307)
+    mm the dashboard yes, not sure about cli and tui
+    [reply to iatetoomanybeans msg=1511481768400654488]
+
+[2026-06-04T12:56:02.295000+00:00] kkurottal6611 (id=1512077471703629974)
+    Heyy <@387972437901312000>  I opened 3 small gateway bug fix PRs, all focused, single file (gateway/run.py), no config/schema/prompt-cache impact, each with regression tests. Would really appreciate a review whenever you get a chance 🙏
+    
+    https://github.com/NousResearch/hermes-agent/pull/39014
+    
+    https://github.com/NousResearch/hermes-agent/pull/39017
+    
+    https://github.com/NousResearch/hermes-agent/pull/39022
+    [embed] fix(gateway): make /retry replay the original structured user event... https://github.com/NousResearch/hermes-agent/pull/39014
+    [embed] fix(gateway): report effective per-platform reasoning display state... https://github.com/NousResearch/hermes-agent/pull/39017
+    [embed] fix(gateway): reload fallback chain when config changes by Que0x ·... https://github.com/NousResearch/hermes-agent/pull/39022
+
+[2026-06-04T13:00:47.322000+00:00] teknium (id=1512078667193516083)
+    oh nice was about to look at, wont I guess 😄
+    [reply to cryptoworlldz msg=1511748621404475513]
+
+[2026-06-04T13:18:32.818000+00:00] teknium (id=1512083136207392788)
+    Shoot I didnt even notice this when I implemented haha
+    [reply to aleksandr_1 msg=1511869849528438876]
+
+[2026-06-04T13:18:52.040000+00:00] teknium (id=1512083216830562385)
+    cc <@119192111202566149>
+    [reply to jw_mushroom_man msg=1511878638876758077]
+
+[2026-06-04T13:45:49.881000+00:00] pr0j3c7t0dd (id=1512090002547544115)
+    Hi all, feature request (I checked the other channel to verify it wasn't in the desktop app),  I'd like the ability to choose a profile when I start a new chat session so I can chat directly with a profile rather then jus the default.  I belive this would be a great addition to the desktop UI.  Thanks.
+
+[2026-06-04T13:47:35.120000+00:00] jw_mushroom_man (id=1512090443951771679)
+    I will continue to push TS6 PR's until moral improves
+    [reply to teknium msg=1512083216830562385]
+
+[2026-06-04T13:59:12.677000+00:00] aleksandr_1 (id=1512093369718018128)
+    no worries 😅 , glad the fix landed!
+    [reply to teknium msg=1512083136207392788]
+
+[2026-06-04T14:16:59.727000+00:00] shilird. (id=1512097845249835008)
+    Wao, Today, I had 3 commits merged. Awesome! <:catlick:1151260427645366375>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512097844868415558/image.png?ex=6a22da5b&is=6a2188db&hm=298c2e259f24d6be0c114e62f820516b356870f16ffe4d8c9feee0b226dce032&
+
+[2026-06-04T14:31:36.137000+00:00] dante.sparras (id=1512101521179807957)
+    If i want to contribute, is there some guide for it?
+
+[2026-06-04T14:32:08.962000+00:00] teknium (id=1512101658857963591)
+    why yes, there is
+
+[2026-06-04T14:32:20.324000+00:00] teknium (id=1512101706513645768)
+    https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+    [embed] hermes-agent/CONTRIBUTING.md at main · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+
+[2026-06-04T14:32:32.782000+00:00] dante.sparras (id=1512101758766157945)
+    <@387972437901312000> thanks mate
+
+[2026-06-04T14:33:54.998000+00:00] yap.bi (id=1512102103605317652)
+    https://github.com/NousResearch/hermes-agent/pull/39121
+    
+    Problem:
+    hermes mcp serve crashed with ModuleNotFoundError: No module named 'mcp_serve' on any standard pip-installed environment.
+    Why:
+    mcp_config.py line 748 had a bare top-level import — from mcp_serve import run_mcp_server. The file mcp_serve.py exists at the repo root but is not bundled into the pip wheel, so Python can't find it outside a source checkout.
+    Fix:
+    One-line change — replaced the bare import with the correct package namespace
+    
+    <@387972437901312000>
+    [embed] fix(mcp): namespace `mcp_serve` import in `mcp_command` dispatcher ... https://github.com/NousResearch/hermes-agent/pull/39121
+
+[2026-06-04T14:36:02.477000+00:00] budaporto (id=1512102638290735345)
+    Hey! I opened a PR to add Python 3.14 support: https://github.com/NousResearch/hermes-agent/pull/39120
+    
+    The <3.14 cap in pyproject.toml was added in #38535 as a backstop for an installer bug (UV_PYTHON hijacking uv sync). That root cause is already fixed in the install scripts. The remaining blocker — pydantic-core lacking cp314 wheels — has been resolved since v2.41.5 (Nov 2025).
+    
+    The PR just raises the ceiling to <3.15 and regenerates the lockfile. Tested clean on Ubuntu 26.04 + Python 3.14.4.
+    [embed] feat(python): raise requires-python ceiling to <3.15 for Python 3.1... https://github.com/NousResearch/hermes-agent/pull/39120
+

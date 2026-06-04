@@ -306,3 +306,6 @@
     Ed
     [reply to jamessmith03335 msg=1512032342905196684]
 
+[2026-06-04T13:40:17.656000+00:00] vayaperson (id=1512088609094631455)
+    <@1439557795627270265> is testing the basic features before the release. By the moment, we detected semantic alerts are not working, we are solving it.
+

@@ -1,0 +1,7 @@
+# Thread 'HERMES x RAGFlow' in forum #plugins-skills-and-skins
+# thread_id=1512097612118102078 forum_id=1485392832154832906
+# Started 2026-06-04T14:59:24.035648+00:00
+
+[2026-06-04T14:16:04.144000+00:00] gucaponi (id=1512097612118102078)
+    What's the recommended path for a custom internal API tool: native plugin vs MCP server? My tool calls a local HTTP endpoint (RAGFlow) and returns text. I want it to appear in hermes tools list and be callable by the agent.
+

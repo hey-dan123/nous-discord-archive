@@ -1,0 +1,20 @@
+# Thread 'Give your Hemes an Email, Phone, and Tunnel w Inkbox Plugin' in forum #plugins-skills-and-skins
+# thread_id=1512098449649176697 forum_id=1485392832154832906
+# Started 2026-06-04T14:59:23.580662+00:00
+
+[2026-06-04T14:19:23.827000+00:00] dimavrem22_71258 (id=1512098449649176697)
+    Inkbox platform plugin for Hermes Agent. It gives a Hermes agent its own Inkbox identity: mailbox, phone number, SMS/MMS, voice calls, contact rules, an Inkbox tunnel, realtime phone calls, and bundled Inkbox skills. 
+    
+    You dont need to have an account or bring any API keys to get started!
+    
+    https://github.com/inkbox-ai/hermes-agent-plugin
+    
+    ```
+    hermes plugins install inkbox-ai/hermes-agent-plugin --enable
+    hermes inkbox setup
+    hermes gateway restart
+    ```
+    
+    Let me know what you guys think and how you use it!
+    [embed] GitHub - inkbox-ai/hermes-agent-plugin: Inkbox platform plugin for ... https://github.com/inkbox-ai/hermes-agent-plugin
+

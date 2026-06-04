@@ -2415,3 +2415,6 @@
     [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
     [reply to prayagmatic msg=1511795778761265293]
 
+[2026-06-04T13:28:03.394000+00:00] latipun (id=1512085529376722964)
+    I'm using hermes-agent docker version. How can I install this memory system? <:Prayge:1151275585000185968>
+
