@@ -24761,3 +24761,177 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     The PR just raises the ceiling to <3.15 and regenerates the lockfile. Tested clean on Ubuntu 26.04 + Python 3.14.4.
     [embed] feat(python): raise requires-python ceiling to <3.15 for Python 3.1... https://github.com/NousResearch/hermes-agent/pull/39120
 
+[2026-06-04T15:15:57.152000+00:00] budaporto (id=1512112682285666460)
+    feat(python): raise requires-python ceil...
+
+[2026-06-04T15:20:59.853000+00:00] jw_mushroom_man (id=1512113951905808485)
+    Two small PRs up for review 
+    
+    **1. Remember desktop window size/position** — #39154 (fixes #39101)
+    https://github.com/NousResearch/hermes-agent/pull/39154
+    The desktop window opened at a hardcoded 1220×800 every launch, ignoring wherever you left it. Now it persists size/position/maximized to a `window-state.json` in userData (same pattern as connection.json/updates.json — no new dep), with an off-screen guard so it can't reopen onto an unplugged monitor. Validation logic is split into a testable `window-state.cjs` (mirrors connection-config.cjs) with 16 unit tests. Verified live on Windows 11 + 65/65 platform tests + type-check clean.
+    
+    **2. Fix ui-tui type-check (spawn stdio → never)** — #39156
+    https://github.com/NousResearch/hermes-agent/pull/39156
+    `npm run type-check -w ui-tui` is red on main today — 18 errors in `execFileNoThrow.ts`. A union-typed `stdio` (`as const` tuple | `'pipe'`) collapses spawn()'s overloads to `never`; surfaced by the `@types/node@25` bump. One-line fix: type it as `StdioOptions`. Type-only, runtime unchanged → 18 errors to 0 (clean on TS 5.9 and 6.0).
+    
+    Both Windows-tested; happy to adjust on review
+    [embed] feat(desktop): remember window size, position, and maximized state ... https://github.com/NousResearch/hermes-agent/pull/39154
+    [embed] fix(tui): type spawn stdio as StdioOptions so ui-tui type-check pas... https://github.com/NousResearch/hermes-agent/pull/39156
+
+[2026-06-04T15:44:46.023000+00:00] davidg1982 (id=1512119933696475156)
+    One small P3 but to enable moa
+    https://github.com/NousResearch/hermes-agent/pull/39172
+    [embed] feat(tools): make Mixture-of-Agents configurable via config.yaml by... https://github.com/NousResearch/hermes-agent/pull/39172
+
+[2026-06-04T15:52:18.644000+00:00] yunofoot (id=1512121832126545940)
+    https://github.com/NousResearch/hermes-agent/pull/38499 https://github.com/NousResearch/hermes-agent/pull/39174 I just fixed two PRs that had conflicts! Please review them. <@387972437901312000> <@119192111202566149>
+    [embed] fix(tui): eliminate TOCTOU race between goal followup and concurren... https://github.com/NousResearch/hermes-agent/pull/38499
+    [embed] fix(patch): unescape \n in fuzzy matcher when file region has newli... https://github.com/NousResearch/hermes-agent/pull/39174
+
+[2026-06-04T15:54:06.456000+00:00] naqerl (id=1512122284322586836)
+    I'm not a maintainer, but would be glad to take a look
+    [reply to yunofoot msg=1512121832126545940]
+
+[2026-06-04T15:54:07.894000+00:00] harrynguyen2107 (id=1512122290354127048)
+    My request is working, now you can search the session by session ID guys
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512122289947414728/image.png?ex=6a22f11f&is=6a219f9f&hm=209f0b3404a6a6096050e6a281adb55e1c78bad4b973898c5063f8162f95f804&
+    [reply to harrynguyen2107 msg=1511591466357620816]
+
+[2026-06-04T15:55:36.009000+00:00] yunofoot (id=1512122659935354991)
+    I hope the fixes for a few minor issues and desktop UI issues are reviewed asap
+
+[2026-06-04T15:57:13.713000+00:00] yunofoot (id=1512123069735501916)
+    thx a lot
+    [reply to naqerl msg=1512122284322586836]
+
+[2026-06-04T16:13:00.908000+00:00] yunofoot (id=1512127042559152209)
+    Ah, the decoder I trained for 66 hours is totally screwed. The intermediate evaluations definitely weren't bad though??
+
+[2026-06-04T16:13:10.573000+00:00] yunofoot (id=1512127083097362712)
+    <:MONKAS:1151260450835681281> <:MONKAS:1151260450835681281> <:MONKAS:1151260450835681281> <:MONKAS:1151260450835681281> <:MONKAS:1151260450835681281>
+
+[2026-06-04T16:18:32.995000+00:00] jw_mushroom_man (id=1512128435432984726)
+    https://github.com/NousResearch/hermes-agent/pull/39189 The Fallback Providers documentation page contradicted itself on whether cron jobs use the fallback provider chain. Its coverage table and "Cron Job Providers" section both say cron jobs inherit the configured fallback_providers, and the Scheduled Tasks (Cron) page agrees under "Provider recovery" â€” but the page's final Summary table still listed cron as "Per-job provider override only (no automatic fallback)." That stale row is the last remnant of the conflict reported in #39056.
+    [embed] docs(cron): reconcile fallback-providers summary table with cron be... https://github.com/NousResearch/hermes-agent/pull/39189
+
+[2026-06-04T16:31:15.460000+00:00] teknium (id=1512131633443246141)
+    <:harold:1112161613345206292>
+    [reply to yunofoot msg=1512127042559152209]
+
+[2026-06-04T16:31:36.270000+00:00] teknium (id=1512131720726581359)
+    Heading to bed rn will check when I’m up hopefully 🙏
+    [reply to yunofoot msg=1512121832126545940]
+
+[2026-06-04T16:31:58.307000+00:00] yunofoot (id=1512131813156458749)
+    sleep well my lady
+    [reply to teknium msg=1512131720726581359]
+
+[2026-06-04T16:32:21.532000+00:00] yunofoot (id=1512131910569037866)
+    The initial theory must have been completely wrong. I guess I need to revise the theory.
+
+[2026-06-04T16:36:37.103000+00:00] jw_mushroom_man (id=1512132982511763516)
+    https://github.com/NousResearch/hermes-agent/pull/39207
+    
+    platform_toolsets can end up holding an invalid toolset name â€” #38798
+    reports a config migration that rewrote hermes-cli to the non-existent
+    hermes. resolve_toolset('hermes') returns [], so every tool silently
+    disappeared: no error, no warning, no log line. The agent quietly degraded to
+    text-only replies, and the cause took significant debugging to trace back to the
+    config.
+    
+    This makes that failure mode loud and actionable. After
+    [embed] fix(config): warn on invalid platform_toolsets after migration by l... https://github.com/NousResearch/hermes-agent/pull/39207
+
+[2026-06-04T16:36:38.912000+00:00] .elkim (id=1512132990098997498)
+    Guys what Threshld and Target Ratio do you use for coding with Hermes?
+
+[2026-06-04T16:37:20.095000+00:00] .elkim (id=1512133162833281145)
+    gn sleep well, PRs and tags will be here when you wake up 🙂
+    [reply to teknium msg=1512131720726581359]
+
+[2026-06-04T16:47:42.018000+00:00] jezzzzzzzzzz (id=1512135771367407687)
+    Threshold 0.9, ratio 0.4 usually
+    [reply to .elkim msg=1512132990098997498]
+
+[2026-06-04T17:04:04.291000+00:00] elkosmas (id=1512139891318984745)
+    I told you people he does sleep...just not enough maybe
+    [reply to teknium msg=1512131720726581359]
+
+[2026-06-04T17:27:46.837000+00:00] gucaponi (id=1512145857909358643)
+    What's the recommended path for a custom internal API tool: native plugin vs MCP server? My tool calls a local HTTP endpoint (RAGFlow) and returns text. I want it to appear in hermes tools list and be callable by the agent.
+
+[2026-06-04T17:42:22.220000+00:00] .moizz. (id=1512149529531646233)
+    https://github.com/NousResearch/hermes-agent/pull/39239 - update current_turn_user_idx after preflight compression
+    
+    > When preflight context compression replaces the messages list with a compressed [summary, ...tail] structure, the current_turn_user_idx set earlier becomes stale. This causes memory/plugin context injection to target the wrong message, potentially corrupting tool results or causing provider API errors from malformed role alternation.
+    
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/39240 - rebuild FTS5 indexes independently when trigram creation fails
+        
+    
+    > _rebuild_fts_indexes() rebuilt both messages_fts and messages_fts_trigram in one call, but was only invoked when both trigram_enabled and triggers_need_repair were true. If trigram FTS5 creation failed (e.g. unavailable tokenizer), the main messages_fts table never got its indexes rebuilt even when triggers were missing. Split into two independent methods so each table rebuilds separately.
+    
+    
+    <@387972437901312000> pls have a look my first 2 PR's :>
+    [embed] fix: update current_turn_user_idx after preflight compression by mo... https://github.com/NousResearch/hermes-agent/pull/39239
+    [embed] fix: rebuild FTS5 indexes independently when trigram creation fails... https://github.com/NousResearch/hermes-agent/pull/39240
+
+[2026-06-04T18:02:20.863000+00:00] .moizz. (id=1512154557004648468)
+    https://github.com/NousResearch/hermes-agent/pull/39253 - clear stuck busy flag when session crashes mid-stream
+    
+    > Desktop chat got permanently stuck in "busy" state after a gateway crash mid-stream — the sawAssistantPayload guard prevented the flag from clearing. Removed the guard so running=false always resets busy.
+    [embed] fix(desktop): clear stuck busy flag when session crashes mid-stream... https://github.com/NousResearch/hermes-agent/pull/39253
+
+[2026-06-04T18:16:57.276000+00:00] yap.bi (id=1512158232947458111)
+    https://github.com/NousResearch/hermes-agent/pull/39256
+    
+    Bug #1 — EventBridge._poll_once early-return guard fires too late
+    PR: #39256
+    
+    Bug: The early-return check ran after self._sessions_json_mtime = sj_mtime was already assigned, making sj_mtime == self._sessions_json_mtime trivially True. The guard effectively became a pure state.db check. When a new conversation was opened (sessions.json changed, state.db not yet written), the EventBridge reloaded the sessions index but exited before processing any messages for the new session.
+    
+    Fix: Moved the early-return check to after both mtimes are read but before either cache is updated.
+    
+    https://github.com/NousResearch/hermes-agent/pull/39259
+    
+    Bug #2 — Anthropic credential sync leaves stale error fields
+    PR: #39259
+    
+    Bug: _sync_anthropic_entry_from_credentials_file and the Anthropic retry-success path only cleared 3 of the 6 error fields (last_status, last_status_at, last_error_code) when syncing fresh tokens. Every other provider sync (Codex, xAI, Nous) clears all six. The leftover last_error_reason, last_error_message, and last_error_reset_at persisted to auth.json and appeared in logs alongside an otherwise healthy credential.
+    
+    Fix: Added the three missing fields to both affected replace() calls
+    
+    <@387972437901312000>
+    [embed] fix EventBridge._poll_once: move early-return guard before mtime ca... https://github.com/NousResearch/hermes-agent/pull/39256
+    [embed] fix: clear all error fields when syncing Anthropic credential from ... https://github.com/NousResearch/hermes-agent/pull/39259
+
+[2026-06-04T18:26:11.952000+00:00] thechaosalchemist (id=1512160559426961550)
+    whats the github link to the hermes desktop app?? cant find it
+
+[2026-06-04T18:26:23.579000+00:00] .moizz. (id=1512160608194400267)
+    https://github.com/NousResearch/hermes-agent/pull/39265 - fix(desktop): auto-retry port when local gateway fails to bind
+    > pickPort() had a TOCTOU race — it tested a port by opening a temporary listener, then immediately closed it. Between close and the gateway spawn, another process could grab the port, causing a cryptic boot failure. Now the full port range is iterated with automatic retry on failure.
+    
+    <@387972437901312000>
+    [embed] fix(desktop): auto-retry port when local gateway fails to bind by m... https://github.com/NousResearch/hermes-agent/pull/39265
+
+[2026-06-04T18:26:25.642000+00:00] thechaosalchemist (id=1512160616846983301)
+    wanted to make a contribution
+
+[2026-06-04T19:14:39.476000+00:00] nanxingncb612d (id=1512172754466505020)
+    https://github.com/NousResearch/hermes-agent/pull/39287 - Fail closed when TUI shell safety checks are unavailable
+
+[2026-06-04T19:50:31.696000+00:00] kylekaster (id=1512181781531721820)
+    https://github.com/NousResearch/hermes-agent/pull/39270 not sexy work, but noticed a few comments in the main chat about the docs being out of date, and wanted to help bring them more in line with the reality of the new desktop app
+    [embed] docs: clarify current desktop install path by donovan-yohan · Pull... https://github.com/NousResearch/hermes-agent/pull/39270
+
+[2026-06-04T19:51:24.870000+00:00] kylekaster (id=1512182004559380652)
+    it's all in the main repo! just separated by app https://github.com/NousResearch/hermes-agent/tree/main/apps/desktop
+    [reply to thechaosalchemist msg=1512160559426961550]
+
+[2026-06-04T20:00:09.262000+00:00] thechaosalchemist (id=1512184204018843908)
+    got it - thanks!
+    [reply to kylekaster msg=1512182004559380652]
+

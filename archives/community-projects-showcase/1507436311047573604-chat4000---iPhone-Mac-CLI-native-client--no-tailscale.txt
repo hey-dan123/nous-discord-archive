@@ -290,3 +290,7 @@
     
     then send another voice message through chat4000 and it should auto-transcribe```
 
+[2026-06-04T16:02:11.281000+00:00] haimbender (id=1512124317826289675)
+    dm'ed you
+    [reply to catsbackdogshow msg=1511892037018845184]
+

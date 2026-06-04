@@ -1,0 +1,13 @@
+# Thread 'Fluxer Plugin' in forum #community-projects-showcase
+# thread_id=1512147408090566726 forum_id=1316137596535177246
+# Started 2026-06-04T20:03:34.790347+00:00
+
+[2026-06-04T17:33:56.429000+00:00] .elkim (id=1512147408090566726)
+    Hey, Fluxer (http://fluxer.app) is open source alternative to Discord with self-hosted instances coming this month. I implemented support to Hermes so until it gets merged here's standalone plugin. 
+    
+    It's so good. And soon completely private with sovereignty over your data.
+    
+    https://github.com/elkimek/hermes-fluxer-plugin
+    [attachment] desktop-2560w.avif https://cdn.discordapp.com/attachments/1512147408090566726/1512147408459661373/desktop-2560w.avif?ex=6a230884&is=6a21b704&hm=0f35e34ce844efc8f8dcf3645af47afd82b1281fec3e4dd77c11250fda62e44f&
+    [embed] GitHub - elkimek/hermes-fluxer-plugin: Standalone Fluxer platform p... https://github.com/elkimek/hermes-fluxer-plugin
+

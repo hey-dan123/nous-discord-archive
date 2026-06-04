@@ -2418,3 +2418,17 @@
 [2026-06-04T13:28:03.394000+00:00] latipun (id=1512085529376722964)
     I'm using hermes-agent docker version. How can I install this memory system? <:Prayge:1151275585000185968>
 
+[2026-06-04T18:04:30.451000+00:00] pinched_nerve (id=1512155100536242327)
+    Sorry about the new bug (234)
+
+[2026-06-04T19:30:39.360000+00:00] nulledvector (id=1512176780512071750)
+    on it!
+    [reply to pinched_nerve msg=1512155100536242327]
+
+[2026-06-04T20:03:55.723000+00:00] pinched_nerve (id=1512185153865125958)
+    You didn't expect it to be that easy, did you? 😉  ~/.hermes/venv doesn't exist.
+    [reply to nulledvector msg=1512176780512071750]
+
+[2026-06-04T20:04:48.785000+00:00] pinched_nerve (id=1512185376423280731)
+    BTW, I could probably figure this out, but I'm trying very hard to be "dumb" so I catch any problems before other people encounter them.
+

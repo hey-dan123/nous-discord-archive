@@ -1132,3 +1132,24 @@
     i am using my own project productively... i have a version in OpenClaw and now migrating it to this. I am a developer, so i need vscode interface... i also need webtop interface so that i can do this
     [attachment] tradingview-with-claude.gif https://cdn.discordapp.com/attachments/1498955668311248948/1511985515371560960/tradingview-with-claude.gif?ex=6a2271be&is=6a21203e&hm=5123733a84b458ca50a6ceecf7d74a30097e4d955ca1f2df99df816d487ad962&
 
+[2026-06-04T18:45:32.419000+00:00] twindenis (id=1512165426778472560)
+    if I ever get the opportunity to use it remote, I may add the ability to properly integrade hermui there, but for now it also installs hermes which I dont like for the host pc lol
+    [reply to liftaris msg=1511984855083384925]
+
+[2026-06-04T18:53:22.682000+00:00] liftaris (id=1512167399204454461)
+    how do you mean? using herm in a non-hermes context?
+    [reply to twindenis msg=1512165426778472560]
+
+[2026-06-04T18:54:04.848000+00:00] twindenis (id=1512167576061608119)
+    I wanted to remote from my pc with the desktop app into my instance to use the instance hermes
+    [reply to liftaris msg=1512167399204454461]
+
+[2026-06-04T18:54:31.228000+00:00] twindenis (id=1512167686707089650)
+    and as for adding herm tui, I would make a plugin for the desktop for that to act as a chat again.
+
+[2026-06-04T18:54:38.990000+00:00] twindenis (id=1512167719263273192)
+    not practical I guess.
+
+[2026-06-04T18:58:10.352000+00:00] liftaris (id=1512168605779755150)
+    you want to use herm tui from within hermes-desktop? I'd just install herm in the remote alongside hermes, then ssh and use herm that way
+

@@ -80,3 +80,8 @@
     [embed] fix(memory): register parent packages for user-installed provider i... https://github.com/NousResearch/hermes-agent/pull/37366
     [reply to rostelinalise msg=1510873974454620190]
 
+[2026-06-04T17:48:21.479000+00:00] techmeat (id=1512151036373110794)
+    My fix is merged! 🚀 Open Second Brain is now a 100% first-class memory provider for Hermes. The workaround is gone, the integration is seamless.
+    https://discord.com/channels/1053877538025386074/1509228633636475131
+    [reply to techmeat msg=1511347745661915300]
+

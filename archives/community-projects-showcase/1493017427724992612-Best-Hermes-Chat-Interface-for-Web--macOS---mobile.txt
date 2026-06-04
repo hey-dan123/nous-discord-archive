@@ -3110,3 +3110,40 @@
 [2026-06-04T10:26:41.886000+00:00] crapman_82439 (id=1512039889024192584)
     how do you guys find this interface vs the Herm one above it there vs the ofical Hermes desktop?
 
+[2026-06-04T16:24:37.290000+00:00] avidfuturist (id=1512129963397087384)
+    You can see what this one works and looks like here https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121
+    
+    All of them are worth a look!
+    [attachment] IMG_5370.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1512129962998501508/IMG_5370.jpg?ex=6a22f845&is=6a21a6c5&hm=1e24009d65b7b4524762a288dede76e9a8cb413f3015ab82c6ce561f0b575833&
+    [reply to crapman_82439 msg=1512039889024192584]
+
+[2026-06-04T19:26:03.277000+00:00] necrosis._. (id=1512175622536036422)
+    Getring "Request timed out. Please try again." Alott also thinking disappears after page refresh not smooth like tinking suddenly stops then i get the answer after 2-3 seconds the model was thinking and working but wasnt displayed the update did something coz it was fine before
+    [reply to avidfuturist msg=1512129963397087384]
+
+[2026-06-04T19:29:25.089000+00:00] necrosis._. (id=1512176468996657313)
+    Thinking is getting displayed in outputs
+
+[2026-06-04T19:29:41.512000+00:00] avidfuturist (id=1512176537879707839)
+    Will look into it, thanks! Which model are you using, will apply a fix today
+    [reply to necrosis._. msg=1512175622536036422]
+
+[2026-06-04T19:30:14.258000+00:00] necrosis._. (id=1512176675226517684)
+    Tried kimi 2.6 and glm 5.1 ollama cloud
+    [reply to avidfuturist msg=1512176537879707839]
+
+[2026-06-04T19:30:28.742000+00:00] avidfuturist (id=1512176735976820817)
+    Can you try latest version and confirm it isn’t fixed already too then I’ll prioritize a fix today if it’s still broken
+
+[2026-06-04T19:31:19.268000+00:00] necrosis._. (id=1512176947898355792)
+    I did update when the prompt came sooo ig its latest., and this started after that
+    [reply to avidfuturist msg=1512176735976820817]
+
+[2026-06-04T19:31:33.261000+00:00] avidfuturist (id=1512177006589120543)
+    Okay got it, will fix, thanks for the report!
+    [reply to necrosis._. msg=1512176947898355792]
+
+[2026-06-04T19:32:02.038000+00:00] necrosis._. (id=1512177127288602809)
+    No need broo thanks for great service
+    [reply to avidfuturist msg=1512177006589120543]
+

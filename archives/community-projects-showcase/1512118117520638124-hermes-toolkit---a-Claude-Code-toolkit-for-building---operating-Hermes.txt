@@ -1,0 +1,22 @@
+# Thread '🛠️ hermes-toolkit — a Claude Code toolkit for building & operating Hermes' in forum #community-projects-showcase
+# thread_id=1512118117520638124 forum_id=1316137596535177246
+# Started 2026-06-04T20:03:35.208246+00:00
+
+[2026-06-04T15:37:33.013000+00:00] davidg1982 (id=1512118117520638124)
+    Been running Hermes on a local model in my homelab and kept hitting the same walls — so I packaged the fixes into an open-source toolkit that turns Claude Code (and claude-mpm) into a Hermes specialist. Dev, test, debug, and tune a Hermes install.
+    
+    🔗 https://github.com/davidgut1982/hermes-toolkit  (MIT)
+    
+    What's in it
+     • A parallel eval harness — replaces the slow hermes chat -q "..." one-prompt-at-a-time QA loop with concurrent YAML test suites. Library/API/CLI backends, baseline-diffing for regressions, CI-gating, and assertions like tool_called, not_tool_called, max_llm_calls, latency_under.
+     • 6 specialist subagents — gateway-engineer, gateway-tester, skill-developer, skill-evaluator, evaluator, deploy-guard.
+     • 8 knowledge skills, e.g.:
+      – hermes-internals — map of the 4 ways to drive Hermes (CLI / library / API / gateway) and which to use when
+      – hermes-orchestration-routing — match the mechanism to the task (a deterministic "is X running?" should be one tool call, not a 6–17 call delegation)
+      – hermes-debug, hermes-performance, hermes-fork-maintainer, hermes-skill-authoring…
+     
+    Why — simple ops queries exploding into long delegations, slow cold-start QA, config drift between surfaces, fork/branch-maintenance pain. The skills bake the fixes in so you (and your Claude) don't relearn them every time.
+    
+    Examples are calibrated to my setup but generalized — swap in your own host/model/fork. Feedback and PRs very welcome if it's useful to anyone else running Hermes.
+    [embed] GitHub - davidgut1982/hermes-toolkit: Hermes agent eval harness, sk... https://github.com/davidgut1982/hermes-toolkit
+

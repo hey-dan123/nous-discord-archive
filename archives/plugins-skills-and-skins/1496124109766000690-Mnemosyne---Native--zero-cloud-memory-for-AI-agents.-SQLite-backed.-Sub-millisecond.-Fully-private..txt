@@ -1487,3 +1487,11 @@
 [2026-06-04T14:35:41.105000+00:00] sloothyyyyy (id=1512102548650332230)
     <@151598363131904000> hermes update nuked the mnemosyne packages cuz it rebuilt the venv, so i don’t think it’s every hermes update and is a one time thing
 
+[2026-06-04T15:45:04.812000+00:00] exer91 (id=1512120012502995026)
+    I have just experienced the same behavior and i am trying to find solution for that without any luck. I like the plugin but will have to drop it since i do not want to fix and re install it after each hermes update... 🙁
+    [reply to sloothyyyyy msg=1512102548650332230]
+
+[2026-06-04T19:04:39.317000+00:00] nulledvector (id=1512170237217472622)
+    will address this soon thanks for reporting
+    [reply to sloothyyyyy msg=1512102548650332230]
+

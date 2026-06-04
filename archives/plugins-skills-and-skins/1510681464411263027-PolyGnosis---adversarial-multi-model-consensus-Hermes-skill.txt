@@ -21,3 +21,9 @@
 [2026-05-31T18:22:04.726000+00:00] d0ggyw00f (id=1510709971023564880)
     PolyGnosis - adversarial multi-model consensus Hermes skill
 
+[2026-06-04T15:26:22.499000+00:00] d0ggyw00f (id=1512115305181216858)
+    I will be posting stats soon - recording them asap
+
+[2026-06-04T17:36:43.539000+00:00] tumadre (id=1512148109000573182)
+    neat.
+
