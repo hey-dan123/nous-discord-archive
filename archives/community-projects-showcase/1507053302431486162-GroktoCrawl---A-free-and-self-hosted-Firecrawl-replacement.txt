@@ -221,3 +221,41 @@
 [2026-06-04T04:55:50.868000+00:00] magnus919 (id=1511956627819855974)
     [attachment] openai_gpt-image-2-medium_20260604_005513_1810685c.png https://cdn.discordapp.com/attachments/1507053302431486162/1511956627564265553/openai_gpt-image-2-medium_20260604_005513_1810685c.png?ex=6a2256d6&is=6a210556&hm=d098195995cfb9e97c937986b0097dbe8fedaec18ca68bf07ea5d1fe6ddb6c41&
 
+[2026-06-05T07:13:16.953000+00:00] magnus919 (id=1512353602272760031)
+    Groktocrawl has an *adapters* framework in `main` branch now. So far we've got adapters for *YouTube* and *Bluesky*. 
+    
+    For specific site URL's, `groktocrawl scrape` will use a specialized adapter. So like, if you try to scrape a YouTube link (even one of their shortlinks), it will return back something that kind of looks like an Obsidian note. YAML frontmatter with metadata about the video, and Markdown transcript.
+
+[2026-06-05T07:15:50.069000+00:00] magnus919 (id=1512354244488069151)
+    For example, `groktocrawl scrape https://youtu.be/DadmyNgM03I?si=hShu68xMpf7iwDvO` outputs:
+    
+    ```
+    ---
+    video_id: DadmyNgM03I
+    title: The Best Way to Take Control of Your Local AI Model (llama.cpp)
+    channel: Tonbi's AI Garage
+    channel_url: https://www.youtube.com/@TonbisAIGarage
+    thumbnail_url: https://i.ytimg.com/vi/DadmyNgM03I/hqdefault.jpg
+    source: youtube-adapter
+    ---
+    
+    # The Best Way to Take Control of Your Local AI Model (llama.cpp)
+    
+    **Channel:** Tonbi's AI Garage
+    
+    ---
+    
+    ## Transcript
+    
+    So, there's a growing interest in local models and it it makes sense with the growing cost of using AI models, concerns about privacy, security, companies suddenly changing their policies without warning. Uh there's a lot of interest in local models and when you start with local models, the easiest, probably most beginner-friendly way is with Ollama. And my own uh how to use local models video talked about Ollama and it is quite easy. It's quite convenient. But there's a lot of other options out there to run local models in different ways and perhaps get better performance than you would from Ollama. And one of them is llama.cpp. And in fact, Ollama is just a wrapper sitting on top of llama.cpp. So, instead of using Ollama, using llama.cpp directly actually takes local models to a whole new level. Real local model enthusiast have certainly heard of this, but for a lot of the general public, I think this is not really well known. So, in this video, I'm going to kind of break down what llama.cpp is, why you'd use it directly instead of through some type of wrapper like Ollama, and then 
+    [...]
+    ```
+
+[2026-06-05T08:51:07.474000+00:00] magnus919 (id=1512378225022472343)
+    https://github.com/groktopus/groktocrawl/releases/tag/v0.6.0
+    [attachment] openai_gpt-image-2-medium_20260605_044910_69d8b9c1.png https://cdn.discordapp.com/attachments/1507053302431486162/1512378225836294224/openai_gpt-image-2-medium_20260605_044910_69d8b9c1.png?ex=6a23df7b&is=6a228dfb&hm=be06018e56f31eed928e3e4cc8e618b6c4a7ddbfca49d2679798054974332e0b&
+    [embed] Release v0.6.0 — Adapter framework, barrier detection, architectu... https://github.com/groktopus/groktocrawl/releases/tag/v0.6.0
+
+[2026-06-05T09:03:33.202000+00:00] magnus919 (id=1512381352832667718)
+    [attachment] openai_gpt-image-2-medium_20260605_050301_8960479b.png https://cdn.discordapp.com/attachments/1507053302431486162/1512381352534610031/openai_gpt-image-2-medium_20260605_050301_8960479b.png?ex=6a23e265&is=6a2290e5&hm=b9001cfd4a3cd68a8513446541ca04079459d6b28308c439bf4237ecf331dae3&
+

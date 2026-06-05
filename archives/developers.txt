@@ -25135,3 +25135,238 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/39502
     [embed] fix(dashboard): reap orphaned embedded-chat sessions to stop slash_... https://github.com/NousResearch/hermes-agent/pull/39502
 
+[2026-06-05T03:35:14.771000+00:00] vincezcrikl (id=1512298731624726639)
+    Just. submitted a PR for  Hermes Desktop -> Adds a message-history button to every Hermes Desktop Cron row. The new dialog renders every persisted message across all executions of that Cron job, including user/assistant messages, tool calls, media, run timestamps, duration, and completion reason.
+    https://github.com/NousResearch/hermes-agent/pull/39344/
+    [attachment] 603131597-cfb09701-e414-4fbc-b01b-0338723ba35c.png https://cdn.discordapp.com/attachments/1491258766648283238/1512298732236963900/603131597-cfb09701-e414-4fbc-b01b-0338723ba35c.png?ex=6a239572&is=6a2243f2&hm=2cb40f3325b8eddc47adaf1e2a4fb49fe5e5651233426bb9f83e5c48806dc474&
+    [attachment] 603131691-342ab0b0-07f0-4917-8c8d-d78890597ff4.png https://cdn.discordapp.com/attachments/1491258766648283238/1512298732711055541/603131691-342ab0b0-07f0-4917-8c8d-d78890597ff4.png?ex=6a239573&is=6a2243f3&hm=33d400957e0833699bff16e0137241f73a280cb0ecca842da5b5384766ee69c8&
+    [embed] feat(desktop): preview cron message history by VinceZcrikl · Pull ... https://github.com/NousResearch/hermes-agent/pull/39344/
+
+[2026-06-05T03:37:13.794000+00:00] ddfp777 (id=1512299230843244566)
+    <@387972437901312000> Question about the Hermes Desktop app specifically, the new GUI, not the CLI:
+    
+    In Desktop, the / command menu seems curated to a built-in allowlist, so third party plugin commands don't appear in it, plugins still work via natural language and render as tool cards, but they're not selectable from the menu the way native commands are.
+    
+    Is that the intended design for Desktop, natural language + cards as the canonical plugin UX or a current limitation, with menu access for plugins (say a namespaced /<plugin> … submenu) planned down the line?
+    
+    Asking because it shapes how you'd build a plugin for Desktop: lean fully into conversational + card output, or design command sets expecting menu exposure, want to build toward the intended model rather than around it. 🙏
+
+[2026-06-05T03:38:22.299000+00:00] teknium (id=1512299518174036178)
+    Nope just that the desktop app is early and recovering 100% of the surface area is going to take some time. Trying to get installer and update bugs addressed first before going to focused on parity
+    [reply to ddfp777 msg=1512299230843244566]
+
+[2026-06-05T03:41:04.610000+00:00] yunofoot (id=1512300198955847792)
+    yepiii
+
+[2026-06-05T03:41:10.908000+00:00] yunofoot (id=1512300225371312128)
+    <:catlick:1151260427645366375>
+
+[2026-06-05T03:44:58.736000+00:00] yunofoot (id=1512301180951466035)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/39174 This PR is currently being actively discussed. Could I possibly ask for a review?
+    [embed] fix(patch): unescape \n in fuzzy matcher when file region has newli... https://github.com/NousResearch/hermes-agent/pull/39174
+
+[2026-06-05T03:45:19.533000+00:00] yunofoot (id=1512301268180140214)
+    My head feels dizzy
+
+[2026-06-05T04:08:40.845000+00:00] .elkim (id=1512307145708797952)
+    done 🙂 https://github.com/elkimek/hermes-fluxer-plugin
+    [embed] GitHub - elkimek/hermes-fluxer-plugin: Standalone Fluxer platform p... https://github.com/elkimek/hermes-fluxer-plugin
+    [reply to teknium msg=1511950329057378354]
+
+[2026-06-05T04:23:28.693000+00:00] yerts (id=1512310869613084682)
+    https://github.com/NousResearch/hermes-agent/pull/39547
+    [embed] fix(streaming): widen stream-unsupported detection so the non-strea... https://github.com/NousResearch/hermes-agent/pull/39547
+
+[2026-06-05T04:35:15.059000+00:00] teknium (id=1512313832327090246)
+    nice! Did you share in <#1485392832154832906>
+    [reply to .elkim msg=1512307145708797952]
+
+[2026-06-05T04:35:19.359000+00:00] teknium (id=1512313850362462339)
+    checkn
+    [reply to yerts msg=1512310869613084682]
+
+[2026-06-05T04:42:55.302000+00:00] yunofoot (id=1512315762725879818)
+    <:pepe_think:1151261558043848785>
+
+[2026-06-05T04:43:05.644000+00:00] .elkim (id=1512315806103633940)
+    yup also on X can you RT? https://x.com/ElkimXOC/status/2062586082416361797?s=20
+    [embed]  https://twitter.com/ElkimXOC/status/2062586082416361797?s=20
+    [reply to teknium msg=1512313832327090246]
+
+[2026-06-05T04:45:11.876000+00:00] frowtek (id=1512316335559020584)
+    https://github.com/NousResearch/hermes-agent/pull/39567
+    [embed] fix(cli): require Chromium for local browser readiness in setup/sta... https://github.com/NousResearch/hermes-agent/pull/39567
+
+[2026-06-05T04:50:03.548000+00:00] _hwrd_ (id=1512317558919790762)
+    https://github.com/NousResearch/hermes-agent/pull/36896
+    [embed] feat(secrets): add 1Password (op://) secret source by hwrdprkns · ... https://github.com/NousResearch/hermes-agent/pull/36896
+
+[2026-06-05T04:51:30.441000+00:00] teknium (id=1512317923375448105)
+    Im not merging any big features while the chat gui stuff is unstable so please be patient
+    [reply to _hwrd_ msg=1512317558919790762]
+
+[2026-06-05T04:56:34.358000+00:00] _hwrd_ (id=1512319198096003122)
+    gotcha! didn't realize this was a big feature — thought it was more of an extension of the existing bitwarden functionality
+    [reply to teknium msg=1512317923375448105]
+
+[2026-06-05T04:56:35.905000+00:00] Translator Bot#1043 (id=1512319204584456192)
+    Mixed up!
+    [reply to _hwrd_ msg=1512319198096003122]
+
+[2026-06-05T05:18:54.251000+00:00] bluepeer (id=1512324818014306345)
+    i like to see this arriving, but currently one update broked the system, unable to update
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512324817813241986/image.png?ex=6a23adbe&is=6a225c3e&hm=8b5cf6ce0240304ebd4cdb156a8125843feab578cf2d6dcb2bfa859b52677b75&
+    [reply to teknium msg=1512287527443365908]
+
+[2026-06-05T05:22:52.116000+00:00] .elkim (id=1512325815692689469)
+    <@387972437901312000> personal one - what settings do you use for Compression? Treshold, Target etc.
+
+[2026-06-05T05:23:26.241000+00:00] teknium (id=1512325958823055381)
+    No just run it a second time
+    [reply to bluepeer msg=1512324818014306345]
+
+[2026-06-05T05:28:38.718000+00:00] bluepeer (id=1512327269446582393)
+    in general it is currently confusing, dashboard behind showed 12, and update shows 82
+    i have 2 wishes for the hermes update process
+    - first bring the updater in the correct state before do anything (to not test if we need venv before or not)
+    - seconds check for updates before make useless backup (deletes backups if you use keep X as max)
+    
+    i for example still need to venv the bash or update from script install unable to update , the system is currently very confusing
+    i know that it is mostly alltime possible by the buttons in dashboards, but there you mostly not see the complete process
+
+[2026-06-05T05:29:53.219000+00:00] bluepeer (id=1512327581926690826)
+    without venv before it looks alltime this
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512327581511323708/image.png?ex=6a23b051&is=6a225ed1&hm=45c33308a88c140ded8857105663e82857562d5928966ba5ab90821ab807cff9&
+
+[2026-06-05T05:39:42.935000+00:00] shaf_2665 (id=1512330055374737563)
+    Hi bro just built a free tier AI load balancer, peek your interest?
+    
+    🔗 https://github.com/Shaf2665/Hermes-router
+    [reply to teknium msg=1512325958823055381]
+
+[2026-06-05T06:04:07.666000+00:00] yerts (id=1512336198901960776)
+    This looks like https://github.com/decolua/9router
+    [embed] GitHub - decolua/9router: Unlimited FREE AI coding. Connect Claude ... https://github.com/decolua/9router
+    [reply to shaf_2665 msg=1512330055374737563]
+
+[2026-06-05T06:05:25.680000+00:00] shaf_2665 (id=1512336526116257914)
+    I built it native to hermes, like adding extra rotation layers between providers
+    [reply to yerts msg=1512336198901960776]
+
+[2026-06-05T06:09:04.282000+00:00] yerts (id=1512337442999369749)
+    9router provides 1 endpoint for any agent that automatically rotates between 40 ish providers, just wondering
+    [reply to shaf_2665 msg=1512336526116257914]
+
+[2026-06-05T06:17:32.934000+00:00] shaf_2665 (id=1512339576440754266)
+    I built it on top of hermes and it runs locally
+    [reply to yerts msg=1512337442999369749]
+
+[2026-06-05T06:31:44.074000+00:00] bluepeer (id=1512343146380398722)
+    idk if this is related to the update fail, or the patch not worked currently there is still a issue
+    here the output of the background sessions , after first load and refresh, it start with 2 sessions after first visit, thenn adds 2 additive sessions and then keeps 4 cycling sessions (never more then 4 currently)
+    
+    ```
+    after first dashboard visit
+    
+    |           \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 /home/bluepeer/.hermes/hermes-agent/venv/bin/hermes dashboard
+    |               \_ /home/bluepeer/.nvm/versions/node/v24.13.1/bin/node --expose-gc /home/bluepeer/.hermes/hermes-agent/ui-tui/dist/entry.js
+    |               \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 -m tui_gateway.slash_worker --session-key 20260605_082459_d1e444 --mode
+    |               \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 -m tui_gateway.slash_worker --session-key 20260605_082456_fd722f --mode
+    
+    after 1 page reload
+    
+    |           \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 /home/bluepeer/.hermes/hermes-agent/venv/bin/hermes dashboard
+    tui_gateway.slash_worker --session-key 20260605_082459_d1e444 --mode
+    tui_gateway.slash_worker --session-key 20260605_082456_fd722f --mode
+    tui_gateway.slash_worker --session-key 20260605_082545_126e83 --mode
+    bin/node --expose-gc /home/bluepeer/.hermes/hermes-agent/ui-tui/dist/entry.js
+    tui_gateway.slash_worker --session-key 20260605_082547_c5592a --mode
+    
+    next refresh
+    
+    |           \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 /home/bluepeer/.hermes/hermes-agent/venv/bin/hermes dashboard
+    tui_gateway.slash_worker --session-key 20260605_082545_126e83 --mode
+    tui_gateway.slash_worker --session-key 20260605_082547_c5592a --mode
+    tui_gateway.slash_worker --session-key 20260605_082707_ef5473 --mode
+    bin/node --expose-gc /home/bluepeer/.hermes/hermes-agent/ui-tui/dist/entry.js
+    tui_gateway.slash_worker --session-key 20260605_082709_3d88aa --mode
+    
+    ```
+    idk if the "patch" not worked correct, or it is related to not correct updated.
+    [reply to teknium msg=1512325958823055381]
+
+[2026-06-05T06:38:12.732000+00:00] kyssta69 (id=1512344776530460742)
+    ## Fix: PR #39622
+    
+    **Issue**: #39525 Gateway failed after I close and open My laptop and change my Wifi
+    **Fix**: Added a periodic polling health check (`_polling_health_check_loop`) to the Telegram adapter that probes `bot.get_me()` every 5 minutes while polling is active. When a laptop sleeps and wakes on a different WiFi, the long-poll TCP connection silently dies without PTB's error callback firing. The health check detects this stale connection (15s probe timeout) and triggers the existing reconnection ladder, so the gateway recovers automatically without requiring a manual reload.
+    **Files**: `gateway/platforms/telegram.py` (+69 lines crazy number right?)
+    **PR**: https://github.com/NousResearch/hermes-agent/pull/39622
+    [embed] fix(gateway): add periodic polling health check to detect stale con... https://github.com/NousResearch/hermes-agent/pull/39622
+
+[2026-06-05T06:41:35.983000+00:00] teknium (id=1512345629026947104)
+    Can you open a support thread. I dont know what externally-managed-environment means
+    [reply to bluepeer msg=1512327581926690826]
+
+[2026-06-05T06:55:52.259000+00:00] .elkim (id=1512349220508794903)
+    sir? 🙂 trying to figure out best settings for coding
+    [reply to .elkim msg=1512325815692689469]
+
+[2026-06-05T07:10:03.036000+00:00] sprmn24 (id=1512352788925911110)
+    Hey <@387972437901312000> , opened a PR  — take a look when you get a chance:
+    
+    PR #39366  fix(file-ops): remove unreachable stdout check in _python_delete fallback
+    Issue: _python_delete() fallback to python never triggered on Windows/systems without python3 — shell errors go to stderr but _exec() only captures stdout, so the condition was always false
+    
+    Fix: check exit_code only
+    https://github.com/NousResearch/hermes-agent/pull/39366
+    [embed] fix(file-ops): remove unreachable stdout check in _python_delete fa... https://github.com/NousResearch/hermes-agent/pull/39366
+
+[2026-06-05T07:17:41.071000+00:00] xiaohan_115 (id=1512354710064070706)
+    https://github.com/ThaungThanHan/hermes-omnivoice
+    
+    A plugin for OmniVoice TTS. It supports 600+ languages, if anyone wants to use TTS in native language, this is way to go.
+    [embed] GitHub - ThaungThanHan/hermes-omnivoice: Omnivoice TTS Plugin for H... https://github.com/ThaungThanHan/hermes-omnivoice
+
+[2026-06-05T07:45:08.468000+00:00] snaplap_24896 (id=1512361619747770450)
+    Hey folks 👋 I have a small bug fix PR that’s been approved but still waiting for a merge — would appreciate if a maintainer could take a look!
+    
+    PR #38968: fix(desktop): read composer text from DOM on Enter submit to avoid stale state
+    https://github.com/NousResearch/hermes-agent/pull/38968
+    
+    Fixes #38923 — the Enter key not submitting on first press in the Desktop composer. The fix reads text from the DOM node instead of the stale React draft state. Only 1 file changed, +9/-2, already approved by @tonydwb. Thanks!
+    [embed] fix(desktop): read composer text from DOM on Enter submit to avoid ... https://github.com/NousResearch/hermes-agent/pull/38968
+
+[2026-06-05T08:49:20.322000+00:00] yunofoot (id=1512377775594410086)
+    is it support voice cloning too?
+    [reply to xiaohan_115 msg=1512354710064070706]
+
+[2026-06-05T08:58:05.452000+00:00] xiaohan_115 (id=1512379978149531800)
+    Yes, need to put the path to the ref_audio and ref_text (string) in hermes config.yaml.
+    [reply to yunofoot msg=1512377775594410086]
+
+[2026-06-05T08:58:36.655000+00:00] yunofoot (id=1512380109024395376)
+    nc works
+
+[2026-06-05T08:59:16.532000+00:00] coexismail (id=1512380276280393839)
+    Hello, First PR from me 🙂
+    
+    hermes_time.py had a bare `except Exception: pass` that was silently swallowing yaml parse errors and file read errors — no logging, no trace, nothing. The logger was already defined in the file but never used in that block.
+    
+    Fix: replaced with specific `except yaml.YAMLError` and `except OSError`, both log at debug level now. No behavior change, 20 tests pass.
+    
+    https://github.com/NousResearch/hermes-agent/pull/39686
+    [embed] fix(hermes_time): replace bare except with specific exceptions and ... https://github.com/NousResearch/hermes-agent/pull/39686
+
+[2026-06-05T09:42:36.140000+00:00] sprmn24 (id=1512391179826888726)
+    <@387972437901312000>  sir 
+    
+    **PR #39710  **
+    
+    fix(file-ops): fix unreachable rg/grep error guard in search methods
+    **Issue:** _search_with_rg() and _search_with_grep() error guard never fired — not result.stdout.strip() was always False because _exec() merges stderr into stdout; dead hasattr(result, 'stderr') branch also removed
+    
+    **Fix: **check exit_code == 2 only, read error from result.stdout
+    https://github.com/NousResearch/hermes-agent/pull/39710
+    [embed] fix(file-ops): fix unreachable rg/grep error guard in search method... https://github.com/NousResearch/hermes-agent/pull/39710
+

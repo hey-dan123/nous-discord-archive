@@ -1,0 +1,18 @@
+# Thread 'magnus919/hermes-profiles' in forum #plugins-skills-and-skins
+# thread_id=1512384226983677982 forum_id=1485392832154832906
+# Started 2026-06-05T09:47:05.377622+00:00
+
+[2026-06-05T09:14:58.453000+00:00] magnus919 (id=1512384226983677982)
+    https://github.com/magnus919/hermes-profiles
+    Curated Hermes Agent profiles for specialist swarms. Each profile packages a role identity (SOUL.md), skill dependencies, and configuration for a specific architecture/engineering capability that can be deployed as a Hermes agent.
+    
+    These profiles are opinionated — they use Hermes-native patterns:
+    
+    Artifact-pyramid output format (progressive disclosure, path-as-handoff)
+    skill-based methodology loading (skill_view → load references)
+    Hermes kanban for multi-agent orchestration
+    Hermes profile system for role isolation
+    They may or may not work in other harnesses. No promises.
+    [attachment] 1f968.png https://cdn.discordapp.com/attachments/1512384226983677982/1512384229009395813/1f968.png?ex=6a23e512&is=6a229392&hm=00eceb4924733636e751f08e05aa664064a3c70e99a03bb4b84cbfe35625cbfb&
+    [embed] GitHub - magnus919/hermes-profiles: Curated Hermes Agent profiles f... https://github.com/magnus919/hermes-profiles
+

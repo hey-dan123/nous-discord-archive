@@ -3163,3 +3163,28 @@
 [2026-06-05T01:00:53.651000+00:00] mathewsstar (id=1512259887671803988)
     You could improve the user interface and features by using suggestions and tips from AI. Take this project to the next level!
 
+[2026-06-05T04:43:11.757000+00:00] fleety13 (id=1512315831743152219)
+    When you begin to think agents have a better understanding of UX than humans, it's time to touch grass, they've been hypnotising you.  How agents interact with a range of tool surfaces is fundamentally different to human workflows in a GUI.  They don't get the UX journey in a practical sense unless you explicitly dedicate a lot of time that's better used communicating with users.
+    [reply to mathewsstar msg=1512259887671803988]
+
+[2026-06-05T04:51:14.464000+00:00] fleety13 (id=1512317856363053219)
+    Adding features users don't request out of concrete need just introduces maintenance ovehead and potentially adds attack vectors considering this is a webui.
+
+[2026-06-05T06:56:38.340000+00:00] .vansken (id=1512349413786517656)
+    as a ux/product designer, I totally agree. There's no point adding a feature "ranted" by AI while the user itself didn't even bother anyway. There's a reason why UX starts with "user" because the product serve user's needs.
+    [reply to fleety13 msg=1512315831743152219]
+
+[2026-06-05T06:59:15.218000+00:00] avidfuturist (id=1512350071780540428)
+    💯  That's the philosophy I take with this project, I am not trying to do everything or add the kitchen sink or add things for the sake of it - everything I ship is either a fix or a feature a user requested or submitted a PR for that I genuinely think belongs in the app and adds to it
+
+[2026-06-05T07:01:08.144000+00:00] .vansken (id=1512350545426255962)
+    yet, everyone has their own preferences, especially in UI that's why I think you said so. Like I hate the UI of hermes dashboard tbh, that's why I'm looking for <@933139410281713755> 's hermes web ui, although I'm also have my own preference, I try to fork it and adjust it myself to match my preference.
+    [reply to mathewsstar msg=1512259887671803988]
+
+[2026-06-05T07:04:14.128000+00:00] avidfuturist (id=1512351325499691028)
+    All for people forking and making their own adjustments, also added an extensions feature (https://github.com/nesquena/hermes-webui/blob/master/docs/EXTENSIONS.md) as well for the same reason. And I definitely recognize there's space for many different community projects with different philosophies. Some people are going to love my WebUI, and some will prefer another project or just use the official desktop app. And those are all great options!
+
+[2026-06-05T07:08:54.537000+00:00] fleety13 (id=1512352501620408330)
+    I'm pretty sure Matthew is just a bit starry eyed about AI and agents right now. likely we were all a bit like that initially!
+      I don't want to dampen anyone's enthsiasm, just temper expectations and offer some grounding.
+

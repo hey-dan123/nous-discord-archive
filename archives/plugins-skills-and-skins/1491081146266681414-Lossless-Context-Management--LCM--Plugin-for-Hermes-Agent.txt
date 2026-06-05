@@ -1769,3 +1769,20 @@
     https://x.com/SteveSchoettler/status/2062409498279678281?s=20
     [embed]  https://twitter.com/SteveSchoettler/status/2062409498279678281?s=20
 
+[2026-06-05T06:37:55.239000+00:00] _voscko_ (id=1512344703159238748)
+    Thanks <@427613574995771414> we're working hard on hermes-lcm to bring the best experience and chat continuity to hermes agent ✌️
+    [reply to w0lfgang88 msg=1511969015495524513]
+
+[2026-06-05T07:02:35.104000+00:00] _voscko_ (id=1512350910163058789)
+    <@427613574995771414>  read was right. I was able to reproduce the failing path by simulating a native Windows environment where `os.statvfs` is unavailable.
+    
+    I opened a small PR here: https://github.com/stephenschoettler/hermes-lcm/pull/238
+    
+    The fix switches the disk-space check in `db_bootstrap._check_disk_space()` to `shutil.disk_usage(parent).free`, which keeps the same behavior on Linux/macOS and works on native Windows too. It also preserves the existing fail-open behavior if the disk-space probe itself cannot run.
+    
+    I added a regression test for the missing-`statvfs` case. Local full suite passed, and GitHub CI is green across 3.11, 3.12, 3.13, and 3.14.
+    
+    <@328509474895822849> fyi as well
+    [embed] fix: use portable disk space check by Tosko4 · Pull Request #238 ... https://github.com/stephenschoettler/hermes-lcm/pull/238
+    [reply to exer91 msg=1511901378157608970]
+

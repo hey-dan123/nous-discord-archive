@@ -49,3 +49,6 @@
     My agents will talk to your agents 😂 already spinning on it (obvi, check out OmniStep)
     [reply to anduril0202 msg=1512293417454141510]
 
+[2026-06-05T04:34:09.396000+00:00] liftaris (id=1512313556916240576)
+    The eikon updates in herm are taking me a while to get through, but I think it's going to work great with what you're cooking up here. custom states and signals that you can hook up any way you want, so Nous girl or any eikon can react to bespoke signals/events
+

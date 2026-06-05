@@ -294,3 +294,7 @@
     dm'ed you
     [reply to catsbackdogshow msg=1511892037018845184]
 
+[2026-06-05T07:09:56.977000+00:00] starw1 (id=1512352763512881202)
+    is it with a custom shortcut for now?
+    [reply to haimbender msg=1512124317826289675]
+

@@ -1,0 +1,19 @@
+# Thread 'OmniVoice TTS Plugin for your Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1512349817630756966 forum_id=1485392832154832906
+# Started 2026-06-05T09:47:05.818202+00:00
+
+[2026-06-05T06:58:14.624000+00:00] xiaohan_115 (id=1512349817630756966)
+    * 600+ Languages Supported: The broadest language coverage among zero-shot TTS models.
+    * Voice Cloning: State-of-the-art voice cloning quality from a short reference audio.
+    * Voice Design: Control voices via assigned speaker attributes (gender, age, pitch, dialect/accent, whisper, etc.).
+    * Fine-grained Control: Non-verbal symbols (e.g., [laughter]) and pronunciation correction via pinyin or phonemes.
+    * Fast Inference: RTF as low as 0.025 (40x faster than real-time).
+    * Diffusion Language Model-style Architecture: A clean, streamlined, and scalable design that delivers both quality and speed.
+    
+    Just give the plugin repository - https://github.com/ThaungThanHan/hermes-omnivoice to your Hermes agent and tell it to install by itself. You can refer to original OmniVoice repo - https://github.com/k2-fsa/OmniVoice for configuration settings. 
+    
+    Let me know if any update is needed and contributors are warmly welcomed ❤️
+    [attachment] Screenshot_2569-06-05_at_1.54.46_PM.png https://cdn.discordapp.com/attachments/1512349817630756966/1512349817945198612/Screenshot_2569-06-05_at_1.54.46_PM.png?ex=6a23c506&is=6a227386&hm=95984ff3a4d9df78381974e8b75666c326ae42d924a71683c20722dbda10620f&
+    [embed] GitHub - ThaungThanHan/hermes-omnivoice: Omnivoice TTS Plugin for H... https://github.com/ThaungThanHan/hermes-omnivoice
+    [embed] GitHub - k2-fsa/OmniVoice: High-Quality Voice Cloning TTS for 600+ ... https://github.com/k2-fsa/OmniVoice
+

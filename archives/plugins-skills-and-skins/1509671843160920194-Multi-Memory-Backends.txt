@@ -26,3 +26,8 @@
 [2026-05-29T09:51:37.969000+00:00] thegiuseppe (id=1509856737363099748)
     alright maybe ill hold off for now, i think my current system works ok but this is definitely something I'm interested in further down the line
 
+[2026-06-05T08:48:48.639000+00:00] maksimstolpasov (id=1512377642706407554)
+    I really want to try it, but I've run into a couple of issues
+    1. The CLI plugin didn't appear after installation
+    2. There's no plugin to select in the dashboard
+
