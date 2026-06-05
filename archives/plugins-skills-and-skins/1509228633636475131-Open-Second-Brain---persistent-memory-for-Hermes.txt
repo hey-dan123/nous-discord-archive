@@ -67,3 +67,34 @@
     Repo + full changelogs: https://github.com/itechmeat/open-second-brain
     [embed] GitHub - itechmeat/open-second-brain: Local-first 🧠 memory for H... https://github.com/itechmeat/open-second-brain
 
+[2026-06-05T11:23:15.270000+00:00] techmeat (id=1512416509774008331)
+    Hey all 👋 Another batch landed since the last post (v0.32.x → **v0.45.0**). The big one this time: the upstream fix is **in Hermes** 🎉
+    
+    🧠 **Native Hermes provider - the workaround is gone**
+    Until now the plugin loaded on Hermes via a self-bootstrap shim - a workaround, because Hermes' loader didn't register the parent namespace for user-installed providers, so anything with relative imports (like our subpackage layout) wouldn't load the documented way. I opened a small upstream fix for exactly that https://github.com/NousResearch/hermes-agent/pull/37366, and it's now cherry-picked into main via #38995 (thanks <@387972437901312000> ). So **Open Second Brain is now a 100% first-class memory provider exactly as the docs describe** - no shim, `hermes open-second-brain ...` discoverable on a stock Hermes out of the box, and it persists across plugin updates.
+    
+    Huge help during development was the memory-provider plugin guide: https://hermes-agent.nousresearch.com/docs/developer-guide/memory-provider-plugin
+    
+    **What's new since v0.32.x:**
+    
+    🕒 **Time-aware recall** - activation decays by content type + event-time windows, so old facts stop polluting answers
+    
+    📒 **Entity truth ledger** - current-truth per entity with conflict detection, plus a **dead-end registry** for negative knowledge
+    
+    🌳 **Git-history → memory** - ingest commits/releases, answer "why did this change", commit→ADR miner
+    
+    🔐 **Secret custody** - AES-256-GCM at rest, stdin-only ingestion, allowlisted exec, no values in logs
+    
+    ✍️ **Write-time integrity** - schema-pack ontology: controlled-vocab labels, link constraints, frontmatter tiers
+    
+    🔗 **Link & recall intelligence** (newest) - alias-resolved wikilinks as real graph edges, reviewable bridge discovery, graph communities
+    
+    📊 **CI-gated recall benchmark** - hit@k + MRR fails CI on ranking regressions, plus opt-in self-tuning recall
+    
+    Full changelogs: https://github.com/itechmeat/open-second-brain/releases
+    [embed] Memory Provider Plugins | Hermes Agent https://hermes-agent.nousresearch.com/docs/developer-guide/memory-provider-plugin
+    [embed] Releases · itechmeat/open-second-brain https://github.com/itechmeat/open-second-brain/releases
+
+[2026-06-05T11:34:33.916000+00:00] teknium (id=1512419356221505636)
+    <a:AlienPls:1151260424185069691>
+

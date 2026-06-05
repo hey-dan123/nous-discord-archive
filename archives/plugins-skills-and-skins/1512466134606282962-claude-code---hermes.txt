@@ -1,0 +1,7 @@
+# Thread 'claude code + hermes' in forum #plugins-skills-and-skins
+# thread_id=1512466134606282962 forum_id=1485392832154832906
+# Started 2026-06-05T14:50:19.704877+00:00
+
+[2026-06-05T14:40:26.752000+00:00] xsisty (id=1512466134606282962)
+    guys whats the best way to use hermes and self improvment with claude code im currently running claude code within hermes dekstop im just wondering if there is a better way
+

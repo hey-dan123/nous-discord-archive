@@ -3188,3 +3188,6 @@
     I'm pretty sure Matthew is just a bit starry eyed about AI and agents right now. likely we were all a bit like that initially!
       I don't want to dampen anyone's enthsiasm, just temper expectations and offer some grounding.
 
+[2026-06-05T13:14:36.906000+00:00] _123321_ (id=1512444534586605679)
+    ``/terminal`` is such a life saver 😄
+

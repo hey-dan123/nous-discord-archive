@@ -25370,3 +25370,223 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/39710
     [embed] fix(file-ops): fix unreachable rg/grep error guard in search method... https://github.com/NousResearch/hermes-agent/pull/39710
 
+[2026-06-05T10:17:48.374000+00:00] coexismail (id=1512400039178272828)
+    Second PR from me 🙂
+    
+    Bug: Some profiles rendered tool and skill category labels nearly invisible in the startup banner (#39675). Root cause was in hermes_cli/banner.py — category labels used [dim {color}] which applies Rich's dim modifier on top of an already-muted banner_dim color, causing double-dimming. On light mode and github-dark skins where banner_dim is already dark (#475569, #444444), the extra dim modifier made categories nearly invisible while tool names rendered normally.
+    
+    Fix: removed the redundant dim modifier from toolset and skill category lines — [dim {dim}] → [{dim}]. Two lines changed, color now renders at intended brightness across all skins.
+    
+    https://github.com/NousResearch/hermes-agent/pull/39726
+    [embed] fix(banner): remove redundant dim modifier from toolset and skill c... https://github.com/NousResearch/hermes-agent/pull/39726
+
+[2026-06-05T10:37:12.365000+00:00] kyssta69 (id=1512404921310515312)
+    **Issue**: #39704  Session Hygiene compression overwrites original messages when _session_db is None
+    **Fix**: Pass session_db=self._session_db to the temporary AIAgent created by session hygiene so compression can properly rotate sessions and preserve original messages.
+    
+    https://github.com/NousResearch/hermes-agent/pull/39745
+    [embed] fix(gateway): pass session_db to hygiene agent for proper session r... https://github.com/NousResearch/hermes-agent/pull/39745
+
+[2026-06-05T11:04:47.979000+00:00] bluepeer (id=1512411865458933892)
+    if i open for every common isse a thread, we end up with 5k open issues tomorrow, i mean i am not a "python" "user", that is a idk general OS related setting to Protect some types of not "venv" (virtual python setups) to break the "world" idk, thats some defaults inside pythion (thats what everyone tells me about it)
+    [reply to teknium msg=1512345629026947104]
+
+[2026-06-05T11:07:05.403000+00:00] bluepeer (id=1512412441856708678)
+    hermes runs all it python inside a virtual env (venv), to have full controll over it required software , and if you run the hermes update regular, it mostly not use the internal venv and run into the OS python thats restricted
+
+[2026-06-05T11:08:23.861000+00:00] bluepeer (id=1512412770933542934)
+    to make it easy, hermes runs related to the entry point , in different ENV locations and sometimes Update drifferent locations and not the required identical locations
+
+[2026-06-05T11:10:30.423000+00:00] bluepeer (id=1512413301772910632)
+    regular it use alltime ~/.hermes/hermes-agent/venv/bin/activate /activate or it .ps1 , .bat whatever equivalent
+
+[2026-06-05T11:11:50.647000+00:00] bluepeer (id=1512413638256889908)
+    related to the entry point (gateway,tui,dashboard, cli' hermes update') it not use everytime the same systems
+
+[2026-06-05T11:12:32.416000+00:00] bluepeer (id=1512413813448638624)
+    sometimes it use the System path and software, sometimes the virtual env
+
+[2026-06-05T11:15:28.090000+00:00] bluepeer (id=1512414550278934740)
+    sometimes ~/.hermes/hermes-agent/venv/lib/python3.11/site-packages <-- what hermes is general designes to use
+    but the screen with the error used not this, it used the inside the OS lib folder installed python version and it different software 'site-packages' installed software that have a python side restriction flag defined
+
+[2026-06-05T11:15:39.149000+00:00] bluepeer (id=1512414596663607396)
+    if i understand it correct
+
+[2026-06-05T11:18:56.356000+00:00] bluepeer (id=1512415423809851542)
+    like 
+    ~/.hermes/hermes-agent/venv/lib/python3.11/site-packages <-- correct (no issues)
+    ~/.local/lib/python3.13/site-packages <-- wrong (restricted message)
+    https://packaging.python.org/en/latest/specifications/externally-managed-environments/ <-- something with this idk
+    
+    if i 
+    'source ~/.hermes/hermes-agent/venv/bin/activate' and then use 'hermes update' all works correct
+    without it, it creates mess, what looks for me, simple like a missing management of define the correct python env before start working and result operate inside a wrong python source folder or something like it.
+    but i have close nothing understand of python stuff, can be all wrong.
+    some one with general basic understand, i think, can detect the real reason for this easy. for me it feels easy like a missing check if we are inside the correct env folder
+
+[2026-06-05T11:31:34.799000+00:00] yunofoot (id=1512418604950487123)
+    It’s a thought that sometimes, it‘s too painful to patch the elements that work properly right away, even though we need to solve it...
+
+[2026-06-05T11:58:35.889000+00:00] kinh0. (id=1512425404294500363)
+    i'm doing something here for you
+    [reply to bluepeer msg=1512415423809851542]
+
+[2026-06-05T11:58:43.331000+00:00] bluepeer (id=1512425435508768978)
+    i mean, i know, that related to my personal choice, to only use local inference open models, i am unable to use the core features like "in-build memory", "skill create" or "title generation" , related to bad design choices that makes it impossible currently, but have a identical entry point that use the correct required software packets, is a fundamental requirement
+
+[2026-06-05T12:19:01.246000+00:00] bluepeer (id=1512430543814262904)
+    link broken (it inside link)
+
+[2026-06-05T12:19:47.707000+00:00] yunofoot (id=1512430738685825024)
+    oh holy
+
+[2026-06-05T12:19:52.488000+00:00] bluepeer (id=1512430758738792551)
+    😉
+
+[2026-06-05T12:19:54.944000+00:00] yunofoot (id=1512430769040265327)
+    thx sir
+
+[2026-06-05T12:20:12.120000+00:00] bluepeer (id=1512430841081495583)
+    general, the small thinks ^^
+
+[2026-06-05T12:20:21.441000+00:00] yunofoot (id=1512430880176738424)
+    I just suddenly realized that my PR is weird again. Thank you!
+
+[2026-06-05T12:20:25.087000+00:00] yunofoot (id=1512430895469035622)
+    wwwww
+
+[2026-06-05T12:20:32.951000+00:00] bluepeer (id=1512430928452911144)
+    a missing space can change the world
+
+[2026-06-05T12:24:25.418000+00:00] yunofoot (id=1512431903490179263)
+    It seems that for the deepseek provider, you should use chr(10) instead of \n literal to avoid problems.
+
+[2026-06-05T12:24:31.463000+00:00] bluepeer (id=1512431928844882051)
+    there are many small issues like the title generator auxilary, it use a maxtoken value, that does not work with think models, can be overwriten by config.yaml with bigger value, but then you run  into the next issue, not using the general timeout values every other implementations use
+
+[2026-06-05T12:25:03.573000+00:00] bluepeer (id=1512432063523979436)
+    local inference user like it realy ^^
+
+[2026-06-05T12:25:47.452000+00:00] bluepeer (id=1512432247565975692)
+    titel generation, background skill create, memory create and many kanban features not work with local inference , related to this small kind of design issues
+
+[2026-06-05T12:26:12.572000+00:00] yunofoot (id=1512432352926896320)
+    DS4 uses patch tools incorrectly quite often, and it turns out this stems from this issue. This is close to a special case where it requires a separate command to the LLM to fix, so I am struggling to figure out how to fix it.
+
+[2026-06-05T12:27:02.339000+00:00] yunofoot (id=1512432561664819342)
+    Does anyone have a good idea about this problem?
+
+[2026-06-05T12:28:13.112000+00:00] tdamre (id=1512432858508038304)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/39807
+    [embed] fix(termux): scope frontend npm installs by adybag14-cyber · Pull ... https://github.com/NousResearch/hermes-agent/pull/39807
+
+[2026-06-05T12:38:47.746000+00:00] kyssta69 (id=1512435520356094034)
+    https://github.com/NousResearch/hermes-agent/pull/39745
+    
+    Fixes #39704. When Gateway Session Hygiene creates a temporary AIAgent for compression, it didn't pass the session_db parameter, causing _compress_context to skip session rotation. This meant compressed messages overwrote the original transcript in the same session, permanently deleting the originals. The fix passes session_db=self._session_db to the hygiene agent so compression can properly rotate to a new session, preserving the original messages.
+    [embed] fix(gateway): pass session_db to hygiene agent for proper session r... https://github.com/NousResearch/hermes-agent/pull/39745
+
+[2026-06-05T12:49:35.120000+00:00] iborazzi (id=1512438235639320616)
+    Hey everyone! I’ve just opened a PR to fix a UX issue in the hermes version command.
+    
+    Currently, when users check out a release tag (detached HEAD), the CLI incorrectly reports that they are "N commits behind" because it tries to compare HEAD against origin/main. I've added a git symbolic-ref check to handle this properly, so it now returns 0 (up to date) when in a detached state.
+    
+    Check it out here:
+    https://github.com/NousResearch/hermes-agent/pull/39776
+    [embed] fix(version): suppress false 'commits behind' warning on detached H... https://github.com/NousResearch/hermes-agent/pull/39776
+
+[2026-06-05T13:08:09.535000+00:00] bluepeer (id=1512442909834870794)
+    Question: Somebody knows why /goal Judge fails?
+    ```
+    2026-06-05 15:01:56,112 INFO [20260605_121130_75c538] agent.conversation_loop: API call #9: model=qwen3.6-35b-a3b provider=lmstudio in=36270 out=749 total=37019 latency=84.1s
+    2026-06-05 15:01:56,154 INFO [20260605_121130_75c538] tools.terminal_tool: Manually cleaned up environment for task: 20260605_121130_75c538
+    2026-06-05 15:01:56,531 INFO [20260605_121130_75c538] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=qwen3.6-35b-a3b api_calls=9/200 budget=9/200 tool_turns=8 last_msg_role=assistant response_len=1930 session=20260605_121130_75c538
+    2026-06-05 15:01:56,638 INFO [20260605_121130_75c538] agent.auxiliary_client: Auxiliary auto-detect: using main provider lmstudio (qwen3.6-35b-a3b)
+    2026-06-05 15:03:27,985 INFO [20260605_121130_75c538] hermes_cli.goals: goal judge: API call failed (Request timed out.) — falling through to continue
+    2026-06-05 15:03:28,289 INFO agent.auxiliary_client: Auxiliary title_generation: using lmstudio (qwen3.6-35b-a3b) at http://192.168.0.160:1234/v1/
+    2026-06-05 15:03:28,513 INFO [20260605_121130_75c538] agent.conversation_loop: conversation turn: session=20260605_121130_75c538 model=qwen3.6-35b-a3b provider=lmstudio platform=tui history=21 msg='[Continuing toward your standing goal] Goal: you generated before in ./reference...'
+    ```
+    i can not find any reason for this "timeout"
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512442909419376640/image.png?ex=6a241bb9&is=6a22ca39&hm=d55392c1abd78d92a9d5cb0c03290edca83fb7a7807804f328f18b98a2c40599&
+
+[2026-06-05T13:08:43.767000+00:00] bluepeer (id=1512443053414285452)
+    looks like a general not implemented timeout values usage like title generations
+
+[2026-06-05T13:13:10.327000+00:00] bluepeer (id=1512444171447959684)
+    -.- yeah , the core regular issue like in any other aspects of cool features
+    
+    ```
+    2026-06-05 15:02:57 [DEBUG]
+     Received request: POST to /v1/chat/completions with body  {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a strict judge evaluating whether an auton... <Truncated in logs> ...true|false>, \"reason\": \"<one-sentence rationale>\"}"
+        },
+        {
+          "role": "user",
+          "content": "Goal:\nyou generated before in ./reference/ a knowl... <Truncated in logs> ...: 2026-06-05 15:01:56 CEST\n\nIs the goal satisfied?"
+        }
+      ],
+      "model": "qwen3.6-35b-a3b",
+      "max_tokens": 4096,
+      "temperature": 0
+    }
+    2026-06-05 15:02:57  [INFO]
+     [qwen3.6-35b-a3b] Running chat completion on conversation with 2 messages.
+    ..........................
+     1140.23.108.209 I slot print_timing: id  0 | task 218647 | n_decoded =    362, tg =  12.31 t/s
+    2026-06-05 15:03:27  [INFO]
+     [LM STUDIO SERVER] Client disconnected. Stopping generation... (If the model is busy processing the prompt, it will finish first.)
+    ```
+    stupid, not follow the basic, hardcoded crap
+
+[2026-06-05T13:14:47.490000+00:00] bluepeer (id=1512444578978992298)
+    hardcoded max_tokens , unable to avoid, , not used timeout values (related to not used, the extend for local llm's not used)
+
+[2026-06-05T13:18:12.611000+00:00] bluepeer (id=1512445439318950108)
+    I know that using local inference makes one an unpopular minority around here, but surely these settings don't work with most cloud APIs either. At least, the standard response times from OpenRouter suggest to me that it only works about 50% of the time.
+
+[2026-06-05T13:22:49.407000+00:00] bluepeer (id=1512446600285389052)
+    I really hope you don't hold this against me; I can't help it that I find fundamental problems with almost every feature out there—I'm not doing it on purpose, sorry.
+
+[2026-06-05T14:07:39.081000+00:00] yap.bi (id=1512457881595678971)
+    Just shipped a new skill for Hermes: **dependency-audit**
+    
+    It scans all project dependencies for security vulnerabilities and license issues in a single command. Supports Python, Node.js, Rust, and Ruby. Auto-detects ecosystems from lock files, cross-references findings with the OSV database, outputs a CRITICAL → LOW severity table, and drops a ready-to-run upgrade script at the end.
+    
+    Hermes already had osv_check.py doing this for MCP packages — this skill brings the same logic to all project dependencies.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/39863
+    [embed] feat(skills): add dependency-audit skill for multi-ecosystem securi... https://github.com/NousResearch/hermes-agent/pull/39863
+
+[2026-06-05T14:10:06.019000+00:00] xdarkchain (id=1512458497898451055)
+    Hello everyone!
+    How to get the developer role? I made confirmed PR.
+
+[2026-06-05T14:13:09.809000+00:00] davidg1982 (id=1512459268769579200)
+    Do more PRs? 🤷‍♂️
+    [reply to xdarkchain msg=1512458497898451055]
+
+[2026-06-05T14:13:45.519000+00:00] xdarkchain (id=1512459418548043929)
+    Ah
+    I thought it's something manual.
+    
+    Thanks!
+    [reply to davidg1982 msg=1512459268769579200]
+
+[2026-06-05T14:14:34.106000+00:00] davidg1982 (id=1512459622336696512)
+    I think so, I dunno what the threshold is. I got it randomly after a few PRs. Meh whatever, gotta on going.
+    [reply to xdarkchain msg=1512459418548043929]
+
+[2026-06-05T14:15:30.128000+00:00] xdarkchain (id=1512459857309995098)
+    Cheers
+
+[2026-06-05T14:20:35.568000+00:00] frowtek (id=1512461138418208768)
+    Both PRs are ready for review, Thanks a lot in advance for taking the tim!
+    https://github.com/NousResearch/hermes-agent/pull/39852
+    https://github.com/NousResearch/hermes-agent/pull/39859
+    [embed] fix(browser): require agent-browser CLI for dep_ensure browser read... https://github.com/NousResearch/hermes-agent/pull/39852
+    [embed] fix(packaging): ship optional-mcps in wheel+sdist; stop pyproject d... https://github.com/NousResearch/hermes-agent/pull/39859
+

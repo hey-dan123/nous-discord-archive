@@ -31,3 +31,7 @@
     1. The CLI plugin didn't appear after installation
     2. There's no plugin to select in the dashboard
 
+[2026-06-05T13:07:02.805000+00:00] _123321_ (id=1512442629948834045)
+    thanks for the feedback, i'll see to it
+    [reply to maksimstolpasov msg=1512377642706407554]
+

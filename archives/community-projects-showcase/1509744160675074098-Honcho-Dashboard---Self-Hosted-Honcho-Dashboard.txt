@@ -47,3 +47,6 @@
     kind of. theres a few things going  on. salespeople on slack, talking to a hermes profile slack bot that farms the work out to all the other profiles via kanban.  so that slackbot uses honcho for storing  personal preferances and profiles about the reps and their clients, it uses mnemopsyne for its  real time memory (as do the other  agents), and it uses hindsight to get information about orders and clients. hindsight is also used on the dev side for cross session memory.
     [reply to hydro._ msg=1510001802257367240]
 
+[2026-06-05T11:35:43.313000+00:00] captain_sandy (id=1512419647293755392)
+    <@613497609738256431> thanks so much for making this! Finally i can now see why my Honcho was not working properly, and it looks awesome as well
+

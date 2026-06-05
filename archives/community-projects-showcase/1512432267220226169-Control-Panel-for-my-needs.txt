@@ -1,0 +1,25 @@
+# Thread 'Control Panel for my needs' in forum #community-projects-showcase
+# thread_id=1512432267220226169 forum_id=1316137596535177246
+# Started 2026-06-05T14:46:43.673047+00:00
+
+[2026-06-05T12:25:52.138000+00:00] dev_wizard._60822 (id=1512432267220226169)
+    I know this is a common thing for people to do and for good reason, I find myself getting lost between what I need to check and what I can ignore on a day to day basis. I have several mid sized projects going from discord bots to larger websites.
+    
+    Currently my control panel works for what it does, everything is made to keep what I need in 1 place and I still have ways to go on it(I'm currently planning out a project manager that watches the git repos, files, allows me to keep notes and directly ask ai about my plans and exploring the large obsidian vaults each of these projects hold)
+    
+    Anyways, the images. Feel free to give your opinions or things you think can be added(I'm sure there are things that I do without realising that can be handled on this)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512432267220226169/1512432267828396134/image.png?ex=6a2411d0&is=6a22c050&hm=e1ffaa44ff7878fdf210bd1fd0054dd42ae3700cdc74e6e21474c931e29c7315&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512432267220226169/1512432268440899745/image.png?ex=6a2411d0&is=6a22c050&hm=8680f5ab7ff41af9f12abaf9261c11636339875c4532ddd4942c0af801f66f33&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512432267220226169/1512432268977901598/image.png?ex=6a2411d0&is=6a22c050&hm=412f76d76e543c5245f0dfeadc1431c157142f2e657a955fc06627a652a9875e&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512432267220226169/1512432269640335600/image.png?ex=6a2411d0&is=6a22c050&hm=1b2220e581b4bead1d3f94af40533e5e5da07a125f5653f1d4f85dac93149e77&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512432267220226169/1512432270278000692/image.png?ex=6a2411d0&is=6a22c050&hm=d3aa83c0e53a58303518cf97abf3da6dfbcd8a69b277270b7e4a933dee14274a&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512432267220226169/1512432270756286556/image.png?ex=6a2411d0&is=6a22c050&hm=131ca0ac7efdd46052e8702685611a9c3cd31ddb60592e23a9f848d5331463ea&
+
+[2026-06-05T12:27:28.540000+00:00] dev_wizard._60822 (id=1512432671559782510)
+    Oh and the model/ai hub..
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512432267220226169/1512432669278077049/image.png?ex=6a24122f&is=6a22c0af&hm=09a79fb765e3cbf0a715a892774411a27db2e3cf150991f973132e53fb21bcf4&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512432267220226169/1512432669802102854/image.png?ex=6a241230&is=6a22c0b0&hm=5d0c3b0034836f7492485f720c96aeabded5b79f571ae3ffa1fa53738c09f3e4&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512432267220226169/1512432670292967454/image.png?ex=6a241230&is=6a22c0b0&hm=0eb7cb3ba77c9b2fed37c5cc5b5c1a4d8c3b3d647ae086ff89f261dbf469abb0&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512432267220226169/1512432670666395831/image.png?ex=6a241230&is=6a22c0b0&hm=6dbc10114f6e55c9b438c6befe887fb19e8ad8ae8a3e49755a5a6cc40e8a038a&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512432267220226169/1512432671064592504/image.png?ex=6a241230&is=6a22c0b0&hm=050fb35dc54e4eecddb634e60b6a5968e5614a16edd4b4dca7e8e40c4ba01b2a&
+

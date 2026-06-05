@@ -74,3 +74,7 @@
     
     hope this helps！ps: I personally use kimi and deepseek, too
 
+[2026-06-05T13:18:20.675000+00:00] kai.xu (id=1512445473141686466)
+    1.1 out
+    add location setting and weather, now the agent will know what the current weather is if you set the location in the config file~
+
