@@ -524,3 +524,7 @@
     idk i haven't tested mnemosyne
     [reply to lordfunks3375 msg=1511404396620156989]
 
+[2026-06-05T16:46:07.278000+00:00] twindenis (id=1512497761864388710)
+    depends on what you want to do, for the average user I would say mnemosyne, for someone who wants strong but slower memory so far this one/noxem but the devil is in the details, isnt it? so because both will be improving, I would say they have different approaches on memory, so pick whichever.
+    [reply to lordfunks3375 msg=1511404396620156989]
+

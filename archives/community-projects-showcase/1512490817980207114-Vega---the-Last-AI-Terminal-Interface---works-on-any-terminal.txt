@@ -1,0 +1,16 @@
+# Thread 'Vega - the Last AI Terminal Interface (*works on any terminal*)' in forum #community-projects-showcase
+# thread_id=1512490817980207114 forum_id=1316137596535177246
+# Started 2026-06-05T19:51:51.973677+00:00
+
+[2026-06-05T16:18:31.727000+00:00] sauel (id=1512490817980207114)
+    A small thing I've been working on. I've long been playing with different kinds of AI interfaces and I spend considerable amounts of time thinking about optimal & next-gen interfaces. 
+    
+    For AI in the terminal, I believe this is it.
+    [attachment] vega-4-discord.mp4 https://cdn.discordapp.com/attachments/1512490817980207114/1512490818492039309/vega-4-discord.mp4?ex=6a244857&is=6a22f6d7&hm=6f31bc1c27e1a2ba0edb481c0ff258754686daed8f003ea880510a9af19791ac&
+
+[2026-06-05T16:40:41.077000+00:00] sauel (id=1512496393678356661)
+    Vega - The Last AI Terminal Interface (*works on any terminal*)
+
+[2026-06-05T16:40:54.636000+00:00] sauel (id=1512496450548797550)
+    Vega - the Last AI Terminal Interface (*works on any terminal*)
+

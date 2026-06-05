@@ -3191,3 +3191,59 @@
 [2026-06-05T13:14:36.906000+00:00] _123321_ (id=1512444534586605679)
     ``/terminal`` is such a life saver 😄
 
+[2026-06-05T17:00:00.152000+00:00] avidfuturist (id=1512501255191396443)
+    Yeah I use that all the time too! Credit to <@1426121324169789481> I believe for that awesome feature!
+    [reply to _123321_ msg=1512444534586605679]
+
+[2026-06-05T17:51:14.066000+00:00] pinched_nerve (id=1512514148121051146)
+    /terminal
+
+[2026-06-05T17:51:18.789000+00:00] pinched_nerve (id=1512514167930617857)
+    nope - doesn't do  anything. 😄
+
+[2026-06-05T17:52:01.622000+00:00] pinched_nerve (id=1512514347585372241)
+    I wonder... if the profile is set up to use a non-local workspace (such as docker or ssh), does "/terminal" still work?
+
+[2026-06-05T17:58:44.428000+00:00] avidfuturist (id=1512516037076062400)
+    Hmm weird, I’ll take a look and see what might be going on
+
+[2026-06-05T18:13:00.593000+00:00] avidfuturist (id=1512519628092608522)
+    Do you have a workspace selected? If so I think you might be right. I captured the issue here https://github.com/nesquena/hermes-webui/issues/3673
+    [reply to pinched_nerve msg=1512514347585372241]
+
+[2026-06-05T18:14:00.118000+00:00] avidfuturist (id=1512519877758550119)
+    Captured the issue here https://github.com/nesquena/hermes-webui/issues/3599
+    [reply to necrosis._. msg=1512177127288602809]
+
+[2026-06-05T18:15:55.437000+00:00] necrosis._. (id=1512520361441230899)
+    Nicee wait let me try to provide u all the things needed
+    [reply to avidfuturist msg=1512519877758550119]
+
+[2026-06-05T18:17:03.965000+00:00] avidfuturist (id=1512520648868630558)
+    Thanks the more info you can send me the easier this will be to investigate and fix
+    [reply to necrosis._. msg=1512520361441230899]
+
+[2026-06-05T18:17:55.559000+00:00] necrosis._. (id=1512520865269682309)
+    I havent used after some recent updates u pushed is there a chance, pushed something related?
+    [reply to avidfuturist msg=1512520648868630558]
+
+[2026-06-05T18:24:01.973000+00:00] avidfuturist (id=1512522402121122004)
+    I’ll let you know when it’s likely been fixed so you can test, I don’t think it’s addressed yet
+    [reply to necrosis._. msg=1512520865269682309]
+
+[2026-06-05T18:24:29.075000+00:00] necrosis._. (id=1512522515795279982)
+    Ok then commenting the details
+    [reply to avidfuturist msg=1512522402121122004]
+
+[2026-06-05T18:27:27.929000+00:00] pinched_nerve (id=1512523265963458600)
+    not really surprised it doesn't work, and I don't think it _should_ work.  That remote shell is supposed to be isolated.  Better if /terminal just doesn't work (with err message) in those cases.
+    [reply to avidfuturist msg=1512519628092608522]
+
+[2026-06-05T18:35:52.013000+00:00] necrosis._. (id=1512525380244865125)
+    Added details also, in the main comment u tagged someone else i dont go by the same name on github
+    [reply to avidfuturist msg=1512522402121122004]
+
+[2026-06-05T18:37:19.290000+00:00] avidfuturist (id=1512525746311266466)
+    All good, thanks
+    [reply to necrosis._. msg=1512525380244865125]
+

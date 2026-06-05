@@ -11,3 +11,10 @@
     [attachment] desktop-2560w.avif https://cdn.discordapp.com/attachments/1512147408090566726/1512147408459661373/desktop-2560w.avif?ex=6a230884&is=6a21b704&hm=0f35e34ce844efc8f8dcf3645af47afd82b1281fec3e4dd77c11250fda62e44f&
     [embed] GitHub - elkimek/hermes-fluxer-plugin: Standalone Fluxer platform p... https://github.com/elkimek/hermes-fluxer-plugin
 
+[2026-06-05T17:14:55.312000+00:00] .elkim (id=1512505009764569230)
+    two weeks or less 🙂
+    [attachment] Screenshot_2026-06-05_19-08-32.png https://cdn.discordapp.com/attachments/1512147408090566726/1512505009483284480/Screenshot_2026-06-05_19-08-32.png?ex=6a24558f&is=6a23040f&hm=92140ed86e1f20775d4cdea44b0a8649a3446da636845a8e67725ac27e814621&
+
+[2026-06-05T17:44:28.449000+00:00] .elkim (id=1512512446840045701)
+    Voice chat working 🙂 Actually talking to my Hermes in real-time. With quirks, needs polishing but damn 😅
+

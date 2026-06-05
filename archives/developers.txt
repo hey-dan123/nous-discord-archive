@@ -25590,3 +25590,176 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(browser): require agent-browser CLI for dep_ensure browser read... https://github.com/NousResearch/hermes-agent/pull/39852
     [embed] fix(packaging): ship optional-mcps in wheel+sdist; stop pyproject d... https://github.com/NousResearch/hermes-agent/pull/39859
 
+[2026-06-05T14:54:18.503000+00:00] kyssta69 (id=1512469623222571171)
+    https://github.com/NousResearch/hermes-agent/pull/39896
+    
+    The denormalized sessions.message_count column can lag behind the actual messages table after a partial write, crash, or race condition, causing session search/browse to report message_count=0 and empty preview for sessions that actually had persisted messages. This computes message_count via a correlated subquery on the messages table in list_sessions_rich and _get_session_rich_row, overriding the stale denormalized value.
+    [embed] fix(state): compute message_count from messages table (#39734) by k... https://github.com/NousResearch/hermes-agent/pull/39896
+
+[2026-06-05T14:55:05.046000+00:00] kyssta69 (id=1512469818438320271)
+    i got it after my 10/12 PRs got accepted at one go (small/big bug and issues fix)
+    [reply to davidg1982 msg=1512459622336696512]
+
+[2026-06-05T14:55:23.357000+00:00] kyssta69 (id=1512469895240089743)
+    so i guess you have to prove you can be useful or make useful contributions
+
+[2026-06-05T14:55:49.411000+00:00] davidg1982 (id=1512470004518617118)
+    Yay! I am useful 😛
+    [reply to kyssta69 msg=1512469895240089743]
+
+[2026-06-05T15:15:41.712000+00:00] kyssta69 (id=1512475005391212794)
+    https://github.com/NousResearch/hermes-agent/pull/39914
+    
+    **Problem**: Removed module-global _hermes_home mutation from cron _job_profile_context that leaked profile context into concurrent non-profile jobs, causing intermittent Script not found errors.
+    [embed] fix(cron): stop mutating module-global _hermes_home in profile cont... https://github.com/NousResearch/hermes-agent/pull/39914
+
+[2026-06-05T16:48:48.946000+00:00] _hwrd_ (id=1512498439949385749)
+    https://github.com/NousResearch/hermes-agent/pull/39946
+    
+    Problem: FileSyncManager.sync() bumped its rate-limit clock even when the sync failed, so the rollback's "retry next cycle" got skipped — one network blip left the remote with stale files for up to 5s on the next command. 
+    
+    Fix: don't advance the clock on failure.
+    [embed] fix(file-sync): don't rate-limit retry after a failed sync cycle by... https://github.com/NousResearch/hermes-agent/pull/39946
+
+[2026-06-05T16:57:50.230000+00:00] snaplap_24896 (id=1512500710258901183)
+    Hey folks 👋 I have a small bug fix PR that’s been approved but still waiting for a merge — would appreciate if a maintainer could take a look!
+    
+    PR #38968: fix(desktop): read composer text from DOM on Enter submit to avoid stale state
+    https://github.com/NousResearch/hermes-agent/pull/38968
+    
+    Fixes #38923 — the Enter key not submitting on first press in the Desktop composer. The fix reads text from the DOM node instead of the stale React draft state. Only 1 file changed, +9/-2, already approved by @tonydwb. Thanks!
+    [embed] fix(desktop): read composer text from DOM on Enter submit to avoid ... https://github.com/NousResearch/hermes-agent/pull/38968
+
+[2026-06-05T16:58:41.574000+00:00] kyssta69 (id=1512500925611376691)
+    https://github.com/NousResearch/hermes-agent/pull/39914
+    
+    **Problem**: Non-profile cron jobs intermittently failed with wrong profile script path because _job_profile_context mutated a module-global _hermes_home that concurrent non-profile jobs could see.
+    The module-global _hermes_home was shared across all threads, but profile and non-profile jobs run concurrently in separate thread pools, so a profile job's mutation bled into parallel jobs.
+    Replaced the mutation with a ContextVar so each job's contextvars.copy_context() slice stays isolated.
+    [embed] fix(cron): stop mutating module-global _hermes_home in profile cont... https://github.com/NousResearch/hermes-agent/pull/39914
+
+[2026-06-05T17:12:15.842000+00:00] yunofoot (id=1512504340898648338)
+    It‘s great that 4 of my PRs are merged!
+
+[2026-06-05T17:30:15.384000+00:00] .elkim (id=1512508868825972938)
+    guys I made the voice chat working 👀 I'm actually talking to my Hermes with all context and memory over Fluxer in realtime
+    [reply to .elkim msg=1512307145708797952]
+
+[2026-06-05T18:07:17.259000+00:00] yap.bi (id=1512518188045434880)
+    Bug Fix Summary — display.show_reasoning ignored by API server
+    
+    Issue: #7556 | Open for: 55 days | PR: #40005
+    
+    What was broken
+    
+    The display.show_reasoning config option — which exposes the model's internal reasoning trace alongside its response — was fully implemented in the TUI gateway but completely absent from the OpenAI-compatible REST API server (gateway/platforms/api_server.py). The words show_reasoning, last_reasoning, and any related logic had zero occurrences in the file.
+    
+    Who was affected
+    
+    Every user running Hermes connected to an OpenAI-compatible client — Open WebUI, Continue.dev, any custom API integration — who had display.show_reasoning: true set in their config. Their setting was silently ignored; no reasoning output was ever returned regardless of configuration.
+    
+    What we fixed
+    
+    Four targeted changes in a single file:
+    
+    Config read — load_config() is now called at request time to read display.show_reasoning (fail-open: defaults to false on any error).
+    History sanitisation — Incoming assistant messages are stripped of <think>…</think> blocks before being sent to the agent, preventing prior reasoning output from polluting the next turn's context.
+    Non-streaming — When reasoning is available, the response is prefixed with <think>\n{reasoning}\n</think>\n\n, the format natively supported by Open WebUI's "Show Thinking" feature.
+    Streaming — After all content deltas are flushed, a custom event: hermes.reasoning SSE event is emitted carrying the reasoning as JSON. Clients that don't recognise it silently ignore it per the SSE spec.
+    No behaviour change for any user with show_reasoning: false (the default).
+    
+    https://github.com/NousResearch/hermes-agent/pull/40005
+    [embed] fix(api-server): honour display.show_reasoning in /v1/chat/completi... https://github.com/NousResearch/hermes-agent/pull/40005
+
+[2026-06-05T18:15:13.972000+00:00] kinh0. (id=1512520187524415559)
+    I opened PR #39902 to start addressing the environment/entrypoint issues you pointed out. I kept the scope intentionally small, focused only on `hermes update`, so we can build from there if the maintainers agree with the direction. The PR body also outlines roughly 9 follow-up PRs that could cover this more consistently across the project.
+    https://github.com/NousResearch/hermes-agent/pull/39902
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512520187901907125/image.png?ex=6a2463b2&is=6a231232&hm=b6753e2db68624f2e443a0680e28bcfaea773ebc43332a3e0b22588c5279f942&
+    [reply to bluepeer msg=1512425435508768978]
+
+[2026-06-05T18:57:44.844000+00:00] iamlukethedev (id=1512530886657179781)
+    Hey guys, my name is Luke and I want to start collaborating with this project. I came from 6+ months of OpenClaw but made the switch to Hermes.
+    
+    My question is how can I start collaborating? Just pick an issue on GitHub and start working on it? Whats the best way to find out the most pressing tasks or issues so I can start working on it?
+    
+    I'm here to help. Thank you
+
+[2026-06-05T18:59:58.705000+00:00] godsboy7777 (id=1512531448110907503)
+    <@387972437901312000> this is still isue if you have not locally patched the skill.
+    
+    
+    <@387972437901312000> quick one for review when you have a gap.
+    
+    I noticed the bundled `baoyu-infographic` skill could be interpreted loosely enough that an agent may create a scripted/handmade infographic instead of actually prompting the configured Hermes `image_generate` tool.
+    
+    In our case, Hermes image gen was correctly configured to:
+    - provider: `openai-codex`
+    - model: `gpt-image-2-high`
+    
+    …but the skill guidance was not strict enough to prevent silent substitution when the agent tried to improve text readability.
+    
+    Issue:
+    https://github.com/NousResearch/hermes-agent/issues/34046
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/34047
+    
+    PR summary:
+    - Clarifies that `baoyu-infographic` must use the Hermes `image_generate` tool with the assembled prompt.
+    - States that the configured Hermes image-generation backend should not be bypassed silently.
+    - Adds guidance that if exact readable text needs HTML/SVG/Pillow overlay, the agent should tell the user before switching away from image gen.
+    - Updates both the skill and bundled docs mirror.
+    
+    CI so far:
+    - `check-common-ancestor` passed.
+    - Docs/Nix checks were still pending when I last checked.
+    
+    This is a small docs/skill-instruction fix, but I think it prevents a confusing user-facing behaviour.
+    [embed] [Bug]: baoyu infographic skill should not silently bypass image_gen... https://github.com/NousResearch/hermes-agent/issues/34046
+    [embed] fix(skills): clarify infographic image generation by GodsBoy · Pul... https://github.com/NousResearch/hermes-agent/pull/34047
+    [reply to teknium msg=1509630374198907002]
+
+[2026-06-05T19:11:42.450000+00:00] hakan_pak (id=1512534399831511201)
+    [Bug]: hermes update attempts to stop other users’ hermes-dashboard services on multi-user hosts
+     #40028 https://github.com/NousResearch/hermes-agent/issues/40028
+    
+    https://github.com/NousResearch/hermes-agent/pull/40035
+
+[2026-06-05T19:14:08.832000+00:00] aleksandr_1 (id=1512535013802119188)
+    https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+    <a:bongo_blob:1151299871274455060>
+    [reply to iamlukethedev msg=1512530886657179781]
+
+[2026-06-05T19:15:37.106000+00:00] iamlukethedev (id=1512535384050106388)
+    I saw that. I guess I’ll start with high priority big fixes but just don’t know if someone else is already working on it to avoid duplication. Not sure how you guys prevent 2 people working on the same thing
+    [reply to aleksandr_1 msg=1512535013802119188]
+
+[2026-06-05T19:23:36.834000+00:00] aleksandr_1 (id=1512537396175044678)
+    Feel free to share what you're planning to work on here. Someone might chime in and let you know they're already working on it, and then you can coordinate or even collaborate.
+    
+    Otherwise, if there aren't any open PRs related to the issue you're tackling, I wouldn't worry too much about duplication. And even if someone happens to submit a fix before you do, that's not necessarily a problem. If your solution ends up being better, the mentors will usually go with the stronger implementation.
+    <:o7:1151261546111053924>
+    [reply to iamlukethedev msg=1512535384050106388]
+
+[2026-06-05T19:33:08.300000+00:00] devorun11 (id=1512539793077178629)
+    You can share any problems you find or any plugins you're developing here, or after you fix a bug, someone else might want to solve the same bug using a different method – that's perfectly normal. teknium will review and combine all these solutions and see your contributions. Just start contributing and don't worry about the rest <:pepeok:1368671071838146692>
+    [reply to iamlukethedev msg=1512535384050106388]
+
+[2026-06-05T19:44:21.819000+00:00] drexux (id=1512542618020614204)
+    fix(commands): stop surfacing gateway-only /whoami in CLI help and autocomplete
+    #40052
+    
+    /whoami reports per-platform slash-command access tiers (admin / user / unrestricted)
+    — a messaging-gateway-only concept. Its handler lives in the gateway
+    (gateway/run.py → _handle_whoami_command, backed by gateway/slash_access.py),
+    and the docs list it only as a messaging command.
+    
+    But its registry entry in hermes_cli/commands.py was missing gateway_only=True,
+    so it leaked into the CLI's COMMANDS / COMMANDS_BY_CATEGORY dicts and showed up in
+    classic-CLI /help and autocomplete. The classic CLI has no whoami dispatch
+    branch, so actually running it printed Unknown command: /whoami — the CLI advertised a
+    command it doesn't support.
+    
+    https://github.com/NousResearch/hermes-agent/pull/40052
+    [embed] fix(commands): stop surfacing gateway-only /whoami in CLI help and... https://github.com/NousResearch/hermes-agent/pull/40052
+

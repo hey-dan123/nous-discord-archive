@@ -564,3 +564,12 @@
     I was thinking low access Ubuntu user specifically for hermes
     [embed] GitHub - Tecnativa/docker-socket-proxy: Proxy over your Docker sock... https://github.com/Tecnativa/docker-socket-proxy
 
+[2026-06-05T16:34:57.258000+00:00] _a_l_a_n_ (id=1512494951596953773)
+    Flaresolverr
+    [reply to magnus919 msg=1511945459126767626]
+
+[2026-06-05T18:10:49.303000+00:00] magnus919 (id=1512519077422305411)
+    https://git.brandyapple.com/magnus/agent-skills/issues/61
+    [embed] feat: FlareSolverr CLI tool + skill for bypassing Cloudflare/DDoS-G... https://git.brandyapple.com/magnus/agent-skills/issues/61
+    [reply to _a_l_a_n_ msg=1512494951596953773]
+

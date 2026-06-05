@@ -52,3 +52,12 @@
 [2026-06-05T04:34:09.396000+00:00] liftaris (id=1512313556916240576)
     The eikon updates in herm are taking me a while to get through, but I think it's going to work great with what you're cooking up here. custom states and signals that you can hook up any way you want, so Nous girl or any eikon can react to bespoke signals/events
 
+[2026-06-05T16:40:49.279000+00:00] shadowhunter9450 (id=1512496428080169101)
+    this looks super cool. putting this in my backlog to try out
+
+[2026-06-05T16:52:51.349000+00:00] .s0uthpaw (id=1512499456660996276)
+
+[2026-06-05T18:06:46.210000+00:00] isneezekittens (id=1512518057816490014)
+    Hey, I got the radio working on Apple Silicon. Submitted a PR with the missing modules if you want to check it out: https://github.com/Mudlifecrisis/evolutionary-radio/pull/1
+    [embed] feat: add working radio modules by Mudlifecrisis · Pull Request #1... https://github.com/Mudlifecrisis/evolutionary-radio/pull/1
+

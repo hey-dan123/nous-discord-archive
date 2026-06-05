@@ -1,0 +1,21 @@
+# Thread 'A plugin to control budget and costs in the loop' in forum #plugins-skills-and-skins
+# thread_id=1512516995738763516 forum_id=1485392832154832906
+# Started 2026-06-05T19:55:21.794266+00:00
+
+[2026-06-05T18:02:32.991000+00:00] nadiamermedev (id=1512516995738763516)
+    hermes-telemetry is an open-source observability plugin for Hermes Agent 
+    that tracks token usage, estimated cost, latency, tool call count, and 
+    session success/failure — all stored locally in SQLite with zero 
+    infrastructure required.
+    
+    It hooks into Hermes' native plugin system (10 hooks registered) and 
+    exposes your usage data through two slash commands: /stats and /budget. 
+    Completely invisible to the model — no extra tools in the LLM's context.
+    
+    Built for: developers running Hermes agents locally or on a VPS who want 
+    to understand and control their API spend without spinning up a full 
+    observability stack.
+    
+    → GitHub: https://github.com/nujovich/hermes-telemetry
+    [embed] GitHub - nujovich/hermes-telemetry: Observability plugin for Hermes... https://github.com/nujovich/hermes-telemetry
+

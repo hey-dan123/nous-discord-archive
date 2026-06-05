@@ -27,3 +27,7 @@
 [2026-06-03T15:51:18.863000+00:00] katsufx_ (id=1511759193521000671)
     .
 
+[2026-06-05T16:04:58.534000+00:00] katsufx_ (id=1512487407201681612)
+    https://github.com/Light-Heart-Labs/DreamServer/ updated with the current version of the Hermes agent 🫡  easy install local llm
+    [embed] GitHub - Light-Heart-Labs/DreamServer: Turn your PC, Mac, or Linux ... https://github.com/Light-Heart-Labs/DreamServer/
+

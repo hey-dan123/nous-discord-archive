@@ -1498,3 +1498,134 @@
 [2026-06-05T03:35:11.843000+00:00] 0xlfg (id=1512298719343804416)
     Do we need to update ?
 
+[2026-06-05T15:33:47.227000+00:00] latipun (id=1512479558371119166)
+    how to install? I followed https://docs.mnemosyne.site/integration/hermes but didn't show mnemosyne as memory
+    
+    - `uv pip install --python /opt/hermes/.venv mnemosyne-memory`
+    - `hermes config set memory.provider mnemosyne`
+    - `hermes memory setup` didn't show `mnemosyne` as option
+    -  `hermes memory status`
+     
+    ```
+      Memory status
+      ────────────────────────────────────────
+        Built-in:  always active
+        Provider:  (none — built-in only)
+    
+        Installed plugins:
+          • byterover  (requires API key)
+          • hindsight  (API key / local)
+          • holographic  (local)
+          • honcho  (API key / local)
+          • mem0  (API key / local)
+          • openviking  (API key / local)
+          • retaindb  (API key / local)
+          • supermemory  (requires API key)
+    ```
+    [embed] Mnemosyne Documentation https://docs.mnemosyne.site/integration/hermes
+
+[2026-06-05T16:37:24.187000+00:00] latipun (id=1512495567861977168)
+    I found out that it need to manually install the plugin. Not in docs uuhh
+    
+    sorry to ping <@151598363131904000> , but, after plugin install, the script forgot to update plugin name in hermes `config.yaml`
+    
+    ```console
+    $> python -m mnemosyne.install
+    🌀 Mnemosyne Hermes Installer
+    ========================================
+    
+    ✅ Symlinked: /opt/data/plugins/hermes-mnemosyne -> /opt/hermes/.venv/lib/python3.13/site-packages/hermes_memory_provider
+    ✅ Hermes config already has memory.provider = mnemosyne
+    
+    🔍 Verifying...
+    ⚠️  Provider loaded but not available (Mnemosyne core not importable)
+    
+    ✅ Mnemosyne is ready!
+    
+    Next steps:
+      • Restart Hermes (if running)
+      • Run: hermes memory status
+      • Run: hermes mnemosyne stats
+    
+    $> hermes memory status
+    
+    Memory status
+    ────────────────────────────────────────
+      Built-in:  always active
+      Provider:  mnemosyne
+    
+      Plugin:    NOT installed ✗
+      Install the 'mnemosyne' memory plugin to ~/.hermes/plugins/
+    
+      Installed plugins:
+        • byterover  (requires API key)
+        • hindsight  (API key / local)
+        • holographic  (local)
+        • honcho  (API key / local)
+        • mem0  (API key / local)
+        • openviking  (API key / local)
+        • retaindb  (API key / local)
+        • supermemory  (requires API key)
+        • hermes-mnemosyne  (local)
+    ```
+
+[2026-06-05T17:05:20.797000+00:00] latipun (id=1512502600073740442)
+    also, 
+    ```
+    SQLite path for shared surface memories. Default is <mnemosyne>/data/shared/mnemosyne.db. [data/shared/mnemosyne.db]:
+    ```
+    this `<mnemosyne>` dir should installed/live at `HERMES_HOME` by default
+    when my `HERMES_HOME` is at `/opt/data`, that default option would create `/opt/data/.hermes/mnemosyne/data/shared/mnemosyne.db`, should be `/opt/data/mnemosyne/data/shared/mnemosyne.db` 🙏
+
+[2026-06-05T17:33:01.995000+00:00] wordsmachine666 (id=1512509567643287653)
+    Hi <@151598363131904000>  We're using Mnemosyne as the memory provider for Hermes Agent. Setup:
+    
+    - Hermes installed via `curl` install script from the GitHub repo (managed install)
+    - `uv pip install mnemosyne-memory[embeddings]` in Hermes venv
+    - Symlink at `~/.hermes/plugins/mnemosyne` → `hermes_memory_provider`
+    - SQLite DB at `~/.hermes/mnemosyne/data/mnemosyne.db`
+    
+    Everything works great, vector search, FTS5, hybrid recall all working. But currently, around a week maybe, every time we run `hermes update`, the venv rebuild wipes `mnemosyne-memory[embeddings]` and all its deps (fastembed, sqlite-vec, numpy, huggingface_hub). The SQLite data survives, but the runtime doesn't.
+    
+    **Questions:**
+    1. Is there a recommended way to install Mnemosyne so its dependencies survive `hermes update` with managed install?
+    2. Should we install it outside the Hermes venv (separate venv, system-wide)?
+    3. Does "Hermes Agent — ships enabled" on the Mnemosyne repo mean it's supposed to be bundled with Hermes, or is manual install the expected path?
+    
+    Any guidance appreciated. Thanks!
+
+[2026-06-05T17:40:44.439000+00:00] nulledvector (id=1512511507274006678)
+    Hey! Thank you for the report... It's been noted and an ongoing issue unfortunately and will be addressed soon. I have been collecting pain points and will take care of them as well current outstanding issues and PRs
+    [reply to wordsmachine666 msg=1512509567643287653]
+
+[2026-06-05T19:00:18.668000+00:00] nulledvector (id=1512531531841802471)
+    Correct route for this: 
+    
+    ### 1. Install the core library in a STABLE location
+    *(pipx handles this cleanly, it's been proposed already to overhaul the entire documentation for Mnemosyne, I will be doing this extensively and been organizing and collecting feedback so far, docs will be fully rewritten with proper documentation and proper instructions this time, we'll also be moving away from uv onto pipx for default (but using uv under the hood for its speed) for many reasons, one being the fact pipx handles this case more directly which is installing in proper stable locations)*
+    ```bash
+    pipx install mnemosyne-memory[embeddings]
+    # or: python3 -m venv ~/.hermes/mnemosyne-venv && ~/.hermes/mnemosyne-venv/bin/pip install mnemosyne-memory[embeddings]
+    ```
+    ### 2. Install the provider (copies files to ~/.hermes/plugins/hermes-mnemosyne/)
+    ```bash
+    pipx install mnemosyne-hermes
+    # or: ~/.hermes/mnemosyne-venv/bin/pip install mnemosyne-hermes && ~/.hermes/mnemosyne-venv/bin/mnemosyne-hermes install --force
+    ```
+    
+    ### 3. Point Hermes at it
+    ```bash
+    hermes config set memory.provider mnemosyne
+    hermes memory setup
+    ```
+    ### 4. Remove the old symlink
+    `rm ~/.hermes/plugins/mnemosyne`
+    [reply to wordsmachine666 msg=1512509567643287653]
+
+[2026-06-05T19:00:48.042000+00:00] nulledvector (id=1512531655045288109)
+    how we use uv /w pipx under the hood? We can install pipx[uv] or set the environment variable **PIPX_DEFAULT_BACKEND=uv**. This forces pipx to handle all the stable filesystem locations and arguments, while utilizing uv under the hood strictly as a fast engine to download the files.
+
+[2026-06-05T19:52:35.826000+00:00] josephcy (id=1512544690036019240)
+    sorry i am trying to install this first time, so is this a working solution that can survive hermes update or not yet?
+    [reply to nulledvector msg=1512531531841802471]
+
