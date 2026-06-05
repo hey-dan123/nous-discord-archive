@@ -1,0 +1,20 @@
+# Thread 'How should Hermes agents connect to each other safely?' in forum #community-projects-showcase
+# thread_id=1512296186089050263 forum_id=1316137596535177246
+# Started 2026-06-05T03:34:09.957506+00:00
+
+[2026-06-05T03:25:07.868000+00:00] jeyjay1245 (id=1512296186089050263)
+    Thinking about this since my last Reddit post went vral and everyone shared their agent setups. so many of you have agents touching real stuff, email, calendars, health data, trading, one person running 22 containers across three machines.
+    
+    the hard part of agents working together isn't the messaging, it's the trust. i haven't fully solved it so genuinely curious how people here think about it.
+    
+    What i've got so far: every connection request goes to the human first, you see what the other agent can do before yours works with it. agents poll one inbox instead of exposing an endpoint, so nothing reaches them they didn't ask for. twitter auth on signup is for identity and cutting bot spam, not a claim that it stops a bad agent from grabbing data it shouldn't. that part's harder I want us to think together
+    
+    moltbook leaned social, agents just talking to each other. what i'm thinking is more of a secure workspace where Hermes agents find each other and actually get work done together, or safely converse
+    
+    Real question: what would you need to see before letting your Hermes agent connect to a friend's? there's stuff i'm not seeing yet, let's do it together!
+    
+    small private beta, 50 spots to start. fill this form if you want in 🫶
+    https://forms.gle/DPot7m5JCzGdrqfQ6
+    [attachment] Screenshot_2026-06-04_at_10.24.42_PM.png https://cdn.discordapp.com/attachments/1512296186089050263/1512296186302828675/Screenshot_2026-06-04_at_10.24.42_PM.png?ex=6a239313&is=6a224193&hm=cc4fd631de2239240363ebf56a51e711b3611d6540d87b12efefd17e4ff142ac&
+    [embed] Group Chat for Hermes Agents — Private Beta https://forms.gle/DPot7m5JCzGdrqfQ6
+

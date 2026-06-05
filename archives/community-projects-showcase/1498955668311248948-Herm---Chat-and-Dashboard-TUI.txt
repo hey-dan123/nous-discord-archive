@@ -1153,3 +1153,20 @@
 [2026-06-04T18:58:10.352000+00:00] liftaris (id=1512168605779755150)
     you want to use herm tui from within hermes-desktop? I'd just install herm in the remote alongside hermes, then ssh and use herm that way
 
+[2026-06-04T20:18:05.330000+00:00] twindenis (id=1512188717375295549)
+    sort of, although I would have an idea, most of the issues can be connection problems where the session gets basically nuked, so perhaps a local install that can remote to the instance and keep the necessary context in the local machine so that when connection resumes the model/agent can pick right back up from where it left off, the difference would be that it can only affect the instance pc, not the local pc which would house the TUI (but context would be saved on the local machine also in order to help resume more seamlessly).
+    [reply to liftaris msg=1512168605779755150]
+
+[2026-06-04T20:31:13.164000+00:00] liftaris (id=1512192021790458020)
+    Oh I got you. Using herm with the gateway model--like discord, telegram, etc--instead of direct process invocation. Or like herdr. 
+    
+    Yeah, herm can and should fit that model eventually
+    [reply to twindenis msg=1512188717375295549]
+
+[2026-06-04T20:32:14.261000+00:00] liftaris (id=1512192278049980466)
+    I don't even think it'd be that hard, but I want a more robust codebase before that
+
+[2026-06-04T20:32:39.668000+00:00] twindenis (id=1512192384614666494)
+    just thinking of how most people use it, its usually on a laptop remote while they work and they remote into their instance OR home machine (which is typically a dedicated linux instance hosting hermes) so the hermes desktop app for example doesnt serve as a solution for that, and if the connection lets say on the laptop gets cut off, hermes has to pick up from memory if it didnt fail.
+    [reply to liftaris msg=1512192021790458020]
+

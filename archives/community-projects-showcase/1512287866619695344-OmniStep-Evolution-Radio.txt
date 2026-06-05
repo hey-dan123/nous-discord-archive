@@ -1,0 +1,51 @@
+# Thread 'OmniStep Evolution Radio' in forum #community-projects-showcase
+# thread_id=1512287866619695344 forum_id=1316137596535177246
+# Started 2026-06-05T03:34:10.442285+00:00
+
+[2026-06-05T02:52:04.352000+00:00] .s0uthpaw (id=1512287866619695344)
+    *The idea came from watching the animated Nous Girl in the <#1498955668311248948> and is ultimately meant to fit as a component into this as well as a standalone, would love to collab with <@209037396983939072> <@1477478963608682587> <@234927066468843520> and everyone else I missed working on Eikons 🤘🤖*  
+    https://github.com/SouthpawIN/evolutionary-radio
+    https://huggingface.co/sovthpaw/omnistep-12a3b
+    
+    This is an omnimodal real time voice to voice and music assistant trained using the Darwin Family paper (cited in this skill I made showing examples of the Darwin technique in all modal 3Bs). 
+    
+    https://github.com/SouthpawIN/evolutionary-model-merging
+    
+    This is the Darwin family generational Evolution training pipeline. I have it in examples here to make multiple multimodal models. My favorite of these models I released on hugging face.
+    It is an omnimodal streaming ASR voice to voice & music assistant
+    
+    I am working on combining it with different sized models and then doing a infinite rotation of Darwin family and traditional training on Hermes agent reasoning traces tool calls a genic tool sets from nvidia's open source Library: https://huggingface.co/collections/nvidia/nemotron-pre-training-datasets 
+    Ousia Research Hermes datasets from <@1477478963608682587> 
+    Cherry picked datsets from Nous Research hf: https://huggingface.co/collections/NousResearch/atropos-artifacts
+    And a vault of my own collection from following Nous Research from the beginning.
+    I'm replacing the base multimodal model with NVIDIA's Cosmos and all of it's datasets & tutorials: https://huggingface.co/nvidia/Cosmos3-Nano
+    https://github.com/nvidia/cosmos-framework
+    and I'm building in 3 sizes:
+    **OmniStep 12A3B**
+    OmniStep (Darwin Cosmos + Darwin Qwen 3 4B x AceStep 4B)
+    This model will be used in the OmniStep Evolution Radio which I want to fit into the Herm TUI
+    
+    **OmniSenter Spark 20A4B**
+    OmniStep + LFM2.5 8A1B w/ Nemotron 3 + Hermes-Agent training and then Darwin Family + Training loops (maybe MergeKit good ones into bigger models?)
+    Projected base model for Nous Girl STS notetaker and music & vibe copilot Agent for Hermes-Agent
+    
+    **OmniSenter Flash 42A3B** (Pro pending)
+    OmniStep + Nemotron Nano Omni 30A3B
+    World Model training for future projects.
+
+[2026-06-05T03:07:20.589000+00:00] .s0uthpaw (id=1512291709596467361)
+    The OG OmniSenter for my burner-phone Skill
+    
+    https://huggingface.co/sovthpaw/Omni-Senter-3B
+    [embed] sovthpaw/Omni-Senter-3B · Hugging Face https://huggingface.co/sovthpaw/Omni-Senter-3B
+
+[2026-06-05T03:12:17.710000+00:00] .s0uthpaw (id=1512292955812270190)
+    <@249730130325274624> would love to focus down easy multimodal and NVFP4 pipelines for <#1505384448223346818> like a dedicated OmniStep/OmniSenter format that manages multimodal kwargs file types automatically
+
+[2026-06-05T03:14:07.774000+00:00] anduril0202 (id=1512293417454141510)
+    Color me intrigued, I’ll be having one of my agents work on what we can do for you here. Also will be testing out
+
+[2026-06-05T03:15:46.208000+00:00] .s0uthpaw (id=1512293830316261539)
+    My agents will talk to your agents 😂 already spinning on it (obvi, check out OmniStep)
+    [reply to anduril0202 msg=1512293417454141510]
+

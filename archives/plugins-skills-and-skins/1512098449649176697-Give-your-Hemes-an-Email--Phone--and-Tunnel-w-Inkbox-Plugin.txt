@@ -18,3 +18,10 @@
     Let me know what you guys think and how you use it!
     [embed] GitHub - inkbox-ai/hermes-agent-plugin: Inkbox platform plugin for ... https://github.com/inkbox-ai/hermes-agent-plugin
 
+[2026-06-04T20:50:15.807000+00:00] demon6660699 (id=1512196814382698588)
+    what service do u use for mail smtp?
+
+[2026-06-04T21:07:37.444000+00:00] dimavrem22_71258 (id=1512201183324799127)
+    we have our own mail server and we dont support SMTP/IMAP yet. Would you find it useful?
+    [reply to demon6660699 msg=1512196814382698588]
+

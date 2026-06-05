@@ -3147,3 +3147,19 @@
     No need broo thanks for great service
     [reply to avidfuturist msg=1512177006589120543]
 
+[2026-06-04T20:09:51.859000+00:00] pinched_nerve (id=1512186647608037738)
+    This looks entirely too much like an active text edit field with the cursor before the first character.  I keep thinking if I type I'll change the session title:
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1512186647330951288/image.png?ex=6a232d0f&is=6a21db8f&hm=fdf26831a6ab17288916b01abe4c1ac9db9edb2f89f69fe224fe51110fa9918c&
+
+[2026-06-04T21:19:08.936000+00:00] avidfuturist (id=1512204083652460724)
+    That’s a theme specific issue
+
+[2026-06-04T21:19:16.200000+00:00] avidfuturist (id=1512204114120151090)
+    I agree but try another theme and you’ll see it goes away
+
+[2026-06-04T21:19:35.175000+00:00] avidfuturist (id=1512204193706803433)
+    No idea why they added that… hope someone submits a patch to fix it
+
+[2026-06-05T01:00:53.651000+00:00] mathewsstar (id=1512259887671803988)
+    You could improve the user interface and features by using suggestions and tips from AI. Take this project to the next level!
+

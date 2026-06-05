@@ -2432,3 +2432,10 @@
 [2026-06-04T20:04:48.785000+00:00] pinched_nerve (id=1512185376423280731)
     BTW, I could probably figure this out, but I'm trying very hard to be "dumb" so I catch any problems before other people encounter them.
 
+[2026-06-04T22:47:21.778000+00:00] nulledvector (id=1512226283440832714)
+    Ty ty!
+
+[2026-06-04T22:47:25.621000+00:00] Translator Bot#1043 (id=1512226299559809197)
+    You you!
+    [reply to nulledvector msg=1512226283440832714]
+

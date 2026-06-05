@@ -24,3 +24,6 @@
     you dont even need an api key to start, the plugin will do it all for you
     [embed] GitHub - JoshMayerr/hermes-op-plugin: Hermes Agent plugin for using... https://github.com/JoshMayerr/hermes-op-plugin
 
+[2026-06-04T20:54:14.391000+00:00] demon6660699 (id=1512197815076651009)
+    —phone +14155551234 its a placeholder ? the reply work?
+

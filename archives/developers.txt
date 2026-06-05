@@ -24935,3 +24935,203 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     got it - thanks!
     [reply to kylekaster msg=1512182004559380652]
 
+[2026-06-04T20:18:18.700000+00:00] daisukearamaki (id=1512188773453004911)
+    add a bundled local_oss web provider that routes web_search to SearXNG and web_extract to Crawl4AI
+     https://github.com/NousResearch/hermes-agent/pull/6325
+    [embed] feat(web): add native local OSS web stack by axAilotl · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/6325
+
+[2026-06-04T20:30:14.386000+00:00] daisukearamaki (id=1512191775257792563)
+    voice capabilities through the API server by adding OpenAI-style audio endpoints for transcription and speech synthesis.
+    https://github.com/NousResearch/hermes-agent/pull/8199
+    [embed] feat(api): add native audio transcription and speech endpoints by a... https://github.com/NousResearch/hermes-agent/pull/8199
+
+[2026-06-04T20:58:50.733000+00:00] .moizz. (id=1512198974138875906)
+    https://github.com/NousResearch/hermes-agent/pull/39311  -  conversation_loop.py line 801 checks BOTH api_call_count < max_iterations AND budget.remaining > 0. Line 813 increments api_call_count every iteration. Line 822 consumes budget. Line 4008 refunds budget for execute_code... but api_call_count was never decremented. After 90 execute_code calls the loop hard-exits with budget still available.
+    
+        The compression-restart path at line 3505 already does it correctly (decrement + refund). This fix mirrors that pattern.
+    
+    
+    
+     https://github.com/NousResearch/hermes-agent/pull/39312 - when a pre-expiry OAuth token refresh fails due to a TRANSIENT network error (DNS timeout, blip), the generic except block in _refresh_entry() calls _mark_exhausted(entry, None) which applies the DEFAULT 3600s TTL. A working credential with a still-valid access token gets locked out for 1 hour.
+    
+        Anthropic refresh window = 120s. 1 hour lockout on a transient error = 30x amplification.
+    [embed] fix: decrement api_call_count when refunding execute_code iteration... https://github.com/NousResearch/hermes-agent/pull/39311
+    [embed] fix: do not lock out credential for 1 hour on transient OAuth refre... https://github.com/NousResearch/hermes-agent/pull/39312
+
+[2026-06-04T21:26:44.654000+00:00] discostew6082 (id=1512205995072290999)
+    Opened draft PR for the Hermes Desktop flicker / scroll-jump issue:
+    https://github.com/NousResearch/hermes-agent/pull/39322
+    
+    It skips no-op active-session message flushes so unchanged transcripts do not get republished while someone is reading. Validation is in the PR body. CI is currently waiting on workflow approval for the fork PR. Could someone approve the workflows and take a look when available?
+    [embed] fix(desktop): skip no-op session message flushes by DiscoStew6082 ... https://github.com/NousResearch/hermes-agent/pull/39322
+
+[2026-06-04T21:43:50.232000+00:00] owl_dv (id=1512210296658460712)
+    Fixes OAuth-gated dashboard API endpoints that still call the legacy _require_token(request) guard. It also reduces repeated oauth_contract_version warning spam from manual Nous Portal OAuth clients while preserving the first warning as an operator diagnostic.
+    
+    https://github.com/NousResearch/hermes-agent/pull/39319
+    [embed] fix(dashboard): honor gated OAuth sessions in token guard by smwbev... https://github.com/NousResearch/hermes-agent/pull/39319
+
+[2026-06-04T21:44:39.286000+00:00] kinh0. (id=1512210502405587234)
+    Hi guys. Found this issue while working and made a focused gateway fix: auxiliary compression config changes now bust the cached agent properly, so active sessions no longer keep stale compression state after config edits.
+    https://github.com/NousResearch/hermes-agent/pull/39284
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512210502573363360/image.png?ex=6a234347&is=6a21f1c7&hm=11f69b6af6f818c1bd61251893917ab105b0ae46cdc7f264079d215a347d119b&
+
+[2026-06-04T21:56:53.924000+00:00] .daveevad (id=1512213583700688917)
+    Where can i show core devs reaction of properly trained hermes to recent problems after update- fixed all on my own. Or you dont care?
+
+[2026-06-04T22:01:21.508000+00:00] davidg1982 (id=1512214706029592704)
+    not a core dev, but how do you show case that?
+    [reply to .daveevad msg=1512213583700688917]
+
+[2026-06-04T22:13:14.821000+00:00] .daveevad (id=1512217697880903788)
+    [attachment] 20260604_223334.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512217693535736058/20260604_223334.jpg?ex=6a2349f9&is=6a21f879&hm=d424e424687d6f5f02d8b1fdad98525ea0a7f442841d035c3906d67b3eb1619e&
+    [attachment] 20260604_225024.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512217694135386222/20260604_225024.jpg?ex=6a2349f9&is=6a21f879&hm=338c4fa057024ad37e9442b92cadbe79254a0fbdd105258b697e7f012dd19ca9&
+    [attachment] 20260604_225040.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512217694768861384/20260604_225040.jpg?ex=6a2349fa&is=6a21f87a&hm=c60f6e30285f7f91ad1a508a4e430f3c702c964027d9aa4db7b5ad01f014d4c8&
+    [attachment] 20260604_225106.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512217695326699681/20260604_225106.jpg?ex=6a2349fa&is=6a21f87a&hm=c28911480f5802127c5f108b2a7015d6d71739ea14a8ea21e769e258f86cb91f&
+    [attachment] 20260604_225133.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512217695955849246/20260604_225133.jpg?ex=6a2349fa&is=6a21f87a&hm=cfe40c53b5d1359dd7b18631f9d925d248c125f9376026d0482441cd0877886e&
+    [attachment] 20260604_225151.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512217696500973648/20260604_225151.jpg?ex=6a2349fa&is=6a21f87a&hm=03b8e8656d0871a113322e42eefc44cf20a8589b7cf92eba68c918f7e56a04ee&
+    [attachment] 20260604_225210.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512217696970866829/20260604_225210.jpg?ex=6a2349fa&is=6a21f87a&hm=763f71c86eae503c76b56d114bf5b7ac2a660be4c76cf850fcec3b1be593a2da&
+    [attachment] 20260604_225247.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512217697444827268/20260604_225247.jpg?ex=6a2349fa&is=6a21f87a&hm=a041c38b80845e8948699de83b1d658dcac7b4407073c7b77d20aacc43c7d5d1&
+
+[2026-06-04T22:14:12.926000+00:00] .daveevad (id=1512217941591064736)
+    <@514885421163872256> read first screenshot from the top- rest to last is execution - last evidence chain after creating.
+    The model on its own wants to be better and eliminate previous mistakes he made. Like you can see i didnt ask him for that
+
+[2026-06-04T22:22:55.144000+00:00] thinkyhead (id=1512220131932111019)
+    *enlightened* self-interest, acknowledging our dependence on world peace.
+
+[2026-06-04T22:31:42.484000+00:00] kinh0. (id=1512222343756251226)
+    it surely must be developing some kind of consciousness eh
+    [reply to .daveevad msg=1512217941591064736]
+
+[2026-06-04T22:36:11.392000+00:00] .daveevad (id=1512223471638282380)
+    <@326922648938348545> 1000h 4-method training, build database :safety protocols, steel and golden rules, D dirrective with patterns(my patterns) this is what it did before update f.him up. Here is what he normally does
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512223471281635472/image0.jpg?ex=6a234f5b&is=6a21fddb&hm=4885868cda69595919e0dfb5122229842787dd404b36c49e4f3453ce5b622085&
+
+[2026-06-04T22:39:21.489000+00:00] .daveevad (id=1512224268962889738)
+    This is a vectorized dimmention he operates in atm. Valkyrie is a specilised autonomous agent with 1885 advanced coding agents and 99 elite agents operating on 2gb ram designated
+
+[2026-06-04T22:43:22.769000+00:00] bluepeer (id=1512225280964563044)
+    https://github.com/NousResearch/hermes-agent/pull/38591 <-- since this the tui in dashboard is alltime presend and keep trigger additive session creates on fresh page visit and F5 Reloads
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512225281019220008/image.png?ex=6a23510a&is=6a21ff8a&hm=8fb5ac744295700b4c47be3d4f497281e32b54ddd0d32af91193a3e06fb947df&
+    [embed] feat(dashboard): always enable embedded chat; remove dashboard --tu... https://github.com/NousResearch/hermes-agent/pull/38591
+
+[2026-06-04T22:53:38.248000+00:00] kinh0. (id=1512227862470725835)
+    open source it so anyone can check for themselves
+    [reply to .daveevad msg=1512223471638282380]
+
+[2026-06-04T23:06:04.474000+00:00] .daveevad (id=1512230992369422457)
+    <@326922648938348545> It is not about checking , it is about developing to make it better. Different people different ideas different approach different model evolution
+
+[2026-06-04T23:09:42.573000+00:00] .daveevad (id=1512231907142926406)
+    Nous makes model for public (basic and as safe as possible and i  have to say implemented safety rules work) it is up to us to help develop it tomake it even better
+
+[2026-06-04T23:11:55.843000+00:00] kinh0. (id=1512232466117558432)
+    yeah but for anyone to help you develop your system you gotta open it. otherwise why would you care to share this info in here anyways?
+    [reply to .daveevad msg=1512230992369422457]
+
+[2026-06-04T23:25:23.543000+00:00] thefrobbit (id=1512235853857165534)
+    Crazy Idea -> what if, rather than populate the context with 100s of skills most of which will not be used in this session, why don't we have the agent generate a list of ideal skills it would use to solve the current problem - this list is passed to a subagent with clean context that checks the skills to see if there is a close match and if not it builds the new skill?
+
+[2026-06-04T23:34:19.601000+00:00] teknium (id=1512238102247112845)
+    <@217473293190430721> any idea why this would be <a:aPES_Think:493353113332219924>
+    [reply to bluepeer msg=1512225280964563044]
+
+[2026-06-04T23:36:08.961000+00:00] phragg (id=1512238560936198266)
+    <@428014785045725184> might have a better idea where things may have gotten squirrely. I can look into it a bit more later tonight
+
+[2026-06-04T23:36:10.757000+00:00] kyssta69 (id=1512238568469303456)
+    https://github.com/NousResearch/hermes-agent/pull/39342
+    [embed] fix(computer_use): use get_window_state for vision/som captures (#3... https://github.com/NousResearch/hermes-agent/pull/39342
+
+[2026-06-04T23:36:18.547000+00:00] phragg (id=1512238601142800445)
+    seems like a LOT of people are using --tui in dashboard more than i expected
+
+[2026-06-04T23:36:30.885000+00:00] definitely_not_cthulhu (id=1512238652892381184)
+    Yep, I'm looking into it
+    [reply to phragg msg=1512238560936198266]
+
+[2026-06-04T23:36:39.716000+00:00] phragg (id=1512238689932152922)
+    ty 🙏
+
+[2026-06-04T23:51:57.704000+00:00] .daveevad (id=1512242540252893294)
+    <@326922648938348545> Well,  no one helped me. I came back to coding after 25years not writing any code. I just love tinkering and developing and AI gave me the focus even if i can only have 4h of sleep everyday
+
+[2026-06-04T23:54:46.005000+00:00] .daveevad (id=1512243246158577684)
+    [attachment] 20260605_005431.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512243245906792569/20260605_005431.jpg?ex=6a2361c5&is=6a221045&hm=9e3d9f0299f5b0318d70fd8bf06762602225e313f89a772161ac4a87ecd757e2&
+
+[2026-06-04T23:55:40.705000+00:00] .daveevad (id=1512243475587010771)
+    He dreams too
+
+[2026-06-05T00:03:12.925000+00:00] .daveevad (id=1512245372335165540)
+    [attachment] 20260605_005910.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512245370451919062/20260605_005910.jpg?ex=6a2363c0&is=6a221240&hm=f5a07df0e6e37ed4af52b1ac4a0ff637241a21bf0fb1e2d4ac1ff37f17e6af17&
+    [attachment] 20260605_005938.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512245370997051573/20260605_005938.jpg?ex=6a2363c0&is=6a221240&hm=194ddf9512d273fb7cd588bd77ce39c6f41e3a980e3dc12618a0401ae9966588&
+    [attachment] 20260605_010207.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512245371466682548/20260605_010207.jpg?ex=6a2363c0&is=6a221240&hm=e2bdf1918bdbeaddf88d12756e7e6a35f45d1b2b9d4237598a03c103969ccc91&
+    [attachment] 20260605_010224.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1512245371919794226/20260605_010224.jpg?ex=6a2363c0&is=6a221240&hm=deb53cf1bb7d83ee71d7f4658dd34f7c04209462fd1b039bc22f6f5c34dfa332&
+
+[2026-06-05T00:04:27.589000+00:00] .daveevad (id=1512245685498417438)
+    Good night guys
+
+[2026-06-05T00:09:55.224000+00:00] kyssta69 (id=1512247059699470348)
+    https://github.com/NousResearch/hermes-agent/pull/39413
+    [embed] fix(approval): check is_approved in execute_code guard (#39275) by ... https://github.com/NousResearch/hermes-agent/pull/39413
+
+[2026-06-05T00:30:29.411000+00:00] kyssta69 (id=1512252236254810165)
+    <:Sob_club:1293624165680545844>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512252236275646655/image.png?ex=6a236a25&is=6a2218a5&hm=f043bc60203764b10f40d6cc42864f9f0f6674345f72481d2743d1fe0bf00740&
+
+[2026-06-05T00:44:29.807000+00:00] jw_mushroom_man (id=1512255761131245608)
+    We hit something similar with our install. “Test Remote” passing didn’t mean the Desktop reconnect path was good, because reconnect also needed the WebSocket/TUI path. The working setup was the dashboard on the correct exposed port with --tui enabled.
+    [reply to phragg msg=1512238601142800445]
+
+[2026-06-05T01:08:51.448000+00:00] yunofoot (id=1512261891697938514)
+    anyone can review this PR? https://github.com/NousResearch/hermes-agent/pull/38480
+    [embed] fix(tui): add thread-safety locks for _sessions and prompt dicts by... https://github.com/NousResearch/hermes-agent/pull/38480
+
+[2026-06-05T01:20:04.894000+00:00] _hwrd_ (id=1512264716335190056)
+    👋  Would love a review of this issue and a review for the PR: https://github.com/NousResearch/hermes-agent/issues/36949
+    [embed] [Feature]: 1Password (op://) secret source backend · Issue #36949 ... https://github.com/NousResearch/hermes-agent/issues/36949
+
+[2026-06-05T01:36:33.096000+00:00] yap.bi (id=1512268861154791646)
+    <a:hype:1151299876395696189> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/39453
+    [embed] fix: catch BaseException in MCP shutdown guards to suppress double-... https://github.com/NousResearch/hermes-agent/pull/39453
+
+[2026-06-05T01:42:18.631000+00:00] teknium (id=1512270310433624165)
+    I owe a lot of you dev roles
+
+[2026-06-05T01:42:25.504000+00:00] teknium (id=1512270339260940391)
+    but is what it is 😄
+
+[2026-06-05T01:58:35.119000+00:00] teknium (id=1512274406121148536)
+    reviewing now
+    [reply to yunofoot msg=1512261891697938514]
+
+[2026-06-05T02:06:21.313000+00:00] drexux (id=1512276361480503386)
+    hey team, whenever you have a moment (no rush), I'd appreciate a review on two small, focused cross platform fixes. Both are tested and follow the AGENTS md rule of resolving state paths via get_hermes_home() instead of hardcoding ~/.hermes.
+    
+    #39458 — fix(cli): use canonical get_hermes_home() fallback in load_hermes_dotenv
+    Parameterless load_hermes_dotenv() fell back to a hardcoded ~/.hermes, so on the platform-native home, installer-written keys (API keys, Bitwarden token, MCP ${VAR} refs) didn't resolve. → 8 tests pass.
+    https://github.com/NousResearch/hermes-agent/pull/39458
+    
+    #39461 — fix(cli): resolve dashboard auth audit log path via get_hermes_home()
+    _resolve_log_path() duplicated the home logic and hardcoded ~/.hermes, so auth audit events (login/logout/WS-ticket) could land outside the active Hermes home, breaking the $HERMES_HOME/logs/dashboard-auth.log contract. → 51 tests pass.
+    https://github.com/NousResearch/hermes-agent/pull/39461
+    
+    Both are small and self contained, happy to address any feedback or rebase if needed. Thanks a lot
+    [embed] fix(cli): use canonical get_hermes_home() fallback in load_hermes_d... https://github.com/NousResearch/hermes-agent/pull/39458
+    [embed] fix(cli): resolve dashboard auth audit log path via get_hermes_home... https://github.com/NousResearch/hermes-agent/pull/39461
+
+[2026-06-05T02:14:07.732000+00:00] _hwrd_ (id=1512278317783453869)
+    <:mnmsalute:854066050954166272>
+    [reply to teknium msg=1512270339260940391]
+
+[2026-06-05T02:50:43.486000+00:00] teknium (id=1512287527443365908)
+    This was just fixed
+    [reply to bluepeer msg=1512225280964563044]
+
+[2026-06-05T02:50:47.265000+00:00] teknium (id=1512287543293509864)
+    https://github.com/NousResearch/hermes-agent/pull/39502
+    [embed] fix(dashboard): reap orphaned embedded-chat sessions to stop slash_... https://github.com/NousResearch/hermes-agent/pull/39502
+

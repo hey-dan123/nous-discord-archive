@@ -381,3 +381,20 @@
     https://github.com/yantrikos/yantrikdb-hermes-plugin/
     [embed] GitHub - yantrikos/yantrikdb-hermes-plugin: YantrikDB memory provid... https://github.com/yantrikos/yantrikdb-hermes-plugin/
 
+[2026-06-05T02:23:39.878000+00:00] spranab (id=1512280717537706015)
+    yantrikdb-hermes-plugin v0.6.0 🚀
+    
+    v0.5 made memory active; v0.6 makes it accountable — a recall quality number you can reproduce, a feedback loop that tunes ranking, and visible self-maintenance.
+    
+    🔹 Benchmarked recall — benchmarks/run_recall_bench.py runs a real embedded YantrikDB over a curated memory-QA set and scores recall@k / MRR (baseline recall@3 = 1.000, MRR = 0.928). CI-guarded, so regressions fail the build.
+    🔹 Self-tuning recall (opt-in) — pass recall(reinforce=[rid,…]) for memories that proved useful; they climb over time. Only explicit reinforcement moves ranking, so it can't entrench noise. Measured +3% MRR lift.
+    🔹 yantrikdb_hygiene (new tool) — scan for stale/duplicate/contradictory memories, then one-call consolidate-or-forget.
+    🔹 Fixes (thanks @Moodow!) — squashed a yantrikdb_relate crash in embedded mode + a sentence-transformers deprecation warning.
+    
+    All opt-in, no new deps, no engine changes — existing setups upgrade with zero behaviour change.
+    
+    
+    pip install -U yantrikdb-hermes-plugin
+    Full notes: https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.6.0
+    [embed] Release v0.6.0 — Prove it, then tune it · yantrikos/yantrikdb-he... https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.6.0
+
