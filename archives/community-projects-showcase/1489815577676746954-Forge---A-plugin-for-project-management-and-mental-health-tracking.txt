@@ -124,3 +124,7 @@
     That's very interesting, health is a bit tricky for iOS would love to check once it has a testflight link too
     [reply to _albertjames msg=1500562814257856734]
 
+[2026-06-05T23:07:46.586000+00:00] _albertjames (id=1512593808523657247)
+    You can join the beta here https://testflight.apple.com/join/BDC7nuMk
+    [embed] Join the Forge Companion beta https://testflight.apple.com/join/BDC7nuMk
+

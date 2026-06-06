@@ -17,3 +17,6 @@
     [embed] GitHub - ThaungThanHan/hermes-omnivoice: Omnivoice TTS Plugin for H... https://github.com/ThaungThanHan/hermes-omnivoice
     [embed] GitHub - k2-fsa/OmniVoice: High-Quality Voice Cloning TTS for 600+ ... https://github.com/k2-fsa/OmniVoice
 
+[2026-06-06T01:27:30.124000+00:00] geordieben (id=1512628971630755862)
+    <@595353420957876247> Right up your street
+

@@ -25763,3 +25763,82 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/40052
     [embed] fix(commands): stop surfacing gateway-only /whoami in CLI help and... https://github.com/NousResearch/hermes-agent/pull/40052
 
+[2026-06-05T20:09:07.602000+00:00] colmeio_66868 (id=1512548849846059190)
+    one key is to give the agents vision so it stops guessing and starts knowing...
+    if the agent can't emulate and check the paths, it is not efficient (speed/accuracy)
+    once you give the agents dept vision, it stops failing....
+
+[2026-06-05T20:13:46.696000+00:00] yap.bi (id=1512550020451139615)
+    cc: <@387972437901312000>
+    [reply to yap.bi msg=1512518188045434880]
+
+[2026-06-05T20:28:13.818000+00:00] iamlukethedev (id=1512553657424679165)
+    Awesome. Thank you so much. Now let’s get to work
+    [reply to devorun11 msg=1512539793077178629]
+
+[2026-06-05T20:47:08.952000+00:00] yap.bi (id=1512558418521493564)
+    https://github.com/NousResearch/hermes-agent/pull/40030
+    
+    https://github.com/NousResearch/hermes-agent/pull/40048
+    
+    https://github.com/NousResearch/hermes-agent/pull/40049
+    
+    https://github.com/NousResearch/hermes-agent/pull/40056
+    
+    https://github.com/NousResearch/hermes-agent/pull/40057
+    
+    https://github.com/NousResearch/hermes-agent/pull/40058
+    
+    https://github.com/NousResearch/hermes-agent/pull/40059
+    
+    https://github.com/NousResearch/hermes-agent/pull/40060
+    [embed] fix(write_file): accept file_path/file_content as aliases for path/... https://github.com/NousResearch/hermes-agent/pull/40030
+    [embed] fix(file_sync): don't advance rate-limit clock on failed sync cycle... https://github.com/NousResearch/hermes-agent/pull/40048
+    [embed] fix(system_prompt): resolve Model/Provider header from live config ... https://github.com/NousResearch/hermes-agent/pull/40049
+    [embed] fix(image_routing): include stripped custom:<name> key in supports_... https://github.com/NousResearch/hermes-agent/pull/40056
+    [embed] fix(openviking): auto-start openviking-server when health check fai... https://github.com/NousResearch/hermes-agent/pull/40057
+
+[2026-06-05T21:06:40.715000+00:00] tdamre (id=1512563333251989564)
+    <@387972437901312000> fixes acer aspire one linux machines so they can also run hermes agent https://github.com/NousResearch/hermes-agent/pull/40120
+    [embed] fix(installer): gate Linux i686 Python bootstrap by adybag14-cyber ... https://github.com/NousResearch/hermes-agent/pull/40120
+
+[2026-06-05T21:49:35.688000+00:00] thechaosalchemist (id=1512574133471416542)
+    found + fixed a UI bug in the desktop app where you couldnt respond to the agent if you had put your laptop to sleep.
+    
+    https://github.com/NousResearch/hermes-agent/pull/40135
+    [embed] fix(desktop): recover chat after sleep/wake by revalidating the cac... https://github.com/NousResearch/hermes-agent/pull/40135
+
+[2026-06-05T23:27:14.740000+00:00] nftpoetrist (id=1512598708116783225)
+    PR #40175 — google-gemini-cli users (OAuth / Code Assist) were hitting silent tool call truncation loops. When no output cap was configured, gemini_cloudcode_adapter.py omitted maxOutputTokens entirely — Gemini then applies a low internal default, cuts the response mid-tool-call with finishReason=MAX_TOKENS, and Hermes retries 3× before refusing the incomplete call. PR #39730 already fixed this in gemini_native_adapter.py with a 65535 fallback; this ports the same one-liner to the cloudcode path that was missed.
+    https://github.com/NousResearch/hermes-agent/pull/40175
+    [embed] fix(gemini): default maxOutputTokens in cloudcode adapter (sibling ... https://github.com/NousResearch/hermes-agent/pull/40175
+
+[2026-06-06T00:00:29.330000+00:00] pinched_nerve (id=1512607074033340588)
+    "Low hanging fruit"  (It just needs a documentation update):  https://github.com/NousResearch/hermes-agent/issues/40183
+    [embed] [Bug]: (documentation err) skill curator can modify bundled skills ... https://github.com/NousResearch/hermes-agent/issues/40183
+
+[2026-06-06T00:02:16.237000+00:00] pinched_nerve (id=1512607522433925241)
+    (I feel bad about not submitting a PR for ^^, but I'm on a tablet right now and don't trust myself to write clean markdown)
+
+[2026-06-06T00:33:18.175000+00:00] frowtek (id=1512615331968061525)
+    fix(api-server): complete browser CORS contract for PATCH and Hermes session headers - https://github.com/NousResearch/hermes-agent/pull/40171
+    fix(gateway): let /footer bypass the running-agent fast path - https://github.com/NousResearch/hermes-agent/pull/40193
+    [embed] fix(api-server): complete browser CORS contract for PATCH and Herme... https://github.com/NousResearch/hermes-agent/pull/40171
+    [embed] fix(gateway): let /footer bypass the running-agent fast path by Fro... https://github.com/NousResearch/hermes-agent/pull/40193
+
+[2026-06-06T00:54:39.006000+00:00] yap.bi (id=1512620704162648176)
+    Bug Fix: Memory Review Counter Reset on Interrupted Turns
+    
+    _turns_since_memory was being reset to 0 the moment the nudge threshold was reached — before the turn had any chance to complete. Since the background memory review is only spawned on non-interrupted turns, any interruption (Ctrl-C, network drop, stream cancel) at that point would zero the counter without ever running the review. The next attempt would then be pushed a full interval into the future instead of retrying on the next turn. In gateway deployments with frequent interruptions this caused the memory review cadence to silently degrade.
+    
+    Fix: Moved the counter reset into the spawn block so it only clears when the review is actually launched. On interruption or exception the counter is preserved and the review retries on the next eligible turn. Bug was not previously reported ' found through direct code review
+    
+    https://github.com/NousResearch/hermes-agent/pull/40212
+    [embed] fix(conversation_loop): defer _turns_since_memory reset to spawn si... https://github.com/NousResearch/hermes-agent/pull/40212
+
+[2026-06-06T01:33:23.323000+00:00] magnus919 (id=1512630453054476431)
+    I think GitHub issues need a `desktop` label now
+
+[2026-06-06T01:56:01.704000+00:00] magnus919 (id=1512636150517600376)
+    <@&1214801236323467284> spam-a-rama
+

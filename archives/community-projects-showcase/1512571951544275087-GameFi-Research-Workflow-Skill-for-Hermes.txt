@@ -1,0 +1,24 @@
+# Thread 'GameFi Research Workflow Skill for Hermes' in forum #community-projects-showcase
+# thread_id=1512571951544275087 forum_id=1316137596535177246
+# Started 2026-06-06T02:55:17.462866+00:00
+
+[2026-06-05T21:42:08.026000+00:00] berkayberksun (id=1512572255841030205)
+    I wanted to explore a small Hermes-centered workflow for a gap I noticed in Web3 gaming research.
+    
+    Hermes already has strong research and automation workflows, but I couldn’t find a dedicated workflow for structured Web3 gaming project discovery. So I opened a small research workflow skill foundation PR.
+    
+    The first version focuses on:
+    - early-stage project discovery workflow
+    - GitHub signal analysis
+    - README quality checks
+    - project risk notes
+    - WATCH / TEST / CONTACT / SKIP classification
+    - Discord-ready daily report template
+    
+    I kept this first PR intentionally small: only the skill foundation and report template, so it can be reviewed easily. Future milestones can add scanner logic, scoring automation, and scheduled report generation.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/40136
+    
+    Feedback is welcome. Thank you!
+    [embed] feat(skills): add gamefi-research workflow skill foundation by BBCr... https://github.com/NousResearch/hermes-agent/pull/40136
+

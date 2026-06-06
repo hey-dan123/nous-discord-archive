@@ -1629,3 +1629,49 @@
     sorry i am trying to install this first time, so is this a working solution that can survive hermes update or not yet?
     [reply to nulledvector msg=1512531531841802471]
 
+[2026-06-05T20:14:23.805000+00:00] nulledvector (id=1512550176097833171)
+    Yes
+    [reply to josephcy msg=1512544690036019240]
+
+[2026-06-05T20:20:25.800000+00:00] josephcy (id=1512551694414909621)
+    I asked gpt to explained too haha
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1512551694121173113/image.png?ex=6a248109&is=6a232f89&hm=78b710e535d8c013f590c79bcc365a76cb6dacb06851e56b3d3fcd4a34c55dca&
+
+[2026-06-05T20:20:29.301000+00:00] josephcy (id=1512551709099163708)
+    and i installed
+
+[2026-06-05T20:23:17.029000+00:00] nulledvector (id=1512552412601254010)
+    No worries no need to feel sorry and be welcomed hope it works out well for you! ✨
+
+[2026-06-05T20:23:31.166000+00:00] nulledvector (id=1512552471896002640)
+    There you go!!
+    [reply to josephcy msg=1512551694414909621]
+
+[2026-06-05T20:44:33.476000+00:00] josephcy (id=1512557766408147135)
+    ok i notice hermes still didnt use the plugin
+    ```
+    root@hermes:~# hermes memory status
+    
+    Memory status
+    ────────────────────────────────────────
+      Built-in:  always active
+      Provider:  mnemosyne
+    
+      Plugin:    NOT installed ✗
+      Install the 'mnemosyne' memory plugin to ~/.hermes/plugins/
+    ```
+
+[2026-06-05T20:45:03.641000+00:00] josephcy (id=1512557892929196032)
+    this does not copy the files to ~/.hermes/plugins/hermes-mnemosyne/
+    
+    i then ran mnemosyne-hermes install --force
+    
+    It installed to:
+    /root/.hermes/plugins/mnemosyne
+    
+    also tried rename to /hermes-mnemosyne/
+    
+    Hermes memory status still says:
+    Provider: mnemosyne
+    Plugin: NOT installed
+

@@ -61,3 +61,21 @@
     Hey, I got the radio working on Apple Silicon. Submitted a PR with the missing modules if you want to check it out: https://github.com/Mudlifecrisis/evolutionary-radio/pull/1
     [embed] feat: add working radio modules by Mudlifecrisis · Pull Request #1... https://github.com/Mudlifecrisis/evolutionary-radio/pull/1
 
+[2026-06-05T21:17:49.985000+00:00] .s0uthpaw (id=1512566140373565490)
+    Pushing the pr through right now and my agent is going to continue working on the evolution Radio currently
+    [reply to isneezekittens msg=1512518057816490014]
+
+[2026-06-05T21:18:43.707000+00:00] .s0uthpaw (id=1512566365699969165)
+    This is the emerge I'm going to be starting with for the OmniSenter base
+    https://huggingface.co/sovthpaw/OmniSenter-Base-16B
+    [embed] sovthpaw/OmniSenter-Base-16B · Hugging Face https://huggingface.co/sovthpaw/OmniSenter-Base-16B
+
+[2026-06-05T21:37:09.244000+00:00] .s0uthpaw (id=1512571002658361364)
+    The idea behind this is that all three of them share the same base model which is the Qwen VL 8B. 100% matching dimensions for Cosmos and the largest AceStep so I'm using a Qwen VL 8B that I'm going to inundate with all of the training in this to be as agentic and Hermes agents slighted as possible:https://github.com/SouthpawIN/evolutionary-training
+    [embed] GitHub - SouthpawIN/evolutionary-training https://github.com/SouthpawIN/evolutionary-training
+    [reply to .s0uthpaw msg=1512566365699969165]
+
+[2026-06-05T22:30:30.123000+00:00] isneezekittens (id=1512584428117954650)
+    First was a mess, new to all this. Apologies. New one is up - https://github.com/Mudlifecrisis/evolutionary-radio/pull/2
+    [embed] Working implementation with mpv fix, skip, tests, and setup scripts... https://github.com/Mudlifecrisis/evolutionary-radio/pull/2
+

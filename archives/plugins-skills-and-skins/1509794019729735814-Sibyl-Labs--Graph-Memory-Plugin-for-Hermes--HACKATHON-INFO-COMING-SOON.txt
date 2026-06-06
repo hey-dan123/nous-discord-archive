@@ -62,3 +62,54 @@
     We’ve paid out over 400$ in bounties, with over 10 fixes shipped thanks to everyone’s feedback and support.
     [attachment] IMG_1590.jpg https://cdn.discordapp.com/attachments/1509794019729735814/1511510793949024406/IMG_1590.jpg?ex=6a20b79f&is=6a1f661f&hm=39b1d75c6cdff155158116c8f8481fa8bc39f03a1bf2d26b1cf0aae4a69f3843&
 
+[2026-06-05T22:10:31.735000+00:00] dr.kojipup (id=1512579401714237571)
+    We ran a 1:1 independent comparison against Honcho on the same dataset. 42,000 writes across 200 companies, 600 stakeholders, and 180 simulated days of agent activity. same 250-question suite, same model (Claude Sonnet 4.6) answering both. no variable changes, straight head to head.
+    
+    Full deep-dive can be found here: https://blog.sibylcap.com/beta-analysis
+    
+    **retrieval accuracy**
+    Sibyl: 243/250 (97.2%)
+    Honcho: 214/250 (85.6%)
+    
+    **context per query**
+    Sibyl: 291 tokens
+    Honcho: 1,313 tokens
+    
+    **estimated cost per run**
+    Sibyl: $0.53
+    Honcho: $1.83
+    
+    The one category where Sibyl wasn't perfect was segment classification - questions about current entity state across a large evolving set of data. Sibyl scored 41/48 there. that's a known gap in natural-language retrieval for vague or paraphrased current-state questions and it's on the roadmap.
+    Honcho dropped harder on the same category: 25/48 retrieval, 20/48 with Sonnet. the reason is the same problem amplified -- when classification requires synthesizing drift across 180 simulated days of writes, similarity retrieval degrades fast.
+    
+    *notes*
+    Segment classification is questions that ask the agent to categorize or label a chunk of data into a bucket - "what type of thing is this?" rather than "what happened with this thing?" It requires the memory layer to return structured relational context, not just the most similar blob.
+    [embed] Sibyl Memory: independent beta testing to date https://blog.sibylcap.com/beta-analysis
+
+[2026-06-05T22:29:44.293000+00:00] gumandnuts (id=1512584235892998185)
+    <@304307757043941377> sent you a friend request so I can DM you. 
+    question, are you able to import a Honcho instance in Sibyl so I can pick up where I left off there?
+
+[2026-06-05T22:39:14.978000+00:00] dr.kojipup (id=1512586629519376555)
+    short answer: no, there isnt a direct way to import the data from honcho to sibyl.
+    
+    I could imagine you could seed some of the entity files to Sibyl if you decided to keep work on an existing project for full context
+    [reply to gumandnuts msg=1512584235892998185]
+
+[2026-06-05T22:44:11.622000+00:00] gumandnuts (id=1512587873734627379)
+    I suppose I could just build up memories again from scratch. 
+    Do you yourselves have any kind of feature to export my user data?
+    [reply to dr.kojipup msg=1512586629519376555]
+
+[2026-06-05T22:47:06.375000+00:00] dr.kojipup (id=1512588606701572287)
+    we have a migrate feature, but unsure how it would work effectively with Honcho. Could you send me a DM? I can put in touch with our team to explore this
+    [reply to gumandnuts msg=1512587873734627379]
+
+[2026-06-05T22:48:11.816000+00:00] dr.kojipup (id=1512588881181278229)
+    or are you asking if we can see your data stored on sibyl? if it's that no, all your data is stored locally.
+    [reply to gumandnuts msg=1512587873734627379]
+
+[2026-06-05T22:53:02.726000+00:00] gumandnuts (id=1512590101346254888)
+    sent you dm
+    [reply to dr.kojipup msg=1512588881181278229]
+

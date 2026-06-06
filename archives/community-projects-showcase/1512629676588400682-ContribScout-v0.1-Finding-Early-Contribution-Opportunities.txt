@@ -1,0 +1,61 @@
+# Thread 'ContribScout v0.1 Finding Early Contribution Opportunities' in forum #community-projects-showcase
+# thread_id=1512629676588400682 forum_id=1316137596535177246
+# Started 2026-06-06T02:55:16.556378+00:00
+
+[2026-06-06T01:30:18.199000+00:00] sworntech (id=1512629676588400682)
+    I built ContribScout v0.1.
+    
+    ContribScout is a contributor intelligence dashboard designed to help builders find early open-source projects where useful work can still stand out.
+    
+    Instead of ranking projects by popularity, it looks for practical contribution leverage:
+    
+    • fresh repository activity
+    • open issues
+    • documentation gaps
+    • missing setup clarity
+    • beginner-friendly entry points
+    • low saturation
+    • room for meaningful first contributions
+    
+    The goal is simple:
+    
+    Find projects where a contributor can become useful early, then turn that signal into a clear next action.
+    
+    ContribScout scans GitHub signals, normalizes project data, and summarizes each opportunity with a Role Opportunity Score.
+    
+    This score is not a hype metric.
+    
+    It is focused on contribution potential:
+    where docs can improve, where setup can be tested, where issues need clarity, and where a builder can leave useful proof of work.
+    
+    I also added a local Proof Vault.
+    
+    This lets contributors save what they tried, where the proof lives, and whether the action is planned, submitted, or completed.
+    
+    For the Hermes side, v0.1 includes a Hermes skill layer for daily contribution reports.
+    
+    The current app runs as a Vercel-ready dashboard, while the Hermes skill is structured to format top opportunities into an agent-readable daily report flow.
+    
+    What’s included in v0.1:
+    
+    • live GitHub opportunity scanner
+    • Role Opportunity Score
+    • suggested contribution actions
+    • local Proof Vault
+    • sample fallback mode
+    • Hermes skill layer
+    • Vercel deployment
+    
+    This is intentionally small for the first version.
+    
+    Next steps:
+    better filters, richer issue analysis, Proof Vault export, and a cleaner Hermes daily report loop.
+    
+    Live app:
+    https://contribscout.vercel.app
+    
+    Repo:
+    https://github.com/Sworntech-dev/contribscout
+    [embed] ContribScout | Contributor Intelligence https://contribscout.vercel.app/
+    [embed] GitHub - Sworntech-dev/contribscout: Hermes-powered contributor int... https://github.com/Sworntech-dev/contribscout
+

@@ -3247,3 +3247,26 @@
     All good, thanks
     [reply to necrosis._. msg=1512525380244865125]
 
+[2026-06-05T23:57:46.041000+00:00] mathewsstar (id=1512606389149896764)
+    Thanks for the perspective, everyone! Just to clarify, my comment was simply a constructive suggestion to help elevate what is already a great project.
+
+[2026-06-06T00:18:35.696000+00:00] avidfuturist (id=1512611630582730824)
+    Thanks, appreciate that!
+    [reply to mathewsstar msg=1512606389149896764]
+
+[2026-06-06T00:21:50.355000+00:00] pinched_nerve (id=1512612447041622209)
+    <@933139410281713755> Any possibility of increasing the max number of entries in the model selection popup?  Perhaps allow the user to configure the max number of models per provider?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1512612447125635152/image.png?ex=6a24b99e&is=6a23681e&hm=47f8a58b121e3bacba860633d4e78dda2070299caa41d9b702c7c01f917ccbd8&
+
+[2026-06-06T00:27:40.704000+00:00] avidfuturist (id=1512613916512096256)
+    Good suggestion, will look into the best way to allow people to customize that
+    [reply to pinched_nerve msg=1512612447041622209]
+
+[2026-06-06T00:45:12.783000+00:00] avidfuturist (id=1512618329250988203)
+    Can track it here https://github.com/nesquena/hermes-webui/issues/3691
+    [reply to pinched_nerve msg=1512612447041622209]
+
+[2026-06-06T00:46:43.180000+00:00] pinched_nerve (id=1512618708403490936)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1512618708076466237/image.png?ex=6a24bf73&is=6a236df3&hm=baaa045cbb6302cc8d17ac9abc49850f3a891a43a36caafbaf0d16ed14fd99fe&
+    [reply to avidfuturist msg=1512618329250988203]
+

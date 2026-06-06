@@ -1,0 +1,16 @@
+# Thread 'feat(skills): add dependency-audit skill for multi-ecosystem security and license scanning' in forum #plugins-skills-and-skins
+# thread_id=1512555270839079022 forum_id=1485392832154832906
+# Started 2026-06-06T02:58:47.668794+00:00
+
+[2026-06-05T20:34:38.486000+00:00] yap.bi (id=1512555270839079022)
+    Summary
+    Adds a new dependency-audit skill under skills/software-development/ that performs end-to-end security and license auditing of a project's third-party dependencies.
+    
+    Motivation
+    The repo already ships ools/osv_check.py which queries the OSV malware database before launching MCP packages. However there is no skill that surfaces this capability to users for their own project dependencies, and no skill that wraps the ecosystem-native audit tools (pip-audit,
+    pm audit, cargo audit, �undler-audit). Users who want a dependency security check today have no structured protocol to follow.
+    
+    https://github.com/NousResearch/hermes-agent/pull/39863
+    [attachment] Ekran_goruntusu_2026-06-05_233554.png https://cdn.discordapp.com/attachments/1512555270839079022/1512555640000872558/Ekran_goruntusu_2026-06-05_233554.png?ex=6a2484b6&is=6a233336&hm=0d3742c1f133d0c815f4766e595f900051ad86933ea6e9faefbe6b698c8448f2&
+    [embed] feat(skills): add dependency-audit skill for multi-ecosystem securi... https://github.com/NousResearch/hermes-agent/pull/39863
+
