@@ -25842,3 +25842,161 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-06T01:56:01.704000+00:00] magnus919 (id=1512636150517600376)
     <@&1214801236323467284> spam-a-rama
 
+[2026-06-06T02:55:41.153000+00:00] kyssta69 (id=1512651163814592522)
+    https://github.com/NousResearch/hermes-agent/pull/40260
+    
+    **Problem**: After context compression, the agent could promote abstract pending-work items from the summary into concrete source-backed findings without re-inspecting source files. The compression summary had no guard against promoting lossy summary items into verified claims. Added an evidence guard to the compression prefix, an Evidence Provenance tracking section to the summary template, and strengthened Remaining Work language to require tool-based re-grounding.
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/40220
+    
+    **Problem**: Session titles from messages with ANSI escape sequences showed garbage like [31mRed[0m instead of the actual text. The sanitize_title() regex only stripped the ESC byte (0x1b) but left the rest of the escape sequence body visible. Added regex patterns to remove full CSI, OSC, and charset escape sequences before stripping control characters.
+    [embed] fix(compression): prevent post-compression evidence fabrication (#4... https://github.com/NousResearch/hermes-agent/pull/40260
+    [embed] fix(agent): strip full ANSI escape sequences from session titles (#... https://github.com/NousResearch/hermes-agent/pull/40220
+
+[2026-06-06T03:09:31.779000+00:00] .mkos. (id=1512654647712809112)
+    Hi, do you folks take PRs/fixes from randos? I spotted a little issue in the desktop app that bothers me quite a bit (accessibility). Alternatively, I can post it in support if you prefer.
+
+[2026-06-06T04:05:34.982000+00:00] kyssta69 (id=1512668754008604782)
+    yes! sure drop the issue it will be fixed asap
+    [reply to .mkos. msg=1512654647712809112]
+
+[2026-06-06T04:08:03.289000+00:00] .mkos. (id=1512669376053248011)
+    Do you mean submit an issue to your repo?
+    [reply to kyssta69 msg=1512668754008604782]
+
+[2026-06-06T04:08:14.657000+00:00] kyssta69 (id=1512669423733964965)
+    you can do that too, or share details here
+
+[2026-06-06T04:15:48.995000+00:00] .mkos. (id=1512671329365659718)
+    Neat - thanks!
+    
+    I think there may be a readability issue in `readableOn()`:
+    
+    https://github.com/NousResearch/hermes-agent/blob/main/apps%2Fdesktop%2Fsrc%2Fthemes%2Fcontext.tsx#L57-L71
+    
+    It currently uses a fixed luminance cutoff of `0.58` to choose between `#ffffff` and `#161616`:
+    
+    ```ts
+    return luminance > 0.58 ? '#161616' : '#ffffff'
+    ```
+    
+    This seems to be a brightness heuristic. A contrast could be a safer approach. For some built-in theme colors, such as Slate #58a6ff and Mono #9a9a9a, the heuristic chooses white text even though #161616 has much higher contrast.
+    
+    A more robust approach would be to compare the contrast ratios of the two candidate foreground colors and choose the better one:
+    
+    ```ts
+    function contrastRatio(a: number, b: number): number {
+      const lighter = Math.max(a, b)
+      const darker = Math.min(a, b)
+      return (lighter + 0.05) / (darker + 0.05)
+    }
+    
+    function readableOn(hex: string): string {
+      const rgb = hexToRgb(hex)
+      if (!rgb) return '#ffffff'
+    
+      const bg = relativeLuminance(rgb)
+      const dark = relativeLuminance([0x16, 0x16, 0x16])
+      const light = 1
+    
+      return contrastRatio(bg, dark) >= contrastRatio(bg, light)
+        ? '#161616'
+        : '#ffffff'
+    }
+    ```
+    
+    This keeps the same foreground colors but selects the one with better actual contrast. This is especially noticeable in the thinking trace UI, where small text plus fade/motion effects make low contrast harder to read.
+    [embed] hermes-agent/apps/desktop/src/themes/context.tsx at main · NousRes... https://github.com/NousResearch/hermes-agent/blob/main/apps%2Fdesktop%2Fsrc%2Fthemes%2Fcontext.tsx
+    [reply to kyssta69 msg=1512669423733964965]
+
+[2026-06-06T04:16:17.884000+00:00] kyssta69 (id=1512671450534908036)
+    ill look into it
+
+[2026-06-06T05:32:14.088000+00:00] meissa2 (id=1512690560639565906)
+    In the kanban board, is it possible to get a default dir or workdir? currently everytime I add a task, I need to manually add it. Please?
+
+[2026-06-06T05:44:17.998000+00:00] gumandnuts (id=1512693596938178571)
+    Hey, I must be an edge case because I'm using the Codex App Server (https://hermes-agent.nousresearch.com/docs/user-guide/features/codex-app-server-runtime) in Telegram and found some serious bugs related to codex's writable workspace/cwd and verbose logging. Here are PRs to fix them:
+    https://github.com/NousResearch/hermes-agent/pull/38778
+    https://github.com/NousResearch/hermes-agent/pull/38836
+    [embed] Codex App-Server Runtime (optional) | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/features/codex-app-server-runtime
+    [embed] fix(codex): seed app-server sessions with configured cwd by jplew ... https://github.com/NousResearch/hermes-agent/pull/38778
+    [embed] fix: bridge Codex app-server progress events by jplew · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/38836
+
+[2026-06-06T05:49:40.508000+00:00] kyssta69 (id=1512694949643292752)
+    https://github.com/NousResearch/hermes-agent/pull/40330
+    
+    **Problem**: Feishu card approval buttons always return 'Unauthorized approval click' in DM. The approval handler was using _allow_group_message() which is for group chat authorization, not individual operator authorization. Changed to _is_interactive_operator_authorized() which correctly validates the operator.
+    [embed] fix(feishu): approval buttons use _is_interactive_operator_authoriz... https://github.com/NousResearch/hermes-agent/pull/40330
+
+[2026-06-06T05:58:31.959000+00:00] hehe_blabla (id=1512697178710081646)
+    Hey, can new people add PRs/bugfixes. 
+    
+    I have an issue with Kimi K2.6 (using as vision model) on fireworks and it is currently broken in hermes. let me know if i can provide more details
+
+[2026-06-06T05:59:54.651000+00:00] yunofoot (id=1512697525545467995)
+    Would you like to try submitting a PR? It shouldn't be difficult to get it checked! And once you're sure, please mention the core team and ask them to review it.
+    [reply to hehe_blabla msg=1512697178710081646]
+
+[2026-06-06T06:07:00.738000+00:00] hehe_blabla (id=1512699312684142742)
+    an older open pr by someone is there at https://github.com/NousResearch/hermes-agent/pull/31637 
+    
+    i have submitted a PR(through hermes only, apologies for the ai PRs lol) with a better implementation at https://github.com/NousResearch/hermes-agent/pull/38020
+    [embed] fix(opencode-go): avoid mixed Kimi reasoning controls by Choonsiks ... https://github.com/NousResearch/hermes-agent/pull/31637
+    [embed] fix(opencode-go): never send extra_body for Kimi K2 models by Kohli... https://github.com/NousResearch/hermes-agent/pull/38020
+
+[2026-06-06T06:07:27.221000+00:00] hehe_blabla (id=1512699423761895575)
+    both are a simple 20 line fix just waiting to run the CI,(all tests passing)
+
+[2026-06-06T07:10:02.826000+00:00] lordbartok (id=1512715175910969374)
+    https://github.com/NousResearch/hermes-agent/pull/34599
+    
+    **Problem:** The planned-stop watcher fired a gateway shutdown for *any* `.gateway-planned-stop.json` marker on disk — including stale markers from other processes — causing a startup crash-loop. Not Windows-only; confirmed on Debian 12 too.
+    **Fix:** Watcher now checks `target_pid == os.getpid()` (with cross-platform start_time fallback) before firing, so it only acts on markers targeting itself.
+    Fixes #34597 · CI green · verified on Debian by imrasalghul, code-reviewed by liuhao1024. Ready for merge 🙏
+    [embed] fix(gateway): only fire planned-stop watcher for markers targeting ... https://github.com/NousResearch/hermes-agent/pull/34599
+
+[2026-06-06T07:10:37.142000+00:00] lordbartok (id=1512715319842439290)
+    https://github.com/NousResearch/hermes-agent/pull/34245
+    
+    **Problem:** When the MCP SDK is missing, `_probe_single_server` failed with an unclear error.
+    **Fix:** Fast-path `_MCP_AVAILABLE` check with an actionable message (covers pip/pipx/extras install shapes) + regression test.
+    Note: this overlaps with @LeonSGP's #34223, which has cleaner DRY factoring. I'd suggest merging #34223 and optionally cherry-picking my extra test coverage — happy to close this in its favor. Fixes #34220.
+    [embed] fix(mcp): fail fast with actionable error when mcp SDK missing (#34... https://github.com/NousResearch/hermes-agent/pull/34245
+
+[2026-06-06T07:25:14.420000+00:00] kyssta69 (id=1512718999413067917)
+    https://github.com/NousResearch/hermes-agent/pull/40330
+    
+    **Problem**: Feishu card approval buttons (Always Approve, Deny) silently reject all clicks in DM with 'Unauthorized approval click' warnings.
+    The approval handler called _allow_group_message() which checks group routing rules, not operator permissions, so it always rejects DM interactions.
+    Changed to _is_interactive_operator_authorized() which correctly checks if the operator is in the allowed users list.
+    [embed] fix(feishu): approval buttons use _is_interactive_operator_authoriz... https://github.com/NousResearch/hermes-agent/pull/40330
+
+[2026-06-06T07:58:07.511000+00:00] oscarbrey (id=1512727275156799538)
+    hey <@1190017486251376740> / <@387972437901312000> can Hermes on Telegram send messages as just new standalone messages (no reply-to / threaded replies) ? i cant figure out how to
+    [reply to godsboy7777 msg=1509184862911991878]
+
+[2026-06-06T08:20:51.337000+00:00] lordbartok (id=1512732995457519807)
+    A batch of small, focused gateway fixes — all rebased clean on current main, CI green, mergeable, each with the linked issue. Ready for review when you have a gap 🙏
+    
+    • #24881 — fix(gateway): circuit breaker on DingTalk reconnect loop to stop log storms (Fixes #24851)
+      https://github.com/NousResearch/hermes-agent/pull/24881
+    • #28606 — fix(gateway): pass merge_text=True in queue mode to prevent silent message drops (Fixes #28503)
+      https://github.com/NousResearch/hermes-agent/pull/28606
+    • #29706 — fix(gateway): normalise legacy bool reply_to_mode before Discord adapter (Fixes #29623)
+      https://github.com/NousResearch/hermes-agent/pull/29706
+    • #31359 — fix(gateway): process Feishu thread @mention-only messages instead of dropping them (Fixes #31336)
+      https://github.com/NousResearch/hermes-agent/pull/31359
+    • #32476 — fix(gateway): set source.is_bot from user.is_bot in Telegram adapter + TELEGRAM_ALLOW_BOTS (Fixes #32188)
+      https://github.com/NousResearch/hermes-agent/pull/32476
+    • #34279 — fix(gateway): clear orphaned session guard on cancel timeout (Fixes #34253)
+      https://github.com/NousResearch/hermes-agent/pull/34279
+    
+    All single-purpose, regression-tested, no config/schema/prompt-cache impact. Thanks a lot in advance! cc: <@387972437901312000>
+    [embed] fix(gateway): add circuit breaker to DingTalk reconnect loop to pre... https://github.com/NousResearch/hermes-agent/pull/24881
+    [embed] fix(gateway): pass merge_text=True in queue mode to prevent silent ... https://github.com/NousResearch/hermes-agent/pull/28606
+    [embed] fix(gateway): normalise legacy bool reply_to_mode before Discord ad... https://github.com/NousResearch/hermes-agent/pull/29706
+    [embed] fix(gateway): process Feishu thread @mention-only messages instead ... https://github.com/NousResearch/hermes-agent/pull/31359
+    [embed] fix(gateway): set source.is_bot from user.is_bot in Telegram adapte... https://github.com/NousResearch/hermes-agent/pull/32476
+

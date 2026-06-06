@@ -1,0 +1,21 @@
+# Thread 'Open Second Brain - a self-learning memory layer for Hermes' in forum #community-projects-showcase
+# thread_id=1512728432612605972 forum_id=1316137596535177246
+# Started 2026-06-06T08:31:10.375870+00:00
+
+[2026-06-06T08:02:43.470000+00:00] techmeat (id=1512728432612605972)
+    Open Second Brain gives your agent a memory it doesn't lose: everything it learns from what you do is stored as plain Markdown in your Obsidian vault - readable, editable, yours. It watches your corrections, turns them into preferences, reviews them in a nightly "dream" pass, and retires rules that stop being true.
+    
+    It plugs into Hermes natively, following the official memory-provider documentation - one line in the config, and Hermes shares the same brain with every agent you run, on every machine: a preference written on your VPS gets applied on your laptop.
+    
+    ⭐ Star it on GitHub if you find it useful: https://github.com/itechmeat/open-second-brain
+    
+    🐦 https://x.com/techmeat/status/2063162978380243214
+    
+    💬 Ongoing thread about the plugin: https://discord.com/channels/1053877538025386074/1509228633636475131
+    [attachment] o2b.mp4 https://cdn.discordapp.com/attachments/1512728432612605972/1512728437113225266/o2b.mp4?ex=6a2525a4&is=6a23d424&hm=9e110dec5d82c4ae19eedbab92f082808bf1f911be6b9e9f9e45b35d5e2de60e&
+    [embed] GitHub - itechmeat/open-second-brain: Local-first 🧠 memory for H... https://github.com/itechmeat/open-second-brain
+    [embed]  https://twitter.com/techmeat/status/2063162978380243214
+
+[2026-06-06T08:05:29.372000+00:00] techmeat (id=1512729128456163400)
+    Open Second Brain - a self-learning memory layer for Hermes
+

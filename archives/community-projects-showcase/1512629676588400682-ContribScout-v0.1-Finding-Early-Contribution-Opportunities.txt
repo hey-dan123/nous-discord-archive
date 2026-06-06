@@ -59,3 +59,16 @@
     [embed] ContribScout | Contributor Intelligence https://contribscout.vercel.app/
     [embed] GitHub - Sworntech-dev/contribscout: Hermes-powered contributor int... https://github.com/Sworntech-dev/contribscout
 
+[2026-06-06T06:01:16.153000+00:00] rostelinalise (id=1512697867389767680)
+    wew, how is the screen view/opensource repo recommendation that you've got?
+
+[2026-06-06T08:30:07.775000+00:00] sworntech (id=1512735329327644862)
+    Thanks!
+    
+    The UI is a dark dashboard with project cards, scores, suggested actions, and a local Proof Vault.
+    
+    Repo recommendations come from live GitHub scanning. ContribScout looks for recently active open-source repos, filters noise, then ranks them by contribution signals like open issues, docs gaps, README quality, beginner-friendly labels, and recent activity.
+    
+    The idea is to find where a builder can be useful early, not just what is popular.
+    [reply to rostelinalise msg=1512697867389767680]
+

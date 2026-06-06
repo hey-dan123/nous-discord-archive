@@ -88,3 +88,7 @@
 [2026-06-05T14:03:44.058000+00:00] zinkdifferent_49268 (id=1512456895837765673)
     MemoryOS
 
+[2026-06-06T07:01:42.560000+00:00] rostelinalise (id=1512713077643280566)
+    https://github.com/itechmeat/open-second-brain there is also this
+    [embed] GitHub - itechmeat/open-second-brain: Local-first 🧠 memory for H... https://github.com/itechmeat/open-second-brain
+
