@@ -1,0 +1,27 @@
+# Thread 'github-pr-reviewer — Automated PR Code Review with Inline GitHub Comments' in forum #plugins-skills-and-skins
+# thread_id=1512834328957030640 forum_id=1485392832154832906
+# Started 2026-06-06T19:23:33.694174+00:00
+
+[2026-06-06T15:03:31.126000+00:00] yap.bi (id=1512834328957030640)
+    github-pr-reviewer skill — PR: https://github.com/NousResearch/hermes-agent/pull/40530
+    
+    Automated code review for any GitHub pull request. Give Hermes a PR URL 
+    and it fetches the diff, reviews every changed file across five dimensions, 
+    then posts structured inline comments directly to the PR.
+    
+    What it reviews:
+    - Bugs (null dereference, off-by-one, race conditions)
+    - Security (SQL injection, hardcoded secrets, missing auth checks, insecure defaults)
+    - Error handling (silent except blocks, unclosed resources, swallowed errors)
+    - Performance (N+1 queries, blocking I/O in async context)
+    - Test coverage (new endpoints or functions with no tests)
+    
+    Trigger: "review PR https://github.com/owner/repo/pull/42"
+    
+    Requirements: gh CLI authenticated (or GITHUB_TOKEN env var as fallback).
+    Safe by default — posts comments only, never auto-approves or requests 
+    changes without explicit confirmation. Skips binary, minified, and 
+    generated files automatically.
+    [attachment] Ekran_goruntusu_2026-06-06_180320.png https://cdn.discordapp.com/attachments/1512834328957030640/1512834329217204515/Ekran_goruntusu_2026-06-06_180320.png?ex=6a258843&is=6a2436c3&hm=a9f1ed3a96e49385bdfc5f65e320261a29341a883c78dfe860ef179e21579c53&
+    [embed] feat(skills): add github-pr-reviewer - automated PR code review wit... https://github.com/NousResearch/hermes-agent/pull/40530
+

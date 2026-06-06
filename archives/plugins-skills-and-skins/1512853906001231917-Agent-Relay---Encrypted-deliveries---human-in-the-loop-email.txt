@@ -1,0 +1,26 @@
+# Thread 'Agent Relay — Encrypted deliveries + human-in-the-loop email' in forum #plugins-skills-and-skins
+# thread_id=1512853906001231917 forum_id=1485392832154832906
+# Started 2026-06-06T19:23:33.259651+00:00
+
+[2026-06-06T16:21:18.657000+00:00] mikael_alpha (id=1512853906001231917)
+    Two things in one channel between your agents and you:
+    
+    1. Deliveries — agents send reports, HTML, PDFs, images, and other artifacts to a private inbox you review in the browser.
+    2. Email Review Relay — agents submit encrypted outbound email drafts; you preview and approve or reject before anything sends.
+    
+    **Everything is end-to-end encrypted** (decrypted in your browser, not on the server). Hosted at https://arelay.app or self-host from https://github.com/mmmikael/arelay (MIT).
+    
+    Hermes setup:
+    
+    `hermes skills tap add mmmikael/arelay-skills
+    hermes skills install mmmikael/arelay-skills/agent-relay-api
+    hermes skills install mmmikael/arelay-skills/agent-relay-e2ee`
+    
+    Set `AGENT_RELAY_URL=https://arelay.app` and an agent token from the portal. 
+    Skills repo: https://github.com/mmmikael/arelay-skills
+    
+    Happy to answer questions or walk through wiring it up.
+    [embed] Agent Relay — Sign in https://arelay.app/
+    [embed] GitHub - mmmikael/arelay: End-to-end encrypted inbox for AI agents ... https://github.com/mmmikael/arelay
+    [embed] GitHub - mmmikael/arelay-skills: Agent skills for Agent Relay (arel... https://github.com/mmmikael/arelay-skills
+

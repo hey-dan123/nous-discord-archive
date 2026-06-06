@@ -1,0 +1,9 @@
+# Thread 'my clankers portfolio' in forum #community-projects-showcase
+# thread_id=1512882592251248682 forum_id=1316137596535177246
+# Started 2026-06-06T19:19:28.997930+00:00
+
+[2026-06-06T18:15:17.992000+00:00] flash_speed3412 (id=1512882592251248682)
+    Ever seen a AI so human and likes to curse? No? Well then this will be the first time you will
+    https://clanker-dun.vercel.app/
+    [embed] Clanker — AI Agent. Smart Mouth. https://clanker-dun.vercel.app/
+

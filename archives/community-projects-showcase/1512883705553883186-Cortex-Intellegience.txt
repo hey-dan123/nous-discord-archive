@@ -1,0 +1,24 @@
+# Thread 'Cortex Intellegience' in forum #community-projects-showcase
+# thread_id=1512883705553883186 forum_id=1316137596535177246
+# Started 2026-06-06T19:19:28.481808+00:00
+
+[2026-06-06T18:19:43.424000+00:00] flash_speed3412 (id=1512883705553883186)
+    Give your AI agent desires, curiosity, memory, creativity, and safe autonomy.
+    
+    Cortex Intelligence is a skill system that transforms any capable AI agent into something that acts like it has a mind of its own. It develops drives, explores when bored, remembers what it learned, generates original ideas, and knows when to ask for permission.
+    
+    - ⚠️ **THIS IS ORIGINALLY MADE FOR OPENCLAW, YOU MUST ASK YOUR HERMES AGENT TO  REFINE IT FOR HERMES**
+    **Learn More:** https://github.com/carbongotfound/cortex-intelligence
+    
+    ⭐ **STAR** the Github if you liked it, don't forget. This is for analytics, so I know who enjoys it, either on Github or here. I also appreciate feedback.
+    
+    🚧 This is improving over time, your feedback is appreciated.
+    [embed] GitHub - carbongotfound/cortex-intelligence https://github.com/carbongotfound/cortex-intelligence
+
+[2026-06-06T18:21:31.760000+00:00] fooned (id=1512884159947735192)
+    W
+
+[2026-06-06T19:11:14.341000+00:00] flash_speed3412 (id=1512896669799284826)
+    **This works best with the soul**
+    https://clanker-soul-site.vercel.app
+

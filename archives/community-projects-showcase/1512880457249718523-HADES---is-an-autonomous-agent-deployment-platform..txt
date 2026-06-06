@@ -1,0 +1,15 @@
+# Thread 'HADES - is an autonomous agent deployment platform.' in forum #community-projects-showcase
+# thread_id=1512880457249718523 forum_id=1316137596535177246
+# Started 2026-06-06T19:19:30.114802+00:00
+
+[2026-06-06T18:06:48.968000+00:00] gordghost (id=1512880457249718523)
+    **HADES** is an autonomous agent deployment platform. The idea is simple anyone can deploy their own fully autonomous Hermes instance in under 60 seconds, directly from a web UI. No code, no server setup, no API key management required on the user's side.
+    
+    **Stack**
+    Node.js Express backend for provisioning, Nginx + Let's Encrypt for SSL, PM2 for process management, systemd for auto-restart on reboot, and a terminal-aesthetic frontend with CRT effects and boot animation.
+    
+    Happy to answer any questions about the implementation!
+    
+    https://github.com/GordGhost/hades-agent
+    [embed] GitHub - GordGhost/hades-agent: Deploy your autonomous AI agent in ... https://github.com/GordGhost/hades-agent
+

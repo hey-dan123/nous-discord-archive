@@ -1,0 +1,21 @@
+# Thread 'I built a Docker-packaged web UI for hermes-agent because I couldn't get any suitable one for my NAS' in forum #community-projects-showcase
+# thread_id=1512881680417820732 forum_id=1316137596535177246
+# Started 2026-06-06T19:19:29.559243+00:00
+
+[2026-06-06T18:11:40.594000+00:00] skywalker2857 (id=1512881680417820732)
+    Hey everyone,
+    I've been running hermes-agent for a while and absolutely love it, but when I tried to deploy some existing web UI solutions on my UGREEN NAS via Portainer to have a friendly interface to use hermes-agent from anywhere, I ran into a wall with permission nightmares, database locking, and CORS headaches... so I ended up building my own solution.
+    Hermes Chat UI is a single Docker image that packages the Hermes Agent, an API proxy, and the web UI together. Pull it, set a few env vars, done. No separate agent install required. I'm running it on my NAS and accessing it remotely via Tailscale, which is great for my use case.
+    Highlights:
+    - Single Docker image — agent + proxy + UI, all in one
+    - Mobile-first PWA, installable on your phone
+    - Real-time streaming with the agent's thought process visible
+    - Tool approval UI — review and approve/deny tool calls from the chat
+    - Conversation persistence via SQLite
+    - Home Assistant and GitHub integrations via env vars
+    My goal with this post is to just share this with someone who might also need it. I'd be happy to get some feedback from you though.
+    Thanks!
+    GitHub: https://github.com/lukegskw/hermes-chat-ui
+    [attachment] screenshot-1.png https://cdn.discordapp.com/attachments/1512881680417820732/1512881680715612413/screenshot-1.png?ex=6a25b45c&is=6a2462dc&hm=c454177590d86604a3a663031e8dec7329d57d13c025c73f215d2e79836185e5&
+    [embed] GitHub - lukegskw/hermes-chat-ui https://github.com/lukegskw/hermes-chat-ui
+

@@ -1,0 +1,33 @@
+# Thread 'Ariadne — Memory for AI agents. Sub-millisecond search. Zero infrastructure.' in forum #community-projects-showcase
+# thread_id=1512845206456631436 forum_id=1316137596535177246
+# Started 2026-06-06T19:19:31.211802+00:00
+
+[2026-06-06T15:46:44.524000+00:00] kyssta69 (id=1512845206456631436)
+    **Description:**
+    I built a memory layer for AI agents that runs entirely locally with no daemon, no cloud, and no API keys. 311 tests, 0.03ms vector search via FAISS.
+    
+    The problem: every agent framework either uses ChromaDB (slow, no dedup), Mem0 (requires PostgreSQL + Qdrant), or rolls their own fragile SQLite tables. None of them handle the full lifecycle — storing, deduplicating, retrieving, evolving, and forgetting memories.
+    
+    What Ariadne does:
+    - 0.03ms vector search (80x faster than ChromaDB)
+    - Hybrid retrieval (BM25 + vector, fused with RRF)
+    - Auto-deduplication via MinHash LSH (catches paraphrases)
+    - Knowledge graph with BFS traversal
+    - Memory lifecycle (Ebbinghaus forgetting curve)
+    - Zero-config embeddings (auto-downloads ONNX model, works offline)
+    - Agent-first — uses your agent's own LLM, no separate API key needed
+    - 26 tool definitions for OpenAI function calling
+    - Conversation summarization, temporal facts, entity resolution
+    
+    ```python
+    from arriadne import AriadneMemory
+    
+    mem = AriadneMemory("memory.db")  # auto-detects embeddings
+    mem.remember("VPS has 4 cores, 8GB RAM", importance=0.8)
+    results = mem.recall("server specs", k=5)
+    ```
+    
+    `pip install arriadne` — https://github.com/kyssta-exe/Ariadne
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512845206456631436/1512845206985117767/image.png?ex=6a259264&is=6a2440e4&hm=fa1f9af58abaeb5490f98b81562317b9e639d86ede3761fcac3703337330a9c4&
+    [embed] GitHub - kyssta-exe/Ariadne: Next-generation AI memory system — s... https://github.com/kyssta-exe/Ariadne
+

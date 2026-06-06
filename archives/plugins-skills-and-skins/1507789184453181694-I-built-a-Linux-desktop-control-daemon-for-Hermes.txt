@@ -88,3 +88,17 @@
     Performance is pretty good — most actions are sub-100ms, screenshots under a second even on a 2014 Haswell laptop. The Unix socket keeps overhead minimal. And yeah exactly — MCP tools can call deskbrid for anything that needs actual desktop interaction: clicking buttons in apps with no API, reading screen content, responding to visual state. It’s the layer underneath MCP agents.
     [reply to tradericko msg=1511357809537581197]
 
+[2026-06-06T17:21:29.351000+00:00] coe0718 (id=1512869050349260881)
+    v0.13.0 — Action Confirmation, Agent Messaging, Unified Search
+    Latest
+    Three major features: destructive-action gating, inter-agent communication, and cross-surface search — all with live dashboard cards, MCP tools, and background TTL sweeping.
+    
+    🛡️ Action Confirmation Mode (#37) — require explicit approval before destructive actions execute. Background TTL sweeper purges stale confirmations every 30s.
+    
+    📬 Agent-to-Agent Messaging (#44) — in-process mailbox for inter-session communication with TTL-based expiry.
+    
+    🔍 Unified Search (#80) — cross-surface search across windows, apps, files, clipboard, and audit log with relevance scoring.
+    
+    https://github.com/coe0718/deskbrid/releases/tag/v0.13.0
+    [embed] Release v0.13.0 — Action Confirmation, Agent Messaging, Unified S... https://github.com/coe0718/deskbrid/releases/tag/v0.13.0
+

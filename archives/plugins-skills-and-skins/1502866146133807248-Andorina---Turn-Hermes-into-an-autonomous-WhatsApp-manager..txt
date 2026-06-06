@@ -309,3 +309,6 @@
 [2026-06-04T13:40:17.656000+00:00] vayaperson (id=1512088609094631455)
     <@1439557795627270265> is testing the basic features before the release. By the moment, we detected semantic alerts are not working, we are solving it.
 
+[2026-06-06T15:20:41.085000+00:00] rogerwongio (id=1512838648918446100)
+    i've installed it and been using it. how do i update/upgrade it?
+

@@ -18,3 +18,6 @@
 [2026-06-05T18:56:39.373000+00:00] rlobrecht (id=1512530612052037723)
     Very cool. Thank you.
 
+[2026-06-06T18:16:54.617000+00:00] txrao (id=1512882997525741669)
+    <@943469970027864064> i forgot to say the plugin looks /creates the obsidian vault in your documents folder on your phone😭 and it also has to be able to go into your storage in termux
+

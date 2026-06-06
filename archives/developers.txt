@@ -26264,3 +26264,249 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] docs(user-guide): add prompt caching to user guide by davidgut1982 ... https://github.com/NousResearch/hermes-agent/pull/36971
     [embed] fix(tools): coerce stringified booleans/integers in MCP tool args b... https://github.com/NousResearch/hermes-agent/pull/37101
 
+[2026-06-06T13:29:43.337000+00:00] frowtek (id=1512810724299116604)
+    What does this PR do?
+    AIAgent._hook_jsonable() in run_agent.py calls isinstance(value, SimpleNamespace), but SimpleNamespace was never imported — so sanitizing any hook payload that contained one raised NameError: name 'SimpleNamespace' is not defined.
+    
+    Bedrock, Codex-responses, and the auxiliary client build their response / message / tool_call objects as SimpleNamespace and hand the raw objects to the post_api_request hook. The hook call sites swallow exceptions (except Exception: pass), so the crash silently dropped the observability hook for those providers. Adding the missing import restores it. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/40509
+    [embed] fix(agent): import SimpleNamespace for hook payload sanitization by... https://github.com/NousResearch/hermes-agent/pull/40509
+
+[2026-06-06T13:47:34.523000+00:00] kyssta69 (id=1512815217178841139)
+    https://github.com/NousResearch/hermes-agent/pull/40520
+    
+    **Problem**: CLI input locks up when lazy dependency installer fires. bare input() in tools/lazy_deps.py deadlocks when prompt_toolkit owns the terminal. Detects prompt_toolkit via get_app_or_none() and uses run_in_terminal() to release the terminal before prompting.
+    [embed] fix(cli): use prompt_toolkit run_in_terminal for lazy-dep install p... https://github.com/NousResearch/hermes-agent/pull/40520
+    [reply to kyssta69 msg=1512791710709584015]
+
+[2026-06-06T13:52:45.830000+00:00] minddragon (id=1512816522895032411)
+    another very atomic commit. https://github.com/NousResearch/hermes-agent/pull/40505  - fixes windows update huge bug.
+    [embed] fix(update): auto-heal CRLF line-ending churn that bricks update on... https://github.com/NousResearch/hermes-agent/pull/40505
+
+[2026-06-06T14:54:20.128000+00:00] yap.bi (id=1512832017904173086)
+    New Skill: github-pr-reviewer
+    
+    Give Hermes a GitHub PR URL → it fetches the diff, reviews every changed 
+    file, and posts inline comments directly to the PR — like a senior dev 
+    doing a code review.
+    
+    What it checks:
+    - Bugs — null dereference, off-by-one, race conditions
+    - Security — SQL injection, hardcoded secrets, missing auth checks
+    - Error handling — silent except blocks, unclosed resources
+    - Performance — N+1 queries, blocking I/O in async
+    - Tests — new endpoints with no test coverage
+    
+    Usage: "review PR https://github.com/owner/repo/pull/42"
+    
+    Only needs `gh` CLI authenticated. Posts comments automatically, never 
+    auto-approves or requests changes without your confirmation.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/40530
+    [embed] feat(skills): add github-pr-reviewer - automated PR code review wit... https://github.com/NousResearch/hermes-agent/pull/40530
+
+[2026-06-06T15:06:14.126000+00:00] imperatormorsus (id=1512835012628709416)
+    I have a question, I am working on creating something for me (for now) I may produce a version of it for general consumption, but I need to ask... usign AI to help with the development of said programming, is there a reason why NOT to follow programming SOP? Because the AI seems to not care about it.
+
+[2026-06-06T15:07:28.548000+00:00] davidg1982 (id=1512835324777205873)
+    I like this concept. I am going to incorporate this concept into my process and see if it will add value
+    [reply to yap.bi msg=1512832017904173086]
+
+[2026-06-06T15:08:06.153000+00:00] yap.bi (id=1512835482504134667)
+    The AI doesn't ignore SOP intentionally  it just doesn't know yours 
+    unless you tell it explicitly. 
+    
+    Best approach: paste your SOP/style guide directly into the system prompt 
+    or at the start of the conversation. The more specific you are (naming 
+    conventions, error handling patterns, folder structure, etc.), the more 
+    it follows it.
+    
+    Also works well: show it an example of "good" code from your codebase 
+    and say "follow this style."
+    [reply to imperatormorsus msg=1512835012628709416]
+
+[2026-06-06T15:08:43.773000+00:00] davidg1982 (id=1512835640293855412)
+    We have a contributor.md (something to make sure AI follows), and there are tests to pass for code to be integrated into main once it is approved to be merged. Also, if you dev something for yourself that isn't part of the main, you'll have to rebase and keep that code alive. Just takes an hour or two every version to deal with. Dealing with PRs that are in main is something I am dealing with because I am running multi-agent code that is out there as a PR, but isn't in main, and I have to reconcile with that every release.
+    If I am wrong, please correct me. 🙂
+    [reply to imperatormorsus msg=1512835012628709416]
+
+[2026-06-06T15:10:40.342000+00:00] imperatormorsus (id=1512836129219674283)
+    This is what I have been doing, I actually found an old college programming book I had and I gutted it of all the "lessons" and used it as a basis for the core of "Proper SOP Programming guidelines" for specific languages" In this case Python.
+    [reply to yap.bi msg=1512835482504134667]
+
+[2026-06-06T15:11:42.652000+00:00] imperatormorsus (id=1512836390566760488)
+    Well it seems to ignore the file if it's built in hermes, because i've seen files that are well over 2500 lines when it should have been broken into sections because of functionality.
+    [reply to davidg1982 msg=1512835640293855412]
+
+[2026-06-06T15:12:15.317000+00:00] davidg1982 (id=1512836527573700668)
+    I use claude code and if I tell it to review against contributor.md, it does
+
+[2026-06-06T15:12:24.964000+00:00] yap.bi (id=1512836568036151396)
+    That's actually a solid approach  stripping a textbook down to just 
+    the conventions and using it as a living style guide works really well 
+    as a system prompt.
+    
+    <@514885421163872256> makes a good point too. If you're planning to keep it 
+    private/forked, factor in the rebase cost every release. Keeping your 
+    changes as small and focused as possible makes that a lot more manageable.
+    [reply to imperatormorsus msg=1512836129219674283]
+
+[2026-06-06T15:12:35.295000+00:00] imperatormorsus (id=1512836611367506173)
+    Where is this contributor.md file?
+    [reply to davidg1982 msg=1512836527573700668]
+
+[2026-06-06T15:12:50.912000+00:00] davidg1982 (id=1512836676869820497)
+    root of the nous hermes repo
+    [reply to imperatormorsus msg=1512836611367506173]
+
+[2026-06-06T15:12:54.079000+00:00] imperatormorsus (id=1512836690153177138)
+    That is what I'm doing, following the KISS methodology.
+    [reply to yap.bi msg=1512836568036151396]
+
+[2026-06-06T15:13:30.196000+00:00] davidg1982 (id=1512836841638723755)
+    https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+    [embed] hermes-agent/CONTRIBUTING.md at main · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+
+[2026-06-06T15:14:13.738000+00:00] davidg1982 (id=1512837024267239464)
+    I ran into an issue where I was contributing to a different software package, well, they didn't like that I used AI, and I found out that CONTRIBUTING.MD existed
+
+[2026-06-06T15:16:09.291000+00:00] imperatormorsus (id=1512837508931649718)
+    Thanks will look into that. I'm trying to create a system that will look into it's memory for guidelines on how to program, and follow some ethical guidelines as well.  I have an issue right now with how AI is being used... not as a tool but a replacement... sorry, my 2 cents.
+    [reply to davidg1982 msg=1512836841638723755]
+
+[2026-06-06T15:23:35.897000+00:00] taikimliuhong (id=1512839382133112913)
+    i have just PR please review it and accept it, It is to Urdu README file to help Pakistani developers
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512839382032191740/image.png?ex=6a258cf7&is=6a243b77&hm=52ad2d5823c701f7cb564e56a94d19ea30d32a2ebe35eba51d729f7e580a18c2&
+
+[2026-06-06T15:25:31.448000+00:00] kyssta69 (id=1512839866788872293)
+    https://github.com/NousResearch/hermes-agent/pull/40579
+    
+    **Problem**: The CLI input locks up completely when the lazy-dependency install prompt appears under prompt_toolkit (the TUI), because a bare input() deadlocks when prompt_toolkit owns the terminal.
+    The lazy_deps.py code used a bare builtin input() for the install confirmation prompt, which cannot read keystrokes when prompt_toolkit is running.
+    The fix detects whether a prompt_toolkit app is active and skips the interactive confirmation when it is, since reaching that code already means the user opted into lazy installs.
+    [embed] fix(cli): skip lazy-dep prompt when prompt_toolkit owns terminal (#... https://github.com/NousResearch/hermes-agent/pull/40579
+
+[2026-06-06T15:36:15.680000+00:00] taikimliuhong (id=1512842568893730997)
+    plase accept it after review 
+    https://github.com/NousResearch/hermes-agent/pull/40578
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1512842568998584370/image.png?ex=6a258fef&is=6a243e6f&hm=99241488c16c807f606b5143f3b156b4ec9e0660defdd36abf510cfac4bfdd07&
+    [embed] docs: add Urdu (ur-PK) translation for README by AMIK-coorporations... https://github.com/NousResearch/hermes-agent/pull/40578
+
+[2026-06-06T16:09:40.063000+00:00] bluepeer (id=1512850975885361244)
+    idk if somebody notices since to you, but the cli gives this already on board creating, regular default workdir setting ' --default-workdir'
+    [reply to meissa2 msg=1512690560639565906]
+
+[2026-06-06T16:10:35.867000+00:00] lordbartok (id=1512851209944301609)
+    A few agent/LLM-correctness fixes, all green + mergeable:
+    
+    • #29168 — fix(agent): merge consecutive assistant tool_calls before orphan-tool drop (Fixes #29148)
+      https://github.com/NousResearch/hermes-agent/pull/29168
+    • #30294 — fix(honcho): flatten multimodal list content in sync_turn (Fixes #30252)
+      https://github.com/NousResearch/hermes-agent/pull/30294
+    • #30808 — fix(agent): emit guardrail halt explanation to client stream (Fixes #30770)
+      https://github.com/NousResearch/hermes-agent/pull/30808
+    • #30809 — fix(agent): preflight body-size check for DeepSeek API (Fixes #30771)
+      https://github.com/NousResearch/hermes-agent/pull/30809
+    • #34360 — fix(agent): strip stale encrypted reasoning state on provider switch (Fixes #34205)
+      https://github.com/NousResearch/hermes-agent/pull/34360
+    • #34358 — fix(agent): emit response-shape diagnostics on empty-response retry (Fixes #34246)
+      https://github.com/NousResearch/hermes-agent/pull/34358
+    • #34523 — fix(agent): scope memory/context tools into the tool_call bridge
+      https://github.com/NousResearch/hermes-agent/pull/34523
+    
+    Thanks for taking a look 🙏
+    [embed] fix(agent): merge consecutive assistant tool_calls before orphan-to... https://github.com/NousResearch/hermes-agent/pull/29168
+    [embed] fix(honcho): flatten multimodal list content in sync_turn (#30252) ... https://github.com/NousResearch/hermes-agent/pull/30294
+    [embed] fix(agent): emit guardrail halt explanation to client stream (#3077... https://github.com/NousResearch/hermes-agent/pull/30808
+    [embed] fix(agent): preflight body-size check for DeepSeek API (#30771) by ... https://github.com/NousResearch/hermes-agent/pull/30809
+    [embed] fix(agent): strip stale encrypted reasoning state on provider switc... https://github.com/NousResearch/hermes-agent/pull/34360
+
+[2026-06-06T16:33:51.760000+00:00] aliasocracy (id=1512857064744030341)
+    Please review https://github.com/NousResearch/hermes-agent/pull/40644 - I would like to be able to use / install Mnemosyne without butchering Hermes!
+    [embed] feat: discover pipx-installed memory providers via entry points, sw... https://github.com/NousResearch/hermes-agent/pull/40644
+
+[2026-06-06T17:00:17.679000+00:00] frowtek (id=1512863716570566737)
+    What does this PR do?
+    When no agent is running, /queue had no canonical branch in the gateway's idle
+    dispatch chain. Because queue is in GATEWAY_KNOWN_COMMANDS, it also skipped
+    the unknown-command notice — so the literal /queue <prompt> text was forwarded
+    verbatim to the agent.
+    
+    Naively enqueuing in the idle path would be worse: the FIFO drain only runs at
+    the tail of a completed agent run (_dequeue_pending_event in
+    _process_message_background). With no run in flight, the queued message would
+    be stranded and never consumed.
+    
+    The fix mirrors the existing idle /steer behavior — there is no in-flight turn
+    to queue behind, so strip the prefix and run the payload now as a normal user
+    turn. An empty payload returns a usage hint.
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/40671
+    [embed] fix(gateway): dispatch /queue when session is idle by Frowtek · Pu... https://github.com/NousResearch/hermes-agent/pull/40671
+
+[2026-06-06T17:34:42.107000+00:00] gordghost (id=1512872375409180833)
+    HADES is an autonomous agent deployment platform built on top of Hermes Agent by NousResearch
+    
+    Deploy your own AI agent in 60 seconds no code, no setup. Each agent is a full isolated Hermes instance powered by MiMo-V2.5-Pro, with persistent memory, Telegram integration, and 24/7 uptime.
+    
+    https://github.com/GordGhost/hades-agent
+    [embed] GitHub - GordGhost/hades-agent: Deploy your autonomous AI agent in ... https://github.com/GordGhost/hades-agent
+
+[2026-06-06T18:25:28.750000+00:00] lordbartok (id=1512885153955975209)
+    A few more small correctness fixes — providers, pricing, and delegation. All CI green / tests passing, mergeable, each with its linked issue. Ready for review when you have a gap 🙏
+    
+    • #34263 — fix(pricing): detect per-million pricing units (fixes 1M× custom-endpoint cost overestimate) (Fixes #34256)
+      https://github.com/NousResearch/hermes-agent/pull/34263
+    • #34265 — fix(codex): translate SDK TypeError on output=None into a classified error (Fixes #33976)
+      https://github.com/NousResearch/hermes-agent/pull/34265
+    • #34380 — fix(stream): extend large-prefill TTFB exemption to direct Copilot (Fixes #34179)
+      https://github.com/NousResearch/hermes-agent/pull/34380
+    • #34369 — fix(delegate): detect credential/endpoint mismatch before sending the request (Fixes #34318, #34334)
+      https://github.com/NousResearch/hermes-agent/pull/34369
+    • #33096 — fix(gateway): forward per-run model override from POST /v1/runs to the agent (Fixes #33072)
+      https://github.com/NousResearch/hermes-agent/pull/33096
+    • #34262 — fix(utils): atomic_replace falls back to shutil on cross-fs EXDEV (Fixes #34252)
+      https://github.com/NousResearch/hermes-agent/pull/34262
+    
+    Thanks so much! I'm excited to get to contribute to such an amazing project!
+    [embed] fix(pricing): detect per-million pricing units to fix 1M× custom-e... https://github.com/NousResearch/hermes-agent/pull/34263
+    [embed] fix(codex): translate SDK TypeError on output=None to classified er... https://github.com/NousResearch/hermes-agent/pull/34265
+    [embed] fix(stream): extend large-prefill TTFB exemption to direct Copilot ... https://github.com/NousResearch/hermes-agent/pull/34380
+    [embed] fix(delegate): detect credential/endpoint mismatch before sending r... https://github.com/NousResearch/hermes-agent/pull/34369
+    [embed] fix(gateway): forward per-run model override from POST /v1/runs to ... https://github.com/NousResearch/hermes-agent/pull/33096
+
+[2026-06-06T18:42:59.703000+00:00] l_acie (id=1512889561972477973)
+    i just read the available leaks of the Poke sysprompts and found the split architecture very interesting. the added latency probably requires running smaller models to compensate but letting the user facing agent focus on personality instead of having to parse tool traces without slipping into assistant voice seems to be a huge UX boost. not sure if they have a bespoke finetuned personality model or if it’s just a wet claude.
+
+[2026-06-06T18:43:23.073000+00:00] l_acie (id=1512889659993362643)
+    this would only make sense for a message client gateway mode ofc and less for TUI/chatUI
+
+[2026-06-06T18:49:49.087000+00:00] pinkguno (id=1512891279053164645)
+    Added Russian language support to Hermes Desktop 
+    https://github.com/NousResearch/hermes-agent/pull/40701
+    [embed] feat(desktop): added Russian language by ponkalapon · Pull Request... https://github.com/NousResearch/hermes-agent/pull/40701
+
+[2026-06-06T18:54:54.504000+00:00] kyssta69 (id=1512892560065040394)
+    https://github.com/NousResearch/hermes-agent/pull/40579
+    
+    **Problem**: CLI terminal locks up completely when lazy-dep install prompt fires (the input() call deadlocks because prompt_toolkit owns the terminal).
+    tools/lazy_deps.py used a bare input() to ask the user, but prompt_toolkit intercepts keystrokes, so input() blocks forever.
+    Detects if prompt_toolkit is running and skips the interactive prompt, since the security.allow_lazy_installs gate already implies user opt-in.
+    
+    https://github.com/NousResearch/hermes-agent/pull/40579
+    
+    **Problem**: CLI input locks up when lazy-dep install prompt fires under prompt_toolkit because bare input() deadlocks. Added prompt_toolkit detection via get_app_or_none() to skip interactive confirmation when prompt_toolkit owns the terminal, since lazy installs are already gated by config flag.
+    [embed] fix(cli): skip lazy-dep prompt when prompt_toolkit owns terminal (#... https://github.com/NousResearch/hermes-agent/pull/40579
+
+[2026-06-06T18:55:54.341000+00:00] l_acie (id=1512892811039608882)
+    oh perhaps i can emulate this via kanban
+    [reply to l_acie msg=1512889561972477973]
+
+[2026-06-06T18:56:01.550000+00:00] l_acie (id=1512892841276346498)
+    without needing source patches
+
+[2026-06-06T18:56:05.619000+00:00] l_acie (id=1512892858343100447)
+    right that’s a thing now.
+

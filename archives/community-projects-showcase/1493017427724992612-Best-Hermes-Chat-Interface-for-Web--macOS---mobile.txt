@@ -3273,3 +3273,15 @@
 [2026-06-06T10:09:10.896000+00:00] _123321_ (id=1512760256583696495)
     getting an issue where i change the model but when i send a message it reverts back to the latest model that was used
 
+[2026-06-06T17:44:33.188000+00:00] avidfuturist (id=1512874854582321232)
+    Will look into it thanks
+    [reply to _123321_ msg=1512760256583696495]
+
+[2026-06-06T17:51:29.937000+00:00] avidfuturist (id=1512876602554454220)
+    Captured here https://github.com/nesquena/hermes-webui/issues/3737 - will look into fixing soon
+    [reply to _123321_ msg=1512760256583696495]
+
+[2026-06-06T18:17:07.347000+00:00] _123321_ (id=1512883050919362680)
+    told my agent to take a look https://github.com/nesquena/hermes-webui/pull/3739 hopefully there's anything useful in there
+    [reply to avidfuturist msg=1512876602554454220]
+

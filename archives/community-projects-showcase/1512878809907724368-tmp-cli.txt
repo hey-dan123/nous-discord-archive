@@ -1,0 +1,12 @@
+# Thread 'tmp-cli' in forum #community-projects-showcase
+# thread_id=1512878809907724368 forum_id=1316137596535177246
+# Started 2026-06-06T19:19:30.598541+00:00
+
+[2026-06-06T18:00:16.211000+00:00] rsks (id=1512878809907724368)
+    Universal command-line file uploader/downloader for temporary file hosts. Upload files to 15+ anonymous hosts and download from any of them.
+    
+    
+    https://github.com/evangit2/tmp-cli
+    [attachment] Screenshot_2026-06-06_135949.png https://cdn.discordapp.com/attachments/1512878809907724368/1512878810188484739/Screenshot_2026-06-06_135949.png?ex=6a25b1b0&is=6a246030&hm=be3010a984e73db69dc478f85c85ea1b5e1288b08095423d55d55010f5cfe982&
+    [embed] GitHub - evangit2/tmp-cli: Universal CLI file uploader/downloader f... https://github.com/evangit2/tmp-cli
+

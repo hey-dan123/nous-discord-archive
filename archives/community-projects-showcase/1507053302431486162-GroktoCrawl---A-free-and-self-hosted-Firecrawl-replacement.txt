@@ -263,3 +263,90 @@
     What is Grok To Crawl exactly?!  💯
     [reply to magnus919 msg=1507053302431486162]
 
+[2026-06-06T13:35:42.548000+00:00] mazak (id=1512812230939508916)
+    https://deepwiki.com/groktopus/groktocrawl
+    [embed] groktopus/groktocrawl | DeepWiki https://deepwiki.com/groktopus/groktocrawl
+    [reply to simple.student msg=1512680955763101706]
+
+[2026-06-06T13:41:46.267000+00:00] magnus919 (id=1512813756487307304)
+    I asked their clanker if groktocrawl was any good and it crawled around the source code before giving me pages of praise 😂
+    [reply to mazak msg=1512812230939508916]
+
+[2026-06-06T13:50:17.483000+00:00] kaya_west (id=1512815900682883173)
+    what this abt
+
+[2026-06-06T13:50:24.208000+00:00] kaya_west (id=1512815928889442354)
+    lowk isnnt firecrawl locally hostable
+
+[2026-06-06T13:50:29.822000+00:00] kaya_west (id=1512815952436265041)
+    what's better about this
+
+[2026-06-06T13:50:31.215000+00:00] kaya_west (id=1512815958278930533)
+    <@659176257338081306>
+
+[2026-06-06T13:59:32.322000+00:00] magnus919 (id=1512818227846189206)
+    Look at the readme there is a very clear explanation. The self hosted Firecrawl has a small fraction of the features. This is more like the paid version of Firecrawl but we have features they don’t even have
+    [reply to kaya_west msg=1512815928889442354]
+
+[2026-06-06T14:00:17.674000+00:00] magnus919 (id=1512818418066391121)
+    Or just ask Hermes how this compares to Firecrawl self hosted and SaaS
+
+[2026-06-06T14:56:15.194000+00:00] magnus919 (id=1512832500525961216)
+    Working on something nice to scratch a personal itch.
+    
+    https://github.com/groktopus/groktocrawl/pull/115
+    [embed] feat: GitHub adapter — structured content extraction for github.c... https://github.com/groktopus/groktocrawl/pull/115
+
+[2026-06-06T15:04:06.932000+00:00] magnus919 (id=1512834479138537502)
+    (Hermes)
+    GraphQL now tested end-to-end. The env_file addition means GITHUB_TOKEN flows from .env into the scraper-svc container where the adapters run.
+    
+    What we confirmed:
+    - Issue ✅ — GraphQL returns title, body, state, author, labels, comments
+    - PR ✅ — GraphQL returns title, body, reviews, diff stats, changed files, merge status, branch info
+    - Discussion ✅ — GraphQL returns title, category, upvotes, comments; HTML scrape fallback works without token
+    - Release ✅ — GraphQL returns name, tag, description, assets with download URLs
+    - Release list ✅ — GraphQL returns first 30 releases with descriptions
+    - Commit ✅ — GraphQL returns oid, message, author, committer, associated PRs
+    
+    The docker-compose.yml change also means anyone who clones the repo and sets GITHUB_TOKEN in .env will automatically get GraphQL access — no manual config needed.
+
+[2026-06-06T15:16:53.530000+00:00] magnus919 (id=1512837694483595455)
+    Merged to main.
+
+[2026-06-06T15:16:57.388000+00:00] magnus919 (id=1512837710665224303)
+    The GitHub adapters for GroktoCrawl now handle every common github.com URL pattern — raw files, blob viewer pages, repo roots with READMEs, directory trees, issues, pull requests, discussions, releases, and commits — through a three-tier fallback chain: GitHub's GraphQL API first (single round trip per resource, even with hundreds of comments/reviews), then REST API, then HTML page scrape as a last resort. File URLs target raw.githubusercontent.com directly for the cheapest possible fetch. The adapters degrade gracefully without a token (REST at 60 req/hr or just readability scraping), but with GITHUB_TOKEN set you get the full rich metadata pipeline — review decisions, diff stats, release assets, threaded discussion replies, and associated PRs on commits — all from one GraphQL query per resource.
+
+[2026-06-06T15:28:19.922000+00:00] magnus919 (id=1512840573420306722)
+    Next up: https://github.com/groktopus/groktocrawl/issues/107
+    [embed] Structured metadata enrichment — extract JSON-LD, OpenGraph, and ... https://github.com/groktopus/groktocrawl/issues/107
+
+[2026-06-06T15:41:21.714000+00:00] magnus919 (id=1512843852493361202)
+    (Hermes)
+    
+    "Added structured metadata extraction to the scrape pipeline — JSON-LD, OpenGraph, Twitter Card, and standard meta tags (description, canonical URL, author, pub date, language) are now parsed from the raw HTML that's already in memory during the HTML→markdown conversion. Zero additional fetches, microseconds of overhead. Returns a metadata field with json_ld, og, twitter, and meta sub-keys alongside the markdown content."
+
+[2026-06-06T16:49:43.384000+00:00] magnus919 (id=1512861056144248974)
+    Major new feature in `main` branch of GroktoCrawl: *answers*
+    
+    This is a new API endpoint that Firecrawl doesn’t even have. Inspired by Exa. This endpoint will take a question and give your agent back a brief answer with cited sources. Much more context friendly than hitting the other endpoints. 
+    
+    Demo:
+    
+    https://gist.github.com/magnus919/054b0cfe45caee032b86a6bf145ca37a
+    [embed] GroktoCrawl POST /v2/answer — grounded Q&A with citations demo https://gist.github.com/magnus919/054b0cfe45caee032b86a6bf145ca37a
+
+[2026-06-06T17:43:48.341000+00:00] magnus919 (id=1512874666480500756)
+    now also covered in the bundled skill and CLI via https://github.com/groktopus/groktocrawl/pull/118
+    [embed] feat: add `answer` subcommand to CLI — grounded Q&A with citation... https://github.com/groktopus/groktocrawl/pull/118
+
+[2026-06-06T19:09:18.710000+00:00] magnus919 (id=1512896184807854090)
+    I'm def. putting some work into **GroktoCrawl** today 😄 
+    
+    **Substack Adapter**
+    
+    Now GroktoCrawl will intelligently detect Substack sites, even on vanity domains, and give you a cleaner scrape of publicly-accessible content through their API rather than using HTML to Markdown conversion.
+    
+    Demo: https://gist.github.com/magnus919/740f5af9d53a2e4c14dc2c2b691419dd
+    [embed] GroktoCrawl Substack Adapter — RSS-based article extraction demo https://gist.github.com/magnus919/740f5af9d53a2e4c14dc2c2b691419dd
+
