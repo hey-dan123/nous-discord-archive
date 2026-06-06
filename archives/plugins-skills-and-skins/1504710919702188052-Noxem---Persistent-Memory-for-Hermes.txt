@@ -528,3 +528,10 @@
     depends on what you want to do, for the average user I would say mnemosyne, for someone who wants strong but slower memory so far this one/noxem but the devil is in the details, isnt it? so because both will be improving, I would say they have different approaches on memory, so pick whichever.
     [reply to lordfunks3375 msg=1511404396620156989]
 
+[2026-06-06T10:33:14.665000+00:00] myasga (id=1512766312190050304)
+    hey i use holographic now there is a way to transfer memory into? iam using Hermes locally
+
+[2026-06-06T10:33:47.933000+00:00] noxerz. (id=1512766451726159973)
+    tell your agent to do that
+    [reply to myasga msg=1512766312190050304]
+

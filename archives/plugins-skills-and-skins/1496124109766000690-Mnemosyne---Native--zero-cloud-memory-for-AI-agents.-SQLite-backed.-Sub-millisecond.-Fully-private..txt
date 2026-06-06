@@ -1675,3 +1675,46 @@
     Provider: mnemosyne
     Plugin: NOT installed
 
+[2026-06-06T10:32:42.246000+00:00] skylinx79 (id=1512766176214777938)
+    Mnemosyne was no longer detected after upgrading Hermes to the very latest version. I am now having Hermes investigate and fix the issue.
+
+[2026-06-06T10:32:48.030000+00:00] skylinx79 (id=1512766200474763335)
+    Has it happened to others?
+
+[2026-06-06T10:37:08.925000+00:00] s1arsky (id=1512767294747447317)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1512767294722277407/image.png?ex=6a2549d4&is=6a23f854&hm=7fb7bc9c33eb0bdfd4373627e4b29e0b8924978f22d583aee18300ec432afc64&
+    [reply to skylinx79 msg=1512766176214777938]
+
+[2026-06-06T10:37:50.053000+00:00] skylinx79 (id=1512767467250909264)
+    Which command is that?
+    [reply to s1arsky msg=1512767294747447317]
+
+[2026-06-06T10:38:05.599000+00:00] s1arsky (id=1512767532455563284)
+    i told hermes to check if mnemosyne is working and active
+
+[2026-06-06T10:40:28.400000+00:00] s1arsky (id=1512768131406233670)
+    but working memories not consolidated since  1st of  the month seem suspicious to me. 'mnemosyne sleep' says '  "message": "No old working memories to consolidate"' . (red. now I changed timeout to 600 as LLM consolidations take time)
+
+[2026-06-06T10:42:28.184000+00:00] s1arsky (id=1512768633816748052)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1512768633548570686/image.png?ex=6a254b14&is=6a23f994&hm=7efbde5b2cba7eadc4576b545ef28b9a864c82dd2b500d50a99f54afebbd71e1&
+
+[2026-06-06T11:25:24.962000+00:00] skylinx79 (id=1512779441607016499)
+    Hermes it fixed it for me, so all good
+
+[2026-06-06T11:25:36.054000+00:00] skylinx79 (id=1512779488130502678)
+    bTW the latest version is 3.3.0
+
+[2026-06-06T11:25:50.437000+00:00] s1arsky (id=1512779548457046036)
+    yeah i am troubleshooting my update cronjob now 😄
+    [reply to skylinx79 msg=1512779488130502678]
+
+[2026-06-06T11:26:01.614000+00:00] skylinx79 (id=1512779595336777840)
+    ok
+
+[2026-06-06T12:02:08.922000+00:00] s1arsky (id=1512788685685260398)
+    I checked - below github readme may be not right:  turning off memory tool  causes menemosyne to have no tool access
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1512788685341331478/image.png?ex=6a255dc0&is=6a240c40&hm=fed0ffaf2e564cb227b1313fe599cc87a0441c92233d5572fa0f12f6147ed50a&
+
+[2026-06-06T12:04:52.954000+00:00] s1arsky (id=1512789373685338142)
+    My way is: after hermes memory setup  , memory tool should stay enabled.  Instead:  set memory_enable and user_profile _enable - both to false in config yaml to turn off legacy memory
+

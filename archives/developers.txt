@@ -26000,3 +26000,267 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(gateway): process Feishu thread @mention-only messages instead ... https://github.com/NousResearch/hermes-agent/pull/31359
     [embed] fix(gateway): set source.is_bot from user.is_bot in Telegram adapte... https://github.com/NousResearch/hermes-agent/pull/32476
 
+[2026-06-06T09:12:03.954000+00:00] kyssta69 (id=1512745882947289089)
+    https://github.com/NousResearch/hermes-agent/pull/40400
+    
+    **Problem**: hermes secrets bitwarden setup crashes with EOFError in non-TTY environments even when --access-token is provided.
+    The wizard unconditionally called interactive console.input() for region and project selection prompts with no TTY check, causing EOFError when stdin is not a terminal.
+    Added sys.stdin.isatty() checks before each interactive prompt to default to US Cloud for region and auto-select single projects (or error with --project-id guidance) in non-TTY mode.
+    [embed] fix(cli): handle non-TTY in bitwarden setup wizard (#40274) by kyss... https://github.com/NousResearch/hermes-agent/pull/40400
+    [reply to kyssta69 msg=1512718999413067917]
+
+[2026-06-06T10:00:09.763000+00:00] coexismail (id=1512757986907394048)
+    https://github.com/NousResearch/hermes-agent/pull/40417
+    
+    Problem: Images in Hermes Desktop were flashing and disappearing when clicking to open the lightbox, or when scrolling back to older messages (#39102). Root cause: MediaAttachment component was calling setSrc('') unconditionally at the start of every useEffect run, clearing the image source before the async IPC call completed. The virtualizer remounting the component on scroll made this especially visible.
+    
+    Fix: removed the single setSrc('') line so the previous src is preserved during async reload.
+    [embed] fix(desktop): remove premature setSrc('') clear in MediaAttachment ... https://github.com/NousResearch/hermes-agent/pull/40417
+
+[2026-06-06T10:19:51.686000+00:00] nadiamermedev (id=1512762944251756615)
+    OpenLit is a solid project! If you're looking for something Hermes-native though, I built a plugin that works out of the box with zero extra infra: https://github.com/nujovich/hermes-telemetry
+    
+    It captures tokens, cost, latency and tool calls through Hermes hooks — no OTEL collector, no separate server. Just:
+    ```
+    hermes plugins install nujovich/hermes-telemetry
+    ```
+    Also has budget enforcement with soft/hard limits and auto-pause for cron jobs. Might be a good complement if you're already using Hermes Agent 🙂
+    [embed] GitHub - nujovich/hermes-telemetry: Observability plugin for Hermes... https://github.com/nujovich/hermes-telemetry
+    [reply to icin9500 msg=1509756355001716889]
+
+[2026-06-06T10:30:04.422000+00:00] coexismail (id=1512765514252943504)
+    https://github.com/NousResearch/hermes-agent/pull/40428
+    
+    Problem: Switching between sessions in Hermes Desktop was unconditionally jumping to the bottom of the chat, losing the user's scroll position. If you scrolled up to read older messages and switched sessions, coming back would reset your position.
+    
+    Fix: check $threadScrolledUp before jumping to bottom on session switch. If the user had scrolled up, preserve their position. Only jump to bottom if they were already there.
+    [embed] fix(desktop): preserve scroll position when switching sessions by b... https://github.com/NousResearch/hermes-agent/pull/40428
+
+[2026-06-06T10:42:25.071000+00:00] kyssta69 (id=1512768620759875735)
+    https://github.com/NousResearch/hermes-agent/pull/40434
+    
+    **Problem**: hermes webhook list/subscribe showed 'platform not enabled' even though WEBHOOK_ENABLED=true was set in .env.
+    The CLI's _is_webhook_enabled() only checked config.yaml but ignored the WEBHOOK_ENABLED env var that the setup wizard writes and the gateway reads.
+    Added a fallback check for the WEBHOOK_ENABLED env var in _is_webhook_enabled(), matching the gateway's startup logic.
+    [embed] fix(cli): honour WEBHOOK_ENABLED env var in webhook CLI gate (#4032... https://github.com/NousResearch/hermes-agent/pull/40434
+
+[2026-06-06T10:49:12.679000+00:00] esa01025 (id=1512770330391875705)
+    Hermes Desktop Windows install fails at apps/desktop build step
+    
+    Hi Nous team,
+    
+    I’m trying to install Hermes Desktop on Windows, but the installation fails at step 9/16: “Building desktop app”.
+    
+    This is a fully local test install. I am not connecting it to any remote VPS or existing Hermes instance.
+    
+    Environment:
+    
+    * Windows
+    * Node.js v24.16.0
+    * npm 11.x
+    * Install path: C:\Users\esade\AppData\Local\hermes\
+    * Hermes Desktop installer downloaded from the official website
+    
+    The installer fails with:
+    
+    ```text
+    apps/desktop build failed (exit 1)
+    
+    [plugin:vite:css]
+    C:/Users/esade/AppData/Local/hermes/hermes-agent/apps/desktop/src/styles.css:2:5729
+    
+    CssSyntaxError: [postcss]
+    `@layer base` is used but no matching `@tailwind base` directive is present.
+    ```
+    
+    The log also shows:
+    
+    ```text
+    workspace hermes@0.15.1
+    npm run build && npm run builder -- --dir
+    ```
+    
+    I first had Node.js v22, then upgraded to Node.js v24, rebooted Windows, retried the install, but the exact same Tailwind/Vite/PostCSS error remains.
+    
+    Is this a known Windows installer issue with Hermes Desktop v0.16.0?
+    Should I wait for a patched installer, or is there a recommended workaround?
+    
+    Thanks!
+    [attachment] 11.png https://cdn.discordapp.com/attachments/1491258766648283238/1512770330207322283/11.png?ex=6a254ca8&is=6a23fb28&hm=169517476aee9f565c05fa9efb977102fed7ac939748d0601d52e6fef50077dd&
+
+[2026-06-06T10:56:50.883000+00:00] coexismail (id=1512772252238872626)
+    https://github.com/NousResearch/hermes-agent/pull/40438
+    
+    Problem: Composer draft text in Hermes Desktop was shared across all sessions — typing in one session and switching to another would show the same draft text everywhere.
+    
+    Fix: added a per-session draft map (sessionDraftsRef) and draftRef to avoid stale closure. On session switch, saves the departing session's draft and restores the incoming session's draft.
+    [embed] fix(desktop): scope composer draft text to active session by babato... https://github.com/NousResearch/hermes-agent/pull/40438
+
+[2026-06-06T11:09:26.579000+00:00] nadiamermedev (id=1512775421857632397)
+    Are you planning to re open the pr with the suggested refactor ? I’d love to see this in the core.
+    [reply to bowtiedbernard msg=1503820622671904928]
+
+[2026-06-06T11:26:18.033000+00:00] godsboy7777 (id=1512779664202924122)
+    Yes. Set Telegram reply mode to `off`.
+    
+    In `~/.hermes/config.yaml`:
+    
+    ```yaml
+    telegram:
+      reply_to_mode: "off"
+    ```
+    
+    Then restart the gateway:
+    
+    ```bash
+    hermes gateway restart
+    ```
+    
+    Valid values:
+    
+    ```yaml
+    telegram:
+      reply_to_mode: "off"     # never reply-to, send standalone messages
+      # reply_to_mode: "first" # default, first chunk replies to the user message
+      # reply_to_mode: "all"   # every chunk replies
+    ```
+    
+    Or via env var:
+    
+    ```bash
+    TELEGRAM_REPLY_TO_MODE=off
+    ```
+    
+    Important: quote `"off"` in YAML, because some YAML parsers treat bare `off` as boolean false.
+    [reply to oscarbrey msg=1512727275156799538]
+
+[2026-06-06T11:31:13.726000+00:00] brokie0928 (id=1512780904429387896)
+    https://github.com/NousResearch/hermes-agent/pull/40447
+    
+    Problem
+    tests/hermes_cli/test_curses_arrow_keys.py and test_curses_color_compat.py fail at collection on Windows with ModuleNotFoundError: No module named '_curses', which aborts the entire pytest run (collection errors, not test failures).
+    
+    Root Cause
+    Both modules do a top-level import curses. The curses module's _curses C extension is Unix-only and is not shipped with CPython on Windows, so the import raises before any test executes.
+    
+    Fix
+    Guard both modules with pytest.skip(..., allow_module_level=True) when sys.platform == "win32", so they are skipped during collection on Windows. curses has no Windows equivalent, so a platform skip is the correct call rather than a cross-platform rewrite. Behavior on macOS/Linux/CI is unchanged.
+    [embed] test(cli): skip curses tests on Windows where _curses is unavailabl... https://github.com/NousResearch/hermes-agent/pull/40447
+
+[2026-06-06T12:00:14.862000+00:00] yap.bi (id=1512788207282946148)
+    https://github.com/NousResearch/hermes-agent/pull/40463
+    
+    https://github.com/NousResearch/hermes-agent/pull/40462
+    
+    https://github.com/NousResearch/hermes-agent/pull/40461
+    
+    https://github.com/NousResearch/hermes-agent/pull/40460
+    
+    https://github.com/NousResearch/hermes-agent/pull/40459
+    [embed] fix(sanitize): preserve assistant messages with tool_calls when str... https://github.com/NousResearch/hermes-agent/pull/40463
+    [embed] fix(hooks): use hook directory name for sys.modules key to prevent ... https://github.com/NousResearch/hermes-agent/pull/40462
+    [embed] fix(osv_check): handle --package=value and --package value npx flag... https://github.com/NousResearch/hermes-agent/pull/40461
+    [embed] fix(rate_limit): guard _fmt_count against negative remaining values... https://github.com/NousResearch/hermes-agent/pull/40460
+    [embed] fix(mirror): write mirror entries to JSONL transcript as well as SQ... https://github.com/NousResearch/hermes-agent/pull/40459
+
+[2026-06-06T12:14:10.144000+00:00] kyssta69 (id=1512791710709584015)
+    https://github.com/NousResearch/hermes-agent/pull/40434
+    
+    **Problem**: Webhook CLI commands (list, subscribe, etc.) show 'platform not enabled' even though webhook is connected. The CLI only checked config.yaml for platforms.webhook.enabled but ignored the WEBHOOK_ENABLED env var that the gateway uses. Fix adds env var fallback matching gateway behavior.
+    [embed] fix(cli): honour WEBHOOK_ENABLED env var in webhook CLI gate (#4032... https://github.com/NousResearch/hermes-agent/pull/40434
+    [reply to kyssta69 msg=1512768620759875735]
+
+[2026-06-06T12:22:24.569000+00:00] oscarbrey (id=1512793784478597151)
+    thank you so much!!
+    [reply to godsboy7777 msg=1512779664202924122]
+
+[2026-06-06T12:30:01.897000+00:00] bowtiedbernard (id=1512795702651129866)
+    Ill do it today
+    [reply to nadiamermedev msg=1512775421857632397]
+
+[2026-06-06T12:35:41.867000+00:00] yap.bi (id=1512797128588791949)
+    https://github.com/NousResearch/hermes-agent/pull/40481
+    
+    PR #40481 — Logs Page Rehaul
+    
+    Rewrote the Logs page UI from scratch to make it actually useful:
+    
+    Search bar — type a query, press Enter → backend filters lines server-side. Escape or ✕ clears it.
+    Highlighted matches — every search match is wrapped in a yellow <mark> tag so it stands out in dense log output.
+    Error/warning banner — shows a count of errors and warnings in the current view. Disappears while searching to stay out of the way.
+    Download button — exports visible lines as hermes-<file>.log, no server round-trip.
+    Scroll controls — ↑↓ buttons in the card header to jump to top or bottom instantly.
+    Click-to-copy — click any line while searching to copy it to clipboard.
+    Footer line count — shows how many lines are visible (or how many matched).
+    New backend endpoint GET /api/logs/summary — scans log files and returns error/warning counts per file.
+    API client update — added search? param to getLogs() and the new getLogsSummary() method with proper TypeScript types.
+    [embed] feat(logs): Logs Page rehaul - search + highlight, error summary ba... https://github.com/NousResearch/hermes-agent/pull/40481
+
+[2026-06-06T12:50:56.628000+00:00] davidg1982 (id=1512800965374509157)
+    Bringing this to the attention. Clean fixes.
+    ● Hermes PRs — ready for review (all open, mergeable, current on main):
+    
+      #40246 — fix(agent): prevent context compression from re-firing after a fresh compress
+      Priority: P1 (High — major feature broken, no workaround)
+      Labels: type/bug, comp/agent, P1
+      https://github.com/NousResearch/hermes-agent/pull/40246
+    
+      #40228 — fix(security): fail closed when the provider env blocklist import fails
+      Priority: P2 (Medium — degraded, workaround exists)
+      Labels: type/security, comp/tools, tool/code-exec, P2
+      https://github.com/NousResearch/hermes-agent/pull/40228
+    
+      #40208 — fix(cli): add missing v25→v26 and v26→v27 config migrations
+      Priority: P2 (Medium — degraded, workaround exists)
+      Labels: type/bug, comp/cli, area/config, P2
+      https://github.com/NousResearch/hermes-agent/pull/40208
+    
+      #40207 — fix(cli): resolve the real venv root in hermes update instead of hardcoded venv/
+      Priority: P2 (Medium — degraded, workaround exists)
+      Labels: type/bug, comp/cli, P2
+      https://github.com/NousResearch/hermes-agent/pull/40207
+    [embed] fix(agent): prevent context compression from re-firing after a fres... https://github.com/NousResearch/hermes-agent/pull/40246
+    [embed] fix(security): fail closed when the provider env blocklist import f... https://github.com/NousResearch/hermes-agent/pull/40228
+    [embed] fix(cli): add missing v25->v26 and v26->v27 config migrations by da... https://github.com/NousResearch/hermes-agent/pull/40208
+    [embed] fix(cli): resolve the real venv root in hermes update instead of ha... https://github.com/NousResearch/hermes-agent/pull/40207
+
+[2026-06-06T13:01:05.174000+00:00] cryptobyz (id=1512803517801435277)
+    Issue: _budget_grace_call was initialized to False and reset to False in the loop, but never set to True anywhere — the grace-call path has been dead code since the v0.15.0 refactor.
+    
+    Fix: https://github.com/NousResearch/hermes-agent/pull/38282
+    [embed] fix(agent): activate _budget_grace_call so grace-call path runs thr... https://github.com/NousResearch/hermes-agent/pull/38282
+
+[2026-06-06T13:15:24.514000+00:00] minddragon (id=1512807122134634679)
+    https://github.com/NousResearch/hermes-agent/pull/40501  - just a small atomic bugfix will ensure tidy in just a bit.  this is /blah  ../../../../.. chaos
+    [embed] fix(tui): preserve absolute paths in complete.path handler by Heimd... https://github.com/NousResearch/hermes-agent/pull/40501
+
+[2026-06-06T13:17:47.814000+00:00] davidg1982 (id=1512807723178397798)
+    other P2 fixes that I would love to see merged
+      #37442 — fix(gateway): remove anthropic haiku backstop from fallback provider
+      Priority: P2 (Medium — degraded, workaround exists)
+      Labels: type/bug, comp/agent, comp/gateway, provider/anthropic, P2
+      Prep: compound PR — needs the fix extracted onto a clean branch from current main
+      https://github.com/NousResearch/hermes-agent/pull/37442
+    
+      #33355 — fix(stream): scrub partial tool-call opener fragments in live delta paths
+      Priority: P2 (Medium — degraded, workaround exists)
+      Labels: type/bug, comp/agent, provider/qwen, P2
+      Prep: rebase onto current main (has a conflict) + add issue link
+      https://github.com/NousResearch/hermes-agent/pull/33355
+    
+      #36971 — docs(user-guide): add prompt caching to user guide
+      Priority: P3 (Minor / docs)
+      Labels: type/docs, P3
+      Prep: add issue link + modernize PR template
+      https://github.com/NousResearch/hermes-agent/pull/36971
+    
+      #37101 — fix(tools): coerce stringified booleans/integers in MCP tool args
+      Priority: P3 (Minor)
+      Labels: type/bug, comp/tools, tool/mcp, P3
+      Prep: compound PR — extract fix to clean branch + fix branch name (feat/→fix/)
+      https://github.com/NousResearch/hermes-agent/pull/37101
+    [embed] fix(gateway): remove anthropic haiku backstop from fallback provide... https://github.com/NousResearch/hermes-agent/pull/37442
+    [embed] fix(stream): scrub partial tool-call opener fragments in live delta... https://github.com/NousResearch/hermes-agent/pull/33355
+    [embed] docs(user-guide): add prompt caching to user guide by davidgut1982 ... https://github.com/NousResearch/hermes-agent/pull/36971
+    [embed] fix(tools): coerce stringified booleans/integers in MCP tool args b... https://github.com/NousResearch/hermes-agent/pull/37101
+

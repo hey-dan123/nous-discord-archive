@@ -3270,3 +3270,6 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1512618708076466237/image.png?ex=6a24bf73&is=6a236df3&hm=baaa045cbb6302cc8d17ac9abc49850f3a891a43a36caafbaf0d16ed14fd99fe&
     [reply to avidfuturist msg=1512618329250988203]
 
+[2026-06-06T10:09:10.896000+00:00] _123321_ (id=1512760256583696495)
+    getting an issue where i change the model but when i send a message it reverts back to the latest model that was used
+
