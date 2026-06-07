@@ -26665,3 +26665,90 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     **Problem**: Config migration after upgrade rewrites user's curated config.yaml with all DEFAULT_CONFIG values, expanding a ~950 byte file to ~12 KB and dropping custom_providers. migrate_config() called load_config() which deep-merges defaults, then save_config() wrote the full expanded config to disk. Changed all migration steps to use read_raw_config() so only the user's actual config is read and modified.
     [embed] fix(config): use read_raw_config() in migrations to prevent expandi... https://github.com/NousResearch/hermes-agent/pull/40921
 
+[2026-06-07T03:45:01.614000+00:00] yunofoot (id=1513025968753741894)
+    Why mimi codec is so complex...
+
+[2026-06-07T03:45:15.815000+00:00] yunofoot (id=1513026028317184021)
+    Too hard to understanding
+
+[2026-06-07T04:01:22.941000+00:00] kyssta69 (id=1513030084737630279)
+    https://github.com/NousResearch/hermes-agent/pull/40983
+    
+    **Problem**: Gateway startup fails on macOS 26 Aqua sessions because launchctl cannot bootstrap the job under the user/<uid> domain. The user/<uid> domain was hardcoded in PR #40581, which works for Background/SSH sessions but breaks GUI login sessions that require gui/<uid>. _launchd_domain() now detects the active session manager via launchctl managername and selects gui/<uid> for Aqua sessions, user/<uid> otherwise.
+    [embed] fix(gateway): detect Aqua session for launchd domain (#40831) by ky... https://github.com/NousResearch/hermes-agent/pull/40983
+
+[2026-06-07T04:20:30.143000+00:00] frowtek (id=1513034896451305513)
+    yo <@387972437901312000> , dropped 3 fix PRs,  give 'em a look when you're free? <:droll:1151299906921824387> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/40984
+    https://github.com/NousResearch/hermes-agent/pull/40988
+    https://github.com/NousResearch/hermes-agent/pull/40987
+    [embed] fix(tui): stop suggesting nonexistent /interrupt in busy-session er... https://github.com/NousResearch/hermes-agent/pull/40984
+    [embed] fix(desktop): treat omitted built-ins as built-ins instead of exten... https://github.com/NousResearch/hermes-agent/pull/40988
+    [embed] fix(desktop): route /rollback through rollback RPCs instead of slas... https://github.com/NousResearch/hermes-agent/pull/40987
+
+[2026-06-07T04:35:30.401000+00:00] kwonye (id=1513038672407036078)
+    Hi team, can I get a review of this PR please? Happy to make any suggested changes and follow up with any bug fixes:
+    
+    https://github.com/NousResearch/hermes-agent/pull/26738
+    [embed] fix(gateway): Support Discord webhook embed content by kwonye · Pu... https://github.com/NousResearch/hermes-agent/pull/26738
+
+[2026-06-07T05:16:32.681000+00:00] lordbartok (id=1513048999958155264)
+    A few security / hardening + corruption-resilience fixes, all CI green / tests passing and mergeable. Ready for review when possible <@387972437901312000> or any of the team. Time permitting of course 🙏
+    
+    • #33650 — security: mark sticker descriptions as user-supplied content (prompt-injection surface)
+      https://github.com/NousResearch/hermes-agent/pull/33650
+    • #34350 — fix(send_message): per-site defense-in-depth media path validation (Fixes #34270)
+      https://github.com/NousResearch/hermes-agent/pull/34350
+    • #34614 — feat(agent): tool_repetition guardrail for repeated mutating calls
+      https://github.com/NousResearch/hermes-agent/pull/34614
+    • #34556 — feat(cli): detect command hijacking in `hermes doctor`
+      https://github.com/NousResearch/hermes-agent/pull/34556
+    • #31923 — fix(gateway): detect scoped-lock PID reuse on macOS when start_time unavailable (Fixes #31890)
+      https://github.com/NousResearch/hermes-agent/pull/31923
+    
+    Each is focused and regression-tested. Thanks so much! 🔥
+    [embed] security: mark sticker descriptions as user-supplied content by Bar... https://github.com/NousResearch/hermes-agent/pull/33650
+    [embed] fix(send_message): add per-site defense-in-depth media path validat... https://github.com/NousResearch/hermes-agent/pull/34350
+    [embed] feat(agent): add tool_repetition guardrail for repeated mutating ca... https://github.com/NousResearch/hermes-agent/pull/34614
+    [embed] feat(cli): detect command hijacking in hermes doctor by Bartok9 · ... https://github.com/NousResearch/hermes-agent/pull/34556
+    [embed] fix(gateway): detect scoped-lock PID reuse on macOS when start_time... https://github.com/NousResearch/hermes-agent/pull/31923
+
+[2026-06-07T05:49:53.128000+00:00] kyssta69 (id=1513057390440878220)
+    https://github.com/NousResearch/hermes-agent/pull/41034
+    
+    **Problem**: The /model slash command in Discord ignored the colon-based provider:model syntax (e.g. xai-oauth:grok-4.3) when the current provider was not an aggregator, causing the full string to be validated as a model name against the wrong provider's catalog. Added pre-processing in switch_model to detect provider:model colon syntax on non-aggregator providers and route it to the explicit-provider code path.
+    [embed] fix(cli): parse provider:model colon syntax from non-aggregator pro... https://github.com/NousResearch/hermes-agent/pull/41034
+
+[2026-06-07T05:56:31.587000+00:00] wittgenstein9840 (id=1513059061699182732)
+    Hi everyone, I have a master’s degree in philosophy. Given my field of study, I have a naturally inquisitive personality and am interested in evolutionary psychology. I’ve developed a skill on my own. Would you like to take a look? https://github.com/NousResearch/hermes-agent/pull/41032
+    [embed] Add Evolutionary Cognitive Architecture (ECA) reasoning skill by ib... https://github.com/NousResearch/hermes-agent/pull/41032
+
+[2026-06-07T06:56:46.407000+00:00] snaplap_24896 (id=1513074223352909916)
+    Hey folks, I put up a fix for #40979 — context_length override gets lost after switching models. PR here: #41010. Would be great if someone could take a look when they get a chance, thanks!
+    
+    https://github.com/NousResearch/hermes-agent/pull/41010
+    [embed] fix(agent): restore global model.context_length override on /model ... https://github.com/NousResearch/hermes-agent/pull/41010
+
+[2026-06-07T07:24:15.314000+00:00] lordbartok (id=1513081139370262650)
+    Three follow-ups to the egress-security work in #30179 — all building on the merged foundation, CI green / tests passing and mergeable. They're incremental and can be reviewed/merged in order. When time permits 👍🔥
+    
+    • #35149 — feat(egress): doctor + audit + Anthropic native support
+      https://github.com/NousResearch/hermes-agent/pull/35149
+    • #35187 — feat(egress): host hardening survey
+      https://github.com/NousResearch/hermes-agent/pull/35187
+    • #35188 — feat(egress): CA rotation (`hermes egress rotate-ca`)
+      https://github.com/NousResearch/hermes-agent/pull/35188
+    
+    Thanks so much! 🙏
+    [embed] feat(egress): doctor + audit + Anthropic native — follow-up to #3... https://github.com/NousResearch/hermes-agent/pull/35149
+    [embed] feat(egress): host hardening survey — follow-up to #30179 by Bart... https://github.com/NousResearch/hermes-agent/pull/35187
+    [embed] feat(egress): CA rotation (`hermes egress rotate-ca`) — follow-up... https://github.com/NousResearch/hermes-agent/pull/35188
+
+[2026-06-07T07:29:55.665000+00:00] taikimliuhong (id=1513082566905954474)
+    https://github.com/NousResearch/hermes-agent/pull/40578
+    [embed] docs: add Urdu (ur-PK) translation for README by AMIK-coorporations... https://github.com/NousResearch/hermes-agent/pull/40578
+
+[2026-06-07T07:30:38.502000+00:00] taikimliuhong (id=1513082746577092609)
+    Please review my pr and accept and merge its very useful for 280 million people of pakistan
+

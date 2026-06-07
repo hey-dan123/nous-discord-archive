@@ -50,3 +50,8 @@
 [2026-06-05T11:35:43.313000+00:00] captain_sandy (id=1512419647293755392)
     <@613497609738256431> thanks so much for making this! Finally i can now see why my Honcho was not working properly, and it looks awesome as well
 
+[2026-06-07T08:20:34.847000+00:00] hydro._ (id=1513095314159173732)
+    Pushed the docker image and made some pretty substantial improvements, check it out! https://github.com/outpoints/honcho-dashboard
+    [embed] GitHub - outpoints/honcho-dashboard: Self Hosted Dashboard for Honcho https://github.com/outpoints/honcho-dashboard
+    [reply to captain_sandy msg=1512419647293755392]
+

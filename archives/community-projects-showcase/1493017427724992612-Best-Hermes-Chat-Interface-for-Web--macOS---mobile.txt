@@ -3319,3 +3319,7 @@
     Thanks for the suggestion!
     [reply to mathewsstar msg=1513008435371835444]
 
+[2026-06-07T07:01:44.424000+00:00] necrosis._. (id=1513075473326805142)
+    Issue is fixed ig, now ig where the leak was happening of thinking leak, thinking is getting divided and error is also not coming
+    [reply to avidfuturist msg=1513010032290168965]
+

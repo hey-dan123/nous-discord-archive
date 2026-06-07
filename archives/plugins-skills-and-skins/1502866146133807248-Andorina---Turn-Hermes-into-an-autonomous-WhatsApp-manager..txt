@@ -312,3 +312,17 @@
 [2026-06-06T15:20:41.085000+00:00] rogerwongio (id=1512838648918446100)
     i've installed it and been using it. how do i update/upgrade it?
 
+[2026-06-07T07:23:28.892000+00:00] vayaperson (id=1513080944662155315)
+    Hi, I'm almost done with the new version, forget about the GitHub one
+    [reply to rogerwongio msg=1512838648918446100]
+
+[2026-06-07T07:24:22.145000+00:00] vayaperson (id=1513081168021553284)
+    It'll be available in 1 or 2 days, ifreet is testing the basic features.
+
+[2026-06-07T07:24:59.811000+00:00] vayaperson (id=1513081326004080731)
+    The old version does not have even sub souls and there are a few problems with specific small models
+
+[2026-06-07T07:31:48.618000+00:00] vayaperson (id=1513083040665043116)
+    Although we've fixed the bugs mentioned earlier, a few new ones have surfaced as a result. We're almost there. As they say, good things come to those who wait. We're nearly done!
+    [reply to vayaperson msg=1511008710829539419]
+

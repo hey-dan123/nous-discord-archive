@@ -1,0 +1,7 @@
+# Thread 'help with web ui' in forum #plugins-skills-and-skins
+# thread_id=1513098557383508078 forum_id=1485392832154832906
+# Started 2026-06-07T08:57:24.309039+00:00
+
+[2026-06-07T08:33:28.092000+00:00] xsisty (id=1513098557383508078)
+    hi guys im currently struggling to make my browser Dashboard mission control actually work my hermes agent is like almost stupid and doesnt contiously review tasks until it works. im wondering if im doing something wrong so if someone whos good with hermes and knows how to make misson control web uis or actually delegate tasks from hermes orchestrator like an manager please could you help me
+

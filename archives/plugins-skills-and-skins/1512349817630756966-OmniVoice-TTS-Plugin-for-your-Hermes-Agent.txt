@@ -26,3 +26,8 @@
 [2026-06-07T03:37:51.291000+00:00] rdx101vc (id=1513024163848261774)
     <@592742491963260948>
 
+[2026-06-07T05:55:12.658000+00:00] xiaohan_115 (id=1513058730646704259)
+    <@1350349705099477033> , sorry for late reply, just saw the message.
+    
+    If the already installed omnivoice is in the same environment as Hermes and Hermes can import it successfully, then it would work. I have not tested out this scenario yet.
+
