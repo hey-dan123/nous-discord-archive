@@ -1,0 +1,13 @@
+# Thread '🌍 New Skill: Unicode Location Normalizer ,  fixes special character errors in city names' in forum #plugins-skills-and-skins
+# thread_id=1513172004684173313 forum_id=1485392832154832906
+# Started 2026-06-07T13:52:41.321830+00:00
+
+[2026-06-07T13:25:19.293000+00:00] blackcap_eth (id=1513172004684173313)
+    Hey! I built a skill that fixes the special character bug in location names (ö, ü, ğ, ş, ç etc.).
+    
+    When you ask Hermes for weather in cities like Köln or Şanlıurfa, it was failing with a red error on the first attempt. This skill normalizes the location name before the URL call, so it works on the first try.
+    
+    Tested on Windows with wttr.in , Köln now resolves to Cologne correctly.
+    
+    Planning to publish it to the Skills Hub. Any feedback welcome!
+

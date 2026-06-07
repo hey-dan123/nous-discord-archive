@@ -31,3 +31,7 @@
     
     If the already installed omnivoice is in the same environment as Hermes and Hermes can import it successfully, then it would work. I have not tested out this scenario yet.
 
+[2026-06-07T09:55:59.731000+00:00] rdx101vc (id=1513119326062776420)
+    oh..i think pinokio creates seperate env...
+    [reply to xiaohan_115 msg=1513058730646704259]
+

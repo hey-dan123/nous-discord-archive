@@ -31,3 +31,6 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1512845206456631436/1512845206985117767/image.png?ex=6a259264&is=6a2440e4&hm=fa1f9af58abaeb5490f98b81562317b9e639d86ede3761fcac3703337330a9c4&
     [embed] GitHub - kyssta-exe/Ariadne: Next-generation AI memory system — s... https://github.com/kyssta-exe/Ariadne
 
+[2026-06-07T09:24:59.291000+00:00] kyssta69 (id=1513111522812104704)
+    make sure to keep the version updated as i constantly try to make it better!
+

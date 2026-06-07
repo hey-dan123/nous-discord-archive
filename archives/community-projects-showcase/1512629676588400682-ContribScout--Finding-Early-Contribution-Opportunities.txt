@@ -20,3 +20,23 @@
     
     This makes ContribScout easier to use inside a Hermes workflow instead of only as a web dashboard.
 
+[2026-06-07T13:36:02.642000+00:00] sworntech (id=1513174703085453443)
+    **ContribScout v0.2.1: Stability / Bugfix Update**
+    
+    Small update for ContribScout today.
+    
+    After testing the live version, I noticed a few things that needed cleanup:
+    • suggested actions were repeating too much
+    • localization-based actions were showing up more often than they should
+    • refreshing the dashboard could sometimes fall back to sample data
+    • live GitHub scan behavior needed to be more stable
+    
+    Updated:
+    • more varied suggested contribution actions
+    • better signal-based action selection
+    • localization suggestions are now used only when they actually make sense
+    • improved live GitHub scan stability
+    • added safer caching for successful GitHub results
+    • reduced unnecessary fallback to sample data
+    • clearer source / notice handling
+

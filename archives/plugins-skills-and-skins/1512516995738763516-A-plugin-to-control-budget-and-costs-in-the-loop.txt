@@ -19,3 +19,7 @@
     → GitHub: https://github.com/nujovich/hermes-telemetry
     [embed] GitHub - nujovich/hermes-telemetry: Observability plugin for Hermes... https://github.com/nujovich/hermes-telemetry
 
+[2026-06-07T11:20:48.572000+00:00] nadiamermedev (id=1513140670209065091)
+    New feature request to support NVIDIA pricing models as per Nemotron Coalition partnership with Hermes. Whoever wants to contribute ! https://github.com/nujovich/hermes-telemetry/issues/12
+    [embed] [FEAT] NVIDIANIMPricingSource — NVIDIA NIM direct provider pricin... https://github.com/nujovich/hermes-telemetry/issues/12
+

@@ -16,3 +16,6 @@
     Thank you so much, dude! 2 hours from my life wasted trying change the default font and nothing doesn't work then i find your post here and solved 😄
     [reply to rubengarciajr msg=1501311220404326471]
 
+[2026-06-07T11:22:07.211000+00:00] andrej.sx (id=1513141000044810240)
+    Yes! This is exactly what I was looking for. Just a simple font size slider. I am not visually impaired, but having so much white space maybe looks nice but it's a waste of real estate and cognitive burden because you have to move your eyes and focus a lot more. Bigger text is just way easier on the eyes and brain, more efficient UX. Once you get used to it, you are never coming back.
+

@@ -326,3 +326,25 @@
     Although we've fixed the bugs mentioned earlier, a few new ones have surfaced as a result. We're almost there. As they say, good things come to those who wait. We're nearly done!
     [reply to vayaperson msg=1511008710829539419]
 
+[2026-06-07T10:36:28.332000+00:00] vayaperson (id=1513129512353796147)
+    **Andoriña v1.5.0-Beta1 is now live on GitHub!**
+    This release brings a massive refactoring to the core infrastructure to make the agent more stable and secure, alongside a new visual installation process.
+    **Key Changes:**
+    - **Core Refactoring:** Zero-Trust pipeline, idempotent inbox (no duplicate messages), and smart scheduling offsets to prevent API collisions.
+    - **GUI Installer:** Setup is now completely visual from your browser.
+    - **Sub-Souls:** Custom AI personas per contact or group.
+    - **Live Monitor:** Real-time log inspector inside the new web dashboard.
+    🔗 **Download:** https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/v1.5.0-Beta1
+    ⚠️ **IMPORTANT:** 
+    A clean installation is strongly recommended. Do not copy files over an existing install. Run `Andorina-Panel.sh` from the new folder. Enter your desired master password on the first login. Linux only.
+    Please report any bugs on GitHub Issues!
+    [embed] Release v1.5.0-Beta1 — Core Refactoring & GUI Installer · Andori... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/v1.5.0-Beta1
+
+[2026-06-07T10:41:30.361000+00:00] vayaperson (id=1513130779155103816)
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/discussions/11
+    [embed] v1.5.0-Beta1 is out — questions, feedback & bug reports here · A... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/discussions/11
+
+[2026-06-07T12:34:53.658000+00:00] vayaperson (id=1513159314251190343)
+    You can update, download from GitHub. Delete the previous skill folder and reinstall from the new version's panel.
+    [reply to rogerwongio msg=1512838648918446100]
+

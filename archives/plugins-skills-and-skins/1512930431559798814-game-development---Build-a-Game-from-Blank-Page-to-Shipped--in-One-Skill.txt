@@ -33,3 +33,18 @@
 [2026-06-06T23:05:13.314000+00:00] happysearch (id=1512955553519763607)
     thanks my friend.
 
+[2026-06-07T12:14:21.711000+00:00] kanin0050 (id=1513154147090694257)
+    Do we have any results, IE games, built with this skill?
+
+[2026-06-07T12:48:55.429000+00:00] yap.bi (id=1513162844894396546)
+    Yes  just built one with it to show it's real, not just docs.
+    
+    Neon Dash, a small arcade game made end-to-end with the skill:
+    https://hellgurd.github.io/neon-dash/
+    
+    Plays in the browser, desktop + mobile. It deliberately uses the exact 
+    patterns the skill teaches — fixed-timestep loop, state machine, particle 
+    pooling, and the juice (screen shake, hit-stop, eased movement) — so the 
+    code doubles as a live example of the docs. Single index.html, no deps.
+    [reply to kanin0050 msg=1513154147090694257]
+

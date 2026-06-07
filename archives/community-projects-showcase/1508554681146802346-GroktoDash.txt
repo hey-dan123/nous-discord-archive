@@ -15,3 +15,6 @@
 [2026-05-25T21:24:58.848000+00:00] magnus919 (id=1508581672633766040)
     ok it builds in XCode and kinda runs. But I'm out of my depth here with macOS desktop apps and hitting a bit of a wall. Putting this down for now. Will come back to it with fresh eyes & enthusiasm another day.
 
+[2026-06-07T13:27:48.513000+00:00] magnus919 (id=1513172630558085121)
+    Soooo yeah given Hermes has an official desktop app now, this isn’t getting any priority from me
+

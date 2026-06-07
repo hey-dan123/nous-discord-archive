@@ -74,3 +74,9 @@
     “The quality of your life is the quality of the questions you ask…”
     [reply to magnus919 msg=1510399458658226348]
 
+[2026-06-07T13:10:09.393000+00:00] magnus919 (id=1513168188286701569)
+    Council now has concurrency working in `main` so you can have multiple parallel Hermes sessions each running their own council at the same time safely.
+    
+    https://github.com/magnus919/hermes-council/pull/16
+    [embed] fix: scope council state dir per-invocation with UUID to avoid conc... https://github.com/magnus919/hermes-council/pull/16
+

@@ -108,3 +108,16 @@
     yes but i have no idea how. i have 6 memory layers and currently only byterover is having problems. hermes spent hours putting them all together
     [reply to obcyy msg=1513097546841460776]
 
+[2026-06-07T11:57:35.021000+00:00] techmeat (id=1513149924726800668)
+    Thanks <@261930338329165836>  for the feedback - confirmed, this was a real issue with how Hermes orders provider registration and initialization, and your report helped pin it down quickly.
+    
+    It is fixed in **v1.0.1**, released just now: the provider advertises its tool schemas right at registration, so all `brain_*` tools route correctly from the first gateway start. To pick it up:
+    ```
+    hermes plugins update open-second-brain
+    hermes gateway restart
+    ```
+    After the update the gateway log shows `Memory provider 'open-second-brain' registered (10 tools)` and the tools work as expected. Release notes:
+    https://github.com/itechmeat/open-second-brain/releases/tag/v1.0.1
+    [embed] Release v1.0.1 - Hermes Registration Fix · itechmeat/open-second-b... https://github.com/itechmeat/open-second-brain/releases/tag/v1.0.1
+    [reply to obcyy msg=1513097546841460776]
+

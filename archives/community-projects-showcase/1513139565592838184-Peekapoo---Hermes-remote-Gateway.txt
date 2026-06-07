@@ -1,0 +1,15 @@
+# Thread 'Peekapoo + Hermes remote Gateway' in forum #community-projects-showcase
+# thread_id=1513139565592838184 forum_id=1316137596535177246
+# Started 2026-06-07T13:48:29.525084+00:00
+
+[2026-06-07T11:16:25.211000+00:00] bdrmoh (id=1513139565592838184)
+    I’ve been testing Hermes Desktop app with Hermes (running in a hardened LXC on my Raspberry Pi) and wanted to control my Mac without running a gateway locally.
+    
+    Hermes uses CUA-Driver MCP via stdio. I initially forwarded tool calls to a CUA-Driver instance on my Mac using socat and remote port forwarding. The accuracy and speed made it unusable to me.
+    
+    To improve this, I integrated OpenClaw's "Peekapoo". It uses Apple’s native Accessibility API and screen recording frameworks instead of vision models, allowing for direct interaction via accessibility identifiers rather than pixel coordinates.
+    
+    So I used supergateway to expose Peekapoo as a streamable HTTP MCP server, also used remote port forwarding to give Hermes access to the MCP without opening ports on my Mac. This lets me control my Mac via Hermes and other channels like Discord.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1513139565592838184/1513139566557794304/image.png?ex=6a26a489&is=6a255309&hm=87bd85d8bd0513fdd120ea4508f9054f72d50dae4061cd98c9524b573925645d&
+    [attachment] hermes-peekapoo.mov https://cdn.discordapp.com/attachments/1513139565592838184/1513139567337799730/hermes-peekapoo.mov?ex=6a26a489&is=6a255309&hm=737795639ed3f8b83c5ab4b70df42ea78a2d959016c48093b4c895dfac762901&
+

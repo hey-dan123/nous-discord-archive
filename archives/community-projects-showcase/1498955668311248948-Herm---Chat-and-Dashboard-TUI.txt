@@ -1180,3 +1180,8 @@
     congrats
     [reply to liftaris msg=1512957859803955333]
 
+[2026-06-07T09:09:38.443000+00:00] tunacookie (id=1513107660495392820)
+    <@209037396983939072> i wonder if it was an intentional design or its not capturing properly the Title, because typign /title does change it but then in the sessions selector there is a title there too 🤔 so is the title suppose to actually just capture from the sessions or its intentional
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1513107659782492211/image.png?ex=6a2686d2&is=6a253552&hm=220297a27ac912228fb037e519aca780e80edfd3f1075ba4759b46d275ba928c&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1513107660218564771/image.png?ex=6a2686d2&is=6a253552&hm=3ac4cddf68fc2423955a52b3e203b2924de72b78ee1d1a08f0e2a749f0d5d4f1&
+

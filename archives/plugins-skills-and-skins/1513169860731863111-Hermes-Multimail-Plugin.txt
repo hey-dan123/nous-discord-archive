@@ -1,0 +1,35 @@
+# Thread 'Hermes Multimail Plugin' in forum #plugins-skills-and-skins
+# thread_id=1513169860731863111 forum_id=1485392832154832906
+# Started 2026-06-07T13:52:41.839223+00:00
+
+[2026-06-07T13:16:48.135000+00:00] artguerilla (id=1513169860731863111)
+    Hey Fam👋
+    
+    I built a small plugin that might be useful for anyone doing real email workflows with Hermes:
+    
+    https://github.com/artguerilla/hermes-multimail
+    
+    The default Hermes mail setup works fine for one account, but I needed Hermes to work across multiple mailboxes. The preinstalled himalaya setup also didn’t cover attachments for my use case, which was a blocker because a lot of invoices come in as PDFs.
+    
+    So I made **hermes-multimail**.
+    
+    My original use case was pretty simple: collect invoices from multiple email accounts, read/search them from one Hermes agent, download the attachments, and then organize them properly.
+    
+    Current features:
+    
+    - multiple IMAP/SMTP accounts
+    - search across one or all inboxes
+    - read full emails
+    - attachment detection/download
+    - send emails
+    - reply in-thread
+    - list folders
+    - mark messages as read
+    - move/delete messages
+    
+    It’s just a generic Hermes plugin, no core Hermes changes needed. Drop it into the plugins folder, configure your accounts, and Hermes gets multi-mailbox tools.
+    
+    Would love feedback from anyone else using Hermes for inbox automation, invoice handling, or multi-account assistant workflows.
+    [attachment] ChatGPT_Image_7._Juni_2026_14_25_56.png https://cdn.discordapp.com/attachments/1513169860731863111/1513169861218664590/ChatGPT_Image_7._Juni_2026_14_25_56.png?ex=6a26c0c0&is=6a256f40&hm=ea1ab65f2fb84b8d1d8d73bd01133548adcfe903da560c94b9964a91c1369e39&
+    [embed] GitHub - artguerilla/hermes-multimail: Multi-account IMAP/SMTP emai... https://github.com/artguerilla/hermes-multimail
+

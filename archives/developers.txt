@@ -26752,3 +26752,177 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-07T07:30:38.502000+00:00] taikimliuhong (id=1513082746577092609)
     Please review my pr and accept and merge its very useful for 280 million people of pakistan
 
+[2026-06-07T09:17:05.428000+00:00] kyssta69 (id=1513109535286362273)
+    https://github.com/NousResearch/hermes-agent/pull/41130
+    
+    **Problem**: When you manually trigger a cron job with cronjob(action="run"), last_run_at stayed null and the job never executed. trigger_job() only updated next_run_at to now but never called the scheduler to actually run the job. The fix calls tick() immediately after triggering so the job executes right away and last_run_at gets populated.
+    [embed] fix(cron): execute job immediately on manual trigger (#41037) by ky... https://github.com/NousResearch/hermes-agent/pull/41130
+
+[2026-06-07T09:30:32.113000+00:00] brokie0928 (id=1513112918768619631)
+    https://github.com/NousResearch/hermes-agent/pull/41135
+    
+    Problem
+    tests/tools/test_search_hidden_dirs.py fails at collection on Windows with FileNotFoundError: [WinError 2], aborting the pytest run. Once that's resolved, two further tests fail on Windows because they shell out to Unix-only find/grep.
+    
+    https://github.com/NousResearch/hermes-agent/pull/41089
+    
+    Problem
+    tests/test_run_tests_parallel.py fails at collection on Windows with FileNotFoundError: \tmp\hermes-isolation-probe, aborting the pytest run.
+    [embed] test(tools): fix Windows compat in test_search_hidden_dirs by Ganes... https://github.com/NousResearch/hermes-agent/pull/41135
+    [embed] test: skip POSIX-only parallel-runner test at collection on Windows... https://github.com/NousResearch/hermes-agent/pull/41089
+
+[2026-06-07T10:36:10.178000+00:00] minddragon (id=1513129436210532594)
+    https://github.com/NousResearch/hermes-agent/pull/41158  IMHO should be p2 ... this fixes MacOS becomes unresponsive after any prompt (e.g. sudo or AI gives choices).
+    [embed] fix(cli): cap KqueueSelector select timeout on macOS to prevent pos... https://github.com/NousResearch/hermes-agent/pull/41158
+
+[2026-06-07T11:47:58.534000+00:00] nanxingncb612d (id=1513147506765336677)
+    https://github.com/NousResearch/hermes-agent/pull/41209 Scope stored Responses records by session key
+    [embed] Scope stored Responses records by session key by necoweb3 · Pull R... https://github.com/NousResearch/hermes-agent/pull/41209
+
+[2026-06-07T11:48:11.337000+00:00] cryptoworlldz (id=1513147560465006672)
+    Opened a fix for the WeChat busy-session interrupt issue.
+    
+    The root cause was that Weixin/WeCom plain-text follow-ups were still getting delayed in platform-level text batching even when the session was already active, so the gateway’s interrupt logic often saw them too late. The fix keeps batching for idle sessions, but bypasses it for active ones so busy-session interrupt handling can react immediately.
+    
+    Bug1 https://github.com/NousResearch/hermes-agent/issues/40724
+    Bug2 https://github.com/NousResearch/hermes-agent/issues/40727
+    PR https://github.com/NousResearch/hermes-agent/pull/41172
+    [embed] [Bug]: WeChat platform: user message interrupt mechanism rarely tri... https://github.com/NousResearch/hermes-agent/issues/40724
+    [embed] [Bug]: WeChat platform: user message interrupt mechanism rarely tri... https://github.com/NousResearch/hermes-agent/issues/40727
+    [embed] fix(gateway): bypass WeChat text batching for active sessions by wo... https://github.com/NousResearch/hermes-agent/pull/41172
+
+[2026-06-07T11:54:18.216000+00:00] kyssta69 (id=1513149099266805981)
+    https://github.com/NousResearch/hermes-agent/pull/41130
+    
+    **Problem**: When a cron job was manually triggered via cronjob(action='run'), the tool only scheduled it for the next scheduler tick by setting next_run_at to now, but never actually executed the job. The scheduler tick may not run in all contexts like CLI sessions or cron job sessions. The fix adds a new _execute_job_now helper that calls run_job directly after triggering, advances next_run_at to prevent double-execution, saves output, delivers results, and marks the job as run with last_run_at populated.
+    [embed] fix(cron): execute job immediately on manual trigger (#41037) by ky... https://github.com/NousResearch/hermes-agent/pull/41130
+
+[2026-06-07T12:01:15.834000+00:00] taikimliuhong (id=1513150850883915837)
+    https://github.com/NousResearch/hermes-agent/pull/40578
+    
+    
+    accept this pull request as soon as possible, why you are not accepting this
+    [embed] docs: add Urdu (ur-PK) translation for README by AMIK-coorporations... https://github.com/NousResearch/hermes-agent/pull/40578
+
+[2026-06-07T12:12:47.447000+00:00] kyssta69 (id=1513153751718953180)
+    ehh urdu is useless as pakistani ppl can read english
+    [reply to taikimliuhong msg=1513150850883915837]
+
+[2026-06-07T12:13:11.741000+00:00] kyssta69 (id=1513153853615505569)
+    and its a P3 PR so will take time, be patient
+
+[2026-06-07T12:13:50.150000+00:00] taikimliuhong (id=1513154014714396732)
+    <@1068770268660629574> URDU IS USELESS?
+
+[2026-06-07T12:14:04.398000+00:00] taikimliuhong (id=1513154074474844211)
+    We are shifting to urdu in pakistan
+
+[2026-06-07T12:14:15.841000+00:00] kyssta69 (id=1513154122470264923)
+    no urdu isnt usless, but there is no need of it in docs, as english is already there
+
+[2026-06-07T12:14:17.058000+00:00] taikimliuhong (id=1513154127574863912)
+    we guys hate english
+
+[2026-06-07T12:14:28.715000+00:00] taikimliuhong (id=1513154176467861514)
+    like chinese
+
+[2026-06-07T12:14:30.793000+00:00] kyssta69 (id=1513154185183498340)
+    im also a pakistani stop speaking for all.
+
+[2026-06-07T12:14:41.771000+00:00] taikimliuhong (id=1513154231228436563)
+    so please
+
+[2026-06-07T12:14:52.455000+00:00] taikimliuhong (id=1513154276040638464)
+    brother we are pakistani
+
+[2026-06-07T12:14:53.687000+00:00] kyssta69 (id=1513154281208025208)
+    i cant accept it bro wait it will get accepted if needed.
+
+[2026-06-07T12:15:13.161000+00:00] taikimliuhong (id=1513154362887634994)
+    we need to introduce urdu in international language
+
+[2026-06-07T12:15:28.858000+00:00] taikimliuhong (id=1513154428725891205)
+    تھک ہے نہ سمجھو تھوڑا
+
+[2026-06-07T12:15:31.228000+00:00] Translator Bot#1043 (id=1513154438666387536)
+    Don't think you're tired
+    [reply to taikimliuhong msg=1513154428725891205]
+
+[2026-06-07T12:15:49.114000+00:00] kyssta69 (id=1513154513685577789)
+    you cant even write proper urdu bro <:Sob_club:1293624165680545844>
+
+[2026-06-07T12:16:05.498000+00:00] taikimliuhong (id=1513154582405058763)
+    haha
+
+[2026-06-07T12:16:07.796000+00:00] taikimliuhong (id=1513154592043438170)
+    no
+
+[2026-06-07T12:16:17.400000+00:00] taikimliuhong (id=1513154632325791754)
+    i was writing in speed
+
+[2026-06-07T12:16:37.358000+00:00] taikimliuhong (id=1513154716035453149)
+    جلدی کروا دو بھائی
+
+[2026-06-07T12:16:40.699000+00:00] Translator Bot#1043 (id=1513154730048753684)
+    Hurry up brother
+    [reply to taikimliuhong msg=1513154716035453149]
+
+[2026-06-07T12:16:53.178000+00:00] taikimliuhong (id=1513154782389600266)
+    i am waiting
+
+[2026-06-07T12:17:31.236000+00:00] taikimliuhong (id=1513154942016426024)
+    <@1068770268660629574> is this your product?
+
+[2026-06-07T12:17:37.873000+00:00] taikimliuhong (id=1513154969854017647)
+    hermes?
+
+[2026-06-07T12:17:42.428000+00:00] kyssta69 (id=1513154988958810114)
+    no
+
+[2026-06-07T12:17:46.478000+00:00] taikimliuhong (id=1513155005945876480)
+    ok
+
+[2026-06-07T12:18:17.220000+00:00] taikimliuhong (id=1513155134887297144)
+    i also introduce urdu in openhuman too
+
+[2026-06-07T12:26:19.244000+00:00] yap.bi (id=1513157156642492448)
+    New day, let's keep working and improving, hopefully one day I'll become a dev too lol 😂 
+    
+    https://github.com/NousResearch/hermes-agent/pull/41239
+    [embed] fix(mcp): avoid replaying historical events on startup (salvage #13... https://github.com/NousResearch/hermes-agent/pull/41239
+
+[2026-06-07T12:28:21.320000+00:00] floory (id=1513157668666216458)
+    https://github.com/NousResearch/hermes-agent/pull/40690
+    
+    <@466492386873311235> <@100390510744584192>
+    [embed] fix(cli): set PYTHON env for node-gyp native builds on NixOS by flo... https://github.com/NousResearch/hermes-agent/pull/40690
+
+[2026-06-07T12:35:09.639000+00:00] taikimliuhong (id=1513159381280100412)
+    https://github.com/NousResearch/hermes-agent/pull/40578
+    [embed] docs: add Urdu (ur-PK) translation for README by AMIK-coorporations... https://github.com/NousResearch/hermes-agent/pull/40578
+
+[2026-06-07T12:36:46.082000+00:00] glitchglitchglitch (id=1513159785791623298)
+    checking :)
+
+[2026-06-07T12:45:01.108000+00:00] saurav__0989__ (id=1513161862081019914)
+    No screenshots. No vision model. Vrski gives your Hermes agent a real Android phone via MCP — it reads the on-screen accessibility tree as structured JSON and acts by element (text/id), so taps are deterministic and fast. The owner signs into Google once; the agent runs forever — installing apps, ordering food, booking rides, sending texts. Repo: https://github.com/Saurav0989/vrski — GUIDE.md to set up, README.md for the full architecture + 23 MCP tools.
+    [embed] GitHub - Saurav0989/vrski: Give your AI agent a real Android phone.... https://github.com/Saurav0989/vrski
+
+[2026-06-07T12:45:37.076000+00:00] taikimliuhong (id=1513162012941615184)
+    great brother
+    [reply to saurav__0989__ msg=1513161862081019914]
+
+[2026-06-07T13:18:40.177000+00:00] yap.bi (id=1513170330670203022)
+    https://github.com/NousResearch/hermes-agent/pull/41285
+    [embed] fix(tools): allow file writes under the active temp dir on macOS (s... https://github.com/NousResearch/hermes-agent/pull/41285
+
+[2026-06-07T13:39:19.475000+00:00] kyssta69 (id=1513175528662761604)
+    https://github.com/NousResearch/hermes-agent/pull/41306
+    
+    **Problem**: Telegram typing indicator stays visible for hours after a background process notification because the typing loop only relied on task.cancel() to stop. Under flood control, send_chat_action can be blocked and the CancelledError doesn't propagate fast enough to stop the loop within the 0.5s timeout. The fix sets the cooperative stop_event before cancelling, so the typing loop exits on its next polling tick within 0.25 seconds.
+    [embed] fix(gateway): set stop_event before cancelling typing task (#41168)... https://github.com/NousResearch/hermes-agent/pull/41306
+
+[2026-06-07T13:40:05.427000+00:00] .consumeobeydie (id=1513175721399550043)
+    Just opened PR #41233 to add the first x402 payment skill to Hermes Agent — autonomous USDC micropayments on Arc Testnet. Verified on-chain: https://github.com/NousResearch/hermes-agent/pull/41233
+    [embed] feat: add x402-payment skill for autonomous USDC micropayments on A... https://github.com/NousResearch/hermes-agent/pull/41233
+

@@ -1,0 +1,8 @@
+# Thread 'A emulator specifically for ur agents that lets them use any app!!' in forum #plugins-skills-and-skins
+# thread_id=1513163230699065355 forum_id=1485392832154832906
+# Started 2026-06-07T13:52:42.298700+00:00
+
+[2026-06-07T12:50:27.412000+00:00] saurav__0989__ (id=1513163230699065355)
+    No screenshots. No vision model. Vrski gives your Hermes agent a real Android phone via MCP — it reads the on-screen accessibility tree as structured JSON and acts by element (text/id), so taps are deterministic and fast. The owner signs into Google once; the agent runs forever — installing apps, ordering food, booking rides, sending texts. Repo: https://github.com/Saurav0989/vrski — GUIDE.md to set up, README.md for the full architecture + 23 MCP tools.
+    [embed] GitHub - Saurav0989/vrski: Give your AI agent a real Android phone.... https://github.com/Saurav0989/vrski
+
