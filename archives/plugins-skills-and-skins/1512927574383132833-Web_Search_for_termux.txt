@@ -1,0 +1,18 @@
+# Thread 'Web_Search_for_termux' in forum #plugins-skills-and-skins
+# thread_id=1512927574383132833 forum_id=1485392832154832906
+# Started 2026-06-07T03:44:30.306489+00:00
+
+[2026-06-06T21:14:02.568000+00:00] txrao (id=1512927574383132833)
+    A websearch script that uses proot-distro and duckduckgo with jina ai to create a Light weight search tool that can pull and read information.
+    I would say its about 70% to 80% accurate in the searches and actually gave links to sources.
+    
+    
+     I would really like feedback for the script so i can improve this light script and  one day i could implement a new light BROSWER automation tool that runs in the proot envirnoment seen termux is limited😭🙏
+    
+    Enough yapping this the repo 
+    https://github.com/tmrisdaone/Hermes_proot-distro_scrapper
+    
+    This is made for termux a light script. If i find a way to make this a plugin or if someone can this would be fire✌️
+    [attachment] flat750x075f-pad750x1000f8f8f8.jpg https://cdn.discordapp.com/attachments/1512927574383132833/1512927574811217991/flat750x075f-pad750x1000f8f8f8.jpg?ex=6a25df1a&is=6a248d9a&hm=07f694eec57d48a624e67785182a8c974309c78cac5b1067565bfe1ad4c9f16d&
+    [embed] GitHub - tmrisdaone/Hermes_proot-distro_scrapper https://github.com/tmrisdaone/Hermes_proot-distro_scrapper
+

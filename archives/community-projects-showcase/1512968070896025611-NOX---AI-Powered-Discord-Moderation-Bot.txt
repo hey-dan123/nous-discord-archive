@@ -1,0 +1,20 @@
+# Thread '🤖 NOX — AI-Powered Discord Moderation Bot' in forum #community-projects-showcase
+# thread_id=1512968070896025611 forum_id=1316137596535177246
+# Started 2026-06-07T03:40:46.169029+00:00
+
+[2026-06-06T23:54:57.689000+00:00] vibhasdutta (id=1512968070896025611)
+    Built a Discord bot that goes beyond the usual command-based moderation. NOX uses Google Gemini to actually understand what's happening in your server — not just pattern-match rules.
+    What it does:
+    🛡️ AI Moderation — profanity detection in 7 languages, custom regex word filters, link protection with VirusTotal checks, auto-warnings, timeouts, kicks, bans, and escalation logic. All configurable per server.
+    🚨 Anti-Raid & Anti-Nuke — 5-signal raid detection (mass joins, message floods, coordinated spam, new account surges, mass mentions) with auto or alert response modes. Anti-nuke catches mass channel/role deletions and permission storms, locks down instantly, and notifies staff.
+    🎫 Ticket System — create tickets via natural language or UI panels, cloud-stored transcripts with 30-day retention, and AI-generated summaries on Premium.
+    📢 Event Announcements — detects scheduled Discord events and auto-generates hype text and themed embeds. Premium adds AI channel announcements that monitor channels for relevance and post only when genuinely useful.
+    🧠 Persistent Memory — remembers conversation context, user preferences, and moderation history across sessions. Makes the bot feel server-aware rather than stateless.
+    🎌 Anime & Manga — full AniList integration with search, rankings, schedules, character lookups, and AI-powered recommendations mid-chat.
+    📊 Analytics — message metrics, automod breakdowns, token usage, ticket stats, all in a dashboard.
+    Stack: Google Gemini · Firebase · Redis · Qdrant (semantic search) · AWS · Next.js
+    Free tier available. Premium unlocks higher AI token limits, AI ticket summaries, AI-powered announcements, and priority support.
+    🔗 https://noxbot.tech
+    Happy to answer questions about how any of it works under the hood.
+    [embed] NOX - Your AI Discord Moderator https://noxbot.tech/
+

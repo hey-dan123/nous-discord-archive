@@ -3285,3 +3285,37 @@
     told my agent to take a look https://github.com/nesquena/hermes-webui/pull/3739 hopefully there's anything useful in there
     [reply to avidfuturist msg=1512876602554454220]
 
+[2026-06-06T21:24:00.168000+00:00] rakaarwaky (id=1512930080899207350)
+    So it will be dead project after all
+
+[2026-06-07T00:31:19.276000+00:00] avidfuturist (id=1512977221135106058)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+
+[2026-06-07T02:35:21.330000+00:00] mathewsstar (id=1513008435371835444)
+    ## Feature Request: Multi-Tab Interface for Profile Switching Within the UI
+    
+    ### Description
+    I would like to propose a new feature to enhance the multitasking capabilities of Hermes Web-Ui: a **built-in multi-tab system** within the same webpage. 
+    
+    Currently, switching between different agent profiles or keeping track of separate ongoing conversations requires navigating away or opening multiple browser tabs. Introducing an internal tab bar would allow users to switch seamlessly between different contexts instantly.
+    
+    ### Key Capabilities & Use Cases
+    * **Parallel Conversations:** Open a conversation with Profile A in one tab and another with Profile B in a second tab, maintaining both sessions active simultaneously.
+    * **Seamless Context Switching:** Switch between tasks, prompts, or agent profiles with a single click without losing the state or history of the current view.
+    * **Improved Workspace Organization:** Keep the workspace clean and centralized within a single browser window, preventing browser tab clutter.
+    
+    ### Proposed UI/UX Flow
+    1. A dynamic tab bar at the top of the main chat area (similar to modern code editors or web browsers).
+    2. A "+" button to open a new tab, prompting the user to select the desired profile or start a new session.
+    3. A close ("x") button on each tab to terminate or save that specific session view.
+    
+    This feature would significantly boost productivity and make Hermes Web-Ui feel like a robust, desktop-grade AI orchestration environment.
+
+[2026-06-07T02:41:42.065000+00:00] avidfuturist (id=1513010032290168965)
+    If you are on a Mac, I have tabs built into the desktop app version of this WebUI for this very reason almost exactly what you are describing! https://github.com/hermes-webui/hermes-swift-mac/releases
+    
+    If we are able to build a windows or Linux desktop version, those would support this as well.
+    
+    Thanks for the suggestion!
+    [reply to mathewsstar msg=1513008435371835444]
+

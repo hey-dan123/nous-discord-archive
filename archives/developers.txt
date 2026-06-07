@@ -26510,3 +26510,158 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-06T18:56:05.619000+00:00] l_acie (id=1512892858343100447)
     right that’s a thing now.
 
+[2026-06-06T19:52:07.386000+00:00] kkurottal6611 (id=1512906958615875766)
+    Small WhatsApp bugfix PR https://github.com/NousResearch/hermes-agent/pull/40734
+    [embed] fix(whatsapp): gate startup requirements on aiohttp, not just Node.... https://github.com/NousResearch/hermes-agent/pull/40734
+
+[2026-06-06T20:24:02.400000+00:00] petrichor223 (id=1512914990766751855)
+    https://github.com/NousResearch/hermes-agent/pull/40746
+    
+    this fixes a subtle ‎`LIKE` vs literal mismatch for entity names with ‎`%` / ‎`_`, which could quietly attach facts to the wrong entities over time 
+    
+    fyi
+    [embed] fix(memory): treat entity names as literals in holographic resoluti... https://github.com/NousResearch/hermes-agent/pull/40746
+
+[2026-06-06T20:30:03.047000+00:00] aleksandr_1 (id=1512916503429906522)
+    <@387972437901312000> sensei, when you have a moment, would appreciate a look at these three PRs. The latest upstream (56236b16) included related approval and config fixes: `fix(approval): close remaining prompt_toolkit deadlock vectors`, `fix(approval): wake blocked gateway approvals on session cleanup`, and `fix(code-exec): restore approval context in execute_code RPC threads + guard entry`. These PRs cover adjacent gaps in the same areas.
+    
+    **1. fix(approval): return approval_required instead of blocking on input() when callback is None.**
+    `check_dangerous_command` and `check_all_command_guards` fell through to `prompt_dangerous_approval` when `approval_callback=None`, blocking a worker thread for up to 60s then silently denying. Added an early-return guard before the blocking path in both functions. https://github.com/NousResearch/hermes-agent/pull/39976
+    
+    **2. fix(approval): guard _permanent_approved reads under _lock before save_permanent_allowlist.**
+    All four `save_permanent_allowlist(_permanent_approved)` call sites read the set outside `_lock`, creating a TOCTOU window where a concurrent `approve_permanent()` could cause a lost update in the persisted `command_allowlist`. Wrapped all four reads in `with _lock: save_permanent_allowlist(_permanent_approved.copy())`. https://github.com/NousResearch/hermes-agent/pull/39865
+    
+    **3. fix(config): guard config caches under _CONFIG_LOCK to prevent thread-safety issues.**
+    `_CONFIG_PARSE_WARNED` and `_LAST_EXPANDED_CONFIG_BY_PATH` were read and written outside `_CONFIG_LOCK` in `_warn_config_parse_failure` and `save_config`, despite `_CONFIG_LOCK` already guarding the other caches. Parallel gateway requests could create duplicate `.bak` files or lose cache entries. Wrapped both in `with _CONFIG_LOCK:`. https://github.com/NousResearch/hermes-agent/pull/39715
+    
+    **Have a great weekend everyone!**
+    <:o7:1151261546111053924>
+
+[2026-06-06T21:18:51.750000+00:00] erhnysr (id=1512928787300487439)
+    opened PR #40799 — slash commands (/steer, /stop, /new etc.) were being silently dropped when the agent was busy in queue mode
+    
+    root cause: the busy handler returned False before any command parsing, so commands fell through as plain text and got queued for next turn
+    
+    https://github.com/NousResearch/hermes-agent/pull/40799
+    [embed] fix(gateway): slash commands no longer silently dropped in busy que... https://github.com/NousResearch/hermes-agent/pull/40799
+
+[2026-06-06T21:28:19.554000+00:00] yap.bi (id=1512931168842940697)
+    Opened a game-development skill PR: https://github.com/NousResearch/hermes-agent/pull/40796
+    
+    Full game dev lifecycle in one skill — concept to shipped. Structured as an 
+    orchestrator SKILL.md + 6 reference files, so the agent loads engine-specific 
+    depth only when needed instead of one giant context dump.
+    
+    Covers Unity (C#), Unreal (C++/Blueprints), and Godot (GDScript) with 
+    idiomatic, copy-and-adapt code — real player controllers, AI FSMs, the 
+    reflection/UPROPERTY gotchas — plus engine-agnostic core systems and full 
+    build/publish coverage (Steam, itch.io, mobile).
+    
+    Feedback welcome.
+    [embed] feat(skills): add game-development - full lifecycle, blank page to ... https://github.com/NousResearch/hermes-agent/pull/40796
+
+[2026-06-06T21:31:34.071000+00:00] lordbartok (id=1512931984706506813)
+    A set of CLI / TUI quality-of-life fixes, all CI green / tests passing and mergeable. Ready for review when someone has a minute 👍 
+    
+    • #23646 — fix(tui): detach session.close finalization from the response path (Fixes #23642)
+      https://github.com/NousResearch/hermes-agent/pull/23646
+    • #31924 — fix(cli): skip cross-mount paths in `@` file autocomplete on Windows (Fixes #31915)
+      https://github.com/NousResearch/hermes-agent/pull/31924
+    • #34495 — fix(cli): diagnose WSL2 local-model split-endpoint in hermes doctor (Fixes #34477)
+      https://github.com/NousResearch/hermes-agent/pull/34495
+    • #34502 — fix(cli): treat model.name as an alias for model.default
+      https://github.com/NousResearch/hermes-agent/pull/34502
+    • #34550 — feat(cli): auto-detect image paths typed anywhere in terminal input
+      https://github.com/NousResearch/hermes-agent/pull/34550
+    • #34571 — feat(cli): semantic color palette for a consistent CLI design system
+      https://github.com/NousResearch/hermes-agent/pull/34571
+    • #34626 — fix(cli): pin worker TERMINAL_CWD to the profile dir in kanban spawn
+      https://github.com/NousResearch/hermes-agent/pull/34626
+    • #34630 — fix(web): clear WebGL atlas on font change to stop glyph corruption
+      https://github.com/NousResearch/hermes-agent/pull/34630
+    
+    Thanks so much!  🙏
+    [embed] fix(tui): detach session.close finalization from response path (#23... https://github.com/NousResearch/hermes-agent/pull/23646
+    [embed] fix(cli): skip cross-mount paths in `@` file autocomplete on Window... https://github.com/NousResearch/hermes-agent/pull/31924
+    [embed] fix(cli): diagnose WSL2 local-model split-endpoint in hermes doctor... https://github.com/NousResearch/hermes-agent/pull/34495
+    [embed] fix(cli): treat model.name as alias for model.default by Bartok9 ·... https://github.com/NousResearch/hermes-agent/pull/34502
+    [embed] feat(cli): auto-detect image paths typed anywhere in terminal input... https://github.com/NousResearch/hermes-agent/pull/34550
+
+[2026-06-06T21:36:44.646000+00:00] aliasocracy (id=1512933287352598680)
+    fix: restore MiniMax OAuth prompt cache hits #40807 - https://github.com/NousResearch/hermes-agent/pull/40807
+    
+    Prompt caching is broken for MM OAuth with streaming at the moment.
+    [embed] fix: restore MiniMax OAuth prompt cache hits by alias8818 · Pull R... https://github.com/NousResearch/hermes-agent/pull/40807
+
+[2026-06-06T21:47:16.504000+00:00] yap.bi (id=1512935937557135400)
+    https://github.com/NousResearch/hermes-agent/pull/40811
+    [embed] fix(copilot-acp): honor line=1 pagination in read_text_file (salvag... https://github.com/NousResearch/hermes-agent/pull/40811
+
+[2026-06-06T21:48:09.346000+00:00] yap.bi (id=1512936159192420504)
+    https://github.com/NousResearch/hermes-agent/pull/40809
+    [embed] fix(agent): replace silent except+pass with logging in agent init (... https://github.com/NousResearch/hermes-agent/pull/40809
+
+[2026-06-06T22:41:12.584000+00:00] bbcrypto0 (id=1512949510660427937)
+    feat(skill): add scanner prototype
+    
+    Added the first lightweight scanner prototype for the research workflow skill.
+    
+    It collects public repository signals, removes duplicate results, and prints clean terminal output for review. This moves the workflow from static templates toward a small working prototype.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/40136
+    [embed] feat(skills): add gamefi-research workflow skill foundation by BBCr... https://github.com/NousResearch/hermes-agent/pull/40136
+
+[2026-06-06T23:34:12.200000+00:00] yap.bi (id=1512962846936535240)
+    <a:hype:1151299876395696189> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/40865
+    [embed] fix(teams-pipeline): fsync state writes to prevent corruption on cr... https://github.com/NousResearch/hermes-agent/pull/40865
+
+[2026-06-07T00:18:34.526000+00:00] aliasocracy (id=1512974013541126265)
+    fix: route MiniMax OAuth secondary clients #40871 - https://github.com/NousResearch/hermes-agent/pull/40871
+    [embed] fix: route MiniMax OAuth secondary clients by alias8818 · Pull Req... https://github.com/NousResearch/hermes-agent/pull/40871
+
+[2026-06-07T01:42:37.891000+00:00] nftpoetrist (id=1512995166947119175)
+    fix(osv_check): uvx --from=PKG install target bypasses malware scan
+    
+    When using uvx --from=PKG BINARY, the actual install target is in --from=PKG, not the first positional arg. Since _parse_package_from_args skips everything starting with -, the real package is never sent to OSV — only the binary name is checked.
+    
+    Fix mirrors the npx --package= fix from #40567: added --from and --from= handling so uvx installs are checked correctly.
+    
+    PR → https://github.com/NousResearch/hermes-agent/pull/40908
+    [embed] fix(osv_check): honor uvx --from/--from= install target when parsin... https://github.com/NousResearch/hermes-agent/pull/40908
+
+[2026-06-07T02:08:36.370000+00:00] lordbartok (id=1513001703681822781)
+    Config-robustness + MCP / skills / cron fixes, all CI green / tests passing and mergeable. Ready for review when you have a chance 🙏
+    
+    • #33405 — fix(mcp): validate mcp_servers entries on load; skip-with-warning instead of crashing
+      https://github.com/NousResearch/hermes-agent/pull/33405
+    • #34250 — fix(config): validate config-key schema, refuse unknown keys (Fixes #34067)
+      https://github.com/NousResearch/hermes-agent/pull/34250
+    • #34251 — fix(skills): don't create empty category dirs on sync (Fixes #34237)
+      https://github.com/NousResearch/hermes-agent/pull/34251
+    • #34255 — fix(cronjob): accept schedule param aliases (cron, when, …) (Fixes #34120)
+      https://github.com/NousResearch/hermes-agent/pull/34255
+    • #27333 — feat(cron): add catchup option to execute missed recurring jobs (Closes #27327)
+      https://github.com/NousResearch/hermes-agent/pull/27333
+    • #34636 — fix(skills): retry transient GitHub rate-limits in skills-index build
+      https://github.com/NousResearch/hermes-agent/pull/34636
+    
+    Thanks so much! 🙏
+    [embed] fix(mcp): validate mcp_servers entries on load; skip-with-warning i... https://github.com/NousResearch/hermes-agent/pull/33405
+    [embed] fix(config): validate config-key schema, refuse unknown keys (#3406... https://github.com/NousResearch/hermes-agent/pull/34250
+    [embed] fix(skills): don't create empty category dirs on sync (#34237) by B... https://github.com/NousResearch/hermes-agent/pull/34251
+    [embed] fix(cronjob): accept schedule param aliases (cron, when, ...) (#341... https://github.com/NousResearch/hermes-agent/pull/34255
+    [embed] feat(cron): add `catchup` option to execute missed recurring jobs (... https://github.com/NousResearch/hermes-agent/pull/27333
+
+[2026-06-07T02:34:34.239000+00:00] thechaosalchemist (id=1513008237857996851)
+    fix(desktop): recover chat after sleep/wake by revalidating the cached backend
+    https://github.com/NousResearch/hermes-agent/pull/40135
+    [embed] fix(desktop): recover chat after sleep/wake by revalidating the cac... https://github.com/NousResearch/hermes-agent/pull/40135
+
+[2026-06-07T03:01:01.792000+00:00] kyssta69 (id=1513014896537764022)
+    https://github.com/NousResearch/hermes-agent/pull/40921
+    
+    **Problem**: Config migration after upgrade rewrites user's curated config.yaml with all DEFAULT_CONFIG values, expanding a ~950 byte file to ~12 KB and dropping custom_providers. migrate_config() called load_config() which deep-merges defaults, then save_config() wrote the full expanded config to disk. Changed all migration steps to use read_raw_config() so only the user's actual config is read and modified.
+    [embed] fix(config): use read_raw_config() in migrations to prevent expandi... https://github.com/NousResearch/hermes-agent/pull/40921
+

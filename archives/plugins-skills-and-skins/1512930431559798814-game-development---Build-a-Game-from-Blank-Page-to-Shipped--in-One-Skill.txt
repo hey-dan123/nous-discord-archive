@@ -1,0 +1,35 @@
+# Thread 'game-development — Build a Game from Blank Page to Shipped, in One Skill' in forum #plugins-skills-and-skins
+# thread_id=1512930431559798814 forum_id=1485392832154832906
+# Started 2026-06-07T03:44:29.911208+00:00
+
+[2026-06-06T21:25:23.772000+00:00] yap.bi (id=1512930431559798814)
+    game-development skill — PR: https://github.com/NousResearch/hermes-agent/pull/40796
+    
+    The gaming category had skills for playing games, but nothing for making them. 
+    This fills that gap completely — an end-to-end game dev guide that takes you 
+    from a blank page to a published game without needing any other tool.
+    
+    Built as an orchestrator + references, covering the full 11-stage lifecycle:
+    concept → design → engine selection → architecture → core systems → gameplay 
+    → art/audio → polish → optimization → QA → shipping → post-launch.
+    
+    Six deep reference files:
+    - engine-selection — Unity vs Unreal vs Godot vs web, full decision matrix
+    - core-systems — game loop, input mapping, state machines, event bus, save/load, pooling
+    - unity — C#, MonoBehaviour, full player controller (coyote-time + jump buffer), AI FSM
+    - unreal — C++/Blueprints, Gameplay Framework, reflection system, Enhanced Input
+    - godot — GDScript, nodes & scenes, signals, CharacterBody2D controller, Resources
+    - shipping — building for desktop/web/mobile + publishing to Steam, itch.io, mobile stores
+    
+    Engine-idiomatic, copy-and-adapt code for each engine — not pseudocode. Whether 
+    you're making your first 2D platformer in Godot or shipping a 3D game to Steam, 
+    it meets you at your stage.
+    
+    Triggers: "help me make a game", "implement a player controller in Unity", 
+    "how do I publish my game to Steam"
+    [attachment] Ekran_goruntusu_2026-06-07_002510.png https://cdn.discordapp.com/attachments/1512930431559798814/1512930431706857553/Ekran_goruntusu_2026-06-07_002510.png?ex=6a25e1c3&is=6a249043&hm=8c1658e4fb97e3104a6ee4d08bbd68eb5065ed491459e62d4a9af0360d5a673a&
+    [embed] feat(skills): add game-development - full lifecycle, blank page to ... https://github.com/NousResearch/hermes-agent/pull/40796
+
+[2026-06-06T23:05:13.314000+00:00] happysearch (id=1512955553519763607)
+    thanks my friend.
+

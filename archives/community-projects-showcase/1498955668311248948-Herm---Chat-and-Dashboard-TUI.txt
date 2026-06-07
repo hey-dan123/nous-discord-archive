@@ -1170,3 +1170,9 @@
     just thinking of how most people use it, its usually on a laptop remote while they work and they remote into their instance OR home machine (which is typically a dedicated linux instance hosting hermes) so the hermes desktop app for example doesnt serve as a solution for that, and if the connection lets say on the laptop gets cut off, hermes has to pick up from memory if it didnt fail.
     [reply to liftaris msg=1512192021790458020]
 
+[2026-06-06T23:14:23.175000+00:00] liftaris (id=1512957859803955333)
+    I got accepted into mintlify's OSS program 🤘 their documentation set up is actually pretty impressive
+
+[2026-06-06T23:15:32.008000+00:00] liftaris (id=1512958148510482443)
+    If you've been keeping up with the dev branch, you'll know there's a lot coming in the next release. Thank you for your patience, getting eikon spec right is important and hard--taking time
+

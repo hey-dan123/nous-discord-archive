@@ -407,3 +407,12 @@
     I used it for a session or two. It’s… a lot.
     [reply to raithlin msg=1511003328660766770]
 
+[2026-06-06T19:36:45.200000+00:00] magnus919 (id=1512903090687180801)
+    # Ali G
+    
+    - [SKILL.md](https://git.brandyapple.com/magnus/awesome-souls/src/branch/main/ali-g/SOUL.md)
+    - [Demo](https://gist.github.com/magnus919/5dcbae98d51e33ba942450eae3ac3e7b)
+    [attachment] SOUL.png https://cdn.discordapp.com/attachments/1492248418515419177/1512903090960072954/SOUL.png?ex=6a25c84d&is=6a2476cd&hm=da40f69926c7f227c16a08999b30052b393965c28def26c05b13ac90d141ad0d&
+    [embed] awesome-souls/ali-g/SOUL.md at main https://git.brandyapple.com/magnus/awesome-souls/src/branch/main/ali-g/SOUL.md
+    [embed] A 10-turn conversation with Ali G, running as an isolated Hermes Ag... https://gist.github.com/magnus919/5dcbae98d51e33ba942450eae3ac3e7b
+

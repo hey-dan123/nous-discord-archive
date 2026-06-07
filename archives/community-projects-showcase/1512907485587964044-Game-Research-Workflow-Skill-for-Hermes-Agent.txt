@@ -1,0 +1,61 @@
+# Thread 'Game Research Workflow Skill for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1512907485587964044 forum_id=1316137596535177246
+# Started 2026-06-07T03:40:47.074390+00:00
+
+[2026-06-06T19:54:13.026000+00:00] bbcrypto0 (id=1512907485587964044)
+    I built a small Hermes-centered research workflow skill for structured game project discovery and technical review.
+    
+    The idea comes from a real community need: gaming communities often find promising new projects too late, after the early testing and learning window has already passed.
+    
+    This workflow helps Hermes Agent organize early project research by reviewing public development signals, repository activity, documentation quality, project notes, and clear next-step classification.
+    
+    Current version includes:
+    - Hermes workflow skill foundation
+    - daily report template
+    - structured research process
+    - public repository signal review
+    - documentation quality checks
+    - project notes
+    - WATCH / TEST / CONTACT / SKIP classification
+    - Discord-ready report format
+    
+    The workflow is designed so Hermes can later:
+    - run this research process on a schedule
+    - remember previous reports
+    - compare new findings with older reports
+    - generate clean community-ready summaries
+    - support a future scanner and scoring system
+    
+    I kept this first PR intentionally small and easy to review: skill foundation + report template only.
+    
+    This is only a research and workflow organization tool. It is not related to any asset, promotion, or external claim.
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/40136
+    
+    Feedback is welcome. Thank you!
+    [embed] feat(skills): add gamefi-research workflow skill foundation by BBCr... https://github.com/NousResearch/hermes-agent/pull/40136
+
+[2026-06-06T22:23:50.474000+00:00] bbcrypto0 (id=1512945139734024252)
+    Small update on my Hermes research workflow project.
+    
+    I added a few new improvements to make the workflow more practical and closer to a working system:
+    
+    - improved the main skill instructions
+    - added clearer step-by-step workflow guidance
+    - added a single project review template
+    - added a lightweight scanner prototype
+    - scanner can review public repositories by selected game/project keywords
+    - it removes duplicate results and prints clean terminal output
+    - added requirements and environment example files for easier setup
+    
+    The project is still intentionally small and reviewable, but it now has a clearer path from workflow documentation → review templates → working scanner prototype.
+    
+    Next step: adding the first scoring and classification pass.
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/40136
+    
+    Feedback is welcome. Thank you!
+    [embed] feat(skills): add gamefi-research workflow skill foundation by BBCr... https://github.com/NousResearch/hermes-agent/pull/40136
+

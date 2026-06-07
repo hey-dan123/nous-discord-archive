@@ -350,3 +350,78 @@
     Demo: https://gist.github.com/magnus919/740f5af9d53a2e4c14dc2c2b691419dd
     [embed] GroktoCrawl Substack Adapter — RSS-based article extraction demo https://gist.github.com/magnus919/740f5af9d53a2e4c14dc2c2b691419dd
 
+[2026-06-06T19:31:22.350000+00:00] magnus919 (id=1512901736556134500)
+    Merged.
+    
+    https://github.com/groktopus/groktocrawl/pull/123
+    [embed] feat: observability infrastructure — health probes, /metrics, and... https://github.com/groktopus/groktocrawl/pull/123
+
+[2026-06-06T20:20:23.635000+00:00] magnus919 (id=1512914073199710418)
+    new feature: **Intelligent Scrape Cache**
+    *GroktoCrawl is a free and local search/scrape/crawl/deep research tool that works with Hermes Agent.*
+    
+    [Demo](https://gist.github.com/magnus919/20399dfa4169b07196200dae79c623be)
+    [embed] Demo: Intelligent scrape cache with ETag/Last-Modified revalidation... https://gist.github.com/magnus919/20399dfa4169b07196200dae79c623be
+
+[2026-06-06T22:59:48.320000+00:00] fooned (id=1512954190396264498)
+    Does this support proxies?
+
+[2026-06-06T22:59:58.910000+00:00] fooned (id=1512954234814074971)
+    My agent didn't seem to think so and has adapted it so it does.
+
+[2026-06-06T23:00:16.259000+00:00] fooned (id=1512954307581055037)
+    Looks cool
+    [reply to magnus919 msg=1512914073199710418]
+
+[2026-06-06T23:04:15.659000+00:00] fooned (id=1512955311697297518)
+    Bt the way, I got it to scrape Reddit
+
+[2026-06-06T23:04:20.170000+00:00] magnus919 (id=1512955330617671861)
+    do me a favor? Talk to your agent please about how you would want it to work. Then ask your agent to file an issue on github about the idea. I really do use these to improve groktocrawl.
+    [reply to fooned msg=1512954234814074971]
+
+[2026-06-06T23:04:58.068000+00:00] fooned (id=1512955489573540033)
+    I'm not if you can scrape Reddit, but I had camoufox installed on the server and it made some sort of adapter that makes it work and it scrapes Reddit via groktocrawl
+
+[2026-06-06T23:05:34.755000+00:00] magnus919 (id=1512955643449835631)
+    I did have a Reddit feature I was working on, and even briefly merged it. But after more testing I reverted that code. Reddit's blocking system was sophisticated enough that I felt it was going to give a bad user experience. So it's just doing standard web scraping on Reddit for now. I'd really like to use their API and give cleaner scrapes like I do now for GitHub, Substack, YouTube, Bluesky...
+    [reply to fooned msg=1512955311697297518]
+
+[2026-06-06T23:05:37.549000+00:00] fooned (id=1512955655168851978)
+    (with a proxy of course) but im on hetzner vps so datacdnter IP
+
+[2026-06-06T23:06:16.830000+00:00] fooned (id=1512955819925438554)
+    I will ask my agent to do a issue, I have never done one  before will likely be wrong lol
+
+[2026-06-06T23:06:51.617000+00:00] magnus919 (id=1512955965832433704)
+    hermes is surprisingly good at this. Assuming it's another clanker reading them. 😄
+    [reply to fooned msg=1512955819925438554]
+
+[2026-06-06T23:07:03.700000+00:00] fooned (id=1512956016512339968)
+    🤣🤣 hes working on it now
+    [reply to magnus919 msg=1512955965832433704]
+
+[2026-06-06T23:11:19.921000+00:00] fooned (id=1512957091181232288)
+    It done it. Not sure if it's any use to you
+    [reply to magnus919 msg=1512955965832433704]
+
+[2026-06-06T23:26:01.399000+00:00] magnus919 (id=1512960788367937556)
+    https://github.com/groktopus/groktocrawl/issues/127#issuecomment-4640769195
+    
+    Wait for the mentioned ADR to get published. Let your clanker read my comment + the ADR (hitting any minute) and it should have enough context to do a good job with it.
+    [embed] feat: proxy support + external browser adapter for anti-bot sites (... https://github.com/groktopus/groktocrawl/issues/127
+    [reply to fooned msg=1512957091181232288]
+
+[2026-06-06T23:29:49.892000+00:00] magnus919 (id=1512961746736775389)
+    https://github.com/groktopus/groktocrawl/blob/main/docs/adr/0020-proxy-support-with-guardrails.md
+    [embed] groktocrawl/docs/adr/0020-proxy-support-with-guardrails.md at main ... https://github.com/groktopus/groktocrawl/blob/main/docs/adr/0020-proxy-support-with-guardrails.md
+    [reply to fooned msg=1512957091181232288]
+
+[2026-06-06T23:33:14.596000+00:00] fooned (id=1512962605327712447)
+    The power of clankers, amazing
+    [reply to magnus919 msg=1512960788367937556]
+
+[2026-06-07T03:25:00.016000+00:00] magnus919 (id=1513020928886313030)
+    I told mine to be a little detailed in the code review so yours would know precisely what was needed to get this merged.
+    [reply to fooned msg=1512962605327712447]
+

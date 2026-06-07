@@ -1,0 +1,22 @@
+# Thread 'ContribScout: Finding Early Contribution Opportunities' in forum #community-projects-showcase
+# thread_id=1512629676588400682 forum_id=1316137596535177246
+# Started 2026-06-07T03:40:51.208364+00:00
+
+[2026-06-06T20:26:20.184000+00:00] sworntech (id=1512915568674472088)
+    ContribScout: Finding Early Contribution Opportunities
+
+[2026-06-06T20:26:39.917000+00:00] sworntech (id=1512915651440803941)
+    **ContribScout v0.2 Update**
+    
+    Added a Hermes-compatible skill package today.
+    
+    The Vercel dashboard stays standalone, but the new Hermes skill layer can now consume the ContribScout API and format the top opportunities into a daily contribution report.
+    
+    Added:
+    • `SKILL.md`
+    • `daily_report.py`
+    • Hermes README updates
+    • API-based daily report format
+    
+    This makes ContribScout easier to use inside a Hermes workflow instead of only as a web dashboard.
+

@@ -23,3 +23,6 @@
 [2026-06-06T16:29:43.487000+00:00] rdx101vc (id=1512856023411462145)
     can it connect to an already installed omnivoice instance? i have it installed via pinokio as an app
 
+[2026-06-07T03:37:51.291000+00:00] rdx101vc (id=1513024163848261774)
+    <@592742491963260948>
+

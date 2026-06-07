@@ -1,0 +1,21 @@
+# Thread '🧠 context-mcp — Persistent memory + codebase knowledge graph for AI coding assistants' in forum #community-projects-showcase
+# thread_id=1512967774782361621 forum_id=1316137596535177246
+# Started 2026-06-07T03:40:46.624530+00:00
+
+[2026-06-06T23:53:47.090000+00:00] vibhasdutta (id=1512967774782361621)
+    The problem: Every AI conversation starts from zero. The assistant re-reads files it already read, re-discovers architecture it already understood, re-derives decisions already made. And if you switch tools — fix something in Claude Code, open Cursor — it knows nothing.
+    What I built: A single MCP server that gives any AI assistant persistent memory and a structural knowledge graph of your codebase.
+    What it does:
+    
+    Persistent memory — decisions, bugs, notes, and architecture saved across sessions and loaded automatically at conversation start
+    Shared context store — lives at ~/.context-mcp/, not tied to any tool. Save from Claude Code, pick it up in Cursor, Gemini CLI, Codex, or Windsurf
+    CodeGraph — AST-parsed knowledge graph (tree-sitter, 16 languages). Answer "what calls this function?" in less tokens instead of reading 10 files. 
+    HTTP mode + OAuth 2.0 — connect Claude.ai and ChatGPT over HTTP with ctx online
+    One install command — npm install -g context-mcp-server + ctx install --all
+    
+    Supports: Claude Code · Cursor · VS Code Copilot · Gemini CLI · Codex CLI · Windsurf · Claude.ai · ChatGPT
+    Stack: Node.js (MCP server, CLI, HTTP/OAuth), Python + tree-sitter (AST extraction, NetworkX graph)
+    🔗 https://github.com/vibhasdutta/context-mcp
+    Would love feedback — especially on the CodeGraph query interface and the multi-AI context sharing. Still early, happy to answer questions.
+    [embed] GitHub - vibhasdutta/context-mcp: Persistent memory and codebase kn... https://github.com/vibhasdutta/context-mcp
+

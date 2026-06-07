@@ -1,0 +1,12 @@
+# Thread 'New Desktop App Path Problem on Windows' in forum #plugins-skills-and-skins
+# thread_id=1512969469666918552 forum_id=1485392832154832906
+# Started 2026-06-07T03:44:29.471754+00:00
+
+[2026-06-07T00:00:31.182000+00:00] notgovernor (id=1512969469666918552)
+    Desktop app might have some issues with paths with spaces in them on windows.
+    
+    Top image was pasted into the session from the clipboard. Bottom image was added using the plus to a file on the desktop.
+    
+    Not sure why it's looking for a path on the top one as there isnt a path to that image on the clipboard. But both show image not found with a stub of a path that ends when it hits a space. My desktop path is "C:\Users\Not Governor\Desktop"
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512969469666918552/1512969470027763862/image.png?ex=6a26061f&is=6a24b49f&hm=337dd2612f868783a010e7bb9fb1300f10db24fb920e0a58e6f7e0cfe6bedcc6&
+
