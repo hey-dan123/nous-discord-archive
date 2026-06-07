@@ -26926,3 +26926,151 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Just opened PR #41233 to add the first x402 payment skill to Hermes Agent — autonomous USDC micropayments on Arc Testnet. Verified on-chain: https://github.com/NousResearch/hermes-agent/pull/41233
     [embed] feat: add x402-payment skill for autonomous USDC micropayments on A... https://github.com/NousResearch/hermes-agent/pull/41233
 
+[2026-06-07T13:54:15.758000+00:00] kyssta69 (id=1513179287946002612)
+    why are you pinging us bro we have no permissions to accept PRs
+
+[2026-06-07T13:54:27.797000+00:00] kyssta69 (id=1513179338441228510)
+    wait for someone who manages PR to see this, he will do it.
+
+[2026-06-07T13:54:41.924000+00:00] taikimliuhong (id=1513179397694296135)
+    sorry i was not know about this
+
+[2026-06-07T13:54:43.100000+00:00] kyssta69 (id=1513179402626797680)
+    usually teknium does that
+
+[2026-06-07T13:57:47.969000+00:00] promptsiren (id=1513180178023583875)
+    there's a huge backlog of issues and PRs
+    be patient
+    team has to work through stuff in order of their priority to the project
+    there are loads of people also waiting
+    please refrain from reposting your PR for consideration more than once a day
+    [reply to taikimliuhong msg=1513179397694296135]
+
+[2026-06-07T14:05:37.245000+00:00] taikimliuhong (id=1513182146309656739)
+    Hey team,
+    Just wanted to gently follow up on my PR for the Urdu README (README.ur-PK.md). I understand there’s a huge backlog and you’re prioritizing things totally respect that 
+    This is just a documentation update no code changes. It adds an Urdu version of the README in pure Urdu script to help Urdu-speaking users understand the project better. If possible, could someone please take a quick look when they get a chance? No rush at all just didn’t want it to slip through the cracks. Thanks so much for your time and hard work!
+    [reply to promptsiren msg=1513180178023583875]
+
+[2026-06-07T14:22:13.796000+00:00] kyssta69 (id=1513186326147498215)
+    https://github.com/NousResearch/hermes-agent/pull/41324
+    
+    **Problem**: When users type /model in Discord, the gateway freezes for 120-150 seconds because list_picker_providers and list_authenticated_providers run blocking HTTP calls directly on the event loop. The fix wraps both calls with asyncio.to_thread to move blocking I/O off the event loop.
+    [embed] fix(gateway): wrap blocking /model provider-list calls in asyncio.t... https://github.com/NousResearch/hermes-agent/pull/41324
+
+[2026-06-07T14:39:11.530000+00:00] kyssta69 (id=1513190594833285263)
+    https://github.com/NousResearch/hermes-agent/pull/41324
+    
+    **Problem**: Line 1: /model slash command blocks Discord event loop for 120-150s causing application timeout.
+    Line 2: list_picker_providers() and list_authenticated_providers() made blocking HTTP calls directly on the async event loop.
+    Line 3: Wrapped both calls in asyncio.to_thread() to keep the event loop responsive.
+    [embed] fix(gateway): wrap blocking /model provider-list calls in asyncio.t... https://github.com/NousResearch/hermes-agent/pull/41324
+
+[2026-06-07T14:39:29.015000+00:00] kyssta69 (id=1513190668170825922)
+    https://github.com/NousResearch/hermes-agent/pull/41333
+    
+    **Problem**: Line 1: hermes skills update always reports update_available even after reinstall.
+    Line 2: install_from_quarantine used content_hash (hashes all files on disk including __pycache__) but update checks compare against bundle_content_hash (bundle files only).
+    Line 3: Changed to use bundle_content_hash() so the stored hash matches what update checks compare against.
+    [embed] fix(skills): use bundle_content_hash in lock to fix false update_av... https://github.com/NousResearch/hermes-agent/pull/41333
+
+[2026-06-07T14:52:20.115000+00:00] kyssta69 (id=1513193902398509157)
+    https://github.com/NousResearch/hermes-agent/pull/41333
+    
+    **Problem**: hermes skills update reinstalls files correctly but the lock content_hash is stale because install_from_quarantine hashed on-disk files including __pycache__ while check compares against the in-memory bundle hash. Fix uses bundle_content_hash for the lock so hashes always match.
+    [embed] fix(skills): use bundle_content_hash in lock to fix false update_av... https://github.com/NousResearch/hermes-agent/pull/41333
+
+[2026-06-07T15:13:38.358000+00:00] davidg1982 (id=1513199263738495030)
+    Question, is it based on the p1 p2 p3 p4 priorities?Do we have a roadmap?
+    [reply to promptsiren msg=1513180178023583875]
+
+[2026-06-07T15:17:33.679000+00:00] promptsiren (id=1513200250746179754)
+    yeah, generally P0 are security or data loss issues so those go first, then P1, P2 etc
+    I think they're focusing mostly on the desktop fixes atm
+    but if someone opens a support thread for an issue, the PR to fix that also gets eyes on it faster since it's solving something concrete
+    no roadmap, just can't get to everything all at the same time, so prioritizing what causes the most paper cuts or affects the most users to get fixed first I guess
+    [reply to davidg1982 msg=1513199263738495030]
+
+[2026-06-07T15:18:16.130000+00:00] davidg1982 (id=1513200428798574742)
+    Gotcha. Thanks for the explaination
+    [reply to promptsiren msg=1513200250746179754]
+
+[2026-06-07T15:20:15.021000+00:00] gausoctavio (id=1513200927463575552)
+    Hello everyone
+
+[2026-06-07T15:20:31.296000+00:00] gausoctavio (id=1513200995725738156)
+    This is my PR in regards to a visual workflow; https://github.com/NousResearch/hermes-agent/pull/41358
+    [embed] feat(dashboard): add visual multi-agent workflow builder and backen... https://github.com/NousResearch/hermes-agent/pull/41358
+
+[2026-06-07T15:24:14.470000+00:00] davidg1982 (id=1513201931785343087)
+    Whoa, that seems intense 🙂
+    [reply to gausoctavio msg=1513200995725738156]
+
+[2026-06-07T15:28:59.909000+00:00] lsof (id=1513203129003540620)
+    I have a question I could use some advice on. `grok-composer-2.5-fast` via grok oauth has a `web_search` tool which conflicts with hermes `web_search`.  From my testing it is the only Grok-provided model that has this namespace conflict.
+    
+    In my own fork I built it so that it respects the native Hermes search configuration, as I _think_ that's the spirit of the law (so to speak). Wanted to get some comments on how this should be best approached as to be in line with the way the team handles model-specific behaviors.
+
+[2026-06-07T15:56:43.330000+00:00] pr0j3c7t0dd (id=1513210105896636476)
+    Thanks for adding the profile selection feature for new chats.  You guys are on fire! 🔥
+    [reply to pr0j3c7t0dd msg=1512090002547544115]
+
+[2026-06-07T16:35:55.234000+00:00] fhsduifisdfbsdifisdfysdfj (id=1513219970497253457)
+    https://tenor.com/view/high-five-apir-news-report-gif-12565671210418447517
+    [embed]  https://tenor.com/view/high-five-apir-news-report-gif-12565671210418447517
+
+[2026-06-07T16:36:37.858000+00:00] fhsduifisdfbsdifisdfysdfj (id=1513220149275000925)
+    Hermes is flying on my machine with the latest update
+
+[2026-06-07T17:00:49.937000+00:00] sauel (id=1513226239735763134)
+    does the hermes agent app not fire hooks?
+
+[2026-06-07T17:12:03.897000+00:00] bbcrypto0 (id=1513229066529149161)
+    feat(skill): add live demo page
+    
+    Added a small demo page for the research workflow skill.
+    
+    It shows the current flow:
+    Scan → Review Signals → Score → Classify → Generate Report
+    
+    Also includes a sample output card, generated report preview, and roadmap for future Hermes-ready automation.
+    
+    Demo: https://hermes-game-research.vercel.app/
+    PR: https://github.com/NousResearch/hermes-agent/pull/40136
+    [embed] Game Research Workflow for Hermes https://hermes-game-research.vercel.app/
+    [embed] feat(skills): add gamefi-research workflow skill foundation by BBCr... https://github.com/NousResearch/hermes-agent/pull/40136
+
+[2026-06-07T17:31:29.674000+00:00] .blockops (id=1513233956152283246)
+    Looking for some BETA testers.
+    
+    https://browserbridge.pages.dev/
+    [embed] BrowserBridge Private Alpha RC1 https://browserbridge.pages.dev/
+
+[2026-06-07T18:24:15.544000+00:00] nadiamermedev (id=1513247234773487858)
+    Quick question about contribution etiquette here — how does this community usually handle it when someone opens an issue with a proposed fix and offers to submit the PR themselves?
+    
+    I ask because I had it happen twice today where someone else opened a PR for my issue within hours, without coordinating first. Totally understand the enthusiasm, just wondering if there's an established norm here — like commenting on the issue first, or checking if the reporter is still planning to take it.
+    
+    Is there a CONTRIBUTING guide section on this, or just informal practice?
+
+[2026-06-07T18:27:25.723000+00:00] gausoctavio (id=1513248032441766129)
+    <@387972437901312000>
+    [reply to nadiamermedev msg=1513247234773487858]
+
+[2026-06-07T18:35:25.946000+00:00] django7787 (id=1513250046643277915)
+    https://hermes-agent.nousresearch.com/docs/developer-guide/contributing
+    [embed] Contributing | Hermes Agent https://hermes-agent.nousresearch.com/docs/developer-guide/contributing
+    [reply to nadiamermedev msg=1513247234773487858]
+
+[2026-06-07T18:36:04.391000+00:00] django7787 (id=1513250207893295165)
+    Most of the time you can just submit issue + your own PR together
+
+[2026-06-07T18:37:41.695000+00:00] nadiamermedev (id=1513250616015851593)
+    That’s what I thought. Thanks for the clarification
+
+[2026-06-07T18:40:40.277000+00:00] django7787 (id=1513251365042782318)
+    Not sure if this is the right place but I have general feedback re **v0.16** (not suitable for github): I don't think `chat` should be inside dashboard. There is TUI and now with release of desktop apps, there is no reason to spin it up inside web like that
+
+[2026-06-07T18:41:01.706000+00:00] django7787 (id=1513251454922526873)
+    Also, maybe I’ll get used to it but also not sure I like the agent spits out how much $$ top-up is left randomly (since I use nous portal)
+

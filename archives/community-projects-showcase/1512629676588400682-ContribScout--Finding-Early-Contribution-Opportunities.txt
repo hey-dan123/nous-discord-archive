@@ -40,3 +40,34 @@
     • reduced unnecessary fallback to sample data
     • clearer source / notice handling
 
+[2026-06-07T18:28:27.276000+00:00] sworntech (id=1513248290613891123)
+    **ContribScout v0.3 Update**
+    
+    Added a few polish and usability updates today.
+    
+    What changed:
+    
+    • added Proof Vault export tools
+    • Markdown export for saved contribution proof
+    • JSON export for backup / restore workflows
+    • copy-to-clipboard report action
+    • improved header branding with a cleaner Hermes Skill Layer badge
+    • cleaned up roadmap and dashboard copy
+    • kept the live GitHub scanner and Hermes skill package intact
+    
+    The main goal of this update was to make Proof Vault more useful.
+    
+    Instead of only saving planned/submitted contribution actions locally, you can now turn them into a clean report that can be reused for updates, applications, or personal contribution logs.
+    
+    ContribScout is still a standalone dashboard, with a Hermes-compatible skill layer included in the repo for daily contribution report flows.
+    
+    I’d really appreciate it if you could try the site and share any feedback.
+    
+    Live app:
+    https://contribscout.vercel.app
+    
+    Repo:
+    https://github.com/Sworntech-dev/contribscout
+    [embed] ContribScout | Contributor Intelligence https://contribscout.vercel.app/
+    [embed] GitHub - Sworntech-dev/contribscout: Hermes-powered contributor int... https://github.com/Sworntech-dev/contribscout
+

@@ -1,0 +1,16 @@
+# Thread '🌍 [SKILL] unicode-location-normalizer — Fix special character errors in city names' in forum #plugins-skills-and-skins
+# thread_id=1513187045156196472 forum_id=1485392832154832906
+# Started 2026-06-07T19:23:33.155616+00:00
+
+[2026-06-07T14:25:05.221000+00:00] blackcap_eth (id=1513187045156196472)
+    ✅ Published my first skill to GitHub!
+    
+    unicode-location-normalizer ,  fixes special character errors in city/location names (ö, ü, ğ, ş, ç etc.) when used in URLs or terminal commands.
+    
+    Install it:
+    hermes skills tap add blackcapeth/hermes-skills
+    hermes skills install unicode-location-normalizer
+    
+    GitHub: https://github.com/blackcapeth/hermes-skills
+    [embed] GitHub - blackcapeth/hermes-skills: Hermes Agent skills — unicode... https://github.com/blackcapeth/hermes-skills
+
