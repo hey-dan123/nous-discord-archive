@@ -1737,3 +1737,48 @@
     memory_enable: false in config yaml, When I use mnemosyne along with native memory it (build-in) keeps being full instead of reworked
     [reply to 0xlfg msg=1513473596612153475]
 
+[2026-06-08T12:05:09.884000+00:00] 0xlfg (id=1513514220426231899)
+    I disabled this already though I tho
+    [reply to s1arsky msg=1513494146885750824]
+
+[2026-06-08T12:05:22.105000+00:00] 0xlfg (id=1513514271684689920)
+    You mean hermes update will reset this?
+
+[2026-06-08T12:41:39.967000+00:00] s1arsky (id=1513523406299988219)
+    config sometimes get reset to default,  if not - turn user_profile: false too
+    [reply to 0xlfg msg=1513514220426231899]
+
+[2026-06-08T14:01:27.234000+00:00] capslock.b (id=1513543485553119434)
+    <@151598363131904000> Hey, interesting mem stack; how is performance on small devices like a rasp pi
+
+[2026-06-08T14:02:36.763000+00:00] nulledvector (id=1513543777179013263)
+    Hey there, thanks for the observation, answering your question... Mnemosyne was built with performance in mind actually, it was developed in a fly.io instance with 4GB RAM
+
+[2026-06-08T14:02:45.746000+00:00] nulledvector (id=1513543814856573120)
+    So it runs perfectly fine in a raspberry pi
+
+[2026-06-08T14:03:39.992000+00:00] capslock.b (id=1513544042380529815)
+    Oooh interesting, see i want to integrate this to a project im building for a live call agent, and need zero latency mem retrieval
+
+[2026-06-08T14:03:53.170000+00:00] nulledvector (id=1513544097653063883)
+    Got a 3b+ myself a friend gifted me a while back
+    [attachment] IMG_3836.jpg https://cdn.discordapp.com/attachments/1496124109766000690/1513544097367855164/IMG_3836.jpg?ex=6a281d49&is=6a26cbc9&hm=376700d27c65fd3393cd228921dd7f9f2dc56b142dce95b5de7b63f85d2ffbe5&
+
+[2026-06-08T14:04:16.233000+00:00] nulledvector (id=1513544194386558986)
+    Mnemosyne should handle that for sure 🙂
+    [reply to capslock.b msg=1513544042380529815]
+
+[2026-06-08T14:05:33.382000+00:00] capslock.b (id=1513544517972918304)
+    Im gonna give it a shot building it into my hermes plugin, feel free to check it out in the future as I will integrate your work 
+    Thanks!
+    
+    https://capslockb.github.io/hermes-live-discord-agent-plugin/index.html
+    [embed] Hermes Live Discord Agent Plugin https://capslockb.github.io/hermes-live-discord-agent-plugin/index.html
+
+[2026-06-08T14:10:01.778000+00:00] nulledvector (id=1513545643707203746)
+    Awesome thanks for sharing will surely check it out! ✨
+    [reply to capslock.b msg=1513544517972918304]
+
+[2026-06-08T14:10:10.448000+00:00] nulledvector (id=1513545680071692439)
+    Thanks for choosing Mnemosyne BTW 🙏
+

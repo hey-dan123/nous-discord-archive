@@ -3330,3 +3330,6 @@
 [2026-06-07T14:14:17.341000+00:00] avidfuturist (id=1513184327750520943)
     👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
 
+[2026-06-08T13:31:19.739000+00:00] .vansken (id=1513535904369606717)
+    is there any update on making the session persistent as CRON output target (/sethome)? <@933139410281713755>
+

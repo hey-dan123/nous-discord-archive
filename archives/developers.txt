@@ -27530,3 +27530,99 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(desktop): read composer text from DOM on Enter submit to avoid ... https://github.com/NousResearch/hermes-agent/pull/38968
     [embed] fix(agent): restore global model.context_length override on /model ... https://github.com/NousResearch/hermes-agent/pull/41010
 
+[2026-06-08T11:53:59.411000+00:00] kyssta69 (id=1513511408258646207)
+    https://github.com/NousResearch/hermes-agent/pull/42062
+    
+    **Problem**: hermes config set provider wrote to a dead top-level key instead of model.provider. Added a key alias so the shortcut writes to the correct location.
+    [embed] fix(cli): redirect 'hermes config set provider' to model.provider (... https://github.com/NousResearch/hermes-agent/pull/42062
+
+[2026-06-08T11:59:25.037000+00:00] kyssta69 (id=1513512774033080420)
+    https://github.com/NousResearch/hermes-agent/pull/42066
+    
+    **Problem**: macOS launchd plist lost HTTP_PROXY and HTTPS_PROXY on gateway restart, breaking networking for proxy users. Added snapshot of current proxy env vars to the plist EnvironmentVariables section.
+    [embed] fix(gateway): include proxy env vars in macOS launchd plist (#41906... https://github.com/NousResearch/hermes-agent/pull/42066
+
+[2026-06-08T12:01:36.320000+00:00] kyssta69 (id=1513513324673761470)
+    https://github.com/NousResearch/hermes-agent/pull/42069
+    
+    **Problem**: BWS network call failure at startup left gateway with no secrets, causing all providers to fail. Added fallback to stale disk cache when live BWS call fails, using previous valid secrets instead of an empty pool.
+    [embed] fix(secrets): fallback to stale BWS disk cache on network failure (... https://github.com/NousResearch/hermes-agent/pull/42069
+
+[2026-06-08T13:00:18.701000+00:00] minddragon (id=1513528098610614523)
+    i had previously proposed a fix for pathing and now it's really broken ... if you have two volumes like /vola and /volb and you are in /volb/somedir and type /vola (enter on a dir) it tries to do a ../../vola/whatever and ... that's wrong.  sooooo. yeah ill make an issue then and try to post a solution again
+
+[2026-06-08T13:43:10.856000+00:00] kyssta69 (id=1513538887010619562)
+    https://github.com/NousResearch/hermes-agent/pull/42124
+    
+    **Problem**: Line 1: hermes gateway install prompts interactively even in headless/CI/ssh contexts, breaking non-TTY installs.
+    Line 2: prompt_yes_no calls added to the shared systemd branch in v2026.5.28 (PR #28874) always prompt, with no bypass flag.
+    Line 3: Added non_interactive parameter to systemd_install() and detect sys.stdin.isatty() to skip prompts and use defaults in non-TTY contexts.
+    [embed] fix(gateway): skip interactive prompts in non-TTY for gateway insta... https://github.com/NousResearch/hermes-agent/pull/42124
+
+[2026-06-08T13:51:51.911000+00:00] capslock.b (id=1513541072473559040)
+    Hey guys, im building discord integrations for live voice, feel free to check my new hermes plugin out, its open to all for adjustment
+     https://capslockb.github.io/hermes-live-discord-agent-plugin/index.html
+    [embed] Hermes Live Discord Agent Plugin https://capslockb.github.io/hermes-live-discord-agent-plugin/index.html
+
+[2026-06-08T14:08:01.564000+00:00] _hwrd_ (id=1513545139493011577)
+    👋 Can i get a review on https://github.com/NousResearch/hermes-agent/pull/39946 ?
+    [embed] fix(file-sync): don't rate-limit retry after a failed sync cycle by... https://github.com/NousResearch/hermes-agent/pull/39946
+
+[2026-06-08T14:11:08.145000+00:00] gausoctavio (id=1513545922070581258)
+    Please, i am waiting for any reviews on this PR
+    [reply to gausoctavio msg=1513200995725738156]
+
+[2026-06-08T14:56:07.040000+00:00] mastermaxxx5102 (id=1513557242056671263)
+    Can we get an hermes agent desktop app for Intel Mac please?
+
+[2026-06-08T15:11:10.602000+00:00] wittgenstein9840 (id=1513561031870513172)
+    Cognitive Evidence Architecture (CEA) is a structured reasoning framework for evaluating claims under uncertainty. Instead of producing simple true/false judgments, it analyzes claims through separate layers such as conceptual clarity, logical consistency, evidence quality, causal reasoning, and domain-specific analysis. A key design principle is strict separation between explanatory domains (e.g., neuroscience, evolutionary theory, economics), preventing conclusions from one field from being incorrectly used as proof in another. The goal is to improve transparency, reduce overconfidence, and encourage more rigorous evaluation of complex claims. https://github.com/NousResearch/hermes-agent/pull/42185
+    [embed] Cognitive Evidence Architecture (CEA) research skill by ibrhmuyls ... https://github.com/NousResearch/hermes-agent/pull/42185
+
+[2026-06-08T15:44:31.100000+00:00] godsboy7777 (id=1513569422567018667)
+    Hey <@387972437901312000>, when you have a gap, could you please review this?
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/42187
+    PR: https://github.com/NousResearch/hermes-agent/pull/42194
+    
+    ## Summary
+    
+    The new Codex `gpt-5.5` compression autoraise feature is the right behaviour.
+    
+    Since ChatGPT caps `gpt-5.5` at 272K tokens, raising the compaction trigger to 85% avoids wasting a lot of usable context.
+    
+    The issue is only the notice UX in gateway sessions.
+    
+    Right now the notice is effectively "once per in-memory `AIAgent`".
+    
+    In Telegram / WhatsApp, the visible user session can stay the same while the gateway rebuilds the agent because of:
+    
+    * Restart
+    * Cache eviction
+    * Idle expiry
+    * Runtime signature change
+    * Model / tool / reasoning changes
+    
+    That makes the same explanatory notice show again in the same conversation.
+    
+    The PR keeps the autoraise logic intact, but persists a small "shown once" latch per durable gateway session:
+    
+    * First eligible turn can still show the notice
+    * Rebuilt agents for the same session suppress repeats
+    * `/new`, `/reset`, auto-reset, and fresh sessions can show it once again
+    * Existing session files remain backward compatible
+    * CLI behaviour is unchanged
+    * The opt-out remains available, but users should not need to disable the feature just to stop repeat notices
+    
+    CI is green.
+    
+    Would appreciate your eyes on whether this is the right place to persist the latch and whether the PR matches the intent of the original feature.
+    [embed] fix: Show Codex gpt-5.5 autoraise notice once per gateway session ... https://github.com/NousResearch/hermes-agent/issues/42187
+    [embed] fix(gateway): persist Codex autoraise notice per session by GodsBoy... https://github.com/NousResearch/hermes-agent/pull/42194
+
+[2026-06-08T15:45:18.542000+00:00] kyssta69 (id=1513569621553189077)
+    https://github.com/NousResearch/hermes-agent/pull/42210
+    
+    **Problem**: Hermes crashes with ModuleNotFoundError for _ctypes on Ubuntu installs using pyenv Python without libffi-dev. The import ctypes in _set_process_title() was not wrapped in try/except. Wrapped the import with ImportError catch and graceful return since it is purely cosmetic.
+    [embed] fix(cli): catch ImportError for ctypes in _set_process_title (#4207... https://github.com/NousResearch/hermes-agent/pull/42210
+

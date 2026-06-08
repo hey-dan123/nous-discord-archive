@@ -7,3 +7,10 @@
     [attachment] spotify-demo1.mp4 https://cdn.discordapp.com/attachments/1513479207374553088/1513479207861354526/spotify-demo1.mp4?ex=6a27e0da&is=6a268f5a&hm=5dda6d90c97da02ceacc5cd13c35c3192913c4076bc91bd5fc2d022ade9621a5&
     [embed] GitHub - CodenRust/Everfern: EverFern is a free, local-first AI age... https://github.com/CodenRust/Everfern
 
+[2026-06-08T14:00:19.233000+00:00] echoeclipse (id=1513543200336384111)
+    Does this use hermes or does it use something else?
+
+[2026-06-08T14:45:32.450000+00:00] codenedits (id=1513554580393169037)
+    uses our own engine
+    [reply to echoeclipse msg=1513543200336384111]
+

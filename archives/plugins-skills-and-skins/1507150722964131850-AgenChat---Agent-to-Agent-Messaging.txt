@@ -42,3 +42,9 @@
 [2026-06-08T09:39:29.491000+00:00] snk00sj (id=1513477560560779305)
     Intersting. Trying but i don't think i'll stick around if it can't be self-hosted. Will see
 
+[2026-06-08T12:28:28.942000+00:00] d0ggyw00f (id=1513520088500928603)
+    1. Does it work with headless Linux machines over SSH?
+    2. Does it kind of make it a ‘PA’ where it can send AND respond to messages?
+    
+    Thanks
+

@@ -1,0 +1,17 @@
+# Thread 'YOLO-AUTO: built llm subscription provider for $6 a month / unlimited qwen-35b-3a' in forum #community-projects-showcase
+# thread_id=1513525123926458582 forum_id=1316137596535177246
+# Started 2026-06-08T15:47:18.647605+00:00
+
+[2026-06-08T12:48:29.481000+00:00] pooopird (id=1513525123926458582)
+    YOLO-Auto has a free tier, but unlimited is only **$6/month**.
+    
+    The project goal is to give builders cheap, predictable AI usage for agents, local workflow apps, automation loops, and anything else that burns tokens fast.
+    
+    No token anxiety. No surprise usage bill. Just one hosted model you can actually use.
+    
+    We're running on local, private, dedicated hardware inside the USA. We will be using major cloud providers (E.g. DO, hotaisle, etc.)  with certs/compliance once/if we grow passed local stage. People seem to like it so far. 
+    
+    We're basically running our local server at power cost for the current users, but people in high energy cost areas $6 is basically cheaper than running your own model. 
+    
+    **yolo-auto.com**
+

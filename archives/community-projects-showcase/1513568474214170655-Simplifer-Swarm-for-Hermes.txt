@@ -1,0 +1,25 @@
+# Thread 'Simplifer Swarm for Hermes' in forum #community-projects-showcase
+# thread_id=1513568474214170655 forum_id=1316137596535177246
+# Started 2026-06-08T15:47:17.387752+00:00
+
+[2026-06-08T15:40:44.995000+00:00] sahil_ss9 (id=1513568474214170655)
+    Simplify Swarm breaks your code down into risk tiers and cleans with surgical precision.
+        
+         Three parallel subagents attack your diff from different angles: Hygiene hunts dead code, AI slop, and stale state. Clarity goes after duplication, naming rot, and structural bloat. Correctness traces N+1 queries, memory leaks, concurrency races, leaky abstractions, and silent failures — the stuff that breaks at 3am.
+        
+         Then a consolidator merges, de-duplicates, and triages into SAFE (auto-apply), CAREFUL (verified per-file), and RISKY (flagged for human review).
+        
+         Read-only during analysis. Opt-in only. Run it when you want to know what you actually shipped.
+        
+         Built by synthesising 11 implementations — Anthropic's official plugin, nicknisi's essentials, Navigator, Addy Osmani, OMC, ECC, WalletConnect, Meta OpenEnv, GitHub Copilot. Language-specific detectors for TS/Python/Go.
+        
+         Companion to Hermes Agent's built-in simplify-code. That one's 175 lines and fast. This one's the deep clean — use it before PRs, before deploys, when you inherit code you don't trust.
+        
+         Repo: https://github.com/Sahil-SS9/hermes-simplify-swarm
+        
+         Upstream enhancement PR open (risk-tiered application, Chesterton's Fence, AI slop detection, silent failure detection, structured output): https://github.com/NousResearch/hermes-agent/compare/main...Sahil-SS9/KenseiAgent:feat/enhance-simplify-code
+        
+         If you write a skill that pairs with this — CI integration, auto-test generator, language pack for Rust/Zig/Kotlin — open a PR. Bug reports appreciated. If the Correctness agent just flagged half your PR and you're annoyed — it's designed to be thorough
+    [attachment] ChatGPT_Image_Jun_8_2026_04_28_18_PM.png https://cdn.discordapp.com/attachments/1513568474214170655/1513568474650116177/ChatGPT_Image_Jun_8_2026_04_28_18_PM.png?ex=6a2833fd&is=6a26e27d&hm=6f643444d2173dc3b2c83144b35dfe02c6f9204e6f5de2ed09728d86f8e32340&
+    [embed] GitHub - Sahil-SS9/hermes-simplify-swarm: Multi-agent code simplifi... https://github.com/Sahil-SS9/hermes-simplify-swarm
+

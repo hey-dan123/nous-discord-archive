@@ -1,0 +1,11 @@
+# Thread 'Signal Orchestra' in forum #community-projects-showcase
+# thread_id=1513522449302683740 forum_id=1316137596535177246
+# Started 2026-06-08T15:47:19.136556+00:00
+
+[2026-06-08T12:37:51.801000+00:00] thoughtsoutloud (id=1513522449302683740)
+    A coordinated suite of seven market-signal bots that detect anomalies, arbitrage spreads, and volume events across CEX/DEX markets - with every alert analyzed in real time by Nous Research's Hermes 4 before delivery.
+    I've been testing it for two months now, and everything works great. If you're interested, give it a try. Thanks for reading.
+    
+    https://github.com/antropov04/crypto-signal-orchestra
+    [embed] GitHub - antropov04/crypto-signal-orchestra https://github.com/antropov04/crypto-signal-orchestra
+

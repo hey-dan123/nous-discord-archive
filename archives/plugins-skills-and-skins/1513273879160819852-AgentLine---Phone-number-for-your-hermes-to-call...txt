@@ -8,3 +8,7 @@
     Get the skill from https://agentline.cloud/skill.md
     [embed] GitHub - Sameersribot/Agentphone https://github.com/Sameersribot/Agentphone
 
+[2026-06-08T13:54:10.290000+00:00] capslock.b (id=1513541652877410477)
+    Hey, love your project; if tyou feel inclined i'd love to add it to my current project; we're working on the same goal https://capslockb.github.io/hermes-live-discord-agent-plugin/index.html
+    [embed] Hermes Live Discord Agent Plugin https://capslockb.github.io/hermes-live-discord-agent-plugin/index.html
+

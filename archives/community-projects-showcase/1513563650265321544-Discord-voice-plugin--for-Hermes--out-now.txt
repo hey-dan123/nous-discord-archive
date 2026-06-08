@@ -1,0 +1,36 @@
+# Thread 'Discord voice plugin, for Hermes; out now' in forum #community-projects-showcase
+# thread_id=1513563650265321544 forum_id=1316137596535177246
+# Started 2026-06-08T15:47:18.221309+00:00
+
+[2026-06-08T15:21:34.876000+00:00] capslock.b (id=1513563650265321544)
+    **__You read that right,__** 
+    your agent can now join your Discord voice channel and *hold a real conversation with you.*
+    
+    *Ask it things. Share your screen. Tell it to code, search, email, take notes. *
+    ***__It does all of it while talking to you.__***
+    
+    It's like a phone call with your agent, except the agent is sovereign, with own agent features implemented outside of Hermes, it can search the web, read your files, check your email, and delegate and track **Codex, OpenCode, NumaSec**, and of course **Hermes** *(API) *sessions while you're talking to it.
+    
+    **What you can do with it right now**
+    *"What's the status of my open PRs?" *— Hermes checks GitHub and reads the diffs to you
+    *"Read me the 3 emails I've been ignoring" *- Uses available Himalaya details from Hermes
+    *"Look at this bug"* *(screenshare)* — sees the error, suggests the fix
+    *"Vibecode a project*" — delegates to **Codex**, **Opencode **or **Hermes **& tracks progress
+    *"What did we work on yesterday?" *— pulls from Honcho memory, picks up where you left off
+    *"Play something chill, lower the lights"* — Spotify + Home Assistant, mid-conversation
+    
+    __**Like it? Help me make this even better!**__
+    **This is v0.3.0 **— early, rough edges, but stable enough for daily use. 
+    The architecture is platform-agnostic at the audio layer, meaning Telegram voice, Slack huddles, and Matrix rooms are all possible next platforms. It's fully open source. Every line; the voice pipeline, the tool dispatch, the screen-share vision, the personality tuning.
+    
+    
+    **__Wanna try it?__**
+    https://capslockb.github.io/hermes-live-discord-agent-plugin/
+    
+    **Github page**
+    https://github.com/Capslockb/hermes-live-discord-agent-plugin
+    > *(Profile link in bio too)*
+    [attachment] fNaCND8.png https://cdn.discordapp.com/attachments/1513563650265321544/1513563650915569784/fNaCND8.png?ex=6a282f7f&is=6a26ddff&hm=b1c0cbe8c1aa078160a74c8810d347b0c1625840c221b885de642cd3cc73ebf9&
+    [embed] Hermes Live Discord Agent Plugin https://capslockb.github.io/hermes-live-discord-agent-plugin/
+    [embed] GitHub - Capslockb/hermes-live-discord-agent-plugin: Hermes Live Di... https://github.com/Capslockb/hermes-live-discord-agent-plugin
+

@@ -1,0 +1,23 @@
+# Thread 'HermaGuard - Internal Bug Bounty Hunter' in forum #community-projects-showcase
+# thread_id=1513563966838673608 forum_id=1316137596535177246
+# Started 2026-06-08T15:47:17.853642+00:00
+
+[2026-06-08T15:22:50.353000+00:00] sahil_ss9 (id=1513563966838673608)
+    Most code review tools check for style violations and linting. Hermaguard tries to break your code.
+    
+    https://github.com/Sahil-SS9/hermaguard
+    
+        Three parallel subagents attack your diff from different angles: an edge case hunter that exhaustively traces every branching path in the change, an adversarial reviewer with a deliberately cynical persona ("your job is to break confidence, not validate"), and a blast radius mapper that traces every caller and callee to catch downstream breakage.
+    
+        Then a consolidator merges, de-duplicates, and triages everything into a risk-tiered report (CRITICAL/HIGH/MEDIUM/LOW).
+    
+        It's read-only — finds problems, doesn't touch your code. Opt-in only, no auto-trigger on commit. Run /hermaguard when you want to know what you missed.
+    
+        Built by synthesising 8 existing implementations: Trail of Bits differential review, BMAD's edge case hunter and adversarial reviewer, dementev-dev's Claude-Codex review loop, Anthropic's security review action, and the adversarial prompt pattern from r/ClaudeAI.
+    
+        PR is open: #42171
+    
+        If you write a skill that pairs with this (fix orchestrator, auto-test generator for findings, CI integration), open a PR. Bug reports in the review process appreciated. Complaints about the adversarial agent's attitude are also valid — it's designed to be a bit of a bastard.
+    [attachment] ChatGPT_Image_Jun_8_2026_04_21_04_PM.png https://cdn.discordapp.com/attachments/1513563966838673608/1513563967178670110/ChatGPT_Image_Jun_8_2026_04_21_04_PM.png?ex=6a282fca&is=6a26de4a&hm=43b17b18a8191a6056e95b1226a7d459effd2b6bdc17b04e8c3cec58b31db1ef&
+    [embed] GitHub - Sahil-SS9/hermaguard: Adversarial bug-hunting code review ... https://github.com/Sahil-SS9/hermaguard
+
