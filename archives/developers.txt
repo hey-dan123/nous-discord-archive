@@ -27626,3 +27626,136 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     **Problem**: Hermes crashes with ModuleNotFoundError for _ctypes on Ubuntu installs using pyenv Python without libffi-dev. The import ctypes in _set_process_title() was not wrapped in try/except. Wrapped the import with ImportError catch and graceful return since it is purely cosmetic.
     [embed] fix(cli): catch ImportError for ctypes in _set_process_title (#4207... https://github.com/NousResearch/hermes-agent/pull/42210
 
+[2026-06-08T16:49:36.952000+00:00] gokhe (id=1513585804897681498)
+    why does gpt5.5 logged in via codex in hermes defaults the context length to 272k in xhigh thinking mode?
+
+[2026-06-08T17:06:00.938000+00:00] godsboy7777 (id=1513589932034101328)
+    Hermes docs say default thinking is medium, not xhigh, so if Codex GPT-5.5 is waking up in xhigh mode, that’s a config or session override, not the default.
+    [reply to gokhe msg=1513585804897681498]
+
+[2026-06-08T17:06:42.712000+00:00] gokhe (id=1513590107247214764)
+    I overide to xhigh, so shouldn’t it use the full 1 million context ?
+    [reply to godsboy7777 msg=1513589932034101328]
+
+[2026-06-08T17:10:52.133000+00:00] godsboy7777 (id=1513591153394585760)
+    xhigh doesn’t buy more context, it only buys deeper reasoning. GPT-5.5 via Codex is not the 1M API route. OpenAI says Codex GPT-5.5 is 400K, and Hermes currently budgets the Codex OAuth path at the 272K limit Codex reports/enforces, so xhigh just spends more thought inside that smaller window.
+    https://developers.openai.com/api/docs/models/gpt-5.5
+    [reply to gokhe msg=1513590107247214764]
+
+[2026-06-08T17:12:04.861000+00:00] gokhe (id=1513591458437922857)
+    Nah you are wrong there, gpt5.5 has 1M context length in the docs
+    [reply to godsboy7777 msg=1513591153394585760]
+
+[2026-06-08T17:12:52.757000+00:00] gokhe (id=1513591659328311376)
+    And codex doesn’t limit to 400k, we can use full 1M in the latest codex
+
+[2026-06-08T17:13:14.200000+00:00] tdamre (id=1513591749266636883)
+    bexause they did not release the 1 million gpt 5.5 for customers thats only for enterprise
+    [reply to gokhe msg=1513585804897681498]
+
+[2026-06-08T17:13:16.644000+00:00] yerts (id=1513591759517515937)
+    https://github.com/NousResearch/hermes-agent/pull/37229 - the counterpart to this PR I made was already merged on oMLX official, can I get some eyes
+    [embed] fix: normalize local tool JSON fallbacks by scubamount · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/37229
+
+[2026-06-08T17:13:42.460000+00:00] gokhe (id=1513591867797803229)
+    Wait wut ? I am using my company’s account, is that why?
+    [reply to tdamre msg=1513591749266636883]
+
+[2026-06-08T17:13:57.708000+00:00] gokhe (id=1513591931752550611)
+    Damn
+
+[2026-06-08T17:14:02.222000+00:00] tdamre (id=1513591950685638747)
+    they pay enterprise or simple workplace?
+    [reply to gokhe msg=1513591867797803229]
+
+[2026-06-08T17:14:22.093000+00:00] gokhe (id=1513592034030784612)
+    I think it’s a enterprise sub ig not sure
+
+[2026-06-08T17:14:27.109000+00:00] tdamre (id=1513592055069282434)
+    to know the difference check if you have access to codex spark
+
+[2026-06-08T17:14:38.084000+00:00] tdamre (id=1513592101101633629)
+    if not then you dont have enterprise
+
+[2026-06-08T17:14:51.735000+00:00] gokhe (id=1513592158358339776)
+    Let me check (codex spark is a model ? Or a feature ?)
+
+[2026-06-08T17:15:31.859000+00:00] godsboy7777 (id=1513592326650335312)
+    codex spark is a model 5.3
+
+[2026-06-08T17:15:53.451000+00:00] gokhe (id=1513592417213747531)
+    Yes I do have access to it
+
+[2026-06-08T17:16:41.090000+00:00] gokhe (id=1513592617026191422)
+    I thought that was an old model lol
+
+[2026-06-08T17:18:40.118000+00:00] tdamre (id=1513593116265812150)
+    interesting
+
+[2026-06-08T17:18:45.845000+00:00] tdamre (id=1513593140286591246)
+    did you use oauth or api key
+
+[2026-06-08T17:18:50.454000+00:00] godsboy7777 (id=1513593159618400277)
+    1M is the API lane, not the Codex OAuth lane.
+
+[2026-06-08T17:19:03.020000+00:00] godsboy7777 (id=1513593212323758191)
+    even if you have enterpise account
+
+[2026-06-08T17:19:44.914000+00:00] tdamre (id=1513593388039929946)
+    how come gpt 5.4 1M is supported on oauth
+    [reply to godsboy7777 msg=1513593159618400277]
+
+[2026-06-08T17:25:37.285000+00:00] godsboy7777 (id=1513594865991291065)
+    GPT-5.4 Codex OAuth exposed a 1M window before. GPT-5.5 changed: OpenAI now documents Codex GPT-5.5 as 400K, while the 1M window is for the API route. So OAuth support changed between 5.4 and 5.5.
+    
+    400K is the total Codex context window for GPT-5.5. The usable input budget is lower because the window also has to reserve space for output, reasoning/tool overhead, system/developer instructions, and Codex’s own scaffolding. That’s why clients often see an effective input cap around 272K even though the advertised Codex window is 400K. Hope it makes sense
+    [reply to tdamre msg=1513593388039929946]
+
+[2026-06-08T18:18:27.671000+00:00] gokhe (id=1513608163553837256)
+    Oauth
+    [reply to tdamre msg=1513593140286591246]
+
+[2026-06-08T18:18:47.568000+00:00] gokhe (id=1513608247007772912)
+    I do have 1 million context through oauth
+    [reply to godsboy7777 msg=1513593159618400277]
+
+[2026-06-08T18:19:26.936000+00:00] tdamre (id=1513608412129267842)
+    just edit config tell gpt to edit the config
+    [reply to gokhe msg=1513608247007772912]
+
+[2026-06-08T18:20:05.352000+00:00] gokhe (id=1513608573257777343)
+    Yeah I did it, let me test and reach 1 million. Was watching wwdc26 lol
+    [reply to tdamre msg=1513608412129267842]
+
+[2026-06-08T18:21:55.639000+00:00] .consumeobeydie (id=1513609035834720306)
+    PR #41233 to add the first x402 payment skill to Hermes Agent — autonomous USDC micropayments on Arc Testnet. Verified on-chain: https://github.com/NousResearch/hermes-agent/pull/41233
+    [embed] feat: add x402-payment skill for autonomous USDC micropayments on A... https://github.com/NousResearch/hermes-agent/pull/41233
+
+[2026-06-08T18:34:13.646000+00:00] kalki9526 (id=1513612131260567803)
+    Hi everyone, Am testing out the Hermes desktop and loving it. Two things 
+    
+    1) is there a way to change the default agent? 
+    
+    2) I'm on an OpenCode Go subscription. Also, I keep getting logged out of the desktop app and have to sign in via the Hermes portal to relaunch it, then manually switch the provider back to OpenCode Go in settings each time.
+
+[2026-06-08T19:47:05.849000+00:00] owl_dv (id=1513630469609099344)
+    fix(dashboard): honor gated OAuth sessions in token guard
+    #39319
+    
+    https://github.com/NousResearch/hermes-agent/pull/39319
+    [embed] fix(dashboard): honor gated OAuth sessions in token guard by smwbev... https://github.com/NousResearch/hermes-agent/pull/39319
+    [reply to django7787 msg=1513250046643277915]
+
+[2026-06-08T19:53:52.644000+00:00] sworntech (id=1513632175831122172)
+    **Small Hermes config docs PR:**
+    
+    **Problem**: `.env.example` was missing API server environment variable examples, while these vars are documented elsewhere.
+    
+    **Fix**: Added commented examples for `API_SERVER_ENABLED`, `API_SERVER_KEY`, `API_SERVER_HOST`, and `API_SERVER_PORT`.
+    
+    **Impact**: Docs/config example only. No runtime behavior changed.
+    
+    **PR**:
+    https://github.com/NousResearch/hermes-agent/pull/42350
+    [embed] docs(config): list API server env vars in env example by Sworntech-... https://github.com/NousResearch/hermes-agent/pull/42350
+

@@ -1189,3 +1189,8 @@
     I pushed a fix for this yesterday! On Dev branch
     [reply to tunacookie msg=1513107660495392820]
 
+[2026-06-08T19:40:11.568000+00:00] .sirash (id=1513628731988512820)
+    sorry if this was covered.. Is there a way to run this on the host machine and hook it up to a remote gateway that's in a Docker?
+    
+    I have both running in a Docker, but now I'm having a hard time with things like voice and stuff because it is in a Docker container.
+

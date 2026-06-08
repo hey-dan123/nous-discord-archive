@@ -166,3 +166,7 @@
 [2026-06-07T21:34:57.953000+00:00] jodfie (id=1513295227715322000)
     What’s best way to update for both forge and the TestFlight app
 
+[2026-06-08T17:00:19.551000+00:00] _albertjames (id=1513588500153241630)
+    Manually with the new npx install the best way is to uninstall and reinstall for now. 
+    But the preferred way, imo, is with hermes/codex, asking it to make sure no data is deleted/making backup of the forge.sqlite 🙂
+

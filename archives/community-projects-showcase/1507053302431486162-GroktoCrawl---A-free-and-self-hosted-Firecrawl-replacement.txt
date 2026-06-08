@@ -425,3 +425,37 @@
     I told mine to be a little detailed in the code review so yours would know precisely what was needed to get this merged.
     [reply to fooned msg=1512962605327712447]
 
+[2026-06-08T17:48:55.446000+00:00] magnus919 (id=1513600730303561868)
+    fair warning... BIG updates coming for GroktoCrawl. I'm expecting more of a resource footprint for:
+    1. small vector DB
+    2. embedding model (RAM)
+    
+    This is going to start putting *past* search results to work to help with *future* searches.
+
+[2026-06-08T17:51:56.839000+00:00] magnus919 (id=1513601491120689182)
+    https://github.com/groktopus/groktocrawl/issues/60
+    [embed] feat: semantic/neural search pipeline — embedding-based retrieval... https://github.com/groktopus/groktocrawl/issues/60
+
+[2026-06-08T17:52:49.170000+00:00] magnus919 (id=1513601710612938752)
+    > This turns GroktoCrawl into a learning search engine — the more you use it, the better it gets at finding content you've already encountered.
+
+[2026-06-08T18:27:55.848000+00:00] magnus919 (id=1513610546660774020)
+    the other shoe dropping...
+    https://github.com/groktopus/groktocrawl/issues/144
+    [embed] feat: Phase 2 semantic search — persistent vector index and learn... https://github.com/groktopus/groktocrawl/issues/144
+
+[2026-06-08T18:39:21.779000+00:00] magnus919 (id=1513613423664168990)
+    btw I'm holding a substantial release on your PR a little longer. Hope you can get it over the finish line!
+    [reply to fooned msg=1512962605327712447]
+
+[2026-06-08T19:17:12.926000+00:00] fooned (id=1513622949544988983)
+    I'll push it briefly hold on
+    [reply to magnus919 msg=1513613423664168990]
+
+[2026-06-08T19:19:12.732000+00:00] magnus919 (id=1513623452047638538)
+    you're def going to have to rebase. I've been merging a lot of new code.
+
+[2026-06-08T19:45:32.166000+00:00] magnus919 (id=1513630076674113609)
+    I lumped it into the v0.9.0 release milestone and then after that I just want to harden it until we get to v1.0.0 (though I might do date-based releases once we go stable. Still thinking through that.)
+    [reply to fooned msg=1513622949544988983]
+

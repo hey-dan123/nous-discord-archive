@@ -71,3 +71,27 @@
     [embed] ContribScout | Contributor Intelligence https://contribscout.vercel.app/
     [embed] GitHub - Sworntech-dev/contribscout: Hermes-powered contributor int... https://github.com/Sworntech-dev/contribscout
 
+[2026-06-08T19:24:42.564000+00:00] sworntech (id=1513624835463581856)
+    **ContribScout v0.4 Update**
+    
+    Added Issue Drill-down / Contribution Fit details.
+    
+    Each project card now shows clearer contribution signals:
+    
+    • open issues
+    • good first issue count
+    • help wanted count
+    • README quality
+    • docs folder status
+    • CONTRIBUTING guide status
+    • issue activity
+    • saturation
+    
+    Also added direct GitHub drill-down links for live repos:
+    
+    • Open issues
+    • Good first issues
+    • Help wanted
+    
+    The goal is to make ContribScout more actionable, moving from “this repo looks interesting” to “here is where you can start contributing.”
+

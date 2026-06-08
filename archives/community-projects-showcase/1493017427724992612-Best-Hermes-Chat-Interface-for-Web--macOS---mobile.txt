@@ -3333,3 +3333,28 @@
 [2026-06-08T13:31:19.739000+00:00] .vansken (id=1513535904369606717)
     is there any update on making the session persistent as CRON output target (/sethome)? <@933139410281713755>
 
+[2026-06-08T16:50:04.449000+00:00] pinched_nerve (id=1513585920228720840)
+    What happens if someone archives or deletes the session?
+    [reply to .vansken msg=1513535904369606717]
+
+[2026-06-08T17:01:23.755000+00:00] avidfuturist (id=1513588769444462843)
+    You can enable CRON sessions so you can see the entire session in settings, and you can see the run output log for every cron in the cron schedule tab as well. 
+    
+    Not able to set it as home or an output target yet, perhaps something we’ll add in the future
+    [reply to .vansken msg=1513535904369606717]
+
+[2026-06-08T17:27:17.643000+00:00] .vansken (id=1513595286923247907)
+    what happened when you /sethome in a telegram or discord channel, what would happen? that should answer the question.
+    [reply to pinched_nerve msg=1513585920228720840]
+
+[2026-06-08T17:28:52.619000+00:00] .vansken (id=1513595685281202226)
+    yes the second paragraph is what I asked for. Like what if we want to use the web ui as the main channel. Currently we can use relay and make it persistent but it doesn't pass all features like streaming, tool call, those configurations and profile switching.
+    [reply to avidfuturist msg=1513588769444462843]
+
+[2026-06-08T17:33:33.537000+00:00] .vansken (id=1513596863536697618)
+    tired of using discord and telegram for hermes lol
+
+[2026-06-08T19:51:37.346000+00:00] avidfuturist (id=1513631608350179488)
+    Makes sense, will definitely look into this as a future feature! Thanks for the suggestion
+    [reply to .vansken msg=1513596863536697618]
+

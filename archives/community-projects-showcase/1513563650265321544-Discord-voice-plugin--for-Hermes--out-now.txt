@@ -34,3 +34,28 @@
     [embed] Hermes Live Discord Agent Plugin https://capslockb.github.io/hermes-live-discord-agent-plugin/
     [embed] GitHub - Capslockb/hermes-live-discord-agent-plugin: Hermes Live Di... https://github.com/Capslockb/hermes-live-discord-agent-plugin
 
+[2026-06-08T19:02:45.370000+00:00] banadushi (id=1513619310751256637)
+    What stands this apart from the native voice mode?
+
+[2026-06-08T19:35:16.189000+00:00] capslock.b (id=1513627493079322705)
+    <@260590141117038602> 
+    **The comparison is:**
+    Hermes native voice = the chat agent speaks (TTS of its text responses). 
+    Single turn, no persistent audio session, no real-time interruption handling, no low-latency duplex, no continuous listening while the model thinks.
+    
+    **Gemini live bridge = a real-time multimodal WebSocket. **The model is always listening, can be interrupted mid-sentence, speaks while it's still thinking, processes audio frames at 16kHz continuously, dispatches tools inline.
+    
+    __**Key technical differences**__
+    Full-duplex vs turn-based — native voice is turn-based (text-in, text-out, TTS-wrapped). The bridge is full-duplex over a persistent WSS, with Gemini's turn Coverage semantics and barge-in.
+    **Tools-as-side-effects vs tools-as-text**
+     both can have tools, but native voice in chat context returns tool results as text. The bridge dispatches tools in-process and feeds results back into the same audio session, the model doesn't break flow to "call a function."
+    **The model itself**
+    The bridge is hardwired to Gemini Multimodal Live, which is the only model that actually does the native audio-in/audio-out loop.
+    **Where it lives **
+     native voice is in the chat agent's response loop. 
+    The bridge is a Discord voice channel session, with its own lifecycle, idle hangup, per-user profiles, notes file, etc. 
+    You can leave Discord voice open for an hour and the bridge stays alive, chat sessions don't have that property.
+    **Per-user memory scope **
+     the bridge uses Honcho per-Discord-user peers; the chat agent's memory is per-conversation, not per-channel-user.
+    Latency — native voice has STT → LLM → TTS round-trip per turn (3+ hops). The bridge streams PCM frames over WSS, resulting in sub-second perceived latency.
+

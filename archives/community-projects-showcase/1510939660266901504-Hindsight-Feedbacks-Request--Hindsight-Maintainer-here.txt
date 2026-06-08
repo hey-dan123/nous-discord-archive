@@ -215,3 +215,9 @@
 [2026-06-02T23:34:29.281000+00:00] jcrabapple (id=1511513367116775546)
     Things are going much better on the latest version
 
+[2026-06-08T19:42:26.527000+00:00] descention (id=1513629298047717476)
+    How are you all handling the "Review the conversation above and update the skill library" recall that hermes does?
+
+[2026-06-08T19:44:30.407000+00:00] descention (id=1513629817638228159)
+    I was thinking about throwing that into a mental model. I am not sure those contexts are even useful to the bank though.
+

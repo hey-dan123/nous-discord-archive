@@ -79,3 +79,8 @@
     First was a mess, new to all this. Apologies. New one is up - https://github.com/Mudlifecrisis/evolutionary-radio/pull/2
     [embed] Working implementation with mpv fix, skip, tests, and setup scripts... https://github.com/Mudlifecrisis/evolutionary-radio/pull/2
 
+[2026-06-08T15:55:38.011000+00:00] .s0uthpaw (id=1513572219794493600)
+    Blog Catelog of the whole model family, projects, and references: 
+    https://github.com/SouthpawIN/evolutionary-training/blob/master/blog/CATALOG.md
+    [embed] evolutionary-training/blog/CATALOG.md at master · SouthpawIN/evolu... https://github.com/SouthpawIN/evolutionary-training/blob/master/blog/CATALOG.md
+

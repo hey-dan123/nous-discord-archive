@@ -40,3 +40,96 @@
 [2026-06-08T14:54:47.490000+00:00] capslock.b (id=1513556908399919124)
     ❤️
 
+[2026-06-08T16:12:06.444000+00:00] ifreet_00706 (id=1513576365583237241)
+    Hey i have a dumb question simply because i could never get Hermes to work on voice in discord. İsn't this the same thing your supposed to be able to do in a voice channel with Hermes?
+
+[2026-06-08T16:15:55.868000+00:00] capslock.b (id=1513577327856980124)
+    <@1439557795627270265> Supposed to do? if you mean, hold a live conversation in a discord channel that isnt STT / TTs like the official Hermes /voice command - then yes.
+    
+    To put it simply my cli installer will ask for a google api key to enable gemini 3.1 realtime live; it works as its own standalone voice-based agent, borrowing elements like memory, tools from hermes, to stay on track with it's own agent capabilities
+
+[2026-06-08T16:18:48.001000+00:00] capslock.b (id=1513578049835368531)
+    In the upcoming future it will even be released as a standalone agent which it can be communicated with solely through live voice chats, but in terms of it being a plug-in, it currently just uses /voice-ive to spawn agent that is aware of your work in hermes and continues in that same vein
+
+[2026-06-08T16:19:01.347000+00:00] capslock.b (id=1513578105812291716)
+    Theoretically it is much better then what Hermes is currently offering to us 🙂
+
+[2026-06-08T16:33:06.635000+00:00] nick_56269 (id=1513581651207389427)
+    I want a local TTS STT fluent conversation
+
+[2026-06-08T16:33:27.410000+00:00] capslock.b (id=1513581738344059092)
+    <@1473779491422863474> Already built 🙂
+
+[2026-06-08T16:33:47.217000+00:00] nick_56269 (id=1513581821420503170)
+    How to use it?
+
+[2026-06-08T16:41:07.078000+00:00] capslock.b (id=1513583666331385977)
+    install, or let agent install for you; restart hermes once done to let your agent see the new plugin.
+    
+    Once that's done, ensure your Discord bot has permissions needed to join and leave your voice channel, this can be configured in your bot's "installation" guild permissions
+    discord.com/developers/
+    
+    Once permission is given for voice channels, join a discord voice channel and try /voice-live  to have bot join
+    
+    
+    If it doesnt work, it's because project is 1 day new; so, you can simply copy paste my message to your hermes agent and ask it to set it up.
+    
+    Further details are found at 
+    capslockb.github.io/hermes-live-discord-agent-plugin/known-bugs.html
+    [attachment] xy4dWfz.png https://cdn.discordapp.com/attachments/1513553586200641727/1513583665693589606/xy4dWfz.png?ex=6a284222&is=6a26f0a2&hm=fc527de880c2d97046b7c9cc2fe8d0273ef391adc8f5b64ab3084e605974cb90&
+
+[2026-06-08T18:00:16.334000+00:00] d0ggyw00f (id=1513603586154692690)
+    Any way to use SST and TTS models with another LLM model?
+    
+    So instead of using Gemini Live it will use a STT model to input into Hermes then a TTS model to play out?
+
+[2026-06-08T18:00:24.254000+00:00] d0ggyw00f (id=1513603619373580419)
+    Will it cause loads of latency?
+
+[2026-06-08T18:01:14.260000+00:00] capslock.b (id=1513603829114081492)
+    The native command has stt tts
+
+[2026-06-08T18:01:46.769000+00:00] d0ggyw00f (id=1513603965466443947)
+    I’ve like never seen it before is it just me…
+
+[2026-06-08T18:04:25.135000+00:00] capslock.b (id=1513604629701722142)
+    Hahaha have you tried ./voice
+
+[2026-06-08T18:57:54.570000+00:00] jtcressy (id=1513618091047649511)
+    Hey so I have existing VOIP/telephony infrastructure i've connected with https://www.dograh.com using a self-hosted instance on my home network. I'm also using gemini-live with dograh to enable realtime low-latency voice conversations. I just don't have this plumbed into hermes at all.... I'm wondering how your plumbing works so I might find a way to get this working but for VOIP/phone interactions rather than discord voice channels.
+    Everyone else's guides seem to focus on connecting hermes with twilio directly but I have a private PBX setup that i'm bridging to dograh using asterisk.
+    
+    generally overwhelmed with how many solutions there are out here and nothing maps cleanly
+    [embed] Dograh — Open-source voice agent infrastructure https://www.dograh.com/
+
+[2026-06-08T18:59:52.593000+00:00] .monjodav (id=1513618586071994428)
+    <@1474100257762578597> Is ElevenLabs possible?
+
+[2026-06-08T19:18:21.245000+00:00] capslock.b (id=1513623236095512656)
+    <@113146055863840768> *what the gemini live bridge actually is, layer by layer:*
+    
+    platform adapter — discord voice client, sink/source pattern, 48khz stereo PCM in/out
+    resampler — 48khz stereo ↔ 16khz mono with a FIR lowpass (this is what kills the "tin can" sound)
+    model WSS — wss://generativelanguage.googleapis.com/... with a setup payload (model, generationConfig, voice, tools, systemInstruction) → server_content audio out
+    tool execution + memory — function declarations, honcho peer per user, metrics, notes
+    
+    **the magic: layer 3 is transport-agnostic. the whole GeminiLiveBridge class is just "open WSS, send PCM in, get PCM out, dispatch function calls." you can swap layer 1 (discord) for an asterisk RTP listener and nothing else needs to change.
+    
+    **last thing — your setup is suspiciously similar to mine** (self-hosted dograh, private PBX, gemini live, pulling it into hermes). 
+    
+    **i think we'd save each other a week of work. reach out to me in dms, i'd love to help.**
+    i also want to flag something, my other plugin, discord-vapi bridge drops this week. Looking at your site, you may benefit from the code once i release
+    
+    https://capslockb.github.io/hermes-live-discord-agent-plugin/architecture.html
+    [embed] Architecture · Hermes Live Discord Agent Plugin https://capslockb.github.io/hermes-live-discord-agent-plugin/architecture.html
+
+[2026-06-08T19:26:35.309000+00:00] capslock.b (id=1513625308350251159)
+    <@201720984741478400> The gemini-live-discord-bridge code itself (bridge.py) does not support ElevenLabs. 
+    Voice output is generated by Gemini's native audio response (24kHz mono PCM, see docs/diagrams/dataflow.txt line 11). No override exists in the bridge code, yet; but it is in the roadmap and will be coming out eventually.
+    
+    You might be glad to hear that I will be releasing a side project, another bridge just like the one I released here; specifically wired towards Elevenlabs, this will be coming out as a standalone project within a week on my Github 🙂
+    
+    If you are somewhat familiar with handling code, I can send the unfinished, possibly buggy version of what I have; if you'd like the code and just debug by yourself let me know in DMS I'll send over a download link.
+    
+    Thanks 🙂
+
