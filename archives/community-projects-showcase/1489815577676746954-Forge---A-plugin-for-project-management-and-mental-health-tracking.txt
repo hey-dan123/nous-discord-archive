@@ -144,3 +144,25 @@
     "We" are now working on making Iroh faster and Tailscale onboarding a bit smoother 😉
     [reply to rostelinalise msg=1512681132901011536]
 
+[2026-06-07T21:00:05.208000+00:00] _albertjames (id=1513286450106339569)
+    Forge 0.3.0 is released 😬🚀
+    
+    The main change since the previous 0.2.6 release line is : training, weight loss, nutrition, and improved install/runtime flow.
+    
+    Forge now has workout/training analysis. It can use HealthKit workout history to rebuild richer workout evidence, show training load, and reason about training zones.
+    
+    Has weight-loss and nutrition tracking. You can log food, add custom foods, see weight-loss insights, check whether the data is reliable, and calculate calorie targets from recent activity instead of only using a static estimate.
+    
+    Handles much larger HealthKit history imports. The existing iPhone sync line now supports compressed workout archives, resumable uploads, backend progress, and deeper historical workout replay.
+    
+    Has alpha WatchOS foundation. The Watch side can receive Forge snapshots and commands, send actions back, and work through the iPhone relay.
+    
+    Has improve onboarding and install with standalone installer/runtime package: forge-memory. It sets up Forge, the data folder, OpenClaw, Hermes, Codex MCP, health checks, repair tools, and iPhone pairing from one place.
+    
+    Phone setup is more practical now. Forge can pair through Tailscale, Iroh, or a fixed/private IP instead of relying on links that only work on the host machine.
+    
+    Agents and plugins are also cleaner: OpenClaw, Hermes, Codex, and Forge Memory now connect through the same Forge runtime more consistently.
+
+[2026-06-07T21:34:57.953000+00:00] jodfie (id=1513295227715322000)
+    What’s best way to update for both forge and the TestFlight app
+

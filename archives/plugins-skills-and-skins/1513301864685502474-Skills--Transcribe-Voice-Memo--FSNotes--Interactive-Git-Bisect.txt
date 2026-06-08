@@ -1,0 +1,16 @@
+# Thread 'Skills: Transcribe Voice Memo, FSNotes, Interactive Git Bisect' in forum #plugins-skills-and-skins
+# thread_id=1513301864685502474 forum_id=1485392832154832906
+# Started 2026-06-08T03:51:13.664403+00:00
+
+[2026-06-07T22:01:20.330000+00:00] thinkyhead (id=1513301864685502474)
+    https://github.com/thinkyhead/HermesSkills
+    
+    - **macOS FSNotes** - Open Source markdown-based alternative to the Notes app for macOS with iCloud sync.
+    - **Transcribe Voice Memos** - Transcribe and optionally act on Voice Memos as soon as they arrive on your computer via iCloud.
+    - **GitHub Interactive `git bisect` workflow** - Recruit users experiencing an issue that is a regression to narrow down the commit that caused it.
+    - **Rehearse Bisect Workflow** - Use Telegram to rehearse a user-and-agent `git bisect` session using a known regression as a test target.
+    
+    I'll post more skills as they develop for my various software and 3D printing related projects.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1513301864685502474/1513301864886571158/image.png?ex=6a273bb0&is=6a25ea30&hm=aa7e335b609d995b2a7f3c1c1a038cd826e2b7e0318eee4367c85ebab6dbf479&
+    [embed] GitHub - thinkyhead/HermesSkills https://github.com/thinkyhead/HermesSkills
+

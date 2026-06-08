@@ -1,0 +1,10 @@
+# Thread 'AgentLine - Phone number for your hermes to call..' in forum #plugins-skills-and-skins
+# thread_id=1513273879160819852 forum_id=1485392832154832906
+# Started 2026-06-08T03:51:14.058219+00:00
+
+[2026-06-07T20:10:08.061000+00:00] .dotnet_ (id=1513273879160819852)
+    Hey fam, I built this skill and the entire telephony infrastructure so that agents can have a phone number to call inbound and outbound with production grade quality without even configuring a webhook. Its actually the fastest and the easiest way to give your agent full suite of telephony services. Github repo  -  https://github.com/Sameersribot/Agentphone
+    
+    Get the skill from https://agentline.cloud/skill.md
+    [embed] GitHub - Sameersribot/Agentphone https://github.com/Sameersribot/Agentphone
+

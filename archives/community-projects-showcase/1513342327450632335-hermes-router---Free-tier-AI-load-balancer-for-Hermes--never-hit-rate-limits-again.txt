@@ -1,0 +1,37 @@
+# Thread 'hermes-router — Free-tier AI load balancer for Hermes (never hit rate limits again)' in forum #community-projects-showcase
+# thread_id=1513342327450632335 forum_id=1316137596535177246
+# Started 2026-06-08T03:47:40.505133+00:00
+
+[2026-06-08T00:42:07.405000+00:00] shaf_2665 (id=1513342327450632335)
+    Hey everyone 👋
+    
+    Built a lightweight proxy that sits between Hermes and your AI providers — so when one free tier hits a rate limit, it automatically falls through to the next provider and rotates keys. No downtime, no manual switching.
+    
+    The problem it solves:
+    Gemini keys hit per-minute limits. OpenRouter has a 50 req/day cap. Groq throttles. If you're running Hermes 24/7 or sharing it with others, you're constantly hitting walls.
+    
+    How it works:
+    Your Hermes points to hermes-router instead of directly to a provider. It handles everything:
+    
+    → Gemini (rotate across multiple keys)
+    → OpenRouter (rotate across multiple keys)
+    → SambaNova
+    → GitHub Models (free with any GitHub account)
+    → Cerebras
+    → Groq
+    
+    Rate limited? Tries the next key. All keys cooling? Cascades to the next provider. Completely transparent to Hermes.
+    
+    Also includes:
+    Strips reasoning_content / think fields that Gemini outputs but Groq/Cerebras reject (prevents 400 errors during fallback)
+    Response cache — identical requests skip the provider entirely
+    /v1/status endpoint showing live key health + latency stats per provider
+    Optional fast routing — short messages go to low-latency providers first
+    
+    Stack: Single-file Python (Flask) — ~300 lines, easy to read and fork.
+    
+    🔗 GitHub: https://github.com/Shaf2665/Hermes-router
+    
+    Happy to answer questions or take PRs if anyone wants to add more providers!
+    [embed] GitHub - Shaf2665/Hermes-router https://github.com/Shaf2665/Hermes-router
+

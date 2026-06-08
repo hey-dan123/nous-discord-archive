@@ -27074,3 +27074,199 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-07T18:41:01.706000+00:00] django7787 (id=1513251454922526873)
     Also, maybe I’ll get used to it but also not sure I like the agent spits out how much $$ top-up is left randomly (since I use nous portal)
 
+[2026-06-07T19:29:20.972000+00:00] _yossif (id=1513263615325765754)
+    so, Hermes use bash on windows, this can make confusion for the model because the file system tool path is not the same for the bash tool.
+
+[2026-06-07T19:29:29.829000+00:00] _yossif (id=1513263652474458212)
+    Am I right?
+
+[2026-06-07T19:35:44.996000+00:00] _yossif (id=1513265226039169124)
+    or I can use WSL, but to use the desktop with hermes WSL?
+
+[2026-06-07T20:00:10.053000+00:00] _0xvox (id=1513271370933469335)
+    Who wanna debug the flickr issue in Hermes Desktop together <:catlick:1151260427645366375> <a:pls:1362920673781092525>
+
+[2026-06-07T20:01:00.969000+00:00] _0xvox (id=1513271584490520628)
+    When they’re in progress, the verbose output for tools and thinking is flickering pretty bad
+
+[2026-06-07T20:01:43.023000+00:00] _0xvox (id=1513271760878047323)
+    Dunno the root cause yet but I’m assuming it should be a streaming output optimally
+
+[2026-06-07T20:01:49.895000+00:00] _0xvox (id=1513271789701038121)
+    <:hands:837380853175943180>
+
+[2026-06-07T22:57:44.835000+00:00] sprmn24 (id=1513316060328231012)
+    Hey <@387972437901312000> , take a look when you get a chance:
+    
+    **PR #41573**  
+    
+     Issue: Teams platform adapter missing `send_document` method — only `send_image` was implemented 
+    
+    Fix: Added `send_document` with URL + local path support, MIME type detection, filename passthrough, and consistent error handling  
+    
+    https://github.com/NousResearch/hermes-agent/pull/41573
+    [embed] feat(teams): add send_document method by sprmn24 · Pull Request #4... https://github.com/NousResearch/hermes-agent/pull/41573
+
+[2026-06-07T23:25:32.500000+00:00] kyssta69 (id=1513323055022342165)
+    https://github.com/NousResearch/hermes-agent/pull/41486
+    
+    **Problem**: IMAP email fetch crashes with 'int object has no attribute decode' on iCloud because (RFC822) returns only UID metadata without the message body. Replaced with (BODY.PEEK[]) and added defensive parsing of the fetch response to handle missing body literals gracefully.
+    
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/41451
+    
+    **Problem**: Email login fails for custom domain providers like iCloud and Fastmail because IMAP/SMTP auth uses the public From address instead of the login username. Added EMAIL_LOGIN_USER env var that defaults to EMAIL_ADDRESS, so existing setups are unaffected while custom domain users can set their actual login username.
+    
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/41446
+    
+    **Problem**: Tirith security scanner crashes with SIGSEGV on every tool call when the binary is missing or corrupted, causing a 20-minute agent hang with no response delivered. Added a circuit breaker that disables tirith after 3 consecutive failures, preventing the retry loop from hanging the user.
+    
+    https://github.com/NousResearch/hermes-agent/pull/41538
+    
+    **Problem**: Vite build crashes with JavaScript heap out of memory on RPi 3B+ and other low-RAM devices. Node.js default heap limit exceeds available RAM during the 2307-module Vite transform step. Added _web_build_env() that detects total RAM and caps NODE_OPTIONS=--max-old-space-size when total RAM is 2GB or less (55% of RAM, min 256MB). High-RAM machines unaffected.
+    
+    https://github.com/NousResearch/hermes-agent/pull/41580
+    
+    **Problem**: hermes cron list crashes with TypeError when any job has deliver: null in jobs.json, making the entire cron list command unusable. The join(deliver) call on line 95 fails because deliver is None instead of an iterable. Fixed by defaulting null/missing deliver to ['local'] using the or fallback pattern.
+    
+    https://github.com/NousResearch/hermes-agent/pull/41581
+    
+    **Problem**: WhatsApp JID targets (group @g.us, DM @s.whatsapp.net, LID @lid) were not recognized by send_message, silently falling back to home channel. Bare-digit targets without JID suffix crashed the Baileys bridge on jidDecode(). Added WhatsApp JID regex pattern and reject bare digits for WhatsApp.
+    
+    https://github.com/NousResearch/hermes-agent/pull/41582
+    
+    **Problem**: hermes setup tools vision custom endpoint wizard never asked for model name, leaving AUXILIARY_VISION_MODEL empty for non-OpenAI endpoints. This caused vision to fail when using a custom base URL. Added model name prompt after API key input for custom endpoints.
+    [embed] fix(email): use BODY.PEEK[] for IMAP fetch and handle missing body ... https://github.com/NousResearch/hermes-agent/pull/41486
+    [embed] fix(email): add EMAIL_LOGIN_USER for custom domain IMAP/SMTP auth (... https://github.com/NousResearch/hermes-agent/pull/41451
+    [embed] fix(security): handle tirith SIGSEGV crash and disable broken binar... https://github.com/NousResearch/hermes-agent/pull/41446
+    [embed] fix(build): cap Node.js heap for Vite build on low-RAM devices (#41... https://github.com/NousResearch/hermes-agent/pull/41538
+    [embed] fix(cron): tolerate deliver: null in cron list (#41392) by kyssta-e... https://github.com/NousResearch/hermes-agent/pull/41580
+
+[2026-06-07T23:26:43.918000+00:00] bluepeer (id=1513323354570887208)
+    There are Some new, weird issues inside the Dashboard since with the PR's added last 24h
+    short overview about still existed not fixed issues and new issues.
+    
+    Old-still exist
+    - session stack related to Dashboard->Chat
+    Chat Spawns Multiple Not Used Sessions by Default 2 but uses only One, and Add 2 Additive (Then 4) Sessions on Refresh/Revisit the Dashboard
+    and Cycles Everytime all 4 Sessions on new Page load
+    - the Dashboard chat Session is stuck inside its State (not use new skills/ correct changed Kanban Boards, general active session issue) but unable to reload/restart Sessions without Refresh the Page
+    
+    New
+    - a Fresh started Dashboard runs npm install every time include a fully rebuild interface not on every but mostly every 2 starts.
+    ```
+    \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 /home/bluepeer/.hermes/hermes-agent/venv/bin/hermes dashboard
+    \_ npm install
+    \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 -m tui_gateway.slash_worker --session-key 20260608_011106_041b53 --mode
+    ```
+    
+    in general there is a weird process calling noticeable
+    it start with
+    ```
+    first
+    \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 -m tui_gateway.slash_worker --session-key 20260608_011929_d8a9ba --mode
+    
+    then
+    \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 -m tui_gateway.slash_worker --session-key 20260608_011929_d8a9ba --mode
+    \_ /home/bluepeer/.nvm/versions/node/v24.13.1/bin/node --expose-gc /home/bluepeer/.hermes/hermes-agent/ui-tui/dist/entry.js
+    
+    then
+    \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 -m tui_gateway.slash_worker --session-key 20260608_011929_d8a9ba --mode
+    \_ /home/bluepeer/.nvm/versions/node/v24.13.1/bin/node --expose-gc /home/bluepeer/.hermes/hermes-agent/ui-tui/dist/entry.js
+    \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 -m tui_gateway.slash_worker --session-key 20260608_011936_854d6e --mode
+    ```
+
+[2026-06-07T23:26:45.501000+00:00] bluepeer (id=1513323361210732674)
+    idk but this can be related to a tui style?
+    reguluar that looks currently like
+    ```
+    first
+    \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 /home/bluepeer/.hermes/hermes-agent/venv/bin/hermes --tui
+    this triggers npm install
+    
+    then
+    \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 /home/bluepeer/.hermes/hermes-agent/venv/bin/hermes --tui
+    \_ /home/bluepeer/.nvm/versions/node/v24.13.1/bin/node --expose-gc /home/bluepeer/.hermes/hermes-agent/ui-tui/dist/entry.js
+    
+    and ends later in 
+    \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 /home/bluepeer/.hermes/hermes-agent/venv/bin/hermes --tui
+    \_ /home/bluepeer/.nvm/versions/node/v24.13.1/bin/node --expose-gc /home/bluepeer/.hermes/hermes-agent/ui-tui/dist/entry.js
+    \_ /home/bluepeer/.hermes/hermes-agent/venv/bin/python3 -m tui_gateway.entry
+    ```
+    
+    there are clearly some core issues inside the chain
+
+[2026-06-07T23:33:09.048000+00:00] bluepeer (id=1513324969923444966)
+    the overall weird part is, that the dashboard tui shows 2 sessions and real there are 4
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1513324968769753119/image.png?ex=6a275134&is=6a25ffb4&hm=bf5e41dcdc9d36d744dcc4d181a43813c404115113050a00efb941ff3b7888b8&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1513324969327726823/image.png?ex=6a275134&is=6a25ffb4&hm=31c0b798ed1c0f8f4b07d48069c800de401a4c562f982859ead1c81d39e49490&
+
+[2026-06-08T00:03:18.182000+00:00] teknium (id=1513332557981290516)
+    Can you start a <#1485307775444844625> instead so we can diagnose and fix the issue
+    [reply to bluepeer msg=1513323361210732674]
+
+[2026-06-08T00:25:02.179000+00:00] cheesecake7668 (id=1513338027341123635)
+    Hey team, I noticed cron jobs are invisible to the agent. When a cron job delivers to a chat, the agent in that same chat has no idea what was sent. You can't follow up on scheduled outputs because the context doesn't exist.
+    
+    There's a PR already open that seems promising: https://github.com/NousResearch/hermes-agent/pull/37073
+    Issue: https://github.com/NousResearch/hermes-agent/issues/37070
+    
+    It introduces 3 modes: off (current behavior), auto (injects last delivery into the system prompt automatically), and button (shows an accept/dismiss inline button on Telegram).
+    
+    Would be great to get eyes on this! 🙏
+    [embed] feat(cron): surface cron deliveries via system-prompt note or accep... https://github.com/NousResearch/hermes-agent/pull/37073
+    [embed] Agent has no awareness of information delivered by its own cron job... https://github.com/NousResearch/hermes-agent/issues/37070
+
+[2026-06-08T00:58:37.274000+00:00] kyssta69 (id=1513346479262273566)
+    https://github.com/NousResearch/hermes-agent/pull/41647
+    
+    **Problem**: Line 1: hermes update breaks when the managed uv binary is corrupted, wrong architecture, or missing because resolve_uv() only checks one path. Line 2: The fallback resolver chain (venv, ~/.local/bin, ~/.cargo/bin, PATH) was removed in a refactor, leaving no recovery path. Line 3: Restored the 5-step fallback chain so resolve_uv() probes trusted locations before falling back to shutil.which.
+    [embed] fix(cli): restore uv fallback resolver chain (#41534) by kyssta-exe... https://github.com/NousResearch/hermes-agent/pull/41647
+
+[2026-06-08T01:03:41.295000+00:00] kyssta69 (id=1513347754418634999)
+    https://github.com/NousResearch/hermes-agent/pull/41650
+    
+    **Problem**: Line 1: After context compression, the agent acts on stale instructions from 'Pending User Asks' and 'Remaining Work' in the summary instead of the latest user message, especially when topics overlap. Line 2: The preamble's conflict-resolution language was ambiguous (allowed using summary as background), and section names like 'Pending User Asks' sounded like active tasks the model should execute. Line 3: Strengthened the preamble to explicitly say topic overlap does NOT mean resume summary task, renamed sections to 'Historical ... (DO NOT EXECUTE)', and added explicit DO NOT ACT instructions in section descriptions.
+    [embed] fix(agent): strengthen compression preamble vs stale tasks (#41607)... https://github.com/NousResearch/hermes-agent/pull/41650
+
+[2026-06-08T01:15:44.501000+00:00] sworntech (id=1513350787764457503)
+    Small Hermes docs cleanup PR:
+    
+    Problem: Some inline probability comments in `toolset_distributions.py` were stale and no longer matched the actual numeric values.
+    
+    Fix: Updated the comments for the `image_gen` and `terminal_tasks` distributions so they reflect the current values.
+    
+    Impact: Comment-only change. No runtime behavior or distribution values were changed.
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/41655
+    [embed] docs(tools): correct toolset distribution probability comments by S... https://github.com/NousResearch/hermes-agent/pull/41655
+
+[2026-06-08T01:23:23.340000+00:00] bluepeer (id=1513352712274710609)
+    ok, to be clear, i made a short lookup and found to collect informations i need to make a "good" post that opens multiple other side issues visible, if i invest the time, i realy want that someone react to it. a short discover trace made it visible that most pip interactions from the venv env, run into the global system python env , related to the base , the hermes venv does not use pip, it uses pip3 so it breaks out in general to the os python, and i am not a python guy, i need hours to debug and find out the  general "system informations" that can be related to the issue
+    
+    edit:
+    I’m basically confused here because everything (CLI, TUI, dashboard) points to `pip` and the documentation always talks about `pip`, yet `pip` doesn't actually exist in the venv, only `pip3` is there—so it seems like nothing works out of the box.
+    [reply to teknium msg=1513332557981290516]
+
+[2026-06-08T01:23:42.588000+00:00] davidg1982 (id=1513352793006669844)
+    anybody use langfuse for diagnostics?
+
+[2026-06-08T01:25:53.773000+00:00] tdamre (id=1513353343236440225)
+    when do we get 32-bit system support?? https://github.com/NousResearch/hermes-agent/pull/40120
+    [embed] fix(installer): gate Linux i686 runtime deps by adybag14-cyber · P... https://github.com/NousResearch/hermes-agent/pull/40120
+
+[2026-06-08T01:26:26.364000+00:00] tdamre (id=1513353479932874763)
+    oh wait someone made a pr for 32 bit support damn nice
+
+[2026-06-08T01:26:42.204000+00:00] tdamre (id=1513353546370912466)
+    shout out to whoever @adybag14-cyber is
+
+[2026-06-08T03:17:02.957000+00:00] saurav__0989__ (id=1513381315821441207)
+    ever wondered if your agents could have their own phone?
+    not a browser. not a sandbox. an actual android phone — so they can order food for you, book a ride, send a message, install any app... maybe do more with your phone than you ever did 👀 I'm thrilled to share vrski — an MCP server that gives your agent in a harness like  hermes-agent its own phone. you sign into google once, hand it off, and your agent takes it from there 🤝 https://github.com/Saurav0989/vrski  Give your AI agent a real Android phone. Reads the UI as structured JSON and acts by element — no screenshots, no vision model. MCP-native, built for  hermes & agent harnesses. would love your eyes on this <@387972437901312000> (sorry for the tag idk if its allowed or not)
+    [embed] GitHub - Saurav0989/vrski: Give your AI agent a real Android phone.... https://github.com/Saurav0989/vrski
+

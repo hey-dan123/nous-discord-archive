@@ -1718,3 +1718,15 @@
 [2026-06-06T12:04:52.954000+00:00] s1arsky (id=1512789373685338142)
     My way is: after hermes memory setup  , memory tool should stay enabled.  Instead:  set memory_enable and user_profile _enable - both to false in config yaml to turn off legacy memory
 
+[2026-06-08T00:44:48.950000+00:00] _a_l_a_n_ (id=1513343005019603106)
+    hermes thoughts on something I dont pretend to understand.
+    [attachment] mnemosyne.txt https://cdn.discordapp.com/attachments/1496124109766000690/1513343004751171706/mnemosyne.txt?ex=6a276200&is=6a261080&hm=05e1e2a188d2c33e527316c2ccdfad39e6bca5ef6aaa837c234c270c47b49342&
+
+[2026-06-08T02:59:17.134000+00:00] nulledvector (id=1513376845436026891)
+    That's really weird... I might have to revisit this in this case I mean I haven't checked the hermes-agent memory pipeline specifically for this config and how to affects us really it's something I was supposed to do a long time... So some parts might have shifted and disabling now might do us harm actually I'll report tomorrow ... I was just initially going with what other major providers were also reporting ... Tomorrow I'll drop 3.4.0 with bunch of fixes over the weekend and more interesting things coming up!!
+    [reply to s1arsky msg=1512789373685338142]
+
+[2026-06-08T03:00:06.455000+00:00] nulledvector (id=1513377052303294485)
+    Thank you for your report that gap is truly critical and should be addressed.. I'll review the findings and implement a patch tomorrow
+    [reply to _a_l_a_n_ msg=1513343005019603106]
+
