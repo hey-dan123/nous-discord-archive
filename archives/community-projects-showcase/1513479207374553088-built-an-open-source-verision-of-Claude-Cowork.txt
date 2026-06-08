@@ -1,0 +1,9 @@
+# Thread 'built an open source verision of Claude Cowork' in forum #community-projects-showcase
+# thread_id=1513479207374553088 forum_id=1316137596535177246
+# Started 2026-06-08T10:49:49.854750+00:00
+
+[2026-06-08T09:46:02.122000+00:00] codenedits (id=1513479207374553088)
+    Hey there i built an open source verision of claude cowork it is called Everfern AI, https://github.com/CodenRust/Everfern it has all the same features of claude cowork
+    [attachment] spotify-demo1.mp4 https://cdn.discordapp.com/attachments/1513479207374553088/1513479207861354526/spotify-demo1.mp4?ex=6a27e0da&is=6a268f5a&hm=5dda6d90c97da02ceacc5cd13c35c3192913c4076bc91bd5fc2d022ade9621a5&
+    [embed] GitHub - CodenRust/Everfern: EverFern is a free, local-first AI age... https://github.com/CodenRust/Everfern
+

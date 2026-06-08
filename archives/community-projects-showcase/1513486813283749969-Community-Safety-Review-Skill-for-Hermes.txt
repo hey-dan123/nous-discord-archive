@@ -1,0 +1,35 @@
+# Thread 'Community Safety Review Skill for Hermes' in forum #community-projects-showcase
+# thread_id=1513486813283749969 forum_id=1316137596535177246
+# Started 2026-06-08T10:49:49.435429+00:00
+
+[2026-06-08T10:16:15.512000+00:00] bbcrypto0 (id=1513486813283749969)
+    I started a new Hermes workflow skill focused on community safety review.
+    
+    The goal is to help communities review suspicious claims, unsafe links, impersonation signs, unclear ownership, missing verification sources, and misleading messages in a structured way.
+    
+    Phase 1 is intentionally small and easy to review.
+    
+    Current version includes:
+    - Hermes workflow skill foundation
+    - safety review template
+    - suspicious signal checklist
+    - LOW / MEDIUM / HIGH / UNKNOWN risk level framework
+    - moderator handoff notes
+    - neutral output style
+    - human review disclaimer
+    
+    Important note:
+    This skill does not automatically accuse anyone.
+    It does not make enforcement decisions.
+    It only creates neutral review notes for humans to check.
+    
+    I also shared a public note about Nous Research / Hermes Agent and community safety here:
+    https://x.com/BBCrypt0/status/2063701528863784967
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/42007
+    
+    Feedback is welcome. Thank you!
+    [embed]  https://twitter.com/BBCrypt0/status/2063701528863784967
+    [embed] feat(skills): add community-safety-review workflow skill by BBCrypt... https://github.com/NousResearch/hermes-agent/pull/42007
+

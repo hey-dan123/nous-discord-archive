@@ -398,3 +398,9 @@
     Full notes: https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.6.0
     [embed] Release v0.6.0 — Prove it, then tune it · yantrikos/yantrikdb-he... https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.6.0
 
+[2026-06-08T06:07:06.451000+00:00] spranab (id=1513424112377401345)
+    <@329427821208535040> do you have any expertise in database replications? I am having some performance issues and leader selection using open raft in the server mode.
+
+[2026-06-08T09:11:19.677000+00:00] obcyy (id=1513470472967164004)
+    \=
+

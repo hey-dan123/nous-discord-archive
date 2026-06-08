@@ -18,3 +18,6 @@
 [2026-06-05T17:44:28.449000+00:00] .elkim (id=1512512446840045701)
     Voice chat working 🙂 Actually talking to my Hermes in real-time. With quirks, needs polishing but damn 😅
 
+[2026-06-08T07:44:34.153000+00:00] .elkim (id=1513448639417159690)
+    Realtime voice chat with Hermes added 🙂 pretty fun this one
+

@@ -348,3 +348,6 @@
     You can update, download from GitHub. Delete the previous skill folder and reinstall from the new version's panel.
     [reply to rogerwongio msg=1512838648918446100]
 
+[2026-06-08T10:37:40.107000+00:00] vayaperson (id=1513492201265565756)
+    If someone experiments some error as bridge or whatsapp online, reconnect whatsapp through native hermes' whatsapp and then repatch in the panel.
+

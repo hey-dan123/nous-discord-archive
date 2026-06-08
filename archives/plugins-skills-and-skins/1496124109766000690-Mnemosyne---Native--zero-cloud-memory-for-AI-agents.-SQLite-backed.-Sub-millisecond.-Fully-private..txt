@@ -1730,3 +1730,10 @@
     Thank you for your report that gap is truly critical and should be addressed.. I'll review the findings and implement a patch tomorrow
     [reply to _a_l_a_n_ msg=1513343005019603106]
 
+[2026-06-08T09:23:44.412000+00:00] 0xlfg (id=1513473596612153475)
+    I am getting memory full any idea why 2.2k char still stand
+
+[2026-06-08T10:45:23.979000+00:00] s1arsky (id=1513494146885750824)
+    memory_enable: false in config yaml, When I use mnemosyne along with native memory it (build-in) keeps being full instead of reworked
+    [reply to 0xlfg msg=1513473596612153475]
+

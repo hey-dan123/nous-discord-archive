@@ -1,0 +1,15 @@
+# Thread '[Plugin] Hermes Dynamic Workflows — Claude Code-style workflows' in forum #plugins-skills-and-skins
+# thread_id=1513391826436886559 forum_id=1485392832154832906
+# Started 2026-06-08T10:53:51.693394+00:00
+
+[2026-06-08T03:58:48.883000+00:00] lingjiuu (id=1513391826436886559)
+    Hey all — I built an open-source plugin that brings Claude Code-style Dynamic Workflows to Hermes 👋
+    You tell Hermes "run a workflow that …" and it writes a sandboxed Python script that orchestrates subagents with agent()/parallel()/pipeline() — parallel fan-out + adversarial verify, up to 1000 subagents. Comes with persisted/resumable runs, a live dashboard, and a /workflows history view.
+    One-line install: hermes plugins install lingjiuu/hermes-dynamic-workflows --enable
+    Repo: https://github.com/lingjiuu/hermes-dynamic-workflows
+    Would really appreciate a star if you find it useful — and happy to take feedback or feature requests.
+    [embed] GitHub - lingjiuu/hermes-dynamic-workflows: Dynamic Workflows for h... https://github.com/lingjiuu/hermes-dynamic-workflows
+
+[2026-06-08T04:19:47.634000+00:00] lingjiuu (id=1513397106021498942)
+    [Plugin] Hermes Dynamic Workflows — Claude Code-style workflows
+

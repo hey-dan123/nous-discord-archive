@@ -1,0 +1,8 @@
+# Thread 'Girls in the community?' in forum #plugins-skills-and-skins
+# thread_id=1513483519459070002 forum_id=1485392832154832906
+# Started 2026-06-08T10:53:51.239250+00:00
+
+[2026-06-08T10:03:10.203000+00:00] nadiamermedev (id=1513483519459070002)
+    I can share a skin for the dev girls in the community
+    [attachment] skin.gif https://cdn.discordapp.com/attachments/1513483519459070002/1513483519672848434/skin.gif?ex=6a27e4de&is=6a26935e&hm=282da9994638d72b6312026c0d420c3ecd54e5cbf42106540bf1c17ccb1c2031&
+

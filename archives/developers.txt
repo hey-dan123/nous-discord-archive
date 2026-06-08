@@ -27270,3 +27270,263 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     not a browser. not a sandbox. an actual android phone — so they can order food for you, book a ride, send a message, install any app... maybe do more with your phone than you ever did 👀 I'm thrilled to share vrski — an MCP server that gives your agent in a harness like  hermes-agent its own phone. you sign into google once, hand it off, and your agent takes it from there 🤝 https://github.com/Saurav0989/vrski  Give your AI agent a real Android phone. Reads the UI as structured JSON and acts by element — no screenshots, no vision model. MCP-native, built for  hermes & agent harnesses. would love your eyes on this <@387972437901312000> (sorry for the tag idk if its allowed or not)
     [embed] GitHub - Saurav0989/vrski: Give your AI agent a real Android phone.... https://github.com/Saurav0989/vrski
 
+[2026-06-08T04:17:58.524000+00:00] frowtek (id=1513396648380993546)
+    https://github.com/NousResearch/hermes-agent/pull/41790
+    [embed] fix(agent): tolerate deleted cwd in codex app server bootstrap by F... https://github.com/NousResearch/hermes-agent/pull/41790
+
+[2026-06-08T05:15:25.033000+00:00] _0xvox (id=1513411104087474337)
+    Problem screenshot, can see there's two thinking block displaying, but should be output to the latest thinking block streaming output
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1513411103659397240/image.png?ex=6a27a16c&is=6a264fec&hm=e863aeb52678f3dac7a111b358295ed50396b75c2172a4d681aa59039ef05f42&
+    [reply to _0xvox msg=1513271760878047323]
+
+[2026-06-08T05:16:42.251000+00:00] _0xvox (id=1513411427963244595)
+    sometimes it could display the same thinking contents but for this one they were separated
+
+[2026-06-08T05:16:50.015000+00:00] _0xvox (id=1513411460527554680)
+    😔
+
+[2026-06-08T05:56:43.996000+00:00] .elkim (id=1513421501611900948)
+    Guys what model do you use for compression?
+
+[2026-06-08T06:03:22.161000+00:00] witcheer (id=1513423171636826182)
+    Qwen
+    [reply to .elkim msg=1513421501611900948]
+
+[2026-06-08T06:03:26.857000+00:00] Translator Bot#1043 (id=1513423191333142531)
+    Question
+    [reply to witcheer msg=1513423171636826182]
+
+[2026-06-08T07:09:35.121000+00:00] nadiamermedev (id=1513439835438710804)
+    Hi ! I use a custom plugin for telemetry that I built but I’m planning to integrate it with langfuse. Happy to talk if you want to try it 🫡
+    [reply to davidg1982 msg=1513352793006669844]
+
+[2026-06-08T07:17:06.704000+00:00] nanxingncb612d (id=1513441729515356210)
+    https://github.com/NousResearch/hermes-agent/pull/41897 Make ResponseStore LRU ordering deterministic
+    [embed] Make ResponseStore LRU ordering deterministic by necoweb3 · Pull R... https://github.com/NousResearch/hermes-agent/pull/41897
+
+[2026-06-08T07:19:39.234000+00:00] aleksas. (id=1513442369272418459)
+    Hey! Got a PR up that adds Oxylabs AI Studio as a web search/extract provider plugin — #33769 - https://github.com/NousResearch/hermes-agent/pull/33769 . It follows the same shape as other web search/extract providers.
+    Is there anything to be done to make accepting this PR streight forward? Scope adjustment, docs, tests, the dependency wiring?
+    [embed] feat(web): add Oxylabs AI Studio as a web provider plugin by aleksa... https://github.com/NousResearch/hermes-agent/pull/33769
+
+[2026-06-08T07:49:31.255000+00:00] kyssta69 (id=1513449885553135706)
+    https://github.com/NousResearch/hermes-agent/pull/41794
+    
+    **Problem**: Discord compact tool progress shows full fenced bash code blocks instead of short preview lines, filling chats with terminal output.
+    The progress_callback in gateway/run.py was using _bash_block in both verbose and compact modes.
+    Fix removes _bash_block from compact/all/new modes so only verbose mode shows fenced code blocks.
+    
+    https://github.com/NousResearch/hermes-agent/pull/41850
+    
+    **Problem**: Auxiliary functions (title generation, vision, compression, session_search) fail with SSL/connection errors behind corporate proxies because they use OpenAI clients without TCP keepalive. auxiliary_client.py creates OpenAI clients without any custom httpx transport, so they use default transport without keepalive. Added a keepalive httpx transport builder mirroring run_agent's implementation, auto-injected into all OpenAI/AsyncOpenAI constructors in auxiliary_client.py.
+    
+    https://github.com/NousResearch/hermes-agent/pull/41862
+    
+    **Problem**: When HERMES_UID/HERMES_GID is set to 1000, files inside /opt/data/ subdirectories remain owned by UID 10000. The targeted chown was gated on the top-level directory check, but usermod -u already fixes the top-level dir, so the subdirectory chown never ran. Now also probes the sessions subdirectory to detect missed ownership and trigger the full targeted chown.
+    
+    https://github.com/NousResearch/hermes-agent/pull/41877
+    
+    **Problem**: Approval cards on Discord and Teams showed Always Allow for Tirith findings, but the backend only persists Tirith approvals for the current session, not permanently. The UI was promising broader persistence than the backend grants. Now hides Always Allow when Tirith findings are present, keeping the UI honest.
+    [embed] fix(progress): skip fenced bash block in compact tool progress mode... https://github.com/NousResearch/hermes-agent/pull/41794
+    [embed] fix(agent): add TCP keepalive transport to auxiliary clients (#4174... https://github.com/NousResearch/hermes-agent/pull/41850
+    [embed] fix(docker): probe subdirectory ownership for UID remap chown (#416... https://github.com/NousResearch/hermes-agent/pull/41862
+    [embed] fix(gateway): hide Always Allow for Tirith session-only findings (#... https://github.com/NousResearch/hermes-agent/pull/41877
+
+[2026-06-08T07:50:31.321000+00:00] kyssta69 (id=1513450137488326786)
+    eh its fake?
+
+[2026-06-08T07:51:19.793000+00:00] lazeewhalee (id=1513450340794761347)
+    ignore this. tis not valid and not automatically updates
+
+[2026-06-08T07:51:55.064000+00:00] lazeewhalee (id=1513450488731930764)
+    Yea, I know I just look for second order opinion. I am second guessing myself for a while. Thanks Kyss
+    [reply to kyssta69 msg=1513450137488326786]
+
+[2026-06-08T07:55:30.932000+00:00] lazeewhalee (id=1513451394147815487)
+    Deleted to avoid misleading info.
+
+[2026-06-08T08:04:19.409000+00:00] lazeewhalee (id=1513453610741006406)
+    <@1068770268660629574> anyone in charge of model selection, I can't find the "Nemotron 3 Ultra Free" models under model selection :
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1513453610271375401/image.png?ex=6a27c903&is=6a267783&hm=e92a23d67959e09d59cafba41f296c8fa1ebbd428cbc64468b5a9118848b408c&
+
+[2026-06-08T08:04:34.741000+00:00] kyssta69 (id=1513453675048337538)
+    in what provider
+    [reply to lazeewhalee msg=1513453610741006406]
+
+[2026-06-08T08:04:50.678000+00:00] lazeewhalee (id=1513453741892964375)
+    Under NIM, 'hermes setup' >> 'NVIDIA NIM (Nemotron models via build.nvidia.com or local NIM)' >> model selection.
+
+[2026-06-08T08:07:06.386000+00:00] kyssta69 (id=1513454311093440522)
+    in nvidia nim?
+
+[2026-06-08T08:07:17.116000+00:00] kyssta69 (id=1513454356098318336)
+    you can enter the name manually
+
+[2026-06-08T08:07:44.891000+00:00] horationelson23 (id=1513454472595112096)
+    Can anyone point me in the right direction on how to secure a Hermes set up in a cloud infra environment? Maybe there's a guide or best practices?
+
+[2026-06-08T08:08:48.356000+00:00] kyssta69 (id=1513454738786488441)
+    use <#1476316988992258300>
+    [reply to horationelson23 msg=1513454472595112096]
+
+[2026-06-08T08:14:14.956000+00:00] kyssta69 (id=1513456108646301907)
+    https://github.com/NousResearch/hermes-agent/pull/41919
+    
+    **Problem**: Auxiliary functions (title, vision, compression) fail with SSL/connection errors on corporate proxies that drop idle TLS connections. Auxiliary OpenAI clients were created without TCP keepalive socket options, unlike the main agent loop. Added keepalive httpx transport to the auxiliary OpenAI proxy, matching the main agent's _build_keepalive_http_client().
+    [embed] fix(agent): add TCP keepalive transport to auxiliary clients (#4174... https://github.com/NousResearch/hermes-agent/pull/41919
+    [reply to kyssta69 msg=1513449885553135706]
+
+[2026-06-08T08:23:55.389000+00:00] kyssta69 (id=1513458543158759584)
+    https://github.com/NousResearch/hermes-agent/pull/41927
+    
+    **Problem**: Gateway approval cards showed Always Allow for Tirith security findings, but the backend only persists session-level approvals for those. The Always Allow button was misleading. Fixed by passing has_tirith through approval data and removing the button in Discord when Tirith findings are present.
+    [embed] fix(gateway): hide Always Allow button for Tirith findings (#41769)... https://github.com/NousResearch/hermes-agent/pull/41927
+
+[2026-06-08T08:29:44.471000+00:00] kyssta69 (id=1513460007314657331)
+    https://github.com/NousResearch/hermes-agent/pull/41931
+    
+    **Problem**: Background process completion notifications were being injected as user input to the agent instead of being displayed in the terminal. The notification text was put into _pending_input, which the agent treated as a new message. Fixed by printing notifications via _console_print instead.
+    [embed] fix(cli): display process notifications in terminal (#41851) by kys... https://github.com/NousResearch/hermes-agent/pull/41931
+
+[2026-06-08T08:32:47.053000+00:00] kyssta69 (id=1513460773119201391)
+    https://github.com/NousResearch/hermes-agent/pull/41934
+    
+    **Problem**: TUI auto-resume silently fell back to creating a new session when config or RPC errors occurred. The catch block swallowed errors without logging. Added console.warn in the catch block so errors are visible for debugging.
+    [embed] fix(tui): log auto-resume errors instead of silently falling back (... https://github.com/NousResearch/hermes-agent/pull/41934
+
+[2026-06-08T08:35:42.883000+00:00] kyssta69 (id=1513461510603800637)
+    https://github.com/NousResearch/hermes-agent/pull/41937
+    
+    **Problem**: QQ Bot adapter's _read_events loop did not handle WSMsgType.CLOSING when the server disconnects without a clean CLOSE frame. This caused a tight receive() loop that pinned a CPU core at 100%. Added CLOSING to the CLOSED/ERROR handler to break the loop cleanly.
+    [embed] fix(qqbot): handle WSMsgType.CLOSING to prevent CPU spin (#41872) b... https://github.com/NousResearch/hermes-agent/pull/41937
+
+[2026-06-08T08:35:50.513000+00:00] smithangshu (id=1513461542606344202)
+    Just like we can use "/<skill>" for invoking a specific skill for a task in hermes agent, is it possible to set a skill as default for a profile by a config, a specific skill will be invoked automatically?
+
+[2026-06-08T08:41:54.550000+00:00] bluepeer (id=1513463069488189491)
+    https://hermes-agent.nousresearch.com/docs/guides/work-with-skills , in general skills have there /name query stuff, and every cli/cron/kanban have a forces skill load param, so in general "agents" have it default in mostly every possibility
+    edit: for core blank profiles idk but a line like 'make sure skill xy is loaded' in soul file sounds not like a bad general way if the model is not crap.
+    [reply to smithangshu msg=1513461542606344202]
+
+[2026-06-08T08:49:04.601000+00:00] kuzudr (id=1513464873252683796)
+    Who can I bug about getting a tiny, 2 line PR merged? Not my PR, but it fixes my issue 🙏
+    
+    https://github.com/NousResearch/hermes-agent/pull/39854
+    [embed] fix(desktop): add Calendar privacy descriptions by yinkev · Pull R... https://github.com/NousResearch/hermes-agent/pull/39854
+
+[2026-06-08T09:04:48.281000+00:00] axmaiqiu (id=1513468831333482648)
+    <@387972437901312000> I was trying the Hermes Windows desktop client and initially ran into repeated freezes / hangs during normal use.  While digging through the local Windows logs, I found one clear bug and one likely related desktop-specific issue.  The clear bug was in Windows PTY stdin handling: `pywinpty` expects `str`, but the current code can pass `bytes`,  which produced `bytes object cannot be converted to PyString` errors.  The likely related issue was in the desktop WebSocket disconnect path. Detached WS sessions were falling back to  stdio, but in the desktop app stdout is captured by Electron and written to `desktop.log`, not consumed as JSON-RPC.  That could dump raw JSON-RPC stream frames into the desktop log after disconnects and potentially amplify freezes/log  churn.  I tested a local patch on my Windows install, and after restarting the desktop client the issue no longer reproduced  for me. I opened a PR with the narrow fixes and regression tests. When you have time, could you take a look and see  whether it makes sense to merge? https://github.com/NousResearch/hermes-agent/pull/41953
+    [embed] fix(tui): handle Windows PTY stdin and detached WS frames by qWaitC... https://github.com/NousResearch/hermes-agent/pull/41953
+
+[2026-06-08T09:17:06.774000+00:00] emzak (id=1513471928797630646)
+    Hey! 👋 Just opened a PR that adds Apify - https://apify.com/ Actor tools to Hermes - tapping into a marketplace of 20,000+ AI tools. Think of it as giving Hermes hands - it can browse, scrape, enrich, and automate without writing a line of custom code, or waste tokens trying 😅 The three tools (`apify_discover`, `apify_start`, `apify_collect`) handle the full async workflow - fire off runs, poll until done, and collect results safely wrapped as external content.
+    
+    Happy to iterate on this - would love to hear if this fits the direction you're taking Hermes or if there's a better way to approach it! You can sign up for a free Apify account to test, but if you're reviewing and want higher limits for a smoother experience, I can set up a testing account with API tokens for you. PR: feat(apify): Actor execution tools - https://github.com/NousResearch/hermes-agent/pull/41932
+    [embed] Apify: Full-stack web scraping and data extraction platform https://apify.com/
+    [embed] feat: Apify Actor tools by JanHranicky · Pull Request #41932 · No... https://github.com/NousResearch/hermes-agent/pull/41932
+
+[2026-06-08T09:17:26.333000+00:00] teknium (id=1513472010834018398)
+    Testing now on windows
+    [reply to axmaiqiu msg=1513468831333482648]
+
+[2026-06-08T09:17:41.073000+00:00] teknium (id=1513472072657932378)
+    cc <@466492386873311235>
+    [reply to emzak msg=1513471928797630646]
+
+[2026-06-08T10:16:38.178000+00:00] bbcrypto0 (id=1513486908351709224)
+    feat(skill): add community safety review workflow
+    
+    Added a small Hermes workflow skill foundation for community safety review.
+    
+    It structures checks around suspicious claims, unsafe links, impersonation signs, unclear ownership, missing verification sources, and moderator handoff notes.
+    
+    Phase 1 includes SKILL.md + safety review template only.
+    
+    X note: https://x.com/BBCrypt0/status/2063701528863784967
+    PR: https://github.com/NousResearch/hermes-agent/pull/42007
+    [embed]  https://twitter.com/BBCrypt0/status/2063701528863784967
+    [embed] feat(skills): add community-safety-review workflow skill by BBCrypt... https://github.com/NousResearch/hermes-agent/pull/42007
+
+[2026-06-08T10:20:41.296000+00:00] godsboy7777 (id=1513487928062513245)
+    <@387972437901312000> latest gateway privacy regression + fix, details below.
+    
+    ## What's happening
+    
+    After #41215, where terminal tool calls render as native bash code blocks on markdown platforms, the messaging gateways, WhatsApp / Telegram, started posting the full terminal command into the chat as a fenced bash block before the final answer.
+    
+    This includes heredocs and all, in both `all` / `new` and `verbose` modes.
+    
+    `execute_code` and `process` leak the same way through the argument preview.
+    
+    Before #41215, terminal progress was a 40-character truncated preview, so this only started after that change landed.
+    
+    After pulling latest `main` this morning, I saw full shell commands showing up in the chat to everyone in it, including internal paths, `systemctl` restarts, `rm -rf`, and similar sensitive command details.
+    
+    ## Scope
+    
+    To be clear, the short previews are fine and are not the issue.
+    
+    Lines like these are useful context and stay:
+    
+    ```text
+    search_files: "manifest.yaml"
+    read_file: "/path/..."
+    todo: "updating 2 task(s)"
+    ```
+    
+    The bug is specifically raw shell command, code, and process input reaching the chat.
+    
+    ## The fix, PR #41950
+    
+    `terminal`, `execute_code`, and `process` now render as generic labels on messaging gateways:
+    
+    ```text
+    Running a terminal command...
+    Running code...
+    Managing a background process...
+    ```
+    
+    so the body never reaches the chat.
+    
+    Every other tool keeps its normal preview.
+    
+    This does not revert #41215. The native bash block is preserved behind a per-channel opt-in:
+    
+    ```text
+    display.show_tool_args
+    ```
+    
+    Default is off, so a trusted personal channel can still get full command detail by opting in.
+    
+    CLI / TUI is unchanged.
+    
+    Both render paths, the live progress callback and the structured stream-event renderer, go through one formatter.
+    
+    Tests added, CI green.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/41955
+    PR: https://github.com/NousResearch/hermes-agent/pull/41950
+    [attachment] 2026-06-08_10-20-00.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1513487928280485958/2026-06-08_10-20-00.jpg?ex=6a27e8f9&is=6a269779&hm=64b6b2f8a4010e7a8a501f3db63fe94679728124a72fc17d492fe9cbf08ed6e2&
+    [embed] Gateway tool progress leaks raw shell commands and code bodies to m... https://github.com/NousResearch/hermes-agent/issues/41955
+    [embed] fix(gateway): sanitise messaging tool progress so chats never recei... https://github.com/NousResearch/hermes-agent/pull/41950
+
+[2026-06-08T10:27:47.020000+00:00] snaplap_24896 (id=1513489713678385153)
+    Hey  👋 I have 3 open PRs that could use a review. All are focused bug fixes with narrow scope, clean commit history, and passing tests:
+    
+    1. fix(desktop): read composer text from DOM on Enter submit to avoid stale state — #38968
+    Fixes #38923 — First Enter press doesn’t submit in Desktop composer. Root cause: submitDraft() reads stale draft React state before onInput commits. Fix: read from DOM via composerPlainText(). Already approved by @tonydwb. (+1/-1, single file)
+    
+    2. fix(agent): restore global model.context_length override on /model switch — #41010
+    Fixes #40979 — /model switch silently drops the global model.context_length override from config.yaml. Root cause: switch_model() clears _config_context_length but never restores it from config. Fix: re-read global override after per-model custom_providers. (+12/-0, single file)
+    
+    3. fix(tui): return error when model switch is blocked during run — #41663
+    Fixes #40795 — Switching models via Desktop picker while a background agent is running silently fails, UI briefly shows wrong model then reverts. Root cause: _mirror_slash_side_effects returns _ok with warning, Desktop ignores it. Fix: return _err(4009) so Desktop shows error notification. (+9/-0, single file)
+    
+    https://github.com/NousResearch/hermes-agent/pull/38968
+    https://github.com/NousResearch/hermes-agent/pull/41010
+    https://github.com/NousResearch/hermes-agent/pull/38968
+    
+    All three are small, self-contained fixes with no breaking changes. Happy to address any feedback. Thanks! 🙏
+    [embed] fix(desktop): read composer text from DOM on Enter submit to avoid ... https://github.com/NousResearch/hermes-agent/pull/38968
+    [embed] fix(agent): restore global model.context_length override on /model ... https://github.com/NousResearch/hermes-agent/pull/41010
+
