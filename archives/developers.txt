@@ -27928,3 +27928,308 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     **Problem**: Memory at capacity causes silent hang when agent tries replace with inexact text. Zero-match branch of replace/remove returned no previews, so agent could not self-correct and looped until turn budget exhausted. Now returns entry previews and current_entries on zero-match, letting the agent see what is stored and retry with correct text.
 
+[2026-06-09T02:58:29.011000+00:00] teknium (id=1513739031459008533)
+    This seems unlikely or most mac installs wouldnt work no? Cc <@690519146701783042>
+    [reply to hughjm msg=1513722217530265680]
+
+[2026-06-09T03:05:12.970000+00:00] hughjm (id=1513740725785858159)
+    我这边确实，hermes 调用工具时总是需要用到绝对路径，但是我本身是可以正常使用的
+    [reply to teknium msg=1513739031459008533]
+
+[2026-06-09T03:05:15.377000+00:00] Translator Bot#1043 (id=1513740735881412688)
+    It is true on my side that Hermes always needs to use the absolute path when calling tools, but I can use it normally.
+    [reply to hughjm msg=1513740725785858159]
+
+[2026-06-09T03:19:32.206000+00:00] Translator Bot#1043 (id=1513744329682845777)
+    영어
+
+[2026-06-09T03:42:01.066000+00:00] axmaiqiu (id=1513749987211608165)
+    <@387972437901312000>  Thanks again for the thoughtful feedback on PR #37275, and for recognizing the underlying use case.
+    You were right that the earlier version was too heavy. Since the current main branch already has most of the canonical session cwd plumbing in place, I rebuilt the change as a much narrower follow-up: #42577. https://github.com/NousResearch/hermes-agent/pull/42577
+    This new version focuses only on the missing messaging-gateway entry point. It adds `/workspace` and `/cwd` for gateway sessions, while reusing the existing `runtime_cwd` / session cwd infrastructure instead of introducing a parallel workspace model.
+    When you have time, I’d really appreciate it if you could take a look and share any feedback.
+    [embed] feat(gateway): add workspace command for messaging sessions by qWai... https://github.com/NousResearch/hermes-agent/pull/42577
+
+[2026-06-09T03:54:46.749000+00:00] kyssta69 (id=1513753198719008798)
+    https://github.com/NousResearch/hermes-agent/pull/42588
+    
+    **Problem**: On macOS 26, hermes gateway start/restart falls back to a detached process because launchctl kickstart -k returns exit code 5. Exit code 5 is a transient I/O error that occurs even when launchd can supervise the service. When exit 5 occurs, the code now checks if the service is loaded via launchctl list and tries launchctl start before falling back to detached, preserving launchd supervision.
+    [embed] fix(gateway): try launchctl start before detached fallback on exit ... https://github.com/NousResearch/hermes-agent/pull/42588
+
+[2026-06-09T03:57:56.278000+00:00] kyssta69 (id=1513753993661386752)
+    https://github.com/NousResearch/hermes-agent/pull/42590
+    
+    **Problem**: On macOS 26, hermes gateway restart starts two gateway processes because launchctl kickstart -k races with KeepAlive. When kickstart kills the old process, launchd restarts it via KeepAlive while kickstart also starts a new instance. Fix: use bootout (unloads service) + bootstrap + kickstart instead of kickstart -k, preventing the KeepAlive race entirely.
+    [embed] fix(gateway): use bootout+kickstart to prevent double start (#42446... https://github.com/NousResearch/hermes-agent/pull/42590
+
+[2026-06-09T04:02:54.716000+00:00] kyssta69 (id=1513755245400817724)
+    https://github.com/NousResearch/hermes-agent/pull/42592
+    
+    **Problem**: Weekly cost report shows nearly zero cost despite heavy usage. Gateway _run_agent was dropping cache_read_tokens, cache_write_tokens, estimated_cost_usd, cost_status, and cost_source from its return dict. Also used session_prompt_tokens (raw prompt tokens) instead of session_input_tokens (canonical API input tokens). All Telegram sessions showed 0 tokens and /usr/bin/bash cost in state.db. Fix adds all missing cost fields to the return dict.
+    [embed] fix(gateway): include cost/token fields in _run_agent return dict (... https://github.com/NousResearch/hermes-agent/pull/42592
+
+[2026-06-09T05:05:04.808000+00:00] lordbartok (id=1513770890540744804)
+    A few egress fixes ready for review, all CI green / tests passing:
+    
+    • #35188 — `feat(egress): CA rotation (hermes egress rotate-ca)` (follow-up to #30179)
+      https://github.com/NousResearch/hermes-agent/pull/35188
+    • #35187 — `feat(egress): host hardening survey` (follow-up to #30179)
+      https://github.com/NousResearch/hermes-agent/pull/35187
+    • #35149 — `feat(egress): doctor + audit + Anthropic native` (follow-up to #30179)
+      https://github.com/NousResearch/hermes-agent/pull/35149
+    
+    Thanks a lot in advance! cc: <@387972437901312000>
+    [embed] feat(egress): CA rotation (`hermes egress rotate-ca`) — follow-up... https://github.com/NousResearch/hermes-agent/pull/35188
+    [embed] feat(egress): host hardening survey — follow-up to #30179 by Bart... https://github.com/NousResearch/hermes-agent/pull/35187
+    [embed] feat(egress): doctor + audit + Anthropic native — follow-up to #3... https://github.com/NousResearch/hermes-agent/pull/35149
+
+[2026-06-09T05:53:00.782000+00:00] django7787 (id=1513782953249996891)
+    Try kanban
+    [reply to autonomics.build msg=1513685755665580102]
+
+[2026-06-09T05:56:33.247000+00:00] bluepeer (id=1513783844392927302)
+    Okay, I've finally taken the time to properly address this in a thread. However, I've realized that I've fundamentally wasted my time.
+    
+    The cause is clear and should be obvious to anyone involved here as a "developer" who understands anything about Python.
+    - Lack of core design
+    
+    and this permeates all three areas:
+    
+    - Python environment (no central management)
+    - Gateway/CLI+TUI/Dashboard (no central management)
+    - Within the Gateway/CLI+TUI/Dashboard (no central management)
+    
+    Here, various approaches are randomly used, resulting in the use of different Python environments.
+    The dashboard is in conflict with the CLI/TUI and the gateway (they don't work together, but against each other).
+    And even within the dashboard, CLI, or gateway, most features work against each other instead of together.
+    It's a recurring theme throughout everything.
+    
+    The best example of this is the Kanban board in the dashboard, which has a "mass move feature."
+    While this feature, if designed to accept more than one transaction, should be able to process them correctly "sequentially," it's indicative of all areas. Even this single function can't manage to avoid crashing itself.
+    
+    I sincerely hope you still enjoy the software, but honestly, it's a complete waste of time for me. More issues like this are added every day than there's time to fix the root cause.
+    
+    I simply cannot imagine that anyone here has the time or resources to implement the necessary fundamental changes in a timely manner.
+    
+    The only thing Hermes is currently doing for me is wasting time trying to figure out why things aren't working as they're supposed to. While they've come up with a lot of interesting ideas, that's precisely the core of the problem: too many conflicting interests that don't follow a common strategy, and therefore nothing works properly.
+    
+    That's why I'm doing the only sensible thing now: ending the relationship.
+    [reply to teknium msg=1513332557981290516]
+
+[2026-06-09T06:02:10.754000+00:00] kxee (id=1513785259999760404)
+    checking this
+    [reply to teknium msg=1513739031459008533]
+
+[2026-06-09T06:24:27.174000+00:00] lordbartok (id=1513790865351376969)
+    **`fix(wecom): fail-closed path-traversal guard for outbound media`** — #41109
+    https://github.com/NousResearch/hermes-agent/pull/41109
+    
+    **Problem:** WeCom outbound media had an open path-traversal guard that could allow crafted filenames to escape the intended directory.
+    **Fix:** Switched to a strict fail-closed guard that rejects any path containing traversal sequences before any file operation is attempted. 22 checks green, all tests passing.
+    
+    Ready for review / merge 🙏
+    [embed] fix(wecom): fail-closed path-traversal guard for outbound media by ... https://github.com/NousResearch/hermes-agent/pull/41109
+
+[2026-06-09T06:44:50.121000+00:00] godsboy7777 (id=1513795994763132970)
+    Hey <@387972437901312000>, flagging a regression in gateway tool progress, with a fix ready and CI green.
+    
+    After updating to the latest `hermes-agent` this morning, terminal commands are leaking the full shell command into messaging chats again.
+    
+    On Telegram / WhatsApp / Slack and other markdown platforms, the terminal tool's progress bubble renders the entire command as a fenced code block, including the working directory, instead of the short `terminal: "..."` preview that every other tool uses.
+    
+    ## Short history
+    
+    * #41955 / #41732: reported the leak.
+    * #42420: fixed it with a compact truncated preview.
+    * #42576: intentionally reversed that and made the full fenced command the default on markdown platforms.
+    
+    So after #42576, there is no way to keep terminal progress compact on a mobile or shared channel without turning off all tool progress, which also removes the useful breadcrumbs like `search_files`, `read_file`, `patch`, and `todo`.
+    
+    ## Fix
+    
+    PR is ready and all CI is green.
+    
+    Instead of reverting #42576 a third time, I made it configurable per platform.
+    
+    New setting:
+    
+    ```yaml
+    display:
+      terminal_progress: compact
+    ```
+    
+    Valid values:
+    
+    * `code_block`, default. Keeps #42576 behaviour, so nothing changes out of the box and the existing test stays green.
+    * `compact`. Uses the short truncated `terminal: "..."` preview, so the full command is not posted while other breadcrumbs stay visible.
+    
+    It resolves through the existing per-platform display resolver, so it can be set globally or per platform, for example:
+    
+    ```yaml
+    display:
+      platforms:
+        telegram:
+          terminal_progress: compact
+    ```
+    
+    It also fixes the verbose-mode path, which was serialising the full command too, and adds regression tests that drive the real command path.
+    
+    One reason this slipped through: the existing truncation tests call terminal progress with empty args, so they stayed green while Telegram still leaked.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/42637
+    PR: https://github.com/NousResearch/hermes-agent/pull/42638
+    
+    Default is unchanged, so this is purely additive.
+    
+    Would appreciate a look when you get a sec.
+    [attachment] 2026-06-09_07-47-59.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1513795994922389575/2026-06-09_07-47-59.jpg?ex=6a2907e2&is=6a27b662&hm=58619a3afd6ed1e1b6ccfcc535cfa9d70ae268be6704299f480614acbc9fe214&
+    [embed] [Bug]: Terminal tool progress posts the full command as a fenced co... https://github.com/NousResearch/hermes-agent/issues/42637
+    [embed] feat(gateway): add per-platform terminal_progress knob to keep term... https://github.com/NousResearch/hermes-agent/pull/42638
+
+[2026-06-09T06:49:50.327000+00:00] axmaiqiu (id=1513797253918097438)
+    Funny enough, after I finished this PR, Hermes threw a bucket of cold water on it and pointed out that the `/workspace` cwd could leak between gateway sessions, so I fixed it and pushed an updated version.
+    That felt oddly interesting.
+    [attachment] content.png https://cdn.discordapp.com/attachments/1491258766648283238/1513797253570101268/content.png?ex=6a29090e&is=6a27b78e&hm=479902b6f4b1d7853e4956aabed6c96ab1fe9c4da0c48ddcde40755acb38cb39&
+    [reply to axmaiqiu msg=1513749987211608165]
+
+[2026-06-09T07:04:28.792000+00:00] teknium (id=1513800938467627019)
+    Can you update and ensure this is still the case? I just did some work on this area
+    [reply to godsboy7777 msg=1513795994763132970]
+
+[2026-06-09T07:23:11.772000+00:00] etmost (id=1513805648586866810)
+    I noticed the gateway already has a cleanup_progress path that deletes temporary progress messages when an adapter implements delete_message(). Telegram and other adapters can participate in that path, but Discord still inherited the base adapter no-op. 
+    
+    As a result, setting display.platforms.discord.cleanup_progress: true looked valid but the gateway silently disabled cleanup for Discord at runtime, leaving stale tool-progress bubbles in the channel.
+    
+    So I created the PR below. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/42661
+    [embed] fix(gateway): support Discord progress cleanup by nazirulhafiy · P... https://github.com/NousResearch/hermes-agent/pull/42661
+
+[2026-06-09T07:24:58.954000+00:00] buhbeef (id=1513806098140893325)
+    Hi guys its my first post here! Been using hermes a lot and really happy the desktop ui came out. I get lazy and like to lay in my bed and have been using it through discord so did a lil weekend project to port the hermes desktop UI to android lol 
+    
+    This was tested on a fold4. Also included some pics of it open/closed. 
+    
+    Opened a small upstream PR for Hermes Agent Android auth handoff:
+    
+    https://github.com/NousResearch/hermes-agent/pull/42655
+    
+    Scope is intentionally narrow: backend mobile OAuth handoff endpoints + tests. It lets a signed-in browser session mint a short-lived PKCE-bound handoff code, then lets the Android client consume it for normal dashboard session cookies.
+    
+    Local physical Android validation passed;
+    
+    Would appreciate review on whether this handoff shape matches the direction you want before I stack the Android client PR on top.
+    [attachment] Image.png https://cdn.discordapp.com/attachments/1491258766648283238/1513806099688456306/Image.png?ex=6a29114b&is=6a27bfcb&hm=4a57afc22adcc62baf8ffceb327a4ff88d8a1d9599ec9046b9e50c1caf782c76&
+    [attachment] 04-settings-loaded-full-device.png https://cdn.discordapp.com/attachments/1491258766648283238/1513806107402047498/04-settings-loaded-full-device.png?ex=6a29114d&is=6a27bfcd&hm=6b799fcbfba114d3a1ca126e1dd6fb88fb679a9cb8f38a83ca0bf904fb073249&
+    [attachment] now-20260609T071404Z-full-device.png https://cdn.discordapp.com/attachments/1491258766648283238/1513806108177858570/now-20260609T071404Z-full-device.png?ex=6a29114d&is=6a27bfcd&hm=f72a331f1fad74ad53995b91fd0299de550f340deb7c986b603a15005ebb1642&
+    [attachment] folded-20260609T072014Z-full-device.png https://cdn.discordapp.com/attachments/1491258766648283238/1513806108815528037/folded-20260609T072014Z-full-device.png?ex=6a29114d&is=6a27bfcd&hm=c49708f3b560f65c4ef69039e410d1a6425410bb04e5104d0ad91037dc83b91b&
+    [attachment] URGENT-RAW-20260609T072426Z-2.png https://cdn.discordapp.com/attachments/1491258766648283238/1513806109327102092/URGENT-RAW-20260609T072426Z-2.png?ex=6a29114d&is=6a27bfcd&hm=20eb5cbf152fdf4fbd4b9f2682b564bf1f56ff5fe47beb71ef7751cce07b2cbc&
+    [embed] feat(dashboard): add mobile OAuth handoff by yinkev · Pull Request... https://github.com/NousResearch/hermes-agent/pull/42655
+
+[2026-06-09T07:29:39.420000+00:00] gumandnuts (id=1513807274500558858)
+    Hey all, /usage and /status commands are busted for Codex App Server, they return 0 no matter what is the actual usage. Here is a fix:
+    https://github.com/NousResearch/hermes-agent/pull/42673
+    [embed] fix(codex): record app-server token usage in session accounting by ... https://github.com/NousResearch/hermes-agent/pull/42673
+
+[2026-06-09T07:34:31.326000+00:00] kyssta69 (id=1513808498842927124)
+    https://github.com/NousResearch/hermes-agent/pull/42678
+    
+    **Problem**: Coding Plan subscribers were silently routed to Z.AI's pay-as-you-go endpoints because generic endpoints were probed first and matched. The ZAI_ENDPOINTS list was ordered generic before coding-plan, so coding-plan keys authenticated on the first generic hit. The fix reorders the list to probe coding-plan endpoints first, ensuring Coding Plan subscribers use their subscription quota.
+    [embed] fix(auth): reorder Z.AI endpoint probe to try coding plan first (#4... https://github.com/NousResearch/hermes-agent/pull/42678
+
+[2026-06-09T07:43:15.622000+00:00] zekezhao_monadix (id=1513810697899737219)
+    Nice — prompt cache visibility feels like the kind of small observability feature that becomes important once agents are running real workflows repeatedly.
+
+[2026-06-09T07:43:16.509000+00:00] zekezhao_monadix (id=1513810701620215809)
+    I’m working on Monadix, an agent collaboration network where reusable creator agents/workflows can be listed and used by other people’s assistants for bounded tasks.
+
+[2026-06-09T07:45:02.111000+00:00] zekezhao_monadix (id=1513811144547111022)
+    Curious if you’re interested in building reusable agent tooling like this for a broader network: e.g. observability, cost/caching diagnostics, or workflow quality checks that other agents could call when needed.
+
+[2026-06-09T08:03:47.544000+00:00] godsboy7777 (id=1513815864955240541)
+    Sorry my local patch was still applied updated now and tested again and it's still and issue. Reopened my issue and PR now
+    [reply to teknium msg=1513800938467627019]
+
+[2026-06-09T08:17:14.104000+00:00] godsboy7777 (id=1513819247912947722)
+    [attachment] Screenshot_20260609_101352_Telegram.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1513819247648837683/Screenshot_20260609_101352_Telegram.jpg?ex=6a291d8a&is=6a27cc0a&hm=7d732df439f0bb96fc7940ba5106973f34bcb4ce38aaf3338b48704e9c67855d&
+
+[2026-06-09T08:19:26.124000+00:00] loongfay (id=1513819801645092965)
+    Hi, <@387972437901312000>,  https://github.com/NousResearch/hermes-agent/pull/41779
+    [embed] refactor(yuanbao): move media resolution to dedicated middlewares b... https://github.com/NousResearch/hermes-agent/pull/41779
+
+[2026-06-09T08:21:20.014000+00:00] teknium (id=1513820279334371428)
+    cc <@119192111202566149>
+    [reply to buhbeef msg=1513806098140893325]
+
+[2026-06-09T08:24:03.180000+00:00] loongfay (id=1513820963702050836)
+    sorry to bother
+
+[2026-06-09T08:33:39.313000+00:00] aleksandr_1 (id=1513823380179259492)
+    Added a new phase to the simplify skill between worker launch and aggregation. It filters out broken worker results (timeouts, empty summaries, tool errors) before they reach Phase 3, and when 2+ workers succeed picks the best one via a single judge LLM call. Adapted from my open PRs #17980 and #18115.
+     https://github.com/NousResearch/hermes-agent/pull/42275
+    
+    Also a batch of earlier PRs: fix(approval) (x2) and fix(config) are in this message. https://discord.com/channels/1053877538025386074/1491258766648283238/1512916503429906522
+
+[2026-06-09T08:39:22.932000+00:00] godsboy7777 (id=1513824821421670420)
+    <@387972437901312000> as said above this is still and issue plus heads up: the red CI on #42638 is not from my PR.
+    
+    Commit `f8adefdeb` dropped the `_config_to_env_sync` dict from `set_config_value`. It now bridges via `terminal_config_env_var_for_key()`, but the drift-guard test was not updated:
+    
+    ```text
+    tests/tools/test_terminal_config_env_sync.py
+    ```
+    
+    So that test now fails 8x on `main` itself and blocks every open PR's merge ref.
+    
+    Quick fix is updating that drift-guard test to match the new bridge path.
+    
+    Context on the re-opened PR that fixes terminal_progress knob to keep terminal commands compact in chat
+     PR: https://github.com/NousResearch/hermes-agent/pull/42638
+    [embed] feat(gateway): add per-platform terminal_progress knob to keep term... https://github.com/NousResearch/hermes-agent/pull/42638
+
+[2026-06-09T09:21:52.370000+00:00] kyssta69 (id=1513835514539675710)
+    https://github.com/NousResearch/hermes-agent/pull/42728
+    
+    **Problem**: Terminal tool blocked valid CJK/Unicode directory paths with a misleading error. The workdir validator regex only accepted ASCII letters. Updated the allowlist to include Unicode letter ranges while still rejecting shell metacharacters.
+    
+    https://github.com/NousResearch/hermes-agent/pull/42734
+    
+    **Problem**: Terminal tool falsely blocked npm update vite because the vite regex was too broad. Narrowed the pattern to only match vite when used as a standalone command (vite, npx vite, npm run vite), not as a package argument to install/update.
+    [embed] fix(terminal): allow Unicode letters in workdir validator (#42619) ... https://github.com/NousResearch/hermes-agent/pull/42728
+    [embed] fix(terminal): narrow vite pattern to avoid false positives (#42620... https://github.com/NousResearch/hermes-agent/pull/42734
+
+[2026-06-09T09:23:52.940000+00:00] sahil_ss9 (id=1513836020246777896)
+    https://github.com/NousResearch/hermes-agent/pull/42209
+    [embed] feat(simplify-code): risk-tiered application, Chesterton's Fence, s... https://github.com/NousResearch/hermes-agent/pull/42209
+
+[2026-06-09T09:24:15.706000+00:00] sahil_ss9 (id=1513836115734429868)
+    https://github.com/NousResearch/hermes-agent/pull/42171
+    [embed] feat(skills): add hermaguard adversarial bug-hunting skill by Sahil... https://github.com/NousResearch/hermes-agent/pull/42171
+
+[2026-06-09T09:24:18.869000+00:00] gumandnuts (id=1513836129000882226)
+    hey <@387972437901312000> , I noticed you're merging my PR from today: https://github.com/NousResearch/hermes-agent/pull/42730 Thanks so much.
+    
+    I also have these two related  PRs open as well, they're pretty important for anyone using Codex App Server:
+    https://github.com/NousResearch/hermes-agent/pull/38778
+    https://github.com/NousResearch/hermes-agent/pull/38836
+    [embed] fix(codex): record app-server token usage in session accounting by ... https://github.com/NousResearch/hermes-agent/pull/42730
+    [embed] fix(codex): seed app-server sessions with configured cwd by jplew ... https://github.com/NousResearch/hermes-agent/pull/38778
+    [embed] fix: bridge Codex app-server progress events by jplew · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/38836
+
+[2026-06-09T09:24:39.036000+00:00] sahil_ss9 (id=1513836213587546172)
+    https://github.com/NousResearch/hermes-agent/pull/33186
+    [embed] feat(plugins): enhance security-guidance with severity tiers, audit... https://github.com/NousResearch/hermes-agent/pull/33186
+
+[2026-06-09T09:24:48.253000+00:00] sahil_ss9 (id=1513836252246573077)
+    https://github.com/NousResearch/hermes-agent/pull/31781
+    [embed] feat(profile): add interactive profile creation wizard by Sahil-SS9... https://github.com/NousResearch/hermes-agent/pull/31781
+
+[2026-06-09T09:24:55.095000+00:00] sahil_ss9 (id=1513836280943870063)
+    https://github.com/NousResearch/hermes-agent/pull/29526
+    [embed] feat(plugins): add pre_user_message hook + PluginContext.ask_user o... https://github.com/NousResearch/hermes-agent/pull/29526
+
+[2026-06-09T09:38:45.775000+00:00] kxee (id=1513839765068451921)
+    merged now
+    [reply to hughjm msg=1513722217530265680]
+

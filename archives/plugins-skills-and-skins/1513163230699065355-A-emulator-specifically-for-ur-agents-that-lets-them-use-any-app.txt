@@ -6,3 +6,6 @@
     No screenshots. No vision model. Vrski gives your Hermes agent a real Android phone via MCP — it reads the on-screen accessibility tree as structured JSON and acts by element (text/id), so taps are deterministic and fast. The owner signs into Google once; the agent runs forever — installing apps, ordering food, booking rides, sending texts. Repo: https://github.com/Saurav0989/vrski — GUIDE.md to set up, README.md for the full architecture + 23 MCP tools.
     [embed] GitHub - Saurav0989/vrski: Give your AI agent a real Android phone.... https://github.com/Saurav0989/vrski
 
+[2026-06-09T08:31:40.418000+00:00] txrao (id=1513822881497354353)
+    I need to test this out
+

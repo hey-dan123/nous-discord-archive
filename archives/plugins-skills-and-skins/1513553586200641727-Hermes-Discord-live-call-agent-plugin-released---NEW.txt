@@ -158,3 +158,14 @@
 [2026-06-09T01:59:07.292000+00:00] mahmoudr. (id=1513724092526624929)
     It is great to use when driving !
 
+[2026-06-09T05:14:01.846000+00:00] xeno_thales (id=1513773143041507428)
+    this is cool but it sends everything i say to google
+
+[2026-06-09T08:50:34.238000+00:00] capslock.b (id=1513827637083246653)
+    <@1077669294919397387> I agree , cool for first release but I am actively collecting providers and have a solution to this, also got another project same vein for VAPI if you need telephony for a business infrastructure.
+    
+    Will have more in a day or three to handle this
+
+[2026-06-09T08:51:21.269000+00:00] capslock.b (id=1513827834345558129)
+    <@395306905322389515> Thanks a lot for the love ❤️
+

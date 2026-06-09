@@ -48,3 +48,9 @@
     
     Thanks
 
+[2026-06-09T06:38:39.784000+00:00] xeno_thales (id=1513794441456914513)
+    can you host it on a blockchain with a privacy layer built in (Octra for FHE or almost any chain now with ZK proof)? Plenty of options for public-but-private relay over cryptographic blockchains
+
+[2026-06-09T06:39:46.491000+00:00] xeno_thales (id=1513794721246613614)
+    the security hazard of leaking PII is just way too great for any meaningful usage
+

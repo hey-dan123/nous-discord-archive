@@ -14,3 +14,6 @@
     uses our own engine
     [reply to echoeclipse msg=1513543200336384111]
 
+[2026-06-09T08:46:21.707000+00:00] ifreet_00706 (id=1513826577891328122)
+    Can it work on something like hyprland?
+

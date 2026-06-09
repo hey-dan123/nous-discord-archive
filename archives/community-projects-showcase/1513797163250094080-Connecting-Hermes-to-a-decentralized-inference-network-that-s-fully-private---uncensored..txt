@@ -1,0 +1,17 @@
+# Thread 'Connecting Hermes to a decentralized inference network that's fully private & uncensored.' in forum #community-projects-showcase
+# thread_id=1513797163250094080 forum_id=1316137596535177246
+# Started 2026-06-09T09:39:31.883048+00:00
+
+[2026-06-09T06:49:28.710000+00:00] leytenv (id=1513797163250094080)
+    Connected Hermes to a decentralized network.
+    
+    It's a decentralized P2P inference network where everyone over the world can share their compute and get paid for it!
+    
+    I recently posted a tutorial on how to connect Hermes to the network, showcasing how it's fully uncensored/unbiased. I believe we live in an age where we deserve agents that won't go down on us and won't give us half-assed answers.
+    
+    Site: https://c0mpute.ai
+    Tutorial: https://x.com/leyten/status/2064027699866223009
+    [attachment] TV2JcBKB_400x400.jpg https://cdn.discordapp.com/attachments/1513797163250094080/1513797163677909005/TV2JcBKB_400x400.jpg?ex=6a2908f8&is=6a27b778&hm=d2629d3367b1eefec733a32fb2dae5f4de01717da05a70260aa0d91a0ce8c4eb&
+    [embed] c0mpute https://c0mpute.ai/
+    [embed]  https://twitter.com/leyten/status/2064027699866223009
+

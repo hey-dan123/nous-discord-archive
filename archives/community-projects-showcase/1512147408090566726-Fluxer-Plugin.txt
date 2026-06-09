@@ -24,3 +24,15 @@
 [2026-06-08T22:27:39.451000+00:00] thegiuseppe (id=1513670875864371271)
     i was actually debating on using fluxer just yesterday. still on the fence about it but I hope it works out.
 
+[2026-06-09T04:32:45.489000+00:00] .elkim (id=1513762756447174766)
+    Let me know if you try the plugin and how does it work for you.
+
+[2026-06-09T04:32:57.952000+00:00] .elkim (id=1513762808720785478)
+    I'm pretty happy with it.
+
+[2026-06-09T05:05:16.228000+00:00] .elkim (id=1513770938439565433)
+    Just updated the terminal block advertising <@387972437901312000> pushed into upstream, looks great.
+
+[2026-06-09T05:06:17.055000+00:00] .elkim (id=1513771193566761052)
+    [attachment] Screenshot_2026-06-09_07-06-06.png https://cdn.discordapp.com/attachments/1512147408090566726/1513771193335812156/Screenshot_2026-06-09_07-06-06.png?ex=6a28f0c9&is=6a279f49&hm=764e010c0d10f6228f147a67b20699d07ac24289b2bd160ccc54d44e49f560de&
+

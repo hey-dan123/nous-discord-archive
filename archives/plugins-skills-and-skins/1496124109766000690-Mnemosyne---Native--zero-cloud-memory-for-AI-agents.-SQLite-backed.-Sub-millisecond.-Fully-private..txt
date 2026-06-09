@@ -1793,3 +1793,17 @@
     I just asked my hermes agent about that and it told me that mnemosyne's auto-capture only works for gateway sessions (discord, telegram, etc.), but since the desktop app goes through the hermes dashboard's own agent loop, it skips the hooks that would trigger the auto-capture for mnemosyne
     [reply to nulledvector msg=1513693626780221451]
 
+[2026-06-09T04:34:19.326000+00:00] 0xlfg (id=1513763150028214402)
+    Is this how it should be?
+    memory:
+      memory_enabled: true
+      user_profile_enabled: true
+      provider: mnemosyne
+
+[2026-06-09T08:55:26.324000+00:00] myasga (id=1513828862180589620)
+    hey how to update easiest way ? it goes with hermes update or require other command?
+
+[2026-06-09T09:43:23.574000+00:00] skylinx79 (id=1513840930241642587)
+    yeah the desktop app just connects to the same gateway as the CLI. There is no difference re: memory plugin.
+    [reply to mindcraft3r msg=1513693181877682186]
+

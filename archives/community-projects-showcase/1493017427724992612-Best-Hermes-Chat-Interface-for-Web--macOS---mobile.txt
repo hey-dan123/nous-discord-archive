@@ -3358,3 +3358,33 @@
     Makes sense, will definitely look into this as a future feature! Thanks for the suggestion
     [reply to .vansken msg=1513596863536697618]
 
+[2026-06-09T03:14:00.499000+00:00] necrosis._. (id=1513742938402717716)
+    Broo the thinking issue is fixed, but the discommection is still happening if i switch app
+    [reply to avidfuturist msg=1513631608350179488]
+
+[2026-06-09T03:14:49.458000+00:00] avidfuturist (id=1513743143751778304)
+    Great to hear it! Working on that, if you can provide me a bit more information it could help, what triggers the disconnection, and what you see, etc
+    [reply to necrosis._. msg=1513742938402717716]
+
+[2026-06-09T03:17:02.850000+00:00] necrosis._. (id=1513743703238508616)
+    I mostly use it on phone sooo dont know maybe web app specific, but if i switch the connections drops warning pops on top right, then after refreshing it doesnt come till the response is complete then reloading pops the response directly,  sooo i have to keep refreshing
+    [reply to avidfuturist msg=1513743143751778304]
+
+[2026-06-09T03:17:31.176000+00:00] avidfuturist (id=1513743822046367744)
+    Got it, so basically streaming the response on mobile after switching out to another app and then returning to it? It only shows up once complete and after a refresh. Will capture and look into that, thanks!
+    [reply to necrosis._. msg=1513743703238508616]
+
+[2026-06-09T03:18:41.923000+00:00] necrosis._. (id=1513744118780661761)
+    Not switching to another conversation but putting switching the main app putting this one in bg then returning to it
+    [reply to avidfuturist msg=1513743822046367744]
+
+[2026-06-09T03:19:05.254000+00:00] avidfuturist (id=1513744216638099547)
+    Ah got it, okay I’ll take a look at that for mobile. Thanks
+
+[2026-06-09T03:26:58.439000+00:00] avidfuturist (id=1513746201319706725)
+    Captured here now https://github.com/nesquena/hermes-webui/issues/3863 - thanks for the report
+    [reply to necrosis._. msg=1513744118780661761]
+
+[2026-06-09T04:32:23.143000+00:00] avidfuturist (id=1513762662721523762)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+
