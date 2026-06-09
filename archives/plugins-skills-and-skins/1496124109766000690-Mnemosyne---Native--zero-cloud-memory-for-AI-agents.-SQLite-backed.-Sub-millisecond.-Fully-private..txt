@@ -1782,3 +1782,14 @@
 [2026-06-08T14:10:10.448000+00:00] nulledvector (id=1513545680071692439)
     Thanks for choosing Mnemosyne BTW 🙏
 
+[2026-06-08T23:56:17.619000+00:00] mindcraft3r (id=1513693181877682186)
+    Hi, does this plugin work with the hermes desktop app?
+    [reply to nulledvector msg=1513544194386558986]
+
+[2026-06-08T23:58:03.692000+00:00] nulledvector (id=1513693626780221451)
+    Good question I haven’t actually dig into the Hermes desktop app so idk  if it’s a separate thing, but if it’s basically the same thing, it should have the same wiring so I think it should work but just for the giggles and of course is for the documentation purposes. I will go ahead and verify this myself and post up the results soon soon enough if it’s not today then it’s gonna be tomorrow but thank you for bringing that up.
+
+[2026-06-09T00:16:34.470000+00:00] mindcraft3r (id=1513698285720829994)
+    I just asked my hermes agent about that and it told me that mnemosyne's auto-capture only works for gateway sessions (discord, telegram, etc.), but since the desktop app goes through the hermes dashboard's own agent loop, it skips the hooks that would trigger the auto-capture for mnemosyne
+    [reply to nulledvector msg=1513693626780221451]
+

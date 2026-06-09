@@ -12,3 +12,14 @@
     Hey, love your project; if tyou feel inclined i'd love to add it to my current project; we're working on the same goal https://capslockb.github.io/hermes-live-discord-agent-plugin/index.html
     [embed] Hermes Live Discord Agent Plugin https://capslockb.github.io/hermes-live-discord-agent-plugin/index.html
 
+[2026-06-08T20:25:56.029000+00:00] d0ggyw00f (id=1513640243092258988)
+    I’m looking for a plugin where I can call them through external VOIP providers (so not phone numbers) but through something like Google Meet, WhatsApp, telegram, signal etc
+
+[2026-06-08T21:21:58.578000+00:00] capslock.b (id=1513654346644983849)
+    <@683856839586480221> That's the end-goal for me too, i've fought tooth and nail to make whatsapp calling from within baileys (hermes wa backend) work, for weeks; but Meta and similar very oftenly change DOM selectors, and take measures against this, to avoid having whatsapp spam calls, etc.
+    
+    However, if you check my github in a about a day, or three; I will also release a VAPI bridge plugin, cutting down half of what you're searching for, making it easy so long as you find someone who manages to handle the calling for platforms
+
+[2026-06-08T21:23:42.395000+00:00] capslock.b (id=1513654782085173259)
+    Even if you dont use VAPI, or gemini; my projects are purpose-built to be very modular so if you have spare time it's not impossible to code in other providers outside of vapi, or code in a call-handling function/tool for whatever platform you wish to use
+

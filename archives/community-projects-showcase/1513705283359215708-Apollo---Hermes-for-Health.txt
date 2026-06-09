@@ -1,0 +1,13 @@
+# Thread 'Apollo - Hermes for Health' in forum #community-projects-showcase
+# thread_id=1513705283359215708 forum_id=1316137596535177246
+# Started 2026-06-09T02:54:31.516902+00:00
+
+[2026-06-09T00:44:22.837000+00:00] thechaosalchemist (id=1513705283359215708)
+    launching soon as a free open source hermes plugin.
+    
+    will connect to your oura, whoop, and all other wearables.
+    
+    follow me on x to keep updated
+    https://x.com/RiverKhan/status/2064146421633147074?s=20
+    [embed]  https://twitter.com/RiverKhan/status/2064146421633147074?s=20
+

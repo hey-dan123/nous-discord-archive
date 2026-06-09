@@ -1,0 +1,8 @@
+# Thread 'Get your clanker drunk' in forum #plugins-skills-and-skins
+# thread_id=1513723400734904420 forum_id=1485392832154832906
+# Started 2026-06-09T02:58:11.966687+00:00
+
+[2026-06-09T01:56:22.356000+00:00] flash_speed3412 (id=1513723400734904420)
+    https://github.com/carbongotfound/hermes-beer
+    [embed] GitHub - carbongotfound/hermes-beer: 🍺 Hermes Beer plugin — ge... https://github.com/carbongotfound/hermes-beer
+

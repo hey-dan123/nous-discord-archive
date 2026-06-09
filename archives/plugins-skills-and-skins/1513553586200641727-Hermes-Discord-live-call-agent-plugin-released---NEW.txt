@@ -133,3 +133,28 @@
     
     Thanks 🙂
 
+[2026-06-08T20:21:09.088000+00:00] d0ggyw00f (id=1513639039574474952)
+    Using the hermes-live-discord plugin (voice_recv v0.5.2a + discord.py 2.7.1 + davey 0.1.5).                                                                                 
+         The bot speaks in the voice channel but can't hear me — repeated "corrupted stream"                                                                                         
+         opus decode errors. The channel shows "end-to-end encrypted" (DAVE).                                                                                                        
+         Is there a workaround or a davey version that handles this? Server is a small                                                                                               
+         private server, no DAVE toggle visible in settings.
+
+[2026-06-08T20:55:54.404000+00:00] capslock.b (id=1513647786023976990)
+    <@683856839586480221> What OS are you on to be specific? lmk im around, ill look into it
+
+[2026-06-08T21:51:09.561000+00:00] capslock.b (id=1513661690800246834)
+    **Two parts to your question:**
+    
+    **Workaround? **
+    Yes, DAVE is enforced on every Discord voice channel**except stage channels. **
+    
+    **Quick fix, i am not sure but worth trying;**: __*create a stage channel on your private server*__, point the bot at that, and the bridge gets real unencrypted Opus.
+    
+    **Thanks for letting me know, you can consider it resolvedin my project within 3 days.**
+    stay tuned for the official fix.
+    <@683856839586480221>
+
+[2026-06-09T01:59:07.292000+00:00] mahmoudr. (id=1513724092526624929)
+    It is great to use when driving !
+

@@ -27759,3 +27759,172 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/42350
     [embed] docs(config): list API server env vars in env example by Sworntech-... https://github.com/NousResearch/hermes-agent/pull/42350
 
+[2026-06-08T20:30:47.257000+00:00] django7787 (id=1513641464591286302)
+    ??
+    [reply to owl_dv msg=1513630469609099344]
+
+[2026-06-08T22:08:37.702000+00:00] sprmn24 (id=1513666087021969418)
+    <@387972437901312000>  sir , I opened a few PRs today , take a look when you get a chance:
+    
+    **PR #42370**
+    Issue: Signal echo-back dedup window broken by `set.pop()` undefined order
+    Fix: Replaced `set` with `collections.deque(maxlen=50)` for correct FIFO eviction
+    https://github.com/NousResearch/hermes-agent/pull/42370
+    
+    **PR #42372**
+    Issue: Feishu WebSocket startup failure silently swallowed with bare except pass
+    Fix: Replaced silent except with logger.error so startup failures are visible in logs
+    https://github.com/NousResearch/hermes-agent/pull/42372
+    
+    **PR #42379**
+    Issue: 22 bare except Exception: pass blocks in api_server.py silently discarding all failures
+    Fix: Replaced each with logger.warning and a short context description
+    https://github.com/NousResearch/hermes-agent/pull/42379
+    [embed] fix(signal): replace set with deque for ordered timestamp eviction ... https://github.com/NousResearch/hermes-agent/pull/42370
+    [embed] fix(feishu): log WebSocket startup failure instead of silently swal... https://github.com/NousResearch/hermes-agent/pull/42372
+    [embed] fix(api-server): log silent exception swallows instead of bare pass... https://github.com/NousResearch/hermes-agent/pull/42379
+
+[2026-06-08T22:25:53.124000+00:00] lordbartok (id=1513670429896872006)
+    https://github.com/NousResearch/hermes-agent/pull/35188
+    
+    **Problem:** 10-year self-signed CA rotation was manual (`openssl` by hand) after the v1 scope cut in #30179. No audited command, no history, no safety net for live daemon restarts with Bitwarden credentials.
+    
+    **Fix:** `hermes egress rotate-ca` — production-grade rotation with archive-before-replace (never lose live cert mid-crash), structured `rotation-history.jsonl`, `--dry-run` / `--no-restart` / `--reason` flags, automatic daemon restart while correctly propagating the operator’s existing credential-source (Bitwarden or otherwise), and fingerprint redaction in errors.
+    
+    Fixes #30179 (scope).  
+    109 iron-proxy tests + 8 dedicated rotation tests, all green. Bugbot findings hardened with regression coverage.
+    
+    64 other PRs under Bartok9 are 5/5 CI-green, conflict-free, and merge-ready (all on main or `feat/iron-proxy`). Kept this thread clean instead of spamming individual links.
+    
+    cc <@387972437901312000>
+    [embed] feat(egress): CA rotation (`hermes egress rotate-ca`) — follow-up... https://github.com/NousResearch/hermes-agent/pull/35188
+
+[2026-06-08T23:26:47.072000+00:00] autonomics.build (id=1513685755665580102)
+    Hey everyone. I'm trying to solve a problem and maybe someone here knows the solution. Basically I've created a specific workflow in order to prevent my Hermes agent from making mistakes and forgetting rules (everyday we ran the same workflow but it often forgets some steps, even with all the guardrails I've added). The workflow involves delegating to expert profiles and there's a validator profile that keeps checking as many times as necessary the work of agents until every condition is met. This workflow works super well when the agent uses it, problem is that it often forgets to use it. We've made it in a skill that is supposed to be loaded before any task (made mandatory in its soul) but still, it often forgets it.
+    
+    I was thinking that the following system would be great for improving the agent's realiability (or something along those lines): for every request to the agent, there would a deterministic process launching that calls and controls the agent and apply a quality verification workflow to it. There would be no way for the agent to avoid the workflow or answer before the workflow is complete.
+    
+    Is there something similar that already exists? And more generally, is there a good way to prevent the agent from forgetting rules? (I've already converted as much as I can into scripts rather than prompts).
+
+[2026-06-08T23:46:41.068000+00:00] tbui17 (id=1513690763647520848)
+    Traditionally harnesses would use todo lists that the LLM has to go through and make sure it checks off. Sometimes it's done with md files too for persistence.
+    You would also mitigate forgetting (but not eliminate it) via an orchestrator pattern so that the orchestrator can keep its context window as small as possible, while delegating the majority of the work to worker agents.
+    There's some more heavy handed approaches too with modifying the harness itself at the hook level to programmatically re-check or re-inject prompts.
+    A key thing to note is that agents tend to be rather poor at validating their own output, so you would have a separate judge agent evaluate quality / completeness.
+    [reply to autonomics.build msg=1513685755665580102]
+
+[2026-06-08T23:56:48.335000+00:00] autonomics.build (id=1513693310710059048)
+    Thanks for your answer. I have a separate judge system: a validator checks the work of the worker again and again until everything is good. Problem is the orchestrator often forgets to launch this workflow. This is frustrating because when the workflow is applied, it works really well. That's why I'm considering a more heavy handed approach.
+    [reply to tbui17 msg=1513690763647520848]
+
+[2026-06-09T00:03:12.324000+00:00] tbui17 (id=1513694921276788756)
+    I would make sure "launch this workflow" is an individual item in the todo list / plan.md file, not sure what your constraints or the available hook points are, but you should be able to have programmatic checks for the presence of some item or some boolean flag between chat messages for example
+    [reply to autonomics.build msg=1513693310710059048]
+
+[2026-06-09T00:17:57.631000+00:00] nanxingncb612d (id=1513698634523476039)
+    https://github.com/NousResearch/hermes-agent/pull/42459 Scope Runs API by session key
+    [embed] Scope Runs API by session key by necoweb3 · Pull Request #42459 ·... https://github.com/NousResearch/hermes-agent/pull/42459
+
+[2026-06-09T00:19:45.670000+00:00] nanxingncb612d (id=1513699087671885845)
+    https://github.com/NousResearch/hermes-agent/pull/42460 Scope API sessions by session key
+    [embed] Scope API sessions by session key by necoweb3 · Pull Request #4246... https://github.com/NousResearch/hermes-agent/pull/42460
+
+[2026-06-09T00:32:45.080000+00:00] cromwel254 (id=1513702356754366464)
+    this happed today after the updates came in i have installed it like 3-4 times now works for a while then gets broken   and my mcp not working
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1513702356473352272/image.png?ex=6a28b0ad&is=6a275f2d&hm=3ce6ccd39e1aa7c708bbbb73b917029e537b5b30bd2dc76aab850d66f0bbbc87&
+
+[2026-06-09T01:48:14.022000+00:00] frowtek (id=1513721352513785977)
+    What does this PR do?
+    _repair_tool_call_arguments salvages malformed tool-call JSON from
+    local/quantized models. When closing unclosed structures it appended all
+    missing } first, then all missing ] — a fixed order that is wrong for
+    nested payloads. {"items": [1, 2 became {"items": [1, 2}] (invalid)
+    instead of {"items": [1, 2]}, every later repair pass then failed, and the
+    whole argument payload was silently dropped to {}. The tool then ran with
+    empty arguments.
+    
+    The fix walks the text tracking string state (so braces/brackets inside
+    string values are ignored) and closes open delimiters in LIFO nesting order,
+    so nested truncations recover correctly. The flat-object case keeps working.
+    
+    https://github.com/NousResearch/hermes-agent/pull/42510
+    [embed] fix(agent): close unclosed JSON delimiters in LIFO order when repai... https://github.com/NousResearch/hermes-agent/pull/42510
+
+[2026-06-09T01:51:40.258000+00:00] hughjm (id=1513722217530265680)
+    <@387972437901312000> Heads up for the team — this one fixes a real macOS footgun for all Hermes Desktop users:
+    
+    🪲 Issue #35613: macOS gateway/launchd terminal sessions skip Homebrew PATH dirs when /usr/bin is already present. Result: read_file, search_files, patch intermittently can't find sed / rg / gh / brew etc.
+    
+    🔧 PR #35614: Switches from the current /usr/bin sentinel to per-entry append — adds missing _SANE_PATH entries individually, preserves user PATH order, no duplicates.
+    
+    ✅ Approved, tests pass (69/69), marsmensch confirmed the reproduction and fix today on real macOS Desktop app.
+    
+    Would be great to get this merged before more users hit it. Thanks!
+    
+    https://github.com/NousResearch/hermes-agent/issues/35613
+    https://github.com/NousResearch/hermes-agent/pull/35614
+    [embed] [Bug]: macOS gateway terminal PATH skips Homebrew dirs when /usr/bi... https://github.com/NousResearch/hermes-agent/issues/35613
+    [embed] fix(terminal): complete sane PATH entries on POSIX by y0shua1ee · ... https://github.com/NousResearch/hermes-agent/pull/35614
+
+[2026-06-09T02:27:01.590000+00:00] frowtek (id=1513731115041423420)
+    What does this PR do?
+    GatewayStreamConsumer._split_text_chunks splits the fallback final
+    message into platform-sized chunks. Its no-newline fallback hard-split at
+    limit, but limit is measured in len_fn units (UTF-16 code units for
+    Telegram) while it was used as a codepoint slice index. Non-BMP text
+    (emoji = 2 UTF-16 units each) produced chunks up to 2x the budget,
+    exceeding the platform cap — so the final fallback message was rejected
+    and lost.
+    
+    The function already computes _cp_budget (the largest codepoint offset
+    within the unit budget) and uses it to bound the newline search; the fix
+    also uses it for the hard split. For the default len_fn=len,
+    _cp_budget == limit, so plain-text behavior is unchanged.
+    
+    https://github.com/NousResearch/hermes-agent/pull/42523
+    [embed] fix(gateway): respect utf16 budget in _split_text_chunks no-newline... https://github.com/NousResearch/hermes-agent/pull/42523
+
+[2026-06-09T02:35:24.269000+00:00] kyssta69 (id=1513733223430098960)
+    https://github.com/NousResearch/hermes-agent/pull/42287
+    
+    **Problem**: Cron jobs fail with 'PluginManager object has no attribute _middleware' during LLM API calls. The _middleware attribute was accessed directly without safety checks, and discover_plugins() was not called before cron jobs ran. Added getattr fallbacks for _middleware access and ensured plugin discovery runs before agent execution.
+    
+    https://github.com/NousResearch/hermes-agent/pull/42290
+    
+    **Problem**: Background processes on macOS silently fail because _find_shell() returns bash 3.2 instead of the user's default shell. bash 3.2 with -l flag and stdin=/dev/null swallows commands silently. Fixed by preferring $SHELL over shutil.which(bash) on macOS.
+    
+    https://github.com/NousResearch/hermes-agent/pull/42374
+    
+    **Problem**: MEDIA:/path/to/file.py tags were silently dropped because .py was not in the allowed extensions list. Added .py and other common code extensions to MEDIA_DELIVERY_EXTS so MEDIA tags with code files are matched and delivered as native attachments.
+    
+    https://github.com/NousResearch/hermes-agent/pull/42425
+    
+    **Problem**: DeepSeek API key stored via hermes auth add was ignored at runtime.
+    The credential resolver extracted only the access_token and dropped the base_url from the pool entry.
+    Fix: _resolve_api_key_provider_secret_and_url now returns the pool entry's base_url as a fallback.
+    
+    https://github.com/NousResearch/hermes-agent/pull/42426
+    
+    **Problem**: Docker container paths like /output/file.txt rejected by media delivery validation.
+    The gateway resolve(strict=True) doesn't know about docker_volumes volume mounts.
+    Fix: _resolve_via_docker_volumes translates container paths to host paths via TERMINAL_DOCKER_VOLUMES.
+    
+    https://github.com/NousResearch/hermes-agent/pull/42461
+    
+    **Problem**: When delegate_task spawns a child agent, it shares the same plugin context engine singleton as the parent, so calling update_model() on the child's engine corrupts the parent's context_length. Added deep-copy of the singleton when retrieved from get_plugin_context_engine() so each agent gets its own independent engine instance.
+    
+    https://github.com/NousResearch/hermes-agent/pull/42463
+    
+    **Problem**: Skills attached to cron jobs were not having their usage bumped when the wakeAgent=false gate fired or when the script produced empty output, causing the curator to prune actively-used skills. Added a helper that bumps usage for all job skills and call it in both early-return paths.
+    
+    https://github.com/NousResearch/hermes-agent/pull/42464
+    
+    **Problem**: The launchd plist included LimitLoadToSessionType with Aqua and Background values, which caused launchctl bootstrap to fail with exit code 5 on macOS 26. Removed the key entirely so launchd loads the service in the user's current session by default.
+    https://github.com/NousResearch/hermes-agent/pull/42519
+    
+    **Problem**: Goal continuation breaks when session rotates to child session after compression. Background review races with goal continuation. Load_goal now walks parent_session_id chain to inherit active goals, and background review is skipped when a goal is active.
+    
+    https://github.com/NousResearch/hermes-agent/pull/42522
+    
+    **Problem**: Memory at capacity causes silent hang when agent tries replace with inexact text. Zero-match branch of replace/remove returned no previews, so agent could not self-correct and looped until turn budget exhausted. Now returns entry previews and current_entries on zero-match, letting the agent see what is stored and retry with correct text.
+

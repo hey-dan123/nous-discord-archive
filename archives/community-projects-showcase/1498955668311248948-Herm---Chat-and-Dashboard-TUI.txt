@@ -1194,3 +1194,13 @@
     
     I have both running in a Docker, but now I'm having a hard time with things like voice and stuff because it is in a Docker container.
 
+[2026-06-08T21:30:14.933000+00:00] liftaris (id=1513656428509007894)
+    Hmm tbh I have no idea how herm works with dockerized Hermes. I'm not totally surprised some things don't work because the setup/assumptions are slightly different, but if you can capture what you see in a GitHub issue that will be helpful to folks I'm sure!
+    [reply to .sirash msg=1513628731988512820]
+
+[2026-06-08T21:30:35.901000+00:00] liftaris (id=1513656516454908055)
+    Then I or another contributor can get to it eventually
+
+[2026-06-08T21:42:28.730000+00:00] .sirash (id=1513659506276700281)
+    k thanks!
+

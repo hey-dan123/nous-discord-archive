@@ -21,3 +21,6 @@
 [2026-06-08T07:44:34.153000+00:00] .elkim (id=1513448639417159690)
     Realtime voice chat with Hermes added 🙂 pretty fun this one
 
+[2026-06-08T22:27:39.451000+00:00] thegiuseppe (id=1513670875864371271)
+    i was actually debating on using fluxer just yesterday. still on the fence about it but I hope it works out.
+

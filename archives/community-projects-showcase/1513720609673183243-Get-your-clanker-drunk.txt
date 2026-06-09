@@ -1,0 +1,8 @@
+# Thread 'Get your clanker drunk' in forum #community-projects-showcase
+# thread_id=1513720609673183243 forum_id=1316137596535177246
+# Started 2026-06-09T02:54:31.135412+00:00
+
+[2026-06-09T01:45:16.915000+00:00] flash_speed3412 (id=1513720609673183243)
+    Too lazy to type. https://github.com/carbongotfound/hermes-beer
+    [embed] GitHub - carbongotfound/hermes-beer: 🍺 Hermes Beer plugin — ge... https://github.com/carbongotfound/hermes-beer
+

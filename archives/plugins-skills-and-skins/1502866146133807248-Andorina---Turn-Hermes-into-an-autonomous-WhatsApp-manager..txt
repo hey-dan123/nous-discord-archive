@@ -351,3 +351,9 @@
 [2026-06-08T10:37:40.107000+00:00] vayaperson (id=1513492201265565756)
     If someone experiments some error as bridge or whatsapp online, reconnect whatsapp through native hermes' whatsapp and then repatch in the panel.
 
+[2026-06-08T20:22:12.440000+00:00] d0ggyw00f (id=1513639305292284154)
+    Does it work with headless Linux machines over SSH?
+    Does it kind of make it a ‘PA’ where it can send AND respond to messages?
+    
+    Thanks
+
