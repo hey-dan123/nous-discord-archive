@@ -1204,3 +1204,7 @@
 [2026-06-08T21:42:28.730000+00:00] .sirash (id=1513659506276700281)
     k thanks!
 
+[2026-06-09T17:42:29.431000+00:00] tunacookie (id=1513961499104776192)
+    more little things, cron jobs and provider and reasoning
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1513961498827816960/image.png?ex=6a29a205&is=6a285085&hm=663398899dc3c4bef3c3d579f8dea5cce2cf707e5c79e017870ba47efe5d0716&
+

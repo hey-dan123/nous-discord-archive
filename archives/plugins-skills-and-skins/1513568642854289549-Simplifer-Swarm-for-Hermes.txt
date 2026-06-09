@@ -23,3 +23,12 @@
     [attachment] ChatGPT_Image_Jun_8_2026_04_28_18_PM.png https://cdn.discordapp.com/attachments/1513568642854289549/1513568643232043020/ChatGPT_Image_Jun_8_2026_04_28_18_PM.png?ex=6a283425&is=6a26e2a5&hm=34a7e64abeae075af3b5d6a8bb6d373914f46de2e114262d77e687282ff69518&
     [embed] GitHub - Sahil-SS9/hermes-simplify-swarm: Multi-agent code simplifi... https://github.com/Sahil-SS9/hermes-simplify-swarm
 
+[2026-06-09T19:25:53.026000+00:00] sahil_ss9 (id=1513987518867963996)
+    Two fixes landed in Simplify-Swarm today, both coming from a real run I did earlier this week.
+    
+    First — same visibility fix as HermaGuard. Before the three agents dispatch, you now get a status message showing exactly what's running and what each agent is focused on. The wait is still 2–5 minutes, but at least you know things are moving.
+    
+    Second, and more importantly — the skill was applying changes without asking first. After the agents returned and findings were consolidated, it would just go ahead with the SAFE tier automatically. That's now a hard stop: the skill presents the full report and waits for you to say which tier to apply — safe only, safe + careful, all, or none. Nothing touches your code until you say so.
+    
+    Simplify-Swarm v1.3.0 — Sahil-SS9/hermes-simplify-swarm
+

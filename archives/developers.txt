@@ -28498,3 +28498,207 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-09T14:10:19.555000+00:00] emanuel_build (id=1513908106134814930)
     Where can I discuss the architecture of the Hermes Agent? Is it in this channel, or is there a more specific channel to talk with the Hermes engineers?
 
+[2026-06-09T15:00:34.586000+00:00] teknium (id=1513920752091398381)
+    We dont have an installer.msi
+    [reply to ilmarselter msg=1513904697520685096]
+
+[2026-06-09T15:00:43.650000+00:00] teknium (id=1513920790108835953)
+    It looks like you downloaded a fake installer
+
+[2026-06-09T15:04:36.868000+00:00] teknium (id=1513921768295891007)
+
+[2026-06-09T15:10:35.139000+00:00] yunofoot (id=1513923270993510460)
+    This was produced using voice modulation and converted from a male speaker to a female speaker. How does the quality sound?
+    [attachment] mio_vc_p255_origin.wav https://cdn.discordapp.com/attachments/1491258766648283238/1513923270359908442/mio_vc_p255_origin.wav?ex=6a297e6a&is=6a282cea&hm=eba4c6edb3c56a1eecbf63bc5c21466d2d4efa0a6a6cd85e88481fd694d8bc3a&
+
+[2026-06-09T15:10:56.525000+00:00] teknium (id=1513923360692895815)
+    here would be the best place
+    [reply to emanuel_build msg=1513908106134814930]
+
+[2026-06-09T15:16:41.868000+00:00] emanuel_build (id=1513924809166422087)
+    I am editing my Hermes to have a pre-LLM request validation method to check the input, similar to the input processors in Mastra.Ai. This is in case the input tries to break the architecture of a specific profile, and the SOUL.md of that profile is not enough to prevent a memory poisoning attack (or context specific scope). For now, I am doing it on my side, but maybe there is something specific to add extra steps in run_conversation by/for each profile.
+
+[2026-06-09T15:18:24.738000+00:00] kyssta69 (id=1513925240634212382)
+    https://github.com/NousResearch/hermes-agent/pull/42897
+    
+    **Problem**: Line 1: Compaction summaries were sometimes inserted with role=assistant, causing weaker LLMs to echo them back as their own previous responses.
+    Line 2: The role selection logic used role=assistant when the head message was role=user, which some LLMs treated as their own prior output.
+    Line 3: Always uses role=user for standalone compaction summaries and merges into adjacent messages when needed to avoid consecutive same-role.
+    [embed] fix(compression): always use role=user for compaction summaries (#4... https://github.com/NousResearch/hermes-agent/pull/42897
+
+[2026-06-09T15:24:47.445000+00:00] teknium (id=1513926845823975536)
+    There are many LLM providers who will not accept multiple assistant roles consecutively
+    [reply to kyssta69 msg=1513925240634212382]
+
+[2026-06-09T15:24:55.801000+00:00] teknium (id=1513926880871317546)
+    so idt this can go in
+
+[2026-06-09T15:25:29.619000+00:00] kyssta69 (id=1513927022714552390)
+    yea most of my PRs nowdays are hermes made im not usually able to check them properly because of exams mb
+
+[2026-06-09T15:28:19.336000+00:00] nyrhe (id=1513927734558986391)
+    Hi <@387972437901312000>, just a suggestion to improve things: when the same tool is used repeatedly, it would be nice if the tool name wasn't repeated each time. For example here, showing 'terminal' once at the top would be enough. If it switches to a different tool, it could show the new tool's name, and if it changes again, a new name. I think that'd be cleaner than repeating the same label over and over.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1513927733623787570/image.png?ex=6a298293&is=6a283113&hm=78bd39c369571c7ba457eea3a433c16e7b596492fbe91280a28bb1d00672ef8d&
+
+[2026-06-09T15:30:38.952000+00:00] kyssta69 (id=1513928320150929590)
+    Hermes Says this on that PR:
+    
+    > This PR already handles that — it always uses `role=user` for compaction summaries, never assistant. When that would create consecutive user messages with head/tail, it merges the summary into the adjacent message instead of inserting a standalone one. The consecutive assistant role issue is what the old code could produce, and this PR fixes exactly that.
+    [reply to teknium msg=1513926845823975536]
+
+[2026-06-09T15:36:04.275000+00:00] hughjm (id=1513929684654620672)
+    Hey <@387972437901312000> , I hit this macOS gateway issue locally and opened a small fix PR here:
+    
+    https://github.com/NousResearch/hermes-agent/pull/42902
+    
+    It fixes #40831 and refs #42524. The problem I reproduced is that after #40581, Hermes gateway service operations target `user/<uid>`. That works for non-Aqua/background launchd managers, but in an interactive macOS Aqua session the LaunchAgent is loaded under `gui/<uid>`. So `hermes gateway restart` looks for `user/501/ai.hermes.gateway`, gets `Could not find service`, tries to bootstrap into `user/501`, hits `launchctl exit 5`, then falls back to a detached background process.
+    
+    The PR selects the domain from `launchctl managername`:
+    - `Aqua` → `gui/<uid>`
+    - other/unknown managers → `user/<uid>`
+    
+    This keeps the macOS 26 non-Aqua behavior from #40581 and restores normal launchd management for Aqua sessions. I tested it locally on macOS 26.5.1, and the PR checks are green.
+    [embed] fix(gateway): select macOS launchd domain from manager by y0shua1ee... https://github.com/NousResearch/hermes-agent/pull/42902
+
+[2026-06-09T15:57:21.291000+00:00] teknium (id=1513935040848068728)
+    not a bad idea!
+    [reply to nyrhe msg=1513927734558986391]
+
+[2026-06-09T15:57:51.088000+00:00] teknium (id=1513935165825613896)
+    Yes, but if it ended on a user turn before the compaction, then it'll also end on consecutive, just user role
+    [reply to kyssta69 msg=1513928320150929590]
+
+[2026-06-09T16:06:24.145000+00:00] realadolan (id=1513937317742514350)
+    It is possible to add BIDI RTL support in Hermes Desktop?
+
+[2026-06-09T16:07:21.098000+00:00] realadolan (id=1513937556620841001)
+    I guess I can throw Claude Code on it and it'll edit the Electron app and add the support needed? But I'd like an official support if possible ❤️
+
+[2026-06-09T16:31:02.061000+00:00] aleksandr_1 (id=1513943516571635783)
+    **1. fix(cron): hold _jobs_file_lock in create, update, and remove.**
+    `create_job`, `update_job`, and `remove_job` followed a load→modify→save pattern without holding `_jobs_file_lock`, leaving them unprotected when a gateway CRUD call on the event loop thread interleaved with a scheduler worker in the ThreadPoolExecutor. Wrapped the critical sections in all three functions with `with _jobs_file_lock:`. https://github.com/NousResearch/hermes-agent/pull/42762
+    
+    **2. fix(cron): warn when agent.redact fails instead of silently passing.**
+    `_run_job_script` wrapped `redact_sensitive_text` in a bare `except Exception: pass` — if redaction failed, unredacted script output (API keys, tokens) flowed silently into the LLM prompt, disk storage, and chat delivery. Replaced with `except Exception as exc: logger.warning(...)` to surface the failure in logs while preserving the existing return contract. https://github.com/NousResearch/hermes-agent/pull/42877
+
+[2026-06-09T16:40:43.016000+00:00] teknium (id=1513945953273643108)
+    dont know what that is fren
+    [reply to realadolan msg=1513937317742514350]
+
+[2026-06-09T16:45:47.044000+00:00] nyrhe (id=1513947228459237386)
+    Thanks, it’s more compact and avoids the spam of repeating the same tool names
+    [reply to teknium msg=1513935040848068728]
+
+[2026-06-09T16:48:04.318000+00:00] promptsiren (id=1513947804228255756)
+    it's support for right to left languages
+    [reply to teknium msg=1513945953273643108]
+
+[2026-06-09T16:48:58.289000+00:00] 74800 (id=1513948030599172207)
+    hi, opened #42954 since loops are so trendy right now
+    
+    it adds a /loop command for persistent self-evaluating agent loops. same concept as claude code's /loop but persistent across sessions and smarter by borrowing from goal's judge.
+    
+    agent monitors its own progress via the existing judge, adapts its polling interval based on whether output is changing, auto-pauses when stuck. two modes: fixed interval and adaptive. no new abstractions. just wires existing cron + judge_goal together. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/42954
+    [embed] feat(cron): /loop command — persistent scheduled agent loops by T... https://github.com/NousResearch/hermes-agent/pull/42954
+
+[2026-06-09T16:49:16.281000+00:00] teknium (id=1513948106062827692)
+    Ohh, yea I think thats on <@119192111202566149>'s todo list
+    [reply to promptsiren msg=1513947804228255756]
+
+[2026-06-09T16:56:21.735000+00:00] .consumeobeydie (id=1513949890546237540)
+    Just updated PR #41233 — added the full Python implementation for the x402-payment skill on Arc Testnet.
+    What's now included:
+    
+    tools/x402_payment.py — EIP-3009 signing, USDC balance check, receipt verification
+    tools/x402_client.py — handles 402 responses automatically
+    tools/x402_server.py — test server
+    skills/blockchain/x402-payment/SKILL.md — updated skill docs
+    
+    Verified on Arc Testnet. All safety rails in place ($1.00 max/request, testnet only).
+    PR: https://github.com/NousResearch/hermes-agent/pull/41233
+    [embed] feat: add x402-payment skill for autonomous USDC micropayments on A... https://github.com/NousResearch/hermes-agent/pull/41233
+
+[2026-06-09T17:04:51.076000+00:00] .consumeobeydie (id=1513952026877497417)
+    Just opened PR #42968 to Hermes Agent — ERC-8183 agentic commerce job skill for Arc Testnet.
+    What it adds:
+    
+    skills/blockchain/erc8183-job/SKILL.md — Hermes learns when and how to create, fund, and complete jobs on Arc Testnet
+    tools/erc8183_job.py — Python tool with create_job, fund_job, complete_job, get_job_status
+    
+    Combined with PR #41233 (x402-payment), Hermes can now run the full Arc agentic stack autonomously: pay for API access → create a job → fund escrow → complete and settle.
+    Verified on Arc Testnet. Job ID 110935, Status: Completed, Budget: 1 USDC.
+    PR: https://github.com/NousResearch/hermes-agent/pull/42968
+    [embed] feat: add ERC-8183 agentic commerce job skill for Arc Testnet by co... https://github.com/NousResearch/hermes-agent/pull/42968
+
+[2026-06-09T17:12:50.674000+00:00] liinx (id=1513954038457303172)
+    W00t!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1513954038188605591/image.png?ex=6a299b12&is=6a284992&hm=4d60523259afcc284303a118036343b24ccc8ff6314b35ce325ef419bac8116c&
+
+[2026-06-09T17:22:30.161000+00:00] realadolan (id=1513956469001814258)
+    Only until 22nd? What happens after?
+    [reply to liinx msg=1513954038457303172]
+
+[2026-06-09T17:24:02.436000+00:00] nyrhe (id=1513956856031088721)
+    2x more usage than Opus is crazy, 2 prompts and you’re done
+    [reply to liinx msg=1513954038457303172]
+
+[2026-06-09T18:08:52.022000+00:00] _hwrd_ (id=1513968136972533843)
+    bump on this bug pls: https://github.com/NousResearch/hermes-agent/pull/39946
+    [embed] fix(file-sync): don't rate-limit retry after a failed sync cycle by... https://github.com/NousResearch/hermes-agent/pull/39946
+
+[2026-06-09T18:09:16.444000+00:00] _hwrd_ (id=1513968239405957310)
+    probably just trying to get people to pay for pro/max
+    [reply to realadolan msg=1513956469001814258]
+
+[2026-06-09T19:03:11.469000+00:00] bitnation (id=1513981808083996722)
+    Crazy🤣
+    [reply to nyrhe msg=1513956856031088721]
+
+[2026-06-09T19:25:06.312000+00:00] frowtek (id=1513987322935246980)
+    What does this PR do?
+    hermes logout resolves its target as
+    provider_id or active_provider or _logout_default_provider_from_config().
+    The config fallback only recognized nous, openai-codex, and xai-oauth.
+    
+    When Qwen OAuth or Google Gemini OAuth is selected via hermes model, the flow
+    sets model.provider but not auth.json.active_provider (their tokens live
+    outside auth.json — in the Qwen CLI credential file / Google OAuth store).
+    So with no active provider, hermes logout printed
+    No provider is currently logged in. and never reset model.provider.
+    
+    This adds qwen-oauth and google-gemini-cli to the fallback set, mirroring
+    how openai-codex and xai-oauth are already handled. Both are already in
+    PROVIDER_REGISTRY, so _should_reset_config_provider_on_logout resets the
+    config once the target resolves — no other changes needed.
+    
+    https://github.com/NousResearch/hermes-agent/pull/43011
+    
+    
+    
+    What does this PR do?
+    exportSession() always called getSessionMessages(sessionId) without the
+    owning profile. When a session belongs to another profile — Command Center's
+    all-profile list, or the sidebar under a non-active profile — the read hit the
+    active gateway profile's backend instead, returning a 404 or the wrong
+    transcript. getSessionMessages(id, profile?) documents that the owning profile
+    must be passed for non-current/default profiles, so this forwards it — matching
+    the existing renameSession/deleteSession convention.
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/43015
+    [embed] fix(cli): resolve qwen-oauth and google-gemini-cli logout from conf... https://github.com/NousResearch/hermes-agent/pull/43011
+    [embed] fix(desktop): pass owning profile when exporting a session by Frowt... https://github.com/NousResearch/hermes-agent/pull/43015
+
+[2026-06-09T19:28:53.813000+00:00] cristianmgm7 (id=1513988277143601193)
+    Hey! 👋 We've built a **Carbon Voice** platform adapter for Hermes Agent (currently running as an external plugin) and we'd like to upstream it as a native platform. A few questions before we open a PR:
+    
+    1. **Subpackage layout** — our adapter is ~13 modules (adapter, api, parse, transport, reactions, allow-list, channels, etc.). I see `gateway/platforms/qqbot/` is already a multi-module subpackage with an `__init__.py` re-exporting the adapter — is that the pattern you'd want us to follow (`gateway/platforms/carbonvoice/`), rather than collapsing into a single file?
+    
+    2. **Dependencies** — Carbon Voice needs `httpx` + `python-socketio`. Should those go into core's `pyproject.toml`, or be optional/extras like some of the other platforms do?
+    
+    3. **Config** — env-vars-only (`CARBONVOICE_PAT`, etc.), or do you also want `config.yaml` keys wired into `load_gateway_config()`?
+    
+    We've already walked the `ADDING_A_PLATFORM.md` checklist and mapped all 16 integration points. Happy to share the plugin repo / a draft PR. Carbon Voice is a voice-first messaging platform (STT/TTS), so it's text-in/text-out from Hermes' side — should slot in cleanly alongside the existing adapters. 🙏
+

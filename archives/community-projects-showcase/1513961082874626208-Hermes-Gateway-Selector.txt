@@ -1,0 +1,21 @@
+# Thread 'Hermes Gateway Selector' in forum #community-projects-showcase
+# thread_id=1513961082874626208 forum_id=1316137596535177246
+# Started 2026-06-09T20:05:09.628595+00:00
+
+[2026-06-09T17:40:50.194000+00:00] tomrevo.x (id=1513961082874626208)
+    Shell function + CLI tool for choosing between local and remote Hermes Agent gateways from your terminal.
+    
+    https://github.com/tommulkins/hermes-gateway-selector/raw/main/assets/demo.png
+    
+    I wanted a convenient way to choose which Hermes Agent gateway to select at runtime.
+    
+    So I created this.  Let me know what you think. 🙂
+    
+    https://github.com/tommulkins/hermes-gateway-selector
+    [attachment] Hermes_Gateway_Selector.png https://cdn.discordapp.com/attachments/1513961082874626208/1513961083168231728/Hermes_Gateway_Selector.png?ex=6a29a1a2&is=6a285022&hm=5acf1ce78fc458b8d877e9e6b3069dbd9fa7bb3a337e1fc25ec803713418ed7b&
+    [embed]  https://github.com/tommulkins/hermes-gateway-selector/raw/main/assets/demo.png
+    [embed] GitHub - tommulkins/hermes-gateway-selector: Shell selector for cho... https://github.com/tommulkins/hermes-gateway-selector
+
+[2026-06-09T19:24:50.399000+00:00] tomrevo.x (id=1513987256191549450)
+    Hermes Gateway Selector
+

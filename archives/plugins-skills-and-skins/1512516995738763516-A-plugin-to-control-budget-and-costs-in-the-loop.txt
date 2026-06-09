@@ -23,3 +23,13 @@
     New feature request to support NVIDIA pricing models as per Nemotron Coalition partnership with Hermes. Whoever wants to contribute ! https://github.com/nujovich/hermes-telemetry/issues/12
     [embed] [FEAT] NVIDIANIMPricingSource — NVIDIA NIM direct provider pricin... https://github.com/nujovich/hermes-telemetry/issues/12
 
+[2026-06-09T19:32:21.490000+00:00] nadiamermedev (id=1513989148204208248)
+    hermes-telemetry v0.4.0 is out — the budget-enforcement + cost-tracking plugin for Hermes Agent.
+    
+    This release is all about Gemini pricing accuracy. Direct Google AI Studio models (bare `gemini-*`) now get correct prices from auto-refresh, and `gemini-X` / `google/gemini-X` resolve to the same entry regardless of routing path or pricing-cache state. So Gemini cost tracking is now correct end-to-end whether you call Google directly or route through OpenRouter.
+    
+    Both PRs landed by @willywg (#14, #15) — thanks for the thorough work.
+    
+    Release notes + install: https://github.com/nujovich/hermes-telemetry/releases/tag/v0.4.0
+    [embed] Release v0.4.0 · nujovich/hermes-telemetry https://github.com/nujovich/hermes-telemetry/releases/tag/v0.4.0
+

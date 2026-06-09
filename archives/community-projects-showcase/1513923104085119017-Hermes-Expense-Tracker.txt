@@ -1,0 +1,16 @@
+# Thread 'Hermes Expense Tracker' in forum #community-projects-showcase
+# thread_id=1513923104085119017 forum_id=1316137596535177246
+# Started 2026-06-09T20:05:10.567206+00:00
+
+[2026-06-09T15:09:55.345000+00:00] emanuel_build (id=1513923104085119017)
+    https://github.com/Canopix/hermes-expense-tracker
+    
+    I’ve turned Hermes into my family expense tracker! 
+    
+    Now I have a shared expense-tracking system powered by Hermes, with a centralized database and a dedicated Telegram bot for each family member (my wife and me, for now) to log expenses throughout the day.
+    
+    By the end of the day, Hermes can generate detailed reports with charts and insights. At the end of the month, I can even ask it to automatically create a full presentation summarizing our spending, trends, and categories.
+    
+    It’s been a surprisingly fun and practical use case for multi-agent profiles and shared data.
+    [embed] GitHub - Canopix/hermes-expense-tracker https://github.com/Canopix/hermes-expense-tracker
+

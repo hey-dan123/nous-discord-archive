@@ -208,3 +208,10 @@
 [2026-06-09T12:59:38.940000+00:00] _.exo._ (id=1513890319706488852)
     So it just comes with hermes instead of having to install another plugin
 
+[2026-06-09T17:18:55.223000+00:00] capslock.b (id=1513955567486632120)
+    Will actually be incoming! 
+    
+    Since this is still at such an early stage, im collection improvements and flesging this project out so I dont submit total slop to hermes devs
+    
+    Thanks for the suggest, stay tuned 🙂
+

@@ -1,0 +1,26 @@
+# Thread 'THEIA - UI Computer Use Plugin' in forum #community-projects-showcase
+# thread_id=1513976306407313492 forum_id=1316137596535177246
+# Started 2026-06-09T20:05:09.202717+00:00
+
+[2026-06-09T18:41:19.767000+00:00] treeindustries (id=1513976306407313492)
+    THEIA — The Human Environment Intelligence Aperture
+    
+    A self-contained UI computer-use plugin that gives Hermes Agent a visual perception and control layer for Windows, macOS, and Linux: screenshots, window focus, mouse, keyboard, drag/scroll gestures, pixel checks, and optional LocateAnything-3B visual UI grounding.
+    
+    What it unlocks
+    THEIA lets Hermes Agent operate GUI software the way a human does: see the screen, perceive the interface, pick a target, click/type/drag/scroll, verify what changed, and repeat. This is most useful when there is no clean API, no browser automation hook, or the workflow crosses multiple desktop applications.
+    
+    See the interface. Understand the environment. Act through the screen.
+    
+    How THEIA works with Hermes Agent
+    Hermes Agent already has language reasoning, tool calling, skills, memory, file access, terminal access, web research, scheduled jobs, subagents, and optional messaging-platform access. THEIA adds the missing visual interface aperture: a way for Hermes Agent to perceive and operate normal desktop software through the same screen a human uses.
+    
+    In practice, THEIA contributes two things:
+    
+    A UI computer-use toolset — screenshot capture, active-window checks, visual locating, mouse/keyboard actions, drag/scroll gestures, pixels, and dry-run controls.
+    A bundled operator skill — reusable guidance that teaches Hermes Agent the safe loop for GUI work: see → target → act → verify → repeat.
+    
+    https://github.com/TREE-Ind/THEIA-UI-Computer-Use
+    [attachment] windows-computer-use-infographic.png https://cdn.discordapp.com/attachments/1513976306407313492/1513976306885333224/windows-computer-use-infographic.png?ex=6a29afcf&is=6a285e4f&hm=186fe742572771a2b653489fd71d7aeb73036fd7bbbb632cc9c293a66573a896&
+    [embed] GitHub - TREE-Ind/THEIA-UI-Computer-Use: THEIA — The Human Enviro... https://github.com/TREE-Ind/THEIA-UI-Computer-Use
+

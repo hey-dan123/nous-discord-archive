@@ -21,3 +21,12 @@
     [attachment] ChatGPT_Image_Jun_8_2026_04_21_04_PM.png https://cdn.discordapp.com/attachments/1513563966838673608/1513563967178670110/ChatGPT_Image_Jun_8_2026_04_21_04_PM.png?ex=6a282fca&is=6a26de4a&hm=43b17b18a8191a6056e95b1226a7d459effd2b6bdc17b04e8c3cec58b31db1ef&
     [embed] GitHub - Sahil-SS9/hermaguard: Adversarial bug-hunting code review ... https://github.com/Sahil-SS9/hermaguard
 
+[2026-06-09T19:25:32.946000+00:00] sahil_ss9 (id=1513987434646605988)
+    Quick update to HermaGuard — nothing major, just a UX fix that's been bugging me.
+    
+    Previously when you invoked the skill, it would go completely silent for a few minutes while the parallel agents did their analysis. No indication anything was running, no ETA — just a blank screen. Easy to assume your session had hung.
+    
+    Now it prints a clear status block before the agents fire: which agents are running, what each one is hunting for, and a rough time estimate. Small thing, but makes the wait a lot less unsettling.
+    
+    HermaGuard v1.2.0 — grab the latest SKILL.md from Sahil-SS9/hermaguard if you're running a local copy.
+
