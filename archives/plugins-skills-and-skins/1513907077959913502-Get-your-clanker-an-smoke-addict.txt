@@ -1,0 +1,12 @@
+# Thread 'Get your clanker an smoke addict' in forum #plugins-skills-and-skins
+# thread_id=1513907077959913502 forum_id=1485392832154832906
+# Started 2026-06-09T14:50:01.532307+00:00
+
+[2026-06-09T14:06:14.419000+00:00] flash_speed3412 (id=1513907077959913502)
+    Your clanker needs to mmm smoke a cigarette? Also, this makes it work faster if it does, and angrier if it can't.
+    
+    ⭐ **If you like this plugin**, star the repo. It would make Carbon happy. Don't make Carbon sad.
+    
+    https://github.com/carbongotfound/hermes-smokes
+    [embed] GitHub - carbongotfound/hermes-smokes: Gets your agent addicted, ji... https://github.com/carbongotfound/hermes-smokes
+

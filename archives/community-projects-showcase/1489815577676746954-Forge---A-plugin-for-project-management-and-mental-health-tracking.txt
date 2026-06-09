@@ -170,3 +170,7 @@
     Manually with the new npx install the best way is to uninstall and reinstall for now. 
     But the preferred way, imo, is with hermes/codex, asking it to make sure no data is deleted/making backup of the forge.sqlite 🙂
 
+[2026-06-09T10:42:30.901000+00:00] _albertjames (id=1513855808809467904)
+    Added npx forge-memory update 😉
+    [reply to jodfie msg=1513295227715322000]
+

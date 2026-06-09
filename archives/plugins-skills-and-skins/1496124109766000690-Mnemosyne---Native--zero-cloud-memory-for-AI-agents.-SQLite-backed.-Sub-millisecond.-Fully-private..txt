@@ -1807,3 +1807,14 @@
     yeah the desktop app just connects to the same gateway as the CLI. There is no difference re: memory plugin.
     [reply to mindcraft3r msg=1513693181877682186]
 
+[2026-06-09T10:39:56.811000+00:00] _a_l_a_n_ (id=1513855162509426728)
+    Give Hermes the GitHub for mnemosyne and tell it update and test mnemosyne.
+    [reply to myasga msg=1513828862180589620]
+
+[2026-06-09T11:56:02.868000+00:00] nulledvector (id=1513874313940303952)
+    ill check that out
+    [reply to mindcraft3r msg=1513698285720829994]
+
+[2026-06-09T11:56:03.932000+00:00] nulledvector (id=1513874318403309578)
+    ty
+

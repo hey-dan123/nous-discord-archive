@@ -169,3 +169,42 @@
 [2026-06-09T08:51:21.269000+00:00] capslock.b (id=1513827834345558129)
     <@395306905322389515> Thanks a lot for the love ❤️
 
+[2026-06-09T12:30:41.663000+00:00] fooned (id=1513883033038749756)
+    Was going to install this but my agent says its hardcoded to gemini, is this true?
+    [reply to capslock.b msg=1513827637083246653]
+
+[2026-06-09T12:31:10.031000+00:00] fooned (id=1513883152022507602)
+    Does it need a gemini token?
+
+[2026-06-09T12:53:40.244000+00:00] capslock.b (id=1513888815226290256)
+    Yep for now, it's something that will no longer be within 3 days give or take, however modularity is built in, maybe my VAPI repository (really really early release but is the same core as hermes) - find it on my github, agent should be able to see how both repos can allow integration for whatever provider you may wish to add.
+    
+    Gemini has realtime, and handling the DAVE encryption is a bitch
+    
+    <@638799074967158784>
+
+[2026-06-09T12:53:46.181000+00:00] _.exo._ (id=1513888840128135269)
+    Seems like it should an extension of this that adds screen sharing.
+    
+    https://hermes-agent.nousresearch.com/docs/user-guide/features/voice-mode#discord-voice-channels
+    [embed] Voice Mode | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/features/voice-mode
+
+[2026-06-09T12:54:56.230000+00:00] capslock.b (id=1513889133934940240)
+    <@374748830769610754> Video, and screenshare detection is already wired in! It may be broken due to it just coming out, but ask your agent to look into that, it's documented and everything 🙂 
+    
+    Works on paper by autodetecting when video is on
+
+[2026-06-09T12:57:37.699000+00:00] _.exo._ (id=1513889811185008640)
+    Oh. I was just saying it seems like it should be a part of the built-in discord system instead of something secondary
+
+[2026-06-09T12:58:01.360000+00:00] capslock.b (id=1513889910426308668)
+    Agreed, it's why i released this project cus it drove me insane
+
+[2026-06-09T12:59:02.629000+00:00] _.exo._ (id=1513890167407251506)
+    Hmm maybe I'm not saying it right.
+    
+    Instead of making it another repo, try to get it merged into Hermes as an extension of the existing discord functionality
+
+[2026-06-09T12:59:38.940000+00:00] _.exo._ (id=1513890319706488852)
+    So it just comes with hermes instead of having to install another plugin
+

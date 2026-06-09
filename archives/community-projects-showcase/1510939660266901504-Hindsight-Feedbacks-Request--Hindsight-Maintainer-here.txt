@@ -221,3 +221,10 @@
 [2026-06-08T19:44:30.407000+00:00] descention (id=1513629817638228159)
     I was thinking about throwing that into a mental model. I am not sure those contexts are even useful to the bank though.
 
+[2026-06-09T10:59:53.454000+00:00] dbeyer123 (id=1513860181593690152)
+    It’d be great if I could delete arbitrary memories but if I recall the cli shows that as deprecated? I just want to run a regular cleanup to root out stale stuff.
+
+[2026-06-09T12:37:40.101000+00:00] nicoloboschi (id=1513884788094799884)
+    we're adding it back in the next version https://github.com/vectorize-io/hindsight/issues/1951
+    [embed] RFC: memory curation — reversible edit & invalidate with cascade ... https://github.com/vectorize-io/hindsight/issues/1951
+

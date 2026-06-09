@@ -1,0 +1,24 @@
+# Thread 'Hermes Obsidian Memory Plugin' in forum #plugins-skills-and-skins
+# thread_id=1513868076674842644 forum_id=1485392832154832906
+# Started 2026-06-09T14:50:01.984066+00:00
+
+[2026-06-09T11:31:15.788000+00:00] kyssta69 (id=1513868076674842644)
+    Browse, search, and edit your Obsidian vault notes from the Hermes dashboard. Multi-vault support, force-directed graph visualization, inline note editing, wikilink navigation.
+    
+    **Install**:
+    ```hermes plugins install kyssta-exe/hermes-obsidian-memory```
+    
+    
+    **Features**:
+    - Auto-discovers all Obsidian vaults on your system
+    - Force-directed graph with drag, zoom, curved edges
+    - Full markdown rendering (code blocks, tables, callouts, checkboxes)
+    - Click [[wikilinks]] to navigate between notes
+    - Edit notes directly from the dashboard
+    - Search by name, filter by folder or tag
+    
+    **Requirements**: Hermes Agent with dashboard enabled, Obsidian vault(s) on the host machine.
+    
+    **Source**: https://github.com/kyssta-exe/hermes-obsidian-memory
+    [embed] GitHub - kyssta-exe/hermes-obsidian-memory https://github.com/kyssta-exe/hermes-obsidian-memory
+
