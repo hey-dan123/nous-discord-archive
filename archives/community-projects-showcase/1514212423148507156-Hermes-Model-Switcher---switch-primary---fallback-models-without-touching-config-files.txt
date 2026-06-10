@@ -1,0 +1,22 @@
+# Thread 'Hermes Model Switcher — switch primary & fallback models without touching config files' in forum #community-projects-showcase
+# thread_id=1514212423148507156 forum_id=1316137596535177246
+# Started 2026-06-10T15:30:10.173218+00:00
+
+[2026-06-10T10:19:34.385000+00:00] xcasper1286 (id=1514212423148507156)
+    Built a small macOS tool for Hermes Agent users who want to change models on the fly without editing config.yaml manually.
+    What it does:
+    
+    17 models preloaded (DeepSeek, GPT-OSS, Qwen3 Coder, Nemotron, Kimi, Llama, and more)
+    Change primary model interactively
+    Manage fallback chain (add/remove/reorder)
+    Update API keys (OpenRouter, DeepSeek, custom)
+    Auto-restarts Hermes gateway after every change
+    Double-click .app shortcut on Desktop — no Terminal needed
+    
+    ⚠️ macOS only (uses native .app bundle)
+    🔗 https://github.com/okireganoto-maker/hermes-model-switcher
+    Feedback welcome!
+    [attachment] Screenshot_2026-06-10_at_17.18.37.png https://cdn.discordapp.com/attachments/1514212423148507156/1514212423349960825/Screenshot_2026-06-10_at_17.18.37.png?ex=6a2a8bb6&is=6a293a36&hm=4c813f73be568a87021ed279b98b9b7f05b3e02be7c26cd9f08bf5a6f4def0fa&
+    [attachment] Screenshot_2026-06-10_at_17.18.46.png https://cdn.discordapp.com/attachments/1514212423148507156/1514212423656275978/Screenshot_2026-06-10_at_17.18.46.png?ex=6a2a8bb6&is=6a293a36&hm=4e51df9c9927c79f7fb02684af4d5d4e5c2d17238dbc42da55f98cc9e1f1f31b&
+    [embed] GitHub - okireganoto-maker/hermes-model-switcher: Interactive model... https://github.com/okireganoto-maker/hermes-model-switcher
+

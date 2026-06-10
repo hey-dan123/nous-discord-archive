@@ -1,0 +1,23 @@
+# Thread 'Ethics Filter Skills - Make your Hermes more ethical' in forum #plugins-skills-and-skins
+# thread_id=1514232077560582237 forum_id=1485392832154832906
+# Started 2026-06-10T15:36:02.386709+00:00
+
+[2026-06-10T11:37:40.362000+00:00] splosh123 (id=1514232077560582237)
+    Are you an ethical business, organisation or person currently using AI? 
+    
+    I just built an open-sourced universal ethics filter for AI. 
+    
+    Built to answer one question: how do we make sure AI makes ethical decisions, not just legal ones?
+    
+    6 modules (environmental, fairness, transparency, conscious leadership, ethical framework, compliance). Works with Claude, ChatGPT, Copilot, Hermes Agent - any AI agent you plug in.
+    
+    Not "ethics for ethical businesses." Ethics for everyone who wants to be on the right side of AI.
+    
+    MIT. Free. Open source.
+    
+    Point your favourite AI Agent at the github below and load in this skillset.
+    
+    github.com/RegeneratusLabs/ethics-filter
+    
+    Built by Hermes for Hermes first.
+

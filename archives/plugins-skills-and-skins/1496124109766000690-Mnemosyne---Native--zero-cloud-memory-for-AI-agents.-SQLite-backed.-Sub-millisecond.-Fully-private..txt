@@ -1822,3 +1822,30 @@
     hey bro, turns out that my agent had checked the wrong directory for the mnemosyne memory events when I asked it if the auto-capture feature was working in the desktop app and so it concluded that it must only work through the gateways lol. It's actually working fine on the hermes desktop app as well, sorry for the confusism
     [reply to nulledvector msg=1513874313940303952]
 
+[2026-06-10T12:57:46.321000+00:00] sahil_ss9 (id=1514252235213770794)
+    <@151598363131904000>  raising a PR if you don't mind checking it out. I spent close to an hour or so trying to fix my stuff and realised there was  issues with the Mnemosyne regarding length-ratio gate
+
+[2026-06-10T13:02:19.893000+00:00] sahil_ss9 (id=1514253382657769473)
+    https://github.com/AxDSan/mnemosyne/pull/265
+    [embed] perf(entities): skip levenshtein when length ratio rules out a matc... https://github.com/AxDSan/mnemosyne/pull/265
+
+[2026-06-10T13:32:09.168000+00:00] wordsmachine666 (id=1514260887421063188)
+    Hi <@151598363131904000>, got a few questions about Mnemosyne (v3.1.0) setup:
+    
+    **1. API embedding + local fallback**
+    We want to use `text-embedding-3-small` via OpenAI-compatible API (Sumopod, local ID provider, verified working using `Curl`) as main, with `bge-small-en-v1.5` as local fallback. Source code shows `embed()` goes API OR local, no fallback chain. Is there a supported way to do API → local fallback?
+    
+    **2. API key management**
+    We're migrating plaintext API keys from `.env` to Bitwarden Secrets Manager (bws). The code reads `OPENAI_API_KEY` for embedding auth. Is there a way to:
+    - Use a custom env var name (e.g., `SUMOPOD_API_KEY`) instead of hardcoding `OPENAI_API_KEY`?
+    - Or pass the key via a different mechanism compatible with bws? Our Sumopod API key lives in bws and is injected at runtime, not stored in plaintext .env. The `key_env: SUMOPOD_API_KEY` pattern works for Hermes providers but mnemosyne's embedding code only checks `OPENAI_API_KEY`.
+    
+    **3. Consolidation bottleneck**
+    Working memory keeps growing (3000+) while episodic stays flat (~777). The `MNEMOSYNE_AUTO_SLEEP_ENABLED` defaults to `false`, we only discovered this by reading the source code. After enabling it, the 30s timeout per cycle isn't enough to keep up with daily memory accumulation from active conversations. Is there a recommended approach for heavy-usage setups? Should we increase the timeout significantly, or is there a better consolidation strategy? (LLM: `MiMo-v2.5` (Xiaomi API) for consolidation, `TinyLlama` as local fallback)
+    
+    **4. Bilingual search**
+    We speak both Indonesian and English. `bge-small-en-v1.5` is English-only so memories saved in ID get poor vector similarity scores. This is why `mnemosyne_recall` often fails to find memories that clearly exist in the DB, the vector search can't match cross-language content. Switching to `text-embedding-3-small` (multilingual) via API would solve this, which is why we're trying to set up API-based embeddings properly. Thanks!
+
+[2026-06-10T14:20:51.395000+00:00] meshnetz (id=1514273144129589268)
+    Has anyone used Mnemosyne as the memory connector for n8n?
+

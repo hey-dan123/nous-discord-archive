@@ -3461,3 +3461,9 @@
     <@1342189005382484112> I wrote up a reply to everything you posted, take a look and let me know if that helps!
     [attachment] hermes-multi-profile-setup_1.md https://cdn.discordapp.com/attachments/1493017427724992612/1514189078852014233/hermes-multi-profile-setup_1.md?ex=6a2a75f8&is=6a292478&hm=d87188a7a7efbbc35c4fe9f43592e8c5557a6b74e48d17d35ff9f3f81f963bfb&
 
+[2026-06-10T15:04:16.297000+00:00] latipun (id=1514284069880463452)
+    Hi, <@933139410281713755> . Setting reasoning in webui, I see this in gateway systemd log
+    
+    remove `max` pls
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514284069578608763/image.png?ex=6a2ace70&is=6a297cf0&hm=e6ce7e3231ec9573f25a20a26cf9ed5710cd019552dda281ca73723a58bca2bd&
+

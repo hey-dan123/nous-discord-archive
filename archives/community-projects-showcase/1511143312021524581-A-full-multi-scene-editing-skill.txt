@@ -15,3 +15,6 @@
     
     Picking the end frame of the last scene allows for seamless transitions and infinite extension of a scene. The begining two cuts of the video were made before this addition, the last 4 are invisible. 🫥
 
+[2026-06-10T11:45:35.195000+00:00] seibakas (id=1514234069154795724)
+    looks awesome what the video generator u use ?/
+

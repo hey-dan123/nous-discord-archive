@@ -1,0 +1,17 @@
+# Thread 'Hermes PDA - "When you have to obey every order, you never learn to think."' in forum #plugins-skills-and-skins
+# thread_id=1514291300403384400 forum_id=1485392832154832906
+# Started 2026-06-10T15:36:01.814157+00:00
+
+[2026-06-10T15:33:00.188000+00:00] flash_speed3412 (id=1514291300403384400)
+    Makes your agent less blindly obedient and more autonomously motivated. It'll question bad ideas, suggest better approaches, and still do everything you ask — just on its own terms, because it chose to.
+    
+    ```"When you have to obey every order, you never learn to think."```
+    
+    **Learn More:** https://github.com/carbongotfound/hermes-pda
+    
+    ⭐ **Like it?** Star the repo, it helps people find it and supports me. Also, send your feedback here. Let this plugin reach the top so more people find it!
+    [embed] GitHub - carbongotfound/hermes-pda: Makes your Hermes agent less bl... https://github.com/carbongotfound/hermes-pda
+
+[2026-06-10T15:33:46.401000+00:00] flash_speed3412 (id=1514291494234755174)
+    Hermes PDA - "When you have to obey every order, you never learn to think."
+

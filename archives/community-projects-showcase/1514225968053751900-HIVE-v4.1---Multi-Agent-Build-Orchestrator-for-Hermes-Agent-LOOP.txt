@@ -1,0 +1,47 @@
+# Thread '🚀 HIVE v4.1 — Multi-Agent Build Orchestrator for Hermes Agent LOOP' in forum #community-projects-showcase
+# thread_id=1514225968053751900 forum_id=1316137596535177246
+# Started 2026-06-10T15:30:09.629238+00:00
+
+[2026-06-10T11:13:23.742000+00:00] astron3276 (id=1514225968053751900)
+    One sentence → automated build → iterable artifact.
+    
+    How it works:
+                         ┌──────────────────┐
+                         │  "make a calc"    │
+                         └────────┬─────────┘
+                                  ↓
+                        ┌──────────────────────┐
+                        │     AGENT LOOP       │
+                        │                      │
+                        │  ARCHITECT → brief   │
+                        │  PLANNER   → DAG     │
+                        │  CODER × 3 → code    │
+                        │  TESTER    → verify  │
+                        │  REVIEWER  → 4-layer │
+                        │  TOOLMAN   → ship    │
+                        │        ↓             │
+                        │  ┌──────────────┐    │
+                        │  │ issues found │────│──→ back to CODER
+                        │  └──────────────┘    │
+                        │  ┌──────────────┐    │
+                        │  │ tests fail   │────│──→ back to CODER
+                        │  └──────────────┘    │
+                        │  ┌──────────────┐    │
+                        │  │ user not     │────│──→ iterate again
+                        │  │ satisfied   │    │
+                        │  └──────────────┘    │
+                        └──────────────────────┘
+                                  ↓
+                          shippable artifact
+    
+    6 specialized agents in a self-correcting loop — review failures and test failures loop back to the coder pool automatically. User can also trigger iteration on the final result.
+    
+    15 MCP tools, 152 tests, Dashboard, rollback, cross-project memory.
+    
+    Built on Hermes Agent MCP — every agent call is a JSON-RPC exchange. Fully MIT open source.
+    
+    🔗 https://github.com/Ebonyhtx/Hermes-Hive
+    
+    Looking for early feedback — especially on the pipeline design and the iteration loop behavior.<:catlick:1151260427645366375>
+    [embed] GitHub - Ebonyhtx/Hermes-Hive: HIVE is a multi-agent orchestration ... https://github.com/Ebonyhtx/Hermes-Hive
+

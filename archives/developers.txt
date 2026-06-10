@@ -28916,3 +28916,185 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     https://github.com/NousResearch/hermes-agent/pull/43115 https://github.com/NousResearch/hermes-agent/issues/522
 
+[2026-06-10T10:59:42.846000+00:00] kyssta69 (id=1514222524966244482)
+    https://github.com/NousResearch/hermes-agent/pull/43484
+    
+    **Problem**: The memory tool remove action rejects valid old_text argument with 'old_text is required' error even when it is provided. The schema did not list old_text as required, so schema-aware LLMs dropped the parameter before invoking the handler. The fix adds old_text to the required fields list in the memory tool schema.
+
+[2026-06-10T11:00:59.437000+00:00] kyssta69 (id=1514222846212182077)
+    https://github.com/NousResearch/hermes-agent/pull/43486
+    
+    **Problem**: Feishu messages had broken Markdown formatting because _escape_markdown_text was prepending backslashes to special characters. Feishu's renderer expects raw Markdown and treats backslash-escaped sequences as literal text. The fix makes the escape function a no-op passthrough.
+
+[2026-06-10T11:06:40.170000+00:00] kyssta69 (id=1514224275349966879)
+    https://github.com/NousResearch/hermes-agent/pull/43489
+    
+    **Problem**: The gateway's send_message MCP tool showed 'No home channel set for telegram' even with TELEGRAM_HOME_CHANNEL configured in config.yaml and .env. The CLI path worked because it bridges config.yaml keys into os.environ, but the MCP tool path skipped this step. The fix adds the same bridging to the send_message tool.
+
+[2026-06-10T11:06:51.562000+00:00] godsboy7777 (id=1514224323131609098)
+    Hey <@387972437901312000>, fix ready for the bug mangling Hermes replies in Telegram forum topics.
+    
+    Long final replies come out with literal `**bold**` markers, backticks, and code fences shown as plain text.
+    
+    Pasting the same content by hand into the same topic renders fine, so this is our delivery path, not Telegram.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/43463
+    Fixes: #43441
+    
+    Before / after screenshots are included in both.
+    
+    Heads up since alt-glitch flagged #43458 and #43470 as competing fixes:
+    
+    Both reorder format-before-chunk in `_edit_overflow_split`, which is necessary but not sufficient.
+    
+    There is a second confirmed leak:
+    
+    The stream consumer's cancellation handler, which the gateway cancels 5s after finish, re-delivers the whole final reply with `finalize=False`.
+    
+    On Telegram that is plain by design, then it suppresses the formatted re-send.
+    
+    With chunk-ordering alone, topic finals still render raw whenever that path fires.
+    
+    #43463 fixes both paths.
+    
+    It also covers:
+    
+    * The inflation window, where raw text is under 4096 but formatted text goes over it, which otherwise silently degrades to stripped plain
+    * A guard so the post-split re-finalize cannot duplicate chunks on screen
+    
+    Validation:
+    
+    * 19 regression tests
+    * Each test was proven to fail before the fix
+    * #43470 ships no tests
+    * liuhao1024, who authored #43458, reviewed this PR and found no issues
+    
+    Scope:
+    
+    * Zero behavior change for streaming previews and progress messages
+    * No `SendResult` changes
+    * Kept out of the way of #42766
+    * Interaction with #42766 is noted in the PR body
+    
+    All CI green on the first run.
+    
+    Mergeable, squash-ready.
+    
+    This finishes what #42421 did for progress bubbles, but for the final replies themselves.
+    [attachment] user_pasted_as_is_in_same_telegram_binded_topic_2026-06-10_10-13-42.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1514224323232010280/user_pasted_as_is_in_same_telegram_binded_topic_2026-06-10_10-13-42.jpg?ex=6a2a96cb&is=6a29454b&hm=fdd0183fea15afda566ab79db759ded1c2530f4d50f068aecd7e1c2ba9a67b12&
+    [attachment] bot_sent_2026-06-10_10-13-11.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1514224323551035514/bot_sent_2026-06-10_10-13-11.jpg?ex=6a2a96cb&is=6a29454b&hm=f3ba07995e69ba035bb8991d77ca756a9fbf89c3cbac2e927287194c87da0614&
+    [embed] fix(telegram): format final replies in bound topics by GodsBoy · P... https://github.com/NousResearch/hermes-agent/pull/43463
+
+[2026-06-10T11:42:54.558000+00:00] tianjinzhanyuzecheng_17984 (id=1514233395394121780)
+    Hey <@387972437901312000>  👋
+    
+      Quick nudge on a Feishu channel improvement that's been up a couple of days: making bot-to-bot conversations in group chats actually work.
+    
+      Feishu bot-to-bot already works at ingestion (the existing FEISHU_ALLOW_BOTS=mentions opt-in admits peer-bot messages), but the conversation itself was broken: a bot only receives a group
+      message that explicitly @mentions it, so a reply that omits the @ silently dies — the API returns success, the peer never sees it — while always @-ing back risks an infinite ping-pong.
+      This PR closes that gap: the agent now gets the peer's open_id plus continue/stop guidance, and the model's own @ (or its deliberate absence) decides whether the exchange continues or
+      ends, so loops break naturally on our side and we can never @ the wrong bot. It also fixes markdown replies rendering a leading <at> as literal text instead of a real, notifying mention.
+    
+      It's additive: the bot-to-bot path only activates under the existing FEISHU_ALLOW_BOTS=mentions opt-in, and the markdown mention fix is a strict improvement either way. No conflicts with
+      main, docs updated, and the Feishu suite passes locally (432 passed, 1 skipped — the one known flake is pre-existing order pollution, unrelated and documented in the PR). New tests cover
+      the sender notice, self-identity injection, the structured-at lift, and the no-inject behavior. Also validated live with a real bot↔bot multi-turn exchange, including a graceful
+      model-driven stop.
+    
+      PR: https://github.com/NousResearch/hermes-agent/pull/42038
+    
+      No rush — would love a look from anyone on the gateway/channels side when there's a moment. CI hasn't been approved to run yet (first-time contributor), so a workflow approval alone would
+      already help. Happy to adjust the prompt guidance or the no-inject posture if you'd prefer a different approach.
+    [embed] feat(feishu): bot-to-bot @mention collaboration with model-driven l... https://github.com/NousResearch/hermes-agent/pull/42038
+
+[2026-06-10T11:43:07.774000+00:00] jw_mushroom_man (id=1514233450826043522)
+    https://github.com/NousResearch/hermes-agent/pull/43499
+    [embed] fix(tools): kill the whole process tree on Windows terminal timeout... https://github.com/NousResearch/hermes-agent/pull/43499
+
+[2026-06-10T11:43:42.646000+00:00] jw_mushroom_man (id=1514233597089943612)
+    <@387972437901312000> If you give mythos nice pretty html reports, it will work on the codebase for you ❤️
+
+[2026-06-10T12:01:51.845000+00:00] loongfay (id=1514238165521666118)
+    Hi, <@387972437901312000>, Yuanbao gateway supports WeChat message forwarding PR. Thanks. https://github.com/NousResearch/hermes-agent/pull/43508
+    [embed] feat(Yuanbao): support wechat forward msg by loongfay · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/43508
+
+[2026-06-10T12:17:44.628000+00:00] zaynjarvis (id=1514242161783210120)
+    Not very keen on adding providers rn
+
+[2026-06-10T12:30:53.748000+00:00] alelpoan (id=1514245471592513587)
+    just opened a PR to fix broken image and video on the TUI docs page (#43501)
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/43501
+    
+    happy to address any feedback 🫡  <@387972437901312000>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1514245471793844325/image.png?ex=6a2aaa7d&is=6a2958fd&hm=ee0d9992bd5988206b4b51824202ff1ac9660029425a957033fd34f5d4f8e86f&
+    [embed] fix(docs): fix broken image and video in TUI docs by alelpoan · Pu... https://github.com/NousResearch/hermes-agent/pull/43501
+
+[2026-06-10T12:43:37.948000+00:00] kyssta69 (id=1514248676879630526)
+    https://github.com/NousResearch/hermes-agent/pull/43526
+    
+    **Problem**: Memory tool remove action was failing with 'old_text is required' even when old_text was provided. The schema's required list didn't include old_text, so some LLM tool-calling implementations dropped it before calling the handler. Adding old_text to the required list ensures it is always passed through.
+    [embed] fix(memory): add old_text to schema required list (#43412) by kysst... https://github.com/NousResearch/hermes-agent/pull/43526
+
+[2026-06-10T13:00:23.361000+00:00] _ostarev_ (id=1514252893887140011)
+    Is anyone currently doing a project in which they need contribution
+
+[2026-06-10T13:06:54.503000+00:00] jw_mushroom_man (id=1514254534455591112)
+    PR roundup from my side — all fork PRs, so CI sits at "action required" until someone hits Approve and run workflows:
+    
+    REBASED ONTO CURRENT MAIN TODAY (conflicts cleared, tests passing)
+    • https://github.com/NousResearch/hermes-agent/pull/39207 — surface invalid platform_toolsets instead of silently dropping tools (115 tests pass)
+    • https://github.com/NousResearch/hermes-agent/pull/39154 — desktop window size/position/maximized persistence, fixes #39101 (adapted to the new 400px minWidth from #41670 so it doesn't regress the collapsed sidebars; 144/144 desktop tests)
+    • https://github.com/NousResearch/hermes-agent/pull/21518 — TypeScript 6.0 for web + ui-tui (lockfile regenerated; the nix npmDepsHash needs one CI round-trip — I'll amend NEW_HASH as soon as the nix job reports it)
+    
+    HOUSEKEEPING
+    • Closed https://github.com/NousResearch/hermes-agent/pull/39156 — superseded by #40612, same StdioOptions fix landed on main 
+    • https://github.com/NousResearch/hermes-agent/pull/39189 — cron docs reconcile, still clean, just needs a merge call
+    
+    If someone can approve workflows on the four open ones, I'll handle whatever CI kicks back same-day.
+
+[2026-06-10T13:11:12.523000+00:00] tdamre (id=1514255616670040195)
+    at least they trying
+    [reply to egilewski msg=1514156188101775481]
+
+[2026-06-10T13:20:19.274000+00:00] kyssta69 (id=1514257909910077560)
+    just a humble request, when you post a message with much embeds, remove the embeds
+    [reply to jw_mushroom_man msg=1514254534455591112]
+
+[2026-06-10T13:20:39.005000+00:00] jw_mushroom_man (id=1514257992667631687)
+    ofc
+    [reply to kyssta69 msg=1514257909910077560]
+
+[2026-06-10T13:42:26.941000+00:00] godsboy7777 (id=1514263478548959282)
+    Hey <@387972437901312000>, quick update on the Telegram topic markdown fix, #43441, since my last message:
+    
+    austinpickett reviewed and approved PR #43463, then closed both competing PRs, #43458 and #43470, calling #43463 the canonical broader fix.
+    
+    So there is no pick-one decision left. It is now the only open fix for the issue.
+    
+    Still mergeable with all CI green, one squash away.
+    
+    https://github.com/NousResearch/hermes-agent/pull/43463
+    [embed] fix(telegram): format final replies in bound topics by GodsBoy · P... https://github.com/NousResearch/hermes-agent/pull/43463
+    [reply to godsboy7777 msg=1514224323131609098]
+
+[2026-06-10T14:11:59.075000+00:00] jw_mushroom_man (id=1514270911417548850)
+    https://github.com/NousResearch/hermes-agent/pull/43566
+    
+    Fixes a Windows busy-spin where any one-shot hermes CLI command can pin a full CPU core for hours instead of exiting, whenever ~/.hermes denies writes at the ACL level (sandboxed agent shells such as Codex's workspace-write mode, hardened service accounts, locked-down corporate profiles).
+    [embed] fix(cli): bound temp-file creation so one-shot commands cannot busy... https://github.com/NousResearch/hermes-agent/pull/43566
+
+[2026-06-10T14:41:02.479000+00:00] yap.bi (id=1514278223784185986)
+    https://github.com/NousResearch/hermes-agent/pull/43581
+    
+    https://github.com/NousResearch/hermes-agent/pull/43580
+    
+    https://github.com/NousResearch/hermes-agent/pull/43579
+    
+    https://github.com/NousResearch/hermes-agent/pull/43578
+    
+    With these 4 PRs, I've now reached 50 pull requests in total. I'd like to ask whether I've earned the developer role, or if you could guide me on what kind of contributions I can make  I'd really appreciate it. Thanks in advance. <@387972437901312000>
+    [embed] fix(hyperliquid): replace deprecated datetime.utcfromtimestamp by H... https://github.com/NousResearch/hermes-agent/pull/43581
+    [embed] fix(hermes_time): drop redundant KeyError in except tuple by HeLLGU... https://github.com/NousResearch/hermes-agent/pull/43580
+    [embed] fix(tui_gateway): replace deprecated datetime.utcfromtimestamp by H... https://github.com/NousResearch/hermes-agent/pull/43579
+    [embed] fix(bluebubbles): use timezone-aware UTC for tempGuid timestamps by... https://github.com/NousResearch/hermes-agent/pull/43578
+
