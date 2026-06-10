@@ -11,3 +11,7 @@
     [attachment] Generated_image2.png https://cdn.discordapp.com/attachments/1513923497489989792/1513923500060971169/Generated_image2.png?ex=6a297ea1&is=6a282d21&hm=b889c5c4e1bc5925a0e1b33f2f4930f0253fb51d6602eac0d05a340a9568999b&
     [embed] GitHub - metahubaifeel/synapse: See what Claude Code is doing when ... https://github.com/metahubaifeel/synapse
 
+[2026-06-10T20:21:02.598000+00:00] eucdee (id=1514363788084645929)
+    Does this only work for claude code? I'm currently using nemotron3:free with telegram and I think it already streams every call...
+    [reply to ethanyeang msg=1513923497489989792]
+

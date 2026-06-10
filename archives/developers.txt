@@ -29098,3 +29098,130 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(tui_gateway): replace deprecated datetime.utcfromtimestamp by H... https://github.com/NousResearch/hermes-agent/pull/43579
     [embed] fix(bluebubbles): use timezone-aware UTC for tempGuid timestamps by... https://github.com/NousResearch/hermes-agent/pull/43578
 
+[2026-06-10T15:48:12.801000+00:00] kyssta69 (id=1514295128179605514)
+    https://github.com/NousResearch/hermes-agent/pull/43526
+    
+    **Problem**: Memory tool 'remove' action with old_text arg was rejected as missing even when provided. Schema did not list old_text in required fields, so LLM tool-calling layers dropped it before invocation. Added old_text to the MEMORY_SCHEMA required parameters list.
+    
+    https://github.com/NousResearch/hermes-agent/pull/43486
+    
+    **Problem**: Feishu messages showed broken Markdown rendering with literal backslash-escaped characters. The _escape_markdown_text function was pre-escaping all special characters with backslashes. Feishu's renderer expects raw Markdown, so the escaping was removed.
+    
+    https://github.com/NousResearch/hermes-agent/pull/43590
+    
+    **Problem**: Telegram forum topic final replies showed raw Markdown like **bold** and backticks instead of rendered text. When MarkdownV2 parsing failed during overflow split, the fallback sent raw text without parse_mode. Now strips formatting markers before sending as plain text.
+    
+    https://github.com/NousResearch/hermes-agent/pull/43594
+    
+    **Problem**: QQ group responses were lost when agent took too long and the reply_to msg_id expired. The adapter retried 3 times with the same expired msg_id and gave up. Now detects msg_id expiration errors and falls back to sending as a standalone message.
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/43596
+    
+    **Problem**: On macOS, /restart stopped the gateway but never relaunched it. The detached restart path skipped setting the exit code, so launchd saw exit code 0 and treated it as success (not restarting). Now forces exit code 75 on macOS so launchd revives the process.
+
+[2026-06-10T16:05:00.764000+00:00] teknium (id=1514299355882983494)
+    Thanks will look
+    [reply to alelpoan msg=1514245471592513587]
+
+[2026-06-10T16:16:32.276000+00:00] cristianmgm7 (id=1514302256294658048)
+    👋 Opened a PR to add **Carbon Voice** as a native messaging platform: **https://github.com/NousResearch/hermes-agent/pull/43226**
+    
+    Carbon Voice is a voice-first platform (it transcribes inbound voice to text and can read replies back as voice memos), so it's text-in/text-out from Hermes' side. The adapter connects over Socket.IO with a REST polling fallback — no public webhook needed.
+    
+    It follows the `gateway/platforms/qqbot/` subpackage pattern and walks the full `ADDING_A_PLATFORM.md` checklist:
+    - `Platform.CARBONVOICE` enum + factory + auth maps + setup wizard
+    - `python-socketio` added to the `[messaging]` extra (httpx already core), `uv.lock` regenerated
+    - env-vars-only config (`CARBONVOICE_PAT` auto-enables it)
+    - prompt hints, toolset, cron delivery, send-message tool, status display, user-guide docs
+    - 16 tests, all passing
+    
+    Verified end-to-end in a container build. auto-enables from the PAT, connects (`✓ carbonvoice connected`), auto-detects the owner (deny-by-default access control), and replies via the configured model. No changes to existing platforms' behavior.
+    
+    One small note for maintainers: the **env auto-enable step** (`_apply_env_overrides` → enable the platform when its token env is set) isn't an explicit item in `ADDING_A_PLATFORM.md`, but the platform won't start without it. might be worth adding to the guide.
+    
+    Would love a review!,  happy to adjust anything to match house conventions. 🙏
+
+[2026-06-10T16:44:37.820000+00:00] lucasdasilva2655 (id=1514309325978337330)
+    <@387972437901312000> any formal presentation needed + requirements and things to be aware of to contribute to Hermes?
+
+[2026-06-10T16:45:03.946000+00:00] hugoramallo1980 (id=1514309435558854838)
+    Hi guys. Hermes full n8n control by voice. Also MCP Setup for n8n with Hermes 0.16 and Desktop.
+    https://youtu.be/f2xLJe7Tf-c
+    [embed] Hermes Agent Desktop: lo que NADIE hace con n8n todavía https://www.youtube.com/watch?v=f2xLJe7Tf-c
+
+[2026-06-10T16:48:19.630000+00:00] sahil_ss9 (id=1514310256316911616)
+    could someone have a quick look at https://github.com/NousResearch/hermes-agent/pull/43113
+    [embed] feat(curator): post-hook extension, created_by surfacing, skill pro... https://github.com/NousResearch/hermes-agent/pull/43113
+
+[2026-06-10T16:54:25.881000+00:00] teknium (id=1514311792484945972)
+    Just patience
+    [reply to lucasdasilva2655 msg=1514309325978337330]
+
+[2026-06-10T16:54:33.573000+00:00] teknium (id=1514311824747532298)
+    🔥
+    [reply to hugoramallo1980 msg=1514309435558854838]
+
+[2026-06-10T17:04:44.454000+00:00] kinh0. (id=1514314386968412290)
+    Hey <@387972437901312000> would you mind taking a look at https://github.com/NousResearch/hermes-agent/pull/43200 ? 
+    
+    It fixes a regression in observed files in telegram group chats not being found and also handles referenced voice messages in group chats. 
+    I thoroughly tested this fix as a patch which was kinda annoying until it worked as expected.
+    [embed] fix(gateway): transcribe observed audio context on demand by Glucks... https://github.com/NousResearch/hermes-agent/pull/43200
+
+[2026-06-10T17:39:53.551000+00:00] raymondcamden (id=1514323233162399855)
+    Hello folks. Got a question about my first attempt at filing a PR for Hermes. I'm working with Diffbot, they've got a new web search API and wanted to build a plugin for Hermes. I didn't have much trouble building that (actually used Hermes to help me with it, which is meta ;). Any way - I forked - made a new branch for my new feature - and was going to commit and PR when I remembered to run tests. They *all* fail. At first it was because pytest wasn't installed in the virtual env - should that be included so that `uv pip install -e ".[all,dev]"` adds it? After I added that, I still get 100% errors, they all (i didnt read all of em of course) seem to be: ` __main__.py: error: unrecognized arguments: --timeout=30 --timeout-method=thread`
+
+[2026-06-10T17:53:12.094000+00:00] kinh0. (id=1514326582494232587)
+    Could this be a missing pytest-timeout dependency? Those --timeout args usually come from that plugin.
+    [reply to raymondcamden msg=1514323233162399855]
+
+[2026-06-10T17:56:21.515000+00:00] raymondcamden (id=1514327376983490693)
+    you got me 🙂 been doing python for a while, but sadly not much testing. i suppose i could just add that and test. and then it goes back to the repo needing to document that its needed... right?
+    [reply to kinh0. msg=1514326582494232587]
+
+[2026-06-10T17:57:16.616000+00:00] raymondcamden (id=1514327608093970485)
+    btw, i think that did the trick. its not spewing hundreds of errors
+
+[2026-06-10T17:58:07.656000+00:00] kinh0. (id=1514327822171246733)
+    good <:catlick:1151260427645366375>
+
+[2026-06-10T17:58:45.029000+00:00] raymondcamden (id=1514327978925097030)
+    thank you much. i guesss the next question is... if im 100% sure my mod is just a plugin, if i still see some faileed tests i assumed its just my environment and... safe to ignore?
+
+[2026-06-10T18:00:57.383000+00:00] kinh0. (id=1514328534057746604)
+    I’d run the tests against a clean main branch in the same env first. if it fails its maybe an existing issue, i guess
+
+[2026-06-10T18:01:10.021000+00:00] raymondcamden (id=1514328587065622580)
+    smart
+
+[2026-06-10T18:09:05.733000+00:00] raymondcamden (id=1514330582346371292)
+    yeah, same, i feel confident PRing (i mean, outside of this being my first plugin for Hermes - but there ya go). thank you!
+
+[2026-06-10T18:45:44.210000+00:00] jw_mushroom_man (id=1514339803427111074)
+    https://github.com/NousResearch/hermes-agent/pull/43720
+    
+    Fixes a desktop startup/WebSocket auth failure where the local dashboard serves a different session token than the one the Electron main process generated when spawning the backend.
+    
+    The old desktop path used the spawn-time token for renderer state and /api/ws?token=.... In the failure mode seen on Windows, GET /api/status still returned 200, but the rendered dashboard HTML injected a different window.__HERMES_SESSION_TOKEN__. The UI then attempted the WebSocket handshake with the stale token and the gateway rejected it, surfacing as Could not connect to Hermes gateway or follow-on renderer IPC errors after boot.
+    [embed] Fix desktop WebSocket auth with served dashboard token by lEWFkRAD ... https://github.com/NousResearch/hermes-agent/pull/43720
+
+[2026-06-10T19:08:15.738000+00:00] frank.martinez (id=1514345472146542722)
+    Is there any documentation or SDK like pattern for the Agent Profile Builder just announced? I want to use it from the CLI, or have my app load it with bash script.
+
+[2026-06-10T19:08:51.419000+00:00] srojk34 (id=1514345621803241633)
+    Sir, after a detailed investigation, I fixed an issue that I believe is quite important. I hope you'll have a chance to review it when you have time. Thank you.
+    
+    🔧 PR: Fix skill disable/keep mismatches caused by directory-name vs frontmatter-name resolution.
+    
+    Profiles were building disabled skill lists from directory names, while the frontend and runtime used frontmatter `name` values. This created silent mismatches for 19 skills, causing deselected skills to stay active and selected skills to be incorrectly flagged.
+    
+    ✅ Unified name resolution using frontmatter names
+    ✅ Added regression coverage (fails on main, passes with fix)
+    ✅ All tests green (263/263)
+    
+    Small change, but it fixes a long-standing profile consistency issue.
+    https://github.com/NousResearch/hermes-agent/pull/43724
+    [embed] fix(profile-builder): key skills by frontmatter name in _disable_un... https://github.com/NousResearch/hermes-agent/pull/43724
+    [reply to teknium msg=1514311824747532298]
+

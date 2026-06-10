@@ -1,0 +1,29 @@
+# Thread 'PCF — A Review-Readiness Gate for Maintainers' in forum #community-projects-showcase
+# thread_id=1514322221940867292 forum_id=1316137596535177246
+# Started 2026-06-10T20:27:15.540426+00:00
+
+[2026-06-10T17:35:52.457000+00:00] ragetherican (id=1514322221940867292)
+    Built a small maintainer-readiness tool for issues/PRs:
+    
+    https://github.com/VrtxOmega/premature-contribution-firewall
+    
+    It is **not an AI detector**. It is a review-readiness gate.
+    
+    The idea is simple: before a maintainer spends time on a PR/issue, PCF checks whether it is scoped, reproducible, tested, evidence-backed, and worth human attention.
+    
+    One-command preflight:
+    
+    `npx premature-contribution-firewall preflight your-pr.json`
+    
+    Read-only by default. Zero dependencies. Includes a 69-case benchmark + adversarial red-team cases.
+    
+    Would genuinely love feedback from anyone maintaining repos, reviewing PRs, or dealing with noisy AI-generated contributions.
+    The visuals weren’t just made up for the post.
+    
+    I used real PCF output and turned it into clearer shareable graphics so people could understand the pass/fail + repair flow quickly.
+    
+    Proof over vibes.
+    [attachment] pcf1.jpeg https://cdn.discordapp.com/attachments/1514322221940867292/1514322222280609974/pcf1.jpeg?ex=6a2af1f8&is=6a29a078&hm=153cce18f7836bcc8af2a5f606089a0a9c5d0d10d66d5dc0e3179b492d42382d&
+    [attachment] pcf2.jpeg https://cdn.discordapp.com/attachments/1514322221940867292/1514322222657966261/pcf2.jpeg?ex=6a2af1f8&is=6a29a078&hm=be2d3af03dbd25237327b557d8fbeaf0bd04def536538112d3de895d90bb9a38&
+    [embed] GitHub - VrtxOmega/premature-contribution-firewall: Maintainer-grad... https://github.com/VrtxOmega/premature-contribution-firewall
+
