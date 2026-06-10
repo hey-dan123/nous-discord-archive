@@ -1,0 +1,15 @@
+# Thread 'Custom Podcasts via NotebookLM' in forum #plugins-skills-and-skins
+# thread_id=1514002472149188638 forum_id=1485392832154832906
+# Started 2026-06-10T03:35:46.477914+00:00
+
+[2026-06-09T20:25:18.166000+00:00] kalkyl (id=1514002472149188638)
+    This massive python scripts lets you customize a curriculum, research the topics, and then generate a series of 1 or more lessons using NotebookLMs Audio Overview feature.
+    
+    I've been using this for about a year to learn about all kinds of things, and I love how I can hyper-customize the curriculum to my knowledge level, special interests and other things that can influence the curriculum.
+    
+    This relies heavily on the unofficial NotebookLM API, and requires a "real human" google account to sign up for NotebookLM. The API then borrows your NotebookLM cookie to make the API function
+    
+    https://github.com/chorned/notebooklm-orchestrator
+    [attachment] Screenshot_2026-06-09_at_3.21.40_PM.png https://cdn.discordapp.com/attachments/1514002472149188638/1514002472321024040/Screenshot_2026-06-09_at_3.21.40_PM.png?ex=6a29c82e&is=6a2876ae&hm=926b62c11e5100f705e7a3ecfb79b5e94720250eb2655d84ea3800775c316a8a&
+    [embed] GitHub - chorned/notebooklm-orchestrator: A stateful, autonomous pi... https://github.com/chorned/notebooklm-orchestrator
+

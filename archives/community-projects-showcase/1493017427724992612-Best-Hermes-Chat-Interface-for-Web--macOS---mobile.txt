@@ -3388,3 +3388,72 @@
 [2026-06-09T04:32:23.143000+00:00] avidfuturist (id=1513762662721523762)
     👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
 
+[2026-06-10T00:17:21.389000+00:00] curtis_szmania (id=1514060870378979489)
+    Thanks, I heard there is a discord for the hermes-webui, do you happen to know how to find it?
+    [reply to avidfuturist msg=1500206945850626121]
+
+[2026-06-10T00:18:26.801000+00:00] avidfuturist (id=1514061144736927844)
+    Yeah it’s more of a dev and testers chat not a general chat (at least for now), so I tend to invite people who contribute in one way or another one off to it
+    [reply to curtis_szmania msg=1514060870378979489]
+
+[2026-06-10T00:20:07.479000+00:00] curtis_szmania (id=1514061567010930728)
+    ah, its internal. Understood. If your privy I gotta few questions for you on a multi-profile hermes setup with hermes-webui using docker compose. Should I create a post in <#1485307775444844625> ?
+    [reply to avidfuturist msg=1514061144736927844]
+
+[2026-06-10T00:20:54.006000+00:00] avidfuturist (id=1514061762159312917)
+    You can post here or DM me with any details. Support threads is only for Hermes agent itself not our WebUI
+    [reply to curtis_szmania msg=1514061567010930728]
+
+[2026-06-10T00:21:35.688000+00:00] curtis_szmania (id=1514061936986427443)
+    ok I'll post here as I'm sure others might find it useful. (I'll compile it)
+
+[2026-06-10T00:26:15.785000+00:00] curtis_szmania (id=1514063111798259882)
+    So my use case is say multi-department isolation (within an org) but also having the ability to share resources when needed. So complete separate hermes-agent container isolation isn't necessary (eg like professional vs personal ). So looking for the ability to use multiple profiles concurrently, in my case an `executive` profile and `marketing` profile. This is what I got so far and I've had some luck but the documentation and existing capabilties are a bit difficult to track down.
+    [reply to avidfuturist msg=1514061762159312917]
+
+[2026-06-10T00:26:58.774000+00:00] curtis_szmania (id=1514063292107067532)
+    my compose:
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1493017427724992612/1514063291780173915/message.txt?ex=6a2a00d2&is=6a28af52&hm=08fd31b102a50215f8b2ae9478681854374775dff1c84bd303bb6906175e5ccf&
+
+[2026-06-10T00:27:24.594000+00:00] curtis_szmania (id=1514063400404127856)
+    So, the confusion... I'll lay out my questions
+    [reply to curtis_szmania msg=1514063292107067532]
+
+[2026-06-10T00:29:22.339000+00:00] curtis_szmania (id=1514063894262317157)
+    First question: With the latest hermes-agent it seems like multiple profiles will automatically be spawned with their own gateways, are these on their own ports? re: https://hermes-agent.nousresearch.com/docs/user-guide/docker#why-one-container-with-many-profiles-not-many-containers  In my experience the `gateway run` command (see hermes-agent compose) does try to spawn them, but they fail with PID clashes and end up dying or restarting and draining: ```├─────────────────────────────────────────────────────────┤
+    
+    │  Messaging platforms + cron scheduler                    │
+    
+    │  Press Ctrl+C to stop                                   │
+    
+    └─────────────────────────────────────────────────────────┘
+    
+    ❌ Gateway already running (PID 340).
+    
+       Use 'hermes gateway restart' to replace it,
+    
+       or 'hermes gateway stop' to kill it first.
+    
+       Or use 'hermes gateway run --replace' to auto-replace.
+    
+    ┌─────────────────────────────────────────────────────────┐```
+    [embed] Docker | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/docker
+
+[2026-06-10T00:31:02.179000+00:00] curtis_szmania (id=1514064313021759641)
+    So i have to manually shell into the hermes-agent container and run `hermes -p <profile> gateway run &` for each profile. I've even set unique  `API_SERVER_PORT`  entries for each profile in their .env files. And I still have to start each gaetway manually after every container restart. Running the gateways manually is the only way I can get them to stay up.
+    [reply to curtis_szmania msg=1514063894262317157]
+
+[2026-06-10T00:38:00.209000+00:00] curtis_szmania (id=1514066066366795846)
+    Second question: re: https://github.com/nesquena/hermes-webui/issues/2872#issuecomment-4531681159 specifically for hermes-webui: ```Workarounds today
+    For the immediate "let my wife use this too without our chats overlapping" need, two options that work with the current single-user model:
+    
+    Profile switching. Hermes WebUI supports multiple profiles (the dropdown in Settings). Each profile gets its own ~/.hermes/<profile>/ directory with separate sessions, settings, and credentials. You and your wife could each have a named profile and switch between them — not concurrent, but at least the chats and tags don't bleed across. The profile selector is in the top bar.
+    
+    Two separate installs. Run two WebUI processes on different ports (e.g. 8787 for you, 8788 for her) with HERMES_HOME set to different directories. Two browser tabs, two passwords, two completely isolated states. Heavier-handed but rock-solid isolation, and works today.```  So accoring to this comment, with my single hermes-agent container with 1 gateway/port per profile setup, and 1 hermes-webui container per profile, do I need to set each `HERMES_HOME` directory to the profile directory or just the top level .hermes  directory? (eg. `.hermes`  vs `.hermes/profiles/<profile>`) and then point each hermes-webui container to its own gateway port for `HERMES_API_URL`?
+    [embed] Multi-user support? · Issue #2872 · nesquena/hermes-webui https://github.com/nesquena/hermes-webui/issues/2872
+    [reply to curtis_szmania msg=1514064313021759641]
+
+[2026-06-10T00:39:03.513000+00:00] curtis_szmania (id=1514066331883016272)
+    I appreciate your assistance.
+    [reply to curtis_szmania msg=1514066066366795846]
+

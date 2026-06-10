@@ -95,3 +95,24 @@
     
     The goal is to make ContribScout more actionable, moving from “this repo looks interesting” to “here is where you can start contributing.”
 
+[2026-06-09T21:35:34.489000+00:00] sworntech (id=1514020156689354764)
+    **ContribScout v0.5 Update**
+    
+    Added Daily Opportunity Report.
+    
+    The dashboard can now turn the current top opportunities into a reusable Markdown report with:
+    
+    • generated date/time
+    • source and notice
+    • top 5 opportunities
+    • Role Opportunity Score
+    • category
+    • suggested action
+    • score reason
+    • repo URL
+    • issue drill-down links when available
+    
+    You can copy the report or download it as `contribscout-daily-report.md`.
+    
+    This keeps the Vercel dashboard standalone, while aligning with the Hermes-compatible skill package’s Markdown-report workflow.
+

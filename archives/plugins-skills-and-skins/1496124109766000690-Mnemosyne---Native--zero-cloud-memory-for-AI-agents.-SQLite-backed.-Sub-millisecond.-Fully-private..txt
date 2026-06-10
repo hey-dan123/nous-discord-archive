@@ -1818,3 +1818,7 @@
 [2026-06-09T11:56:03.932000+00:00] nulledvector (id=1513874318403309578)
     ty
 
+[2026-06-10T00:31:06.179000+00:00] mindcraft3r (id=1514064329798844537)
+    hey bro, turns out that my agent had checked the wrong directory for the mnemosyne memory events when I asked it if the auto-capture feature was working in the desktop app and so it concluded that it must only work through the gateways lol. It's actually working fine on the hermes desktop app as well, sorry for the confusism
+    [reply to nulledvector msg=1513874313940303952]
+

@@ -28702,3 +28702,78 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     We've already walked the `ADDING_A_PLATFORM.md` checklist and mapped all 16 integration points. Happy to share the plugin repo / a draft PR. Carbon Voice is a voice-first messaging platform (STT/TTS), so it's text-in/text-out from Hermes' side — should slot in cleanly alongside the existing adapters. 🙏
 
+[2026-06-09T20:27:01.561000+00:00] srojk34 (id=1514002905818992692)
+    PR #43065 — video_generate was missing from the gateway's auto-append media allowlist, so generated videos were never auto-delivered via MEDIA: tags (unlike image_generate which got the same fix in #42616). Added it to _AUTO_APPEND_MEDIA_TOOL_NAMES and wired up the JSON path extraction, mirroring the existing image handler. Fixes #19105 (video path).
+    
+    https://github.com/NousResearch/hermes-agent/pull/43065
+    [embed] fix(gateway): add video_generate to auto-append media allowlist by ... https://github.com/NousResearch/hermes-agent/pull/43065
+
+[2026-06-09T20:51:06.333000+00:00] minagayid (id=1514008965631971379)
+    can any one please help me with something, I want to connect hermes with different multiple mcp, how can I do this
+
+[2026-06-09T21:15:59.398000+00:00] theoveo (id=1514015228000600074)
+    Ask him to do it
+    [reply to minagayid msg=1514008965631971379]
+
+[2026-06-09T21:18:36.308000+00:00] minagayid (id=1514015886128713838)
+    Okay, thanks
+    [reply to theoveo msg=1514015228000600074]
+
+[2026-06-09T21:57:00.261000+00:00] theoriginalgreen (id=1514025549607993374)
+    Hey, does anyone know what kind of interactions the Hermes MCP client supports the MCP App SDK? I am playing around with the client in Claude desktop but having difficulty getting the kind of experience I want
+
+[2026-06-09T22:18:52.348000+00:00] sahil_ss9 (id=1514031052900007946)
+    https://github.com/NousResearch/hermes-agent/pull/43113
+    
+    3 small changes so skills don't land in the library orphaned:
+    
+        1. The curator's "new skills this run" report now includes who created each skill (created_by was already tracked internally, just never surfaced)
+    
+        2. New post_hook_script config – point it at a script, curator runs it after every pass. Lets you route new skills to profiles / block archivals / log audits without building your own detection pipeline. Empty by default – single-profile users see zero change.
+    
+        3. skill_manage gets an optional profile= param – tag which profile should own the skill at creation time, injected into the YAML frontmatter metadata.
+    
+        +96/-7 lines, all existing tests pass. Mechanism-only – the routing policy stays in userland.
+    [embed] feat(curator): post-hook extension, created_by surfacing, skill pro... https://github.com/NousResearch/hermes-agent/pull/43113
+
+[2026-06-09T22:21:45.803000+00:00] sworntech (id=1514031780423012495)
+    **Small Hermes docs PR**:
+    
+    **Problem**: The trajectory format docs had stale references to nonexistent trajectory-saving entry points like `agent.save_trajectories` config and `hermes --save-trajectories`.
+    
+    **Fix**: Clarified the supported entry points:
+    • programmatic integrations can pass `save_trajectories=True`
+    • the standalone `run_agent.py` script accepts `--save_trajectories`
+    
+    **Impact**: Docs-only change. No runtime behavior changed.
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/43116
+    [embed] docs(trajectory): clarify trajectory saving entry points by Swornte... https://github.com/NousResearch/hermes-agent/pull/43116
+
+[2026-06-09T22:38:44.560000+00:00] tdamre (id=1514036053399310377)
+    https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/
+    [embed] Upcoming breaking changes for npm v12 - GitHub Changelog https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/
+
+[2026-06-09T23:00:52.280000+00:00] aleksandr_1 (id=1514041622260748562)
+    **1. fix(agent): catch persist errors in finalize_turn to avoid losing turn result.**
+    `finalize_turn()` called `_persist_session()` without any error handling — a disk full or SQLite lock error propagated up through `run_conversation()` with no catch, dropping the turn result and leaving the user without a response. Wrapped both `_drop_trailing_empty_response_scaffolding()` and `_persist_session()` in a single `try/except` with `logger.warning`. https://github.com/NousResearch/hermes-agent/pull/43057
+    
+    **2. fix(agent): normalize provider to lowercase in `_pool_may_recover_from_rate_limit`.**
+    `provider == "google-gemini-cli"` is a case-sensitive comparison against a value that comes from user config or environment variables without normalization. Any case variation (Google-Gemini-CLI, GOOGLE-GEMINI-CLI) bypassed the guard, causing the credential pool to burn through its retry budget on a 429 that rotation cannot recover from instead of triggering immediate fallback. Replaced with `(provider or "").strip().lower() == "google-gemini-cli"`. https://github.com/NousResearch/hermes-agent/pull/42976
+
+[2026-06-09T23:04:30.247000+00:00] .mkos. (id=1514042536480739358)
+    <@1068770268660629574> just a very gentle follow up :⁠-⁠)
+    
+    https://discord.com/channels/1053877538025386074/1491258766648283238/1512671329365659718
+
+[2026-06-10T00:21:52.350000+00:00] joyful_fawn_90558 (id=1514062006871654520)
+    nothing fancy, and I looked for it in vain, but if "portal.nousresearch.com/orgs" page could have a dark theme toggle it would be nice ! not the one to manage subscription.
+
+[2026-06-10T02:40:10.543000+00:00] mobai4876162 (id=1514096812015882382)
+    Can we get an interface for reviewing skills like the OpenClaw Skills Workshop?
+
+[2026-06-10T03:13:19.493000+00:00] realadolan (id=1514105154276687883)
+    I'm on Max, it still until 22nd. Apparently, after 22nd, it's API-only. No subscription
+    [reply to _hwrd_ msg=1513968239405957310]
+
