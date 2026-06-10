@@ -228,3 +228,13 @@
     we're adding it back in the next version https://github.com/vectorize-io/hindsight/issues/1951
     [embed] RFC: memory curation — reversible edit & invalidate with cascade ... https://github.com/vectorize-io/hindsight/issues/1951
 
+[2026-06-10T08:07:34.558000+00:00] .chronocat (id=1514179204986437706)
+    Question: Does hindsight eventually do any pruning or it's just additive? 
+    Just had this installed and running locally in the same machine as hermes
+
+[2026-06-10T08:34:04.140000+00:00] nicoloboschi (id=1514185872176578580)
+    right now it's additive, we're adding a "curation" feature to do pruning but it's explicit
+
+[2026-06-10T08:34:22.501000+00:00] nicoloboschi (id=1514185949188198493)
+    the problem is thet each use case has his own rationale to define "useless"
+

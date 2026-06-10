@@ -3457,3 +3457,7 @@
     I appreciate your assistance.
     [reply to curtis_szmania msg=1514066066366795846]
 
+[2026-06-10T08:46:48.754000+00:00] avidfuturist (id=1514189079200399370)
+    <@1342189005382484112> I wrote up a reply to everything you posted, take a look and let me know if that helps!
+    [attachment] hermes-multi-profile-setup_1.md https://cdn.discordapp.com/attachments/1493017427724992612/1514189078852014233/hermes-multi-profile-setup_1.md?ex=6a2a75f8&is=6a292478&hm=d87188a7a7efbbc35c4fe9f43592e8c5557a6b74e48d17d35ff9f3f81f963bfb&
+

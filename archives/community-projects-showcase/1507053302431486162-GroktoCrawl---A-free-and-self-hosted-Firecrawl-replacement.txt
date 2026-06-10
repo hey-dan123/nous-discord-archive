@@ -459,3 +459,31 @@
     I lumped it into the v0.9.0 release milestone and then after that I just want to harden it until we get to v1.0.0 (though I might do date-based releases once we go stable. Still thinking through that.)
     [reply to fooned msg=1513622949544988983]
 
+[2026-06-10T04:23:16.428000+00:00] magnus919 (id=1514122757498081391)
+    🚀 **GroktoCrawl v0.7.0** — from stateless scraper to learning search engine. This is our most substantial release yet.
+    
+        🧠 Semantic search — Qdrant vector index (250K docs, configurable), every scraped page becomes searchable
+        🎤 Grounded Q&A — search → scrape → LLM → citations, one round trip. Short answers to simple questions.
+        🌐 Web portal — Google-style search bar with real-time streaming answers. **TECHNOLOGY PREVIEW**
+        🔌 GitHub, Substack, Reddit adapters — structured extraction, three-tier fallbacks
+        🛡️ Proxy support + politeness protocol (@Jackal991 🤝)
+    
+        ⚠️ **New required services**: semantic-svc + qdrant in compose stack. If you're tight on system resources (RAM, storage) fair warning this is going to be a big addition.
+    
+        54 PRs, MIT, self-hosted. docker compose up.
+    
+        https://github.com/groktopus/groktocrawl/releases/tag/v0.7.0
+    
+        ⚠️  Breaking / Migration:
+        - `docker compose up` auto-pulls Qdrant v1.18.2 (~50MB) + builds semantic-svc on first run — expect ~2-3 min initial startup
+        - Old deployments upgrading mid-lifecycle: existing `.env` files still work, but add `QDRANT_URL`, `SEMANTIC_URL`, and `SCRAPER_PROXY_URL` if you want to configure them
+        - Scraper-svc now reads `.env` (needs env_file: `.env` in compose — already there if you use the repo's `docker-compose.yml`)
+        - No DB migration needed — semantic search is additive. The Qdrant index starts empty and builds as you scrape. Everything that worked before still works.
+    
+    Coming soon: 
+    - **SlopSearX** as an AI-native replacement for SearXNG. 
+    - Improvements to web portal.
+    - Stabilization towards v1.0.0
+    [attachment] openai_gpt-image-2-medium_20260610_001354_c2d9455b.png https://cdn.discordapp.com/attachments/1507053302431486162/1514122757871505608/openai_gpt-image-2-medium_20260610_001354_c2d9455b.png?ex=6a2a3834&is=6a28e6b4&hm=072787fa2d145f59a5ad9808f9ec888b655de760003be4b1ef024586562be94d&
+    [embed] Release v0.7.0 — Semantic Search, Web Portal, Grounded Q&A, Site ... https://github.com/groktopus/groktocrawl/releases/tag/v0.7.0
+

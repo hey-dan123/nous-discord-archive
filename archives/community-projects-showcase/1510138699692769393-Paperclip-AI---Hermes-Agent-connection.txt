@@ -61,3 +61,9 @@
     Update for you <@795826252425854977> Dale, you were right. Things went really pear shaped over the weekend. I don't know if you jinxed me... But something went bonkers and I had agents running loose everywhere. Back to Opencode where things are calm again.
     [attachment] image.png https://cdn.discordapp.com/attachments/1510138699692769393/1511327863197138994/image.png?ex=6a200d41&is=6a1ebbc1&hm=59348f9c4d007b02ff7c7c60ae2229369cc81490ca0108abd43faf543df847f9&
 
+[2026-06-10T04:38:44.251000+00:00] dalekc72 (id=1514126649069801532)
+    Well, the jinx is real.  I am on vacation right now, and I mentioned to my wife how smooth things had been going with logistics.  I caught myself mid sentence but the jinx caught up to me and I got a flat tire on a country road that had 1 lane which wasn't paved in a foreign country.  
+    
+    You may want to look at the Hermes Kanban.  I have a rule for my main agent, that everything must go through the kanban for tracking.  And it's been great.
+    [reply to splosh123 msg=1511327863620632576]
+

@@ -1208,3 +1208,69 @@
     more little things, cron jobs and provider and reasoning
     [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1513961498827816960/image.png?ex=6a29a205&is=6a285085&hm=663398899dc3c4bef3c3d579f8dea5cce2cf707e5c79e017870ba47efe5d0716&
 
+[2026-06-10T05:09:07.047000+00:00] tunacookie (id=1514134294430355466)
+    <@209037396983939072> how do you solve this ? was able to resume session normally on normal hermes <:pepe_think:1151261558043848785>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1514134293847474297/image.png?ex=6a2a42f2&is=6a28f172&hm=9f7afd2b324bbb894d82eb125eaf8b3c95bc9930a7b3df00ec78578b2f380c7c&
+
+[2026-06-10T05:15:45.253000+00:00] liftaris (id=1514135964627238912)
+    which herm version are you on? looking into it
+    [reply to tunacookie msg=1514134294430355466]
+
+[2026-06-10T05:15:54.059000+00:00] tunacookie (id=1514136001562284053)
+    bleeding edge v1.9.0-dev.22
+    [reply to liftaris msg=1514135964627238912]
+
+[2026-06-10T05:19:36.490000+00:00] liftaris (id=1514136934505648158)
+    try something, may be a bit weird but: change the model (ctrl+x + m, or ctrl+k) to anything else that works for you, send any message (dont need to wait for a response), exit and reload/resume the session like you just tried to do
+
+[2026-06-10T05:19:59.597000+00:00] liftaris (id=1514137031423561869)
+    this will help me confirm a possible path for the bug repro
+
+[2026-06-10T05:21:42.385000+00:00] tunacookie (id=1514137462547415060)
+    no that just made a new session
+
+[2026-06-10T05:23:31.596000+00:00] liftaris (id=1514137920611811471)
+    mmm ok, I'll keep digging, hang tight
+
+[2026-06-10T05:52:47.994000+00:00] tunacookie (id=1514145287478706188)
+    i removed the need for having the model to resume the session... that kinda solved it but i dont think thats a proper fix xD but at least i can resume the session and just switch models
+    [reply to liftaris msg=1514137920611811471]
+
+[2026-06-10T05:52:56.046000+00:00] liftaris (id=1514145321251377264)
+    I found and fixed the bug, just pushing/fixing a test in CI
+
+[2026-06-10T05:54:36.791000+00:00] liftaris (id=1514145743806529567)
+    eh, that's the right direction of the fix pretty much. I had a half baked idea of auto-switching the model to whatever the user last used in the resumed session. I no longer think that's a good UX :P
+
+[2026-06-10T05:56:56.429000+00:00] tunacookie (id=1514146329490624593)
+    i think the main issue was cos i created the session with a custom provider and that custom provider is gone now becos expired so i removed it
+    [reply to liftaris msg=1514145743806529567]
+
+[2026-06-10T05:57:31.355000+00:00] tunacookie (id=1514146475980886086)
+    so opening a very old session if the provider is gone is an issue i guess
+
+[2026-06-10T05:58:03.428000+00:00] liftaris (id=1514146610505056286)
+    yeah, but herm shouldn't care what you do with whatever model/provider you have, so it was bad design
+
+[2026-06-10T05:58:10.074000+00:00] liftaris (id=1514146638380400822)
+    I think the fix is in now, if you update
+
+[2026-06-10T06:05:43.742000+00:00] tunacookie (id=1514148541201911849)
+    did a diff huhu its recommending to use yours instead , okay your fix worked tested.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1514148540891398154/image.png?ex=6a2a5037&is=6a28feb7&hm=8e068dbae0907ef4212ae2350e0804c42a87571184575b99956ba0054d5e1f42&
+    [reply to liftaris msg=1514146638380400822]
+
+[2026-06-10T06:14:06.838000+00:00] tunacookie (id=1514150651339345953)
+    <@209037396983939072> what model u use to fix 😂 i was using nemotron maybe that why shit
+
+[2026-06-10T06:38:13.599000+00:00] liftaris (id=1514156719494664232)
+    I use gpt 5.5 because I don't pay for it 🙃
+    [reply to tunacookie msg=1514150651339345953]
+
+[2026-06-10T06:39:15.387000+00:00] tunacookie (id=1514156978652581931)
+    i want....
+    [reply to liftaris msg=1514156719494664232]
+
+[2026-06-10T06:39:24.741000+00:00] liftaris (id=1514157017885966416)
+    The difference in patch was because I removed the feature, while your nemotron fixed the feature. Both are right
+

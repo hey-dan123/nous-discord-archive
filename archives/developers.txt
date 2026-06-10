@@ -28777,3 +28777,142 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I'm on Max, it still until 22nd. Apparently, after 22nd, it's API-only. No subscription
     [reply to _hwrd_ msg=1513968239405957310]
 
+[2026-06-10T03:34:08.451000+00:00] kinh0. (id=1514110392786223124)
+    Opened PR: https://github.com/NousResearch/hermes-agent/pull/43200
+    
+      Fixes two Telegram observe/media issues:
+      - regression/latent bug from `4a91e3649`: observed group context/media could fail to reach the addressed turn, including after compression/session split and in fresh sessions when replying to an observed media message;
+      - observed voice/audio cached after `fa3b06b03` reached the agent only as a media note/path, so it was not actually usable until transcribed.
+    
+      Now observed media context is preserved for later mentions, and observed audio is transcribed on demand with the configured STT provider.
+    
+    I extensively tested this fix as a patch until it worked fine.
+    [embed] fix(gateway): transcribe observed audio context on demand by Glucks... https://github.com/NousResearch/hermes-agent/pull/43200
+
+[2026-06-10T03:41:41.621000+00:00] iamlukethedev (id=1514112293519097936)
+    I keep getting memory full messsages even though im using Obsidian. Does anyone know why? Wondering if this is a bug
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1514112293112385616/image.png?ex=6a2a2e75&is=6a28dcf5&hm=2db627a614e17359464f8b0e38e7a98275a6a551358ae6ae9e0ad5b8366b8d20&
+
+[2026-06-10T04:20:48.145000+00:00] .s0uthpaw (id=1514122135553966111)
+
+[2026-06-10T05:52:55.488000+00:00] magnus919 (id=1514145318911082567)
+    https://github.com/NousResearch/hermes-agent/pull/43347
+    [embed] feat(skills): add factory-droid skill — delegate coding to Factor... https://github.com/NousResearch/hermes-agent/pull/43347
+
+[2026-06-10T06:11:25.025000+00:00] starw1 (id=1514149972646428682)
+    github? what makes it different/better than kokoro
+    [reply to cristianmgm7 msg=1513988277143601193]
+
+[2026-06-10T06:36:06.905000+00:00] egilewski (id=1514156188101775481)
+    Could've enabled minReleaseAge too, but it's Microsoft, so I guess it's still much more than was reasonable to expect.
+    [reply to tdamre msg=1514036053399310377]
+
+[2026-06-10T06:47:05.968000+00:00] godsboy7777 (id=1514158952412348466)
+    Quick update: I retested the current main without my local patch and confirmed the Telegram terminal progress issue is fixed for my setup.
+    
+    #42729 resolves the problem by keeping non-verbose terminal progress compact while preserving the fenced code-block presentation.
+    
+    I’ve closed my issue and PR since the original regression is now covered. Thanks <@387972437901312000> for the follow-up fix.🙏 🙏 <a:catPls:1151260428710715582>
+    [reply to godsboy7777 msg=1513824821421670420]
+
+[2026-06-10T07:16:41.854000+00:00] lazeewhalee (id=1514166401017974896)
+    I sometimes hit this before the token limit or fallback retry goes out :  what's the probable cause and maybe someone can show me how to back-test this? Thanks a lot
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1514166400728563773/image.png?ex=6a2a60d9&is=6a290f59&hm=d4dc752704631a494b02575a19fe52162d1e6fa9dcc80e77bc4c1e19a9c60c95&
+
+[2026-06-10T07:16:49.242000+00:00] lazeewhalee (id=1514166432005492888)
+    <@387972437901312000>
+
+[2026-06-10T07:17:24.102000+00:00] lazeewhalee (id=1514166578219057233)
+    GodsBoy!!! finally seeing you in discord, previously we only interracts within our PRs hehehhe
+    [reply to godsboy7777 msg=1514158952412348466]
+
+[2026-06-10T07:31:54.631000+00:00] kyssta69 (id=1514170229482065940)
+    | 1 | [#43009](https://github.com/NousResearch/hermes-agent/pull/43009) | Memory add blocks when drift detected |
+    | 2 | [#43010](https://github.com/NousResearch/hermes-agent/pull/43010) | TUI fails to detect workspace root with sub-package lockfiles |
+    | 3 | [#43063](https://github.com/NousResearch/hermes-agent/pull/43063) | Cron deliver=origin treated as local when no origin exists |
+    | 4 | [#43152](https://github.com/NousResearch/hermes-agent/pull/43152) | Flush cursor not reset after compaction |
+    | 5 | [#43155](https://github.com/NousResearch/hermes-agent/pull/43155) | Credentials redacted in conversation history |
+    | 6 | [#43207](https://github.com/NousResearch/hermes-agent/pull/43207) | Matrix ping-pong loop from status messages |
+    | 7 | [#43215](https://github.com/NousResearch/hermes-agent/pull/43215) | Skill payload load failure shows no error |
+    | 8 | [#43261](https://github.com/NousResearch/hermes-agent/pull/43261) | CLI rejects model names with spaces |
+    | 9 | [#43266](https://github.com/NousResearch/hermes-agent/pull/43266) | Bedrock ignores profile from config.yaml |
+    | 10 | [#43267](https://github.com/NousResearch/hermes-agent/pull/43267) | Huge bookend messages not truncated in session_search |
+    | 11 | [#43269](https://github.com/NousResearch/hermes-agent/pull/43269) | No fallback triggered on repeated stale stream kills |
+    | 12 | [#43315](https://github.com/NousResearch/hermes-agent/pull/43315) | Skills sync blocks dashboard startup |
+    | 13 | [#43374](https://github.com/NousResearch/hermes-agent/pull/43374) | Script shims only check .venv, not venv directory |
+    | 14 | [#43378](https://github.com/NousResearch/hermes-agent/pull/43378) | Vision auto-detect doesn't bridge runtime credentials | (1/2)
+    | 15 | [#43385](https://github.com/NousResearch/hermes-agent/pull/43385) | Docker Compose command arguments
+
+[2026-06-10T07:36:09.230000+00:00] teknium (id=1514171297347670056)
+    them PRs stackin up eh 😄
+    [reply to kyssta69 msg=1514170229482065940]
+
+[2026-06-10T07:36:41.511000+00:00] kyssta69 (id=1514171432744255591)
+    speed running  1000PRs <:shush:1240691697164484669>
+    [reply to teknium msg=1514171297347670056]
+
+[2026-06-10T07:37:26.888000+00:00] kyssta69 (id=1514171623068926034)
+    first ever public project i contributed to btw
+
+[2026-06-10T07:42:13.443000+00:00] sylwester0_42058 (id=1514172824967708842)
+    Congrats man, love to see it
+    [reply to kyssta69 msg=1514171623068926034]
+
+[2026-06-10T07:43:12.340000+00:00] kyssta69 (id=1514173071999635576)
+    ty!
+    [reply to sylwester0_42058 msg=1514172824967708842]
+
+[2026-06-10T07:45:31.935000+00:00] sylwester0_42058 (id=1514173657503633491)
+    Just noticed a couple of these PRs are already marked as duplicates though. They already have 13k open PRs stacked up, so closing the duplicates might save the team some headache. Just wanted to give you a quick heads up in case you missed it ❤️ <:Prayge:1151275585000185968>
+    [reply to kyssta69 msg=1514171623068926034]
+
+[2026-06-10T07:46:01.900000+00:00] kyssta69 (id=1514173783186083960)
+    yes, i have a cron job on hermes to close duplicate PRs every 3 hours if mine isnt of any need
+    [reply to sylwester0_42058 msg=1514173657503633491]
+
+[2026-06-10T07:47:26.663000+00:00] sylwester0_42058 (id=1514174138707738705)
+    respect! 🫡
+    [reply to kyssta69 msg=1514173783186083960]
+
+[2026-06-10T08:17:41.386000+00:00] lordbartok (id=1514181750207807549)
+    A few small fixes ready for review, all CI green / tests passing:
+    
+    • #41109 — `fix(wecom): fail-closed path-traversal guard for outbound media` 
+      https://github.com/NousResearch/hermes-agent/pull/41109
+    • #35188 — `feat(egress): CA rotation (`hermes egress rotate-ca`)` 
+      https://github.com/NousResearch/hermes-agent/pull/35188
+    
+    Thanks a lot in advance!
+    [embed] fix(wecom): fail-closed path-traversal guard for outbound media by ... https://github.com/NousResearch/hermes-agent/pull/41109
+    [embed] feat(egress): CA rotation (`hermes egress rotate-ca`) — follow-up... https://github.com/NousResearch/hermes-agent/pull/35188
+
+[2026-06-10T08:40:55.187000+00:00] teknium (id=1514187596232917104)
+    Can you open a <#1485307775444844625> so we can get better logs and keep organized
+    [reply to lazeewhalee msg=1514166401017974896]
+
+[2026-06-10T08:46:37.449000+00:00] kyssta69 (id=1514189031783530687)
+    https://github.com/NousResearch/hermes-agent/pull/43433
+    
+    **Problem**: When a user declines adding /v1 to their custom endpoint URL during hermes setup, the setup wizard still overwrites their URL with the /v1 variant if the fallback probe succeeds. The fix tracks when the user explicitly declined /v1 and skips the fallback URL override, respecting the user's choice.
+    [embed] fix(cli): respect user choice when declining /v1 suffix (#43408) by... https://github.com/NousResearch/hermes-agent/pull/43433
+
+[2026-06-10T08:55:21.377000+00:00] ogie40 (id=1514191229296836688)
+    ngl bro i hate frontend development and opus nailed it but my god what did it with my backend i can't track shit anymore
+
+[2026-06-10T09:30:21.765000+00:00] z1gon (id=1514200038962888806)
+    Hey <@387972437901312000>, could you take a look at this when you have the time? I believe adding more providers could help support a wider audience, cheers :)
+    
+    Add VolcanoEngine and BytePlus providers (Effectively closes #14070, #8952, #32114 and #29331): https://github.com/NousResearch/hermes-agent/pull/32549
+    [embed] Add Volcengine and BytePlus providers by ehz0ah · Pull Request #32... https://github.com/NousResearch/hermes-agent/pull/32549
+
+[2026-06-10T09:31:55.310000+00:00] teknium (id=1514200431318929478)
+    Not very keen on adding providers rn
+    [reply to z1gon msg=1514200038962888806]
+
+[2026-06-10T09:51:26.230000+00:00] aleksandr_1 (id=1514205342513365074)
+    **feat(tools): add pre-execution argument validation layer (Phase 1, refs #522).**
+    
+    Between JSON parsing and tool dispatch there was no schema validation, no placeholder detection, no path existence checking, and no required parameter enforcement. Added tools/argument_validator.py with required parameter check against tool JSON schema, placeholder detection scoped to path-like parameters only, type/enum validation, and path existence check for read_file. Validation injected in agent/agent_runtime_helpers.py::invoke_tool after JSON parse, before execution, covering both sequential and concurrent paths. 13 tests added, all passing in CI. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/43115 https://github.com/NousResearch/hermes-agent/issues/522
+
