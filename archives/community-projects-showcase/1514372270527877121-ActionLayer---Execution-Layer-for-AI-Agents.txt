@@ -1,0 +1,22 @@
+# Thread 'ActionLayer - Execution Layer for AI Agents' in forum #community-projects-showcase
+# thread_id=1514372270527877121 forum_id=1316137596535177246
+# Started 2026-06-11T03:43:54.251944+00:00
+
+[2026-06-10T20:54:44.970000+00:00] misacek (id=1514372270527877121)
+    Hey everyone 👋
+    Quick share from me and my team. We built something called ActionLayer and we want you to try it.
+    
+    It's an execution layer for AI agents. Think of it as giving your AI assistant real hands to do things in the world, booking, clicking, extracting data, filling forms.
+    
+    We're running something special for developers right now:
+    1000 tasks for free to build with
+    Submit your solution when you're done
+    Every week we feature and highlight the best ones
+    
+    And if you just want to explore first, use promo code EXECUTE at actionlayer.io for free credits to get started.
+    No catch. We just really want to see what you're capable of building with it.
+    Questions? Email us at hello@actionlayer.io 🚀
+    
+    https://actionlayer.io/
+    [embed] ActionLayer — Give your AI agent the power to actually do things https://actionlayer.io/
+

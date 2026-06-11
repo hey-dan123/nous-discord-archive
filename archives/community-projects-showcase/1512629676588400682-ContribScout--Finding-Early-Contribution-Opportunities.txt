@@ -116,3 +116,24 @@
     
     This keeps the Vercel dashboard standalone, while aligning with the Hermes-compatible skill package’s Markdown-report workflow.
 
+[2026-06-10T21:58:23.552000+00:00] sworntech (id=1514388286821371904)
+    **ContribScout v0.6 Update**
+    
+    Added Repo Watchlist / Contribution Pipeline.
+    
+    You can now save interesting GitHub contribution opportunities before turning them into Proof Vault entries.
+    
+    Watchlist items include:
+    
+    • status tracking
+    • personal notes
+    • score and suggested action
+    • repo links
+    • issue drill-down links
+    • Markdown export
+    • JSON export
+    
+    The flow is now clearer:
+    
+    Discover → Evaluate → Save → Track → Contribute → Proof Vault → Export
+

@@ -29225,3 +29225,157 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(profile-builder): key skills by frontmatter name in _disable_un... https://github.com/NousResearch/hermes-agent/pull/43724
     [reply to teknium msg=1514311824747532298]
 
+[2026-06-10T20:57:11.229000+00:00] misacek (id=1514372883982581953)
+    Hey everyone 👋
+    Quick share from me and my team. We built something called ActionLayer and we want you to try it.
+    
+    It's an execution layer for AI agents. Think of it as giving your AI assistant real hands to do things in the world, booking, clicking, extracting data, filling forms.
+    
+    We're running something special for developers right now:
+    - 1000 tasks for free to build with
+    - Submit your solution when you're done
+    - Every week we feature and highlight the best ones
+    
+    And if you just want to explore first, use promo code EXECUTE at actionlayer.io for free credits to get started.
+    No catch. We just really want to see what you're capable of building with it.
+    Questions? Email us at hello@actionlayer.io 🚀
+    
+    https://actionlayer.io/
+
+[2026-06-10T21:34:10.418000+00:00] nyrhe (id=1514382191935619183)
+    an another example why this is needed
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1514382192036548719/image.png?ex=6a2b29d2&is=6a29d852&hm=ef4708d9b876f27f979253ff61214aa51101a2fb660e328500645b896a7ba222&
+    [reply to teknium msg=1513935040848068728]
+
+[2026-06-10T21:39:03.476000+00:00] sahil_ss9 (id=1514383421109964850)
+    https://github.com/NousResearch/hermes-agent/pull/43780  followup PR to my previously closed one
+    [embed] feat(curator): add post_curator_run hook event through the plugin h... https://github.com/NousResearch/hermes-agent/pull/43780
+
+[2026-06-10T21:44:54.565000+00:00] teknium (id=1514384893683961907)
+    what interface is that
+    [reply to nyrhe msg=1514382191935619183]
+
+[2026-06-10T21:49:04.511000+00:00] maxfreedompollard (id=1514385942033596628)
+    <@387972437901312000> Is there any way to link agents on different computers usefully? Shared memory, independant communication, etc
+
+[2026-06-10T21:55:26.468000+00:00] teknium (id=1514387544077242378)
+    Not at the moment no
+    [reply to maxfreedompollard msg=1514385942033596628]
+
+[2026-06-10T22:01:49.114000+00:00] gille (id=1514389149011148900)
+    boop https://github.com/NousResearch/hermes-agent/pull/43790
+    [embed] fix(tui): decode startup subprocess output as utf-8 by helix4u · P... https://github.com/NousResearch/hermes-agent/pull/43790
+
+[2026-06-10T22:13:32.249000+00:00] tomrevo.x (id=1514392098173091990)
+    I used a combination of webhooks for a-2-a communication and locally hosted Honcho that each of my agents makes API calls to share memory
+    [reply to maxfreedompollard msg=1514385942033596628]
+
+[2026-06-10T22:14:01.878000+00:00] sworntech (id=1514392222445998151)
+    **Small Hermes Windows docs PR**:
+    
+    **Problem**: On corporate-managed Windows machines, TLS can fail when Python/Node tooling does not use the organization’s corporate root CA bundle.
+    
+    **Fix**: Added a Windows troubleshooting note documenting CA bundle override variables:
+    
+    • `HERMES_CA_BUNDLE`
+    • `REQUESTS_CA_BUNDLE`
+    • `SSL_CERT_FILE`
+    • `NODE_EXTRA_CA_CERTS`
+    
+    **Impact**: Docs-only change. No runtime behavior changed.
+    
+    References #43294
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/43797
+    [embed] docs(windows): document corporate CA bundle overrides by Sworntech-... https://github.com/NousResearch/hermes-agent/pull/43797
+
+[2026-06-10T22:15:53.702000+00:00] nyrhe (id=1514392691469717626)
+    Telegram on Windows
+    [reply to teknium msg=1514384893683961907]
+
+[2026-06-10T22:24:05.458000+00:00] aleksandr_1 (id=1514394754044137593)
+    **1. fix(profiles): use unique tmp file in set_active_profile to prevent parallel-writer clobber.**
+    set_active_profile() used path.with_suffix(".tmp") producing a constant active_profile.tmp shared by all writers. Two processes (e.g. web dashboard + CLI) writing simultaneously would clobber each other silently — the final os.replace is atomic but the tmp write window was unprotected. Replaced with tempfile.mkstemp(dir=..., prefix=".active_profile_") so each caller owns its own unique tmp file. Cleanup on failure via except BaseException. 
+    https://github.com/NousResearch/hermes-agent/pull/43535
+    
+    **2. fix(state): retry _connect_and_init when concurrent repair is in progress.**
+    When two processes open SessionDB simultaneously on a malformed state.db, the first repairs it via _claim_repair_attempt while the second received an immediate sqlite3.DatabaseError instead of waiting. Added a retry loop reusing the existing _execute_write jitter pattern (_WRITE_MAX_RETRIES, 20-150ms) so the losing caller waits for repair to complete and retries the connection instead of surfacing "Session database not available". https://github.com/NousResearch/hermes-agent/pull/43742
+
+[2026-06-10T22:26:45.953000+00:00] sworntech (id=1514395427208691762)
+    **Small Hermes docs/markup PR**:
+    
+    **Problem**: The LM Studio provider docs had a stray Docusaurus admonition close marker near the context-length section.
+    
+    **Fix**: Removed the orphaned `:::` marker.
+    
+    **Impact**: Docs/markup-only change. No runtime behavior changed.
+    
+    Addresses item 25 from #36048
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/43802
+    [embed] docs(providers): remove stray LM Studio admonition marker by Swornt... https://github.com/NousResearch/hermes-agent/pull/43802
+
+[2026-06-10T23:05:08.279000+00:00] tiny_th_dev (id=1514405083863978246)
+    I have a PR open to add nostr to the gateway: https://github.com/NousResearch/hermes-agent/pull/16769
+    Austin Pickett reviewed it a few weeks ago and I addressed his `Should fix` and his `Significant test gaps` and his `Minor items` a few weeks ago. The PR is sitting in `Merging is blocked: 1 review requesting changes by reviewers with write access.` state. Does this mean maintainers will eventually get around to this PR again, or have I fallen into a gap in the process? There are frequent merge conflicts that I've been staying on top of. Does each rebase to main restart some clock on getting a review or consideration for merging?  Thank you for any insights you can offer to the normal PR-merging flow. 👍
+    [embed] feat(gateway): add Nostr NIP-17 private DM platform adapter by unsa... https://github.com/NousResearch/hermes-agent/pull/16769
+
+[2026-06-11T02:33:55.122000+00:00] jw_mushroom_man (id=1514457625251680376)
+    https://github.com/NousResearch/hermes-agent/pull/43927
+    
+    Adds a Windows backend for the computer_use toolset, which is currently macOS-only (cua-driver). Windows hosts get the same model-agnostic desktop control through the existing ComputerUseBackend ABC: SOM captures with numbered element overlays, element-index clicking, drag/scroll, Unicode typing, key combos, and focus-free set_value — driven by any tool-capable model through the existing universal schema, unchanged.
+    [embed] Feat/computer use windows by lEWFkRAD · Pull Request #43927 · Nou... https://github.com/NousResearch/hermes-agent/pull/43927
+
+[2026-06-11T02:35:10.197000+00:00] jw_mushroom_man (id=1514457940139184188)
+    If anyone wants to look at this and make suggestions, id be so happy
+
+[2026-06-11T02:48:21.337000+00:00] kyssta69 (id=1514461258420715600)
+    Few PRs <:cat_hehe:1228996780792872960> 
+     
+    1. [#43647](https://github.com/NousResearch/hermes-agent/pull/43647) — fix(update): include workspace root to preserve repo-root deps
+    2. [#43648](https://github.com/NousResearch/hermes-agent/pull/43648) — fix(skills): add global skills dir to trusted dirs for symlink fix
+    3. [#43649](https://github.com/NousResearch/hermes-agent/pull/43649) — fix(skills): resolve SKILLS_DIR dynamically to avoid stale paths
+    4. [#43651](https://github.com/NousResearch/hermes-agent/pull/43651) — fix(compress): account for output-token reservation in compaction threshold
+    5. [#43705](https://github.com/NousResearch/hermes-agent/pull/43705) — fix(webhook): add Fireflies V2 signature and event support
+    6. [#43749](https://github.com/NousResearch/hermes-agent/pull/43749) — fix(auth): propagate rotated xAI tokens back to global root
+    7. [#43813](https://github.com/NousResearch/hermes-agent/pull/43813) — fix(provider): update kimi-coding endpoint and User-Agent
+    8. [#43816](https://github.com/NousResearch/hermes-agent/pull/43816) — fix(config): profile configs inherit root providers instead of replacing
+    9. [#43822](https://github.com/NousResearch/hermes-agent/pull/43822) — fix(whatsapp): add HTTPS proxy support for Baileys WebSocket
+    10. [#43922](https://github.com/NousResearch/hermes-agent/pull/43922) — fix(gateway): use kickstart instead of bootout/bootstrap in plist
+    11. [#43924](https://github.com/NousResearch/hermes-agent/pull/43924) — fix(nix): downgrade extraPythonPackages collision check to warning
+    12. [#43932](https://github.com/NousResearch/hermes-agent/pull/43932) — fix(agent): add Chinese reasoning tags to think block filters
+    13. [#43934](https://github.com/NousResearch/hermes-agent/pull/43934) — fix(whatsapp): bump Baileys to v7.0.0-rc13 for LID group support
+
+[2026-06-11T03:07:44.288000+00:00] frowtek (id=1514466136190877768)
+    Hey <@387972437901312000>, opened a couple small bug fix prs, whenever you have time
+    https://github.com/NousResearch/hermes-agent/pull/43908 — Optional[Union[...]] tool params were leaking a null branch into the schema and getting 400'd by Anthropic
+    https://github.com/NousResearch/hermes-agent/pull/43889 — session search came back empty for stuff like .env / rm -rf (FTS5 syntax issue, error was getting swallowed)
+    both have tests. no rush 🙏
+    [embed] fix(tools): strip the null branch from multi-variant nullable anyOf... https://github.com/NousResearch/hermes-agent/pull/43908
+    [embed] fix(state): neutralize leading/trailing/standalone "." and "-" in _... https://github.com/NousResearch/hermes-agent/pull/43889
+
+[2026-06-11T03:29:42.894000+00:00] kylekaster (id=1514471666825035787)
+    <@387972437901312000> looks like my agent over corrected when I asked it to code review that baoyu skill change against the upstream baoyu skill and over-genericized, sorry for wasting your time on that
+    
+    looking through the history manually, https://github.com/NousResearch/hermes-agent/pull/34047/changes I think this PR gets to the root of what I was seeing and is a more accurate and controlled fix for keeping the agent from silently drifting away from the baoyu-generation flow silently
+
+[2026-06-11T03:32:17.722000+00:00] teknium (id=1514472316220739736)
+    do we have proof the skill currently does not work for some group of people
+    [reply to kylekaster msg=1514471666825035787]
+
+[2026-06-11T03:32:32.965000+00:00] teknium (id=1514472380154515516)
+    because its never failed me
+
+[2026-06-11T03:34:12.474000+00:00] kylekaster (id=1514472797525774366)
+    trying to collect some evidence from my Hermes agent now... my agent has repeatedly told me things like 
+    
+    "this seemed text heavy so I fell back to html/SVG"
+    
+    which is inline with <@1190017486251376740>  s observations in his PR
+    ```If exact, readable text is more important than illustration quality, explicitly tell the user that a deterministic HTML/SVG/Pillow overlay may be better before switching away from `image_generate`. Do not substitute a scripted infographic without saying so.```
+
+[2026-06-11T03:34:44.627000+00:00] kylekaster (id=1514472932385099907)
+    I wonder if it's a quirk of using openai-codex as the image gen backend?
+

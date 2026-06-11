@@ -1,0 +1,22 @@
+# Thread 'iMessage + Hermes | 1 minute setup' in forum #plugins-skills-and-skins
+# thread_id=1514394069294387441 forum_id=1485392832154832906
+# Started 2026-06-11T03:47:41.637313+00:00
+
+[2026-06-10T22:21:22.201000+00:00] dimavrem22_71258 (id=1514394069294387441)
+    https://x.com/DVremenko/status/2064833339727466555?s=20
+    
+    Fastest and cheapest way to connect your Hermes with iMesssage! Inkbox also gives your agent an entire digital identity: its own email, phone number for calls and sms, internet address for webhooks/websockets, and much more! 
+    
+    • Hermes Plugin: https://github.com/inkbox-ai/hermes-agent-plugin
+    • iMessage Docs: https://inkbox.ai/docs/capabilities/imessage
+    • Website: https://inkbox.ai
+    • Console: https://console.inkbox.ai
+    • Docs: https://inkbox.ai/docs
+    • SDK: https://github.com/inkbox-ai/inkbox
+    [attachment] IMessage_logo.svg.png https://cdn.discordapp.com/attachments/1514394069294387441/1514394073304137859/IMessage_logo.svg.png?ex=6a2b34e3&is=6a29e363&hm=0f96c4d3eaf98232569adcf5d7a2959ca947b8af85581b51c7b0639d587955c7&
+    [embed]  https://twitter.com/DVremenko/status/2064833339727466555?s=20
+    [embed] GitHub - inkbox-ai/hermes-agent-plugin: Inkbox platform plugin for ... https://github.com/inkbox-ai/hermes-agent-plugin
+    [embed] iMessage https://inkbox.ai/docs/capabilities/imessage
+    [embed] Inkbox https://inkbox.ai/
+    [embed] Inkbox https://console.inkbox.ai/
+

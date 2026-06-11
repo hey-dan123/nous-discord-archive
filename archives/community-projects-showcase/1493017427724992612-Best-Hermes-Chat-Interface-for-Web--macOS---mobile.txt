@@ -3593,3 +3593,178 @@
 [2026-06-10T20:28:16.897000+00:00] curtis_szmania (id=1514365609666809856)
     Another question, I did share a STATE dir for all my profiles for the last week, so I have a few marketing and executive sessions I'd like to bring over to the new compose setup. Is there any reasonable way to do that? STATE_DIR doesn't seem to include memory and things, just the sessions/conversations.
 
+[2026-06-10T20:30:21.298000+00:00] curtis_szmania (id=1514366131442286683)
+    re docs: ```HERMES_WEBUI_STATE_DIR    $HERMES_HOME/webui (Windows default %LOCALAPPDATA%\hermes\webui, POSIX default ~/.hermes/webui)    Where sessions and state are stored```
+    [reply to curtis_szmania msg=1514365609666809856]
+
+[2026-06-10T20:43:52.859000+00:00] avidfuturist (id=1514369535375966419)
+    [attachment] hermes-migrating-sessions-and-memory.md https://cdn.discordapp.com/attachments/1493017427724992612/1514369535107666080/hermes-migrating-sessions-and-memory.md?ex=6a2b1e08&is=6a29cc88&hm=e0d4ddf069db6ce2138f3f4d366cf1f844a0b840185698180f8b9194e4d5d991&
+    [reply to curtis_szmania msg=1514365609666809856]
+
+[2026-06-10T21:00:55.836000+00:00] curtis_szmania (id=1514373826052362321)
+    Absolutely, when it's all said and done I'll have 2 isolated hermes agents, 1 professional 1 personal, each with multiple profiles wrapped with hermes webui. So it will be quite complex and likely a useful use case for others.
+    [reply to avidfuturist msg=1514365488522727625]
+
+[2026-06-10T21:01:16.995000+00:00] avidfuturist (id=1514373914799636543)
+    💯 Absolutely, look forward to seeing what you come up with!
+    [reply to curtis_szmania msg=1514373826052362321]
+
+[2026-06-10T21:07:08.295000+00:00] curtis_szmania (id=1514375388258766868)
+    So now that I have only a default and a executive profile on the executive webui interface, do i just delete the executive profile as default is listed, or just ignore it? it seems the default has all the executive sessions and settings in it.
+    [reply to avidfuturist msg=1514351744065339443]
+
+[2026-06-10T21:15:54.271000+00:00] avidfuturist (id=1514377594361876653)
+    [attachment] hermes-two-profiles-delete-or-ignore.md https://cdn.discordapp.com/attachments/1493017427724992612/1514377594202755303/hermes-two-profiles-delete-or-ignore.md?ex=6a2b258a&is=6a29d40a&hm=eda51739b3a24e65c04ba85b19a368a25392423c87e4d62a4c56fc4f6285f9bc&
+    [reply to curtis_szmania msg=1514375388258766868]
+
+[2026-06-10T21:16:52.590000+00:00] avidfuturist (id=1514377838969618572)
+    I'm not sure if that's accurate, but posted in case its helpful, I would maybe not delete for now, or backup before you do basically
+
+[2026-06-10T21:21:40.860000+00:00] curtis_szmania (id=1514379048061763655)
+    it is helpful, the profiles directory within the executive profile is actually a by product of my previous attempts on trying to get this to work, as i pointed the container HERMES_HOME to .hermes/profiles/executive and didn't leave it at .hermes, so the webui (thats the only folders i see in this extra sub executive profile) created that sub profile directory. so its safe to delete
+    [reply to avidfuturist msg=1514377594361876653]
+
+[2026-06-10T21:52:57.673000+00:00] curtis_szmania (id=1514386919986036958)
+    Also, I notice hermes-webui takes awhile to bootstrap is that normal? probably 15 minutes, it seems like on every container start its installing dependencies again, is it using the hermes-src volume to reinstall dependencies just in case hermes-agent dependencies have changed since the last start? (since this is agent driven prod support I might as well take advantage of it 🙂 )
+    [reply to avidfuturist msg=1514377594361876653]
+
+[2026-06-10T21:54:59.410000+00:00] avidfuturist (id=1514387430588022887)
+    <@1342189005382484112>
+    [attachment] hermes-slow-webui-bootstrap.md https://cdn.discordapp.com/attachments/1493017427724992612/1514387430394826754/hermes-slow-webui-bootstrap.md?ex=6a2b2eb3&is=6a29dd33&hm=cf28dc4f20d6a6632c0f84d62f5ff22f80ea5b0be7a7fdbca389ff444f7359ce&
+
+[2026-06-10T22:02:20.706000+00:00] curtis_szmania (id=1514389281517605065)
+    I'm seeing something a little different. On a container stop and then start (hermes-agent container remains running), its taking about 10 minutes. here is my container log for the executive webui container, with timestamps and you can see the container kill at the top:
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1493017427724992612/1514389281479589988/message.txt?ex=6a2b306c&is=6a29deec&hm=c45f706f235ea1a9db3d9fbb1be496a826dbe897da98e38672c9198f043db947&
+    [reply to avidfuturist msg=1514387430588022887]
+
+[2026-06-10T22:02:51.261000+00:00] curtis_szmania (id=1514389409674559639)
+    The biggest time suck seems to be this (7 minutes) ```
+    2026-06-10T21:45:29.945101018Z -- Running as root for one-time container init; will switch to hermeswebui
+    
+    2026-06-10T21:45:36.384007357Z usermod: no changes
+    
+    2026-06-10T21:52:56.545446447Z 
+    
+    2026-06-10T21:52:56.545477961Z -- Preparing /app for the hermeswebui runtime user
+    
+    2026-06-10T21:52:56.658064421Z sending incremental file list
+    ``` The one-time container init. which seems to fire in a container stop and start situation.
+    [reply to curtis_szmania msg=1514389281517605065]
+
+[2026-06-10T22:05:15.258000+00:00] curtis_szmania (id=1514390013641621575)
+    I could try the 2 options in the suggestions, like a persistent uv cache volume or persistent `/app/venv` volume of course
+    [reply to curtis_szmania msg=1514389409674559639]
+
+[2026-06-10T22:26:28.932000+00:00] avidfuturist (id=1514395355817709649)
+    🖥️ Update: I’m working on native WebUI rust light and fast, here's my mac version but supports **native Windows and Linux desktop apps too**, anyone interested in helping me test?
+    
+    Will include multi window and full multi-tab support, need some alpha testers
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514395355582562445/image.png?ex=6a2b3614&is=6a29e494&hm=7e7bd9ee635808bb5a4b832e741024166b94e44dffbcb93f798d3a4e3e9f075d&
+
+[2026-06-10T22:27:18.619000+00:00] danielferraz.mm (id=1514395564220092426)
+    <:catlick:1151260427645366375>
+    [reply to avidfuturist msg=1514395355817709649]
+
+[2026-06-10T23:51:20.996000+00:00] mathewsstar (id=1514416713482113054)
+    Hi everyone,
+    I'm having an issue with Hermes Web-UI. When I try to access the Providers section in Settings to manage my API keys, the interface fails to load and shows the following error messages:
+    "Request timed out. Please try again."
+    "Failed to load providers: Request timed out. Please try again."
+    Has anyone encountered this or knows how to fix it? Thanks in advance!
+    [attachment] image0.png https://cdn.discordapp.com/attachments/1493017427724992612/1514416713246969876/image0.png?ex=6a2b49f8&is=6a29f878&hm=762f895b35d4087497d6f8521fd9468624dfdb97e1cb736dd0bdcdea55f840e0&
+
+[2026-06-10T23:59:54.359000+00:00] avidfuturist (id=1514418866682335252)
+    Thanks for the report, will take a look to see if I can figure out what might be causing that
+    [reply to mathewsstar msg=1514416713482113054]
+
+[2026-06-11T00:00:10.321000+00:00] mathewsstar (id=1514418933632077884)
+    Hi everyone,
+    I'm experiencing a specific issue with profiles in Hermes Web-UI.
+    When I am using the default profile, everything works as expected. However, when I switch or chat using other profiles, the available AI providers and models do not appear. Instead, I only see the models belonging to the default provider, while all other configured providers and models are completely missing.
+    This used to work perfectly fine before, but now I'm also getting a "Request timed out / Failed to load providers" error when checking the settings.
+    Has anyone faced this profile-specific bug or knows how to fix the sync between profiles? Thanks!
+
+[2026-06-11T00:01:18.256000+00:00] avidfuturist (id=1514419218571984966)
+    Will look into that too, and hopefully can figure out what's going on and have a fix later today
+    [reply to mathewsstar msg=1514418933632077884]
+
+[2026-06-11T00:01:25.137000+00:00] avidfuturist (id=1514419247432863745)
+    will message back here
+
+[2026-06-11T00:06:14.977000+00:00] latipun (id=1514420463110197389)
+    I think hermes only accept `low`, `medium`, `high`, and `xhigh`. No `max`. All of them works, except `max`
+    [reply to avidfuturist msg=1514334353461612634]
+
+[2026-06-11T00:09:40.122000+00:00] avidfuturist (id=1514421323550691388)
+    Noted, thanks!
+    [reply to latipun msg=1514420463110197389]
+
+[2026-06-11T00:15:49.717000+00:00] latipun (id=1514422873744478258)
+    okay, yeah, you're welcome.
+    hermes didn't accept `max` as reasoning setting in `~/.hermes/config.yaml`.  
+    `none`, `minimal`, `low`, `medium`, `high`, and `xhigh` works regardless model choices
+    [reply to avidfuturist msg=1514421323550691388]
+
+[2026-06-11T00:29:56.648000+00:00] avidfuturist (id=1514426426030297198)
+    Is this webUI issue or a Hermes issue though?
+    [reply to latipun msg=1514422873744478258]
+
+[2026-06-11T00:31:29.485000+00:00] latipun (id=1514426815417028830)
+    webUI.
+    You have this `max` option, which is misleading, in fact, max is treated as medium in hermes because `max` is unaccepted value
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514426815232475237/image.png?ex=6a2b5361&is=6a2a01e1&hm=8693f66d9e72eaa30bbe11cd2bfb1032dec68400f95dad09c2735d74d87b11d4&
+    [reply to avidfuturist msg=1514426426030297198]
+
+[2026-06-11T00:32:45.704000+00:00] avidfuturist (id=1514427135102681249)
+    Ah I see, got it, I’ll remove Max then thanks
+    [reply to latipun msg=1514426815417028830]
+
+[2026-06-11T00:33:02.918000+00:00] latipun (id=1514427207303565405)
+    Thank you ✨
+
+[2026-06-11T00:38:10.973000+00:00] avidfuturist (id=1514428499379749075)
+    Captured here, will fix soon https://github.com/nesquena/hermes-webui/issues/3957
+    [reply to mathewsstar msg=1514418933632077884]
+
+[2026-06-11T00:44:17.685000+00:00] latipun (id=1514430037481230366)
+    also, after setting (clicking) the reasoning option, no more button appear
+    [attachment] zen_j0E6BNaOwU.gif https://cdn.discordapp.com/attachments/1493017427724992612/1514430037187891302/zen_j0E6BNaOwU.gif?ex=6a2b5661&is=6a2a04e1&hm=c9a51e52b35d31d4b2acf838284f9840c0bd6ccde9431b81775d27a19044f22f&
+    [reply to avidfuturist msg=1514428499379749075]
+
+[2026-06-11T00:44:49.802000+00:00] latipun (id=1514430172189954209)
+    I need to reload browser (F5) to make it appear again
+
+[2026-06-11T01:03:59.617000+00:00] avidfuturist (id=1514434994863341630)
+    Noted thanks, will look into it
+    [reply to latipun msg=1514430037481230366]
+
+[2026-06-11T01:08:28.126000+00:00] avidfuturist (id=1514436121071718561)
+    Tracked here: https://github.com/nesquena/hermes-webui/issues/3958
+    [reply to latipun msg=1514430037481230366]
+
+[2026-06-11T01:08:47.500000+00:00] avidfuturist (id=1514436202332422226)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+
+[2026-06-11T02:22:28.551000+00:00] avidfuturist (id=1514454745564053645)
+    I believe one or both of these issues you reported might be fixed in .356 - can you update and let me know what you find?
+    [reply to mathewsstar msg=1514418933632077884]
+
+[2026-06-11T02:33:20.723000+00:00] fleety13 (id=1514457480971681902)
+    .356 the magnum release
+    [reply to avidfuturist msg=1514454745564053645]
+
+[2026-06-11T03:24:59.265000+00:00] panbartosz (id=1514470477198921903)
+    I just installed this and I wanted to say that this is extremaly based. Much better interface compared to interacting with Hermes via IM like Discord etc.
+
+[2026-06-11T03:37:10.958000+00:00] avidfuturist (id=1514473546141663282)
+    Thanks for the message, glad to hear you like it! We now have lightweight WebUI desktop companion apps too, check them out for Windows/Linux/macOS: https://github.com/hermes-webui/hermes-desktop-rust/releases - still in alpha, so please report any feedback!
+    [reply to panbartosz msg=1514470477198921903]
+
+[2026-06-11T03:45:02.170000+00:00] latipun (id=1514475522548039720)
+    Sorry to bother you today, <@933139410281713755> 😅
+    Why I can't run skill thru slash command directly?
+    
+    In discord, I could invoke skills directly using slash command (but need to use `/skill <skill-name> [query]` command)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514475521289879674/image.png?ex=6a2b80bd&is=6a2a2f3d&hm=2258ae7e0325b2200f6232423c48d0942580a49cb78b656eda8774a29243065c&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514475522002915518/image.png?ex=6a2b80be&is=6a2a2f3e&hm=72c32f1f8d6ce3c8123a8222aaddcbc6ff0de34d40d5362b0530b2a4713aeee7&
+

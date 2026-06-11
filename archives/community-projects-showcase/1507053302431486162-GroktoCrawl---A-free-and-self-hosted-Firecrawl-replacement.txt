@@ -487,3 +487,10 @@
     [attachment] openai_gpt-image-2-medium_20260610_001354_c2d9455b.png https://cdn.discordapp.com/attachments/1507053302431486162/1514122757871505608/openai_gpt-image-2-medium_20260610_001354_c2d9455b.png?ex=6a2a3834&is=6a28e6b4&hm=072787fa2d145f59a5ad9808f9ec888b655de760003be4b1ef024586562be94d&
     [embed] Release v0.7.0 — Semantic Search, Web Portal, Grounded Q&A, Site ... https://github.com/groktopus/groktocrawl/releases/tag/v0.7.0
 
+[2026-06-11T02:05:14.392000+00:00] magnus919 (id=1514450407986954341)
+    I updated the `groktocrawl` skill to include all of the new features. Probably an oversight. This should have been in the v0.7.0 release. Check out the demo of how this enhances your agent's searches by knowing how to work with each of the scrape engines.
+    
+    Demo:
+    https://gist.github.com/magnus919/d4e29281bd34148954e33179c79bd3f7
+    [embed] GroktoCrawl + Skill Demo: 20 adapters, one command — CLI output a... https://gist.github.com/magnus919/d4e29281bd34148954e33179c79bd3f7
+

@@ -1849,3 +1849,136 @@
 [2026-06-10T14:20:51.395000+00:00] meshnetz (id=1514273144129589268)
     Has anyone used Mnemosyne as the memory connector for n8n?
 
+[2026-06-10T22:18:22.895000+00:00] nulledvector (id=1514393317230776373)
+    Hey, good questions. Let me break it down without the code spaghetti.
+    
+    1. API embedding + local fallback
+    
+    You're right — there was no fallback. If the API failed, embeddings just returned nothing. That's fixed now. PR #269 just merged.
+    
+    Here's what changed: if your API call fails (network blip, rate limit, whatever), Mnemosyne now automatically drops to a local model. You don't have to do anything extra. By default it uses bge-small-en-v1.5 as the fallback, but you can pick whichever local model you want.
+    
+    So your setup would be:
+    - Primary: text-embedding-3-small via Sumopod API
+    - Fallback: bge-small-en-v1.5 locally (or swap to a multilingual one for better Indonesian coverage)
+    
+    Set MNEMOSYNE_EMBEDDING_FALLBACK_MODEL if you want a different fallback. Leave it unset.
+    
+    2. API key management
+    
+    You don't need OPENAI_API_KEY specifically. The code checks MNEMOSYNE_EMBEDDING_API_KEY first.
+    
+    Your Bitwarden workflow will work fine, just set MNEMOSYNE_EMBEDDING_API_KEY when the container/process starts and you're good.
+    
+    3. Consolidation bottleneck
+    
+    The 30s timeout isn't real — that was a misunderstanding from reading the source. The actual timeout is 5 seconds by default. Which is way too small for 3000+ working memory items, you're right about that.
+    
+    For heavy usage, bump these:
+    - MNEMOSYNE_AUTO_SLEEP_TIMEOUT=120 — gives it 2 minutes to do real work
+    - MNEMOSYNE_AUTO_SLEEP_THRESHOLD=200 — waits until you have 200 items before consolidating
+    - Or skip auto-sleep entirely and run hermes mnemosyne sleep on a cron schedule
+    
+    With MiMo-v2.5 as your LLM and the host adapter wired in, consolidation should chew through that backlog fine once you give it enough runway.
+    
+    4. Bilingual search
+    
+    Yeah, bge-small-en-v1.5 is English-only. That's exactly why your Indonesian memories don't show up in recall.
+    
+    The fix is switching to text-embedding-3-small (it handles Indonesian and English natively) as your primary model, with the new fallback as a safety net.
+    [reply to ruangraung msg=1514260887421063188]
+
+[2026-06-10T23:38:13.640000+00:00] josephcy (id=1514413411071430856)
+    Just wanted to say by now i still can't get it to working, anyone actually installed it recently and got it working?
+    ```
+    root@hermes:~# pipx install mnemosyne-memory[embeddings]
+      installed package mnemosyne-memory 3.5.0, installed using Python 3.14.4
+      These apps are now globally available
+        - mnemosyne
+        - mnemosyne-install
+        - mnemosyne-uninstall
+    done! ✨ 🌟 ✨
+    root@hermes:~# python3 -c "import mnemosyne; print(mnemosyne.__version__)"
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+        import mnemosyne; print(mnemosyne.__version__)
+        ^^^^^^^^^^^^^^^^
+    ModuleNotFoundError: No module named 'mnemosyne'
+    root@hermes:~# pipx install mnemosyne-memory
+    'mnemosyne-memory' already seems to be installed. Not modifying existing installation in '/root/.local/share/pipx/venvs/mnemosyne-memory'. Pass '--force' to force installation.
+    root@hermes:~# pipx install mnemosyne-hermes
+      installed package mnemosyne-hermes 0.1.6, installed using Python 3.14.4
+      These apps are now globally available
+        - mnemosyne-hermes
+    done! ✨ 🌟 ✨
+    root@hermes:~# hermes config set memory.provider mnemosyne
+    ✓ Set memory.provider = mnemosyne in /root/.hermes/config.yaml
+    root@hermes:~# hermes gateway restart
+    ⚠ Installing gateway service to run as root.
+        This is fine for LXC/container environments but not recommended on bare-metal hosts.
+    ⏳ System service restarting gracefully (PID 214026)...
+    ⏳ System service process started (PID 218324); waiting for gateway runtime...
+    ✓ System service restarted (PID 218324)
+    root@hermes:~# hermes memory status
+    
+    Memory status
+    ────────────────────────────────────────
+      Built-in:  always active
+      Provider:  mnemosyne
+    
+      Plugin:    NOT installed ✗
+      Install the 'mnemosyne' memory plugin to ~/.hermes/plugins/
+    
+    ```
+    **Gave up using pipx** and install in hermes venv and it just worked...
+
+[2026-06-11T00:02:28.471000+00:00] ruangraung (id=1514419513075040387)
+    Got a few follow-up questions after reading your previous replies. The consolidation thing is resolved, now my questions are for the embedding stuffs:
+    
+    **1. Installation method — PyPI vs GitHub**
+    
+    My Hermes installed mnemosyne-memory and mnemosyne-hermes using `pip install mnemosyne-memory [all]` and `pip install mnemosyne-hermes` (from your GitHub README), but it downloaded from PyPI. That's why PR #269 isn't in our version, we're on 3.5.0, but PR #269 was merged after the 3.5.0 release.
+    
+    What's the right way to install so we get the latest code including PR #269? Should we use `pip install git+https://github.com/AxDSan/mnemosyne.git@main` or is there another method?
+    
+    **2. Current setup**
+    
+    - mnemosyne-memory: 3.5.0 (PyPI)
+    - mnemosyne-hermes: 0.1.6 (PyPI)
+    - Installed in separate venv: `~/.hermes/mnemosyne-venv/` so it will survive when I do `hermes update`.
+    - Current embedding: `BAAI/bge-small-en-v1.5` (local, already downloaded)
+    
+    **3. Where to configure?**
+    
+    When you say set `MNEMOSYNE_EMBEDDING_MODEL`, `MNEMOSYNE_EMBEDDING_API_KEY`, etc. — do these all go in `~/.hermes/.env`? Or is there a mnemosyne-specific config file?
+    
+    **4. Dimension mismatch warning**
+    
+    The docs mention: *"Changing the embedding model after data has been stored will cause a dimension mismatch. The vec0 virtual table is locked to the dimension it was created with. To switch models, delete and re-create the database, or run the migration tool."*
+    
+    We currently have bge-small (384 dims). Switching to `text-embedding-3-small` (1536 dims) would trigger this. Is there a migration tool? Or do we need to recreate the DB?
+    
+    **5. API key setup**
+    
+    You mentioned: *"set MNEMOSYNE_EMBEDDING_API_KEY when the container/process starts and you're good."*
+    
+    As I mentioned earlier we're using bws. We use `key_env: SUMOPOD_API_KEY`. How do we set `MNEMOSYNE_EMBEDDING_API_KEY` at runtime? Is it just an env var that gets injected before mnemosyne starts, or does it need something special? Sorry I if I ask too much. Thx.
+    [reply to nulledvector msg=1514393317230776373]
+
+[2026-06-11T01:13:33.182000+00:00] nulledvector (id=1514437400569581718)
+    You're close! Two things:
+    
+     1. import mnemosyne fails — expected. You pipx-installed mnemosyne-memory, which puts the CLI in an isolated venv. It's not importable from a bare python3 -c unless you pipx run it. Use pipx run mnemosyne --version to check the version.
+    
+     2. Plugin shows ✗ — you installed mnemosyne-hermes via pipx, but that just puts the CLI on your PATH. You missed the second step: run mnemosyne-hermes install to create the plugin symlink in Hermes' plugins directory.
+    
+    mnemosyne-hermes install               
+    // this is the missing step
+    
+    hermes config set memory.provider mnemosyne # ✅ you did this
+    hermes gateway restart                       # ✅ you did this
+    hermes memory status                         # should now show Plugin: installed ✓
+    
+    Should work after that. Let me know if it doesn't.
+    [reply to josephcy msg=1514413411071430856]
+

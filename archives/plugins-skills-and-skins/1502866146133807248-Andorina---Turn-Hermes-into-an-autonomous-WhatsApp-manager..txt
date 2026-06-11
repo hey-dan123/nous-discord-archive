@@ -357,3 +357,31 @@
     
     Thanks
 
+[2026-06-10T21:00:32.906000+00:00] vayaperson (id=1514373729877102653)
+    Hey so sorry!! I was a bit busy the last days.
+    [reply to d0ggyw00f msg=1513639305292284154]
+
+[2026-06-10T21:05:54.660000+00:00] vayaperson (id=1514375079411323022)
+    Yes. It runs fully headless on Linux, VPS, Raspberry Pi, whatever you prefer. SSH is all you need. The GUI is optional, the model can do same things you can do in the panel, but some features 'll be a bit more uncomfortable to set-up as installation or role creation. 
+    And yes, that's exactly the concept, it's a proper PA. It both responds to incoming messages and sends proactively on its own: scheduled messages, recurring reminders, alerts, broadcasts. It runs 24/7 in the background. If you talk through whatsapp with the agent, you can do the same thing you do being in front of your PC.
+    [reply to d0ggyw00f msg=1513639305292284154]
+
+[2026-06-10T21:12:27.934000+00:00] vayaperson (id=1514376728921772193)
+    🛑 We are currently working on the following 🛑 
+    
+    1- RBAC is applied globally across Hermes. If a conversation is initiated from the TUI and the model is asked to perform an action that requires a tool, it will refuse to use it, stating that it does not have the necessary permissions and cannot identify the user because it receives an empty JID and phone number.
+    
+    2- Webhook alerts are rejecting connections on the configured port.
+       ·Tool usage is being blocked for user accounts due to permission restrictions.
+       ·The system is operating in chatbot-only mode, which prevents tools from being used even when they are required.
+      
+    3- Some scheduling requests may fail because the chat identifier is not being recognized correctly.
+    
+    We will have an update available soon🫶🏼
+
+[2026-06-10T22:49:05.958000+00:00] vayaperson (id=1514401047597027379)
+    We applied some fixes to the bugs, the new release is on GitHub.
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/V1.5.2-Beta1
+    [embed] Release v1.5.2-Beta1 - Bug Fix Release: Security, Webhooks, note ma... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/V1.5.2-Beta1
+    [reply to vayaperson msg=1514376728921772193]
+

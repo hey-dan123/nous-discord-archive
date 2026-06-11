@@ -238,3 +238,7 @@
 [2026-06-10T08:34:22.501000+00:00] nicoloboschi (id=1514185949188198493)
     the problem is thet each use case has his own rationale to define "useless"
 
+[2026-06-10T23:50:49.873000+00:00] .chronocat (id=1514416582942654606)
+    That makes sense. What about if it's based on usefulness in terms of when it's last referenced? I've used this in my own small custom memory implementation before Hermes and it had an additional step of marking them as stale before actually pruning. Hope this helps
+    [reply to nicoloboschi msg=1514185949188198493]
+

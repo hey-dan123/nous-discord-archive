@@ -20,3 +20,6 @@
     [attachment] Screenshot_2026-06-10_at_17.18.46.png https://cdn.discordapp.com/attachments/1514212423148507156/1514212423656275978/Screenshot_2026-06-10_at_17.18.46.png?ex=6a2a8bb6&is=6a293a36&hm=4e51df9c9927c79f7fb02684af4d5d4e5c2d17238dbc42da55f98cc9e1f1f31b&
     [embed] GitHub - okireganoto-maker/hermes-model-switcher: Interactive model... https://github.com/okireganoto-maker/hermes-model-switcher
 
+[2026-06-10T20:53:36.749000+00:00] nadiamermedev (id=1514371984388264016)
+    Ohhh, not Windows ? 🥹
+

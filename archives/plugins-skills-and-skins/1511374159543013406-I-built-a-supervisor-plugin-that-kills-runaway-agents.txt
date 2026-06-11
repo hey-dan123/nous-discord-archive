@@ -33,3 +33,6 @@
     [attachment] ezgif-7f308e37e01698ce.gif https://cdn.discordapp.com/attachments/1511374159543013406/1511774520887869490/ezgif-7f308e37e01698ce.gif?ex=6a21ad3d&is=6a205bbd&hm=696e70191cb39c94385d3bfb59172b6b0592f8974afc57df1ed386e529299229&
     [reply to chengduum msg=1511445512258064605]
 
+[2026-06-11T00:23:08.442000+00:00] cinnabeard (id=1514424713890496612)
+    would this fix CoT loops?
+

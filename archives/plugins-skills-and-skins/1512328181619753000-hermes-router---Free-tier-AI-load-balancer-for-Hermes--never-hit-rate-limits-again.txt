@@ -35,3 +35,29 @@
     Happy to answer questions or take PRs if anyone wants to add more providers!
     [embed] GitHub - Shaf2665/Hermes-router https://github.com/Shaf2665/Hermes-router
 
+[2026-06-11T00:53:24.719000+00:00] shaf_2665 (id=1514432331908120656)
+    # Update — v2 just pushed 🔧
+    
+    ## Two new things landed:
+    
+    ### 1. Multi-key credential pool for ALL providers
+    Previously only Gemini/OpenRouter had round-robin key rotation. Now every provider does. Three ways to add keys:
+    
+    
+    GROQ_API_KEY=key1               # single (still works)
+    GROQ_API_KEYS=key1,key2,key3   # comma-separated
+    GROQ_API_KEY_2=key2             # numbered suffixes
+    Mix and match — they all combine and de-duplicate automatically.
+    
+    ### 2. Mistral added as a provider
+    
+    
+    MISTRAL_API_KEY=your-key
+    Free tier (mistral-small-latest) — get a key at console.mistral.ai. Slots in after GitHub Models in the cascade.
+    
+    Both changes are backward-compatible — existing .env files need no changes.
+    
+    
+    https://github.com/Shaf2665/Hermes-router
+    [embed] GitHub - Shaf2665/Hermes-router https://github.com/Shaf2665/Hermes-router
+

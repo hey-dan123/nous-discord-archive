@@ -1,0 +1,27 @@
+# Thread 'Who's up to build a profile optimized for local models?' in forum #community-projects-showcase
+# thread_id=1514409829815291925 forum_id=1316137596535177246
+# Started 2026-06-11T03:43:53.839340+00:00
+
+[2026-06-10T23:23:59.802000+00:00] _tobie (id=1514409829815291925)
+    I can't explain better.
+    It must include a variety of skills and tools that relays the intelligence to scripts and strict soul.md, including memory mgmt, web search and so on... 
+    
+    But for the dumbest and low context agents on the open-source "market".
+    
+    Let me know what would be your tips (what mandatory tools, how to keep the context as small as possible while rail guarding the model in a way it can't fail)
+
+[2026-06-10T23:53:47.978000+00:00] eucdee (id=1514417329969303553)
+    I hope you don't mind a little heads-up, "I cant explain better" is exactly why it won't work. If you want "it" better explained why not feed it to your favorite chat bot and ask it to rewrite it for a specific crowd. It will understand and explain it even for a 6 year old to understand. Now, the open-source "market" got you covered... the question is, how much money for vram are you willing to spend. Is it worth it or maybe a flat rate service will be enough for your needs. The current state is: the more parameter, the smarter the model. But highly specialized models could work better in your environment which won't need the general knowledge. It all comes back to money.
+
+[2026-06-11T00:09:24.843000+00:00] _tobie (id=1514421259465789481)
+    (actually, I explained it better just under ^^)
+    
+    I already started to build it when I used nanoclaw but it's way not enough to cover the lack of intelligence a local agent can handle (i'm on gemma 26B 14B), also, another issue is the slowness of these models (they're ok when standalone but hit a slowness wall when it's time to process the prompt).
+    
+    But yeah, I know vRAM is expensive, I just wanted to build this in a """low tech""" way, away from datacenters. 
+    
+    It is not necessary for my usage, I just like the idea that i'll be able to deploy tiny tiny hermes agents on my family phones (remotely connected to my server)
+
+[2026-06-11T01:08:32.183000+00:00] eucdee (id=1514436138088140932)
+    I run models on my 8gb 3080 mobile gpu, but its too slow, maybe take a look at the jetson nano or the dgx spark ... those can run some advanced models.. I also would have thought 26b models work well, guess we need to be around 200b for quality models. Mac mini pro or dgx spark will run some of these
+
