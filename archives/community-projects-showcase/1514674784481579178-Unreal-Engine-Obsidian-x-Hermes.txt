@@ -1,0 +1,36 @@
+# Thread 'Unreal Engine Obsidian x Hermes' in forum #community-projects-showcase
+# thread_id=1514674784481579178 forum_id=1316137596535177246
+# Started 2026-06-11T20:19:04.353825+00:00
+
+[2026-06-11T16:56:49.917000+00:00] iam_rxpii (id=1514674784481579178)
+    I'm building an RPG in Unreal Engine 5 and im having Hermes help me.
+        UE5 is dense — C++, Blueprints, GAS, AI, PCG, materials, animation
+        — so I'm compiling everything I learn into a structured knowledge base.
+    
+        This repo is that knowledge base, formatted as an Obsidian vault.
+    
+    https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian
+        What's in it:
+        • 155 files across 9 tutorial series (Gorka Games, Ask A Dev,
+          PolyBoost, Coqui Games, UNF Games, Bad Decisions Studio)
+        • Step-by-step guides extracted from the best tutorials
+        • Full YAML frontmatter, wikilinks between episodes, and MOC
+          index files per series
+        • Covers: combat, AI, quests, equipment, blueprints, PCG,
+          landscapes, materials, animation, UI
+    
+        The goal: have a local knowledge base that my Hermes agent can
+        reference when helping me code game systems. Instead of re-watching
+        40+ hours of tutorials, I ask Hermes and it pulls from this vault.
+    
+        If you have UE5 resources worth adding — tutorials, articles,
+        patterns, gotchas — drop them here. I'll format and index them.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1514674784481579178/1514674784712261773/image.png?ex=6a2c3a51&is=6a2ae8d1&hm=2756f8859e2b0bc74d131931e08b0b97b56543c4ac7a9d398a000a4eb7e9d078&
+    [embed] GitHub - theheavenlyd3mon/Unreal-Engine-Obsidian https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian
+
+[2026-06-11T17:18:08.251000+00:00] .s0uthpaw (id=1514680146202853427)
+
+[2026-06-11T17:23:24.387000+00:00] iam_rxpii (id=1514681472173478028)
+    once i update the GDD, ill update it in here. im expericmenting with new ideas now  that i may add
+    [reply to .s0uthpaw msg=1514680146202853427]
+

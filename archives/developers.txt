@@ -29677,3 +29677,81 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Thank you for this
     [reply to kyssta69 msg=1514637490491756625]
 
+[2026-06-11T16:04:54.611000+00:00] lordbartok (id=1514661717941158108)
+    A few small egress follow-ups ready for review, all CI green / tests passing:
+    
+    • #35188 — `feat(egress): CA rotation (hermes egress rotate-ca)` — follow-up to #30179
+      https://github.com/NousResearch/hermes-agent/pull/35188
+    • #35187 — `feat(egress): host hardening survey` — follow-up to #30179
+      https://github.com/NousResearch/hermes-agent/pull/35187
+    • #35149 — `feat(egress): doctor + audit + Anthropic native` — follow-up to #30179
+      https://github.com/NousResearch/hermes-agent/pull/35149
+    
+    Thanks a lot in advance! cc: <@387972437901312000>
+    [embed] feat(egress): CA rotation (`hermes egress rotate-ca`) — follow-up... https://github.com/NousResearch/hermes-agent/pull/35188
+    [embed] feat(egress): host hardening survey — follow-up to #30179 by Bart... https://github.com/NousResearch/hermes-agent/pull/35187
+    [embed] feat(egress): doctor + audit + Anthropic native — follow-up to #3... https://github.com/NousResearch/hermes-agent/pull/35149
+
+[2026-06-11T16:10:01.985000+00:00] kyssta69 (id=1514663007160897748)
+    https://github.com/NousResearch/hermes-agent/pull/44371
+    
+    **Problem**: ACP image content blocks were silently dropped before reaching the model.
+    _apply_persist_user_message_override replaced multimodal content lists with plain text strings.
+    The fix merges override text with existing non-text content blocks instead of clobbering them.
+    [embed] fix(agent): preserve multimodal content blocks in persist override ... https://github.com/NousResearch/hermes-agent/pull/44371
+
+[2026-06-11T16:19:47.016000+00:00] teknium (id=1514665460958888088)
+    Will leave these to <@428014785045725184> , seems up his alley
+    [reply to lordbartok msg=1514661717941158108]
+
+[2026-06-11T16:20:16.277000+00:00] kyssta69 (id=1514665583688552518)
+    https://github.com/NousResearch/hermes-agent/pull/44376
+    
+    **Problem**: TUI crashes with UnicodeEncodeError when LLM returns non-BMP Unicode characters.
+    json.dumps with ensure_ascii=False passes through unpaired UTF-16 surrogates that crash stream.write's UTF-8 encoding.
+    Now sanitizes surrogates to U+FFFD before writing to the transport stream.
+    [embed] fix(tui): sanitize surrogates before writing to transport stream (#... https://github.com/NousResearch/hermes-agent/pull/44376
+
+[2026-06-11T16:22:48.130000+00:00] lordbartok (id=1514666220606066888)
+    Sounds great, thanks!
+    [reply to teknium msg=1514665460958888088]
+
+[2026-06-11T16:45:12.005000+00:00] lex.kr (id=1514671857226219571)
+    diff tab
+    [attachment] Bildschirmfoto_2026-06-11_um_18.44.07.png https://cdn.discordapp.com/attachments/1491258766648283238/1514671856945463347/Bildschirmfoto_2026-06-11_um_18.44.07.png?ex=6a2c3797&is=6a2ae617&hm=6b0c6e73589395172952655a9f4be2c000eab97252e8cc81626cb402c6400e47&
+
+[2026-06-11T17:19:48.785000+00:00] fy0439 (id=1514680567872884777)
+    https://github.com/NousResearch/hermes-agent/pull/44390
+    
+    Problem: The Termux manual install docs can still lead fresh Android installs into the psutil failure from #31415 (`platform android is not supported`), even though the one-line installer already prebuilds the psutil Android shim.
+    
+    This PR updates the English + zh-Hans Termux guides so the manual path runs `python scripts/install_psutil_android.py` before `pip install`, adds `armv8l` / `CARGO_BUILD_TARGET` troubleshooting for `jiter` / `maturin`, and adds a small docs regression test.
+    
+    CI is waiting for fork workflow approval. Thanks!
+    [embed] docs: fix Termux manual psutil install steps by lifuyue · Pull Req... https://github.com/NousResearch/hermes-agent/pull/44390
+
+[2026-06-11T17:36:05.297000+00:00] .consumeobeydie (id=1514684663661072465)
+    Just updated PR #41233 — added the full Python implementation for the x402-payment skill on Arc Testnet.
+    What's now included:
+    
+    tools/x402_payment.py — EIP-3009 signing, USDC balance check, receipt verification
+    tools/x402_client.py — handles 402 responses automatically
+    tools/x402_server.py — test server
+    skills/blockchain/x402-payment/SKILL.md — updated skill docs
+    
+    Verified on Arc Testnet. All safety rails in place ($1.00 max/request, testnet only).
+    PR: https://github.com/NousResearch/hermes-agent/pull/41233
+    [embed] feat: add x402-payment skill for autonomous USDC micropayments on A... https://github.com/NousResearch/hermes-agent/pull/41233
+
+[2026-06-11T17:36:31.444000+00:00] .consumeobeydie (id=1514684773329535047)
+    Just opened PR #42968 to Hermes Agent — ERC-8183 agentic commerce job skill for Arc Testnet.
+    What it adds:
+    
+    skills/blockchain/erc8183-job/SKILL.md — Hermes learns when and how to create, fund, and complete jobs on Arc Testnet
+    tools/erc8183_job.py — Python tool with create_job, fund_job, complete_job, get_job_status
+    
+    Combined with PR #41233 (x402-payment), Hermes can now run the full Arc agentic stack autonomously: pay for API access → create a job → fund escrow → complete and settle.
+    Verified on Arc Testnet. Job ID 110935, Status: Completed, Budget: 1 USDC.
+    PR: https://github.com/NousResearch/hermes-agent/pull/42968
+    [embed] feat: add ERC-8183 agentic commerce job skill for Arc Testnet by co... https://github.com/NousResearch/hermes-agent/pull/42968
+

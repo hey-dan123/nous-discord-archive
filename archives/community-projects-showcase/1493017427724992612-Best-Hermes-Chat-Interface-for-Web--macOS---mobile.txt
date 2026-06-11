@@ -3855,3 +3855,23 @@
     
     Now WebUI works for Windows/Linux/macOS as both a web app and a native desktop app! And with iOS support!
 
+[2026-06-11T18:48:39.491000+00:00] latipun (id=1514702926474645685)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514702925585191042/image.png?ex=6a2c5487&is=6a2b0307&hm=26703acd7889871e7b4adac010d6777e30a83dc70140c2858f1a67f3502be3e7&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514702926046695644/image.png?ex=6a2c5487&is=6a2b0307&hm=caf7fc6edf8298e231a301e72f0605d7fed4c4837c9c513c2d9f092ccf1c26e5&
+
+[2026-06-11T18:50:27.719000+00:00] latipun (id=1514703380415774891)
+    lol
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514703380063195400/image.png?ex=6a2c54f3&is=6a2b0373&hm=1c8f6c9e4c8c04aaddfddee762a02384e0b80e0a9ef755d86270f41496bfe97e&
+
+[2026-06-11T19:02:34.922000+00:00] latipun (id=1514706430526226582)
+    this happen in chat panel, cron/tasks output.
+    also, I noticed in setting page too
+    [reply to latipun msg=1514702926474645685]
+
+[2026-06-11T19:07:51.681000+00:00] avidfuturist (id=1514707759109505225)
+    Thanks for the reports!
+
+[2026-06-11T19:14:49.207000+00:00] avidfuturist (id=1514709510340743420)
+    Captured as issues for us to work on
+    [reply to latipun msg=1514706430526226582]
+

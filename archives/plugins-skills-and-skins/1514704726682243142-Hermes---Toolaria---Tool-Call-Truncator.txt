@@ -1,0 +1,30 @@
+# Thread 'Hermes - Toolaria - Tool-Call Truncator' in forum #plugins-skills-and-skins
+# thread_id=1514704726682243142 forum_id=1485392832154832906
+# Started 2026-06-11T20:23:25.886680+00:00
+
+[2026-06-11T18:55:48.694000+00:00] sahil_ss9 (id=1514704726682243142)
+    Toolaria 🛟 — stop oversized tool results flooding your context
+    
+      Built a little Hermes plugin. MCP and web tool calls (web_extract, browser snapshots, big JSON) dodge the normal truncation and dump 50-200k chars straight into context. Toolaria catches them at the
+      transform_tool_result hook, spills the full thing to a SHA256 blob store, and hands the model a compact excerpt plus a fetch handle.
+    
+      The model then pulls only what it needs:
+      rescuer_fetch(id, mode="grep"|"range"|"stat"|"full")
+    
+      It's the spill-to-disk pattern Claude Code uses, packaged as one zero-config plugin. On by default, no engine swap, composes with whatever context setup you run. Does one thing.
+    
+      - SHA256-addressed, dedupes identical results
+      - grep runs under a real timeout (no ReDoS foot-guns)
+      - swept blobs leave a breadcrumb telling the model to re-run the source tool, not a dead handle
+    
+      Clone, enable, hermes plugin reload. That's it.
+    
+      👉 github.com/Sahil-SS9/Toolaria
+    
+      Feedback welcome, especially if you run it next to a heavier context engine
+    [attachment] Toolaria.png https://cdn.discordapp.com/attachments/1514704726682243142/1514704727844192408/Toolaria.png?ex=6a2c5634&is=6a2b04b4&hm=98de8f0cecfe89b3fcdc49f08aadf855ed0cfd0ec89e9185dac1108de61db7bc&
+
+[2026-06-11T18:56:22.042000+00:00] sahil_ss9 (id=1514704866553892876)
+    https://github.com/Sahil-SS9/Toolaria
+    [embed] GitHub - Sahil-SS9/Toolaria: Rescue oversized tool results before t... https://github.com/Sahil-SS9/Toolaria
+

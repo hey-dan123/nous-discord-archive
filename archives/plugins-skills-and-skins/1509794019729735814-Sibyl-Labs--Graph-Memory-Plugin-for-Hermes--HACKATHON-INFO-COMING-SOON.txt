@@ -113,3 +113,34 @@
     sent you dm
     [reply to dr.kojipup msg=1512588881181278229]
 
+[2026-06-11T16:20:56.296000+00:00] dr.kojipup (id=1514665751540404224)
+    **Sibyl update 6/11/26**
+    
+    Hey guys! the team has been shipping. I'm happy to share an overview of the v2 beta analysis: what it found, and how it held up under audit
+    
+    we realized that most memory benchmarks measure one thing: did the model produce the right answer. that conflates two systems. a strong model can paper over a weak memory engine by reasoning across whatever junk got retrieved. so the independent beta tester behind this benchmark isolated the phases: retrieval first, no model in the loop, then sonnet 4.6 answering from each engine's retrieved context. four engines, 191k records, the same 350 questions.
+    [attachment] blog-4way-overview.png https://cdn.discordapp.com/attachments/1509794019729735814/1514665751351529582/blog-4way-overview.png?ex=6a2c31e8&is=6a2ae068&hm=c2cf5a79f80de05dd7a0c66ee97f57d645db37a43e2a1021fd4863dc3f93f48a&
+
+[2026-06-11T16:21:28.271000+00:00] dr.kojipup (id=1514665885653008445)
+    some findings if you're building agents:
+    
+    context per query is your real cost multiplier. sibyl read ~228 tokens per query, and went 350/350 on retrieval. the next best engine read ~11,892 tokens per query, 52x more, and went 152/350. wasted context gets billed on every query for the life of the agent. answering all 350 questions cost $0.64 on sibyl, $18.68 on the 52x engine.
+    
+    similarity cannot return nothing. 50 of the questions were traps about companies that don't exist in the corpus. every similarity-based engine retrieved something anyway, 0/50, because nearest-neighbor search always has a nearest neighbor. sibyl refused all 50 at the retrieval layer, before any model call. for an autonomous agent, a plausible wrong memory is worse than an empty result. an empty result triggers a clarifying question. a plausible wrong one triggers a confident wrong action.
+    [attachment] blog-4way-heatmap.png https://cdn.discordapp.com/attachments/1509794019729735814/1514665885405806733/blog-4way-heatmap.png?ex=6a2c3208&is=6a2ae088&hm=7f067f8ed45fb116bcd4952f3d69cd7c279c9a14c337f6e2dfab58307d60a15c&
+
+[2026-06-11T16:23:17.861000+00:00] dr.kojipup (id=1514666345306919013)
+    something to note: **it would also change the bill.** 
+    
+    we estimated a single mem0 run under its full recommended configuration at $500 to $1,000. hindsight lands in the same range. which raises the question the audit kept circling: at that point, are you measuring retrieval quality, or measuring how much money you're willing to spend on extra processing, planning, and model calls?
+    
+    our position: a benchmark should reflect what a real deployment would actually run. if competitive results require a configuration most users would never accept in production, those results describe the lab, not the product.
+    
+    ingest, for the record: 191k records in 47.6 seconds, zero failed writes, one 287 mb sqlite file, $0 in model calls to write or recall.
+    
+    the tester's own words after the audit: "if achieving the same level of memory retrieval required hours of setup and hundreds of dollars, i wouldn't even be asking myself where to go."
+    
+    full data and methodology: https://blog.sibylcap.com/beta-analysis-v2
+    [attachment] HKeYpM7WcAE9EuE.png https://cdn.discordapp.com/attachments/1509794019729735814/1514666345013444678/HKeYpM7WcAE9EuE.png?ex=6a2c3275&is=6a2ae0f5&hm=704af3fdcebf3b951c78fdfd8e8102d6988837925888d45fd813f5f8497bc21d&
+    [embed] Memory's wrong problem: four engines, one exact-recall test https://blog.sibylcap.com/beta-analysis-v2
+
