@@ -1,0 +1,20 @@
+# Thread 'Project Larpwing' in forum #community-projects-showcase
+# thread_id=1514490881233915925 forum_id=1316137596535177246
+# Started 2026-06-11T10:19:56.913851+00:00
+
+[2026-06-11T04:46:03.966000+00:00] kaya_west (id=1514490881233915925)
+    https://github.com/OPaheimer/Project-Larpwing 
+    A lightweight OpenAI-compatible model alias router. Point any OpenAI client at Larpwing, use short alias names for your models, and Larpwing translates them to real backend model IDs and forwards the request.
+    Had some free credits for Minimax M2.7 so I made this <:kekw:1405462882623295579>
+    [attachment] Screenshot_from_2026-06-11_12-07-28.png https://cdn.discordapp.com/attachments/1514490881233915925/1514491021499564083/Screenshot_from_2026-06-11_12-07-28.png?ex=6a2b8f2d&is=6a2a3dad&hm=38172ccb4b08b6488cd853138c391b52b0583aad05c6ed31c491067271341562&
+    [embed] GitHub - OPaheimer/Project-Larpwing: A simple router made with Fast... https://github.com/OPaheimer/Project-Larpwing
+
+[2026-06-11T04:49:19.874000+00:00] kaya_west (id=1514491702931488968)
+    <@369998561724727297>
+
+[2026-06-11T04:49:21.644000+00:00] kaya_west (id=1514491710355410975)
+    test it out
+
+[2026-06-11T06:08:35.683000+00:00] 4rgo (id=1514511650240331826)
+    😆
+

@@ -3768,3 +3768,85 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514475521289879674/image.png?ex=6a2b80bd&is=6a2a2f3d&hm=2258ae7e0325b2200f6232423c48d0942580a49cb78b656eda8774a29243065c&
     [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514475522002915518/image.png?ex=6a2b80be&is=6a2a2f3e&hm=72c32f1f8d6ce3c8123a8222aaddcbc6ff0de34d40d5362b0530b2a4713aeee7&
 
+[2026-06-11T03:56:33.099000+00:00] latipun (id=1514478420514308233)
+    I noticed there's `/use <skill-name>` command in WebUI, but there's no auto-completion for skill name like in discord
+
+[2026-06-11T03:59:38.648000+00:00] avidfuturist (id=1514479198763225228)
+    There should be if you type / at the beginning, you should be able to type any skill name and see it autocomplete?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514479198465560636/image.png?ex=6a2b842a&is=6a2a32aa&hm=d608ad23a48c9502d54f6354540ed1058389db0b81abbff0b775d466692a3d1e&
+    [reply to latipun msg=1514475522548039720]
+
+[2026-06-11T03:59:51.668000+00:00] avidfuturist (id=1514479253373059222)
+    do you not see that? or can you clarify your question
+
+[2026-06-11T04:12:42.458000+00:00] latipun (id=1514482486300901518)
+    yeah, I see it, but if I use it (in my example `/handoff`) I get that message above
+    [reply to avidfuturist msg=1514479198763225228]
+
+[2026-06-11T04:13:20.705000+00:00] latipun (id=1514482646720319519)
+    then, I noticed this command, but no auto complete for skill name
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514482646393032704/image.png?ex=6a2b8760&is=6a2a35e0&hm=12580969f3ffecb95f33f11e65dfe4fff0182d1a643592465c6bee30e6551299&
+
+[2026-06-11T04:13:25.487000+00:00] avidfuturist (id=1514482666777477130)
+    Handoff is a special CLI only skill we haven't migrated to WebUI yet, but we will in the future
+    [reply to latipun msg=1514482486300901518]
+
+[2026-06-11T04:14:00.847000+00:00] avidfuturist (id=1514482815087939714)
+    Got it, /use - you want autocomplete of the skill names right? We can do that, will capture both requests
+
+[2026-06-11T04:15:21.458000+00:00] latipun (id=1514483153195241609)
+    oh really? damn, I have custom skill named `handoff` 🤦
+    [reply to avidfuturist msg=1514482666777477130]
+
+[2026-06-11T04:15:55.186000+00:00] latipun (id=1514483294660722728)
+    let me try invoking another skill command 😅 well, let me rename my `handoff` then try again
+
+[2026-06-11T04:16:09.249000+00:00] avidfuturist (id=1514483353644961872)
+    Oh yeah... handoff is now a reserved skill they added built-in
+    [reply to latipun msg=1514483153195241609]
+
+[2026-06-11T04:22:04.148000+00:00] avidfuturist (id=1514484842199253133)
+    Filed both as feature issues, should be taken care of in a day or two
+
+[2026-06-11T04:28:12.424000+00:00] latipun (id=1514486386860757012)
+    demmit haha, I didn't notice hermes has `/handoff` command. It actually shows both their and mine in CLI auto-complete. But didn't try it yet, since I don't have convo to handoff from CLI hehe, only doing chat from WebUI or Discord for now 😁
+    Well, I'll just rename my `handoff` skill to something else
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1514486386390990905/image.png?ex=6a2b8adc&is=6a2a395c&hm=9dfe4dbf9b9eecea9f161b02b4ba079e95c026bb5581988daef5c88a5e561d06&
+    [reply to avidfuturist msg=1514483353644961872]
+
+[2026-06-11T04:29:40.387000+00:00] avidfuturist (id=1514486755804577914)
+    Yeah if you rename yours, it should show up and work within WebUI just fine!
+    [reply to latipun msg=1514486386860757012]
+
+[2026-06-11T07:59:49.451000+00:00] curtis_szmania (id=1514539642052149258)
+    But does this work across stacks stopping and starting? eg a portainer stack for example. I have to stop a stack in order to upgrade the images
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1493017427724992612/1514539641775067208/message.txt?ex=6a2bbc75&is=6a2a6af5&hm=5a93f63807b2cdc6396e16360f8fced5f98e57eb8bda0a516487c0f4f090c94f&
+    [reply to avidfuturist msg=1514189079200399370]
+
+[2026-06-11T08:15:19.572000+00:00] curtis_szmania (id=1514543543262122085)
+    From my testing the s6 service doesn't restart the profiles after image updates. I've created a custom script to run the profile gateways
+    [reply to curtis_szmania msg=1514539642052149258]
+
+[2026-06-11T08:17:41.988000+00:00] curtis_szmania (id=1514544140598251573)
+    I've tried the uvcache option and that doesn't seemed to have helped, for a persistent volume. I think its slowed things down. ` hermes-webui-uvcache:/uv_cache` and option 2 using a persistent volume for venv doesn't really seem to be feasible as I'm needing to update the images daily just because of the pace of releases by yourself and Nous. (these aren't small daily release, they are quite significant feature release daily):```
+    Put a named volume at `/app/venv` so the `.deps_installed` marker survives recreation and the
+    install is skipped entirely:
+    
+    ```yaml
+        volumes:
+          - hermes-webui-venv-executive:/app/venv    # one volume PER container
+    ```
+    
+    **Caveat:** because the venv is now persistent, it will **not** refresh when you upgrade the
+    WebUI or agent image. After any image upgrade, clear it once to force a clean rebuild:
+    
+    ```bash
+    docker compose down
+    docker volume rm <project>_hermes-webui-venv-executive
+    docker compose up -d
+    ```
+    
+    Use a **separate** venv volume per container (don't share `/app/venv` — two containers would
+    race while populating it).```
+    [reply to avidfuturist msg=1514387430588022887]
+

@@ -242,3 +242,16 @@
     That makes sense. What about if it's based on usefulness in terms of when it's last referenced? I've used this in my own small custom memory implementation before Hermes and it had an additional step of marking them as stale before actually pruning. Hope this helps
     [reply to nicoloboschi msg=1514185949188198493]
 
+[2026-06-11T08:51:14.512000+00:00] nicoloboschi (id=1514552581735579769)
+    we had this initially but it was not worth it and was deleting/invalidating memories that were actually useful in other queries (maybe done less often) 
+    
+    we just merged the curation feature where the agent/client/hermes can invalidate stale memories so they don't get recalled anymore - I think for now that will be enought and we could generalize once we see a clear usage pattern
+    [reply to .chronocat msg=1514416582942654606]
+
+[2026-06-11T08:53:27.012000+00:00] .chronocat (id=1514553137481125909)
+    Ah nice. Is this in v0.8.1? or not yet? 😂
+    [reply to nicoloboschi msg=1514552581735579769]
+
+[2026-06-11T08:53:48.869000+00:00] nicoloboschi (id=1514553229156028486)
+    will be in 0.8.2, probably tomorrow
+

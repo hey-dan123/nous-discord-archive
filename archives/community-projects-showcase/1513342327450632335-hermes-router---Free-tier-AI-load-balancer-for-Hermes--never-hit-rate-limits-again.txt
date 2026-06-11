@@ -62,3 +62,27 @@
     https://github.com/Shaf2665/Hermes-router
     [embed] GitHub - Shaf2665/Hermes-router https://github.com/Shaf2665/Hermes-router
 
+[2026-06-11T05:19:36.842000+00:00] shaf_2665 (id=1514499323847770286)
+    # Update — Smart Routing just landed 🧠
+    
+    hermes-router can now pick the right model for each request automatically.
+    
+    ## How it works:
+    On startup, the router probes every provider, validates models (and auto-fixes broken ones by querying the provider's /models API), then assigns each a capability rating:
+    1 — outstanding   gpt-4o, claude-opus, gemini-pro
+    2 — best          nemotron-120b, llama-70b, gemini-flash
+    3 — good          gpt-4o-mini, mistral-small, llama-8b
+    4 — fair          command-r7b, smaller models
+    
+    https://github.com/Shaf2665/Hermes-router
+    
+    
+    Every request is then classified by complexity (token count + keyword signals) and routed to the **cheapest model that can handle it** — no wasted quota on a powerful model for a simple question.
+    
+    **Simple request** → cohere/groq (fast, cheap)
+    **Complex request** → openrouter/sambanova (strongest free models)
+    
+    Zero added latency — classification is pure heuristic, no extra API call.
+    Results persist to `router_state.json` so ratings survive restarts.
+    [embed] GitHub - Shaf2665/Hermes-router https://github.com/Shaf2665/Hermes-router
+

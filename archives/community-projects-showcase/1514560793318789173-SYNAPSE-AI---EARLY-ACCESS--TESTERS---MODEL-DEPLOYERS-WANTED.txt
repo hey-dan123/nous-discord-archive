@@ -1,0 +1,82 @@
+# Thread 'SYNAPSE AI - EARLY ACCESS (TESTERS + MODEL DEPLOYERS WANTED)' in forum #community-projects-showcase
+# thread_id=1514560793318789173 forum_id=1316137596535177246
+# Started 2026-06-11T10:19:56.570259+00:00
+
+[2026-06-11T09:23:52.306000+00:00] rick035304 (id=1514560793318789173)
+    I’m currently opening early access to Synapse AI, a next-generation AI SaaS platform that combines:
+    ChatGPT-style AI chat system
+    AI model marketplace
+    Creator/deployer system (bring your own API key)
+    Subscription + boost monetization system
+    
+    What Synapse AI Does
+    Synapse AI allows users to:
+    
+    Use AI like ChatGPT
+    Chat with multiple AI models
+    Streaming responses (real-time typing effect)
+    Chat history + conversation memory
+    
+    Discover AI Models
+    Browse a marketplace of AI models
+    Try different models built by deployers
+    See usage, likes, and performance stats
+    
+    Deploy Your Own AI Model
+    Upload your own API key (OpenAI / OpenRouter / custom endpoints)
+    Register your model into the marketplace
+    Set pricing / boost options (coming soon)
+    Track usage and model performance
+    
+    Current Stage of the Platform
+    Synapse AI is currently in:
+    Late development + early beta testing stage (Phase 5: Payment & Monetization Integration)
+    
+    Already working:
+    AI chat system (fully functional)
+    Model marketplace UI + backend
+    User authentication system
+    Usage quota system (free tier limits)
+    Model deployment system (API key integration ready)
+    Supabase backend fully structured
+    
+    Still being improved:
+    Stripe payment system (Pro plan + Boost system)
+    Final monetization flow (still under testing/debugging)
+    Some billing automation features
+    
+    What I’m Looking For
+    I am looking for:
+    
+    Early Users / Testers
+    Try AI chat system
+    Explore model marketplace
+    Give feedback on UX and stability
+    
+    Model Deployers
+    Users who want to:
+    connect their own API key (OpenAI / other providers)
+    deploy AI models into the marketplace
+    test real-world AI model hosting system
+    
+    Important Notes
+    This is an early beta system
+    Some features are still under development (especially payments)
+    Data structure and features may change during testing
+    Stability is improving daily
+
+[2026-06-11T09:24:36.315000+00:00] rick035304 (id=1514560977906044928)
+    https://drive.google.com/drive/folders/1xYAUp5XQgezqDcBqEGpGRojoquqWM2sN
+    
+    Here is the link to download and access to my Discord group, Synapse AI
+    [embed]  https://drive.google.com/drive/folders/1xYAUp5XQgezqDcBqEGpGRojoquqWM2sN
+
+[2026-06-11T09:36:18.188000+00:00] bahjat_14421 (id=1514563921774645298)
+    sure I will look into this
+
+[2026-06-11T09:37:15.915000+00:00] rick035304 (id=1514564163899232386)
+    Thanks
+
+[2026-06-11T09:43:00.127000+00:00] aialliai (id=1514565607628996698)
+    Sure, lets go!
+

@@ -494,3 +494,10 @@
     https://gist.github.com/magnus919/d4e29281bd34148954e33179c79bd3f7
     [embed] GroktoCrawl + Skill Demo: 20 adapters, one command — CLI output a... https://gist.github.com/magnus919/d4e29281bd34148954e33179c79bd3f7
 
+[2026-06-11T05:40:49.983000+00:00] meigrafd (id=1514504663788159087)
+    There are some strange chars in `.env.sample` file, i guess "tab"
+    ```
+    #  ^t^` ^t^` Outbound Proxy  ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^` ^t^`
+    ```
+    etc.
+

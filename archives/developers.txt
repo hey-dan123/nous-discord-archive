@@ -29379,3 +29379,133 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-11T03:34:44.627000+00:00] kylekaster (id=1514472932385099907)
     I wonder if it's a quirk of using openai-codex as the image gen backend?
 
+[2026-06-11T03:45:42.370000+00:00] kylekaster (id=1514475691159060542)
+    now I'm curious what godsboy did to run into it himself lol
+    
+    I swear I asked my Hermes several times if this was an issue with something we wrote locally or something from upstream, and it said upstream. 
+    
+    but in reality, it looks like it modified the local references files inside it the skill to add it's own "fallback to html/SVG/pillow for text dense graphics"
+
+[2026-06-11T03:56:34.651000+00:00] lordbartok (id=1514478427024134184)
+    a few PRs, when you get a minute: Small fixes (ready for quick merge):
+    
+    • #34358 — fix(agent): emit response-shape diagnostics on empty-response retry
+    • #34360 — fix(agent): strip stale encrypted reasoning state on provider switch
+    • #34364 — fix(uninstall): robust rmtree with retries (Windows leftover files)
+    • #34369 — fix(delegate): detect credential/endpoint mismatch before sending
+    • #34373 — fix(update): clean retry web/node_modules on dep-layout mismatch
+    • #34380 — fix(stream): extend large-prefill TTFB exemption to direct Copilot
+    • #34423 — fix(hindsight): tear down shared event loop at exit
+    • #34495 — fix(cli): diagnose WSL2 local-model split-endpoint in hermes doctor
+    • #34502 — fix(cli): treat model.name (http://model.name/) as alias for model.default
+    • #34523 — fix(agent): scope memory/context tools into tool_call bridge
+    • #34573 — fix(cli): clear TUI input buffer before dispatching inline /steer
+    • #34599 — fix(gateway): only fire planned-stop watcher for markers targeting self
+    • #34621 — fix(gateway): drop outbound silence-narration messages pre-send
+    • #34626 — fix(cli): pin worker TERMINAL_CWD to profile dir in kanban spawn
+    
+    Feature additions (green + tested):
+    
+    • #34381 — feat(swarm): per-swarm verifier + synthesizer body and skills overrides
+    • #34550 — feat(cli): auto-detect image paths typed anywhere in terminal input
+    • #34552 — feat(web): add web.prefer_fetch_over_browser toggle
+    • #34556 — feat(cli): detect command hijacking in hermes doctor
+    • #34571 — feat(cli): add semantic color palette for consistent CLI design system
+    • #34614 — feat(agent): add tool_repetition guardrail
+    • #34620 — feat(gateway): opt-in per-platform model via platform_models
+    
+    Already reviewed:
+    
+    • #35187 — feat(egress): host hardening survey
+    • #35188 — feat(egress): CA rotation (hermes egress rotate-ca)
+    • #41109 — fix(wecom): fail-closed path-traversal guard for outbound media
+    
+    All have passing CI, mergeable: MERGEABLE, and mergeStateStatus: CLEAN.
+    Thanks so much!
+
+[2026-06-11T05:03:55.859000+00:00] magnus919 (id=1514495377078882396)
+    starting a discussion... not sure if there's internal conversation about hermes supporting evals but it could be a series of big architectural decisions so a discussion thread seemed the best place to start.
+    
+    https://github.com/NousResearch/hermes-agent/issues/44000
+    [embed] [Feature]: Evals for Hermes Agent — structured quality gates for ... https://github.com/NousResearch/hermes-agent/issues/44000
+
+[2026-06-11T05:06:28.746000+00:00] kkurottal6611 (id=1514496018333434027)
+    Small fix PR **fix(skills): strip UTF-8 BOM before parsing SKILL.md frontmatter**
+    https://github.com/NousResearch/hermes-agent/pull/44002
+    
+    A `SKILL.md` saved with a UTF-8 BOM slips past the `startswith("---")` check in
+    `parse_frontmatter`, so the whole frontmatter is silently dropped (no name/description,
+    `platforms` gating falls open, env/config setup never runs). Fix strips the leading BOM
+    at the shared chokepoint — +111/−0
+    [embed] fix(skills): strip UTF-8 BOM before parsing SKILL.md frontmatter by... https://github.com/NousResearch/hermes-agent/pull/44002
+
+[2026-06-11T05:23:09.044000+00:00] kai.xu (id=1514500213887205376)
+    hi, here is a small fix pr for a heartbeat blocking problem
+    https://github.com/NousResearch/hermes-agent/pull/43504
+    [embed] fix(gateway): add handoff_state index to prevent heartbeat blocking... https://github.com/NousResearch/hermes-agent/pull/43504
+
+[2026-06-11T05:23:28.451000+00:00] isyutaru612 (id=1514500295286063269)
+    https://github.com/NousResearch/hermes-agent/issues/44016
+    [embed] [Feature]: Observability Hardening: Hindsight Memory Provider · Is... https://github.com/NousResearch/hermes-agent/issues/44016
+
+[2026-06-11T05:47:21.122000+00:00] hypertekton (id=1514506304343769098)
+    A bug fix PR for the discord voicemixer https://github.com/NousResearch/hermes-agent/pull/44023
+    [embed] fix(discord): inherit AudioSource in VoiceMixer by Cdddo · Pull Re... https://github.com/NousResearch/hermes-agent/pull/44023
+
+[2026-06-11T06:28:52.460000+00:00] kyssta69 (id=1514516753772711966)
+    https://github.com/NousResearch/hermes-agent/pull/44056
+    
+    **Problem**: Agent turns crash when a tool argument contains ~nonexistent_user because expanduser() raises RuntimeError not caught by the except clause. Added RuntimeError to the except tuple in _add_path_candidate so it degrades gracefully.
+    [embed] fix(agent): catch RuntimeError from expanduser() with ~nonexistent_... https://github.com/NousResearch/hermes-agent/pull/44056
+
+[2026-06-11T06:37:41.269000+00:00] kyssta69 (id=1514518971758546995)
+    https://github.com/NousResearch/hermes-agent/pull/44066
+    
+    **Problem**: The holographic memory provider dropped its SQLite connection on shutdown without closing it, letting GC finalize the fd at a random time. This created a window for TLS socket data to be written into memory_store.db. Fixed by closing the connection explicitly in shutdown() and adding header validation before connecting.
+    [embed] fix(memory): close SQLite in holographic shutdown + header validati... https://github.com/NousResearch/hermes-agent/pull/44066
+
+[2026-06-11T07:21:59.643000+00:00] zygimantas_98838 (id=1514530121787379772)
+    Hi, our pull request has been idle for a few weeks now, wanted to ask if there's someone that could help expedide the process? https://github.com/NousResearch/hermes-agent/pull/33769
+    [embed] feat(web): add Oxylabs AI Studio as a web provider plugin by aleksa... https://github.com/NousResearch/hermes-agent/pull/33769
+
+[2026-06-11T08:02:29.004000+00:00] loongfay (id=1514540311265673306)
+    Hi, <@387972437901312000> , if you have some time, please take a look for this PR: https://github.com/NousResearch/hermes-agent/pull/43508
+    [embed] feat(Yuanbao): support wechat forward msg by loongfay · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/43508
+
+[2026-06-11T08:20:00.889000+00:00] kyssta69 (id=1514544723191402598)
+    https://github.com/NousResearch/hermes-agent/pull/44066
+    
+    **Problem**: Users running the holographic memory provider see their memory_store.db corrupted with TLS ciphertext after gateway restarts. HolographicMemoryProvider.shutdown() dropped its MemoryStore reference without closing the sqlite3.Connection, letting the DB fd be reclaimed by GC at a non-deterministic time, which allows the kernel to recycle it for a TLS socket (same class as #29507). The fix explicitly calls MemoryStore.close() before dropping the reference so the connection is finalized deterministically on the caller's thread.
+
+[2026-06-11T08:21:51.545000+00:00] yerts (id=1514545187316305930)
+    Have you looked at the extension docs to adding a custom plugin
+    [reply to zygimantas_98838 msg=1514530121787379772]
+
+[2026-06-11T08:46:18.401000+00:00] kyssta69 (id=1514551339756290070)
+    https://github.com/NousResearch/hermes-agent/pull/44131
+    
+    **Problem**: Stateless OpenAI-compatible clients (Open WebUI, LibreChat) fork conversations after compaction because they re-supply the old session_id on every request, and the API server loads the ended parent session instead of resolving to the latest descendant. The fix calls resolve_resume_session_id() on the client-supplied X-Hermes-Session-Id in the chat completions endpoint, walking the parent-child chain forward to find the session that actually holds messages.
+
+[2026-06-11T08:50:06.956000+00:00] kyssta69 (id=1514552298385182800)
+    https://github.com/NousResearch/hermes-agent/pull/44148
+    
+    **Problem**: Stream retry after a timeout always fails for Anthropic-mode providers like minimax because _replace_primary_openai_client unconditionally tries to rebuild the OpenAI client, which has no api_key in _client_kwargs for these providers. The fix adds a guard to skip the rebuild when client is None and _client_kwargs lacks an api_key, preventing the false error and allowing the retry logic to proceed correctly.
+
+[2026-06-11T08:56:51.099000+00:00] kyssta69 (id=1514553993484042282)
+    https://github.com/NousResearch/hermes-agent/pull/44151
+    
+    **Problem**: Clicking an older chat in the desktop/TUI app fails with 'No LLM provider configured' when the session only stored a bare billing_provider like 'custom' instead of a full provider id. The fix skips setting provider_override for bare billing classes (custom, auto, openrouter) without a base_url, so the system falls back to the default provider resolution instead of passing an unroutable id to the agent.
+
+[2026-06-11T10:04:16.061000+00:00] jw_mushroom_man (id=1514570959284080651)
+    Review bot said I need an adult 🙁
+
+[2026-06-11T10:04:19.326000+00:00] jw_mushroom_man (id=1514570972978610226)
+    https://github.com/NousResearch/hermes-agent/pull/43927#pullrequestreview-4473677972
+    [embed] Feat(tools): add Windows UIA backend for computer_use by lEWFkRAD ... https://github.com/NousResearch/hermes-agent/pull/43927
+
+[2026-06-11T10:12:37.265000+00:00] minddragon (id=1514573061486149803)
+    <@387972437901312000> latest main goes boom on hermes update
+
+[2026-06-11T10:15:18.090000+00:00] minddragon (id=1514573736035090494)
+    npm ci and npm errors on web
+

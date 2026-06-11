@@ -121,3 +121,8 @@
     [embed] Release v1.0.1 - Hermes Registration Fix · itechmeat/open-second-b... https://github.com/itechmeat/open-second-brain/releases/tag/v1.0.1
     [reply to obcyy msg=1513097546841460776]
 
+[2026-06-11T06:30:43.852000+00:00] obcyy (id=1514517220984623134)
+    Is anyone else hitting this with DeepSeek V4 Flash?
+    https://github.com/itechmeat/open-second-brain/issues/82
+    [embed] O2B handle_tool_call Bug · Issue #82 · itechmeat/open-second-brain https://github.com/itechmeat/open-second-brain/issues/82
+

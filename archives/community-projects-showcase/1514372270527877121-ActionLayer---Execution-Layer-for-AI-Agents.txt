@@ -20,3 +20,6 @@
     https://actionlayer.io/
     [embed] ActionLayer — Give your AI agent the power to actually do things https://actionlayer.io/
 
+[2026-06-11T05:35:50.390000+00:00] .vansken (id=1514503407203913859)
+    Can we use other languages?
+

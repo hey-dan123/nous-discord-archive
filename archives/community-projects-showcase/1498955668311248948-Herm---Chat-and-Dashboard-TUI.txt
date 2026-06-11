@@ -1274,3 +1274,8 @@
 [2026-06-10T06:39:24.741000+00:00] liftaris (id=1514157017885966416)
     The difference in patch was because I removed the feature, while your nemotron fixed the feature. Both are right
 
+[2026-06-11T08:59:06.767000+00:00] tunacookie (id=1514554562516619384)
+    <@209037396983939072> bleh, when i tried to paste on herm a big ctrl c and ctrl v im getting this but on normal hermes --tui its fine <:chingy1Killu:1244395070753603675>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1514554561971486771/image.png?ex=6a2bca5a&is=6a2a78da&hm=d4d2febb8bd60f34c55106df56b02cf8ec291be7cc8beaf971239641d5ac290d&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1514554562265223219/image.png?ex=6a2bca5a&is=6a2a78da&hm=39ff117490c33376b5de438fc6f9b8c2c07aa48c1390b014bc8ff236c9449a50&
+
