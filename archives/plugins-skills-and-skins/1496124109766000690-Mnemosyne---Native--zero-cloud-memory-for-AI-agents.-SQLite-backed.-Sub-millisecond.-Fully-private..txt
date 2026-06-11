@@ -1982,3 +1982,138 @@
     Should work after that. Let me know if it doesn't.
     [reply to josephcy msg=1514413411071430856]
 
+[2026-06-11T13:12:35.839000+00:00] josephcy (id=1514618353988272168)
+    i actually did `mnemosyne-hermes install` too but doesn't work, it somehow works when i simply install into hermes venv
+    
+    Here's how it work for me:
+    ```
+    uv pip install --python /usr/local/lib/hermes-agent/venv/bin/python -U "mnemosyne-hermes"
+    /usr/local/lib/hermes-agent/venv/bin/python -m mnemosyne_hermes.install install --force
+    hermes config set memory.provider mnemosyne
+    ```
+    
+    this is installed into the venv
+    ```
+    mnemosyne-hermes: 0.1.6
+    mnemosyne-memory: 3.5.0
+    fastembed: 0.8.0
+    onnxruntime: 1.26.0
+    sqlite-vec: 0.1.9
+    import mnemosyne: True
+    import fastembed: True
+    ```
+    
+    btw im on ubuntu 26.04
+    [reply to nulledvector msg=1514437400569581718]
+
+[2026-06-11T14:00:12.229000+00:00] nulledvector (id=1514630334556143800)
+    **Why mnemosyne-hermes install didn't work for you (but uv into the venv did)**
+    
+    Root cause: the installer creates a symlink at:
+    
+      ~/.hermes/plugins/mnemosyne/ -> <installer's site-packages>
+    
+    When pipx-installed, that points into pipx's own venv.  But Hermes
+    runs from a *different* Python.  The installer only checked
+    
+      import mnemosyne.core.beam
+    
+    using ITS Python (pipx), not HERMES' Python.  Both check passed,
+    both created the symlink fine, but only the uv-into-venv path
+    actually worked at runtime because Hermes' Python couldn't see
+    pipx's site-packages.
+    
+    **How we narrowed it down**
+    
+    Your working flow was the clue:
+    
+      uv pip install --python /usr/local/lib/hermes-agent/venv/bin/python \\
+        -U "mnemosyne-hermes"
+      /usr/local/lib/hermes-agent/venv/bin/python \\
+        -m mnemosyne_hermes.install install --force
+    
+    That puts *everything* into Hermes' own venv.  The symlink lands
+    in Hermes' site-packages, Hermes' Python finds the deps.  Both
+    the plugin-directory path AND the entry-point path work.
+    
+    The install.py was missing one thing: validation against Hermes'
+    actual Python before declaring success.
+    
+    **What the fix does (commit 27e90dc, pushed to main)**
+    
+    Three new functions + one new flag:
+    
+      _find_hermes_python() - probes common Hermes venv locations
+        (~/.hermes/hermes-agent/venv, /opt/hermes/hermes-agent/venv,
+        VIRTUAL_ENV, sys.prefix).  Returns the actual Python Hermes
+        runs under.
+    
+      check_mnemosyne_core_for_hermes_python() - asks *Hermes' Python*
+        whether it can import mnemosyne core.  If it can't, the
+        installer now tells you exactly why *before* creating a link
+        that will silently fail.
+    
+      _bootstrap_hermes_venv() - if Hermes' venv is missing deps,
+        auto-installs mnemosyne-hermes[all] into it using Hermes'
+        own pip.  Falls back to showing the exact uv command.
+    
+      --no-bootstrap - for users who want to manage deps manually.
+    [reply to josephcy msg=1514618353988272168]
+
+[2026-06-11T14:00:17.502000+00:00] nulledvector (id=1514630356672712744)
+    The install flow now looks like:
+    
+      [1/3] Check core (installer's Python) .... OK
+      [2/3] Check Hermes' Python ............... MISSING
+       --> Auto-bootstrapping into Hermes' venv... OK
+      [3/3] Create plugin symlink .............. OK
+      Done.
+    
+    **Regarding pipx vs uv into the venv**
+    
+    You're right.  Hermes' own setup wizard uses pipx exclusively:
+    
+      hermes_cli/memory_setup.py:100-109:
+        pipx_path = shutil.which("pipx")
+        subprocess.run([pipx_path, "install", "--python",
+                        sys.executable] + missing)
+    
+    The whole point of the mnemosyne-hermes pip installable package
+    was to live *outside* Hermes' venv so hermes update's
+    
+      uv pip install -e .[all]
+    
+    can't clobber shared deps (fastembed, onnxruntime, sqlite-vec).
+    
+    But uv into the venv works fine -- you just need to re-run the
+    install if hermes update upgrades something that conflicts.
+    
+    **If you want pipx isolation but mnemosyne-hermes install to work:**
+    
+      pipx install mnemosyne-hermes[all]
+      mnemosyne-hermes install --force
+    
+    The installer now auto-detects Hermes' venv and says:
+    
+      "Hermes' Python at /usr/local/lib/hermes-agent/venv/bin/python
+       can't import mnemosyne core.  mnemosyne-hermes is installed in
+       YOUR Python (pipx's venv), but Hermes runs from a different
+       venv.
+    
+       Attempting auto-bootstrap..."
+    
+    If that auto-bootstrap fails, it prints the exact command to run:
+    
+      uv pip install --python /usr/local/lib/hermes-agent/venv/bin/python \\
+        -U 'mnemosyne-hermes[all]'
+      Then re-run: mnemosyne-hermes install --force
+    
+    **Your working flow remains valid and is now also the recommended
+    manual bootstrap**
+    
+      uv pip install --python <hermes-venv>/bin/python \\
+        -U "mnemosyne-hermes[all]"
+      mnemosyne-hermes install --force
+      hermes config set memory.provider mnemosyne
+      hermes memory status
+

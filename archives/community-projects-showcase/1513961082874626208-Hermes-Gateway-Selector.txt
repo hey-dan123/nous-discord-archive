@@ -19,3 +19,6 @@
 [2026-06-09T19:24:50.399000+00:00] tomrevo.x (id=1513987256191549450)
     Hermes Gateway Selector
 
+[2026-06-11T14:21:44.257000+00:00] tomrevo.x (id=1514635753714352301)
+    I'm writing a follow up to this how to make a remote gateway for your TUI.  It's a bit of reverse engineering from the desktop gateway process.
+

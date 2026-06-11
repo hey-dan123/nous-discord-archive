@@ -215,3 +215,26 @@
     
     Thanks for the suggest, stay tuned 🙂
 
+[2026-06-11T14:53:59.971000+00:00] rostelinalise (id=1514643872687591444)
+    maybe i did some mistake on getting the gemini api key? is it from here https://aistudio.google.com/api-keys
+    ```Model selection:
+    Gemini Live model (models/gemini-2.5-flash-native-audio-preview-09-2025): 
+    ✓ GEMINI_MODEL: model = models/gemini-2.5-flash-native-audio-preview-09-2025
+    Comma-separated fallback models (models/gemini-2.0-flash-live-001,models/gemini-2.5-flash-live-preview): 
+    ✓ GEMINI_LIVE_MODEL_FALLBACKS: fallbacks = models/gemini-2.0-flash-live-001,models/gemini-2.5-flash-live-preview
+    ℹ 
+    Advanced tuning:
+    Local HTTP control port (18943): 
+    ✓ DISCORD_VOICE_LIVE_PORT: port = 18943
+    Auto-leave after N seconds of silence (0 = disable) (900): 
+    ✓ DISCORD_VOICE_LIVE_AUTO_LEAVE_QUIET_SECONDS: threshold = 900s
+    Idle prompt threshold (N seconds before asking 'are you still there?') (300): 
+    ✓ DISCORD_VOICE_LIVE_IDLE_PROMPT_SECONDS: prompt after = 300s
+    ℹ 
+    Validating network credentials...
+    ⚠ Discord token check failed: token must be 3 dot-separated parts
+    Continue anyway? (token may be valid but network may be flaky) [y/n] (y): y
+    ⚠ Gemini key check failed: key should start with 'AIza'
+    Continue anyway? [y/n] (y): y```
+    [embed] Sign in - Google Accounts https://aistudio.google.com/api-keys
+

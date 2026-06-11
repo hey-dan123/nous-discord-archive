@@ -55,3 +55,39 @@
 [2026-06-10T13:12:38.360000+00:00] magnus919 (id=1514255976696385616)
     They didn’t say *which* Friday 😂
 
+[2026-06-11T11:24:14.941000+00:00] thechaosalchemist (id=1514591087245660180)
+    yoyo
+
+[2026-06-11T11:24:29.491000+00:00] thechaosalchemist (id=1514591148272914462)
+    <@297914788107780099> just running some more tests today
+
+[2026-06-11T11:24:33.514000+00:00] thechaosalchemist (id=1514591165146595409)
+    launch should be today/tomorrow
+
+[2026-06-11T11:24:37.888000+00:00] thechaosalchemist (id=1514591183492350072)
+    <@659176257338081306>
+
+[2026-06-11T11:54:29.553000+00:00] seibakas (id=1514598698280161300)
+    oo what's does it do ?
+
+[2026-06-11T12:18:38.453000+00:00] sahil_ss9 (id=1514604775407222804)
+    [attachment] image0.gif https://cdn.discordapp.com/attachments/1511523359048077352/1514604774928941136/image0.gif?ex=6a2bf91e&is=6a2aa79e&hm=7b4adee29de3757e0deb5017b99a5e94fc7e71442471f2d5341f70b29e74292c&
+
+[2026-06-11T12:21:45.159000+00:00] magnus919 (id=1514605558509080708)
+    https://tenor.com/view/snoop-dogg-taco-talking-gif-14321788
+    [embed]  https://tenor.com/view/snoop-dogg-taco-talking-gif-14321788
+    [reply to seibakas msg=1514598698280161300]
+
+[2026-06-11T12:31:28.509000+00:00] iruzenn (id=1514608005256052939)
+    <@1174418351573971018> i'll always be there
+
+[2026-06-11T12:31:38.800000+00:00] thechaosalchemist (id=1514608048419901440)
+    soon it'll: make ig content, seo, websites, facebook ads for you
+    [reply to seibakas msg=1514598698280161300]
+
+[2026-06-11T12:32:07.296000+00:00] thechaosalchemist (id=1514608167940522164)
+    but the launch will be that you can connect all of your platform data (google analytics, posthog, x, linkedin, ig, klaviyo, everything) and then query it via an llm
+
+[2026-06-11T12:32:41.609000+00:00] thechaosalchemist (id=1514608311859675157)
+    so theres 2 layers: data layer (powered by hermes) + then action layer (a dashboard)
+

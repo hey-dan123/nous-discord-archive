@@ -33,3 +33,25 @@
     [embed]  https://twitter.com/BBCrypt0/status/2063701528863784967
     [embed] feat(skills): add community-safety-review workflow skill by BBCrypt... https://github.com/NousResearch/hermes-agent/pull/42007
 
+[2026-06-11T12:56:47.464000+00:00] bbcrypto0 (id=1514614376215220355)
+    Quick update on my second Hermes skill: Community Safety Review.
+    
+    I opened a PR for Phase 2:
+    https://github.com/NousResearch/hermes-agent/pull/44280
+    
+    This skill generates a neutral Markdown safety review report from public, reviewer-supplied project information.
+    
+    It does not label any project as a scam or make final accusations. Instead, it highlights public risk signals, positive trust signals, and missing information so a human reviewer can make a better decision.
+    
+    Current report includes:
+    
+    * Review level: LOW / MEDIUM / HIGH / HUMAN REVIEW REQUIRED
+    * Detected risk signals with evidence
+    * Positive trust signals
+    * Missing information
+    * Public-signals-only note
+    * Manual verification required disclaimer
+    
+    Public information only. No automated enforcement. Manual verification required.
+    [embed] feat(skill): add community safety review report generation by BBCry... https://github.com/NousResearch/hermes-agent/pull/44280
+

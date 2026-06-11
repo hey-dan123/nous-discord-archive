@@ -29509,3 +29509,171 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-11T10:15:18.090000+00:00] minddragon (id=1514573736035090494)
     npm ci and npm errors on web
 
+[2026-06-11T10:21:51.648000+00:00] teknium (id=1514575386736984174)
+    updated just now to test
+    [reply to minddragon msg=1514573061486149803]
+
+[2026-06-11T10:21:55.535000+00:00] teknium (id=1514575403040247919)
+    nothing happened <a:aPES_Think:493353113332219924>
+
+[2026-06-11T10:23:56.002000+00:00] minddragon (id=1514575908315332728)
+    https://pastebin.com/MndFYxUa <@387972437901312000>
+    [embed] contact@btcr-mag40 mag53]$ hermes update⚕ Updating Hermes Agent..... https://pastebin.com/MndFYxUa
+
+[2026-06-11T10:24:10.042000+00:00] minddragon (id=1514575967203622994)
+    had 2x machines it happened to
+
+[2026-06-11T10:24:40.052000+00:00] minddragon (id=1514576093074427937)
+    lmk if you want a debug
+
+[2026-06-11T10:32:20.698000+00:00] minddragon (id=1514578025163919520)
+    [attachment] CleanShot_2026-06-11_at_05.32.11.png https://cdn.discordapp.com/attachments/1491258766648283238/1514578024970977300/CleanShot_2026-06-11_at_05.32.11.png?ex=6a2be034&is=6a2a8eb4&hm=4ae6704e5f0416945d708b9f15eec9cd9b4f7059bd3a67c0aa1ac1237d16ee72&
+
+[2026-06-11T10:33:55.326000+00:00] kyssta69 (id=1514578422062649364)
+    https://github.com/NousResearch/hermes-agent/pull/44206
+    
+    **Problem**: Hermes misses running dashboard processes when --profile is placed before the dashboard subcommand (e.g. hermes --profile X dashboard).
+    _find_stale_dashboard_pids() uses contiguous substring matching that fails when global flags appear between the entry-point and 'dashboard'.
+    Added a fallback token scan that skips flags and their values to correctly identify 'dashboard' as the subcommand.
+    [embed] fix(cli): detect dashboard processes when --profile precedes subcom... https://github.com/NousResearch/hermes-agent/pull/44206
+
+[2026-06-11T10:37:50.087000+00:00] teknium (id=1514579406721515660)
+    I think CUA team has a PR for this that Im working through
+    [reply to jw_mushroom_man msg=1514570972978610226]
+
+[2026-06-11T10:47:43.107000+00:00] teknium (id=1514581894027804672)
+    ```    Pulled the paste and verified against current main in the worktree. Verdict: this isn't reproducible as a hermes-agent bug — the update itself succeeded and the degradation path behaved as designed. Report:
+        
+        What the log shows
+        1. npm ci failed (lock file's @types/node@24.13.1 does not satisfy @types/node@24.13.2) → our deterministic installer (hermes_cli/main.py:4546) fell back to npm install, by design.
+        2. Fallback "succeeded" but only added 788 packages — a clean npm ci on current main installs 1483. So roughly half the tree, including the web workspace's own deps, never landed.
+        3. Web build then failed with hundreds of TS2307s (vite, @nous-research/ui, lucide-react, react-router-dom all unresolvable) — that's the missing-node_modules signature, not a code bug. Update served the stale dist as fallback (intentional, issue #23817).
+        
+        Premise check against main
+        - @types/node@24.13.2 appears nowhere in the repo — every workspace pins ^24.12.0 and the committed lockfile has 24.13.1. The mismatch comes from their checkout (they're on a fork; something locally pinned/rewrote a manifest).
+        - I ran npm ci --dry-run on current main here: clean, lockfile fully in sync.
+        - Their npm isn't stock: the allowScripts / npm approve-scripts --allow-scripts-pending warnings are a script-policy wrapper (Socket-style safe-npm or similar). With pending-unapproved packages like esbuild and node-pty, that wrapper is the most likely reason the install came up ~700 packages short — which is exactly what then broke tsc && vite build.
+        
+        Suggested reply to the reporter
+        
+        cd ~/hermes-agent
+        git checkout -- package-lock.json        # restore upstream lockfile
+        npm approve-scripts --allow-scripts-pending   # or temporarily bypass your npm policy wrapper
+        npm ci
+        npm run build -w web
+        
+        Then hermes update should go green end to end. The "serving stale dist" line means nothing else was harmed — agent/CLI updated fine, only the dashboard UI is stale.```
+    [reply to minddragon msg=1514578025163919520]
+
+[2026-06-11T10:48:49.190000+00:00] teknium (id=1514582171199864842)
+    is it your vps provider or something ? <:Shrug:1062899514249330738>
+
+[2026-06-11T10:52:02.061000+00:00] jw_mushroom_man (id=1514582980159471696)
+    Ye. Would love to help with future work on it if needed
+    [reply to teknium msg=1514579406721515660]
+
+[2026-06-11T10:59:35.541000+00:00] minddragon (id=1514584882192449637)
+    Well...from my clanker (GPT 5.5):
+    [attachment] CleanShot_2026-06-11_at_05.59.03.png https://cdn.discordapp.com/attachments/1491258766648283238/1514584881949048922/CleanShot_2026-06-11_at_05.59.03.png?ex=6a2be697&is=6a2a9517&hm=c69270cd17265f0082bb11777475b838f9a69133d46841a1bf2123eb9f5dab55&
+    [reply to teknium msg=1514582171199864842]
+
+[2026-06-11T11:02:04.818000+00:00] minddragon (id=1514585508305436813)
+    Minor point:
+    [attachment] CleanShot_2026-06-11_at_06.01.50.png https://cdn.discordapp.com/attachments/1491258766648283238/1514585508095852594/CleanShot_2026-06-11_at_06.01.50.png?ex=6a2be72c&is=6a2a95ac&hm=e8977b7cad4cb75596605574f213a7068b656e7217cf94283c8a5057c2246ace&
+
+[2026-06-11T11:05:23.710000+00:00] flownium (id=1514586342518952057)
+    https://github.com/NousResearch/hermes-agent/pull/44219
+    Problem:
+    Hermes self-hosted web backend setup docs were unclear so users could configure SearXNG/Firecrawl with the wrong env vars or backend keys and Hermes would fall back to another web provider.
+    [embed] docs: add self-hosted web backend setup by itsflownium · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/44219
+
+[2026-06-11T11:06:45.313000+00:00] teknium (id=1514586684786872390)
+    please paste the text instead of an image so I can give it to hermes easier
+    [reply to minddragon msg=1514584882192449637]
+
+[2026-06-11T11:16:27.733000+00:00] minddragon (id=1514589127633408031)
+    Roger. Apologies. Dealing with a copy/paste fail of my own in the terminal->mosh->ssh (jump)->mosh(don'task)->ssh (oh finally)->hermes. ... I'll see if I can get an OCR snippper next
+    [reply to teknium msg=1514586684786872390]
+
+[2026-06-11T11:27:14.917000+00:00] thechaosalchemist (id=1514591842119979049)
+    yoyo <@387972437901312000> 
+    
+    cooking this up as a hermes plugin. it's working really well rn, gonna do another round of tests then launch it! obs open source
+    
+    https://discord.com/channels/1053877538025386074/1476316988992258300/1514591070531354695
+
+[2026-06-11T11:38:54.227000+00:00] minddragon (id=1514594775238578286)
+    also ... Teknium - you're an MVP. Always be awesome Rock Star.
+
+[2026-06-11T11:45:17.217000+00:00] flownium (id=1514596381615063090)
+    <#1485307775444844625>
+
+[2026-06-11T11:58:45.658000+00:00] zygimantas_98838 (id=1514599772462383145)
+    Hi, I'm sure our developer has looked at the docs before creating the PR, is there something wrong with it?
+    [reply to yerts msg=1514545187316305930]
+
+[2026-06-11T12:11:34.720000+00:00] abdullahx990 (id=1514602998142079107)
+    done
+    [reply to flownium msg=1514596381615063090]
+
+[2026-06-11T12:38:48.655000+00:00] _.exo._ (id=1514609851362316482)
+    https://tenor.com/view/zoro-one-piece-nothing-happened-gif-21452837
+    [embed]  https://tenor.com/view/zoro-one-piece-nothing-happened-gif-21452837
+    [reply to teknium msg=1514575403040247919]
+
+[2026-06-11T12:46:58.296000+00:00] pinched_nerve (id=1514611905065521243)
+    Any chance PR 33910 can get a bit of attention?  It’s an extremely tiny fix and admittedly a likely low priority, but it’s lost in the forest of thousands of PRs
+
+[2026-06-11T12:57:25.221000+00:00] nulledvector (id=1514614534579425481)
+    https://github.com/NousResearch/hermes-agent/pull/18366
+    [embed] fix: make /busy command available on gateway platforms by AxDSan ·... https://github.com/NousResearch/hermes-agent/pull/18366
+
+[2026-06-11T13:25:04.619000+00:00] mcsaoul (id=1514621494599352410)
+    https://github.com/NousResearch/hermes-agent/pull/29793
+    A PR a bit lost in the huge inbound flow too, but bringing a useful feature for Signal users: support fine-grained group chat user authorizations so the platform can have users get agent access in only some groups but not others and without having to also give DM access, etc... I recently rebased after the gateway/run.py refactoring so if it's deemed interesting, should be easy to salvage/merge!
+    [embed] feat(signal): split group auth into chat + in-group user gates by M... https://github.com/NousResearch/hermes-agent/pull/29793
+
+[2026-06-11T13:38:03.611000+00:00] kyssta69 (id=1514624761928355850)
+    https://github.com/NousResearch/hermes-agent/pull/44273
+    
+    **Problem**: Line 1: Users on the default profile could not delete sessions from the Desktop archived sessions settings page -- got 'Delete failed - session not found' every time.
+    Line 2: The DELETE /api/sessions/{id} endpoint called db.delete_session() with the raw session ID without resolving it first, while GET and PATCH endpoints both used db.resolve_session_id() for compression-root and prefix resolution.
+    Line 3: Added resolve_session_id() call to the DELETE endpoint in both web_server.py and api_server.py so prefix, alias, and compression-root IDs resolve correctly before deletion.
+    [embed] fix(cli): resolve session ID before delete like GET/PATCH do (#4411... https://github.com/NousResearch/hermes-agent/pull/44273
+
+[2026-06-11T13:58:53.254000+00:00] tom.mck (id=1514630003311116540)
+    So, with over 13,000 active PRs, how does anything get addressed on this project? It's very daunting. I was going to try to send a PR related to adding Bitwarden Vault secrets, but figured it would get lost in the shuffle
+
+[2026-06-11T14:01:22.809000+00:00] pinched_nerve (id=1514630630590251240)
+    While the number of PRs is high, I’m thankful that they aren’t all blindly merged. Here, I think it’s more about quality than quantity.
+
+[2026-06-11T14:03:49.698000+00:00] mburhop (id=1514631246687506462)
+    I’m at the same place. Got an engineering (not software) setup with Hermes. Plugin makes more and more sense with the updates. Will be OS
+    [reply to thechaosalchemist msg=1514591842119979049]
+
+[2026-06-11T14:28:38.337000+00:00] kyssta69 (id=1514637490491756625)
+    https://github.com/NousResearch/hermes-agent/pull/44315
+    
+    **Problem**: After /stop, the next user message could be silently swallowed with no feedback when the agent was interrupted and produced an empty response. The interrupted state in _normalize_empty_agent_response caused the response to be dropped silently. Now returns a visible interruption message so the user knows what happened.
+    [embed] fix(gateway): surface interruption message instead of swallowing em... https://github.com/NousResearch/hermes-agent/pull/44315
+
+[2026-06-11T15:13:24.225000+00:00] aleksandr_1 (id=1514648755922534490)
+    **1. fix(state): catch FK violation in append_message when session deleted concurrently.**
+    append_message() raised sqlite3.IntegrityError when a session was deleted between the caller's read and the INSERT — dashboard bulk-delete or prune racing with an inbound gateway event. Wrapped the INSERT in try/except sqlite3.IntegrityError, logs DEBUG and returns None. Fix scoped to append_message only, not _execute_write, to avoid masking integrity errors in other write paths. https://github.com/NousResearch/hermes-agent/pull/44266
+    
+    **2. fix(mcp): pass safe_env directly to StdioServerParameters to prevent empty-dict inheriting parent env.**
+    _build_safe_env returns {} when os.environ lacks _SAFE_ENV_KEYS (systemd, minimal Docker, stripped CI env). Old ternary env=safe_env if safe_env else None collapsed {} to None — MCP SDK treats None as "inherit parent env", leaking OPENAI_API_KEY / ANTHROPIC_API_KEY / GITHUB_TOKEN etc. to stdio subprocess. Fixed by passing safe_env directly; regression guard added in _run_stdio test. https://github.com/NousResearch/hermes-agent/pull/44291
+
+[2026-06-11T15:28:22.555000+00:00] jw_mushroom_man (id=1514652523791908915)
+    https://github.com/NousResearch/hermes-agent/pull/44356
+    
+    Adds apps/excel/ ” an Excel sidecar for Hermes: an Office.js task pane plus a zero-dependency Node bridge that connects a live workbook to the api_server platform. You chat with Hermes in a side panel; it reads sheet data, writes tables/formulas/formatting, and parses attached documents ” strictly through a structured JSON actions contract that the pane executes, never through agent tools.
+    [embed] feat(excel): add Excel sidecar (task pane + api_server bridge) by l... https://github.com/NousResearch/hermes-agent/pull/44356
+
+[2026-06-11T15:29:05.114000+00:00] jw_mushroom_man (id=1514652702297161819)
+    for all my finance and accounting homies out there ❤️
+
+[2026-06-11T15:30:41.178000+00:00] jw_mushroom_man (id=1514653105218916493)
+    Thank you for this
+    [reply to kyssta69 msg=1514637490491756625]
+

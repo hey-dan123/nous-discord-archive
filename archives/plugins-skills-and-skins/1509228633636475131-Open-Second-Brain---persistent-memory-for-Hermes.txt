@@ -126,3 +126,12 @@
     https://github.com/itechmeat/open-second-brain/issues/82
     [embed] O2B handle_tool_call Bug · Issue #82 · itechmeat/open-second-brain https://github.com/itechmeat/open-second-brain/issues/82
 
+[2026-06-11T11:17:57.770000+00:00] techmeat (id=1514589505275822301)
+    <@261930338329165836> thank you 🙏
+    Fixed
+    [reply to obcyy msg=1514517220984623134]
+
+[2026-06-11T11:19:02.533000+00:00] techmeat (id=1514589776911663224)
+    Open Second Brain runs alongside Hermes Write Gate out of the box. Your approve/deny on built-in memory stays the source of truth, and our mirror only ever reflects  writes you actually committed. Gate it in Hermes, and the second brain follows.
+    https://discord.com/channels/1053877538025386074/1490858802726043759/1514391560081506484
+

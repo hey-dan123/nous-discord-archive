@@ -1,0 +1,21 @@
+# Thread 'MemLock — Re-assert standing instructions after context compaction' in forum #community-projects-showcase
+# thread_id=1514642545236246750 forum_id=1316137596535177246
+# Started 2026-06-11T15:56:41.326294+00:00
+
+[2026-06-11T14:48:43.482000+00:00] sahil_ss9 (id=1514642545236246750)
+    MemLock — Your Agent Stops Forgetting Instructions
+    
+        You know that thing where you tell your agent "always use bullet points" and 30 turns later it's writing you essays? That's context compaction eating your instructions.
+    
+        MemLock is a Hermes plugin I built that fixes it. When the system compresses old turns into a summary (to save tokens), MemLock watches for that moment and checks: did your pinned instructions survive in the active conversation, or did they get buried in the summary?
+    
+        If they drifted, it quietly re-injects them so your agent picks the instruction back up. No drama, no lost context.
+    
+        You pin instructions via guard_pin — things like "always reply in British English" or "use short sentences". Run /guard anytime to see how healthy your standing instructions are.
+    
+        Setup is one git clone into your plugins folder. MIT licensed, tested, docs included.
+    
+        Repo: https://github.com/Sahil-SS9/hermes-memlock
+    [attachment] ChatGPT_Image_Jun_11_2026_03_38_08_PM.png https://cdn.discordapp.com/attachments/1514642545236246750/1514642545731436614/ChatGPT_Image_Jun_11_2026_03_38_08_PM.png?ex=6a2c1c4b&is=6a2acacb&hm=d246f3826d51631e9dc4dda2a463344f1ae1d80892bc3503a7910a56afa4855c&
+    [embed] GitHub - Sahil-SS9/hermes-memlock: Re-assert standing instructions ... https://github.com/Sahil-SS9/hermes-memlock
+

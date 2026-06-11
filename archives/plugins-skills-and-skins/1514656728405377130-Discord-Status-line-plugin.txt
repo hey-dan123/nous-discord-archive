@@ -1,0 +1,20 @@
+# Thread 'Discord Status-line plugin' in forum #plugins-skills-and-skins
+# thread_id=1514656728405377130 forum_id=1485392832154832906
+# Started 2026-06-11T16:01:23.348535+00:00
+
+[2026-06-11T15:45:05.013000+00:00] phospheneoverdrive (id=1514656728405377130)
+    Hey, made a little plugin that adds a status line after each bot response on Discord.
+    
+    > -#  *4.5s ⋅ 7% ⋅ ( 71K/1M ) ⋅ deepseek-v4-flash*
+    
+    Shows turn timing, context window usage, tokens, model — whatever you want really. It's all configurable through a yaml template, there's 14 variables to pick from (cache %, tool calls, provider, etc).
+    
+    To install just drop it in `~/.hermes/plugins/` and restart (or symlink if you prefer).
+    
+    https://github.com/Gerkinfeltser/hermes-discord-status-line
+    
+    **Status:** works on my setup, consider it beta. It monkey-patches `DiscordAdapter.send` since there's no post-response hook in Hermes yet, so it could break on a big update. If #42416 lands it'll switch to proper hooks and pick up session-level stuff too.
+    
+    Let me know if you try it out or run into issues!
+    [embed] GitHub - Gerkinfeltser/hermes-discord-status-line https://github.com/Gerkinfeltser/hermes-discord-status-line
+
