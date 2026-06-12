@@ -142,3 +142,7 @@
     
     but this looks really interesting. How well does this work with an existing obsidian second brain vault? Could both of these possibly be used together? As I wouldn’t need all memories logged into the vault but having the vault act as a memory source would be awesome. Any suggestions?
 
+[2026-06-12T13:32:32.452000+00:00] techmeat (id=1514985760812437737)
+    Yes - it's Obsidian-native and the agent only writes to the `Brain/` folder, so your existing notes are never touched. Use the vault as a read-only memory source via `notes.read_paths` + inline `@osb` markers (`o2b brain scan-inline` captures just the lines you tag) or `o2b brain source add` for search/recall. Auto-capture is optional, so you control exactly what gets logged.
+    [reply to autoferrit msg=1514831476397572117]
+

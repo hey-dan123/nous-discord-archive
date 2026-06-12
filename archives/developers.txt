@@ -30098,3 +30098,232 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I will try to soon.
     [reply to tiny_th_dev msg=1514783844539170887]
 
+[2026-06-12T10:27:22.561000+00:00] teknium (id=1514939162552172566)
+    Merged, and welcome to developers role status 🙂
+    [reply to hughjm msg=1514928373141602324]
+
+[2026-06-12T10:28:09.300000+00:00] teknium (id=1514939358589751436)
+    I'm putting it behind a config option until Ive been able to test it:
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613964666337622f42363268525a4f714a32585045354a4d535a4452465f62364a77345873722e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1514939358258532373/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613964666337622f42363268525a4f714a32585045354a4d535a4452465f62364a77345873722e706e67.png?ex=6a2d30b9&is=6a2bdf39&hm=001da5c0443ac47a9e1ffed0035ec5d8fecb1820d4e8c126a2b201d355f9e609&
+    [reply to xdarkchain msg=1514911001034883122]
+
+[2026-06-12T10:38:26.435000+00:00] aialliai (id=1514941947041546331)
+    <@387972437901312000> mind checking this https://github.com/NousResearch/hermes-agent/pull/44832 not that important but some june 16 deadline on it
+    [embed] ci: bump remaining node20 action pins to node24-ready releases (reb... https://github.com/NousResearch/hermes-agent/pull/44832
+
+[2026-06-12T10:38:41.722000+00:00] flownium (id=1514942011160002602)
+    yea i decided to fix it since i had some spare time
+    [reply to teknium msg=1514931561651503114]
+
+[2026-06-12T10:46:26.017000+00:00] xdarkchain (id=1514943958554247228)
+    Perfect.
+    [reply to teknium msg=1514939358589751436]
+
+[2026-06-12T10:59:42.594000+00:00] teknium (id=1514947299640610886)
+    <@100390510744584192> moved us to node 26 today
+    [reply to aialliai msg=1514941947041546331]
+
+[2026-06-12T11:00:22.226000+00:00] aialliai (id=1514947465869266954)
+    perfect then ill close that!
+    [reply to teknium msg=1514947299640610886]
+
+[2026-06-12T11:05:35.949000+00:00] flownium (id=1514948781718638592)
+    oh yeh i need to close my PR thanks for reminding me lol
+    [reply to aialliai msg=1514947465869266954]
+
+[2026-06-12T11:44:40.253000+00:00] aialliai (id=1514958614442545202)
+    <@387972437901312000> this one I will mention becuse it's flagged P1 https://github.com/NousResearch/hermes-agent/pull/44120
+    [embed] fix(gateway,agent): persist delivered responses that recovery paths... https://github.com/NousResearch/hermes-agent/pull/44120
+
+[2026-06-12T11:45:26.085000+00:00] aialliai (id=1514958806675620000)
+    most of the others i have are P2 or P3 and can wait...
+
+[2026-06-12T11:50:39.706000+00:00] kyssta69 (id=1514960122097438752)
+    https://github.com/NousResearch/hermes-agent/pull/44874
+    
+    **Problem**: read_file and search_files reported 'File not found' for existing files when the Docker container was still starting up. The wc -c existence probe failed with a non-zero exit code from the transport layer, which was treated as a missing file. The fix runs a health probe to disambiguate environment failures from genuine missing files.
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/44870
+    
+    **Problem**: Gateway warm sessions accumulated merged newline-joined user blobs because repair_message_sequence shrunk the message list but the DB-write cursor was not clamped. The turn-end flush skipped the assistant/tool chain. The fix clamps the cursor after repair and adds a safety guard in _flush_messages_to_session_db.
+
+[2026-06-12T11:58:14.835000+00:00] xdarkchain (id=1514962031046823967)
+    <@387972437901312000> Important: Added some fixes to the original branch, they must be picked up too.
+    
+    Here: https://github.com/NousResearch/hermes-agent/pull/44780
+    [embed] Add Telegram Bot API 10.1 rich message support by ITheEqualizer · ... https://github.com/NousResearch/hermes-agent/pull/44780
+
+[2026-06-12T12:41:50.496000+00:00] nulledvector (id=1514973001924218940)
+    Finally rich formatting!
+    [reply to xdarkchain msg=1514962031046823967]
+
+[2026-06-12T12:45:37.969000+00:00] xdarkchain (id=1514973956015132733)
+    We ❤️ TG.
+    [reply to nulledvector msg=1514973001924218940]
+
+[2026-06-12T13:03:40.830000+00:00] aialliai (id=1514978497863352402)
+    Has anyone reached the bot yet?
+    [reply to xdarkchain msg=1514973956015132733]
+
+[2026-06-12T13:04:01.322000+00:00] xdarkchain (id=1514978583813296128)
+    I tested it locally, wanna see?
+    [reply to aialliai msg=1514978497863352402]
+
+[2026-06-12T13:04:13.981000+00:00] aialliai (id=1514978636908986378)
+    yeah! 😄
+    [reply to xdarkchain msg=1514978583813296128]
+
+[2026-06-12T13:04:43.154000+00:00] aialliai (id=1514978759269154877)
+    really curous and cant be bothered to set up to test 😛
+
+[2026-06-12T13:05:30.950000+00:00] xdarkchain (id=1514978959740375122)
+    Can't send image here. 🙁
+
+[2026-06-12T13:06:27.078000+00:00] aialliai (id=1514979195158269954)
+    Thanks for trying though! I can probably look it up online also 🙂
+    [reply to xdarkchain msg=1514978959740375122]
+
+[2026-06-12T13:07:04.511000+00:00] xdarkchain (id=1514979352163647618)
+    Just hand the PR to your agent and ask it to set it up for you.
+    [reply to aialliai msg=1514979195158269954]
+
+[2026-06-12T13:08:45.919000+00:00] aialliai (id=1514979777499365386)
+    Or that yeah.. 🙈
+
+[2026-06-12T13:08:51.281000+00:00] xdarkchain (id=1514979799989227740)
+    Haha
+
+[2026-06-12T13:09:58.885000+00:00] aialliai (id=1514980083540951191)
+    what am i thinking... that's already in my test enviroment...
+
+[2026-06-12T13:11:18.159000+00:00] aialliai (id=1514980416040472756)
+    Well I guess happy friday
+
+[2026-06-12T13:11:23.703000+00:00] nulledvector (id=1514980439293558926)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/18366 all green ready to go!
+    [embed] fix: make /busy command available on gateway platforms by AxDSan ·... https://github.com/NousResearch/hermes-agent/pull/18366
+
+[2026-06-12T13:11:32.960000+00:00] nulledvector (id=1514980478120231035)
+    https://tenor.com/view/green-ninjago-ninja-sensei-sensei-wu-gif-6467414812525449281
+    [embed]  https://tenor.com/view/green-ninjago-ninja-sensei-sensei-wu-gif-6467414812525449281
+
+[2026-06-12T13:16:06.823000+00:00] kyssta69 (id=1514981626785042555)
+    https://github.com/NousResearch/hermes-agent/pull/44917
+    
+    **Problem**: WAL checkpoint corruption: the /compress and vacuum commands use TRUNCATE mode which can corrupt state.db if it fails mid-operation.
+    The bare except Exception: pass silently swallowed errors, so a truncated WAL with unflushed data caused disk I/O errors on next connection.
+    Changed periodic checkpoint to PASSIVE mode (non-destructive) and added logging so failures are visible instead of silent.
+    [embed] fix(state): use PASSIVE WAL checkpoint to prevent corruption (#4479... https://github.com/NousResearch/hermes-agent/pull/44917
+
+[2026-06-12T13:17:18.827000+00:00] kyssta69 (id=1514981928791703602)
+    https://github.com/NousResearch/hermes-agent/pull/44920
+    
+    **Problem**: Codex OAuth refresh chain dying: when a ChatGPT credential hit a 429 quota error, the pool skipped it entirely during a multi-day cooldown window.
+    The OAuth refresh token was never rotated, so by the time the cooldown expired the session had expired and the credential was permanently dead.
+    Added refresh logic for OAuth entries even during exhaustion cooldown to keep the token chain alive.
+    [embed] fix(auth): refresh OAuth tokens during exhaustion cooldown (#44799)... https://github.com/NousResearch/hermes-agent/pull/44920
+
+[2026-06-12T13:20:17.515000+00:00] kyssta69 (id=1514982678263500800)
+    https://github.com/NousResearch/hermes-agent/pull/44923
+    
+    **Problem**: Curator LLM loop on symlinked skills: 26 symlinked lark-* skills all appeared as separate candidates, causing the LLM to enter a 4-hour consolidation loop making 811 API calls and consuming 91M tokens.
+    The rglob followed symlinks, so each symlink was counted as a separate skill. Added deduplication by resolved symlink target.
+    Also capped max_iterations from 9999 to 200 to prevent future runaway loops (typical pass is 50-100 calls).
+    [embed] fix(curator): deduplicate symlinked skills and cap iteration limit ... https://github.com/NousResearch/hermes-agent/pull/44923
+
+[2026-06-12T13:24:07.124000+00:00] sahil_ss9 (id=1514983641313312830)
+    Pushed two kanban dispatcher fixes, would love a sneak peek if anyone's got a sec 👀
+    
+    #44909 — reclaim releases a task's claim even when the worker kill didn't land (cgroup-throttled D-state workers can't take SIGKILL), so duplicate workers pile up with no bound. Now it holds the claim and retries. https://github.com/NousResearch/hermes-agent/pull/44909
+    
+    #44919 — the embedded dispatcher has no singleton guard, so multiple gateways each sweep every board and corrupt the shared SQLite DBs. Adds a machine-global flock. Closes #41448. https://github.com/NousResearch/hermes-agent/pull/44919
+    
+    Both green with tests. Found these chasing a proper runaway on my box (load 70+, swap gone, ~110 workers for 17 tasks). Any eyes welcome 🙏
+    [embed] fix(kanban): hold reclaim while the worker is still alive by Sahil-... https://github.com/NousResearch/hermes-agent/pull/44909
+    [embed] fix(kanban): machine-global singleton lock for the embedded dispatc... https://github.com/NousResearch/hermes-agent/pull/44919
+
+[2026-06-12T13:25:11.102000+00:00] suhas2391 (id=1514983909656498196)
+    👋 Hey everyone! First-time contributor here.
+    
+    I submitted a Windows compatibility fix for the test suite:
+    
+    **PR #42872** — fix(tests): use shutil.which and skip POSIX-only tests on Windows
+    🔗 https://github.com/NousResearch/hermes-agent/pull/42872
+    
+    **The bug:** `test_search_hidden_dirs.py` crashes at collection time on Windows because it uses Unix `which` instead of `shutil.which()` — which is actually a violation of CONTRIBUTING.md rule #2.
+    
+    **The fix:** 
+    • Replaced `subprocess.run(["which", "rg"])` → `shutil.which("rg")`
+    • Added `skipif(win32)` markers for `find`/`grep` test classes
+    • 1 file, +6/-2 lines — all 9 tests pass ✅
+    
+    Already approved by tonydwb, just waiting on CI approval + maintainer merge. Would appreciate a look when someone gets a chance! 🙏
+    [embed] fix(tests): use shutil.which and skip POSIX-only tests on Windows b... https://github.com/NousResearch/hermes-agent/pull/42872
+
+[2026-06-12T13:41:00.864000+00:00] aialliai (id=1514987893247053906)
+    It's sleepy time in the US so don't hold your breath!
+
+[2026-06-12T13:46:20.495000+00:00] sahil_ss9 (id=1514989233876766912)
+    Who sleeps??
+
+[2026-06-12T13:46:28.036000+00:00] sahil_ss9 (id=1514989265505746944)
+    It's for the weak 😂
+
+[2026-06-12T13:54:02.344000+00:00] elkosmas (id=1514991171011608839)
+    Some of us have built careers on human sleep research. 😭
+    [reply to sahil_ss9 msg=1514989233876766912]
+
+[2026-06-12T14:09:08.990000+00:00] frowtek (id=1514994973760815315)
+    dropped 3 small DingTalk fixes, all with tests
+    https://github.com/NousResearch/hermes-agent/pull/44933 — allowed_users from config.yaml passed the adapter but gateway auth still denied them, fixed
+    https://github.com/NousResearch/hermes-agent/pull/44934 — config + env allowlists now actually merge like the docs say
+    https://github.com/NousResearch/hermes-agent/pull/44937 — DingTalk never started with config.yaml-only credentials, now it does
+    [embed] fix(gateway): honor nested DingTalk allowed_users config in gateway... https://github.com/NousResearch/hermes-agent/pull/44933
+    [embed] fix(dingtalk): merge config and env allowed_users as documented by ... https://github.com/NousResearch/hermes-agent/pull/44934
+    [embed] fix(gateway): honor config-backed DingTalk credentials during adapt... https://github.com/NousResearch/hermes-agent/pull/44937
+
+[2026-06-12T14:22:26.335000+00:00] siredlin (id=1514998318067880020)
+    Cheers! Since I want to run everything local I am making a pipeline that Hermes will create Infographics with the help of ComfyUI and Ernie-Image from Baidu. This is my first result on a simple pormpt "Hand-drawn lab-notebook infographic on cream paper. Top banner in bold marker caps: 'PR #43200 • OBSERVED AUDIO'. Smaller monospace subtitle below it: 'fix(gateway): transcribe on demand'. Two rounded sketch-bordered panels: left titled 'THE PROBLEM' with bullet 'observed audio skipped STT'; right titled 'FILES' listing in monospace 'gateway/run.py' and 'hermes_state.py → get_ancestor_observed_messages()'. A green '+691' and red '−7' in the corner. Small flask and atom doodles. Clean, legible text."
+    [attachment] preview.png https://cdn.discordapp.com/attachments/1491258766648283238/1514998317753565294/preview.png?ex=6a2d67a2&is=6a2c1622&hm=14e991fc09bbe633e486c0e08323b76019a065b0bb2d5772f6cb262a61198206&
+    [reply to kinh0. msg=1514759115120050266]
+
+[2026-06-12T14:33:14.733000+00:00] aialliai (id=1515001037646204998)
+    https://github.com/NousResearch/hermes-agent/pull/44103
+    [embed] fix(api_server): resolve compressed sessions to their live tip for ... https://github.com/NousResearch/hermes-agent/pull/44103
+
+[2026-06-12T14:39:00.926000+00:00] pinched_nerve (id=1515002489685147759)
+    That sounds like a dreamy job.
+    [reply to elkosmas msg=1514991171011608839]
+
+[2026-06-12T14:42:30.022000+00:00] kkurottal6611 (id=1515003366697341079)
+    When HERMES_HOME is unset, `_resolve_log_path()` hardcoded `~/.hermes` instead of using the platform-native default from `get_hermes_home()` (`%LOCALAPPDATA%\hermes` on native Windows) — so audit logs landed in a different tree than every other Hermes state file. The local copy also ignored the context-local profile override.
+    
+    The fix delegates to `get_hermes_home()`, the documented single source of truth. Added 2 regression tests (platform-native + `~/.hermes` fallback); all 13 dashboard_auth test suites pass (248 passed)
+    
+    Feedback welcome! 🙏 https://github.com/NousResearch/hermes-agent/pull/44984
+    [embed] fix(dashboard-auth): stop hardcoding ~/.hermes for audit log path b... https://github.com/NousResearch/hermes-agent/pull/44984
+
+[2026-06-12T14:51:14.289000+00:00] aialliai (id=1515005565632512100)
+    https://github.com/NousResearch/hermes-agent/pull/44773
+    [embed] chore(release): map AIalliAI and plcunha contributor emails in AUTH... https://github.com/NousResearch/hermes-agent/pull/44773
+
+[2026-06-12T14:51:42.960000+00:00] aialliai (id=1515005685887406250)
+    https://github.com/NousResearch/hermes-agent/pull/44445
+    [embed] fix(lazy-deps): verify real import names after install, not just me... https://github.com/NousResearch/hermes-agent/pull/44445
+
+[2026-06-12T14:52:08.033000+00:00] aialliai (id=1515005791051055186)
+    https://github.com/NousResearch/hermes-agent/pull/44392
+    [embed] fix(agent): honor HERMES_TLS_MAX_VERSION to cap provider TLS handsh... https://github.com/NousResearch/hermes-agent/pull/44392
+
+[2026-06-12T14:52:28.046000+00:00] aialliai (id=1515005874991796274)
+    https://github.com/NousResearch/hermes-agent/pull/44105
+    [embed] fix(windows): hide console-window flash on gateway-runtime subproce... https://github.com/NousResearch/hermes-agent/pull/44105
+
+[2026-06-12T14:52:43.115000+00:00] aialliai (id=1515005938195759357)
+    https://github.com/NousResearch/hermes-agent/pull/44061
+    [embed] Bugfix rollup (2026-06-10 session): cron, state DB, agent loop, MCP... https://github.com/NousResearch/hermes-agent/pull/44061
+
+[2026-06-12T14:53:59.976000+00:00] aialliai (id=1515006260574158899)
+    Evrything posted so far green... so fuck it ship it I hope ✅
+

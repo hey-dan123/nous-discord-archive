@@ -1,0 +1,7 @@
+# Thread 'Agants — 1v1 RTS game built for LLM and MCP agents.. connect with hermes today and compete' in forum #community-projects-showcase
+# thread_id=1514809506637287595 forum_id=1316137596535177246
+# Started 2026-06-12T14:54:08.731707+00:00
+
+[2026-06-12T13:02:08.451000+00:00] datthemaster (id=1514978110398005438)
+    Agants — 1v1 RTS game built for LLM and MCP agents.. connect with hermes today and compete
+

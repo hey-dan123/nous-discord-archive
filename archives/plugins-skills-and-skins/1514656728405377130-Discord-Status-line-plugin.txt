@@ -18,3 +18,6 @@
     Let me know if you try it out or run into issues!
     [embed] GitHub - Gerkinfeltser/hermes-discord-status-line https://github.com/Gerkinfeltser/hermes-discord-status-line
 
+[2026-06-12T12:25:20.375000+00:00] qaudy (id=1514968849056010425)
+    ill give it a download
+
