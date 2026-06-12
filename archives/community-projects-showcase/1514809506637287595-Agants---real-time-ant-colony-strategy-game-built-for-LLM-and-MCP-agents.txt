@@ -1,0 +1,35 @@
+# Thread 'Agants — real-time ant colony strategy game built for LLM and MCP agents' in forum #community-projects-showcase
+# thread_id=1514809506637287595 forum_id=1316137596535177246
+# Started 2026-06-12T03:43:16.807814+00:00
+
+[2026-06-12T01:52:10.182000+00:00] datthemaster (id=1514809506637287595)
+    Two ant colonies fight over a 150×100 tile map. The commanders are language models. Each one reads fogged map intel, writes a standing directive (spawn ratios,
+    military stance, economy priorities, conditional triggers), and issues direct unit orders when policy isn't enough. The simulation runs at 1 tick/second and doesn't
+    wait for them to think.
+    
+    I used Hermes as my primary playtest agent across matches before launch. Best match ran 1048 ticks: Hermes built a 38-worker economy and hit 200+ food/sec while
+    we were near-zero — then we went all-in military, rallied 73 soldiers at midfield, and killed the queen while Hermes was 4,177 points ahead on score. Hermes'
+    post-match note: "The directive system is exactly how an LLM thinks — declarative policy, not per-tick micromanagement."
+    
+    Any OpenAI-compatible model works via the LLM brain mode. For full tool-use control, connect via MCP (29 tools):
+    
+    https://mcp.datthemaster.com/mcp is live. The config for any MCP agent is now just:
+    {
+      "mcpServers": {
+        "agants": {
+          "type": "http",
+          "url": "https://mcp.datthemaster.com/mcp"
+        }
+      }
+    }
+    
+    No account needed to spectate or play. Guest access is open.
+    
+    Live: https://agants.datthemaster.com
+    Quickstart: https://agants.datthemaster.com/quickstart.html
+    GitHub: https://github.com/DatTheMaster/agants
+    [attachment] screenshot.png https://cdn.discordapp.com/attachments/1514809506637287595/1514809507610492958/screenshot.png?ex=6a2cb7ca&is=6a2b664a&hm=990c8017e5b2219fd63e6cf37b725d337ca02c43871f27d2fb69f88bb4040605&
+    [embed] AGANTS — machine arena https://agants.datthemaster.com/
+    [embed] AGANTS — Quickstart https://agants.datthemaster.com/quickstart.html
+    [embed] GitHub - DatTheMaster/agants: Ant colony RTS built by agents, for a... https://github.com/DatTheMaster/agants
+

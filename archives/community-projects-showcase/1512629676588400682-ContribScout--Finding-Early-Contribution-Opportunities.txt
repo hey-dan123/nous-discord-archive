@@ -137,3 +137,31 @@
     
     Discover → Evaluate → Save → Track → Contribute → Proof Vault → Export
 
+[2026-06-11T22:53:20.697000+00:00] sworntech (id=1514764503915692222)
+    **ContribScout v0.7 Update**
+    
+    Added Smart Filters and Role Presets.
+    
+    You can now narrow GitHub contribution opportunities by:
+    
+    • score
+    • good first issues
+    • help wanted labels
+    • docs gaps
+    • missing CONTRIBUTING guides
+    • open issues
+    • saturation
+    • GitHub source
+    
+    New presets:
+    
+    • First PR
+    • Docs Fix
+    • Good First Issues
+    • Low Competition
+    • High Score
+    • AI / Agent Tools
+    • Needs CONTRIBUTING
+    
+    Filtered results now also power the Daily Opportunity Report, so the report matches the user’s current search intent.
+

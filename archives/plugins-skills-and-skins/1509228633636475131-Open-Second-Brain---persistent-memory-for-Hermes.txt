@@ -135,3 +135,10 @@
     Open Second Brain runs alongside Hermes Write Gate out of the box. Your approve/deny on built-in memory stays the source of truth, and our mirror only ever reflects  writes you actually committed. Gate it in Hermes, and the second brain follows.
     https://discord.com/channels/1053877538025386074/1490858802726043759/1514391560081506484
 
+[2026-06-12T03:19:28.181000+00:00] autoferrit (id=1514831476397572117)
+    This seems really interesting. I was about to test this memory tool: 
+    
+    https://discord.com/channels/1053877538025386074/1496124109766000690
+    
+    but this looks really interesting. How well does this work with an existing obsidian second brain vault? Could both of these possibly be used together? As I wouldn’t need all memories logged into the vault but having the vault act as a memory source would be awesome. Any suggestions?
+

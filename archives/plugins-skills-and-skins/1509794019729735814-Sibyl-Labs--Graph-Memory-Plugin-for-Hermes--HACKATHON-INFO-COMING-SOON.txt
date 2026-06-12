@@ -144,3 +144,6 @@
     [attachment] HKeYpM7WcAE9EuE.png https://cdn.discordapp.com/attachments/1509794019729735814/1514666345013444678/HKeYpM7WcAE9EuE.png?ex=6a2c3275&is=6a2ae0f5&hm=704af3fdcebf3b951c78fdfd8e8102d6988837925888d45fd813f5f8497bc21d&
     [embed] Memory's wrong problem: four engines, one exact-recall test https://blog.sibylcap.com/beta-analysis-v2
 
+[2026-06-12T01:20:59.735000+00:00] jec.02 (id=1514801661414080633)
+    Do you have comparison between sibyl vs honcho?
+

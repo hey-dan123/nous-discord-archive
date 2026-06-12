@@ -19,3 +19,6 @@
 [2026-06-06T08:05:29.372000+00:00] techmeat (id=1512729128456163400)
     Open Second Brain - a self-learning memory layer for Hermes
 
+[2026-06-11T20:59:54.937000+00:00] eucdee (id=1514735958489038918)
+    So i gave my fresh install on a $1 vps the choice of a reddit obsidian layout, opensecondbrain, honcho and openviking and it chose opensecondbrain as its preferred memory.. nemotron3 ultra free said the quality is outstanding and 80% of what honcho provides. Just local and free. Only thing missing is the neuromancer inference.
+

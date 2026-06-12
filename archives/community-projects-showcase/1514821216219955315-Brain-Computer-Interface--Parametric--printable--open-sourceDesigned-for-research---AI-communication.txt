@@ -1,0 +1,16 @@
+# Thread 'Brain Computer Interface, Parametric, printable, open-sourceDesigned for research & AI communication' in forum #community-projects-showcase
+# thread_id=1514821216219955315 forum_id=1316137596535177246
+# Started 2026-06-12T03:43:16.375805+00:00
+
+[2026-06-12T02:38:41.964000+00:00] eucdee (id=1514821216219955315)
+    https://github.com/ohrbit/eeg_bci_cap/tree/main/scad
+    
+    Designed with claude sonnet 4.x perplexity chatui
+    
+    Im sure fable would fix and optimize it in a heatbeat.. that why i put it out there...
+    [attachment] 1020-plain.png https://cdn.discordapp.com/attachments/1514821216219955315/1514821216597446806/1020-plain.png?ex=6a2cc2b2&is=6a2b7132&hm=9b335ac254ea472452863b818114328c32fbd820bfbc2747efc8d8afcbcb71d8&
+    [embed] eeg_bci_cap/scad at main · ohrbit/eeg_bci_cap https://github.com/ohrbit/eeg_bci_cap/tree/main/scad
+
+[2026-06-12T02:47:21.923000+00:00] eucdee (id=1514823397085810739)
+    Brain Computer Interface, Parametric, printable, open-sourceDesigned for research & AI communication
+

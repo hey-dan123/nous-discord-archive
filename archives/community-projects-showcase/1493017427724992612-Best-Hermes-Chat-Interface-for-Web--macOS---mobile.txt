@@ -3875,3 +3875,8 @@
     Captured as issues for us to work on
     [reply to latipun msg=1514706430526226582]
 
+[2026-06-12T00:49:18.458000+00:00] mathewsstar (id=1514793686880485507)
+    Hi everyone,
+    I would like to propose a feature idea to improve the workflow efficiency in Hermes Web-UI: The ability to share files between different Workspaces, even when switching profiles.
+    Currently, files and context can feel isolated depending on the active profile or workspace. Having a feature that allows seamless cross-workspace file sharing—and ensures these files remain accessible even if we change profiles—would make the ecosystem much more flexible and powerful for managing multiple tasks.
+

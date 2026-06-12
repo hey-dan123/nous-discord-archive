@@ -91,3 +91,6 @@
 [2026-06-11T12:32:41.609000+00:00] thechaosalchemist (id=1514608311859675157)
     so theres 2 layers: data layer (powered by hermes) + then action layer (a dashboard)
 
+[2026-06-12T02:32:26.937000+00:00] rearwindowblackwidow_78112 (id=1514819643242709143)
+    Very curious about this!!!
+
