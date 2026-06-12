@@ -34,3 +34,23 @@
     once i update the GDD, ill update it in here. im expericmenting with new ideas now  that i may add
     [reply to .s0uthpaw msg=1514680146202853427]
 
+[2026-06-12T08:08:31.862000+00:00] iam_rxpii (id=1514904221068034080)
+    https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/releases/tag/v1.2.1
+    
+    A free, Obsidian-based UE5 knowledge base for solo RPG development. Tutorials, architecture docs, and design decisions — all wikilinked with MOC indexes.
+    
+    What's in it:
+    • 222 content files across 26 folders
+    • 10 original tutorial series (Blueprints, AI, C++, PCG, Animation, etc.)
+    • 45 new tutorials across 14 topics (GAS, Data Assets, Niagara, UI, Enhanced Input, Save Systems, Multiplayer, and more)
+    • 7 architecture docs — design patterns, RPG system architecture, C++ vs Blueprint decisions, learning paths
+    
+    What's new in v1.2.x:
+    • Architecture folder added — teaches the why behind patterns, not just the how
+    • README overhauled to reflect all 26 folders and current vault state
+    • All wikilinks verified, 0 broken references
+    
+    What it is:
+    Tutorial folders teach implementation steps (click here, write this code). Architecture docs teach design decisions (what pattern, why, when). Together you get both.
+    [embed] Release v1.2.1 — README Update · theheavenlyd3mon/Unreal-Engine-... https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/releases/tag/v1.2.1
+

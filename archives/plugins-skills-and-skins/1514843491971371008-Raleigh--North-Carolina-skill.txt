@@ -1,0 +1,11 @@
+# Thread 'Raleigh, North Carolina skill' in forum #plugins-skills-and-skins
+# thread_id=1514843491971371008 forum_id=1485392832154832906
+# Started 2026-06-12T10:12:15.163451+00:00
+
+[2026-06-12T04:07:12.917000+00:00] magnus919 (id=1514843491971371008)
+    https://git.brandyapple.com/magnus/agent-skills/src/branch/main/raleigh
+    
+    This will give your Hermes Agent access to the open API's and data shared by the City of Raleigh.
+    [attachment] 4949074.png https://cdn.discordapp.com/attachments/1514843491971371008/1514843492134686884/4949074.png?ex=6a2cd770&is=6a2b85f0&hm=2c2979bf90f08888063888f5178e77b2cd3319806396af3adcf638e786987280&
+    [embed] agent-skills https://git.brandyapple.com/magnus/agent-skills/src/branch/main/raleigh
+

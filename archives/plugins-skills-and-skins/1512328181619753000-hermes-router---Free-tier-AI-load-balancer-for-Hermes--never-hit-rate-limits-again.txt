@@ -85,3 +85,10 @@
     https://github.com/Shaf2665/Hermes-router
     [embed] GitHub - Shaf2665/Hermes-router https://github.com/Shaf2665/Hermes-router
 
+[2026-06-12T07:13:22.787000+00:00] oshooo0196 (id=1514890341801525378)
+    Add Nvidia NIM 40 RPM
+
+[2026-06-12T07:19:04.632000+00:00] shaf_2665 (id=1514891775603511427)
+    Sure, can you create an issue for that
+    [reply to oshooo0196 msg=1514890341801525378]
+

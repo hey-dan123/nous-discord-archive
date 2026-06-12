@@ -29827,3 +29827,274 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     ~60 lines, 10 new tests, 30k-test suite clean. PR: github.com/NousResearch/hermes-agent/pull/44587
 
+[2026-06-12T03:47:57.056000+00:00] the_goobis (id=1514838643938820118)
+    <@575461682151686145> 
+    https://developers.openai.com/codex/pricing
+    
+    What if? Corpo trash didn’t think their decisions through? What if? They underestimated Man. And the hubris of Maggots hatched flies from the Corpse. Of a god? 🪰🐍🪽
+    [attachment] IMG_2922.png https://cdn.discordapp.com/attachments/1491258766648283238/1514838644437811302/IMG_2922.png?ex=6a2cd2ed&is=6a2b816d&hm=9928c8bd4f1158260c67990a81c25f862f3fb36c8d07ab8c5b288f404175a45a&
+    [embed] Pricing – Codex | OpenAI Developers https://developers.openai.com/codex/pricing
+
+[2026-06-12T05:44:13.387000+00:00] maxfreedompollard (id=1514867904791838770)
+    The latest announcement in hermes-announcement has the wrong URL. It's a 404 - non-existent page. 
+    
+    The correct url for the Automation Blueprints page is: https://hermes-agent.nousresearch.com/docs/guides/automation-blueprints
+    
+    Currently has: https://hermes-agent.nousresearch.com/docs/guides/automation-templates
+    
+    <@387972437901312000>
+    
+    Announcement link: https://discord.com/channels/1053877538025386074/1490858802726043759/1514792610441592904
+
+[2026-06-12T05:51:26.097000+00:00] teknium (id=1514869719708991648)
+    mmmm
+    [reply to maxfreedompollard msg=1514867904791838770]
+
+[2026-06-12T07:07:41.717000+00:00] godsboy7777 (id=1514888911250259989)
+    Hey Teknium, could you please review this Mem0 Hermes Agent PR when you get a gap?
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/38429
+    
+    ## Why it matters
+    
+    Hermes' built-in Mem0 memory provider currently writes memories with both `user_id` and `agent_id` for attribution, but reads them back using only `user_id`.
+    
+    Relevant upstream file:
+    https://github.com/NousResearch/hermes-agent/blob/main/plugins/memory/mem0/__init__.py
+    
+    The practical problem is that Mem0 Platform can store agent-scoped records under `{ user_id, agent_id }`, so a plain `{ user_id }` read can miss memories that Hermes itself saved through the agent.
+    
+    That makes recall incomplete even though Mem0 is configured and working correctly.
+    
+    ## Why this belongs in Hermes Agent, not Mem0 upstream
+    
+    * The bug is in Hermes' Mem0 provider read logic.
+    * Hermes chooses the filters it sends to Mem0.
+    * Mem0 is not failing to store or search records.
+    * The provider should read both legacy user-only records and current user+agent records.
+    
+    ## What the PR changes
+    
+    The PR fixes this by changing Hermes' `_read_filters()` to use an OR filter covering both shapes:
+    
+    ```json
+    {
+      "user_id": "..."
+    }
+    ```
+    
+    and:
+    
+    ```json
+    {
+      "user_id": "...",
+      "agent_id": "..."
+    }
+    ```
+    
+    It also adds tests here:
+    https://github.com/NousResearch/hermes-agent/pull/38429/files
+    
+    This is a narrow compatibility fix for Hermes' bundled provider, not a new core tool or speculative feature.
+    
+    It preserves existing user-only recall while restoring recall for agent-attributed memories.
+    
+    ## Current live impact
+    
+    We are carrying this as a local Hermes patch right now because our live Hermes setup misses agent-scoped Mem0 memories without it.
+    
+    Would be good to upstream it so others using `agent_id` do not silently lose recall.
+    
+    ## Extra context
+    
+    Hermes' own bundled Mem0 provider documents both config fields in:
+    
+    ```text
+    plugins/memory/mem0/README.md
+    ```
+    
+    Those fields are:
+    
+    * `user_id`
+    * `agent_id`
+    
+    The provider's write path already uses both values for attribution. The mismatch is only on the read path.
+    
+    Current behaviour is effectively:
+    
+    1. Hermes saves memory as:
+    
+    ```json
+    {
+      "user_id": "dewaldt",
+      "agent_id": "hermie"
+    }
+    ```
+    
+    2. Later Hermes searches or lists memories with:
+    
+    ```json
+    {
+      "user_id": "dewaldt"
+    }
+    ```
+    
+    3. Depending on how Mem0 scopes those records, that can omit memories Hermes itself saved.
+    
+    That makes the feature look flaky from the user side:
+    
+    * `mem0_conclude` works
+    * Mem0 dashboard / API has the records
+    * `mem0_profile` / `mem0_search` can still miss some of them
+    
+    The PR fixes the read side to match the write side.
+    
+    PR again:
+    https://github.com/NousResearch/hermes-agent/pull/38429
+    
+    Relevant upstream file again:
+    https://github.com/NousResearch/hermes-agent/blob/main/plugins/memory/mem0/__init__.py
+    
+    This should be safe because it does not remove user-only reads.
+    
+    It broadens reads to include both:
+    
+    * Older / plain user-scoped memories
+    * Newer / current agent-attributed memories
+    
+    So it is backwards-compatible and restores consistency between write and read behaviour.
+    
+    Thanks.
+    [embed] fix(mem0): read agent-attributed memories by GodsBoy · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/38429
+    [embed] hermes-agent/plugins/memory/mem0/__init__.py at main · NousResearc... https://github.com/NousResearch/hermes-agent/blob/main/plugins/memory/mem0/__init__.py
+    [embed] fix(mem0): read agent-attributed memories by GodsBoy · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/38429/files
+
+[2026-06-12T07:25:13.171000+00:00] flownium (id=1514893321368244366)
+    https://github.com/NousResearch/hermes-agent/pull/44734
+    [embed] fix: detect Kubernetes containers by itsflownium · Pull Request #4... https://github.com/NousResearch/hermes-agent/pull/44734
+
+[2026-06-12T07:36:31.195000+00:00] flownium (id=1514896165206757407)
+    https://github.com/NousResearch/hermes-agent/pull/44740
+    [embed] fix: stop Discord typing after replies by itsflownium · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/44740
+
+[2026-06-12T08:25:38.735000+00:00] flownium (id=1514908528085827728)
+    https://github.com/NousResearch/hermes-agent/pull/44774
+    [embed] fix(desktop): stabilize sidebar by itsflownium · Pull Request #447... https://github.com/NousResearch/hermes-agent/pull/44774
+
+[2026-06-12T08:35:28.332000+00:00] xdarkchain (id=1514911001034883122)
+    Hey <@387972437901312000> 
+    
+    Telegram added Rich Messages (Bot API 10.1) and Hermes now uses them — replies render **native markdown**: tables, task lists, headings, math, collapsible details, and more. Live streaming previews match the final message too.
+    
+    This is really good and useful so please take a look when you can.
+    
+    https://github.com/NousResearch/hermes-agent/pull/44780
+    [embed] Add Telegram Bot API 10.1 rich message support by ITheEqualizer · ... https://github.com/NousResearch/hermes-agent/pull/44780
+
+[2026-06-12T08:49:12.184000+00:00] loongfay (id=1514914456520626279)
+    Hi, <@387972437901312000> , if you have some time, please take a look for this PR: https://github.com/NousResearch/hermes-agent/pull/43508
+    [embed] feat(Yuanbao): support wechat forward msg by loongfay · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/43508
+
+[2026-06-12T09:07:19.161000+00:00] teknium (id=1514919015632474172)
+    Can you add screenshots before and after? I dont kow what rich messages means compared to markdown v2
+    [reply to xdarkchain msg=1514911001034883122]
+
+[2026-06-12T09:19:58.781000+00:00] xdarkchain (id=1514922201709678653)
+    Check this bot on Telegram: @richtextdemobot
+    [reply to teknium msg=1514919015632474172]
+
+[2026-06-12T09:23:12.760000+00:00] aialliai (id=1514923015316574279)
+    Well not a good sign,  demo not responding! 🤨
+    [reply to xdarkchain msg=1514922201709678653]
+
+[2026-06-12T09:23:36.968000+00:00] xdarkchain (id=1514923116852416544)
+    That is the official bot from TG BTW.
+    [reply to aialliai msg=1514923015316574279]
+
+[2026-06-12T09:24:38.781000+00:00] aialliai (id=1514923376114925760)
+    I know! The change would take some work though!
+    [reply to xdarkchain msg=1514923116852416544]
+
+[2026-06-12T09:25:10.843000+00:00] xdarkchain (id=1514923510592700497)
+    True, I did some stuff and I think it's almost done and ready!
+    [reply to aialliai msg=1514923376114925760]
+
+[2026-06-12T09:25:31.645000+00:00] aialliai (id=1514923597842350271)
+    So did I 😛
+    [reply to xdarkchain msg=1514923510592700497]
+
+[2026-06-12T09:25:39.607000+00:00] xdarkchain (id=1514923631237529741)
+    <:shobon:1458061171193151653>
+    [reply to aialliai msg=1514923597842350271]
+
+[2026-06-12T09:30:49.406000+00:00] teknium (id=1514924930628587590)
+    ?
+    [reply to xdarkchain msg=1514922201709678653]
+
+[2026-06-12T09:44:30.165000+00:00] hughjm (id=1514928373141602324)
+    Hey <@387972437901312000> , I opened a small follow-up for the macOS Desktop /codex-runtime PATH issue:
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/44813
+    PR: https://github.com/NousResearch/hermes-agent/pull/44814
+    
+    Context:
+    - #35613 / #42653 fixed the terminal/gateway subprocess PATH by appending missing POSIX sane PATH entries.
+    - #41385 / #41389 covers the Desktop backend path for Hermes-managed Node binaries like ~/.hermes/node/bin/codex.
+    - I hit the remaining Desktop case where Codex is installed via Homebrew at /opt/homebrew/bin/codex. The Desktop dashboard backend PATH includes Hermes node/venv + Apple default paths, but still misses /opt/homebrew/bin, so /codex-runtime on fails with “codex CLI not found”.
+    
+    The PR factors Desktop backend env construction into a small tested helper:
+    - prepends ~/.hermes/node/bin and the venv bin;
+    - appends missing POSIX sane PATH entries such as /opt/homebrew/bin and /opt/homebrew/sbin;
+    - preserves caller precedence and dedupes entries;
+    - preserves Windows PATH casing/delimiters.
+    
+    Local checks:
+    - node --check backend-env/main/test files: passed
+    - node --test electron/backend-env.test.cjs electron/backend-probes.test.cjs: 12 passed
+    - npm run test`:desktop:`platforms: 170 passed, 1 skipped
+    
+    This is intended as a complement to #41389, borrowing the PATH-completion behavior from #42653 for the Desktop backend path.
+    [embed] [Bug]: Desktop backend PATH still misses Homebrew bins for /codex-r... https://github.com/NousResearch/hermes-agent/issues/44813
+    [embed] fix(desktop): complete backend PATH for Homebrew Codex by y0shua1ee... https://github.com/NousResearch/hermes-agent/pull/44814
+
+[2026-06-12T09:55:57.125000+00:00] godsboy7777 (id=1514931254460678324)
+    Hey <@387972437901312000>, small follow-up to the Telegram delivery fixes you merged in #43761:
+    
+    PR #44783 makes the gateway's `"Suppressing normal final send"` log line carry its own evidence instead of three bare booleans.
+    
+    It now includes:
+    
+    * Payload lengths
+    * Short SHA-256 digests
+    * Message ID
+    * Overflow flag
+    
+    This came out of triaging a live "did the user actually see the full reply?" incident on our deployment.
+    
+    The logs could not answer it. We had to pull the session DB to prove the model had simply stopped normally.
+    
+    With this change, a digest match on that one log line settles it.
+    
+    That is exactly the log distinction #27942's acceptance criteria ask for, and it makes false positives like #29200 provable or refutable from logs alone.
+    
+    Scope:
+    
+    * Zero behavior change
+    * Suppression condition is byte-identical to `main`
+    * Composition helper cannot raise
+    * Message content never hits logs
+    * 11 new tests
+    * All CI green on the first run
+    * Mergeable
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/44783
+    [embed] fix(gateway): log delivery facts when suppressing the final send by... https://github.com/NousResearch/hermes-agent/pull/44783
+
+[2026-06-12T09:57:10.365000+00:00] teknium (id=1514931561651503114)
+    this seems like a nice one, I noticed this yesterday lol
+    [reply to flownium msg=1514896165206757407]
+
+[2026-06-12T09:57:54.956000+00:00] teknium (id=1514931748679717004)
+    I will try to soon.
+    [reply to tiny_th_dev msg=1514783844539170887]
+

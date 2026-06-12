@@ -1,0 +1,10 @@
+# Thread 'Hermes Agent — Remote Backend Setup (VPS + Tailscale + Desktop App)' in forum #community-projects-showcase
+# thread_id=1514892754747002981 forum_id=1316137596535177246
+# Started 2026-06-12T10:08:29.966302+00:00
+
+[2026-06-12T07:22:58.078000+00:00] half_tom (id=1514892754747002981)
+    Sharing in case it helps others: I'm running Hermes on a VPS secured with Tailscale, using the desktop app for access, and the Hermes Dashboard as a systemd service for automatic startup and management
+    
+    Github:  https://github.com/Haftom19/hermes-vps-setup
+    [embed] GitHub - Haftom19/hermes-vps-setup https://github.com/Haftom19/hermes-vps-setup
+

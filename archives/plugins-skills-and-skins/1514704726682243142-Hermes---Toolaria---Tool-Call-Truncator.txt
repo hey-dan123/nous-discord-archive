@@ -32,3 +32,27 @@
     All setup ty
     [attachment] image.png https://cdn.discordapp.com/attachments/1514704726682243142/1514832804058239126/image.png?ex=6a2ccd7c&is=6a2b7bfc&hm=ccf1c65e4291c38e6c47482bf0c302051aa12f932c0e23918bc6119a705199ed&
 
+[2026-06-12T09:05:31.592000+00:00] sahil_ss9 (id=1514918564455518238)
+    Toolaria v2 is live
+    
+    Quick recap: big tool results (web pages, API dumps, MCP output) used to flood the model's context and crowd everything else out. Toolaria catches them, stashes the full thing on disk, and hands the model a tiny handle instead.
+    
+    v2 turns that handle into a proper workspace:
+    
+    Outline — get a structural map of a result without reading it. JSON schemas with number stats, page headings, log error clusters. The model navigates by structure, not guesswork.
+    
+    Search — ask a rescued result a question in plain English, get the relevant bits back with line numbers. Works dep-free out of the box, smarter with embeddings installed.
+    
+    Pass-by-reference — the big one. Hand a whole result to another tool without the model ever reading it. Write tla:<id> and Toolaria swaps in the full content right before the tool runs.
+    
+    The numbers, on a real 2,000-row result:
+    - 171,874 chars became a 1,733-char handle. 99x smaller in context.
+    - Passed it to a second tool by emitting 79 characters. The tool still got all 171,874.
+    
+    Hardened too: session-scoped so one session can't pull another's data, exec/exfil sinks blocked by default, grep that can't be hung by a nasty regex.
+    
+    Zero config, on by default, composes with whatever context engine you run.
+    
+    Repo and a Proof section showing it in action: https://github.com/Sahil-SS9/Toolaria
+    [embed] GitHub - Sahil-SS9/Toolaria: Rescue oversized tool results before t... https://github.com/Sahil-SS9/Toolaria
+

@@ -1,0 +1,21 @@
+# Thread 'A tool for orchestration ( free for individual devs )' in forum #community-projects-showcase
+# thread_id=1514924066056699934 forum_id=1316137596535177246
+# Started 2026-06-12T10:08:29.578529+00:00
+
+[2026-06-12T09:27:23.276000+00:00] kushalkhemani (id=1514924066056699934)
+    Hey folks - Kushal here. I've been working on Stratum, a local-first multi-agent orchestrator that runs entirely on your hardware. No cloud backend, no telemetry, no per-seat pricing.
+    
+    Architecture-wise, it's a manager-agent topology running in an Electron shell. The manager owns planning, delegation, verification, and recovery. Workers (frontend, runtime, test, browser, review) each get bounded tasks with visible state and dedicated tool surfaces. The manager checks diffs, logs, screenshots, and summaries before accepting work, with automatic retry on failure.
+    
+    The agent runtime supports 75+ LLM providers including Nous Hermes through the OpenCode integration and direct provider configs. Model routing is per-worker - you can assign different models to different workers. Context windows are tracked per run, and project memory (plan.md, codebase.md, notes) persists across sessions so long-running work doesn't restart cold.
+    
+    It's been battle-tested on my own research work - edge efficiency, scheduling, AI tutoring pipelines - running on CPU-only hardware with intermittent connectivity. The whole thing stays under 128K tracked context per run with durable artifacts written back into the project directory.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1514924066056699934/1514924394034626590/image.png?ex=6a2d22c9&is=6a2bd149&hm=486af8f43e105e2062b61b213b29819b51758697d3c82371967488a9f5004eca&
+
+[2026-06-12T09:27:40.236000+00:00] kushalkhemani (id=1514924137192095907)
+    Repo and docs at https://getstratum.vercel.app/. Would love feedback from this community - especially on the agent orchestration layer and how it compares to what you're running locally.
+    [embed] Stratum https://getstratum.vercel.app/
+
+[2026-06-12T09:28:50.474000+00:00] kushalkhemani (id=1514924431791620097)
+    👀 token count
+

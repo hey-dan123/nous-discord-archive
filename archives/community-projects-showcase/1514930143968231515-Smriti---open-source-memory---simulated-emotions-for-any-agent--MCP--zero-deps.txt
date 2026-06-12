@@ -1,0 +1,18 @@
+# Thread 'Smriti — open-source memory + simulated emotions for any agent (MCP, zero deps)' in forum #community-projects-showcase
+# thread_id=1514930143968231515 forum_id=1316137596535177246
+# Started 2026-06-12T10:08:29.163224+00:00
+
+[2026-06-12T09:51:32.363000+00:00] thelonewolf9666 (id=1514930143968231515)
+    Hey everyone — just open-sourced Smriti, a portable memory + affect layer that works with any MCP-capable agent (built with Hermes in mind).
+    
+    It does the Hermes-style self-improvement loop (events → reflection → reusable skill docs) but framework-agnostic, plus temporal facts that actually supersede ("moved to Tokyo" beats "lives in London"), and a simulated emotion system where frustration escalates strategy (retry → switch → ask for help → cooldown) — never aggression. Values veto emotions, always.
+    
+    Benchmarked in CI: same 5 ops tasks, day-1 trial-and-error vs day-30 with memory → 5/5 skill recall, 75% fewer steps.
+    
+    Pure Python + SQLite, zero deps, MIT, 32 tests, 20 MCP tools.
+    
+    https://github.com/thelonewolf1337-code/smriti
+    
+    Would love feedback from people running long-lived agents 🧠
+    [embed] GitHub - thelonewolf1337-code/smriti: Portable memory + simulated a... https://github.com/thelonewolf1337-code/smriti
+

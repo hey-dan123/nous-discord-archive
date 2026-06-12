@@ -3880,3 +3880,28 @@
     I would like to propose a feature idea to improve the workflow efficiency in Hermes Web-UI: The ability to share files between different Workspaces, even when switching profiles.
     Currently, files and context can feel isolated depending on the active profile or workspace. Having a feature that allows seamless cross-workspace file sharing—and ensures these files remain accessible even if we change profiles—would make the ecosystem much more flexible and powerful for managing multiple tasks.
 
+[2026-06-12T06:45:53.114000+00:00] avidfuturist (id=1514883422571466752)
+    Thanks for the suggestion!
+    [reply to mathewsstar msg=1514793686880485507]
+
+[2026-06-12T07:17:21.726000+00:00] kyklooppi (id=1514891343984591019)
+    Wondering what is the real need of this as In Hermes, the clean separation is already there: profile data lives under ~/.hermes/profiles/<name>/, while working files and drafts live in the shared workspace tree, like /home/kyklis/workspace/....
+    
+    That means if a file is meant to survive profile changes, it should be placed in the workspace, not in profile-local state. Profiles are for agent behavior, config, skills, sessions, and memory. Workspaces are for the actual project files we want to keep and reuse.
+    
+    In practice, that’s how we already work. We keep draft docs and evolving notes as .md files in the workspace so they stay available no matter which profile is active. So the workflow problem is already solved by the folder layout, without needing extra cross-profile sharing plumbing.
+    [reply to mathewsstar msg=1514793686880485507]
+
+[2026-06-12T07:20:47.992000+00:00] avidfuturist (id=1514892209126637568)
+    Great points, appreciate the writeup!
+    [reply to kyklooppi msg=1514891343984591019]
+
+[2026-06-12T08:27:22.131000+00:00] deor42 (id=1514908961759825981)
+    This is how i work too, Profiles and Workspaces are different things.
+    I do often set up Workspaces per project, but they are always within the Home workspace so i can easily switch if a chat needs access to everything.
+    /home/workspace - is home
+    /home/workspace/project1
+    /home/workspace/project2
+    etc etc.
+    [reply to kyklooppi msg=1514891343984591019]
+
