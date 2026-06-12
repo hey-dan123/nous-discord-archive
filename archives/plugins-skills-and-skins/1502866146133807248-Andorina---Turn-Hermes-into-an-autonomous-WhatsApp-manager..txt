@@ -385,3 +385,27 @@
     [embed] Release v1.5.2-Beta1 - Bug Fix Release: Security, Webhooks, note ma... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/releases/tag/V1.5.2-Beta1
     [reply to vayaperson msg=1514376728921772193]
 
+[2026-06-12T18:25:28.820000+00:00] vayaperson (id=1515059481443176484)
+    Bug fix update. If your bridge was disconnecting or looping the QR code, this fixes it.
+    
+    **What was happening:**
+    Hermes v0.16.0 changed where it stores the WhatsApp session. If your disk had filled up at any point, the credentials file ended up empty and the bridge got stuck retrying every 30 seconds indefinitely.
+    
+    **What's fixed:**
+    - Session symlink so future Hermes path changes don't break the connection again
+    - Installer now checks Hermes >= v0.16.0 is installed and offers to update it automatically if not
+    - Installer warns if disk space is below 5GB
+    - Auto-updater now handles the symlink, disk monitor setup and config migration automatically on update
+    - New daily disk monitor: sends a WhatsApp alert if free space drops below 85%
+    - Fixed a broken injection anchor in patch_whatsapp.py (removed in Hermes v0.16.0, affected fresh installs)
+    
+    **To update:**
+    - Already installed: run the built-in updater script
+    - Fresh install or manual update: download below and run `install.sh`
+    
+    **If your bridge is stuck on QR:**
+    Stop the gateway, run `hermes whatsapp` to scan the QR, then start the gateway again.
+    
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+    [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+

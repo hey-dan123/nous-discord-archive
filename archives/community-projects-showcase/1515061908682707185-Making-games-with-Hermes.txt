@@ -1,0 +1,17 @@
+# Thread 'Making games with Hermes' in forum #community-projects-showcase
+# thread_id=1515061908682707185 forum_id=1316137596535177246
+# Started 2026-06-12T20:07:36.097098+00:00
+
+[2026-06-12T18:35:07.519000+00:00] jw_mushroom_man (id=1515061908682707185)
+    I am trying to make games with hermes. This is how it is going. the first game is Crysis in HTML
+
+[2026-06-12T18:55:25.662000+00:00] dustytretch (id=1515067017944629409)
+    do you have a link to the game?
+
+[2026-06-12T19:49:13.762000+00:00] jw_mushroom_man (id=1515080557577371728)
+    [attachment] IMG_1305.mov https://cdn.discordapp.com/attachments/1515061908682707185/1515080556835242054/IMG_1305.mov?ex=6a2db439&is=6a2c62b9&hm=d2252f25ea2de2fb2ce3c3ad279ee7649d7c1f2204647ce8a404e85f48e1f736&
+
+[2026-06-12T19:49:29.812000+00:00] jw_mushroom_man (id=1515080624895955149)
+    No I just started about 30 minutes ago as a meme from chat ☠️
+    [reply to dustytretch msg=1515067017944629409]
+

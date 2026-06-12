@@ -147,3 +147,7 @@
 [2026-06-12T01:20:59.735000+00:00] jec.02 (id=1514801661414080633)
     Do you have comparison between sibyl vs honcho?
 
+[2026-06-12T19:06:44.980000+00:00] dr.kojipup (id=1515069867210964992)
+    we ran an earlier adversarial test here!: https://discord.com/channels/1053877538025386074/1509794019729735814/1512579401714237571
+    [reply to jec.02 msg=1514801661414080633]
+

@@ -1,0 +1,9 @@
+# Thread 'Apollo - the plugin that turns Hermes into a health super agent' in forum #plugins-skills-and-skins
+# thread_id=1515054183156420748 forum_id=1485392832154832906
+# Started 2026-06-12T20:11:32.968397+00:00
+
+[2026-06-12T18:04:25.610000+00:00] thechaosalchemist (id=1515054183156420748)
+    connect any wearable, own your own health data, fully open sourced!
+    https://x.com/RiverKhan/status/2065447164365455443?s=20
+    [embed]  https://twitter.com/RiverKhan/status/2065447164365455443?s=20
+

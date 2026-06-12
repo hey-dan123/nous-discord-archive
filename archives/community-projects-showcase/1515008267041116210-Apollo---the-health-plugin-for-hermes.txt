@@ -1,0 +1,63 @@
+# Thread 'Apollo - the health plugin for hermes' in forum #community-projects-showcase
+# thread_id=1515008267041116210 forum_id=1316137596535177246
+# Started 2026-06-12T20:07:36.552718+00:00
+
+[2026-06-12T15:01:58.355000+00:00] thechaosalchemist (id=1515008267041116210)
+    More info here:
+    
+    https://x.com/RiverKhan/status/2065447164365455443?s=20
+    [embed]  https://twitter.com/RiverKhan/status/2065447164365455443?s=20
+
+[2026-06-12T15:02:03.119000+00:00] thechaosalchemist (id=1515008287022514236)
+    sup
+
+[2026-06-12T15:17:23.076000+00:00] thechaosalchemist (id=1515012145602101361)
+    Yoyo <@387972437901312000> shipped it 🫡
+
+[2026-06-12T15:17:51.078000+00:00] thechaosalchemist (id=1515012263050739912)
+    Works beautifully with Oura and whoop 
+    
+    Adding Garmin next
+
+[2026-06-12T15:18:24.468000+00:00] thechaosalchemist (id=1515012403098685612)
+    Omg just saw the RT! Thanks!!
+
+[2026-06-12T15:18:28.184000+00:00] thechaosalchemist (id=1515012418684715158)
+    Lmk if any requests
+
+[2026-06-12T15:19:06.863000+00:00] teknium (id=1515012580916072489)
+    <a:hype:1151299876395696189>
+
+[2026-06-12T15:25:45.899000+00:00] jcrabapple (id=1515014254594625627)
+    Is it open source?
+
+[2026-06-12T15:26:04.377000+00:00] thechaosalchemist (id=1515014332096712905)
+    ofc man - repo link in tweet
+    [reply to jcrabapple msg=1515014254594625627]
+
+[2026-06-12T15:26:33.528000+00:00] jcrabapple (id=1515014454364868638)
+    I didn't see the repo link in the tweet
+    [reply to thechaosalchemist msg=1515014332096712905]
+
+[2026-06-12T15:26:39.023000+00:00] thechaosalchemist (id=1515014477412565054)
+    https://github.com/Infinite-Labs-AI/hermes-health-apollo
+    [embed] GitHub - Infinite-Labs-AI/hermes-health-apollo: Hermes Health Apoll... https://github.com/Infinite-Labs-AI/hermes-health-apollo
+
+[2026-06-12T15:26:45.468000+00:00] jcrabapple (id=1515014504444989561)
+    Thanks
+    [reply to thechaosalchemist msg=1515014477412565054]
+
+[2026-06-12T15:26:53.125000+00:00] thechaosalchemist (id=1515014536560902256)
+    https://x.com/RiverKhan/status/2065447166953337074?s=20
+    [embed]  https://twitter.com/RiverKhan/status/2065447166953337074?s=20
+
+[2026-06-12T15:27:19.436000+00:00] jcrabapple (id=1515014646916972564)
+    Oh I can't see comments on tweets. Don't have X.
+
+[2026-06-12T15:27:43.086000+00:00] thechaosalchemist (id=1515014746112262275)
+    ahh i see, all good
+    [reply to jcrabapple msg=1515014646916972564]
+
+[2026-06-12T15:27:48.799000+00:00] thechaosalchemist (id=1515014770074321108)
+    lmk if you have any issues using the plugin!
+

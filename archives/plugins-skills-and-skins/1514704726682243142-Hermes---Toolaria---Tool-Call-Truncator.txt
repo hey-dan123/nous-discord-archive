@@ -56,3 +56,19 @@
     Repo and a Proof section showing it in action: https://github.com/Sahil-SS9/Toolaria
     [embed] GitHub - Sahil-SS9/Toolaria: Rescue oversized tool results before t... https://github.com/Sahil-SS9/Toolaria
 
+[2026-06-12T18:50:45.132000+00:00] eucdee (id=1515065841316528330)
+    I told hermes to setup and use it.. 
+    
+    **Toolaria is now fully set up and working!** Here's a summary:
+    
+    ## ✅ Setup Complete
+    
+    **Installation steps performed:**
+    1. Cloned `https://github.com/Sahil-SS9/Toolaria.git` to `~/.hermes/plugins/toolaria`
+    2. Installed dependencies (`pip install -r requirements.txt`)
+    3. Created `plugin.yaml` manifest (required for plugin discovery)
+    4. Added `toolaria` to `plugins.enabled` in `~/.hermes/config.yaml`
+    5. Restarted the gateway via `systemctl restart hermes-gateway`
+    
+    Nice 🙂
+

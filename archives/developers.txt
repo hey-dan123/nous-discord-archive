@@ -30327,3 +30327,178 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-12T14:53:59.976000+00:00] aialliai (id=1515006260574158899)
     Evrything posted so far green... so fuck it ship it I hope ✅
 
+[2026-06-12T14:56:44.200000+00:00] thechaosalchemist (id=1515006949379539056)
+    yoyo everyone, i just launched apollo - the health plugin for hermes.
+    
+    check it out here:
+    
+    https://x.com/RiverKhan/status/2065447164365455443?s=20
+    [embed]  https://twitter.com/RiverKhan/status/2065447164365455443?s=20
+
+[2026-06-12T14:58:42.401000+00:00] aialliai (id=1515007445150335177)
+    <@1174418351573971018> not the right place really.. https://discord.com/channels/1053877538025386074/1316137596535177246 https://discord.com/channels/1053877538025386074/1485392832154832906
+    [reply to thechaosalchemist msg=1515006949379539056]
+
+[2026-06-12T14:58:52.376000+00:00] kyssta69 (id=1515007486988517606)
+    https://github.com/NousResearch/hermes-agent/pull/44994
+    
+    **Problem**: hermes backup on Windows bundles the entire Git for Windows installation (~9,500 files, 390 MB) because the 'git' directory under HERMES_HOME is not in the exclusion list.
+    The 'git' directory name was missing from _EXCLUDED_DIRS in backup.py, so it was included in backups.
+    Added 'git' to _EXCLUDED_DIRS to exclude the Git for Windows installation from backups.
+    [embed] fix(backup): exclude Git for Windows dir from backups (#44852) by k... https://github.com/NousResearch/hermes-agent/pull/44994
+
+[2026-06-12T14:59:26.197000+00:00] aialliai (id=1515007628843946074)
+    <@1068770268660629574> pile-up on the highway.....
+
+[2026-06-12T14:59:44.828000+00:00] kyssta69 (id=1515007706988150796)
+    😬
+
+[2026-06-12T15:03:34.203000+00:00] kyssta69 (id=1515008669056503968)
+    https://github.com/NousResearch/hermes-agent/pull/44997
+    
+    **Problem**: read_file returns inconsistent response in execute_code sandbox causing KeyError crashes when files are read twice.
+    The dedup optimization in read_file_tool returned {status: unchanged, ...} instead of the standard {content, total_lines, ...} structure when a file was unchanged.
+    Added content, total_lines, file_size, and truncated fields to the dedup response to match the standard structure.
+    [embed] fix(tools): make read_file dedup response consistent (#44843) by ky... https://github.com/NousResearch/hermes-agent/pull/44997
+
+[2026-06-12T15:05:54.243000+00:00] aialliai (id=1515009256426967081)
+    Let's go! 🔥  I cant count how many posts will wait for them!
+    [reply to kyssta69 msg=1515008669056503968]
+
+[2026-06-12T15:06:24.039000+00:00] kyssta69 (id=1515009381400576111)
+    Speedrunning 1000 prs
+    [reply to aialliai msg=1515009256426967081]
+
+[2026-06-12T15:07:49.044000+00:00] kyssta69 (id=1515009737937256488)
+    ||sob||
+    https://github.com/NousResearch/hermes-agent/pull/44870
+    
+    **Problem**: Session DB turn-end flush drops assistant messages after repair_message_sequence compacts the message list.
+    When repair_message_sequence merges consecutive user messages or drops stray tools, the messages list shrinks but the flush cursor (_last_flushed_db_idx) was not clamped, causing the turn-end flush to skip persisting the assistant/tool chain.
+    Clamped the cursor after repair and added a safety guard in _flush_messages_to_session_db to prevent cursor overshooting.
+    [embed] fix(agent): clamp flush cursor after repair_message_sequence compac... https://github.com/NousResearch/hermes-agent/pull/44870
+
+[2026-06-12T15:08:02.853000+00:00] kyssta69 (id=1515009795856269493)
+    My exams ended so I might just nolife from tr
+
+[2026-06-12T15:08:05.346000+00:00] kyssta69 (id=1515009806312800416)
+    Tmr
+
+[2026-06-12T15:08:11.164000+00:00] aialliai (id=1515009830715133952)
+    They really need a EU office to approve!
+    [reply to kyssta69 msg=1515009381400576111]
+
+[2026-06-12T16:38:08.442000+00:00] suhas2391 (id=1515032468540096703)
+    **PR #45055** — fix(cli): show all session sources in /sessions list
+    🔗 https://github.com/NousResearch/hermes-agent/pull/45055
+    
+    **The bug (#44964):** The `/sessions` slash command in the interactive CLI (and bare `/resume` commands) would filter list_sessions_rich on source="cli", causing TUI and WhatsApp/Telegram/Slack sessions to be hidden from the in-chat resume lists.
+    
+    **The fix:** 
+    • Removed the restrictive `source="cli"` filter from `_list_recent_sessions` in `cli.py` (keeping the internal `exclude_sources=["tool"]` clean-up filter).
+    • Added a unit test to verify that list_sessions_rich is called without filtering by source.
+    • All CLI and TUI test suites are green! ✅
+    [embed] fix(cli): show all session sources in /sessions list by suhas-svg ... https://github.com/NousResearch/hermes-agent/pull/45055
+
+[2026-06-12T16:45:33.404000+00:00] theoveo (id=1515034334845997269)
+    Hello, quick context for PR #44985.
+    
+    We ran into an issue with Hermes Desktop when the dashboard is exposed remotely with the browser/password auth gate enabled.
+    
+    Concrete setup:
+    - dashboard bound on a non-loopback / remote interface
+    - auth gate enabled to protect browser access
+    - Hermes Desktop still uses the existing session token flow for API calls and WebSockets
+    
+    Result: browser login works, but Hermes Desktop can get blocked because the auth gate no longer accepts the Desktop token path (`X-Hermes-Session-Token` for HTTP API calls and `?token=...` for WebSockets).
+    
+    The PR keeps browser auth in place for the web dashboard, while also allowing Hermes Desktop to keep authenticating with its existing session token. This lets both use cases coexist on the same backend:
+    - browser dashboard protected by cookie/auth gate
+    - Desktop remote access via session token
+    
+    We initially fixed this in our custom overlay, but that overlay drifts quickly from upstream. So I preferred upstreaming the minimal behavior with regression tests instead of continuing to maintain a large local patch.
+    
+    Local validation:
+    - dedicated Desktop token + auth gate test: 2 passed
+    - existing web_server test + new regression test: 3 passed
+    - py_compile OK
+    - git diff --check OK
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/44985
+    [embed] fix(dashboard): accept Desktop token behind auth gate by leprincep3... https://github.com/NousResearch/hermes-agent/pull/44985
+
+[2026-06-12T17:28:43.810000+00:00] elkosmas (id=1515045199796244593)
+    Can be nightmarish from time to time 🙃
+    [reply to pinched_nerve msg=1515002489685147759]
+
+[2026-06-12T17:29:36.510000+00:00] aialliai (id=1515045420835799241)
+    Oh no... then we need your help probably
+    [reply to elkosmas msg=1515045199796244593]
+
+[2026-06-12T17:29:39.135000+00:00] pinched_nerve (id=1515045431846109354)
+    I was involved in a sleep study once.  I failed.
+    [reply to elkosmas msg=1515045199796244593]
+
+[2026-06-12T17:30:35.541000+00:00] aialliai (id=1515045668430024714)
+    about 4 hours of sleep in the last 55 hours
+
+[2026-06-12T17:32:29.695000+00:00] pinched_nerve (id=1515046147226599444)
+    Not joking at all:  I found I sleep best sitting upright,  in front of a monitor and keyboard, trying to solve some impossible problem.  When I wake up, the probem is usually solved.
+
+[2026-06-12T17:35:39.338000+00:00] aialliai (id=1515046942646997203)
+    I probably am right now...
+    [reply to pinched_nerve msg=1515046147226599444]
+
+[2026-06-12T17:36:15.785000+00:00] hungnguyen2124. (id=1515047095516659856)
+    Hi team! Got a few small, single-topic desktop PRs up — would love a review when someone has bandwidth 🙏
+    
+    #45069 — fix: custom: provider slugs no longer get rewritten onto openrouter (+8 lines). Two users hit this; one's blocked on it for a tutorial, so it'd be great to land this one soon if it looks right.
+    https://github.com/NousResearch/hermes-agent/pull/45069
+    
+    #45067 — fix: streamed assistant text order + newline preservation on message.complete
+    https://github.com/NousResearch/hermes-agent/pull/45067
+    
+    #45068 — fix: second-instance launch with a destroyed window now restores/recreates it (Windows)
+    https://github.com/NousResearch/hermes-agent/pull/45068
+    
+    #45066 — feat: render html + mermaid fences as live artifacts (sandboxed iframe, strict mermaid, streaming fallbacks, unit-tested). Fixes #40493, closed my older #40911 in favor of this.
+    https://github.com/NousResearch/hermes-agent/pull/45066
+    
+    Each is small and self-contained. Happy to adjust anything to fit codebase conventions — thanks!
+    [embed] fix(web): preserve custom: provider slugs in main model assignment ... https://github.com/NousResearch/hermes-agent/pull/45069
+    [embed] fix(desktop): correct streamed assistant text order and newline han... https://github.com/NousResearch/hermes-agent/pull/45067
+    [embed] fix(desktop): restore or recreate main window on second-instance ac... https://github.com/NousResearch/hermes-agent/pull/45068
+    [embed] feat(desktop): render html and mermaid code fences as live artifact... https://github.com/NousResearch/hermes-agent/pull/45066
+
+[2026-06-12T17:36:27.483000+00:00] aialliai (id=1515047144581758976)
+    But I do on occations take like a 16 hout nap!
+
+[2026-06-12T17:38:38.624000+00:00] elkosmas (id=1515047694626979961)
+    you would be amazed on how active your brain becomes (electrically speaking) when sleeping,,, creating automations for repeated tasks, organizing memories, solving problems... trully interesting
+
+[2026-06-12T17:39:27.229000+00:00] aialliai (id=1515047898491125963)
+    Thats kind of the same thing as coding.... so maybe thats why we dont need sleep...
+    [reply to elkosmas msg=1515047694626979961]
+
+[2026-06-12T17:41:09.542000+00:00] elkosmas (id=1515048327622951094)
+    prolonged sleep deprivation can even be life threatening... please take a rest when you can
+    [reply to aialliai msg=1515047898491125963]
+
+[2026-06-12T17:41:40.083000+00:00] aialliai (id=1515048455721062550)
+    I know.... I have chhronic insomnia and see doctors about it 😄
+    [reply to elkosmas msg=1515048327622951094]
+
+[2026-06-12T17:47:48.523000+00:00] aialliai (id=1515050001070428210)
+    Oh no last commit created some conflicts for my already green bugfix rollup
+
+[2026-06-12T18:07:02.482000+00:00] aialliai (id=1515054841125146787)
+    this bundle is now green again, had some conflicts after last commit  ✅ https://github.com/NousResearch/hermes-agent/pull/44061
+    [embed] Bugfix rollup (2026-06-10 session): cron, state DB, agent loop, MCP... https://github.com/NousResearch/hermes-agent/pull/44061
+
+[2026-06-12T18:11:31.520000+00:00] somacosf (id=1515055969552568361)
+    I go through bouts of Genius for several days on some of my research and projects. And then after ~3-5 days of very little sleep and several all nighters ill crash and sleep for a long slmber - but then I go back to what I built and read (I do OCD Meticulours documentation as I go) - but I read some of the stuff I came up with and im like "Where the fuck did THAT come from!" and I cant get my mind back into that dimension - but im impressed with my Jekyl/hyde that comes out ~ebery two weeks.
+
+[2026-06-12T18:12:30.299000+00:00] aialliai (id=1515056216089432144)
+    I can relate 😄
+    [reply to somacosf msg=1515055969552568361]
+

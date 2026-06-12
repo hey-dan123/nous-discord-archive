@@ -3905,3 +3905,7 @@
     etc etc.
     [reply to kyklooppi msg=1514891343984591019]
 
+[2026-06-12T15:27:29.020000+00:00] kyklooppi (id=1515014687115182310)
+    I have a similar setup. Each agent can have its own projects, and we store files in workspaces. I use Mnemosyne as the memory provider, so each agent has its own memory database, but the files themselves are shared. Real agentic workflow is still evolving, but for now, stateful .md files are the best way to keep project state useful for other agents.
+    [reply to deor42 msg=1514908961759825981]
+

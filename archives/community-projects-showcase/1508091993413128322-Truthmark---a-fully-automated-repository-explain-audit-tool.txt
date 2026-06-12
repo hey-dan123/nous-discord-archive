@@ -23,3 +23,6 @@
     [attachment] truthmark-banner.png https://cdn.discordapp.com/attachments/1508091993413128322/1508091993723769004/truthmark-banner.png?ex=6a14479e&is=6a12f61e&hm=a6fc13f66d40c43d031b6bb296dde0b2ed750a341588710c883706c5175f98e6&
     [embed] GitHub - merlinhu1/truthmark: Makes AI agent behavior visible and r... https://github.com/merlinhu1/truthmark
 
+[2026-06-12T19:49:13.635000+00:00] merlin_0212 (id=1515080557044695040)
+    V2.1 has been shipped
+
