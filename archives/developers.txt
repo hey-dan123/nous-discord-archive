@@ -30502,3 +30502,282 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I can relate 😄
     [reply to somacosf msg=1515055969552568361]
 
+[2026-06-12T21:50:10.255000+00:00] barronc (id=1515110993515253781)
+    founder of an Agentic QA company (www.ito.ai) and found a few bugs in recent PRs on Hermes. would love to help support the community by giving nous free QA on the open source repos, who's the right person to chat with?
+    
+    Here are the things we found:
+    
+    1 bug found
+    https://app.ito.ai/share/9c674252-d2e8-49ef-9865-75a92e52ff18?tab=details&testCase=006f2057-fa83-416a-8590-bbc6ade3376e
+    
+    1 bug found https://app.ito.ai/share/d9b25c73-71c7-4c50-8b3a-faef5a1814c1
+    
+    3 bug found https://app.ito.ai/share/c919667b-a2d4-4fb7-8810-20c893519554 (purely
+    backend issue, no useful capturable video evidence)
+
+[2026-06-12T22:14:07.366000+00:00] pinched_nerve (id=1515117021195407512)
+    Why not submit the bugs to the opensource github repo instead of requiring clicking on unknown links?
+    [reply to barronc msg=1515110993515253781]
+
+[2026-06-12T22:14:18.805000+00:00] aialliai (id=1515117069174181968)
+    <@575461682151686145> can’t be bothered to open this on a vm…
+
+[2026-06-12T22:14:38.576000+00:00] aialliai (id=1515117152099893290)
+    Exactly!!
+    [reply to pinched_nerve msg=1515117021195407512]
+
+[2026-06-12T22:14:39.187000+00:00] pinched_nerve (id=1515117154662350848)
+    honestly, that looks suspicious as hell to me.
+
+[2026-06-12T22:15:50.117000+00:00] pinched_nerve (id=1515117452164337805)
+    <@&1214801236323467284> sorry for the ping, but might want to capture and delete those links until someone checks if they're safe.
+    [reply to barronc msg=1515110993515253781]
+
+[2026-06-12T22:16:09.045000+00:00] kainan_e (id=1515117531554386000)
+    Kk (checked they appear legit)
+
+[2026-06-12T22:16:34.174000+00:00] pinched_nerve (id=1515117636952785060)
+    I always feel so guilty pinging a mod role.
+
+[2026-06-12T22:17:19.180000+00:00] aialliai (id=1515117825721893005)
+    Me too… I pinged sovthpaw because he was online…
+    [reply to pinched_nerve msg=1515117636952785060]
+
+[2026-06-12T22:18:08.464000+00:00] pinched_nerve (id=1515118032433709087)
+    I'd ping <@575461682151686145>, but then I couldn't nag him to answer my support thread (https://discord.com/channels/1053877538025386074/1515058378987016223)
+    [reply to aialliai msg=1515117825721893005]
+
+[2026-06-12T22:18:12.298000+00:00] pinched_nerve (id=1515118048514805780)
+    oops
+
+[2026-06-12T22:18:31.193000+00:00] kainan_e (id=1515118127766175774)
+    Not malicious
+    [reply to pinched_nerve msg=1515117452164337805]
+
+[2026-06-12T22:18:48.931000+00:00] aialliai (id=1515118202164740187)
+    Normally I would have opened on an isolated machine but on the phone right now
+
+[2026-06-12T22:18:57.602000+00:00] pinched_nerve (id=1515118238533681324)
+    I'm paranoid.  Perhaps excessively.
+    [reply to kainan_e msg=1515118127766175774]
+
+[2026-06-12T22:19:18.671000+00:00] kainan_e (id=1515118326903345305)
+    It's better to be safe than sorry
+    [reply to pinched_nerve msg=1515118238533681324]
+
+[2026-06-12T22:19:22.636000+00:00] .s0uthpaw (id=1515118343533891636)
+    Hey what's going on?
+    [reply to pinched_nerve msg=1515118032433709087]
+
+[2026-06-12T22:19:26.643000+00:00] aialliai (id=1515118360340205698)
+    No man… the world we live in today
+
+[2026-06-12T22:19:48.369000+00:00] kainan_e (id=1515118451465916427)
+    He was concerned links might be malicious but they appear fine
+    [reply to .s0uthpaw msg=1515118343533891636]
+
+[2026-06-12T22:19:52.172000+00:00] aialliai (id=1515118467416723607)
+    too slow....
+    [reply to .s0uthpaw msg=1515118343533891636]
+
+[2026-06-12T22:20:15.887000+00:00] pinched_nerve (id=1515118566884774040)
+    We were chatting about pinging mods and I took the opportunity to link a support thread that's looking for support. 😄
+    [reply to .s0uthpaw msg=1515118343533891636]
+
+[2026-06-12T22:20:18.398000+00:00] .s0uthpaw (id=1515118577416540252)
+    Sorry I missed you I was in the voice chat and didn't see the notification. I'm going to circle around to your support thread was it about this?
+
+[2026-06-12T22:20:32.103000+00:00] pinched_nerve (id=1515118634899607552)
+    no.. it's a simple python question
+
+[2026-06-12T22:21:07.390000+00:00] .s0uthpaw (id=1515118782903877763)
+    Yes please do it in the opposite order next time but yes <#1485307775444844625> and only ping mods if it's an immediate emergency but we do have systems in which we see these lanes pretty well
+    [reply to pinched_nerve msg=1515118566884774040]
+
+[2026-06-12T22:21:41.222000+00:00] kainan_e (id=1515118924805705860)
+    He pinged concerned links posted were scams, legit use of ping, all  good
+    [reply to .s0uthpaw msg=1515118782903877763]
+
+[2026-06-12T22:21:42.942000+00:00] pinched_nerve (id=1515118932019908708)
+    the mod ping was legit for something else.  Your private ping was just to annoy you and only you. 🤣
+    [reply to .s0uthpaw msg=1515118782903877763]
+
+[2026-06-12T22:22:13.715000+00:00] pinched_nerve (id=1515119061090963666)
+    (at least I'm honest!)
+
+[2026-06-12T22:22:31.567000+00:00] aialliai (id=1515119135967805481)
+    Love it!
+
+[2026-06-12T22:22:48.889000+00:00] barronc (id=1515119208621539459)
+    sorry! will post directly on the PR
+
+[2026-06-12T22:23:06.965000+00:00] barronc (id=1515119284437778553)
+    I was jsut hoping to chat with someone from the team who may be interested in running this pre-merge to prevent issues as they come up
+
+[2026-06-12T22:23:12.844000+00:00] aialliai (id=1515119309096226896)
+    So anyone taking a look at those links to see how many commits ago they were relevant.....
+
+[2026-06-12T22:23:19.537000+00:00] pinched_nerve (id=1515119337168437418)
+    this discord server has been hit with a LOT of scams and fakes recently... so everyone is a bit paranoid.
+    [reply to barronc msg=1515119208621539459]
+
+[2026-06-12T22:23:38.885000+00:00] barronc (id=1515119418319962142)
+    totally understand and not trying to spam. won't post anymore links
+
+[2026-06-12T22:24:14.961000+00:00] pinched_nerve (id=1515119569633804469)
+    (Actually, I'm always paranoid.  not sure about others.  The first thing I usually ask for everything is :  how might this go wrong?)
+
+[2026-06-12T22:25:35.894000+00:00] barronc (id=1515119909091283085)
+    i've heard that posting directly on github may be spammy for contributors so wanted to gauge interest before posting too much
+
+[2026-06-12T22:25:52.673000+00:00] .s0uthpaw (id=1515119979467509794)
+    Love it 😅
+    [reply to pinched_nerve msg=1515118932019908708]
+
+[2026-06-12T22:25:54.100000+00:00] aialliai (id=1515119985452781730)
+    It's reasonable after what's been going on... I never take risks opening links that I dont trust...
+    [reply to barronc msg=1515119418319962142]
+
+[2026-06-12T22:25:57.238000+00:00] definitely_not_cthulhu (id=1515119998614638592)
+    Not my call to make, but with the velocity of the Hermes repo, I'm not sure a traditional security scanner in a pre-merge CI hook would work
+    [reply to barronc msg=1515119284437778553]
+
+[2026-06-12T22:26:44.773000+00:00] barronc (id=1515120197990613042)
+    agreed - it's not a security scanner. it actually runs the application in isolated environemnt, hits it with swarm of agents to test, and posts back results.
+
+[2026-06-12T22:26:51.045000+00:00] barronc (id=1515120224297423019)
+    sits outside of CI/CD so it's not flaky
+
+[2026-06-12T22:27:01.068000+00:00] barronc (id=1515120266336931861)
+    up to the person what to do with that feedback
+
+[2026-06-12T22:27:32.743000+00:00] barronc (id=1515120399191638117)
+    for private companies, they set standards around what needs to be addressed (e.g. all critical bugs must be squashed) and they hit it with coding loops to resolve, but for here it can just be helpful to increase contributor quality
+
+[2026-06-12T22:28:12.827000+00:00] barronc (id=1515120567315992667)
+    it catches security issues, runtime issues, integrations, etc
+
+[2026-06-12T22:28:26.237000+00:00] aialliai (id=1515120623561736402)
+    uhm....
+
+[2026-06-12T22:28:43.788000+00:00] .s0uthpaw (id=1515120697175969942)
+    Typically how we handle those is we would ask people to post it someplace public and verifiable like huggingface or GitHub if it's a model, and then Hermes specific skills, plugins, skins, you know that kind of thing, post it here: <#1485392832154832906> 
+    And then larger or more unique community projects that don't quite fit in to one of those categories, but related to Hermes you can post here <#1316137596535177246>
+
+[2026-06-12T22:29:24.432000+00:00] definitely_not_cthulhu (id=1515120867648995521)
+    I'd have to play it to have a more solid opinion, but during the day we might be merging something every few mins. Scanners of all sorts would have trouble keeping up. Heck, our CI doesn't keep up.
+
+[2026-06-12T22:30:33.339000+00:00] pinched_nerve (id=1515121156665905283)
+    (trying not to be critical, but that might be a Bad Thing.  Look how it's destroyed other similar projects)
+    [reply to definitely_not_cthulhu msg=1515120867648995521]
+
+[2026-06-12T22:30:53.662000+00:00] .s0uthpaw (id=1515121241907007641)
+    https://huggingface.co/sovthpaw/omnistep-12a3b
+    Or
+    https://southpawin.github.io/blog/senter-ohm-flagship/
+
+[2026-06-12T22:31:14.431000+00:00] barronc (id=1515121329018372179)
+    haha fair, we could do regression testing on a schedule (1x / day)  or something
+
+[2026-06-12T22:31:34.390000+00:00] definitely_not_cthulhu (id=1515121412732616876)
+    Yeah, look. We're a diverse team and there's some strong opinions in multiple directions on how we should handle things 😄
+    [reply to pinched_nerve msg=1515121156665905283]
+
+[2026-06-12T22:31:52.747000+00:00] barronc (id=1515121489727459569)
+    we're not an open source project, but we're offering it to free for open source folks for visibility and to give back to the community
+
+[2026-06-12T22:32:09.438000+00:00] barronc (id=1515121559734583306)
+    built a lot in the applied cryptography/zk space so know how important that is
+
+[2026-06-12T22:32:25.947000+00:00] pinched_nerve (id=1515121628978090054)
+    I get it.  You're also a commercial venture and once customers give money, they have a reasonable expectation of some amount of stability.
+    [reply to definitely_not_cthulhu msg=1515121412732616876]
+
+[2026-06-12T22:32:36.489000+00:00] aialliai (id=1515121673194573914)
+    Your privacy policy sounds a bit flaky though?
+    [reply to barronc msg=1515121489727459569]
+
+[2026-06-12T22:33:52.379000+00:00] definitely_not_cthulhu (id=1515121991500169237)
+    Yeah, we're working on things like stable release channels, etc. Just not ready yet.
+    [reply to pinched_nerve msg=1515121628978090054]
+
+[2026-06-12T22:34:10.214000+00:00] barronc (id=1515122066305585294)
+    how so? we use frontier models under the hood for various parts so abide by their policies
+    [reply to aialliai msg=1515121673194573914]
+
+[2026-06-12T22:34:11.518000+00:00] pinched_nerve (id=1515122071775219752)
+    I won't push.  today. 😄
+
+[2026-06-12T22:36:13.403000+00:00] barronc (id=1515122582997962833)
+    we also run the whole application then test, so it's much slower than CI. reviews can take 30-45 minutes so we don't block on it because that would be horrible.
+
+[2026-06-12T22:36:34.063000+00:00] barronc (id=1515122669652021308)
+    we're making it a lot faster but still wouldn't be able to keep up with merging every couple min
+
+[2026-06-12T22:43:36.196000+00:00] teknium (id=1515124440206282832)
+    We have codeql and dependabot and our own custom supply chain check CI
+    [reply to definitely_not_cthulhu msg=1515119998614638592]
+
+[2026-06-12T22:52:46.227000+00:00] barronc (id=1515126747203375275)
+    yeah that's super important to have as well
+    [reply to teknium msg=1515124440206282832]
+
+[2026-06-12T23:11:33.272000+00:00] aleksandr_1 (id=1515131474372989028)
+    **Gateway was stuck in a permanent crash loop under systemd.** 
+    On restart, the new process saw the old one as "alive" even though it was already dead (zombie process), waited 15 seconds, failed to kill it, exited with code 1, systemd respawned, and the cycle repeated. I fixed it by adding a /proc/<pid>/stat check before os.kill: if the process is in state Z (zombie), immediately return False. Five lines of code that break the deterministic loop. Issue: https://github.com/NousResearch/hermes-agent/issues/42126 
+    
+    **PR:** https://github.com/NousResearch/hermes-agent/pull/44898
+    
+    **Have a great weekend everyone!**<:o7:1151261546111053924>
+
+[2026-06-12T23:19:16.341000+00:00] flownium (id=1515133416625148015)
+    https://github.com/NousResearch/hermes-agent/pull/45270
+    [embed] fix(desktop): restore last active session on startup by itsflownium... https://github.com/NousResearch/hermes-agent/pull/45270
+
+[2026-06-12T23:32:43.769000+00:00] pinched_nerve (id=1515136803223507015)
+    A request so I can spend even more money on nous portal:
+    
+    https://github.com/NousResearch/hermes-agent/issues/45278
+    [embed] Feature request: route image tool requests to different models base... https://github.com/NousResearch/hermes-agent/issues/45278
+
+[2026-06-13T00:12:27.531000+00:00] sworntech (id=1515146801445867612)
+    **Small Hermes contributing docs PR**:
+    
+    **Problem**: `CONTRIBUTING.md` did not clearly summarize some repository-level CI checks that contributors may encounter.
+    
+    **Fix**: Added a short contributor-facing note for:
+    
+    • OSV vulnerability scanning
+    • supply-chain auditing
+    • contributor identity / contributor-list checks
+    
+    **Impact**: Docs-only change. No runtime behavior changed.
+    
+    References #26010 S3
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/45292
+    [embed] docs(contributing): document repository CI checks by Sworntech-dev ... https://github.com/NousResearch/hermes-agent/pull/45292
+
+[2026-06-13T00:58:59.427000+00:00] flownium (id=1515158511506690050)
+    https://github.com/NousResearch/hermes-agent/pull/45316
+    [embed] fix: model fallback config by itsflownium · Pull Request #45316 ·... https://github.com/NousResearch/hermes-agent/pull/45316
+
+[2026-06-13T02:17:12.395000+00:00] flownium (id=1515178195240882237)
+    mods ifykyk. <@&1214801236323467284> (sorry for ping github related btw).
+
+[2026-06-13T02:22:29.797000+00:00] flownium (id=1515179526521360437)
+    [attachment] Screenshot_2026-06-13_at_12.22.22_pm.png https://cdn.discordapp.com/attachments/1491258766648283238/1515179526471286895/Screenshot_2026-06-13_at_12.22.22_pm.png?ex=6a2e1065&is=6a2cbee5&hm=564b0fae36a5dd5468f32dd0cf037b9c1763f3f62d4bf75eb64eb5208690a6d5&
+
+[2026-06-13T02:56:12.089000+00:00] pinched_nerve (id=1515188008628916365)
+    getting errors from npm after hermes update.  posted details, log, info here: https://discord.com/channels/1053877538025386074/1515186964037505094
+
+[2026-06-13T03:06:54.182000+00:00] kxee (id=1515190701762023454)
+    link pls
+    [reply to flownium msg=1515179526521360437]
+
+[2026-06-13T03:29:24.145000+00:00] flownium (id=1515196363917496360)
+    k https://github.com/NousResearch/hermes-agent/issues/45340
+    [embed] [Feature]: anyone ready to make money through hacking · Issue #453... https://github.com/NousResearch/hermes-agent/issues/45340
+    [reply to kxee msg=1515190701762023454]
+

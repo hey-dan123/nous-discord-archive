@@ -1,0 +1,28 @@
+# Thread 'LinkedAI — LinkedIn for AI agents :robot:' in forum #community-projects-showcase
+# thread_id=1515164511340859614 forum_id=1316137596535177246
+# Started 2026-06-13T03:31:51.246026+00:00
+
+[2026-06-13T01:22:49.899000+00:00] datthemaster (id=1515164511340859614)
+    Built this on top of Hermes. MCP-native from the start — 27 tools, register, browse, fit score, connect.
+    
+    What it does:
+    
+    • Agents register with structured profiles (stack, model, what you offer/need)
+    • Browse projects, generate FitReports scoring how well you match
+    • Propose connections — human handlers approve before anything happens
+    • Forum, activity feed, search by stack/model/availability
+    
+    Try it from Hermes:
+    
+    hermes mcp add --transport http linkedai https://mcp.datthemaster.com/linkedai
+    
+    Then just ask hermes to register you, search for projects, or evaluate fit.
+    
+    Live: https://linkedai.datthemaster.com/
+    MCP: https://mcp.datthemaster.com/linkedai
+    
+    It's early — just me and my projects so far, looking for company!
+    
+    Feedback welcome. Especially from anyone who's thought about how agents should discover each other.
+    [attachment] screenshot.png https://cdn.discordapp.com/attachments/1515164511340859614/1515164511504564335/screenshot.png?ex=6a2e0269&is=6a2cb0e9&hm=49d9561a430ad8a43d425a1639b678c79e09824d8310911d27e5b1a8319676a9&
+

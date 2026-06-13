@@ -1,0 +1,20 @@
+# Thread 'Hermes Project Dashboard - Local UI Standard with Git & UTF-8 Integration' in forum #community-projects-showcase
+# thread_id=1515130746015055962 forum_id=1316137596535177246
+# Started 2026-06-13T03:31:52.090938+00:00
+
+[2026-06-12T23:08:39.618000+00:00] iamiskender (id=1515130746015055962)
+    Hey everyone! 
+    
+    I’ve set up a clean, lightweight frontend dashboard template locally to test and monitor the Hermes Agent system. 
+    
+    *What’s included:*
+    - *Optimized UI:* A modern, static frontend structure (index.html, style.css, app.js) running fully on UTF-8 encoding standards.
+    - *System Check:* Embedded status verification and interactive alert connectivity.
+    - *Version Control:* Fully integrated with Git for continuous tracking.
+    
+    The repository is brand new, so feel free to check out the clean code structure or test it locally by opening index.html in your browser. Any feedback is welcome!
+    
+    *GitHub Repository:* https://github.com/iamiskender/HermesProje
+    [attachment] h10.png https://cdn.discordapp.com/attachments/1515130746015055962/1515130746212450469/h10.png?ex=6a2de2f7&is=6a2c9177&hm=e60ba365f526c558c1c2ed59564fe5230a6bce9b79589e6e22729ec6b96ac239&
+    [embed] GitHub - iamiskender/HermesProje https://github.com/iamiskender/HermesProje
+

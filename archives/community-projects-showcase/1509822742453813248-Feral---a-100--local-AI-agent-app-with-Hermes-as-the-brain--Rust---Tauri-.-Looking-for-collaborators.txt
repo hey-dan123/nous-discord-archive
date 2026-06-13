@@ -95,3 +95,55 @@
     🔗 https://github.com/bloom500/feral/releases/tag/v0.1.3
     [embed] Release Feral v0.1.3 · bloom500/feral https://github.com/bloom500/feral/releases/tag/v0.1.3
 
+[2026-06-12T20:42:23.240000+00:00] bloom9952 (id=1515093935217840289)
+    🦊 Feral v0.2.0 — the agent finally opens its eyes
+    
+    Your private, local-first AI agent. Now with vision, real memory, MCP extensions, and a proper mascot. Windows · macOS (Apple Silicon + Intel) · Linux.
+    
+    📦 Download: https://github.com/bloom500/feral/releases/tag/v0.2.0
+    
+    ⚠️ Upgrading from 0.1.x — read this first
+    
+    The old update-signing key leaked into public git history, so it's been rotated.
+    
+    Coming from 0.1.7 or older → install the transitional 0.1.8 build first (it carries the new key), or grab the 0.2.0 installer manually one time.
+    Coming from 0.1.8 → smooth automatic update.
+    Onboarding, chats, models, BYOK keys — all carry over unchanged.
+    Full plan: docs/UPDATER_KEY_MIGRATION.md
+    ✨ What's new
+    
+    👁️ Vision that actually works. Pasted screenshots and uploaded images reach the model as real pixel data — not a [Image attached: …] filename stub. Works on OpenAI, Anthropic, and Ollama paths. Local GGUF stays text-only (the model can't see regardless).
+    
+    🧠 Memory that carries over. New chats no longer start cold. The chat tab now injects a memory context block into the system prompt on every send, and runs a background extraction pass that writes subject–predicate–object triples back into ~/.feral/memory-graph.json. "Remember X" / "forget Y" finally take effect immediately. Plus a redesigned Memory Graph page — dark canvas, glowing neon nodes, click-to-inspect details.
+    
+    🔌 MCP Extensions — native, secure. Feral now consumes Model Context Protocol servers through the official rmcp Rust SDK, fully backend-side. Curated catalog: File Access, Long-term Memory, GitHub, Web Search, Browser Automation, Deep Reasoning. One-click install, on/off toggles, "What can it do?" tool listing. No API keys, transports, or raw values ever reach the frontend.
+    [embed] Release Feral v0.2.0 · bloom500/feral https://github.com/bloom500/feral/releases/tag/v0.2.0
+
+[2026-06-12T20:42:33.841000+00:00] bloom9952 (id=1515093979681788116)
+    📎 Drag & drop + paste — any file. Drop files onto the chat, paste screenshots with Ctrl+V. PDFs, .docx, .pptx, .xlsx, .odt are parsed natively and reach the model as text. Binaries attach as path references the agent can open with its file tools. No more "Unsupported format" dead chips.
+    
+    🍎🐧 macOS & Linux are here. Signed installers for Windows (.msi/.exe), macOS Apple Silicon + Intel (.dmg), and Linux (.deb/.rpm) — built from a single tag, updater manifest included. The agent sidecar resolves on all five targets.
+    
+    👾 New mascot. Say hi to the real Feral monster — charcoal-black fluff, orange horns, big black eyes, tiny white fangs. 55 animated variants across 22 states, 26% larger, crisp 3× pixel scale. Confetti on celebrate, drifting Z's while sleeping, orbiting search ring, drawn-in green check on done, flashing error cross.
+
+[2026-06-12T20:44:29.637000+00:00] bloom9952 (id=1515094465365147738)
+    🛠️ Stability (the unsexy part that mattered)
+    
+    - Stop button actually stops. Signal now flows end-to-end through a new Tauri command, sidecar stdin, and AgentLoop.stop() — aborts in-flight inference and running tools.
+    - Agent tasks survive tab switches. - A live per-session mirror accumulates streamed content, tool bubbles, and phase even while another chat is on screen.
+    - macOS/Linux: cloud model selection works in agent mode. 
+    - Sidecar binary was being placed somewhere the host couldn't find it. Fixed.
+    - GGUF chat template now reads from the model's own metadata via llama.cpp's template engine — renamed GGUFs no longer get a wrong template and corrupted output.
+    - Real tokenizer endpoint — context accounting is no longer based on GPT-2 BPE guesses.
+    - Stalled streams now report an explained error instead of silently ending in a fake "stopped by user" state.
+    - Mid-reasoning dead ends — if a completion exhausts tokens while still thinking, the agent loop feeds the partial reasoning back and asks the model to finish (up to 4 continuations). No more "(model used all tokens on reasoning and produced no answer)".
+    - Root React ErrorBoundary — render exceptions now show a recovery screen, not a blank window.
+    - Humanized inference errors — 401/429/overflow mapped to plain English with a fix-it action. Raw error still under "Technical details".
+
+[2026-06-12T20:44:41.919000+00:00] bloom9952 (id=1515094516879724587)
+    📚 Docs
+    
+    New & rewritten for 0.2.0: README, SECURITY.md, docs/USER_GUIDE.md, docs/CONTRIBUTOR_GUIDE.md, docs/UPDATER_KEY_MIGRATION.md, docs/CONTRIBUTING.md.
+    
+    💬 Questions, bugs, or want to show off what your Feral built? Drop them in the thread — we read every one. ⭐ If Feral is useful, a star on the repo goes a long way.
+

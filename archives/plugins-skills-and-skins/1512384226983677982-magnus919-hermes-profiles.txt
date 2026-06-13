@@ -54,3 +54,13 @@
 [2026-06-11T15:38:42.466000+00:00] lsof (id=1514655123886968974)
     Really appreciate you publishing this!
 
+[2026-06-13T02:18:52.796000+00:00] isyutaru612 (id=1515178616353456149)
+    Awesome thank you I was able to add something them.
+    
+    I have some questions if you might know the answers.
+    
+    I am running 1 agent on 1 27B model. Is it possible for example to give the orchestrator a goal or  similiar and have it create a kanban or similar to have each more targeted better profile take a look at it / continue the workflow?
+
+[2026-06-13T03:32:49.993000+00:00] isyutaru612 (id=1515197227306324078)
+    A lot of my issues have actually cleared up with these profiles
+

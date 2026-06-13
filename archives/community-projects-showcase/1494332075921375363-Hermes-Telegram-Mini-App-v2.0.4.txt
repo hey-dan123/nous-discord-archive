@@ -11,3 +11,10 @@
 [2026-04-17T04:53:44.094000+00:00] zaharenok (id=1494561478542360677)
     Wow looks cool
 
+[2026-06-12T20:20:11.122000+00:00] eucdee (id=1515088347909980301)
+    I was just about to tell my hermes to code it then i thought someone must have already done it 🙂 ill test it now.. you think hermes can autoset it up? Lets see 🙂 
+    
+    ....
+    
+    Yes i first told it to install cloudflare tunnel and then pointed to your github.. it did the rest ♡♡ only one problem, your setup overwrites the original dashboard, hermes is currently rebuilding it on another port, probably fires up another tunnel and we are set... also the top buttons of the ui could need some work...
+

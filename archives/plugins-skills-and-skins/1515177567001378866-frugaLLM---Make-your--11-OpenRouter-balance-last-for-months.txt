@@ -1,0 +1,13 @@
+# Thread 'frugaLLM — Make your $11 OpenRouter balance last for months 🧠' in forum #plugins-skills-and-skins
+# thread_id=1515177567001378866 forum_id=1485392832154832906
+# Started 2026-06-13T03:35:45.941443+00:00
+
+[2026-06-13T02:14:42.611000+00:00] kalkyl (id=1515177567001378866)
+    Built a zero-dependency cost-optimizing proxy for Hermes. It acts as a middleman that auto-discovers top free OpenRouter models (like owl-alpha or deepseek-r1) and routes your daily prompts to them.
+    
+    I know this wheel might have been invented a few times already, but I had to share my version of it because it's just been working flawlessly for me. Save your paid API keys strictly for heavy-duty reasoning. It runs locally, supports local Ollama fallbacks, and keeps your OpenRouter costs near zero without sacrificing access to pro models when you need them.
+    
+    Repo & easy setup guide: https://github.com/chorned/frugaLLM
+    [attachment] Screenshot_2026-06-12_at_9.14.21_PM.png https://cdn.discordapp.com/attachments/1515177567001378866/1515177567278207057/Screenshot_2026-06-12_at_9.14.21_PM.png?ex=6a2e0e92&is=6a2cbd12&hm=2d2711ac7a17cd148e97750a7393f04440c4b4fe30cf5401c58130047a5750d5&
+    [embed] GitHub - chorned/frugaLLM: frugaLLM is a cost-optimizing local prox... https://github.com/chorned/frugaLLM
+

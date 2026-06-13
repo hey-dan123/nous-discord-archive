@@ -95,3 +95,20 @@
 [2026-06-12T18:40:06.771000+00:00] eucdee (id=1515063163836698646)
     Very usefull, ill set it up later, oh wait, ill tell hermes to set it up xD
 
+[2026-06-13T01:01:48.166000+00:00] shaf_2665 (id=1515159219249352704)
+    thanks make sure to give a star if you like
+    [reply to eucdee msg=1515063163836698646]
+
+[2026-06-13T02:48:01.362000+00:00] shaf_2665 (id=1515185950370824233)
+    ## hermes-router update — 2 new free providers added 🎉
+    
+    **Naga AI** — nemotron-3-super-120b-a12b:free, 100 req/day per key
+    **NVIDIA NIM** — deepseek-ai/deepseek-v4-flash, 1M context window, 40 req/min per key (also unlocks 120+ free models via NVIDIA_MODEL override)
+    Router now cascades across 10 providers
+    Also fixed a bug where large MoE models with slow cold-starts were wrongly marked unavailable during startup probes.
+    
+    Get your free keys at naga.ac and build.nvidia.com, drop them in .env and you're good.
+    
+    GitHub: https://github.com/Shaf2665/Hermes-router
+    [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
+

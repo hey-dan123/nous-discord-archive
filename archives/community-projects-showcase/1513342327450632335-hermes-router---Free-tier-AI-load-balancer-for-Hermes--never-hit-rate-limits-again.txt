@@ -86,3 +86,16 @@
     Results persist to `router_state.json` so ratings survive restarts.
     [embed] GitHub - Shaf2665/Hermes-router https://github.com/Shaf2665/Hermes-router
 
+[2026-06-13T02:48:15.646000+00:00] shaf_2665 (id=1515186010282266704)
+    ## hermes-router update — 2 new free providers added 🎉
+    
+    **Naga AI** — nemotron-3-super-120b-a12b:free, 100 req/day per key
+    **NVIDIA NIM** — deepseek-ai/deepseek-v4-flash, 1M context window, 40 req/min per key (also unlocks 120+ free models via NVIDIA_MODEL override)
+    Router now cascades across 10 providers
+    Also fixed a bug where large MoE models with slow cold-starts were wrongly marked unavailable during startup probes.
+    
+    Get your free keys at naga.ac and build.nvidia.com, drop them in .env and you're good.
+    
+    GitHub: https://github.com/Shaf2665/Hermes-router
+    [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
+

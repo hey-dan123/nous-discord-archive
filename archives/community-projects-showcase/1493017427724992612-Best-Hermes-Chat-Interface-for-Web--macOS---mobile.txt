@@ -3909,3 +3909,36 @@
     I have a similar setup. Each agent can have its own projects, and we store files in workspaces. I use Mnemosyne as the memory provider, so each agent has its own memory database, but the files themselves are shared. Real agentic workflow is still evolving, but for now, stateful .md files are the best way to keep project state useful for other agents.
     [reply to deor42 msg=1514908961759825981]
 
+[2026-06-12T22:34:08.581000+00:00] tommygun_91 (id=1515122059456413788)
+    Hey nesquena, I've been trying my best to contribute issues and PR as a hobbyist agentic engineer (if that's what it's called these days). I would love to be part of your Dev/discord group as I have some detailed questions about your future vision for your webui solution.
+    
+    I work for a big mining tech company in a business development capacity so have a fair amount of experience with UI/UX stuff but not directly with development.
+    [reply to avidfuturist msg=1514357343414915174]
+
+[2026-06-13T00:00:08.984000+00:00] avidfuturist (id=1515143703755362356)
+    Hey, you can feel free to ask me anything in here for now or DM me!
+    [reply to tommygun_91 msg=1515122059456413788]
+
+[2026-06-13T01:44:33.051000+00:00] goated138 (id=1515169977156505730)
+    Is this better than Hermes desktop?
+
+[2026-06-13T01:45:37.257000+00:00] avidfuturist (id=1515170246456119457)
+    It makes different choices, hard to say it’s better, Hermes desktop is official and first party - this is a community project. I believe this is more mature and has a more extensive feature set right now. I’d encourage you to use whichever one you prefer!
+    
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now WebUI works for Windows/Linux/macOS as both a web app and a native desktop app! And with iOS support!
+    [reply to goated138 msg=1515169977156505730]
+
+[2026-06-13T01:46:42.790000+00:00] avidfuturist (id=1515170521321312266)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1515170521107529849/image.png?ex=6a2e0802&is=6a2cb682&hm=5eddb3acb98fb28fc5524f8f86f4cc0b6ea173c0647d7f55d59d87cca25f1fac&
+
+[2026-06-13T01:47:09.972000+00:00] goated138 (id=1515170635331141762)
+    Thanks, are there community configs where I can download a fully configured setup with crons and tons of other things, taking into account the best of how people are using it?
+    [reply to avidfuturist msg=1515170246456119457]
+
+[2026-06-13T01:48:15.079000+00:00] avidfuturist (id=1515170908409692291)
+    https://github.com/sunnysktsang/hermes-suite is pretty good
+    [embed] GitHub - sunnysktsang/hermes-suite: All-in-one Docker/Podman image:... https://github.com/sunnysktsang/hermes-suite
+    [reply to goated138 msg=1515170635331141762]
+

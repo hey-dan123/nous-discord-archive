@@ -165,3 +165,27 @@
     
     Filtered results now also power the Daily Opportunity Report, so the report matches the user’s current search intent.
 
+[2026-06-12T23:57:57.470000+00:00] sworntech (id=1515143152145797311)
+    **ContribScout v0.8 Update**
+    
+    Added Contribution Brief Builder.
+    
+    You can now generate a copy-ready Markdown brief for any opportunity, including:
+    
+    • repo context
+    • Role Opportunity Score
+    • suggested action
+    • score reason
+    • Contribution Fit signals
+    • issue drill-down links
+    • starter checklist
+    • suggested PR approach
+    • quality/risk checklist
+    • Proof Vault reminder
+    
+    Briefs also work from Watchlist items, so saved repos can include status and personal notes in the generated plan.
+    
+    The flow is now:
+    
+    Discover → Filter → Save → Build Brief → Contribute → Proof Vault → Export
+

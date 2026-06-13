@@ -8,3 +8,8 @@
     Github:  https://github.com/Haftom19/hermes-vps-setup
     [embed] GitHub - Haftom19/hermes-vps-setup https://github.com/Haftom19/hermes-vps-setup
 
+[2026-06-12T21:57:32.880000+00:00] .omarlittle (id=1515112850018926652)
+    Looks pretty similar to my implementation of this sort of setup as well. The only note is that you bind to the tailscale ip instead of everything. 
+    
+    I also added a traefik proxy to serve it as a fqdn internally
+

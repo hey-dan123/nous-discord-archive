@@ -1,0 +1,29 @@
+# Thread 'Spinwage for Hermes — sponsored status lines for agent workflows' in forum #community-projects-showcase
+# thread_id=1515158855288623307 forum_id=1316137596535177246
+# Started 2026-06-13T03:31:51.701563+00:00
+
+[2026-06-13T01:00:21.391000+00:00] maxmosh (id=1515158855288623307)
+    Spinwage for Hermes — get paid while your agent thinks
+    
+    We built an EU-hosted sponsor-line experiment for Hermes / Claude Code style agent workflows.
+    
+    The idea is simple:
+    when an agent is thinking, planning, or running tools, there is already a high-attention status line. Spinwage turns that line into one tasteful sponsored placement and shares 50% of net ad spend with the developer/operator whose session showed it.
+    
+    For Hermes builders:
+    - designed for agent status surfaces, not banner ads
+    - works today through the Claude Code statusLine path
+    - no code/prompt/completion reads
+    - no binary patching
+    - EU-hosted in Frankfurt
+    - reversible install/uninstall
+    
+    Install:
+    npx spinwage hermes-slot --json
+    
+    I’d love feedback from the Hermes community:
+    Would a native Hermes sponsor/status slot make sense?
+    What should the UX and trust rules be before this becomes a real marketplace?
+    
+    Credit where it’s due: Andrew McCalip proved wait-time attention is real. Spinwage is our European/GDPR-clean implementation angle.
+

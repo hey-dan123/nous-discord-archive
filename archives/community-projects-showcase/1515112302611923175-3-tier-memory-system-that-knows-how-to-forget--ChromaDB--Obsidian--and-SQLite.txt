@@ -1,0 +1,31 @@
+# Thread '3 tier memory system that knows how to forget: ChromaDB, Obsidian, and SQLite' in forum #community-projects-showcase
+# thread_id=1515112302611923175 forum_id=1316137596535177246
+# Started 2026-06-13T03:31:52.443990+00:00
+
+[2026-06-12T21:55:22.368000+00:00] thedavidmurray (id=1515112302611923175)
+    Agent-agnostic persistent memory for AI agents. One file, three real tiers, one-line install. 
+    
+    https://github.com/edgeless-ai/edgeless-memory
+    
+    The key here is it forgets. There's a decay mechanism (which can be disabled) that prunes unused memories   
+    
+    Energy / decay — every memory cools 5%/day (configurable) while unused and reheats when accessed. Stale junk ages out of search results on its own; you never have to prune. Hot stays hot.
+    
+    Weighting — errors, action items, and high-priority agents rank higher.
+    
+    Context detection — each memory is auto-tagged (trading, security, dev, content, research, ops, general).
+    
+    Auditable improvement loop — self-improve surfaces gaps and cooling memories; sia_loop.py adds a propose→record→review cycle (framework-free scaffolding, inspired by the Self-Improving Agent pattern — it records each generation so progress is reviewable; it doesn't call an LLM itself).
+    
+    3 layers:
+    - SQLite: fast structured facts, weighting, energy/decay
+    - ChromaDB: semantic vector search (meaning, not keywords), auto-degrades gracefully
+    - Obsidian: a browsable markdown vault you can open + graph view 
+    
+    Supports single or multi-agent swarms with author tracing. 
+    
+    It's agent agnostic. I modified my own memory stack to support my Hermes swarm, so this was built in Hermes with Hermes in mind. 
+    
+    Open to question, comments, suggestions!!
+    [embed] GitHub - edgeless-ai/edgeless-memory: Agent-agnostic persistent mem... https://github.com/edgeless-ai/edgeless-memory
+
