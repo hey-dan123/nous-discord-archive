@@ -99,3 +99,43 @@
     GitHub: https://github.com/Shaf2665/Hermes-router
     [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
 
+[2026-06-13T06:48:10.737000+00:00] shaf_2665 (id=1515246387669897237)
+    # hermes-router update — what's new🎉 
+    
+    **Better performance**
+    
+    HTTP connection pooling — reuses connections instead of opening new ones each request
+    Upgraded default models across all providers (best free models with highest context)
+    gpt-4o on GitHub Models added as the top-tier (rating 1) option
+    
+    **New CLI command**
+    `./install.sh                     # one-time setup`
+    `hermes-router update             # pull latest + restart with auto-rollback`
+    `hermes-router update --check     # just check, no changes`
+    
+    Safe update — validates code before restart, auto-rolls back if something breaks.
+    
+    README also overhauled with a beginner-friendly routing explainer and glossary.
+    
+    GitHub: https://github.com/Shaf2665/Hermes-router
+
+[2026-06-13T08:19:57.752000+00:00] dinesh58 (id=1515269485764808765)
+    very nice feature. did you try something like modelrelay or omnirouter with hermes before building this?
+    [reply to shaf_2665 msg=1514499323847770286]
+
+[2026-06-13T08:20:23.193000+00:00] dinesh58 (id=1515269592472227900)
+    I'm currently just testing modelrelay but thinking I should switch to yours
+
+[2026-06-13T08:47:41.508000+00:00] shaf_2665 (id=1515276464063250432)
+    i am just handpicking existing features already available, and then redevelop it to make it efficient and cheap
+    Didn't tried modelrelay or omnirouter, will check those and see if i can improve this application further, thanks for the info 🙂
+    [reply to dinesh58 msg=1515269485764808765]
+
+[2026-06-13T08:50:13.446000+00:00] dinesh58 (id=1515277101337677965)
+    ah ok. Omniroute has RTK + caveman for reducing token usage. Might be worth looking into for your project?
+    [reply to shaf_2665 msg=1515276464063250432]
+
+[2026-06-13T08:51:19.253000+00:00] shaf_2665 (id=1515277377352237206)
+    sure
+    [reply to dinesh58 msg=1515277101337677965]
+

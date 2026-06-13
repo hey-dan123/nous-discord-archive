@@ -255,3 +255,7 @@
 [2026-06-11T08:53:48.869000+00:00] nicoloboschi (id=1514553229156028486)
     will be in 0.8.2, probably tomorrow
 
+[2026-06-13T03:57:17.223000+00:00] .chronocat (id=1515203381314981908)
+    <@577414329180356610> - Would you be open to review this request? https://github.com/vectorize-io/hindsight/issues/2184
+    [embed] Time-pattern awareness: Recall by recurring calendar patterns (week... https://github.com/vectorize-io/hindsight/issues/2184
+

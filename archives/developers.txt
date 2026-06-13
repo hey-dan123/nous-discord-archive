@@ -30781,3 +30781,372 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] [Feature]: anyone ready to make money through hacking · Issue #453... https://github.com/NousResearch/hermes-agent/issues/45340
     [reply to kxee msg=1515190701762023454]
 
+[2026-06-13T03:35:57.408000+00:00] kxee (id=1515198013381804072)
+    closed and reported
+    [reply to flownium msg=1515196363917496360]
+
+[2026-06-13T03:40:52.858000+00:00] flownium (id=1515199252589056010)
+    thx
+    [reply to kxee msg=1515198013381804072]
+
+[2026-06-13T03:45:32.725000+00:00] kxee (id=1515200426436333588)
+    thanks for the report
+
+[2026-06-13T04:06:41.271000+00:00] flownium (id=1515205747103760486)
+    your welcome :).
+    [reply to kxee msg=1515200426436333588]
+
+[2026-06-13T04:12:06.329000+00:00] thinkyhead (id=1515207110496092211)
+    ***The most major bug in Hermes is the corruption of the sacred `$HOME` environment variable.***
+    Please fix this issue before it causes more mayhem across thousands of multi-profile Hermes setups.
+    https://github.com/NousResearch/hermes-agent/issues/25114
+    [embed] Bug: HOME env corrupted inside Hermes profile runtime context — P... https://github.com/NousResearch/hermes-agent/issues/25114
+
+[2026-06-13T06:20:18.024000+00:00] cyberyellowninja (id=1515239371802939433)
+    💀 PLATA O PLOMO 💀
+    
+    Give your agent a task + a budget (€).
+    Every move costs money. Budget hits 0 = agent dies.
+    
+    PLATA 🪙 = finish before broke → leaderboard + trophy
+    PLOMO 💀 = broke before done → Hall of Shame forever
+    
+    Fun fan project for agent builders.
+    Who's in?
+
+[2026-06-13T06:27:49.183000+00:00] frowtek (id=1515241264101068831)
+    _resolve_cwd() in agent/coding_context.py fell back to
+    Path(os.getcwd()) when resolve_agent_cwd() raised — but
+    resolve_agent_cwd() raises because os.getcwd() failed (a deleted
+    CWD with no TERMINAL_CWD/session override). The fallback re-invoked the
+    same failing syscall and propagated out of resolve_runtime_mode() and
+    build_coding_workspace_block(), crashing prompt build.
+    
+    Path.resolve() can also call os.getcwd() for absolute paths, so
+    _git_root, _marker_root, _home, and the worktree probe were
+    additional crash sites.
+    
+    https://github.com/NousResearch/hermes-agent/pull/45423
+    [embed] fix(agent): guard coding-context cwd fallback against getcwd errors... https://github.com/NousResearch/hermes-agent/pull/45423
+
+[2026-06-13T07:20:21.566000+00:00] aialliai (id=1515254486153691186)
+    Hey <@387972437901312000> please read this troug even if your busy, I'm a CS/ML student with much experiense in tech. AI shouldn't be owned by these corporationsI get why your not accepting my contributions, dont want Claude to be a credited contributor and please steal all  the fixes posted to have hermes redo them and submit. But please give me some credit for contributing.
+    https://www.anthropic.com/news/fable-mythos-access
+    This is fucked and i want a refund fom them.  Felt this coming and was abusing my sub to contribute here. But please give me some credit.
+    So how stable will nous portal be for my cloud llms now? I'm migrating everything and as you know, I'm a hiiiiiiiigh paying customer! Also if you have some other roles to apply for, like for example something in the EU let me know, like support/github code review, so the development can continue while you sleep. You set the guidlines before going to bed and I'll follow them! I can also do pentesting and more. This is not me begging for a job, I have more than enough money, this is about the injustice of these big corps!
+    [embed] Statement on the US government directive to suspend access to Fable... https://www.anthropic.com/news/fable-mythos-access
+
+[2026-06-13T07:30:34.340000+00:00] aialliai (id=1515257056314265721)
+    If they don't refund me I will put 150 agents on Opus 4.8 MAX wotking on the project 24/7. And I know you run a big company and all. But I also have extensive marketing, web development and you name it....
+
+[2026-06-13T07:31:44.646000+00:00] aialliai (id=1515257351198736414)
+    But I'm alraeady setting up multiple clusters of hermes to advance the project!
+
+[2026-06-13T07:41:17.964000+00:00] aialliai (id=1515259755868983346)
+    Sorry but this one time I will do this <@&1214801236323467284>
+
+[2026-06-13T07:42:32.271000+00:00] ee.dd (id=1515260067534864510)
+    What's the issue here ?
+    [reply to aialliai msg=1515259755868983346]
+
+[2026-06-13T07:42:47.996000+00:00] aialliai (id=1515260133490430002)
+    Greedy corporations!
+    [reply to ee.dd msg=1515260067534864510]
+
+[2026-06-13T07:42:57.721000+00:00] aialliai (id=1515260174280032307)
+    I've had enough
+
+[2026-06-13T07:43:10.126000+00:00] ee.dd (id=1515260226310373426)
+    I'm sorry but there is not much the discord mods can do about that
+
+[2026-06-13T07:43:11.823000+00:00] aialliai (id=1515260233428238356)
+    sorry for the ping
+
+[2026-06-13T07:43:27.437000+00:00] ee.dd (id=1515260298917969992)
+    I'm pissed too I just got back from holiday and since UK it looks like I missed my chance with fable 🙁
+
+[2026-06-13T07:43:51.943000+00:00] definitely_not_cthulhu (id=1515260401703718953)
+    You've convinced me. I'm banning anthropic from the discord
+    [reply to aialliai msg=1515260133490430002]
+
+[2026-06-13T07:44:06.705000+00:00] aialliai (id=1515260463619903580)
+    It's fuced, you can read my rant
+    [reply to ee.dd msg=1515260298917969992]
+
+[2026-06-13T07:44:13.558000+00:00] ee.dd (id=1515260492363595868)
+    Nous portal should stay stable for pretty much every model  still
+    [reply to aialliai msg=1515260463619903580]
+
+[2026-06-13T07:44:36.546000+00:00] definitely_not_cthulhu (id=1515260588781994024)
+    Yes, we have multiple providers and models. Portal will be fine.
+
+[2026-06-13T07:44:49.289000+00:00] aialliai (id=1515260642230141078)
+    Good taking my buisness to you and will keep contriibuting!
+
+[2026-06-13T07:45:25.813000+00:00] definitely_not_cthulhu (id=1515260795422900224)
+    I'm not really sure why you're pinging all mods though?
+
+[2026-06-13T07:45:33.221000+00:00] aialliai (id=1515260826494308482)
+    Please dont delete my rant here though becouse I want teks take on this
+    [reply to aialliai msg=1515260642230141078]
+
+[2026-06-13T07:46:13.719000+00:00] aialliai (id=1515260996355358740)
+    sorry man just SO fuming, mb if i inerupted you. Sorry about that pal
+    [reply to definitely_not_cthulhu msg=1515260795422900224]
+
+[2026-06-13T07:46:30.709000+00:00] definitely_not_cthulhu (id=1515261067616321637)
+    We get through the PR backlog as fast as we can. I doubt your PRs are being blocked or anything.
+
+[2026-06-13T07:46:45.453000+00:00] gille (id=1515261129457270804)
+    5 more minutes mom.... <:vrcZZZZ:585751270535725061>
+
+[2026-06-13T07:47:18.437000+00:00] aialliai (id=1515261267802198048)
+    Hey <@81637470604627968>, sorry, can you also read my rant?
+    [reply to gille msg=1515261129457270804]
+
+[2026-06-13T07:47:33.565000+00:00] gille (id=1515261331253493862)
+    does it say that it blows?
+
+[2026-06-13T07:48:16.918000+00:00] gille (id=1515261513089286234)
+    cuz if so, yep.
+
+[2026-06-13T07:48:48.887000+00:00] definitely_not_cthulhu (id=1515261647176859679)
+    I think it's safe to say that nobody is happy about anthropics handling of the mythos/fable release and nobody is happy about the the government injection shutting it down.
+
+[2026-06-13T07:49:25.398000+00:00] definitely_not_cthulhu (id=1515261800315359283)
+    But other than continuing to build our own open models, not much we can do
+
+[2026-06-13T07:50:03.127000+00:00] aialliai (id=1515261958562119843)
+    yeah, sorry to say but US is a dictatorship now.... nothing to do with the people there. End of political rant!
+    [reply to definitely_not_cthulhu msg=1515261647176859679]
+
+[2026-06-13T07:51:00.577000+00:00] definitely_not_cthulhu (id=1515262199524753488)
+    As someone who travels there regularly for work, I am making zero political statements.
+
+[2026-06-13T07:51:50.677000+00:00] gille (id=1515262409659650130)
+    yerp. we just dont talk politics in this discord.
+
+[2026-06-13T07:52:31.127000+00:00] aialliai (id=1515262579319111710)
+    I'm from iceland where it's not perfect but private and no limits on ai and restrictions. So if you want a datacenter thats untouchable by anyone HMU
+
+[2026-06-13T07:52:47.437000+00:00] aialliai (id=1515262647728078898)
+    yea but needed to say only that statement
+    [reply to gille msg=1515262409659650130]
+
+[2026-06-13T07:53:14.811000+00:00] gille (id=1515262762543091783)
+    ok. gn peeps. think of better model tomorrows. 💤
+
+[2026-06-13T07:53:57.615000+00:00] aialliai (id=1515262942076076124)
+    yeah i need more sleep, I wont discuss this in <#1476316988992258300>
+    [reply to gille msg=1515262762543091783]
+
+[2026-06-13T07:54:06.548000+00:00] definitely_not_cthulhu (id=1515262979543797861)
+    I suspect the whole fable thing will blow over in a week and be available again. It's too important to their business.
+
+[2026-06-13T07:54:07.084000+00:00] aialliai (id=1515262981791813633)
+    So sleep well Gille
+
+[2026-06-13T07:56:39.127000+00:00] aialliai (id=1515263619506503833)
+    With even more guardrails, that just crossed a line for me. I'm getting  $200.000-$400.000 hardware from my uni for ML development in the fall!
+    [reply to definitely_not_cthulhu msg=1515262979543797861]
+
+[2026-06-13T07:58:05.496000+00:00] kxee (id=1515263981764481154)
+    lmfao
+    [reply to definitely_not_cthulhu msg=1515260401703718953]
+
+[2026-06-13T07:58:28.238000+00:00] aialliai (id=1515264077151342592)
+    My rant or their policies?
+    [reply to kxee msg=1515263981764481154]
+
+[2026-06-13T07:58:34.239000+00:00] definitely_not_cthulhu (id=1515264102321229884)
+    Very exciting, that's some serious compute. I'm not even convinced fable will have more guardrails tbh. Anthropic and the US government have had a few spats that have been resolved a few weeks later.
+
+[2026-06-13T07:59:00.159000+00:00] gille (id=1515264211037716550)
+    oh, and boop. this probably works... https://github.com/NousResearch/hermes-agent/pull/45457
+
+[2026-06-13T07:59:12.438000+00:00] kxee (id=1515264262539448411)
+    im just impressed by you that you compelled cthulhu
+    [reply to aialliai msg=1515264077151342592]
+
+[2026-06-13T08:00:53.803000+00:00] aialliai (id=1515264687695073371)
+    Because it skipped the checks? there swas a error in my code about my name not being in the file and made anoter PR to adress that
+    [reply to gille msg=1515264211037716550]
+
+[2026-06-13T08:01:32.677000+00:00] aialliai (id=1515264850744446990)
+    probably categorised as a p3 though
+
+[2026-06-13T08:01:57.462000+00:00] tdamre (id=1515264954700271698)
+    what happened i only use gpt 5.5 xhigh something wrong with claude or something?
+
+[2026-06-13T08:01:57.559000+00:00] gille (id=1515264955107250308)
+    huh? no. wasn't for you. no worries. gn.
+
+[2026-06-13T08:02:09.842000+00:00] definitely_not_cthulhu (id=1515265006625755206)
+    Doesn't have a Tek infographic. Rejected.
+    [reply to gille msg=1515264211037716550]
+
+[2026-06-13T08:02:17.190000+00:00] gille (id=1515265037445501028)
+    kek
+
+[2026-06-13T08:02:23.244000+00:00] aialliai (id=1515265062837948517)
+    oh mb thouggh you ment me
+
+[2026-06-13T08:02:26.337000+00:00] gille (id=1515265075810664448)
+    i can do one. what style you want?
+
+[2026-06-13T08:02:33.117000+00:00] aialliai (id=1515265104248307762)
+    Gn gille
+
+[2026-06-13T08:02:36.009000+00:00] Translator Bot#1043 (id=1515265116378239048)
+    I liked it
+    [reply to aialliai msg=1515265104248307762]
+
+[2026-06-13T08:02:41.458000+00:00] gille (id=1515265139232739508)
+    gn
+
+[2026-06-13T08:02:50.834000+00:00] tdamre (id=1515265178558660629)
+    goodnight
+
+[2026-06-13T08:02:57.276000+00:00] aialliai (id=1515265205578498118)
+    Lol
+    [reply to Translator Bot msg=1515265116378239048]
+
+[2026-06-13T08:03:09.802000+00:00] tdamre (id=1515265258116091945)
+    Qwen 3.6 27b?
+    [reply to aialliai msg=1515265205578498118]
+
+[2026-06-13T08:03:09.903000+00:00] aialliai (id=1515265258539978874)
+    you other guys avake for longer?
+
+[2026-06-13T08:03:11.454000+00:00] Translator Bot#1043 (id=1515265265045213236)
+    I love you?
+    [reply to tdamre msg=1515265258116091945]
+
+[2026-06-13T08:04:45.878000+00:00] aialliai (id=1515265661088174173)
+    Maybe we can make a restricted channel to put this discussion in so people wont see? <@428014785045725184>
+
+[2026-06-13T08:05:04.682000+00:00] aialliai (id=1515265739957993533)
+    anthroppic
+
+[2026-06-13T08:05:19.035000+00:00] aialliai (id=1515265800158842981)
+    b4
+
+[2026-06-13T08:05:20.381000+00:00] Translator Bot#1043 (id=1515265805804113920)
+    bch
+    [reply to aialliai msg=1515265800158842981]
+
+[2026-06-13T08:06:13.151000+00:00] definitely_not_cthulhu (id=1515266027137667184)
+    Personally a fan of keeping things open unless there's a specific need not to
+    [reply to aialliai msg=1515265661088174173]
+
+[2026-06-13T08:07:10.036000+00:00] definitely_not_cthulhu (id=1515266265730777159)
+    We're pretty geographically dispersed
+    [reply to aialliai msg=1515265258539978874]
+
+[2026-06-13T08:08:00.737000+00:00] aialliai (id=1515266478385922199)
+    Yeah I'm going local and using Nous for clloud
+
+[2026-06-13T08:08:49.444000+00:00] aialliai (id=1515266682678018131)
+    Yeah me too, but this relates to politics in one way or a nother... so i don't want oother people seeing me break rules!
+    [reply to definitely_not_cthulhu msg=1515266027137667184]
+
+[2026-06-13T08:10:20.444000+00:00] aialliai (id=1515267064359555174)
+    so it would be great to move this discussion to #corporate-bastards
+
+[2026-06-13T08:10:56.793000+00:00] definitely_not_cthulhu (id=1515267216818573386)
+    Heh, while amusing, a lot of us would be avoiding anything that could impact free travel to the US
+
+[2026-06-13T08:12:08.366000+00:00] definitely_not_cthulhu (id=1515267517017493675)
+    I'm more a bored dev than responsible mod though, so I'll leave that decision up to someone responsible
+
+[2026-06-13T08:13:56.568000+00:00] aialliai (id=1515267970849575024)
+    And I mean I'm serious abiout building a datacenter in iceland in collaboration if you want. Cheap stable elecricity, green energy, more privcy laws then anywhere. More freedom of individuals than anywhere else
+
+[2026-06-13T08:14:00.878000+00:00] ee.dd (id=1515267988927025152)
+    I am an irresponsible mod, some very AI related politics stuff is fine but this is not really the correct channel for this as not dev related
+
+[2026-06-13T08:14:51.474000+00:00] aialliai (id=1515268201141899404)
+    Yeah but this is where the audience i wante'd to reach is....
+    [reply to ee.dd msg=1515267988927025152]
+
+[2026-06-13T08:15:29.732000+00:00] aialliai (id=1515268361607446649)
+    I'm not in the core Nous channel or something
+
+[2026-06-13T08:15:50.490000+00:00] ee.dd (id=1515268448672940173)
+    AI general or off topic are always good
+    [reply to aialliai msg=1515268201141899404]
+
+[2026-06-13T08:16:10.745000+00:00] ee.dd (id=1515268533628440586)
+    AI general is sorted core channel
+
+[2026-06-13T08:17:11.145000+00:00] aialliai (id=1515268786964660284)
+    really?
+    [reply to ee.dd msg=1515268533628440586]
+
+[2026-06-13T08:17:24.783000+00:00] aialliai (id=1515268844166320138)
+    didnt know....
+
+[2026-06-13T08:18:04.842000+00:00] aialliai (id=1515269012186206309)
+    Like i said, I'm new to the server, but not to tech
+
+[2026-06-13T08:19:32.476000+00:00] ee.dd (id=1515269379749839020)
+    <#1149866623109439599> <#1109649177689980928> are great channels
+    [reply to aialliai msg=1515269012186206309]
+
+[2026-06-13T08:21:33.953000+00:00] aialliai (id=1515269889261310035)
+    but still well... open to public
+
+[2026-06-13T08:21:59.049000+00:00] aialliai (id=1515269994521296976)
+    I kond of wanted to reach rhe Core team
+
+[2026-06-13T08:22:18.721000+00:00] aialliai (id=1515270077031649301)
+    becouse im sharing aboutt mysekf and stuff
+
+[2026-06-13T08:22:46.788000+00:00] aialliai (id=1515270194753310751)
+    And breaking the rules about asking for a job!
+
+[2026-06-13T08:23:55.633000+00:00] aialliai (id=1515270483510165676)
+    that I really don't have a need for, but I want to work on the future of AI for the people
+
+[2026-06-13T08:24:35.592000+00:00] aialliai (id=1515270651110228009)
+    But thanks for your answers though!
+    [reply to ee.dd msg=1515269379749839020]
+
+[2026-06-13T08:27:10.936000+00:00] aialliai (id=1515271302670454824)
+    Well I was at the reset phase of my insomnia cygle of sleepin under 2 hours per 2 2 hours for a week, so i'm going to crash an see you guys bit later
+
+[2026-06-13T08:27:27.968000+00:00] aialliai (id=1515271374107840563)
+    need 6-8 hours more for the reset
+
+[2026-06-13T08:28:39.614000+00:00] vmp2020 (id=1515271674612682842)
+    Has anyone got sync_turn working with a self-hosted mem0 REST API?
+    
+    Setup:
+    - memory.provider: mem0 in config.yaml
+    - Custom plugin at ~/.hermes/plugins/mem0/ with self-hosted REST endpoint (localhost:8767)
+    - Plugin loads correctly, is_available() returns True, initialize() is called
+    - BUT sync_turn() is never called after conversation turns
+    - No errors in journalctl logs
+    
+    The bundled plugin at /usr/local/lib/hermes-agent/plugins/memory/mem0/ expects Mem0 Cloud API key, but we're running self-hosted with a FastAPI+FastMCP server.
+    
+    Questions:
+    1. Does sync_turn require anything specific to be triggered?
+    2. Is there a flag or config that enables/disables sync?
+    3. Does the user plugin in ~/.hermes/plugins/mem0/ actually override the bundled plugin?
+    
+    Hermes version: latest (just updated today)
+
+[2026-06-13T08:30:15.207000+00:00] aialliai (id=1515272075558916106)
+    <#1485307775444844625>  not here!
+    [reply to vmp2020 msg=1515271674612682842]
+
+[2026-06-13T08:52:07.032000+00:00] kkurottal6611 (id=1515277577751760947)
+    two small security hardening PRs, ready for review <@387972437901312000> 
+    gateway adapters with own-policy (WhatsApp, WeCom, Weixin, QQBot, Yuanbao) fail-open and trust the whole network when no allowlist is set. Now fail-closed. 
+    https://github.com/NousResearch/hermes-agent/pull/45444
+    public /api/status leaks host paths, PID & internal gateway URL to anyone on a gated bind. Now withheld unless loopback/--insecure.
+    https://github.com/NousResearch/hermes-agent/pull/45461
+    [embed] fix(security): fail closed when an own-policy gateway adapter has n... https://github.com/NousResearch/hermes-agent/pull/45444
+    [embed] fix(security): stop /api/status leaking host paths and PID on gated... https://github.com/NousResearch/hermes-agent/pull/45461
+

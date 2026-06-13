@@ -112,3 +112,23 @@
     GitHub: https://github.com/Shaf2665/Hermes-router
     [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
 
+[2026-06-13T06:48:04.095000+00:00] shaf_2665 (id=1515246359811198986)
+    # hermes-router update — what's new🎉 
+    
+    **Better performance**
+    
+    HTTP connection pooling — reuses connections instead of opening new ones each request
+    Upgraded default models across all providers (best free models with highest context)
+    gpt-4o on GitHub Models added as the top-tier (rating 1) option
+    
+    **New CLI command**
+    `./install.sh                     # one-time setup`
+    `hermes-router update             # pull latest + restart with auto-rollback`
+    `hermes-router update --check     # just check, no changes`
+    
+    Safe update — validates code before restart, auto-rolls back if something breaks.
+    
+    README also overhauled with a beginner-friendly routing explainer and glossary.
+    
+    GitHub: https://github.com/Shaf2665/Hermes-router
+

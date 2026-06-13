@@ -1,0 +1,16 @@
+# Thread 'Narrow focus PWA' in forum #community-projects-showcase
+# thread_id=1515205980374306906 forum_id=1316137596535177246
+# Started 2026-06-13T08:55:27.017655+00:00
+
+[2026-06-13T04:07:36.887000+00:00] frank.martinez (id=1515205980374306906)
+    Wanted a focused mobile only frontend for Hermes. Multiple attempts failed; tried TUI libraries to render in mobile browser and they all sucked. And, didn’t want another chat app. 
+    
+    Eventually paired Cursor agent with Hermes agent and they built a sweet PWA from my design direction. 
+    
+    The direction is focused on a pipeline: research -> build -> invest
+    
+    Hermes is exceptional at understanding the context for each stage of the pipeline to deliver high value responses. Eventually it should manage talent recruitment to go deep in a domain.
+    
+    I’m sharing it here as inspiration with myself as the only user; i.e. it’s not something I plan to open source. But happy to G Meet with others building personal [what I refer to as] devices; code name is ‘agent phone’.
+    [attachment] IMG_2763.png https://cdn.discordapp.com/attachments/1515205980374306906/1515205980646932490/IMG_2763.png?ex=6a2e2908&is=6a2cd788&hm=de413be45ee984dde07a72e267c3d484001f63ee97e984bb96f50c0617daf852&
+

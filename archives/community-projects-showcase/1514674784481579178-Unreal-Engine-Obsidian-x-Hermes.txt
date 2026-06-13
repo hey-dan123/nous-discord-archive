@@ -54,3 +54,7 @@
     Tutorial folders teach implementation steps (click here, write this code). Architecture docs teach design decisions (what pattern, why, when). Together you get both.
     [embed] Release v1.2.1 — README Update · theheavenlyd3mon/Unreal-Engine-... https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/releases/tag/v1.2.1
 
+[2026-06-13T06:31:36.219000+00:00] iam_rxpii (id=1515242216359202818)
+    https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/releases/tag/v1.3.0
+    [embed] Release v1.3.0 · theheavenlyd3mon/Unreal-Engine-Obsidian https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/releases/tag/v1.3.0
+
