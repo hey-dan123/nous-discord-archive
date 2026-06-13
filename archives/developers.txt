@@ -31383,3 +31383,156 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     So the PR is really "harden the logon task" (battery-safe, kill the 72h exec limit, restart-on-failure, stop the minute-repeat churn) all still worth having, but it can't deliver true unattended reboot survival on a box without auto-login. Two honest options: reframe it as a logon-task hardening + document that headless reboot survival needs auto-login, or add an opt-in service/boot-trigger mode for headless machines (which would disable computer_use).
 
+[2026-06-13T14:09:32.348000+00:00] enderlook (id=1515357459596968007)
+    How do contributors tests their changes in Windows then? I found a tiny bug in the UI that I wanted to try to fix by myself 🥺
+    [reply to teknium msg=1515345260233101485]
+
+[2026-06-13T14:09:49.023000+00:00] enderlook (id=1515357529536729169)
+    Oh, thanks. Where is that from?
+    Don't look from https://hermes-agent.nousresearch.com/docs/developer-guide/contributing#development-setup
+    [embed] Contributing | Hermes Agent https://hermes-agent.nousresearch.com/docs/developer-guide/contributing
+    [reply to teknium msg=1515350400507842600]
+
+[2026-06-13T14:29:33.480000+00:00] scottermonkey (id=1515362497509724290)
+    I got *some* support on that PR now but can use more, please!
+    [reply to teknium msg=1515345430601273516]
+
+[2026-06-13T14:29:38.012000+00:00] scottermonkey (id=1515362516518043719)
+    ---
+    NEW/DIFFERENT ONE:
+    
+    Please support this PR. I built it out. It was a simple change. Ready to merge; just needs support.
+    
+    SUMMARY: Fix toolbar buttons vanishing when navigating between pages in the dashboard.
+    
+    PR #45652 — ChatPage was permanently mounted but hidden, and its setEnd(null) was clobbering the shared header toolbar after other pages set their buttons. Two fixes: ChatPage now bails out of clearing the header when it's not the active page, and PageHeaderProvider uses render-phase state comparison instead of a layout effect so the mounted-then-propped race can't wipe buttons mid-frame. 2 files, clean.
+    https://github.com/NousResearch/hermes-agent/pull/45652
+    [embed] fix(dashboard): prevent hidden ChatPage from clearing shared header... https://github.com/NousResearch/hermes-agent/pull/45652
+
+[2026-06-13T14:30:34.293000+00:00] scottermonkey (id=1515362752577667193)
+    I dog-fooded both of them
+
+[2026-06-13T14:56:22.583000+00:00] jw_mushroom_man (id=1515369246576869550)
+    . Going through #45599's breakdown: my PR did fixes B (XML settings) and C (uv-safe pythonw), but kept the cmd.exe /d /c action — so it never did fix A, the console-less wscript/.vbs launcher. The real reboot failure is 0xC000013A (CTRL_CLOSE_EVENT hitting the console), and RestartOnFailure can't catch that code, so the console has to go. Just pushed that: the task now runs wscript.exe //B //Nologo "<vbs>" → pythonw, both console-less. Verified on Win11 — the child reports has_console=false. Survived on my box before only because it auto-logs-in; yours doesn't, which is exactly why you saw it fail. Should close #45599 now.
+
+[2026-06-13T15:21:58.728000+00:00] teknium (id=1515375689635991713)
+    Install it normally, the repo is used as the source for running it
+    [reply to enderlook msg=1515357459596968007]
+
+[2026-06-13T15:39:00.948000+00:00] icycosmos (id=1515379977137164350)
+    Guys can you review this and check its coolness? 😆 https://discord.com/channels/1053877538025386074/1476316988992258300/1512563612626194502
+
+[2026-06-13T15:40:13.272000+00:00] scottermonkey (id=1515380280486006796)
+    <@387972437901312000> saw what you did. Thanks!
+
+[2026-06-13T16:22:57.907000+00:00] tiny_th_dev (id=1515391037345103902)
+    What's involved in getting nostr added to the gateway? I've kept the PR fresh for ~7 weeks. Is this a non-starter and I'm wasting my time, or are we getting closer to taking the PR? Thank you for any feedback or helping me set expectations. https://github.com/NousResearch/hermes-agent/pull/16769
+    [embed] feat(gateway): add Nostr NIP-17 private DM platform adapter by unsa... https://github.com/NousResearch/hermes-agent/pull/16769
+
+[2026-06-13T16:36:30.107000+00:00] .consumeobeydie (id=1515394443958550558)
+    Just opened PR #42968 to Hermes Agent — ERC-8183 agentic commerce job skill for Arc Testnet.
+    What it adds:
+    
+    skills/blockchain/erc8183-job/SKILL.md — Hermes learns when and how to create, fund, and complete jobs on Arc Testnet
+    tools/erc8183_job.py — Python tool with create_job, fund_job, complete_job, get_job_status
+    
+    Combined with PR #41233 (x402-payment), Hermes can now run the full Arc agentic stack autonomously: pay for API access → create a job → fund escrow → complete and settle.
+    Verified on Arc Testnet. Job ID 110935, Status: Completed, Budget: 1 USDC.
+    PR: https://github.com/NousResearch/hermes-agent/pull/42968
+    [embed] feat: add ERC-8183 agentic commerce job skill for Arc Testnet by co... https://github.com/NousResearch/hermes-agent/pull/42968
+
+[2026-06-13T16:36:40.724000+00:00] .consumeobeydie (id=1515394488489611264)
+    Just updated PR #41233 — added the full Python implementation for the x402-payment skill on Arc Testnet.
+    What's now included:
+    
+    tools/x402_payment.py — EIP-3009 signing, USDC balance check, receipt verification
+    tools/x402_client.py — handles 402 responses automatically
+    tools/x402_server.py — test server
+    skills/blockchain/x402-payment/SKILL.md — updated skill docs
+    
+    Verified on Arc Testnet. All safety rails in place ($1.00 max/request, testnet only).
+    PR: https://github.com/NousResearch/hermes-agent/pull/41233
+    [embed] feat: add x402-payment skill for autonomous USDC micropayments on A... https://github.com/NousResearch/hermes-agent/pull/41233
+
+[2026-06-13T17:25:24.594000+00:00] xdarkchain (id=1515406752089243648)
+    <@387972437901312000> Hello there!
+    
+    The Telegram rich text needs an important update which can be deemed urgent in order to make rich text work.
+    This is once again REALLY important!
+    
+    https://github.com/NousResearch/hermes-agent/pull/45741
+    [embed] Feat/telegram rich messages by ITheEqualizer · Pull Request #45741... https://github.com/NousResearch/hermes-agent/pull/45741
+
+[2026-06-13T18:03:26.438000+00:00] aialliai (id=1515416322836529323)
+    Actually courious about this one... so I'll look at it to comment
+    [reply to xdarkchain msg=1515406752089243648]
+
+[2026-06-13T18:40:50.344000+00:00] xdarkchain (id=1515425734460575754)
+    This is a follow up which finalizes things.
+    [reply to aialliai msg=1515416322836529323]
+
+[2026-06-13T18:48:00.868000+00:00] undifined. (id=1515427540209111203)
+    This message is currently not supported on Telegram Web. Try getdesktop.telegram.org
+    [reply to xdarkchain msg=1515406752089243648]
+
+[2026-06-13T18:48:52.333000+00:00] xdarkchain (id=1515427756068835359)
+    Doesn't the V2 fallback kick in for you?
+    [reply to undifined. msg=1515427540209111203]
+
+[2026-06-13T18:49:20.144000+00:00] undifined. (id=1515427872716623994)
+    no
+
+[2026-06-13T18:49:49.886000+00:00] xdarkchain (id=1515427997463609482)
+    Interesting, so you're seeing plain text only?
+
+[2026-06-13T18:50:25.880000+00:00] undifined. (id=1515428148433653770)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1515428148173340692/image.png?ex=6a2ef7f1&is=6a2da671&hm=8d3098c3632af7912559f7591877eeae040a2a0b4d5a04de39d93d9ef4f77a70&
+    [reply to xdarkchain msg=1515427997463609482]
+
+[2026-06-13T18:51:59.343000+00:00] xdarkchain (id=1515428540445757563)
+    I'll work on a fix. 
+    
+    This is exactly why we have the fallback but I wonder why it's not kicking in. 
+    
+    I'll try to replicate the issue. 
+    Which OS and browser?
+    [reply to undifined. msg=1515428148433653770]
+
+[2026-06-13T18:52:44.539000+00:00] undifined. (id=1515428730011648050)
+    ubuntu 26.04 on host, win11 edge desktop
+
+[2026-06-13T18:52:53.797000+00:00] xdarkchain (id=1515428768842387556)
+    Thanks
+
+[2026-06-13T18:53:51.193000+00:00] undifined. (id=1515429009578660021)
+    android app is fine
+    [reply to xdarkchain msg=1515428768842387556]
+
+[2026-06-13T18:54:21.995000+00:00] xdarkchain (id=1515429138771738654)
+    It is fine on every native application.
+    [reply to undifined. msg=1515429009578660021]
+
+[2026-06-13T18:54:42.161000+00:00] xdarkchain (id=1515429223354073098)
+    Regarding the web, it is weird tho, since they used to update that first.
+
+[2026-06-13T18:54:54.236000+00:00] undifined. (id=1515429274000297984)
+    so, scalping non-natives , got it
+
+[2026-06-13T18:55:02.230000+00:00] xdarkchain (id=1515429307529564242)
+    🤣
+
+[2026-06-13T18:55:05.568000+00:00] xdarkchain (id=1515429321530151053)
+    <:LookUp:1107986527109255168>
+
+[2026-06-13T18:55:40.845000+00:00] xdarkchain (id=1515429469492613292)
+    They just need to pick up the new endpoint and they'll be fine.
+
+[2026-06-13T18:56:04.332000+00:00] xdarkchain (id=1515429568004100248)
+    This was pretty much introduced 2 days ago, literally.
+
+[2026-06-13T19:18:47.270000+00:00] maxfreedompollard (id=1515435284580536471)
+    Opened my first PR, a  fix for a data-loss bug in skills_sync . 3 ordering-only changes plus regression tests. Since it's my first commit, is there anything I need to do to get it in front of a maintainer for review, or do I just wait? 
+    
+    https://github.com/NousResearch/hermes-agent/pull/44951
+    [embed] fix(skills): make bundled-update backup handling crash-safe and ide... https://github.com/NousResearch/hermes-agent/pull/44951
+

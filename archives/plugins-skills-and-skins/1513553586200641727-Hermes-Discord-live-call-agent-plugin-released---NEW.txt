@@ -238,3 +238,6 @@
     Continue anyway? [y/n] (y): y```
     [embed] Sign in - Google Accounts https://aistudio.google.com/api-keys
 
+[2026-06-13T19:18:40.781000+00:00] capslock.b (id=1515435257363697737)
+    <@338366360545394689> Yep, it should work; do you have gemini explicitly toggled in your gstudio cloud?
+

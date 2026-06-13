@@ -109,3 +109,23 @@
     Lmao I’m a case manager who used to be a personal trainer 🤣 so I’m with you
     [reply to jw_mushroom_man msg=1515353412521164821]
 
+[2026-06-13T13:55:19.477000+00:00] iam_rxpii (id=1515353882396463234)
+    Local is the way to go. Keeps all your data on machine. Plus imma train off this data in a few months to get all the good and fine tune a future model probs. 
+    
+    Give back to the open source community
+    [reply to jw_mushroom_man msg=1515353497502093385]
+
+[2026-06-13T13:56:42.750000+00:00] iam_rxpii (id=1515354231668740256)
+    You should talk to <@894241515621204018> about comfyui if you haven’t. Guys a wizard. I planned on chatting with him more on asset to 3d models cause that’s my next step after getting a framework built
+
+[2026-06-13T14:00:16.490000+00:00] jw_mushroom_man (id=1515355128159535236)
+    Have you looked at three.js much? We started messing around with it last week and it’s a blast. I’ll hit Cris up too. Thanks!
+    [reply to iam_rxpii msg=1515354231668740256]
+
+[2026-06-13T14:01:59.699000+00:00] iam_rxpii (id=1515355561049456700)
+    Ironically have a profile on my team that’s three.js specific because that’s where I was gonna start first. That and using the blender-MCP and configuring it to work in my favor.
+    [reply to jw_mushroom_man msg=1515355128159535236]
+
+[2026-06-13T18:08:07.299000+00:00] iam_rxpii (id=1515417500853211316)
+    <@874265192383529010> i reivewed and merged your PR. I really appreciate that info. imma leave the dev kit cause someone might benefit from it in the future. you are awesome. thats my first PR and open source project
+

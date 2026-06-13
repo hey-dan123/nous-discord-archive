@@ -36,3 +36,6 @@
 [2026-06-09T05:06:17.055000+00:00] .elkim (id=1513771193566761052)
     [attachment] Screenshot_2026-06-09_07-06-06.png https://cdn.discordapp.com/attachments/1512147408090566726/1513771193335812156/Screenshot_2026-06-09_07-06-06.png?ex=6a28f0c9&is=6a279f49&hm=764e010c0d10f6228f147a67b20699d07ac24289b2bd160ccc54d44e49f560de&
 
+[2026-06-13T17:57:45.639000+00:00] eucdee (id=1515414893421924502)
+    Awesome, as soon as the server goes live i need that
+

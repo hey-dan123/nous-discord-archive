@@ -1036,3 +1036,13 @@
 [2026-06-05T16:58:51.590000+00:00] fathah. (id=1512500967621267467)
     [attachment] Hermes_One_-_Office.mov https://cdn.discordapp.com/attachments/1489459150235893863/1512500967147569203/Hermes_One_-_Office.mov?ex=6a2451cb&is=6a23004b&hm=5328b0e4ffb69a387e4022e3eea004fe90b775b0d1cb2a504c23343ce7234fe2&
 
+[2026-06-13T18:23:36.511000+00:00] fathah. (id=1515421398250688602)
+    [attachment] Hermes_One_-_Office_City.mov https://cdn.discordapp.com/attachments/1489459150235893863/1515421397382336532/Hermes_One_-_Office_City.mov?ex=6a2ef1a8&is=6a2da028&hm=8282a771e924787adaf5b4ce0dc4451a332a83476bff4f09cc925146b254e2cf&
+
+[2026-06-13T18:23:52.667000+00:00] fathah. (id=1515421466013864086)
+    Release v0.6.1
+    
+    https://github.com/fathah/hermes-desktop/releases/tag/v0.6.1
+    [attachment] Screenshot_2026-06-13_at_3.10.12_PM.jpg https://cdn.discordapp.com/attachments/1489459150235893863/1515421466256998590/Screenshot_2026-06-13_at_3.10.12_PM.jpg?ex=6a2ef1b8&is=6a2da038&hm=0df5fa6017ce58f73c04ba3a8d294ba24b3875e10be24f39f08a31ccb4c1d0fc&
+    [embed] Release Hermes Desktop v0.6.1 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.6.1
+

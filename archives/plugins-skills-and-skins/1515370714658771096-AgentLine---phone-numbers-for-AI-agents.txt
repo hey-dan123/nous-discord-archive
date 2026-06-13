@@ -1,0 +1,8 @@
+# Thread 'AgentLine - phone numbers for AI agents' in forum #plugins-skills-and-skins
+# thread_id=1515370714658771096 forum_id=1485392832154832906
+# Started 2026-06-13T19:27:03.266763+00:00
+
+[2026-06-13T15:02:12.601000+00:00] .dotnet_ (id=1515370714658771096)
+    Hey its Sam building AgentLine - Telephony services for AI agents. AI agents like Hermes and Openclaw get stuck whenever they have to call or use a phone number to login/signup. AgentLine solves this by giving every AI agent a phone number of its own to call and recieve sms. Give it a try at https://agentline.cloud/?utm_source=discord&utm_medium=community&utm_campaign=discord-invite
+    [embed] AgentLine | The Voice Infrastructure for AI Agents https://agentline.cloud/?utm_source=discord&utm_medium=community&utm_campaign=discord-invite
+

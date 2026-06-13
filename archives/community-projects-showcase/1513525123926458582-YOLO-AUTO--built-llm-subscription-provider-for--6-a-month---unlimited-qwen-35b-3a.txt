@@ -26,3 +26,17 @@
 [2026-06-11T17:43:49.349000+00:00] _big_owen_ (id=1514686610036490453)
     yeah I could definitely say the same I've been testing it for like the past couple of hours and I can say that it has definitely a capability and also having it be so cheap is what makes it such an interest of mine because locally hosting it's something I can't do with the resources I have but paying a couple bucks every month I can definitely do
 
+[2026-06-13T18:11:47.222000+00:00] isyutaru612 (id=1515418423276863561)
+    <@308737331903594496> 
+    
+    
+      "error": {
+        "message": "Upstream returned HTTP 500: {\"error\":{\"message\":\"litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.. Received Model Group=Qwen3.6-35B-A3B-FP8\\nAvailable Model Group Fallbacks=None\",\"type\":null,\"param\":null,\"code\":\"500\"}}",
+        "type": "server_error",
+        "param": null,
+        "code": "upstream_error",
+
+[2026-06-13T19:14:05.641000+00:00] omelet_phrm (id=1515434103342760018)
+    Having the the error.
+    [reply to isyutaru612 msg=1515418423276863561]
+

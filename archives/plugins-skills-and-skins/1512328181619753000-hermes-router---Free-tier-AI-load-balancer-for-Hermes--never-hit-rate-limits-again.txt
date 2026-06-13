@@ -167,3 +167,36 @@
     omniroute is just a rewrite of the og 9router
     [reply to lordfunks3375 msg=1515315848255115405]
 
+[2026-06-13T14:27:56.954000+00:00] shaf_2665 (id=1515362092650201089)
+    # hermes-router — update
+    
+    `hr auth` — easy API key management
+    
+    No more manually editing .env files. Just run:
+    
+    
+    `hr auth add groq`
+    It asks for your key (input hidden), saves it automatically, and you can keep adding more keys for the same provider in one go — they all go into the credential pool and get round-robined.
+    
+    
+    `hr auth list`
+    Shows all providers and how many keys you have configured.
+    
+    Supports all 10 providers: gemini, openrouter, cerebras, sambanova, github_models, mistral, groq, cohere, naga, nvidia
+    
+    **How to update**
+    
+    If you already have hermes-router set up:
+    
+    
+    `hr update`
+    That's it — pulls latest, validates, restarts, auto-rollbacks if anything breaks.
+    
+    **Note:**
+    If you haven't set up the hr command yet:
+    
+    
+    `git pull`
+    `./install.sh`
+    GitHub: https://github.com/Shaf2665/Hermes-router
+

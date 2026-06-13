@@ -50,3 +50,22 @@
     Repo and a Proof section showing it in action: https://github.com/Sahil-SS9/Toolaria
     [embed] GitHub - Sahil-SS9/Toolaria: Rescue oversized tool results before t... https://github.com/Sahil-SS9/Toolaria
 
+[2026-06-13T13:55:30.555000+00:00] sahil_ss9 (id=1515353928861093959)
+    **Toolaria v3 is live** — `Sahil-SS9/Toolaria@0dcb310`
+    
+    **What's new (5 features):**
+    
+    🔹 **Hot-blob pinning** — Frequently-fetched blobs survive TTL sweeps. A blob you keep querying won't vanish at 72h. Uses recency-weighted counting (not dumb threshold) so old fetches naturally decay. Config: `hot_fetch_threshold: 3.0`, `hot_ttl_hours: 168`
+    
+    🔹 **Anchor-pattern excerpts** — Error/decision/action/value lines promoted into excerpts even outside head/tail windows. "The team decided to deploy" or "Total: 42 items" now surface automatically. Config: `anchor_patterns: {error, decision, action, value}`
+    
+    🔹 **Provenance enrichment** — Rescue handles now show `source=` (URL from original tool args) and `at=` (UTC timestamp). Model can assess freshness without fetching.
+    
+    🔹 **Semantic role tagging** — Handles include `role=episodic|semantic|procedural`. web_search → episodic, rescuer_fetch outline → semantic. Helps models understand what kind of data a blob holds.
+    
+    🔹 **Chain mode** — `mode="chain"` does grep→context in a single call. No more separate grep + range calls just to see what's around an error. Merges overlapping windows. Usage: `rescuer_fetch(id="abc", mode="chain", pattern="ERROR", count=3)`
+    
+    **How to update:** `git pull origin main` if you track the repo, or copy the plugin files. Restart your gateway for plugin reload.
+    
+    **Tests:** 94/94. Backward compatible — all 5 features disabled by default until you set the config keys.
+
