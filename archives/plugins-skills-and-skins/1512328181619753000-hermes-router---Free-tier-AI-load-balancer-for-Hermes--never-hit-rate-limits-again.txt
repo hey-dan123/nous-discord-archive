@@ -132,3 +132,38 @@
     
     GitHub: https://github.com/Shaf2665/Hermes-router
 
+[2026-06-13T09:21:18.717000+00:00] nathan_o (id=1515284924851294378)
+    will you be adding nousportal?  I've been using the free nemotron 3 ultra:free model and been pretty happy with it..  was a bit slow but I wasn't doing anthing too complex.
+
+[2026-06-13T09:55:27.535000+00:00] shaf_2665 (id=1515293518216827040)
+    # hermes-router — update
+    
+    **Circuit breaker + health-aware routing**
+    
+    If a provider keeps throwing errors or timing out, it gets skipped automatically for ~60s, then probed again
+    Healthy providers get picked first — flaky ones sink in the order
+    Wasted round-trips on broken providers are basically eliminated now
+    
+    Why no token compression?
+    A few people have asked about adding RTK/Caveman-style compression. We looked at it — but since Hermes Agent already handles compression on its end, adding it to the router would be double work. On top of that, the router is free-tier only, so there's no cost saving. We'd just be adding risk of corrupting messages for zero benefit.
+    
+    GitHub: https://github.com/Shaf2665/Hermes-router
+
+[2026-06-13T09:55:56.590000+00:00] shaf_2665 (id=1515293640082325595)
+    if it has a api key then it can be added
+    [reply to nathan_o msg=1515284924851294378]
+
+[2026-06-13T10:10:11.211000+00:00] shaf_2665 (id=1515297224622604439)
+    are you using paid subscription?
+    [reply to nathan_o msg=1515284924851294378]
+
+[2026-06-13T10:33:48.454000+00:00] shaf_2665 (id=1515303168970461254)
+    Nous Portal requires a paid subscription so it doesn't fit our free-tier router — we only add providers with free models. If you're looking for Nemotron, we actually already have Naga AI in the router which serves nemotron-3-super-120b-a12b:free for free. Give it a try!"
+
+[2026-06-13T11:24:11.431000+00:00] lordfunks3375 (id=1515315848255115405)
+    what is the difference with omniroute, 9router?
+
+[2026-06-13T12:17:34.201000+00:00] shaf_2665 (id=1515329281646133368)
+    omniroute is just a rewrite of the og 9router
+    [reply to lordfunks3375 msg=1515315848255115405]
+

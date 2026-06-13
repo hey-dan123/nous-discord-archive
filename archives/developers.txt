@@ -31150,3 +31150,236 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(security): fail closed when an own-policy gateway adapter has n... https://github.com/NousResearch/hermes-agent/pull/45444
     [embed] fix(security): stop /api/status leaking host paths and PID on gated... https://github.com/NousResearch/hermes-agent/pull/45461
 
+[2026-06-13T10:28:31.529000+00:00] sahil_ss9 (id=1515301839690666055)
+    can i get a re-review on https://github.com/NousResearch/hermes-agent/pull/44919 please
+    [embed] fix(kanban): machine-global singleton lock for the embedded dispatc... https://github.com/NousResearch/hermes-agent/pull/44919
+
+[2026-06-13T10:29:05.802000+00:00] sahil_ss9 (id=1515301983441911868)
+    https://github.com/NousResearch/hermes-agent/pull/44909
+    [embed] fix(kanban): hold reclaim while the worker is still alive by Sahil-... https://github.com/NousResearch/hermes-agent/pull/44909
+
+[2026-06-13T10:30:04.972000+00:00] sahil_ss9 (id=1515302231618883606)
+    and if possible a review of - https://github.com/NousResearch/hermes-agent/pull/43780
+    [embed] feat(curator): add post_curator_run hook event through the plugin h... https://github.com/NousResearch/hermes-agent/pull/43780
+
+[2026-06-13T10:34:22.407000+00:00] sahil_ss9 (id=1515303311379533925)
+    https://github.com/NousResearch/hermes-agent/pull/29526 <--- re addressed a merge issue with this 🙂
+    [embed] feat(plugins): add pre_user_message hook + PluginContext.ask_user o... https://github.com/NousResearch/hermes-agent/pull/29526
+
+[2026-06-13T10:42:49.288000+00:00] vampyren (id=1515305437392535603)
+    Not ssure this is the right place so please tell me if i should post it elsewhere. This is  a Heads up: 
+    the Hermes npm install/update warnings are getting louder and look like dependency maintenance drift, not just local noise.
+        
+        On Node v22.22.2 / npm 11.16.0 I’m seeing:
+        - npm audit reports Vite/esbuild high-severity advisories and a Joi moderate advisory unless Vite/esbuild/Joi are bumped.
+        - npm audit fix currently crashes in the workspace with Cannot read properties of null (reading 'isDescendantOf'), so the safe path was targeted dependency bumps rather than audit fix --force.
+        - npm install repeatedly warns about pending install scripts via npm’s allow-scripts flow: agent-browser, electron, electron-winstaller, node-pty, esbuild, unicode-animations, etc. We probably need a project-level policy for which scripts are intentionally allowed.
+        - @icons-pack/react-simple-icons@13.13.0 now requires Node >=24 and pnpm >=10, while Hermes currently runs fine on Node 22/npm. Either the supported Node version should be bumped/documented, or that dependency should be pinned/replaced.
+        - Desktop install also emits deprecated dependency warnings: inflight, rimraf v2, glob v7, boolean, rcedit.
+        
+        I locally tested a safe patch without --force:
+        - Vite -> ^8.0.16 in web + bootstrap-installer
+        - esbuild -> ^0.28.1 in ui-tui + @hermes/ink
+        - lockfile updated so Joi resolves cleanly
+        - npm audit now reports 0 vulnerabilities
+        - web build, ui-tui typecheck/build, bootstrap-installer build, and desktop typecheck all pass
+        
+        I did not approve install scripts or downgrade the Node-24 icon package warning because those need an upstream/project decision.
+
+[2026-06-13T11:47:18.051000+00:00] scottermonkey (id=1515321664160796722)
+    Please support this PR. I built it out. It was a simple change. Ready to merge; just needs support.
+    
+    SUMMARY: Clone any profile, not just default.
+    
+    PR #45558 — Clone new profiles from any profile in the dashboard, not just default. Backend and CLI already support it — the web UI just had a one-line checkbox hardcoded to "default". Replace it with a dropdown. 21 files, 59 lines, clean tests. Closes #23746.
+    https://github.com/NousResearch/hermes-agent/pull/45558
+    [embed] feat(dashboard): clone new profile from any profile (dropdown inste... https://github.com/NousResearch/hermes-agent/pull/45558
+
+[2026-06-13T11:55:20.242000+00:00] iborazzi (id=1515323686616305764)
+    Fixed a fresh-clone build blocker in the desktop app (#45551 / #45559):
+    apps/shared/tsconfig.json was targeting ES2022 but the source uses Array.findLast() / Array.findLastIndex() (ES2023) — bumped target/lib to ES2023.
+    Also @assistant-ui/store@0.2.16 imports from @assistant-ui/tap/react-shim but tap 0.5.10 doesn't export it. Instead of patching node_modules or bumping tap (cascading type errors), added a Vite resolve alias pointing it to react directly — consistent with the existing dedup aliases in vite.config.ts.
+    All CI checks passed. PR: https://github.com/NousResearch/hermes-agent/pull/45559
+    [embed] fix(desktop): bump shared tsconfig to ES2023, alias @assistant-ui/t... https://github.com/NousResearch/hermes-agent/pull/45559
+
+[2026-06-13T12:04:09.857000+00:00] kyssta69 (id=1515325907982880918)
+    https://github.com/NousResearch/hermes-agent/pull/45570
+    
+    **Problem**: Users received doubled and interleaved messages for hours after gateway restart because auto-resume and inbound message handler both created separate AIAgent instances for the same session.
+    The auto-resume task was created asynchronously, so between task creation and execution, the inbound handler also passed the 'not running' check and created a duplicate agent.
+    The fix atomically claims the session in _running_agents before the auto-resume task starts, blocking the inbound handler from creating a duplicate.
+    [embed] fix(gateway): prevent duplicate agent instances on auto-resume race... https://github.com/NousResearch/hermes-agent/pull/45570
+
+[2026-06-13T12:14:16.676000+00:00] enderlook (id=1515328453165973584)
+    How can I run a clone of Hermes repository?
+    Going to the folder I executed the `setup-hermes.sh`. But then I did `hermes desktop` in the directory and it opened my installed one, not the clone.
+    Then I checked the guide and tried to do:
+    ```
+    # Symlink for global access
+    mkdir -p ~/.local/bin
+    ln -sf "$(pwd)/venv/bin/hermes" ~/.local/bin/hermes
+    
+    # Verify
+    hermes doctor
+    hermes chat -q "Hello"
+    ```
+    But I can't run `ln -sf "$(pwd)/venv/bin/hermes" ~/.local/bin/hermes` as `ln` is not recogniced by command line nor powershell on Window.
+
+[2026-06-13T12:31:29.856000+00:00] theoveo (id=1515332786636984491)
+    <@387972437901312000> I reproduced the Desktop remote issue against a clean upstream Hermes backend, without our custom stack.
+    
+    PR: https://github.com/NousResearch/hermes-agent/compare/main...leprincep35700:hermes-agent:fix/dashboard-desktop-token-gated  
+    Related issue/context: https://github.com/NousResearch/hermes-agent/issues/42139
+    
+    What I tested:
+    
+    - Fresh isolated upstream Hermes Docker build
+    - Dashboard exposed on LAN
+    - `/api/status` returns `200`
+    - `gateway_running=true`
+    - API server is connected
+    - Docker port is bound on `0.0.0.0`
+    - Also tested without BasicAuth/proxy auth
+    
+    Result: Hermes Desktop still shows `Could not reach gateway`, even though the backend is reachable and healthy.
+    
+    So this does not look like a network/port/Docker problem. It looks like the Desktop remote auth/handshake contract is incompatible with the current gated self-hosted dashboard path.
+    
+    The PR fixes the narrow compatibility gap: when dashboard auth gate is active, it also accepts the Desktop session token for native Desktop clients:
+    
+    - HTTP API calls via `X-Hermes-Session-Token`
+    - WebSocket via `?token=...`
+    
+    Browser auth/cookie/OAuth remains gated; this only restores the native Desktop token path.
+    
+    Validation:
+    txt
+    tests/hermes_cli/test_dashboard_desktop_token_gated.py
+    2 passed
+    Based on the reproduction, the PR seems correctly scoped: vanilla upstream backend is healthy but Desktop cannot connect without this token compatibility path.
+    [embed] Comparing NousResearch:main...leprincep35700:fix/dashboard-desktop-... https://github.com/NousResearch/hermes-agent/compare/main...leprincep35700:hermes-agent:fix/dashboard-desktop-token-gated
+    [embed] Gated dashboard mode: endpoints calling _require_token() 401 cookie... https://github.com/NousResearch/hermes-agent/issues/42139
+
+[2026-06-13T13:21:03.793000+00:00] teknium (id=1515345260233101485)
+    We no longer support installing it that way so idk - I'd say ask hermes to help but sounds like you arent going to be able to <a:roflmao:393566686965530678>
+    [reply to enderlook msg=1515328453165973584]
+
+[2026-06-13T13:21:44.412000+00:00] teknium (id=1515345430601273516)
+    not a bad idea
+    [reply to scottermonkey msg=1515321664160796722]
+
+[2026-06-13T13:22:48.828000+00:00] teknium (id=1515345700781822062)
+    Thanks for the report. I think <@100390510744584192> is in the process of upgrading us all to node 26
+    [reply to vampyren msg=1515305437392535603]
+
+[2026-06-13T13:23:58.157000+00:00] vampyren (id=1515345991568461965)
+    Thanks allot!
+    [reply to teknium msg=1515345700781822062]
+
+[2026-06-13T13:24:23.441000+00:00] jw_mushroom_man (id=1515346097617371236)
+    **Hermes PRs — last 12 hours** 
+    
+    **#45610 — fix(windows): harden gateway scheduled task**
+    Makes the Windows gateway task survive reboot/login reliably: installed from XML (logon delay, start-when-available, battery-safe, no 72h limit, restart-on-failure) and using the uv-safe detached-python launcher so it won't respawn a console python. Fixes #45599.
+    `https://github.com/NousResearch/hermes-agent/pull/45610`
+    
+    **#45604 — fix(gateway): exclude delegate children from TUI active-session list**
+    Stops delegated subagent "watch" sessions from leaking into the switchable active-session list, where one could silently become your current conversation and swallow prompts meant for the parent.
+    `https://github.com/NousResearch/hermes-agent/pull/45604`
+    
+    **#45373 — fix(web): require explicit Parallel backend selection**
+    A fresh install with no web config or creds no longer silently routes web_search/web_extract to Parallel's anonymous hosted MCP — it falls through to the normal setup error unless you opt in. Fixes #45058.
+    `https://github.com/NousResearch/hermes-agent/pull/45373`
+    
+    **#45366 — fix(gateway): notify agent only on successful process exit**
+    Background terminal jobs with notify_on_complete only inject a follow-up turn on a clean exit; failed/killed/unknown-exit ones are logged and dropped instead of polluting the chat. Fixes #45352.
+    `https://github.com/NousResearch/hermes-agent/pull/45366`
+    
+    **#45351 — fix(agent): reserve output tokens in compression threshold**
+    Proactive context compression now subtracts the request's reserved output budget (e.g. max_tokens=65536) from the context window before applying its threshold, so it compresses in time instead of overflowing context. Fixes #43547.
+    `https://github.com/NousResearch/hermes-agent/pull/45351`
+    
+    Also updated: **#44356 — feat(excel): Excel sidecar** picked up a native conditional_format action + a reliability fix so medium multi-action builds stop emitting invalid JSON.
+    `https://github.com/NousResearch/hermes-agent/pull/44356`
+
+[2026-06-13T13:25:37.704000+00:00] jw_mushroom_man (id=1515346409099104396)
+    <@387972437901312000> I added an excel sidecar that finance people will find useful. I also integrated Hermes with Sage50 read access, but idk if i should push that yet because i dont know if thats safe for security reasons. thoughts?
+
+[2026-06-13T13:26:24.241000+00:00] jw_mushroom_man (id=1515346604289167451)
+    It lets hermes read financial data straight from local sage databases without credintials, which is useful for audits, but could be use maliciously
+
+[2026-06-13T13:28:01.591000+00:00] teknium (id=1515347012604661821)
+    > #45610 — fix(windows): harden gateway scheduled task
+    > Makes the Windows gateway task survive reboot/login reliably: installed from XML (logon delay, start-when-available, battery-safe, no 72h limit, restart-on-failure) and using the uv-safe detached-python launcher so it won't respawn a console python. Fixes #45599.
+    > https://github.com/NousResearch/hermes-agent/pull/45610
+    I've already tried this and it doesnt work..
+    [embed] fix(windows): harden gateway scheduled task by lEWFkRAD · Pull Req... https://github.com/NousResearch/hermes-agent/pull/45610
+    [reply to jw_mushroom_man msg=1515346097617371236]
+
+[2026-06-13T13:28:36.931000+00:00] jw_mushroom_man (id=1515347160831623238)
+    Missed that review. sorry.
+    [reply to teknium msg=1515347012604661821]
+
+[2026-06-13T13:28:43.936000+00:00] teknium (id=1515347190212591676)
+    not that specific PR
+
+[2026-06-13T13:28:51.131000+00:00] teknium (id=1515347220390613004)
+    I tried it myself to make it work more reliably on my own PR
+
+[2026-06-13T13:28:52.666000+00:00] jw_mushroom_man (id=1515347226828869732)
+    oh the excel?
+
+[2026-06-13T13:29:06.243000+00:00] teknium (id=1515347283775066263)
+    Have you tested that PR live in your own windows install
+
+[2026-06-13T13:29:45.032000+00:00] jw_mushroom_man (id=1515347446467657749)
+    yes. On my workstation at the office. I will close it for now and look into. sorry to bother
+
+[2026-06-13T13:41:29.330000+00:00] teknium (id=1515350400507842600)
+    ```    For Windows, don’t use the Linux symlink line. ln -sf ... is for bash/Linux/macOS, and venv/bin/hermes is also the Linux venv path.
+        
+        Native Windows paths are under venv\Scripts.
+        
+        From the cloned repo root in PowerShell:
+        
+        powershell
+        Run the clone's Hermes directly
+        .\venv\Scripts\hermes.exe doctor
+        .\venv\Scripts\hermes.exe chat -q "Hello"
+        .\venv\Scripts\hermes.exe desktop
+        
+        
+        If that venv doesn’t exist yet, set it up natively:
+        
+        powershell
+        from the cloned hermes-agent repo
+        uv venv venv --python 3.11
+        .\venv\Scripts\python.exe -m pip install -e ".[all,dev]"
+        .\venv\Scripts\hermes.exe doctor
+        
+        
+        Or, to avoid the global installed hermes entirely:
+        
+        powershell
+        .\venv\Scripts\python.exe -m hermes_cli.main doctor
+        .\venv\Scripts\python.exe -m hermes_cli.main desktop
+        
+        
+        If they want hermes to mean the clone inside that PowerShell session:
+        
+        powershell
+        $env:Path = "$PWD\venv\Scripts;$env:Path"
+        hermes doctor
+        hermes desktop
+        
+        
+        That only affects the current terminal. To make it persistent, add the clone’s venv\Scripts directory before the installed Hermes entry in the Windows User PATH.
+        
+        Also: setup-hermes.sh is the bash/Linux helper. On native Windows the official installer path is scripts\install.ps1, but for a dev clone the cleanest route is the uv venv + pip install -e ".[all,dev]" flow above.```
+    [reply to enderlook msg=1515328453165973584]
+
+[2026-06-13T13:47:01.611000+00:00] jw_mushroom_man (id=1515351794195234957)
+    Dug into it. I think we're both seeing real behavior: the task uses a LogonTrigger + InteractiveToken (the gateway needs a logged-in session for the Windows computer_use backend), so it only comes up after a user logs in. My boxes auto-login (AutoAdminLogon=1), so it survives reboot for me, yours probably doesn't auto-login, so it sits at the lock screen and never fires. StartWhenAvailable doesn't help here since it only rescues missed time-based schedules, not logon triggers.
+    
+    So the PR is really "harden the logon task" (battery-safe, kill the 72h exec limit, restart-on-failure, stop the minute-repeat churn) all still worth having, but it can't deliver true unattended reboot survival on a box without auto-login. Two honest options: reframe it as a logon-task hardening + document that headless reboot survival needs auto-login, or add an opt-in service/boot-trigger mode for headless machines (which would disable computer_use).
+

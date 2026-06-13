@@ -1,0 +1,9 @@
+# Thread 'AIx Alignment Index' in forum #community-projects-showcase
+# thread_id=1515333178720653433 forum_id=1316137596535177246
+# Started 2026-06-13T13:54:53.023633+00:00
+
+[2026-06-13T12:33:03.336000+00:00] simulateai_research_team_00263 (id=1515333178720653433)
+    New Open Source Auditing Tool for Use to Score Alignment in Systems
+    🔗 https://github.com/mindbomber/AIx_Alignment_Index
+    [embed] GitHub - mindbomber/AIx_Alignment_Index https://github.com/mindbomber/AIx_Alignment_Index
+

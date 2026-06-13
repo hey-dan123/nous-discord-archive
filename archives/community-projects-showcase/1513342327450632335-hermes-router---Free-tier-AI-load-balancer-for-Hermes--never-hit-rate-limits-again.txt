@@ -139,3 +139,17 @@
     sure
     [reply to dinesh58 msg=1515277101337677965]
 
+[2026-06-13T09:55:11.024000+00:00] shaf_2665 (id=1515293448964411452)
+    # hermes-router — update
+    
+    **Circuit breaker + health-aware routing**
+    
+    If a provider keeps throwing errors or timing out, it gets skipped automatically for ~60s, then probed again
+    Healthy providers get picked first — flaky ones sink in the order
+    Wasted round-trips on broken providers are basically eliminated now
+    
+    Why no token compression?
+    A few people have asked about adding RTK/Caveman-style compression. We looked at it — but since Hermes Agent already handles compression on its end, adding it to the router would be double work. On top of that, the router is free-tier only, so there's no cost saving. We'd just be adding risk of corrupting messages for zero benefit.
+    
+    GitHub: https://github.com/Shaf2665/Hermes-router
+

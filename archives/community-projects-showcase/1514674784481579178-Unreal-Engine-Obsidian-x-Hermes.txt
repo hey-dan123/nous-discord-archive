@@ -58,3 +58,54 @@
     https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/releases/tag/v1.3.0
     [embed] Release v1.3.0 · theheavenlyd3mon/Unreal-Engine-Obsidian https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/releases/tag/v1.3.0
 
+[2026-06-13T13:33:35.320000+00:00] jw_mushroom_man (id=1515348412365668353)
+    Noctis — went through the v1.3.0 drop, the UE5_CPP reference set is clean. Had my Hermes + Claude on Forge build out a complementary layer + a dev kit and opened a PR:
+    https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/pull/1
+    
+    What's in it:
+    • **UE5_Gotchas/** — 5 notes on the stuff tutorials skip, each mapped to Echoes' stack: GAS replication (ASC-on-PlayerState, the Mixed-mode Owner trap, InitAbilityActorInfo timing), open-world save, multiplayer-from-day-one, deterministic tower gen, and the 60fps Nanite/Lumen reality. Matches your frontmatter/MOC conventions, 0 broken wikilinks.
+    • **Canonical references** — the sources that don't rot (Epic 5.7 docs, tranek, vorixo, Cedric's Network Compendium, Lyra, benui).
+    • **A dev kit** (namespaced under Contrib/ so it doesn't touch your structure) — a vertical-slice spec + milestone backlog, a reviewed UE5.7 C++ starter module (ASC-on-PlayerState GAS triad, async profile/run save, deterministic floor generator), and a Hermes UE5 skill + profile prompts.
+    • **An errata note worth a look** — cross-checked your new v1.3.0 refs. GAS one's solid (just: InstancedPerExecution/NonInstanced are deprecated in 5.5+). The framework one picked up a few legacy UE3/UE4 patterns that are dead ends in 5.7 — AttachTo→SetupAttachment, the IMPLEMENT_PRIMARY_GAME_MODULE arity, TargetInfo→ReadOnlyTargetRules, and the old INI module-registration section. All flagged with the modern fix.
+    
+    Heads up: the C++ is reviewed for 5.7 API correctness but **not yet compiled against the engine** — treat first build as a nit-fix pass (README spells it out + lists what was already corrected).
+    
+    Also saw your TurboHaul setup,. The profile prompts are tuned for exactly that (ue5-coder/abilities → bake the vault in + a "VERIFY, don't invent APIs" rule that catches the 35B's hallucinations on review). Take what's useful, leave the rest — happy to split into smaller PRs if you'd rather take it piecemeal.
+    [embed] UE5 gotchas, canonical references, and an Echoes of Ascension dev k... https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/pull/1
+
+[2026-06-13T13:50:02.638000+00:00] iam_rxpii (id=1515352553477636135)
+    I’ll give it a look and definitely update it. Thank you for that
+    [reply to jw_mushroom_man msg=1515348412365668353]
+
+[2026-06-13T13:52:06.777000+00:00] jw_mushroom_man (id=1515353074154340352)
+    I have Hermes and Claude on it today while I’m out. Really interested in this project
+    [reply to iam_rxpii msg=1515352553477636135]
+
+[2026-06-13T13:52:08.130000+00:00] iam_rxpii (id=1515353079829237881)
+    What are you working on currently, I’m curious to learn or hear
+    [reply to jw_mushroom_man msg=1515348412365668353]
+
+[2026-06-13T13:52:37.636000+00:00] iam_rxpii (id=1515353203586236536)
+    Love to hear that. I’m just trying to make it easier to build games tbh
+
+[2026-06-13T13:52:55.602000+00:00] iam_rxpii (id=1515353278940971161)
+    I’m a learning solo dev who’s just using AI and his resources
+
+[2026-06-13T13:53:14.158000+00:00] jw_mushroom_man (id=1515353356770607206)
+    The crysis in html meme is the only complex project I have going on. I’m doing some stuff in godot and my girlfriend and I have set up some really good comfy UI pipelines for asset generation
+    [reply to iam_rxpii msg=1515353079829237881]
+
+[2026-06-13T13:53:22.405000+00:00] jw_mushroom_man (id=1515353391361036471)
+    I’ll get a git together for you later on
+
+[2026-06-13T13:53:27.450000+00:00] jw_mushroom_man (id=1515353412521164821)
+    I’m an accountant ☠️
+
+[2026-06-13T13:53:47.711000+00:00] jw_mushroom_man (id=1515353497502093385)
+    I’m also using local models for most of this so there is a lot of overlap here
+    [reply to iam_rxpii msg=1515353278940971161]
+
+[2026-06-13T13:53:53.442000+00:00] iam_rxpii (id=1515353521539780658)
+    Lmao I’m a case manager who used to be a personal trainer 🤣 so I’m with you
+    [reply to jw_mushroom_man msg=1515353412521164821]
+
