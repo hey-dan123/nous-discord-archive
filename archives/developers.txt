@@ -31536,3 +31536,153 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/44951
     [embed] fix(skills): make bundled-update backup handling crash-safe and ide... https://github.com/NousResearch/hermes-agent/pull/44951
 
+[2026-06-13T19:40:12.443000+00:00] xdarkchain (id=1515440674986528930)
+    <@387972437901312000> Yet another ping!
+    There is a new commit which is a targeted fix for an issue regarding the style applying which needs to be picked up too.
+    
+    https://github.com/NousResearch/hermes-agent/pull/45741
+    [embed] Feat/telegram rich messages by ITheEqualizer · Pull Request #45741... https://github.com/NousResearch/hermes-agent/pull/45741
+
+[2026-06-13T19:43:28.796000+00:00] xdarkchain (id=1515441498550702220)
+    I'm super tired so I'ma call it the day. 
+    Will fix the web issue tomorrow.
+
+[2026-06-13T20:12:43.941000+00:00] nucleosynth (id=1515448860162392245)
+    is there anything llm-gateway-like that doesn't suck?  litellm seems to break client cancellations for me
+
+[2026-06-13T20:16:33.146000+00:00] nakoturk (id=1515449821517975694)
+    Hey everyone! I did a little housekeeping on the codebase. I ran codespell and opened a chore PR that fixes over 700 typos across 176 files. It’s a clean maintenance update strictly documentation and comments, so no logic changes at all. If anyone wants to take a look: https://github.com/NousResearch/hermes-agent/pull/45804
+    [embed] chore: remove unused imports to clean up codebase by okannako · Pu... https://github.com/NousResearch/hermes-agent/pull/45804
+
+[2026-06-13T20:20:04.524000+00:00] teknium (id=1515450708101431307)
+    not rly
+    [reply to nucleosynth msg=1515448860162392245]
+
+[2026-06-13T20:20:06.821000+00:00] teknium (id=1515450717735751751)
+    <:shrug:771395301374296124>
+
+[2026-06-13T20:20:38.769000+00:00] nucleosynth (id=1515450851735503019)
+    almost makes me want to write one
+
+[2026-06-13T20:20:55.250000+00:00] nucleosynth (id=1515450920861696142)
+    it's just an http reverse proxy how hard could it be <a:keksplode:1116838444191199272>
+
+[2026-06-13T20:33:52.265000+00:00] aialliai (id=1515454179898949782)
+    https://github.com/NousResearch/hermes-agent/pull/45810#issuecomment-4699709532 green ✅
+    [embed] fix(model-switch): exhausted credential pool should not count as au... https://github.com/NousResearch/hermes-agent/pull/45810
+
+[2026-06-13T20:44:09.184000+00:00] aialliai (id=1515456767444779150)
+    https://github.com/NousResearch/hermes-agent/pull/45815 ✅✅
+    [embed] feat(web): make the web_search default result limit configurable by... https://github.com/NousResearch/hermes-agent/pull/45815
+
+[2026-06-13T21:09:19.557000+00:00] aialliai (id=1515463102408425603)
+    https://github.com/NousResearch/hermes-agent/pull/45819 ✅
+    [embed] fix(agent): match custom credential pools by requested provider nam... https://github.com/NousResearch/hermes-agent/pull/45819
+
+[2026-06-13T21:10:39.013000+00:00] aialliai (id=1515463435671044257)
+    https://github.com/NousResearch/hermes-agent/pull/44392 ✅
+    [embed] fix(agent): honor HERMES_TLS_MAX_VERSION to cap provider TLS handsh... https://github.com/NousResearch/hermes-agent/pull/44392
+
+[2026-06-13T21:14:59.257000+00:00] aialliai (id=1515464527213494457)
+    https://github.com/NousResearch/hermes-agent/pull/45811 ✅
+    [embed] fix(prompt): surface the Hermes config/state directory in environme... https://github.com/NousResearch/hermes-agent/pull/45811
+
+[2026-06-13T21:22:44.101000+00:00] maxfreedompollard (id=1515466476910542979)
+    <@387972437901312000> Opened my first PR, a  fix for a data-loss bug in skills_sync . 3 ordering-only changes plus regression tests. Since it's my first commit, is there anything I need to do to get it in front of a maintainer for review, or do I just wait? 
+    
+    https://github.com/NousResearch/hermes-agent/pull/44951
+    [embed] fix(skills): make bundled-update backup handling crash-safe and ide... https://github.com/NousResearch/hermes-agent/pull/44951
+
+[2026-06-13T22:02:44.884000+00:00] jmsunseri (id=1515476546524020826)
+    who do i need to beg to get this merged?  https://github.com/NousResearch/hermes-agent/pull/45840
+    [embed] feat(telegram): add disable_rich_messages config option by jmsunser... https://github.com/NousResearch/hermes-agent/pull/45840
+
+[2026-06-13T22:15:51.411000+00:00] aialliai (id=1515479845457625098)
+    https://github.com/NousResearch/hermes-agent/pull/45841 ✅
+    [embed] fix(desktop): flip the foreground view to the warm session synchron... https://github.com/NousResearch/hermes-agent/pull/45841
+
+[2026-06-13T22:35:27.110000+00:00] enderlook (id=1515484776696647780)
+    When I attempt to do:
+    ```
+    .\venv\Scripts\python.exe -m pip install -e ".[all,dev]"
+    ```
+    I get:
+    ```
+    ...\hermes-agent\venv\Scripts\python.exe: No module named pip
+    ```
+    [reply to teknium msg=1515350400507842600]
+
+[2026-06-13T22:35:57.433000+00:00] enderlook (id=1515484903880396830)
+    But if I already have an installation of hermes what would happen?
+    [reply to teknium msg=1515375689635991713]
+
+[2026-06-13T22:43:50.180000+00:00] sworntech (id=1515486886725160960)
+    **Small Hermes docs wording PR**:
+    
+    **Problem**: The README and docs homepage used an exclusive “only agent with a built-in learning loop” claim, which can become stale or unsupported over time.
+    
+    **Fix**: Softened the wording while preserving the built-in learning loop positioning.
+    
+    **Impact**: Docs-only change. No runtime behavior changed.
+    
+    References #26010 S8
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/45850
+    [embed] docs: qualify learning-loop claim by Sworntech-dev · Pull Request ... https://github.com/NousResearch/hermes-agent/pull/45850
+
+[2026-06-13T22:59:39.714000+00:00] neekoadams (id=1515490869359280228)
+    https://github.com/NousResearch/hermes-agent/pull/45832
+    [embed] feat(desktop): highlight terminal shell input by unleashed-nick · ... https://github.com/NousResearch/hermes-agent/pull/45832
+
+[2026-06-14T00:24:46.031000+00:00] aialliai (id=1515512286805229620)
+    https://github.com/NousResearch/hermes-agent/pull/45841 ✅
+    [embed] fix(desktop): flip the foreground view to the warm session synchron... https://github.com/NousResearch/hermes-agent/pull/45841
+
+[2026-06-14T00:25:22.437000+00:00] jmn67. (id=1515512439502934076)
+    Added Synology Chat as a platform plugin — bot DMs + channel webhooks, follows ADDING_A_PLATFORM.md, zero core changes. Field-tested on a real DSM 7.x box (DMs + a channel, in + out), 56 tests. CI's parked in action_required since I'm a first-time external contributor, so it needs a maintainer to kick off the run.
+    
+    https://github.com/NousResearch/hermes-agent/pull/44671
+    [embed] feat(platforms): add Synology Chat bundled platform plugin by druid... https://github.com/NousResearch/hermes-agent/pull/44671
+
+[2026-06-14T00:34:33.927000+00:00] colorado.rob1459 (id=1515514752619511859)
+    I have a MiniMax coding plan which includes halfway decent image generation capability. I'd really like to use it. There is a PR that supports this available since mid-April. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/10389
+    [embed] Adding Minimax support for image generation by notoriousmic · Pull... https://github.com/NousResearch/hermes-agent/pull/10389
+
+[2026-06-14T01:00:59.552000+00:00] flownium (id=1515521403213054044)
+    https://github.com/NousResearch/hermes-agent/pull/45890
+    [embed] fix: route Copilot catalog endpoint models by itsflownium · Pull R... https://github.com/NousResearch/hermes-agent/pull/45890
+
+[2026-06-14T01:01:45.900000+00:00] flownium (id=1515521597610524884)
+    https://github.com/NousResearch/hermes-agent/pull/45891
+    [embed] fix: repair Windows install  by itsflownium · Pull Request #45891 ... https://github.com/NousResearch/hermes-agent/pull/45891
+
+[2026-06-14T01:27:24.551000+00:00] nanxingncb612d (id=1515528051180437524)
+    https://github.com/NousResearch/hermes-agent/pull/45898 Keep resumed profile cwd scoped to profile DB
+    [embed] Keep resumed profile cwd scoped to profile DB by necoweb3 · Pull R... https://github.com/NousResearch/hermes-agent/pull/45898
+
+[2026-06-14T01:28:15.630000+00:00] nanxingncb612d (id=1515528265421291711)
+    https://github.com/NousResearch/hermes-agent/pull/45899 Scope TUI config writes to resumed profile
+    [embed] Scope TUI config writes to resumed profile by necoweb3 · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/45899
+
+[2026-06-14T01:29:30.745000+00:00] nanxingncb612d (id=1515528580476702771)
+    https://github.com/NousResearch/hermes-agent/pull/45900 Run TUI shell exec in session cwd
+    [embed] Run TUI shell exec in session cwd by necoweb3 · Pull Request #4590... https://github.com/NousResearch/hermes-agent/pull/45900
+
+[2026-06-14T01:51:38.912000+00:00] flownium (id=1515534151212601386)
+    https://github.com/NousResearch/hermes-agent/pull/45910
+    [embed] fix: add provider account removal by itsflownium · Pull Request #4... https://github.com/NousResearch/hermes-agent/pull/45910
+
+[2026-06-14T03:32:20.029000+00:00] teknium (id=1515559489494057000)
+    We already fallback to plain markdown v2 if it fails
+    [reply to jmsunseri msg=1515476546524020826]
+
+[2026-06-14T03:35:02.956000+00:00] jmsunseri (id=1515560172859297962)
+    This solution didn't fix the problem.  The message successfully sends with telegram but the client fails to receive it
+    [reply to teknium msg=1515559489494057000]
+
+[2026-06-14T03:39:28.815000+00:00] jmsunseri (id=1515561287952633906)
+    I'm working on a Pebble watch app that uses Telegram to talk to either OpenClaw or Hermes.  I was grinding for hours yesterday trying to figure out why I could send messages to both but I only received messages from OpenClaw.  This patch and setting was the solution
+

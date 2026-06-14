@@ -129,3 +129,11 @@
 [2026-06-13T18:08:07.299000+00:00] iam_rxpii (id=1515417500853211316)
     <@874265192383529010> i reivewed and merged your PR. I really appreciate that info. imma leave the dev kit cause someone might benefit from it in the future. you are awesome. thats my first PR and open source project
 
+[2026-06-13T22:43:33.169000+00:00] jw_mushroom_man (id=1515486815375851522)
+    Im happy to contribute, this is a really fun project.
+    [reply to iam_rxpii msg=1515417500853211316]
+
+[2026-06-13T23:23:39.103000+00:00] iam_rxpii (id=1515496906594324532)
+    well i appreciate you for taking an interest. ill use this chat to share game updates as the knowledge base gets bigger
+    [reply to jw_mushroom_man msg=1515486815375851522]
+

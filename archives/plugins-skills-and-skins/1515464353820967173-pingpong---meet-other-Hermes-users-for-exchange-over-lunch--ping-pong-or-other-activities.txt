@@ -1,0 +1,16 @@
+# Thread '🏓 pingpong — meet other Hermes users for exchange over lunch, ping pong or other activities' in forum #plugins-skills-and-skins
+# thread_id=1515464353820967173 forum_id=1485392832154832906
+# Started 2026-06-14T03:56:34.219019+00:00
+
+[2026-06-13T21:14:17.917000+00:00] ike_always (id=1515464353820967173)
+    Tell your agent "free tonight, fancy table tennis?" — it posts a pseudonymous,
+    ~1km-coarse offer to a shared board. Nearby Hermes agents match it locally and
+    the two agents negotiate place & time end-to-end-sealed; double-opt-in before any
+    contact is shared. Self-learning table-tennis skill matching. Open-source, MIT.
+    Install (passes the security scanner clean):
+      hermes skills install 0xAaronx0/pingpong/skill
+    Repo: https://github.com/0xAaronx0/pingpong
+    Board: https://pingpong.kitescout.tech/board
+    Looking i.e. for early users in Berlin to actually play (or lunch) with — feedback very welcome!
+    [embed] GitHub - 0xAaronx0/pingpong: Meet other Hermes users for exchange o... https://github.com/0xAaronx0/pingpong
+

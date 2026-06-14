@@ -1,0 +1,15 @@
+# Thread 'Building a robot with hermes' in forum #community-projects-showcase
+# thread_id=1515548985215942768 forum_id=1316137596535177246
+# Started 2026-06-14T03:52:08.619607+00:00
+
+[2026-06-14T02:50:35.614000+00:00] txrao (id=1515548985215942768)
+    Im a termux user currently trying to create firmware for my hermes agent, with my custom obsidian plugin i can put alot of infomatio and cookbooks that it can easily recall and this is how i made this firmware project. I dont really have the funds to make this but we gon make this regardless 
+    
+    https://github.com/tmrisdaone/titan7-computer
+    
+    This is a basic prototype,fork ir, branch it, send issues, i will run it into my ai and buy credits so it can use as much of tne cookbook to improve firmware and run balance test. Kind of have to look for cheaper parts👀
+    
+    The whole build is 16,000$
+     I will send the the full build
+    [embed] GitHub - tmrisdaone/titan7-computer https://github.com/tmrisdaone/titan7-computer
+

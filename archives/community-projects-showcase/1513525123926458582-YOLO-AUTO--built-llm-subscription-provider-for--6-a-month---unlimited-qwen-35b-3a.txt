@@ -40,3 +40,12 @@
     Having the the error.
     [reply to isyutaru612 msg=1515418423276863561]
 
+[2026-06-13T20:16:37.657000+00:00] isyutaru612 (id=1515449840438349906)
+    seems back up. they said it was a power outage.... meh
+    [reply to omelet_phrm msg=1515434103342760018]
+
+[2026-06-13T20:29:02.270000+00:00] pooopird (id=1515452963571761154)
+    Sorry, we're only a few weeks into running this live. We're at roughly 98% uptime, but it's not perfect yet. We're continuously tuning and optimizing as we learn from real-world usage and onboard more users. What worked for 5 users didn't necessarily work for 10, and we're still working through those scaling challenges.
+    
+    When issues do come up, we usually identify and/or fix them pretty quickly. Right now we're running locally on our own 4× RTX 3090s. If things continue to go well, we plan to start renting additional GPUs and scale the infrastructure further.
+

@@ -22,3 +22,19 @@
     **Source**: https://github.com/kyssta-exe/hermes-obsidian-memory
     [embed] GitHub - kyssta-exe/hermes-obsidian-memory https://github.com/kyssta-exe/hermes-obsidian-memory
 
+[2026-06-14T01:18:28.222000+00:00] critolis (id=1515525801653833768)
+    I ran into an issue with the Obsidian Memory plugin on a larger multi-folder vault: notes with the same filename in different folders could collide, so some notes disappeared or opened incorrectly. Vault switching could also keep stale filters around and make a vault look empty.
+    
+    I opened a PR that fixes this by keying notes by vault-relative path instead of filename stem, adding path-safe note routes, handling ambiguous note names safely, and resetting frontend filters/state on vault switch:
+    
+    https://github.com/kyssta-exe/hermes-obsidian-memory/pull/1
+    
+    Thanks to <@1068770268660629574>  for making and sharing the plugin — it’s already useful. This was just one of those “real vaults are messy” bugs.
+    [embed] fix: key Obsidian notes by vault-relative path by vforge · Pull Re... https://github.com/kyssta-exe/hermes-obsidian-memory/pull/1
+
+[2026-06-14T02:25:49.778000+00:00] kyssta69 (id=1515542753168330802)
+    Thank you, I'll have Hermes review it and merge
+
+[2026-06-14T02:28:49.523000+00:00] kyssta69 (id=1515543507073499136)
+    Done merged <@184055497069035520> Ty got pointing out
+

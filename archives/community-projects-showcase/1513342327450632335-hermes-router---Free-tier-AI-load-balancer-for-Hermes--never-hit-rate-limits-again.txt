@@ -186,3 +186,47 @@
     `./install.sh`
     GitHub: https://github.com/Shaf2665/Hermes-router
 
+[2026-06-14T02:14:05.790000+00:00] shaf_2665 (id=1515539800428511312)
+    # hermes-router — update
+    
+    auth.json — your keys now live in one clean place
+    
+    Until now keys were scattered across your .env. They've moved to a single structured auth.json that hr auth add manages for you:
+    
+    
+    {
+      "providers": {
+        "openrouter": ["sk-or-key1", "sk-or-key2"],
+        "gemini": ["AIzaSy-key"]
+      }
+    }
+    Why it's better:
+    • One file, easy to read and back up — keys grouped per provider
+    • hr auth add writes to it directly (input hidden, dedupes, locked to chmod 600)
+    • It's git-ignored, so real keys never get committed
+    • The router is now fully self-contained — keys travel with it, no host app needed
+    
+    ✅ Nothing breaks if you do nothing. The router reads auth.json first, then falls back to your existing .env keys. Old setups keep working.
+    
+    Also: the README got a full rewrite — shorter, with clear Architecture, Setup, Commands, and Troubleshooting sections.
+    
+    Already using hermes-router? Updating takes one command:
+    
+    
+    `hr update`
+    That's it — it pulls the latest, checks everything's valid, and restarts (auto-rolls-back if anything fails). Your keys are untouched.
+    
+    Don't have the hr command yet? Set it up once from your repo folder:
+    
+    
+    `git pull`
+    `./install.sh`
+    This puts hr on your PATH. Now you can use hr update, hr auth add, hr status, etc. from anywhere. (If hr still isn't found, open a new terminal or add ~/.local/bin to your PATH — install.sh tells you the exact line.)
+    
+    (Optional) to move your keys out of .env into the new auth.json, just re-add them once:
+    
+    
+    `hr auth add openrouter`
+    `hr restart`
+    GitHub: https://github.com/Shaf2665/Hermes-router
+

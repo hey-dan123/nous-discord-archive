@@ -1,0 +1,53 @@
+# Thread 'VoidNotes v0.4.0 – Catalyst' in forum #community-projects-showcase
+# thread_id=1515481124933992448 forum_id=1316137596535177246
+# Started 2026-06-14T03:52:09.019268+00:00
+
+[2026-06-13T22:20:56.462000+00:00] wariatcsa (id=1515481124933992448)
+    Void Notes v0.4.0 – Catalyst
+    
+    Void Notes is a minimalist, brutalist-styled Markdown "second-brain" notepad. Built with Electron, React, and CodeMirror 6, it’s designed for speed, local-first note-taking, and deep extensibility.
+    
+    Key Features:
+    
+    Editor: Markdown-focused environment with live preview, split-view, and CodeMirror 6 power.
+    
+    Organization: Vault-based system, file tree, tag filtering, and command palette.
+    
+    Extended Syntax: Supports Wiki-links, Discord-style formatting (spoilers, highlights, underline), and YAML frontmatter.
+    
+    Customization: Multiple themes (Obsidian, Dracula, etc.), resizable panels, and optional Vim keybindings.
+    
+    Extensibility: A full plugin system with a GitHub-integrated marketplace for easy installs.
+    
+    Tech Stack: Electron 35, React 19, TypeScript 5, Vite 6.
+    
+    v0.4.0 Changelog:
+    
+    Plugin System: New extensible architecture with hooks, commands, and event bus.
+    
+    Plugin Marketplace: Browse and install plugins directly from GitHub.
+    
+    Plugin Management: Enable/disable in Settings; includes security warnings for custom plugins.
+    
+    Built-in Plugins: Word-count, text-snippets, and auto-format.
+    
+    Split View: Side-by-side editing and preview.
+    
+    Vim Keybindings: Optional modal editing support.
+    
+    UI/Themes: Multiple themes (Obsidian, Light, Dracula, Nord, Solarized) and smooth animations for modals, sidebar, and editor.
+    
+    Layout: Resizable panels (drag to resize sidebar).
+    
+    Interaction: Right-click context menu (open, rename, copy path, delete).
+    
+    Updates: Auto-updater checks for new releases on startup.
+    
+    Onboarding: Auto-created Welcome Note on first launch.
+    
+    Dev Documentation: Added VoidAPI reference, plugin development guide, 6 plugin examples, and a marketplace contribution guide.
+    
+    Download and full details:
+    https://github.com/PixelCodeGH/VoidNotes/releases/tag/v0.4.0
+    [embed] Release v0.4.0 - Catalyst · PixelCodeGH/VoidNotes https://github.com/PixelCodeGH/VoidNotes/releases/tag/v0.4.0
+

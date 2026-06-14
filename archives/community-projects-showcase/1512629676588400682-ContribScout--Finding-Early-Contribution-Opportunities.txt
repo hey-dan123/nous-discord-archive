@@ -189,3 +189,26 @@
     
     Discover → Filter → Save → Build Brief → Contribute → Proof Vault → Export
 
+[2026-06-13T22:30:41.107000+00:00] sworntech (id=1515483577112989818)
+    **ContribScout v0.9 Update**
+    
+    Added PR Readiness Kit.
+    
+    You can now generate a copy-ready PR prep kit for any opportunity, including:
+    
+    • duplicate guard checklist
+    • GitHub PR / issue search links
+    • suggested branch name
+    • commit summary
+    • PR title
+    • PR description template
+    • validation checklist
+    • risk flags
+    • developer update message
+    
+    It also reminds users to use `References #issue` by default and avoid `Closes #issue` unless the PR fully resolves the issue.
+    
+    This was inspired by the real open-source PR workflow:
+    
+    Discover → Filter → Save → Build Brief → PR Kit → Contribute → Proof Vault → Export
+

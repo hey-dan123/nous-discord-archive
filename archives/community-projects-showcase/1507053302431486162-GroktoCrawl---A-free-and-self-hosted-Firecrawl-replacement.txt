@@ -510,3 +510,52 @@
     https://gist.github.com/magnus919/170fb0c7a975c89d26a1c6357a9a3ffd
     [embed] GroktoCrawl Project Gutenberg adapter demo — scrape any Gutenberg... https://gist.github.com/magnus919/170fb0c7a975c89d26a1c6357a9a3ffd
 
+[2026-06-13T23:02:02.354000+00:00] magnus919 (id=1515491467634933860)
+    Gentle introduction to what Groktocrawl can do.
+    
+    https://magnus919.com/2026/06/i-built-my-own-research-engine.-heres-what-this-tool-lets-you-do./
+    [embed] I Built My Own Research Engine. Here's What This Tool Lets You Do. https://magnus919.com/2026/06/i-built-my-own-research-engine.-heres-what-this-tool-lets-you-do./
+
+[2026-06-14T01:47:26.088000+00:00] magnus919 (id=1515533090792018062)
+    working on swapping out SearXNG in `main` tonight. 
+    
+    https://github.com/groktopus/groktocrawl/issues/199
+    [embed] feat: replace SearXNG with SlopSearX in Docker stack · Issue #199 ... https://github.com/groktopus/groktocrawl/issues/199
+
+[2026-06-14T01:48:10.656000+00:00] magnus919 (id=1515533277723885580)
+    there's a bunch of general cleanup I'm doing, trying to track toward a realistic v1.0.0
+
+[2026-06-14T02:58:45.392000+00:00] magnus919 (id=1515551039494033458)
+    merged
+    [reply to magnus919 msg=1515533090792018062]
+
+[2026-06-14T03:16:28.675000+00:00] magnus919 (id=1515555499226042441)
+    GroktoCrawl upgrades on `main`:
+     - `docker-compose.yml` will now pull pre-built images.
+    - `searxng` is out. Replaced by my own `slopsearx`.
+    - and more.
+    ```
+        All 9 tests PASS. Here's the full battery:
+    
+    
+          search                         PASS  (regular query, 3 results)
+          search json                    PASS  (structured JSON output, 4 results)
+          scrape wiki                    PASS  (25,505 chars, full Wikipedia page)
+          scrape example.com             PASS  (basic site)
+          scrape raw github              PASS  (20,383 chars, github-adapter detected)
+          answer                         PASS  (grounded Q&A with 5 citations)
+          agent sync                     PASS  (4,212 chars, full research loop)
+          map example.com                PASS  (graceful "no URLs" — expected)
+          health endpoint                PASS  (4/4 checks OK)
+    
+    
+        Key observations:
+        - GitHub adapter active — scrape shows source: github-adapter
+        - Answer endpoint returns well-formed citations from Wikipedia, Nature, HBP
+        - Search returns cross-engine results (Brave, HN, GitHub)
+        - Agent completed full research loop (search → scrape → synthesize)
+        - SlopSearX handling search transparently — no agent-svc code changes needed, just the format compat fix
+    
+        The deployment is fully healthy and all endpoints functional.
+    ```
+
