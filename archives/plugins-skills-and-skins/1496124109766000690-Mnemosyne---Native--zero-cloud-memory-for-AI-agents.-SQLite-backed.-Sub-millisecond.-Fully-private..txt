@@ -2117,3 +2117,6 @@
       hermes config set memory.provider mnemosyne
       hermes memory status
 
+[2026-06-14T11:00:39.187000+00:00] lividberries (id=1515672312740057189)
+    Can anyone share if this actually helps working on large pre-existing projects or is it just more vaporware?
+

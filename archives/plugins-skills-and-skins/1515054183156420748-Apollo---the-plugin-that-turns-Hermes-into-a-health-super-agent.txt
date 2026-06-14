@@ -20,3 +20,17 @@
     I am excited!
     [reply to thechaosalchemist msg=1515500014519058482]
 
+[2026-06-14T11:15:11.009000+00:00] thechaosalchemist (id=1515675969426296863)
+    https://x.com/RiverKhan/status/2066117029153648715?s=20
+    
+    google health support live!
+    
+    <@1034463677069398100> lmk if you try it out. i think if your huawei is compatible with google health, the plugin will pick up the data
+    [embed]  https://twitter.com/RiverKhan/status/2066117029153648715?s=20
+
+[2026-06-14T11:34:35.008000+00:00] buke5122 (id=1515680851591958578)
+    It's not compatible with Huawei directly, but there's a workaround over a sync app, have to take a look at it again👍
+
+[2026-06-14T11:35:57.413000+00:00] buke5122 (id=1515681197223837726)
+    There's an app called "Health Sync" which can synchronize Huawei to Google Fit
+

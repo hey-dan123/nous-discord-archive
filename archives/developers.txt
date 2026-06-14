@@ -32010,3 +32010,256 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     What do you mean...?
     [reply to thinkyhead msg=1515648042467069962]
 
+[2026-06-14T09:34:45.124000+00:00] teknium (id=1515650695032995940)
+    Tweeting a freakout thread after Ive already addressed you here is not helpful lol
+    [reply to thinkyhead msg=1515648042467069962]
+
+[2026-06-14T09:34:58.854000+00:00] teknium (id=1515650752620658799)
+    ```    Real bug, overstated framing.
+        
+        What I confirmed:
+        
+        ◆ The core claim is true for subprocesses, not the Hermes Python process itself.
+          - hermes_constants.py:285 says get_subprocess_home() returns {HERMES_HOME}/home when it exists.
+          - tools/environments/local.py:230 and tools/environments/local.py:390 inject that path as HOME for terminal/background subprocesses.
+          - tools/code_execution_tool.py:1264 does the same for execute_code.
+          - agent/copilot_acp_client.py:71 does the same for ACP children.
+        
+        ◆ This is intentional profile isolation from #4426 / PR #7357.
+          - New profiles create a home/ dir: hermes_cli/profiles.py:47.
+          - Tests explicitly assert named profiles get different subprocess homes: tests/test_subprocess_home_isolation.py:45.
+          - Tests also assert the parent Python process HOME stays unchanged: tests/test_subprocess_home_isolation.py:260.
+        
+        ◆ Live repro from current code:
+          - Parent process: HOME=/real/home/user, Path.home=/real/home/user
+          - Active profile: /tmp/.../.hermes/profiles/worker
+          - Terminal subprocess env: HOME=/tmp/.../.hermes/profiles/worker/home
+          - Background subprocess env: same profile home
+        
+        So “Hermes corrupts sacred $HOME” is imprecise. It does not mutate global $HOME in the running Python process. It deliberately rewrites $HOME for agent-spawned subprocesses when profile isolation is active.
+        
+        But the user-facing failure is real:
+          - ~/.hermes/scripts/... resolves under <profile>/home/.hermes/..., not real ~/.hermes/...
+          - ~/.gitconfig, ~/.ssh, ~/.config, ~/.azure, ~/Library/Keychains, Claude/Codex auth, etc. can disappear from subprocesses
+          - Related open issues confirm it: #25114, #36144, #29015
+          - #29015 has a concrete macOS Claude Code auth repro caused by the same local terminal env override.
+        
+        Scope: not “all users of shells on all OSes.” It hits users who:
+          1. use named profiles with {HERMES_HOME}/home present, and
+          2. run external CLIs/scripts via Hermes that expect real-user ~.
+        
+        That is common enough for multi-profile coding/kanban setups. P2 seems fair; P1 language is exaggerated unless we consider Claude/Codex delegation auth a mainline flow.
+        
+        Existing fix proposal:
+          - PR #25151 adds HERMES_REAL_HOME to subprocess envs.
+          - That helps scripts find the real home, but does not fix opaque CLIs that only honor $HOME like claude, az, gh, ssh, etc.
+          - So it’s a partial mitigation, not a full fix.
+        
+        My recommendation:
+          - Don’t remove per-profile HOME isolation wholesale. That would regress the original design: per-profile git/ssh/gh/npm state and Docker persistence.
+          - Salvage the problem as a policy/config design:
+            - expose real home to subprocesses (HERMES_REAL_HOME) for scripts/helpers,
+            - add docs/tooling guidance,
+            - add targeted escape hatches for known shared-auth CLIs, likely config-driven rather than global,
+            - for macOS, consider symlinking ~/Library/Keychains into profile home when enabled.
+          - Close/merge #25151 only if we label it as partial and follow up for CLI-auth passthrough. Otherwise it will look like we “fixed” the issue while Claude/Azure/GitHub auth remains broken.```
+
+[2026-06-14T09:37:27.157000+00:00] thinkyhead (id=1515651374648660150)
+    Systems like macOS depend on $HOME reliably pointing to the current user home folder. Altering this is a cardinal sin and leads to all kinds of issues. Potentially system-breaking issues. Definitely mess-making within Hermes profiles folders issues. Every instance where Hermes infrastructure may be altering $HOME must be fixed. I am trying to run processes and this is causing mayhem. I am gratified that it is getting attention.
+    [reply to teknium msg=1515648457895968900]
+
+[2026-06-14T09:38:26.037000+00:00] teknium (id=1515651621609013269)
+    No, it isn't a system breaking issue
+    [reply to thinkyhead msg=1515651374648660150]
+
+[2026-06-14T09:38:38.283000+00:00] teknium (id=1515651672972726383)
+    it is $HERMES_HOME not your actual home directory that its looking for in all hermes agent cases
+
+[2026-06-14T09:38:47.173000+00:00] teknium (id=1515651710259953746)
+    You are overblowing the issue, and it will be resolved
+
+[2026-06-14T09:38:53.660000+00:00] teknium (id=1515651737468539022)
+    it is just not a P0 issue, so please calm down
+
+[2026-06-14T09:39:19.273000+00:00] teknium (id=1515651844897116291)
+    (btw its been like this for 2 months)
+
+[2026-06-14T09:39:27.942000+00:00] teknium (id=1515651881257537657)
+    (not a single person has had their "PC corrupted")
+
+[2026-06-14T09:39:37.251000+00:00] thinkyhead (id=1515651920302313663)
+    When an active shell invokes system processes that expect to read/write to $HOME/Library/… and those reads/writes occur inside a Hermes profile, we get droppings, and missed writes to system.
+
+[2026-06-14T09:44:09.851000+00:00] aialliai (id=1515653063669448754)
+    <@387972437901312000> ahh sorry, about the bundling, was Gille's suggestion to reduce his workload. I feel for him staying in support all day 😀
+
+[2026-06-14T09:45:39.022000+00:00] aialliai (id=1515653437679734876)
+    But i didnt close the. others or comment on them to be safe, so all the fixes are still there waiting for approval 🫡
+    [reply to aialliai msg=1515653063669448754]
+
+[2026-06-14T09:51:00.472000+00:00] loongfay (id=1515654785938886687)
+    Hi, <@387972437901312000> , We have identified a serious issue regarding data loss. A solution has been provided in this issue: https://github.com/NousResearch/hermes-agent/issues/46053
+    [embed] Bug: assistant responses silently dropped after repair_message_sequ... https://github.com/NousResearch/hermes-agent/issues/46053
+
+[2026-06-14T09:53:32.245000+00:00] thinkyhead (id=1515655422520987801)
+    I am a massive fan of Hermes. My urgency is not reflective of an emotional or irrational freaking out. This is a pretty serious bug that is causing me headaches in my tentative explorations. I cannot imagine what someone running many coordinated agents might experience, and it is far more for their sake that I raise the alarm. I maintain a 75000+ star open source project on GitHub for the last 12 years myself, and indeed sometimes people come to me a little overwrought. Even so, I do try not to diminish their concerns, especially when bugs in my project are bumming them out.
+    [reply to teknium msg=1515651737468539022]
+
+[2026-06-14T09:55:39.054000+00:00] teknium (id=1515655954396479631)
+    You do not need to worry, it is being addressed, I am just saying you are not being helpful freaking out on twitter and screaming about it
+    [reply to thinkyhead msg=1515655422520987801]
+
+[2026-06-14T09:55:47.874000+00:00] teknium (id=1515655991390371962)
+    I am here, I am addressing it, you already have my attention
+
+[2026-06-14T09:55:58.957000+00:00] teknium (id=1515656037875716157)
+    and it is already being reviewed and implemented, the changes you are demanding
+
+[2026-06-14T09:57:19.690000+00:00] teknium (id=1515656376494461051)
+    literally 2M people install and use hermes every 2 weeks
+
+[2026-06-14T09:57:25.020000+00:00] teknium (id=1515656398850101258)
+    no one has ever had an issue with it this way
+
+[2026-06-14T09:57:34.115000+00:00] teknium (id=1515656436997423215)
+    So to tell everyone DO NOT INSTALL HERMES AHHH is just overblown
+
+[2026-06-14T09:58:29.076000+00:00] aialliai (id=1515656667520438344)
+    Just take a chill pill man, everyting iis being improved multiple times per day. So give this stuff a little time. ok 😀
+    [reply to thinkyhead msg=1515655422520987801]
+
+[2026-06-14T09:58:33.877000+00:00] teknium (id=1515656687657156698)
+    If you'd like feel free to review this PR salvaged from yours before I merge: https://github.com/NousResearch/hermes-agent/pull/46075
+    [embed] fix: make profile subprocess HOME policy explicit by teknium1 · Pu... https://github.com/NousResearch/hermes-agent/pull/46075
+
+[2026-06-14T10:01:37.680000+00:00] thinkyhead (id=1515657458583081051)
+    If someone told me Hermes will override $HOME I would say, ok, Hermes sounds cool, but I will wait to install it when that is not the case. Because I know what that means. Most people probably don't. So I simply recommend they wait till this quite serious thing is resolved. It is really good to hear you will fix it.
+
+[2026-06-14T10:04:51.674000+00:00] teknium (id=1515658272252629012)
+    It literally doesn't it only does it for hermes' subprocesses per profile tf?
+
+[2026-06-14T10:05:04.714000+00:00] teknium (id=1515658326946349158)
+    It is not changing system level PATHs system wide
+
+[2026-06-14T10:10:53.537000+00:00] teknium (id=1515659790016053268)
+    The whole intention was so you could have some degree of CLI/Env isolation between profiles
+
+[2026-06-14T10:11:02.433000+00:00] teknium (id=1515659827328712866)
+    If you want one profile to use x github account and another to use Y
+
+[2026-06-14T10:11:12.463000+00:00] teknium (id=1515659869397712926)
+    now all profiles will share the exact same userlevel env vars and tokens
+
+[2026-06-14T10:11:37.561000+00:00] teknium (id=1515659974666096730)
+    But we gave up on isolation a few days ago so, enjoy them all being unable to be isolated <:Shrug:1062899514249330738>
+
+[2026-06-14T10:12:15.868000+00:00] thinkyhead (id=1515660135337431060)
+    I am seeing side effects of `$HOME` being altered, in kanban and within activated profiles, in sub-agents. The ubiquity of scripts and users who refer to `~` or `$HOME` expecting a specific outcome and not side-effects is quite many. The alteration of these has implications on macOS for where all kinds of things get written, as defined in shell env. For example, oddities like this…
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1515660135110934700/image.png?ex=6a2fcfff&is=6a2e7e7f&hm=3ddc08c6ef434ac6913ee1d14a8d8a5b059ce23dda5bcbdcc203bf369d164620&
+    [reply to teknium msg=1515658326946349158]
+
+[2026-06-14T10:12:19.190000+00:00] maxfreedompollard (id=1515660149271036005)
+    https://github.com/NousResearch/hermes-agent/pull/46067
+    
+    When I saw OpenRouter's post about Fusion being as good as Fable at a lower cost, I checked it out and was impressed.  I noticed a bug in Hermes while trying to add multi-turn capabilities for Fusion, so here is my PR to fix the bug, and add native multi-turn Fusion support on Hermes. 
+    
+    OpenRouter's post btw: https://x.com/OpenRouter/status/2065856853989270011
+    
+    Long description (from PR):
+    
+    Hermes is currently the #1 app on OpenRouter by token usage (18.2T tokens, ~3.5x the next app; #1 in Most Popular, Trending, and Top Coding Agents as of 2026-06-14). OpenRouter is the largest single surface Hermes runs on, so a fix here reaches a very large share of real usage - both the silent pareto-code regression that affects users today and the new Fusion option.
+    
+    Fusion itself is a genuinely new capability for that audience. OpenRouter exposes multi-model Fusion deliberation through its API (the openrouter/fusion alias / openrouter:fusion server tool); single-shot use is straightforward, but multi-turn Fusion requires re-sending openrouter/fusion with full history every turn - which is exactly what Hermes' agent loop already does. Wiring Fusion in therefore gives Hermes users multi-turn Fusion deliberation through their existing OpenRouter connection. Capacity for multi-turn Fusion has only recently been added to the API only - the OpenRouter website currently only has single-turn Fusion, so this adds a brand new capability to both OpenRouter users and Hermes Agent users.
+    [embed] fix(openrouter): surface router models in the picker and add Fusion... https://github.com/NousResearch/hermes-agent/pull/46067
+    [embed]  https://twitter.com/OpenRouter/status/2065856853989270011
+
+[2026-06-14T10:13:25.874000+00:00] teknium (id=1515660428963741696)
+    Yes thats exactly as it was intended so you can have a github token that only works for that profile specifically...
+    [reply to thinkyhead msg=1515660135337431060]
+
+[2026-06-14T10:13:38.289000+00:00] teknium (id=1515660481036161074)
+    Now they will all have to share one, no profile can access a seperate github account for itself
+
+[2026-06-14T10:14:26.844000+00:00] teknium (id=1515660684690460752)
+    If we move to expand the kanban to multi-machine agents coordinating similar things will occurr
+
+[2026-06-14T10:14:38.979000+00:00] teknium (id=1515660735588597841)
+    they will have different `~` resolutions and home dir's there too
+
+[2026-06-14T10:15:11.632000+00:00] stocksavage (id=1515660872545079376)
+    ive heard a lot of people talk about kanban recently, i have absolutely no idea what it does, what are the use cases for it?
+
+[2026-06-14T10:15:21.508000+00:00] maxfreedompollard (id=1515660913968152636)
+    I forgot to ping teknium but he is here anyway of course. Tek, you must be the busiest man on earth. 🫡
+
+[2026-06-14T10:15:23.992000+00:00] teknium (id=1515660924386545694)
+    multiple agents coordinating on one project
+    [reply to stocksavage msg=1515660872545079376]
+
+[2026-06-14T10:15:38.227000+00:00] teknium (id=1515660984092725359)
+    https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban-tutorial
+    [embed] Kanban tutorial | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban-tutorial
+
+[2026-06-14T10:16:01.153000+00:00] thinkyhead (id=1515661080251203584)
+    I see. I mistook some of that for "droppings." Nevertheless, I hit the weird issue in kanban where `$HOME` and `~` were not as expected. Indeed it "freaked me out" a bit….
+    [reply to teknium msg=1515660735588597841]
+
+[2026-06-14T10:17:20.821000+00:00] stocksavage (id=1515661414403145778)
+    hmm, is it better than subagents in your opinion? or not comparable. i launch several subagents in parallel sometimes but they arent able to communicate with each other, although they're working on the same project
+    [reply to teknium msg=1515660924386545694]
+
+[2026-06-14T10:17:36.445000+00:00] stocksavage (id=1515661479934955571)
+    gonna give that a read
+
+[2026-06-14T10:18:51.072000+00:00] teknium (id=1515661792943276143)
+    each agent profile working in the kanban can spawn subagents of itself so its on top of it
+    [reply to stocksavage msg=1515661414403145778]
+
+[2026-06-14T10:19:24.231000+00:00] teknium (id=1515661932021944341)
+    Its more if you have specialized SOUL's, memories, skills, models, providers, mcps, toolsets, etc for different tasks - a clean-ish way to make them all meaningfully useful for just what they are specialized for
+
+[2026-06-14T10:20:27.072000+00:00] stocksavage (id=1515662195596333147)
+    ahhh okay, very interesting
+    [reply to teknium msg=1515661932021944341]
+
+[2026-06-14T10:21:40.090000+00:00] thinkyhead (id=1515662501856149625)
+    deleted x/tweet as it is m00t
+    [reply to teknium msg=1515656436997423215]
+
+[2026-06-14T10:23:08.942000+00:00] teknium (id=1515662874528448583)
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613965336636652f3172726e626d5a4d7832435f48756b445553694c305f656338564c6846422e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1515662874226200596/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613965336636652f3172726e626d5a4d7832435f48756b445553694c305f656338564c6846422e706e67.png?ex=6a2fd28c&is=6a2e810c&hm=e9b70c1482487245397e7bbc91b9dfc026476f524c17d5c19748e7e68e927f90&
+
+[2026-06-14T10:23:09.758000+00:00] teknium (id=1515662877950873720)
+    it is merged
+
+[2026-06-14T10:37:01.921000+00:00] kyssta69 (id=1515666368295338104)
+    https://github.com/NousResearch/hermes-agent/pull/46091
+    
+    **Problem**: The /model command showed the config default model even when a fallback model was actively handling requests after a provider failure. The /model handler read model info from config and session overrides but never checked the cached agent's live model attribute. Added a check that reads the actual model from the running/cached agent and displays it when it differs from the config value.
+    [embed] fix(gateway): /model shows active fallback instead of stale config ... https://github.com/NousResearch/hermes-agent/pull/46091
+
+[2026-06-14T10:44:12.862000+00:00] kyssta69 (id=1515668175792898130)
+    https://github.com/NousResearch/hermes-agent/pull/46095
+    
+    **Problem**: When another process like hermes dashboard writes to the same session DB, the gateway's cached agent keeps stale in-memory transcript and replies with outdated context. The agent cache now stores the session message_count and checks it on reuse. If the count changed (another process wrote rows), the cache entry is discarded so a fresh agent reads the updated transcript from disk.
+    [embed] fix(gateway): invalidate agent cache on cross-process session write... https://github.com/NousResearch/hermes-agent/pull/46095
+
+[2026-06-14T11:11:55.244000+00:00] kriptoff (id=1515675148328374362)
+    Role
+
+[2026-06-14T11:43:30.378000+00:00] .elkim (id=1515683097096749137)
+    wow that's huge
+    [reply to teknium msg=1515656376494461051]
+
+[2026-06-14T13:09:44.601000+00:00] wittgenstein9840 (id=1515704799360712745)
+    As someone with a master’s degree in philosophy, I continue to contribute to the field of thought, my friends. I’ve added another skill. Please take a look and let me know what you think. https://github.com/NousResearch/hermes-agent/pull/46137
+    [embed] feat: introduce Philosophical Reasoning Auditor skill for structure... https://github.com/NousResearch/hermes-agent/pull/46137
+
+[2026-06-14T13:43:14.023000+00:00] nanxingncb612d (id=1515713227487449268)
+    https://github.com/NousResearch/hermes-agent/pull/46148 Scope TUI /stop to the active session's background processes
+    [embed] Scope TUI `/stop` to the active session's background processes by n... https://github.com/NousResearch/hermes-agent/pull/46148
+
+[2026-06-14T13:43:29.677000+00:00] nanxingncb612d (id=1515713293145083936)
+    https://github.com/NousResearch/hermes-agent/pull/46147 Detect Windows egress tool suffixes
+    [embed] fix(mcp): detect Windows egress tool suffixes by necoweb3 · Pull R... https://github.com/NousResearch/hermes-agent/pull/46147
+

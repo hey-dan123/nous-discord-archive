@@ -440,3 +440,33 @@
     If anyone wants to give it a spin and help catch some bugs, here's the repo: https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
     [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
 
+[2026-06-14T12:25:14.824000+00:00] vayaperson (id=1515693601504624710)
+    Hey everyone, just a quick heads-up about what we're working on for the upcoming v1.5.2-Beta3. We noticed a few minor hiccups in Beta 2 and wanted to patch them up to keep the foundation solid before moving forward.
+    
+    Here's a quick look at what's being tweaked:
+    
+    📱 Admin recognition over WhatsApp
+    Sometimes the system wouldn't recognize the owner when sending commands via WhatsApp. This was just a quirk with how WhatsApp handles device IDs (LIDs) under the hood.
+    
+    The fix: We've updated the logic to check the local contacts cache, so it should reliably recognize the admin now.
+    
+    
+    💬 Message merging tweak
+    We have a feature that bundles your consecutive messages together to save on LLM tokens. It works great, but the time window was a bit too generous (5 minutes). This meant if you replied a few minutes later, the bot would still bundle your new message with the old one, causing it to occasionally repeat or reference old context.
+    
+    The fix: We lowered the window to 60 seconds and made sure it completely stops merging if the bot has already replied.
+    
+    
+    🎭 Sub-soul stability
+    We noticed that in very long conversations, the bot could sometimes start drifting out of its assigned persona.
+    
+    The fix:
+    Translated the core identity prompt to English (which works much better with most models).
+    Tweaked the prompt order so the operational mode has higher priority.
+    Added a subtle "soul reminder" that refreshes the persona every 8 turns. This keeps the bot perfectly in character even in endless chats.
+    
+    
+    We'll be pushing this update very soon. Let us know below if you spot any other minor bugs we should look at!
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+    [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+
