@@ -3963,3 +3963,8 @@
     you can tell your agent what directories you want to use in each project and agent will follow that. It is important that you define that if you are running. multiple agents.
     [reply to savage887 msg=1515405059821932636]
 
+[2026-06-14T17:45:47.615000+00:00] avidfuturist (id=1515774269676589288)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now WebUI works for Windows/Linux/macOS as both a web app and a native desktop app! And with iOS support!
+

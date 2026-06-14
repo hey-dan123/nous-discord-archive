@@ -19,3 +19,28 @@
     [attachment] ChatGPT_Image_Jun_11_2026_03_38_08_PM.png https://cdn.discordapp.com/attachments/1514642545236246750/1514642545731436614/ChatGPT_Image_Jun_11_2026_03_38_08_PM.png?ex=6a2c1c4b&is=6a2acacb&hm=d246f3826d51631e9dc4dda2a463344f1ae1d80892bc3503a7910a56afa4855c&
     [embed] GitHub - Sahil-SS9/hermes-memlock: Re-assert standing instructions ... https://github.com/Sahil-SS9/hermes-memlock
 
+[2026-06-14T15:08:23.146000+00:00] sahil_ss9 (id=1515734656702484651)
+    Just shipped a solid update to the memlock plugin (the thing that stops Hermes forgetting your pinned instructions after context compaction).
+    
+        What's new:
+    
+        scope: global — pins that survive session restarts. Set it once, it comes back every session. Default is still session (dies with the session), so nothing breaks.
+    
+        python
+        guard_pin(text="Always use British English", scope="global", priority=80)
+    
+    
+        Also in this release:
+        - inject: always mode — deterministic presence every turn if you want it
+        - Pin cap (max_pins: 16) — no prompt-injection pin spam
+        - Whitespace-flattened pin text — can't spoof extra lines in the reminder block
+        - Windowed semantic audit — per-window max cosine instead of whole-region averaging (way more accurate for short instructions)
+        - Memory-provider agnostic persistence — defaults to zero-dependency file store, pluggable for Mnemosyne later
+    
+        Upgrade:
+        bash
+        git pull origin main  # if you cloned it
+        or
+        git clone https://github.com/Sahil-SS9/hermes-memlock.git ~/.hermes/plugins/memlock
+    [embed] GitHub - Sahil-SS9/hermes-memlock: Re-assert standing instructions ... https://github.com/Sahil-SS9/hermes-memlock.git
+

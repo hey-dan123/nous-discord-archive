@@ -32263,3 +32263,80 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/46147 Detect Windows egress tool suffixes
     [embed] fix(mcp): detect Windows egress tool suffixes by necoweb3 · Pull R... https://github.com/NousResearch/hermes-agent/pull/46147
 
+[2026-06-14T15:29:14.924000+00:00] nanxingncb612d (id=1515739907039957033)
+    https://github.com/NousResearch/hermes-agent/pull/46157 Scope TUI spawn tree storage to session profile
+    [embed] Scope TUI spawn tree storage to session profile by necoweb3 · Pull... https://github.com/NousResearch/hermes-agent/pull/46157
+
+[2026-06-14T15:29:29.896000+00:00] nanxingncb612d (id=1515739969837207726)
+    https://github.com/NousResearch/hermes-agent/pull/46156 Store TUI artifacts under session profile home
+    [embed] Store TUI artifacts under session profile home by necoweb3 · Pull ... https://github.com/NousResearch/hermes-agent/pull/46156
+
+[2026-06-14T15:29:41.047000+00:00] nanxingncb612d (id=1515740016608018725)
+    https://github.com/NousResearch/hermes-agent/pull/46155 Scope TUI config reads to session profile
+    [embed] Scope TUI config reads to session profile by necoweb3 · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/46155
+
+[2026-06-14T15:47:00.929000+00:00] iborazzi (id=1515744378189250722)
+    Hey, fixed #46201 — platform-disabled skills were still showing up in the <available_skills> prompt. PR here: https://github.com/NousResearch/hermes-agent/pull/46203#issue-4659670744
+    [embed] fix: platform-disabled skills still appear in <available_skills> pr... https://github.com/NousResearch/hermes-agent/pull/46203
+
+[2026-06-14T17:34:47.405000+00:00] kxee (id=1515771500555407553)
+    merged
+    [reply to iborazzi msg=1515744378189250722]
+
+[2026-06-14T17:35:15.719000+00:00] kxee (id=1515771619312795780)
+    merged
+    [reply to kyssta69 msg=1515668175792898130]
+
+[2026-06-14T18:17:10.386000+00:00] godsboy7777 (id=1515782166590525611)
+    Hey <@387972437901312000>, wanted to share where we landed with Brave Search Pro.
+    
+    We ended up going the plugin route for our own Hermes installs, and for the other projects and clients where we run Hermes Agent:
+    
+    https://github.com/GodsBoy/hermes-brave-search-pro
+    
+    Hermes already has native Brave Free support, which is great. Our gap was specifically the paid Brave Search API surface: grounding context, richer web results, images, news, videos, discussions, suggestions, raw/debug modes, and a dedicated `brave_search` tool while keeping normal `web_search` stable.
+    
+    We still have the upstream PR open here:
+    
+    https://github.com/NousResearch/hermes-agent/pull/26286
+    
+    Until that PR, or something similar, lands in core, the plugin lets us run Brave Search Pro cleanly without maintaining local Hermes patches. It keeps `web_search` as the standard Hermes contract, routes discovery through Brave Pro, keeps extraction separate with Tavily, and exposes the richer Brave-specific modes only when explicitly needed.
+    
+    This actually made us appreciate the Hermes plugin architecture more. It gives us a clean opt-in path for a paid provider without disrupting users who are happy with the native free Brave provider. Thought I’d share in case it is useful as a plugin example or for thinking through how Brave Pro should eventually fit upstream.
+    [attachment] brave-hermes-hero.png https://cdn.discordapp.com/attachments/1491258766648283238/1515782166905356429/brave-hermes-hero.png?ex=6a3041a6&is=6a2ef026&hm=2afc60002fe72ae9a84d10ff4a189683a3cbe8665b40d8a9e01e5ce67a78ba57&
+
+[2026-06-14T18:25:00.695000+00:00] aialliai (id=1515784139209445386)
+    <@387972437901312000> I threw you a dm about a stale id problem, would appreciate you took a look, no need to reply as I'll see if it's resolved anywat!
+
+[2026-06-14T19:03:30.119000+00:00] nanxingncb612d (id=1515793825636024403)
+    https://github.com/NousResearch/hermes-agent/pull/46283 proxy - require opt-in for network binds
+    [embed] fix(proxy): require opt-in for network binds by necoweb3 · Pull Re... https://github.com/NousResearch/hermes-agent/pull/46283
+
+[2026-06-14T19:05:52.697000+00:00] wojtek.majnkraft (id=1515794423651373096)
+    Hey everyone, wanted to share something I've been building.
+    
+    I started using Hermes Agent recently and the thing that bugged me most was that I couldn't really inspect what my agent was "remembering." Memory was either a black box or it disappeared when the session ended.
+    
+    So I built hermes-okf — a memory system that stores everything as plain markdown files on disk. Every decision, tool call, plan step... you can literally cat the file and read it. No database, no vector store, just .md + YAML.
+    
+    I based it on Google's Open Knowledge Format (OKF) which is basically a spec for structured knowledge as markdown files. It gives you:
+    
+    Persistent memory across sessions (agent restarts, you don't lose anything)
+    Knowledge graph from markdown links (no RDF, no Cypher — just [[links]])
+    Two-memory model: hot buffer in memory + cold archive on disk, auto-flushes
+    Crash recovery  snapshot and restore from any point
+    Optional RAG via ChromaDB if you want semantic search
+    Full CLI to inspect the bundle from terminal
+    v0.3.0 just dropped on PyPI. It has a universal HermesOKFProvider that works with any Hermes agent, not just one specific setup. 
+    
+    I'm looking for feedback from people actually building with Hermes. What's missing? What's annoying? Should I add async I/O? Multi-agent bundle merging? Git-backed history? I'd love to hear from people who have run into the same memory issues I did.
+    
+    🔗 GitHub: https://github.com/EliaszDev/hermes-okf 📦 PyPI: https://pypi.org/project/hermes-okf/ 📖 Wiki: https://github.com/EliaszDev/hermes-okf/wiki
+    
+    If you try it out, drop me an issue or DM me. I'd genuinely love to know if this is useful or if I'm solving a problem no one else has.
+    It's like Obisidian with Hermes but better, built into the agent core
+
+[2026-06-14T19:08:39.201000+00:00] teknium (id=1515795122019762226)
+    Can you hit up <@690519146701783042> or start a <#1485307775444844625> so others on the team can help
+    [reply to aialliai msg=1515784139209445386]
+

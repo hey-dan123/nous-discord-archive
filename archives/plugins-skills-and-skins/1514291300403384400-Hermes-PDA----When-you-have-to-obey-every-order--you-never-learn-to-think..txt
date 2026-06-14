@@ -15,3 +15,6 @@
 [2026-06-10T15:33:46.401000+00:00] flash_speed3412 (id=1514291494234755174)
     Hermes PDA - "When you have to obey every order, you never learn to think."
 
+[2026-06-14T14:08:26.724000+00:00] ruffer3000 (id=1515719572215300097)
+    This plugin makes the reasoning more interesting to read, but one thing I cannot figure out is when would the demand pressure ever increase? I only see mechanics for decreasing it.
+

@@ -33,3 +33,20 @@
     Release notes + install: https://github.com/nujovich/hermes-telemetry/releases/tag/v0.4.0
     [embed] Release v0.4.0 · nujovich/hermes-telemetry https://github.com/nujovich/hermes-telemetry/releases/tag/v0.4.0
 
+[2026-06-14T16:00:48.712000+00:00] nadiamermedev (id=1515747850162798622)
+    **hermes-telemetry v0.4.1**
+    
+    Better cost accuracy across multi-provider setups, plus NVIDIA NIM works out of the box.
+    
+    **What's new**
+    
+    - **Provider-aware pricing guard** — pricing entries refreshed from one source no longer leak across providers. If two providers expose the same model id, each call is now billed at the rate of the provider that actually served it. Before, an OpenRouter-sourced entry could be applied to a Nous call and inflate recorded cost.
+    
+    - **NVIDIA NIM seed prices** — five NIM models ship with built-in pricing. NIM users get accurate `/stats` and budget enforcement on day one with zero config.
+    
+    - **Subscription flat-rate models are silent** — mark a model with `_subscription: true` in `pricing.yaml` and the plugin records $0 without the noisy "no price for model" warning. Good for Nous Portal flat-rate plans, Anthropic enterprise, NIM private endpoints, etc.
+    
+    **Backward compatibility:** none of your existing setups need changes. The new `provider` argument on `estimate_cost()` is optional.
+    
+    Run `hermes plugins update hermes-telemetry` to upgrade.
+

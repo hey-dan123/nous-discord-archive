@@ -137,3 +137,45 @@
     well i appreciate you for taking an interest. ill use this chat to share game updates as the knowledge base gets bigger
     [reply to jw_mushroom_man msg=1515486815375851522]
 
+[2026-06-14T15:56:37.182000+00:00] iam_rxpii (id=1515746795169517568)
+    Release: Release v1.4.1 — Housekeeping · theheavenlyd3mon/Unreal-Engine-Obsidian · GitHub · June 13, 2026
+    
+    What changed
+    This is a cleanup and consolidation release — no new content, just tightening the vault's structure.
+    
+    New:
+    
+    _MOC_ROOT.md — a master index that ties all folder MOCs together (Learning Path → Systems → Architecture → Special). Gives you one entry point to navigate the entire vault.
+    See Also cross-links added to 6 topic MOCs: GAS, CPP, AI, Data Assets, Save System, and Animation.
+    Fixed:
+    
+    Step-by-Step Guides numbering gap — files were renumbered from 05–14 to 04–13, with all frontmatter and wikilinks updated to match.
+    Removed:
+    
+    _research_queue.json — all 14 topics had already been written, so the queue was dead weight.
+    Local_Models_Setups.md — Windows setup info that didn't belong in the vault content.
+    UE5_RPG_Framework/ — content was absorbed into Step-by-Step Guides, so the standalone folder was retired.
+    Renamed:
+    
+    Blueprint Fundamentals and PCG tutorial files given consistent underscore-based naming.
+    Moved:
+    
+    _REVIEW_New_Tutorials.md → .archive/
+    The Big Contribution: PR #1
+    Merged the same day, UE5 gotchas, canonical references, and an Echoes of Ascension dev kit by lEWFkRAD · Pull Request #1 · theheavenlyd3mon/Unreal-Engine-Obsidian · GitHub from lEWFkRAD is a three-layer add:
+
+[2026-06-14T15:56:44.927000+00:00] iam_rxpii (id=1515746827654397962)
+    UE5_Gotchas/ — 5 concept docs + a MOC covering real-world pain points: GAS replication traps, save system design (World Partition aware), multiplayer architecture from day one, procedural generation gotchas, and performance budgets with Nanite/Lumen/Niagara/Chaos at 60 FPS. Each doc maps back to the Echoes of Ascension project.
+    
+    Articles/ue5-canonical-references.md — curated list of stable external references (Epic 5.7 docs, GASDocumentation, Cedric Neukirchen's Multiplayer Compendium, Tom Looman, Lyra, etc.) to fight link rot.
+    
+    Contrib/echoes-of-ascension-kit/ — a full UE 5.7 starter kit including a vertical-slice spec, C++ module (ASC-on-PlayerState GAS triad, async save subsystem, deterministic floor generator), an eval-harness for measuring LLM API-hallucination rates, and a Hermes UE5 skill.
+    
+    A follow-up modernization pass cleaned up legacy UE3/UE4 patterns (AttachTo → SetupAttachment, removed Engine.h includes, updated GAS deprecation markers, etc.). The starter code is reviewed for API correctness against 5.7 but hasn't been compiled against the engine yet — FIRST_BUILD.md covers the initial debug pass.
+    
+    All wikilinks in the PR were verified with zero broken references.
+    
+    TL;DR: v1.4.1 is structural cleanup + the first major community contribution, which drops a full "gotchas + references + starter code" layer into the vault. Vault is cleaner, better indexed, and has its first real-world pitfall documentation.
+    https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/releases/tag/v1.4.1\
+    [embed] Release v1.4.1 — Housekeeping · theheavenlyd3mon/Unreal-Engine-O... https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/releases/tag/v1.4.1/
+

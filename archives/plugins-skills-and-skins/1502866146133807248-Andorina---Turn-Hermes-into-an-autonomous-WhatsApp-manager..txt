@@ -470,3 +470,22 @@
     https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
     [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
 
+[2026-06-14T17:46:24.465000+00:00] vayaperson (id=1515774424236949584)
+    **Update on what we actually found: it was a bit more than we thought**
+    
+    So after digging deeper today, turns out the issues in Beta 3 were a bit more layered than our initial post suggested. Wanted to be transparent about what we actually found vs. what we said.
+    
+    Admin recognition - the real story: We said it was a LID/contacts cache issue. Partially true — but the actual root cause was simpler and sneakier: the ADMIN_PHONE in the config doesn't include a country prefix (xxxxxxxxx), but WhatsApp sends the full number (34xxxxxxxxx). The comparison was failing silently. We also found a second issue: The JID section in the rules correctly marked someone as owner, the system wasn't checking that as a fallback. It relied on the phone number match. Both are now fixed. Additionally, the admin panel UI had a race condition where setting "Hermes Native" soul would visually snap back to "Default Soul" on reload (patched too).
+    
+    Long-term memory was offline 🧠 This one we didn't mention at all: Hindsight (memory layer backed by PostgreSQL) was silently not running. The process had died and left a stale PID. The bot was working fine short-term but had zero cross-session recall. We've fixed the startup, added a compatibility layer for the library version mismatch, and added a visible warning banner in the admin panel so this never goes unnoticed again — with a one-click "Start Memory" button.
+    
+    Soul/persona stability: No corrections needed here.
+    
+    Soul transition - One thing we didn't mention before: when you swap a contact's assigned soul, the system was wiping the entire conversation history. Now instead of a full wipe, it preserves the user's messages for context continuity but strips the bot's previous responses so new soul picks up the conversation context without being anchored to the old persona's voice.
+    
+    Sorry for the vague initial post. We were mid-investigation. We are testing the fixes. Beta 4 drop soon.
+    
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+    [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+    [reply to vayaperson msg=1515693601504624710]
+
