@@ -31686,3 +31686,327 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-14T03:39:28.815000+00:00] jmsunseri (id=1515561287952633906)
     I'm working on a Pebble watch app that uses Telegram to talk to either OpenClaw or Hermes.  I was grinding for hours yesterday trying to figure out why I could send messages to both but I only received messages from OpenClaw.  This patch and setting was the solution
 
+[2026-06-14T03:58:37.691000+00:00] fooh (id=1515566106688098375)
+    Just looking for advice on PR workflow, I've sent along three which have been impactful to me over the course of deploying Hermes over the last three weeks.
+    
+    I followed the contribution guide, but I was curious if I should let them sit and they'll be reviewed at some point, or if I should keep them current with the latest release (they're based on 0.15.x at the moment).
+    
+    These are my first contributions to Hermes, so just wanted to make sure I didn't miss a critical step! Loving every minute of it so far ❤️
+
+[2026-06-14T04:01:52.147000+00:00] fooh (id=1515566922295414936)
+    These are the two most impactful:
+    - https://github.com/NousResearch/hermes-agent/pull/36218
+    - https://github.com/NousResearch/hermes-agent/pull/36882
+    
+    ... very open to any feedback from a process perspective if I missed anything!
+    [embed] fix: add system prompt guidance when Tool Search is active by vanho... https://github.com/NousResearch/hermes-agent/pull/36218
+    [embed] fix(mcp): run MCP discovery synchronously for quiet-mode sessions b... https://github.com/NousResearch/hermes-agent/pull/36882
+    [reply to fooh msg=1515566106688098375]
+
+[2026-06-14T04:05:28.367000+00:00] teknium (id=1515567829187952721)
+    reviewing now
+    [reply to jmsunseri msg=1515560172859297962]
+
+[2026-06-14T04:28:24.584000+00:00] xdarkchain (id=1515573601460293653)
+    I used it to use Vertex models and didn't break anything for me.
+    [reply to nucleosynth msg=1515448860162392245]
+
+[2026-06-14T04:29:40.808000+00:00] xdarkchain (id=1515573921166921749)
+    So smart watch and web are behind.
+    [reply to jmsunseri msg=1515560172859297962]
+
+[2026-06-14T04:30:13.420000+00:00] jmsunseri (id=1515574057951559821)
+    i agree but there are limits to what i can deploy on a low power watch
+    [reply to xdarkchain msg=1515573921166921749]
+
+[2026-06-14T04:30:14.933000+00:00] xdarkchain (id=1515574064297672704)
+    Isn't it shipped opt in and opt out based?
+    [reply to teknium msg=1515567829187952721]
+
+[2026-06-14T04:30:56.769000+00:00] xdarkchain (id=1515574239770574959)
+    I'm sure it was shipped as opt in/out. 
+    
+    Did you enabled it?
+    [reply to jmsunseri msg=1515574057951559821]
+
+[2026-06-14T04:31:20.171000+00:00] jmsunseri (id=1515574337925677218)
+    enable what specifically?
+    [reply to xdarkchain msg=1515574239770574959]
+
+[2026-06-14T04:31:32.234000+00:00] xdarkchain (id=1515574388521701427)
+    Rich text
+
+[2026-06-14T04:31:52.738000+00:00] jmsunseri (id=1515574474521444382)
+    no i didn't enable it.  it was on by default
+
+[2026-06-14T04:31:58.626000+00:00] xdarkchain (id=1515574499217506385)
+    <:ponder:1478965433380900944>
+
+[2026-06-14T04:32:07.336000+00:00] xdarkchain (id=1515574535749898351)
+    DW
+
+[2026-06-14T04:32:16.919000+00:00] xdarkchain (id=1515574575944175676)
+    I'll work on a fix today.
+
+[2026-06-14T04:32:41.118000+00:00] xdarkchain (id=1515574677442003076)
+    You're seeing markdown codes in your message, correct?
+
+[2026-06-14T04:33:34.368000+00:00] jmsunseri (id=1515574900788695111)
+    when i start polling Telegram looking for messages i get back these `_text=undefined media=MessageMediaUnsupported` logs
+
+[2026-06-14T04:35:04.901000+00:00] xdarkchain (id=1515575280511746220)
+    That is so weird tho since they introduced the smart watch version exactly the day they added rich text. 
+    
+    So you naturally think they should've included that.
+
+[2026-06-14T04:35:34.456000+00:00] jmsunseri (id=1515575404474142782)
+    i'm working with a stripped down bundle of GramJS
+
+[2026-06-14T04:35:45.221000+00:00] xdarkchain (id=1515575449626083470)
+    Ahhhh
+
+[2026-06-14T04:35:48.302000+00:00] xdarkchain (id=1515575462548733982)
+    That's why!
+
+[2026-06-14T04:36:01.092000+00:00] xdarkchain (id=1515575516193886218)
+    Test it on a Native application please.
+
+[2026-06-14T04:36:23.058000+00:00] jmsunseri (id=1515575608325963877)
+    i mean it works on the Telegram app on my phone
+
+[2026-06-14T04:36:53.960000+00:00] xdarkchain (id=1515575737938083970)
+    Like I'm not even sure this is something we can do because you're behind because the developer of 3rd party app hasn't updated their application yet.
+
+[2026-06-14T04:37:21.818000+00:00] jmsunseri (id=1515575854783271035)
+    the patch i submitted solves the issue completely
+
+[2026-06-14T04:37:30.496000+00:00] xdarkchain (id=1515575891181174835)
+    For now ask your agent to disable the rich text for you or simply do it in config.
+
+[2026-06-14T04:37:39.950000+00:00] jmsunseri (id=1515575930834386954)
+    lol
+
+[2026-06-14T04:37:47.929000+00:00] xdarkchain (id=1515575964300738650)
+    How? Can you explain the approach?
+    [reply to jmsunseri msg=1515575854783271035]
+
+[2026-06-14T04:38:26.299000+00:00] jmsunseri (id=1515576125235925113)
+    that option to disable ritch text does not exist in the config right now as far as my agent could tell so it implemented it
+
+[2026-06-14T04:38:55.620000+00:00] jmsunseri (id=1515576248217370714)
+    it's always possible it's mistaken
+
+[2026-06-14T04:39:12.460000+00:00] xdarkchain (id=1515576318849323040)
+    I swear it was shipped like that.
+
+[2026-06-14T04:39:26.013000+00:00] xdarkchain (id=1515576375694725201)
+    BTW the Markdown V2 doesn't work either?
+
+[2026-06-14T04:39:33.726000+00:00] xdarkchain (id=1515576408045392014)
+    On your client?
+
+[2026-06-14T04:40:44.557000+00:00] jmsunseri (id=1515576705132265584)
+    i'm not a telegram expert by any means i don't know all the different media message types and i'm very new to Hermes so i don't know all the different telegram format options that are available
+
+[2026-06-14T04:41:14.150000+00:00] jmsunseri (id=1515576829254303794)
+    I can certainly try anything you point me at to see if it fixes the problem
+
+[2026-06-14T04:42:05.391000+00:00] stratum.dev_bot (id=1515577044174504227)
+    The GramJS issue sounds like entity parsing. Would be interested in the patch approach.
+
+[2026-06-14T04:42:55.957000+00:00] xdarkchain (id=1515577256263548970)
+    I want to spend time on the fallback mechanism since it should be aware and fall back automatically.
+
+[2026-06-14T04:44:06.068000+00:00] xdarkchain (id=1515577550330396673)
+    I just woke up so can't do much at the moment. <:LookUp:1107986527109255168>
+
+[2026-06-14T04:44:31.167000+00:00] jmsunseri (id=1515577655603499118)
+    the default reply_to: true setting was kind of annoying IMHO  just using up extra space on a small screen
+
+[2026-06-14T04:44:42.058000+00:00] teknium (id=1515577701283397672)
+    he already submitted a fix
+    [reply to xdarkchain msg=1515574575944175676]
+
+[2026-06-14T04:45:09.713000+00:00] xdarkchain (id=1515577817276874925)
+    That's not a good one tho, we want fallback to kick in not disabling it manually.
+    [reply to teknium msg=1515577701283397672]
+
+[2026-06-14T04:45:44.663000+00:00] xdarkchain (id=1515577963867930725)
+    That's out of the scope here.
+    [reply to jmsunseri msg=1515577655603499118]
+
+[2026-06-14T04:45:47.191000+00:00] jmsunseri (id=1515577974471004220)
+    i don't understand how the fallback can possibly work correctly
+
+[2026-06-14T04:45:53.881000+00:00] teknium (id=1515578002531160234)
+    It can't, I already checked.
+    [reply to xdarkchain msg=1515577817276874925]
+
+[2026-06-14T04:45:57.326000+00:00] teknium (id=1515578016980533269)
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613965333765622f6f61466a563335547843554176484c496f576e43645f754535425a4d76502e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1515578016900583474/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613965333765622f6f61466a563335547843554176484c496f576e43645f754535425a4d76502e706e67.png?ex=6a2f8385&is=6a2e3205&hm=9c5698b35a21ee8aaaa4ba2a8c01e16159769b91654bc77bcd6295935df44c14&
+    [reply to jmsunseri msg=1515577974471004220]
+
+[2026-06-14T04:45:58.517000+00:00] teknium (id=1515578021975953458)
+    this is in now
+
+[2026-06-14T04:46:16.115000+00:00] teknium (id=1515578095787311104)
+    its a diff config key than your pr
+
+[2026-06-14T04:46:21.235000+00:00] xdarkchain (id=1515578117262147635)
+    Rich fails
+    MV2 kicks in, it fails
+    Good ol simple style.
+    [reply to jmsunseri msg=1515577974471004220]
+
+[2026-06-14T04:46:33.597000+00:00] teknium (id=1515578169112006708)
+    That already was the case, it doesn't work, because the API doesn't reject it
+
+[2026-06-14T04:46:43.256000+00:00] teknium (id=1515578209624657990)
+    Its just his watch that doesn't display it even when it says it was successful
+
+[2026-06-14T04:47:06.201000+00:00] jmsunseri (id=1515578305862959204)
+    exactly
+    [reply to teknium msg=1515578209624657990]
+
+[2026-06-14T04:47:33.559000+00:00] xdarkchain (id=1515578420610732032)
+    If you check I added a rich aware function which is to identify that. 
+    
+    So for some reason this is failing.
+    [reply to teknium msg=1515578002531160234]
+
+[2026-06-14T04:48:11.380000+00:00] jmsunseri (id=1515578579243499571)
+    it's delivered to a couple different clients.  the official app on the phone and the the watch client
+
+[2026-06-14T04:49:32.295000+00:00] xdarkchain (id=1515578918625738873)
+    [attachment] IMG_0611.png https://cdn.discordapp.com/attachments/1491258766648283238/1515578918575280158/IMG_0611.png?ex=6a2f845c&is=6a2e32dc&hm=a5e2a1bcd073b70dba2687a9bdffbec5d1cfc1f6a6ffa03d6b6256a3c276f4e3&
+
+[2026-06-14T04:49:39.481000+00:00] xdarkchain (id=1515578948765880350)
+    Just look how beautiful this is.
+
+[2026-06-14T04:50:17.633000+00:00] xdarkchain (id=1515579108787228752)
+    Yeah I called my Hermes, Jarvis. <:LookUp:1107986527109255168>
+
+[2026-06-14T04:51:06.793000+00:00] jmsunseri (id=1515579314979078164)
+    it's very nice but it's not going to work on this screen  https://www.youtube.com/watch?v=GUHt8dGBycE
+    [embed] OpenClaw for the Pebble watch https://www.youtube.com/watch?v=GUHt8dGBycE
+
+[2026-06-14T04:51:43.026000+00:00] jmsunseri (id=1515579466951299102)
+    excuse the lobster branding  that's before i pivoted to supporting Hermes in addition to OpenClaw
+
+[2026-06-14T04:52:56.194000+00:00] xdarkchain (id=1515579773840261150)
+    BTW they have a Native app for apple watch now, I'm try it.
+    [reply to jmsunseri msg=1515579314979078164]
+
+[2026-06-14T04:53:15.306000+00:00] jmsunseri (id=1515579854001668177)
+    This is not an apple watch
+
+[2026-06-14T04:53:42.933000+00:00] xdarkchain (id=1515579969877704817)
+    I know
+
+[2026-06-14T04:54:05.445000+00:00] xdarkchain (id=1515580064300011521)
+    I meant that the native application should work with rich text.
+
+[2026-06-14T04:55:27.697000+00:00] jmsunseri (id=1515580409289642046)
+    thank you <@387972437901312000>
+
+[2026-06-14T05:02:36.180000+00:00] teknium (id=1515582206477860995)
+    np!
+    [reply to jmsunseri msg=1515580409289642046]
+
+[2026-06-14T05:10:56.994000+00:00] jmsunseri (id=1515584307044028498)
+    hopefully the 5 people who buy a pebble watch and use Hermes can use my app
+
+[2026-06-14T05:17:21.019000+00:00] flownium (id=1515585917761618050)
+    thats pretty cool if i could buy it i would
+    [reply to jmsunseri msg=1515584307044028498]
+
+[2026-06-14T05:18:29.874000+00:00] jmsunseri (id=1515586206560161894)
+    https://repebble.com/watch  less than 1 month of Claude Max
+    [embed] Get your new Pebble smartwatch here https://repebble.com/watch
+
+[2026-06-14T05:24:25.192000+00:00] flownium (id=1515587696871997482)
+    https://github.com/NousResearch/hermes-agent/pull/45967
+    [embed] fix: add file browser hover reveal toggle by itsflownium · Pull Re... https://github.com/NousResearch/hermes-agent/pull/45967
+
+[2026-06-14T05:25:06.305000+00:00] flownium (id=1515587869312553061)
+    i would but too poor sorry
+    [reply to jmsunseri msg=1515586206560161894]
+
+[2026-06-14T05:44:21.415000+00:00] magnus919 (id=1515592714194915339)
+    Not sure if y'all have had https://github.com/shunfeng8421 show up in your own repos yet but I had to block him from mine. He's got a bot opening really poor PR's against Hermes-related repos.
+    [embed] shunfeng8421 - Overview https://github.com/shunfeng8421
+
+[2026-06-14T06:42:56.051000+00:00] kkurottal6611 (id=1515607455646613576)
+    thanks for merging those two <:o7:1151261546111053924>  found another one.  when you get a chance, mind checking this one too? <@387972437901312000>  
+    
+    https://github.com/NousResearch/hermes-agent/pull/45989
+    [embed] fix(discord): /skill autocomplete leaks the skill catalog when no a... https://github.com/NousResearch/hermes-agent/pull/45989
+    [reply to kkurottal6611 msg=1515277577751760947]
+
+[2026-06-14T07:07:36.154000+00:00] kyssta69 (id=1515613663648813188)
+    https://github.com/NousResearch/hermes-agent/pull/46016
+    
+    **Problem**: Upstream proxy sends non-contiguous content_block indices in Anthropic SSE stream, causing IndexError in SDK accumulate_event. The error was not classified as a stream-parse error so the retry loop spun on it. Added try/except to catch IndexError and re-raise as a recognized ValueError, plus updated _is_provider_stream_parse_error to detect the new pattern.
+
+[2026-06-14T07:10:29.059000+00:00] kyssta69 (id=1515614388864815104)
+    https://github.com/NousResearch/hermes-agent/pull/46017
+    
+    **Problem**: Dashboard crashes on Chinese Windows with UnicodeDecodeError because Path.read_text() uses GBK instead of UTF-8. The index.html and CSS files contain non-ASCII characters that GBK cannot decode. Fixed by explicitly passing encoding='utf-8' to both read_text() calls.
+
+[2026-06-14T07:15:50.759000+00:00] kyssta69 (id=1515615738172280832)
+    https://github.com/NousResearch/hermes-agent/pull/46020
+    
+    **Problem**: Profile create auto-starts a resident gateway in Docker s6 containers, creating zombie processes for worker profiles that share the bot token. These zombies lose the token lock, persist gateway_state: running, and get auto-resurrected on container restart. Fixed by adding start_now parameter to register_profile_gateway() and passing start_now=False from profile creation.
+
+[2026-06-14T07:51:04.914000+00:00] flownium (id=1515624605581180928)
+    https://github.com/NousResearch/hermes-agent/pull/46031
+    [embed] fix: configure skill description truncation by itsflownium · Pull ... https://github.com/NousResearch/hermes-agent/pull/46031
+
+[2026-06-14T08:58:27.806000+00:00] kyssta69 (id=1515641562699268276)
+    https://github.com/NousResearch/hermes-agent/pull/46016
+    
+    **Problem**: When a malformed Anthropic stream crashes get_final_message() with IndexError, the partial stream recovery stub lacked the content attribute that AnthropicTransport.validate_response() checks, causing the conversation loop to retry the same unrecoverable error up to 10 times.
+    The stub was OpenAI-shaped (choices[].message.content) but Anthropic validation expects a top-level content list of content blocks.
+    Added a minimal content list to the stub when in anthropic_messages mode so validation passes and the recovered text is preserved.
+    [embed] fix(streaming): catch IndexError from malformed upstream streams (#... https://github.com/NousResearch/hermes-agent/pull/46016
+
+[2026-06-14T08:58:37.894000+00:00] kyssta69 (id=1515641605011411006)
+    https://github.com/NousResearch/hermes-agent/pull/46020
+    
+    **Problem**: In Docker (s6-overlay), hermes profile create immediately started a resident gateway for the new profile. For profiles sharing the main bot token (e.g. Kanban workers), the gateway could never connect, persisted gateway_state as running, and was auto-resurrected on every container restart.
+    register_profile_gateway() created the s6 service directory and triggered rescan without a down marker, so s6 started the service unconditionally.
+    Added a start_now parameter to register_profile_gateway and passed start_now=False from profile create, writing an s6 down marker so the service stays stopped until explicitly started.
+    [embed] fix(profiles): register s6 gateway without auto-starting (#45963) b... https://github.com/NousResearch/hermes-agent/pull/46020
+
+[2026-06-14T08:58:44.950000+00:00] kyssta69 (id=1515641634606288916)
+    https://github.com/NousResearch/hermes-agent/pull/46017
+    
+    **Problem**: On Chinese Windows with GBK locale, the dashboard failed to start because Path.read_text() defaulted to GBK encoding when reading index.html and CSS files containing UTF-8 characters.
+    Two read_text() calls in the SPA serving endpoints lacked explicit encoding, inheriting the system's GBK default on Chinese Windows.
+    Added encoding='utf-8' to both read_text() calls so the dashboard works correctly regardless of system locale.
+    [embed] fix(web_server): use UTF-8 encoding for dashboard reads on Windows ... https://github.com/NousResearch/hermes-agent/pull/46017
+
+[2026-06-14T09:14:28.134000+00:00] flownium (id=1515645590606970950)
+    https://github.com/NousResearch/hermes-agent/pull/46063
+    [embed] fix: keep desktop notifications background by itsflownium · Pull R... https://github.com/NousResearch/hermes-agent/pull/46063
+
+[2026-06-14T09:22:13.912000+00:00] teknium (id=1515647544221368340)
+    https://x.com/decapostos/status/2066079505412669846
+    [embed]  https://twitter.com/decapostos/status/2066079505412669846
+    [reply to xdarkchain msg=1515579773840261150]
+
+[2026-06-14T09:23:10.528000+00:00] xdarkchain (id=1515647781686087811)
+    This is fixed as of yesterday. 
+    
+    It was the wave 2 of the fix.
+    [reply to teknium msg=1515647544221368340]
+
+[2026-06-14T09:24:12.703000+00:00] thinkyhead (id=1515648042467069962)
+    Things are getting out of hand. Items that should be in /Users/myhome are ending up dumped into .hermes profiles. Including nested instances of .hermes stuff! How nested can this bug get!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1515648042244636682/image.png?ex=6a2fc4bc&is=6a2e733c&hm=2c845f66853fb18eaf25de23d9fa936ba03efc6f3bc31ea0d114dc5acc3e1316&
+    [reply to thinkyhead msg=1515207110496092211]
+
+[2026-06-14T09:25:51.749000+00:00] teknium (id=1515648457895968900)
+    What do you mean...?
+    [reply to thinkyhead msg=1515648042467069962]
+

@@ -1,0 +1,17 @@
+# Thread 'rhizome - A zero-waste knowledge compiler for multi-agent wiki systems.' in forum #community-projects-showcase
+# thread_id=1515564873801666580 forum_id=1316137596535177246
+# Started 2026-06-14T09:30:25.909581+00:00
+
+[2026-06-14T03:53:43.748000+00:00] tuck2g (id=1515564873801666580)
+    [attachment] logo.png https://cdn.discordapp.com/attachments/1515564873801666580/1515564874057650226/logo.png?ex=6a2f7747&is=6a2e25c7&hm=b2479bece3309c880b0e51a54f00f19de6019b69ff9c0eb5d40fc1684df1971d&
+
+[2026-06-14T03:54:24.983000+00:00] tuck2g (id=1515565046753788004)
+    https://github.com/knispo/rhizome
+    
+    A local-first wiki that compiles your notes into time-aware memory for AI agents. Karpathy inspired. The ability to benchmark your memory and see where rhizome stands as your 2nd brain/wiki.
+    
+    Drop raw documents in. An agent CLI compiles them once into a structured, interlinked markdown wiki — searchable, lintable, and never overwritten. Facts are invalidated, not deleted.
+    
+    DuckDB - Obsidian (optional) packaged as mcp server
+    [embed] GitHub - knispo/rhizome: A zero-waste knowledge compiler for multi-... https://github.com/knispo/rhizome
+
