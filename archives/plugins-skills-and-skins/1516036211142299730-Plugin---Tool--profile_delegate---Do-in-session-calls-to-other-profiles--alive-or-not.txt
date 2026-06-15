@@ -1,0 +1,9 @@
+# Thread 'Plugin - Tool: profile_delegate - Do in-session calls to other profiles (alive or not)' in forum #plugins-skills-and-skins
+# thread_id=1516036211142299730 forum_id=1485392832154832906
+# Started 2026-06-15T12:13:13.475169+00:00
+
+[2026-06-15T11:06:39.327000+00:00] heeervas (id=1516036211142299730)
+    https://github.com/Heeervas/profile-delegate-plugin
+    
+    Built this because I'm not a big fan of kanban delegation, and I don't always have terminal handy. Bad thing is that it creates a new session for each profile call, next step would be to be able to resume/continue the previous session with the same profile, but for now I can handle the token consumption. (it does not drain a lot in my tests).
+

@@ -1,0 +1,14 @@
+# Thread 'Plugin - Tool: node_search - Obsidian-focused context gathering pre-read_file (useful for LLM-Wiki)' in forum #plugins-skills-and-skins
+# thread_id=1516049024803934339 forum_id=1485392832154832906
+# Started 2026-06-15T12:13:13.020310+00:00
+
+[2026-06-15T11:57:34.342000+00:00] heeervas (id=1516049024803934339)
+    https://github.com/Heeervas/node-search-plugin
+    
+    node-search is a Hermes plugin for bounded Markdown/Obsidian context gathering before read_file.
+    
+    It indexes frontmatter, headings, wikilinks, backlinks, graph-health states, and returns compact candidate evidence instead of dumping files.
+    Useful for vault/wiki workflows where agents need to choose the right notes safely and cheaply.
+    Configurable roots, path confinement, CI, tests, and synthetic benchmarks included.
+    [embed] GitHub - Heeervas/node-search-plugin: Hermes Agent plugin for bound... https://github.com/Heeervas/node-search-plugin
+

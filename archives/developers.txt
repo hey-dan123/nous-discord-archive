@@ -32497,3 +32497,228 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [fix(tools): load .env passthrough vars in local backend](https://github.com/NousResearch/hermes-agent/pull/46280) - Fixes local tool backend not picking up .env passthrough variables
     [fix(gateway): deterministic systemd unit PATH for named profiles](https://github.com/NousResearch/hermes-agent/pull/46315) - Named profile systemd units get a stable PATH instead of host-dependent one
 
+[2026-06-15T04:07:02.574000+00:00] kyssta69 (id=1515930612186484897)
+    https://github.com/NousResearch/hermes-agent/pull/46407
+    
+    **Problem**: Matrix send_message media path was creating a new adapter per message, exhausting recipient one-time keys under burst sends.
+    Each fresh MatrixAdapter does full E2EE init (login + olm/megolm key share), consuming OTKs that can't replenish fast enough, causing silent message drops.
+    Cached the standalone adapter by (homeserver, token) and reuse it across calls, only recreating on error or config change.
+
+[2026-06-15T04:09:34.853000+00:00] kyssta69 (id=1515931250890899526)
+    https://github.com/NousResearch/hermes-agent/pull/46452
+    
+    **Problem**: Desktop installer fails on Windows with npm exit code 1 at the desktop stage.
+    @icons-pack/react-simple-icons@^13.13.0 declares engine node>=24, but Hermes only needs ^20, so npm hard-fails on Node 22.
+    Added --ignore-engines flag to npm ci and npm install in the desktop build stage.
+
+[2026-06-15T04:11:59.692000+00:00] kyssta69 (id=1515931858389700712)
+    https://github.com/NousResearch/hermes-agent/pull/46315
+    
+    **Problem**: Named profile gateway units showed permanent outdated warning after every restart or update.
+    shutil.which('node') resolved differently depending on whether gateway or CLI ran, producing different PATH entries in the unit.
+    Removed the environment-dependent shutil.which block; _build_service_path_dirs() already handles node path deterministically.
+
+[2026-06-15T06:05:08.671000+00:00] flownium (id=1515960333431341176)
+    https://github.com/NousResearch/hermes-agent/pull/46500
+    [embed] fix: show media upload feedback by itsflownium · Pull Request #465... https://github.com/NousResearch/hermes-agent/pull/46500
+
+[2026-06-15T06:05:25.183000+00:00] flownium (id=1515960402687557652)
+    https://github.com/NousResearch/hermes-agent/pull/46491
+    [embed] fix: add tui copy-on-select toggle by itsflownium · Pull Request #... https://github.com/NousResearch/hermes-agent/pull/46491
+
+[2026-06-15T06:32:53.656000+00:00] flownium (id=1515967316884586547)
+    https://github.com/NousResearch/hermes-agent/pull/46507
+    [embed] fix: unlink connected provider accounts by itsflownium · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/46507
+
+[2026-06-15T07:27:44.773000+00:00] zaynjarvis (id=1515981120829657229)
+    <@387972437901312000> <@690519146701783042> <@360038592015237121> <@222797987829645313> 
+    **__Propose & Volunteer to be Hermes maintainer for OpenViking plugin [scoped]__**
+    
+    Hi maintainers from Hermes Agent community, I'm Zayn from OpenViking, a** __built-in__ memory provider** for Hermes Agent. 
+    
+    **__I'm a core maintainer from OpenViking__** [image 1], we are building fast like Hermes do, and release version weekly.
+    We wish to make the integration between Hermes and OpenViking awesome and up-to-date.
+    
+    Now OpenViking has accumulated **__37 open/95 closed PRs__** [image 2] from our awesome community and our official patch.
+    <@377763567698706443> and I have sent messages request  to help resolve OV plugin PRs before. from search you will see. [image 3]
+    
+    > OV solved thousands PRs too, I know It's hard to keep up.
+    Hence, **I propose and volunteer to be a Hermes maintainer**, who is **scoped only allowed to merge OpenViking plugin** related code. 
+    You can find my profile from OpenViking and GitHub, you can trust me behave. I can provide you with my company and personal email.
+    
+    You can dm me for more details. I would happily take trainings / learnings if there's a process.
+    This proposal is trying to make Hermes Agent X OpenViking integration great. Cheers 🙂
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1515981119936532490/image.png?ex=6a30faf0&is=6a2fa970&hm=dc664a822f4b85ca8f90f90aec3af608ad22d39b70671b7517862f66c1ef1026&
+    [attachment] dyn-8ea8be741a0d90b19e2837e411445c9c.png https://cdn.discordapp.com/attachments/1491258766648283238/1515981120200769556/dyn-8ea8be741a0d90b19e2837e411445c9c.png?ex=6a30faf0&is=6a2fa970&hm=494fbc1601d0f4dcc981077f323048d8857a23626f3c7e8acbf15f39f78c0e4a&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1515981120435523664/image.png?ex=6a30faf0&is=6a2fa970&hm=622cd3e328a9678d307b918259b1a8f805931dd03ad839be273c9a06bb5cd379&
+
+[2026-06-15T07:30:28.663000+00:00] flownium (id=1515981808234135714)
+    https://github.com/NousResearch/hermes-agent/pull/46520
+    [embed] fix: restart mcp loop during reload by itsflownium · Pull Request ... https://github.com/NousResearch/hermes-agent/pull/46520
+
+[2026-06-15T08:35:05.425000+00:00] godsboy7777 (id=1515998068552765600)
+    Hey <@387972437901312000>, could you please review this Hermes PR when you get a gap?
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/40341
+    Issue: https://github.com/NousResearch/hermes-agent/issues/40287
+    
+    ## Short version
+    
+    `hermes update` can currently remove packages that are only declared as plugin `pip_dependencies`, because they are not in the core `pyproject.toml` / lockfile.
+    
+    We hit this with Mem0:
+    
+    * `mem0ai` disappeared after update
+    * Memory silently failed for days
+    * `hermes memory setup` had to reinstall it
+    
+    This PR looks like the right update-path fix.
+    
+    After the core dependency refresh, it scans active plugins, including the selected `memory.provider`, and reinstalls missing plugin dependencies.
+    
+    ## Why it matters
+    
+    It protects Hindsight, Mem0, and other plugin-backed features from silently breaking after normal updates.
+    
+    I also left a Mem0-specific evidence comment here:
+    https://github.com/NousResearch/hermes-agent/pull/40341#issuecomment-4705991258
+    
+    Thank you.
+    [embed] fix(update): reinstall active plugin dependencies after update (#40... https://github.com/NousResearch/hermes-agent/pull/40341
+    [embed] hermes update removes plugin pip_dependencies (e.g., hindsight-clie... https://github.com/NousResearch/hermes-agent/issues/40287
+
+[2026-06-15T09:08:58.935000+00:00] sahil_ss9 (id=1516006597711888564)
+    <@387972437901312000>  any chance I can ask you to look at:
+    
+    https://github.com/NousResearch/hermes-agent/pull/44909
+    https://github.com/NousResearch/hermes-agent/pull/44919
+    https://github.com/NousResearch/hermes-agent/pull/43780
+    https://github.com/NousResearch/hermes-agent/pull/42171
+    https://github.com/NousResearch/hermes-agent/pull/33186
+    [embed] fix(kanban): hold reclaim while the worker is still alive by Sahil-... https://github.com/NousResearch/hermes-agent/pull/44909
+    [embed] fix(kanban): machine-global singleton lock for the embedded dispatc... https://github.com/NousResearch/hermes-agent/pull/44919
+    [embed] feat(curator): add post_curator_run hook event through the plugin h... https://github.com/NousResearch/hermes-agent/pull/43780
+    [embed] feat(skills): add hermaguard adversarial bug-hunting skill by Sahil... https://github.com/NousResearch/hermes-agent/pull/42171
+    [embed] feat(plugins): enhance security-guidance with severity tiers, audit... https://github.com/NousResearch/hermes-agent/pull/33186
+
+[2026-06-15T09:37:56.818000+00:00] kyssta69 (id=1516013886921379920)
+    https://github.com/NousResearch/hermes-agent/pull/46570
+    
+    **Problem**: Agents on Discord sessions with tool_search enabled couldn't use discord or discord_admin tools.
+    Platform-specific tools from the active toolset were being deferred by tool_search because they weren't in _HERMES_CORE_TOOLS.
+    Added protected_tool_names parameter to keep platform-essential tools visible when tool_search activates.
+    [embed] fix(tool_search): protect platform tools from deferral (#46400) by ... https://github.com/NousResearch/hermes-agent/pull/46570
+
+[2026-06-15T09:40:40.756000+00:00] kyssta69 (id=1516014574527316090)
+    https://github.com/NousResearch/hermes-agent/pull/46571
+    
+    **Problem**: When the venv is broken, system-level hermes computes PROJECT_ROOT as site-packages, causing VIRTUAL_ENV to point at a nonsense path.
+    Path(__file__).parent.parent resolves to site-packages when installed via pip, not the project root.
+    Added _resolve_project_root() that walks up to find pyproject.toml so PROJECT_ROOT always points to the real project directory.
+    [embed] fix(cli): validate PROJECT_ROOT by walking to pyproject.toml (#4640... https://github.com/NousResearch/hermes-agent/pull/46571
+
+[2026-06-15T09:48:37.982000+00:00] kyssta69 (id=1516016576158109857)
+    https://github.com/NousResearch/hermes-agent/pull/46575
+    
+    **Problem**: Cron jobs failed with RuntimeError: HTTP 429 when credential pool was exhausted instead of falling back.
+    The except Exception handler wrapped errors and re-raised without trying fallback, unlike the AuthError handler.
+    Added rate-limit/credential-exhaustion detection to try the fallback chain before raising.
+    [embed] fix(cron): fallback on rate-limit/credential-exhaustion errors (#46... https://github.com/NousResearch/hermes-agent/pull/46575
+
+[2026-06-15T10:09:09.975000+00:00] godsboy7777 (id=1516021743511273564)
+    Hey <@387972437901312000>, would appreciate a review on a small Telegram gateway fix when you get a sec:
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/46569
+    Issue: https://github.com/NousResearch/hermes-agent/issues/46568
+    
+    ## Why it is needed
+    
+    Ever since rich messages got turned on via `telegram.extra.rich_messages`, the Bot API 10.1 `sendRichMessage` path from #44829, replies lost their context.
+    
+    When you reply to a bot message that went out as a rich message, Telegram gives the reply pointer but leaves `reply_to_message.text` / `.caption` empty.
+    
+    Hermes then drops the `[Replying to: "..."]` injection, and the agent has no idea what you are replying to.
+    
+    This is most obvious when replying to a cron announcement.
+    
+    It worked fine before rich messages because the old `sendMessage` path always carried a real text field that round-tripped.
+    
+    ## Fix
+    
+    A small bounded, TTL-expiring outbound cache on the adapter keyed by:
+    
+    ```text
+    (chat_id, message_id)
+    ```
+    
+    It is populated on both send paths, with a fallback in `_build_message_event` that only fires when there is no native quote and no text / caption.
+    
+    This restores parity with legacy replies, so there is no new stale-context surface. It stays clean versus #26714.
+    
+    The cache is in-memory only and capped three ways:
+    
+    * 1024 entries
+    * 2000 chars
+    * 48h TTL
+    
+    Cron gets this for free since delivery already routes through `adapter.send`.
+    
+    ## Validation
+    
+    Green across the board on the first run:
+    
+    * 6 test shards
+    * Both nix checks
+    * Both builds
+    * e2e
+    * check-attribution
+    * ruff + ty
+    
+    Also included:
+    
+    * 21 new tests
+    * RED / GREEN verified
+    * Two minor P3 follow-ups noted in the PR body
+    
+    Happy to split or reshape if you would prefer something narrower.
+    [embed] fix(telegram): restore reply context for replies to rich messages b... https://github.com/NousResearch/hermes-agent/pull/46569
+    [embed] [Bug]: Telegram rich cron announcements lose reply context because ... https://github.com/NousResearch/hermes-agent/issues/46568
+
+[2026-06-15T10:22:53.016000+00:00] flownium (id=1516025195595563079)
+    https://github.com/NousResearch/hermes-agent/pull/46584
+    [embed] fix: approve listed pairing requests by itsflownium · Pull Request... https://github.com/NousResearch/hermes-agent/pull/46584
+
+[2026-06-15T11:46:17.078000+00:00] kyssta69 (id=1516046184152694934)
+    https://github.com/NousResearch/hermes-agent/pull/46617
+    
+    **Problem**: When compression fires mid-turn, old session messages are lost to SQLite because end_session() is called before any flush. Added _flush_messages_to_session_db() call before end_session() to persist accumulated messages.
+    [embed] fix(compression): flush messages before session rotation (#46567) b... https://github.com/NousResearch/hermes-agent/pull/46617
+
+[2026-06-15T12:01:56.980000+00:00] scottermonkey (id=1516050126387544095)
+    Help me understand the way Hermes agents/profiles load skill front-matter (or entire skills?) when an agent/profile initializes in the context of me working with you to maximize for each profile which skills are visible and made use of at what times. For example, I thought it would help to create a sort of index of skills I want to be sure the profile was aware of them via a section in the AGENTS.md file (see example below) for each profile but that has worked inconsistently. Latest is I'm telling each profile to be sure to **remember (add to memory)** to look at that section of their AGENTS.md file, in hopes of that helping. All of this seems incredibly redundant. 
+    
+    ```
+    ## Skills You Need (at least these, load others as needed)
+    All available via default profile skills (`external_dirs: /home/scotter/.hermes/skills`):
+    - `test-driven-development`.
+        - Load as: `skill_view('test-driven-development')`.
+        - Expected source: `/home/scotter/.hermes/skills/software-development/test-driven-development`.
+        - Use for: code changes; use RED-GREEN-REFACTOR.
+    - `writing-plans`.
+        - Load as: `skill_view('writing-plans')`.
+        - Expected source: `/home/scotter/.hermes/skills/software-development/writing-plans`.
+        - Use for: before multi-step feature work.
+    - `subagent-driven-development`.
+        - Load as: `skill_view('subagent-driven-development')`.
+        - Expected source: `/home/scotter/.hermes/skills/software-development/subagent-driven-development`.
+        - Use for: parallel execution and two-stage review.
+    - `debuggers`.
+        - Load as: `skill_view('debuggers')`.
+        - Expected source: `/home/scotter/.hermes/skills/software-development/debuggers`.
+        - Use for: bugs; reproduce before fixing.
+    - `simplification`.
+        - Load as: `skill_view('simplification')`.
+        - Expected source: `/home/scotter/.hermes/skills/software-development/simplification`.
+        - Use for: when complexity is spiraling: duplicated concepts, growing special cases, or "just one more case" logic.
+    ```
+

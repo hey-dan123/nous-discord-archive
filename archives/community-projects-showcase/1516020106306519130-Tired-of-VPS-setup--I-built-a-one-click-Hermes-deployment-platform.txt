@@ -1,0 +1,27 @@
+# Thread 'Tired of VPS setup? I built a one-click Hermes deployment platform' in forum #community-projects-showcase
+# thread_id=1516020106306519130 forum_id=1316137596535177246
+# Started 2026-06-15T12:08:59.949454+00:00
+
+[2026-06-15T10:02:39.635000+00:00] johnsonbuilds (id=1516020106306519130)
+    I noticed many new Hermes users get stuck on:
+    
+    • Buying a VPS
+    • Installing Docker
+    • Managing updates
+    • Keeping agents online
+    
+    So I built a hosted deployment platform for Hermes.
+    
+    Current flow:
+    
+    1. Open HermesAgentCloud
+    2. Paste Telegram Bot Token
+    3. Agent is online
+    
+    No server management required.
+    
+    Looking for feedback from Hermes users.
+    
+    https://hermesagentcloud.com
+    [attachment] landingpage_hermes.mp4 https://cdn.discordapp.com/attachments/1516020106306519130/1516020106717564958/landingpage_hermes.mp4?ex=6a311f3f&is=6a2fcdbf&hm=f101c15c5d6b78ff783bbe79f16ec2aed209042321d636453675b6db4e14c5cd&
+

@@ -511,3 +511,7 @@
 [2026-06-15T03:45:28.088000+00:00] buke5122 (id=1515925182718414898)
     How high is the chance of you getting banned when using this?
 
+[2026-06-15T07:33:07.394000+00:00] vayaperson (id=1515982474000470067)
+    Read the page and the warnings. If you use it in a normal way, you shouldn't have problems. Just don't make spam.
+    [reply to buke5122 msg=1515925182718414898]
+

@@ -305,3 +305,7 @@
 [2026-06-06T19:51:11.400000+00:00] haimbender (id=1512906723793309849)
     lmk if it doesn't work or something
 
+[2026-06-15T07:54:58.094000+00:00] rostelinalise (id=1515987971474591784)
+    https://github.com/NousResearch/hermes-agent/pull/45895 this is a very interesting feature that i think would really be lovely to implement on chat4000
+    [embed] feat(dashboard): add rich chat surface by socksprox · Pull Request... https://github.com/NousResearch/hermes-agent/pull/45895
+

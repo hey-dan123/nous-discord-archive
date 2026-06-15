@@ -1,0 +1,24 @@
+# Thread 'Semi Automatic Job Application Pipeline using Hermes' in forum #community-projects-showcase
+# thread_id=1516050065289117829 forum_id=1316137596535177246
+# Started 2026-06-15T12:08:59.498727+00:00
+
+[2026-06-15T12:01:42.413000+00:00] marcul1x (id=1516050065289117829)
+    Hi guys, 
+    
+    Most modern HR systems are just dumb legacy crap. 
+    
+    Outsmart them by increasing your submission throughput by factor 100x. It's about quality submissions but if you have no fast throughput and send 10 applications per week. You are out. You are legacy. You are a dinosaur. Your application goes extinct.
+    
+    You aren’t applying to humans anymore; you’re applying to rigid, outdated ATS parsers that don't care how good you actually are. They just run blunt keyword matching—either shortlisting you or throwing your application off a cliff.
+    
+    It’s time to outsmart them. Enter Hermes.
+    
+    I've built an automated pipeline to beat the parsers at their own game. It’s not open-source just yet, but it will be soon. If you’re in a hurry and want to bypass the noise right now, let me know and I’ll tailor a pipeline for your setup. I am not that far, that I can share the prompts and skills for general use.
+    
+    https://marcgloor.github.io/hermes-job-pipeline.html
+    
+    Contact me: 
+    Telegram: @marculix
+    Discord: marcul1x
+    E-Mail: marc.gloor@u.nus.edu
+

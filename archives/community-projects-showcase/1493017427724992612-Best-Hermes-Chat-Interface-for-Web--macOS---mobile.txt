@@ -3968,3 +3968,6 @@
     
     Now WebUI works for Windows/Linux/macOS as both a web app and a native desktop app! And with iOS support!
 
+[2026-06-15T07:39:55.714000+00:00] huhu1030 (id=1515984186618544261)
+    There might be a regression, enter key sends the prompt despite having the setting to crtl + enter in the settings. This is happening on mobile only. It used to work I can't tell what version was it. It broke when I upgrade to 428.
+

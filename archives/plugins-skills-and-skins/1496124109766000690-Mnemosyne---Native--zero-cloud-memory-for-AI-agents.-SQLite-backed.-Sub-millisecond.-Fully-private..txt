@@ -2120,3 +2120,12 @@
 [2026-06-14T11:00:39.187000+00:00] lividberries (id=1515672312740057189)
     Can anyone share if this actually helps working on large pre-existing projects or is it just more vaporware?
 
+[2026-06-15T07:01:49.023000+00:00] 0xlfg (id=1515974595541209109)
+    I been using it mostly for a semi project so far its okay I feel.
+
+[2026-06-15T07:02:14.438000+00:00] 0xlfg (id=1515974702139707452)
+    Are you using native memory how has it been
+
+[2026-06-15T07:34:09.993000+00:00] 0xlfg (id=1515982736559440004)
+    I am current on v3, is v3.7 upgrade necessary
+

@@ -15,3 +15,14 @@
 [2026-06-15T02:53:00.591000+00:00] codename_11 (id=1515911981159415949)
     Hermes-Relay (Android App) - streaming chat, hands-free voice,  and full agent management.
 
+[2026-06-15T11:15:58.420000+00:00] heeervas (id=1516038556148174928)
+    Compatile with profiles and docker?
+
+[2026-06-15T11:55:51.462000+00:00] codename_11 (id=1516048593293934693)
+    <@291306835007504385> Compatible with profiles and docker shouldn't be an issue 🙂 - the app targets the api/dashboard server which follows suit with the new official Desktop app - which does support that without issue (I do run profiles, but not in docker - however profile context wouldn't change from the consumer perspective).
+    
+    Let me know if any issues of course and I'll hop right on it!
+
+[2026-06-15T11:59:09.917000+00:00] heeervas (id=1516049425674535014)
+    Will check it first before install, since Discord already covers a lot of my use cases, but I'll keep an eye 👍
+
