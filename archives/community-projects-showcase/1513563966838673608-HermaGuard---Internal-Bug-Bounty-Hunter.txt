@@ -30,3 +30,18 @@
     
     HermaGuard v1.2.0 — grab the latest SKILL.md from Sahil-SS9/hermaguard if you're running a local copy.
 
+[2026-06-15T01:24:44.588000+00:00] sahil_ss9 (id=1515889768112721930)
+    🛡️   HermaGuard v2.0.0 is out.
+      
+       My adversarial code-review skill: 3 subagents attack your diff from different angles, a consolidator triages what's actually broken. Read-only, finds bugs, never touches your code.
+      
+       What's new:
+       • Deterministic pre-scan (semgrep, bandit, eslint) runs first, so the agents chase real findings instead of guessing
+       • Runs on any harness now: Claude Code, Codex, Cursor, Gemini, Hermes. Not locked to one
+       • JSON output + a feedback loop that learns which findings you actually fix
+       • Score-only benchmark with a seeded bug corpus, run it yourself
+       • GitHub Action for PR checks
+      
+       Open source, MIT. Go break it and tell me what's rubbish 👉  https://github.com/Sahil-SS9/hermaguard
+    [embed] GitHub - Sahil-SS9/hermaguard: Adversarial bug-hunting code review ... https://github.com/Sahil-SS9/hermaguard
+

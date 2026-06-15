@@ -158,3 +158,9 @@
     I’ll send you a dm!
     [reply to eucdee msg=1515481543949291642]
 
+[2026-06-14T23:16:43.177000+00:00] eucdee (id=1515857549939970119)
+    I think i have dms disabled... yesterday i let nemo3(hermes) install sibyl... straight forward, i still need to spend some time on the readme... i also think i instantly saw a massive reduction in token usage...
+
+[2026-06-15T03:47:20.127000+00:00] buke5122 (id=1515925652644036761)
+    How does this compare to mnemosyne?
+

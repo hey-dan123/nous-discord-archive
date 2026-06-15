@@ -89,3 +89,26 @@
     [embed] Game Research Workflow for Hermes https://hermes-game-research.vercel.app/
     [embed] feat(skills): add gamefi-research workflow skill foundation by BBCr... https://github.com/NousResearch/hermes-agent/pull/40136
 
+[2026-06-15T00:22:52.079000+00:00] bbcrypto0 (id=1515874196721373274)
+    Quick update on my GameFi Research Workflow skill.
+    
+    I added a static showcase UI to the existing PR:
+    https://github.com/NousResearch/hermes-agent/pull/40136
+    
+    The demo now presents the workflow in a cleaner way with:
+    
+    * fictional sample project data
+    * scan summary cards
+    * WATCH / TEST / CONTACT / SKIP counts
+    * top projects table
+    * AI Research Signal Score breakdown
+    * relevance filter explanation
+    * source links section
+    * Markdown report preview
+    * visible manual verification disclaimers
+    
+    All sample projects are fictional and only used to demonstrate the UI.
+    
+    No scanner/report logic was changed in this update. The demo is static: no tokens, no secrets, no backend routes, and no API calls.
+    [embed] feat(skills): add gamefi-research workflow skill foundation by BBCr... https://github.com/NousResearch/hermes-agent/pull/40136
+

@@ -1,0 +1,17 @@
+# Thread 'Hermes-Relay (Android App) - streaming chat, hands-free voice,  and full agent management.' in forum #community-projects-showcase
+# thread_id=1492283125613465640 forum_id=1316137596535177246
+# Started 2026-06-15T04:05:29.988067+00:00
+
+[2026-06-15T02:51:37.803000+00:00] codename_11 (id=1515911633921118328)
+    Just published v1.0.0 - this release was a major overhal supporting the latest upstream changes to the gateway/dashboard to support the offical Desktop app - this allows chat/management/standard voice to require no plugin or other secondary install - completly upstream supported 🙂 - the terminal/bridge features are now via the plugin path for a power-user/advanced path. 
+    The 'flow' is much easier and quite a bit of polish was added as well.
+    Onboarding supports both paths  - and you can change in settings/connections later. 
+    
+    https://github.com/Codename-11/hermes-relay
+    
+    Just pushed to Google Play as well so that should come along shortly! 😁
+    [embed] GitHub - Codename-11/hermes-relay: Hermes Relay — Your Hermes AI ... https://github.com/Codename-11/hermes-relay
+
+[2026-06-15T02:53:00.591000+00:00] codename_11 (id=1515911981159415949)
+    Hermes-Relay (Android App) - streaming chat, hands-free voice,  and full agent management.
+

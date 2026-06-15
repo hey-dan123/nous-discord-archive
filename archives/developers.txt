@@ -32340,3 +32340,160 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Can you hit up <@690519146701783042> or start a <#1485307775444844625> so others on the team can help
     [reply to aialliai msg=1515784139209445386]
 
+[2026-06-14T19:50:59.405000+00:00] aialliai (id=1515805776407691467)
+    Will do 🫡
+    [reply to teknium msg=1515795122019762226]
+
+[2026-06-14T20:04:29.021000+00:00] aialliai (id=1515809172183187608)
+    I have remedied the situation in all other ways, but thats the only one I cant without approval. And compleately lost whatt little faith I had left in Anthropic along the way 😅
+
+[2026-06-14T20:08:21.789000+00:00] santsleo (id=1515810148482945056)
+    Hey guys, there's a PR that I've been trying to get merged for the past few weeks. I was wondering if you had any tips on how to get it included. It's to add 1password as a secrets manager option, adding to the existing Bitwarden path.
+    https://github.com/NousResearch/hermes-agent/pull/38569
+    [embed] feat: add 1Password secrets backend by santileoni · Pull Request #... https://github.com/NousResearch/hermes-agent/pull/38569
+
+[2026-06-14T20:16:53.403000+00:00] scanfee (id=1515812294347718817)
+    Hey everyone. I made this really cool feature, the selfhosted Hermes Agent webui now has a proper rich text CHAT!
+    
+    Yes, all the features, sessions, search, fork!, tool calling, approval prompts and much more. 
+    
+    I just wanted it for myeslf, so I built it, I've been using it and it has come to a stable point. No one shot slop, I polished it well to find the last bug.
+    
+    Thing is, I noticed there's a PR on github about every 10 minutes. This is a real problem for me, (and probably the maintainers) to distinguish a  PR that didn't contain much work or one shotted ai pr, from a pr that was thoroughly tested.
+    
+    What strategy can I use? How can I make my odds high of it being merged?
+    
+    https://github.com/NousResearch/hermes-agent/pull/45895
+    [attachment] 607547193-be2a46e6-a944-4b37-a874-5431b27d67ef.png https://cdn.discordapp.com/attachments/1491258766648283238/1515812295173865675/607547193-be2a46e6-a944-4b37-a874-5431b27d67ef.png?ex=6a305db5&is=6a2f0c35&hm=a72a47fff2cc1ed1e95a291f0560fdabb79e4366d1c359cadc56b29b5b1eee4e&
+    [embed] feat(dashboard): add rich chat surface by socksprox · Pull Request... https://github.com/NousResearch/hermes-agent/pull/45895
+
+[2026-06-14T20:22:05.570000+00:00] teknium (id=1515813603670884402)
+    You can convince <@119192111202566149> to take a look <a:cheer:734837260662603908>
+    [reply to scanfee msg=1515812294347718817]
+
+[2026-06-14T21:32:02.047000+00:00] scanfee (id=1515831204971155577)
+    Ah yea sure! Would love if you could take a look <@119192111202566149> .
+    
+    I really think this feature will be valuable to have in the web ui of Hermes
+    [reply to teknium msg=1515813603670884402]
+
+[2026-06-14T22:10:54.931000+00:00] fvckbohemian (id=1515840989795848385)
+    For coding what's the best between agent between kimi k2.7 and deepseek v4 flash/pro max?
+
+[2026-06-14T22:11:47.921000+00:00] fvckbohemian (id=1515841212052013259)
+    getting kinda bored of claude abusively restrictive guardrails on opus 4.7/8
+
+[2026-06-14T22:30:18.681000+00:00] sprmn24 (id=1515845870917255308)
+    <@387972437901312000> , opened a new PR — I would appreciate it if you could take a look when you have the chance.
+    
+    **PR #46329** — feat(i18n): add Turkish (tr) locale for desktop app
+    
+    Issue: **Turkish** was missing from the desktop app's locale catalog (only en/zh/zh-hant/ja supported), even though it's already available on the web dashboard.
+    
+    Fix: Added apps/desktop/src/i18n/tr.ts with full translations for all 28 top-level sections following the ja.ts pattern, plus registered 'tr' in types.ts, languages.ts, and catalog.ts. tsc --noEmit passes clean.
+    
+    https://github.com/NousResearch/hermes-agent/pull/46329
+    
+    *Figured this could be genuinely useful for Turkish-speaking users who'd prefer the desktop app in their native language* <:Prayge:1151275585000185968>
+    [embed] feat(i18n): add Turkish (tr) locale for desktop app by sprmn24 · P... https://github.com/NousResearch/hermes-agent/pull/46329
+
+[2026-06-14T22:34:41.192000+00:00] sworntech (id=1515846971967934616)
+    **Small Hermes Teams docs PR**:
+    
+    **Problem**: The Teams setup docs did not mention that `microsoft-teams-apps` requires Python 3.12+.
+    
+    **Fix**: Added a short setup note explaining the Python 3.12+ requirement and advising users on Python 3.11 to recreate the Hermes environment with Python 3.12+ before enabling Teams.
+    
+    **Impact**: Docs-only change. No runtime behavior changed.
+    
+    References #26083
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/46335
+    [embed] docs(teams): note Teams SDK Python requirement by Sworntech-dev · ... https://github.com/NousResearch/hermes-agent/pull/46335
+
+[2026-06-14T22:51:55.642000+00:00] aleksandr_1 (id=1515851310765707425)
+    light follow-up on my PRs this week:
+    
+    **#42762** - added _jobs_file_lock to create_job, update_job, remove_job in cron. **P2** https://github.com/NousResearch/hermes-agent/pull/42762
+    
+    **#42877** - warn when agent.redact fails instead of silently swallowing the exception in cron. **P2** https://github.com/NousResearch/hermes-agent/pull/42877
+    
+    **#42976** - normalize provider to lowercase in _pool_may_recover_from_rate_limit. **P2** https://github.com/NousResearch/hermes-agent/pull/42976
+    
+    **#43057** - persist errors in finalize_turn no longer drop the turn result. **P2** https://github.com/NousResearch/hermes-agent/pull/43057
+    
+    **#43115** - argument validation layer before tool dispatch (Phase 1 of issue #522). **P3** https://github.com/NousResearch/hermes-agent/pull/43115
+    
+    **#43535** - atomic tmp file in set_active_profile so concurrent writers no longer clobber each other. **P3** https://github.com/NousResearch/hermes-agent/pull/43535
+    
+    **#43742** - retry _connect_and_init when a concurrent repair is already in progress. **P2** https://github.com/NousResearch/hermes-agent/pull/43742
+    
+    **#44266** - FK violation in append_message when a session is deleted concurrently. **P2** https://github.com/NousResearch/hermes-agent/pull/44266
+    
+    **#44291** - empty safe_env dict no longer collapses to None and leaks parent env into stdio MCP subprocess. **P2 **https://github.com/NousResearch/hermes-agent/pull/44291
+    
+    **#44898** - gateway crash loop under systemd caused by zombie processes that _pid_exists treated as alive. **P1 **https://github.com/NousResearch/hermes-agent/pull/44898
+
+[2026-06-14T23:12:54.104000+00:00] wittgenstein9840 (id=1515856589138165791)
+    Cognitive Capability Gap Analyzer is a meta-skill that analyzes an AI skill ecosystem and identifies missing cognitive capabilities. Instead of focusing on what skills already exist, it focuses on what forms of reasoning are absent or underrepresented, then suggests opportunities for future skill development. https://github.com/NousResearch/hermes-agent/pull/46341
+    [embed] Add Cognitive Capability Gap Analyzer Meta-Skill by ibrhmuyls · Pu... https://github.com/NousResearch/hermes-agent/pull/46341
+
+[2026-06-14T23:56:24.545000+00:00] bbcrypto0 (id=1515867538121035806)
+    Small docs/example consistency PR opened for Hermes Agent:
+    
+    https://github.com/NousResearch/hermes-agent/pull/46352
+    
+    I noticed that `.env.example` references `ELEVENLABS_API_KEY` in the STT provider selection comments, but the file did not include a commented placeholder for it.
+    
+    This PR adds the missing commented placeholder near the related voice/STT provider keys.
+    
+    It is a small docs/example cleanup:
+    
+    * 1 file changed
+    * commented placeholder only
+    * no runtime changes
+    * no config behavior changes
+    
+    Just a small fix to keep the example environment file clearer and more consistent for contributors.
+    [embed] docs(.env.example): add missing ELEVENLABS_API_KEY placeholder by B... https://github.com/NousResearch/hermes-agent/pull/46352
+
+[2026-06-15T00:37:34.040000+00:00] arthors.zhang (id=1515877895933792276)
+    Hey folks — quick ask. PR #45365 has been reviewed and approved 
+        (@tonydwb), just needs a maintainer to approve the CI workflow 
+        runs (first-time contributor). It's a small clipboard improvement 
+        — PyObjC acceleration + set_clipboard_text, no new deps.
+        
+        https://github.com/NousResearch/hermes-agent/pull/45365
+        
+        Would really appreciate a click. Thanks! 🙏
+    [embed] feat(clipboard): add set_clipboard_text + PyObjC acceleration for p... https://github.com/NousResearch/hermes-agent/pull/45365
+
+[2026-06-15T00:41:40.265000+00:00] arthors.zhang (id=1515878928676290712)
+    PR #45365 — feat: add set_clipboard_text + PyObjC acceleration 
+        
+        https://github.com/NousResearch/hermes-agent/pull/45365
+        
+        Small clipboard improvement:
+        • Adds set_clipboard_text() — cross-platform text write  
+        • PyObjC (AppKit) path for macOS — zero subprocess on paste
+        • Falls back cleanly to osascript when PyObjC not installed
+        • No new deps, 107 tests passing
+        
+        Already reviewed & approved by tonydwb — just needs CI workflow
+        approval for first-time contributor. Thanks!
+    [embed] feat(clipboard): add set_clipboard_text + PyObjC acceleration for p... https://github.com/NousResearch/hermes-agent/pull/45365
+
+[2026-06-15T02:28:07.587000+00:00] zealous_dragon_76901 (id=1515905719046635692)
+    Hi, could someone help review this PR when available?
+    It fixes Feishu video meeting invite handling in Hermes by preserving the video_chat card fields and passing through the invite call_id for meeting join correlation. I’ve kept the scope focused on inbound invite/card parsing and added tests for the normalized message and invite event path.
+    PR: https://github.com/NousResearch/hermes-agent/pull/44739
+    Thanks!
+    [embed] fix(feishu): preserve video meeting invite fields by Ren1104 · Pul... https://github.com/NousResearch/hermes-agent/pull/44739
+
+[2026-06-15T02:56:18.902000+00:00] kyssta69 (id=1515912812935778395)
+    [fix(streaming): catch IndexError from malformed upstream streams](https://github.com/NousResearch/hermes-agent/pull/46016) - Handles crashes when upstream returns malformed streaming chunks
+    [fix(gateway): /model shows active fallback instead of stale config](https://github.com/NousResearch/hermes-agent/pull/46091) - /model command now reflects the actual fallback model being used
+    [fix(tools): load .env passthrough vars in local backend](https://github.com/NousResearch/hermes-agent/pull/46280) - Fixes local tool backend not picking up .env passthrough variables
+    [fix(gateway): deterministic systemd unit PATH for named profiles](https://github.com/NousResearch/hermes-agent/pull/46315) - Named profile systemd units get a stable PATH instead of host-dependent one
+

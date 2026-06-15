@@ -230,3 +230,131 @@
     `hr restart`
     GitHub: https://github.com/Shaf2665/Hermes-router
 
+[2026-06-15T01:04:21.639000+00:00] shaf_2665 (id=1515884638692839485)
+    # hermes-router update — easier setup & install
+    
+    Two things that were annoying are now fixed:
+    
+    **1. One-liner install (new)**
+    You can now install hermes-router from scratch with a single command:
+    
+    
+    `curl -fsSL https://raw.githubusercontent.com/Shaf2665/Hermes-router/main/get.sh | bash`
+    Clones the repo, creates a venv, installs dependencies, and puts hr on your PATH — no manual steps.
+    
+    **2. Setup wizard & diagnostics (new commands)**
+    
+    `hr setup`     ← walks you through adding your first key and starting the router
+    `hr doctor `   ← shows a checklist: Python, venv, keys, PATH, router health
+    `hr setup` is the recommended starting point for new installs. hr doctor is useful if something isn't working — it tells you exactly what's broken and how to fix it.
+    
+    Already using hermes-router?
+    
+    
+    `hr update`
+    Pulls the latest changes. Then hr doctor to confirm everything's healthy.
+    
+    GitHub: https://github.com/Shaf2665/Hermes-router
+
+[2026-06-15T01:23:30.289000+00:00] shaf_2665 (id=1515889456479993988)
+    # hermes-router update — OpenAI & Anthropic support
+    
+    You can now add your OpenAI or Anthropic API keys directly to hermes-router. The router handles everything — your app still sends the same OpenAI-format request it always has.
+    
+    
+    `hr auth add openai`
+    `hr auth add anthropic`
+    That's it. No config changes, no code changes on your end.
+    
+    **How it works**
+    
+    OpenAI is a straight pass-through — same format, just your own key.
+    
+    Anthropic uses a completely different wire format, so the router translates automatically:
+    
+    Extracts system messages to Anthropic's required format
+    Converts the response back to OpenAI format
+    Handles streaming the same way
+    Your app never knows (or needs to know) which provider responded.
+    
+    **Default models**
+    
+    
+    openai     → gpt-4o-mini
+    anthropic  → claude-haiku-4-5
+    Override with OPENAI_MODEL or ANTHROPIC_MODEL in your .env.
+    
+    **Aliases work too**
+    
+    
+    `hr auth add gpt`      (same as openai)
+    `hr auth add claude`   (same as anthropic)
+    After adding keys, `hr restart` to pick them up.
+    
+    GitHub: https://github.com/Shaf2665/Hermes-router
+
+[2026-06-15T01:36:35.629000+00:00] shaf_2665 (id=1515892750434828549)
+    # hermes-router update — model override command
+    
+    You can now switch models per-provider without touching any config files.
+    
+    
+    `hr model list`
+    `hr model set anthropic claude-sonnet-4-6`
+    `hr model set openai gpt-4o`
+    `hr model set gemini gemini-2.5-pro`
+    `hr model reset anthropic`
+    hr model list shows all providers with their active model. Overrides are highlighted so you can see at a glance what's been changed vs what's still on the default.
+    
+    After changing a model, just `hr restart` to apply.
+    
+    **Aliases work**
+    
+    
+    `hr model set claude claude-opus-4-8`
+    `hr model set gpt gpt-4o`
+    Update your existing install
+    
+    If you already have hermes-router set up:
+    
+    
+    `hr update`
+    `hr restart`
+    That's it — pulls the latest and restarts. Run hr model list after to confirm everything looks right.
+    
+    If you don't have the hr command yet:
+    
+    
+    `git pull`
+    `./install.sh`
+    Don't have hermes-router at all? One-liner install:
+    
+    
+    `curl -fsSL https://raw.githubusercontent.com/Shaf2665/Hermes-router/main/get.sh | bash`
+    
+    **GitHub**: https://github.com/Shaf2665/Hermes-router
+
+[2026-06-15T02:22:05.454000+00:00] shaf_2665 (id=1515904200150618264)
+    # Anthropic prompt caching — now automatic🚀 
+    
+    If you're using hermes-router with an Anthropic API key, your costs just dropped.
+    
+    When your system prompt is 1,024+ tokens, hermes-router now automatically tells Anthropic to cache it server-side. Every request after the first pays 10% of normal price for those tokens — no config changes, no client-side changes. It just works.
+    
+    **Example savings:**
+    A 2,000-token system prompt used 50 times:
+    
+    Before: 100,000 tokens billed at full price
+    After: ~11,000 tokens billed at full price, the rest at 10% → ~87% cost reduction on that portion
+    You'll also see cache_read_input_tokens in the response usage block so you can confirm cache hits are happening.
+    
+    **Update your existing install:**
+    
+    
+    `hr update`
+    `hr restart`
+    No config needed — works automatically for any request going to the Anthropic provider.
+    
+    GitHub: https://github.com/Shaf2665/Hermes-router
+    [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
+

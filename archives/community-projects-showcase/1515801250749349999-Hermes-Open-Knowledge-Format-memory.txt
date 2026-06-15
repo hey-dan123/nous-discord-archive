@@ -1,0 +1,28 @@
+# Thread 'Hermes Open Knowledge Format memory' in forum #community-projects-showcase
+# thread_id=1515801250749349999 forum_id=1316137596535177246
+# Started 2026-06-15T04:04:05.357824+00:00
+
+[2026-06-14T19:33:00.404000+00:00] wojtek.majnkraft (id=1515801250749349999)
+    I integrated Google's Open Knowledge Format (OKF) into Hermes memory — basically it's like having Obsidian natively inside your agent. Every decision, tool call, and plan step gets stored as plain markdown files on disk. You can literally cat the file and read what your agent "remembered."
+    
+    Why it's useful:
+    • Memory persists across sessions (no more "what were we doing?" after restart)
+    • Knowledge graph from markdown links — no RDF, no Cypher, just [[links]]
+    • Two-memory model: hot buffer in-process + cold archive on disk, auto-flushes
+    • Crash recovery — snapshot and restore from any point
+    • Optional RAG via ChromaDB if you want semantic search
+    v0.3.0 just dropped on PyPI with a universal provider that works with any Hermes agent:
+    
+    
+    from hermes_okf import HermesOKFProvider
+    provider = HermesOKFProvider()
+    provider.on_session_start("session-1")
+    provider.on_memory_write("user", "Prefers dark mode")
+    provider.on_session_end("session-1")
+    
+    Whole thing lives in ~/.hermes/okf_memory/ as .md files you can grep.
+    
+    https://github.com/EliaszDev/hermes-okf
+    Is this actually useful or am I solving a problem no one else has? If you try it, tell me what's broken or what's missing. I genuinely want to know.
+    [embed] GitHub - EliaszDev/hermes-okf: Universal OKF-based memory system fo... https://github.com/EliaszDev/hermes-okf
+

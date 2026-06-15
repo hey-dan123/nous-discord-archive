@@ -489,3 +489,25 @@
     [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
     [reply to vayaperson msg=1515693601504624710]
 
+[2026-06-14T23:55:56.177000+00:00] vayaperson (id=1515867419137150976)
+    Beta 3 is officially live! 
+    
+    All the fixes we detailed in our last update are now packaged and ready. While we have tested everything thoroughly in our development environment, we need to see how they behave in the wild under different user setups.
+    
+    Here is a quick recap of what's shipped in v1.5.2-Beta3:
+    
+    Admin Recognition Fixed: Resolved the silent failure caused by the missing country prefix mismatch and enabled the JID owner fallback check.
+    
+    Long-Term Memory Restored: PostgreSQL/Hindsight startup crash is fixed. We've also added a visual warning banner in the admin panel with a one-click manual start button so you can easily verify its status.
+    
+    Smart Persona Transitions: Swapping a contact's soul now preserves the user's message history for context continuity while stripping the previous bot persona's responses.
+    
+    UI Stability: Fixed the race condition in the admin panel dropdown where the "Hermes Native" soul would visually revert to "Default Soul" on reload.
+    
+    Grab the latest zip, test it on your setup, and let us know if you spot any issues outside the dev environment!
+    👉 https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+    [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+
+[2026-06-15T03:45:28.088000+00:00] buke5122 (id=1515925182718414898)
+    How high is the chance of you getting banned when using this?
+

@@ -14,3 +14,12 @@
     I’m sharing it here as inspiration with myself as the only user; i.e. it’s not something I plan to open source. But happy to G Meet with others building personal [what I refer to as] devices; code name is ‘agent phone’.
     [attachment] IMG_2763.png https://cdn.discordapp.com/attachments/1515205980374306906/1515205980646932490/IMG_2763.png?ex=6a2e2908&is=6a2cd788&hm=de413be45ee984dde07a72e267c3d484001f63ee97e984bb96f50c0617daf852&
 
+[2026-06-14T21:30:20.308000+00:00] scanfee (id=1515830778246860901)
+    Hey, I implemented that into normal web app of native Hermes agent
+    
+    https://github.com/NousResearch/hermes-agent/pull/45895
+    
+    feel free to try out my pr :)
+    [attachment] IMG_8036.jpg https://cdn.discordapp.com/attachments/1515205980374306906/1515830778339131402/IMG_8036.jpg?ex=6a306eec&is=6a2f1d6c&hm=87ca568c07c384bbd71e51dd2d08be9a83449a9c31641b48ccd462f96c88a8eb&
+    [embed] feat(dashboard): add rich chat surface by socksprox · Pull Request... https://github.com/NousResearch/hermes-agent/pull/45895
+

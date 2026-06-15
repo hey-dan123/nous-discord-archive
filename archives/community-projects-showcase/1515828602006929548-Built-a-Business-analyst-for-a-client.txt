@@ -1,0 +1,7 @@
+# Thread 'Built a Business analyst for a client' in forum #community-projects-showcase
+# thread_id=1515828602006929548 forum_id=1316137596535177246
+# Started 2026-06-15T04:04:04.460918+00:00
+
+[2026-06-14T21:21:41.452000+00:00] riprock (id=1515828602006929548)
+    With Hermes agent, I built a business analyst for a client of mine! They are a service based business.  Ive been woroking on custom software for their business and as apart of it I have thrown in a business analyst built with hermes and Claude models. Writing custom tools and skills that interact with tooling designed to work specifically with the software and a connection into slack, they get summaries and a 24/7 business analyst that they can interact with. It reads from the databsae that stores their business status, daily information, context, all information related to their business and can be a point of conversation and growth.  Just started it so it doesnt have complete context yet but as the days go on it will slowly get more accumulated.
+

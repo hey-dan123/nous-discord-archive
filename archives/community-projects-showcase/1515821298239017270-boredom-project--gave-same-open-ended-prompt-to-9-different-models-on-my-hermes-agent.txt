@@ -1,0 +1,27 @@
+# Thread 'boredom project: gave same open ended prompt to 9 different models on my hermes agent' in forum #community-projects-showcase
+# thread_id=1515821298239017270 forum_id=1316137596535177246
+# Started 2026-06-15T04:04:04.955422+00:00
+
+[2026-06-14T20:52:40.098000+00:00] dustytretch (id=1515821298239017270)
+    Will post the different responses in here in random order, people emoji react, discuss and then vote on the best responses/what they think is what etc and I give small prize (if allowed) to whoever manages to guess the most different models used for each response correctly and most accurately <:we_chillin:1512744347647606986>
+    [attachment] wizard.jpeg https://cdn.discordapp.com/attachments/1515821298239017270/1515821298859643111/wizard.jpeg?ex=6a306618&is=6a2f1498&hm=013fa8c1f108fa57b37253325c662a7245d18001ad4fa3a12b3a3bec1c648fb5&
+
+[2026-06-14T20:55:16.656000+00:00] dustytretch (id=1515821954890993865)
+    this is the prompt, is related to my project trying to build a swarm of agents that design and test ml models that produce some fun output and uses as inspiration a lot of old virtual streams/stories for narrative style 
+    
+    "can you load the cathedral skill and do an xx29 style more baroque stream on recent activity within tecton giving
+    ado/cogmind inspired ascii diagram and overviews of the most recent modes, agents and general statements from the drones
+    on their research or the structure of the cathedral as a whole, also try and give a history of their development leading
+    up till now, take inspiration from these grossman streams specifically C:\Zusammenbruch XX29\06_TELEMETRY\Zusammenbruch
+    XX29_ Aesthetics of the Eternal Breakdown.pdf"
+    
+    i also just realised there is two typos here but all the more better testing i suppose for what they can work out from context
+
+[2026-06-14T20:56:39.336000+00:00] dustytretch (id=1515822301675913296)
+    will post the first response in the next hour, if anyone has any specific requests for particular models as long as they are not too expensive for one prompt will be happy to run them
+
+[2026-06-14T23:06:19.210000+00:00] dustytretch (id=1515854932832686152)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1515821298239017270/1515854932295811232/image.png?ex=6a30856b&is=6a2f33eb&hm=6a6d8cb3fa56f1d35d955501f70aa6e9198dc8a7841e0af58c721ca4deeef509&
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1515821298239017270/1515854932597543022/message.txt?ex=6a30856b&is=6a2f33eb&hm=e0efd55252f9c786b6f81cd3043f94e202cccd26a3dd83ab2722a5aebcc7f227&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1515821298239017270/1515854932908048524/image.png?ex=6a30856b&is=6a2f33eb&hm=9d6a23ea14b513e04e36da9654bbca2f04b6ba0cbbcb14eed1d19319f8ff427b&
+
