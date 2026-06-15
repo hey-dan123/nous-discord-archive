@@ -3971,3 +3971,41 @@
 [2026-06-15T07:39:55.714000+00:00] huhu1030 (id=1515984186618544261)
     There might be a regression, enter key sends the prompt despite having the setting to crtl + enter in the settings. This is happening on mobile only. It used to work I can't tell what version was it. It broke when I upgrade to 428.
 
+[2026-06-15T15:33:55.977000+00:00] avidfuturist (id=1516103473727406081)
+    I don’t see any regressions. Can you try a hard reload or restart the server. Then check settings again and confirm the setting shows the preferred option. Or set it again and save. 
+    
+    What **Device + browser + keyboard app** (GBoard / SwiftKey / iOS).
+    
+    After another reload, does Settings still show "Ctrl+Enter" (i.e. did it persist server-side)?
+    
+    If you can provide these and I can reproduce than I’ll be sure to fix!
+    [reply to huhu1030 msg=1515984186618544261]
+
+[2026-06-15T16:31:45.446000+00:00] _123321_ (id=1516118025734979664)
+    the model reverting to the default model bug seems to be back,
+    this time it seems to be happening on notifications
+
+[2026-06-15T16:44:55.048000+00:00] avidfuturist (id=1516121337565806755)
+    Can you elaborate on how to reproduce the issue and on which version and I’ll investigate and fix
+    [reply to _123321_ msg=1516118025734979664]
+
+[2026-06-15T16:46:08.056000+00:00] _123321_ (id=1516121643783819265)
+    ```WebUI: v0.51.434 Agent: v2026.6.5-1017-g733472952```
+    started the session with the default model,
+    switched to another once it had loaded all the handoffs and plan
+    it throw some tasks to kanban, when the notification came back the model switched back to the one i started the session with the default model.
+
+[2026-06-15T16:46:38.313000+00:00] _123321_ (id=1516121770690609383)
+    i just tried to resume the exchange with the model i had switched too and it seems it didn't switch back to default this time around, i'm sorry this isn't much to go for for repro
+
+[2026-06-15T16:58:28.181000+00:00] avidfuturist (id=1516124748093063283)
+    Thanks! Will look into it soon
+
+[2026-06-15T17:06:01.249000+00:00] avidfuturist (id=1516126648397988060)
+    Does this look right? https://github.com/nesquena/hermes-webui/issues/4251
+    [reply to _123321_ msg=1516121643783819265]
+
+[2026-06-15T17:07:23.334000+00:00] _123321_ (id=1516126992687304828)
+    LGTM
+    [reply to avidfuturist msg=1516126648397988060]
+

@@ -267,3 +267,9 @@
     This was from an existing implementation i had using neo4j memory
     [reply to nicoloboschi msg=1516001373139894395]
 
+[2026-06-15T14:37:06.674000+00:00] nicoloboschi (id=1516089174074331146)
+    ok I'll look into it but probably the tagging is already "good enough" but will spend some time on it
+    
+    btw we released 0.8.2 with the curation feature on friday https://hindsight.vectorize.io/blog/2026/06/12/version-0-8-2
+    [embed] What's new in Hindsight 0.8.2 | Hindsight https://hindsight.vectorize.io/blog/2026/06/12/version-0-8-2
+

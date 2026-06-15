@@ -515,3 +515,25 @@
     Read the page and the warnings. If you use it in a normal way, you shouldn't have problems. Just don't make spam.
     [reply to buke5122 msg=1515925182718414898]
 
+[2026-06-15T16:20:48.274000+00:00] vayaperson (id=1516115269355831456)
+    We are aware that the semantic alerts and webhook functions are not working. We probably broke something while fixing how the sub-souls work. Don't worry, we are working on it and you will soon receive an update 🫶🏻
+
+[2026-06-15T20:01:05.068000+00:00] vayaperson (id=1516170704607772692)
+    v1.5.2-Beta4 is now available. This release focuses on fixes the last mentioned errors, particularly around JID resolution and webhooks.
+    
+    What we fixed (in theory 😅)
+    
+    Webhook URL detection — The old detection was single-tier and broke easily. We replaced it with a multi-tier fallback that checks tunnel headers and external IPs. There's also a new stability banner in the panel that warns you if the URL looks wrong before you even notice.
+    Semantic / fuzzy alerts — Alert rules now use fuzzy keyword matching, so plurals and accents no longer cause misses. If you had alerts that weren't triggering reliably, this should help.
+    JID suffix matching — Role assignment was silently failing for users whose numbers were stored without country prefix. Same issue was affecting away auto-replies and alert source matching. All three spots have been patched with a centralized JID normalizer.
+    How it was tested
+    
+    This version went through our dev environment and a sandbox simulating a fresh install from zero. We covered permissions, role escalation attempts, JID resolution edge cases, and the installation flow. Things look solid on our end.
+    
+    That said, real-world setups always surface things a sandbox doesn't.
+    
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+    
+    Thanks🫶🏼
+    [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+

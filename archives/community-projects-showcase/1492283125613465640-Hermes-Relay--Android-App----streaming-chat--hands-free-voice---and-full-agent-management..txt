@@ -26,3 +26,10 @@
 [2026-06-15T11:59:09.917000+00:00] heeervas (id=1516049425674535014)
     Will check it first before install, since Discord already covers a lot of my use cases, but I'll keep an eye 👍
 
+[2026-06-15T12:15:10.285000+00:00] codename_11 (id=1516053453749747742)
+    Appreciate it! Channels definitely get you most of what you need lol. That's part of my 'is this good enough' check - if I still reach for Discord/Telegram, something is missing lol.
+    
+    Really where (until they come out with Official Android/iOS app) I'd wanted to fill a gap was with the integrated terminal (tmux) to manage if needed - and the bridge idea (agent controls your phone). I've yet to come up with more than novelty uses for that but I'm sure there's some cool workflows/use-cases. 
+    
+    Realtime-Voice is what I really wanted from my Hermes Agent though - so this gave a platform for that. I like sparring with ChatGPT or Claude via their Live voice mode on ideas/projects - I wanted to do the same with Hermes 🙂 - this still requires the plugin but at the moment it handles a realtime agent loop for uniterupted conversation and hermes becomes a tool the realtime loop calls for background tasks (check memory, do work, etc). Looking forward to pushing that farther!
+

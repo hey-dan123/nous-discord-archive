@@ -1,0 +1,8 @@
+# Thread 'Enable telegram topics' in forum #plugins-skills-and-skins
+# thread_id=1516153734651056300 forum_id=1485392832154832906
+# Started 2026-06-15T20:57:29.759414+00:00
+
+[2026-06-15T18:53:39.115000+00:00] eucdee (id=1516153734651056300)
+    This is an integrated feature i just discovered, thought this may be the best place for such a #quicktip ... just say /topic to open the help and configure the bot to use it, great feature.
+    [attachment] Screenshot_20260615_203405_Telegram.jpg https://cdn.discordapp.com/attachments/1516153734651056300/1516153735158431844/Screenshot_20260615_203405_Telegram.jpg?ex=6a319bb3&is=6a304a33&hm=e709e50396f04903c215425bb1ea28e7f770ffec209916f247a8041455ae13ff&
+

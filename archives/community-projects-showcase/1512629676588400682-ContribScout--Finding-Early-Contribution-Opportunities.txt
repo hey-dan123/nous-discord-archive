@@ -212,3 +212,25 @@
     
     Discover → Filter → Save → Build Brief → PR Kit → Contribute → Proof Vault → Export
 
+[2026-06-15T19:42:42.084000+00:00] sworntech (id=1516166078357835916)
+    **ContribScout v1.0 Update**
+    
+    After v0.9, which added the PR Readiness Kit / Duplicate Guard, v1.0 focuses on the product experience and UI.
+    
+    What changed in v1.0:
+    
+    • redesigned the app into a Mission Control-style dashboard
+    • added a stronger landing / product intro section
+    • improved the overall dark premium visual direction
+    • added smoother page flow and cinematic-style sections
+    • cleaned up the header and dashboard structure
+    • improved spacing, panels, cards, and action areas
+    • made the workflow feel more connected from discovery to PR prep
+    • kept the existing core tools intact
+    
+    Core workflow is still:
+    
+    Discover → Filter → Save → Brief → PR Kit → Proof Vault
+    
+    This version is not the final visual direction yet. The landing and scroll experience will keep improving, but v1.0 is the first step toward making ContribScout feel more like a real product instead of just a utility dashboard.
+

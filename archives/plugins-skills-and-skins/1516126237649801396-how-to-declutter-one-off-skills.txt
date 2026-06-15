@@ -1,0 +1,10 @@
+# Thread 'how to declutter one-off skills?' in forum #plugins-skills-and-skins
+# thread_id=1516126237649801396 forum_id=1485392832154832906
+# Started 2026-06-15T20:57:30.775403+00:00
+
+[2026-06-15T17:04:23.319000+00:00] duckie3636 (id=1516126237649801396)
+    need  to  unclutter      ; accumulated lot of local skills from one-offs & want to clear most keeping just a few I'm actively using. What's the right way? tried moving the skill folders out of ~/.hermes/skills/ and it got messy. Is there a builtin command for it?
+
+[2026-06-15T17:37:08.043000+00:00] sahil_ss9 (id=1516134478299271178)
+    ask hermes to use the curator skill.
+

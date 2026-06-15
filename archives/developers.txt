@@ -32722,3 +32722,90 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
         - Use for: when complexity is spiraling: duplicated concepts, growing special cases, or "just one more case" logic.
     ```
 
+[2026-06-15T12:27:15.557000+00:00] nakoturk (id=1516056495761002647)
+    I ran ruff to safely clean up over 130 unused imports (F401) across the codebase. Intentionally left the try/except ImportError blocks untouched so lazy-loading isn't broken. Just removing dead code to keep things tidy: https://github.com/NousResearch/hermes-agent/pull/46640
+    [embed] chore: remove unused imports to clean up codebase by okannako · Pu... https://github.com/NousResearch/hermes-agent/pull/46640
+
+[2026-06-15T13:33:49.764000+00:00] shilird. (id=1516073248679530586)
+    https://github.com/NousResearch/hermes-agent/pull/28566      <@387972437901312000>  please check again
+    [embed] fix(file): use os.path.expanduser for tilde expansion in sandboxed ... https://github.com/NousResearch/hermes-agent/pull/28566
+
+[2026-06-15T13:55:54.527000+00:00] skylarpayne_33994 (id=1516078805138018334)
+    The desktop app no longer opens for me (even with completely fresh install). This seems to be related to how its packaged, and I think this should fix it: https://github.com/NousResearch/hermes-agent/pull/45942
+    [embed] [codex] Fix desktop ASAR icon startup crash by skylarbpayne · Pull... https://github.com/NousResearch/hermes-agent/pull/45942
+
+[2026-06-15T14:35:39.228000+00:00] kxee (id=1516088807299088479)
+    OpenViking <> Nous thread
+
+[2026-06-15T14:36:29.989000+00:00] nuuuuuuuuuu0480 (id=1516089020206153884)
+    https://github.com/NousResearch/hermes-agent/pull/46685     Changes:
+    
+    Added the HERMES_DISABLE_MODEL_METADATA environment variable to completely skip metadata fetching.
+    Changed the timeout configuration from timeout=10 to timeout=(5, 10):
+    5 seconds for connection timeout
+    10 seconds for read timeout.
+    [embed] fix(model_metadata): add HERMES_DISABLE_MODEL_METADATA and tighter ... https://github.com/NousResearch/hermes-agent/pull/46685
+
+[2026-06-15T14:39:50.691000+00:00] nuuuuuuuuuu0480 (id=1516089862011355230)
+    <@387972437901312000>
+
+[2026-06-15T15:46:12.519000+00:00] discostew6082 (id=1516106563008594182)
+    I hit this issue this morning and had Codex verify the PR. https://github.com/NousResearch/hermes-agent/pull/45559
+    [embed] fix(desktop): bump shared tsconfig to ES2023, alias @assistant-ui/t... https://github.com/NousResearch/hermes-agent/pull/45559
+
+[2026-06-15T16:13:05.622000+00:00] muni6762 (id=1516113328852832387)
+    Has any one configured Hermes agents  with Gemini endpoint URL and Kong gateway?
+
+[2026-06-15T17:28:44+00:00] kusuriya (id=1516132364189696192)
+    I made a PR (https://github.com/NousResearch/hermes-agent/pull/46773) and issue (https://github.com/NousResearch/hermes-agent/issues/46776) to fix a problem where in the new TUI if you color the banner hero's individual boxes and have multiple colors in the same line it just turns into line soup
+
+[2026-06-15T18:58:21.406000+00:00] aialliai (id=1516154918665191504)
+    I'd like to thank the Nous team member responsible for the /hermes-discord-helper, had my own skill to do this, but this one is way better 🔥
+
+[2026-06-15T19:29:45.025000+00:00] srojk34 (id=1516162819135901779)
+    I hope you have time to look into this. I think it's an important bug <@387972437901312000> 
+    
+    🔧 PR #46843 — fix(tools): resolve raw-task-id cwd overrides in code_execution_tool
+    
+    code_execution_tool._get_or_create_env() was the one call site that never got migrated to the resolve_task_overrides() helper added in #46552. Result: a CWD override registered under a raw session id (by the ACP/Desktop adapter) got silently dropped once it collapsed to "default" — so execute_code spun up its sandbox with the wrong cwd (terminal/file tools were already fine, only execute_code was affected).
+    
+    ✅ 2-line fix + regression tests (fail before the fix, pass after)
+    🔗 https://github.com/NousResearch/hermes-agent/pull/46843
+    [embed] fix(tools): resolve raw-task-id cwd overrides in code_execution_too... https://github.com/NousResearch/hermes-agent/pull/46843
+
+[2026-06-15T19:45:25.575000+00:00] questionkaushik (id=1516166764088529037)
+    Hello everyone. 
+    
+    I would love to have a Kanban Board in Hermes Desktop.
+    
+    Tracking tasks in sessions isn't the right for long horizon tasks. 
+    
+    I've tried to add Multica to my stack, and I am currently using it to track tasks and projects. 
+    
+    But I realized that it is adding unnecessary complexity, as well as using 3x more input tokens. 
+    
+    Adding a Project Management functionality  (Projects -- Kanban + List)  would make Hermes Desktop so much more useful for working with Hermes on projects, like I would with a coworker..
+     
+    Thoughts?
+
+[2026-06-15T19:54:28.732000+00:00] srojk34 (id=1516169042254233872)
+    PR #46848 — Fix gateway runtime detection on Fly.io Firecracker VMs
+    Gateway status reporting fell through to "manual process" on Fly-hosted s6-supervised gateways, because the check relied on is_container() (Docker/Podman/lxc only — false on Firecracker microVMs). Now gates on detect_service_manager() == "s6" instead, so Fly deployments correctly report s6 (container supervisor) with accurate service status. Added 3 new tests, all 47 in the file pass.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/46848
+    
+    PR #46854 — Add IPv4 fallback for IMAP connections (IPv6 hang fix)
+    #46084 added an IPv4-only fallback for SMTP when IPv6 is unreachable, but the two IMAP4_SSL connections (connect() and _fetch_new_messages()) had no equivalent — they could hang until socket timeout on IPv6-broken networks. Added _IPv4IMAP4_SSL + _connect_imap() mirroring the existing SMTP fix, applied at both call sites. 4 new tests added, full email suite (72 tests) passes.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/46854
+    [embed] fix(gateway): gate s6 runtime snapshot on detect_service_manager, n... https://github.com/NousResearch/hermes-agent/pull/46848
+    [embed] fix(gateway): add IPv4 fallback for IMAP connections on unreachable... https://github.com/NousResearch/hermes-agent/pull/46854
+    [reply to srojk34 msg=1516162819135901779]
+
+[2026-06-15T20:29:41.527000+00:00] .w1n5t0n (id=1516177903958884414)
+    FYI the https://hermes-agent.nousresearch.com/ page is broken on Firefox, as soon as I try to scroll it looks like this (and doesn't scroll)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1516177904533242056/image.png?ex=6a31b235&is=6a3060b5&hm=9f5e292c2ead7180902d90d6d7fcd88cf17c2561656584c70cf9066316d1251a&
+
+[2026-06-15T20:40:19.680000+00:00] aleksandr_1 (id=1516180580566565037)
+    <@387972437901312000> sorry for the tag, but I noticed you recently merged #46631 which handles PID/start_time collisions after reboot. I have a related open PR #44898 that fixes a different failure mode in the same area: _pid_exists was returning True for zombie processes, causing --replace to wait 15 seconds, fail to SIGKILL, and exit 1 in a permanent crash loop under systemd Restart=always. https://github.com/NousResearch/hermes-agent/pull/44898 
+    
+    Hope it's useful<:o7:1151261546111053924>
+

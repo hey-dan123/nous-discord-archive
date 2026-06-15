@@ -1,0 +1,12 @@
+# Thread 'Hermes Agent Workshop Materials' in forum #community-projects-showcase
+# thread_id=1516143597467209939 forum_id=1316137596535177246
+# Started 2026-06-15T20:53:31.218357+00:00
+
+[2026-06-15T18:13:22.222000+00:00] _name_name_ (id=1516143597467209939)
+    Materials to delivery your own workshop teaching semi technical users to setup their first Hermes agent. Slides starts with why a user might want to have an agent, walking through several of my personal examples from life and business. Workshop guides the user through installing their agents, getting a model setup with either free Open Router or another sub, then setting up a daily news briefing.
+    https://github.com/chrishart0/linuxfest-hermes-workshop
+    [embed] GitHub - chrishart0/linuxfest-hermes-workshop https://github.com/chrishart0/linuxfest-hermes-workshop
+
+[2026-06-15T18:14:32.650000+00:00] _name_name_ (id=1516143892863389816)
+    The guided workshop portion is generic and ready to use, but the slides are fairly specific to myself with minimal notes. If anyone wants to reuse just ping me and I can make some notes or help genericize.
+

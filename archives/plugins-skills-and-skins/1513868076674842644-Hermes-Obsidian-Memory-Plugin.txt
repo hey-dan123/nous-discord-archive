@@ -38,3 +38,6 @@
 [2026-06-14T02:28:49.523000+00:00] kyssta69 (id=1515543507073499136)
     Done merged <@184055497069035520> Ty got pointing out
 
+[2026-06-15T17:51:10.308000+00:00] eucdee (id=1516138011014992063)
+    Hi ive created a new plugin based on your implementation, please check it out: https://discord.com/channels/1053877538025386074/1516137490178904214
+

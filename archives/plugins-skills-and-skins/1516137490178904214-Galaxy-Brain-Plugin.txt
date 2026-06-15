@@ -1,0 +1,15 @@
+# Thread 'Galaxy Brain Plugin' in forum #plugins-skills-and-skins
+# thread_id=1516137490178904214 forum_id=1485392832154832906
+# Started 2026-06-15T20:57:30.284185+00:00
+
+[2026-06-15T17:49:06.131000+00:00] eucdee (id=1516137490178904214)
+    A 3D interactive knowledge graph visualization plugin for Hermes Agent, bringing your Obsidian vault to life as a navigable 3D constellation of notes and tags.
+    
+    https://github.com/ohrbit/hermes_plugins/tree/main/galaxy_brain
+    
+    Took some time but i told my almost vanilla 1€ vps to combine both githubs into one plugin for hermes 🥰
+    
+    Enjoy! I hope the original authors can implement a proper version from this.
+    [attachment] hero.jpg https://cdn.discordapp.com/attachments/1516137490178904214/1516137490409328800/hero.jpg?ex=6a318c92&is=6a303b12&hm=213dc712db7fc1914bb8a13ef64db2346f36912e93fa12e37ab3444a1130de32&
+    [embed] hermes_plugins/galaxy_brain at main · ohrbit/hermes_plugins https://github.com/ohrbit/hermes_plugins/tree/main/galaxy_brain
+

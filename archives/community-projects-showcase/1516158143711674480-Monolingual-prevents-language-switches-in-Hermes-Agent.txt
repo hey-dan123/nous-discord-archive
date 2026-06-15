@@ -1,0 +1,26 @@
+# Thread 'Monolingual prevents language switches in Hermes Agent' in forum #community-projects-showcase
+# thread_id=1516158143711674480 forum_id=1316137596535177246
+# Started 2026-06-15T20:53:30.820495+00:00
+
+[2026-06-15T19:11:10.317000+00:00] gwyntel (id=1516158143711674480)
+    TL;DR: Plugin that runs Lingua to auto detect a foreign language and translates when needed.
+    
+    I wrote this as a lightweight, no config way to ensure GLM never accidentally speaks mixed languages in user facing output. Try it out!
+    
+    Agent prompt:
+    ```# Install monolingual Hermes plugin please!
+    # Install the lingua detection library
+    pip install lingua-language-detector
+    
+    # Clone the plugin into Hermes plugins directory
+    git clone https://github.com/GwynTel/monolingual.git ~/.hermes/plugins/monolingual
+    
+    # Enable the plugin
+    hermes plugins enable monolingual
+    
+    # Restart your session or gateway (or /reset in an active session)```
+    [attachment] Screenshot_20260615-121207.png https://cdn.discordapp.com/attachments/1516158143711674480/1516158619735822548/Screenshot_20260615-121207.png?ex=6a31a03f&is=6a304ebf&hm=e2d883b9c4d2e571ed8584246b729013a8e54dc84b89cd5532a73f909f91db7f&
+
+[2026-06-15T19:14:18.031000+00:00] gwyntel (id=1516158931041517760)
+    Monolingual prevents language switches in Hermes Agent
+
