@@ -179,3 +179,21 @@
     https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/releases/tag/v1.4.1\
     [embed] Release v1.4.1 — Housekeeping · theheavenlyd3mon/Unreal-Engine-O... https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/releases/tag/v1.4.1/
 
+[2026-06-15T22:24:43.414000+00:00] jw_mushroom_man (id=1516206852571009135)
+    <@968599126101098547> it’s almost done with its first round of benchmarks
+    [attachment] 4A432931-4972-4C1C-B340-43EF1D3E618B.png https://cdn.discordapp.com/attachments/1514674784481579178/1516206852298244256/4A432931-4972-4C1C-B340-43EF1D3E618B.png?ex=6a31cd2b&is=6a307bab&hm=a6cac95ec724e43b2914ecbf1a511037212b6a20008ab81046978644ce74909b&
+
+[2026-06-15T22:25:09.137000+00:00] iam_rxpii (id=1516206960461091060)
+    that looks fire. hows it looking
+    [reply to jw_mushroom_man msg=1516206852571009135]
+
+[2026-06-15T22:37:13.010000+00:00] jw_mushroom_man (id=1516209996604637295)
+    State when I was walking out for dinner
+    [attachment] IMG_1334.jpg https://cdn.discordapp.com/attachments/1514674784481579178/1516209996591927518/IMG_1334.jpg?ex=6a31d019&is=6a307e99&hm=54acbab9cecd4a0caf5847c3023a5f65e86eeb9c955e7bc17933017084f04fcb&
+
+[2026-06-16T02:10:27.634000+00:00] jw_mushroom_man (id=1516263661147001026)
+    [attachment] debugging_at_2am_forge_stewart.svg https://cdn.discordapp.com/attachments/1514674784481579178/1516263660702666762/debugging_at_2am_forge_stewart.svg?ex=6a320213&is=6a30b093&hm=a759cad0a3973eec144b3d2c6ff537e552a51a46decd85f99800e6db6d604224&
+
+[2026-06-16T03:00:49.252000+00:00] jw_mushroom_man (id=1516276334731591802)
+    [attachment] users_4e76fe8a-3e84-4433-8f54-a847094e8e58_generated_afc436c5-ac67-4d3f-9cbe-afabb9b1eaad_generated_video.mov https://cdn.discordapp.com/attachments/1514674784481579178/1516276334286864485/users_4e76fe8a-3e84-4433-8f54-a847094e8e58_generated_afc436c5-ac67-4d3f-9cbe-afabb9b1eaad_generated_video.mov?ex=6a320de1&is=6a30bc61&hm=f00652ba5f4f93a8b3f87c54794a1c722bf2b8c8c32107a1dfd149bcfd36a575&
+

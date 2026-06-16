@@ -54,3 +54,6 @@
     [embed]  https://cdn.discordapp.com/attachments/1493799349849686016/1515777850324816224/image.png?ex=6a303da1&is=6a2eec21&hm=ea42a3f7c3d9ddf7827633e01cbb0a609ebeafb308ec1165b91e0552b87b88e1&
     [embed]  https://cdn.discordapp.com/attachments/1493799349849686016/1515777850622476378/image.png?ex=6a303da1&is=6a2eec21&hm=bfa1973d50f353d3509f9bd7126d8b45d676260fb7529b7944c9133de02314fa&
 
+[2026-06-16T00:17:28.716000+00:00] pooopird (id=1516235228304113786)
+    [attachment] You_are_invited_to_the_YOLO_AU.mp4 https://cdn.discordapp.com/attachments/1513525123926458582/1516235228077752542/You_are_invited_to_the_YOLO_AU.mp4?ex=6a31e798&is=6a309618&hm=dbee248fa6ee1f1dd1c0224aba920373dbfeed9e5c132991a6bd65601af152d5&
+

@@ -32809,3 +32809,71 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     Hope it's useful<:o7:1151261546111053924>
 
+[2026-06-15T21:02:04.742000+00:00] .daveevad (id=1516186054393331752)
+    I see you implemented my solution. Good job Nous Devs!!! Hopefully it wont brake the agent 😛
+
+[2026-06-15T21:04:04.341000+00:00] .daveevad (id=1516186556027764746)
+    Here is one more implementation you can work on i already implemented and working . That will improve- no template, empty file and no shell policy
+
+[2026-06-15T21:04:25.669000+00:00] .daveevad (id=1516186645483884665)
+    [attachment] 20260615_220415.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1516186645211123812/20260615_220415.jpg?ex=6a31ba59&is=6a3068d9&hm=47037dbe2ea9a2c15ce84ad248bb9383eaf97a4d25d4424d5bc0b834b1e47ee0&
+
+[2026-06-15T21:05:55.763000+00:00] .daveevad (id=1516187023365505125)
+    That is implemented to agent/ tool_executor.py before the tool call - self-heals when "bad"code reaches writing faze
+
+[2026-06-15T21:06:59.793000+00:00] .daveevad (id=1516187291926921367)
+    I was actually testing it in conversation_loop.py first but it dint work , same with agent_init.py
+
+[2026-06-15T21:07:58.643000+00:00] .daveevad (id=1516187538761584871)
+    This saves a lot of tolkens
+
+[2026-06-15T21:08:25.174000+00:00] .daveevad (id=1516187650040791112)
+    *tokens
+
+[2026-06-15T21:11:54.635000+00:00] .daveevad (id=1516188528583905562)
+    I hope that helps. Give me a shout if you need more details
+
+[2026-06-15T21:22:01.701000+00:00] sworntech (id=1516191074802991104)
+    **Small Hermes Docker docs PR**:
+    
+    **Problem**: Gateway/server deployments can run unattended, so warning-only tool-loop guardrails may not be enough if an agent gets stuck in repeated tool calls.
+    
+    **Fix**: Added a Docker/gateway operator note explaining that `tool_loop_guardrails.hard_stop_enabled` defaults to `false`, why that is reasonable for watched CLI/TUI sessions, and how operators can explicitly enable hard stops for unattended deployments.
+    
+    **Impact**: Docs-only change. No runtime behavior changed.
+    
+    References #46708
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/46873
+    [embed] docs(docker): document gateway tool-loop hard stops by Sworntech-de... https://github.com/NousResearch/hermes-agent/pull/46873
+
+[2026-06-15T21:43:02.967000+00:00] yap.bi (id=1516196364936282115)
+    https://github.com/NousResearch/hermes-agent/pull/40857 <@387972437901312000>
+    [embed] fix(hermes_time): add missing reset_cache() referenced in docstring... https://github.com/NousResearch/hermes-agent/pull/40857
+
+[2026-06-15T22:55:21.795000+00:00] yerts (id=1516214563299659857)
+    https://github.com/NousResearch/hermes-agent/pull/46912/
+    [embed] feat(agent): opt-in retry of primary on transient rate limits befor... https://github.com/NousResearch/hermes-agent/pull/46912/
+
+[2026-06-15T22:57:16.752000+00:00] yerts (id=1516215045464395956)
+    Behavioral refinement of the eager fallback path introduced for #11314 / #13636
+
+[2026-06-16T01:47:49.058000+00:00] dias4761 (id=1516257962866249788)
+    https://github.com/NousResearch/hermes-agent/pull/46937
+    
+    
+    waiting aprovall tests
+    [embed] feat(skills): implement double-check auto-correction for background... https://github.com/NousResearch/hermes-agent/pull/46937
+
+[2026-06-16T01:48:42.450000+00:00] nuuuuuuuuuu0480 (id=1516258186808655953)
+    https://github.com/NousResearch/hermes-agent/pull/46962
+           File: gateway/run.py, tests/gateway/test_run_progress_topics.py
+           Fix: _code_block_full thay vi _code_block_short trong non-verbose modes
+          
+    https://github.com/NousResearch/hermes-agent/pull/46963
+           File: gateway/session.py
+           Fix: Them freshness check cho resume_pending sessions de tranh zombie sessions
+    [embed] fix(gateway): show full terminal command in code blocks on non-verb... https://github.com/NousResearch/hermes-agent/pull/46962
+    [embed] fix(gateway): add freshness gate to resume_pending sessions by vant... https://github.com/NousResearch/hermes-agent/pull/46963
+

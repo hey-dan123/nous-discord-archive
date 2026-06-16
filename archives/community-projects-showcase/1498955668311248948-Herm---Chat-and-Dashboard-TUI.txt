@@ -1283,3 +1283,9 @@
     I pushed a potential fix for this in dev yesterday! Lmk if you still see it. I added some string sanitization for cases that could trigger that error
     [reply to tunacookie msg=1514554562516619384]
 
+[2026-06-16T03:04:43.122000+00:00] tunacookie (id=1516277315653468171)
+    <@209037396983939072> a polish on the background process would be nice, in hermes if you type /btw or /background it would appear like so , and on herm only shows up for a too short of a time to actually view it, not exactly sure where to see the view other than the top right there
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1516277313841532938/image.png?ex=6a320eca&is=6a30bd4a&hm=7367e9dd1effbff6d32b49960b98e65fdacdb8a056af2fd7f0f5c87b4edde94f&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1516277314759954472/image.png?ex=6a320eca&is=6a30bd4a&hm=0aad748fcf7e4d0a0edbcfd2529a1a37cb67b106381c0871dc9c331476cca870&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1516277315242430485/image.png?ex=6a320ecb&is=6a30bd4b&hm=5a93e4ea4b19b39f12d9c57e1b473d5d7c0dd9bdcfe8691759e731c248555566&
+
