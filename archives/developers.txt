@@ -33212,3 +33212,215 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     I'll provide more detail if you're interested. I don't do Discord other than to disseminate.
 
+[2026-06-16T16:50:12.970000+00:00] diamondtrippled (id=1516485058892923053)
+    Yes plz
+
+[2026-06-16T16:57:39.693000+00:00] dskwe. (id=1516486932584988854)
+    Ran into an annoying bug where Hermes rejected my `glm-5.2` model because it wasn't in Z.AI's live `/models` listing — even though it's right there in our own `_PROVIDER_MODELS` catalog 😅
+    
+    Opened a PR to fix this CLI validator edge case: [#47209](https://github.com/NousResearch/hermes-agent/pull/47209)
+    
+    The validator never consulted the catalog when the API was reachable — it now checks `_PROVIDER_MODELS` before rejecting. Models in the catalog get accepted with a warning; unknown models still get rejected, so the fake-model guard stays intact.
+    
+    Best of both worlds: you can use models the catalog knows about but the API hasn't listed yet, while `claude-nonexistent`-style typos are still blocked. 
+    
+    All tests are green. Would love some eyes or a review on this! 🙌
+    [embed] fix(models): accept unlisted models with warning per comment intent... https://github.com/NousResearch/hermes-agent/pull/47209
+
+[2026-06-16T17:38:57.795000+00:00] reverendissimo00 (id=1516497326498123928)
+    hey guys, first time here so maybe im posting in the wrong place, so PLEASE tell me if am doin something wrong, i made a little toy with ESP32-S3-BOX-3 that interface with hermes natively and gives a "alexa" like experience no wakeword needed. all open and clean, might interest someone ?  am i posting in the right place ?
+
+[2026-06-16T17:44:42.582000+00:00] dandrade.jose (id=1516498772639617185)
+    Hi everyone.
+    
+    Can someone explain what to do to develop Hermes from inside Hermes? Do you feed the system with docs and the repo?
+    
+    I have a deployment that build containers. I want Hermes to monitor 24/7. In case of error, fix and rebuild.
+
+[2026-06-16T17:45:04.451000+00:00] singularity9001 (id=1516498864364851282)
+    that's pretty cool, sounds like embedded voice agent? how does it handle async and sync interactions?
+    [reply to reverendissimo00 msg=1516497326498123928]
+
+[2026-06-16T17:45:35.092000+00:00] chipchu (id=1516498992882782309)
+    how come no wake word? or whats the replacement? or always listening
+    [reply to reverendissimo00 msg=1516497326498123928]
+
+[2026-06-16T17:45:37.627000+00:00] reverendissimo00 (id=1516499003515207730)
+    the bridge server has rest api
+
+[2026-06-16T17:45:46.245000+00:00] reverendissimo00 (id=1516499039661850928)
+    u can send voice out just calling the api
+
+[2026-06-16T17:45:59.882000+00:00] reverendissimo00 (id=1516499096859578638)
+    otherwise it has his own hermes session
+
+[2026-06-16T17:48:04.167000+00:00] xdarkchain (id=1516499618148388874)
+    <@387972437901312000> Did we have any changes regarding the telegram rich text? It seems we had a regression after the latest version and it’s not working anymore.
+
+[2026-06-16T17:50:44.500000+00:00] reverendissimo00 (id=1516500290633994432)
+    https://github.com/Reverendissimo/ESP32-Voice
+    
+      ESP32-S3-BOX-3 voice terminal: firmware plus a Python bridge backend.
+    
+      • firmware/ — ESP-IDF app for the BOX-3 + sensor dock. Captures speech (VAD), streams audio to a
+        server, plays TTS back over HTTP, drives the LVGL display, reads sensors/radar, handles IR,
+        config over NVS, OTA updates, and a USB serial CLI.
+      • tools/hermes_voice_bridge/ — Backend that ties it together: ASR, Hermes agent (/v1/responses),
+        Chatterbox TTS, ESP playback streaming, multi-device admin UI, and a versioned firmware catalog
+         for OTA.
+      • tools/ — Helper scripts (flash, smoke tests, WAV playback).
+      • Docs — Architecture, API contract, and project layout markdown files at the repo root.
+    
+      The device is the hands/ears/mouth; the bridge is the brain.
+    [embed] GitHub - Reverendissimo/ESP32-Voice: ESP-IDF firmware for ESP32-S3-... https://github.com/Reverendissimo/ESP32-Voice
+
+[2026-06-16T17:50:53.524000+00:00] reverendissimo00 (id=1516500328483262736)
+    if anyone want to try... let me know
+
+[2026-06-16T17:51:03.559000+00:00] reverendissimo00 (id=1516500370572967976)
+    it need an ESP32-S3-BOX-3
+
+[2026-06-16T17:52:58.975000+00:00] reverendissimo00 (id=1516500854662762598)
+    [attachment] WhatsApp_Video_2026-06-16_at_19.35.00.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1516500854625009694/WhatsApp_Video_2026-06-16_at_19.35.00.mp4?ex=6a32defa&is=6a318d7a&hm=f75033fcd31b23cf7762ffc418eae85c826a4df32b020db9390cd0b04f23ee38&
+
+[2026-06-16T17:54:00.176000+00:00] reverendissimo00 (id=1516501111358361743)
+    STT and TTS can be faster, it's running on a potato (p102 ex mining)
+
+[2026-06-16T18:41:19.808000+00:00] teknium (id=1516513021638480073)
+    Its now default off, toggled on in config
+    [reply to xdarkchain msg=1516499618148388874]
+
+[2026-06-16T18:42:20.760000+00:00] xdarkchain (id=1516513277289562334)
+    Why?
+    [reply to teknium msg=1516513021638480073]
+
+[2026-06-16T18:42:31.286000+00:00] teknium (id=1516513321438806169)
+    Because like half of all clients do not support it at all
+    [reply to xdarkchain msg=1516513277289562334]
+
+[2026-06-16T18:42:51.892000+00:00] xdarkchain (id=1516513407866769408)
+    On latest version?
+    [reply to teknium msg=1516513321438806169]
+
+[2026-06-16T18:43:32.200000+00:00] teknium (id=1516513576930644070)
+    yes
+
+[2026-06-16T18:43:50.787000+00:00] xdarkchain (id=1516513654890168523)
+    Hmm
+
+[2026-06-16T18:44:31.389000+00:00] reverendissimo00 (id=1516513825187434629)
+    yeah not even telegram web
+
+[2026-06-16T18:44:48.430000+00:00] reverendissimo00 (id=1516513896662569132)
+    i had to remove it immediately or my webteelegram was unusable
+
+[2026-06-16T18:45:35.211000+00:00] xdarkchain (id=1516514092876038175)
+    That's the only two known sources, web and smart watches.
+
+[2026-06-16T18:46:13.500000+00:00] xdarkchain (id=1516514253471879239)
+    I tested on Mac, Linux, iOS, Windows and Android and they all worked flawlessly.
+
+[2026-06-16T18:47:56.086000+00:00] xdarkchain (id=1516514683748745316)
+    I think it's a bit too aggressive to push it completely back on all devices just because of those 2 sources because even promot generator is changed too I'm sure. 
+    
+    Instead, it should be OS aware and disable it itself on those 2.
+
+[2026-06-16T18:48:44.199000+00:00] xdarkchain (id=1516514885549297806)
+    The strange thing is that why the fallback isn't kicking in, I honestly suspect they don't even support V2 MD.
+
+[2026-06-16T18:49:05.631000+00:00] xdarkchain (id=1516514975441752226)
+    <@387972437901312000> The default is now MD V2?
+
+[2026-06-16T18:50:59.031000+00:00] reverendissimo00 (id=1516515451075821638)
+    it's always listening, u can disable with a button. im thinking something like a voice command to enable and disable the listening directly on esp but ... working on it
+    [reply to chipchu msg=1516498992882782309]
+
+[2026-06-16T18:51:27.484000+00:00] teknium (id=1516515570416222331)
+    It was happening even on <@119192111202566149>'s iphone
+    [reply to xdarkchain msg=1516514683748745316]
+
+[2026-06-16T18:51:31.757000+00:00] teknium (id=1516515588338618479)
+    so no, I think it is not isolated
+
+[2026-06-16T18:52:45.893000+00:00] xdarkchain (id=1516515899287408803)
+    Are you sure she's on the latest version of the app? I literally used it 17 seconds ago and it was working. 
+    
+    I need to be able to replicate it but this isn't helping.
+    [reply to teknium msg=1516515570416222331]
+
+[2026-06-16T18:53:13.019000+00:00] teknium (id=1516516013062098976)
+    I cant replicate it it works fine on my phone how can I help you if I cant replicate it, the clearest safest thing is to make the default not use it
+    [reply to xdarkchain msg=1516515899287408803]
+
+[2026-06-16T18:53:35.780000+00:00] teknium (id=1516516108528783520)
+    There was at least 40 different sources of people saying it was broken across a variety of devices yesterday and the day before
+
+[2026-06-16T18:53:45.169000+00:00] teknium (id=1516516147909103688)
+    It was clearly not ready for mass rollout
+
+[2026-06-16T18:54:12.796000+00:00] xdarkchain (id=1516516263785005287)
+    But again, were they using the latest version of the Telegram? That's the only question I have.
+
+[2026-06-16T18:54:15.404000+00:00] teknium (id=1516516274723885168)
+    You can await <@119192111202566149> to explain her specific fail case
+
+[2026-06-16T18:54:17.211000+00:00] teknium (id=1516516282302992425)
+    I dont know
+
+[2026-06-16T18:54:40.074000+00:00] teknium (id=1516516378197233715)
+    Worked fine for me on windows desktop and my iphone.
+
+[2026-06-16T18:54:43.646000+00:00] xdarkchain (id=1516516393179283546)
+    Let me know please. 
+    
+    Ping me so I don't miss.
+    [reply to teknium msg=1516516274723885168]
+
+[2026-06-16T18:54:56.389000+00:00] xdarkchain (id=1516516446627434497)
+    That's the strange part.
+    [reply to teknium msg=1516516378197233715]
+
+[2026-06-16T18:55:19.930000+00:00] xdarkchain (id=1516516545365545151)
+    I suspect it's just people not updating their TG.
+
+[2026-06-16T19:02:00.405000+00:00] srojk34 (id=1516518225079304383)
+    PR #47412 — fix(compressor): strip _multimodal tool-result images after compress()
+    
+    browser_vision and computer_use return screenshots as _multimodal envelopes (base64, can be several MB each). The compressor was only stripping user-attached images, so these tool-result screenshots survived every compression pass and kept inflating the request payload — causing HTTP 413 errors even after 101 → 13 message compression, because providers limit byte size, not token count.
+    
+    Fix: added _strip_all_multimodal_tool_results() called inside compress() after the message list is assembled. Replaces every _multimodal envelope with its text_summary. Safe to strip all of them (including the most recent) because compression only runs between turns — by the time it triggers, the model has already seen and responded to every screenshot.
+    
+    6 new tests, all 102 pass. Fixes #47339.
+    
+    https://github.com/NousResearch/hermes-agent/pull/47412
+    [embed] fix(compressor): strip _multimodal tool-result images after compres... https://github.com/NousResearch/hermes-agent/pull/47412
+
+[2026-06-16T20:00:56.545000+00:00] innadedova (id=1516533056725323787)
+    Hi! Contributing for the first time, so would appreciate the feedback! 🤗 
+    I connected Gemini as a provider and tried using the Gemma free models for auxiliary tasks, and ran into a bug on the native Gemini path. 
+    
+    While digging into it, I found this sits in the same general Gemma-on-Gemini area as related issue #27121, but the failure here turned out to be different: when Hermes didn’t explicitly set max_tokens, it was still synthesizing generationConfig.maxOutputTokens, and Gemma rejects that shape unless the cap was actually requested.
+    
+    Gemma being hidden from the normal Gemini model picker seems intentional, which makes sense given the less steady runtime on Google’s side. But if you run them non-concurrently they’re still pretty attractive for auxiliary work because the limits are generous, and they’re useful for things like vision too.
+    So this PR fixes that path by omitting the synthetic maxOutputTokens only for native Gemini Gemma requests when no explicit cap was asked for, while still preserving explicit caps and leaving the generic OpenAI-compatible / Anthropic-compatible routing alone. I also included a small monitor fix for same-order outputs like [{ "score": 10 }] when the model omits index, because that showed up in the same Gemma flow while validating auxiliary tasks.
+    
+    https://github.com/NousResearch/hermes-agent/pull/47426
+    [embed] fix(gemini): omit synthetic maxOutputTokens for Gemma auxiliary cal... https://github.com/NousResearch/hermes-agent/pull/47426
+
+[2026-06-16T20:25:36.214000+00:00] aialliai (id=1516539262907191347)
+    <@417886593937047552> Can confirm that I had this problem on an outdated version of TG on my mac(barely use TG on mac)...updated and voila. So maybe in a few weeks it could be the default 🙂
+    [reply to xdarkchain msg=1516516545365545151]
+
+[2026-06-16T20:44:02.478000+00:00] kntlbdak (id=1516543902914707507)
+    Hey, flagging a persistent issue I hit with profile switching on Win 10 Desktop 
+    
+    Switching the profile dropdown in the GUI to any non-default profile mostly just shows "Gateway Disconnected", kills input, or crashes the backend. desktop.log shows exit code 3221225477 (0xC0000005) pretty often.
+    
+    I dug through the logs and cleaned up my side,  killed duplicate Python processes from leftover automation scripts + old Scheduled Tasks, made sure dependencies like python-telegram-bot are installed. The startup issues got better but the GUI profile switch still randomly crashes even with everything clean.
+    
+    Feels like a race condition in the Electron launcher when it spawns non-default profile backends, since the access violation happens at process init. Not user config.
+    
+    Workaround that works 100%: keep GUI on default, and for other profiles just do hermes profile use <name> && hermes from terminal. Loads the right model every time, no crashes.
+    
+    Anyone else hitting the 3221225477 on profile switch? Or is there a fix in nightly builds I haven't caught yet?
+

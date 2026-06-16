@@ -4014,3 +4014,67 @@
     
     Now WebUI works for Windows/Linux/macOS as both a web app and a native desktop app! And with iOS support!
 
+[2026-06-16T18:22:58.275000+00:00] lemz42 (id=1516508401474081018)
+    didn't realise there was a windows app out so just downloaded and installed to check it out
+    
+    unfortunately if I have multiple tabs open with different profiles loaded, the sessions in the sidebar seem to just stick to whatever was the last profile that loaded. I checked the github for known issues and didnt see this one so wanted to report and let you know in case you havent seen it yet.
+    [reply to avidfuturist msg=1516201622051622975]
+
+[2026-06-16T18:24:38.905000+00:00] lemz42 (id=1516508823546757162)
+    I've been a multi browser user to use the different profiles and love the experience, it works great. desktop app would definitely be awesome so hope this is something that's fairly easy to fix!
+
+[2026-06-16T18:30:33.313000+00:00] avidfuturist (id=1516510310041784350)
+    Thank you for testing - will take a look at this soon!
+    [reply to lemz42 msg=1516508401474081018]
+
+[2026-06-16T18:39:51.126000+00:00] avidfuturist (id=1516512649679212625)
+    Captured here will fix this today https://github.com/hermes-webui/hermes-desktop-rust/issues/3
+    [reply to lemz42 msg=1516508401474081018]
+
+[2026-06-16T18:55:31.700000+00:00] lemz42 (id=1516516594732498954)
+    awesome ty! will let you know if I see anything else but a quick look around felt pretty similar to browser
+    [reply to avidfuturist msg=1516510310041784350]
+
+[2026-06-16T18:56:51.130000+00:00] avidfuturist (id=1516516927886069770)
+    Great to hear, that was the hope! Similar to browser with tab and new window support and a lightweight native desktop shell
+    [reply to lemz42 msg=1516516594732498954]
+
+[2026-06-16T18:56:52.429000+00:00] lemz42 (id=1516516933334208664)
+    also maybe obvious to some but I was trying to configure ssh and hitting errors but I have tailscale running on my pc so realised I could just use the standard direct "local" even though I run hermes on vps but tailscale is great
+
+[2026-06-16T18:57:16.725000+00:00] lemz42 (id=1516517035239018705)
+    maybe a worthwhile note for the less tech savvy in the readme
+
+[2026-06-16T18:57:22.610000+00:00] avidfuturist (id=1516517059922497587)
+    Yes intended to use Tailscale if you have it unless you want to use a direct SSH tunnel. Good suggestion!
+
+[2026-06-16T18:58:51.900000+00:00] lemz42 (id=1516517434432028673)
+    appreciate all the work and updates. honestly such a game changer for my workflow rather than using telegram, discord or cli. it really gives similar vibes/workflow to using claude.ai with the artifact panel, which is honestly so useful
+
+[2026-06-16T18:59:29.273000+00:00] avidfuturist (id=1516517591185625238)
+    So glad to hear it, that’s what we were going for and now you can use the desktop apps and our native iOS app too, all integrated in the same environment.
+    
+    WebUI iOS app: https://apps.apple.com/us/app/hermex/id6767006319
+    [reply to lemz42 msg=1516517434432028673]
+
+[2026-06-16T19:00:07.820000+00:00] lemz42 (id=1516517752863461427)
+    as much as it was awesome to see the official hermes desktop app drop, it kinda felt like not a big deal to me because of having webui lol
+
+[2026-06-16T19:00:55.698000+00:00] lemz42 (id=1516517953678610433)
+    I know I had some other friends who I told about this webui and they were using it already and felt similar so hats off to you and everyone who's been working on it
+
+[2026-06-16T19:01:57.124000+00:00] avidfuturist (id=1516518211317797036)
+    Yeah I’m glad people have so many great options for using Hermes, with the official desktop app as well as Hermes one desktop app as well. And everyone can use one or more of the interfaces they prefer best
+    [reply to lemz42 msg=1516517752863461427]
+
+[2026-06-16T19:02:46.106000+00:00] avidfuturist (id=1516518416763326607)
+    Love to hear it, thanks for sharing! It’s been awesome having so many incredible and dedicated contributors making this project better. It’s why I love open source
+    [reply to lemz42 msg=1516517953678610433]
+
+[2026-06-16T20:03:15.897000+00:00] avidfuturist (id=1516533641210101911)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now WebUI works for Windows/Linux/macOS as both a web app and a native desktop app! And with iOS support!
+    
+    (Could use feedback and testing of everything from WebUI, desktop apps, and iOS apps, please report any feedback here!)
+

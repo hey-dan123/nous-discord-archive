@@ -1,0 +1,12 @@
+# Thread 'Otterbot: Tech Community Discord Manager running locally' in forum #community-projects-showcase
+# thread_id=1516493182366650409 forum_id=1316137596535177246
+# Started 2026-06-16T20:48:10.586051+00:00
+
+[2026-06-16T17:22:29.757000+00:00] mattbcool (id=1516493182366650409)
+    Local ollama hermes bot to connect people, localize info and do community manager tasks
+    
+    https://mattcool.tech/posts/monterey-bay-tech-otterbot-local-ai-agent-for-the-community
+    
+    Updated with a mandarin version on my blog as well that includes a notebookLM pod.
+    [embed] Monterey Bay Tech OtterBot: Local AI Agent for the Community https://mattcool.tech/posts/monterey-bay-tech-otterbot-local-ai-agent-for-the-community
+

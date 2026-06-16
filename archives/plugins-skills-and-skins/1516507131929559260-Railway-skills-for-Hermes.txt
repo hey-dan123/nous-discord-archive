@@ -1,0 +1,8 @@
+# Thread 'Railway skills for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1516507131929559260 forum_id=1485392832154832906
+# Started 2026-06-16T20:52:11.138862+00:00
+
+[2026-06-16T18:17:55.592000+00:00] gumbyender (id=1516507131929559260)
+    https://github.com/GumbyEnder/hermes-railway-skills
+    [embed] GitHub - GumbyEnder/hermes-railway-skills: Hermes specific skills f... https://github.com/GumbyEnder/hermes-railway-skills
+

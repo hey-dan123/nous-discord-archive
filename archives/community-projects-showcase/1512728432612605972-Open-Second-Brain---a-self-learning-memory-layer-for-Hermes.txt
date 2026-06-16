@@ -22,3 +22,7 @@
 [2026-06-11T20:59:54.937000+00:00] eucdee (id=1514735958489038918)
     So i gave my fresh install on a $1 vps the choice of a reddit obsidian layout, opensecondbrain, honcho and openviking and it chose opensecondbrain as its preferred memory.. nemotron3 ultra free said the quality is outstanding and 80% of what honcho provides. Just local and free. Only thing missing is the neuromancer inference.
 
+[2026-06-16T17:07:32.957000+00:00] techmeat (id=1516489420914561104)
+    https://x.com/techmeat/status/2066930117079634088
+    [embed]  https://twitter.com/techmeat/status/2066930117079634088
+

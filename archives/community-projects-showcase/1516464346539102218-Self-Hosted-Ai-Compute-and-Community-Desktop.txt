@@ -1,0 +1,83 @@
+# Thread 'Self-Hosted Ai Compute and Community Desktop' in forum #community-projects-showcase
+# thread_id=1516464346539102218 forum_id=1316137596535177246
+# Started 2026-06-16T20:48:11.765358+00:00
+
+[2026-06-16T17:12:25.181000+00:00] pranrichh (id=1516490646590853250)
+    Desktop is currently down
+
+[2026-06-16T20:16:08.686000+00:00] pranrichh (id=1516536882522230794)
+    Qwen server down, vibe thinker 3B instead:
+    ### Python SDK
+    ```python
+    from openai import OpenAI
+    
+    client = OpenAI(
+        base_url="https://rap-php-hills-textile.trycloudflare.com/v1",
+        api_key="none"
+    )
+    
+    resp = client.chat.completions.create(
+        model="vibe",
+        messages=[{"role": "user", "content": "Solve: what is 15! (factorial)?"}],
+        max_tokens=2000
+    )
+    print(resp.choices[0].message.content)
+    ```
+    
+    ### cURL
+    ```bash
+    curl https://rap-php-hills-textile.trycloudflare.com/v1/chat/completions \
+      -H "Content-Type: application/json" \
+      -d '{
+        "model": "vibe",
+        "messages": [{"role": "user", "content": "What is 2+2?"}],
+        "max_tokens": 500
+      }'
+    ```
+    
+    ### Streaming
+    ```python
+    stream = client.chat.completions.create(
+        model="vibe",
+        messages=[{"role": "user", "content": "Explain quantum computing"}],
+        max_tokens=2000,
+        stream=True
+    )
+    for chunk in stream:
+        if chunk.choices[0].delta.content:
+            print(chunk.choices[0].delta.content, end="")
+    ```
+    
+    ### Key Parameters
+    | Parameter | Value | Notes |
+    |-----------|-------|-------|
+    | `model` | `"vibe"` | Any string works, it ignores it |
+    | `max_tokens` | 2000+ | Model thinks first, needs room |
+    | `temperature` | 1.0 | Recommended for reasoning |
+    | `top_p` | 0.95 | Recommended |
+    | `stream` | true/false | SSE streaming supported |
+    
+    ### Disable Reasoning (direct answers)
+    ```json
+    {
+      "model": "vibe",
+      "messages": [
+        {"role": "system", "content": "/no_think"},
+        {"role": "user", "content": "What is 2+2?"}
+      ],
+      "max_tokens": 100
+    }
+    ```
+    
+    ### Endpoints (1/2)
+    | Endpoint | Method | Purpose |
+    |----------|--------|---------|
+    | `/v1/chat/completions` | POST | Chat (OpenAI-compatible) |
+    | `/v1/completions` | POST | Raw completion |
+    | `/v1/models` | GET | Model listing |
+    | `/health` | GET | Health check |
+    | `/metrics` | GET | Prometheus metrics |
+
+[2026-06-16T20:17:39.565000+00:00] pranrichh (id=1516537263696252998)
+    Self-Hosted Ai Compute and Community Desktop
+

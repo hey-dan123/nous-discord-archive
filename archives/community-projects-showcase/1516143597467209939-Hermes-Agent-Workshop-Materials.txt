@@ -28,3 +28,12 @@
     1. Is there an audience you’re targeting?
     2. What level of experience with LLMs are you targeting for this content?
 
+[2026-06-16T16:57:39.659000+00:00] _name_name_ (id=1516486932442513459)
+    I am targeting semi-technical audience. The sort of folks could be asked to open a terminal and run the intaller. Not the sort of people who needs to understand software or prompting.
+
+[2026-06-16T16:58:17.207000+00:00] _name_name_ (id=1516487089930240143)
+    For my initial quick starter, the prompts are all canned. So the user just pasts a prompt, then the hermes agent walks the user through doing their setup 1 step at a time.
+
+[2026-06-16T16:58:26.046000+00:00] _name_name_ (id=1516487127003828296)
+    That's the level I want to aim at.
+

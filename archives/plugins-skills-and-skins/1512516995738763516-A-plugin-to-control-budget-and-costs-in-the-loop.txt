@@ -66,3 +66,52 @@
     Full changelog: https://github.com/nujovich/hermes-telemetry/blob/main/CHANGELOG.md
     [embed] hermes-telemetry/CHANGELOG.md at main · nujovich/hermes-telemetry https://github.com/nujovich/hermes-telemetry/blob/main/CHANGELOG.md
 
+[2026-06-16T18:09:53.147000+00:00] nadiamermedev (id=1516505108408700989)
+    🚀 **hermes-telemetry v0.6.0 — now inside the Hermes dashboard**
+    
+    If you already run the plugin, a `git pull` gives you a first-class surface inside the dashboard — no extra port, no second app.
+    
+    **What you get**
+    
+    📊 **`/telemetry` tab** with six sub-views: Summary · Runs · Requests · Providers · Cron · Budgets
+    
+    
+    🪟 **Four slot widgets** injected into existing dashboard pages:
+    • `header-right` — 24h spend + budget semáforo (red on hard breach)
+    • `sessions:top` — last run with real activity
+    • `cron:top` — 7-day cron cost + failure badge
+    • `analytics:bottom` — daily cost chart
+    
+    🎨 **Theme-aware** — inherits whatever skin you have active, no extra config
+    🔒 **Read-only** — `PRAGMA query_only=ON`; the plugin never writes to `telemetry.db`
+    🤝 **Standalone dashboard untouched** — `serve.py` on port 8765 still works for headless / cron-only deployments
+    
+    **Update**
+    
+    ```bash
+    cd ~/.hermes/plugins/hermes-telemetry && git pull
+    hermes gateway restart
+    hermes dashboard --stop && hermes dashboard
+    ```
+    
+    ⚠️ The dashboard restart is **required** — Hermes mounts plugin routers once at startup. Without it the tab renders but every endpoint 404s.
+    
+    Verify it worked:
+    
+    ```bash
+    tail ~/.hermes/logs/gui.log | grep hermes-telemetry
+    # → Mounted plugin API routes: /api/plugins/hermes-telemetry/
+    ```
+    🔗 Release: https://github.com/nujovich/hermes-telemetry/releases/tag/v0.6.0
+    
+    Bugs / feature requests → drop them here 🙏
+    [embed] Release v0.6.0 · nujovich/hermes-telemetry https://github.com/nujovich/hermes-telemetry/releases/tag/v0.6.0
+
+[2026-06-16T18:11:17.818000+00:00] nadiamermedev (id=1516505463544348824)
+    [attachment] 01-summary.png https://cdn.discordapp.com/attachments/1512516995738763516/1516505461392674876/01-summary.png?ex=6a32e345&is=6a3191c5&hm=044c3679706d487567247f9ab89d83aafe040d15235f66c74a905e2ad9721731&
+    [attachment] 02-runs.png https://cdn.discordapp.com/attachments/1512516995738763516/1516505461808042175/02-runs.png?ex=6a32e345&is=6a3191c5&hm=305662a46d1e397dbfb24106f424c86c735b89d7c87611d19f3dc61cbedbae5f&
+    [attachment] 03-requests.png https://cdn.discordapp.com/attachments/1512516995738763516/1516505462256697445/03-requests.png?ex=6a32e345&is=6a3191c5&hm=b8e433e825e545920fa1af21d57e33e74d35ec40ff651bb330cc16185194e480&
+    [attachment] 04-providers.png https://cdn.discordapp.com/attachments/1512516995738763516/1516505462592372927/04-providers.png?ex=6a32e345&is=6a3191c5&hm=4773ba6d8cedc3ef4d12eeaaa20bdfdaf5b37066ad1c2d511f299cf371f6e4e8&
+    [attachment] 05-cron-tab.png https://cdn.discordapp.com/attachments/1512516995738763516/1516505463053615204/05-cron-tab.png?ex=6a32e345&is=6a3191c5&hm=919ebce4266bee82dcc56eaf43c318a4aeb8ac611113c41b0b4aef62238a6027&
+    [attachment] 06-budgets-tab.png https://cdn.discordapp.com/attachments/1512516995738763516/1516505463422849205/06-budgets-tab.png?ex=6a32e345&is=6a3191c5&hm=5abbae38eeb19bcfec0efb2264fb400589d51027536d50cdcd7ec7e030da2da1&
+
