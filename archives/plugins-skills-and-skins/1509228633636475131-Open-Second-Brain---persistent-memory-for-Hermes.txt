@@ -146,3 +146,33 @@
     Yes - it's Obsidian-native and the agent only writes to the `Brain/` folder, so your existing notes are never touched. Use the vault as a read-only memory source via `notes.read_paths` + inline `@osb` markers (`o2b brain scan-inline` captures just the lines you tag) or `o2b brain source add` for search/recall. Auto-capture is optional, so you control exactly what gets logged.
     [reply to autoferrit msg=1514831476397572117]
 
+[2026-06-16T08:42:55.971000+00:00] autoferrit (id=1516362430031200427)
+    is is viable to update the BRAIN/_BRAIN file to tell it to update/retrieve memories on certain topics from other directories outside of the BRAIN directory? For example I am rebuilding my home lab and have various notes for servers or individual services already in place. would it work to point information to those given folders so when I update those notes manually they propogate into the agent knowledge and vice/versa?
+    [reply to techmeat msg=1514985760812437737]
+
+[2026-06-16T08:59:44.814000+00:00] techmeat (id=1516366661425430558)
+    Yes, but read-only. Add your folders to `notes.read_paths` in the config - the agent reads/links them, so your edits propagate in. It never writes back though: agent notes stay in `Brain/` and link to yours. Easiest: just ask Claude/Hermes to wire it up.
+    [reply to autoferrit msg=1516362430031200427]
+
+[2026-06-16T09:47:49.657000+00:00] heeervas (id=1516378761333969057)
+    <@357137210941898752> Do tyou think you could create a diagram to understand of it works internally? 
+    Would be interesting for people like me who already have created their own sync sustem with obsidian
+
+[2026-06-16T09:48:10.699000+00:00] heeervas (id=1516378849590378646)
+    That way we can see the benefits/imapct
+
+[2026-06-16T09:49:26.266000+00:00] heeervas (id=1516379166541484105)
+    Just saw https://github.com/itechmeat/open-second-brain/blob/main/docs/how-it-works.md, nvm
+
+[2026-06-16T09:57:17.415000+00:00] techmeat (id=1516381142683619451)
+    Yes, of course. The plugin repo has many explanatory diagrams, but for users I plan to make a video overview soon, where I'll show how both of my plugins work - Open Second Brain and Hermes Workflows - https://github.com/itechmeat/hermes-workflows
+    [embed] GitHub - itechmeat/hermes-workflows https://github.com/itechmeat/hermes-workflows
+    [reply to heeervas msg=1516378761333969057]
+
+[2026-06-16T09:57:51.366000+00:00] techmeat (id=1516381285084303440)
+    Both are actively developing - Open Second Brain is already quite stable, while Hermes Workflows is still in progress. I'm planning to present it here in Discord in the next few days.
+
+[2026-06-16T09:58:29.032000+00:00] techmeat (id=1516381443067089056)
+    https://x.com/techmeat/status/2065435253762621645
+    [embed]  https://twitter.com/techmeat/status/2065435253762621645
+

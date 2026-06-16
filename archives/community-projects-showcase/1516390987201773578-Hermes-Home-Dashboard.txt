@@ -1,0 +1,25 @@
+# Thread 'Hermes Home Dashboard' in forum #community-projects-showcase
+# thread_id=1516390987201773578 forum_id=1316137596535177246
+# Started 2026-06-16T11:07:19.163370+00:00
+
+[2026-06-16T10:36:24.531000+00:00] albertcvrrbs (id=1516390987201773578)
+    A customizable, rice-style Home page for the Hermes Agent dashboard.
+    
+    It adds a Home tab: a grid of glass widgets you can drag, resize, add and remove. Each widget reveals contextual controls on hover (only outside edit mode) — arrows, toggles, steppers — so the glass stays clean until you reach for it.
+    
+    INSTALL
+    
+    From the dashboard (recommended)
+    In the Hermes web dashboard, open the Plugins page → Install from GitHub / Git URL and paste:
+    
+    https://github.com/albertocvrrbs/hermes-home-dashboard.git
+    
+    Leave "Enable after install" on, then click Install. Hermes clones the repo into ~/.hermes/plugins/home-dashboard/, discovers dashboard/manifest.json, and the Home tab shows up. (If it doesn't appear, hit Re-scan on the same page.)
+    
+    No build step is needed — a prebuilt bundle (dashboard/dist/) ships in the repo.
+    
+    From the CLI:
+    hermes plugins install albertocvrrbs/hermes-home-dashboard
+    [attachment] Captura_de_pantalla_54.png https://cdn.discordapp.com/attachments/1516390987201773578/1516390987499573548/Captura_de_pantalla_54.png?ex=6a3278a8&is=6a312728&hm=d1768eb734d1a8bfa31400a18e9ffb04253bb9b3b1b931ffe7beb991543a63fc&
+    [embed] GitHub - albertocvrrbs/hermes-home-dashboard https://github.com/albertocvrrbs/hermes-home-dashboard.git
+

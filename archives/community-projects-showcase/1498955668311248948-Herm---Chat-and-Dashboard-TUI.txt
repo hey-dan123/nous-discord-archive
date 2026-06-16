@@ -1289,3 +1289,12 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1516277314759954472/image.png?ex=6a320eca&is=6a30bd4a&hm=0aad748fcf7e4d0a0edbcfd2529a1a37cb67b106381c0871dc9c331476cca870&
     [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1516277315242430485/image.png?ex=6a320ecb&is=6a30bd4b&hm=5a93e4ea4b19b39f12d9c57e1b473d5d7c0dd9bdcfe8691759e731c248555566&
 
+[2026-06-16T04:36:50.830000+00:00] liftaris (id=1516300500541116487)
+    I got you boss
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1516300500360757258/image.png?ex=6a322462&is=6a30d2e2&hm=1cf6c78007954ce4edf8a2de52bfe70735108587bb147687a211fedc8af00b14&
+    [reply to tunacookie msg=1516277315653468171]
+
+[2026-06-16T09:11:26.822000+00:00] tunacookie (id=1516369605860397126)
+    i added theme is persistent across sessions haha because i once did a big fuck up because both sessions looked the same and was working on the wrong working directory so i need the sessions to be different colors 🤣
+    [reply to liftaris msg=1516300500541116487]
+

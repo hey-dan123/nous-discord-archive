@@ -32877,3 +32877,265 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(gateway): show full terminal command in code blocks on non-verb... https://github.com/NousResearch/hermes-agent/pull/46962
     [embed] fix(gateway): add freshness gate to resume_pending sessions by vant... https://github.com/NousResearch/hermes-agent/pull/46963
 
+[2026-06-16T03:56:18.866000+00:00] iamlukethedev (id=1516290300144783433)
+    <@387972437901312000> genuine question. I already opened 46 PRs and 13 were closed but from the 13 most of them are closed because it says that the issue was addressed in the main or that it was duplicated but if I was the first to fix I'm not sure how it can be duplicated or if it was addressed.
+    
+    Is there any tip to avoid working on the same thing someone else is working? I want to continue collaborating and just want to understand the process so I can continue submitting PRs. Thanks
+    
+    https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3Aiamlukethedev
+    [embed] Pull requests · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3Aiamlukethedev
+
+[2026-06-16T04:28:57.923000+00:00] dias4761 (id=1516298517025394840)
+    https://github.com/NousResearch/hermes-agent/pull/47029 
+    
+    Waiting approval test
+    [embed] feat(cli): resolve concurrent session cross-contamination and memor... https://github.com/NousResearch/hermes-agent/pull/47029
+
+[2026-06-16T05:08:59.130000+00:00] aialliai (id=1516308588417646772)
+    Well add to your workflow to check against other PR’s before working on the problem 😃
+    [reply to iamlukethedev msg=1516290300144783433]
+
+[2026-06-16T05:33:22.820000+00:00] iamlukethedev (id=1516314727578599445)
+    That's my point. I did all of that and if you see in my PRs, I was the first one to solve
+    [reply to aialliai msg=1516308588417646772]
+
+[2026-06-16T05:37:59.398000+00:00] plottah (id=1516315887630815255)
+    I'm working with the team at Nvidia that is making nemoclaw / nemohermes / openshell. We want to test thoroughly contributions from Nvidia developers to avoid introducing regressions while fixing security issues, or working on the surfaces between hermes agent and nemohermes. I'm getting familiar with how testing is done in hermes and some of the automations and infrastructure used. I understand GH actions are the center of automation which includes CI, artifact building etc. I was thinking on having an bot that will help contributions from Nvidia maintainers be checked thoroughly. Are there some gaps on testing that are not currently run for every PR from contributors? which areas of testing would require more enphasis to avoid regressions? I would appreciate any tips and guidance from Hermes developers on how to best contribute. Thank you!
+
+[2026-06-16T05:41:26.393000+00:00] aialliai (id=1516316755830640731)
+    some of your checks are failing, or final fix to the code is done when others have posted complete PR that work and so on. Thats why others get picked. Set up a code reviewer profile on your agent to criticize your code before posting and then this will get stuff accepted faster 🙂
+    [reply to iamlukethedev msg=1516314727578599445]
+
+[2026-06-16T05:43:22.848000+00:00] aialliai (id=1516317244278313002)
+    Nvidia tends to contact companies through official channels not random new profiles on discord 🙂
+    [reply to plottah msg=1516315887630815255]
+
+[2026-06-16T05:45:20.454000+00:00] aialliai (id=1516317737553498262)
+    But otherwise I recommend seeing the docs https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation#code-review--fix
+    [embed] Subagent Delegation | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation
+    [reply to plottah msg=1516315887630815255]
+
+[2026-06-16T05:50:06.950000+00:00] aialliai (id=1516318939205074995)
+    Not trying to be an asshole or anything, but we will help you no matter who you are, so no need for claiming to be nvidia 😄
+    [reply to plottah msg=1516315887630815255]
+
+[2026-06-16T06:21:33.005000+00:00] nuuuuuuuuuu0480 (id=1516326849892843552)
+    same me lol
+    [reply to iamlukethedev msg=1516290300144783433]
+
+[2026-06-16T06:52:01.020000+00:00] plottah (id=1516334517143474317)
+    I'm not Nvidia. I'm just an engineer working for Nvidia and asking how to best collaborate with the community in this project, and facilitate contributions from other engineers are Nvidia. Disclaimer: ny views and opinions are my own and don't represent the views of my employer.
+    [reply to aialliai msg=1516318939205074995]
+
+[2026-06-16T06:52:48.666000+00:00] plottah (id=1516334716985278475)
+    I'm not sure you understood my question but that all right,
+
+[2026-06-16T06:53:21.103000+00:00] aialliai (id=1516334853036052480)
+    I see... well stick around then! My response is maybe a bit harsh since pleople have been claiming to be affiliated with all sorts of stuff here.
+    [reply to plottah msg=1516334517143474317]
+
+[2026-06-16T06:54:20.524000+00:00] undifined. (id=1516335102265917692)
+    everybody is somebody , some are NPC
+
+[2026-06-16T06:55:00.620000+00:00] undifined. (id=1516335270440734760)
+    https://tenor.com/view/vivaladirtleague-vldl-vldl-epic-vldl-epic-npc-man-vldl-check-gif-10139637839203589179
+    [embed]  https://tenor.com/view/vivaladirtleague-vldl-vldl-epic-vldl-epic-npc-man-vldl-check-gif-10139637839203589179
+
+[2026-06-16T06:58:54.115000+00:00] aialliai (id=1516336249789743225)
+    start with checking out what hermes offers, then later you will get more support here 🙂
+    [attachment] cl.md https://cdn.discordapp.com/attachments/1491258766648283238/1516336249512792145/cl.md?ex=6a3245ae&is=6a30f42e&hm=170cf33a2b7fe3d86ea03d3ae6239b3d853df8feaa8d6e38e8074b8e2a272027&
+    [reply to plottah msg=1516334716985278475]
+
+[2026-06-16T07:00:50.240000+00:00] plottah (id=1516336736853037200)
+    Im using Hermes and getting to understand how is developed and tested. Time and resources are limited hence my request for ideas on things that can help while being respectful to the community. For example, is it ok to set some automated bots that can comment on some PRs when we contribute some code to do additional testing?
+
+[2026-06-16T07:01:50.817000+00:00] aialliai (id=1516336990931517450)
+    hermes takes care of a lot of hermes's development so yes
+    [reply to plottah msg=1516336736853037200]
+
+[2026-06-16T07:03:06.326000+00:00] undifined. (id=1516337307639353424)
+    I would limit outside testing to only that which is contributed
+
+[2026-06-16T07:03:23.072000+00:00] aialliai (id=1516337377877168178)
+    agreed
+
+[2026-06-16T07:05:44.416000+00:00] aialliai (id=1516337970716606524)
+    Because in the end hermes will take care of verifying and commenting on other pr's so your input on those would honestly be a waste of your resources. So limiting it to your pr's would be best.
+
+[2026-06-16T07:08:08.253000+00:00] plottah (id=1516338574012842014)
+    Yes that's the idea
+
+[2026-06-16T07:09:04.059000+00:00] plottah (id=1516338808080040027)
+    Makes sense, good to know there's alignment there
+
+[2026-06-16T07:10:54.775000+00:00] aialliai (id=1516339272456605697)
+    hope this answered your questions, but always feel free to ask 🙂
+    [reply to plottah msg=1516338808080040027]
+
+[2026-06-16T07:11:44.889000+00:00] plottah (id=1516339482650083428)
+    Thanks for taking the time to answer
+
+[2026-06-16T07:13:27.292000+00:00] nuuuuuuuuuu0480 (id=1516339912159399966)
+    https://github.com/NousResearch/hermes-agent/pull/47052     https://github.com/NousResearch/hermes-agent/pull/47098
+    [embed] fix(agent): add timeout to subprocess.run in Claude Code setup-toke... https://github.com/NousResearch/hermes-agent/pull/47052
+    [embed] fix: guard against None values in personality preview slicing by va... https://github.com/NousResearch/hermes-agent/pull/47098
+
+[2026-06-16T07:15:19.514000+00:00] aialliai (id=1516340382852710509)
+    The first one failed a test. Take a look at it and fix 🙂
+    [reply to nuuuuuuuuuu0480 msg=1516339912159399966]
+
+[2026-06-16T07:20:57.860000+00:00] aleksas. (id=1516341801978429510)
+    https://github.com/NousResearch/hermes-agent/pull/33769 - what's missing to get the approval?
+    [embed] feat(web): add Oxylabs AI Studio as a web provider plugin by aleksa... https://github.com/NousResearch/hermes-agent/pull/33769
+
+[2026-06-16T07:24:17.105000+00:00] aialliai (id=1516342637672529983)
+    Only thing this is a prioriry 3 PR so takes some time 🙂
+    [reply to aleksas. msg=1516341801978429510]
+
+[2026-06-16T07:25:18.367000+00:00] vastvisionary (id=1516342894624112760)
+    is there anyone specific to reach out to for proposals for collabs?
+
+[2026-06-16T07:25:30.002000+00:00] aialliai (id=1516342943424708650)
+    only about 14.000 pr's open....
+
+[2026-06-16T07:25:41.497000+00:00] aialliai (id=1516342991638237316)
+    collabs on what?
+    [reply to vastvisionary msg=1516342894624112760]
+
+[2026-06-16T07:26:00.915000+00:00] aialliai (id=1516343073083494441)
+    this is more of a hermes development channel
+
+[2026-06-16T07:26:28.982000+00:00] vastvisionary (id=1516343190804889721)
+    my bad, can send the message somewhere else 
+    collabs with Hermes Team / the project in general
+    [reply to aialliai msg=1516343073083494441]
+
+[2026-06-16T07:29:00.574000+00:00] aialliai (id=1516343826627952660)
+    All good. Well, you can submit PR's on github. If you need someone to collab on that <#1476316988992258300> is a really good place to get to know the community and find people with similar ideas 🙂
+    [reply to vastvisionary msg=1516343190804889721]
+
+[2026-06-16T07:31:27.734000+00:00] vastvisionary (id=1516344443861471338)
+    thanks! 
+    we're building a product on top of hermes ( / hermes as foundation) and wanted to reach out to the team if they would be open to talk about a possible collab or just a quick exchange 
+    is discord the right place for that or should we go the email route instead?
+    [reply to aialliai msg=1516343826627952660]
+
+[2026-06-16T07:33:02.441000+00:00] aialliai (id=1516344841091547156)
+    Well team is pretty busy updating hermes so engaging in other projects to build on top is a big ask. So I'd rather look to the community to help you with that! Lot of good devs hanging out in the other channel 🙂
+    [reply to vastvisionary msg=1516344443861471338]
+
+[2026-06-16T07:38:59.174000+00:00] autumnn5389 (id=1516346337338064976)
+    open <#1485307775444844625>
+    [reply to vastvisionary msg=1516344443861471338]
+
+[2026-06-16T07:39:49.471000+00:00] aialliai (id=1516346548299104367)
+    yeah GIlle will guide you well 😄
+
+[2026-06-16T07:52:05.690000+00:00] sellnotbuy (id=1516349636225536182)
+    Hey, I opened a PR for an ntfy delivery bug I found while checking Hermes routing consistency:
+    
+    https://github.com/NousResearch/hermes-agent/pull/47102
+    
+    The issue is that `send_message` already handles explicit ntfy topics correctly, but cron live delivery and `DeliveryRouter` could still publish to the configured default topic instead of the resolved target topic.
+    
+    That means a cron alert or scheduled notification could look successfully delivered while actually going to the wrong ntfy topic.
+    
+    The PR aligns cron live delivery and `DeliveryRouter` with the existing `send_message` behavior, and adds regression tests for the affected paths.
+    
+    CI is currently waiting for maintainer approval to run workflows on the fork PR, but I listed the local validation in the PR description.
+    [embed] fix(ntfy): honor live delivery topics by Kxazar · Pull Request #47... https://github.com/NousResearch/hermes-agent/pull/47102
+
+[2026-06-16T08:35:57.878000+00:00] kyssta69 (id=1516360676422058036)
+    https://github.com/NousResearch/hermes-agent/pull/47133
+    
+    **Problem**: Custom providers defined in config.yaml are hidden in the desktop model picker with 0 models.
+    The dedup logic treats custom: prefixed slugs as aggregators and filters their own models against the user_models set.
+    Skip is_user_defined rows in the aggregator filtering loop so custom providers keep their models.
+    [embed] fix(picker): skip user-defined providers in aggregator dedup (#4704... https://github.com/NousResearch/hermes-agent/pull/47133
+
+[2026-06-16T08:54:51.377000+00:00] kyssta69 (id=1516365430661447871)
+    https://github.com/NousResearch/hermes-agent/pull/47141
+    
+    **Problem**: Agent cannot write to its own ~/.hermes/.env file, getting 'Write denied: protected system/credential file' error.
+    The hermes .env paths were in the write deny list alongside SSH keys and system files.
+    Removed ~/.hermes/.env from the deny list so the agent can manage its own environment variables.
+    [embed] fix(file-safety): allow agent to write to its own ~/.hermes/.env (#... https://github.com/NousResearch/hermes-agent/pull/47141
+
+[2026-06-16T09:19:39.852000+00:00] kyssta69 (id=1516371673778094081)
+    https://github.com/NousResearch/hermes-agent/pull/47144
+    
+    **Problem**: On k8s/k3s with containerd runtime and cgroup v2, is_container() returns False because the cgroup file has no docker/podman markers.
+    Added detection for containerd and kubepods markers in /proc/1/cgroup so is_container() returns True on these systems.
+    This prevents detect_service_manager() from returning 'none' which caused gateway supervision to be silently disabled and containers to crash-loop.
+    [embed] fix(constants): detect containerd + cgroup v2 in is_container() (#4... https://github.com/NousResearch/hermes-agent/pull/47144
+
+[2026-06-16T10:05:19.898000+00:00] johannes0910 (id=1516383166364127324)
+    I would like to advertise for my PR #18280 (https://github.com/NousResearch/hermes-agent/pull/18280) to be reviewed.
+    
+    It fixes a critical Mattermost bug when threaded replies are being used. Without this fix Mattermost threaded replies dont't work because Hermes replies get sent to the main channel and concurrent replies block each other
+    
+    I keep updating this PR every time I update Hermes. Can somebody from the maintainers please review my PR and merge it (or lmk what needs changing)?
+    [embed] fix(mattermost): isolate root threads as sessions by randomsnowflak... https://github.com/NousResearch/hermes-agent/pull/18280
+
+[2026-06-16T10:05:27.529000+00:00] cryptobyz (id=1516383198370729984)
+    Hey mates. After a little break, back in town 🙂 
+    
+    Issue: 413 compression path declares "Cannot compress further" and resets session even when token count drops significantly but message count stays the same
+    PR: https://github.com/NousResearch/hermes-agent/pull/46987
+    [embed] fix(agent): detect token reduction in 413 path even when message co... https://github.com/NousResearch/hermes-agent/pull/46987
+
+[2026-06-16T10:13:31.805000+00:00] vindiesel2190 (id=1516385229571362877)
+    Hallo Hermes-Team,
+    
+    ich möchte zwei Verbesserungsvorschläge machen:
+    
+    1. Visuelle Guthaben-Anzeige
+    Es wäre sehr hilfreich, wenn es eine kleine farbcodierte Balkenanzeige (ähnlich wie ein Akku-Status) gibt, die auf einen Blick den Kontostand des Haupt-Accounts (NousResearch) und des aktuell aktiven LLM-Providers zeigt. Länge = verbleibendes Guthaben, Farbe = grün/gelb/rot. Das spart viel Zeit und Frustration.
+    
+    2. Automatische Feedback-Routing-Routine
+    Der Agent sollte erkennen können, wenn ein sinnvoller Verbesserungsvorschlag geäußert wird, und dann automatisch eine klare, strukturierte Nachricht vorbereiten, die der Nutzer direkt an die richtige Stelle senden kann. Der Nutzer sollte nicht wissen müssen, wo Feedback hingehört.
+    
+    Ich teste Hermes derzeit intensiv und plane perspektivisch einen Company-Account. Solche Features würden die tägliche Nutzung deutlich verbessern.
+    
+    Vielen Dank!
+    Hans-Peter Walterscheid
+    ```
+    
+    ---
+    
+    Fertig. Du kannst den Text direkt in den Discord kopieren.
+    
+    Möchtest du noch eine etwas kürzere oder formellere Variante?
+
+[2026-06-16T10:13:36.510000+00:00] Translator Bot#1043 (id=1516385249305690224)
+    Hello Hermes team,
+    
+    I would like to make two suggestions for improvement:
+    
+    1. Visual credit display
+    It would be very helpful if there was a small color-coded bar display (similar to a battery status) that shows at a glance the balance of the main account (NousResearch) and the currently active LLM provider. Length = remaining credit, color = green/yellow/red. This saves a lot of time and frustration.
+    
+    2. Automatic feedback routing routine
+    The agent should be able to recognize when a meaningful suggestion for improvement is made and then automatically prepare a clear, structured message that the user can send directly to the right place. The user shouldn't have to know where feedback belongs.
+    
+    I'm currently testing Hermes intensively and am planning a company account in the future. Such features would significantly improve daily use.
+    
+    Thank you!
+    Hans Peter Walterscheid
+    ```
+    
+    ---
+    
+    Done. You can copy the text directly into the Discord.
+    
+    Would you like a slightly shorter or more formal version?
+    [reply to vindiesel2190 msg=1516385229571362877]
+
+[2026-06-16T10:13:57.171000+00:00] alelpoan (id=1516385335964209163)
+    made a docs PR for ui-tui README: three sections were out of date vs actual code:
+    - App model: 8 → 22+ files documented
+    - Commands: 14 → ~50 commands, grouped by source file
+    - Event surface: 20 → 34 events
+    would appreciate a review https://github.com/NousResearch/hermes-agent/pull/47150
+    [embed] docs(ui-tui): expand App model, Commands, and Event surface section... https://github.com/NousResearch/hermes-agent/pull/47150
+

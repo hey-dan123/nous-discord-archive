@@ -50,3 +50,19 @@
     
     Run `hermes plugins update hermes-telemetry` to upgrade.
 
+[2026-06-16T07:38:03.160000+00:00] nadiamermedev (id=1516346102398582824)
+    🚀 **hermes-telemetry v0.5.1 is out**
+    
+    This release makes free-tier pricing & the free→paid alert bulletproof:
+    
+    • **`:free` models now cost $0 automatically** — any model id ending in `:free` (the OpenRouter free-tier convention, e.g. `nvidia/nemotron-3-ultra-550b-a55b:free`) resolves to $0 with no manual `pricing.yaml` config. This also fixed a bug where a seeded model's `:free` variant was being billed at its paid rate.
+    
+    • **Free→paid alert now survives id changes (#32)** — when a provider drops the `:free` suffix (or renames a promo to its paid base id), the plugin still connects the new paid id back to the free one and warns you in-context the moment cost goes above $0.
+    
+    ⚠️ **Heads-up for free Nemotron Ultra users:** the `nvidia/nemotron-3-ultra:free` promo **ends June 18, 2026**, after which it bills as the paid id. No action needed on your end — the plugin will flag the first paid call automatically.
+    
+    📝 **One ask:** the paid Nemotron Ultra rate we ship is the OpenRouter price, *pending NIM-direct confirmation*. If you spot **any price discrepancy after the 18th** — billed cost not matching what the plugin estimates — please feel free to open an issue on GitHub 🙏 It helps us nail down the real per-token numbers.
+    
+    Full changelog: https://github.com/nujovich/hermes-telemetry/blob/main/CHANGELOG.md
+    [embed] hermes-telemetry/CHANGELOG.md at main · nujovich/hermes-telemetry https://github.com/nujovich/hermes-telemetry/blob/main/CHANGELOG.md
+

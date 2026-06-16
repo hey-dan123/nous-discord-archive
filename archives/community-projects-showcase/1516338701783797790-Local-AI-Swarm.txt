@@ -1,0 +1,8 @@
+# Thread 'Local AI Swarm' in forum #community-projects-showcase
+# thread_id=1516338701783797790 forum_id=1316137596535177246
+# Started 2026-06-16T11:07:19.524951+00:00
+
+[2026-06-16T07:08:38.716000+00:00] terexitarius_ (id=1516338701783797790)
+    Largely built with Hermes this codebase enables local ai inference as well as allowing others to pay to task the AI that is on your device. https://x.com/i/status/2066771078488240460
+    [embed]  https://twitter.com/i/status/2066771078488240460
+

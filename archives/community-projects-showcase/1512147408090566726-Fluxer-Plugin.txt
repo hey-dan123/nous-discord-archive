@@ -42,3 +42,10 @@
 [2026-06-14T06:05:29.683000+00:00] .elkim (id=1515598033696325823)
     Should be tomorrow.
 
+[2026-06-16T05:41:22.157000+00:00] .elkim (id=1516316738063700028)
+    https://fluxer.app/blog/mobile-clients-and-fluxer-v2 going to test it soon and update the plugin if needed
+    [embed] Mobile clients and Fluxer v2 | Fluxer https://fluxer.app/blog/mobile-clients-and-fluxer-v2
+
+[2026-06-16T07:14:40.624000+00:00] .elkim (id=1516340219735965887)
+    My Hermes installed the self-hosted instance locally just fine, enough giving it the write-up. Connection to instance seems to work only from PWAs now.
+

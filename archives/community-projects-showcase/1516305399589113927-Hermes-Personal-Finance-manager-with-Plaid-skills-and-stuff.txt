@@ -1,0 +1,11 @@
+# Thread 'Hermes Personal Finance manager with Plaid skills and stuff' in forum #community-projects-showcase
+# thread_id=1516305399589113927 forum_id=1316137596535177246
+# Started 2026-06-16T11:07:19.925217+00:00
+
+[2026-06-16T04:56:18.854000+00:00] a404.eth (id=1516305399589113927)
+    yall might like this - its an mcp and skills I have been using to use hermes as a financial assistant. Similar to ChatGPT finance but all hosted yourself. It's MIT and use at your own risk but thought I'd share https://github.com/austinbv/hermes-plaid
+    [embed] GitHub - austinbv/hermes-plaid https://github.com/austinbv/hermes-plaid
+
+[2026-06-16T04:57:17.082000+00:00] a404.eth (id=1516305643814912081)
+    Hermes Personal Finance manager with Plaid skills and stuff
+
