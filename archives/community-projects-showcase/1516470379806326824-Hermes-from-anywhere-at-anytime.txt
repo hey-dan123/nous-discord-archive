@@ -1,0 +1,12 @@
+# Thread 'Hermes from anywhere at anytime' in forum #community-projects-showcase
+# thread_id=1516470379806326824 forum_id=1316137596535177246
+# Started 2026-06-16T16:47:43.167847+00:00
+
+[2026-06-16T15:51:53.203000+00:00] nicoloboschi (id=1516470379806326824)
+    I use multiple sessions on hermes via profiles at the same time. and I needed a way to continue to chat with my phone. telegram and others are not multi sessions and the TUI is much more usable anyway. 
+    
+    I'm using vipershell (which I also use for claude code and codex) - check it out
+    https://github.com/nicoloboschi/vipershell
+    [attachment] LG_HDR_WFHD_Area_2026-06-16_0513_PM.png https://cdn.discordapp.com/attachments/1516470379806326824/1516470380053922005/LG_HDR_WFHD_Area_2026-06-16_0513_PM.png?ex=6a32c299&is=6a317119&hm=13841a6873ea1c3c84434be0c945897d57ba28c563aa90f8554aa05ffa221974&
+    [embed] GitHub - nicoloboschi/vipershell: Your machine, anywhere. A full-fe... https://github.com/nicoloboschi/vipershell
+

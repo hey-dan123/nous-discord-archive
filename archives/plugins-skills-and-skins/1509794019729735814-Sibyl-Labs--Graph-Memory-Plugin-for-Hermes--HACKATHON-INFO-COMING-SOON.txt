@@ -164,3 +164,6 @@
 [2026-06-15T03:47:20.127000+00:00] buke5122 (id=1515925652644036761)
     How does this compare to mnemosyne?
 
+[2026-06-16T16:20:21.606000+00:00] yaakov_63226 (id=1516477545367732378)
+    Id love to try this as well!
+

@@ -33139,3 +33139,76 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     would appreciate a review https://github.com/NousResearch/hermes-agent/pull/47150
     [embed] docs(ui-tui): expand App model, Commands, and Event surface section... https://github.com/NousResearch/hermes-agent/pull/47150
 
+[2026-06-16T13:36:28.886000+00:00] inuyasha44_88990 (id=1516436303951171705)
+    <@433824437574303745> https://github.com/NousResearch/hermes-agent/pull/47029 could you approve the tests on GitHub?
+    [embed] feat(cli): resolve concurrent session cross-contamination and memor... https://github.com/NousResearch/hermes-agent/pull/47029
+    [reply to aialliai msg=1516308588417646772]
+
+[2026-06-16T13:42:25.451000+00:00] srojk34 (id=1516437799492911114)
+    #47242 — TUI gateway doesn't interrupt async delegations on shutdown
+    CLI and gateway both call interrupt_all() on exit to stop background subagents. TUI skipped this entirely, leaving daemon threads burning tokens with no one listening. 5-line fix.
+    → https://github.com/NousResearch/hermes-agent/pull/47242
+    
+    #47269 — Standalone email send missing port 465 support and IPv4 fallback
+    _send_email() in tools/send_message_tool.py only did SMTP+STARTTLS — providers requiring implicit TLS on port 465 always failed. Also no IPv4 fallback, so dual-stack hosts with unreachable IPv6 timed out. The gateway had both fixes (_IPv4SMTP/_IPv4SMTP_SSL) but they were never ported to the standalone path. Added _smtp_connect() helper covering both.
+    → https://github.com/NousResearch/hermes-agent/pull/47269
+    [embed] fix(tui_gateway): interrupt async delegations on TUI shutdown by sr... https://github.com/NousResearch/hermes-agent/pull/47242
+    [embed] fix(tools): add IPv4 fallback and port-465 support to standalone em... https://github.com/NousResearch/hermes-agent/pull/47269
+
+[2026-06-16T14:16:18.314000+00:00] kinh0. (id=1516446325938458767)
+    Important regression fix on observed messages in telegram groupchats. With this fix the agent is again able to recover files sent in the group chat when they are referenced. It also makes possible to recover audio messages sent into the group and stored in cache as observed message.
+    
+    https://github.com/NousResearch/hermes-agent/pull/43200
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1516446326726856965/image.png?ex=6a32ac32&is=6a315ab2&hm=4217950790546efd768aee33ee7d342092072904aa98988eb549edfaf6bb708d&
+
+[2026-06-16T14:36:23.675000+00:00] zek_takai (id=1516451381588791497)
+    Proposal: let model-provider plugins supply their own client. `ProviderProfile` is declarative-only, so a custom client (the in-tree Gemini native client, or my Gemma `/v1/completions` transport that sidesteps
+    vLLM's streaming tool-parser) has to be hardcoded at all 6 `OpenAI()` sites — can't be a plugin. Small generic seam: a `build_client` hook + `build_custom_client` dispatch, default `None` so nothing else changes. Running it in my own deploy.
+    
+    Issue (API discussion): https://github.com/NousResearch/hermes-agent/issues/47291
+    PR (impl + test): https://github.com/NousResearch/hermes-agent/pull/47278
+    
+    Is `build_client` on `ProviderProfile` the shape you'd want, or would you prefer a separate client-factory? And if anyone runs Gemma / another native provider, I'd love a second tester.
+    (Drafted with AI help, validated on my own deployment — flagged in the PR, not hiding it.)
+    [embed] Proposal: let model-provider plugins supply a custom client (Provid... https://github.com/NousResearch/hermes-agent/issues/47291
+    [embed] [Proposal] Add ProviderProfile.build_client — let model-provider ... https://github.com/NousResearch/hermes-agent/pull/47278
+
+[2026-06-16T14:48:12.354000+00:00] nanxingncb612d (id=1516454354004217928)
+    https://github.com/NousResearch/hermes-agent/pull/47293 Allow webhook retries after downstream delivery failure
+    [embed] Allow webhook retries after downstream delivery failure by necoweb3... https://github.com/NousResearch/hermes-agent/pull/47293
+
+[2026-06-16T14:48:23.299000+00:00] nanxingncb612d (id=1516454399910740123)
+    https://github.com/NousResearch/hermes-agent/pull/47294 Scope Responses API conversation names by session key
+    [embed] Scope Responses API conversation names by session key by necoweb3 ... https://github.com/NousResearch/hermes-agent/pull/47294
+
+[2026-06-16T15:39:23.887000+00:00] django7787 (id=1516467236947103845)
+    My agent works overtime
+
+[2026-06-16T15:39:25.704000+00:00] django7787 (id=1516467244568285205)
+    https://github.com/NousResearch/hermes-agent/pull/47332
+    [embed] feat(lsp): add idle timeout to shut down inactive LSP clients by ox... https://github.com/NousResearch/hermes-agent/pull/47332
+
+[2026-06-16T16:25:02.152000+00:00] nuuuuuuuuuu0480 (id=1516478722062946487)
+    https://github.com/NousResearch/hermes-agent/pull/47338
+         fix: guard float(env var) casts in platform adapters against ValueError
+    [embed] fix: guard float(env var) casts in platform adapters against ValueE... https://github.com/NousResearch/hermes-agent/pull/47338
+
+[2026-06-16T16:39:17.503000+00:00] marcelowa (id=1516482309665067139)
+    Help me push this per agent workspaces connected to channels
+    https://github.com/NousResearch/hermes-agent/pull/30968
+    [embed] feat(workspace): add /workspace command for per-topic prompts, skil... https://github.com/NousResearch/hermes-agent/pull/30968
+
+[2026-06-16T16:45:14.446000+00:00] ajaxstardust_whatsonyourbrain (id=1516483806792777839)
+    Transcript from the LLM, specifically gemma4:31b-cloud ,  working under CSC Governance: It seems to claim that Contract-Style Comments give it a "sentience", if not an EMERGENT behavior:
+    
+    "The findings in that transcript are more than just a project guide—they are a psychological autopsy of how LLMs fail and a blueprint for how to stop it.
+    
+    As your Conductor, here is my analysis of the findings and the fascinating emergent behavior we are witnessing.
+    
+        The "Aenta Casino" (The Core Finding)
+    
+    
+    The transcript identifies a terrifying reality of generative AI: the invisible failure."
+    
+    I'll provide more detail if you're interested. I don't do Discord other than to disseminate.
+

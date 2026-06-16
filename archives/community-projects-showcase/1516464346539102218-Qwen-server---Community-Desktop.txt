@@ -1,0 +1,25 @@
+# Thread 'Qwen server + Community Desktop' in forum #community-projects-showcase
+# thread_id=1516464346539102218 forum_id=1316137596535177246
+# Started 2026-06-16T16:47:44.174407+00:00
+
+[2026-06-16T15:27:54.760000+00:00] pranrichh (id=1516464346539102218)
+    # 1. Free Qwen 3.6-35B-A3B running on ONLY CPU. At around 30 tokens/sec, you can talk to it right here:
+    https://brother-vegetables-syndicate-ladder.trycloudflare.com/
+    If you don't trust the link:
+    https://gemini.google.com/share/a3c8f9db72b9
+    # 2. Community Desktop
+    Its an xfce desktop, where u can launch chromium etc, and do all sorts of shit (running on a 80 cpu cores and 312gb+ ram machine), everyone can at once control this desktop, it can get chaotic but that's the fun of it:
+    https://limitation-state-dating-dealt.trycloudflare.com
+    If you don't trust the link:
+    https://g.co/gemini/share/a3cb3574e4b4
+    (Tho, you won't see the kasmvnc sidebar from the Gemini link)
+    Its not a scam, I gave u guys the Gemini share links, as their proxied through their infra minimising any risks, I also gave the trycloudflared links because, in desktop specifically u can't see the kasmvnc sidebar through Gemini share, so phone users will have problems and u can't configure some settings u would like.
+    [embed] ‎Gemini - direct access to Google AI https://gemini.google.com/share/a3c8f9db72b9
+    [embed] ‎Gemini - direct access to Google AI https://g.co/gemini/share/a3cb3574e4b4
+
+[2026-06-16T15:28:40.303000+00:00] pranrichh (id=1516464537560420595)
+    Also another thing is that, there is no guarantee when these links won't work. I might pull the leash of em for sometime if I'm doing something so yeah
+
+[2026-06-16T15:28:45.621000+00:00] pranrichh (id=1516464559865462884)
+    AND AGAIN ITS NOT A SCAM
+

@@ -142,3 +142,37 @@
 [2026-06-14T11:49:14.919000+00:00] thechaosalchemist (id=1515684542206316665)
     will share here
 
+[2026-06-16T11:35:33.918000+00:00] thechaosalchemist (id=1516405874409738262)
+    ok taking a while, but got the runtime in a clean state, just deleted 800k lines of code
+    [attachment] Screenshot_2026-06-16_at_12.35.11.png https://cdn.discordapp.com/attachments/1511523359048077352/1516405874183241818/Screenshot_2026-06-16_at_12.35.11.png?ex=6a328685&is=6a313505&hm=096ae37d278aa6ffb3a81cb7c89f4b99aa78f3590019b0247b253392ea4e8cd3&
+
+[2026-06-16T11:43:01.530000+00:00] sahil_ss9 (id=1516407751830409216)
+    800k lines of code. Jesus how hard did you vibe on this 😂
+    [reply to thechaosalchemist msg=1516405874409738262]
+
+[2026-06-16T11:43:33.964000+00:00] sahil_ss9 (id=1516407887868592230)
+    Should we be worried about the source code 😜
+
+[2026-06-16T11:52:01.463000+00:00] thechaosalchemist (id=1516410016473681990)
+    😄
+    [reply to sahil_ss9 msg=1516407751830409216]
+
+[2026-06-16T11:52:12.219000+00:00] thechaosalchemist (id=1516410061587615765)
+    a lot of hermes code that the project doesnt need i deleted
+
+[2026-06-16T11:52:32.080000+00:00] thechaosalchemist (id=1516410144890556486)
+    https://x.com/RiverKhan/status/2066647641941783001?s=20 this was yesterdays first big refactor
+    [embed]  https://twitter.com/RiverKhan/status/2066647641941783001?s=20
+
+[2026-06-16T13:15:29.034000+00:00] _bashell (id=1516431019748622417)
+    👀👀👀
+
+[2026-06-16T16:27:42.044000+00:00] thechaosalchemist (id=1516479392698601686)
+    https://x.com/RiverKhan/status/2066920552384598273?s=20
+    
+    ALRIGHT WE'RE LIVE!!!!!
+    [embed]  https://twitter.com/RiverKhan/status/2066920552384598273?s=20
+
+[2026-06-16T16:28:11.278000+00:00] thechaosalchemist (id=1516479515315146822)
+    <@797682085224513547> <@721010716869525515> <@297914788107780099> <@928394777878220850> <@842061712479092789> <@1019172941184892979> <@398905788082552833> <@1242735795274649653> <@1506293406261968996> <@444981791611158538>
+

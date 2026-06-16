@@ -1,0 +1,24 @@
+# Thread 'dyadcore — local peer memory for agents (Hermes-compatible)' in forum #community-projects-showcase
+# thread_id=1516469991241945281 forum_id=1316137596535177246
+# Started 2026-06-16T16:47:43.637648+00:00
+
+[2026-06-16T15:50:20.562000+00:00] dooyee_0824 (id=1516469991241945281)
+    Memory as relational field, not storage. Built dyadcore — a local peer memory system that runs on graph topology instead of semantic similarity.   
+    
+    • Graph > vectors. FTS5 trigram for coarse retrieval. Real ranking runs on relational edges — contradicted penalties, echoed bonuses, field-strength scaling. No cosine similarity. May underperform on MRR/NDCG; that's a tradeoff, not a bug.
+    
+    • No time decay. A 3-week contradiction edge outweighs a 3-day weak signal. Value comes from graph position, not age.
+    
+    • Beliefs emerge. They grow out of contradicted edge topology. Confidence is structural — evidence count, echoed signals, source diversity, contradicted penalties. No external authority.
+    
+    • De-agent-centric. The agent doesn't own the memory; the relational field does. Both user and agent leave traces. Bidirectional edges. The field holds the history of their relationship.
+    
+    Designed to plug into any local agent stack. If you're running Hermes and want persistent memory without cloud dependencies, it should drop in cleanly.
+    
+    I'm more interested in whether the ideas hold up than whether the code is perfect. If you've thought about why agent memory benchmarks are all hit-rate-based, or whether no time decay is insane — let me know.
+    
+    Apache 2.0 | pip install dyadcore-mem 
+    
+    Repo: https://github.com/dy3uto-alt/dyadcore
+    [embed] GitHub - dy3uto-alt/dyadcore https://github.com/dy3uto-alt/dyadcore
+

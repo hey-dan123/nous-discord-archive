@@ -1298,3 +1298,18 @@
     i added theme is persistent across sessions haha because i once did a big fuck up because both sessions looked the same and was working on the wrong working directory so i need the sessions to be different colors 🤣
     [reply to liftaris msg=1516300500541116487]
 
+[2026-06-16T15:33:22.363000+00:00] liftaris (id=1516465720605802668)
+    @here I can use your help!
+    If you would be so kind, please help me break the eikon feature, platform, and TUI in dev 😈 
+    `npm i -g herm-tui@next`
+    
+    **Some things you should try**:
+    - Create an eikon! Ask your agent to  use the updated `/eikon-create` with hermes and image/video gen tools (*the skill will not update automatically*)
+    - Upload it to the github registry (you will need `gh` cli to do it from within herm) There is a web mirror at https://eikon.liftaris.dev/
+    - Download and use an eikon from the registry
+    - Edit it in Studio
+    
+    **Pre-existing eikons may not work.** There is bundled upgrade script though, so tell me if that works!
+    
+    I'm being intentionally vague on instructions--I want to know how intuitive these features are for you and your hermes agent! As usual, always ask hermes.
+

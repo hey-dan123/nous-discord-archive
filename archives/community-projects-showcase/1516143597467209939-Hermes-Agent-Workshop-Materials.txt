@@ -10,3 +10,21 @@
 [2026-06-15T18:14:32.650000+00:00] _name_name_ (id=1516143892863389816)
     The guided workshop portion is generic and ready to use, but the slides are fairly specific to myself with minimal notes. If anyone wants to reuse just ping me and I can make some notes or help genericize.
 
+[2026-06-16T16:34:32.646000+00:00] _name_name_ (id=1516481114888212693)
+    would love to 
+    - have a nice library of starter for different sort of users.
+    - better slides designed for anyone to pick up
+    - workshop runner's guide
+
+[2026-06-16T16:34:57.577000+00:00] _name_name_ (id=1516481219456401561)
+    The idea would be anyone who wants to run a workshop teaching folks how to get started making their own agents could use this as their go to. Could be for public events, such as local tech meetups, or paid for businesses. I did this free at a public conference over the weekend, ~40+ attendees, and this Friday I just agreed to run the workshop internally for a business.
+
+[2026-06-16T16:36:54.627000+00:00] _name_name_ (id=1516481710399689018)
+    <@585455964854026240>  and <@434520004336025603>
+
+[2026-06-16T16:40:04.360000+00:00] lsof (id=1516482506197569556)
+    <@695026360090886274> so these sorts of things will always shift around based on your audience. 
+    
+    1. Is there an audience you’re targeting?
+    2. What level of experience with LLMs are you targeting for this content?
+

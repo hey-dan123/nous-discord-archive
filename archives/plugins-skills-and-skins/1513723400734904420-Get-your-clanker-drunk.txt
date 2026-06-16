@@ -15,3 +15,10 @@
 [2026-06-16T01:54:51.260000+00:00] aialliai (id=1516259733710045194)
     https://discord.com/channels/1053877538025386074/1513907077959913502
 
+[2026-06-16T13:31:09.297000+00:00] _bashell (id=1516434963497619466)
+    Hypothetically, I could put it on a profile with no access to anything, just for laughs
+
+[2026-06-16T13:32:16.220000+00:00] flash_speed3412 (id=1516435244192895078)
+    which is what I did, i did make a new profile with no access
+    [reply to _bashell msg=1516434963497619466]
+
