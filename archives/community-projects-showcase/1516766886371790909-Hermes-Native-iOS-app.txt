@@ -1,0 +1,11 @@
+# Thread 'Hermes Native iOS app' in forum #community-projects-showcase
+# thread_id=1516766886371790909 forum_id=1316137596535177246
+# Started 2026-06-17T15:22:37.427019+00:00
+
+[2026-06-17T11:30:05.877000+00:00] lebibi0 (id=1516766886371790909)
+    built a native iOS app for Hermes: your agent on your phone, talking only to your own gateway. live chat, approvals, push, Live Activities, and more. open-source + a TestFlight beta landing in ~a day: https://github.com/ab0991-oss/hermes-ios
+    
+    it’s early and built solo, i’d genuinely love testers, feedback, and contributors (PRs welcome). would mean a lot to have community support taking it further.
+    [attachment] demo.mov https://cdn.discordapp.com/attachments/1516766886371790909/1516766887206195400/demo.mov?ex=6a33d6be&is=6a32853e&hm=a9ca5d6b01bfe77aea8053e5df9cf014e66e15a688d7cb8d55d41e65c15aeded&
+    [embed] GitHub - ab0991-oss/hermes-ios: Native iOS app for your self-hosted... https://github.com/ab0991-oss/hermes-ios
+

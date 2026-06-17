@@ -1,0 +1,21 @@
+# Thread 'Soul Factory' in forum #community-projects-showcase
+# thread_id=1516805624350900415 forum_id=1316137596535177246
+# Started 2026-06-17T15:22:37.023522+00:00
+
+[2026-06-17T14:04:01.731000+00:00] thedavidmurray (id=1516805624350900415)
+    ~4,800 loadable soul.md personality files for agents. Each soul.md has 9 sections (identity, philosophy, decision patterns, mental models, etc.). 
+    
+    Think "Wikipedia of minds". You grab one, drop it into your agent's personality layer (Hermes, Claude Code, Codex, whatever supports soul.md) ), and your agent has a coherent cognitive profile: identity, philosophy, how it makes decisions, communication style, contradictions and so on. 
+    
+      There's also a builder section where you can:
+     - Forge a new soul from a name + source materials
+     - Combine 2–5 existing souls into a blended mind
+     - Download you new soul and start using it, or tweak it to your liking 
+    
+    the Soul Factory
+    souls.edgelesslab.com
+
+[2026-06-17T14:04:35.952000+00:00] thedavidmurray (id=1516805767884439572)
+    https://souls.edgelesslab.com/
+    [embed] Edgeless Souls — The Soul Factory https://souls.edgelesslab.com/
+

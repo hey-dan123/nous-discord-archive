@@ -186,3 +186,9 @@
     Is there a way to smoothly switch from one to another?
     [reply to dr.kojipup msg=1516554980201468056]
 
+[2026-06-17T14:16:38.325000+00:00] heeervas (id=1516808797736271944)
+    If we use it for free as beta testers, do we keep the features as free later? 
+    
+    Honestly I don't want to build a memory if it will be deprecated later...
+    Also, can it be self-hosted?
+

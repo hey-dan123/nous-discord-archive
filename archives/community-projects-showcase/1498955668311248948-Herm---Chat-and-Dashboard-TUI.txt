@@ -1352,3 +1352,22 @@
 [2026-06-17T08:55:01.649000+00:00] gambrin. (id=1516727861610942534)
     I love herm. One issue I have with the chat window: when the agent finishes the response, I am getting a section with partial contents of the last file written to disk underneath the last response. To view the response, I need to scroll up in the chat. Is there a way to remove this?
 
+[2026-06-17T10:55:15.988000+00:00] tunacookie (id=1516758120741867752)
+    isnt it minimized by default? the partial contents?
+    [reply to gambrin. msg=1516727861610942534]
+
+[2026-06-17T11:19:19.551000+00:00] gambrin. (id=1516764175483932732)
+    it is limited, i.e. i do not see everything but still part of the text written to the file is visible, even with verbose=OFF.
+
+[2026-06-17T11:19:40.541000+00:00] gambrin. (id=1516764263522504704)
+    not as minimized as Hermes TUI verbose OFF. Screenshots?
+
+[2026-06-17T11:23:55.762000+00:00] gambrin. (id=1516765333996834816)
+    P.S. When I return to the same session after herm restart, the file-content blob disappears, chat looks very clean
+
+[2026-06-17T14:52:11.436000+00:00] liftaris (id=1516817744652275823)
+    <@465739698023694348> I think you will find the better experience on the dev build of herm, main release is quite behind. I think I'll be able to release the new stable version later today, but in the meantime `npm i -g herm-tui@next` will give you the dev build
+
+[2026-06-17T14:52:32.878000+00:00] liftaris (id=1516817834586411038)
+    Lot's of other improvements too!
+

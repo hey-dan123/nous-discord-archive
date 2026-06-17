@@ -33620,3 +33620,133 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-17T10:23:20.061000+00:00] wittgenstein9840 (id=1516750084761718864)
     keep building fam!
 
+[2026-06-17T11:25:12.635000+00:00] kyssta69 (id=1516765656425562282)
+    https://github.com/NousResearch/hermes-agent/pull/47819
+    
+    **Problem**: Cron fallback ignored the model from fallback_providers entries, sending the primary model name (e.g. gpt-5.5) to the fallback provider which may charge much more. The fix extracts the model field from the fallback_providers entry when available, so the fallback provider receives the correct model.
+    [embed] fix(cron): use fallback_providers entry model instead of primary mo... https://github.com/NousResearch/hermes-agent/pull/47819
+
+[2026-06-17T11:27:45.643000+00:00] kyssta69 (id=1516766298187501679)
+    https://github.com/NousResearch/hermes-agent/pull/47821
+    
+    **Problem**: On Windows with Git Bash (MSYS2), Unix-style paths like /c/Users/... were rejected by validate_media_delivery_path() because pathlib.Path could not resolve them as absolute paths, blocking MEDIA directive sends. The fix converts MSYS-style paths to native Windows paths before validation, with a guard to only run on Windows.
+    [embed] fix(gateway): convert MSYS/Git Bash paths in validate_media_deliver... https://github.com/NousResearch/hermes-agent/pull/47821
+
+[2026-06-17T11:58:01.180000+00:00] teknium (id=1516773913101598811)
+    oof thanks for letting me know
+    [reply to kylekaster msg=1516690980328312934]
+
+[2026-06-17T12:00:33.776000+00:00] teknium (id=1516774553135616123)
+    Developers if you find a caching preservation regression or issue please ping me it is my absolute #1 top priority to maintain maximum caching
+    [reply to kylekaster msg=1516690980328312934]
+
+[2026-06-17T12:43:13.076000+00:00] teknium (id=1516785287617970207)
+    Merged friend <:salute:1072217852385435768>
+    [reply to realadolan msg=1516689776714190989]
+
+[2026-06-17T12:43:43.622000+00:00] floory (id=1516785415737184296)
+    https://github.com/NousResearch/hermes-agent/pull/28720
+    [embed] feat(kanban): config-gated auto-subscribe on kanban_create with TUI... https://github.com/NousResearch/hermes-agent/pull/28720
+
+[2026-06-17T12:43:47.146000+00:00] floory (id=1516785430517780590)
+    can someone check this out pls
+
+[2026-06-17T12:44:23.422000+00:00] floory (id=1516785582670352486)
+    ignored for a month i improved upon it a few days ago but stlil no one's checked it out
+
+[2026-06-17T12:44:51.906000+00:00] floory (id=1516785702141034568)
+    or at least re-run sweeper on it or something please
+
+[2026-06-17T12:45:27.710000+00:00] floory (id=1516785852313767936)
+    i've been running that PR locally (i also synced it with my local state since upstream PR was dated) for a while now and seems to be working fine
+
+[2026-06-17T13:00:15.298000+00:00] skylarpayne_33994 (id=1516789575127793855)
+    Friendly bump on this issue: https://github.com/NousResearch/hermes-agent/issues/47439
+    
+    There are 2 linked PRs, either could resolve it. This issue causes the desktop app to crash on startup for several users
+    [embed] Packaged macOS desktop app crashes on launch after update due to AS... https://github.com/NousResearch/hermes-agent/issues/47439
+
+[2026-06-17T13:14:56.555000+00:00] bsquared0pen (id=1516793271387557990)
+    ICYMI: This PR adds native support for Dynamic Workflows, the long-running task coordination strategy that's become popular in Claude Code. Check out the demo video!
+    [reply to bsquared0pen msg=1516616052845580480]
+
+[2026-06-17T13:36:37.566000+00:00] godsboy7777 (id=1516798728223199454)
+    <@387972437901312000> small but high-impact gateway bug, with fixes already pending but still unmerged:
+    
+    Every image sent to a Telegram forum topic bound to a session is silently dropped before the model call.
+    
+    The agent replies as if no image arrived. The same image in a private DM works fine.
+    
+    Root cause:
+    
+    `_apply_persist_user_message_override` in `run_agent.py` collapses the multimodal `[text, image_url]` user turn into a plain text string, the clean persist override, at turn start via `_persist_session`, before the API request is built.
+    
+    Bound topics set that override. DMs do not.
+    
+    That matches the exact split:
+    
+    * DM works
+    * Telegram bound topic fails
+    
+    Tracked in #44242, which was filed as ACP-only, but this hits Telegram bound topics just as hard, for every provider:
+    
+    https://github.com/NousResearch/hermes-agent/issues/44242
+    
+    Two one-line fixes are already up:
+    
+    https://github.com/NousResearch/hermes-agent/pull/44247
+    https://github.com/NousResearch/hermes-agent/pull/44249
+    
+    I traced the Telegram repro end to end with per-stage logging and confirmed the drop is that exact line:
+    
+    * Image is consumed and attached inline
+    * Message enters as a list with the image
+    * Then it becomes a plain string before the API call
+    * No message-repair path is involved
+    
+    Flagging the Telegram impact because it is broad and silent: every image sent to a bound topic, for every provider, regardless of vision support.
+    
+    Patching the line locally fixed it immediately. The agent then described the image in the bound topic.
+    
+    Could you take a look at merging one of the pending fixes?
+    
+    It is broad and silent, so it is easy to miss.
+    [embed] ACP image content blocks dropped before API call (persist_user_mess... https://github.com/NousResearch/hermes-agent/issues/44242
+    [embed] fix(agent): skip persist_user_message override when content is a mu... https://github.com/NousResearch/hermes-agent/pull/44247
+    [embed] fix: preserve ACP multimodal content during persistence by Rivuza ... https://github.com/NousResearch/hermes-agent/pull/44249
+
+[2026-06-17T13:56:46.970000+00:00] nuuuuuuuuuu0480 (id=1516803800831103188)
+    PR #47894: https://github.com/NousResearch/hermes-agent/pull/47894
+         - Branch: fix/mcp-iserror-json-double-encoding
+         - File sửa: tools/mcp_tool.py (1 file, +22/-3)
+    [embed] fix(mcp): extract message from JSON error bodies to prevent double-... https://github.com/NousResearch/hermes-agent/pull/47894
+
+[2026-06-17T14:07:04.710000+00:00] kwonye (id=1516806391820587189)
+    Fix for the discord gateway dropping embeds: https://github.com/NousResearch/hermes-agent/pull/26738
+    
+    Before and after posted
+    [attachment] 593463765-aea07fbb-156b-40f7-adcb-cbf2613b382d.png https://cdn.discordapp.com/attachments/1491258766648283238/1516806391942090783/593463765-aea07fbb-156b-40f7-adcb-cbf2613b382d.png?ex=6a33fb88&is=6a32aa08&hm=c260c6278122ce5238536c04afd9ca1a9be3738a350ff5591adeb1aaa72af9ca&
+    [attachment] 593463797-9740dd59-c984-4cde-9029-09932ddd1f44.png https://cdn.discordapp.com/attachments/1491258766648283238/1516806392173039796/593463797-9740dd59-c984-4cde-9029-09932ddd1f44.png?ex=6a33fb88&is=6a32aa08&hm=7bd49188e46e8c52d4cf0cc35143c659975d783925aae1b69f2d52789a6af16b&
+    [embed] fix(gateway): Support Discord webhook embed content by kwonye · Pu... https://github.com/NousResearch/hermes-agent/pull/26738
+
+[2026-06-17T15:01:56.562000+00:00] arsaimon (id=1516820198848729198)
+    Have you noticed how sometimes the models dont know they are running inside hemes? Any fix?
+    [attachment] Screenshot_2026-06-17_at_9.00.47_AM.png https://cdn.discordapp.com/attachments/1491258766648283238/1516820198454202388/Screenshot_2026-06-17_at_9.00.47_AM.png?ex=6a340864&is=6a32b6e4&hm=ebff3c7ae391044df3f8526a565025b715702a109e4dbeb00397bda39a13a5cb&
+
+[2026-06-17T15:14:04.100000+00:00] lordbartok (id=1516823250364272761)
+    A few iron-proxy follow-ups ready for review, all stacked on feat/iron-proxy (#30179), all MERGEABLE / no conflicts with each other:
+    
+    • #35149 — feat(egress): doctor + audit + Anthropic native
+    https://github.com/NousResearch/hermes-agent/pull/35149
+    • #35187 — feat(egress): host-hardening survey
+    https://github.com/NousResearch/hermes-agent/pull/35187
+    • #35188 — feat(egress): CA rotation (egress rotate-ca)
+    https://github.com/NousResearch/hermes-agent/pull/35188
+    
+    These knock out several asks from the #30179 review thread — doctor adds a CONNECT-level token-swap check (not just a TCP port probe), audit gives operational visibility, and rotate-ca closes the manual-CA-rotation gap. They land once #30179 merges since they branch off it.
+    
+    Thanks a lot in advance! cc: <@387972437901312000>
+    [embed] feat(egress): doctor + audit + Anthropic native — follow-up to #3... https://github.com/NousResearch/hermes-agent/pull/35149
+    [embed] feat(egress): host hardening survey — follow-up to #30179 by Bart... https://github.com/NousResearch/hermes-agent/pull/35187
+    [embed] feat(egress): CA rotation (`hermes egress rotate-ca`) — follow-up... https://github.com/NousResearch/hermes-agent/pull/35188
+
