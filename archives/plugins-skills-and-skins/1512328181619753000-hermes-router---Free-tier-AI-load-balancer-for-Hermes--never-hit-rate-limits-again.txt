@@ -372,3 +372,131 @@
     GitHub: https://github.com/Shaf2665/Hermes-router
     [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
 
+[2026-06-17T01:11:22.517000+00:00] shaf_2665 (id=1516611179714187514)
+    # Two big additions: Embeddings + Monitoring 📊
+    
+    hermes-router can now do more than chat — two new endpoints just landed.
+    
+    **🧬 Embeddings — /v1/embeddings**
+    Turn text into vectors using free providers (Gemini, Mistral, Cohere), with the same auto-failover and key rotation as chat. Perfect for any app with memory/semantic search.
+    
+    
+    `resp = client.embeddings.create(model="hermes-router", input="hello world")`
+    `print(len(resp.data[0].embedding))   # 3072 from Gemini`
+    
+    Smart detail: embeddings stick to one provider instead of round-robining — because different providers return different vector sizes (Gemini 3072, Cohere 1536, Mistral 1024), and you can't mix those in one vector store. It only fails over if the provider goes down.
+    
+    **📈 Monitoring — /metrics**
+    
+    A Prometheus-compatible endpoint for Grafana & friends. Track per-provider requests, errors, latency, circuit-breaker state, cache hits, and uptime — at a glance.
+    
+    
+    curl http://localhost:8319/metrics
+    
+    Exposes counts only (never your request content), so it's safe to leave open. Set METRICS_REQUIRE_AUTH=1 to gate it behind your key.
+    
+    Update your existing install:
+    
+    
+    `hr update`
+    `hr restart`
+    GitHub: https://github.com/Shaf2665/Hermes-router
+
+[2026-06-17T02:51:24.872000+00:00] shaf_2665 (id=1516636355415769168)
+    # hermes-router is now bilingual: OpenAI and Anthropic SDKs 🔀
+    
+    Until now, hermes-router only spoke the OpenAI API. If your agent was built on the Anthropic SDK, you were stuck. Not anymore.
+    
+    You can now point the Anthropic SDK straight at hermes-router — no code changes, just swap the base_url:
+    
+    
+    `import anthropic
+    
+    client = anthropic.Anthropic(api_key="sk-router-1", base_url="http://localhost:8319")
+    msg = client.messages.create(
+        model="claude-3-5-sonnet-20241022",
+        max_tokens=100,
+        messages=[{"role": "user", "content": "Hello!"}],
+    )
+    print(msg.content[0].text)`
+    
+    Streaming (client.messages.stream(...)) works too.
+    
+    The twist: even when you use the Anthropic SDK, your request still gets routed across all 11 free providers (Gemini, Groq, Mistral…) with full auto-failover. Your app thinks it's talking to Claude — it's actually getting free multi-provider routing underneath.
+    
+    So now any agent — OpenAI SDK or Anthropic SDK — is plug-and-play. One router, both ecosystems.
+    
+    Update your existing install:
+    
+    
+    `hr update
+    hr restart`
+    
+    ⚠️ Note: the model you pass is ignored (the router picks the cheapest capable provider). Text + streaming are fully supported; Anthropic tool-use blocks aren't translated yet.
+    
+    GitHub: https://github.com/Shaf2665/Hermes-router
+
+[2026-06-17T03:05:01.794000+00:00] shaf_2665 (id=1516639781835243591)
+    # Follow-up: tool use now fully works through the Anthropic SDK 🛠️
+    
+    Quick update to the dual-SDK announcement — the earlier ⚠️ note said Anthropic tool-use blocks weren't translated yet. That's now done.
+    
+    Agents built on the Anthropic SDK can use tools/function calling through hermes-router, fully translated in both directions:
+    
+    Your tools definitions → routed to any free provider
+    The provider's tool call → back to you as a proper tool_use block
+    Your tool_result → sent back for the final answer
+    Works in both streaming and non-streaming mode. Tested with a full round-trip on the real Anthropic SDK:
+    
+    
+    `client = anthropic.Anthropic(api_key="sk-router-1", base_url="http://localhost:8319")
+    msg = client.messages.create(
+        model="claude-3-5-sonnet-20241022", max_tokens=300,
+        tools=[{"name":"get_weather","description":"...","input_schema":{...}}],
+        messages=[{"role":"user","content":"Weather in Tokyo?"}],
+    )
+    # → msg.stop_reason == "tool_use", with the tool call ready to run`
+    
+    So any agent — OpenAI or Anthropic, plain chat or tool-using — is now genuinely plug-and-play. 🔌
+    
+    **Update:**
+    
+    
+    `hr update
+    hr restart`
+    Just one note: tool calls need the provider the router lands on to support function calling (most do — Gemini, Groq, Cerebras, Mistral…).
+    
+    GitHub: https://github.com/Shaf2665/Hermes-router
+
+[2026-06-17T03:52:40.493000+00:00] shaf_2665 (id=1516651772087898122)
+    # hermes-router is now production-complete — every SDK, every feature, no known limitations ✅
+    
+    Over the last stretch we closed the final gaps. hermes-router is now genuinely plug-and-play for any agent, on either SDK:
+    
+                                                     OpenAI SDK                               Anthropic SDK
+    Chat (+ streaming)                    ✅                                                         ✅
+    Tool / function calling              ✅                                                         ✅
+    Tool-aware routing                   ✅                                                          ✅
+    Reasoning models                     ✅                                                         ✅
+    Embeddings                                ✅                                                           —
+    Prometheus /metrics               ✅                                                         ✅
+    
+    **The two limitations we just eliminated:**
+    
+    🛠️ Tool-aware routing — the router now detects (at startup) which providers actually support function calling, and only sends tool requests to those. A tool call can never land on a model that would silently ignore it.
+    
+    🧠 Reasoning models fixed — models like gpt-oss, nemotron, and glm-4.5 "think" before answering, which used to eat your whole max_tokens and return empty replies on short requests. The router now detects reasoning models and reserves extra headroom automatically — no more blank answers.
+    
+    Both are auto-detected per provider and visible in hr status / /v1/status, with env overrides if you ever need them.
+    
+    
+    The result: point any agent — OpenAI or Anthropic, plain chat or tools, fast or reasoning model — at hermes-router and it just works. Across 11 free providers, with failover, key rotation, smart routing, caching, embeddings, and metrics.
+    
+    **Update:**
+    
+    
+    `hr update
+    hr restart`
+    GitHub: https://github.com/Shaf2665/Hermes-router
+    [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
+

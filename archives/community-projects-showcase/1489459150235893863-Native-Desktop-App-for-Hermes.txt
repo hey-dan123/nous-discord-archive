@@ -1046,3 +1046,12 @@
     [attachment] Screenshot_2026-06-13_at_3.10.12_PM.jpg https://cdn.discordapp.com/attachments/1489459150235893863/1515421466256998590/Screenshot_2026-06-13_at_3.10.12_PM.jpg?ex=6a2ef1b8&is=6a2da038&hm=0df5fa6017ce58f73c04ba3a8d294ba24b3875e10be24f39f08a31ccb4c1d0fc&
     [embed] Release Hermes Desktop v0.6.1 · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/releases/tag/v0.6.1
 
+[2026-06-17T01:39:36.233000+00:00] gaming_life (id=1516618283674239097)
+    Please fix the context. Not sure why it isn't compacting, in the terminal, it auto-compacted because of a skill I have. And I have 64k context but it shows 32k for some reason. Strange behavior and having no solution to it right now bothers me. I appreciate your work 👍
+    [attachment] image.png https://cdn.discordapp.com/attachments/1489459150235893863/1516618283309203497/image.png?ex=6a334c58&is=6a31fad8&hm=f36d65f76f98a07ace0f9ae55bb01835a9cdbdee3725485f1573e72d78190534&
+    [reply to fathah. msg=1515421398250688602]
+
+[2026-06-17T01:45:09.087000+00:00] fathah. (id=1516619679764844545)
+    Will check this. thanks
+    [reply to gaming_life msg=1516618283674239097]
+

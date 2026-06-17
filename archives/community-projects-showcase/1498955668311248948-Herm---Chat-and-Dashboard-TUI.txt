@@ -1313,3 +1313,22 @@
     
     I'm being intentionally vague on instructions--I want to know how intuitive these features are for you and your hermes agent! As usual, always ask hermes.
 
+[2026-06-16T21:41:52.027000+00:00] tunacookie (id=1516558455257829446)
+    [attachment] 2026-06-17_05-41-27.mp4 https://cdn.discordapp.com/attachments/1498955668311248948/1516558454745989241/2026-06-17_05-41-27.mp4?ex=6a33149f&is=6a31c31f&hm=9d319fe03a2dfd1669d2b7e643a99de7382670b7ebe3713ab68d0d21c6331f0c&
+    [reply to liftaris msg=1516465720605802668]
+
+[2026-06-16T21:42:37.751000+00:00] liftaris (id=1516558647038316624)
+    OMG it's marvelous
+
+[2026-06-16T22:46:35.998000+00:00] tunacookie (id=1516574745813061714)
+    Install failed
+    EPERM: operation not permitted, tried downloading ares + source from catalog inside herm i got this (so cant edit) but downloading eikon only was okay ,
+     also i uploaded my own eikon already not sure if it actually landed tho
+    [reply to liftaris msg=1516465720605802668]
+
+[2026-06-16T22:49:29.571000+00:00] tunacookie (id=1516575473830723584)
+    weird ahhh error sometimes it install failed for source sometime it doesnt
+
+[2026-06-16T22:51:35.727000+00:00] tunacookie (id=1516576002967605429)
+    was able to donwload source now for ares ands and nous and was able to edit, but the owl no source so cant edit
+

@@ -423,3 +423,6 @@
     https://github.com/theheavenlyd3mon/hermes-profiles
     [embed] GitHub - theheavenlyd3mon/hermes-profiles https://github.com/theheavenlyd3mon/hermes-profiles
 
+[2026-06-16T21:41:20.755000+00:00] meltzmedia (id=1516558324093681938)
+    What’s some recommendations for models that everyone is using.  Especially for different agents.  Would love to hear
+

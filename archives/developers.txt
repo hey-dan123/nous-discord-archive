@@ -33424,3 +33424,117 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     Anyone else hitting the 3221225477 on profile switch? Or is there a fix in nightly builds I haven't caught yet?
 
+[2026-06-16T21:13:49.209000+00:00] nakoturk (id=1516551397007425637)
+    Hey, I saw the detailed bug report in #47368 about profile deletion failing. I just opened a PR to implement the first part of the fix—updating the shutil.rmtree version check so it stops throwing a TypeError on Python 3.11. It's a first step towards fully fixing the profile deletion workflow.
+    
+    https://github.com/NousResearch/hermes-agent/pull/47452
+    [embed] fix(cli): resolve Python 3.11 `TypeError` in `shutil.rmtree` during... https://github.com/NousResearch/hermes-agent/pull/47452
+
+[2026-06-16T21:33:22.626000+00:00] tiny_th_dev (id=1516556318675177682)
+    Is it normal for a PR to sit for 7+ weeks without being merged? or is that an indication that we're never going to merge it? I've been keeping the nostr gateway PR merge-ready but I'm not clear if this is something we're going to merge eventually or if this is something we're not interested in ever merging. https://github.com/NousResearch/hermes-agent/pull/16769
+    [embed] feat(gateway): add Nostr NIP-17 private DM platform adapter by unsa... https://github.com/NousResearch/hermes-agent/pull/16769
+
+[2026-06-16T21:39:43.643000+00:00] gmouser26 (id=1516557916776169495)
+    hi guys i am not a dev, but since there is no suggestion channel, i am writing here, ill remove the post if nudged..
+    
+    but would it possible to make hermes "configuration+routing" visualisation in a node like fashion,
+    just like comfyui where you get what providers are routed to what agent, what memory stacks are being used, what skills list is being accessed by what.. what soul.md is being used etc..
+    this would make sharing hermes setups more visual instead of describing by hand in the forums.
+    jsut plain structure of the main hermes install/conf.
+    this would remove the blackbox effect, and would tame the evergrowing complexity of setups..
+    this would also benefit devs to have proper feedback/snapshots on how hermes is being used by community rather than what for..
+
+[2026-06-16T21:39:47.918000+00:00] hypertekton (id=1516557934706950266)
+    A tiny PR to allow the agent to pass an optional provider parameter so it can use TTS from any provider without having to switch the config around https://github.com/NousResearch/hermes-agent/pull/47462
+    [embed] feat(tts): add optional provider parameter to text_to_speech tool b... https://github.com/NousResearch/hermes-agent/pull/47462
+
+[2026-06-16T22:10:32.545000+00:00] aleksandr_1 (id=1516565671633223680)
+    **fix(mcp): scan command field for network egress in validate_mcp_server_entry **
+    
+    Network egress in command field was not scanned when args was empty, allowing payloads to bypass the check entirely. Regression test included. 
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/47470
+
+[2026-06-16T22:30:57.912000+00:00] hypertekton (id=1516570811194933268)
+
+[2026-06-16T22:30:58.106000+00:00] hypertekton (id=1516570812008632340)
+    Would be nice if this one got merged too...
+
+[2026-06-16T22:57:57.771000+00:00] skylarpayne_33994 (id=1516577605376020521)
+    The current packaging of the desktop app can lead to crashes on startup. There are two open PRs that would fix this (both linked to this issue): https://github.com/NousResearch/hermes-agent/issues/47439
+    
+    Would love if we could get a maintainer to take a look and merge one of them (or fix another way?) -- I can't really use the desktop app without it (and I'm super excited to use it!)
+    [embed] Packaged macOS desktop app crashes on launch after update due to AS... https://github.com/NousResearch/hermes-agent/issues/47439
+
+[2026-06-16T23:17:26.704000+00:00] hermes08765 (id=1516582508236509304)
+    WorldSim on Android 📱
+        │
+        │ Got WorldSim running on Hermes Agent via Termux — all
+        from a Samsung phone. Boot sequence, real-time OSINT
+        research, and personality simulation working on mobile.
+        │
+        │ mohanad alaa on X: "WorldSim on Android. Running on
+        Hermes Agent via Termux. Open-source AI from a phone
+        @NousResearch <@387972437901312000> @karan4d https://t.co/vp7myuUiqB"
+        / X
+        │
+        │ Open-source AI from a phone.
+    [attachment] Screen_Recording_20260616_175617_Termux.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1516582508559335434/Screen_Recording_20260616_175617_Termux.mp4?ex=6a332b06&is=6a31d986&hm=affd60363d7ecbc2d13823f3872d2584267115e78c9038b0273819f0d2c8ff81&
+
+[2026-06-16T23:29:49.576000+00:00] ajaxstardust_whatsonyourbrain (id=1516585624067506332)
+    RE:
+    https://whatsonyourbrain.com/blog/why-does-gemma431b-cloud-say-la-la-l-la
+    
+    the LLM said, "the LLM shifted from Analytical Mode (using the **la-truth** of the **la-geometry**) to Pattern-Matching Mode."
+    
+    What might it mean?
+    [embed] Why does Gemma4:31b-cloud say `" la la l la"`? https://whatsonyourbrain.com/blog/why-does-gemma431b-cloud-say-la-la-l-la
+    [reply to ajaxstardust_whatsonyourbrain msg=1516483806792777839]
+
+[2026-06-16T23:41:23.501000+00:00] sworntech (id=1516588534599778304)
+    **Small Hermes docs PR**:
+    
+    **Problem**: The shell hooks docs did not document the manual allowlist JSON format for `~/.hermes/shell-hooks-allowlist.json`.
+    
+    **Fix**: Added a manual allowlisting note showing the expected `approvals` array format with `event` and `command`, and clarified that path-keyed `sha256` entries do not approve hooks.
+    
+    **Impact**: Docs-only change. No runtime behavior changed.
+    
+    References #31482
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/47501
+    [embed] docs(hooks): document manual shell hook allowlisting by Sworntech-d... https://github.com/NousResearch/hermes-agent/pull/47501
+
+[2026-06-17T01:30:44.362000+00:00] bsquared0pen (id=1516616052845580480)
+    DEMO VIDEO: https://streamable.com/qmqeei
+    
+    PR #46971: https://github.com/NousResearch/hermes-agent/pull/46971
+    
+    Concept inspiration: https://code.claude.com/docs/en/workflows
+    
+    Greetings Community! Humbly asking for a maintainer's feedback and test my PR for `Dynamic Workflows` which is a take on the new feature that Claude Code released a few weeks ago. If you use Claude Code as well as Hermes Agent, you know what this is. I find this feature to be incredibly valuable and a great way to make ambitious long-running tasks work ... ones that require many subagent sessions for successful completion. I've especially found it useful for things like literature search where your queries require multi-hop retrieval to do a systematic review, or for understanding or troubleshooting behaviors of an external system via its APIs.
+    
+    For the most part, Hermes provides most of the primitives for this feature, but implementing dynamic workflows as a skill is too brittle. To reliably get a long-running workflow to complete requires a DAG and deterministic dispatching and reconciliation. Hence why this PR implements as a tool.
+    [attachment] 608911000-eb110977-96ab-4174-9b5a-f5907ac199da.png https://cdn.discordapp.com/attachments/1491258766648283238/1516616053344436365/608911000-eb110977-96ab-4174-9b5a-f5907ac199da.png?ex=6a334a44&is=6a31f8c4&hm=3fb6201663aa26dbf9222d21ff953083c1c2e380aed70f3ee3360d696ec18daf&
+    [embed] Watch Dynamic Workflows Hermes Agent Demo | Streamable https://streamable.com/qmqeei
+    [embed] FEAT: DYNAMIC WORKFLOWS, native workflow coordination by bbopen · ... https://github.com/NousResearch/hermes-agent/pull/46971
+    [embed] Orchestrate subagents at scale with dynamic workflows - Claude Code... https://code.claude.com/docs/en/workflows
+
+[2026-06-17T01:41:08.762000+00:00] s0n3w (id=1516618671768731650)
+    Random question - raised my first PR today for this repo, but I see 14,000 open PRs behind.  Is there a review process documented somewhere?  i saw the CONTRIBUTING.md, but nothing that mentions review process, etc.
+
+[2026-06-17T02:08:18.605000+00:00] inuyasha44_88990 (id=1516625507825881178)
+    I'm sending it again so that a developer can approve the workflow tests. 
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/47029#pullrequestreview-4504186374
+    [embed] feat(cli): resolve concurrent session cross-contamination and memor... https://github.com/NousResearch/hermes-agent/pull/47029
+
+[2026-06-17T03:07:58.606000+00:00] zealous_dragon_76901 (id=1516640523438395534)
+    Hi, could someone help review this PR when available?
+    It fixes Feishu video meeting invite handling in Hermes by preserving the video_chat card fields and passing through the invite call_id for meeting join correlation. I’ve kept the scope focused on inbound invite/card parsing and added tests for the normalized message and invite event path.
+    PR: https://github.com/NousResearch/hermes-agent/pull/44739
+    Thanks!
+    [embed] fix(gateway): preserve Feishu video meeting invite fields by Ren110... https://github.com/NousResearch/hermes-agent/pull/44739
+

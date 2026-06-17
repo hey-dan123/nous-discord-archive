@@ -1,0 +1,14 @@
+# Thread 'Stateful AI Agent' in forum #community-projects-showcase
+# thread_id=1516623530073264330 forum_id=1316137596535177246
+# Started 2026-06-17T03:55:56.819064+00:00
+
+[2026-06-17T02:00:27.072000+00:00] dogefather7516 (id=1516623530073264330)
+    Hi guys, I'm working on building a stateful agent: started with a opencode fork with builtin autonomous memory management, the memory core can also be plugged into hermes and other desktop/coding agents.
+    
+    try it and lemme know how it works for you: https://github.com/surya17495/centri
+    
+    Goal is to build a voice and mobile first client with server running in a sandbox or VM and works with all models like opencode does.
+    
+    hmu if you wanna collab on this 🙂
+    [embed] GitHub - surya17495/centri: Memory-native OpenCode fork with Centri... https://github.com/surya17495/centri
+

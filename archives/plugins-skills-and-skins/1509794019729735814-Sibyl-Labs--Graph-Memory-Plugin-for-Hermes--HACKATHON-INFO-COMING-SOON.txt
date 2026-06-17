@@ -167,3 +167,18 @@
 [2026-06-16T16:20:21.606000+00:00] yaakov_63226 (id=1516477545367732378)
     Id love to try this as well!
 
+[2026-06-16T20:55:02.724000+00:00] x1pher (id=1516546672187150496)
+    I would like to try this out as well. Will this remain free to use?
+
+[2026-06-16T21:20:07.699000+00:00] dr.kojipup (id=1516552984509677729)
+    <@1460026072006393866> <@304741125879627778> If you open up https://beta.sibyllabs.org/ there will be a link to our discord. Open up a ticket and we can give you access to the full set of features. it remains free indefinitely while we build out our infrastructure further. feel free to shoot me a DM
+    [embed] Sibyl Memory Plugin · Beta install https://beta.sibyllabs.org/
+
+[2026-06-16T21:28:03.509000+00:00] dr.kojipup (id=1516554980201468056)
+    A beta tester will be running a direct test against Mnemosyne soon, so I want to be careful not to overstate anything yet.
+    
+    One thing to flag on the adversarial test if you read our v2 benchmark blog: Mnemosyne was run with hybrid mode off, FTS-only. That took about 6h to ingest the 500-company dataset. We expect hybrid would take longer, but we won't know until we run it ourselves.
+    
+    For the next one he'll test Mnemosyne with hybrid on, since that's its stronger config and the fairer comparison. The real tradeoff there is accuracy vs ingestion time, and that's exactly what we want the full test to measure.
+    [reply to buke5122 msg=1515925652644036761]
+

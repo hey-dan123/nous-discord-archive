@@ -1,0 +1,14 @@
+# Thread 'fablize-for-hermes — run like Fable, on Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1516596273463955486 forum_id=1485392832154832906
+# Started 2026-06-17T04:00:34.144356+00:00
+
+[2026-06-17T00:12:08.590000+00:00] thiagosteixeira (id=1516596273463955486)
+    This project adapts fablize's verified procedures — verification grounding, multi-story evidence gating, investigation protocol, and early-stop prevention — from Claude Code's plugin system to Hermes Agent's skill system.
+    
+    fablize makes any agent see a task through to the end — with evidence and verification — as procedure, not as luck.
+    
+    
+    https://github.com/teixeirazeus/fablize-for-hermes
+    [attachment] banner-social.jpg https://cdn.discordapp.com/attachments/1516596273463955486/1516596274579767326/banner-social.jpg?ex=6a3337d8&is=6a31e658&hm=09460274e10973287d33afa0e05e32cc1ff6ea445c8595788d72d0267c355c0f&
+    [embed] GitHub - teixeirazeus/fablize-for-hermes: This project adapts fabli... https://github.com/teixeirazeus/fablize-for-hermes
+

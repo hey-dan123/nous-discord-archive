@@ -8,3 +8,6 @@
     [attachment] 5ae48bc4-0932-44d5-bd23-ed70b30232c1.jpg https://cdn.discordapp.com/attachments/1511026093765951690/1511026093996511242/5ae48bc4-0932-44d5-bd23-ed70b30232c1.jpg?ex=6a1ef436&is=6a1da2b6&hm=049bf8d82d9e58a176dd736b4d2b95716b0276e47c356cc41b6c41d9566b0030&
     [embed] GitHub - CardSorting/dietcode-plugin: DietCode is a standalone Herm... https://github.com/CardSorting/dietcode-plugin
 
+[2026-06-16T21:36:07.739000+00:00] oleegg (id=1516557011209162932)
+    DietCode is changing this was v1, changing the name to LUMI. the first version worked but now am taking all the fruits and polishing this
+
