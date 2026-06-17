@@ -33750,3 +33750,46 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] feat(egress): host hardening survey — follow-up to #30179 by Bart... https://github.com/NousResearch/hermes-agent/pull/35187
     [embed] feat(egress): CA rotation (`hermes egress rotate-ca`) — follow-up... https://github.com/NousResearch/hermes-agent/pull/35188
 
+[2026-06-17T16:18:34.540000+00:00] nakoturk (id=1516839484166111303)
+    Saw issue #47930 about active sessions looking completely static on Windows. It was because the prefers-reduced-motion media query was just killing the animation entirely. Put up a PR that swaps the spin with a soft opacity pulse instead. Keeps it accessible but you can actually tell the agent is still working now. 
+    https://github.com/NousResearch/hermes-agent/pull/47942
+    [embed] fix(ui): provide pulsing fallback for working sessions on reduced-m... https://github.com/NousResearch/hermes-agent/pull/47942
+
+[2026-06-17T16:38:44.559000+00:00] solidlamp_86872 (id=1516844559353647356)
+    Hi! I opened my first PR to hermes-agent: https://github.com/NousResearch/hermes-agent/pull/43872
+    
+    It looks like GitHub Actions are waiting for maintainer approval because I’m a first-time contributor (action_required). Could someone approve the workflow run / take a look when they have a chance?
+    
+    It’s a focused bug fix for fallback provider identity reporting, with regression tests included. Happy to adjust anything.
+    [embed] fix(agent): keep system-prompt model identity in sync across provid... https://github.com/NousResearch/hermes-agent/pull/43872
+
+[2026-06-17T16:44:52.636000+00:00] bsquared0pen (id=1516846103180476537)
+    Is there a CLA to sign?
+
+[2026-06-17T18:28:30.962000+00:00] lordbartok (id=1516872184730091670)
+    fix(egress): address @weklund review — pin SHA, guard CA mount, 2yr CA, host-svc doc — #47969
+    https://github.com/NousResearch/hermes-agent/pull/47969
+    
+    Problem: Review pass on the iron-proxy firewall (#30179) surfaced 5 real egress-isolation seams — an implicit HTTPS_PROXY passthrough overriding the container proxy, the binary SHA being a no-op against a compromised download channel, docker_extra_args not checking -v/--mount (rogue CA could win), a 10yr CA, and an undocumented raw-TCP path to host services via host.docker.internal.
+    
+    Fix: Filter passthrough proxy vars in the init-session env; pin per-platform SHA-256 in source as the authoritative trust anchor (checksums.txt demoted to a cross-check); scan -v/--volume/--mount and refuse mounts onto the egress CA path; drop CA validity to 2yr; document the host-service exposure + mitigation.
+    
+    Targets feat/iron-proxy (#30179). +7 regression tests · iron_proxy (92) + docker (76) green · ruff clean. Thanks @weklund for the thorough review 🙏
+    [embed] fix(egress): filter implicit passthrough proxy vars in init-session... https://github.com/NousResearch/hermes-agent/pull/47969
+
+[2026-06-17T19:09:39.491000+00:00] realadolan (id=1516882538491281549)
+    Could you please take a look at this PR as well? 🙂 https://github.com/NousResearch/hermes-agent/pull/47911
+    [embed] fix(desktop): tables follow RTL message direction by Adolanium · P... https://github.com/NousResearch/hermes-agent/pull/47911
+
+[2026-06-17T19:27:15.555000+00:00] etmost (id=1516886967944478721)
+    **Problem: **
+    When a user configures Xiaomi MiMo via hermes model, the setup flow only offers the Pay As You Go endpoint (https://api.xiaomimimo.com/v1). Users subscribed to Xiaomi's Token Plan get HTTP 401 errors because their API keys require a different regional endpoint that the wizard never surfaces.
+    
+    Hope this PR can help solve this issue. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/48001
+    [embed] feat(xiaomi): add Token Plan endpoint support during hermes model s... https://github.com/NousResearch/hermes-agent/pull/48001
+
+[2026-06-17T19:36:24.004000+00:00] illmania765. (id=1516889268306317342)
+    Would you guys recommend the AI-103?
+

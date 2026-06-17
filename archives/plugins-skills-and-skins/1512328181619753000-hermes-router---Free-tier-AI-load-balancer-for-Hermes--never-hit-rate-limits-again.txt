@@ -528,3 +528,24 @@
 [2026-06-17T14:17:45.921000+00:00] heeervas (id=1516809081254318201)
     I love AI, I have a similar thing and will drop your repo and just say improve mine with what this repo has better designed 🤣
 
+[2026-06-17T17:18:37.435000+00:00] shaf_2665 (id=1516854595802890300)
+    sure that's the purpose of open source mate, just don't forget who carried the alpha 😂
+    [reply to heeervas msg=1516809081254318201]
+
+[2026-06-17T17:19:25.795000+00:00] heeervas (id=1516854798639697920)
+    Hahahaha ofc mate, I don’t think I have mine public-ready, so after comparing i can send you the list so you integrate what you want
+
+[2026-06-17T17:20:50.835000+00:00] heeervas (id=1516855155323175085)
+    Now from memory i have a dashboard of usage remaining across accounts, smart routing to try and optimize for cache (when available) and if not optimizer for usage (more usage to accounts close to expire) - and also a cost analysis to check sub vs API cost and estimated usage vs actual usage (to spot spikes)
+
+[2026-06-17T17:29:28.534000+00:00] shaf_2665 (id=1516857326710034513)
+    haha appreciate it mate 🙏 sounds like we ran into the same stuff.
+    
+    1 and 2 I mostly have — hr status + a /metrics endpoint for the dashboard side, and smart routing + Anthropic prompt-cache passthrough for caching. I don't track remaining quota though (free tiers don't really expose it, so I just cooldown a key when it 429s) — how are you getting those numbers?
+    
+    your "route toward accounts near reset" idea is clever, not doing that — might steal it 👀
+    
+    cost analysis I skip on purpose, it's free-tier first so usually $0.
+    
+    biggest thing I leaned into: it's a drop-in for both OpenAI and Anthropic SDKs with full tool translation. all MIT — send the list, always down to nick good ideas 😂
+

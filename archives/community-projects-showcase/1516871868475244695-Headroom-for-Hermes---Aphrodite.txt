@@ -1,0 +1,8 @@
+# Thread 'Headroom for Hermes - Aphrodite' in forum #community-projects-showcase
+# thread_id=1516871868475244695 forum_id=1316137596535177246
+# Started 2026-06-17T20:10:19.790154+00:00
+
+[2026-06-17T18:27:15.561000+00:00] nikolahristov (id=1516871868475244695)
+    Hey guys, I made https://github.com/PlayForm/Aphrodite. It's Headroom for Hermes with deep integration, context and code aware compressions. It's giving me insane savings and async tool use in Hermes, has never been nicer! Try it out, it's in active development, and I'm currently working on it. Would love some contributions and feedback!
+    [attachment] aphrodite.png https://cdn.discordapp.com/attachments/1516871868475244695/1516871868634894447/aphrodite.png?ex=6a343883&is=6a32e703&hm=e092f354a55ee32283181a2883631405801622c835e7aa82386529483cda4a87&
+

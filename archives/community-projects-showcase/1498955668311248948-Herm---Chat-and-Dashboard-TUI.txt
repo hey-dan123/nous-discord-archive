@@ -1371,3 +1371,15 @@
 [2026-06-17T14:52:32.878000+00:00] liftaris (id=1516817834586411038)
     Lot's of other improvements too!
 
+[2026-06-17T16:50:52.877000+00:00] gambrin. (id=1516847614140616895)
+    ok, will try that. is my world going to break? LOL
+
+[2026-06-17T17:23:19.338000+00:00] gambrin. (id=1516855778190037155)
+    i am a little bit handicapped in linux installation options... I have installed using bun. is npm going to work for me (and install over the existing installation)? I suspect my current herm lives in /.bun/herm/
+
+[2026-06-17T17:23:42.136000+00:00] gambrin. (id=1516855873811648614)
+    I will explore, I guess :]
+
+[2026-06-17T20:05:11.721000+00:00] gambrin. (id=1516896514876768469)
+    after i installed the dev build via npm, herm shows v 1.8.1  - is that ok?
+

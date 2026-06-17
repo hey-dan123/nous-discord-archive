@@ -192,3 +192,11 @@
     Honestly I don't want to build a memory if it will be deprecated later...
     Also, can it be self-hosted?
 
+[2026-06-17T16:17:47.591000+00:00] dr.kojipup (id=1516839287247605851)
+    yes, and its entirely self-hosted!
+    [reply to heeervas msg=1516808797736271944]
+
+[2026-06-17T16:18:34.490000+00:00] dr.kojipup (id=1516839483956265123)
+    we have a migrate skill for users switching over memory providers,  but it might be easier to just ask your agent to write a .md file of its existing memory and have your agent ingest it once you've installed the memory plugin
+    [reply to buke5122 msg=1516677875774918707]
+

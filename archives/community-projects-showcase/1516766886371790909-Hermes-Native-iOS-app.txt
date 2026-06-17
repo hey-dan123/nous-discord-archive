@@ -9,3 +9,14 @@
     [attachment] demo.mov https://cdn.discordapp.com/attachments/1516766886371790909/1516766887206195400/demo.mov?ex=6a33d6be&is=6a32853e&hm=a9ca5d6b01bfe77aea8053e5df9cf014e66e15a688d7cb8d55d41e65c15aeded&
     [embed] GitHub - ab0991-oss/hermes-ios: Native iOS app for your self-hosted... https://github.com/ab0991-oss/hermes-ios
 
+[2026-06-17T18:11:04.513000+00:00] gumnaam (id=1516867795604996389)
+    nice I’m gonna steal some features from here for my app. 
+    
+    https://tamago.pras.fun
+    [embed] Tamago — An agent that knows you before it works for you https://tamago.pras.fun/
+
+[2026-06-17T19:18:33.505000+00:00] lebibi0 (id=1516884778308341882)
+    External beta. To use it install the plugin. Ref gh repo.
+    TestFlight: https://testflight.apple.com/join/TeMvfFaS
+    [embed] Join the Hermes Mobile Gateway beta https://testflight.apple.com/join/TeMvfFaS
+
