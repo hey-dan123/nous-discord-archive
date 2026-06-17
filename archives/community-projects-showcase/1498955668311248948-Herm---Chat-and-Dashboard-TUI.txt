@@ -1332,3 +1332,23 @@
 [2026-06-16T22:51:35.727000+00:00] tunacookie (id=1516576002967605429)
     was able to donwload source now for ares ands and nous and was able to edit, but the owl no source so cant edit
 
+[2026-06-17T06:44:14.148000+00:00] liftaris (id=1516694946806239322)
+    Thank you <@221727702992945152> you're the best, that's exactly what I'm looking for.
+    For the Ares EPERM error, I've narrowed that down to windows specific error when modifying files. Noted!
+
+[2026-06-17T06:45:27.528000+00:00] liftaris (id=1516695254584000563)
+    I see your PR/upload and it worked in some capacity, but revealed that the `publish` command was stale and that the eikon repo needs a PR template and some more settings tuned for easier PR/eikon contribution 🙏
+
+[2026-06-17T07:00:20.456000+00:00] tunacookie (id=1516698999795613726)
+    I uploaded 2 ways via asking hermes to upload for me by gh cli and the one inside herm interactive menu
+    [reply to liftaris msg=1516695254584000563]
+
+[2026-06-17T07:00:26.295000+00:00] tunacookie (id=1516699024286154763)
+    Thats why got 2 pr
+
+[2026-06-17T07:01:16.427000+00:00] tunacookie (id=1516699234555138198)
+    I took a screenshot of your chat and asked it to get to work on helping you 😂 disregard what i said sorry 4 ping
+
+[2026-06-17T08:55:01.649000+00:00] gambrin. (id=1516727861610942534)
+    I love herm. One issue I have with the chat window: when the agent finishes the response, I am getting a section with partial contents of the last file written to disk underneath the last response. To view the response, I need to scroll up in the chat. Is there a way to remove this?
+

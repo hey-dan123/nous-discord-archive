@@ -33538,3 +33538,85 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Thanks!
     [embed] fix(gateway): preserve Feishu video meeting invite fields by Ren110... https://github.com/NousResearch/hermes-agent/pull/44739
 
+[2026-06-17T04:02:34.105000+00:00] maxfreedompollard (id=1516654261876822066)
+    <@387972437901312000> 
+    
+    https://github.com/NousResearch/hermes-agent-self-evolution/pull/122
+    [embed] fix(config): honor explicit --hermes-repo and make config construct... https://github.com/NousResearch/hermes-agent-self-evolution/pull/122
+
+[2026-06-17T04:17:22.723000+00:00] maxfreedompollard (id=1516657989011112048)
+    <@387972437901312000> 
+    
+    This is a different one
+    
+    https://github.com/NousResearch/hermes-agent/pull/47617
+    [embed] fix(curator): stop the rollback safety snapshot from pruning its ta... https://github.com/NousResearch/hermes-agent/pull/47617
+
+[2026-06-17T05:11:35.723000+00:00] maxfreedompollard (id=1516671633081761903)
+    <@387972437901312000> 
+    
+    Third and final one for tonight:
+    
+    https://github.com/NousResearch/hermes-agent/pull/47648
+    
+    Pull request [#47648](https://github.com/NousResearch/hermes-agent/pull/47648) fixes a bug where `hermes curator restore <name>` could silently pull an unrelated archived skill out of `.archive/` and rename it, because the fallback match was a bare `startswith("<name>-")` that grabbed sibling skills like `git-helpers` when you asked for `git`. The fix tightens that fallback to only accept the exact 14 digit timestamp suffix `archive_skill` writes on a real name collision, so siblings no longer match and the requested skill either restores correctly or returns "not found".
+    [embed] fix(curator): stop restore from matching unrelated skills by name p... https://github.com/NousResearch/hermes-agent/pull/47648
+
+[2026-06-17T05:18:06.135000+00:00] xdarkchain (id=1516673270588506112)
+    That's the thing. 
+    The implementation itself is okay and I'm sure when you're using an outdated version, it tells you to update your client but people just ignore it. <:LookUp:1107986527109255168>
+    [reply to aialliai msg=1516539262907191347]
+
+[2026-06-17T06:23:41.502000+00:00] realadolan (id=1516689776714190989)
+    I'd appreciate a review on this PR as well. It would help a lot! https://github.com/NousResearch/hermes-agent/pull/44628
+    [embed] fix(desktop): list markers and quote border follow RTL message dire... https://github.com/NousResearch/hermes-agent/pull/44628
+
+[2026-06-17T06:28:28.466000+00:00] kylekaster (id=1516690980328312934)
+    giving a friendly bump to this PR looking to solve the cache miss issues with codex auth'd GPT 5.5
+    
+    https://github.com/NousResearch/hermes-agent/pull/47399, observed this yesterday and had my agent working on a PR, and when doing the review step it came to the same conclusions as found here
+
+[2026-06-17T06:33:17.810000+00:00] kylekaster (id=1516692193925140580)
+    and with all good bug fixes comes a feature request :D
+    
+    https://github.com/NousResearch/hermes-agent/pull/47497 I've been loving working with kanban swarms, but sometimes I want to get the benefit of my other hermes profiles without the overhead of kanban.
+    
+    I've seen similar issues and tried to be very tactful about this specific opinionated approach, I propose giving the ability to `delegate_task` to a specific hermes profile, mostly to get the benefits of that profile's `SOUL.md` and it has been useful for me locally especially after the background subagents stuff came out, to be able to leverage the identities for specific tasks when talking with my main hermes agent.
+
+[2026-06-17T06:46:41.162000+00:00] nuuuuuuuuuu0480 (id=1516695563427381389)
+    https://github.com/NousResearch/hermes-agent/pull/47618 
+    https://github.com/NousResearch/hermes-agent/pull/47621 
+    https://github.com/NousResearch/hermes-agent/pull/47623
+    [embed] fix(cli): skip bool coercion for string-typed config keys by vanthi... https://github.com/NousResearch/hermes-agent/pull/47618
+    [embed] fix(cli): kill venv python processes before venv recreation on Wind... https://github.com/NousResearch/hermes-agent/pull/47621
+    [embed] fix(gateway): log MCP discovery failures at WARNING instead of DEBU... https://github.com/NousResearch/hermes-agent/pull/47623
+
+[2026-06-17T07:56:57.697000+00:00] kyssta69 (id=1516713248857264179)
+    https://github.com/NousResearch/hermes-agent/pull/47724
+    
+    **Problem**: Curator restore matches unrelated archived skills when the requested name is a prefix. Fix restricts matching to exact timestamped duplicates only.
+    [embed] fix(skills): prevent restore from matching unrelated archived skill... https://github.com/NousResearch/hermes-agent/pull/47724
+
+[2026-06-17T07:57:06.635000+00:00] kyssta69 (id=1516713286345818132)
+    https://github.com/NousResearch/hermes-agent/pull/47724
+    
+    **Problem**: Curator restore matches unrelated archived skills when the requested name is a prefix. Fix restricts matching to exact timestamped duplicates only.
+    [embed] fix(skills): prevent restore from matching unrelated archived skill... https://github.com/NousResearch/hermes-agent/pull/47724
+
+[2026-06-17T08:22:14.596000+00:00] loongfay (id=1516719611192803328)
+    Hi, <@387972437901312000> , Yuanbao Gateway optimizes media resource processing speed: parallel download. Please take a look: https://github.com/NousResearch/hermes-agent/pull/47303
+    [embed] Dev by loongfay · Pull Request #47303 · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/pull/47303
+
+[2026-06-17T09:15:46.472000+00:00] srojk34 (id=1516733082776899764)
+    PR #47732 — fix(agent): unwrap pre-wrapped tool schemas from context engines and memory providers <@387972437901312000> 
+    
+    Context engines and memory providers can return tool schemas already in OpenAI's {"type":"function","function":{...}} form. Every consumer site was blindly wrapping them a second time, producing a nameless tool entry. Strict providers like DeepSeek reject the entire request with HTTP 400 (tools[N].function: missing field name) — one bad schema silently kills all model calls for the session.
+    
+    Fixed in 4 locations across agent_init.py and memory_manager.py. Also added a guard to skip any schema that still has no name after unwrapping, rather than appending it as dead weight. 5 new regression tests, 96/96 passing.
+    
+    https://github.com/NousResearch/hermes-agent/pull/47732
+    [embed] fix(agent): unwrap pre-wrapped tool schemas from context engines an... https://github.com/NousResearch/hermes-agent/pull/47732
+
+[2026-06-17T10:23:20.061000+00:00] wittgenstein9840 (id=1516750084761718864)
+    keep building fam!
+

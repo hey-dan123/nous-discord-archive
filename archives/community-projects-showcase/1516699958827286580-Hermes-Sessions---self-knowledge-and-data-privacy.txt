@@ -1,0 +1,13 @@
+# Thread 'Hermes Sessions - self-knowledge and data privacy' in forum #community-projects-showcase
+# thread_id=1516699958827286580 forum_id=1316137596535177246
+# Started 2026-06-17T10:51:40.664981+00:00
+
+[2026-06-17T07:04:09.107000+00:00] bert_71849 (id=1516699958827286580)
+    I spent two months using  Hermes Agent, then asked two LLMs (GPT-5.5 and Opus 4.8) to profile me from 741 Hermes  sessions. 
+    I wrote up the experiment and what it says about privacy in the LLM age:  
+     
+    https://nhranitzky.github.io/know_thyself.html
+    
+    Worth trying yourself.
+    [embed] Gnōthi seautón https://nhranitzky.github.io/know_thyself.html
+

@@ -182,3 +182,7 @@
     For the next one he'll test Mnemosyne with hybrid on, since that's its stronger config and the fairer comparison. The real tradeoff there is accuracy vs ingestion time, and that's exactly what we want the full test to measure.
     [reply to buke5122 msg=1515925652644036761]
 
+[2026-06-17T05:36:24.097000+00:00] buke5122 (id=1516677875774918707)
+    Is there a way to smoothly switch from one to another?
+    [reply to dr.kojipup msg=1516554980201468056]
+

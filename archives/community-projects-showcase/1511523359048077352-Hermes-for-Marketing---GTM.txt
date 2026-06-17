@@ -179,3 +179,11 @@
 [2026-06-17T01:06:35.502000+00:00] seibakas (id=1516609975886286929)
     ? where's the link ?
 
+[2026-06-17T09:09:30.958000+00:00] thechaosalchemist (id=1516731507757023343)
+    https://github.com/Infinite-Labs-AI/infinite-os
+    [embed] GitHub - Infinite-Labs-AI/infinite-os: Self-hosted, local-first gro... https://github.com/Infinite-Labs-AI/infinite-os
+    [reply to seibakas msg=1516609975886286929]
+
+[2026-06-17T09:09:40.504000+00:00] thechaosalchemist (id=1516731547796115547)
+    my bad, the tweet hid it
+

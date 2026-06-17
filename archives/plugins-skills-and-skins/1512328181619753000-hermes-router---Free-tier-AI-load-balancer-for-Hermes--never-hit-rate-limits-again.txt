@@ -500,3 +500,28 @@
     GitHub: https://github.com/Shaf2665/Hermes-router
     [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
 
+[2026-06-17T04:27:58.422000+00:00] shaf_2665 (id=1516660655325843507)
+    # New to AI agents? You can build your first one today — for free 🤖
+    
+    We just added beginner-friendly guides to hermes-router, written for people with zero AI experience. No jargon dumped on you, no paid API keys, no frameworks to learn.
+    
+    **📚 Three new guides:**
+    
+    🚀 Getting started — what hermes-router actually is (with a simple analogy), the handful of words you'll keep seeing, and how to send your first AI message step by step.
+    
+    📖 Concepts — a plain-language glossary. What's a token? An embedding? An agent loop? All explained simply.
+    
+    🤖 Build your first AI agent — the fun one. Copy-paste your way from a basic chatbot → one that remembers → one that uses tools to do real things. Every code sample is tested and runs on free models through hermes-router.
+    
+    The best part: because it all runs through hermes-router, you're building on free AI providers with automatic failover — so you can learn and experiment without hitting rate limits or paying a cent.
+    
+    If you've been wanting to build an AI agent but didn't know where to start, this is your on-ramp. 💛
+    
+    **Get started:**
+    
+    
+    `curl -fsSL https://raw.githubusercontent.com/Shaf2665/Hermes-router/main/get.sh | bash
+    hr setup`
+    GitHub: https://github.com/Shaf2665/Hermes-router
+    [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
+

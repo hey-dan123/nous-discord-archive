@@ -1,0 +1,61 @@
+# Thread '"Create a Squirrel Story" → Hermes Generates the Entire Video' in forum #community-projects-showcase
+# thread_id=1516667844954427433 forum_id=1316137596535177246
+# Started 2026-06-17T10:51:41.117442+00:00
+
+[2026-06-17T04:56:32.563000+00:00] johnsonbuilds (id=1516667844954427433)
+    I built a Hermes skill that turns a single prompt into a complete children's picture-book video.
+    
+    For example:
+    
+    "Create a squirrel story for my daughter"
+    
+    The agent automatically:
+    
+    ✓ Writes the prompt
+    ✓ Generates all illustrations
+    ✓ Creates English narration (different voices for mom and child)
+    ✓ Creates Chinese narration
+    ✓ Merges everything into a video
+    ✓ Ready to publish
+    
+    Before this, my workflow looked like:
+    
+    ChatGPT
+    → Generate images
+    → WaveSpeed TTS
+    → edge-tts
+    → Custom script
+    → Publish
+    
+    Total time: 30–60 minutes.
+    
+    Now:
+    
+    Tell the agent what story you want.
+    
+    That's it.
+    
+    The entire workflow runs autonomously and usually takes about 1 minute of my time.
+    
+    What I like most is that this isn't just a one-off demo.
+    
+    My daughters want a new story every day, so I turned a repetitive workflow into a reusable Hermes skill.
+    
+    Built with:
+    - Image generation
+    - WaveSpeed
+    - edge-tts
+    - Video composition tools
+    
+    All orchestrated by Hermes Agent.
+    
+    The core Wavespeed skill is open source:
+    
+    hermes skills install https://raw.githubusercontent.com/johnsonbuilds/awesome-hermes-skills/main/creative/wavespeed/SKILL.md
+    
+    If you want to run Hermes without managing servers:
+    
+    https://hermesagentcloud.com
+    [attachment] lv_0_20260617125009.mp4 https://cdn.discordapp.com/attachments/1516667844954427433/1516667845520654346/lv_0_20260617125009.mp4?ex=6a337a80&is=6a322900&hm=77cdca58e6cf122193da26530891abb709aafcc73fa2e54e5638ab6a7eee7501&
+    [attachment] IMG_20260617_123616_557.jpg https://cdn.discordapp.com/attachments/1516667844954427433/1516667846430687232/IMG_20260617_123616_557.jpg?ex=6a337a80&is=6a322900&hm=cc654783d58c0c7c10f446cc4d5c185d025587e25df9257430df1a39a925f73d&
+

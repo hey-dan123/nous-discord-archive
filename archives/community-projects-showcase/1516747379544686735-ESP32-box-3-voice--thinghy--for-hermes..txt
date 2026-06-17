@@ -1,0 +1,8 @@
+# Thread 'ESP32-box-3 voice "thinghy" for hermes.' in forum #community-projects-showcase
+# thread_id=1516747379544686735 forum_id=1316137596535177246
+# Started 2026-06-17T10:51:40.281612+00:00
+
+[2026-06-17T10:12:35.087000+00:00] reverendissimo00 (id=1516747379544686735)
+    wanted an alexa like experience with Hermes, so i wrote a thing. it's still BETA so do not expect anything exceptional but it works quite well. the bridge uses chatterbox and whisper to transcribe and create the voice output. you can clone voices with chatterbox which is a feature i like. uses the REST API of the gateway to have a session with hermes. if someone has the ESP32-box in hand and want to test please feel free to give me feedback. https://github.com/Reverendissimo/ESP32-Voice
+    [embed] GitHub - Reverendissimo/ESP32-Voice: ESP-IDF firmware for ESP32-S3-... https://github.com/Reverendissimo/ESP32-Voice
+
