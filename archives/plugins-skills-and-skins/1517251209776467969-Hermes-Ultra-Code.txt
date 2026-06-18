@@ -1,0 +1,32 @@
+# Thread 'Hermes Ultra Code' in forum #plugins-skills-and-skins
+# thread_id=1517251209776467969 forum_id=1485392832154832906
+# Started 2026-06-18T20:28:21.343096+00:00
+
+[2026-06-18T19:34:37.575000+00:00] .blockops (id=1517251209776467969)
+    This was my experiment into reigning AI into writing disciplined, minimal code and eliminating AI bias by having other models review and scrutinize the decisions before any code is even written.
+    
+    🛂 HermesUltraCode — a pre-dispatch prompt gate for Hermes
+    Built a Hermes plugin that vets every delegate_task before the worker subagent runs. The orchestrator's prompt doesn't reach the worker until a reviewer signs off — and that reviewer runs on a different model lab than your orchestrator.
+    
+    That cross-lab bit is the whole point: a model reviewing its own family's output shares its training data, its sycophancy, its blind spots — so it's structurally blind to the mistakes it's most likely to make. A genuinely different lab brings different failure modes and catches what a same-lineage reviewer would rubber-stamp. So: Hermes/Nous orchestrator → reviewed by Anthropic/xAI/whatever (you can even route the reviewer through hermes proxy). The gate hard-fails at startup if the labs match.
+    
+    hermes plugins install MahdiHedhli/HermesUltraCode
+    
+    (heads up: it fails closed, so set a reviewer key/lab before enabling — full flow in the README)
+    
+    Repo 👉 https://github.com/MahdiHedhli/HermesUltraCode
+    
+    Would love feedback / blind-spot pokes 🤓
+    [attachment] dashboard.png https://cdn.discordapp.com/attachments/1517251209776467969/1517251210057482423/dashboard.png?ex=6a3599cd&is=6a34484d&hm=4cc834bb8f04c9097765ddd2c8959ca0da75b9675baeca9f6aa09c64346653bb&
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1517251209776467969/1517251210435100932/message.txt?ex=6a3599cd&is=6a34484d&hm=ac611e574ef50e62b8dd225d9996a03f2b55d8079dc4a540a60928cacc6e26b5&
+    [embed] GitHub - MahdiHedhli/HermesUltraCode: Pre-dispatch prompt gate, pon... https://github.com/MahdiHedhli/HermesUltraCode
+
+[2026-06-18T19:34:47.644000+00:00] .blockops (id=1517251252009046096)
+    How it wires in — real Hermes seams, no forking:
+    
+    ✂️ Tighten-only — the reviewer can only append constraints or block, never rewrite. dispatched = base verbatim + directives, enforced in code.
+    🔒 Fail-closed — missing / timed-out / garbled verdict → block + escalate. Silence is never a pass.
+    🧾 Immutable audit trail — one redacted row per dispatch, JSON/CSV export, plus a read-only dashboard (live state, gate panel, fail-closed counter).
+    🧶 Neckbeard discipline — a vendored minimalism ruleset injected into the orchestrator + workers (forked from Ponytail, MIT). "Doesn't write less code, writes the correct code."
+    It's a proper plugin — hooks tool_request (tighten) + pre_tool_call (block) on delegate_task, verified end-to-end against the real PluginManager. Stdlib-only core, 0 runtime deps, 155 offline tests.
+

@@ -555,3 +555,27 @@
     **Update:**
     ` hr update && hr restart`
 
+[2026-06-18T17:34:31.932000+00:00] markopaasila (id=1517220987119075529)
+    Does this handle main turns only, or also delegation, auxiliary tasks?
+
+[2026-06-18T17:36:16.058000+00:00] shaf_2665 (id=1517221423855304724)
+    # 🚀 Update: Codex support + run anywhere
+    
+    Codex (ChatGPT subscription) is now a provider — use your Plus/Pro/Go quota, no API key. OAuth + token refresh + Responses API all handled for you:
+    
+    
+    `codex login
+    hr auth import-codex
+    hr restart`
+    Multi-account? Pair with hr mode sequential. (Note: subscription-via-proxy is ToS-gray — use your own accounts.)
+    
+    New deployment guide 🌍 — Windows ✅ (native, or Docker/WSL2), Docker, and Hugging Face Spaces (with the port gotcha solved). See documentation/deployment.md.
+    
+    Update: `hr update && hr restart`
+
+[2026-06-18T17:40:42.525000+00:00] shaf_2665 (id=1517222541498912890)
+    hermes-router isn't an agent framework — it sits below it. It's a smart proxy for the model API: it routes every request to a working provider with auto key-rotation + failover.
+    
+    So it handles all of them — main turns, delegation, auxiliary tasks — because it doesn't distinguish. They're all just API calls to it. Your agent decides what's what; the router just makes sure each call reaches a live model.
+    [reply to markopaasila msg=1517220987119075529]
+

@@ -1409,3 +1409,21 @@
     Have a slash command to change the cwd or make it live change on the side panel.
     Provider that model uses.
 
+[2026-06-18T18:06:03.983000+00:00] tunacookie (id=1517228922956152913)
+    🤘
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1517228922612482178/image.png?ex=6a35850b&is=6a34338b&hm=29b45f505308b7795353cc89ef5fe7be889c510db80706895e6f88d433f42f7f&
+
+[2026-06-18T18:20:43.760000+00:00] valiendovrga (id=1517232613008343111)
+    can i have this plz
+    [reply to tunacookie msg=1516558455257829446]
+
+[2026-06-18T18:21:20.191000+00:00] tunacookie (id=1517232765811163226)
+    ping the author to add it not  me 😆
+    [reply to valiendovrga msg=1517232613008343111]
+
+[2026-06-18T18:21:39.547000+00:00] tunacookie (id=1517232846995984444)
+    im scared to do feature pull requests i dont know what shit i have in my herm
+
+[2026-06-18T18:25:15.268000+00:00] valiendovrga (id=1517233751795564595)
+    @? hehe pls
+

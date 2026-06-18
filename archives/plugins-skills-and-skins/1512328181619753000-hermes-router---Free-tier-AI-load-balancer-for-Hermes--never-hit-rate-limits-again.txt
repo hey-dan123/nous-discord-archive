@@ -684,3 +684,88 @@
     What's it doing right now, does the Space build & show "Running", or does it error / show nothing at the URL? And is it a Docker Space? That'll tell us if it's the port or something else.
     [reply to syedabdullah7046 msg=1517124694762065972]
 
+[2026-06-18T16:18:59.986000+00:00] nettsam1 (id=1517201978759844033)
+    Is this only for linux or mac? or is it usable for windows users also?
+
+[2026-06-18T17:10:30.997000+00:00] shaf_2665 (id=1517214943399907419)
+    Yep, Windows works! 🙂 The router itself is plain Python, so it runs natively on Windows, macOS, and Linux — waitress (its server) is actually great on Windows.
+    
+    The only Windows caveat: the hr helper commands are bash scripts, so on Windows you'd use one of:
+    
+    Docker Desktop — docker compose up, easiest and identical everywhere
+    WSL2 — full hr experience, just like Linux
+    or run it directly: pip install -r requirements.txt then python router.py
+    Full walkthrough (with PowerShell steps) here: https://github.com/Shaf2665/Hermes-router/blob/main/documentation/deployment.md
+    
+    Have fun!
+    [reply to nettsam1 msg=1517201978759844033]
+
+[2026-06-18T17:24:03.960000+00:00] nettsam1 (id=1517218353213735073)
+    Thank you. 🙂
+    [reply to shaf_2665 msg=1517214943399907419]
+
+[2026-06-18T17:30:32.669000+00:00] shaf_2665 (id=1517219983577583647)
+    you can follow up with this guide
+    https://github.com/Shaf2665/Hermes-router/blob/main/documentation/deployment.md
+    [reply to syedabdullah7046 msg=1517124694762065972]
+
+[2026-06-18T17:31:02.511000+00:00] shaf_2665 (id=1517220108743868670)
+    welcome, make sure to leave a star if you like this project
+    [reply to nettsam1 msg=1517218353213735073]
+
+[2026-06-18T17:31:30.886000+00:00] shaf_2665 (id=1517220227757375669)
+    just stole the codex feature 🙂
+    [reply to heeervas msg=1517120399077277789]
+
+[2026-06-18T17:32:43.844000+00:00] heeervas (id=1517220533765148692)
+    That’s damn good
+
+[2026-06-18T17:33:16.349000+00:00] heeervas (id=1517220670101258432)
+    Good to see some of the functions recommended have had so much impact on your product hahaha
+
+[2026-06-18T17:33:41.733000+00:00] shaf_2665 (id=1517220776569339934)
+    # 🚀 Update: Codex support + run anywhere
+    
+    Codex (ChatGPT subscription) is now a provider — use your Plus/Pro/Go quota, no API key. OAuth + token refresh + Responses API all handled for you:
+    
+    
+    `codex login
+    hr auth import-codex
+    hr restart`
+    Multi-account? Pair with hr mode sequential. (Note: subscription-via-proxy is ToS-gray — use your own accounts.)
+    
+    New deployment guide 🌍 — Windows ✅ (native, or Docker/WSL2), Docker, and Hugging Face Spaces (with the port gotcha solved). See documentation/deployment.md.
+    
+    Update: `hr update && hr restart`
+
+[2026-06-18T17:34:15.213000+00:00] heeervas (id=1517220916994768896)
+    So now it’s codex Auth + smart/even rotation up to user right??
+
+[2026-06-18T17:34:31.309000+00:00] heeervas (id=1517220984506159205)
+    It’s gpt image gen supported?
+
+[2026-06-18T17:35:25.763000+00:00] shaf_2665 (id=1517221212902789170)
+    that's agent work
+    
+    our Hermes router is just a model
+    
+    Maybe I can try that too 🤔
+    [reply to heeervas msg=1517220984506159205]
+
+[2026-06-18T17:36:19.491000+00:00] heeervas (id=1517221438254223531)
+    When I implemented it to my router I sent the teknium PR for Hermes to my codex and it added it easily
+
+[2026-06-18T17:36:25.315000+00:00] heeervas (id=1517221462682108094)
+    Just in case you want to try
+
+[2026-06-18T17:40:27.830000+00:00] syedabdullah7046 (id=1517222479863615719)
+    Thanks, mate
+    [reply to shaf_2665 msg=1517219983577583647]
+
+[2026-06-18T17:41:50.047000+00:00] heeervas (id=1517222824706834503)
+    <@1272778978624540704> accept my dm request and I can send you my image-generation.ts if you want
+
+[2026-06-18T17:42:11.149000+00:00] shaf_2665 (id=1517222913215041710)
+    already done mate
+    [reply to heeervas msg=1517222824706834503]
+

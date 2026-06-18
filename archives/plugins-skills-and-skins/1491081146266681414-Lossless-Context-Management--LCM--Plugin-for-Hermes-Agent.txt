@@ -1827,3 +1827,40 @@
     I’d see them as complementary rather than mutually exclusive: Mnemosyne can provide durable external memory, while LCM keeps the active Hermes conversation manageable and recoverable over long sessions.
     [reply to w9h. msg=1516963735716233346]
 
+[2026-06-18T16:46:00.593000+00:00] _voscko_ (id=1517208776078393405)
+    Profiles have separate Hermes homes, so directory-based user plugins are profile-local.
+    
+    Default profile user plugins live under: ~/.hermes/plugins/
+    
+    A named profile uses its own plugin directory, for example: ~/.hermes/profiles/my-profile/plugins/
+    
+    So if the plugin was installed only as a directory under the default profile, another profile will not automatically see it.
+    
+    Symlinking is enough, as long as:
+    
+    1. the symlink points to the plugin directory
+    2. the plugin’s Python dependencies are installed in the Hermes environment that profile uses
+    3. the plugin is enabled/configured in that profile
+    4. for LCM specifically, that profile’s config selects it, for example:
+    
+    context:
+      engine: lcm
+    
+    Example:
+    
+    mkdir -p ~/.hermes/profiles/my-profile/plugins
+    ln -s ~/.hermes/plugins/context_engine/lcm ~/.hermes/profiles/my-profile/plugins/context_engine/lcm
+    
+    Then restart that profile’s Hermes/gateway session.
+    
+    If it was installed as a pip plugin via a hermes_agent.plugins entry point, then you usually don’t need to copy/symlink the code, but you still need to enable/configure it per profile.
+    [reply to blaspat msg=1516970823775162379]
+
+[2026-06-18T17:17:25.266000+00:00] w0lfgang88 (id=1517216680969896077)
+    https://x.com/SteveSchoettler/status/2067657181248545055?s=20
+    [embed]  https://twitter.com/SteveSchoettler/status/2067657181248545055?s=20
+
+[2026-06-18T18:07:28.609000+00:00] w9h. (id=1517229277903585340)
+    thank you for the concise and pleasant response, ill def have to give it a go
+    [reply to _voscko_ msg=1517164464305082368]
+

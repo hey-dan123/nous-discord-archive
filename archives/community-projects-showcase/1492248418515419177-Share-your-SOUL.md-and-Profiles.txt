@@ -438,3 +438,16 @@
     I would love to discuss the refining.
     [reply to datarevised msg=1516974785844740256]
 
+[2026-06-18T15:48:26.127000+00:00] lordxam_ (id=1517194286997700809)
+    Have you guys found if using first, second or third person makes a difference? Or if writing in bullet points eg. Purpose:... \n Role: ... \n Tone: ... works better than just "talking to the AI"?
+
+[2026-06-18T19:49:54.848000+00:00] reefsnax (id=1517255057098412142)
+    Cringe NetNavi inspired soul.md:
+    [attachment] SOUL.md https://cdn.discordapp.com/attachments/1492248418515419177/1517255056666263662/SOUL.md?ex=6a359d62&is=6a344be2&hm=bef015cf1ea048da18d7a9d70e70e283e6ca767cec7b18378d4c30cc3d12939b&
+
+[2026-06-18T19:50:49.351000+00:00] reefsnax (id=1517255285700563045)
+    I uh, don't *really* know what I'm doing a lot of the time but after a month of using Hermes, this has been serving me well. Incorporates some of DataVoid's ideas but I like the stupid LARP.
+
+[2026-06-18T19:51:54.042000+00:00] reefsnax (id=1517255557034147922)
+    I have Ika send stuff to friends and family so the heavy-handed personality is useful in making it feel approachable to the more "anti-AI" folks I have it interact with. They don't even seem to notice/care that it's an LLM-driven entity <:squidShrug:1393330736060301502>
+

@@ -99,3 +99,15 @@
 [2026-06-18T03:12:47.190000+00:00] drgekoz (id=1517004121712885852)
     ## **Play Here >>> https://hermes-idleviber.netlify.app **
 
+[2026-06-18T15:43:06.954000+00:00] echoeclipse (id=1517192948289241239)
+    I am currently playing around with it but im having a smidge of a hard time with the font, was there a way to change the font?
+
+[2026-06-18T16:37:41.307000+00:00] drgekoz (id=1517206681921261569)
+    <@95617422995750912> hey mate - I've been working on it all day - let me push the latest version so you can see it - hold the line for about 10 mins please
+
+[2026-06-18T16:53:33.824000+00:00] drgekoz (id=1517210677066862592)
+    <@95617422995750912> - all done --- it's 2:53am here so I'm heading bed - but feel free to add me and let me know any other issues you may be having and I'll iron them out tomorrow
+
+[2026-06-18T17:24:23.615000+00:00] echoeclipse (id=1517218435652784311)
+    yay kk thank you!
+

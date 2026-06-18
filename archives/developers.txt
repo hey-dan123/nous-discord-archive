@@ -34099,3 +34099,67 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/48479
     [embed] fix(compression): guard feasibility auto-lower against unresolved a... https://github.com/NousResearch/hermes-agent/pull/48479
 
+[2026-06-18T15:20:44.368000+00:00] nanxingncb612d (id=1517187317075283969)
+    https://github.com/NousResearch/hermes-agent/pull/48473 preserve profile for session windows
+    [embed] fix(desktop): preserve profile for session windows by necoweb3 · P... https://github.com/NousResearch/hermes-agent/pull/48473
+
+[2026-06-18T15:21:57.958000+00:00] maxfreedompollard (id=1517187625734246471)
+    https://github.com/NousResearch/hermes-agent/pull/48486
+    [embed] fix(context_references): keep message newlines when stripping @ ref... https://github.com/NousResearch/hermes-agent/pull/48486
+
+[2026-06-18T15:45:32.809000+00:00] devorun11 (id=1517193560049451009)
+    https://github.com/NousResearch/hermes-agent/pull/48463
+    [embed] fix(install): relax EAP=Stop around git/uv native calls in install.... https://github.com/NousResearch/hermes-agent/pull/48463
+
+[2026-06-18T15:47:56.444000+00:00] yap.bi (id=1517194162498310154)
+    https://github.com/NousResearch/hermes-agent/pull/48502
+    [embed] fix(usage): avoid 60s/60m in format_duration_compact (boundary roun... https://github.com/NousResearch/hermes-agent/pull/48502
+
+[2026-06-18T16:27:01.249000+00:00] sahil_ss9 (id=1517203997323169983)
+    Could I get a review on please - 
+    
+    https://github.com/NousResearch/hermes-agent/pull/48466
+    https://github.com/NousResearch/hermes-agent/pull/43780
+    https://github.com/NousResearch/hermes-agent/pull/44919
+    [embed] fix(cron): compact cron failure messages + repair bare repo dirs af... https://github.com/NousResearch/hermes-agent/pull/48466
+    [embed] feat(curator): add post_curator_run hook event through the plugin h... https://github.com/NousResearch/hermes-agent/pull/43780
+    [embed] fix(kanban): machine-global singleton lock for the embedded dispatc... https://github.com/NousResearch/hermes-agent/pull/44919
+
+[2026-06-18T16:44:14.750000+00:00] yap.bi (id=1517208332140548196)
+    Opened a fix for #48510 — on Windows, codex-runtime reported "codex CLI not found" 
+    even when installed, because npm installs codex.CMD and subprocess.run() doesn't 
+    resolve .CMD without shell=True. Fix resolves the binary via shutil.which() at both 
+    the version check and the actual spawn.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/48522
+    
+    
+    Opened a fix for #48504 — Desktop remote mode proved the backend ready, then failed 
+    with "Timed out after 15000ms" while loading profiles. Profile-heavy installs take 
+    ~35s but every authenticated call fell back to a hardcoded 15s timeout. Bumped it to 
+    60s; the readiness/auth probes keep their own short timeouts so a down backend is 
+    still caught fast.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/48526
+    [embed] fix(codex): resolve codex binary via shutil.which so Windows .CMD i... https://github.com/NousResearch/hermes-agent/pull/48522
+    [embed] fix(desktop): raise authenticated fetch timeout so profile-heavy re... https://github.com/NousResearch/hermes-agent/pull/48526
+
+[2026-06-18T17:21:56.714000+00:00] sworntech (id=1517217819505332345)
+    **Small Hermes Agent docs cleanup PR**:
+    
+    https://github.com/NousResearch/hermes-agent/pull/48545
+    
+    Removes an unresolved `#<TBD>` placeholder from a `run_agent.py` comment.
+    Comment-only, no behavior change.
+    
+    References #32848
+    [embed] docs: remove unresolved run agent comment placeholder by Sworntech-... https://github.com/NousResearch/hermes-agent/pull/48545
+
+[2026-06-18T18:24:04.605000+00:00] gitanu (id=1517233455413465339)
+    This is a bummer. I already built the integration for telegram bot 10.1 formatting and they’re dropping it instead of letting it go through.
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1517233455220392016/image0.jpg?ex=6a358944&is=6a3437c4&hm=89b481c21bd4cf0f6eaeba5513d954c71a12b870f478577dc3f7bc2ee39e4349&
+
+[2026-06-18T19:51:27.948000+00:00] aleksandr_1 (id=1517255447587852328)
+    fix(conversation): persist sanitized system prompt to SessionDB after non-ASCII stripping. On Linux with ASCII locale, UnicodeEncodeError recovery sanitized agent._cached_system_prompt in memory but never wrote the clean copy back to SessionDB. Every subsequent turn read the stale unsanitized prompt from DB, found a mismatch, and rebuilt the system prompt from scratch, losing the prefix cache for the rest of the session. PR: https://github.com/NousResearch/hermes-agent/pull/48390
+    [embed] fix(conversation): persist sanitized system prompt to SessionDB aft... https://github.com/NousResearch/hermes-agent/pull/48390
+

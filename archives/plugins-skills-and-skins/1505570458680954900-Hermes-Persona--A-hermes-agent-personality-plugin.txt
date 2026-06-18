@@ -81,3 +81,6 @@
 [2026-06-18T06:01:56.433000+00:00] buke5122 (id=1517046690723528865)
     I didn't read a lot, but do I have to deactivate the soul.md file?
 
+[2026-06-18T17:10:39.809000+00:00] kai.xu (id=1517214980359847937)
+    No it works along with your existing soul file and prefill, the plugin works as a real time & dynamic reminder of the agent on what ever info you put in the persona config file
+
