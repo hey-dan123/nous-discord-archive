@@ -1,0 +1,25 @@
+# Thread 'IMPLEMENTAUDIT ; a nested loop skill to safely close findings, plan deeply, augment /goal , etc' in forum #plugins-skills-and-skins
+# thread_id=1517054553470799943 forum_id=1485392832154832906
+# Started 2026-06-18T10:22:07.972546+00:00
+
+[2026-06-18T06:33:11.058000+00:00] mdthr (id=1517054553470799943)
+    https://theIslampill.github.io/IMPLEMENTAUDIT.md/
+    https://github.com/theIslampill/IMPLEMENTAUDIT.md/
+    
+    I give permission for Nous to use/adapt/merge this into Hermes however they see fit
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517054553470799943/1517054721528041526/image.png?ex=6a34e2cf&is=6a33914f&hm=1f80e6f009d9148b2a61f556fd7a619b61709359b1cc155337567e61733a5594&
+    [embed] GitHub - theislampill/IMPLEMENTAUDIT.md: A loop skill to implement ... https://github.com/theIslampill/IMPLEMENTAUDIT.md/
+
+[2026-06-18T06:34:12.768000+00:00] mdthr (id=1517054812301299792)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517054553470799943/1517054812032733214/image.png?ex=6a34e2e4&is=6a339164&hm=92ddb140d4a1d2744e3f34efaa898ebb87309c34bf47aab6d27bb693352d6765&
+
+[2026-06-18T06:34:35.597000+00:00] mdthr (id=1517054908053061713)
+    > Andons are loop points, not just errors:
+    ```
+    > record abnormality -> 5 Whys -> Hansei -> countermeasure -> rerun relevant checks -> close/defer/block with evidence
+    ```
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517054553470799943/1517054908078100480/image.png?ex=6a34e2fb&is=6a33917b&hm=bd1ff3301e2f64cffd63a86396480b8a03126fa4c159677939f6313624852938&
+
+[2026-06-18T06:34:43.617000+00:00] mdthr (id=1517054941691383879)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517054553470799943/1517054941343121458/image.png?ex=6a34e303&is=6a339183&hm=36ad84cf0cef98363f00e0e402f7f62ad156f19854311edfbf2173945a6a1b48&
+

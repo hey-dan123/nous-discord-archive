@@ -33980,3 +33980,67 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     good job man
     [reply to 10ofdisks msg=1516980976130064384]
 
+[2026-06-18T03:59:49.816000+00:00] kyssta69 (id=1517015960664412230)
+    https://github.com/NousResearch/hermes-agent/pull/48202
+    
+    **Problem**: OAuth Pro/Max/Team requests rejected with HTTP 400 'extra usage, not plan limits' because Hermes omits the x-anthropic-billing-header system block. Anthropic's billing gate requires this block with cc_entrypoint=sdk-cli to route OAuth to subscription plan. Added the billing block as system[0] in the OAuth path of build_anthropic_kwargs().
+    [embed] fix(anthropic): add billing header for OAuth plan-tier routing (#48... https://github.com/NousResearch/hermes-agent/pull/48202
+
+[2026-06-18T04:12:32.299000+00:00] kyssta69 (id=1517019158749904948)
+    https://github.com/NousResearch/hermes-agent/pull/48205
+    
+    **Problem**: strip_markdown ate list bullets and literal asterisks on plain text platforms like SMS and iMessage. The star emphasis regexes lacked boundary guards, matching across bullet markers and math expressions. Added lookaround assertions to match only real emphasis spans.
+    [embed] fix(gateway): prevent strip_markdown from eating bullets (#48150) b... https://github.com/NousResearch/hermes-agent/pull/48205
+
+[2026-06-18T04:21:28.418000+00:00] big.slam (id=1517021407396106300)
+    How you post on Instagram/tiktok on auto?
+
+[2026-06-18T04:45:16.355000+00:00] aialliai (id=1517027396598108161)
+    not the channel for that
+
+[2026-06-18T04:52:27.469000+00:00] nuuuuuuuuuu0480 (id=1517029204821151794)
+    fix(cli): prune stale bundled_manifest entries on profile clone
+     https://github.com/NousResearch/hermes-agent/pull/48235
+    [embed] fix(cli): prune stale bundled_manifest entries on profile clone by ... https://github.com/NousResearch/hermes-agent/pull/48235
+
+[2026-06-18T05:50:25.296000+00:00] hypertekton (id=1517043791884714125)
+    Here's a small PR to add expressive speech tags to the xAI voices so they don't sound flat... https://github.com/NousResearch/hermes-agent/pull/48251
+    [embed] feat(tts): add auxiliary-model auto speech tags for xAI TTS by Cddd... https://github.com/NousResearch/hermes-agent/pull/48251
+
+[2026-06-18T06:31:30.428000+00:00] 10ofdisks (id=1517054131397984266)
+    I haven't done any work yet, but I would love to help out. Is there a preferred approach for kanban integration: add kanban feature to desktop app (focused), or add native dashboard plugin loader (more code, but enables more features)? The PR's I listed show different approaches
+    [reply to shilird. msg=1517010388640595978]
+
+[2026-06-18T07:15:31.387000+00:00] fesalfayed (id=1517065208382881935)
+    <@387972437901312000> I opened a pull request to add google’s new OKF spec to the /llm-wiki skill 
+    
+    https://github.com/NousResearch/hermes-agent/issues/48267
+    
+    reference: 
+    https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf
+    
+    https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing
+    [embed] feat(skills): add OKF v0.1 interoperability standard to llm-wiki by... https://github.com/NousResearch/hermes-agent/issues/48267
+    [embed] knowledge-catalog/okf at main · GoogleCloudPlatform/knowledge-catalog https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf
+    [embed] How the Open Knowledge Format can improve data sharing | Google Clo... https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing
+
+[2026-06-18T08:16:37.024000+00:00] kyssta69 (id=1517080583178555522)
+    https://github.com/NousResearch/hermes-agent/pull/48306
+    
+    **Problem**: Google Gemini OAuth users cannot use auxiliary tasks (vision, compression) because google-gemini-cli was not handled in auxiliary_client resolve_provider_client. Fix: add explicit routing to GeminiCloudCodeClient for this OAuth provider.
+    [embed] fix(agent): add google-gemini-cli to auxiliary resolve_provider_cli... https://github.com/NousResearch/hermes-agent/pull/48306
+
+[2026-06-18T08:21:48.388000+00:00] floory (id=1517081889133953094)
+    how far is the backlog
+
+[2026-06-18T08:21:50.522000+00:00] floory (id=1517081898084466819)
+    for PRs
+
+[2026-06-18T09:36:37.785000+00:00] kyssta69 (id=1517100719029878894)
+    https://github.com/NousResearch/hermes-agent/pull/48347
+    
+    **Problem**: Users get stuck in permanent deadlock when concurrent commands swap the session guard during message processing.
+    Old task's finally block deleted _session_tasks before _release_session_guard, leaving an orphaned guard with no detectable owner.
+    Fixed by only deleting _session_tasks when the guard can also be released; done tasks are left for staleness detection.
+    [embed] fix(gateway): prevent stale session lock from orphaned guard swap (... https://github.com/NousResearch/hermes-agent/pull/48347
+

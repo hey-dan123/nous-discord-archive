@@ -1392,3 +1392,12 @@
 [2026-06-17T21:34:01.757000+00:00] liftaris (id=1516918870668087317)
     I suspect it is still using the herm version you already had installed through bun. Try installing with bun at herm-tui@next
 
+[2026-06-18T06:47:18.410000+00:00] tunacookie (id=1517058107522416651)
+    feel like adding a filter function for the session tab thing, similar to how you filter the /model picker thing.
+
+[2026-06-18T06:53:27.932000+00:00] gambrin. (id=1517059657410023466)
+    1.91.-dev41 installed and running
+
+[2026-06-18T09:20:40.136000+00:00] gambrin. (id=1517096702358847520)
+    1.9.1 does not show the file partial under the response, chat is clean.
+

@@ -592,3 +592,17 @@
     `hr update
     hr restart`
 
+[2026-06-18T07:55:47.968000+00:00] heeervas (id=1517075344258240573)
+    Well mine started as a fork of a multi router, but quickly moved to Codex-focused since I'm using multiple acconuts there, usage is at wham/usage endpoint or something like that I believe, but I guess every tool has its own
+    [reply to shaf_2665 msg=1516857326710034513]
+
+[2026-06-18T07:57:24.458000+00:00] heeervas (id=1517075748966502560)
+    Also one thing I added, not sure if you have it, is clickable opt-in opt-off for routing across accounts, and "activate now" button/window, so after resets, for example yesterday at codex, I don't route requests to 0% usage accounts until I want it, that way I can do a scalation of activations (day 0 two slots, day 1 other slot, etc)
+    Then requests are routed between activated accounts
+
+[2026-06-18T07:57:40.537000+00:00] heeervas (id=1517075816406843473)
+    Honestly if you can implement that for more multiple providers I'll just switch over to yours lol
+
+[2026-06-18T07:57:55.386000+00:00] heeervas (id=1517075878688063528)
+    Mine is too codex-focused atm
+

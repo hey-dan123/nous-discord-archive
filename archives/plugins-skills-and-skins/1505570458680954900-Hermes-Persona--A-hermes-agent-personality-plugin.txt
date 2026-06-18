@@ -78,3 +78,6 @@
     1.1 out
     add location setting and weather, now the agent will know what the current weather is if you set the location in the config file~
 
+[2026-06-18T06:01:56.433000+00:00] buke5122 (id=1517046690723528865)
+    I didn't read a lot, but do I have to deactivate the soul.md file?
+

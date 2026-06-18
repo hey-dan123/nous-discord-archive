@@ -1,0 +1,20 @@
+# Thread 'Hermes Session Analytics: An improved plugin for visualizing sessions' in forum #plugins-skills-and-skins
+# thread_id=1517061801756590231 forum_id=1485392832154832906
+# Started 2026-06-18T10:22:07.614518+00:00
+
+[2026-06-18T07:01:59.184000+00:00] tom_jose (id=1517061801756590231)
+    Tired of the native Analytics page being hidden because the numbers are "just estimates"? This plugin gives you real cost attribution (by user, platform, and model), tool latency, top-spender sessions, and cleaned-up transcripts with Slack links — all read-only from state.db. Slack-first; Discord + WhatsApp soon.
+    Github repo for the plugin: https://github.com/tomjose92/hermes-session-analytics
+    [attachment] Screenshot_2026-06-18_at_12.19.17_PM.png https://cdn.discordapp.com/attachments/1517061801756590231/1517061802842656819/Screenshot_2026-06-18_at_12.19.17_PM.png?ex=6a34e967&is=6a3397e7&hm=3efe9bf4c5080a15bbb1e569dd47ce2053f5da1c7511d3b3f82c671e953957b9&
+
+[2026-06-18T07:02:39.236000+00:00] tom_jose (id=1517061969746591827)
+    A drop-in dashboard plugin that turns your Hermes sessions into real analytics — built to go beyond the native Analytics page.
+    
+    - **Cost attribution** — see exactly who and what is spending: per user, per platform (webhooks + crons), and per model, plus your top-N most expensive sessions.
+    - **Tool insights** — global and per-session tool usage with average latency, so you can spot slow or chatty tools.
+    - **Cleaner conversations** — strips the gateway's thread-context / reply / sender prefixes into a readable transcript, with an "Open in Slack" deep link and the skills each session triggered.
+    - **Flexible time ranges** — presets plus custom since/until windows, not just fixed 7/30/90 days.
+    - **Safe by design** — reads `state.db` read-only, never calls an LLM.
+    
+    Currently focused on Slack; Discord and WhatsApp attribution coming soon. Install = clone into `~/.hermes/plugins/` and reload the dashboard.
+

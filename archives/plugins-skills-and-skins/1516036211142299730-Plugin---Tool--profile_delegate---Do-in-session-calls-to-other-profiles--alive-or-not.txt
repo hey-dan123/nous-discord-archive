@@ -7,3 +7,16 @@
     
     Built this because I'm not a big fan of kanban delegation, and I don't always have terminal handy. Bad thing is that it creates a new session for each profile call, next step would be to be able to resume/continue the previous session with the same profile, but for now I can handle the token consumption. (it does not drain a lot in my tests).
 
+[2026-06-18T09:11:55.287000+00:00] heeervas (id=1517094500982329376)
+    Updated profile_delegate so delegated runs now require a short session_title, create/rename readable child sessions, and support explicit session_mode: new|resume with session_id.
+    
+    Switched execution to hermes chat -q -Q --pass-session-id and parse the real child session_id footer, including the stderr case.
+    
+    **Result: agents can now do continuity work across profile sessions, and humans can open the exact delegated session in TUI with hermes -p <profile> --resume <id>.**
+    
+    Verified with reviewer: turn 1 stored a fact, turn 2 resumed the same session and recalled it.
+
+[2026-06-18T09:13:18.418000+00:00] heeervas (id=1517094849659273327)
+    https://github.com/Heeervas/profile-delegate-plugin/releases/tag/v1.1.0
+    [embed] Release v1.1.0 · Heeervas/profile-delegate-plugin https://github.com/Heeervas/profile-delegate-plugin/releases/tag/v1.1.0
+

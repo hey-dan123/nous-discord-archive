@@ -1,0 +1,32 @@
+# Thread 'Memory Is for Decisions. Markdown Is for Knowledge.' in forum #community-projects-showcase
+# thread_id=1517055527849300078 forum_id=1316137596535177246
+# Started 2026-06-18T10:18:11.079810+00:00
+
+[2026-06-18T06:37:03.368000+00:00] johnsonbuilds (id=1517055527849300078)
+    One small workflow change improved my AI agent dramatically.
+    
+    Instead of stuffing everything into memory, I store research in Markdown files:
+    
+    📁 /knowledge/
+    
+    * quick-ref.md (index)
+    * growth_tactics.md
+    * developer_resources.md
+    
+    The agent only needs the index file to discover relevant knowledge.
+    
+    Benefits:
+    
+    ✅ Human-readable
+    ✅ Version controllable
+    ✅ Cross-agent compatible
+    ✅ No vector database required
+    
+    My current rule:
+    
+    Memory = decisions
+    Markdown = knowledge
+    
+    Curious how others manage long-term knowledge for their agents.
+    [attachment] ChatGPT_Image_2026618_14_19_57.png https://cdn.discordapp.com/attachments/1517055527849300078/1517055528138702898/ChatGPT_Image_2026618_14_19_57.png?ex=6a34e38f&is=6a33920f&hm=6cd5053b2c186f27cc78010d68e5600d98a832904cec166b23a7783753871ee1&
+
