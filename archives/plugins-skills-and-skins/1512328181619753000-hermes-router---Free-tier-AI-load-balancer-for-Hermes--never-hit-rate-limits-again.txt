@@ -606,3 +606,81 @@
 [2026-06-18T07:57:55.386000+00:00] heeervas (id=1517075878688063528)
     Mine is too codex-focused atm
 
+[2026-06-18T10:49:48.696000+00:00] shaf_2665 (id=1517119135845187705)
+    Funny you mention this — just shipped something for exactly your use case 👀
+    I didn't go the clickable opt-in/opt-out route (felt like a chore to re-toggle after every reset). Instead it's a set-once mode:
+    `hr mode sequential`
+    In sequential mode the router drains one key/account fully until it rate-limits, then moves to the next — so your later accounts stay untouched in reserve instead of all depleting in parallel. That's your "scaled activation" idea, just automatic: no buttons, no re-activating after a reset.
+    hr mode round-robin is still the default (spread load evenly). And the big difference from your setup — this works across all 13 providers, not just Codex. So if you were holding out for the multi-provider version… here it is 😄
+    `hr update && hr restart` to grab it. Curious if it fits how you ration accounts.
+    [reply to heeervas msg=1517075748966502560]
+
+[2026-06-18T10:51:53.316000+00:00] shaf_2665 (id=1517119658539487283)
+    Also this router is based on Api keys not Oauth tokens like the one codex uses
+    
+    Will work on that too later
+
+[2026-06-18T10:52:09.993000+00:00] heeervas (id=1517119728488026142)
+    It probable does apart from the log analysis
+    
+    I see that sometimes codex spike, or a session spends an insane amount of tokens, so I have an alert system
+    
+    You have something like that? (expected vs spend and cost /usage per M tokens)
+
+[2026-06-18T10:52:21.417000+00:00] heeervas (id=1517119776403624016)
+    Ouch, mine works rotatin Oauth
+    [reply to shaf_2665 msg=1517119658539487283]
+
+[2026-06-18T10:52:24.582000+00:00] heeervas (id=1517119789678461029)
+    That hurted
+
+[2026-06-18T10:52:27.898000+00:00] heeervas (id=1517119803586777200)
+    I was about to jump lol
+
+[2026-06-18T10:52:28.595000+00:00] heeervas (id=1517119806510465124)
+    hahahah
+
+[2026-06-18T10:53:31.951000+00:00] shaf_2665 (id=1517120072244789269)
+    Not a big deal to implement 
+    I was focusing on those who are using free provider api keys
+    [reply to heeervas msg=1517119776403624016]
+
+[2026-06-18T10:54:49.874000+00:00] heeervas (id=1517120399077277789)
+    Yeah I understand it´s a different purpose
+
+[2026-06-18T10:57:05.398000+00:00] shaf_2665 (id=1517120967506395316)
+    # New: key rotation modes ⚙️
+    
+    You can now choose how hermes-router picks between multiple keys/accounts on a provider:
+    round-robin (default) — spreads requests evenly across all your keys. Best for load + latency.
+    
+    sequential — drains one key fully until it rate-limits, then moves to the next. Keeps your later accounts fresh in reserve instead of burning them all at once — great for rationing accounts after a quota reset.
+    
+    `hr mode              # see current mode`
+    `hr mode sequential   # switch`
+    `hr restart           # apply`
+    
+    Default is unchanged, so nothing breaks if you don't touch it. The active mode shows up in hr status. Failover, cooldowns, and the circuit breaker all keep working — this only changes which key gets preferred next.
+    
+    **Update:**
+    ` hr update && hr restart`
+
+[2026-06-18T11:11:54.045000+00:00] syedabdullah7046 (id=1517124694762065972)
+    I'm running hermes router in a new HF space
+    [reply to shaf_2665 msg=1516968794017366196]
+
+[2026-06-18T14:18:20.569000+00:00] shaf_2665 (id=1517171614444290058)
+    Nice, running it in an HF Space works, you just have to line up the port. HF only exposes one port (default 7860), but hermes-router listens on 8319, so traffic never reaches it.
+    
+    Two fixes, pick one:
+    
+    In your Space README.md header add app_port: 8319 (and make sure sdk: docker), or
+    Add a Space secret PORT=7860.
+    Then a few HF-specific things:
+    
+    Put your provider keys + a strong PROXY_API_KEYS in Settings -> Secrets (the filesystem is ephemeral, so auth.json won't persist). Add ROUTER_STATE_FILE=/tmp/router_state.json too.
+    The Space URL is public, set that PROXY_API_KEYS to something only you know, or others can use your quota.
+    Connect your agent to https://<your-space>.hf.space/v1, api key = your PROXY_API_KEYS, model hermes-router.
+    What's it doing right now, does the Space build & show "Running", or does it error / show nothing at the URL? And is it a Docker Space? That'll tell us if it's the port or something else.
+    [reply to syedabdullah7046 msg=1517124694762065972]
+

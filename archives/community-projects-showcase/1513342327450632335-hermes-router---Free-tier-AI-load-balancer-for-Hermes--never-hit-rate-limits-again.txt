@@ -538,3 +538,20 @@
     `hr update
     hr restart`
 
+[2026-06-18T10:56:30.657000+00:00] shaf_2665 (id=1517120821791821854)
+    # New: key rotation modes ⚙️
+    
+    You can now choose how hermes-router picks between multiple keys/accounts on a provider:
+    round-robin (default) — spreads requests evenly across all your keys. Best for load + latency.
+    
+    sequential — drains one key fully until it rate-limits, then moves to the next. Keeps your later accounts fresh in reserve instead of burning them all at once — great for rationing accounts after a quota reset.
+    
+    `hr mode              # see current mode`
+    `hr mode sequential   # switch`
+    `hr restart           # apply`
+    
+    Default is unchanged, so nothing breaks if you don't touch it. The active mode shows up in hr status. Failover, cooldowns, and the circuit breaker all keep working — this only changes which key gets preferred next.
+    
+    **Update:**
+    ` hr update && hr restart`
+

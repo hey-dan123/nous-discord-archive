@@ -6,3 +6,15 @@
     Hi fellow builders, if you built something cool and want fellow builders to test it and provide candid feedback for product improvement, drop your link here: https://feedbacklab.app/
     [embed] Feedback Lab https://feedbacklab.app/
 
+[2026-06-18T14:49:39.210000+00:00] genidma2652 (id=1517179494035881984)
+    good morning
+    
+    how are you doing?
+    
+    how is this different from product hunt?
+    
+    thx!
+
+[2026-06-18T15:03:39.427000+00:00] william_zhu3541 (id=1517183018161279118)
+    Great question. I thought about it last night as well. I realized that Product Hunt is more for formal project launches while this is going to have more emphasis on feedback for work in progress, small  project. I'm gonna make a lot more changes to feature changes to emphasize feedback, giving each other feedback for improvement.
+

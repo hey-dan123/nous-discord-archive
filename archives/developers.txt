@@ -34044,3 +34044,58 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Fixed by only deleting _session_tasks when the guard can also be released; done tasks are left for staleness detection.
     [embed] fix(gateway): prevent stale session lock from orphaned guard swap (... https://github.com/NousResearch/hermes-agent/pull/48347
 
+[2026-06-18T11:51:17.830000+00:00] kyssta69 (id=1517134609194684556)
+    https://github.com/NousResearch/hermes-agent/pull/48391
+    
+    **Problem**: TUI model picker was rewriting the entire config.yaml via yaml.dump when persisting a global model switch, destroying comments and potentially clobbering unrelated config sections like auxiliary slots and fallback tiers. The root cause was _persist_model_switch using save_config() (full rewrite) instead of save_config_value() (targeted key update). Changed to use save_config_value() with atomic_roundtrip_yaml_update, matching the CLI approach.
+    [embed] fix(tui): use targeted save_config_value for model persistence (#48... https://github.com/NousResearch/hermes-agent/pull/48391
+
+[2026-06-18T11:53:20.803000+00:00] kyssta69 (id=1517135124980961391)
+    https://github.com/NousResearch/hermes-agent/pull/48392
+    
+    **Problem**: Dashboard crashes on Chinese Windows (GBK locale) with UnicodeDecodeError when serving index.html or CSS. Two read_text() calls in web_server.py were missing encoding='utf-8', so Python used the system default GBK codec. Added explicit UTF-8 encoding to both bare read_text() calls.
+    [embed] fix(dashboard): add encoding='utf-8' to bare read_text() calls (#48... https://github.com/NousResearch/hermes-agent/pull/48392
+
+[2026-06-18T11:59:49.464000+00:00] srojk34 (id=1517136755143213078)
+    PR #48393 — fix(desktop): dispose open PTY sessions in before-quit handler <@387972437901312000> 
+    
+    The before-quit handler kills the Python backend and cleans up watchers but never disposes live PTY sessions. When Electron tears down the environment, node-pty's ThreadSafeFunction fires on a half-destroyed runtime → SIGABRT crash (node-pty#904). Happens on every quit/update-restart if a terminal tab is open.
+    
+    Fix: sweep terminalSessions and call the existing disposeTerminalSession() before environment teardown. 6 lines, single file.
+    
+    https://github.com/NousResearch/hermes-agent/pull/48393
+    [embed] fix(desktop): dispose open PTY sessions in before-quit handler by s... https://github.com/NousResearch/hermes-agent/pull/48393
+
+[2026-06-18T12:23:25.986000+00:00] srojk34 (id=1517142696467234997)
+    PR #48408 — test(desktop): cover resolveWorktree and worktreesForIpc
+    
+    git-worktrees.cjs had zero test coverage. Added 10 tests: main worktree, linked worktree, detached HEAD, subdirectory walk-up, batch dedup, invalid input. All use real temp dirs. No code changes — test-only.
+    
+    https://github.com/NousResearch/hermes-agent/pull/48408
+    [embed] test(desktop): cover resolveWorktree and worktreesForIpc by srojk34... https://github.com/NousResearch/hermes-agent/pull/48408
+
+[2026-06-18T13:47:04.393000+00:00] srojk34 (id=1517163745191919797)
+    The Contributor badge looks really cool. I'm happy to be part of such a large project. 
+    Ty Teknium ❤️
+    [attachment] Ekran_Resmi_2026-06-18_16.45.31.png https://cdn.discordapp.com/attachments/1491258766648283238/1517163744956780698/Ekran_Resmi_2026-06-18_16.45.31.png?ex=6a354858&is=6a33f6d8&hm=69f933e8dd0c96d0211a5f58128ccdfb833b0137b092d81665bcbd9e5ec54fbc&
+
+[2026-06-18T13:49:54.586000+00:00] ajaxstardust_whatsonyourbrain (id=1517164459033100349)
+    WORDPRESS vs ARTIFICIAL INTELLIGENCE 
+    I created this is the SPEC DRIVEN Development-with-AI series in LARGE part with Ollama and related software.
+    
+    
+    https://www.youtube.com/watch?v=2CwL7QNVSDw
+    [embed] [Multi-Agent 9] - Spec-Driven PROJECT: WordPress Governance with CS... https://www.youtube.com/watch?v=2CwL7QNVSDw
+
+[2026-06-18T14:37:53.059000+00:00] srojk34 (id=1517176532223922178)
+    PR #48461 — fix(bootstrap-installer): prevent panic when truncating multi-byte UTF-8 output
+    
+    truncate() slices by byte offset (&s[..max]), which panics if max lands inside a multi-byte UTF-8 character. The install scripts emit ⚠, ✓, → throughout, so a failed manifest with >4000 bytes of output can crash the installer silently — the user never sees the actual error. Walks back to the nearest char boundary using is_char_boundary() (stable since Rust 1.0, MSRV 1.77 compatible).
+    
+    https://github.com/NousResearch/hermes-agent/pull/48461
+    [embed] fix(bootstrap-installer): prevent panic when truncating multi-byte ... https://github.com/NousResearch/hermes-agent/pull/48461
+
+[2026-06-18T15:11:18.409000+00:00] yap.bi (id=1517184943271444520)
+    https://github.com/NousResearch/hermes-agent/pull/48479
+    [embed] fix(compression): guard feasibility auto-lower against unresolved a... https://github.com/NousResearch/hermes-agent/pull/48479
+

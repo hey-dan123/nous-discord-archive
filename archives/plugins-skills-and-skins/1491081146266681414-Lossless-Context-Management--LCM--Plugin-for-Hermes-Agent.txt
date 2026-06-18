@@ -1805,3 +1805,25 @@
     Hi, I want to ask
     If I already installed this as a general user plugin, do I need to install it in another profile or symlinking it enough?
 
+[2026-06-18T13:49:55.843000+00:00] _voscko_ (id=1517164464305082368)
+    They are adjacent, but not quite the same layer. A Mnemosyne setup where retrieved context is injected on each call is closer to memory injection: before the model runs, you fetch relevant memories/notes and add them to the prompt. Correct me if I'm wrong <@151598363131904000> 
+    
+    LCM is more of a conversation context engine. It manages the agent’s own transcript/history as it grows, compacts older context into a DAG, and lets the agent retrieve or expand supporting evidence from that graph later. So instead of always feeding a retrieved memory packet on every call, the session history itself becomes searchable, compressible, and recoverable.
+    
+    Short version:
+    
+    - Mnemosyne context-on-call:
+    -- best for long-term/user/project memory injection
+    -- runs before each model call
+    -- usually injects retrieved snippets
+    -- simple and useful, but can add noisy/token-heavy context every call
+    
+    - Hermes LCM:
+    -- best for active conversation/session context management
+    -- runs as the conversation grows and compacts
+    -- builds a DAG of summaries plus source evidence
+    -- lets the agent drill back into supporting messages instead of only trusting a summary
+    
+    I’d see them as complementary rather than mutually exclusive: Mnemosyne can provide durable external memory, while LCM keeps the active Hermes conversation manageable and recoverable over long sessions.
+    [reply to w9h. msg=1516963735716233346]
+

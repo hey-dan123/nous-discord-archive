@@ -4095,3 +4095,19 @@
 [2026-06-18T08:39:54.929000+00:00] _123321_ (id=1517086446417084416)
     Love the new model selection menu ❤️ really clean
 
+[2026-06-18T15:17:05.963000+00:00] avidfuturist (id=1517186401018319011)
+    Yes of course! https://apps.apple.com/us/app/hermex/id6767006319 works seamlessly as an extension of WebUI
+    [embed] Hermex App - App Store https://apps.apple.com/us/app/hermex/id6767006319
+    [reply to valiendovrga msg=1517059980635930635]
+
+[2026-06-18T15:17:47.971000+00:00] avidfuturist (id=1517186577212899339)
+    Glad to hear it! We put a bunch of work into improving it this week! I feel a lot better about it now
+    [reply to _123321_ msg=1517086446417084416]
+
+[2026-06-18T15:20:16.994000+00:00] avidfuturist (id=1517187202260668457)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now WebUI works for Windows/Linux/macOS as both a web app and a native desktop app! And with iOS support!
+    
+    (Could use feedback and testing of everything from WebUI, desktop apps, and iOS apps, please report any feedback here!)
+

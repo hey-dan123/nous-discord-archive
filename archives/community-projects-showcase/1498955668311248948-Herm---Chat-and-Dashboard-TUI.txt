@@ -1401,3 +1401,11 @@
 [2026-06-18T09:20:40.136000+00:00] gambrin. (id=1517096702358847520)
     1.9.1 does not show the file partial under the response, chat is clean.
 
+[2026-06-18T10:42:39.843000+00:00] tunacookie (id=1517117337105338451)
+    List of features i want to add:
+    Filter for sessions,
+    Theme persists across sessions.
+    Longer display area for CWD.
+    Have a slash command to change the cwd or make it live change on the side panel.
+    Provider that model uses.
+
