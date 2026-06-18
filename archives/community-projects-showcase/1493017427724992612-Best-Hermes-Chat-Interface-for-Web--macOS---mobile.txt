@@ -4078,3 +4078,14 @@
     
     (Could use feedback and testing of everything from WebUI, desktop apps, and iOS apps, please report any feedback here!)
 
+[2026-06-17T20:40:36.050000+00:00] deor42 (id=1516905424958390342)
+    I 100% agree with this. I was about to reactivate my Claude sub so I could use Projects, but  once I added WebUi to Hermes I didn't bother. Been using it for a couple of months now and it's gone from strength to strength!
+    [reply to lemz42 msg=1516517434432028673]
+
+[2026-06-17T22:45:33.051000+00:00] avidfuturist (id=1516936869659676752)
+    Means a lot, thanks for sharing, I feel really proud of how far we’ve taken the WebUI project just in this last week or two! Huge thanks to <@1426121324169789481> and @rodifer and everyone reporting bugs and helping us test!
+    [reply to deor42 msg=1516905424958390342]
+
+[2026-06-17T22:45:58.693000+00:00] avidfuturist (id=1516936977210146847)
+    Is Rod not even in the Nous discord 😂- well anyhow he’s been crushing it with contributions recently
+

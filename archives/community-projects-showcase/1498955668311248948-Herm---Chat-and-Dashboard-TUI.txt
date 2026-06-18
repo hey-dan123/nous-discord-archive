@@ -1383,3 +1383,12 @@
 [2026-06-17T20:05:11.721000+00:00] gambrin. (id=1516896514876768469)
     after i installed the dev build via npm, herm shows v 1.8.1  - is that ok?
 
+[2026-06-17T20:38:36.540000+00:00] gambrin. (id=1516904923696992316)
+    P.S. the issue persists for me
+
+[2026-06-17T21:32:22.668000+00:00] liftaris (id=1516918455058567408)
+    <@465739698023694348> Hey sorry I was at work--you can use bun too! Npm was just my default suggestion. It should show herm v 1.9.0-dev-28 or something.
+
+[2026-06-17T21:34:01.757000+00:00] liftaris (id=1516918870668087317)
+    I suspect it is still using the herm version you already had installed through bun. Try installing with bun at herm-tui@next
+

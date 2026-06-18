@@ -512,3 +512,29 @@
     GitHub: https://github.com/Shaf2665/Hermes-router
     [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
 
+[2026-06-18T00:55:10.526000+00:00] shaf_2665 (id=1516969490754048180)
+    # hermes-router just got a new provider — Hugging Face!🚀 
+    
+    You can now add a Hugging Face token to your router pool and get access to 45,000+ models across HF's inference partners — all through the same OpenAI-compatible interface you already use.
+    
+    **How to add it:**
+    
+    
+    `hr auth add huggingface
+    hr restart`
+    Get your token at huggingface.co → Settings → Access Tokens → create one with Inference Providers permission (starts with hf_).
+    
+    **What you get:**
+    
+    45k+ models from partners like Meta, Mistral, Qwen, and more
+    :cheapest suffix on the default model to stretch the free credit
+    Auto-detected tool-calling and reasoning support at startup
+    Fails over to other providers when credit runs out — zero downtime
+    The free credit is small (~$0.10/mo), so treat it as a bonus in the pool, not your primary. Stack it with Gemini, Groq, and the rest for maximum uptime.
+    
+    **Update now:**
+    
+    
+    `hr update
+    hr restart`
+

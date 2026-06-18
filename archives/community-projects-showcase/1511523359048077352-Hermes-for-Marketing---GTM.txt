@@ -187,3 +187,6 @@
 [2026-06-17T09:09:40.504000+00:00] thechaosalchemist (id=1516731547796115547)
     my bad, the tweet hid it
 
+[2026-06-17T20:24:52.960000+00:00] thechaosalchemist (id=1516901469352366160)
+    hey! big update, now the AI an run facebook ads
+

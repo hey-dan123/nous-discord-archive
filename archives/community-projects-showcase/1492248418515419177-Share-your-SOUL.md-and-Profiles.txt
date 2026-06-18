@@ -426,3 +426,11 @@
 [2026-06-16T21:41:20.755000+00:00] meltzmedia (id=1516558324093681938)
     What’s some recommendations for models that everyone is using.  Especially for different agents.  Would love to hear
 
+[2026-06-17T20:36:38.345000+00:00] gambrin. (id=1516904427951489064)
+    I just want to bump this one. I read and implemented to all my profiles immediately. My experience is that a full-stack architect agent in hermes with this SOUL.md on deepseek-v4-flash  is on par with similar agent without this soul in opencode on deepseek-v4-pro.
+    [reply to datarevised msg=1492248938026111096]
+
+[2026-06-18T01:16:12.974000+00:00] datarevised (id=1516974785844740256)
+    I might go back over it sometime to see if it can be further refined. Glad you found it so impactful!
+    [reply to gambrin. msg=1516904427951489064]
+

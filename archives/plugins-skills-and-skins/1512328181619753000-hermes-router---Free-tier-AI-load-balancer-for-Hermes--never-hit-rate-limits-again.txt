@@ -549,3 +549,46 @@
     
     biggest thing I leaned into: it's a drop-in for both OpenAI and Anthropic SDKs with full tool translation. all MIT — send the list, always down to nick good ideas 😂
 
+[2026-06-17T20:44:41.019000+00:00] syedabdullah7046 (id=1516906452432719912)
+    Hi, is anyone hosting their Hermes Agent on Hugging Face? I'm already hosting it on there but I'm having issues connecting hermes router to it
+
+[2026-06-18T00:52:24.411000+00:00] shaf_2665 (id=1516968794017366196)
+    Hey! The issue is about where hermes-router is running — if it's on your local machine (localhost:8319), your HF Space can't reach it since HF Spaces run in the cloud.
+    
+    Two options:
+    
+    Option 1 — Expose your local hermes-router publicly
+    Use a tunnel like ngrok or Cloudflare Tunnel to give it a public URL, then point your HF-hosted Hermes Agent at that URL instead of localhost.
+    
+    Option 2 — Use HF's inference models inside hermes-router (just landed in the latest update!)
+    We just added Hugging Face as a provider — so hermes-router can now pull from HF's 45k+ free inference models. Add your hf_ token with hr auth add huggingface, restart, and it joins the pool automatically. Your agent stays local but gets HF models as a backup.
+    
+    Which setup are you going for? Happy to walk you through it!
+    [reply to syedabdullah7046 msg=1516906452432719912]
+
+[2026-06-18T00:54:31.924000+00:00] shaf_2665 (id=1516969328845783110)
+    # hermes-router just got a new provider — Hugging Face!🚀 
+    
+    You can now add a Hugging Face token to your router pool and get access to 45,000+ models across HF's inference partners — all through the same OpenAI-compatible interface you already use.
+    
+    **How to add it:**
+    
+    
+    `hr auth add huggingface
+    hr restart`
+    Get your token at huggingface.co → Settings → Access Tokens → create one with Inference Providers permission (starts with hf_).
+    
+    **What you get:**
+    
+    45k+ models from partners like Meta, Mistral, Qwen, and more
+    :cheapest suffix on the default model to stretch the free credit
+    Auto-detected tool-calling and reasoning support at startup
+    Fails over to other providers when credit runs out — zero downtime
+    The free credit is small (~$0.10/mo), so treat it as a bonus in the pool, not your primary. Stack it with Gemini, Groq, and the rest for maximum uptime.
+    
+    **Update now:**
+    
+    
+    `hr update
+    hr restart`
+

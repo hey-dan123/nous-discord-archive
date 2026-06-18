@@ -9,3 +9,7 @@
 [2026-06-17T13:32:12.819000+00:00] reverendissimo00 (id=1516797617793929349)
     please if anyone try it just drop me a message and let me know how it works, what would u see implemented and things like that. i really appreciate feedback, no need to star the repo or anything
 
+[2026-06-17T20:20:21.279000+00:00] reverendissimo00 (id=1516900329839394856)
+    added OpenAI-compatible STT/TTS endpoints with Opus support for Hermes.
+    so now one can use the same server to provide SST/TTS to hermes on all channel plus the bridge will handle the ESP32s
+

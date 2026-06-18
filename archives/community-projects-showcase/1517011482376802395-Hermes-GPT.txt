@@ -1,0 +1,38 @@
+# Thread 'Hermes GPT' in forum #community-projects-showcase
+# thread_id=1517011482376802395 forum_id=1316137596535177246
+# Started 2026-06-18T03:42:37.511214+00:00
+
+[2026-06-18T03:42:02.109000+00:00] tonysimons_ (id=1517011482376802395)
+    🚨  Some dude just shipped Hermes GPT!
+    
+    It’s an MCP sidecar that lets ChatGPT plug into Hermes Agent’s local tool system.
+    
+    ChatGPT can now use Hermes to:
+    
+    ⚕️  read project files
+    ⚕️  search your workspace
+    ⚕️  search Hermes memory
+    ⚕️  inspect installed skills
+    ⚕️  call selected local Hermes tools
+    ⚕️  unlock gated power tools only when explicitly enabled
+    
+    🚫  No Hermes source edits.
+    🚫  No fork.
+    🚫  No fake cloud agent cosplay.
+    ✅  Zero usage of your Codex quota.
+    
+    This is a local bridge between ChatGPT and Hermes Agent.
+    
+    Hermes stays clean.
+    MCP does the wiring.
+    ChatGPT gets local hands.
+    
+    Oh, and that dude who shipped it? 
+    
+    It was me! 🤘🏻
+    
+    v0.1.0 is live. 👇🏻
+    
+    https://github.com/asimons81/hermes-gpt
+    [embed] GitHub - asimons81/hermes-gpt https://github.com/asimons81/hermes-gpt
+

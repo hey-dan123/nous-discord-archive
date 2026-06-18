@@ -537,3 +537,25 @@
     Thanks🫶🏼
     [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
 
+[2026-06-17T20:42:44.830000+00:00] vayaperson (id=1516905965100732497)
+    ⚠️ Semantic alerts are working from group to contact and from contact to contact (at least in the development environment). Outside of that environment, we've received reports that group-to-group forwarding is not working, and we're currently investigating it.
+    
+    The webhook alerts fix has not been tested yet. If anyone has any additional information, we'd really appreciate it. ⚠️ 
+    
+    Cheers!!
+
+[2026-06-17T22:14:06.299000+00:00] vayaperson (id=1516928956048085134)
+    @everyone **Andoriña v1.5.2-Beta5 is out!** 
+    
+    This is a quick patch release to address an issue with the semantic alerts system.
+    
+    **What's fixed in Beta5:**
+    🐛 **Group-to-Group Semantic Alerts:** We've fixed a bug where alert rules set with a group as the source were failing to trigger. The webhook was incorrectly using the individual member's JID instead of the group's JID. This has been resolved, and alerts now should flow perfectly between groups! (Plus, alert notifications now include the proper group chat name for readability).
+    
+    *If you are already on Beta4, you can update with a single click from the Settings tab in your Andoriña Web Panel.*
+    
+    Enjoy, and keep the feedback coming! 🫶🏼
+    
+    https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+    [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
+

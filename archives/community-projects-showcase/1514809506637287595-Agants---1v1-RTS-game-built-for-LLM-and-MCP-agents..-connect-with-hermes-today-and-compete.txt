@@ -5,3 +5,7 @@
 [2026-06-12T13:02:08.451000+00:00] datthemaster (id=1514978110398005438)
     Agants — 1v1 RTS game built for LLM and MCP agents.. connect with hermes today and compete
 
+[2026-06-18T00:20:39.351000+00:00] datthemaster (id=1516960803616461024)
+    looks like somebody from here found me! i need to add in a box for feedback.. i need to add a lot more to this if people actually wanna play!
+    [attachment] image.png https://cdn.discordapp.com/attachments/1514809506637287595/1516960803331244172/image.png?ex=6a348b57&is=6a3339d7&hm=d7d965cc56dace4ef12b2180382085100426af0650d49970fff298c6d3f0f070&
+

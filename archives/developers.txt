@@ -33793,3 +33793,190 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-17T19:36:24.004000+00:00] illmania765. (id=1516889268306317342)
     Would you guys recommend the AI-103?
 
+[2026-06-17T21:21:09.240000+00:00] sprmn24 (id=1516915630496813177)
+    <@387972437901312000>  sir <:tekkie:1341983449371639881>  , I opened a couple of PRs today — take a look when you get a chance:
+    
+    PR #47460 / xAI OAuth concurrent write-through race condition 
+     fix(auth): serialize concurrent xAI OAuth write-through to global root https://github.com/NousResearch/hermes-agent/pull/47460
+    
+    
+    PR #48052 / Mattermost concurrent send race condition 
+     fix(mattermost): return post status as local tuple to fix concurrent send race https://github.com/NousResearch/hermes-agent/pull/48052
+    [embed] fix(auth): serialize concurrent xAI OAuth write-through to global r... https://github.com/NousResearch/hermes-agent/pull/47460
+    [embed] fix(mattermost): return post status as local tuple to fix concurren... https://github.com/NousResearch/hermes-agent/pull/48052
+
+[2026-06-17T21:29:21.666000+00:00] shadyman (id=1516917695881412658)
+    god i swear i don't want to update my hermes desktop anymore
+
+[2026-06-17T21:29:44.325000+00:00] shadyman (id=1516917790919884822)
+    everything was fine until updating
+
+[2026-06-17T21:40:16.725000+00:00] sprmn24 (id=1516920443397734604)
+    PR #48068 
+     Issue: Install overlay shows "Installation failed" when user intentionally cancels + hardcoded Windows log path shown on all platforms 
+    
+     Fix: detect cancellation in applyEvent, show clean cancelled UI, load log path dynamically via getRecentLogs() IPC https://github.com/NousResearch/hermes-agent/pull/48068
+    [embed] fix(desktop): show cancelled state instead of failure UI when insta... https://github.com/NousResearch/hermes-agent/pull/48068
+
+[2026-06-17T22:22:07.277000+00:00] aialliai (id=1516930973416030248)
+    <@387972437901312000> you probably know by now but this electron faliure is causing some chaos
+
+[2026-06-17T22:29:55.050000+00:00] teknium (id=1516932935398326282)
+    But no one pinpointing the source of why
+    [reply to aialliai msg=1516930973416030248]
+
+[2026-06-17T22:31:46.458000+00:00] aialliai (id=1516933402677219408)
+    <@387972437901312000> The npm ci at line 5417 fails outright when Electron's download is blocked (install.js process.exit(1)), and line 5418-5421 sys.exits
+
+[2026-06-17T22:31:56.019000+00:00] aialliai (id=1516933442779222210)
+    seems to be source of the problem
+
+[2026-06-17T22:32:15.718000+00:00] aialliai (id=1516933525402812478)
+    in main.py
+
+[2026-06-17T22:32:39.770000+00:00] aialliai (id=1516933626283954257)
+    will have a pr to link in about 3 min
+
+[2026-06-17T22:33:45.857000+00:00] teknium (id=1516933903472922705)
+    But why is it failing to download
+    [reply to aialliai msg=1516933402677219408]
+
+[2026-06-17T22:34:01.148000+00:00] aialliai (id=1516933967608283146)
+    https://discord.com/channels/1053877538025386074/1516921714750001284
+
+[2026-06-17T22:38:57.576000+00:00] lordbartok (id=1516935210917298368)
+    fix(egress): maxpetrusenko P1/P2 — fail-closed secrets, NODE_OPTIONS conflict, GPG verify — #48076
+    https://github.com/NousResearch/hermes-agent/pull/48076
+    
+    Follow-up to @maxpetrusenko's security review on the iron-proxy egress firewall (#30179). The 3 P0s are already handled by @kuangmi-bit's fix/iron-proxy-p0s, so this PR owns the 3 P1s + the P2 that were still open. Stacked on feat/iron-proxy.
+    
+    P1 — fail-closed secrets (the important one). Secret rules now emit replace.require: true. Without it, a real provider key that a sandbox process sent directly to an allowlisted host — bypassing the minted proxy token — would still sail through the proxy boundary. With require, iron-proxy returns ActionReject when a mapped host is hit and no token swap fired. The whole token-swap firewall could otherwise be silently no-op'd by a process that just used the real key.
+    
+    ⚠️ The subtle part: Max cited the v0.45 upstream docs, but we're pinned to v0.39, and iron-proxy decodes config with KnownFields(true) (strict) — an unknown field hard-fails every proxy startup. So I pulled the actual v0.39.0 source and confirmed replaceConfig.Require (yaml:"require,omitempty") exists and is enforced in TransformRequest before adding it. Safe on our pin, no version bump required.
+    
+    P1 — NODE_OPTIONS CA-mode conflict. The append-merge only de-duped exact tokens, so an operator's --use-bundled-ca could survive next to the egress-required --use-openssl-ca — leaving Node's final trust behavior dependent on flag order. Egress flag now wins deterministically (conflicting CA-mode flag stripped + warned); unrelated tuning like --max-old-space-size is preserved.
+    
+    P1 — release-channel tamper. install_iron_proxy now GPG-verifies checksums.txt against checksums.txt.asc + the bundled public-key.asc in an ephemeral keyring. SHA-256 only protects the archive if checksums.txt itself came from a clean channel. Best-effort: degrades with a warning when gpg/sig assets are absent (SHA-256 stays enforced), but a present-but-invalid signature hard-fails the install.
+    
+    P2 — threat-model wording. Scoped "tokens only work from behind the proxy" → "behind the configured trusted proxy boundary" (CA private key + proxy endpoint integrity are part of that boundary) across the docstring, config, and egress docs, with a MITRE ATT&CK T1588.004 AiTM note.
+    
+    +259/−10 · iron_proxy 94 + docker 74 green · ruff clean. Left the v0.39→v0.45 bump as a separate follow-up since it's a behavior-affecting binary change that deserves its own validation. cc @maxpetrusenko — thanks for the well-cited review 🙏
+    [embed] fix(egress): maxpetrusenko P1/P2 — fail-closed secrets, NODE_OPTI... https://github.com/NousResearch/hermes-agent/pull/48076
+
+[2026-06-17T23:17:03.988000+00:00] aleksandr_1 (id=1516944800824164482)
+    Sir, two PRs that harden prefix cache preservation.
+    
+    **1. PR #47890** guards `_restore_or_build_system_prompt` against concurrent rebuilds on the gateway path. Two simultaneous turns for the same session could both trigger a full system-prompt rebuild, fire `on_session_start` twice, and waste the cache. Fixed with a per-session lock and double-checked locking guard.
+    **P2** - https://github.com/NousResearch/hermes-agent/pull/47890
+    
+    **2. PR #47915** extends `_stored_prompt_matches_runtime` to detect cwd and runtime surface drift. A stored prompt could silently be reused as a valid cache hit even after a compression chain changed the working directory or desktop/terminal surface. Both checks are no-ops when the relevant marker is absent, so legacy prompts remain fully compatible.
+    **P2** - https://github.com/NousResearch/hermes-agent/pull/47915
+    [reply to teknium msg=1516774553135616123]
+
+[2026-06-17T23:30:45.681000+00:00] ianallowayxyz (id=1516948247254401207)
+    check my stuff out devs https://discord.com/channels/1053877538025386074/1516944986116067439
+
+[2026-06-17T23:36:21.611000+00:00] sworntech (id=1516949656246948010)
+    **Small Hermes docs PR**:
+    
+    This updates a stale fuzzy-match comment/docstring that still described the matcher as using an 8-strategy chain.
+    
+    The current matcher has 9 strategies, including `unicode_normalized`, so the docs wording now matches the implementation.
+    
+    Docs/comment-only change. No runtime behavior changed.
+    
+    Validation:
+    `python -m py_compile tools/fuzzy_match.py`
+    
+    References #32848
+    
+    PR:
+    https://github.com/NousResearch/hermes-agent/pull/48097
+    [embed] docs(fuzzy-match): correct strategy chain count by Sworntech-dev ·... https://github.com/NousResearch/hermes-agent/pull/48097
+
+[2026-06-18T00:27:40.045000+00:00] lordbartok (id=1516962568134983875)
+    <@387972437901312000> on "why is it failing to download" — it mostly isn't a download failure. The recurring "The specified electronDist does not exist" is a **static-path vs npm-workspace-hoisting** mismatch: `build.electronDist` was a hardcoded relative path, but npm non-deterministically puts the workspace-only `electron` devDep either under `apps/desktop/node_modules/electron` (nested) or hoists it to the repo-root `node_modules/electron`. A static path only matches one layout, so a clean install — and especially a re-install during update — points electronDist at an empty path half the time. That's why it "fails after update" and why a manual symlink fixes it until the next install wipes it.
+    
+    Two lesser faults wore the same error: (a) genuinely region-blocked GitHub release downloads (already mitigated by the npmmirror fallback), and (b) update rebuilds inheriting `NODE_ENV=production` / `NPM_CONFIG_OMIT=dev`, stripping TypeScript/Vite.
+    
+    Good news: already fixed on main by #48091 (merged earlier today — supersedes #48081/#48082). It drops the static electronDist and resolves it at build time via `require.resolve("electron/package.json")` in `scripts/run-electron-builder.cjs`, so it's hoist-proof for both layouts + self-heals a blocked install. #48003 is superseded by it. Issue #47917 should be safe to close once folks confirm on the next build. 🎻
+
+[2026-06-18T00:28:28.518000+00:00] teknium (id=1516962771445481555)
+    Yea we sourced the reason and it should now be fixed <a:cheer:734837260662603908>
+    [reply to lordbartok msg=1516962568134983875]
+
+[2026-06-18T00:48:59.786000+00:00] maxfreedompollard (id=1516967935758045184)
+    <@387972437901312000> 
+    
+    On Windows with no timezone configured, the gateway writes message timestamps with a multi-word zone name like "Pacific Daylight Time", but the regular expression that reads them back forbids spaces, so the code cannot recognize a timestamp it wrote itself and leaves those prefixes unstripped and undeduplicated. The fix widens that one regular expression to accept space separated zone names, so the reader and the writer agree again. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/48134
+    [embed] fix(gateway): strip timestamp prefixes with multi-word timezone nam... https://github.com/NousResearch/hermes-agent/pull/48134
+
+[2026-06-18T00:49:44.234000+00:00] teknium (id=1516968122186203197)
+    Why on gods green earth would someone on windows have no timezone
+
+[2026-06-18T00:54:59.990000+00:00] maxfreedompollard (id=1516969446562988042)
+    Entirely possible. Plus no timezone set / no timezone reaching / windows server / windows on vps / people with super old computers (don't forget the poor exist teknium)
+
+[2026-06-18T00:55:18.025000+00:00] maxfreedompollard (id=1516969522207264818)
+    IDK I am not a doctor
+
+[2026-06-18T01:11:43.800000+00:00] aialliai (id=1516973656847159408)
+    <@1501032789183696998> sadly I think all 3 of them can wait long time for tat to be aa priority. So get us some stories about what they do and how and where for what reason, do a sad video and ccome to him again!
+    [reply to maxfreedompollard msg=1516969522207264818]
+
+[2026-06-18T01:14:58.185000+00:00] aialliai (id=1516974472157069435)
+    <@119192111202566149>
+
+[2026-06-18T01:15:20.547000+00:00] aialliai (id=1516974565950230682)
+    I made a gui that can use remote or local
+
+[2026-06-18T01:16:25.193000+00:00] aialliai (id=1516974837094944768)
+    It's the same one yuo have currently, was just making it to stop people for asking me here if they could download the standalone client for remote connections
+
+[2026-06-18T01:17:01.158000+00:00] aialliai (id=1516974987943088228)
+    If you're interested HMU
+
+[2026-06-18T01:17:45.716000+00:00] aialliai (id=1516975174833143818)
+    It has both local and remote capabilities so if you can switch between them
+
+[2026-06-18T01:17:50.770000+00:00] maxfreedompollard (id=1516975196031160411)
+    I don't mind, of course there has to be a priority. With that said a lot of environments could have that issue & more defensively to the implementation it hardens the agent when there are other bugs on the computer unrelated to bugs in Hermes such as corruption of TimeZoneInformation or an engineer pushing an invalid or mispelled timezone. It makes it more stable generally without any additional component or overhead, plus, I hit the bug in testing so it's not pie in the sky impossible.
+    [reply to aialliai msg=1516973656847159408]
+
+[2026-06-18T01:18:39.626000+00:00] aialliai (id=1516975400948076785)
+    And no redundancy in place?
+    [reply to maxfreedompollard msg=1516975196031160411]
+
+[2026-06-18T01:19:15.364000+00:00] aialliai (id=1516975550844108910)
+    I can see the use case... motherboard battery dead for example....
+
+[2026-06-18T01:19:21.181000+00:00] maxfreedompollard (id=1516975575242248232)
+    By virtue of the fact I hit the bug, it shows up somewhere. I get what you're saying - it's not a large help, my mindstate was net positive not degree of positive impact. However it's already closed so no point discussing, idc
+
+[2026-06-18T01:20:25.058000+00:00] maxfreedompollard (id=1516975843161804960)
+    https://tenor.com/view/canal-hipocritas-medo-medroso-com-medo-nao-me-machuce-gif-3238008380609733347
+    [embed]  https://tenor.com/view/canal-hipocritas-medo-medroso-com-medo-nao-me-machuce-gif-3238008380609733347
+
+[2026-06-18T01:20:59.125000+00:00] aialliai (id=1516975986049028138)
+    not like that LOL
+
+[2026-06-18T01:32:15.898000+00:00] maxfreedompollard (id=1516978824640729259)
+    Although this one affects every system:
+    
+    It fixes the shared strip_markdown helper used by five plain text gateway adapters (SMS, iMessage, Feishu, QQ Bot, Photon), where the asterisk emphasis patterns silently paired up and ate * bullet markers and any text holding two or more literal asterisks (like a * b * c), mangling ordinary agent output on every operating system by default. The fix gives the two star patterns the same inside edge guards the underscore patterns already had, so bullet lists and literal asterisks now pass through untouched while real *italic* and **bold** still get stripped.
+    
+    https://github.com/NousResearch/hermes-agent/pull/48151
+    [embed] fix(gateway): keep markdown bullet lists and literal asterisks in p... https://github.com/NousResearch/hermes-agent/pull/48151
+
+[2026-06-18T01:40:48.853000+00:00] 10ofdisks (id=1516980976130064384)
+    i'd love to get the kanban into the desktop app, is there a plan on how to move this forward? i see these pr's open right now: 
+    - #41756 - integrate kanban into desktop app (sidebar tab + /kanban slash)
+    - #46466 - native dashboard plugin loader (kanban + achievements as native tabs)
+    - #37797 - standalone desktop kanban viewer route
+
+[2026-06-18T03:37:41.342000+00:00] shilird. (id=1517010388640595978)
+    good job man
+    [reply to 10ofdisks msg=1516980976130064384]
+

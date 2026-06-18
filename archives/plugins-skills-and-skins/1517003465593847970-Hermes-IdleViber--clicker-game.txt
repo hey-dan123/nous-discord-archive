@@ -1,0 +1,101 @@
+# Thread 'Hermes IdleViber (clicker-game)' in forum #plugins-skills-and-skins
+# thread_id=1517003465593847970 forum_id=1485392832154832906
+# Started 2026-06-18T03:46:37.132490+00:00
+
+[2026-06-18T03:10:10.759000+00:00] drgekoz (id=1517003465593847970)
+    Hermes IdleViber is an ambient idle/incremental game that lives in your browser — a cozy pixel-art universe where you click, earn, upgrade, and unlock themed rooms while chiptune music plays and particle effects drift across the screen. 
+    
+    The twist? 
+    
+    The game is hard-locked to your local Hermes Agent gateway.
+    
+    https://hermes-idleviber.netlify.app
+    [attachment] Screenshot_2026-06-14_125910.png https://cdn.discordapp.com/attachments/1517003465593847970/1517003466017476618/Screenshot_2026-06-14_125910.png?ex=6a34b312&is=6a336192&hm=1ed81f96f2ec0f06461dcd7378c1f79309af5b0d88fd9f5632bd4e4e9bfc24b8&
+    [attachment] Screenshot_2026-06-14_130331.png https://cdn.discordapp.com/attachments/1517003465593847970/1517003466457747456/Screenshot_2026-06-14_130331.png?ex=6a34b312&is=6a336192&hm=2ae9db4152945eb4abd0e552d787498b568057857fc5de9675f0172b639546c3&
+    [attachment] Screenshot_2026-06-14_140240.png https://cdn.discordapp.com/attachments/1517003465593847970/1517003466768252938/Screenshot_2026-06-14_140240.png?ex=6a34b313&is=6a336193&hm=53c2ab782b648f0415dc40797c2d6287cb46e97204477d4e5258a8582b72744f&
+    [attachment] Screenshot_2026-06-14_140256.png https://cdn.discordapp.com/attachments/1517003465593847970/1517003467078635530/Screenshot_2026-06-14_140256.png?ex=6a34b313&is=6a336193&hm=f5190f72afabada81161147850a8c98972d4174bcaa306c6c84d86bc8ac9af20&
+    [attachment] Screenshot_2026-06-14_140313.png https://cdn.discordapp.com/attachments/1517003465593847970/1517003467401466000/Screenshot_2026-06-14_140313.png?ex=6a34b313&is=6a336193&hm=a6bd18b3ad82796275a246e121b07d16eeba68604ee52ed60ab8b5f6e0dbddf1&
+    [attachment] Screenshot_2026-06-14_140337.png https://cdn.discordapp.com/attachments/1517003465593847970/1517003467737137203/Screenshot_2026-06-14_140337.png?ex=6a34b313&is=6a336193&hm=d890626534c290f97e672ef31fac99cb12b2761c36fcd73b3386e628965658c2&
+
+[2026-06-18T03:10:43.982000+00:00] drgekoz (id=1517003604941213817)
+    https://github.com/DrGekoz/Hermes-IdleViber
+    [embed] GitHub - DrGekoz/Hermes-IdleViber: Hermes IdleViber is an ambient i... https://github.com/DrGekoz/Hermes-IdleViber
+
+[2026-06-18T03:10:54.771000+00:00] drgekoz (id=1517003650193686538)
+    ## ✦ What Is This?
+    
+    Hermes IdleViber is an ambient idle/incremental game that lives in your browser — a cozy pixel-art universe where you click, earn, upgrade, and unlock themed rooms while chiptune music plays and particle effects drift across the screen.
+    
+    The twist? The game pings your local Hermes Agent gateway and turns its latency into a VPS multiplier. The faster your gateway responds, the bigger the bonus. It turns your dev tools into a game mechanic — an upgradeable boost you can invest prestige chips into.
+
+[2026-06-18T03:12:02.162000+00:00] drgekoz (id=1517003932851900638)
+    ## ✦ Features
+    
+    ## 🎮 Gameplay
+    
+    6 rooms × 13 unique autoclickers = 78 distinct upgrades, each with its own pixel art icon
+    Per-room cost progression (buy cheap in new rooms!)
+    ⚡ Buy All buttons on upgrades, decor, and prestige tabs (most expensive first)
+    🖱 Hold-to-spam rapid-purchase on all shop items (autoclickers + prestige)
+    🔔 Real-time sidebar tab indicators — gold dots pulse on tabs with affordable items, green dot when prestige is ready, cyan dot for new achievements
+    90 decor items with visual canvas placement (click-and-drag)
+    InfinityZ number system — numbers never cap, display scales infinitely
+    Bulk buy with calculated max-buyable
+    Affordability updates every tick — no tab-hopping required
+    
+    ## 🎨 Visual
+    
+    78 custom autoclicker pixel art icons + 49 prestige/decor icons + 102 decor placement sprites — all generated via Codex CLI (16-bit retro style)
+    6 unique room backgrounds with atmospheric effects
+    Particle systems: fireflies, matrix rain, cherry blossoms, aurora, smoke, dust, waves
+    Godrays & dynamic lighting
+    Pixel-perfect rendering with image-rendering: pixelated
+    Custom chroma-key removal pipeline for transparent icon assets
+
+[2026-06-18T03:12:09.081000+00:00] drgekoz (id=1517003961872420956)
+    ## 🎵 Audio
+    
+    45 chiptune cover MP3s — game classics (Zelda, Mario, Pokemon, Megaman, Chrono, Castlevania), pop covers (Blinding Lights, Take On Me, Eye of the Tiger), anime hits (Otonoke, Naruto), and memes
+    Shuffle play across the full playlist
+    Adjustable SFX & music volume
+    
+    ## 🔌 Integration
+    
+    Auto-discovers Hermes gateway by scanning 41 common ports
+    Real-time latency display with quality tiers
+    Gateway VPS multiplier updates live
+    Task-in-progress detection (doubles multiplier when gateway is busy)
+    
+    ## 💾 Persistence
+    
+    Auto-save every 30s to localStorage
+    Firebase Firestore realtime leaderboard — tier names, InfZ values, full BN array accuracy
+    Local API server mode for self-hosted accounts
+    Offline earnings calculated on return (10x format above 1000%)
+
+[2026-06-18T03:12:17.229000+00:00] drgekoz (id=1517003996047478995)
+    ## 🏆 Achievements
+    
+    55 base achievements across vibe, click, prestige, room, VPS, gateway, decor, and autoclicker milestones
+    
+    250 tier achievements — programmatically generated from Bronze I to Ten Quad (10Q) 
+    — one per prestige tier
+    
+    Real-time achievement notifications with toast popups
+    
+    Permanent unlock tracking
+    
+    ## 🏅 Leaderboard
+    
+    Firestore-backed realtime leaderboard with live tier column (Bronze, Silver, Gold, etc.)
+    
+    Dev badge tooltip on hover for contributors
+    
+    Stores full BN (BigNumber) arrays for accurate InfinityZ layer display
+    
+    Clear polling on subscription 
+    — no double reads, respects Firestore quota
+
+[2026-06-18T03:12:47.190000+00:00] drgekoz (id=1517004121712885852)
+    ## **Play Here >>> https://hermes-idleviber.netlify.app **
+

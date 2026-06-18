@@ -1798,3 +1798,10 @@
     https://x.com/i/status/2066170540730306770
     [embed]  https://twitter.com/i/status/2066170540730306770
 
+[2026-06-18T00:32:18.418000+00:00] w9h. (id=1516963735716233346)
+    How would this compare to my current mnemosyne setup where the agent is fed mnemosyne context on call
+
+[2026-06-18T01:00:28.343000+00:00] blaspat (id=1516970823775162379)
+    Hi, I want to ask
+    If I already installed this as a general user plugin, do I need to install it in another profile or symlinking it enough?
+
