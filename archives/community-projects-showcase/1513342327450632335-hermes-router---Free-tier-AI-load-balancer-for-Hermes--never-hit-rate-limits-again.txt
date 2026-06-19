@@ -588,3 +588,11 @@
     Can't afford a domain as I am broke <:sadCat:1151280288698204220>
     [embed] hermes-router https://hermes-router.vercel.app/
 
+[2026-06-19T14:31:01.083000+00:00] shaf_2665 (id=1517537192136933466)
+    Hi <@387972437901312000> 
+    Can you take a look into this project 
+    If possible adding Hermes router as a native model inside Hermes Agent like open router.
+    Almost most of the free providers have been configured and the request have been handled effectively 
+    
+    Can I create a PR for it?
+

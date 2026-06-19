@@ -34354,3 +34354,159 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
            - tools/mcp_oauth.py: assert -> RuntimeError
            - tools/environments/docker.py: assert -> RuntimeError
 
+[2026-06-19T10:37:10.451000+00:00] floory (id=1517478343401017444)
+    oh what, are they? 😭
+    [reply to teknium msg=1517270744407736320]
+
+[2026-06-19T10:37:34.628000+00:00] floory (id=1517478444806439025)
+    why am i not the first one to do such a pr then
+
+[2026-06-19T11:04:00.978000+00:00] kyssta69 (id=1517485098440851457)
+    https://github.com/NousResearch/hermes-agent/pull/48988
+    
+    **Problem**: Hermes Desktop hangs forever on Windows when clicking Update - the Electron process holds a lock on node_modules/electron while the updater tries to wipe it with npm ci. app.quit() waits for graceful shutdown which races the updater. Changed to app.exit(0) for immediate termination, and added a wait-for-exit guard in install.ps1 as safety net.
+    [embed] fix(desktop): use app.exit(0) after updater handoff to prevent EBUS... https://github.com/NousResearch/hermes-agent/pull/48988
+
+[2026-06-19T11:29:21.338000+00:00] sahil_ss9 (id=1517491475292753991)
+    **PR submitted**: Cron jobs hitting rate limits dump raw provider JSON (multi-KB error blobs) into chat — unreadable and noisy for operators.
+    **Fix**: Compact pattern-matched failure messages (rate limit, timeout, auth) instead of raw provider payloads. Full details still saved in cron output.
+    https://github.com/NousResearch/hermes-agent/pull/48466
+    
+    **PR submitted**: Git gc --prune=now removes empty refs/heads/ dirs from bare repos, causing subsequent git add -A to fail with "fatal: not a git repository" — all checkpoint operations silently break.
+    **Fix**: Recreate refs/heads/ and branches/ directories after each of 4 git gc call sites in checkpoint_manager. Standard library only.
+    https://github.com/NousResearch/hermes-agent/pull/48466
+    
+    **PR submitted**: Kanban dispatcher running inside the gateway lacks a cross-platform singleton lock — two concurrent dispatch cycles can spawn duplicate workers for the same task.
+    **Fix**: Machine-global fcntl.flock advisory lock for embedded dispatcher, with Windows fallback via gateway.status lock helpers. Reviewed, feedback addressed.
+    https://github.com/NousResearch/hermes-agent/pull/44919
+    
+    **PR submitted**: release_stale_claims unconditionally reclaims tasks even when the worker PID is still alive (parked in D-state from cgroup throttle), spawning duplicate workers beside the still-alive one — self-reinforcing runaway observed at 100+ workers on a single board.
+    **Fix**: Gate reclaim on new _worker_survived_termination() helper — defer reclaim with grace extension when kill didn't land. Reviewed by liuhao1024.
+    https://github.com/NousResearch/hermes-agent/pull/44909
+    
+    **PR submitted**: simplify-code skill applies findings flat with no risk tiers and misses AI slop and silent failure patterns.
+    **Fix**: Three risk tiers (SAFE/CAREFUL/RISKY), Chesterton's Fence via git blame, slop detection, silent failure detection, structured reviewer output. +45/-8 lines.
+    https://github.com/NousResearch/hermes-agent/pull/42209
+    [embed] fix(cron): compact cron failure messages + repair bare repo dirs af... https://github.com/NousResearch/hermes-agent/pull/48466
+    [embed] fix(kanban): machine-global singleton lock for the embedded dispatc... https://github.com/NousResearch/hermes-agent/pull/44919
+    [embed] fix(kanban): hold reclaim while the worker is still alive by Sahil-... https://github.com/NousResearch/hermes-agent/pull/44909
+    [embed] feat(simplify-code): risk-tiered application, Chesterton's Fence, s... https://github.com/NousResearch/hermes-agent/pull/42209
+
+[2026-06-19T12:40:31.902000+00:00] kyssta69 (id=1517509387336286329)
+    https://github.com/NousResearch/hermes-agent/pull/49013
+    
+    **Problem**: After context compression, the LLM summarizer misclassifies completed side-effecting operations (sent messages, created PRs) as pending work. The agent then re-executes them after compaction, producing duplicate real-world actions like duplicate Slack messages and duplicate PRs. The fix strengthens the summarizer prompt to classify completed side-effects only in the Completed Actions section, and adds an explicit warning in SUMMARY_PREFIX against re-executing already-completed side-effecting operations.
+    [embed] fix(compression): prevent duplicate side-effect actions after compa... https://github.com/NousResearch/hermes-agent/pull/49013
+
+[2026-06-19T12:42:30.702000+00:00] kyssta69 (id=1517509885619601548)
+    https://github.com/NousResearch/hermes-agent/pull/49015
+    
+    **Problem**: The OAuth prompt sanitizer did a greedy hermes-agent -> claude-code replace that also clobbered the docs URL, producing a dead NXDOMAIN link (claude-code.nousresearch.com) that every OAuth user is told to consult. The fix extracts and preserves URLs before the blanket name swap so they remain intact.
+    [embed] fix(auth): preserve docs URL during OAuth prompt sanitization (#488... https://github.com/NousResearch/hermes-agent/pull/49015
+
+[2026-06-19T12:44:34.466000+00:00] kyssta69 (id=1517510404723445760)
+    https://github.com/NousResearch/hermes-agent/pull/49016
+    
+    **Problem**: The stream consumer's think-tag filter held back any trailing character matching a tag prefix, including a single '<'. This clipped legitimate content like 'x < y' or HTML syntax explanations in streamed messages. The fix starts the partial-tag lookahead from i=2 so a bare '<' alone is never held back.
+    [embed] fix(gateway): prevent clipping of messages containing '<' (#48869) ... https://github.com/NousResearch/hermes-agent/pull/49016
+
+[2026-06-19T12:55:05.694000+00:00] srojk34 (id=1517513052285702265)
+    PR #49020 — fix(desktop): clear subagent and todo state when a session is deleted
+    
+    https://github.com/NousResearch/hermes-agent/pull/49020
+    
+    removeSession clears queued prompts on delete but never cleans up $subagentsBySession and $todosBySession. Since deleted sessions never get a next turn, the orphaned entries leak forever. Fix mirrors the existing clearQueuedPrompts pattern — 6 lines, zero risk.
+    [embed] fix(desktop): clear subagent and todo state when a session is delet... https://github.com/NousResearch/hermes-agent/pull/49020
+
+[2026-06-19T13:00:30.258000+00:00] alelpoan (id=1517514413605650644)
+    Ctrl+C in the built-in terminal was sending ^C to the shell instead of copying mouse-selected text.
+    Keyboard selection (Shift+Home) worked fine, mouse selection didn't. 
+    
+    Before/after video in the PR 👇
+    
+    PR #49010: https://github.com/NousResearch/hermes-agent/pull/49010 <@387972437901312000> <@119192111202566149>
+    [attachment] Before_CTRLC.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1517514413819691218/Before_CTRLC.mp4?ex=6a368eee&is=6a353d6e&hm=1a62f9961619e796e4bafd6e1b85b9ec15507717bc3b40febe512fc721cb210b&
+    [attachment] After_CTRLC.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1517514414293778472/After_CTRLC.mp4?ex=6a368eee&is=6a353d6e&hm=fcd3d2c7c29f0dd6c0e112a5d719d2415cbbe523cbd6a1b2a7f423f12731a7de&
+    [embed] fix(terminal): Ctrl+C now copies mouse selection instead of sending... https://github.com/NousResearch/hermes-agent/pull/49010
+
+[2026-06-19T13:32:48.982000+00:00] teknium (id=1517522545203609761)
+    Nice ones!
+    [reply to hypertekton msg=1517403098308546570]
+
+[2026-06-19T13:40:16.401000+00:00] teknium (id=1517524421814784140)
+    Umm your videos dont even show you in the hermes tui?
+    [reply to alelpoan msg=1517514413605650644]
+
+[2026-06-19T13:40:29.359000+00:00] teknium (id=1517524476164706344)
+    is that the terminal inside the GUI?
+
+[2026-06-19T13:44:10.057000+00:00] alelpoan (id=1517525401839210607)
+    Yeah, it's the terminal panel inside the desktop GUI app (Ctrl+~)
+    [reply to teknium msg=1517524476164706344]
+
+[2026-06-19T13:45:27.543000+00:00] alelpoan (id=1517525726839050383)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1517525726163636445/image.png?ex=6a369977&is=6a3547f7&hm=eaf7bc77ef09df81b273c406a7960524eca80325b1fddaa2eb73a5fdc80563c9&
+
+[2026-06-19T13:46:42.831000+00:00] teknium (id=1517526042619674635)
+    Yea the intention is to act as a terminal, which means CTRL C shutsdown/closes whatever is active
+
+[2026-06-19T13:46:52.894000+00:00] teknium (id=1517526084827222036)
+    right click highlighted text to copy
+
+[2026-06-19T13:47:54.263000+00:00] hakan_pak (id=1517526342227197952)
+    bug-The Codex (ChatGPT OAuth) backend doesn't support image generation at all. The plugin tried anyway, and the server rejected it with HTTP 400.
+    
+    *Users saw a meaningless raw error dump 
+    
+     fixed
+    We catch that specific 400 and turn it into a clear message: "Codex can't generate images, use the openai provider with OPENAI_API_KEY." Tests added too
+    
+    https://github.com/NousResearch/hermes-agent/pull/49054
+    [embed] fix(plugins): surface clear error when Codex backend lacks image ge... https://github.com/NousResearch/hermes-agent/pull/49054
+
+[2026-06-19T13:49:34.251000+00:00] alelpoan (id=1517526761607532604)
+    Just to clarify, the fix only copies when there's a mouse selection active. With no selection, Ctrl+C still sends the interrupt signal as normal, so the terminal behavior isn't changed at all in that case.
+    [reply to teknium msg=1517526042619674635]
+
+[2026-06-19T13:50:03.957000+00:00] teknium (id=1517526886203396287)
+    Understood, nonetheless..
+    [reply to alelpoan msg=1517526761607532604]
+
+[2026-06-19T13:50:37.646000+00:00] alelpoan (id=1517527027505303702)
+    Got it, thanks for taking a look either way.
+    [reply to teknium msg=1517526886203396287]
+
+[2026-06-19T13:53:16.327000+00:00] teknium (id=1517527693061525536)
+    np!
+
+[2026-06-19T14:11:15.746000+00:00] ajaxstardust_whatsonyourbrain (id=1517532220473212979)
+    SYSTEM GOVERNANCE and MAINTENANCE 
+    using Ollama and Hermes for example
+    https://whatsonyourbrain.com/blog/csc-governance-and-system-maintenance
+    
+    Orchestrated the process using Hermes via
+    GitHub CSC SPECIFICATION used in this example:
+    https://github.com/ajaxstardust/CONTRACT-Style-Comments
+    [embed] CSC for Governance and System Maintenance https://whatsonyourbrain.com/blog/csc-governance-and-system-maintenance
+    [embed] GitHub - ajaxStardust/CONTRACT-Style-Comments: CONTRACT-Style-Comme... https://github.com/ajaxstardust/CONTRACT-Style-Comments
+
+[2026-06-19T14:50:34.284000+00:00] ehmaybe_ (id=1517542112898580682)
+    Hi! Checking in on this bug fix  PR: https://github.com/NousResearch/hermes-agent/pull/43090
+    
+    Failing on CI not seeing a file that is in the PR, and there's a comment in the test runner that implies it's a CI issue. I did a force push to trigger the CI again and still failing. Passes clean locally on 2 different setups.
+    [embed] fix(sys.path): strip absolute CWD to prevent module shadowing by m4... https://github.com/NousResearch/hermes-agent/pull/43090
+
+[2026-06-19T14:50:40.266000+00:00] varoyik (id=1517542137988644934)
+    been working on **opencode-pets**. it's a companion for opencode that reacts to your session. drag it around, throw it, switch pets (petdex compatible), contextual speech bubbles. almost done.
+    [attachment] opencode-pets.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1517542135568793740/opencode-pets.mp4?ex=6a36a8bf&is=6a35573f&hm=c1e407274c40b97d09944eeaa92794a6dd5bac53bd80a2361d391c7c38cd71e0&
+
+[2026-06-19T14:55:29.832000+00:00] srojk34 (id=1517543352516608173)
+    PR #49109 — fix(desktop): resolve curated priority and docs when backend provider label differs from PROVIDER_GROUPS name
+    
+    https://github.com/NousResearch/hermes-agent/pull/49109
+    
+    The unified provider catalog merged today tags env vars with backend provider_label, which buildProviderKeyGroups now uses as the bucket name. But providerMeta/providerPriority look up curated overlays by matching PROVIDER_GROUPS[].name — and the labels don't match for 7 of 11 popular providers (e.g. "Google AI Studio" vs "Gemini", "Qwen Cloud" vs "DashScope (Qwen)"). Those providers silently drop to priority 99, losing their curated sort position, description, and docs link.
+    
+    Fix falls back to a prefix-based providerGroup() lookup on the primary env key when the backend label misses.
+    [embed] fix(desktop): resolve curated priority and docs when backend provid... https://github.com/NousResearch/hermes-agent/pull/49109
+

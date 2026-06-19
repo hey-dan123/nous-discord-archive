@@ -1,0 +1,54 @@
+# Thread 'HyAtlas-Memory — 7-layer cognitive memory for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1517486886778572900 forum_id=1316137596535177246
+# Started 2026-06-19T15:10:29.137773+00:00
+
+[2026-06-19T11:11:07.351000+00:00] tunacookie (id=1517486886778572900)
+    HyAtlas-Memory is a memory provider plugin that gives Hermes persistent, structured memory across sessions. 
+    https://github.com/tuancookiez-hub/HyAtlas-Memory
+    **What it does automatically**
+    • Captures every conversation, extracts atomic facts via LLM
+    • Injects relevant memories into the prompt before the agent responds (no tool call needed)
+    • Background processing merges duplicates, resolves conflicts, refines your model over time
+    **7 memory layers**
+    • L1 raw (verbatim sessions) → L2 facts (LLM-extracted atomic)
+    • L3 summaries (every 20 adds) → L4 identity (long-lived user facts)
+    • L5 Kuzu graph (async, knowledge relationships)
+    • L6 schemas (typed entity/relationship categories)
+    • L7 intention (proactive intent detection — my own extension)
+    **Dual-path architecture**
+    • **System 1** (fast): L1/L2 in milliseconds, every message — you never wait
+    • **System 2** (background): L5 graph rebuild, dedup, schema validation, intent detection
+    **Live dashboard** — `python -m server.dashboard.dashboard`
+    • 7 tabs: Overview, Explore, Layers, Today, Graph, Activity, Settings
+    • L0–L7 layer distribution, 7-day ingestion chart, knowledge constellation
+    • Reads the live server, no extra config
+    **CLI** — `hermes hy-memory doctor | add | search | list | init | reset`
+    **3 modes** depending on cost tolerance:
+    • `lite` — embedding-only, zero LLM calls (free)
+    • `pro` — LLM extraction + reconciliation
+    • `ultra` — full pipeline + Kuzu graph (default)
+    **Built on**
+    • Hermes Agent (this org) — peer dep
+    • Hy-Memory framework (Tencent Hunyuan) — architecture inspiration
+    • Kuzu — embedded graph DB
+    • SentenceTransformers — local embeddings (or any OpenAI-compatible embedder)
+    • Works with OpenAI, OpenRouter, DeepSeek, MiniMax, ByteDance, or local Ollama
+    MIT licensed. PRs welcome. The 6-layer model the System1/System2 duality comes from the Hy-Memory framework; the L7 intention layer, the dashboard's layer-aware UI, and the System2 background triggers are my additions.
+    [attachment] ChatGPT_Image_Jun_18_2026_06_02_53_AM_1.png https://cdn.discordapp.com/attachments/1517486886778572900/1517486887072301227/ChatGPT_Image_Jun_18_2026_06_02_53_AM_1.png?ex=6a36754b&is=6a3523cb&hm=e007804dd7083017516e5239675c9534e92873e09dd1888473c7f21a4923a04e&
+    [attachment] ChatGPT_Image_Jun_18_2026_02_08_37_AM.png https://cdn.discordapp.com/attachments/1517486886778572900/1517486887609176154/ChatGPT_Image_Jun_18_2026_02_08_37_AM.png?ex=6a36754b&is=6a3523cb&hm=5803a0824f6bbb5879bf4c45c6188555838a302000755728947d7169bf3695d2&
+    [attachment] dashboard-demo.gif https://cdn.discordapp.com/attachments/1517486886778572900/1517486887973949520/dashboard-demo.gif?ex=6a36754b&is=6a3523cb&hm=e9699deffe72897fd19a591039a5aa25c1e934e5722c70325ce451c2fc392a32&
+    [embed] GitHub - tuancookiez-hub/HyAtlas-Memory: A plugin for Hermes to con... https://github.com/tuancookiez-hub/HyAtlas-Memory
+
+[2026-06-19T11:11:18.198000+00:00] tunacookie (id=1517486932274315344)
+    HyAtlas-Memory — 7-layer cognitive memory for Hermes Agent
+
+[2026-06-19T11:12:30.142000+00:00] tunacookie (id=1517487234029322353)
+    Might have alot of bugs... ask your hermes to fix it.. and post it as an issue for me <:chingy1Hamstersad:1320028465982079026>
+
+[2026-06-19T11:14:24.193000+00:00] tunacookie (id=1517487712393756822)
+    85% on long eval mem benchmark 
+    might need to optimize diskspace more, so far 3000 memories saved to 120 MB.
+
+[2026-06-19T11:17:55.599000+00:00] tunacookie (id=1517488599094792283)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517486886778572900/1517488598805381150/image.png?ex=6a3676e3&is=6a352563&hm=3ce92f740db900a7a54ccc55ae497939f1274bea4030a26143472b067575e3ed&
+

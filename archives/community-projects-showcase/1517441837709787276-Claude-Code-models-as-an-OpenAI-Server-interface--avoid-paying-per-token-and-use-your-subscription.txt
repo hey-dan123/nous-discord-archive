@@ -12,3 +12,9 @@
     Check it out: https://github.com/schmarta/claude-code-openai-server
     [embed] GitHub - schmarta/claude-code-openai-server: Use Claude Code models... https://github.com/schmarta/claude-code-openai-server
 
+[2026-06-19T12:33:23.588000+00:00] .blockops (id=1517507590857162755)
+    Cool, will have to play with this.
+
+[2026-06-19T14:54:52.603000+00:00] gloggers (id=1517543196366868481)
+    Let me know your thoughts!!
+

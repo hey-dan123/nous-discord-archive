@@ -200,3 +200,6 @@
     we have a migrate skill for users switching over memory providers,  but it might be easier to just ask your agent to write a .md file of its existing memory and have your agent ingest it once you've installed the memory plugin
     [reply to buke5122 msg=1516677875774918707]
 
+[2026-06-19T12:01:42.290000+00:00] x1pher (id=1517499616235360496)
+    I checked the beta sign-up. You said it's free but I need to add a wallet?
+

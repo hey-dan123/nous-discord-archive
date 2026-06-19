@@ -51,3 +51,18 @@
     Configurable via thresholds (schema updated with the new field).
     New test covers both positive (spam caught) and negative (legit names untouched) cases.
 
+[2026-06-19T13:12:04.151000+00:00] sahil_ss9 (id=1517517324003967106)
+    🚀 GitHub Radar v4.1 is live
+    
+        Two modes, better signal, less noise:
+    
+        Daily mode (default) — new-find scan with cache dedup + trending as primary source. No more silent "0 repos" — output now shows cache stats so you know the system is working.
+    
+        Weekly re-evaluation (--mode weekly) — full cache re-scan that compares pushed_at timestamps to flag repos with NEW activity since last check. Found 59 repos with fresh pushes in the first test run.
+    
+        Other upgrades:
+        • 4 new query templates (React Native, Flutter, voice, sports)
+        • Proper GitHub Search API rate limiting (30 req/min, no more silent failures)
+        • pushed_at tracking in cache — repos with new pushes get re-scored
+        • Self-tuning lowered star threshold to 50 (signal was 93% — we were filtering too aggressively)
+
