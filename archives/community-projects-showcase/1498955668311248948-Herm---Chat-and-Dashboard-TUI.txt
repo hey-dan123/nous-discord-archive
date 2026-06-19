@@ -1431,3 +1431,15 @@
     the prompt is simple, say i want you to add a filter to the session tab similar to the one in the slash model picker so that i can search my sessions on herm tui
     [reply to valiendovrga msg=1517232613008343111]
 
+[2026-06-19T15:30:07.761000+00:00] liftaris (id=1517552067982524476)
+    Just released update 1.9
+    Been a long time coming. 
+    I will do a larger announcment later, but I've got a WC game to attend now 🤩 
+    Thanks for all the feedback and support!
+    https://github.com/liftaris/herm/pull/194
+    [embed] 1.9.0 by liftaris · Pull Request #194 · liftaris/herm https://github.com/liftaris/herm/pull/194
+
+[2026-06-19T15:33:14.281000+00:00] liftaris (id=1517552850304241754)
+    <@221727702992945152> <@398709623567155200> these are good suggestions, and is on my roadmap 🙏 
+    In the meantime, there is the `/` command in the sessions tab that will search through your sessions. It's not perfect, results can show up as JSON snippets and will be improved. Tuna don't be scared to PR haha, I can always take what you have  and build on top of it
+

@@ -4137,3 +4137,52 @@
 [2026-06-19T02:13:12.874000+00:00] rostelinalise (id=1517351517810856087)
     nicee
 
+[2026-06-19T16:37:47.476000+00:00] rostelinalise (id=1517569095661387957)
+    would it be possible to see all the chat sessions and just load it on the app? instead of just showing those chat that is being done on the app?
+
+[2026-06-19T16:38:36.854000+00:00] avidfuturist (id=1517569302767734975)
+    I think they are shown, you may need to go into settings to make sure the check box is on for showing all sessions in preferences, but this is fully supported now and default on going forward for new users
+    [reply to rostelinalise msg=1517569095661387957]
+
+[2026-06-19T16:48:26.266000+00:00] rostelinalise (id=1517571774940971100)
+    nice, i didn't know this before
+
+[2026-06-19T17:06:55.153000+00:00] rostelinalise (id=1517576425949888532)
+    but it does return this tho, while at it.. may i know how your kanban flow is like??
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1517576425752760360/image.png?ex=6a36c8af&is=6a35772f&hm=84d8fc6553dae16fa22edcbcf5b700774d8e5f39991d22d26087147d3f85ef7a&
+
+[2026-06-19T17:24:11.198000+00:00] avidfuturist (id=1517580771437711511)
+    It shouldn’t return that, except for in select edge cases. Can you try a few others?
+    [reply to rostelinalise msg=1517576425949888532]
+
+[2026-06-19T17:24:45.022000+00:00] avidfuturist (id=1517580913305849856)
+    Kanban is in its own tab. You create tasks, place them into a profile and configure them in the modal, and then they process through automatically!
+
+[2026-06-19T17:24:54.484000+00:00] avidfuturist (id=1517580952992485496)
+    Tasks can also be created automatically by the agent
+
+[2026-06-19T17:35:33.095000+00:00] realadolan (id=1517583631521026170)
+    I absolutely love the iOS app. Holy! Also, thank you for keeping RTL in mind. It helps a lot.
+
+[2026-06-19T18:25:47.582000+00:00] avidfuturist (id=1517596275195772948)
+    Glad to hear it! All credit to <@501593132907888665> for the app! Game changer right?
+    
+    https://apps.apple.com/us/app/hermex/id6767006319
+    
+    works seamlessly building on top of our WebUI!
+    [embed] Hermex App - App Store https://apps.apple.com/us/app/hermex/id6767006319
+    [reply to realadolan msg=1517583631521026170]
+
+[2026-06-19T18:54:23.773000+00:00] realadolan (id=1517603473422680092)
+    It really is!
+
+[2026-06-19T19:26:52.962000+00:00] avidfuturist (id=1517611648914034759)
+    https://x.com/hermes_updates/status/2068051418817450116?s=46&t=brZif7wwaCoijMKWsXCy5Q
+    [embed]  https://twitter.com/hermes_updates/status/2068051418817450116?s=46&t=brZif7wwaCoijMKWsXCy5Q
+
+[2026-06-19T19:27:14.086000+00:00] avidfuturist (id=1517611737514508460)
+    Kudos to Uzi and the iOS app. Once we get Android out we can all be a happy family!
+
+[2026-06-19T19:27:31.228000+00:00] avidfuturist (id=1517611809413136417)
+    It is easy to forget this entire project was only started in April, so while we’ve made many mistakes along the way, that’s the nature of this. Feel good about where the project is now. Although there’s still a lot of work to do!
+

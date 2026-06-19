@@ -203,3 +203,7 @@
 [2026-06-19T12:01:42.290000+00:00] x1pher (id=1517499616235360496)
     I checked the beta sign-up. You said it's free but I need to add a wallet?
 
+[2026-06-19T15:30:55.042000+00:00] dr.kojipup (id=1517552266293411850)
+    it's free. you don't need to use a wallet. you can use your email. the wallet is for people that are in web 3 that like to use their wallet as a sign-in method.
+    [reply to x1pher msg=1517499616235360496]
+

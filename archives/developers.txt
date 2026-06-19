@@ -34510,3 +34510,116 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Fix falls back to a prefix-based providerGroup() lookup on the primary env key when the backend label misses.
     [embed] fix(desktop): resolve curated priority and docs when backend provid... https://github.com/NousResearch/hermes-agent/pull/49109
 
+[2026-06-19T15:31:29.315000+00:00] nakoturk (id=1517552410044661880)
+    Pushed a critical follow-up commit to fully resolve the `Errno 66 (Directory not empty)` issue described in the deeper diagnosis of #47368. As pointed out in the issue discussion, there was a synchronous resolution bug in the Electron teardown sequence (`apps/desktop/electron/main.cjs`). When a pool backend was slow to exit under CPU contention, the 5-second soft cap would trigger `kill('SIGKILL')` and immediately call `resolve()`. This returned control to the deletion workflow *before* the OS actually removed the process. The still-alive backend would then write to `logs/agent.log` right while `shutil.rmtree` was trying to delete the directory, causing the crash. I removed the synchronous `resolve()` from the `setTimeout` block. The promise now strictly waits for the `child.once('exit', ...)` listener to fire. `SIGKILL` is now just the trigger, and the system properly waits for the actual OS-level exit event before allowing the file system deletion to proceed.
+    
+    https://github.com/NousResearch/hermes-agent/pull/46640
+    [embed] chore: remove unused imports to clean up codebase by okannako · Pu... https://github.com/NousResearch/hermes-agent/pull/46640
+
+[2026-06-19T15:35:07.290000+00:00] 0zi57 (id=1517553324298080406)
+    Small security fix PR: cron job scripts were inheriting the full agent/gateway env (provider keys etc.). Now uses the same _sanitize_subprocess_env as terminal/MCP (SECURITY.md §2.3) + regression test
+    https://github.com/NousResearch/hermes-agent/pull/49125 <@387972437901312000>
+    [embed] fix(cron): sanitize env for job script subprocesses by 0z1-ghb · P... https://github.com/NousResearch/hermes-agent/pull/49125
+
+[2026-06-19T16:42:22.385000+00:00] hakan_pak (id=1517570248713179235)
+    Two PRs for the native-Windows failures in #48986   <@387972437901312000> 
+    
+    #49115 https://github.com/NousResearch/hermes-agent/pull/49115 — ACP file:// reads on Windows. File attachments were silently dropped on native Windows (paths got rewritten to a WSL /mnt location that doesn't exist). Now fixed 
+    #49118 https://github.com/NousResearch/hermes-agent/pull/49118 — Windows home-path tests. Two tests leaked the real user profile instead of the tmp dir. One of them meant the SSH-key block security check never actually ran on Windows — now it does
+    [embed] fix(acp): read file:// resources on native Windows instead of /mnt ... https://github.com/NousResearch/hermes-agent/pull/49115
+    [embed] test(agent): honor Windows expanduser home in HOME-dependent tests ... https://github.com/NousResearch/hermes-agent/pull/49118
+
+[2026-06-19T17:05:44.660000+00:00] realadolan (id=1517576130280816860)
+    Could you please take a look at this PR as well? 🙂 https://github.com/NousResearch/hermes-agent/pull/47911
+    [embed] fix(desktop): tables follow RTL message direction by Adolanium · P... https://github.com/NousResearch/hermes-agent/pull/47911
+
+[2026-06-19T17:26:46.313000+00:00] lordbartok (id=1517581422037172486)
+    #47917 "electronDist resurfaced" — root-caused + fix up
+    
+    For anyone still hitting The specified electronDist does not exist / slow electron re-downloads after an update: this is a different fault from the one #48091 fixed last week. #48091 made the path resolve dynamically (working ✅) — but there's a residual download gap.
+    
+    Problem: hermes update reinstalls repo-root deps with --workspaces=false, so the apps/desktop workspace never gets reinstalled → electron's postinstall never runs on update → node_modules/electron/dist is empty → electron-builder falls into a fresh @electron/get download on every update (the "no local electron dist; will fetch" line + version churn 40.9.3/40.10.2/42.3.3).
+    
+    Fix: when npm ci succeeds but dist/ is empty, repopulate the binary (host → mirror) before the first pack so the build reuses it. Reuses #48091's self-heal helpers, +96/0, 2 tests (ordering-asserted).
+    
+    https://github.com/NousResearch/hermes-agent/pull/49152
+    
+    🙏 If anyone can pull the branch and confirm an update → rebuild no longer re-downloads electron (esp. on Windows), that'd help the review.
+    [embed] fix(desktop): pre-fetch Electron dist after clean install on update... https://github.com/NousResearch/hermes-agent/pull/49152
+
+[2026-06-19T17:28:26.401000+00:00] meshnetz (id=1517581841836671056)
+    Has there been any updates to this? https://github.com/NousResearch/hermes-agent/pull/27617    the latest updates have some pretty awsome features like streaming Speach to Text by leverging Moonshine... Lemonade is the GO to for all AMD users as it maximizes your local hardware - Beats ollama,
+    [embed] feat(image_gen): add Lemonade local inference server backend by bla... https://github.com/NousResearch/hermes-agent/pull/27617
+
+[2026-06-19T17:37:05.411000+00:00] reprograma. (id=1517584018722394142)
+    Pleease can someone take a look?
+    https://github.com/NousResearch/hermes-agent/pull/48589
+    [embed] feat(packaging): add langfuse optional extra by tt-a1i · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/48589
+
+[2026-06-19T18:43:54.355000+00:00] hakan_pak (id=1517600833452249241)
+    fix(cli): reject --resume/--continue in oneshot  
+    
+    https://github.com/NousResearch/hermes-agent/pull/49204
+    
+    Bug: hermes --resume <id> -z <prompt> (and --continue) silently ignored the flag — it ran a fresh, context-less session with no warning (exit 0).
+    Users thought they were resuming a conversation but got an empty one — silent context loss. Same class as #26633 / #31548, which were already fixed with "fail loud".
+     Fix: Guard both oneshot dispatch sites — --resume/--continue now exits with a clear error instead of being dropped.
+    [embed] fix(cli): reject --resume/--continue in oneshot instead of dropping... https://github.com/NousResearch/hermes-agent/pull/49204
+
+[2026-06-19T18:45:42.716000+00:00] dias4761 (id=1517601287951089774)
+    <@387972437901312000>  Hermes messaging gateway on Windows is fragile: three related issues causing silent failure . Please check this page when you have time.
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/48852
+    [embed] fix(gateway): resolve watchdog, env override, and proxy routing on ... https://github.com/NousResearch/hermes-agent/pull/48852
+
+[2026-06-19T19:02:00.992000+00:00] kxee (id=1517605391138291762)
+    https://github.com/NousResearch/hermes-agent/pull/48937
+    
+    already salvaged with some fixes <@387972437901312000> bumping for review
+    [embed] fix(gateway): harden Windows watchdog, env-override, and proxy rout... https://github.com/NousResearch/hermes-agent/pull/48937
+    [reply to dias4761 msg=1517601287951089774]
+
+[2026-06-19T19:07:47.536000+00:00] dias4761 (id=1517606844649050182)
+    ohhh ,tysm. I tried to reduce the number of modified files.
+    [reply to kxee msg=1517605391138291762]
+
+[2026-06-19T19:08:47.764000+00:00] dias4761 (id=1517607097263460422)
+    I mentioned you in this.
+
+[2026-06-19T19:18:37.048000+00:00] alelpoan (id=1517609568899825694)
+    Fixed another small terminal issue: the shell prompt was duplicating on the first keystroke after mouse click.
+    
+    Before/after videos attached below 👇
+    
+    PR #49217: https://github.com/NousResearch/hermes-agent/pull/49217
+    
+    Happy to hear your thoughts. Still learning, so no worries if it's too minor 🙂
+    [attachment] test_1.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1517609569025786008/test_1.mp4?ex=6a36e78d&is=6a35960d&hm=d27c1b43f88f76ef6194626ad72f093a0d1e10fad135c3f08ec9488041770faa&
+    [attachment] test_2.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1517609569319260341/test_2.mp4?ex=6a36e78d&is=6a35960d&hm=938d40e582937a001d3a722d59bc4778cca6af748457b5021e29bfa442e77c61&
+    [embed] fix(terminal): prevent shell prompt duplication on first keystroke ... https://github.com/NousResearch/hermes-agent/pull/49217
+    [reply to teknium msg=1517527693061525536]
+
+[2026-06-19T19:25:31.618000+00:00] lordbartok (id=1517611307732435125)
+    Tracked down the #47917 electronDist does not exist regression that kept "resurfacing" after #48091.
+    
+    Turns out it's a separate fault from the path-resolution one #48091 fixed. hermes update reinstalls repo-root deps with --workspaces=false, so the desktop workspace's electron postinstall never runs on update → node_modules/electron/dist ends up empty → electron-builder silently re-downloads via @electron/get on every single update (the "no local electron dist; will fetch" line + the 40.9.3/40.10.2/42.3.3 version churn people are seeing).
+    
+    Fix: when npm ci succeeds but dist/ is empty, repopulate the binary (host → mirror) before the first pack. Reuses the self-heal helpers from #48091. +96/0, 2 ordering-asserted tests.
+    
+    ✅ CI green across all checks (desktop-build, Windows footguns, all test shards)
+    ✅ Independently confirmed on Windows by wordgao — --force-build with emptied dist repopulates locally, no network download, ~10s build
+    
+    https://github.com/NousResearch/hermes-agent/pull/49152
+    
+    Would appreciate a review when someone has a sec 🙏
+    [embed] fix(desktop): pre-fetch Electron dist after clean install on update... https://github.com/NousResearch/hermes-agent/pull/49152
+
+[2026-06-19T19:30:21.646000+00:00] hakan_pak (id=1517612524197904454)
+    Bug: In gateway / scheduled-task mode (no TTY), ensure_dependency() skipped the prompt but still ran a blocking dependency install (e.g. the browser engine), hanging the process forever.
+    
+     A long-running gateway could freeze on startup with no terminal to respond to — especially under Scheduled Tasks.
+    
+    Fix: When an interactive install is requested but there's no TTY, skip it and degrade gracefully instead of hanging. interactive=False (explicit unattended install) is unaffected.   https://github.com/NousResearch/hermes-agent/pull/49215
+    [embed] fix(cli): skip dependency install when no TTY is available by hakan... https://github.com/NousResearch/hermes-agent/pull/49215
+

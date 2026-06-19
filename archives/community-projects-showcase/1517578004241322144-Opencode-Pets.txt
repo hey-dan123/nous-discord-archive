@@ -1,0 +1,8 @@
+# Thread 'Opencode Pets' in forum #community-projects-showcase
+# thread_id=1517578004241322144 forum_id=1316137596535177246
+# Started 2026-06-19T19:47:19.389131+00:00
+
+[2026-06-19T17:13:11.447000+00:00] varoyik (id=1517578004241322144)
+    been working on **opencode-pets**. it's a companion for opencode that reacts to your session. drag it around, throw it, switch pets (petdex compatible), contextual speech bubbles. almost done.
+    [attachment] opencode-pets-pre-mvp-demo.mp4 https://cdn.discordapp.com/attachments/1517578004241322144/1517578004832977108/opencode-pets-pre-mvp-demo.mp4?ex=6a36ca27&is=6a3578a7&hm=22e7d25407f3c0959a858e39d6b617279450b5340b1026ce97c443b93572b8bd&
+
