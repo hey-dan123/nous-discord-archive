@@ -4111,3 +4111,29 @@
     
     (Could use feedback and testing of everything from WebUI, desktop apps, and iOS apps, please report any feedback here!)
 
+[2026-06-19T00:37:46.525000+00:00] mindcraft3r (id=1517327499762208779)
+    is there a version for android?
+    [reply to avidfuturist msg=1517186401018319011]
+
+[2026-06-19T00:54:26.442000+00:00] avidfuturist (id=1517331693718208532)
+    Not yet, that’s the next thing once I get the desktop apps in a good place
+    [reply to mindcraft3r msg=1517327499762208779]
+
+[2026-06-19T00:54:31.396000+00:00] avidfuturist (id=1517331714496659506)
+    But it’s planned!
+
+[2026-06-19T01:22:51.114000+00:00] rostelinalise (id=1517338843630538844)
+    does this have the git repository dropped somewhere?
+    [reply to avidfuturist msg=1517186401018319011]
+
+[2026-06-19T01:32:08.080000+00:00] mindcraft3r (id=1517341179715391582)
+    hell yeaaa, I'm looking forward to that 🙌
+    [reply to avidfuturist msg=1517331693718208532]
+
+[2026-06-19T01:37:39.409000+00:00] avidfuturist (id=1517342569409941655)
+    Not that I’m aware of yet, <@501593132907888665> said he’s working on cleaning up the repo so it can be made public
+    [reply to rostelinalise msg=1517338843630538844]
+
+[2026-06-19T02:13:12.874000+00:00] rostelinalise (id=1517351517810856087)
+    nicee
+

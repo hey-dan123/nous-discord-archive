@@ -1864,3 +1864,15 @@
     thank you for the concise and pleasant response, ill def have to give it a go
     [reply to _voscko_ msg=1517164464305082368]
 
+[2026-06-18T21:30:27.567000+00:00] nulledvector (id=1517280360155578369)
+    The "Runs as the conversation grows" is accurate but understated: LCM fires at LCM_CONTEXT_THRESHOLD (a fraction of the context window, similar to the built-in's 50% default) and compresses the middle of the message list while head + tail stay untouched, so the active prompt always sees head + tail, not the DAG (the DAG is the persistent store the agent re-queries on demand via tools like lcm_grep). 
+    
+    The "Mnemosyne = noisy/token-heavy every call" line is fair but a bit dated: our BEAM work has been pushing precision through multi-stage retrieval, temporal weighting, and fact extraction, so what's injected now is tighter than a naive recall_all() would give (the framing is more true of a vanilla setup than current ones). 
+    
+    Mnemosyne isn't strictly "always feeds a packet on every call" either, since most deployments only auto-inject the top-k retrieved memories, gated on the user message rather than unconditionally (better mental model: "recalled on demand, top-k in, the rest stays in the store"). 
+    
+    Mnemosyne also has a working-history layer for the current session (episodic, scratchpad, triples) and isn't purely "long-term/project" memory, so the complementary framing still holds but "Mnemosyne = durable, LCM = active session" oversells the clean split.
+    
+    Other than that, yes mostly clear and accurate 🙂
+    [reply to _voscko_ msg=1517164464305082368]
+

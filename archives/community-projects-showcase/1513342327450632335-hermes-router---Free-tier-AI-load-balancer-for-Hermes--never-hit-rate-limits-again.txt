@@ -579,3 +579,12 @@
     So it handles all of them — main turns, delegation, auxiliary tasks — because it doesn't distinguish. They're all just API calls to it. Your agent decides what's what; the router just makes sure each call reaches a live model.
     [reply to markopaasila msg=1517220987119075529]
 
+[2026-06-19T02:55:23.283000+00:00] shaf_2665 (id=1517362131115180163)
+    **Check out our official hermes-router website**
+    
+    
+    https://hermes-router.vercel.app/
+    
+    Can't afford a domain as I am broke <:sadCat:1151280288698204220>
+    [embed] hermes-router https://hermes-router.vercel.app/
+

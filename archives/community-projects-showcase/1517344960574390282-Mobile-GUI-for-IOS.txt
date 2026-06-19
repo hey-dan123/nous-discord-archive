@@ -1,0 +1,22 @@
+# Thread 'Mobile GUI for IOS' in forum #community-projects-showcase
+# thread_id=1517344960574390282 forum_id=1316137596535177246
+# Started 2026-06-19T04:06:04.269255+00:00
+
+[2026-06-19T01:47:09.507000+00:00] mgf.654 (id=1517344960574390282)
+    I make GUI Dashboard for personal use case to control my agents from phone
+    
+    Dashboard / Activity / Memory / Agents / Cron / Skills / Chat 
+    
+    Dashboard have real live real event , activity too 
+    
+    All crons can be triggered manually, and there's also a history of recent crons.
+    
+    All sessions are automatically saved.
+    
+    The activity panel shows real-time agents and the Kanban pipeline.
+    
+    There's a chat history.
+    
+    In the main panel, you can select a model and a worker.
+    [attachment] ScreenRecording_06-19-2026_02-08-57_1.mov https://cdn.discordapp.com/attachments/1517344960574390282/1517344961006141530/ScreenRecording_06-19-2026_02-08-57_1.mov?ex=6a35f11d&is=6a349f9d&hm=b28cf1028ce64d64ad25c4936ac098399c06836c3b76a967d8ea01f32c88a766&
+

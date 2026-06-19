@@ -769,3 +769,12 @@
     already done mate
     [reply to heeervas msg=1517222824706834503]
 
+[2026-06-19T02:55:32.499000+00:00] shaf_2665 (id=1517362169769889892)
+    **Check out our official hermes-router website**
+    
+    
+    https://hermes-router.vercel.app/
+    
+    Can't afford a domain as I am broke <:sadCat:1151280288698204220>
+    [embed] hermes-router https://hermes-router.vercel.app/
+

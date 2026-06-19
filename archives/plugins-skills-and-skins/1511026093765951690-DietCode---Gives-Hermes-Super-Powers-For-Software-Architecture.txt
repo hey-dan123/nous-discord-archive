@@ -11,3 +11,6 @@
 [2026-06-16T21:36:07.739000+00:00] oleegg (id=1516557011209162932)
     DietCode is changing this was v1, changing the name to LUMI. the first version worked but now am taking all the fruits and polishing this
 
+[2026-06-19T03:34:58.805000+00:00] oleegg (id=1517372094776610938)
+    I have retired this plugin - it is in frozen and archived mode. something changed upstream and I have no idea. BroccoliDB still works by itself, but Joyzoning philosophy + the tricks I used for long horizon Human in the loop no longer works (the main issue conceptually this branch is far too different from the main hermes branch and the philosophies do not work) Hermes aims for more autonomy, This idea aimmed for more auditability which is completely orthogonal, but it was an experiment. I will be replacing with a skill MD but it is untested
+

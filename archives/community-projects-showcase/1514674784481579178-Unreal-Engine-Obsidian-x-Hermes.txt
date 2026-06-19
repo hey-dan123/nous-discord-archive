@@ -215,3 +215,19 @@
     I’ll be checking it out later tonight or tomorrow to see how it is and give my feedback
     [reply to thepickle msg=1516956279606612119]
 
+[2026-06-19T00:26:26.490000+00:00] .s0uthpaw (id=1517324647488819382)
+
+[2026-06-19T00:26:26.856000+00:00] .s0uthpaw (id=1517324649023799467)
+    Have you guys seen this?
+
+[2026-06-19T03:57:13.166000+00:00] vj_mekanix (id=1517377691492552894)
+    This is dope. When you get to systems like this. It makes your brain melt by how many steps need to be done to accomplish a simple validation run 🤌😅
+
+[2026-06-19T04:00:13.012000+00:00] iam_rxpii (id=1517378445821218988)
+    Theres still so much to build as well. its been interesting and keeping me busy. ill be updating the repo in the near future as im swithing over to unreal 5.8 here soom
+    [reply to vj_mekanix msg=1517377691492552894]
+
+[2026-06-19T04:00:25.133000+00:00] iam_rxpii (id=1517378496660242532)
+    I appreciate ya for taking an interest
+    [reply to vj_mekanix msg=1517377691492552894]
+

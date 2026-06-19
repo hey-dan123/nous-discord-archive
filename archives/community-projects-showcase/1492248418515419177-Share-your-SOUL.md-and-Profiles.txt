@@ -451,3 +451,18 @@
 [2026-06-18T19:51:54.042000+00:00] reefsnax (id=1517255557034147922)
     I have Ika send stuff to friends and family so the heavy-handed personality is useful in making it feel approachable to the more "anti-AI" folks I have it interact with. They don't even seem to notice/care that it's an LLM-driven entity <:squidShrug:1393330736060301502>
 
+[2026-06-18T21:46:05.881000+00:00] lordxam_ (id=1517284295729873006)
+    Isn't some of the instructions for sustainability redundant since that stuff is already built in to hermes by default? Or do you find it helps?
+    [reply to reefsnax msg=1517255057098412142]
+
+[2026-06-18T21:46:32.098000+00:00] lordxam_ (id=1517284405692076122)
+    Also what model do you use?
+
+[2026-06-18T21:52:20.168000+00:00] reefsnax (id=1517285865603469442)
+    I've found it helpful, personally... But I can't say that I've made a concerted effort to track it closely. Lately I've been using `deepseek-v4-flash` with `gemini-2.5-flash-lite` as my aux model but I'm still experimenting.
+    
+    FWIW, Hermes acts as my "Junior Dev Assistant" and helps me manage my homelab, so I don't feel a need to invest in higher-end models.
+
+[2026-06-18T21:53:21.841000+00:00] reefsnax (id=1517286124278648842)
+    I *do* have Claude as a fallback or if I need really heavy lifting but more often than not Claude (and Anthropic) kinda frustrate me half the time.
+

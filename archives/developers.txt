@@ -34163,3 +34163,115 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     fix(conversation): persist sanitized system prompt to SessionDB after non-ASCII stripping. On Linux with ASCII locale, UnicodeEncodeError recovery sanitized agent._cached_system_prompt in memory but never wrote the clean copy back to SessionDB. Every subsequent turn read the stale unsanitized prompt from DB, found a mismatch, and rebuilt the system prompt from scratch, losing the prefix cache for the rest of the session. PR: https://github.com/NousResearch/hermes-agent/pull/48390
     [embed] fix(conversation): persist sanitized system prompt to SessionDB aft... https://github.com/NousResearch/hermes-agent/pull/48390
 
+[2026-06-18T20:34:42.236000+00:00] alelpoan (id=1517266328820383826)
+    While using the chat heavily and sending long messages, I kept running into an annoying UX issue long user message bubbles were getting clipped with no way to scroll through them. You literally couldn't read the beginning or end of your own message. 😅
+    
+    Should make a noticeable difference when working with longer messages, existing collapse behavior is untouched. <@387972437901312000> 
+    
+    PR #48619: https://github.com/NousResearch/hermes-agent/pull/48619
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1517266328929439824/image.png?ex=6a35a7e2&is=6a345662&hm=fd9cbd166c33d8fd455818fadaea6c6704d952baef3cb6d16a4205c75889a146&
+    [embed] fix(desktop): add scroll to long user message bubbles by alelpoan ... https://github.com/NousResearch/hermes-agent/pull/48619
+
+[2026-06-18T20:44:28.557000+00:00] brooklyn (id=1517268788028903495)
+    merged
+
+[2026-06-18T20:46:24.504000+00:00] alelpoan (id=1517269274345869523)
+    🫡
+    [reply to brooklyn msg=1517268788028903495]
+
+[2026-06-18T20:52:05.899000+00:00] teknium (id=1517270706260414641)
+    <@843913220867096606> when is your pr ever hit by the average person
+
+[2026-06-18T20:52:14.994000+00:00] teknium (id=1517270744407736320)
+    kanban tools are disabled in all chats and you'd have to mod hermes to make them enabled
+
+[2026-06-18T20:52:44.678000+00:00] teknium (id=1517270868911456358)
+    this PR is extremely low user count who would ever hit this scenario so please understand that it is one of the lowest prio PRs we could have and there are much higher user impact PRs we should be addressing first
+
+[2026-06-18T22:05:09.280000+00:00] sprmn24 (id=1517289091492876460)
+    **PR #48662**  Issue: TOCTOU race in readFileDataUrl IPC handler — size cap checked via stat() then bypassed by re-opening the file separately for read, allowing growth between checks 
+    
+     Fix: open-handle + bounded-read pattern matching readFileText, with defense-in-depth re-stat 
+    
+    https://github.com/NousResearch/hermes-agent/pull/48662
+    [embed] fix(desktop): close TOCTOU race in readFileDataUrl IPC handler by s... https://github.com/NousResearch/hermes-agent/pull/48662
+
+[2026-06-18T22:33:13.057000+00:00] dias4761 (id=1517296153765613799)
+    hey bro , can u Check my  PR pls ?
+    [reply to teknium msg=1517270706260414641]
+
+[2026-06-18T22:33:48.545000+00:00] dias4761 (id=1517296302612811786)
+    https://github.com/NousResearch/hermes-agent/pull/47029
+    [embed] feat(cli): resolve concurrent session cross-contamination and memor... https://github.com/NousResearch/hermes-agent/pull/47029
+
+[2026-06-18T22:35:31.373000+00:00] dias4761 (id=1517296733904961657)
+    This principle applies to contamination in multiple contexts
+
+[2026-06-18T22:51:33.127000+00:00] devorun11 (id=1517300767793614879)
+    Observed group context dropped before the API call
+    
+    With observe_unmentioned_group_messages on, the observed context wrapped into the user message never reached the model (no error, no log). The early persist mutated the same messages list the request is built from, stripping the wrapped content before api_messages was assembled.
+    
+    Fix: apply the persist-override through a non-mutating view live list untouched (model gets full context), transcript stays clean, dedup still writes the row once https://github.com/NousResearch/hermes-agent/pull/48694
+    [embed] fix(gateway): stop early persist from dropping observed context bef... https://github.com/NousResearch/hermes-agent/pull/48694
+
+[2026-06-19T00:39:57.669000+00:00] kasey_66747 (id=1517328049820008708)
+    Hey team, we just opened a PR to add Solar LLM , would love your team to take it for a spin! <@387972437901312000> <@153017054545444864> 
+    https://github.com/NousResearch/hermes-agent/pull/42231
+    [embed] feat(agent): add Upstage Solar as a model provider by minchang · P... https://github.com/NousResearch/hermes-agent/pull/42231
+
+[2026-06-19T01:27:10.489000+00:00] maxfreedompollard (id=1517339931528396811)
+    <@387972437901312000> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/48486
+    [embed] fix(context_references): keep message newlines when stripping @ ref... https://github.com/NousResearch/hermes-agent/pull/48486
+
+[2026-06-19T01:31:28.305000+00:00] nuuuuuuuuuu0480 (id=1517341012886818968)
+    https://github.com/NousResearch/hermes-agent/pull/48735
+    [embed] fix(api-server): guard HERMES_MAX_ITERATIONS against malformed env ... https://github.com/NousResearch/hermes-agent/pull/48735
+
+[2026-06-19T01:38:37.417000+00:00] maxfreedompollard (id=1517342812713127987)
+    <@1301571210479669339> THANK YOU for that one lol
+
+[2026-06-19T02:03:10.422000+00:00] shilird. (id=1517348990944018452)
+    Team have alot PRS to review. WAIT
+    [reply to kasey_66747 msg=1517328049820008708]
+
+[2026-06-19T02:08:25.991000+00:00] nuuuuuuuuuu0480 (id=1517350314536079541)
+    Okay bro, let's build Hermes together
+    [reply to maxfreedompollard msg=1517342812713127987]
+
+[2026-06-19T02:08:37.229000+00:00] nuuuuuuuuuu0480 (id=1517350361671798804)
+    https://github.com/NousResearch/hermes-agent/pull/48748
+    [embed] fix(config): guard WECOM_CALLBACK_PORT/BLUEBUBBLES_WEBHOOK_PORT aga... https://github.com/NousResearch/hermes-agent/pull/48748
+
+[2026-06-19T02:09:08.786000+00:00] dias4761 (id=1517350494031319070)
+    I'd be happy to participate too!, if I can
+    [reply to nuuuuuuuuuu0480 msg=1517350314536079541]
+
+[2026-06-19T02:21:03.098000+00:00] srojk34 (id=1517353490072998079)
+    Found that /resume and /branch call end_session() without flushing un-persisted messages first — same bug that #47202 fixed in compress_context() and /new. When a turn is interrupted mid-flight and the user runs /resume or /branch, messages from that turn are silently lost. Added the same best-effort flush before end_session() in both commands + regression tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/48764
+    [embed] fix(cli): flush un-persisted messages before /resume and /branch en... https://github.com/NousResearch/hermes-agent/pull/48764
+
+[2026-06-19T02:26:11.413000+00:00] yatesalex (id=1517354783239962847)
+    Hey Nous team, hope everyone is having an incredible day today!
+    
+    - Persists /model switch by default across sessions: https://github.com/NousResearch/hermes-agent/pull/48754
+    - Refresh sessions list in Hermes GUI in real time: https://github.com/NousResearch/hermes-agent/pull/48751
+    - Adds active folder indicator to Hermes GUI input (if you like this approach I'll add to terminal sessions as well): https://github.com/NousResearch/hermes-agent/pull/48749
+    
+    I welcome any feedback and appreciate it. Thank you!
+
+[2026-06-19T02:27:31.206000+00:00] yatesalex (id=1517355117916061887)
+    Btw your guys GitHub Actions bill must be insane. Check out Blacksmith they are great https://www.blacksmith.sh/
+
+[2026-06-19T02:31:05.088000+00:00] nuuuuuuuuuu0480 (id=1517356015002194061)
+    It's  easy if you're a DEV. LOL
+    [reply to dias4761 msg=1517350494031319070]
+
+[2026-06-19T02:40:25.482000+00:00] dias4761 (id=1517358365464989858)
+    HEYY, i´m LMAO
+    [reply to nuuuuuuuuuu0480 msg=1517356015002194061]
+
