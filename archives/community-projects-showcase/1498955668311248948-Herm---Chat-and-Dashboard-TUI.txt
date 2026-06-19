@@ -1427,3 +1427,7 @@
 [2026-06-18T18:25:15.268000+00:00] valiendovrga (id=1517233751795564595)
     @? hehe pls
 
+[2026-06-19T08:50:36.623000+00:00] tunacookie (id=1517451525742399559)
+    the prompt is simple, say i want you to add a filter to the session tab similar to the one in the slash model picker so that i can search my sessions on herm tui
+    [reply to valiendovrga msg=1517232613008343111]
+

@@ -182,3 +182,6 @@
 [2026-06-16T11:12:44.428000+00:00] heeervas (id=1516400130352353411)
     @ me please when you have that video
 
+[2026-06-19T06:42:15.634000+00:00] mmiedl_39794 (id=1517419225453690961)
+    Interesting - but I just don’t get it. What’s the use case of this? Isn’t a skill the better way to handle things?
+

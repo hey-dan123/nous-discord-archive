@@ -34275,3 +34275,82 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     HEYY, i´m LMAO
     [reply to nuuuuuuuuuu0480 msg=1517356015002194061]
 
+[2026-06-19T05:38:10.623000+00:00] hypertekton (id=1517403098308546570)
+    More TTS PRs:
+    
+    Add config for using speaker_id in Piper for multi-speaker voices https://github.com/NousResearch/hermes-agent/pull/48797
+    
+    Add speed and optimize latency params to xAI TTS
+    https://github.com/NousResearch/hermes-agent/pull/48850
+    
+    And optionally automatically add speech tags to xAI TTS for rich emotion voice 
+    https://github.com/NousResearch/hermes-agent/pull/48251
+    [embed] feat(tts): expose speaker_id on built-in Piper provider by Cdddo ·... https://github.com/NousResearch/hermes-agent/pull/48797
+    [embed] feat(tts): add xAI TTS speed and optimize_streaming_latency config ... https://github.com/NousResearch/hermes-agent/pull/48850
+    [embed] feat(tts): add auxiliary-model auto speech tags for xAI TTS by Cddd... https://github.com/NousResearch/hermes-agent/pull/48251
+
+[2026-06-19T05:53:31.233000+00:00] dias4761 (id=1517406959626621038)
+    https://github.com/NousResearch/hermes-agent/pull/48852
+    
+    fix(gateway): resolve watchdog, env override, and proxy routing on Windows
+    [embed] fix(gateway): resolve watchdog, env override, and proxy routing on ... https://github.com/NousResearch/hermes-agent/pull/48852
+
+[2026-06-19T07:07:45.420000+00:00] godsboy7777 (id=1517425641841098872)
+    Hey <@690519146701783042>, when you have a gap, could you please give PR #15624 a fresh review? I have been working with the mem0 team so they update PR and we get this merged as it affects everyone using their plugin on hermes.
+    
+    https://github.com/NousResearch/hermes-agent/pull/15624
+    
+    This is the Mem0 v3 / OSS mode PR from Kartik. It matters because the current Hermes Mem0 plugin is still on Mem0 v2 semantics, where memories written with both `user_id` and `agent_id` are not returned by a plain `user_id` read. Mem0 support confirmed this is expected v2 behaviour, and that v3 fixes it by making `agent_id` attribution rather than a narrower recall scope.
+    
+    So this PR should let Hermes drop the local OR-filter workaround and rely on `{"user_id": ...}` reads again once merged.
+    
+    The cleanup items from your review look addressed now:
+    - `mem0ai>=2.0.4,<3` upper bound is in place
+    - telemetry opt-out docs are now in both the plugin README and `website/docs/user-guide/features/memory-providers.md`
+    - qdrant path test is now root-safe
+    - PostHog key is behind `MEM0_POSTHOG_KEY`
+    - async exit flush is in place
+    - OSS double-telemetry handling is in place
+    - AUTHOR_MAP entries and version bump are in
+    - branch is mergeable and no longer behind main
+    
+    I also checked the latest PR head locally and ran:
+    
+    `uv run pytest tests/plugins/memory -q`
+    
+    Result:
+    
+    `346 passed in 98.85s`
+    
+    Would appreciate a re-review so this can get unstuck and merged. It removes a real practical recall issue for Hermes users on Mem0.
+    [embed] feat(mem0): v3 API, OSS mode, update/delete tools, telemetry & revi... https://github.com/NousResearch/hermes-agent/pull/15624
+
+[2026-06-19T07:39:07.092000+00:00] gloggers (id=1517433534145499206)
+    I made a claude code adapter that runs it as a OpenAI server interface so its usable through a custom connector in Hermes without the API billing and was wondering if I could send the GitHub link here for anyone interested!!
+
+[2026-06-19T07:52:14.946000+00:00] srojk34 (id=1517436838644551702)
+    /update has the same hosted-dashboard bug that #48882 just fixed for /exit — it calls dieWithCode(42) which kills the PTY and bricks the tab. There's no Python update wrapper in hosted mode anyway, so the command can never work there. This PR adds the same DASHBOARD_TUI_MODE guard + regression test.
+    
+    https://github.com/NousResearch/hermes-agent/pull/48904
+    [embed] fix(tui): guard /update against hosted dashboard mode by srojk34 ·... https://github.com/NousResearch/hermes-agent/pull/48904
+
+[2026-06-19T08:00:00.355000+00:00] aleksas. (id=1517438790711378052)
+    hey, sorry to bug you again — getting asked about https://github.com/NousResearch/hermes-agent/pull/33769 a lot by colleagues i know it’s just a P3, but could it maybe get bumped up? all the package deps are removed and the diff is as minimal as possible
+    [embed] feat(web): add Oxylabs AI Studio as a web provider plugin by aleksa... https://github.com/NousResearch/hermes-agent/pull/33769
+
+[2026-06-19T09:14:03.287000+00:00] kyssta69 (id=1517457425718968341)
+    https://github.com/NousResearch/hermes-agent/pull/48944
+    
+    **Problem**: Typing /goal <text> in the TUI desktop app returned 'empty command' and swallowed the input text. slash.exec returned error 4018 telling the frontend to fall back to command.dispatch, but some clients failed this fallback. slash.exec now routes pending-input commands to command.dispatch internally, eliminating the fragile client-side fallback.
+    [embed] fix(tui): route pending-input commands via command.dispatch (#48848... https://github.com/NousResearch/hermes-agent/pull/48944
+
+[2026-06-19T09:27:02.055000+00:00] nuuuuuuuuuu0480 (id=1517460692108709910)
+    https://github.com/NousResearch/hermes-agent/pull/48936
+    [embed] fix: handle SSE-only Anthropic endpoints in auxiliary client by van... https://github.com/NousResearch/hermes-agent/pull/48936
+
+[2026-06-19T09:27:04.883000+00:00] nuuuuuuuuuu0480 (id=1517460703970197514)
+    PR #48936 (3 fixes):
+           - agent/auxiliary_client.py: SSE-only Anthropic endpoint fix
+           - tools/mcp_oauth.py: assert -> RuntimeError
+           - tools/environments/docker.py: assert -> RuntimeError
+

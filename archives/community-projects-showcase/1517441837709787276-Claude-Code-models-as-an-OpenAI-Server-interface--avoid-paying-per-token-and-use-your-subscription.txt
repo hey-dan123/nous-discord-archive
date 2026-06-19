@@ -1,0 +1,14 @@
+# Thread 'Claude Code models as an OpenAI Server interface (avoid paying per token and use your subscription)' in forum #community-projects-showcase
+# thread_id=1517441837709787276 forum_id=1316137596535177246
+# Started 2026-06-19T10:23:11.479297+00:00
+
+[2026-06-19T08:12:06.816000+00:00] gloggers (id=1517441837709787276)
+    I made a cool thing that allows you to use your claude code CLI as a OpenAI compatible server
+    
+    It effectively allows you to use any claude model through claude code on third party services with no API level costs.
+    
+    It works very well in Hermes for me right now.
+    
+    Check it out: https://github.com/schmarta/claude-code-openai-server
+    [embed] GitHub - schmarta/claude-code-openai-server: Use Claude Code models... https://github.com/schmarta/claude-code-openai-server
+

@@ -466,3 +466,21 @@
 [2026-06-18T21:53:21.841000+00:00] reefsnax (id=1517286124278648842)
     I *do* have Claude as a fallback or if I need really heavy lifting but more often than not Claude (and Anthropic) kinda frustrate me half the time.
 
+[2026-06-19T04:43:54.559000+00:00] s1arsky (id=1517389441386287124)
+    My use case is system OS assistant/troublshooting: deepseek flash > mimo 2.5   ;  mimo 2.5 pro > minmax m3 (i have test official minmax sub yet) ;  mimo 2.5 pro > deepseek flash  ; AUX : web extract : gemini flash 2.5 lite;  curator - any strong model; vision:     model: google/gemini-3.1-flash-lite
+    ;  title -     model: mistralai/mistral-small-3.2-24b-instruct ; the rest cheap STABLE API model . In the end daily driver is mimo 2.5 pro because of bang for a buck. Minmax for me is slow and thinking too much. Has 0.06 price on cache hit vs Mimo's 0.00 (nous). When important stuff I use deepseek pro > mimo 2.5 pro
+    [reply to meltzmedia msg=1516558324093681938]
+
+[2026-06-19T06:18:05.188000+00:00] .s0uthpaw (id=1517413141842100265)
+    https://hermes-agent.nousresearch.com/docs/user-guide/profile-distributions
+    [embed] Profile Distributions: Share a Whole Agent | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/profile-distributions
+
+[2026-06-19T06:18:15.675000+00:00] .s0uthpaw (id=1517413185827897344)
+
+[2026-06-19T08:36:48.798000+00:00] flash_speed3412 (id=1517448053592948799)
+    https://clanker-soul-site.vercel.app
+
+[2026-06-19T08:57:04.724000+00:00] gambrin. (id=1517453153555972126)
+    Actually, coding architect and coding writer would be a good areas of focus for the review. Happy to contribute.
+    [reply to datarevised msg=1516974785844740256]
+

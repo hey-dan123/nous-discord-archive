@@ -15,3 +15,8 @@
     [embed] c0mpute https://c0mpute.ai/
     [embed]  https://twitter.com/leyten/status/2064027699866223009
 
+[2026-06-19T05:55:26.296000+00:00] leytenv (id=1517407442235818136)
+    Update: we have done something deemed impossible!
+    https://x.com/leyten/status/2067673668524679324?s=20
+    [embed]  https://twitter.com/leyten/status/2067673668524679324?s=20
+
