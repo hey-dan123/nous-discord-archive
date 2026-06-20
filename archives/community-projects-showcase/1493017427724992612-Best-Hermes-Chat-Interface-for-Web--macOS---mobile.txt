@@ -4262,3 +4262,29 @@
     do you guys think that it would be good to have option to toggle skills on other hermes profiles?
     [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1517765129096396882/image.png?ex=6a37786d&is=6a3626ed&hm=51f8b4a9c294cfbe3b69cc1840e973a522b6f75e4d3ba7f274ad817ba91c15de&
 
+[2026-06-20T09:07:16.689000+00:00] frostmage10 (id=1517818108188823653)
+    When for android
+
+[2026-06-20T16:03:26.579000+00:00] avidfuturist (id=1517922839498457179)
+    Working on Android next!
+    [reply to frostmage10 msg=1517818108188823653]
+
+[2026-06-20T16:04:02.998000+00:00] avidfuturist (id=1517922992250683642)
+    Could you explain more? Profiles are generally pretty self contained
+    [reply to rostelinalise msg=1517765129369030807]
+
+[2026-06-20T16:29:13.776000+00:00] frostmage10 (id=1517929328912896141)
+    would it be as polished looking as Uzi's?
+    [reply to avidfuturist msg=1517922839498457179]
+
+[2026-06-20T16:29:30.361000+00:00] frostmage10 (id=1517929398475554957)
+    Uzi is yet to make it public code
+
+[2026-06-20T16:29:56.413000+00:00] admund__ (id=1517929507745693846)
+    Today, I launched Hermes Desktop, and I find it to be the fastest. However, I also use WebUI, Telegram, Discord, and my Voice Command Center.
+    [attachment] Zrzut_ekranu_2026-06-20_o_18.28.18.png https://cdn.discordapp.com/attachments/1493017427724992612/1517929507057565706/Zrzut_ekranu_2026-06-20_o_18.28.18.png?ex=6a381184&is=6a36c004&hm=19c46a4a7cb52cf827e783fd1d941fd5e886856a9c5cf46867a52fc22a123f64&
+
+[2026-06-20T16:31:10.630000+00:00] avidfuturist (id=1517929819034226748)
+    Probably not to start, it’ll be a huge amount of work to make it as polished as Uzi’s - we’d need someone very passionate about the project. But still hope to get something up as a native app as a starting point
+    [reply to frostmage10 msg=1517929328912896141]
+

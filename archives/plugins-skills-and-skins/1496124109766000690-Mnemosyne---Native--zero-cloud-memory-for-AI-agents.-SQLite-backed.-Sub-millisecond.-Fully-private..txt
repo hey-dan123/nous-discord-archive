@@ -2149,3 +2149,52 @@
 [2026-06-20T08:09:07.555000+00:00] mightguy.nq (id=1517803473700126804)
     "Warning: Unknown toolsets: messaging, mnemosyne" when i start hermes, is this bad?
 
+[2026-06-20T15:41:34.940000+00:00] nulledvector (id=1517917338085625866)
+    not bad. just a startup warning, Hermes keeps running and skips those toolsets.
+    
+    means your config (probably `~/.hermes/config.yaml`) references two toolset names that aren't registered with this Hermes build. Tools named "`messaging`" and "`mnemosyne`" usually come from plugins.
+    
+    quick diagnosis:
+    ```bash
+      hermes tools                 # see what's actually loaded
+      pipx list | grep -E "hermes-gateway|mnemosyne-hermes"   # see if plugins are installed
+      cat ~/.hermes/config.yaml | grep -A2 toolsets   # see what config references
+    ```
+    two fixes depending on what you want:
+    
+    1. install the missing plugins:
+    `pipx install mnemosyne-hermes    # registers the mnemosyne toolset`
+     
+    `pipx install hermes-gateway      # registers the messaging toolset (telegram, discord, slack, etc.)`
+    
+       then `pipx ensurepath` if pipx's bin dir isn't in PATH, restart shell, the warning shouod be gone.
+    
+    2. or just remove the toolset entries from config if you don't use them. harmless either way, just noise at startup.
+    
+    the warning is there so you don't silently miss a plugin that's supposed to be there. not an error.
+    [reply to mightguy.nq msg=1517803473700126804]
+
+[2026-06-20T15:55:22.793000+00:00] no_orbert (id=1517920810353033386)
+    Hi, <@151598363131904000>  every time when Hermes desktop is updated or rebuilding Mnemosyne uninstalled from my Mac.  Do you know why and how can be fixed?
+
+[2026-06-20T16:16:59.762000+00:00] nulledvector (id=1517926250235166941)
+    thought this was fixed... I will have to take a look at it again
+    [reply to no_orbert msg=1517920810353033386]
+
+[2026-06-20T16:17:18.860000+00:00] no_orbert (id=1517926330337988741)
+    let me chek the version
+
+[2026-06-20T16:21:56.592000+00:00] nulledvector (id=1517927495230292040)
+    ok let me know
+
+[2026-06-20T17:23:21.054000+00:00] no_orbert (id=1517942948984258602)
+    3.10.0
+    [reply to nulledvector msg=1517927495230292040]
+
+[2026-06-20T18:46:10.288000+00:00] allanon911 (id=1517963791462039622)
+    any recommendations or best practices for multi-profile agents? Should I turn profile_isolation on or not?
+
+[2026-06-20T19:05:32.438000+00:00] nulledvector (id=1517968665872699494)
+    i dont personally use Hermes Desktop, but will get it to see if I can replicate
+    [reply to no_orbert msg=1517920810353033386]
+

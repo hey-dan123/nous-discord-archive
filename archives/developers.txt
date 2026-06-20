@@ -34885,3 +34885,305 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-20T08:26:57.872000+00:00] definitely_not_cthulhu (id=1517807962935267519)
     Agent also clusters the pull requests, so I can review a batch solving the same problem all at once
 
+[2026-06-20T09:15:31.568000+00:00] njk9898 (id=1517820183861792778)
+
+[2026-06-20T09:16:05.504000+00:00] njk9898 (id=1517820326199955486)
+
+[2026-06-20T10:01:01.729000+00:00] kyssta69 (id=1517831634987126795)
+    https://github.com/NousResearch/hermes-agent/pull/49566
+    
+    **Problem**: hermes doctor shows a false-positive 'Venv entry point not found' warning when Hermes is installed via PyPI wheel. The check only looks under PROJECT_ROOT/venv/bin/hermes, but wheel installs put the entry point in sys.prefix/bin/ instead. Added a sys.prefix fallback so the check works for both editable and wheel installs.
+    [embed] fix(cli): resolve false-positive venv entry point warning in doctor... https://github.com/NousResearch/hermes-agent/pull/49566
+
+[2026-06-20T11:50:48.477000+00:00] confusedxx (id=1517859261810610410)
+    Hi Guys, I need some advice. I am not a developer, but did some coding 25 years ago 😂since then, I have moved into management and can read some coding languages, but don’t do it much. 
+    I have a full stack SAAS application that I would like to develop and incorporate pieces of functionality from other apps on the market and combine to a unique application. 
+    I would like Hermes to do much of it for me: Product management, architecture, development, testing, documentation and deployment. 
+    
+    How do you suggest setting up Hermes Agent to orchestrate run the kanban and sub agents and make sure the product works as per the requirements the product manager writes?
+    
+    I will naturally be in the loop and signoff the functional requirements. 
+    
+    I could ask Hermes, but I want a few options to help challenge what I may hear from Hermes / GPT on this😉
+    
+    What LLMs would you suggest for each of the roles?
+
+[2026-06-20T12:02:46.455000+00:00] rostelinalise (id=1517862273228738591)
+    if it was me, i am going to subscribe to one from nous portal, deepseek and another one from claude. Then I would set up hermes webui https://github.com/nesquena/hermes-webui and connect it  to my phone via hermex https://apps.apple.com/us/app/hermex/id6767006319.
+    
+    Then my first model would also be connected to my whatsapp (most frequently used app on my phone), then I would use https://x.com/NousResearch/status/2064760263224504719 to create these profile : Product management, architecture, development, testing, documentation and deployment.  Cut down the skills access depending what it needs and maybe use the product management agent as the default profiles.
+    
+    I would then assign the architecture model to a high model (claude opus 4.8), and then use other model for other agents.
+    Hope this is useful for you.
+    [embed] GitHub - nesquena/hermes-webui: Hermes WebUI: The best way to use H... https://github.com/nesquena/hermes-webui
+    [embed]  https://twitter.com/NousResearch/status/2064760263224504719
+    [reply to confusedxx msg=1517859261810610410]
+
+[2026-06-20T12:10:44.392000+00:00] neysixx (id=1517864277841674250)
+    Hi ! 
+    I've been using Hermes with the Discord plugin in mention-only mode, and I noticed that when the bot reads channel history (backfill), voice messages are invisible to it. It only sees the attachment, never the spoken content.
+    I dug into the code and confirmed there's no STT transcription step in _fetch_channel_context for audio attachments. The voice message just shows up as (attachment) in the history context the LLM receives.
+    
+    Is this a known gap, or intentional ? If it's worth fixing, I can open an issue + a PR. I already have a working implementation that :
+    - detects audio/* attachments in history (including Discord voice messages via waveform heuristic)
+    - transcribes them through the existing STT pipeline
+    - injects [voice: <transcript>] into the context instead of (attachment)
+    
+    Happy to contribute if there's appetite for it.
+
+[2026-06-20T12:15:51.940000+00:00] mustafa_ramax (id=1517865567791349860)
+    Hey everyone 😊 Kept hitting the same pain point in Hermes desktop — no project separation! Turns out I'm not alone 😄 I built Projects (Claude CoWork / Codex-style): create a project, bind a folder, set instructions, sessions stay grouped and more coming...
+    
+    Just submitted the PR. Would love feedback you guys.. Thanks! 
+      
+    PR: https://github.com/NousResearch/hermes-agent/pull/49434
+    [attachment] Screenshot_2026-06-20_at_1.28.56_pm.png https://cdn.discordapp.com/attachments/1491258766648283238/1517865568059920565/Screenshot_2026-06-20_at_1.28.56_pm.png?ex=6a37d5f8&is=6a368478&hm=b54d987974bdb5c78046a05acc565af5cb08222096503ff8d622d279b6576896&
+    [attachment] Screenshot_2026-06-20_at_12.23.02_pm.png https://cdn.discordapp.com/attachments/1491258766648283238/1517865568429146142/Screenshot_2026-06-20_at_12.23.02_pm.png?ex=6a37d5f8&is=6a368478&hm=da79a65b53262450f05024e67ee827240b438928966b475d43e095b64724755d&
+    [attachment] Screenshot_2026-06-20_at_12.29.29_pm.png https://cdn.discordapp.com/attachments/1491258766648283238/1517865568827478137/Screenshot_2026-06-20_at_12.29.29_pm.png?ex=6a37d5f8&is=6a368478&hm=f622cf5eea4f1ab79e8e8eeff7b226304a1451afcdab4375703569f6b23d663e&
+    [embed] feat(desktop): Projects v1 — claude-style folder-bound with sessi... https://github.com/NousResearch/hermes-agent/pull/49434
+
+[2026-06-20T12:17:06.565000+00:00] 0xhellno (id=1517865880791547926)
+    hey! I opened two small PRs for bug fixes, what's the best way to get them merged? is linking them here preferred? #49019 and #49033
+
+[2026-06-20T12:58:50.489000+00:00] neysixx (id=1517876383009869854)
+    I opened the PR (https://github.com/NousResearch/hermes-agent/pull/49621) and the related issue (https://github.com/NousResearch/hermes-agent/issues/49616) 🙂
+    [embed] feat(discord): transcribe voice messages in channel history via STT... https://github.com/NousResearch/hermes-agent/pull/49621
+    [embed] feat(discord): transcribe voice messages in channel history via STT... https://github.com/NousResearch/hermes-agent/issues/49616
+    [reply to neysixx msg=1517864277841674250]
+
+[2026-06-20T14:14:42.991000+00:00] thyfriendlyfox (id=1517895477587083467)
+    Hey guys! I was told to post some pictures here.
+    
+    We work on mobile-based development at team reagent a lot, but we really really love hermes desktop
+    
+    so we worked on a client for mobile, and i’m not sure if its something the core devs team wants, but if you guys like it and approve of stuff like this, we can make a PR
+
+[2026-06-20T14:14:48.664000+00:00] thyfriendlyfox (id=1517895501381500979)
+    [attachment] Screenshot_20260620-151018.png https://cdn.discordapp.com/attachments/1491258766648283238/1517895497656963252/Screenshot_20260620-151018.png?ex=6a37f1d7&is=6a36a057&hm=8d44d6e3d6b7513630a90f7621350e045d99f8c983fdd080bd10ea716e4db7c3&
+    [attachment] Screenshot_20260620-150959.png https://cdn.discordapp.com/attachments/1491258766648283238/1517895498210738236/Screenshot_20260620-150959.png?ex=6a37f1d7&is=6a36a057&hm=348c655d10211cb8876825a7e7345bed05926c236c1ecb6d7d2e809539c88b7a&
+    [attachment] Screenshot_20260620-151008.png https://cdn.discordapp.com/attachments/1491258766648283238/1517895498697150535/Screenshot_20260620-151008.png?ex=6a37f1d8&is=6a36a058&hm=e546ec7163314349afb27c098ee9182ee813465f5d15adfc15d42617e2cc499b&
+    [attachment] Screenshot_20260620-150915.png https://cdn.discordapp.com/attachments/1491258766648283238/1517895499150131280/Screenshot_20260620-150915.png?ex=6a37f1d8&is=6a36a058&hm=2fc552f060198e096c9a553e14918694a6c2b559c378f9e3fb4626dfd172f906&
+    [attachment] Screenshot_20260620-150911.png https://cdn.discordapp.com/attachments/1491258766648283238/1517895500278530209/Screenshot_20260620-150911.png?ex=6a37f1d8&is=6a36a058&hm=3d016067ddee468b15695a94a831193e6f5a0a517e8e7641f54ca56be01de8b6&
+    [attachment] Screenshot_20260620-150906.png https://cdn.discordapp.com/attachments/1491258766648283238/1517895500999688302/Screenshot_20260620-150906.png?ex=6a37f1d8&is=6a36a058&hm=4dd4066869c8ccab5442ce7e6b8c46f9905f0a11f046e7b76f900d144a82deec&
+
+[2026-06-20T14:15:34.709000+00:00] floory (id=1517895694508363938)
+    the buttons/UI looks quite small (i've got an s24 ultra but it still looks like buttons would be easy to misclick) but i think you should make a PR anyway
+
+[2026-06-20T14:16:08.042000+00:00] thyfriendlyfox (id=1517895834316836955)
+    no extra functionality yet btw floory, but its made by my good friend BentlyBro, who uses hermes desktop to remote control his homelab blades that run the actual hermes agents
+
+[2026-06-20T14:16:51.917000+00:00] thyfriendlyfox (id=1517896018342051840)
+    heh yeah the buttons are pretty small
+    
+    we’ll add gestures! swiping and stuff 😄
+
+[2026-06-20T14:18:27.073000+00:00] nuuuuuuuuuu0480 (id=1517896417455378603)
+    fix(hermes-cli): replace bare asserts with proper error handling
+           https://github.com/NousResearch/hermes-agent/pull/49630
+           - hermes_cli/mcp_catalog.py:377
+           - hermes_cli/mcp_picker.py:222
+           - hermes_cli/main.py:4590
+           - hermes_cli/oneshot.py:221
+    
+       fix(tools,agent): replace bare asserts with proper error handling
+           https://github.com/NousResearch/hermes-agent/pull/49633
+           - tools/browser_cdp_tool.py:110
+           - tools/environments/docker.py:947
+           - tools/browser_supervisor.py:813
+           - agent/transports/codex_app_server_session.py:399
+    
+         fix(gateway): replace bare asserts with proper error handling
+           https://github.com/NousResearch/hermes-agent/pull/49636
+           - gateway/platforms/api_server.py:4247
+           - gateway/platforms/weixin.py:5 asserts (1337, 1404, 1816, 2071, 2094)
+           - gateway/platforms/bluebubbles.py:2 asserts (219, 225)
+           - gateway/relay/ws_transport.py:280
+    [embed] fix(hermes-cli): replace bare asserts with proper error handling by... https://github.com/NousResearch/hermes-agent/pull/49630
+    [embed] fix(tools,agent): replace bare asserts with proper error handling b... https://github.com/NousResearch/hermes-agent/pull/49633
+    [embed] fix(gateway): replace bare asserts with proper error handling by va... https://github.com/NousResearch/hermes-agent/pull/49636
+
+[2026-06-20T15:40:34.994000+00:00] uzunkuyruk (id=1517917086654005398)
+    <@387972437901312000> Fixed #34850 — mid-session model switches via /model were never persisted 
+    to the database. update_token_counts() was using COALESCE(model, ?) which 
+    ignores the new value before a model is already set. Swapped to COALESCE(?, model).
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/49682
+    [embed] fix(state): use COALESCE(?, model) so mid-session model switches ar... https://github.com/NousResearch/hermes-agent/pull/49682
+
+[2026-06-20T16:09:16.539000+00:00] alelpoan (id=1517924307337220349)
+    Just wanted to improve UX for newcomers: three buttons in the right sidebar had no tooltips. 
+    The title prop just wasn't being passed to the buttons. 
+    Three lines and it works 🙂 <@387972437901312000> 
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/49697
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1517924307479560252/image.png?ex=6a380cac&is=6a36bb2c&hm=9ec08c1e1b59d2a309720d941ce7b34528ee9c71daacad739bd993264df123b5&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1517924307853115513/image.png?ex=6a380cac&is=6a36bb2c&hm=b41445f2ddf06e9bba5e6bb0aaf95af2838b18e909d5c8f203065ef1a5391ec5&
+    [embed] fix(desktop): add tooltips to right sidebar header buttons by alelp... https://github.com/NousResearch/hermes-agent/pull/49697
+
+[2026-06-20T16:12:19.143000+00:00] icather_98107 (id=1517925073233903627)
+    `_venv_scripts_dir()` hardcodes `PROJECT_ROOT / "venv"` — returns None when venv is at `.venv`. On Windows this silently skips quarantine and concurrent-instance detection, so `uv pip install -e .` hits Access Denied trying to overwrite the running hermes.exe. Four existing quarantine PRs already merged but never fired.
+    
+    Fix: prefer `sys.prefix` first (authoritative when running), then probe `venv/` → `.venv/`. VIRTUAL_ENV for uv also switched from hardcoded path to sys.prefix. +6 tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/49666
+    [embed] fix(windows): detect .venv and use sys.prefix for venv path resolut... https://github.com/NousResearch/hermes-agent/pull/49666
+
+[2026-06-20T16:48:31.355000+00:00] reverendissimo00 (id=1517934184151253175)
+    guys i dunnow if it is the right place here, but i see Openai added Scheduled Task on chatgpt and im working on a Subconscious Engine for Hermes, it basically create and endpoint in the gateway that allow for the Subconscious Engine to run routine task and notify any session connected to the gateway with message injection that something has to be done sending [nudges] is someone interested in giving it a look and maybe collaborate? it works really well honestly
+
+[2026-06-20T16:48:52.877000+00:00] reverendissimo00 (id=1517934274421067917)
+    (cron is very limited)
+
+[2026-06-20T16:50:14.222000+00:00] reverendissimo00 (id=1517934615606726767)
+    Subconscious Engine looks at filesystem, rest api (receive) rest api (pool) and scheduled jobs and inject a nudge to a conversation telling the agent "u have this stuff to do"
+
+[2026-06-20T16:58:59.717000+00:00] maxfreedompollard (id=1517936819692507318)
+    <@387972437901312000> I'm going to try to get phase 1 2 & 3 done this week if possible so I can start on the fun phase, phase 4.
+    
+    
+    https://github.com/NousResearch/hermes-agent-self-evolution/pull/127
+    [embed] Fix Phase 1 skill evolution correctness gates by MaxFreedomPollard ... https://github.com/NousResearch/hermes-agent-self-evolution/pull/127
+
+[2026-06-20T16:59:22.370000+00:00] maxfreedompollard (id=1517936914705940732)
+    But I'm going in order oc
+
+[2026-06-20T16:59:46.342000+00:00] dias4761 (id=1517937015251927160)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/49706
+    
+    
+    fix(gateway): resolve gateway session latency and tool output context bloat (#49673)
+    #49706
+    [embed] fix(gateway): resolve gateway session latency and tool output conte... https://github.com/NousResearch/hermes-agent/pull/49706
+
+[2026-06-20T16:59:50.843000+00:00] teknium (id=1517937034130362550)
+    When are people ending up with the wrong location of their venv..?
+    [reply to icather_98107 msg=1517925073233903627]
+
+[2026-06-20T17:01:11.225000+00:00] dias4761 (id=1517937371276902481)
+    when u have time, try check this
+
+[2026-06-20T17:14:51.389000+00:00] teknium (id=1517940811294179339)
+    mmm this was already in on the repo
+    [reply to uzunkuyruk msg=1517917086654005398]
+
+[2026-06-20T17:15:06.250000+00:00] teknium (id=1517940873625731272)
+    A very long time ago
+
+[2026-06-20T17:16:00.334000+00:00] teknium (id=1517941100470599710)
+    cc <@119192111202566149>
+    [reply to thyfriendlyfox msg=1517895477587083467]
+
+[2026-06-20T17:16:13.544000+00:00] teknium (id=1517941155877224509)
+    Please hold up sire
+    [reply to mustafa_ramax msg=1517865567791349860]
+
+[2026-06-20T17:16:21.304000+00:00] teknium (id=1517941188425158686)
+    https://github.com/NousResearch/hermes-agent/pull/49037
+    [embed] feat(projects): first-class projects with a backend-authoritative s... https://github.com/NousResearch/hermes-agent/pull/49037
+
+[2026-06-20T17:16:26.098000+00:00] teknium (id=1517941208532520990)
+    Can you test this
+
+[2026-06-20T17:19:42.022000+00:00] thyfriendlyfox (id=1517942030297206977)
+    it’s <@353922987235213313> who’s doing the work :3
+    [reply to teknium msg=1517941100470599710]
+
+[2026-06-20T17:20:50.732000+00:00] bentlybro (id=1517942318488096881)
+    <:salute_kiwi:1446138396979494962> hello
+
+[2026-06-20T17:23:52.243000+00:00] brooklyn (id=1517943079800410172)
+    if you have the work <@353922987235213313> and it's PRable then i'd like to see it
+
+[2026-06-20T17:24:16.138000+00:00] bentlybro (id=1517943180023300137)
+    I am just fixing up some things then i will make it a pr shortly and share it here 🙂
+    [reply to brooklyn msg=1517943079800410172]
+
+[2026-06-20T17:49:55.610000+00:00] teknium (id=1517949637036740628)
+    merged
+    [reply to alelpoan msg=1517924307337220349]
+
+[2026-06-20T17:51:46.378000+00:00] alelpoan (id=1517950101631406152)
+    Amazing infographic 😄 🫡
+    [reply to teknium msg=1517949637036740628]
+
+[2026-06-20T17:52:56.804000+00:00] dias4761 (id=1517950397019455680)
+    <@387972437901312000> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/49517
+    [embed] fix(acp): resolve duplicate user messages in session DB and LLM con... https://github.com/NousResearch/hermes-agent/pull/49517
+
+[2026-06-20T18:01:12.928000+00:00] teknium (id=1517952477914333415)
+    Didn't I close these 5 minutes ago
+    [reply to dias4761 msg=1517950397019455680]
+
+[2026-06-20T18:01:27.577000+00:00] dias4761 (id=1517952539356823582)
+    no no, this is another one
+
+[2026-06-20T18:02:14.991000+00:00] dias4761 (id=1517952738225295482)
+    I confess that I found that issue extremely complex for me.
+    [reply to teknium msg=1517952477914333415]
+
+[2026-06-20T18:02:29.525000+00:00] dias4761 (id=1517952799185567904)
+    and I really appreciate the review
+
+[2026-06-20T18:07:36.198000+00:00] dias4761 (id=1517954085465231371)
+    The cancellation was related to the fix for issue #49673: fix(gateway): resolves gateway session latency and tool output context bloat 
+    
+    Those two others I submitted were different
+    
+    fix(acp): resolves duplicate user messages in the session DB and LLM context (#49391)
+    
+    
+    fix(gateway): resolve watchdog, env override, and proxy routing on Windows (Issue #48820)
+    [reply to teknium msg=1517952477914333415]
+
+[2026-06-20T18:07:59.739000+00:00] dias4761 (id=1517954184203206750)
+    I believe I didn't document it properly; I apologize.
+
+[2026-06-20T18:10:41.572000+00:00] dias4761 (id=1517954862980141256)
+    https://github.com/NousResearch/hermes-agent/pull/48852
+    [embed] fix(gateway): resolve watchdog, env override, and proxy routing on ... https://github.com/NousResearch/hermes-agent/pull/48852
+
+[2026-06-20T18:18:11.538000+00:00] telnetdoogie (id=1517956750274330735)
+    I'm hoping someone can chime in on this. I opened it as an issue some time back, and it's had some activity and there's a PR out there against it, but I'm not sure how this repo ecosystem works... I know that not everyone will give this issue the same level of importance, but right now it's my biggest bugbear in my hermes setup, since my agent is having to constantly remind me about the "huge injected memory context" and we've had to create rules about what it means / doesn't mean etc... it's very unnatural and I think the injected contexts actually should belong somewhere else so it doesn't require creative meddling with pure user input. https://github.com/NousResearch/hermes-agent/issues/31584
+    [embed] [Feature]: Treat memory-context as background context, not authorit... https://github.com/NousResearch/hermes-agent/issues/31584
+
+[2026-06-20T18:19:45.819000+00:00] telnetdoogie (id=1517957145717510375)
+    ...there has to be a better way to inject memory context without tainting what should be a clean user input channel
+
+[2026-06-20T18:25:53.886000+00:00] teknium (id=1517958689502269641)
+    Its labeled P2, which means by default it gets less attention then P1, and P0
+    [reply to telnetdoogie msg=1517956750274330735]
+
+[2026-06-20T18:26:11.473000+00:00] teknium (id=1517958763267752099)
+    given 15000 PRs in queue, that could mean it will take a while
+
+[2026-06-20T18:28:33.483000+00:00] telnetdoogie (id=1517959358900601084)
+    Yeah, that's fine. I understand that... I was hoping to get it in front of someone that could think about the potential of a dedicated "channel" for these kinds of injections, rather than just asking "hey can we rush this thing to a merge"... I understand it's an incredibly busy / popular repo. I just wasn't sure how things get 'seen'
+    [reply to teknium msg=1517958763267752099]
+
+[2026-06-20T18:29:03.451000+00:00] teknium (id=1517959484595634208)
+    Here is definitely the place for that discussion with other devs
+    [reply to telnetdoogie msg=1517959358900601084]
+
+[2026-06-20T18:39:02.004000+00:00] uzunkuyruk (id=1517961995108876329)
+    I understand. Can you give me your feedback?
+    [reply to teknium msg=1517940873625731272]
+
+[2026-06-20T18:39:42.340000+00:00] uzunkuyruk (id=1517962164290326708)
+    generally
+
+[2026-06-20T18:40:22.461000+00:00] uzunkuyruk (id=1517962332569993329)
+    Got it, thanks for the note. I'll close this one and look for something more impactful to work on.
+    [reply to teknium msg=1517940811294179339]
+
+[2026-06-20T18:48:24.905000+00:00] maxfreedompollard (id=1517964356086796529)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/49756
+    [embed] fix(tui): close agents orphaned during session build by MaxFreedomP... https://github.com/NousResearch/hermes-agent/pull/49756
+
+[2026-06-20T19:11:03.261000+00:00] quark2world (id=1517970053444931745)
+    Guess this can now be closed with the minimal installer being part of upstream <:tekcheer:1453863338537779242> https://github.com/NousResearch/hermes-agent/pull/22275
+
+[2026-06-20T19:14:49.492000+00:00] avf00 (id=1517971002326515772)
+    can i ask what is the approach to test plugins that use messages from the gateway?
+

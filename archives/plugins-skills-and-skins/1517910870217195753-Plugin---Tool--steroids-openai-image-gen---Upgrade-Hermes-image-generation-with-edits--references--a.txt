@@ -1,0 +1,27 @@
+# Thread 'Plugin - Tool: steroids-openai-image-gen - Upgrade Hermes image generation with edits, references, a' in forum #plugins-skills-and-skins
+# thread_id=1517910870217195753 forum_id=1485392832154832906
+# Started 2026-06-20T19:27:25.507058+00:00
+
+[2026-06-20T15:15:52.880000+00:00] heeervas (id=1517910870217195753)
+    Adds `steroids-openai` as provider and enhances `image_generate `for richer Hermes image workflows.
+    
+    Supports:
+    - text-to-image
+    - image edits
+    - and reference-image generation 
+    
+    Via OpenAI-compatible image APIs or Hermes Codex Auth.
+    
+    Exposes practical controls like quality, `image_url`, `reference_image_urls`, and `input_fidelity `for agents.
+    
+    Includes configurable models, size mappings, timeouts, max image bytes, remote-image handling, and reference-image limits.
+    
+    **Expands Hermes beyond text-only image generation into production-ready edit and reference workflows.**
+    
+    GitHub: https://github.com/eve-ai-dev/steroids-openai-image-gen
+    
+    Use example:
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517910870217195753/1517911187017302206/image.png?ex=6a380074&is=6a36aef4&hm=3226ae914316dc6a2f1b54a3214d8154996001e1a361945efbb146765a6382ef&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517910870217195753/1517911187742785648/image.png?ex=6a380074&is=6a36aef4&hm=3ca4ba3dbf05e426e3bffdc81e429c637dc459cbb54ff99fb15eccadff8c9083&
+    [embed] GitHub - eve-ai-dev/steroids-openai-image-gen: Hermes image generat... https://github.com/eve-ai-dev/steroids-openai-image-gen
+

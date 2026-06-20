@@ -782,3 +782,18 @@
     Currently I need some help building a hermes-router extension for vs code
     If you interested ping me and raise a PR with your idea
 
+[2026-06-20T14:32:42.411000+00:00] shaf_2665 (id=1517900005002711180)
+    # 🚀 Update: multiple models per provider
+    
+    Rate limits are per-model, so now you can give a provider several models and the router fails over across them before moving on — multiplying your free quota (keys × models × providers):
+    
+    
+    `hr model set gemini gemini-2.5-flash-lite,gemini-2.5-flash,gemini-2.0-flash`
+    `hr restart`
+    
+    Cooldowns are now tracked per (key, model); a 429 on one model no longer benches the others. Backward-compatible — a single model works exactly as before. Thanks to <@292288108362203137> for the suggestion!
+    
+    Docs → https://hermes-router.vercel.app/configuration/#multiple-models-per-provider
+    Update: `hr update && hr restart`
+    [embed] Configuration https://hermes-router.vercel.app/configuration/
+

@@ -30,3 +30,26 @@
     🧶 Neckbeard discipline — a vendored minimalism ruleset injected into the orchestrator + workers (forked from Ponytail, MIT). "Doesn't write less code, writes the correct code."
     It's a proper plugin — hooks tool_request (tighten) + pre_tool_call (block) on delegate_task, verified end-to-end against the real PluginManager. Stdlib-only core, 0 runtime deps, 155 offline tests.
 
+[2026-06-20T16:17:50.662000+00:00] .blockops (id=1517926463725244567)
+    HermesUltraCode update — it’s a native tab in the Hermes dashboard now 
+    🛂 Quick update on HermesUltraCode (the pre-dispatch gate that vets every delegate_task with a neutral, different-lab reviewer — tighten-only, fail-closed, fully audited):
+    
+    🖥️ It lives inside the Hermes dashboard. No more separate UI — there’s a native UltraCode tab right under Kanban, built on Hermes’ own dashboard-plugin system (the same mechanism Kanban uses — no fork, no npm build on my side). It shows the orchestrator + every subagent running in parallel, each one’s tool log, the reviewer’s tightening directives per agent, a live build plan (done / active / to-do), and the immutable audit trail.
+    
+    ⚡ Parallel fan-out is gate-reviewed properly now. Found + fixed a gap where a batched delegate_task(tasks=[…]) was getting blocked as an “empty goal” — the gate now reviews and tightens each task in the batch, so it never quietly degrades your parallelism to sequential.
+    
+    🧭 scope-first skill is up on the skill hub — plan-first discipline where the agent uses clarify to lock the target directory + scope before building, then fans out:
+    
+    hermes skills install MahdiHedhli/skills/scope-first
+    
+    One-command install — the gate and the dashboard tab come with it:
+    hermes plugins install MahdiHedhli/HermesUltraCode (then point the reviewer at a lab different from your orchestrator)
+    
+    Repo → https://github.com/MahdiHedhli/HermesUltraCode
+    
+    Verified end-to-end on a real Hermes agent — screenshots 👇
+    [attachment] IMG_8298.png https://cdn.discordapp.com/attachments/1517251209776467969/1517926462345314437/IMG_8298.png?ex=6a380eae&is=6a36bd2e&hm=79e63f3410e2bc918369015a28655a89b12f237fe0e78dc392bd2463d0bd412f&
+    [attachment] IMG_8299.png https://cdn.discordapp.com/attachments/1517251209776467969/1517926462911414495/IMG_8299.png?ex=6a380eae&is=6a36bd2e&hm=1567a390970b53fb4543a29adb74a4350a64f6e18c81c648a3e19727989d13e5&
+    [attachment] IMG_8300.png https://cdn.discordapp.com/attachments/1517251209776467969/1517926463385501766/IMG_8300.png?ex=6a380eae&is=6a36bd2e&hm=8bfbaa0b4bfe22c3b51a72e34a6d9cc9c51a682dfe95c129f254d8a9d97c1219&
+    [embed] GitHub - MahdiHedhli/HermesUltraCode: Pre-dispatch prompt gate, pon... https://github.com/MahdiHedhli/HermesUltraCode
+

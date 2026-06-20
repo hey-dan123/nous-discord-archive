@@ -1,0 +1,9 @@
+# Thread 'Real customer doing real work with Hermes' in forum #community-projects-showcase
+# thread_id=1517933158224367836 forum_id=1316137596535177246
+# Started 2026-06-20T19:23:16.718669+00:00
+
+[2026-06-20T16:44:26.755000+00:00] doctorwhodor (id=1517933158224367836)
+    Finally launched this week for a local cottage baker.  Every part of this business was built by hermes agents, mine or the Birdie agent you can see.
+    Birdie can take an order, send payment requests, manage workflow, place  orders when inventory is low.  This is live and in production.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517933158224367836/1517933158459375786/image.png?ex=6a3814ea&is=6a36c36a&hm=3b05ca898a32415a9b6fc28b6af975d971d0d886a55706cacb4cf4d11761eda0&
+
