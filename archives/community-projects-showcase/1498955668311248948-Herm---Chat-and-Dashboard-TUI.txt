@@ -1443,3 +1443,20 @@
     <@221727702992945152> <@398709623567155200> these are good suggestions, and is on my roadmap 🙏 
     In the meantime, there is the `/` command in the sessions tab that will search through your sessions. It's not perfect, results can show up as JSON snippets and will be improved. Tuna don't be scared to PR haha, I can always take what you have  and build on top of it
 
+[2026-06-20T05:57:07.152000+00:00] tunacookie (id=1517770253122277396)
+    made cwd poll every 5 seconds on the sidebar.  rather than having it /cwd.
+
+[2026-06-20T05:57:23.356000+00:00] tunacookie (id=1517770321086648352)
+    idk if 5 seconds is too short
+
+[2026-06-20T05:58:06.034000+00:00] tunacookie (id=1517770500091412583)
+    i feel like mkinag it 5 seconds at the start of the 10 minutes of the session because usually thats the stage where you still trying to figure things out and set up the project and then switch to every 10 minutes "Adaptive Polling"
+
+[2026-06-20T07:27:53.087000+00:00] tunacookie (id=1517793095029227550)
+    more features, have the tab change depending on what its doing like hermes cli/tui
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1517793094739824821/image.png?ex=6a379279&is=6a3640f9&hm=c98bae786e598c30c16f86aa29fae235801f2bb22d217188059846ea54d271bd&
+
+[2026-06-20T08:50:04.289000+00:00] tunacookie (id=1517813777989636308)
+    clicking 3 the dots or the tools should expand the rest of the tools used
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1517813778010603530/image.png?ex=6a37a5bc&is=6a36543c&hm=8c6a1e373d59f7e2ae86177363970e8c280c540bb2871f64b09da71094803827&
+

@@ -1,0 +1,14 @@
+# Thread 'Poly Autism Hermes AI Agent' in forum #community-projects-showcase
+# thread_id=1517811472296837213 forum_id=1316137596535177246
+# Started 2026-06-20T08:52:39.559944+00:00
+
+[2026-06-20T08:40:54.569000+00:00] njk9898 (id=1517811472296837213)
+    An AI agent Made with Hermes AI agent specifically for autism nonverbal autism individuals that converts nonverbal autism speech to verbal english and lebanese arabic ways of speech The project also includes two important features:An autism search engine that knows all about autism sources and acts as an autism search engine just like google chrome or brave,The user can also upload a video or image of the autism individual and Poly will analyze the movements of the Nonverbal autism individual and provide results that are accurate using professional kaggle autism datasets and unsloth skill fine tuning,The main setup of the project is my s9+ samsung phone running on termux and ollama cloud model:Google Gemma 4 31B AI model and connected via whatsapp chat.
+    [attachment] 45kfjb.jpg https://cdn.discordapp.com/attachments/1517811472296837213/1517811473047486494/45kfjb.jpg?ex=6a37a396&is=6a365216&hm=1235fa27ecd858a80d6aaa7f5e9b99226d72b5981d1f81dfcfc3f01567441a0c&
+    [attachment] ge543u.jpg https://cdn.discordapp.com/attachments/1517811472296837213/1517811477422280755/ge543u.jpg?ex=6a37a397&is=6a365217&hm=c084e9bdb525058a3ec306c9fdda9e7f4e911d7cc0fe6370fc348c511d899d33&
+    [attachment] IMG-20260427-WA0012.jpg https://cdn.discordapp.com/attachments/1517811472296837213/1517811478093365318/IMG-20260427-WA0012.jpg?ex=6a37a397&is=6a365217&hm=b3614f9b1808fa52487920db447ccaa92c4ba7f9e393ef29566b1608d400b465&
+    [attachment] IMG-20260427-WA0011.jpg https://cdn.discordapp.com/attachments/1517811472296837213/1517811478512537642/IMG-20260427-WA0011.jpg?ex=6a37a398&is=6a365218&hm=e154c5cc87bc3fa5dfeecf613712cd888574befa6e70dd96a52907ab94e34c9f&
+    [attachment] IMG-20260428-WA0065.jpg https://cdn.discordapp.com/attachments/1517811472296837213/1517811478852272249/IMG-20260428-WA0065.jpg?ex=6a37a398&is=6a365218&hm=616869207ea7816b4c9fc78074d4027d5b2716da4b1806695e9c4d11addaf5ca&
+    [attachment] IMG-20260428-WA0067.jpg https://cdn.discordapp.com/attachments/1517811472296837213/1517811479234216118/IMG-20260428-WA0067.jpg?ex=6a37a398&is=6a365218&hm=56884776d2a2e51d3f98ad20864d541a594ad97e1c663c3dc225c15355121e40&
+    [attachment] Screenshot_20260503-114211_Termux.jpg https://cdn.discordapp.com/attachments/1517811472296837213/1517811479670165664/Screenshot_20260503-114211_Termux.jpg?ex=6a37a398&is=6a365218&hm=f0db2fb32075ae6d6292e8a561bc0dbdbeafe3d04e3aa12b751cf2aad8127891&
+

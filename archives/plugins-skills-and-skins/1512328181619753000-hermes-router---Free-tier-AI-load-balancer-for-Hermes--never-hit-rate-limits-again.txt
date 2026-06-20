@@ -778,3 +778,7 @@
     Can't afford a domain as I am broke <:sadCat:1151280288698204220>
     [embed] hermes-router https://hermes-router.vercel.app/
 
+[2026-06-20T04:46:08.160000+00:00] shaf_2665 (id=1517752389614960710)
+    Currently I need some help building a hermes-router extension for vs code
+    If you interested ping me and raise a PR with your idea
+

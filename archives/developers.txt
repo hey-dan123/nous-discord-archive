@@ -34768,3 +34768,120 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     PR: https://github.com/NousResearch/hermes-agent/pull/49367
     [embed] fix(test): clear HERMES_REAL_HOME env leak in copilot ACP home test... https://github.com/NousResearch/hermes-agent/pull/49367
 
+[2026-06-20T03:48:05.195000+00:00] antiraedus (id=1517737781000933457)
+    I got my first PR duplicated and when I saw the preceding PR that came before me, there were 2 within ~5 mins of each other 🤣 
+    I'm curious about something: since so many people are targetting their agents towards this repo, how do ya'll actually... systematically deal with and identify the good PR's away from bad ones that could potentially cause bugs etc?
+    
+    This sounds like a really hard problem so I'm curious to here how tf one can even mitigate this a bit
+
+[2026-06-20T03:53:26.082000+00:00] harryecom (id=1517739126898561096)
+    hahaha, it's crazy..
+    
+    41k commits... to /hermes-agent
+    
+    ?? 
+    
+    I hope one day, the master can give us a 10 minute class on his coding workflow, I really want to learn
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1517739126684782652/image.png?ex=6a376036&is=6a360eb6&hm=e3c6113e40e96ef9e98412d927f4cf955cdedd6df372dad06669650d4ed59f87&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1517739126923853945/image.png?ex=6a376036&is=6a360eb6&hm=2550824b4d0e2c521164263d611b1dd55a40fafe83eab2e6c620848e22dd7c28&
+    [reply to antiraedus msg=1517737781000933457]
+
+[2026-06-20T03:53:54.672000+00:00] dias4761 (id=1517739246813839370)
+    In that case, you can try looking at his solution. And if yours is superior or you want to add something to his code, you create an issue and link it to him as a Co-founder.
+    [reply to antiraedus msg=1517737781000933457]
+
+[2026-06-20T03:56:15.107000+00:00] antiraedus (id=1517739835841052702)
+    I'm just a really big fan of the mission of nous and am curious how you deal with such level of eyes + scale of PRs/additions etc on this. like. its fucking insane??
+
+[2026-06-20T03:57:25.807000+00:00] dias4761 (id=1517740132378214501)
+    I wonder the same thing lmao, I'm just an enthusiast who likes to solve issues.
+
+[2026-06-20T03:59:17.397000+00:00] antiraedus (id=1517740600420471035)
+    yeah right?? like damn! this is a really interesting problem space, I've been building my own local shit and haven't ported to hermes fully (but have stolen some ideas off it like FST5 into my local setup...)
+    [reply to dias4761 msg=1517740132378214501]
+
+[2026-06-20T03:59:27.382000+00:00] antiraedus (id=1517740642300854392)
+    I had a quick look and it was basically the same fix in this case, there's sometimes a disparity between ticket/issue tracking vs PRs etc... https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+    Like I'm SUPER  surprised there's not even a section in contributing.md  that strongly tells agents to do gh reads of the PRs/issues state to see if PRs already exist for this particular issue (unless I missed it) Seems like it could save a LOT of time?
+    [embed] hermes-agent/CONTRIBUTING.md at main · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+
+[2026-06-20T04:00:04.932000+00:00] antiraedus (id=1517740799796842616)
+    Am I missing something or is this a legit  blindspot?
+
+[2026-06-20T04:00:43.726000+00:00] harryecom (id=1517740962510803005)
+    it's insane, I hope to just be here in this community with the hopes of one day, I can learn the way of the master/s!
+    [reply to dias4761 msg=1517740132378214501]
+
+[2026-06-20T04:02:35.144000+00:00] antiraedus (id=1517741429831766166)
+    I'd like to ping someone about this since it seems like an oversight but I don't wanna get smited 🤣
+
+[2026-06-20T04:10:47.621000+00:00] dias4761 (id=1517743495429750907)
+    yea lmao ,is insane !
+
+[2026-06-20T05:03:09.311000+00:00] rostelinalise (id=1517756672632815620)
+    can learn together here
+    [reply to harryecom msg=1517739126898561096]
+
+[2026-06-20T05:21:50.007000+00:00] harryecom (id=1517761373172531300)
+    I hope so <:bhob:1151299900496158830>
+
+[2026-06-20T05:21:54.804000+00:00] Translator Bot#1043 (id=1517761393292607520)
+    I hope so <:bhob:1151299900496158830>
+    [reply to harryecom msg=1517761373172531300]
+
+[2026-06-20T05:22:18.238000+00:00] harryecom (id=1517761491582058578)
+    maybe they can make a new channel, that is like a structured community for learning more
+    [reply to rostelinalise msg=1517756672632815620]
+
+[2026-06-20T06:13:18.770000+00:00] srojk34 (id=1517774328383541310)
+    PR #49465 — fix(plugins): silence mattermost check_fn log spam for unconfigured users. I think there is an important bug <@387972437901312000> 
+    
+    Sibling of the raft check_fn fix (#49240, merged today). The Mattermost adapter's check_mattermost_requirements() logged WARNING on every load_gateway_config() call for users without Mattermost configured — flooding logs with identical messages dozens of times during normal operation. The caller in platform_registry.py already emits its own warning when an adapter is actually requested, so these were redundant.
+    
+    https://github.com/NousResearch/hermes-agent/pull/49465
+    [embed] fix(plugins): silence mattermost check_fn log spam for unconfigured... https://github.com/NousResearch/hermes-agent/pull/49465
+
+[2026-06-20T06:20:54.973000+00:00] srojk34 (id=1517776241837736057)
+    PR #49475 — fix(gateway): silence matrix check_fn credential-check log spam
+    
+    Sibling of the raft (#49240) and mattermost (#49465) check_fn fixes. check_matrix_requirements() logged a WARNING on every adapter-creation attempt (connect, reconnect, profile load) when MATRIX_HOMESERVER was missing — but the caller in _create_adapter() already emits its own warning, producing duplicate entries. Removed the redundant credential-check logs while preserving deeper diagnostic messages (package install, E2EE config).
+    
+    https://github.com/NousResearch/hermes-agent/pull/49475
+    [embed] fix(gateway): silence matrix check_fn credential-check log spam by ... https://github.com/NousResearch/hermes-agent/pull/49475
+
+[2026-06-20T06:26:25.700000+00:00] realadolan (id=1517777629007052861)
+    PR #49473, link: https://github.com/NousResearch/hermes-agent/pull/49473
+    
+    Adds official TickTick support: a remote-MCP catalog entry (`optional-mcps/ticktick`, OAuth, modeled on the linear entry) plus a companion skill (`optional-skills/productivity/ticktick`). Verified against the live server (Streamable HTTP, OAuth 2.1 with PKCE and dynamic client registration, 47 tools).
+    [embed] feat: add official TickTick support (MCP catalog entry and skill) b... https://github.com/NousResearch/hermes-agent/pull/49473
+
+[2026-06-20T06:30:26.248000+00:00] srojk34 (id=1517778637938491585)
+    PR #49482 — fix(tools): silence check_terminal_requirements log spam
+    
+    The terminal tool's check_fn was the only tool check_fn in the codebase that logged ERROR messages — every other tool check (browser, tts, vision, session_search) is silent. Since check_fn runs on every LLM tool-use call (30s TTL cache), misconfigured backends (Docker missing, SSH incomplete, Modal credentials absent) flooded logs with identical ERROR entries every 30 seconds. Removed all logger.error() calls and simplified the modal error branching. Sibling of raft (#49240), mattermost (#49465), and matrix (#49475) check_fn fixes.
+    
+    https://github.com/NousResearch/hermes-agent/pull/49482
+    [embed] fix(tools): silence check_terminal_requirements log spam by srojk34... https://github.com/NousResearch/hermes-agent/pull/49482
+
+[2026-06-20T07:50:51.840000+00:00] dias4761 (id=1517798877938323517)
+    https://github.com/NousResearch/hermes-agent/pull/49517 <@387972437901312000>
+    [embed] fix(acp): resolve duplicate user messages in session DB and LLM con... https://github.com/NousResearch/hermes-agent/pull/49517
+
+[2026-06-20T08:10:41.188000+00:00] nuuuuuuuuuu0480 (id=1517803866425397329)
+    https://github.com/NousResearch/hermes-agent/pull/49436
+    [embed] fix: guard remaining float(os.getenv) casts against malformed value... https://github.com/NousResearch/hermes-agent/pull/49436
+
+[2026-06-20T08:11:29.371000+00:00] solitudinem (id=1517804068519674058)
+    https://github.com/NousResearch/hermes-agent/pull/38021
+    [embed] fix(tui): resync terminal columns on resize trailing edge (#36666) ... https://github.com/NousResearch/hermes-agent/pull/38021
+
+[2026-06-20T08:15:12.720000+00:00] solitudinem (id=1517805005313146880)
+    Is it necessary to post pull requests here?
+
+[2026-06-20T08:23:06.229000+00:00] definitely_not_cthulhu (id=1517806991354105907)
+    For the docker pull requests at least, I have an agent do a sanity check of the code. For any that pass that, the agent checks out and runs locally. Combine the result of the local run along with personal preferences and I can usually get a pretty good ranking of them.
+    [reply to antiraedus msg=1517737781000933457]
+
+[2026-06-20T08:26:57.872000+00:00] definitely_not_cthulhu (id=1517807962935267519)
+    Agent also clusters the pull requests, so I can review a batch solving the same problem all at once
+

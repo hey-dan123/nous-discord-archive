@@ -1,0 +1,28 @@
+# Thread '🫚 rhizome - Karpathy-inspired memory/knowledgebase utilizing DuckDB, QMD, markitdown, & more' in forum #plugins-skills-and-skins
+# thread_id=1515595298708258858 forum_id=1485392832154832906
+# Started 2026-06-20T08:56:51.529702+00:00
+
+[2026-06-20T04:15:30.511000+00:00] tuck2g (id=1517744681956671610)
+    🫚 rhizome - Karpathy-inspired memory/knowledgebase utilizing DuckDB, QMD, markitdown, & more
+
+[2026-06-20T04:21:48.414000+00:00] tuck2g (id=1517746266996605109)
+    Quick update on the repo with the latest pieces.
+    
+    Rhizome turns dropped documents into a living, searchable wiki that stays in plain markdown on your disk. Agents like Hermes, Claude, Codex, or OpenCode can all read and write to it. Knowledge builds up across tools without duplication.
+    
+    Recent updates:
+    
+    rhizome-research: multi-round deep research that pulls together sources and writes a clean wiki page for you
+    rhizome-mcp: MCP server so any MCP client (Claude Code, Cursor, etc.) gets search, time-travel, lint, memory checks, graph, and eval tools with zero extra setup
+    rhizome-graph: finds communities, suggests map-of-content pages, exports the graph
+    rhizome-memory: tracks fact staleness and spots contradictions
+    Full research with code context: point it at GitHub repos and it understands architecture before digging into the topic
+    Local-first option with Ollama so even the writing step stays on your machine
+    Core strengths:
+    
+    Compiles knowledge once into a persistent wiki instead of re-deriving answers from raw files every time
+    Tracks how facts change over time (bi-temporal) so nothing gets lost or overwritten
+    Ships an eval harness so you can measure how good the search actually is
+    Everything stays as normal [[wikilinked]] markdown in your Obsidian vault
+    Works with multiple agents at once and keeps everything local when you want it that way
+

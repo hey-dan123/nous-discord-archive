@@ -20,3 +20,14 @@
     https://github.com/Heeervas/profile-delegate-plugin/releases/tag/v1.1.0
     [embed] Release v1.1.0 · Heeervas/profile-delegate-plugin https://github.com/Heeervas/profile-delegate-plugin/releases/tag/v1.1.0
 
+[2026-06-20T07:00:51.108000+00:00] heeervas (id=1517786291956355143)
+    **Profile Delegate plugin now supports async background delegation with notify-on-complete.**
+    
+    Added `profile_delegate(background=true, notify_on_complete=true)`: it returns immediately with a `task_id`, runs the target Hermes profile in the background, and posts the result back into the originating chat when done.
+    It reuses Hermes’ native async-delegation completion queue, so it works cleanly in gateway contexts without patching core `/opt/hermes`.
+    Run artifacts remain inspectable via `profile_delegate_status`, and sync mode is unchanged.
+    Reviewed with the `reviewer` profile, live-tested in Discord, and pushed with tests passing.
+    
+    https://github.com/Heeervas/profile-delegate-plugin
+    [embed] GitHub - Heeervas/profile-delegate-plugin: Hermes Profile Delegate ... https://github.com/Heeervas/profile-delegate-plugin
+

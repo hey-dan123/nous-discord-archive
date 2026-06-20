@@ -2146,3 +2146,6 @@
     probably working <:catlick:1151260427645366375>
     [reply to lividberries msg=1517549750260596836]
 
+[2026-06-20T08:09:07.555000+00:00] mightguy.nq (id=1517803473700126804)
+    "Warning: Unknown toolsets: messaging, mnemosyne" when i start hermes, is this bad?
+
