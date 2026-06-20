@@ -34623,3 +34623,148 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Fix: When an interactive install is requested but there's no TTY, skip it and degrade gracefully instead of hanging. interactive=False (explicit unattended install) is unaffected.   https://github.com/NousResearch/hermes-agent/pull/49215
     [embed] fix(cli): skip dependency install when no TTY is available by hakan... https://github.com/NousResearch/hermes-agent/pull/49215
 
+[2026-06-19T19:48:28.349000+00:00] solidlamp_86872 (id=1517617082160910498)
+    Is this not the right place? Can anyone help me with my first PR?
+    
+    https://discord.com/channels/1053877538025386074/1491258766648283238/1516844559353647356
+
+[2026-06-19T19:50:39.655000+00:00] inuyasha44_88990 (id=1517617632898056253)
+    Yes. Here you put your PR link.
+    [reply to solidlamp_86872 msg=1517617082160910498]
+
+[2026-06-19T19:51:09.543000+00:00] inuyasha44_88990 (id=1517617758257418441)
+    And you have to wait a while for the Hermes core moderators to investigate.
+
+[2026-06-19T19:56:17.136000+00:00] devorun11 (id=1517619048395964617)
+    Yes, this is the right channel
+    [reply to solidlamp_86872 msg=1517617082160910498]
+
+[2026-06-19T19:56:22.482000+00:00] devorun11 (id=1517619070818582783)
+    You can share any problems you find or any plugins you're developing here, or after you fix a bug, someone else might want to solve the same bug using a different method – that's perfectly normal. teknium will review and combine all these solutions and see your contributions. Just start contributing and don't worry about the rest <:pepeok:1368671071838146692>
+    [reply to solidlamp_86872 msg=1517617082160910498]
+
+[2026-06-19T19:57:30.829000+00:00] solidlamp_86872 (id=1517619357486682182)
+    Thanks. Here’s the link https://github.com/NousResearch/hermes-agent/pull/43872
+    [embed] fix(agent): keep system-prompt model identity in sync across provid... https://github.com/NousResearch/hermes-agent/pull/43872
+    [reply to devorun11 msg=1517619070818582783]
+
+[2026-06-19T20:29:39.956000+00:00] dias4761 (id=1517627448831901881)
+    <@690519146701783042> <@387972437901312000>  fix(gateway): prevent an infinite reboot loop when resuming the session; this is a Priority 1 bug, from what I've seen in the issue. When you have a chance, take a look at it.
+    
+    https://github.com/NousResearch/hermes-agent/pull/49243
+    [embed] fix(gateway): prevent infinite restart loop on session resume by Jo... https://github.com/NousResearch/hermes-agent/pull/49243
+
+[2026-06-19T20:35:10.172000+00:00] srojk34 (id=1517628833858326578)
+    When a previously-connected MCP server loses its connection and exhausts all reconnection retries, its tools were never removed from the registry. This caused the agent to keep advertising dead tools to the LLM on every turn — wasting tokens and producing repeated "MCP server is not connected" errors on every call attempt. The only way to clear this was a manual /reload-mcp or full session restart. This PR extracts a _deregister_tools() helper and calls it from the reconnect give-up path so cleanup happens in all exit paths, not just explicit shutdown.
+    
+    https://github.com/NousResearch/hermes-agent/pull/49255
+    [embed] fix(mcp): deregister tools when reconnection retries are exhausted ... https://github.com/NousResearch/hermes-agent/pull/49255
+
+[2026-06-19T20:41:33.133000+00:00] srojk34 (id=1517630440113045716)
+    The external memory-provider bridge in tool_executor.py and agent_runtime_helpers.py forwarded every add/replace operation to external providers (RetainDB, Honcho, Supermemory, OpenViking) without checking whether the built-in store actually committed the write. Failed batches (budget exceeded, malformed ops) wrote nothing to the built-in store but pushed every op to the external provider — creating phantom writes that accumulate on retries. Staged (not-yet-approved) batches were also persisted externally before the user approved or even if they rejected, violating the write-approval gate contract. The fix parses the memory_tool result and only bridges when success=True and staged is not set.
+    
+    https://github.com/NousResearch/hermes-agent/pull/49256
+    [embed] fix(memory): gate external provider bridge on successful committed ... https://github.com/NousResearch/hermes-agent/pull/49256
+
+[2026-06-19T21:49:25.836000+00:00] hakan_pak (id=1517647522267664487)
+    https://github.com/NousResearch/hermes-agent/pull/49282     
+    fix(tools): never let a model whitelist strip the prompt / source images
+    
+     Bug: In the new image-to-image code (#48705, this release), the FAL payload builders filter the request down to the model's supports / edit_supports whitelist — and that filter also covers the mandatory prompt and image_urls. If a model config omits one, the request silently goes out with no prompt or no source images: a broken generation with no error.
+     **Why it matters: All 7 current models happen to list those keys, so it works today — but a single missing whitelist entry would silently break generation, a very hard class of bug to spot.**
+     Fix: Always keep the mandatory keys regardless of the whitelist, so the filter can only ever drop optional knobs — never the prompt or the images <@387972437901312000>
+    [embed] fix(tools): never let a model whitelist strip the prompt / source i... https://github.com/NousResearch/hermes-agent/pull/49282
+
+[2026-06-19T22:07:27.909000+00:00] sprmn24 (id=1517652060810510539)
+    Issue: Remote display detection (RDP/SSH/X11) silently disables GPU acceleration with no user-facing feedback — only a console.log 
+    
+    Fix: IPC handler + preload bridge + dismissible renderer banner showing the detection reason 
+    
+     https://github.com/NousResearch/hermes-agent/pull/49284
+    [embed] feat(desktop): notify renderer when GPU acceleration is disabled du... https://github.com/NousResearch/hermes-agent/pull/49284
+
+[2026-06-19T22:16:28.634000+00:00] dias4761 (id=1517654328775544963)
+    https://github.com/NousResearch/hermes-agent/pull/49280
+    
+    <@387972437901312000> 
+    
+     Pull Request: Fix Silent Delivery Failures in Signal Live Adapter :Related Issue: #49260 (Signal Live Adapter — silent delivery failure)
+    [embed] Fix silent delivery failures in Signal live adapter (#49260) by Joa... https://github.com/NousResearch/hermes-agent/pull/49280
+
+[2026-06-19T22:46:58.620000+00:00] teknium (id=1517662004293144718)
+    <@466492386873311235> this related to what you worked on today?
+    [reply to srojk34 msg=1517628833858326578]
+
+[2026-06-19T22:49:33.181000+00:00] sprmn24 (id=1517662652568961157)
+    Feature: LINE adapter was missing send_image for images already hosted at HTTPS URLs — added the method using existing _image_message() helper with HTTPS validation + 3 tests / 
+    https://github.com/NousResearch/hermes-agent/pull/49298
+    [embed] feat(line): add URL-based send_image method by sprmn24 · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/49298
+
+[2026-06-19T23:01:47.879000+00:00] sworntech (id=1517665734115721257)
+    **Small fix Hermes Agent docs cleanup PR:**
+    
+    https://github.com/NousResearch/hermes-agent/pull/49303
+    
+    It updates the `tools/memory_tool.py` module docstring so the listed memory tool actions match the current schema.
+    
+    1 file changed, documentation-only, no runtime behavior change.
+    
+    References #32848
+    [embed] fix docs: update memory tool action list by Sworntech-dev · Pull R... https://github.com/NousResearch/hermes-agent/pull/49303
+
+[2026-06-19T23:09:41.541000+00:00] teknium (id=1517667720798273746)
+    saw the duplicate. Thanks for closing
+    [reply to sworntech msg=1517665734115721257]
+
+[2026-06-19T23:09:51.499000+00:00] teknium (id=1517667762565156925)
+    You're a dev nonetheless to me <:salute:1072217852385435768>
+
+[2026-06-19T23:12:12.204000+00:00] sworntech (id=1517668352724566046)
+    Really appreciate it, thank you 🫡 
+    I’ll keep contributing carefully and make sure to double-check overlaps before opening new PRs.
+    [reply to teknium msg=1517667762565156925]
+
+[2026-06-19T23:18:25.263000+00:00] sprmn24 (id=1517669917447557150)
+    Thanks for the salvage 🙏
+    [reply to sprmn24 msg=1517652060810510539]
+
+[2026-06-19T23:22:43.634000+00:00] hakan_pak (id=1517671001133940767)
+    https://github.com/NousResearch/hermes-agent/pull/49313   thank you sir
+    [embed] fix(tools): never let a model whitelist strip the prompt / source i... https://github.com/NousResearch/hermes-agent/pull/49313
+    [reply to hakan_pak msg=1517647522267664487]
+
+[2026-06-19T23:43:53.591000+00:00] hakan_pak (id=1517676327719665895)
+    fix(telegram): read entity offsets as UTF-16 code units, not code points  https://github.com/NousResearch/hermes-agent/pull/49325
+    
+     Telegram MessageEntity offsets are UTF-16 code units, but the mention / command parsing sliced the text with them as Python code-point indices (source_text[offset:offset+length]). A non-BMP character before the span (a leading emoji, CJK Ext-B, …) shifts the UTF-16 offset past the code-point index, so the slice misaligns
+    
+     **Why it matters: In a require_mention group, a message like 😀 @hermes_bot help has its mention slice land on the wrong text, so the bot fails to detect the mention and silently ignores a message that explicitly addressed it**
+    
+    Fix: Added a utf16_slice() helper next to utf16_len() and used it at all three entity-slicing sites in telegram.py. Audited the other adapters — Signal already converts code-point offsets to UTF-16, and Discord/Matrix don't address text by offset — so this is the full surface. Tests cover the emoji-before-mention case (fails before the fix) plus utf16_slice units
+    [embed] fix(telegram): read entity offsets as UTF-16 code units, not code p... https://github.com/NousResearch/hermes-agent/pull/49325
+
+[2026-06-19T23:49:08.676000+00:00] hakan_pak (id=1517677649281941635)
+    I've released a fix for a bug that people like me, who use emojis frequently, might encounter <:huggingface:1368674088721322045>
+    [reply to hakan_pak msg=1517676327719665895]
+
+[2026-06-20T02:10:13.197000+00:00] blockcipher (id=1517713152056361070)
+    bugfix: `/goal` does not work in Hermes Desktop because the frontend was not updated after the backend's command-dispatch payload protocol changed slightly
+    https://github.com/NousResearch/hermes-agent/pull/49358
+    [embed] fix(desktop): handle slash exec dispatch payloads by counterpositio... https://github.com/NousResearch/hermes-agent/pull/49358
+
+[2026-06-20T02:19:46.282000+00:00] nuuuuuuuuuu0480 (id=1517715555748937748)
+    Bug found: The test test_run_prompt_preserves_real_home_when_profile_home_available in tests/agent/test_copilot_acp_client.py fails when the environment already contains HERMES_REAL_HOME (for example, from an active Hermes session).
+    
+    Root cause: The test monkeypatches HOME and HERMES_HOME but does not clear HERMES_REAL_HOME. The _iter_real_home_candidates() function in hermes_constants.py checks HERMES_REAL_HOME with the highest priority, so a stale value from a previous session is used instead of the monkeypatched HOME.
+    
+    Fix: Add a single line:
+    
+    monkeypatch.delenv("HERMES_REAL_HOME", raising=False)
+    
+    This isolates the test from the surrounding environment and ensures it behaves deterministically.
+    
+    Change scope: 1 file, 1 line added.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/49367
+    [embed] fix(test): clear HERMES_REAL_HOME env leak in copilot ACP home test... https://github.com/NousResearch/hermes-agent/pull/49367
+

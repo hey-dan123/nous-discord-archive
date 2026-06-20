@@ -1,0 +1,15 @@
+# Thread 'Managing Software Projects with Hermes, The Authoritative Framework' in forum #community-projects-showcase
+# thread_id=1517691137035599902 forum_id=1316137596535177246
+# Started 2026-06-20T03:29:04.379296+00:00
+
+[2026-06-20T00:42:44.407000+00:00] avidfuturist (id=1517691137035599902)
+    I am the creator of Hermes WebUI (https://discord.com/channels/1053877538025386074/1493017427724992612) - ⭐ A few of you have asked me more details about how I manage that entire open source project agentically. I started a new project called StewardOS that explains that in detail, both for human and agent consumption - detailing **exactly how to manage an open source project end to end using Hermes agents** https://nesquena.github.io/steward-os/ 
+    
+    and source: https://github.com/nesquena/steward-os 
+    
+    Agents can be pointed at it directly as well. Would love any feedback!
+    [attachment] Screenshot_2026-06-19_at_5.42.32_PM.png https://cdn.discordapp.com/attachments/1517691137035599902/1517691137811415123/Screenshot_2026-06-19_at_5.42.32_PM.png?ex=6a373384&is=6a35e204&hm=6caa81a9568fd364b10b25b92cb3fdded1fd6588ff400d5aa82a2168e091af87&
+
+[2026-06-20T00:42:59.476000+00:00] avidfuturist (id=1517691200239570984)
+    Managing Software Projects with Hermes, The Authoritative Framework
+

@@ -18,3 +18,13 @@
 [2026-06-19T14:54:52.603000+00:00] gloggers (id=1517543196366868481)
     Let me know your thoughts!!
 
+[2026-06-20T02:45:23.518000+00:00] billyelusiv (id=1517722003384303646)
+    awesome, thanks for the share Lucas! 
+    Any way you can see this workaround getting closed by Anthropic any time soon?
+
+[2026-06-20T03:14:26.620000+00:00] gloggers (id=1517729314483867738)
+    The way it works is it basically wraps a JSON stream conversation (a built in claude feature that runs on subscription credits, not the API credits) in a OpenAI compatible server interface (like how LM Studio or ollama give access to clients)
+
+[2026-06-20T03:14:57.388000+00:00] gloggers (id=1517729443534213282)
+    I could see it getting closed but not for a while as it uses the json stream feature built into claude code, they would have to remove that whole feature to disable this
+

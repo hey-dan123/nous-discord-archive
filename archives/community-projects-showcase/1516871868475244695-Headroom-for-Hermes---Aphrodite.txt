@@ -9,3 +9,34 @@
 [2026-06-18T17:54:31.570000+00:00] nikolahristov (id=1517226018765541678)
     Headroom for Hermes - Aphrodite 💋
 
+[2026-06-19T20:25:06.636000+00:00] bowtiedbernard (id=1517626302444863519)
+    Hey <@584113584380969020> ran the plugin through codex when I hit a bug on the release version. Came back with the update fixing things, but also suggested a few changes. Our local fixes:
+    Safe proxy process selection
+    Replaced:
+    lsof -ti :9797
+    with listener-only lookup:
+    lsof -tiTCP :9797 -sTCP:LISTEN
+    Then verify /proc/<pid>/cmdline contains aphrodite before signaling it.
+    Reason: the original command returns both the Aphrodite listener and Hermes client connections, causing Hermes to receive SIGTERM, then SIGKILL.
+    Version normalization
+    Normalize both expected and reported versions by removing the optional v prefix.
+    Reason: proxy health reports 0.8.40, while BIN_VERSION is v0.8.40, causing a false mismatch and proxy restart on every session.
+    Required CCR database argument
+    Added:
+    --ccr-db-path ~/.hermes/aphrodite/ccr-{cache|token}.db
+    Reason: v0.8.40 refuses to launch without this argument, but the v1.62.55 plugin launcher omitted it.
+    Fresh health checks
+    Clear _alive_cache[port] before each readiness retry.
+    Reason: otherwise _wait_alive() may return a stale cached result after restarting or failing to start a proxy.
+
+[2026-06-19T20:27:23.936000+00:00] nikolahristov (id=1517626878322540575)
+    Noted, will re-check and apply fixes. It's going through some changes currently.
+    [reply to bowtiedbernard msg=1517626302444863519]
+
+[2026-06-19T20:43:38.781000+00:00] bowtiedbernard (id=1517630967119085638)
+    Would submit a PR but I'm still seeing how it works for me and if there's anything else, but for the most part were straightforward
+    [reply to nikolahristov msg=1517626878322540575]
+
+[2026-06-19T20:43:54.965000+00:00] bowtiedbernard (id=1517631034999570593)
+    If I find anything more I'll PR it
+

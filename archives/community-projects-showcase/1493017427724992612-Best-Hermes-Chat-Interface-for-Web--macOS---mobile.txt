@@ -4186,3 +4186,68 @@
 [2026-06-19T19:27:31.228000+00:00] avidfuturist (id=1517611809413136417)
     It is easy to forget this entire project was only started in April, so while we’ve made many mistakes along the way, that’s the nature of this. Feel good about where the project is now. Although there’s still a lot of work to do!
 
+[2026-06-19T19:57:48.527000+00:00] _big_owen_ (id=1517619431717732544)
+    wait you're the one who made the mobile app
+    [reply to avidfuturist msg=1517611648914034759]
+
+[2026-06-19T19:58:23.831000+00:00] avidfuturist (id=1517619579793313862)
+    <@501593132907888665> built it on top of my WebUI using my API so they are all integrated!
+    [reply to _big_owen_ msg=1517619431717732544]
+
+[2026-06-19T21:35:53.535000+00:00] avidfuturist (id=1517644115230195772)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and a native desktop app! And with **native iOS app** support!
+    
+    (Could use feedback and testing of everything from WebUI, desktop apps, and iOS apps, please report any feedback here!)
+
+[2026-06-20T00:40:40.038000+00:00] avidfuturist (id=1517690615393943744)
+    ⭐ A few of you have asked me more details about how I manage this entire open source project agentically, I started a new project called StewardOS that explains that here below
+
+[2026-06-20T00:44:34.144000+00:00] avidfuturist (id=1517691597305937974)
+    https://discord.com/channels/1053877538025386074/1517691137035599902/1517691137035599902
+
+[2026-06-20T03:10:30.504000+00:00] realadolan (id=1517728324141453382)
+    Hey, I havent' tested / checked yet, so a quick answer would be appreciate 🙂 I connect to my SSH via SSH keys rather than passwords. Is that supported?
+
+[2026-06-20T03:10:37.187000+00:00] realadolan (id=1517728352172118161)
+    For the tunneling that is.
+
+[2026-06-20T03:11:05.853000+00:00] avidfuturist (id=1517728472406032416)
+    Should be! I’d say it’s the preferred way!
+    [reply to realadolan msg=1517728324141453382]
+
+[2026-06-20T03:11:15.188000+00:00] realadolan (id=1517728511559860315)
+    Good! Thank you
+
+[2026-06-20T03:11:41.372000+00:00] realadolan (id=1517728621383385290)
+    Any plans to support RTL languages with Bidi support?
+
+[2026-06-20T03:11:46.138000+00:00] realadolan (id=1517728641373438042)
+    Or should I PR it
+
+[2026-06-20T03:12:09.994000+00:00] avidfuturist (id=1517728741433016522)
+    Sure let me know when you get it working!
+    
+    It’s open source so I’ve been adding every locale someone submits! Other RTL languages already supported!
+    [reply to realadolan msg=1517728511559860315]
+
+[2026-06-20T03:12:12.767000+00:00] realadolan (id=1517728753063559329)
+    This is what I did for the official client
+
+[2026-06-20T03:12:23.889000+00:00] avidfuturist (id=1517728799712874626)
+    Please do! PRs more than welcome!
+    [reply to realadolan msg=1517728753063559329]
+
+[2026-06-20T03:13:28.303000+00:00] realadolan (id=1517729069884637294)
+    Not sure if locale is the right path here, the RTL+Bidi should be supported in the chat messages - for example
+    [attachment] dk7025v.png https://cdn.discordapp.com/attachments/1493017427724992612/1517729069548965948/dk7025v.png?ex=6a3756d8&is=6a360558&hm=0e684a2975ee46a522b860f768f3dd8b7db6d3bfc6d8b3628fb84c87e39d3cc8&
+    [reply to avidfuturist msg=1517728741433016522]
+
+[2026-06-20T03:14:21.892000+00:00] realadolan (id=1517729294653198427)
+    However, the Desktop app needs some RTL+Bidi love too. Will work on that
+
+[2026-06-20T03:18:33.537000+00:00] avidfuturist (id=1517730350128955522)
+    Sounds good!
+    [reply to realadolan msg=1517729294653198427]
+

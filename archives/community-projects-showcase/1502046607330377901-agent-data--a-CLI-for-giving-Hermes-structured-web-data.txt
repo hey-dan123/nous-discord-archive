@@ -15,3 +15,13 @@
 [2026-05-27T22:31:14.853000+00:00] deepparser (id=1509323124938637463)
     agent-data: a CLI for giving Hermes structured web data
 
+[2026-06-20T01:09:14.169000+00:00] deepparser (id=1517697804980719756)
+    Update: X (formerly Twitter) is now available as a new endpoint on agent-data! Point Hermes at a specific account, keyword, or trend and you'll get back structured data on posts (including author, body, links, and engagement) as well as thread context. 
+    
+    A few ways to use it with Hermes:  
+    - **Feature discovery:** "Use agent-data to search X for posts mentioning our product by name, plus phrases like 'wish it could' or 'missing feature'. Analyze each post's thread, and group requests by theme."  
+    - **Competitor tracking:** "Use agent-data to monitor X for posts mentioning our competitors, then send me a daily brief on user sentiment, common complaints, and which posts are getting the most engagement."  
+    - **Launch reaction monitoring:** "Use agent-data to monitor X for reactions to our new product launch by tracking our account, keyword mentions of the launch, and relevant trends. Summarize the reception and highlight what people liked and didn't like."  
+    
+    As a reminder, we’re adding new sources and endpoints every week, so if there are any you’d like us to prioritize, please let me know!
+

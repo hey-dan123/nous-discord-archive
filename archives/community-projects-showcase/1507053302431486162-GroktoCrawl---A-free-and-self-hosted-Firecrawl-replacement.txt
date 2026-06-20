@@ -561,3 +561,6 @@
 
 [2026-06-15T14:04:30.850000+00:00] magnus919 (id=1516080970753642557)
 
+[2026-06-19T22:08:51.800000+00:00] yaakov_63226 (id=1517652412674998313)
+    This looks really great! How does it handle stealth such as bot evasion/CAPTCHAs?
+
