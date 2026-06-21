@@ -1,0 +1,32 @@
+# Thread 'Gemini Canvas Proxy ⚡' in forum #community-projects-showcase
+# thread_id=1517982395775717396 forum_id=1316137596535177246
+# Started 2026-06-21T03:59:26.493898+00:00
+
+[2026-06-20T20:00:05.902000+00:00] pranrichh (id=1517982395775717396)
+    ### Free and unlimited Gemini 3 Flash and Nano Banana 2 with absolutely no rate limits. 
+    
+    This project bridges your local tools to the Gemini Canvas interface using a future-proof `postMessage` architecture. Unlike older proxies that rely on WebSockets, this bypasses Chrome’s "Local Network Access" security blocks entirely, making it way more stable for long-running agents.
+    
+    It’s an OpenAI-compatible provider purpose-built for **Hermes Agent**. It natively handles Gemini’s strict tool-calling requirements by automatically sanitizing JSON schemas—meaning you can use complex MCP tools and terminal operations out of the box without errors. Perfect for running 1M+ context agents, auxillary tasks, and image generation on the go without burning any API Credits.
+    
+    https://github.com/pranrichh/gemini-canvas-proxy
+    [embed] GitHub - pranrichh/gemini-canvas-proxy: Free unlimited Gemini API v... https://github.com/pranrichh/gemini-canvas-proxy
+
+[2026-06-20T20:02:24.780000+00:00] pranrichh (id=1517982978272133341)
+    If you found it helpful, please feel free to give a star to the repo ❤️
+
+[2026-06-20T20:55:30.481000+00:00] pranrichh (id=1517996340070715554)
+    Additionally:
+
+[2026-06-20T20:56:17.202000+00:00] pranrichh (id=1517996536032923758)
+    # Running on a VPS with Tailscale
+    
+    Spin up a $5 VPS (any provider — Hetzner, DigitalOcean, Oracle free tier), install Chrome and Tailscale, then set up the extension and Canvas as normal. The native host binds to localhost:8765 by default, but since Tailscale creates a private mesh network between all your devices, any machine on your tailnet can reach the proxy at http://<vps-tailscale-ip>:8765/v1 — no port forwarding, no public exposure, no firewall rules. This is the "set it and forget it" deployment: the Chrome instance and Canvas tab live on a headless VPS running 24/7 (use Xvfb for the headless Chrome session), and your phone, laptop, or any Hermes Agent instance anywhere on your tailnet gets free unlimited Gemini inference without ever needing to keep a browser tab open locally. The proxy becomes a private API endpoint that follows you across every device.
+
+[2026-06-21T02:06:56.609000+00:00] colorado.rob1459 (id=1518074715372126340)
+    or, you know, just have your agent setup wireguard rather than relying on  yet another 3rd party vendor.
+
+[2026-06-21T02:20:22.866000+00:00] pranrichh (id=1518078097058959462)
+    I was just familiar with tailscale, that also works!
+    [reply to colorado.rob1459 msg=1518074715372126340]
+

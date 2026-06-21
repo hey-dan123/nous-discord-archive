@@ -4288,3 +4288,6 @@
     Probably not to start, it’ll be a huge amount of work to make it as polished as Uzi’s - we’d need someone very passionate about the project. But still hope to get something up as a native app as a starting point
     [reply to frostmage10 msg=1517929328912896141]
 
+[2026-06-20T22:10:30.142000+00:00] avidfuturist (id=1518015213016977449)
+    Anyone willing to test the Android app, can you friend or DM me? Need more testers!
+

@@ -2198,3 +2198,38 @@
     i dont personally use Hermes Desktop, but will get it to see if I can replicate
     [reply to no_orbert msg=1517920810353033386]
 
+[2026-06-20T23:45:32.379000+00:00] tonyporj (id=1518039129932173404)
+    hi, im just not a developer, beginner on this.. what should i do if those keep appearing? hermes agent said Mnemosyne is the one that caused it..
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1518039129944887447/image.png?ex=6a38779c&is=6a37261c&hm=9c1718dac01e152ec9aa908ca75ae24efc7f64a001257188da330ce1d15aca52&
+
+[2026-06-20T23:48:59.286000+00:00] tonyporj (id=1518039997763162342)
+    nvm i asked hermes agent to fix this.. it asked for hf token, i provided it , then its done... --- I will delete this message after few minutes^^,)
+    [reply to tonyporj msg=1518039129932173404]
+
+[2026-06-21T01:34:38.606000+00:00] nulledvector (id=1518066586798391378)
+    It'd alright thanks for reporting anyways yes if you or anyone else find errors like these it's because THE ONNX model downloads from hf... Would love to selfhost and mirror it myself so people don't have to go trough this
+
+[2026-06-21T01:34:49.625000+00:00] nulledvector (id=1518066633015558164)
+    <:Prayge:1151275585000185968>
+
+[2026-06-21T02:30:13.602000+00:00] nulledvector (id=1518080574785454270)
+    Sorry for the late reply... profile_isolation ON means each profile has its own memory dir, plugin state, and config. work profile can't accidentally read personal profile's MEMORY.md. that's the whole point of having profiles.
+    
+    cost is some setup overhead per profile (install plugins, set env vars). for most users ON is the safer default. gotchas only bite if you want cross-profile memory, in which case you'd flip OFF intentionally anyway.
+    
+    turn it OFF when:
+    - you have multiple projects that SHOULD share memory (rare)
+    - you're debugging and need to see state across profiles
+    - single-user single-context setup where isolation is overhead with no benefit
+    
+    with mnemosyne specifically, profile_isolation ON keeps MEMORY.md / USER.md / persona.md per-profile. usually what you want. PR #331 (bunnyfu) fixed a full-import-path issue for isolated profiles. that's in v3.9.0+ so you're covered.
+    
+    practical path:
+    
+    1. start ON, run a profile for a week, see if anything breaks
+    2. if you find yourself needing cross-profile memory, OFF is a one-line config flip
+    3. don't leave OFF "just in case". the moment you forget which context you're in, you'll regret it
+    
+    rule of thumb: ON by default, flip OFF when you have a specific reason, never the other way around.
+    [reply to allanon911 msg=1517963791462039622]
+

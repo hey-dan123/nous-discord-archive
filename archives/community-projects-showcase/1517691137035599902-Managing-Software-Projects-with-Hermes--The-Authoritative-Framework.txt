@@ -13,3 +13,7 @@
 [2026-06-20T00:42:59.476000+00:00] avidfuturist (id=1517691200239570984)
     Managing Software Projects with Hermes, The Authoritative Framework
 
+[2026-06-20T21:59:45.273000+00:00] avidfuturist (id=1518012508240089340)
+    Pushed a bunch of updates including a new FAQ https://nesquena.github.io/steward-os/docs/reference/faq.html
+    [embed] FAQ https://nesquena.github.io/steward-os/docs/reference/faq.html
+

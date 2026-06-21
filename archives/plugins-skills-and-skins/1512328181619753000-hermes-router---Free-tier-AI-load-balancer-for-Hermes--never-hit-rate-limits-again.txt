@@ -797,3 +797,79 @@
     Update: `hr update && hr restart`
     [embed] Configuration https://hermes-router.vercel.app/configuration/
 
+[2026-06-20T20:10:27.687000+00:00] glazaroff (id=1517985003731030046)
+    What's different/benefits of this router comparing the hermes connection_pool + fallback provider?
+
+[2026-06-21T00:21:48.974000+00:00] shaf_2665 (id=1518048259233284199)
+    Good question — they overlap but solve it at different layers, and they actually stack.
+    
+    Hermes' built-ins (credential pools + fallback providers) are inside Hermes: pools rotate multiple keys for the same provider, and fallback switches to a different provider when the primary fails (turn-scoped — resets to primary each new message, fires at most once per turn). Great for keeping Hermes itself resilient.
+    
+    hermes-router is a **standalone proxy** that any OpenAI/Anthropic app can use (not just Hermes), and it adds layers those don't have:
+    
+    **Smart routing** — picks the cheapest capable model per request (difficulty-scored), not a fixed primary→fallback chain
+    
+    **Failover** on every request across keys × models × providers (incl. multiple models per provider — each its own rate-limit bucket), not "once per turn"
+    
+    **Response caching** (saves free-tier quota), circuit breaker with health-based reordering, tool-aware routing, embeddings, Codex OAuth, Prometheus /metrics + hr status
+    
+    One router centralizes all your keys and serves all your apps
+    They're complementary, not either/or — you can even point Hermes at hermes-router (Hermes → router → providers), so you get Hermes' turn-level fallback and the router's routing underneath. That's actually how I run it.
+    [reply to glazaroff msg=1517985003731030046]
+
+[2026-06-21T00:31:10.948000+00:00] shaf_2665 (id=1518050616323084448)
+    # 🟣 New provider: Kimi (Moonshot)
+    
+    You can now route through the Kimi coding plan — and since it's API-key based (not OAuth), it's a one-liner to add:
+    
+    
+    `hr auth add kimi`
+    `hr restart`
+    Defaults to the coding-plan endpoint (api.kimi.com/coding/v1, model kimi-for-coding). On the standard Moonshot API instead? Just set KIMI_BASE_URL=https://api.moonshot.ai/v1.
+    
+    That brings hermes-router to 16 providers — drop Kimi into the pool alongside Gemini, Groq, Codex and the rest for even more failover headroom. Thanks <@416240596508737536> for the nudge! 
+    
+    Docs → https://hermes-router.vercel.app/providers/#kimi-moonshot-coding-plan
+    Update:` hr update && hr restart`
+    [embed] Providers https://hermes-router.vercel.app/providers/
+
+[2026-06-21T01:04:52.147000+00:00] shaf_2665 (id=1518059093846130749)
+    # 🧩 New: hermes-router VS Code extension
+    
+    A control panel for your router, right in the editor — see all your providers' health, latency, and key cooldowns live in a sidebar, plus restart / add keys / switch models / change rotation mode without touching the terminal.
+    
+    Install: download the .vsix from the release → VS Code Extensions → ⋯ → Install from VSIX:
+    https://github.com/Shaf2665/Hermes-router/releases/tag/vscode-v0.1.0
+    
+    Works with a local or remote (HF Space) router. Source is in vscode-extension/. More coming (chat/model-provider integration) — feedback welcome!
+    [embed] Release VS Code extension v0.1.0 · Shaf2665/Hermes-router https://github.com/Shaf2665/Hermes-router/releases/tag/vscode-v0.1.0
+
+[2026-06-21T01:42:55.957000+00:00] shaf_2665 (id=1518068672839548978)
+    # 🧩 hermes-router - VS Code extension update — feature-complete
+    
+    **Run your free-tier AI pool right inside VS Code:**
+    
+    📊 Dashboard — live provider health, latency, key cooldowns, cache & rotation, in a sidebar
+    🎛️ Manage — restart, add keys, set models, switch rotation — no terminal needed
+    🤖 Use it as a model — pick hermes-router in Copilot Chat's model picker
+    🛠️ Agent mode — full tool calling: it can run commands, edit files, and use MCP tools
+    Install (VS Code ≥ 1.104 + Copilot Chat): grab the .vsix → Extensions → ⋯ → Install from VSIX:
+    https://github.com/Shaf2665/Hermes-router/releases/tag/vscode-v0.3.0
+    
+    Source in vscode-extension/. Marketplace listing coming soon. Feedback welcome!
+    [embed] Release VS Code extension v0.3.0 — agent mode (tool calling) · S... https://github.com/Shaf2665/Hermes-router/releases/tag/vscode-v0.3.0
+
+[2026-06-21T03:39:19.908000+00:00] shaf_2665 (id=1518097965653295135)
+    # 🧩 hermes-router - VS Code extension update — live on the Marketplace!
+    
+    Run your free-tier AI pool right inside VS Code. One-click install: search "hermes-router" in the Extensions view 👉 https://marketplace.visualstudio.com/items?itemName=MohammedShafiq.hermes-router
+    
+    **What it does:**
+    
+    📊 Dashboard — live provider health, latency, key cooldowns, cache & rotation, in a sidebar
+    🎛️ Manage — restart, add keys, set models, switch rotation — no terminal needed
+    🤖 Use it as a model — pick hermes-router in Copilot Chat's model picker
+    🛠️ Agent mode — full tool calling: run commands, edit files, use MCP tools
+    Point it at your local router (or a remote Hugging Face Space). Requires VS Code ≥ 1.104 + the Copilot Chat extension. Source: vscode-extension/. Feedback very welcome!
+    [embed] hermes-router - Visual Studio Marketplace https://marketplace.visualstudio.com/items?itemName=MohammedShafiq.hermes-router
+

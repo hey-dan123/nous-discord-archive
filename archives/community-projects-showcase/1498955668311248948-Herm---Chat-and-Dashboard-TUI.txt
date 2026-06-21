@@ -1460,3 +1460,6 @@
     clicking 3 the dots or the tools should expand the rest of the tools used
     [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1517813778010603530/image.png?ex=6a37a5bc&is=6a36543c&hm=8c6a1e373d59f7e2ae86177363970e8c280c540bb2871f64b09da71094803827&
 
+[2026-06-20T22:58:32.817000+00:00] tunacookie (id=1518027303832129698)
+    i wonder how would one reduce the lag once it reaches 1000+ turns <:pepe_think:1151261558043848785> or  is creating a new session the only way <@209037396983939072> ?
+

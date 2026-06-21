@@ -35187,3 +35187,220 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-20T19:14:49.492000+00:00] avf00 (id=1517971002326515772)
     can i ask what is the approach to test plugins that use messages from the gateway?
 
+[2026-06-20T19:50:24.198000+00:00] bbcrypto0 (id=1517979955932303600)
+    Small Hermes Agent docs PR opened:
+    
+    https://github.com/NousResearch/hermes-agent/pull/49779
+    
+    I noticed that `.env.example` documents base URL overrides for provider sections, but Hugging Face was missing the `HF_BASE_URL` placeholder.
+    
+    This PR adds the missing commented placeholder for consistency.
+    
+    Docs/example only no runtime, config, or behavior changes.
+    [embed] docs(.env.example): add HF_BASE_URL placeholder by BBCrypto-web · ... https://github.com/NousResearch/hermes-agent/pull/49779
+
+[2026-06-20T19:58:28.802000+00:00] rabbitleader0ne (id=1517981988508668155)
+    Hermes Agent Android
+
+[2026-06-20T20:45:26.565000+00:00] aialliai (id=1517993807063285943)
+    Since you mention p1 .. this one has been sitting a while <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/44120 (then again I haven’t cross checked it vs current main, maybe it was fixed in the rich text update, will check when I get go the computer!)
+    [embed] fix(gateway,agent): persist delivered responses that recovery paths... https://github.com/NousResearch/hermes-agent/pull/44120
+
+[2026-06-20T21:02:56.851000+00:00] sworntech (id=1517998212282187928)
+    **Opened a small Hermes Agent docs cleanup PR**:
+    
+    https://github.com/NousResearch/hermes-agent/pull/49802
+    
+    It removes a stale `(#TBD)` placeholder from the `_check_cross_profile_path()` docstring in `tools/file_tools.py`.
+    
+    1 file changed, docstring-only, no behavior change.
+    [embed] docs: remove file tools TBD placeholder by Sworntech-dev · Pull Re... https://github.com/NousResearch/hermes-agent/pull/49802
+
+[2026-06-20T21:21:09.162000+00:00] devorun11 (id=1518002793766584341)
+    The email adapter used the IMAP/SMTP host straight from env vars without stripping it and ignored config.extra, so a whitespace-padded or config-only host hit IMAP4_SSL("") and failed with the misleading [Errno 8] nodename nor servname. 
+    Fix: resolve host from env config.extra with whitespace stripped, and validate in connect() with a clear error instead of attempting an empty-host connection  
+    
+    https://github.com/NousResearch/hermes-agent/pull/49805
+    [embed] fix(email): resolve IMAP/SMTP host from config and validate before ... https://github.com/NousResearch/hermes-agent/pull/49805
+
+[2026-06-20T22:06:52.900000+00:00] dias4761 (id=1518014301837852772)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/49816
+    
+     fix(dashboard): resolve CPU busy-loop in PTY reader and Windows test compatibility
+    #49816
+    
+    
+    try solve Dashboard freeze: CPU 100% when context compression runs → Desktop client timeout #49768
+    [embed] fix(dashboard): resolve CPU busy-loop in PTY reader and Windows tes... https://github.com/NousResearch/hermes-agent/pull/49816
+
+[2026-06-20T22:51:01.988000+00:00] hakan_pak (id=1518025412918247424)
+    <@606590420713078788>  rep. sir check pls
+
+[2026-06-20T23:01:38.186000+00:00] thyfriendlyfox (id=1518028081325932554)
+    Hey Brooklyn, you still up?
+    [reply to brooklyn msg=1517943079800410172]
+
+[2026-06-20T23:07:26.320000+00:00] thyfriendlyfox (id=1518029541506027725)
+    Cause
+
+[2026-06-20T23:07:38.449000+00:00] thyfriendlyfox (id=1518029592378474566)
+    <@353922987235213313> has something cool :3
+
+[2026-06-20T23:11:15.603000+00:00] thyfriendlyfox (id=1518030503188500661)
+    https://github.com/NousResearch/hermes-agent/pull/49834
+    [embed] feat(mobile): Hermes Agent Android app — Capacitor thin client (c... https://github.com/NousResearch/hermes-agent/pull/49834
+
+[2026-06-20T23:12:09.772000+00:00] thyfriendlyfox (id=1518030730389885059)
+    Hey Guys, so we made the PR but we need help testing some of the features!
+    
+    But it’s made in capacitor and my PR after this PR will build the package for iOS :3
+
+[2026-06-20T23:12:29.099000+00:00] thyfriendlyfox (id=1518030811453063168)
+    So if anyone here has an android phone please give it a try!
+
+[2026-06-20T23:16:27.575000+00:00] thyfriendlyfox (id=1518031811693777005)
+    With love from Team Reagent ❤️
+
+[2026-06-20T23:21:37.306000+00:00] thyfriendlyfox (id=1518033110800007260)
+    This is the Android version of Hermes that we really hope you guys like btw
+
+[2026-06-20T23:22:09.993000+00:00] thyfriendlyfox (id=1518033247899095211)
+    also sorry it took so long! we like to run our verifications :3
+    [reply to brooklyn msg=1517943079800410172]
+
+[2026-06-20T23:28:45.744000+00:00] brooklyn (id=1518034907799228507)
+    Np I can check it out if you wanna link me. Who”s “we” 😁
+
+[2026-06-20T23:29:47.509000+00:00] thyfriendlyfox (id=1518035166860411080)
+    How do I link?
+    
+    Also <@353922987235213313> and I
+    [reply to brooklyn msg=1518034907799228507]
+
+[2026-06-20T23:30:12.615000+00:00] thyfriendlyfox (id=1518035272162476073)
+    sorry im just really excited about this one
+
+[2026-06-20T23:33:22.397000+00:00] sprmn24 (id=1518036068165877761)
+    Security fix , Strip PyYAML source snippet from managed-scope parse error log 
+    https://github.com/NousResearch/hermes-agent/pull/49836
+     Bug fix Surface silent message-loss in append_to_transcript 
+     https://github.com/NousResearch/hermes-agent/pull/49843
+    [embed] fix(cli): strip PyYAML source snippet from managed-scope parse erro... https://github.com/NousResearch/hermes-agent/pull/49836
+    [embed] fix(gateway): surface silent message-loss in append_to_transcript b... https://github.com/NousResearch/hermes-agent/pull/49843
+
+[2026-06-20T23:43:21.019000+00:00] thyfriendlyfox (id=1518038578968662018)
+    I think you should have access cause its a PR, I don't really know how to link you to it
+    [reply to brooklyn msg=1518034907799228507]
+
+[2026-06-21T00:06:01.017000+00:00] yatesalex (id=1518044283213709342)
+    Hey guys, do you think git worktrees should be default? 
+    
+    I think most users will benefit with git worktrees on by default and optional opt out as I can't think of as many use cases where people would not want this. Very beneficial for workflow I run fixing things on the same feature at the same time.
+    
+    Please let me know your thoughts and if you like the idea of git worktrees by default I will implement and put up PR. Thank you!
+
+[2026-06-21T00:07:16.298000+00:00] teknium (id=1518044598964850739)
+    I think they are now if you open a git project dir
+    [reply to yatesalex msg=1518044283213709342]
+
+[2026-06-21T00:07:32.964000+00:00] teknium (id=1518044668867252284)
+    Didnt you make that happen <@119192111202566149>
+
+[2026-06-21T00:07:53.919000+00:00] yatesalex (id=1518044756759019641)
+    Okay, I'll look into it thanks. I just asked Hermes and it said it's not on by default
+
+[2026-06-21T00:12:13.770000+00:00] antiraedus (id=1518045846653112401)
+    I made a PR for this 
+    https://github.com/NousResearch/hermes-agent/pull/49661
+    
+    2000ish PRs are marked as dupes, so if this can even stop 10% of dupes coming through that's like what 200PRs/month less from a few lines change?
+    [embed] docs(contributing): add "search first" guidance to cut duplicate PR... https://github.com/NousResearch/hermes-agent/pull/49661
+    [reply to antiraedus msg=1517740642300854392]
+
+[2026-06-21T00:12:41.071000+00:00] brooklyn (id=1518045961161801839)
+    Yeah, albeit the UX isn’t obvious until the proj PR gets in
+    [reply to teknium msg=1518044668867252284]
+
+[2026-06-21T00:12:53.451000+00:00] antiraedus (id=1518046013087158404)
+    It does assume dependency on gh CLI/web browser but I think this is reasonable
+
+[2026-06-21T00:13:24.411000+00:00] antiraedus (id=1518046142942806057)
+    Curious to hear if y'all think it's worthwhile or not
+
+[2026-06-21T00:15:29.163000+00:00] antiraedus (id=1518046666190622820)
+    The agent.md only talks about code dupes, and the PR template only asks if you've checked for dupes AFTER you make the feature and send PR up
+    
+    Thought it's easy way to reduce wasted cycles and reduce noise
+
+[2026-06-21T00:34:30.643000+00:00] bentlybro (id=1518051453904621778)
+    its just this pr https://github.com/NousResearch/hermes-agent/pull/49834 🙂
+    [reply to brooklyn msg=1518034907799228507]
+
+[2026-06-21T00:39:07.406000+00:00] patricklovesoj (id=1518052614732906656)
+    Opened a Github issue to propose improving desktop cleaning-up backend sessions & releasing resources, and get some feedback before opening PRs.
+    
+    Problem:
+    Today the Desktop UI can move away from a chat in several ways — New Chat, /new, archive, delete, closing a secondary window, or quitting the app — but those paths do not consistently close the backend runtime session they leave behind. 
+    
+    Potential Solution:
+    The backend already has the right hard-teardown primitive: session.close. Desktop should call it deliberately at user-visible session boundaries, and Electron should reliably tear down the dashboard backends it owns when the app exits. ex.) Explicit session end UX. 
+    
+    https://github.com/NousResearch/hermes-agent/issues/48997
+    [embed] Desktop should explicitly close abandoned runtime sessions and owne... https://github.com/NousResearch/hermes-agent/issues/48997
+
+[2026-06-21T01:38:25.246000+00:00] bbcrypto0 (id=1518067537395318895)
+    Small Hermes Agent docs PR opened:
+    
+    https://github.com/NousResearch/hermes-agent/pull/49877
+    
+    I noticed that `cli-config.yaml.example` referenced `docs/mcp.md`, but that file does not exist in the repo.
+    
+    The actual MCP documentation lives at:
+    
+    `website/docs/user-guide/features/mcp.md`
+    
+    This PR updates the comment to point to the correct docs path.
+    
+    Comment-only change — no runtime, config, or behavior changes.
+    [embed] docs(config): correct MCP docs path in cli-config.yaml.example by B... https://github.com/NousResearch/hermes-agent/pull/49877
+
+[2026-06-21T01:43:17.675000+00:00] gille (id=1518068763931574272)
+    https://github.com/NousResearch/hermes-agent/pull/49874 eh, k. playing around with a plugin and ran into strange some things. led me to this.
+    [embed] fix(agent): defer turns during compression lock contention by helix... https://github.com/NousResearch/hermes-agent/pull/49874
+
+[2026-06-21T01:46:11.499000+00:00] yatesalex (id=1518069493002272840)
+    Hey team, looks like worktrees were not set to default `true` in `load_cli_config()` - added that as well as a `--no-worktree` per session opt out so users can run per session without worktree if they want and don't have to change config. 
+    
+    Please let me know your thoughts. Thank you!
+    
+    https://github.com/NousResearch/hermes-agent/pull/49862
+    [embed] feat(worktree): enable git worktree isolation by default by yatesja... https://github.com/NousResearch/hermes-agent/pull/49862
+
+[2026-06-21T01:56:08.956000+00:00] janezeroon (id=1518071998918430832)
+    Hi hermes team please allow codex oauth to do image editting.
+    
+    this pr adds image-to-image / editing support to the OpenAI Codex-authenticated image backend.
+    
+    https://github.com/NousResearch/hermes-agent/pull/49597
+    [embed] feat(image-gen): support Codex image editing by mehalter · Pull Re... https://github.com/NousResearch/hermes-agent/pull/49597
+
+[2026-06-21T02:09:21.788000+00:00] .blockops (id=1518075324297121812)
+    I didn’t want to be presumptuous and open a PR but can someone from Nous review this feature request?
+    
+    https://github.com/NousResearch/hermes-agent/issues/41190
+    [embed] [Feature]: Unified plugin route selector for per-turn provider/mode... https://github.com/NousResearch/hermes-agent/issues/41190
+
+[2026-06-21T02:10:16.233000+00:00] .blockops (id=1518075552656003192)
+    Made a proposal here: https://github.com/MahdiHedhli/HermesUltraCode/blob/main/docs/upstream-routing.md
+    [embed] HermesUltraCode/docs/upstream-routing.md at main · MahdiHedhli/Her... https://github.com/MahdiHedhli/HermesUltraCode/blob/main/docs/upstream-routing.md
+
+[2026-06-21T03:36:39.094000+00:00] dias4761 (id=1518097291150360646)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/49931
+    
+     fix(terminal): bypass Git Bash wrapper to prevent console flashes on Windows Fixes #49851
+    [embed] fix(terminal): bypass Git Bash wrapper to prevent console flashes o... https://github.com/NousResearch/hermes-agent/pull/49931
+
+[2026-06-21T03:38:13.350000+00:00] teknium (id=1518097686488682609)
+    I couldnt get it to it seemed like it didnt allow it, are you sure it does?
+    [reply to janezeroon msg=1518071998918430832]
+

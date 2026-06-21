@@ -53,3 +53,21 @@
     [attachment] IMG_8300.png https://cdn.discordapp.com/attachments/1517251209776467969/1517926463385501766/IMG_8300.png?ex=6a380eae&is=6a36bd2e&hm=8bfbaa0b4bfe22c3b51a72e34a6d9cc9c51a682dfe95c129f254d8a9d97c1219&
     [embed] GitHub - MahdiHedhli/HermesUltraCode: Pre-dispatch prompt gate, pon... https://github.com/MahdiHedhli/HermesUltraCode
 
+[2026-06-21T02:01:20.190000+00:00] .blockops (id=1518073304328437791)
+    HermesUltraCode update — local-first, cost-aware model routing 🧠💸
+    
+    New drop for HermesUltraCode (the pre-dispatch gate that vets every delegate_task with a neutral, different-lab reviewer — tighten-only, fail-closed, audited). It now helps you run subagents on your own hardware and only pay cloud prices when a task actually needs it.
+    
+    🖥️ Use your local box. hermes ultracode-local probes your LM Studio / Ollama endpoint, lists the loaded models, and (with --apply) points subagents at it. Workers run local and free; your orchestrator + the cross-lab reviewer stay cloud, so the safety check is untouched. (Running Gemma-4-31B on a Mac Studio here — flies.)
+    
+    🧠 Cost-aware router (HERMESULTRACODE_ROUTING=1). Every released dispatch is scored: the cheapest model that actually clears the task’s required capability tier — local preferred via a tunable local_bias, but risk-gated off elevated / merge-authority work no matter how cheap, and capped so a quantized local model never takes the hard stuff.
+    
+    💸 See the savings. New Cost tab in the dashboard: dollars saved vs all-cloud, the local-vs-cloud split, and a per-dispatch table of what the router picked and why. (Demo run: 90% saved.)
+    
+    Honest caveat: routing is advisory today… it annotates and shows you the numbers, but Hermes binds the worker model from one global delegation: block, so true per-task binding needs a tiny upstream change (RFC in the repo, would love thoughts 👀). The config flip gives you the local win right now.
+    
+    hermes plugins install MahdiHedhli/HermesUltraCode
+    
+    Repo → github.com/MahdiHedhli/HermesUltraCode · 211 offline tests, zero runtime deps. Screenshot 👇
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1517251209776467969/1518073304194482378/image0.jpg?ex=6a389770&is=6a3745f0&hm=d5be27bbc7e69154c8fc135eeab2e076f1ba2a34e94ade709c20041a3c215bb6&
+

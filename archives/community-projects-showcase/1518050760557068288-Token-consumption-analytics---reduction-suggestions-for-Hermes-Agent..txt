@@ -1,0 +1,13 @@
+# Thread 'Token consumption analytics + reduction suggestions for Hermes Agent.' in forum #community-projects-showcase
+# thread_id=1518050760557068288 forum_id=1316137596535177246
+# Started 2026-06-21T03:59:25.409481+00:00
+
+[2026-06-21T00:31:45.336000+00:00] patricklovesoj (id=1518050760557068288)
+    Built a Hermes web dashboard plugin that tells you where the tokens go and what to change. https://github.com/patrickluvsoj/hermes-token-lens
+    
+    Where tokens go — per-call capture of usage, decomposed into categories: system prompt, tool schemas (built-in / per-MCP-server), skill loading, memory, history, tool results, output, reasoning.
+    
+    Suggestions — deterministic detectors (unused MCP servers, low cache hit rate, oversized system prompt, runaway turns) fire after 3 recorded sessions; AI-evaluated suggestions unlock at 10. Every suggestion: evidence, expected savings, capability-risk note, copy-paste plan.
+    [attachment] token-lens-tab.png https://cdn.discordapp.com/attachments/1518050760557068288/1518050760733233182/token-lens-tab.png?ex=6a388271&is=6a3730f1&hm=c08cf19535c2122c0b8bff770df5891ef635a90ead9637bcbb72fae37890e13b&
+    [embed] GitHub - patrickluvsoj/hermes-token-lens: Token consumption analyti... https://github.com/patrickluvsoj/hermes-token-lens
+
