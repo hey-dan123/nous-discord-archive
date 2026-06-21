@@ -20,3 +20,15 @@
     link to plugin: https://github.com/JoshMayerr/hermes-op-plugin
     [embed] GitHub - JoshMayerr/hermes-op-plugin: Hermes Agent plugin for using... https://github.com/JoshMayerr/hermes-op-plugin
 
+[2026-06-21T14:26:42.853000+00:00] victoryah (id=1518260884772880466)
+    op.inc's server is just flaky right now — the 502s are on their end, not our setup. Kida has a valid session cookie at /tmp/op_cookies.txt so she doesn't need to re-authenticate.
+    
+    Tell her:
+    
+    Wait 2 minutes then retry: curl -b /tmp/op_cookies.txt https://api.op.inc/console/numbers/available
+    If it still 502s, try: curl https://api.op.inc/healthz to check if their server is up at all.
+    Report the raw response body either way.
+    If /healthz is also returning 502, op.inc is just down and there's nothing to do but wait. The session cookie is valid for a while so she won't need to re-OTP when it comes back up.
+    
+    If this keeps happening, it's worth opening an issue or DM on the hermes-op-plugin repo — Josh is the author of both the plugin and likely op.inc itself, so he'd be the fastest person to tell you if the paid tier is actually live yet or if the lease endpoint is still being built out.
+

@@ -89,3 +89,6 @@
 [2026-06-21T12:38:46.009000+00:00] tunacookie (id=1518233718920319136)
     76% on personamem
 
+[2026-06-21T18:51:29.282000+00:00] tunacookie (id=1518327517285453924)
+    its broken. will try to fix it asap...
+

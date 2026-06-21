@@ -1,0 +1,20 @@
+# Thread 'Graph View for Semantic Search App' in forum #community-projects-showcase
+# thread_id=1518310669655605418 forum_id=1316137596535177246
+# Started 2026-06-21T19:27:07.181529+00:00
+
+[2026-06-21T17:44:32.494000+00:00] curiousclump. (id=1518310669655605418)
+    little uh, graph view that ive been making. each node is an image, each edge represents similarity above a .7 threshold with another image. so you can easily find similar images. and i recently added graph settings so you can control what it looks like more!
+    [attachment] Screenshot_2026-06-18_170320.png https://cdn.discordapp.com/attachments/1518310669655605418/1518310670305853502/Screenshot_2026-06-18_170320.png?ex=6a397480&is=6a382300&hm=77bef959ce7b81f1ebf88478e48dc721c90eeb138705f9a47ec7f64e00f516ef&
+    [attachment] Screenshot_2026-06-18_170228.png https://cdn.discordapp.com/attachments/1518310669655605418/1518310671064760511/Screenshot_2026-06-18_170228.png?ex=6a397480&is=6a382300&hm=c628a91cc2f55b4c08ef5933bb74b831c9576dd4475b2c3eab64eea9ddc479df&
+    [attachment] Screenshot_2026-06-18_170154.png https://cdn.discordapp.com/attachments/1518310669655605418/1518310671484194867/Screenshot_2026-06-18_170154.png?ex=6a397480&is=6a382300&hm=8d4e1320d365e735e92b7ba761a7181d7fda294092f479094f7a50d10caeb9c0&
+    [attachment] Screenshot_2026-06-18_170111.png https://cdn.discordapp.com/attachments/1518310669655605418/1518310671920660792/Screenshot_2026-06-18_170111.png?ex=6a397481&is=6a382301&hm=bb74a02f4d5fe5ec1a1f8304567f840123b99fad563785dbde19a82c8b3698c1&
+    [attachment] Screenshot_2026-06-18_165905.png https://cdn.discordapp.com/attachments/1518310669655605418/1518310672302080193/Screenshot_2026-06-18_165905.png?ex=6a397481&is=6a382301&hm=8ff1ecd3077a19566ac03dee97428e648b4530c5c7a6f30cac2bf0c6b527cc5e&
+
+[2026-06-21T18:21:08.684000+00:00] wise_mind (id=1518319881144111115)
+    Super cool
+    Is that an app you're developing?
+
+[2026-06-21T18:31:27.183000+00:00] curiousclump. (id=1518322475316809782)
+    yep
+    [reply to wise_mind msg=1518319881144111115]
+

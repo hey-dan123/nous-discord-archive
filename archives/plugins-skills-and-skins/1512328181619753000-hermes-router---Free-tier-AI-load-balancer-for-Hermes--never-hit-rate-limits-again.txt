@@ -891,3 +891,16 @@
     🔗 https://hub.docker.com/r/shafiq735/hermes-router
     [embed] Deployment https://hermes-router.vercel.app/deployment/
 
+[2026-06-21T16:48:30.142000+00:00] shaf_2665 (id=1518296566929035405)
+    # 🩹 VS Code extension v0.3.1 — friendlier on Windows & Docker
+    
+    If you run hermes-router in Docker (or on a plain Windows host), the Add key / Restart buttons used to fail with a cryptic spawn hr ENOENT. That's because those controls use the hr CLI, which is a Linux/macOS/WSL helper — not something you have when the router runs in a container.
+    
+    Now the extension detects that and tells you exactly what to do instead: set keys with -e <PROVIDER>_API_KEYS=… and use docker restart. 🐳
+    
+    📊 The dashboard and using hermes-router as a model in Copilot Chat were never affected — they keep working everywhere.
+    
+    Update from the Marketplace (auto-updates), or grab the .vsix:
+    https://marketplace.visualstudio.com/items?itemName=MohammedShafiq.hermes-router
+    [embed] hermes-router - Visual Studio Marketplace https://marketplace.visualstudio.com/items?itemName=MohammedShafiq.hermes-router
+

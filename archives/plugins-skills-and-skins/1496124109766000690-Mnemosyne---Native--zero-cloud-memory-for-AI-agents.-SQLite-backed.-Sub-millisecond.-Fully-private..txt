@@ -2233,3 +2233,8 @@
     rule of thumb: ON by default, flip OFF when you have a specific reason, never the other way around.
     [reply to allanon911 msg=1517963791462039622]
 
+[2026-06-21T14:33:55.036000+00:00] allanon911 (id=1518262697479901266)
+    thanks for the detailed answer. The docs though mention that default is "OFF".
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1518262697316057239/image.png?ex=6a3947d2&is=6a37f652&hm=019858089dde4ef537df91af9dadb2698a621011c1bf46d7941a17ae36c0e7b6&
+    [reply to nulledvector msg=1518080574785454270]
+

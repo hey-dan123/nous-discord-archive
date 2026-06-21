@@ -715,3 +715,20 @@
     🔗 https://hub.docker.com/r/shafiq735/hermes-router
     [embed] Deployment https://hermes-router.vercel.app/deployment/
 
+[2026-06-21T16:48:20.713000+00:00] shaf_2665 (id=1518296527381205283)
+    # 🩹 VS Code extension v0.3.1 — friendlier on Windows & Docker
+    
+    If you run hermes-router in Docker (or on a plain Windows host), the Add key / Restart buttons used to fail with a cryptic spawn hr ENOENT. That's because those controls use the hr CLI, which is a Linux/macOS/WSL helper — not something you have when the router runs in a container.
+    
+    Now the extension detects that and tells you exactly what to do instead: set keys with -e <PROVIDER>_API_KEYS=… and use docker restart. 🐳
+    
+    📊 The dashboard and using hermes-router as a model in Copilot Chat were never affected — they keep working everywhere.
+    
+    Update from the Marketplace (auto-updates), or grab the .vsix:
+    https://marketplace.visualstudio.com/items?itemName=MohammedShafiq.hermes-router
+    [embed] hermes-router - Visual Studio Marketplace https://marketplace.visualstudio.com/items?itemName=MohammedShafiq.hermes-router
+
+[2026-06-21T18:28:19.097000+00:00] wise_mind (id=1518321686426943690)
+    Hey <@1272778978624540704> I developed a mod that switches to another LLM (I run one locally) for conversation mode so (at least in my case) you can have a fast conversations completely for free (and did some optimizations for performance).
+    I haven't posted it yet but conceptually I'd love to integrate these modifications into your router - would you like that feature? Just an FYI it's not a plug-and-play, it requires modding Hermes Desktop itself (I maintain a modded buiidl and individual mods/patches - as I said, will release later)
+

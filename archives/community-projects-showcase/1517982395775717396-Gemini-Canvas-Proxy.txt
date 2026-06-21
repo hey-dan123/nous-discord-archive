@@ -38,3 +38,41 @@
     There is a very minute possibility but just to be safe just use an alt account that's it
     [reply to dulli77 msg=1518186396475723796]
 
+[2026-06-21T14:34:05.884000+00:00] mergelab (id=1518262742979710986)
+    Do we need a Google AI plus or pro subscription?
+
+[2026-06-21T14:36:21.888000+00:00] buke5122 (id=1518263313421828097)
+    I can't figure out how to use it on a VPS
+
+[2026-06-21T14:36:42.892000+00:00] buke5122 (id=1518263401518727169)
+    Opened a VNC, opened chrome and did everything and it somehow fails
+
+[2026-06-21T16:42:08.571000+00:00] pranrichh (id=1518294966504263812)
+    No just a free Google account
+    [reply to mergelab msg=1518262742979710986]
+
+[2026-06-21T17:49:21.694000+00:00] pranrichh (id=1518311882648195232)
+    The proxy previously defaulted to `127.0.0.1`, which blocked Tailscale access from other devices. I've fixed this in commit https://github.com/pranrichh/gemini-canvas-proxy/commit/e851d6d by defaulting the binding to `0.0.0.0`.
+    
+    It should now work perfectly on your VPS—just run it, and it's instantly accessible via your Tailscale IP without any manual config.
+    [embed] feat: default to 0.0.0.0 binding and simplify VPS instructions · p... https://github.com/pranrichh/gemini-canvas-proxy/commit/e851d6d
+    [reply to buke5122 msg=1518263401518727169]
+
+[2026-06-21T18:27:45.146000+00:00] pranrichh (id=1518321544026263652)
+    Shit I'm having some issues lemme fix it rq
+
+[2026-06-21T18:34:05.459000+00:00] pranrichh (id=1518323139174596828)
+    **Found and fixed.** Commit https://github.com/pranrichh/gemini-canvas-proxy/commit/5b22b47.
+    
+    ### The Bug
+    The `elif bind_address == '0.0.0.0':` block I wrote earlier had `server_thread.join()` + `return` in it. When the proxy started in normal mode (not standalone) with `0.0.0.0`, it would:
+    
+    1. Start the HTTP server ✅
+    2. Print a warning ✅
+    3. **Block forever on `server_thread.join()` and never reach the native messaging code** ❌
+    
+    So `host_ready` was never sent to the extension, and the message-reading loop never ran. Canvas received the request and showed 200 OK, but the response had nowhere to go — curl just hung.
+    
+    ### The Fix
+    Removed the blocking `elif` branch. Now it just logs the warning and continues to `send_message(host_ready)` and the main loop as normal. The `standalone` check gets its own early `return` so it doesn't interfere.
+

@@ -37,3 +37,6 @@
 [2026-06-16T16:58:26.046000+00:00] _name_name_ (id=1516487127003828296)
     That's the level I want to aim at.
 
+[2026-06-21T14:41:46.621000+00:00] _name_name_ (id=1518264675450753035)
+    @kainan_e  I talked to you via the contact for on the site. Pinging you here. This worked was delivered last weekend, im delivering it again interally at a client on Tuesday, and im not scheduled to deliver it July 18th publicly for ~40 people at a local tech group for our city. Would love to make sure the workshop aligns more tightly with how Nous wants things done. Maybe you've already got some internal materials? If it makes sense, maybe I can help contribute some offical materials to the docs site people can run for their own teams.
+

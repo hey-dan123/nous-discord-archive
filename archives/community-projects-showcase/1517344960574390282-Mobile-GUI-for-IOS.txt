@@ -20,3 +20,6 @@
     In the main panel, you can select a model and a worker.
     [attachment] ScreenRecording_06-19-2026_02-08-57_1.mov https://cdn.discordapp.com/attachments/1517344960574390282/1517344961006141530/ScreenRecording_06-19-2026_02-08-57_1.mov?ex=6a35f11d&is=6a349f9d&hm=b28cf1028ce64d64ad25c4936ac098399c06836c3b76a967d8ea01f32c88a766&
 
+[2026-06-21T18:24:24.352000+00:00] mgf.654 (id=1518320701835313372)
+    [attachment] ScreenRecording_06-21-2026_20-09-21_1.mov https://cdn.discordapp.com/attachments/1517344960574390282/1518320701239726261/ScreenRecording_06-21-2026_20-09-21_1.mov?ex=6a397dd8&is=6a382c58&hm=a553095ad2b401da9104097e0ee35a3580bed948fe9a3f5552f094c5965c0a3a&
+

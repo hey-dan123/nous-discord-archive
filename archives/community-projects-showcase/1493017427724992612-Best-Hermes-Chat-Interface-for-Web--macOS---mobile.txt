@@ -4305,3 +4305,67 @@
     
     (Could use feedback and testing of everything from Android, WebUI, desktop apps, and iOS apps, please report any feedback here!)
 
+[2026-06-21T14:07:49.820000+00:00] realadolan (id=1518256132487905350)
+    Here's a feedback: When you enter the wrong address at the start and hit Connect, you can't change it anymore. There's no way to edit it. The only fix is to clear the app's data
+
+[2026-06-21T14:08:01.794000+00:00] realadolan (id=1518256182710632538)
+    I'd make it possible to re-enter the details if possible
+
+[2026-06-21T15:36:04.025000+00:00] jconcep (id=1518278337993244712)
+    how do folks handle voice when hermes agent is running on a remote system??
+
+[2026-06-21T15:37:56.795000+00:00] avidfuturist (id=1518278810984910878)
+    Thanks, will fix!
+    [reply to realadolan msg=1518256132487905350]
+
+[2026-06-21T15:39:00.643000+00:00] avidfuturist (id=1518279078782959667)
+    WebUI is designed so voice should work even on a remote system. Can you elaborate on your issue?
+    [reply to jconcep msg=1518278337993244712]
+
+[2026-06-21T15:40:08.541000+00:00] jconcep (id=1518279363567554661)
+    I went through steps and had it configure voice but it still kept saying it was unavailable.  I am in process of rebuilding  (moving to another system) so wanted to make sure i did it correctly this time. I may need to follow up once i"m back up and running again.
+    [reply to avidfuturist msg=1518279078782959667]
+
+[2026-06-21T15:41:10.590000+00:00] avidfuturist (id=1518279623819923561)
+    Okay sounds good, fwiw voice should work out of the box with WebUI even remotely, although if you give me more details of your setup later I’ll investigate
+    [reply to jconcep msg=1518279363567554661]
+
+[2026-06-21T15:43:55.672000+00:00] jconcep (id=1518280316224016455)
+    okay so that is point of confusion for me - is it hermes-webui (port 8787) or the native webui (port 9119)  and I will most definitely follow up later on when I am back up and running if i run into any issues - i have a dedicated mac I'm running this on so trying to ensure i do this cleanly this time. I went through too many iterations the first time around and was down a rabbit hole and why I am starting clean again.
+    [reply to avidfuturist msg=1518279623819923561]
+
+[2026-06-21T15:44:22.101000+00:00] avidfuturist (id=1518280427075407984)
+    This chat is focused on Hermes-webUI on port 8787
+    [reply to jconcep msg=1518280316224016455]
+
+[2026-06-21T15:45:02.031000+00:00] jconcep (id=1518280594553835600)
+    okay perfect - thank you very much and I'll be back in touch if i have any issues once i have everything installed again
+    [reply to avidfuturist msg=1518280427075407984]
+
+[2026-06-21T17:12:34.133000+00:00] avidfuturist (id=1518302623466258544)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and a native desktop app! And with **native iOS app and Android support**! Full setup guide here: https://get-hermes.ai/setup/
+    
+    (Could use feedback and testing of everything from Android, WebUI, desktop apps, and iOS apps, please report any feedback here!)
+
+[2026-06-21T17:24:02.667000+00:00] avidfuturist (id=1518305511387172972)
+    Anyone willing to test the Android app, can you friend or DM me? Need 5 more testers!
+
+[2026-06-21T17:46:22.547000+00:00] mathewsstar (id=1518311131251216544)
+    Hi everyone,
+    As Hermes Web-UI scales and allows us to configure multiple AI providers and dozens of models, the model selection dropdown can become quite cluttered. Currently, switching between models requires a lot of scrolling and searching, which slows down the workflow.
+    I would like to propose a UX improvement: A pinning or favorite system for models and providers.
+    How it could work:
+    Pin Icon: A small star or pin icon next to each model/provider in the settings or dropdown menu.
+    "Favorites" Section: A dedicated, collapsible section at the very top of the selection dropdown displaying only the pinned models.
+    Quick Toggle: The ability to quickly add or remove models from this shortlist.
+    Why this matters:
+    For power users managing extensive configurations, this would drastically reduce scrolling fatigue, eliminate interface clutter, and make switching contexts significantly faster.
+    Would love to hear the community's and developers' thoughts on this!
+    Thanks!
+
+[2026-06-21T17:47:13.741000+00:00] avidfuturist (id=1518311345974546595)
+    Great idea Mathews! I like it, will look to add something like this soon!
+    [reply to mathewsstar msg=1518311131251216544]
+

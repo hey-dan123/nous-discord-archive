@@ -35530,3 +35530,355 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     What are the requirements for the developer role?
     [reply to .osraka msg=1518247822514978927]
 
+[2026-06-21T14:24:10.856000+00:00] thyfriendlyfox (id=1518260247251259445)
+    Hey guys, there's a lot of messages here and I don't want our PR to get lost, but I also don't want to spam the chat
+    So I dm'd brooklyn the PR link. I hope it helps
+    
+    Thanks guys!
+
+[2026-06-21T14:33:35.417000+00:00] teknium (id=1518262615191588874)
+    https://x.com/Teknium/status/2068703654866190605
+    [embed]  https://twitter.com/Teknium/status/2068703654866190605
+
+[2026-06-21T14:33:48.112000+00:00] teknium (id=1518262668438409306)
+    Thanks all <@&1149869525567799297>s!
+
+[2026-06-21T14:34:25.579000+00:00] teknium (id=1518262825586393279)
+    Get a merged PR
+    [reply to .osraka msg=1518247822514978927]
+
+[2026-06-21T14:34:37.793000+00:00] minddragon (id=1518262876815622246)
+    Dude - what we have collectively built is incredible. 1,500 people accomplished a LOT
+
+[2026-06-21T14:34:39.596000+00:00] nour_h (id=1518262884377825450)
+    🔥
+
+[2026-06-21T14:35:02.142000+00:00] davidg1982 (id=1518262978942861362)
+    I would say that Claude.Code accomplished a lot for me 😛
+
+[2026-06-21T14:35:19.465000+00:00] autumnn5389 (id=1518263051600658512)
+    Thats a lot
+    [reply to minddragon msg=1518262876815622246]
+
+[2026-06-21T14:35:36.770000+00:00] floory (id=1518263124182958272)
+    that is a lot of people lul
+
+[2026-06-21T14:35:55.444000+00:00] thyfriendlyfox (id=1518263202507395203)
+    wait
+    
+    I have a developer role?
+    [reply to teknium msg=1518262825586393279]
+
+[2026-06-21T14:36:13.728000+00:00] thyfriendlyfox (id=1518263279196307576)
+    <a:cat_yipee:1125456104579674274>
+
+[2026-06-21T14:36:17.988000+00:00] floory (id=1518263297063780502)
+    congrats
+
+[2026-06-21T14:36:25.679000+00:00] floory (id=1518263329322438807)
+    u have aura now
+
+[2026-06-21T14:36:27.645000+00:00] devorun11 (id=1518263337568178242)
+    https://tenor.com/view/hats-off-j%C3%B3zef-the-hourglass-sanatorium-taking-of-my-hat-greetings-gif-27453787
+    [embed]  https://tenor.com/view/hats-off-j%C3%B3zef-the-hourglass-sanatorium-taking-of-my-hat-greetings-gif-27453787
+    [reply to teknium msg=1518262615191588874]
+
+[2026-06-21T14:36:32.488000+00:00] realadolan (id=1518263357881323710)
+    Speaking of, could you take a look at https://github.com/NousResearch/hermes-agent/pull/49473 and https://github.com/NousResearch/hermes-agent/pull/47911 ? 🙂
+    [embed] feat: add official TickTick support (MCP catalog entry and skill) b... https://github.com/NousResearch/hermes-agent/pull/49473
+    [embed] fix(desktop): tables follow RTL message direction by Adolanium · P... https://github.com/NousResearch/hermes-agent/pull/47911
+    [reply to teknium msg=1518262615191588874]
+
+[2026-06-21T14:38:46.239000+00:00] nuuuuuuuuuu0480 (id=1518263918873542828)
+    https://github.com/NousResearch/hermes-agent/pull/50158
+    [embed] fix(agent): pass max_tokens unconditionally in _build_call_kwargs b... https://github.com/NousResearch/hermes-agent/pull/50158
+
+[2026-06-21T14:39:19.974000+00:00] nuuuuuuuuuu0480 (id=1518264060368523494)
+    I wish I had a DEV role too
+    [reply to teknium msg=1518262615191588874]
+
+[2026-06-21T14:39:48.762000+00:00] elmatador123gh (id=1518264181114142800)
+    I have 3 merged pr, will try more 🫡
+    [reply to teknium msg=1518262825586393279]
+
+[2026-06-21T14:40:18.672000+00:00] nuuuuuuuuuu0480 (id=1518264306565910700)
+    I got 4 merge, lol
+    [reply to elmatador123gh msg=1518264181114142800]
+
+[2026-06-21T14:40:36.174000+00:00] elmatador123gh (id=1518264379974488156)
+    congrats champpp
+    [reply to nuuuuuuuuuu0480 msg=1518264306565910700]
+
+[2026-06-21T14:41:18.125000+00:00] nuuuuuuuuuu0480 (id=1518264555929604096)
+    wao, you got it
+    [reply to elmatador123gh msg=1518264379974488156]
+
+[2026-06-21T14:41:39.915000+00:00] minddragon (id=1518264647323619459)
+    the real honor is being memoralized in history.
+
+[2026-06-21T14:42:04.473000+00:00] thyfriendlyfox (id=1518264750327468144)
+    bently should get a role soon since the only PR i helped with was mcp stuff, cause teknium heard my cries across the web
+    [reply to floory msg=1518263329322438807]
+
+[2026-06-21T14:42:38.269000+00:00] nuuuuuuuuuu0480 (id=1518264892078166056)
+    Congrats on your DEV role!
+    [reply to elmatador123gh msg=1518264379974488156]
+
+[2026-06-21T14:42:42.866000+00:00] elmatador123gh (id=1518264911359381595)
+    yeahh just now,thank you team
+    [reply to nuuuuuuuuuu0480 msg=1518264555929604096]
+
+[2026-06-21T14:42:50.198000+00:00] minddragon (id=1518264942112014367)
+    we are here at the genesis of AI. we are the ones to show the way for the rest of humanity. we few, we brave fortunate souls endured the bleeding edge so that many will have a better future.
+
+[2026-06-21T14:45:30.280000+00:00] lsof (id=1518265613544460418)
+    My second PR, happy with that
+
+[2026-06-21T14:47:01.715000+00:00] egilewski (id=1518265997050646660)
+    I'm not sure if announcing PRs here is the recommended practice, but I really wish more security ones were merged. I don't have strong preferences, any P0 or P1 would be fine. E.g. the latest P0 one (not mine): https://github.com/NousResearch/hermes-agent/pull/47494
+    [embed] fix(security): sandbox tool isolation bypass — distinguish None f... https://github.com/NousResearch/hermes-agent/pull/47494
+
+[2026-06-21T14:48:36.460000+00:00] yap.bi (id=1518266394439848078)
+    I've opened 56 PRs so far  8 closed, 2 merged. Going to keep at it; I really enjoy contributing.
+    [reply to teknium msg=1518262615191588874]
+
+[2026-06-21T14:51:25.534000+00:00] autumnn5389 (id=1518267103587598356)
+    <:catlick:1151260427645366375> <:catlick:1151260427645366375> <:catlick:1151260427645366375> <:catlick:1151260427645366375>
+    [reply to teknium msg=1518262668438409306]
+
+[2026-06-21T14:51:42.775000+00:00] oleegg (id=1518267175901593641)
+    thank you tek 🥹
+    [reply to teknium msg=1518262615191588874]
+
+[2026-06-21T14:52:00.981000+00:00] oleegg (id=1518267252263223306)
+    gettem tek
+
+[2026-06-21T14:52:04.127000+00:00] oleegg (id=1518267265458503700)
+    😭 😭 😭 😭
+
+[2026-06-21T14:52:34.150000+00:00] oleegg (id=1518267391384227941)
+    lets fk'n goooo folks
+
+[2026-06-21T14:52:39.635000+00:00] oleegg (id=1518267414389850122)
+    🚀
+
+[2026-06-21T14:55:27.234000+00:00] nuuuuuuuuuu0480 (id=1518268117351010384)
+    https://github.com/NousResearch/hermes-agent/pull/50189
+    fix(gateway): skip DB/override persist when model switch fails
+    [embed] fix(gateway): skip DB/override persist when model switch fails by v... https://github.com/NousResearch/hermes-agent/pull/50189
+
+[2026-06-21T15:02:13.083000+00:00] yap.bi (id=1518269819604959492)
+    Opened a fix for #50197 — batch_runner.py creates a fresh AIAgent per prompt but 
+    its try/except has no finally, so the agent is never closed. Every prompt leaks 
+    terminal sandboxes, browser daemons, and httpx clients across a batch run. Added a 
+    finally that closes it (best-effort, ephemeral worker so close() is the right call).
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/50206
+    [embed] fix(batch_runner): close the per-prompt agent to release sandboxes/... https://github.com/NousResearch/hermes-agent/pull/50206
+
+[2026-06-21T15:04:41.985000+00:00] srojk34 (id=1518270444145348629)
+    fix(agent): reset summary-failure cooldown on model switch
+    
+    update_model() clears calibration state (#50137) but missed _summary_failure_cooldown_until. When summary generation fails on a local model (600s cooldown) and the user switches to a cloud model, context compression stays suppressed for up to 10 minutes even though the new model can summarize fine. One-line sibling fix in the same function.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/50207
+    [embed] fix(agent): reset summary-failure cooldown on model switch by srojk... https://github.com/NousResearch/hermes-agent/pull/50207
+
+[2026-06-21T15:21:42.051000+00:00] frowtek (id=1518274722612121712)
+    opened two small gateway bug-fix PRs, would appreciate a look when you get a sec <@387972437901312000> 
+    
+    • #50211 — SMS adapter crashed on a malformed SMS_WEBHOOK_PORT; now falls back to the default via env_int like every other platform → https://github.com/NousResearch/hermes-agent/pull/50211
+    • #50212 — MSGRAPH_WEBHOOK_HOST env var was documented but never read, which broke the loopback quickstart; this bridges it into config → https://github.com/NousResearch/hermes-agent/pull/50212
+    [embed] fix(gateway): tolerate malformed SMS_WEBHOOK_PORT via env_int by Fr... https://github.com/NousResearch/hermes-agent/pull/50211
+    [embed] fix(gateway): bridge MSGRAPH_WEBHOOK_HOST env into webhook config b... https://github.com/NousResearch/hermes-agent/pull/50212
+
+[2026-06-21T15:41:07.562000+00:00] wolfgang1425 (id=1518279611119702140)
+    Hi all  First-time contributor here. I've opened three small, focused PRs — all with passing tests, clear descriptions, and minimal diffs. Two are bug fixes that close existing issues. If a maintainer has a moment to approve the CI runs and take a look, I'd really appreciate it, and I'm happy to address any feedback quickly.
+    
+     fix(gateway): harden HERMES_TELEGRAM_FOLLOWUP_GRACE_SECONDS parsing — closes #50120 (P2) A malformed value crashed _handle_message and dropped the inbound Telegram message. Routes the read through the existing _float_env helper, like every other timeout env read. +45/−2, 4 tests. → https://github.com/NousResearch/hermes-agent/pull/50227
+    
+     fix(cli): preserve --source across CLI self-relaunch — closes #45107 --source was dropped on self-relaunch (and on the direct -q path), so sessions were always recorded as cli. Tests cover both paths. → https://github.com/NousResearch/hermes-agent/pull/45157
+    
+     feat(skills): add a hackernews skill — read/search HN from the terminal Stdlib-only, no API key, with tests. → https://github.com/NousResearch/hermes-agent/pull/41585
+    
+    All three are at action_required (waiting on maintainer approval to run CI). Thanks for building Hermes  glad to help keep contributing!
+    [embed] fix(gateway): harden HERMES_TELEGRAM_FOLLOWUP_GRACE_SECONDS parsing... https://github.com/NousResearch/hermes-agent/pull/50227
+    [embed] fix(cli): preserve --source across CLI self-relaunch (#45107) by wo... https://github.com/NousResearch/hermes-agent/pull/45157
+    [embed] feat(skills): add hackernews skill for reading and searching HN by ... https://github.com/NousResearch/hermes-agent/pull/41585
+
+[2026-06-21T16:23:40.869000+00:00] dias4761 (id=1518290320465330227)
+    <@387972437901312000>  fix(desktop): pre-warm hermes_cli.gateway in _lifespan to unblock /api/status on first probe
+    #50231
+    
+    https://github.com/NousResearch/hermes-agent/pull/50231
+    
+    
+    Closes #50209
+    [embed] fix(desktop): pre-warm hermes_cli.gateway in _lifespan to unblock /... https://github.com/NousResearch/hermes-agent/pull/50231
+
+[2026-06-21T16:29:19.717000+00:00] janezeroon (id=1518291741696987257)
+    yes it is. codex can add image for reference as gpt api does and hermes already use codex to image generate already
+    [reply to teknium msg=1518097686488682609]
+
+[2026-06-21T16:29:58.920000+00:00] janezeroon (id=1518291906126417980)
+    because i always use codex for images work
+
+[2026-06-21T16:38:14.070000+00:00] janezeroon (id=1518293982935912631)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1518293982499836085/image.png?ex=6a3964f5&is=6a381375&hm=b32097d416353591ff14bfde806d769b41cf1cda402882474ddeb36cecf09c43&
+
+[2026-06-21T16:38:51.835000+00:00] hedell_kendara (id=1518294141333667994)
+    Hello everyone. Pleased to meet you all. I am new Could someone help me with this. 
+    
+    I'm using Hermes Agent with MCP servers configured in ~/.hermes/config.yaml. Everything works perfectly in CLI mode (hermes chat).
+    
+    However, when I create a session via the API (POST /api/sessions) and chat through /api/sessions/{id}/chat/stream, the MCP tools are not available, even when I specify toolsets: ['mcp'] in the session config.
+    
+    The tools appear in CLI but are missing in API sessions. This suggests:
+    
+    MCP servers are not being loaded/propagated to API sessions.
+    The API session context doesn't inherit the CLI MCP config.
+    Could you confirm if this is a known limitation or if there is a specific way to pass MCP config to API sessions?
+    
+    Thanks!
+
+[2026-06-21T16:58:43.892000+00:00] davidg1982 (id=1518299141183115335)
+    I did a PR for, seems like today, a fringe feature for those using AXI tools.
+    https://github.com/NousResearch/hermes-agent/pull/50258
+    [embed] feat(cli): add AXI Tools section to welcome banner by davidgut1982 ... https://github.com/NousResearch/hermes-agent/pull/50258
+
+[2026-06-21T16:59:24.029000+00:00] davidg1982 (id=1518299309529894983)
+    and people wondering what is AXI? https://axi.md/
+    [embed] AXI: Agent eXperience Interface https://axi.md/
+    [reply to davidg1982 msg=1518299141183115335]
+
+[2026-06-21T17:24:24.432000+00:00] dias4761 (id=1518305602676330659)
+    fix(photon): classify Envoy overflow errors as retryable; add typing cooldown (P1)#50256
+    
+    Closes #50185
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/50256
+    
+    
+    <@387972437901312000>
+    [embed] fix(photon): classify Envoy overflow errors as retryable; add typin... https://github.com/NousResearch/hermes-agent/pull/50256
+
+[2026-06-21T17:44:56.450000+00:00] tiny_th_dev (id=1518310770134356170)
+    <@387972437901312000> Do I need to do anything to get the nostr platform adapter PR considered for merging? I've been keeping it fresh for ~2 months. https://github.com/NousResearch/hermes-agent/pull/16769
+    [embed] feat(gateway): add Nostr NIP-17 private DM platform adapter by unsa... https://github.com/NousResearch/hermes-agent/pull/16769
+
+[2026-06-21T17:59:46.176000+00:00] teknium (id=1518314501915672791)
+    Thats reported on a false premise, we do not want execute code sandboxed
+    [reply to egilewski msg=1518265997050646660]
+
+[2026-06-21T18:00:26.424000+00:00] teknium (id=1518314670728019970)
+    It’s likely not going to be, you should publish a standalone plugin and share it
+    [reply to tiny_th_dev msg=1518310770134356170]
+
+[2026-06-21T18:03:47.243000+00:00] egilewski (id=1518315513024086087)
+    Ah, thank you. I'll try to get GPT to collect information from everywhere and grok the plan.
+    [reply to teknium msg=1518314501915672791]
+
+[2026-06-21T18:09:56.960000+00:00] teknium (id=1518317063729582142)
+    In general, we've been making great progress on P1 Issues this week we should have all cleared out mid next
+    [reply to egilewski msg=1518315513024086087]
+
+[2026-06-21T18:10:16.063000+00:00] tiny_th_dev (id=1518317143853105373)
+    This is the new architecture that I see on main? following `google_chat` ? Should I do that as a new PR, and just close the current, or re-work the current PR?
+    [reply to teknium msg=1518314670728019970]
+
+[2026-06-21T18:11:47.735000+00:00] teknium (id=1518317528353472693)
+    All gateway channels are plugins, but they dont have to be integrated on main, they can be standalone.
+    [reply to tiny_th_dev msg=1518317143853105373]
+
+[2026-06-21T18:11:54.567000+00:00] teknium (id=1518317557008826619)
+    and installable from outside of the core repo
+
+[2026-06-21T18:12:34.296000+00:00] tiny_th_dev (id=1518317723644596256)
+    Thank you for the info/update 👍
+
+[2026-06-21T18:16:10.647000+00:00] egilewski (id=1518318631086329898)
+    I've noticed that many PRs aren't connected to any issues. Do they tend to be based on false premises as well?
+    [reply to teknium msg=1518317063729582142]
+
+[2026-06-21T18:17:38.475000+00:00] teknium (id=1518318999463657492)
+    No idea for any particular ones
+    [reply to egilewski msg=1518318631086329898]
+
+[2026-06-21T18:20:22.856000+00:00] scottermonkey (id=1518319688927674388)
+    Hermes truncates cron output at 4000 chars (cuts the bottom off silently): 
+    MAX_PLATFORM_OUTPUT and TRUNCATED_VISIBLE are hard-coded into `delivery.py`.
+    
+    I created a solution/PR that makes the truncation configurable and adapter-aware so chunking platforms get the full output. Would appreciate eyes/reviews/support: https://github.com/NousResearch/hermes-agent/pull/50145
+    [embed] fix(delivery): configurable + adapter-aware cron output truncation ... https://github.com/NousResearch/hermes-agent/pull/50145
+
+[2026-06-21T18:29:57.516000+00:00] egilewski (id=1518322099226153012)
+    One more question: how freshly updated/rebased should I keep my PRs so your won't need to salvage them?
+    [reply to teknium msg=1518318999463657492]
+
+[2026-06-21T18:39:06.317000+00:00] teknium (id=1518324401064509481)
+    doesnt matter it'll be fine no matter how old 🙂
+    [reply to egilewski msg=1518322099226153012]
+
+[2026-06-21T18:41:18.823000+00:00] dias4761 (id=1518324956834828328)
+    fix(photon): classify Envoy overflow errors as retryable; add typing cooldown
+    #50256
+    
+    Closes #50185
+    <@387972437901312000> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/50256
+    [embed] fix(photon): classify Envoy overflow errors as retryable; add typin... https://github.com/NousResearch/hermes-agent/pull/50256
+
+[2026-06-21T18:49:16.190000+00:00] egilewski (id=1518326959057408070)
+    About that, "I" found a spot I missed after I got a notification about my PR being salvaged, so I added a second commit and commented on both PRs, but you/Hermes missed it in the end: https://github.com/NousResearch/hermes-agent/pull/34466/commits/acee75a842acc02d62a6c6cef5c91421e911bbdd
+    [embed] fix(file): harden read_file device alias blocking by egilewski · P... https://github.com/NousResearch/hermes-agent/pull/34466/commits/acee75a842acc02d62a6c6cef5c91421e911bbdd
+    [reply to teknium msg=1518324401064509481]
+
+[2026-06-21T19:05:26.863000+00:00] maxfreedompollard (id=1518331030354919454)
+    <@387972437901312000>  https://github.com/NousResearch/atropos/pull/479
+    [embed] Stop parse_tool_call from corrupting JSON tool calls that contain a... https://github.com/NousResearch/atropos/pull/479
+
+[2026-06-21T19:07:07.273000+00:00] teknium (id=1518331451504984146)
+    Atropos is defunct now, I think the post training team moved to NemoGym
+    [reply to maxfreedompollard msg=1518331030354919454]
+
+[2026-06-21T19:07:20.448000+00:00] teknium (id=1518331506764943390)
+    <@250106875281014784> can address when he's available
+
+[2026-06-21T19:07:29.266000+00:00] maxfreedompollard (id=1518331543750185171)
+    SON OF A ya ok I should have checked
+    [reply to teknium msg=1518331451504984146]
+
+[2026-06-21T19:07:48.471000+00:00] teknium (id=1518331624302051521)
+    If he has moved on I would recommend he puts something about the repo no longer being maintained 🙃
+
+[2026-06-21T19:07:49.792000+00:00] maxfreedompollard (id=1518331629842726912)
+    Fair fair. No, I only wanted to contribute because it was NOUS lol ngl
+
+[2026-06-21T19:08:01.798000+00:00] teknium (id=1518331680199278622)
+    appreciate it <:salute:1072217852385435768>
+
+[2026-06-21T19:18:41.906000+00:00] devorun11 (id=1518334365006958744)
+    The email adapter used the IMAP/SMTP host straight from env vars without stripping it and ignored config.extra, so a whitespace-padded or config-only host hit IMAP4_SSL("") and failed with the misleading [Errno 8] nodename nor servname. 
+    Fix: resolve host from env config.extra with whitespace stripped, and validate in connect() with a clear error instead of attempting an empty-host connection  
+    
+    no Duplicate 
+    
+    https://github.com/NousResearch/hermes-agent/pull/49805
+    [embed] fix(email): resolve IMAP/SMTP host from config and validate before ... https://github.com/NousResearch/hermes-agent/pull/49805
+
+[2026-06-21T19:20:31.300000+00:00] alelpoan (id=1518334823838519456)
+    Addressed all feedback from PR #47150:
+    - fixed file paths to src/app/, 
+    - corrected registry order, added billing.ts, and fully replaced the File map with a verified tree. 
+    Sorry for the oversight <@387972437901312000> . 🫡 
+    
+    New PR: https://github.com/NousResearch/hermes-agent/pull/50347
+    [embed] docs(ui-tui): fix file paths, add billing command, and expand File ... https://github.com/NousResearch/hermes-agent/pull/50347
+    [reply to alelpoan msg=1516385335964209163]
+
+[2026-06-21T19:22:28.180000+00:00] drexux (id=1518335314069028995)
+    Opened a PR fixing a multi profile bug  Desktop session search only searched the default profile, so conversations in other profiles showed in recents but couldn't be found in search. Now it searches across all profiles. Ready for review https://github.com/NousResearch/hermes-agent/pull/50340 P3
+    [embed] fix(desktop): search sessions across all profiles, not just the def... https://github.com/NousResearch/hermes-agent/pull/50340
+

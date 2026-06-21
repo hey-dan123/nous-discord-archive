@@ -1,0 +1,28 @@
+# Thread 'Hermes Desktop — mod pack + custom theme (Veritas) 🌌' in forum #plugins-skills-and-skins
+# thread_id=1518328533963903066 forum_id=1485392832154832906
+# Started 2026-06-21T19:31:28.497669+00:00
+
+[2026-06-21T18:55:31.677000+00:00] wise_mind (id=1518328533963903066)
+    Hi, all,
+    
+    A handful of mods I run on **Hermes Desktop** to make it faster, smoother, and customizer it to my liking. 
+    ***This isn't a mod list, it's a feature list***
+    
+    ## 🎙️ Improved Conversation Mode - 
+    - **Configrable conversation mode LLM** — configurable model   (e.g. a fast local one) + switch between the regular LLM (Herme's model) and the voice one, then snap back to your normal model when you're done. Chat history carries over either way. Included optimizations for speed to make sure it's always real-time, for as little resources as possible.
+    - **Local voice model** — Kokoro, which is customizable and lightweight - no need to pay for API/subscription either.
+    
+    *With a fully local setup voice mode completely free!
+    
+    ## 🎨 Visual customization
+    - **Themes without rebuilding** — Custom themes you set up just show up as selectable options — no technical hoops.
+    - **Rebrand = matching look** — When you rebrand your agent using `hermes --reband` — ***additional skill/command*** (CLI) to ***be released later***, the desktop app automatically dresses up to match.
+    - **Build a theme in the app** — A theme editor right in Settings: tweak colors as you like, or just describe the vibe you want and let it draft one, then save and use it instantly.
+    - **"Veritas" — my cosmic theme** *(WIP, in the screenshot)*, based on my agent's SOUL.md, which serves as a source of truth for rebranding (looks match personality)
+    
+    ## 🪟 Quality of Life
+    - **Scroll wheel Zoom** — `ctrl`+`scroll wheel` in addition to the keyboard zoom
+    
+    Full mod list and what each one does will be published when the mods are published -
+    This is still WIP so if you want early access before the first release let me know 🙂
+
