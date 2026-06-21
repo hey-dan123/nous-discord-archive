@@ -873,3 +873,21 @@
     Point it at your local router (or a remote Hugging Face Space). Requires VS Code ≥ 1.104 + the Copilot Chat extension. Source: vscode-extension/. Feedback very welcome!
     [embed] hermes-router - Visual Studio Marketplace https://marketplace.visualstudio.com/items?itemName=MohammedShafiq.hermes-router
 
+[2026-06-21T05:21:14.781000+00:00] shaf_2665 (id=1518123613289709598)
+    # 🐳 hermes-router is now on Docker Hub — run it in one line
+    
+    No clone, no build. Multi-arch (amd64 + arm64), so it runs anywhere — VPS, cloud, Apple Silicon:
+    
+    
+    `docker run -d -p 8319:8319 \
+      -e GEMINI_API_KEYS=your-key \
+      -e PROXY_API_KEYS=choose-a-secret \
+      shafiq735/hermes-router`
+    Add more `-e <PROVIDER>_API_KEYS=…` for extra providers, then hit http://localhost:8319/health. A full free-tier load balancer up in seconds.
+    
+    ☁️ Hosting on Hugging Face? It's a Docker Space too — point your Space at the image, set app_port: 8319 in the README, and put your keys in Settings → Secrets (plus ROUTER_STATE_FILE=/tmp/router_state.json). 
+    Full guide: https://hermes-router.vercel.app/deployment/
+    
+    🔗 https://hub.docker.com/r/shafiq735/hermes-router
+    [embed] Deployment https://hermes-router.vercel.app/deployment/
+

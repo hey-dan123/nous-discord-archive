@@ -15,3 +15,6 @@
     [attachment] Fz4Mn9taQAEDTGS.jpg https://cdn.discordapp.com/attachments/1511739394674135232/1511739395139571732/Fz4Mn9taQAEDTGS.jpg?ex=6a218c86&is=6a203b06&hm=c101c0439df76146eb3c57340438e54d7ad8eb1eff1d89f3b0ad226a97f45c57&
     [embed] GitHub - MahdiHedhli/hermes-omnivoice-studio-bridge: Hermes command... https://github.com/MahdiHedhli/hermes-omnivoice-studio-bridge
 
+[2026-06-21T06:04:56.416000+00:00] capslock.b (id=1518134609223749774)
+    <@406092441892945920> Hey dont wanna sound promotional but i fw what you're makin and think you might like some of the projects ive got they're in your lane of what you built 🙂
+

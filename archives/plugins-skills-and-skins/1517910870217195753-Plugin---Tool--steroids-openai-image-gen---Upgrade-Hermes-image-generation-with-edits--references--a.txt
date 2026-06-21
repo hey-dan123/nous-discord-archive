@@ -25,3 +25,8 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1517910870217195753/1517911187742785648/image.png?ex=6a380074&is=6a36aef4&hm=3ca4ba3dbf05e426e3bffdc81e429c637dc459cbb54ff99fb15eccadff8c9083&
     [embed] GitHub - eve-ai-dev/steroids-openai-image-gen: Hermes image generat... https://github.com/eve-ai-dev/steroids-openai-image-gen
 
+[2026-06-21T09:38:33.317000+00:00] heeervas (id=1518188367202877470)
+    Now supports image_gen_background creation
+    
+    So you can ask it to run several images in parallel
+

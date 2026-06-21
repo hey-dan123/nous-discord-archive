@@ -40,3 +40,12 @@
 [2026-06-19T20:43:54.965000+00:00] bowtiedbernard (id=1517631034999570593)
     If I find anything more I'll PR it
 
+[2026-06-21T04:50:11.638000+00:00] bowtiedbernard (id=1518115798701310054)
+    <@584113584380969020> you might want to look into how aphrodite interacts with hermes background reviewer, it was showing some failures that led me down a false path. The reviewer was trying to access but was getting denied. Not necessarily a problem but creates noise that confused my agent until codex and I dissected
+
+[2026-06-21T04:50:31.314000+00:00] bowtiedbernard (id=1518115881228435516)
+    It shouldn't need access to those tool outputs, but it was checking them anyway
+
+[2026-06-21T04:50:43.592000+00:00] bowtiedbernard (id=1518115932726235229)
+    "harmless policy denials, not degradation or data loss"
+

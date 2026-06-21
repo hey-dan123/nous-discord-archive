@@ -4291,3 +4291,17 @@
 [2026-06-20T22:10:30.142000+00:00] avidfuturist (id=1518015213016977449)
     Anyone willing to test the Android app, can you friend or DM me? Need more testers!
 
+[2026-06-21T05:34:47.732000+00:00] realadolan (id=1518127023053213858)
+    Sent to you a DM. I have both iPhone and Android so I can test it
+
+[2026-06-21T06:32:13.222000+00:00] avidfuturist (id=1518141474485571604)
+    Thanks!
+    [reply to realadolan msg=1518127023053213858]
+
+[2026-06-21T07:29:25.891000+00:00] avidfuturist (id=1518155872143015946)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and a native desktop app! And with **native iOS app and Android support**! Full setup guide here: https://get-hermes.ai/setup/
+    
+    (Could use feedback and testing of everything from Android, WebUI, desktop apps, and iOS apps, please report any feedback here!)
+

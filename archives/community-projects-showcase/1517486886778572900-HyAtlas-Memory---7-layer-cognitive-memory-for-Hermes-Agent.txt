@@ -61,3 +61,19 @@
 [2026-06-20T14:16:06.735000+00:00] tunacookie (id=1517895828835012849)
     [attachment] content.png https://cdn.discordapp.com/attachments/1517486886778572900/1517895828524503040/content.png?ex=6a37f226&is=6a36a0a6&hm=c4c1048781039d7bd33c3a66be0562c946e3e25355aa9b6de0d5b9b5c7dfa6d1&
 
+[2026-06-21T08:00:09.535000+00:00] oabdulnaby (id=1518163604946419793)
+    Will test it out and tell you my feedback bro!
+
+[2026-06-21T08:02:01.920000+00:00] tunacookie (id=1518164076323147796)
+    warning its not exactly fully functional im pushing patches that could be problems right now
+    [reply to oabdulnaby msg=1518163604946419793]
+
+[2026-06-21T08:02:26.045000+00:00] tunacookie (id=1518164177510731959)
+    but can ask your hermes to fix it probably for now
+
+[2026-06-21T08:03:02.827000+00:00] tunacookie (id=1518164331785883718)
+    nothing crazy that should affect your hermes since its a totally seperate Plugin, made it in a way that  it just a plug and play kinda thing and works alongside hermes
+
+[2026-06-21T08:33:36.642000+00:00] tunacookie (id=1518172023363211385)
+    any issues / pr's would be very appreciated <:chingy1Hamstersad:1320028465982079026>
+

@@ -1463,3 +1463,42 @@
 [2026-06-20T22:58:32.817000+00:00] tunacookie (id=1518027303832129698)
     i wonder how would one reduce the lag once it reaches 1000+ turns <:pepe_think:1151261558043848785> or  is creating a new session the only way <@209037396983939072> ?
 
+[2026-06-21T05:46:08.354000+00:00] capslock.b (id=1518129877788659762)
+    <@209037396983939072> You're the goat; question, any command available to obtain more animations? or could you point me to the right way?  thanks a bunch
+
+[2026-06-21T06:49:11.880000+00:00] liftaris (id=1518145747046891520)
+    hmm I assume hermes cli/tui doesn't lag in the same session, yeah? if it's herm specific I'll tackle that when I do a performance pass
+    [reply to tunacookie msg=1518027303832129698]
+
+[2026-06-21T06:49:40.754000+00:00] tunacookie (id=1518145868153487360)
+    im not sure if it doesnt lag on hermes
+    [reply to liftaris msg=1518145747046891520]
+
+[2026-06-21T06:49:47.417000+00:00] tunacookie (id=1518145896100139039)
+    let me load one and see if scrolling lags
+
+[2026-06-21T06:50:24.154000+00:00] tunacookie (id=1518146050186018826)
+    hm they dont lag on resume because they summarize everything so hard to say... how it would be like on long sessions
+
+[2026-06-21T06:51:36.679000+00:00] liftaris (id=1518146354378047570)
+    in the newest version 1.9 there is an eikon catalog in the Eikon tab, though not many animations to choose from. this is the current list, one of them is curtesy of <@221727702992945152> 
+    https://eikon.liftaris.dev/
+    [reply to capslock.b msg=1518129877788659762]
+
+[2026-06-21T06:52:09.696000+00:00] tunacookie (id=1518146492861255741)
+    nvm resumed a 900 msg turn and it doesnt lag yes
+
+[2026-06-21T06:52:25.015000+00:00] tunacookie (id=1518146557113798798)
+    hermes --tui
+
+[2026-06-21T06:52:34.371000+00:00] tunacookie (id=1518146596355702915)
+    the hermes cli is summarised
+
+[2026-06-21T06:53:48.787000+00:00] liftaris (id=1518146908479295578)
+    there's probably a low lift solution, I'll put it on my list of things to check tomorrow. I haven't stress tested too much on large sessions
+
+[2026-06-21T07:00:38.607000+00:00] tunacookie (id=1518148627388960788)
+    nvm i thnk both lags just herm tui a little "less" laggy but i guess thats expected it holds less, might just be a pc issue probably lmao i need more pc rams im only on 32 gb
+    [attachment] 2026-06-21_15-00-03.mp4 https://cdn.discordapp.com/attachments/1498955668311248948/1518148626843570307/2026-06-21_15-00-03.mp4?ex=6a38dd96&is=6a378c16&hm=a22735621f26b6efa0ea57d0eeecc3c44887d8b0f16106ec9d3571ca214bd6a2&
+    [reply to liftaris msg=1518146908479295578]
+

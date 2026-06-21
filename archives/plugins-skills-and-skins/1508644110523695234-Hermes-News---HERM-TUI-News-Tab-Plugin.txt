@@ -9,3 +9,6 @@
 [2026-05-26T02:00:10.227000+00:00] excessivelysalty (id=1508650926376751186)
     Oh that's really cool!  I know there's a blogwatcher skill that's built in with Hermes, I wonder if that could be hooked up to a herm tab, and then you could have it track *any* feed that blogwatcher watches.
 
+[2026-06-21T06:17:57.915000+00:00] capslock.b (id=1518137887068131460)
+    <@176135812948164608> holy shit can u send me that avatar
+

@@ -1,0 +1,36 @@
+# Thread 'Hermes Bible Skill' in forum #plugins-skills-and-skins
+# thread_id=1518156858869940224 forum_id=1485392832154832906
+# Started 2026-06-21T09:50:43.345209+00:00
+
+[2026-06-21T07:33:21.145000+00:00] dadmin88 (id=1518156858869940224)
+    📖 **Hermes Bible — Community Knowledge Base Skill**
+    
+    Shoutout to <@1453594507818959015> for building The Hermes Bible — 169 pages of community documentation for Hermes Agent. I packaged it into a skill so it loads right into your agent's context.
+    
+    **What's inside:**
+    • 169 pages covering flows, features, patterns, and real-world usage
+    • 25+ battle-tested workflows with practical examples
+    • Hidden Hermes features you won't find in the official docs
+    • SOUL.md patterns and operating contract templates
+    • Intent-based routing — the skill figures out which resource you need
+    
+    **The hermes-complete bundle** is the standout — one command loads both the official Hermes docs AND this community bible together, with smart instructions on when to use which source.
+    
+    **Install:**
+    
+    `hermes skills install https://github.com/DeployFaith/hermes-bible-skill` 
+    
+    Github: https://github.com/DeployFaith/hermes-bible-skill
+    [attachment] grok_01_hero.jpg https://cdn.discordapp.com/attachments/1518156858869940224/1518156859335380992/grok_01_hero.jpg?ex=6a38e541&is=6a3793c1&hm=2034a607bfddd7718d533ecb05980a51f30e7c3502ba61fe4b39e6c3143a5094&
+    [attachment] grok_03_bundle.jpg https://cdn.discordapp.com/attachments/1518156858869940224/1518156860799189065/grok_03_bundle.jpg?ex=6a38e541&is=6a3793c1&hm=50feb2538fe2dcf2d9ec2eb3592dcad812eb51fbd15bbbff12b5e9abbe718a22&
+    [attachment] grok_04_install.jpg https://cdn.discordapp.com/attachments/1518156858869940224/1518156861570814022/grok_04_install.jpg?ex=6a38e541&is=6a3793c1&hm=9f150924e0b3f6d97b3a262b7f7eea1ca0b6b4982199c846353708d2079cd48f&
+    [attachment] grok_05_community.jpg https://cdn.discordapp.com/attachments/1518156858869940224/1518156862049226852/grok_05_community.jpg?ex=6a38e541&is=6a3793c1&hm=0df2e387d1fb2a9756eb3af9967efc6af14d3200b918abb6c3111d9a21ebfd8c&
+    [embed] GitHub - DeployFaith/hermes-bible-skill: Community knowledge base s... https://github.com/DeployFaith/hermes-bible-skill
+
+[2026-06-21T08:41:38.664000+00:00] michaelgaio (id=1518174045110010006)
+    How often does the documentation update?
+
+[2026-06-21T08:59:50.543000+00:00] dadmin88 (id=1518178624782729296)
+    The skill has a self-updater that runs weekly. It fetches the latest llms.txt from hermesbible.com, diffs against the current reference files, and auto-commits any new docs or flows to the repo. So as the Hermes Bible grows, the skill stays current automatically.
+    [reply to michaelgaio msg=1518174045110010006]
+

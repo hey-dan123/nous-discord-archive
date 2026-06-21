@@ -35404,3 +35404,39 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I couldnt get it to it seemed like it didnt allow it, are you sure it does?
     [reply to janezeroon msg=1518071998918430832]
 
+[2026-06-21T04:12:09.914000+00:00] bbcrypto0 (id=1518106228457345055)
+    Nice to see one of my Hermes docs contributions included in the second docs-backlog salvage cluster.
+    
+    My `ELEVENLABS_API_KEY` placeholder fix was validated and cherry-picked into PR #49944 with authorship preserved under `BBCrypto-web`.
+    
+    Small fix, but I’m happy to keep contributing and helping clean up docs/config consistency where I can.
+    
+    https://github.com/NousResearch/hermes-agent/pull/49944
+    [embed] docs: salvage 28 validated docs PRs from the older backlog (cluster... https://github.com/NousResearch/hermes-agent/pull/49944
+
+[2026-06-21T04:57:01.744000+00:00] dias4761 (id=1518117518810677309)
+    <@387972437901312000>  fix(composer): prevent maximum call stack exceeded loop when pasting screenshot
+    #49973
+    https://github.com/NousResearch/hermes-agent/pull/49973
+    
+    Fixes #47117.
+    [embed] fix(composer): prevent maximum call stack exceeded loop when pastin... https://github.com/NousResearch/hermes-agent/pull/49973
+
+[2026-06-21T08:16:32.492000+00:00] nuuuuuuuuuu0480 (id=1518167727766765618)
+    https://github.com/NousResearch/hermes-agent/pull/50050
+    [embed] fix(config): use is_truthy_value for boolean config coercion across... https://github.com/NousResearch/hermes-agent/pull/50050
+
+[2026-06-21T08:28:29.414000+00:00] icather_98107 (id=1518170734755577866)
+    `uv venv` (no args) defaults to `.venv/` on every platform — but this only matters on Windows because quarantine + concurrent-instance detection are the two call-sites that rely on `_venv_scripts_dir()`. On Linux/macOS both functions short-circuit at `_is_windows()`, so the `.venv` naming bug is invisible there. It only surfaces on the one platform where the detection is actually needed. The `sys.prefix` fallback closes this regardless of how the venv was created or named.
+    [reply to teknium msg=1517937034130362550]
+
+[2026-06-21T09:38:25.744000+00:00] devrx9 (id=1518188335439413288)
+    hello may  i know what's mean that "Thunder" icon for?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1518188334592168037/image.png?ex=6a390291&is=6a37b111&hm=f57eb450617894d96c34629c78841bc3f9b917529974d769c17c5757e052a2dd&
+
+[2026-06-21T09:42:59.712000+00:00] srojk34 (id=1518189484544622713)
+    PR #50092 — Two remaining call sites in the priority handler still used merge_text=True, newline-joining consecutive text messages into a single turn and destroying message boundaries. Sibling of #49776 — applied the same FIFO fix to the Telegram follow-up grace window and the agent-pending sentinel path.
+    
+    https://github.com/NousResearch/hermes-agent/pull/49475
+    [embed] fix(gateway): silence matrix check_fn credential-check log spam by ... https://github.com/NousResearch/hermes-agent/pull/49475
+

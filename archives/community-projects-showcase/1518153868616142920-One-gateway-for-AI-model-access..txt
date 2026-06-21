@@ -1,0 +1,15 @@
+# Thread 'One gateway for AI model access.' in forum #community-projects-showcase
+# thread_id=1518153868616142920 forum_id=1316137596535177246
+# Started 2026-06-21T09:46:38.772758+00:00
+
+[2026-06-21T07:21:28.213000+00:00] nodenetwork (id=1518153868616142920)
+    Connect to AI models through one developer-friendly API gateway.
+    
+    Built for developers and teams that need reliable access to commercial and enterprise-grade model APIs.
+    
+    Use ❄️ Credit for on-demand access and pay only for actual usage, without starting from a subscription plan.
+    
+    https://nodenetwork.ovh/
+    [attachment] Screenshot_2026-06-21_14-20-39.png https://cdn.discordapp.com/attachments/1518153868616142920/1518153870319292456/Screenshot_2026-06-21_14-20-39.png?ex=6a38e278&is=6a3790f8&hm=71a5b99fb5c471ec6cb84f4c383e3bda1eebe3ad2806f92e66c1e237358d7bba&
+    [embed] NodeClaw Platform — AI gateway, PAYG access, docs, and control plane https://nodenetwork.ovh/
+

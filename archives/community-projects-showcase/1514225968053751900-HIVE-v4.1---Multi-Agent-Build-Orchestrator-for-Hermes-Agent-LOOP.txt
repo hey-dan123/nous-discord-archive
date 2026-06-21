@@ -45,3 +45,6 @@
     Looking for early feedback — especially on the pipeline design and the iteration loop behavior.<:catlick:1151260427645366375>
     [embed] GitHub - Ebonyhtx/Hermes-Hive: HIVE is a multi-agent orchestration ... https://github.com/Ebonyhtx/Hermes-Hive
 
+[2026-06-21T05:48:51.150000+00:00] capslock.b (id=1518130560604700712)
+    <@952730188083523584> hey interesting project u got here; literally building something very similar from over here, this uses its own sovereign agent loop or does it actually use hermes' agent loop? wanna implement this
+
