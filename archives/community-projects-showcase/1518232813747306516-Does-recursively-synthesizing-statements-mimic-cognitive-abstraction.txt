@@ -1,0 +1,90 @@
+# Thread 'Does recursively synthesizing statements mimic cognitive abstraction?' in forum #community-projects-showcase
+# thread_id=1518232813747306516 forum_id=1316137596535177246
+# Started 2026-06-21T14:05:28.409245+00:00
+
+[2026-06-21T12:35:10.199000+00:00] lea_fia (id=1518232813747306516)
+    A very primitive and simplistic experiment that examined whether a recursive system that combines the results of dialectics looks like abstraction.
+    
+    Qwen3:8B was used because tokens are expensive and I wanted to run locally on my potato
+    
+    Qwen was given a philosophical question and asked to derive a thesis. Then called again with this thesis to derive an anti-thesis. And finally once more to derive a synthesis of the dialectic.
+    
+    Example:
+    
+        {
+            "question": "Is mathematics discovered or invented?",
+    
+            "thesis": "Mathematics is discovered, as its truths exist independently of human thought, even though the language and systems are human inventions.",
+    
+            "antithesis": "Mathematics is invented, as its structures and truths are human constructs shaped by cognitive processes and cultural contexts, not inherent in the universe.",
+    
+            "synthesis": "Mathematics blends discovery and invention: its abstract truths exist independently of human thought, yet its language, symbols, and systems are human constructs shaped by cognition, culture, and context."
+        }
+    
+    Note: Better models do generate far prettier synthesis statements. Below is a result from Hermes-4-405B:
+    
+    "Mathematical structures possess independent coherence that human cognition approximates through formal systems. Truths exist as latent patterns in abstract relational spaces, discoverable but not created by intellect."
+    
+    After 10 of these statements were generated, they were picked pairwise and fed back to qwen with the prompt:
+    
+        Find the deepest common principle
+        that explains both syntheses.
+    
+        Avoid merely combining the topics.
+    
+        Seek a more abstract idea.
+    
+        Return one concise synthesis.
+    
+    and then recursively combined to form a 'root' statement that hopefully compresses the insight from previous statements.
+    
+    Problems:
+    Sometimes qwen would generate an overly compatible thesis
+    Sometimes qwen would generate a nothing burger of a synthesis
+    Sometimes qwen was a bit stupid
+
+[2026-06-21T12:35:29.938000+00:00] lea_fia (id=1518232896538673292)
+    Results:
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1518232813747306516/1518232896014389248/message.txt?ex=6a392c11&is=6a37da91&hm=99c85710fa4a93ff769e015d153426f972d9ce73e04e830e453d10a1a54cc96d&
+
+[2026-06-21T12:37:43.745000+00:00] lea_fia (id=1518233457766043790)
+    As a side note, Hermes-4-405B was not only able to generate the synthesis:
+    
+    "Mathematical structures possess independent coherence that human cognition approximates through formal systems. Truths exist as latent patterns in abstract relational spaces, discoverable but not created by intellect."
+    
+    but also able to abstract the insight into a framework:
+    
+    **Target**: Mathematical Platonism vs. Formalism  
+    **Abstracted Framework**:  
+    "The Dichotomy Synthesis Template"  
+    - **Layer 1 (Transcendent)**: Invariant patterns  
+    - **Layer 2 (Construct)**: Human systems to access Layer 1  
+    - **Synthesis**: Layer 2 evolves to better approximate Layer 1, but neither creates nor fully contains it.  
+    
+    and apply this to art and morality:
+    
+    **Thesis**: "Art expresses universal human truths (Layer 1)"  
+    **Antithesis**: "Art is culturally constructed symbolism (Layer 2)"  
+    —does the following resolution demonstrate true abstraction?  
+    *"Artworks give form to transcendent human experiences (Layer 1) using culturally bounded mediums (Layer 2). New artistic movements emerge when mediums evolve to capture previously ineffable aspects of Layer 1."*  
+    
+    
+    ### Refined Synthesis (Morality):  
+    **Core Insight**:  
+    Transcendent principles (e.g., "minimize suffering") exist as objective value-truths, but human societies *instantiate* them through culturally relative practices (e.g., Buddhist vs. utilitarian approaches to suffering). Divine commands are culturally specific instantiations mistaken for the principles themselves.
+
+[2026-06-21T12:41:43.576000+00:00] lea_fia (id=1518234463690035341)
+    The potential application would be to model synthesis statements and higher order synthesis statements as a graph that essentially encapsulated the abstraction a model has done on observations/statements/facts/truths whatever you wanna call it.
+    
+    Then the question becomes would there be a helpful way of using this data as a framework for a model to contextualize a problem / prompt based on its 'knowledge' -> could it then extrapolate and solve problems it hadn't been trained on?
+
+[2026-06-21T12:44:20.457000+00:00] lea_fia (id=1518235121696637049)
+    So then does this resemble abstraction?
+
+[2026-06-21T12:44:25.813000+00:00] lea_fia (id=1518235144161591457)
+    https://klipy.com/gifs/i-dont-know-idk-99
+    [embed] Elmo I Don't Know Idk https://klipy.com/gifs/i-dont-know-idk-99
+
+[2026-06-21T13:04:11.150000+00:00] lea_fia (id=1518240115825180854)
+    But if it looked similar enough, you could theoretically chuck a model in with Atropos, develop a 'knowledge' graph, perform recursive consolidation on the knowledge until abstract principles are formed and then maybe when the model attempts to extrapolate and solve problems it hasn't been trained on, the symbolic knowledge graph can inform it in a way that means the answer isn't a complete hallucination
+

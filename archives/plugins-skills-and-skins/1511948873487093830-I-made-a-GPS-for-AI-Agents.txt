@@ -26,3 +26,6 @@
 [2026-06-18T18:15:34.201000+00:00] jimpickens3203 (id=1517231314623926456)
     So you didn't make a GPS? Would have been cool if you made an actual GPS for the road
 
+[2026-06-21T11:27:10.258000+00:00] gd03champ (id=1518215701234716843)
+    Doest hermes append skill index to sympromt already?
+

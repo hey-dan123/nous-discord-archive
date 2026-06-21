@@ -12,3 +12,8 @@
 [2026-06-21T06:17:57.915000+00:00] capslock.b (id=1518137887068131460)
     <@176135812948164608> holy shit can u send me that avatar
 
+[2026-06-21T12:00:31.080000+00:00] nat2r (id=1518224093290299463)
+    https://github.com/nsheusi/HERM-Death
+    [embed] GitHub - nsheusi/HERM-Death: Death of the Endless HERM Video Files https://github.com/nsheusi/HERM-Death
+    [reply to capslock.b msg=1518137887068131460]
+

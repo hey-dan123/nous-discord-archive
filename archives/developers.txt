@@ -35440,3 +35440,93 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/49475
     [embed] fix(gateway): silence matrix check_fn credential-check log spam by ... https://github.com/NousResearch/hermes-agent/pull/49475
 
+[2026-06-21T10:10:03.946000+00:00] srojk34 (id=1518196297075785729)
+    PR #50098 — Hygiene auto-compress guard reads the config flag (compression_in_place) instead of the result flag (_last_compaction_in_place). Since the hygiene agent has no session_db, in-place compaction always fails silently — but the config flag still says True, so the guard triggers rewrite_transcript() and permanently replaces the original messages with only the summary. One-character fix for a data loss bug introduced in #49925.
+    
+    https://github.com/NousResearch/hermes-agent/pull/50098
+    [embed] fix(gateway): read compaction result flag instead of config flag in... https://github.com/NousResearch/hermes-agent/pull/50098
+
+[2026-06-21T10:45:50.385000+00:00] tunacookie (id=1518205299893342360)
+    https://github.com/NousResearch/hermes-agent/pull/49539 
+    
+    Please add <:Prayge:1151275585000185968>  i keep going into compression hell when i forget that the model im changing to has lower context, just a little warning no big blocks <:chingy1Hamstersad:1320028465982079026>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1518205300082081902/image.png?ex=6a39125e&is=6a37c0de&hm=bea21c2125c10c0eda6aa0ddd1a1221c97799493ba62d55aa988f10d77d97ffc&
+    [embed] fix(cli): warn when in-session model switch will preflight-compress... https://github.com/NousResearch/hermes-agent/pull/49539
+
+[2026-06-21T10:47:31.864000+00:00] kxee (id=1518205725526986774)
+    reviewing rn, good call
+    [reply to tunacookie msg=1518205299893342360]
+
+[2026-06-21T10:48:13.210000+00:00] tunacookie (id=1518205898944938024)
+    Yes it needs to be reviewed i just noticed the warning that shows up is not accurate
+    [reply to kxee msg=1518205725526986774]
+
+[2026-06-21T10:48:26.019000+00:00] tunacookie (id=1518205952669782097)
+    But it does warn
+
+[2026-06-21T11:48:31.017000+00:00] kxee (id=1518221073127309443)
+    merged
+    [reply to tunacookie msg=1518205299893342360]
+
+[2026-06-21T11:49:25.362000+00:00] tunacookie (id=1518221301066633378)
+    Thank you 😘
+
+[2026-06-21T12:01:48.236000+00:00] inuyasha44_88990 (id=1518224416905891891)
+    Did you merge that branch we did?
+    [reply to kxee msg=1518205725526986774]
+
+[2026-06-21T12:02:19.827000+00:00] kxee (id=1518224549408276592)
+    which one
+    [reply to inuyasha44_88990 msg=1518224416905891891]
+
+[2026-06-21T12:05:59.530000+00:00] dias4761 (id=1518225470909583480)
+    <@690519146701783042>  https://github.com/NousResearch/hermes-agent/pull/48852
+    [embed] fix(gateway): resolve watchdog, env override, and proxy routing on ... https://github.com/NousResearch/hermes-agent/pull/48852
+
+[2026-06-21T12:09:16.028000+00:00] dias4761 (id=1518226295081795655)
+    https://github.com/NousResearch/hermes-agent/pull/48937
+    [embed] fix(gateway): harden Windows watchdog, env-override, and proxy rout... https://github.com/NousResearch/hermes-agent/pull/48937
+    [reply to kxee msg=1518224549408276592]
+
+[2026-06-21T12:42:57.130000+00:00] dias4761 (id=1518234772197871616)
+    <@690519146701783042>  when u can , try check this branch
+    [reply to kxee msg=1518224549408276592]
+
+[2026-06-21T13:04:58.048000+00:00] theoveo (id=1518240312529649706)
+    Hey  <@387972437901312000> -> quick heads-up on https://github.com/NousResearch/hermes-agent/pull/24271.
+    
+    I rebased and realigned it on current main after the recent gateway restart notification changes.
+    
+    Context: this PR intentionally builds on my earlier gateway restart/thread-targeting work from #18440, which you salvaged and merged through #19271. That merged work fixed the `/restart` lifecycle path and thread/topic preservation.
+    
+    The remaining gap this PR targets is narrower: when the gateway comes up from a normal process start — Docker restart, systemd restart, host reboot, update, or crash recovery — there is no `/restart` marker, so operators can’t get a home-channel “Gateway online” signal.
+    
+    The updated version keeps that behavior opt-in via `gateway_startup_notification` / `GATEWAY_STARTUP_NOTIFICATION`, defaulting to false to avoid noisy cold-start pings. It also preserves the newer main-branch semantics: chat-originated `/restart` stays routed to the precise originating chat/topic and does not get an extra generic home-channel broadcast.
+    
+    Would appreciate a review when you have a chance — I think this closes the remaining “gateway is back online after cold/process start” visibility gap without changing default behavior.
+    [embed] Build software better, together https://github.com/NousResearch/hermes-agent/pull/24271.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/24271.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/24271.
+
+[2026-06-21T13:11:00.230000+00:00] shilird. (id=1518241831630930090)
+    patient bro,kkk
+    [reply to dias4761 msg=1518234772197871616]
+
+[2026-06-21T13:23:38.027000+00:00] .osraka (id=1518245010062053516)
+    Hey
+
+[2026-06-21T13:28:04.762000+00:00] scottermonkey (id=1518246128829599764)
+    Hermes truncates cron output at 4000 chars (cuts the bottom off silently): 
+    
+    MAX_PLATFORM_OUTPUT and TRUNCATED_VISIBLE are hard-coded into `delivery.py`.
+    
+    I created a solution/PR that makes the truncation configurable and adapter-aware so chunking platforms get the full output. Would appreciate eyes/reviews/support: https://github.com/NousResearch/hermes-agent/pull/50145
+    [embed] fix(delivery): configurable + adapter-aware cron output truncation ... https://github.com/NousResearch/hermes-agent/pull/50145
+
+[2026-06-21T13:34:48.568000+00:00] .osraka (id=1518247822514978927)
+    Geliştirici rolü için gereklilikler neler neler
+
+[2026-06-21T13:34:54.960000+00:00] Translator Bot#1043 (id=1518247849324843138)
+    What are the requirements for the developer role?
+    [reply to .osraka msg=1518247822514978927]
+

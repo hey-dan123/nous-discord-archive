@@ -38,3 +38,19 @@
 [2026-06-08T14:11:55.849000+00:00] radu83._49711 (id=1513546122155655339)
     Would you be willing to share corebase?
 
+[2026-06-21T11:49:17.534000+00:00] kartojal (id=1518221268233621504)
+    hey! missed this sorry
+
+[2026-06-21T11:50:51.263000+00:00] kartojal (id=1518221661361668247)
+    whatsapp demo is basically making the skills toolset with read-only mode and attach the different legal tools, in this case Tuyo uses legalize as source of regulations https://github.com/legalize-dev/legalize-es
+    [embed] GitHub - legalize-dev/legalize-es: Spanish legislation as a Git rep... https://github.com/legalize-dev/legalize-es
+
+[2026-06-21T11:51:20.935000+00:00] kartojal (id=1518221785814929588)
+    its a bit slow to search laws due is just a filesystem search, so it could be improved via RAG
+
+[2026-06-21T11:53:54.492000+00:00] kartojal (id=1518222429879537746)
+    after a month showcasing this to legal teams, they see way more value in the Clients Document Management, like having a way to ask the status of a clients history, keep all documents automatically in the clients folder, etc
+
+[2026-06-21T11:55:27.486000+00:00] kartojal (id=1518222819924906024)
+    and yes our plan is to open source the base legal setup, as a Hermes Profile so is easly distributable
+

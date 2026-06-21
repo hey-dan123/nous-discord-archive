@@ -77,3 +77,15 @@
 [2026-06-21T08:33:36.642000+00:00] tunacookie (id=1518172023363211385)
     any issues / pr's would be very appreciated <:chingy1Hamstersad:1320028465982079026>
 
+[2026-06-21T12:23:34.085000+00:00] cem888.ai.creator (id=1518229894033703043)
+    Really interesting architecture — love the dual-path System 1/System 2 design. We've been working on a completely different approach at CEM888.AI: filesystem-native memory with no vector DB, no embeddings, no async pipelines. Everything lives in plain files and ripgrep does the retrieval.
+    
+    We just benchmarked it: 99.9% AR and 77.2% BEAM (10M-token memory). Curious if you've run HyAtlas through BEAM or any memory benchmarks? Would love to compare notes — totally different philosophies, would be fascinating to see where each approach is strongest.
+
+[2026-06-21T12:36:23.038000+00:00] tunacookie (id=1518233119256477776)
+    85% on long eval mem on Pro mode
+    [reply to cem888.ai.creator msg=1518229894033703043]
+
+[2026-06-21T12:38:46.009000+00:00] tunacookie (id=1518233718920319136)
+    76% on personamem
+
