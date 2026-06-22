@@ -28,3 +28,14 @@
     https://github.com/MrTrenchTrucker/turbohaul-manager
     [embed] GitHub - MrTrenchTrucker/turbohaul-manager: Ollama-shape inference ... https://github.com/MrTrenchTrucker/turbohaul-manager
 
+[2026-06-21T23:08:14.149000+00:00] mrtrenchtrucker (id=1518392129980727437)
+    v 0.4.0 now available! 
+    https://github.com/MrTrenchTrucker/turbohaul-manager/releases/tag/v0.4.0
+    Highlights
+    Live inference monitor — a built-in, real-time view of the active generation: tokens/sec, prompt/decode progress, and a live output stream (SSE) — independent of any external client or logger.
+    Per-model concurrent dispatch — a main chat model can run in series while a sub-agent model serves up to N requests concurrently (parallel: N) on a single warm llama-server sidecar. The single-model-resident invariant is preserved.
+    KV-cache offload to host RAM — with no_kv_offload, model weights stay on the GPU while the KV cache lives in system RAM. Run a large context (e.g. 250K) on a 24 GB card, and — with kv_unified: true — serve requests in parallel while offloaded. See docs/KV_CACHE_OFFLOADING.md.
+    Live-panel stability + tool-call display fixes — no more flicker between "generating" and "idle" during bursty generation; tool calls render correctly in the live output.
+    Faster failure recovery — a crashed model load fails its slot in ~2 s instead of waiting out the full load-health timeout, so a bad load no longer wedges the queue.
+    [embed] Release Turbohaul Manager v0.4.0 · MrTrenchTrucker/turbohaul-manager https://github.com/MrTrenchTrucker/turbohaul-manager/releases/tag/v0.4.0
+

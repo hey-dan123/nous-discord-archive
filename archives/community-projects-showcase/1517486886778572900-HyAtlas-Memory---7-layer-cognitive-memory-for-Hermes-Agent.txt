@@ -92,3 +92,6 @@
 [2026-06-21T18:51:29.282000+00:00] tunacookie (id=1518327517285453924)
     its broken. will try to fix it asap...
 
+[2026-06-22T03:46:21.777000+00:00] tunacookie (id=1518462122965602515)
+    Focusing on easy deployment now.
+

@@ -35882,3 +35882,133 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Opened a PR fixing a multi profile bug  Desktop session search only searched the default profile, so conversations in other profiles showed in recents but couldn't be found in search. Now it searches across all profiles. Ready for review https://github.com/NousResearch/hermes-agent/pull/50340 P3
     [embed] fix(desktop): search sessions across all profiles, not just the def... https://github.com/NousResearch/hermes-agent/pull/50340
 
+[2026-06-21T19:58:45.392000+00:00] dmayhem (id=1518344445958029363)
+    Appreciate the PR 🙏 but yeah we've moved on, will get a notification on the repo to let people know 😅
+    [reply to maxfreedompollard msg=1518331629842726912]
+
+[2026-06-21T20:05:55.687000+00:00] janezeroon (id=1518346250745942027)
+    please add codex image edit <@250106875281014784>
+
+[2026-06-21T20:08:27.471000+00:00] janezeroon (id=1518346887374049424)
+    <:egpleading:793393870364344340>
+    [reply to janezeroon msg=1518071998918430832]
+
+[2026-06-21T20:15:09.647000+00:00] drywall2972 (id=1518348574222713028)
+    https://elevenlabs.io/speech-engine
+    Could this integrate cleanly into Hermes? Seems like a solid way for those who are willing to pay the API costs to get an all-included voice setup with voice interrupt.
+    [embed] Turn your chat agent into a voice agent https://elevenlabs.io/speech-engine
+
+[2026-06-21T20:20:12.585000+00:00] strongandsexy (id=1518349844836647072)
+    at a hackathon today, some free tokens for building from lovable, nebius, and an invite to testflight thine
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1491258766648283238/1518349844538982440/message.txt?ex=6a3998fc&is=6a38477c&hm=dc95547aba41cbdfea1dea37d1e1689f60df302dd9f20722fd185015748df52c&
+
+[2026-06-21T20:34:02.444000+00:00] devorun11 (id=1518353325517439146)
+    Auth-header redaction gap https://github.com/NousResearch/hermes-agent/pull/50407 
+    
+    Secret redaction only masked Authorization: Bearer. Everything else leaked into logs/transcripts/public debug share uploads: Basic (base64 user:pass), non-Bearer schemes, Proxy-Authorization, and x-api-key/api-key (Anthropic + many providers). Fix: mask the credential for all auth schemes + the api-key header family    <@387972437901312000>
+    [embed] fix(redact): mask all Authorization schemes and x-api-key style hea... https://github.com/NousResearch/hermes-agent/pull/50407
+
+[2026-06-21T20:35:19.001000+00:00] teknium (id=1518353646620905524)
+    Didnt they already do a giant ad of them doing that with hermes
+    [reply to drywall2972 msg=1518348574222713028]
+
+[2026-06-21T20:50:04.482000+00:00] drywall2972 (id=1518357360597405726)
+    No clue. I’ll see if it’s fully plug and play later today.
+    [reply to teknium msg=1518353646620905524]
+
+[2026-06-21T21:08:34.197000+00:00] devorun11 (id=1518362015079338156)
+    hermes mcp test false-healthy https://github.com/NousResearch/hermes-agent/pull/50418 
+    
+    mcp test could show a stdio server ✓ healthy while the gateway failed with exec: <cmd>: not found — same spawn code, but each inherits a different PATH. Fix: mcp test now prints the resolved binary + spawn PATH and warns when the command isn't on it
+    [embed] fix(mcp): surface resolved binary and spawn PATH in hermes mcp test... https://github.com/NousResearch/hermes-agent/pull/50418
+
+[2026-06-21T21:25:58.723000+00:00] gumandnuts (id=1518366396139049063)
+    <@387972437901312000> thank you for merging my PR: https://github.com/NousResearch/hermes-agent/pull/38836
+    
+    My experiments with codex app server also surfaced another bug, I fixed it here: https://github.com/NousResearch/hermes-agent/pull/38778
+
+[2026-06-21T21:49:01.364000+00:00] sprmn24 (id=1518372195355853042)
+    <@387972437901312000> , I opened a couple of PRs today , take a look when you get a chance:
+    
+    MCP SamplingHandler — reset _tool_loop_count on all error paths
+    
+    Error paths (timeout, rate limit, disallowed model, exception, empty choices) were never resetting the counter, causing spurious "tool loop limit exceeded" on the next request
+    
+    https://github.com/NousResearch/hermes-agent/pull/50434
+    
+    
+    Web server liveness endpoint — broaden exception catch in _resolve_restart_drain_timeout
+    
+    Only caught ImportError but the same import chain can fail other ways; non-ImportError failures were breaking the liveness endpoint instead of falling back to the default timeout
+    
+    https://github.com/NousResearch/hermes-agent/pull/50441
+    [embed] fix(mcp): reset _tool_loop_count on all error paths in SamplingHand... https://github.com/NousResearch/hermes-agent/pull/50434
+    [embed] fix(web_server): broaden exception catch in _resolve_restart_drain_... https://github.com/NousResearch/hermes-agent/pull/50441
+
+[2026-06-21T22:53:25.430000+00:00] .crowbe (id=1518388402423070760)
+    I found what feels like a Hermes Desktop skills filtering bug: search filters the visible list, but category counts remain global, so search + category don’t behave like composable filters. Does that read as a bug to others? Related is that clicking a category filter with an existing text search flickers before returning to the search result list.
+    
+    If those seem worth resolving, I'll aim to open an issue and PR. Preferred UX question: should categories with zero search matches be hidden, shown disabled with 0, or left visible with global counts?
+
+[2026-06-21T23:44:56.030000+00:00] doxe_0x (id=1518401365339275304)
+    **MCP OAuth login is broken over SSH / headless (PR up)**
+    
+    **Problem:** `hermes mcp login` (and `mcp add --auth oauth`, plus `mcp test` / `mcp configure` and the dashboard `/test` route) dies about 40s into the OAuth flow with MCP call timed out after 40.0s, before you can open the browser, authorize, and paste the callback. The inner `_wait_for_callback` already allows 300s and has a stdin paste fallback for headless boxes, but the outer `_probe_single_server(connect_timeout=30)` caps the whole probe at 40s and cancels it. End result: OAuth MCP servers are effectively un-loginnable over SSH. I had to temporarily patch the timeout and curl the loopback callback by hand just to get one authenticated.
+    
+    **Fix:** one OAuth-aware probe timeout (`_effective_probe_timeout`) inside `_probe_single_server`, so all six probe call sites auto-pick a long window (`HERMES_MCP_OAUTH_TIMEOUT`, default 330s, with headroom over the inner 300s) when auth: oauth, and keep the fast 30s probe otherwise. The dashboard `/test` route stays on the 30s fail-fast since the paste flow is server-side and not reachable from a remote browser. Added `TestProbeTimeoutSelection`; full mcp suite green.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/50458
+    
+    Open to feedback, especially: env var vs a dedicated `--timeout` flag, and whether the dashboard route should stay on the fast cap.
+    [embed] fix(mcp): don't cap interactive OAuth login at the 30s connection-p... https://github.com/NousResearch/hermes-agent/pull/50458
+
+[2026-06-22T00:27:04.168000+00:00] randqua (id=1518411969118470165)
+    Opened my first small Hermes Agent PR:
+    
+    https://github.com/NousResearch/hermes-agent/pull/50481
+    
+    While checking the docs, I noticed that the token-lock note in AGENTS.md was pointing to an old platform adapter path that no longer exists.
+    
+    I updated it to reference the current IRC adapter example, since it shows the scoped-lock pattern more clearly.
+    
+    Small docs-only cleanup:
+    
+    one file changed
+    one line updated
+    no runtime changes
+    no config changes
+    
+    Happy to start contributing with small verified fixes like this.
+    [embed] docs(agents): fix stale platform adapter path in token-lock note by... https://github.com/NousResearch/hermes-agent/pull/50481
+
+[2026-06-22T01:05:57.537000+00:00] nuuuuuuuuuu0480 (id=1518421755977400541)
+    https://github.com/NousResearch/hermes-agent/pull/50490                                                                                                                                                Bug: TrajectoryCompressor.init() trong trajectory_compressor.py gọi logging.basicConfig() — library code
+     override root logger config của application mỗi khi instantiate.  <@387972437901312000>  PLEASE CHECK
+    [embed] fix(compressor): remove logging.basicConfig from library class __in... https://github.com/NousResearch/hermes-agent/pull/50490
+
+[2026-06-22T01:12:06.003000+00:00] mehalter (id=1518423301435822310)
+    I can confirm it works (I opened the PR) . I commented on the PR with an example of the code being used
+    [reply to teknium msg=1518097686488682609]
+
+[2026-06-22T01:19:50.343000+00:00] erosika (id=1518425249018941530)
+    Ooh you actively use nostr protocol? down to check this out
+    [reply to tiny_th_dev msg=1518310770134356170]
+
+[2026-06-22T01:34:57.550000+00:00] janezeroon (id=1518429054120755210)
+    <@387972437901312000> please review it🙏🙏
+    [reply to mehalter msg=1518423301435822310]
+
+[2026-06-22T02:51:46.565000+00:00] thyfriendlyfox (id=1518448385730941101)
+    https://github.com/NousResearch/hermes-agent/pull/49834
+    [embed] feat(mobile): Hermes Agent Android app — Capacitor thin client (c... https://github.com/NousResearch/hermes-agent/pull/49834
+
+[2026-06-22T02:51:55.096000+00:00] thyfriendlyfox (id=1518448421512413224)
+    posting again in case it got missed
+
+[2026-06-22T03:09:28.769000+00:00] kylekaster (id=1518452840937291836)
+    https://github.com/NousResearch/hermes-agent/pull/47497 i know new feature req's are not the priority, but would love to hear feedback from others around what the future of kanban looks like and if this is in direct conflict with usage/patterns other people have run into 👀 
+    
+    tl;dr is having the ability to delegate to profiles via the `delegate_task` tool, which basically with this MVP just allows you to pre-define `SOUL.md` since we don't typically pass the `skills` tool to the allowed subset for subagents in hermes if i understand correctly, but I could see an extension of this that could allow power users to build backgrounded delegate task workflows, that use profiles to complete tasks in single turns
+    
+    I can see this stepping on the toes of what kanban wants to do with swarms, but I do sometimes find I have one off tasks that I want to use my other specialist agents for, and it feels heavy to set up a whole kanban board for it, but maybe I'm just assigning too much of my own pre-disposition for what kanban should be used for?
+

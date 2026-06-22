@@ -234,3 +234,40 @@
     
     This version is not the final visual direction yet. The landing and scroll experience will keep improving, but v1.0 is the first step toward making ContribScout feel more like a real product instead of just a utility dashboard.
 
+[2026-06-21T21:33:10.298000+00:00] sworntech (id=1518368206295662764)
+    **ContribScout Agent: Build Update**
+    
+    Hey everyone, I’ve been sharing small ContribScout updates here for a while, and the project has now evolved into something much more complete.
+    
+    What started as a simple GitHub discovery tool has become **ContribScout Agent**: an open-source growth operations agent for AI and devtool teams.
+    
+    The current flow is:
+    
+    * start with an open-source growth goal
+    * scan live GitHub opportunities
+    * rank and select the best-fit repo
+    * generate a PR-ready contribution brief
+    * prepare duplicate-check and readiness guidance
+    * save a local Proof Vault candidate
+    * trigger a Stripe test-mode provisioning step
+    * export a judge-ready package
+    * run the same workflow through a Hermes-compatible skill layer
+    
+    The goal is to make open-source growth less noisy and more actionable: from “where should we contribute?” to a clear contribution path.
+    
+    This is still an early MVP, but the core loop is live now:
+    
+    **goal → scan → select → plan → proof → export**
+    
+    Demo video:
+    https://x.com/sworntech/status/2068767392214482963
+    
+    Live demo:
+    https://contribscout.vercel.app/
+    
+    Repo:
+    https://github.com/Sworntech-dev/contribscout
+    [embed]  https://twitter.com/sworntech/status/2068767392214482963
+    [embed] ContribScout | Contributor Intelligence https://contribscout.vercel.app/
+    [embed] GitHub - Sworntech-dev/contribscout: Hermes-powered contributor int... https://github.com/Sworntech-dev/contribscout
+

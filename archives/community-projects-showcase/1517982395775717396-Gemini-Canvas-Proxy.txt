@@ -76,3 +76,10 @@
     ### The Fix
     Removed the blocking `elif` branch. Now it just logs the warning and continues to `send_message(host_ready)` and the main loop as normal. The `standalone` check gets its own early `return` so it doesn't interfere.
 
+[2026-06-21T21:45:14.073000+00:00] goated138 (id=1518371242028306582)
+    How does this differ from configuring gemini in hermes-router?
+
+[2026-06-22T03:05:40.629000+00:00] pranrichh (id=1518451884049043528)
+    Hermes-router is a load balancer that rotates many rate-limited keys to maintain uptime, whereas this proxy uses a single Gemini Canvas session to access Google's internal credentials which have no rate limits or daily caps. This approach provides a truly unlimited and free API for models like Gemini 3 Flash and Nano Banana 2 without the need to manage hundreds of keys or worry about 503 errors during heavy usage.
+    [reply to goated138 msg=1518371242028306582]
+

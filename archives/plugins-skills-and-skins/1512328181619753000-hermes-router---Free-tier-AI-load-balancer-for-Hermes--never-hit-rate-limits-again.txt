@@ -904,3 +904,27 @@
     https://marketplace.visualstudio.com/items?itemName=MohammedShafiq.hermes-router
     [embed] hermes-router - Visual Studio Marketplace https://marketplace.visualstudio.com/items?itemName=MohammedShafiq.hermes-router
 
+[2026-06-22T01:27:04.383000+00:00] shaf_2665 (id=1518427069514776740)
+    # 🐳 New: hermes-router:cli image — full control from VS Code on Windows
+    
+    If you run hermes-router in Docker Desktop and manage it with the VS Code extension, this one's for you.
+    
+    The plain image has no hr inside it, so the extension's Add key / Restart / Model buttons couldn't do anything in a container. The new :cli image fixes that — it bundles the hr CLI and keeps your keys on a volume.
+    
+    👉 The combo to use (VS Code extension + Docker Desktop):
+    1️⃣ Image: shafiq735/hermes-router:cli (the :cli tag — not the plain one)
+    2️⃣ Extension: hermes-router v0.4.0+ from the Marketplace
+    3️⃣ Run it with a volume (one line — PowerShell friendly):
+    
+    
+    `docker run -d --name hermes-router -p 8319:8319 -v hermes-data:/app/data -e GEMINI_API_KEYS=your-key -e PROXY_API_KEYS=sk-router-1 shafiq735/hermes-router:cli`
+    4️⃣ In the extension settings, set hermesRouter.dockerContainer → hermes-router
+    
+    That's it. Now Add key, Rotation, Model, and Restart all run against the container (via docker exec / docker restart), and everything persists on the hermes-data volume across restarts. 🔑
+    
+    📦 https://hub.docker.com/r/shafiq735/hermes-router
+    📖 Full guide: https://hermes-router.vercel.app/vscode-extension/#managing-a-router-running-in-docker
+    
+    Not on Windows / not using Docker? The plain :latest image and the hr CLI work exactly as before — :cli is only needed for the Docker-Desktop-managed-from-VS-Code workflow.
+    [embed] VS Code Extension https://hermes-router.vercel.app/vscode-extension/
+

@@ -54,3 +54,11 @@
 [2026-06-21T11:55:27.486000+00:00] kartojal (id=1518222819924906024)
     and yes our plan is to open source the base legal setup, as a Hermes Profile so is easly distributable
 
+[2026-06-21T20:01:32.087000+00:00] wise_mind (id=1518345145127538749)
+    Hi, I have a relative who's a lawyer and a geneologist, do you think this would be useful as a base for them? I'm sure it'd need tweaing (different laws, legal processes, services, legal reasoning, etc.)
+    They have a single-person firm (it's just them)
+
+[2026-06-21T20:01:39.364000+00:00] wise_mind (id=1518345175649489148)
+    <@331143296594214914>
+    [reply to wise_mind msg=1518345145127538749]
+

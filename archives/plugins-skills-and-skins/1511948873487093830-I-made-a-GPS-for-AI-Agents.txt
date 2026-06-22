@@ -29,3 +29,14 @@
 [2026-06-21T11:27:10.258000+00:00] gd03champ (id=1518215701234716843)
     Doest hermes append skill index to sympromt already?
 
+[2026-06-21T21:54:45.698000+00:00] madvulcan (id=1518373639597199371)
+    I am working on that
+    [reply to jimpickens3203 msg=1517231314623926456]
+
+[2026-06-21T21:55:43.169000+00:00] jimpickens3203 (id=1518373880647913592)
+    Hell yeah
+
+[2026-06-21T21:55:46.564000+00:00] madvulcan (id=1518373894887575703)
+    Well. I'm working on having the GPS data from my android phone relay to Hermes so it knows where I am so I can ask it about nearby stuff when I travel. I'll put it on github and make a thread when done
+    [reply to jimpickens3203 msg=1517231314623926456]
+

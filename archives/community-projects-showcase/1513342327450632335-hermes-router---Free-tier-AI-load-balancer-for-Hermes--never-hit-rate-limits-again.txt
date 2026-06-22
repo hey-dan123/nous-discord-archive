@@ -732,3 +732,41 @@
     Hey <@1272778978624540704> I developed a mod that switches to another LLM (I run one locally) for conversation mode so (at least in my case) you can have a fast conversations completely for free (and did some optimizations for performance).
     I haven't posted it yet but conceptually I'd love to integrate these modifications into your router - would you like that feature? Just an FYI it's not a plug-and-play, it requires modding Hermes Desktop itself (I maintain a modded buiidl and individual mods/patches - as I said, will release later)
 
+[2026-06-22T01:24:54.845000+00:00] shaf_2665 (id=1518426526192898200)
+    are you talking about local models?
+    [reply to wise_mind msg=1518321686426943690]
+
+[2026-06-22T01:26:56.413000+00:00] shaf_2665 (id=1518427036086173817)
+    # 🐳 New: hermes-router:cli image — full control from VS Code on Windows
+    
+    If you run hermes-router in Docker Desktop and manage it with the VS Code extension, this one's for you.
+    
+    The plain image has no hr inside it, so the extension's Add key / Restart / Model buttons couldn't do anything in a container. The new :cli image fixes that — it bundles the hr CLI and keeps your keys on a volume.
+    
+    👉 The combo to use (VS Code extension + Docker Desktop):
+    1️⃣ Image: shafiq735/hermes-router:cli (the :cli tag — not the plain one)
+    2️⃣ Extension: hermes-router v0.4.0+ from the Marketplace
+    3️⃣ Run it with a volume (one line — PowerShell friendly):
+    
+    
+    `docker run -d --name hermes-router -p 8319:8319 -v hermes-data:/app/data -e GEMINI_API_KEYS=your-key -e PROXY_API_KEYS=sk-router-1 shafiq735/hermes-router:cli`
+    4️⃣ In the extension settings, set hermesRouter.dockerContainer → hermes-router
+    
+    That's it. Now Add key, Rotation, Model, and Restart all run against the container (via docker exec / docker restart), and everything persists on the hermes-data volume across restarts. 🔑
+    
+    📦 https://hub.docker.com/r/shafiq735/hermes-router
+    📖 Full guide: https://hermes-router.vercel.app/vscode-extension/#managing-a-router-running-in-docker
+    
+    Not on Windows / not using Docker? The plain :latest image and the hr CLI work exactly as before — :cli is only needed for the Docker-Desktop-managed-from-VS-Code workflow.
+    [embed] VS Code Extension https://hermes-router.vercel.app/vscode-extension/
+
+[2026-06-22T01:37:04.945000+00:00] shaf_2665 (id=1518429588454244433)
+    Yeah, just came to know that local models — that'd be a great fit 🙌
+    
+    Heads up on scope though: your mod lives inside Hermes Desktop, but hermes-router is a standalone proxy in front of any client — so the "mod the desktop build" part wouldn't carry over directly. 
+    The concept absolutely does though: a local-model provider (Ollama/LM Studio/llama.cpp) + a "conversation mode" that prefers the fast local model and falls back to cloud for heavier tasks.
+     The router already does difficulty-based + fast-path routing, so it's a natural extension.
+    
+    Best next step: have a look through the codebase (it's a single router.py — repo + docs at https://hermes-router.vercel.app), see how it'd slot in, and raise a PR. Happy to review and help shape it. 🚀
+    [reply to wise_mind msg=1518321686426943690]
+
