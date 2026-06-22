@@ -99,3 +99,7 @@
     next focus, work on access for scoring
     [attachment] image.png https://cdn.discordapp.com/attachments/1517486886778572900/1518485393727553657/image.png?ex=6a3a1739&is=6a38c5b9&hm=ebb18129d41dac200cae128b05c94330e0a21e29a957c392fb120b60c174a4ef&
 
+[2026-06-22T16:50:40.962000+00:00] tunacookie (id=1518659503493484766)
+    Updated the live status window
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517486886778572900/1518659503107739710/image.png?ex=6a3ab960&is=6a3967e0&hm=1120d94b65bee316d9a583bfe4ad975ebdaefc44f6e717c6498cf1dea1c36678&
+

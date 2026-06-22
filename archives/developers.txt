@@ -36116,3 +36116,124 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-22T11:27:54.287000+00:00] kartiklabhshetwar (id=1518578273771192341)
     Mem0 X Nous thread
 
+[2026-06-22T12:00:47.733000+00:00] mustellon (id=1518586551003643944)
+    Hi everyone,
+    I'm new here, hope I'm welcome
+
+[2026-06-22T12:02:37.577000+00:00] doxe_0x (id=1518587011722776719)
+    While in `_wait_for_callback` (tools/mcp_oauth.py) I noticed the `OSError`-on-bind branch has a stale comment: it claims the busy port is held by a server `build_oauth_auth` started, and promises to "fall back to polling" it. But `build_oauth_auth` never starts a callback server (this is the only listener), so there is nothing to poll. The branch just raised a misleading `OAuth callback timed out` when the real cause is a busy port: a concurrent login, a leftover listener, or a fixed `oauth.redirect_port` that collided.
+    
+    Tiny PR fixes the comment and raises an accurate `OAuth callback port N is already in use` error, suggesting you free it or set a different `redirect_port`, chained from the original `OSError`. Behavior unchanged, regression test added.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/50786
+
+[2026-06-22T12:03:23.563000+00:00] dongjiang_90131 (id=1518587204602167306)
+    Hey, I contribute one bug fix. Can anyone hava a look?   https://github.com/NousResearch/hermes-agent/pull/50782
+    [embed] fix(security): block terminal commands that read credential files (... https://github.com/NousResearch/hermes-agent/pull/50782
+
+[2026-06-22T12:11:25.220000+00:00] devorun11 (id=1518589224817922079)
+    Welcome bro, you can start developing and exploring Hermes
+    [reply to mustellon msg=1518586551003643944]
+
+[2026-06-22T12:26:23.726000+00:00] minddragon (id=1518592993425227816)
+    (Should we tell him yet that this is the firehose channel? lol)
+    [reply to devorun11 msg=1518589224817922079]
+
+[2026-06-22T12:40:58.409000+00:00] devorun11 (id=1518596662111768750)
+    He will discover it himself soon
+    [reply to minddragon msg=1518592993425227816]
+
+[2026-06-22T12:44:47.507000+00:00] teknium (id=1518597623018160249)
+    merged <a:cheer:734837260662603908>
+    [reply to scottermonkey msg=1518574912053317642]
+
+[2026-06-22T13:04:04.046000+00:00] kuzudr (id=1518602473894580354)
+    <@387972437901312000> Is there any thing that can be done to push this over the line? Seems like a zero-risk change. https://github.com/NousResearch/hermes-agent/pull/39854
+    [embed] fix(desktop): add Calendar privacy descriptions by yinkev · Pull R... https://github.com/NousResearch/hermes-agent/pull/39854
+
+[2026-06-22T13:04:25.327000+00:00] kuzudr (id=1518602563153432731)
+    I have an annoying issue where CRON jobs break after interacting with the desktop app due to permissions issues, and this PR shoudl fix it
+
+[2026-06-22T13:12:16.941000+00:00] minddragon (id=1518604541245919472)
+    has anyone noticed kimi looping like crazy on tool calls or is it just me? (k2p7)
+
+[2026-06-22T13:19:18.325000+00:00] devorun11 (id=1518606308658512055)
+    https://github.com/NousResearch/hermes-agent/pull/50789  Slack ignored documented mention_patterns   The Slack adapter never read the documented wake-word patterns, so matching channel messages were silently dropped (works on every other adapter). Added the same pattern other adapters use; mention now triggers on <@BOT> or a wake word
+    [embed] fix(slack): honor documented mention_patterns wake words by devorun... https://github.com/NousResearch/hermes-agent/pull/50789
+
+[2026-06-22T13:29:52.884000+00:00] devorun11 (id=1518608970191999027)
+    Non-image files encoded as fake JPEG https://github.com/NousResearch/hermes-agent/pull/50822 — _guess_mime() defaulted any unknown file suffix to image/jpeg, so a document routed as an image (e.g. an .html/.markdown attachment named Image_*) was base64-encoded as data:image/jpeg;base64,<document bytes> and the provider rejected the whole turn with HTTP 400. Fix: magic bytes / declared MIME win — _guess_mime returns None for non-images and the file is skipped instead of faked. Real images unaffected
+    [embed] fix(vision): don't encode non-image files as fake image/jpeg by dev... https://github.com/NousResearch/hermes-agent/pull/50822
+
+[2026-06-22T13:53:27.583000+00:00] teknium (id=1518614903869542651)
+    Haven't tried 2.7
+    [reply to minddragon msg=1518604541245919472]
+
+[2026-06-22T13:53:31.135000+00:00] teknium (id=1518614918767706403)
+    seems like glm-5.2 is king now
+
+[2026-06-22T13:58:51.208000+00:00] minddragon (id=1518616261251174462)
+    yeah it is but kimi 2.7 highspeed just came out ... and kimi 2.7 permits swarms
+
+[2026-06-22T14:02:11.256000+00:00] thyfriendlyfox (id=1518617100313165924)
+    Hey <@119192111202566149>, when you get a chance can you review our PR? https://github.com/NousResearch/hermes-agent/pull/49834 We would love to know what to fix before we get too overloaded with the commits ahead of us
+    [embed] feat(mobile): Hermes Agent Android app — Capacitor thin client (c... https://github.com/NousResearch/hermes-agent/pull/49834
+
+[2026-06-22T14:02:49.231000+00:00] thyfriendlyfox (id=1518617259592126616)
+    Also good morning everyone! <a:cat_yipee:1125456104579674274>
+
+[2026-06-22T14:12:10.543000+00:00] teknium (id=1518619613905162262)
+    When we did the nomos math prover model, it needed 64+ agents so that the ones that did endless thinking got cancelled out in aggregate
+    [reply to minddragon msg=1518616261251174462]
+
+[2026-06-22T14:48:27.812000+00:00] brucexu (id=1518628746033365092)
+    https://x.com/brucexu_eth/status/2069068347271172433?s=46 Anyone here think filtering out cache folders like NPM or node_modules is a good fix for Hermes backup? Just sooo large😂
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1518628746205073530/image0.jpg?ex=6a3a9cbb&is=6a394b3b&hm=852681733c971ba5f411258b5a0cd44f6070d2d35a752f1f56763a9046e11f43&
+
+[2026-06-22T14:50:23.909000+00:00] srojk34 (id=1518629232979214348)
+    I think this is an important issue. I hope you have time to take a look at it. Thank you.
+    <@387972437901312000> 
+    
+    PR #50863 — Found that handleExport in the dashboard's SessionsPage was the only API call using raw fetch() instead of authedFetch, so it skipped the HERMES_BASE_PATH prefix. Session export silently 404s on any reverse-proxy deployment with a URL prefix (e.g. /hermes/). One-line fix — swapped to authedFetch which already handles base path + auth.
+    
+    https://github.com/NousResearch/hermes-agent/pull/50863
+    [embed] fix(dashboard): route session export through authedFetch for revers... https://github.com/NousResearch/hermes-agent/pull/50863
+
+[2026-06-22T14:54:50.643000+00:00] techmeat (id=1518630351742697553)
+    Quick note on https://github.com/NousResearch/hermes-agent/pull/42940 - small one.
+    Shell-hook consumers only get `session_id`, but Hermes rotates that id mid-conversation (after compaction), so the link back to the original session is lost. The fix is a field called `parent_session_id`: it's already listed as a top-level key and the docs describe it, but the payload never actually includes it. The PR adds the one missing line so the payload matches the docs.
+    Rebased on current main, hook tests green (68).
+    [embed] feat(hooks): expose parent_session_id on shell-hook payload by sola... https://github.com/NousResearch/hermes-agent/pull/42940
+
+[2026-06-22T15:07:22.873000+00:00] tomrevo.x (id=1518633506824261782)
+    A video posted recently got me thinking about malformed tool responses (https://discord.com/channels/1053877538025386074/1476316988992258300/1518600947360858143).
+    
+    I see the issue https://github.com/NousResearch/hermes-agent/issues/6841 closed as `won't-fix` which seems like the right call given it's an upstream issue.
+    
+    Those with more exp with the hermes source code, have you considered before making a plugin as a repair harness like Ahmad Awais did for Command Code?
+    
+    I made a plan for it here: https://github.com/tommulkins/tool-repair-harness
+    
+    but I'm not certain yet if this would be waste of time.
+
+[2026-06-22T16:10:49.546000+00:00] teknium (id=1518649473167790400)
+
+[2026-06-22T16:35:14.763000+00:00] aienthusiast (id=1518655618733314179)
+    i can't help but ask, I loved the support and development speed, how do you do it? how do you develop and patch hermes? what ai stack? how does the process work? its amazing
+
+[2026-06-22T16:40:58.313000+00:00] aialliai (id=1518657059686580225)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/44462#issuecomment-4766756945 this one should be good to go now again all green, you mind taking a look. Seems to be bothering some, P2 though 🙂
+    [embed] fix(desktop): route /compress via session.compress and stop masking... https://github.com/NousResearch/hermes-agent/pull/44462
+
+[2026-06-22T16:42:38.360000+00:00] aialliai (id=1518657479314247765)
+    Well, dedicated team, contributors and a whole lot of hermes 😄
+    [reply to aienthusiast msg=1518655618733314179]
+
+[2026-06-22T16:45:47.335000+00:00] teknium (id=1518658271932710983)
+    We use Hermes Agent ofc 🙂
+    [reply to aienthusiast msg=1518655618733314179]
+
+[2026-06-22T16:46:02.068000+00:00] teknium (id=1518658333727264829)
+    and the now 1600~ contributors <a:Pray:1060091951753465937>
+    [reply to aialliai msg=1518657479314247765]
+

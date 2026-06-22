@@ -1,0 +1,28 @@
+# Thread 'Hermes Project Oracle — Advanced Prediction & Context Oracle for Hermes Agents' in forum #plugins-skills-and-skins
+# thread_id=1518630937649484009 forum_id=1485392832154832906
+# Started 2026-06-22T16:57:19.184469+00:00
+
+[2026-06-22T14:57:10.334000+00:00] iruzenn (id=1518630937649484009)
+    Hermes Project Oracle — Intelligence & Prediction Layer
+    Annoncé par <@928394777878220850> 
+    
+    🔮 Elevate your Hermes Agent's reasoning capabilities. Hermes Project Oracle acts as an advanced contextual analysis and forecasting layer, allowing your agents to look ahead, evaluate deep information flows, and provide highly accurate, predictive insights based on real-time data environments.
+    
+    What’s Inside:
+    Contextual Foresight: Provides agents with predictive modeling structures to analyze complex scenarios and project logical outcomes.
+    
+    Smart Data Filtering: Acts as a literal "oracle", processing raw information inputs and highlighting the most critical parameters for your agent's core decision loop.
+    
+    Deep Integration: Seamlessly attaches to existing Hermes architectures, enriching the standard SOUL.md contract with dynamic analytical tools.
+    
+    Extensible Architecture: Designed to easily plug into diverse data sources and external analytical models.
+    
+    Install & Setup:
+    To deploy the context oracle or attach it to your local Hermes framework:
+    
+    # Install via the Hermes skill/plugin manager
+    `hermes skills install https://github.com/iruzen-dono/hermes-project-oracle`
+    
+    https://github.com/iruzen-dono/hermes-project-oracle
+    [embed] GitHub - iruzen-dono/hermes-project-oracle: Deep project scanner fo... https://github.com/iruzen-dono/hermes-project-oracle
+

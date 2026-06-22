@@ -544,3 +544,6 @@
 [2026-06-07T07:12:10.083000+00:00] noxerz. (id=1513078097531109446)
     [attachment] image.png https://cdn.discordapp.com/attachments/1504710919702188052/1513078097237250138/image.png?ex=6a266b4a&is=6a2519ca&hm=2a8e9fa1c706c4e32700fdab13a60d3cd7906ed97b413e5331a0d07d55c7354b&
 
+[2026-06-22T16:51:55.288000+00:00] legitimate0481 (id=1518659815239454810)
+    how can i check what memory bs projects i installed to review and remove them to make room for that ?
+

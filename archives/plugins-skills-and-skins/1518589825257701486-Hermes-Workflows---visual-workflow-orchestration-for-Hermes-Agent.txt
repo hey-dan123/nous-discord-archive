@@ -1,0 +1,19 @@
+# Thread 'Hermes Workflows - visual workflow orchestration for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1518589825257701486 forum_id=1485392832154832906
+# Started 2026-06-22T16:57:20.081186+00:00
+
+[2026-06-22T12:13:48.376000+00:00] techmeat (id=1518589825257701486)
+    Describe a process as a graph and run it on Hermes' own primitives. It is a thin layer, not a new engine - workflows compile straight to native Hermes Kanban tasks, Cron jobs, and Profile assignments. It does not replace any of them.
+    
+    • Headless-first: a run advances on a self-terminating Cron tick, no human in the loop except an explicit human_review node
+    • Node types: trigger, agent_task, script, condition, human_review, finish
+    • Scope picks the backend: a project run schedules durable Kanban cards, a global run invokes the profile runner directly
+    • Visual editor on @xyflow/react: author the graph, validate, preview the compiled Hermes plan, then run and inspect per node, with Runs and Schedules views
+    • Optional Open Second Brain for long-term memory
+    
+    https://github.com/itechmeat/hermes-workflows
+    [attachment] screenshot_2026-06-22_at_14-10-11.png https://cdn.discordapp.com/attachments/1518589825257701486/1518589826637762641/screenshot_2026-06-22_at_14-10-11.png?ex=6a3a787c&is=6a3926fc&hm=05b4d349c4fcf1f74b477c18f7dff8dadb45b4809da79c663599d2cef8166e89&
+    [attachment] screenshot_2026-06-22_at_14-11-10.png https://cdn.discordapp.com/attachments/1518589825257701486/1518589828319416491/screenshot_2026-06-22_at_14-11-10.png?ex=6a3a787d&is=6a3926fd&hm=6c09cfdf085bb12285162f76a35398f95331fd90cbdfb6c19429ea22e48fe70e&
+    [attachment] screenshot_2026-06-22_at_14-13-05.png https://cdn.discordapp.com/attachments/1518589825257701486/1518589829477171304/screenshot_2026-06-22_at_14-13-05.png?ex=6a3a787d&is=6a3926fd&hm=83210f4dbc159192cfc65e04ae9a2177e00aa6e8a92ed5972657194b36fb535d&
+    [embed] GitHub - itechmeat/hermes-workflows: Multi-step automations for Her... https://github.com/itechmeat/hermes-workflows
+

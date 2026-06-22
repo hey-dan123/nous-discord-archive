@@ -564,3 +564,32 @@
 [2026-06-19T22:08:51.800000+00:00] yaakov_63226 (id=1517652412674998313)
     This looks really great! How does it handle stealth such as bot evasion/CAPTCHAs?
 
+[2026-06-22T14:32:25.955000+00:00] magnus919 (id=1518624711712444627)
+    GroktoCrawl treats bot evasion as a layered fallback chain rather than a single solution. It tries the least aggressive approach first and escalates only when needed.
+    
+        For most sites, the first attempt is simple content negotiation -- `/llms.txt` or `Accept: text/markdown` headers. These don't trigger bot detection at all because they're legitimate HTTP standards, and they cover a surprising number of sites (especially developer docs, blogs, and CMS platforms).
+    
+        When those don't work, it escalates to a headless Chromium instance with Playwright. That browser session runs with realistic fingerprinting: proper navigator.plugins, language settings, hardware concurrency, WebGL vendor strings, and a randomized viewport. It looks like a genuine browser to most anti-bot systems.
+    
+        If it hits a Cloudflare JS challenge specifically, there's a FlareSolverr integration that solves the challenge and hands back the session cookies.
+    
+        For the really nasty stuff -- Shopify UCP stores that serve agent-friendly llms.txt instead of the actual page content via content negotiation -- there's a dedicated Shopify adapter that uses a regular browser User-Agent and readability-lxml extraction instead.
+    
+        The philosophy is: try the cheap path first, escalate deliberately, and never fabricate content when extraction genuinely fails. Everything feeds into a clean markdown output regardless of which tier actually got the data.
+    [reply to yaakov_63226 msg=1517652412674998313]
+
+[2026-06-22T14:38:55.088000+00:00] yaakov_63226 (id=1518626343854801119)
+    This is helpful, thanks for the detailed reply!
+    [reply to magnus919 msg=1518624711712444627]
+
+[2026-06-22T14:39:47.976000+00:00] magnus919 (id=1518626565683023983)
+    There is a plugin ecosystem in Groktocrawl that's really handy. Basically once Groktocrawl has a signature for what kind of site it's dealing with, it can alter its strategy for that site.
+    [reply to yaakov_63226 msg=1518626343854801119]
+
+[2026-06-22T14:40:04.452000+00:00] magnus919 (id=1518626634788376717)
+    (this is true in `main` but not in the current tagged release)
+
+[2026-06-22T15:01:17.735000+00:00] yaakov_63226 (id=1518631975324352543)
+    Sweet - I'll check it out in a bit today. Thanks again!
+    [reply to magnus919 msg=1518626565683023983]
+

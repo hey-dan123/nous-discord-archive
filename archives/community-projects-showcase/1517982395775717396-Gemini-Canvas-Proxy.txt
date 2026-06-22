@@ -127,3 +127,9 @@
 [2026-06-22T11:23:32.725000+00:00] pranrichh (id=1518577176700522689)
     You can read the readme.md for more details
 
+[2026-06-22T14:33:06.104000+00:00] one_phantomic (id=1518624880109813810)
+    project is cool af, def using as another aux - added prelim docker-compose support in a pr last night, lmk if anything's wrong
+
+[2026-06-22T14:33:25.858000+00:00] goated138 (id=1518624962964099144)
+    Is there no way to set this up on headless server? Couldn’t figure out how to
+

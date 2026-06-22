@@ -1,0 +1,30 @@
+# Thread 'Hermes Plugin Gen — Generate & Boilerplate Custom Hermes Skills Instantly' in forum #plugins-skills-and-skins
+# thread_id=1518630196817690644 forum_id=1485392832154832906
+# Started 2026-06-22T16:57:19.662651+00:00
+
+[2026-06-22T14:54:13.706000+00:00] iruzenn (id=1518630196817690644)
+    Hermes Plugin Gen — Custom Skill Generator
+    Annoncé par <@928394777878220850> 
+    
+    Tired of manually setting up the boilerplate for every new Hermes skill or plugin? Hermes Plugin Gen is a CLI tool designed to automate the creation of Hermes agent extensions, giving you a structured, ready-to-code environment in seconds.
+    
+    What’s Inside:
+    Instant Scaffolding: Generates the complete directory structure required for Hermes skills with zero manual setup.
+    
+    Smart Boilerplate: Pre-configures essential files, intent routing configurations, and basic execution templates.
+    
+    Developer-Centric: Built to let you focus straight on writing core logic (SOUL.md patterns, system instructions) rather than copy-pasting configs.
+    
+    Hermes-CLI Ready: Fully compatible with standard installation and integration workflows.
+    
+    Install & Generate:
+    To use the generator or integrate it into your workspace:
+    # Clone the repository
+    `git clone https://github.com/iruzen-dono/hermes-plugin-gen.git`
+    
+    # Navigate and run the generator (or adjust based on your exact CLI execution command)
+    `cd hermes-plugin-gen`
+    
+    https://github.com/iruzen-dono/hermes-plugin-gen
+    [embed] GitHub - iruzen-dono/hermes-plugin-gen: Hermes Agent plugin scaffol... https://github.com/iruzen-dono/hermes-plugin-gen
+
