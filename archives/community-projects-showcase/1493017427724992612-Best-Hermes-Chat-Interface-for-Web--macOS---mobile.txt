@@ -4603,3 +4603,13 @@
     
     (Could use feedback and testing of everything from Android, WebUI, desktop apps, and iOS apps, please report any feedback here!)
 
+[2026-06-22T17:36:21.815000+00:00] realadolan (id=1518670999464181790)
+    Hey, any way to prevent WebUI from showing Claude sessions?
+
+[2026-06-22T17:36:44.923000+00:00] realadolan (id=1518671096386158733)
+    Just realized it shows Claude sessions as well 🫪
+
+[2026-06-22T17:40:30.884000+00:00] avidfuturist (id=1518672044135419925)
+    Good point, I'll make that a toggle in settings
+    [reply to realadolan msg=1518670999464181790]
+

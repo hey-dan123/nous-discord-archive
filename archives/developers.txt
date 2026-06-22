@@ -36237,3 +36237,131 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     and the now 1600~ contributors <a:Pray:1060091951753465937>
     [reply to aialliai msg=1518657479314247765]
 
+[2026-06-22T17:15:07.779000+00:00] dias4761 (id=1518665655770022060)
+    <@387972437901312000>  when u can , try check this https://github.com/NousResearch/hermes-agent/pull/48852
+    [embed] fix(gateway): resolve watchdog, env override, and proxy routing on ... https://github.com/NousResearch/hermes-agent/pull/48852
+
+[2026-06-22T17:15:43.849000+00:00] dias4761 (id=1518665807058436206)
+    I had done it with one of the Nous devs, but I think he forgot to check.
+
+[2026-06-22T17:16:11.960000+00:00] dias4761 (id=1518665924964520122)
+    especially since there are now conflicts in the branch.
+
+[2026-06-22T17:22:26.993000+00:00] aienthusiast (id=1518667497967190059)
+    how do you do infographic, validation, summary etc? a skill?
+    [reply to teknium msg=1518658271932710983]
+
+[2026-06-22T17:45:26.324000+00:00] aialliai (id=1518673283300462706)
+    Am I going mad? why is GitHub actions mentioning pr from Hermes on OC pr? 😵‍💫
+    [attachment] Screenshot_2026-06-22_at_17.43.31.png https://cdn.discordapp.com/attachments/1491258766648283238/1518673283149729873/Screenshot_2026-06-22_at_17.43.31.png?ex=6a3ac636&is=6a3974b6&hm=58c134284cc3401ecc12bcdb16547ec0a3ed6ad72b1b0af1a8f3e6e8e29615bb&
+
+[2026-06-22T17:51:24.978000+00:00] janezeroon (id=1518674787604369681)
+    Hey <@387972437901312000> , regarding PR #49597 (Codex image editing) — you previously asked whether Codex actually allows this. Just wanted to share that there's now confirmation in the comments section. I independently tested it on our own Codex subscriptions and it works. I cherry-picked the PR to my local machine and successfully generated + edited images.
+    
+    You can see the screenshots here:
+    https://github.com/NousResearch/hermes-agent/pull/49597
+    
+    No rush, just following up with the evidence you asked for. 🙏
+    [embed] feat(image-gen): support Codex image editing by mehalter · Pull Re... https://github.com/NousResearch/hermes-agent/pull/49597
+
+[2026-06-22T17:52:00.350000+00:00] mehalter (id=1518674935965548686)
+    Hopefully the PR isn't being overlooked now because it was marked as a duplicate. Especially since it's not actually a duplicate really
+
+[2026-06-22T17:54:29.960000+00:00] janezeroon (id=1518675563475243202)
+    i really don't want to forever patch it by myself 😂
+
+[2026-06-22T18:02:51.621000+00:00] yeesil (id=1518677667593982293)
+    I had a total of 32 commits, but now it's down to 10;
+    at this rate, I think it will be reset to zero. Are our contributions being recorded? Or will they all be canceled like this?
+    [attachment] Ekran_Alnts.JPG https://cdn.discordapp.com/attachments/1491258766648283238/1518677667396718773/Ekran_Alnts.JPG?ex=6a3aca4b&is=6a3978cb&hm=2a3d16e5837b45a22420ccd6fe7f8dcdec73af0e87600ba911b04acfbca968ad&
+
+[2026-06-22T18:14:53.766000+00:00] f4t1i (id=1518680696489644053)
+    My Hermes architecture diagram. It shows exactly how Hermes observes problems, generates proposals, runs them through strict safety & governance layers, and only applies changes after human review.<@387972437901312000>
+    [attachment] IMG_2347.png https://cdn.discordapp.com/attachments/1491258766648283238/1518680696221077654/IMG_2347.png?ex=6a3acd1d&is=6a397b9d&hm=912cfd9388f126ae83e7d6eeaede5fa7810e507dadfe4a465f1076cd2592d7b6&
+
+[2026-06-22T18:35:50.177000+00:00] americanappleseed (id=1518685966259195914)
+    <@387972437901312000> this doc has a dead link 
+    
+    https://hermes-agent.nousresearch.com/docs/user-guide/features/computer-use
+    
+    https://cua.ai/docs/how-to-guides/driver/personalize-cursor
+    [embed] Computer Use | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/features/computer-use
+
+[2026-06-22T18:39:43.781000+00:00] aialliai (id=1518686946065649835)
+    checks out...
+    [reply to americanappleseed msg=1518685966259195914]
+
+[2026-06-22T19:02:23.706000+00:00] aleksandr_1 (id=1518692650004250764)
+    <@387972437901312000> sir, noticed you added sweeper labels yesterday to my PR #44898 and I pushed follow-up commits to address both concerns.
+    
+    For `sweeper:risk-compatibility`: the original fix was Linux-only since it relied on `/proc/<pid>/stat`. I added a macOS/BSD fallback via `ps -o state= -p <pid>` that triggers when `FileNotFoundError` is raised. I added a regression test that covers this path by mocking `gateway.status.Path` and blocking `psutil` so it exercises the ps fallback on both Linux and macOS CI. I verified all five compatibility risk categories: no config dependency, no migrations, no defaults changed, upgrades safe in all states.
+    
+    For `sweeper:risk-message-delivery`: I traced all three `_pid_exists` call sites. `gateway/run.py` does not import `gateway.status` at all. The message pipeline has zero dependency on `_pid_exists`. The fix corrects an existing message suppression: without it, zombie holds the scoped lock, platform adapter fails with a lock conflict, gateway exits cleanly under systemd, `Restart=always` relaunches, and the loop repeats leaving messages unread, the crash-loop symptom reported in #42126. No path in the updated `_pid_exists` returns `False` for a live process.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/44898
+    
+    <:o7:1151261546111053924>
+    [embed] fix(gateway): handle zombie PIDs in _pid_exists (closes #42126) by ... https://github.com/NousResearch/hermes-agent/pull/44898
+
+[2026-06-22T19:20:40.560000+00:00] dias4761 (id=1518697250543505499)
+    <@387972437901312000>  I was testing the Hermes files and encountered the following bug. :fix(photon): check_requirements() silently returns False after sidecar npm install fails.
+    
+    https://github.com/NousResearch/hermes-agent/pull/50983
+    [embed] fix(photon): add diagnostic warnings to check_requirements() silent... https://github.com/NousResearch/hermes-agent/pull/50983
+
+[2026-06-22T19:21:18.256000+00:00] dias4761 (id=1518697408652116210)
+    Fixes #50981
+
+[2026-06-22T19:24:18.716000+00:00] dias4761 (id=1518698165556219988)
+    I don't know how important this variable is to you, but anyway, I documented it and tried to implement a solution.
+
+[2026-06-22T19:50:29.795000+00:00] aialliai (id=1518704755138892016)
+    Labeled P3 ..  but photon is problematic!
+    [reply to dias4761 msg=1518698165556219988]
+
+[2026-06-22T19:56:31.948000+00:00] dias4761 (id=1518706274118664343)
+    yea v:
+    [reply to aialliai msg=1518704755138892016]
+
+[2026-06-22T19:58:23.619000+00:00] dias4761 (id=1518706742500786338)
+    I noticed that the automated testing system (Photon) has a flaw: when trying to install necessary dependencies (npm install), the error is silently ignored, causing the tests to not run correctly without anyone noticing. This compromises code quality.
+
+[2026-06-22T19:58:45.333000+00:00] dias4761 (id=1518706833576034354)
+    But I don't know if this part is widely used by developers, etc.
+
+[2026-06-22T20:00:29.596000+00:00] aialliai (id=1518707270886883478)
+    I have not dared to touch Photon, since I've heard problematic user experiences. But I'm sure people appreciate you testing it and making PR's 🔥
+    [reply to dias4761 msg=1518706742500786338]
+
+[2026-06-22T20:01:08.404000+00:00] dias4761 (id=1518707433659302059)
+    tysm
+
+[2026-06-22T20:01:10.270000+00:00] Translator Bot#1043 (id=1518707441486004454)
+    tim
+    [reply to dias4761 msg=1518707433659302059]
+
+[2026-06-22T20:01:25.042000+00:00] dias4761 (id=1518707503444131971)
+    I tried to document as much as possible.
+
+[2026-06-22T20:20:49.357000+00:00] .s0uthpaw (id=1518712386935066776)
+    https://github.com/NousResearch/hermes-agent/issues/51022
+    [embed] [Feature]: turbofit — multi-launcher orchestrator skill (fit-chec... https://github.com/NousResearch/hermes-agent/issues/51022
+
+[2026-06-22T20:23:24.962000+00:00] .s0uthpaw (id=1518713039589867691)
+    It checks if a model will fit their system, configures it for Hermes (main Hermes or Aux model (def. All tasks)), and creates launcher aliases for all front ends including TUI, Dashboard, Desktop, and even Herm. Package update manager; all-in-one "can I run this model in Hermes" tool
+
+[2026-06-22T20:23:27.008000+00:00] davidg1982 (id=1518713048171286678)
+    question, how receptive are we to a tool prioritization feature? PR or Plugin?
+    
+    Tool Prioritization Plugin — Simple Version
+    
+    Right now when Hermes has two tools that do similar things (like OCR), the AI just picks one based on what the tool name sounds like — not what you actually want. It might pick the expensive one over the free one, or the fast one over the slow one, and you can't control it.
+    
+    I want to build a plugin that adds a "weight" system for tools. You'd say in config: "prefer zai-vision OCR 90% of the time, only use Tesseract as a backup." The plugin would hook into where Hermes builds the tool list and either reorder tools or add hints like [PREFERRED] to the description so the AI gets the hint.
+    
+    This lets you control costs (prefer free tools), quality (prefer better OCR), and makes debugging way easier because you know which tool it'll pick.
+    
+    Question: Should this be a plugin I build, or should it be baked into Hermes core? What's the better long-term path here?
+    
+    PR scope: ~200-400 lines
+

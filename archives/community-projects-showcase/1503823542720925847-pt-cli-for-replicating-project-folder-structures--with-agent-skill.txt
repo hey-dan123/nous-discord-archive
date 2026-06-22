@@ -29,3 +29,6 @@
     
     Template for Blender projects coming soon.
 
+[2026-06-22T17:59:20.223000+00:00] garyritchie (id=1518676780926501057)
+    Started adding example templates so you can see what it can do (super simple!): https://github.com/search?q=topic%3Atemplate-project+org%3Agaryritchie&type=Repositories
+

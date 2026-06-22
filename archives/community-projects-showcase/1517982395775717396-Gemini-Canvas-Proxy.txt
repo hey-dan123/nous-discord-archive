@@ -133,3 +133,11 @@
 [2026-06-22T14:33:25.858000+00:00] goated138 (id=1518624962964099144)
     Is there no way to set this up on headless server? Couldn’t figure out how to
 
+[2026-06-22T18:34:51.734000+00:00] pranrichh (id=1518685721131483137)
+    There is a separate guide for tailscale+vps setup, pls read vps_setup.md
+    [reply to goated138 msg=1518624962964099144]
+
+[2026-06-22T18:35:12.345000+00:00] pranrichh (id=1518685807580282940)
+    I'll check it out
+    [reply to one_phantomic msg=1518624880109813810]
+
