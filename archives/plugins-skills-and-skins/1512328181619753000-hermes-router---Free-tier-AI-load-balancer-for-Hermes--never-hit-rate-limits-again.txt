@@ -928,3 +928,27 @@
     Not on Windows / not using Docker? The plain :latest image and the hr CLI work exactly as before — :cli is only needed for the Docker-Desktop-managed-from-VS-Code workflow.
     [embed] VS Code Extension https://hermes-router.vercel.app/vscode-extension/
 
+[2026-06-22T05:42:11.080000+00:00] shaf_2665 (id=1518491270455103518)
+    # 🚀 Big hermes-router update — it just grew up a lot
+    
+    Four major features landed today, all opt-in (nothing changes unless you turn them on) and still free + single-file:
+    
+    **🖥️ Local models** — point it at Ollama / LM Studio / llama.cpp and route to a model on your own machine: free, private, fast, with the cloud pool as automatic fallback. Just set LOCAL_BASE_URL/LOCAL_MODEL. {I would like to thank <@1127390955117486122> for the idea}
+    
+    **💬 Bonus**: send model hermes-router:fast for "conversation mode" — short/casual turns go to your local model, heavier ones fall back to the cloud.
+    
+    **🔑 Per-key budgets & rate limits **— give each API key an RPM ceiling + daily request/token caps (hr limit set …). Over-limit → clean 429. Now safe to share with a team.
+    
+    **🧠 Semantic caching (opt-in)** — serves a cached answer for similar prompts, not just identical ones. Real free-tier savings. SEMANTIC_CACHE=1.
+    
+    **📊 Usage analytics** — new GET /v1/usage (per-provider + per-key tokens/requests), new Prometheus metrics, and it's all shown right in hr status and the VS Code dashboard (new Tokens column).
+    
+    🧩 VS Code extension updated to v0.5.0 · 🐳 Docker images refreshed (:latest, :cli)
+    
+    📖 Docs: https://hermes-router.vercel.app
+    ⭐ GitHub: https://github.com/Shaf2665/Hermes-router
+    
+    Building on a budget? Give it a spin — and a ⭐ helps a ton! 🌟
+    [embed] hermes-router https://hermes-router.vercel.app/
+    [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
+

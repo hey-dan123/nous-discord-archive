@@ -111,3 +111,6 @@
 [2026-06-18T17:24:23.615000+00:00] echoeclipse (id=1517218435652784311)
     yay kk thank you!
 
+[2026-06-22T06:51:36.574000+00:00] drgekoz (id=1518508741803245609)
+    <@95617422995750912> --- font switcher has been implemented + default font given black outline to make it easier to read - you can also select font size in the settings as well
+

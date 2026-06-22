@@ -4432,3 +4432,116 @@
     Okay great, he should be able to sort it out!
     [reply to jconcep msg=1518432154151944285]
 
+[2026-06-22T04:54:55.668000+00:00] rostelinalise (id=1518479377875206195)
+    no public repo yet? need to prolly add a kanban feature for the ios app
+    [reply to avidfuturist msg=1518420177077796925]
+
+[2026-06-22T04:57:45.704000+00:00] avidfuturist (id=1518480091057881098)
+    For the iOS app you mean? Yeah - Good point, Uzi should hopefully add that soon
+    [reply to rostelinalise msg=1518479377875206195]
+
+[2026-06-22T04:58:07.304000+00:00] rostelinalise (id=1518480181654851625)
+    would love to contribute to the design/feature idea XD
+    [reply to avidfuturist msg=1518480091057881098]
+
+[2026-06-22T07:02:36.263000+00:00] hydraxiann (id=1518511508739592415)
+    *Reaches hand in for testing on pixel 10 pro xl*
+
+[2026-06-22T07:03:07.723000+00:00] avidfuturist (id=1518511640692396033)
+    Excellent, need android testers
+    [reply to hydraxiann msg=1518511508739592415]
+
+[2026-06-22T07:04:08.909000+00:00] avidfuturist (id=1518511897324818502)
+    If you are brand new and don’t have WebUI you can follow instructions here https://get-hermes.ai/setup/
+    [reply to hydraxiann msg=1518511508739592415]
+
+[2026-06-22T07:04:15.848000+00:00] hydraxiann (id=1518511926429089874)
+    Tried to send a dm, but it appears to be closed
+    [reply to avidfuturist msg=1518511640692396033]
+
+[2026-06-22T07:04:31.497000+00:00] avidfuturist (id=1518511992066015332)
+    APK is here https://github.com/hermes-webui/hermes-android/releases
+
+[2026-06-22T07:04:40.382000+00:00] floory (id=1518512029332275354)
+    aren't you gonna have to submit your ID to Google? just publish on f-droid
+    [reply to avidfuturist msg=1518419808364925019]
+
+[2026-06-22T07:05:28.563000+00:00] avidfuturist (id=1518512231418040420)
+    Can you friend me and send me your play store email, can set you up in play store internal test, we need more members
+    [reply to hydraxiann msg=1518511926429089874]
+
+[2026-06-22T07:05:32.996000+00:00] hydraxiann (id=1518512250011254934)
+    Neat!
+    
+    And webui i plan to toss into termux, as i want to experiment with running it all locally on the phone 😛
+    [reply to avidfuturist msg=1518511992066015332]
+
+[2026-06-22T07:05:41.658000+00:00] avidfuturist (id=1518512286342578247)
+    Developer already did! So we already have the play store internal beta test going. Just need 12 people to install via play store and 2 weeks - and we can go public
+    [reply to floory msg=1518512029332275354]
+
+[2026-06-22T07:06:51.155000+00:00] avidfuturist (id=1518512577833992202)
+    Sure! WebUI just needs to run where your Hermes agent is and you should be good to go
+    [reply to hydraxiann msg=1518512250011254934]
+
+[2026-06-22T07:07:23.748000+00:00] avidfuturist (id=1518512714538815518)
+    https://www.reddit.com/r/termux/s/brW25PnMFU
+    [embed] Setting up Hermes Agent + WebUI in termux on Android - editing loca... https://www.reddit.com/r/termux/s/brW25PnMFU
+
+[2026-06-22T07:07:44.822000+00:00] avidfuturist (id=1518512802929836165)
+    Might want to check that post <@613392707015933981> as they did the exact same thing
+
+[2026-06-22T07:08:26.386000+00:00] hydraxiann (id=1518512977261629540)
+    Awesome!
+    [reply to floory msg=1518512029332275354]
+
+[2026-06-22T07:10:15.928000+00:00] hydraxiann (id=1518513436714074132)
+    Or don't use fdroid and use something a bit more secure and trustworthy 😛
+    [reply to floory msg=1518512029332275354]
+
+[2026-06-22T07:11:59.511000+00:00] hydraxiann (id=1518513871172796436)
+    As i had hermes adb into my s21 and snag all the apk's related to shamsung's dex apps, i'm gonna try setting it up all "desktop style" with mouse and keyboard lol
+
+[2026-06-22T07:12:00.102000+00:00] avidfuturist (id=1518513873651499048)
+    Let me know how it goes with the new android app which connects to the WebUI instance! Cool experiment
+    [reply to hydraxiann msg=1518512250011254934]
+
+[2026-06-22T07:12:59.211000+00:00] hydraxiann (id=1518514121572618350)
+    Will do! Though, phone's expected today or tomorrow, and as i gotta learn the ropes on how to setup apps with grapheneOS, might take a hot few days to get everything setup 😛
+    [reply to avidfuturist msg=1518513873651499048]
+
+[2026-06-22T07:13:48.304000+00:00] avidfuturist (id=1518514327483580557)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and a native desktop app! And with **native iOS app and Android support**! Full setup guide here: https://get-hermes.ai/setup/
+    
+    (Could use feedback and testing of everything from Android, WebUI, desktop apps, and iOS apps, please report any feedback here!)
+
+[2026-06-22T07:14:57.296000+00:00] fleety13 (id=1518514616857006181)
+    Get Hermes to document everything, hopefully we see more people adopting graphene and hermes!
+    [reply to hydraxiann msg=1518514121572618350]
+
+[2026-06-22T07:16:21.551000+00:00] hydraxiann (id=1518514970248216648)
+    Any recommended instruction for documenting it all? As i'm not sure how i'd document it lol. Like if i am to do it myself, what steps/parts would you want documented for instance?
+    [reply to fleety13 msg=1518514616857006181]
+
+[2026-06-22T07:25:29.638000+00:00] fleety13 (id=1518517269091848272)
+    Hermes make an obsidian vault.
+    Take voice notes after each step. 
+    feed them into hermes. 
+    Get herems to write in a  how to  format. 
+    If you take a few photos its a bonus.  
+    Are you trying to find a way to let hermes ssh into you phone and do some of it?
+    Wild if possible!  We can ssh into servers, why not a phone?
+    [reply to hydraxiann msg=1518514970248216648]
+
+[2026-06-22T08:52:48.637000+00:00] floory (id=1518539243046309959)
+    ?
+    [reply to hydraxiann msg=1518513436714074132]
+
+[2026-06-22T08:52:53.116000+00:00] floory (id=1518539261832462456)
+    what are you on about
+
+[2026-06-22T08:53:27.487000+00:00] floory (id=1518539405995016254)
+    f-droid is the most popular open source android app store i've never heard of it being untrustworthy or insecure?
+

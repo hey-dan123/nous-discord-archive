@@ -83,3 +83,47 @@
     Hermes-router is a load balancer that rotates many rate-limited keys to maintain uptime, whereas this proxy uses a single Gemini Canvas session to access Google's internal credentials which have no rate limits or daily caps. This approach provides a truly unlimited and free API for models like Gemini 3 Flash and Nano Banana 2 without the need to manage hundreds of keys or worry about 503 errors during heavy usage.
     [reply to goated138 msg=1518371242028306582]
 
+[2026-06-22T05:07:11.445000+00:00] goated138 (id=1518482463947620472)
+    Does it include embeddings models or just the Gemini 3 Flash and Nano Banana?
+    [reply to pranrichh msg=1518451884049043528]
+
+[2026-06-22T05:10:17.119000+00:00] pranrichh (id=1518483242720956576)
+    It includes gemini-3-flash-preview, gemini-2.5-flash-preview-05-20, gemini-3.1-flash-image-preview (nano banana 2), gemini-2.5-flash-image, doens't include embedding models, it uses the models currently available for free in Gemini canvas and keeps updating in a few months when Google releases new models, so Gemini 3.5 flash should come too soon
+    [reply to goated138 msg=1518482463947620472]
+
+[2026-06-22T05:11:04.873000+00:00] goated138 (id=1518483443015614505)
+    This is so cool. Nice work, installing it now!
+    [reply to pranrichh msg=1518483242720956576]
+
+[2026-06-22T05:11:18.502000+00:00] pranrichh (id=1518483500179914804)
+    Thx mate, please share ur experience
+    [reply to goated138 msg=1518483443015614505]
+
+[2026-06-22T11:22:15.743000+00:00] dulli77 (id=1518576853814874313)
+    Unlimited but still capped by the free tier usage, right? Or like literally unlimited (?)
+    [reply to pranrichh msg=1518451884049043528]
+
+[2026-06-22T11:22:34.346000+00:00] pranrichh (id=1518576931841380372)
+    Literally unlimited
+    [reply to dulli77 msg=1518576853814874313]
+
+[2026-06-22T11:22:44.503000+00:00] pranrichh (id=1518576974442926162)
+    It's a gemini canvas promotion thing
+
+[2026-06-22T11:22:54.184000+00:00] dulli77 (id=1518577015047983184)
+    How?! I was thinking of making it multi auth and rotating
+    [reply to pranrichh msg=1518576931841380372]
+
+[2026-06-22T11:22:57.358000+00:00] pranrichh (id=1518577028360831056)
+    Which is currently being utilised in a different way
+
+[2026-06-22T11:23:01.408000+00:00] dulli77 (id=1518577045347504268)
+    Oic
+
+[2026-06-22T11:23:21.271000+00:00] pranrichh (id=1518577128659095616)
+    Yea you don't need to do that trouble
+    [reply to dulli77 msg=1518577015047983184]
+
+[2026-06-22T11:23:32.725000+00:00] pranrichh (id=1518577176700522689)
+    You can read the readme.md for more details
+

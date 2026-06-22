@@ -36012,3 +36012,107 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     I can see this stepping on the toes of what kanban wants to do with swarms, but I do sometimes find I have one off tasks that I want to use my other specialist agents for, and it feels heavy to set up a whole kanban board for it, but maybe I'm just assigning too much of my own pre-disposition for what kanban should be used for?
 
+[2026-06-22T04:18:28.358000+00:00] opahfish (id=1518470203632259223)
+
+[2026-06-22T05:43:33.432000+00:00] gahrek_tain (id=1518491615864426516)
+    Just posted my first project. 🙂 I've found it highly useful. https://github.com/tier4research/memorant
+    [embed] GitHub - tier4research/memorant: Trustworthy long-term memory for A... https://github.com/tier4research/memorant
+
+[2026-06-22T06:39:49.741000+00:00] srojk34 (id=1518505777130635264)
+    terminal.modal_mode (auto/direct/managed) was present in DEFAULT_CONFIG, TERMINAL_CONFIG_ENV_MAP, and consumed by terminal_tool via os.getenv("TERMINAL_MODAL_MODE") — but missing from both cli.py env_mappings and gateway/run.py _terminal_env_map. Users who set terminal.modal_mode: direct in config.yaml had it silently reverted to "auto" on CLI and gateway paths. Same bug class as docker_extra_args (#50631). Fix adds the missing bridge entries + regression test.
+    
+    https://github.com/NousResearch/hermes-agent/pull/50654
+    [embed] fix(terminal): bridge modal_mode config key to TERMINAL_MODAL_MODE ... https://github.com/NousResearch/hermes-agent/pull/50654
+
+[2026-06-22T07:13:49.210000+00:00] srojk34 (id=1518514331283750922)
+    _cleanup_single_browser_session() kills a daemon PID from a world-writable /tmp/ dir without identity verification — recycled or planted PIDs cause arbitrary process kills. The orphan reaper path was fixed in #50417 but this cleanup path was missed. Same guard applied, fail-closed.
+    
+    https://github.com/NousResearch/hermes-agent/pull/50667
+    [embed] fix(security): verify PID identity before kill in browser session c... https://github.com/NousResearch/hermes-agent/pull/50667
+
+[2026-06-22T07:21:10.029000+00:00] srojk34 (id=1518516180212781106)
+    handle_max_iterations() bypasses the transport and sends API messages directly. The transport strips timestamp since #47868 but the summary path was missed. Resumed sessions hitting max iterations on strict providers (Fireworks, Mistral, Kimi) get HTTP 400. One-word fix.
+    
+    https://github.com/NousResearch/hermes-agent/pull/50672
+    [embed] fix(agent): strip timestamp from summary path to avoid strict-provi... https://github.com/NousResearch/hermes-agent/pull/50672
+
+[2026-06-22T08:50:48.075000+00:00] the_answers (id=1518538737372500038)
+    He <@387972437901312000> 
+    
+    When you get a chance, Can you check my PR?
+    
+    Here's some background:
+    
+    I just updated my hermes today, and coincidentally one of my chats became too big. Upon compression, I noticed a bug where the agent was saying that compression happened, but the compressed messages didn't persist.
+    
+    So, after some digging I found out why they weren't persisting, and found a bug where both the manual /compress command and session hygiene auto-compress create temp AIAgent instances without a session_db. The compressor runs, computes compressed messages, rotates the session ID, and reports (like "Compressed: 970 → 11 messages") — but never actually writes to the database. Next user message reloads the full original transcript and hits overflow again.
+    
+    
+    
+    Anyway, I made a PR:
+    
+    - **PR:** https://github.com/NousResearch/hermes-agent/pull/50542
+    - **2 files, 13 insertions:** `gateway/slash_commands.py` + `gateway/run.py`
+    - **Tested live** — confirmed working after restart.
+    [embed] fix(gateway): pass session_db to compress temp agents so persistenc... https://github.com/NousResearch/hermes-agent/pull/50542
+
+[2026-06-22T09:14:50.812000+00:00] wysie_ (id=1518544788650065950)
+    <@387972437901312000> Made allowable filetypes configurable, can you have a look? thanks. https://github.com/NousResearch/hermes-agent/pull/50562
+    [embed] feat: make gateway document types configurable by wysie · Pull Req... https://github.com/NousResearch/hermes-agent/pull/50562
+
+[2026-06-22T09:24:32.113000+00:00] 0xhellno (id=1518547226803048588)
+    hey, contributed two bug fixes that are annoying for the GUI user experience. can anyone have a look?
+    https://github.com/NousResearch/hermes-agent/pull/49033 
+    https://github.com/NousResearch/hermes-agent/pull/49019
+    [embed] fix(interrupt): run user-approved commands from a clean interrupt s... https://github.com/NousResearch/hermes-agent/pull/49033
+    [embed] fix(terminal): stop flagging benign nonzero exit codes as failures ... https://github.com/NousResearch/hermes-agent/pull/49019
+
+[2026-06-22T10:47:31.557000+00:00] icather_98107 (id=1518568112105193472)
+    Every terminal tool call fails with exit code 126 when hermes runs from PowerShell/cmd.exe on Windows — session cwd is stored as C:\Users\... but bash cd needs /c/Users/.... One file, +24/-2. Tagged P1.
+    
+    https://github.com/NousResearch/hermes-agent/pull/50596
+    [embed] fix(tools): convert Windows native CWD to MSYS format for bash cd b... https://github.com/NousResearch/hermes-agent/pull/50596
+
+[2026-06-22T11:00:45.023000+00:00] minddragon (id=1518571440142684325)
+    Hmm. Pete Steinberger is quite...annoying. Says we're VC funded >.>  I ain't seen a single VC in the 1,500+ contributors here. Which, btw, if there was - I think many of us have ideas lol.
+
+[2026-06-22T11:14:32.791000+00:00] scottermonkey (id=1518574912053317642)
+    Hi <@387972437901312000> - Hoping you will find interest in checking this one out:
+     
+    Hermes truncates cron output at 4000 chars (cuts the bottom off silently): 
+    MAX_PLATFORM_OUTPUT and TRUNCATED_VISIBLE are hard-coded into delivery.py.
+    
+    I created a solution/PR that makes the truncation configurable and adapter-aware so chunking platforms get the full output. Would appreciate eyes/reviews/support: https://github.com/NousResearch/hermes-agent/pull/50145
+    [embed] fix(delivery): configurable + adapter-aware cron output truncation ... https://github.com/NousResearch/hermes-agent/pull/50145
+
+[2026-06-22T11:16:43.963000+00:00] srojk34 (id=1518575462228689067)
+    stop() reads the bot PID from .active.json and kills it after only a bare liveness check. Once the bot exits and the kernel recycles the PID, an unrelated process gets SIGKILL'd. Same vulnerability class fixed in process registry (#50468), WhatsApp bridge, and browser daemon (#50417). Fix records kernel start-time at spawn, verifies before signalling. Legacy .active.json degrades to prior behaviour.
+    
+    https://github.com/NousResearch/hermes-agent/pull/50674
+    [embed] fix(security): validate PID identity before kill in google_meet sto... https://github.com/NousResearch/hermes-agent/pull/50674
+
+[2026-06-22T11:17:29.401000+00:00] teknium (id=1518575652809478204)
+    Nous is VC funded
+    [reply to minddragon msg=1518571440142684325]
+
+[2026-06-22T11:17:47.466000+00:00] teknium (id=1518575728579444917)
+    (just like he personally is at openai fwiw)
+
+[2026-06-22T11:19:38.302000+00:00] teknium (id=1518576193459322942)
+    Anyone who thinks that 1.5M$ in gpt spend per month he's spending is from the non profit funding I got a bridge to sell em
+
+[2026-06-22T11:21:16.083000+00:00] minddragon (id=1518576603582562314)
+    Well yes:
+    
+    Nous (VC) -> Small core team like you and perhaps 1-2 others same as him
+    Nous -> Open Source directly vs. Non profit (cough - payment to his buddies) - $$$$
+    [reply to teknium msg=1518575728579444917]
+
+[2026-06-22T11:22:34.682000+00:00] minddragon (id=1518576933250666576)
+    Complete aside <@387972437901312000> I know that I've been hinting at this...but I've been tooling an idea and I got 2 more pieces to bake for Liminal Suite. 
+    
+    It should make dogfooding Pete's way (at millions of inference dollars) quite stupid.
+
+[2026-06-22T11:27:54.287000+00:00] kartiklabhshetwar (id=1518578273771192341)
+    Mem0 X Nous thread
+

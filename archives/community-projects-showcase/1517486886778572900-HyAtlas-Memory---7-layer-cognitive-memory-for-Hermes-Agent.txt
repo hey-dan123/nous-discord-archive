@@ -95,3 +95,7 @@
 [2026-06-22T03:46:21.777000+00:00] tunacookie (id=1518462122965602515)
     Focusing on easy deployment now.
 
+[2026-06-22T05:18:50.020000+00:00] tunacookie (id=1518485393983541319)
+    next focus, work on access for scoring
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517486886778572900/1518485393727553657/image.png?ex=6a3a1739&is=6a38c5b9&hm=ebb18129d41dac200cae128b05c94330e0a21e29a957c392fb120b60c174a4ef&
+

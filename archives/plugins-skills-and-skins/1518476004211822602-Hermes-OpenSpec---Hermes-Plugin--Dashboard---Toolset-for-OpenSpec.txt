@@ -1,0 +1,20 @@
+# Thread 'Hermes-OpenSpec - Hermes Plugin (Dashboard + Toolset for OpenSpec)' in forum #plugins-skills-and-skins
+# thread_id=1518476004211822602 forum_id=1485392832154832906
+# Started 2026-06-22T11:54:33.667859+00:00
+
+[2026-06-22T04:41:31.324000+00:00] dami.zip (id=1518476004211822602)
+    Integrated a toolset and a dashboard for registered repositories. Custom identifiers (Example: `openspec/os_edc52e`) per change/spec for use with agent. 
+    
+    Register or init a repository OpenSpec definition.
+    Watch your agent(s) work at your change board. 
+    Review generated specs, requirements, and proposals.
+    
+    
+    
+    https://github.com/FelineStateMachine/hermes-openspec
+    [attachment] 2026-06-21_22-17-09.mov https://cdn.discordapp.com/attachments/1518476004211822602/1518476005461852261/2026-06-21_22-17-09.mov?ex=6a3a0e7b&is=6a38bcfb&hm=6e3b7ace1efa9424724511d64b4e361cb061367f89e565b30276aecb40b0b4ec&
+    [attachment] board.png https://cdn.discordapp.com/attachments/1518476004211822602/1518476006694850570/board.png?ex=6a3a0e7b&is=6a38bcfb&hm=a2348da2124a2898c3068c85cfa7f3f58023b55c20ecc62a91a77d013ff106ab&
+    [attachment] specs.png https://cdn.discordapp.com/attachments/1518476004211822602/1518476007441694750/specs.png?ex=6a3a0e7c&is=6a38bcfc&hm=7a0a73f585e4330b1f5b3bc7579ca63015e73df779825ca5ffe504e8b16edca1&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1518476004211822602/1518476007957336074/image.png?ex=6a3a0e7c&is=6a38bcfc&hm=42c45801eb44c8897519157586e85f11e092241b95e0f02cd02abba574220868&
+    [embed] GitHub - FelineStateMachine/hermes-openspec: A plugin for hermes th... https://github.com/FelineStateMachine/hermes-openspec
+
