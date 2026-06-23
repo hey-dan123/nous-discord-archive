@@ -36621,3 +36621,83 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I get it. I truly do. There's challenges with this approach...
     [reply to wesleysimplicio msg=1518884610937847938]
 
+[2026-06-23T09:44:20.606000+00:00] yeesil (id=1518914599569592331)
+    <@387972437901312000>
+    [reply to yeesil msg=1518677667593982293]
+
+[2026-06-23T09:45:13.612000+00:00] minddragon (id=1518914821893132419)
+    I think you meant PR's.
+    [reply to yeesil msg=1518914599569592331]
+
+[2026-06-23T10:15:35.565000+00:00] aialliai (id=1518922463717757110)
+    Did someone tag teknium maybe? 🤔
+
+[2026-06-23T10:18:57.466000+00:00] autumnn5389 (id=1518923310551793705)
+    No worries, bro. The project isn't planning to launch a token anyway. It's all about contributing and building for the community.    LOL
+    [reply to yeesil msg=1518914599569592331]
+
+[2026-06-23T10:19:15.476000+00:00] movedhat (id=1518923386091212802)
+    surely opencode users know this handy dandy tool im sure this will be a great addition! @ devs 👀  https://github.com/NousResearch/hermes-agent/pull/51246
+    [embed] feat(desktop): Tab-cycle mode toggle (Plan / Code / Ask) in compose... https://github.com/NousResearch/hermes-agent/pull/51246
+
+[2026-06-23T10:54:22.786000+00:00] wnuuee (id=1518932224789971075)
+    Wanted to make the tooltip style consistent so the app feels more polished visually.
+    Several icon buttons across the desktop UI showed plain white browser-native tooltips on hover instead of the app's styled dark tooltips. The <Tip> component is already used elsewhere in the app (e.g. the Default workspace button in the statusbar) and produces the correct dark-themed tooltip style. <@387972437901312000> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/51315
+    [attachment] 2026-06-23-13-15-25_JuicMKJq.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1518932224945295421/2026-06-23-13-15-25_JuicMKJq.mp4?ex=6a3bb75e&is=6a3a65de&hm=58ccb3cc480fc7b6c9975eeebd30e40f6e4d7accb8567fdcb9f004b44fe0a83f&
+    [embed] fix(desktop): replace native title tooltips with styled Tip compone... https://github.com/NousResearch/hermes-agent/pull/51315
+
+[2026-06-23T11:32:37.436000+00:00] og_cupid (id=1518941849249779713)
+    [attachment] electron_dTbtMwNX8T.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1518941847475720374/electron_dTbtMwNX8T.mp4?ex=6a3bc055&is=6a3a6ed5&hm=5255828d0cab9879e16923a82770077fd426a316d3f342e03330a3527b4bc9cf&
+
+[2026-06-23T11:54:56.718000+00:00] eureka0328 (id=1518947466605625514)
+    Hi @teI’ve noticed a bunch of PRs related to ContextEngine hook extensions are still stuck unmerged. Do we have a clear roadmap planned out for this feature?
+
+[2026-06-23T11:58:06.118000+00:00] eureka0328 (id=1518948261006671982)
+    <@387972437901312000> Would appreciate a response when you have the time.
+
+[2026-06-23T12:32:49.808000+00:00] tkdchen (id=1518957000636235941)
+    Hi team, I'm packaing hermes agent Fedora package. So far, I encountered a major issue is the top-level modules are installed into `/usr/lib/python3.xx/site-packages/`. I'd like to hear team's thoughts to convert project structure to the src-layout in order to namespace all Python modules, e.g. `import hermes_agent.hermes_cli`.
+
+[2026-06-23T12:33:17.443000+00:00] tkdchen (id=1518957116545564682)
+    I have local changes made recently, it has huge changes to modules and tests, and even deployments like Dockerfile. Almost changes relates to the file path construction based on `PROJECT_ROOT`, currently it points to the installation directory and source directory dynamically in the context of corresponding features.
+
+[2026-06-23T12:33:29.518000+00:00] tkdchen (id=1518957167191916545)
+    My current plan is to transition to src-layout step-by-step and the first step is to make code not rely on the `PROJECT_ROOT`. What do you think?
+
+[2026-06-23T13:03:58.887000+00:00] scottermonkey (id=1518964840121765990)
+    Hey <@387972437901312000> - 
+    
+    Please check out this PR.
+    
+    Currently: A single compression.threshold for all models:
+    - 50% on a 1M-context model means compress at 500K; way too late. 
+    - Same 50% on a 128K model fires at 64K; just right.
+    If you switch between models, you're forced to change that number.
+    
+    The fix: let model.compression.threshold override the global default per-model, right alongside your model config. Falls back to the global compression.threshold when there's no override. Zero breakage.
+    
+    PR is here → https://github.com/NousResearch/hermes-agent/pull/38139
+    [embed] feat(agent): support per-model compression overrides by sweetcornna... https://github.com/NousResearch/hermes-agent/pull/38139
+
+[2026-06-23T13:04:26.251000+00:00] smomo_omoms (id=1518964954894565466)
+    Hi, I coded my own chat app ( when I say I coded.... ) and an adapter plugin, it is all working 100%, but I had to make one change to message_tool.py to allow media sending to my adapter plugin. It was hard coded to only allow media to  telegram, discord, matrix, weixin, signal, yuanbao, feishu.    I would like a clean 'plugin only' adapter, so I was wondering if anyone knoiws if there is a mechanism where my plugin is able to tell the hermes system to allow medai ?
+
+[2026-06-23T13:14:09.760000+00:00] thyfriendlyfox (id=1518967402308571236)
+    Good morning guys 🙂
+
+[2026-06-23T13:25:01.729000+00:00] randqua (id=1518970136865013891)
+    Opened a small docs cleanup PR for Hermes:
+    https://github.com/NousResearch/hermes-agent/pull/51354
+    While checking the contributor docs, I noticed an outdated reference to tests/conftest.py::_enforce_test_timeout. That fixture is no longer present, so I updated the docs to point to the current timeout setup location: tests/conftest.py::pytest_configure.
+    Small documentation-only change:
+    
+    updated the stale reference in contributor docs
+    no code changes
+    no test behavior changes
+    no config changes
+    
+    I’ll keep looking for small, verified docs/tooling issues where I can help.
+    [embed] docs: fix stale conftest timeout reference by TutkuEroglu · Pull R... https://github.com/NousResearch/hermes-agent/pull/51354
+

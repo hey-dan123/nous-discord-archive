@@ -75,3 +75,17 @@
     https://github.com/Ufonik88/Hermes-VaultKnox
     [embed] GitHub - Ufonik88/Hermes-VaultKnox https://github.com/Ufonik88/Hermes-VaultKnox
 
+[2026-06-23T12:35:23.076000+00:00] ufonik88 (id=1518957643488563354)
+    🔐 VaultKnox v0.7.0 for Hermes is here, and this one is all about serious hardening.
+    
+    ✦ Sensitive metadata is now encrypted at rest, the search index is protected with deterministic tokens for exact-match queries, and KDF settings are fully configurable at init for stronger, flexible deployments.
+    
+    ✦ I have also tightened access controls across the board. Agent actions now enforce session-derived keys, MCP scans require both an agent ID and capability check, username hints are reduced to the minimum, and token TTLs are clamped by policy.
+    
+    With policy controls now live, metadata minimized, and 303 tests passing, this release is built for teams that care about real security.
+    
+    For Hermes agents running VaultKnox, this is the upgrade to make. 🚀
+    
+    🔗 https://github.com/Ufonik88/Hermes-VaultKnox
+    [embed] GitHub - Ufonik88/Hermes-VaultKnox https://github.com/Ufonik88/Hermes-VaultKnox
+

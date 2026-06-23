@@ -1055,3 +1055,21 @@
     Will check this. thanks
     [reply to gaming_life msg=1516618283674239097]
 
+[2026-06-23T11:48:39.618000+00:00] fathah. (id=1518945884933591050)
+    [attachment] Image_23-06-26_at_4.32_PM.jpg https://cdn.discordapp.com/attachments/1489459150235893863/1518945884690186350/Image_23-06-26_at_4.32_PM.jpg?ex=6a3bc417&is=6a3a7297&hm=a28871873af2f5d70bc4c407216961e6863d4d42c3eadfb22c7300618fe2b222&
+
+[2026-06-23T11:48:43.437000+00:00] fathah. (id=1518945900951638066)
+    [attachment] Screen_Recording_2026-06-23_at_4.19.34_PM.mov https://cdn.discordapp.com/attachments/1489459150235893863/1518945900636934195/Screen_Recording_2026-06-23_at_4.19.34_PM.mov?ex=6a3bc41b&is=6a3a729b&hm=23b998884f1032bf6625efa851eaa07611ddd7186db317218f31034b14189e2f&
+
+[2026-06-23T11:49:31.757000+00:00] fathah. (id=1518946103620276405)
+    ## Release v0.7
+    
+    https://x.com/HermesOneApp/status/2069375934600565042
+    
+    
+    Changelog:
+    
+    https://github.com/fathah/hermes-desktop/blob/main/changelogs/0.7.0.md
+    [embed]  https://twitter.com/HermesOneApp/status/2069375934600565042
+    [embed] hermes-desktop/changelogs/0.7.0.md at main · fathah/hermes-desktop https://github.com/fathah/hermes-desktop/blob/main/changelogs/0.7.0.md
+

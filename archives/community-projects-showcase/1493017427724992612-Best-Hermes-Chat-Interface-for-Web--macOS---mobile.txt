@@ -4679,3 +4679,43 @@
     
     (Could use feedback and testing of everything from Android, WebUI, desktop apps, and iOS apps, please report any feedback here!)
 
+[2026-06-23T11:16:39.457000+00:00] hydraxiann (id=1518937831194755092)
+    Plan is to run termux in some form on the phone and run it all locally 😛
+    [reply to fleety13 msg=1518517269091848272]
+
+[2026-06-23T11:19:21.260000+00:00] hydraxiann (id=1518938509845598388)
+    <@145786028483936256>Can you check what in my message got flagged?
+
+[2026-06-23T11:20:16.964000+00:00] hydraxiann (id=1518938743484973169)
+    Or <@843913220867096606> , as Adolan is probably asleep/work/school 😛
+
+[2026-06-23T11:22:14.152000+00:00] realadolan (id=1518939235007332483)
+    What message?
+
+[2026-06-23T11:22:47.315000+00:00] realadolan (id=1518939374102778097)
+    I can see "Plan is to run termux in some form on the phone and run it all locally 😛"
+
+[2026-06-23T11:22:50.837000+00:00] realadolan (id=1518939388875116705)
+    it's not flagged
+
+[2026-06-23T11:23:13.192000+00:00] hydraxiann (id=1518939482638778458)
+    Is the internal testing one the same as the apk on git? As that's the one i got installed.
+    [reply to avidfuturist msg=1518512231418040420]
+
+[2026-06-23T11:23:37.171000+00:00] hydraxiann (id=1518939583214125116)
+    A message i pasted got flagged, but it didn't say what part of it.
+    [reply to realadolan msg=1518939235007332483]
+
+[2026-06-23T11:24:34.764000+00:00] realadolan (id=1518939824776806520)
+    Oh, not sure... don't think I can see why, I'm not a mod, just a dev
+
+[2026-06-23T11:26:01.373000+00:00] hydraxiann (id=1518940188041023498)
+    Ah ok. Guess the only way is to tag one of the people/person that posts announcements 😛
+
+[2026-06-23T11:28:20.566000+00:00] hydraxiann (id=1518940771858907259)
+    https://hastebin.duckers-web.site/avukinukam.md This was why. As i heard some stuff about it a few weeks ago, and saw this posted in another discord.
+    [reply to floory msg=1518539405995016254]
+
+[2026-06-23T11:34:23.510000+00:00] hydraxiann (id=1518942294156378182)
+    Was tmux/termux or whatever it was the recommended app to install llama.cpp with?
+
