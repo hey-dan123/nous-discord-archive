@@ -36701,3 +36701,225 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I’ll keep looking for small, verified docs/tooling issues where I can help.
     [embed] docs: fix stale conftest timeout reference by TutkuEroglu · Pull R... https://github.com/NousResearch/hermes-agent/pull/51354
 
+[2026-06-23T15:07:46.075000+00:00] waefrebeorn (id=1518995992005836820)
+    been hard at work on slermes
+    
+    so hard at work in fact that i learned how to slerm the web server and the sdl2 desktop app of my own
+    
+    slermes will slerm
+    [attachment] IMG_5375.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1518995991187951757/IMG_5375.jpg?ex=6a3bf2c1&is=6a3aa141&hm=d15dacc2896b546949061bace1a501f0fa14858c8493a1bdad90ab2c226982f4&
+    [attachment] IMG_5365.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1518995991485878397/IMG_5365.jpg?ex=6a3bf2c1&is=6a3aa141&hm=e10d59b70862e8dc9711f84fdd2ae07f0c04a0f890b3e7fd13bb5357e8009f71&
+
+[2026-06-23T15:26:44.784000+00:00] chris.delac (id=1519000768097550396)
+    New PR: https://github.com/NousResearch/hermes-agent/pull/51412
+    [embed] feat(skills): add external_dirs_readonly config flag (default true)... https://github.com/NousResearch/hermes-agent/pull/51412
+
+[2026-06-23T15:30:18.185000+00:00] imandey_ (id=1519001663166353518)
+    I’ve been thinking about the future of AI development. While most current AI is limited to flat, 2D interfaces, I believe the next evolution is integrating AI directly with 3D engines (like spline,t.co/kJViA3am5q,godly etc) and spatial computing. Imagine an AI that acts as a pro-level spatial designer—generating not just static code, but fully immersive, 3D-animated, and clickable websites, apps, and games with real-time physics. This shift from 'flat' AI to dynamic, interactive 3D website and app and game revolutionize how we build and experience digital spaces. I’d love to hear your thoughts on this vision.
+    We want the feature to be built-in, free, and unlimited for everyone.
+    So, the Hermes agent will become a world changing AI agent when it comes to coding.
+
+[2026-06-23T15:37:44.260000+00:00] imandey_ (id=1519003534140379136)
+    Everyone, please support me in bringing this feature officially into Hermes Agent and please tell the nous research about this.
+    I am not a developer.
+
+[2026-06-23T15:53:39.974000+00:00] hypertekton (id=1519007542695563274)
+    People have been dreaming about 3D UIs forever and still they don't happen because it's actually very awkward for most things people do on computers. Source: worked 8 years on VR/AR
+    [reply to imandey_ msg=1519001663166353518]
+
+[2026-06-23T16:03:21.663000+00:00] promptclickrun (id=1519009982475927593)
+    Has anyone seen (or created) a method for identifying multiple users chatting across a single agent/profile? A use case would be an AI assistant for our family, or even team based development on a specific profile, where it could inject proper memory and user context based on either a user authentication or device pairing? Heavily preferring to use an iOS app and/or web UI. Just really not a fan of telegram and discord for agentic work.
+
+[2026-06-23T16:04:19.411000+00:00] scottermonkey (id=1519010224688861276)
+    Thanks, TonyDW for approving this! 
+    <@387972437901312000> please take a look?
+    https://github.com/NousResearch/hermes-agent/pull/38139
+    [embed] feat(agent): support per-model compression overrides by sweetcornna... https://github.com/NousResearch/hermes-agent/pull/38139
+
+[2026-06-23T16:34:44.808000+00:00] teknium (id=1519017880958668901)
+    <@119192111202566149> lgtm wdyt
+    [reply to wnuuee msg=1518932224789971075]
+
+[2026-06-23T16:38:35.118000+00:00] brooklyn (id=1519018846948687872)
+    nice! yeah lgtm too
+    [reply to wnuuee msg=1518932224789971075]
+
+[2026-06-23T16:48:47.903000+00:00] shivamselam (id=1519021417155399762)
+    is there a way to let hermes use opencode as an adapter?
+
+[2026-06-23T16:49:19.908000+00:00] dias4761 (id=1519021551394230484)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/51153 when u can see
+    [embed] fix(discord): prevent duplicate user message processing on auto-thr... https://github.com/NousResearch/hermes-agent/pull/51153
+
+[2026-06-23T16:49:48.960000+00:00] smomo_omoms (id=1519021673246887987)
+    It still surprises me how little progress there has been in 3D user interfaces, but I think this is because of inheriant problems with them. That's not to say that someone won't find ingenius way to make it work, but it has been a long time now and we are still using mostly 2D interactions for everything.  In fact, you could say that the recent use of voice for our interfaces has moved from 2D to 1D so its actually going in the opposite direction 😉
+    
+    An interesting thought about 3D interfaces though is there are two kinds.  One in which you are inside the 3D environment, imagine being in a room with screens and todo lists and kanban boards on the walls, and you go through the door to enter a different room etc..
+    
+    And the other is you are manipulating the 3D object, imagine a cube with buttons and sliders on the faces, and mabe pegs and strings to connect bits together.
+    
+    I think the problem with the 1st 3D is that you can get lost, and you have to keep turning your head around to see everything.
+    
+    The problems the the 2nd 3D is that you can't see what's going on the other side of the object you are manipulating.
+    [reply to imandey_ msg=1519001663166353518]
+
+[2026-06-23T16:50:54.973000+00:00] starw1 (id=1519021950125609014)
+    Probably more as a skill. I know open code has an interactable server. If one doesn’t exist already, you can just have an agent wire one up.
+    
+    The T3 code source code has an open code adapter so reading the docs on the open code server or maybe reading the source code for T3 code would be good resources for an agent to code up, if one doesn’t exist already.
+    [reply to shivamselam msg=1519021417155399762]
+
+[2026-06-23T16:51:51.014000+00:00] shivamselam (id=1519022185178599444)
+    thanks!! let me see
+    [reply to starw1 msg=1519021950125609014]
+
+[2026-06-23T16:51:54.053000+00:00] teknium (id=1519022197924954262)
+    will merge
+    [reply to brooklyn msg=1519018846948687872]
+
+[2026-06-23T16:52:22.626000+00:00] teknium (id=1519022317769068765)
+    Welcome to developer role status <a:cheer:734837260662603908>
+    [reply to wnuuee msg=1518932224789971075]
+
+[2026-06-23T17:02:56.080000+00:00] starw1 (id=1519024974667579625)
+    Yes open code, codex, and Claude code are all supported for an agent to use.
+    [reply to shivamselam msg=1519022185178599444]
+
+[2026-06-23T17:03:04.276000+00:00] starw1 (id=1519025009044095097)
+    You can also hook up an open code sub
+
+[2026-06-23T17:03:37.569000+00:00] wnuuee (id=1519025148685189204)
+    Thank you, Teknium and Brooklyn
+    [reply to teknium msg=1519022317769068765]
+
+[2026-06-23T17:04:20.225000+00:00] shivamselam (id=1519025327597289524)
+    i was looking for it in the desktop app, couldnt find, sorry I'm new to this
+    [reply to starw1 msg=1519024974667579625]
+
+[2026-06-23T17:06:03.573000+00:00] starw1 (id=1519025761070088313)
+    No worries. The way that Hermes is able to interact with things is going to be dictated with skills. There are literally hundreds of them and your agent has access to all of them. The best way to find out if an agent is able to do something it literally just ask him and then he looks at the skills available.
+    
+    Keep in mind that the desktop app is not quite on parity with the CLI or all the things you can do with Hermes. The desktop is just a visual way to use Hermes without directly using the CLI. It’s just a proxy.
+    [reply to shivamselam msg=1519025327597289524]
+
+[2026-06-23T17:07:50.709000+00:00] starw1 (id=1519026210431045705)
+    Note: skills are automatically created if an agent does a task! It remembers how to do things
+
+[2026-06-23T17:10:43.789000+00:00] srojk34 (id=1519026936381440171)
+    fix(goals): schedule driver wake-up for time-based wait barriers
+    
+    When the judge returns wait_for_seconds (e.g. rate-limit backoff), the goal loop parks but no timer is armed to resume it. PID/session barriers wake via process-exit events, but time barriers produce no event — the loop deadlocks until the user manually types or runs /goal unwait.
+    
+    Fix: added resume_after_seconds to the decision dict so all three drivers (CLI, gateway, TUI) schedule a delayed continuation that re-enters the loop after the deadline.
+    
+    4 new tests, all 105 existing tests pass.
+    
+    https://github.com/NousResearch/hermes-agent/pull/51454
+    [embed] fix(goals): schedule driver wake-up for time-based wait barriers by... https://github.com/NousResearch/hermes-agent/pull/51454
+
+[2026-06-23T17:23:33.181000+00:00] helvio88 (id=1519030163445125120)
+    Would anyone be able to approve this?
+    https://github.com/NousResearch/hermes-agent/pull/36130?
+    
+    I think it's not only a nice proxy expansion for xAI, but also a framework for more proxies, now that AI providers are merging Subscription with Tokens
+    [embed] Enable TTS support for xai-oauth by Helvio88 · Pull Request #36130... https://github.com/NousResearch/hermes-agent/pull/36130?
+
+[2026-06-23T17:26:37.607000+00:00] shivamselam (id=1519030936983830660)
+    If i use the web dashboard, will ur be able to do it there? Or is CLI the only way? Do i have to connect an llm first for it to figure out the connection with opencode?
+    [reply to starw1 msg=1519025761070088313]
+
+[2026-06-23T17:29:07.056000+00:00] starw1 (id=1519031563818369215)
+    First set up Hermes before you start using skills. This means setting up a model. Yes. 
+    
+    When you are talking about connection with “do you want to use your code subscription or do you want to use code CLI as a tool for the Agent to query? 
+    
+    I don’t use the web dashboard, so I’m not sure what its current capabilities are.
+    [reply to shivamselam msg=1519030936983830660]
+
+[2026-06-23T17:33:14.373000+00:00] shivamselam (id=1519032601141051603)
+    I wanted Hermes to use opencode cli to make all llm calls and execute commands, similar to how paperclip gives adapter connection to opencode, codex, Claude Code etc, but I’m starting to think i might be wrong assuming this expectation
+    [reply to starw1 msg=1519031563818369215]
+
+[2026-06-23T17:35:16.957000+00:00] starw1 (id=1519033115295879280)
+    I mean what you’re thinking is perfectly viable. You just need to set up Hermes in the first place. 
+    
+    You ask the Hermes Agent (an llm) to take an action, in this case, using the coding CLI.
+    [reply to shivamselam msg=1519032601141051603]
+
+[2026-06-23T17:48:54.957000+00:00] thyfriendlyfox (id=1519036546236416182)
+    imagine a hermes local changes manager menu, so you can keep your local changes applied with toggles, which still keeping your base hermes app updated and synced with upstream changes
+    
+    it just reapplies them
+    
+    and it would also be good CI for the PRs as an active test for them to pass
+
+[2026-06-23T17:49:15.392000+00:00] thyfriendlyfox (id=1519036631947018311)
+    idk, maybe im thinking too much on it lol
+
+[2026-06-23T18:04:22.270000+00:00] shivamselam (id=1519040435669045368)
+    Thank you, I’ll do that
+    [reply to starw1 msg=1519033115295879280]
+
+[2026-06-23T18:44:06.575000+00:00] chris.delac (id=1519050436169044008)
+    hello, new PR ready for review: https://github.com/NousResearch/hermes-agent/pull/51490
+    [embed] feat(agent): add global RULES.md support by chdlc · Pull Request #... https://github.com/NousResearch/hermes-agent/pull/51490
+
+[2026-06-23T18:45:49.325000+00:00] lee.talley_08865 (id=1519050867133775982)
+    Anyone here working on enabling multi tenant use in Hermes?
+
+[2026-06-23T18:48:37.847000+00:00] hypertekton (id=1519051573966274570)
+    but ... TTS already works for xAI OAuth???
+    [reply to helvio88 msg=1519030163445125120]
+
+[2026-06-23T18:52:25.293000+00:00] hypertekton (id=1519052527943946324)
+    I even added optional LLM pass to inject emotion tags for it https://github.com/NousResearch/hermes-agent/pull/49061 and made the speed and streaming latency work https://github.com/NousResearch/hermes-agent/pull/49062 (both already merged)
+    [embed] feat(tts): add auxiliary-model auto speech tags for xAI by teknium1... https://github.com/NousResearch/hermes-agent/pull/49061
+    [embed] feat(tts): add xAI TTS speed and optimize_streaming_latency config ... https://github.com/NousResearch/hermes-agent/pull/49062
+
+[2026-06-23T18:53:59.254000+00:00] helvio88 (id=1519052922044940398)
+    That PR is for the oauth proxy 😄
+    [reply to hypertekton msg=1519051573966274570]
+
+[2026-06-23T18:54:36.855000+00:00] helvio88 (id=1519053079754833971)
+    I will add that to the title of the PR, must have escaped my best judgement
+
+[2026-06-23T19:01:21.808000+00:00] palmer. (id=1519054778251083970)
+    https://github.com/NousResearch/hermes-agent/pulls/professorpalmer
+    [embed] Pull requests · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/pulls/professorpalmer
+
+[2026-06-23T19:01:31.578000+00:00] palmer. (id=1519054819229307010)
+    I have a dozen or so PRs if anyone interested
+
+[2026-06-23T19:01:35.741000+00:00] palmer. (id=1519054836690194563)
+    Thanks
+
+[2026-06-23T19:02:01.433000+00:00] hypertekton (id=1519054944450248965)
+    [attachment] tts_20260623_125953.mp3 https://cdn.discordapp.com/attachments/1491258766648283238/1519054944047464609/tts_20260623_125953.mp3?ex=6a3c29a9&is=6a3ad829&hm=0a798f00fd44d7d9e537b5328d13c4d52e556dc5d2670e01348b0410945cd4c2&
+    [reply to helvio88 msg=1519053079754833971]
+
+[2026-06-23T19:03:04.949000+00:00] helvio88 (id=1519055210855534652)
+    My bad lol - but I did start the PR description with that. Doesn't help much when it's shown in a list lmao
+    [reply to hypertekton msg=1519054944450248965]
+
+[2026-06-23T19:03:36.676000+00:00] frowtek (id=1519055343928479766)
+    fix(gateway): include Yuanbao and plugin platforms in unauthorized-DM allowlist default : https://github.com/NousResearch/hermes-agent/pull/51495
+    
+    fix(gateway): honor "open access" choice in interactive platform setup : https://github.com/NousResearch/hermes-agent/pull/51497
+    
+    both PR are ready for review. <@387972437901312000> 🤘
+    [embed] fix(gateway): include Yuanbao and plugin platforms in unauthorized-... https://github.com/NousResearch/hermes-agent/pull/51495
+    [embed] fix(gateway): honor "open access" choice in interactive platform se... https://github.com/NousResearch/hermes-agent/pull/51497
+
+[2026-06-23T19:11:25.418000+00:00] sworntech (id=1519057309974921368)
+    Opened a small docs-only PR:
+    
+    https://github.com/NousResearch/hermes-agent/pull/51503
+    
+    Tiny typo fix in the profile distributions guide: `commiting` → `committing`.
+    
+    1 file changed, no behavior change.
+    [embed] docs: fix profile distributions typo by Sworntech-dev · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/51503
+
+[2026-06-23T19:15:28.014000+00:00] jaredclucas (id=1519058327496294597)
+    Anyone have any experience using multiple codex accounts with their Hermes agents?  If so, please DM, looking for scalable solutions for managed agents that won’t blow me out with API costs
+

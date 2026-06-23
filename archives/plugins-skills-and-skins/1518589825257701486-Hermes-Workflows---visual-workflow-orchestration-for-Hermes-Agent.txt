@@ -17,3 +17,6 @@
     [attachment] screenshot_2026-06-22_at_14-13-05.png https://cdn.discordapp.com/attachments/1518589825257701486/1518589829477171304/screenshot_2026-06-22_at_14-13-05.png?ex=6a3a787d&is=6a3926fd&hm=83210f4dbc159192cfc65e04ae9a2177e00aa6e8a92ed5972657194b36fb535d&
     [embed] GitHub - itechmeat/hermes-workflows: Multi-step automations for Her... https://github.com/itechmeat/hermes-workflows
 
+[2026-06-23T19:40:27.002000+00:00] advancedcskills (id=1519064614707662890)
+    Nice will give it a run as I have a few comfy style activities around design coming online soon and so layering this up into the kanban cards could work well..
+

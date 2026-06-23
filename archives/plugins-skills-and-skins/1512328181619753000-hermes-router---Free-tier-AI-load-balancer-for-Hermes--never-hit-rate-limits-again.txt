@@ -998,3 +998,6 @@
     Free-first, self-hosted, single router.py. Feedback + PRs welcome! ⚡
     [embed] hermes-router https://hermes-router.vercel.app/
 
+[2026-06-23T19:31:46.732000+00:00] markopaasila (id=1519062432537120819)
+    Now it is working really well! Thank you!
+

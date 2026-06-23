@@ -1,0 +1,15 @@
+# Thread 'Hermes How-To' in forum #community-projects-showcase
+# thread_id=1519050857197338794 forum_id=1316137596535177246
+# Started 2026-06-23T20:00:45.971122+00:00
+
+[2026-06-23T18:45:46.956000+00:00] dalekc72 (id=1519050857197338794)
+    I published an 80-episode video course this month. I did not film a single frame.
+    
+    It is a Hermes How-To: free, plain-English tutorials for Hermes. Install to automation, in short steps, with a glossary and FAQ so no jargon trips you up.
+    
+    The course that teaches you to run an AI agent was built by AI agents: the research, the scripts, the visuals, the voiceover, the site. That is the demo.
+    
+    https://actionableops.com/hermes-howto/
+    [attachment] hermes-howto-social-1200x630.png https://cdn.discordapp.com/attachments/1519050857197338794/1519050857725956286/hermes-howto-social-1200x630.png?ex=6a3c25db&is=6a3ad45b&hm=cf47b8113049faaca149bc042b2f0d77ea6f47e2628f6cf57024f8b5d68450b4&
+    [embed] Start Here: What Hermes Is https://actionableops.com/hermes-howto/
+

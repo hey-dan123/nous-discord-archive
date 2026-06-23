@@ -1,0 +1,20 @@
+# Thread 'Remember' in forum #community-projects-showcase
+# thread_id=1519061776581394513 forum_id=1316137596535177246
+# Started 2026-06-23T20:00:45.527046+00:00
+
+[2026-06-23T19:29:10.340000+00:00] flash_speed3412 (id=1519061776581394513)
+    ```"AI agents shouldn't have goldfish memory."``` 
+    
+    **Production-ready local-first memory layer for AI agents.**
+    
+    Remember gives your agent persistent memory that survives across sessions. Hybrid search (BM25 + vector), temporal validity windows, entity graphs, and memory decay — all in a single SQLite file. No cloud. No API keys. No telemetry.
+    
+    ------------------------------------------
+    
+    **Found a bug? Have an idea? Open an issue or PR.**
+    
+    If Remember saved your project from the dreaded "wait, what was I working on?" — consider starring the repo. It helps others find it, and honestly it makes me feel good about the minutes I spent debugging FTS5 tokenizers.
+    
+    https://github.com/carbongotfound/remember
+    [embed] GitHub - carbongotfound/remember: Remembers facts, preferences, and... https://github.com/carbongotfound/remember
+

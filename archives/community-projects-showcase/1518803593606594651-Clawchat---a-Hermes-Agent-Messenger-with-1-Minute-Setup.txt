@@ -58,3 +58,13 @@
 [2026-06-23T06:43:24.450000+00:00] that_onebird (id=1518869065551319110)
     Thanks
 
+[2026-06-23T16:35:01.085000+00:00] dannyzuo_ (id=1519017949229220082)
+    Quick update from the latest Clawchat builds:
+    
+    A lot of our recent work came directly from user feedback across iOS, macOS, and Android.
+    
+    We read every report and try to turn user feedback into fixes quickly.
+    
+    Small improvements, but they matter if Clawchat is going to feel good as a mobile / desktop messenger for Hermes users.
+    [attachment] clawchat-latest-update-card.png https://cdn.discordapp.com/attachments/1518803593606594651/1519017948860383262/clawchat-latest-update-card.png?ex=6a3c0734&is=6a3ab5b4&hm=115348305f716c2797f57c5a6e19be71f9e0724d26f6761c8b0b646c6139a14a&
+

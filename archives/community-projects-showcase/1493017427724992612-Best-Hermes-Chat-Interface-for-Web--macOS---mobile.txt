@@ -4719,3 +4719,16 @@
 [2026-06-23T11:34:23.510000+00:00] hydraxiann (id=1518942294156378182)
     Was tmux/termux or whatever it was the recommended app to install llama.cpp with?
 
+[2026-06-23T15:51:42.486000+00:00] avidfuturist (id=1519007049915039786)
+    Just to follow up here this was working in iOS after all, and all is well with the iOS app
+    [reply to realadolan msg=1518670999464181790]
+
+[2026-06-23T15:51:53.891000+00:00] avidfuturist (id=1519007097751081000)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And with **native iOS app and Android support**! 
+    
+    Full setup guide here: https://get-hermes.ai/setup/
+    
+    (Could use feedback and testing of everything from Android, WebUI, desktop apps, and iOS apps, please report any feedback here!)
+

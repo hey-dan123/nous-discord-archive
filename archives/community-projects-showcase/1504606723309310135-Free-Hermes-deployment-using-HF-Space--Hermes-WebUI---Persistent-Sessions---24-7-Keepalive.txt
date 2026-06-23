@@ -40,3 +40,95 @@
     Its not exactly a vps, sooo not doesnt serve power users , its a docker container running it, with major customisation u can do through hermes dashboard or the terminal u get in webui, if u need proper ssh access u need to pay 9$ and u can get better vps in that price
     [reply to gruen23 msg=1504924926229090506]
 
+[2026-06-23T14:52:21.692000+00:00] dinesh58 (id=1518992114862657592)
+    Thanks for putting this together. I was running this for a few weeks
+    Unfortunately, got my HF account suspended, citing TOS violations
+    [reply to necrosis._. msg=1504606723309310135]
+
+[2026-06-23T15:01:11.211000+00:00] necrosis._. (id=1518994335826448485)
+    Same
+    [reply to dinesh58 msg=1518992114862657592]
+
+[2026-06-23T15:01:16.854000+00:00] necrosis._. (id=1518994359494774795)
+    Yesterday
+
+[2026-06-23T15:01:33.407000+00:00] necrosis._. (id=1518994428922958078)
+    Was running fine for more than a month
+
+[2026-06-23T15:01:40.148000+00:00] necrosis._. (id=1518994457196888246)
+    Ig they started cracking down on thjs
+
+[2026-06-23T15:01:49.204000+00:00] necrosis._. (id=1518994495180509325)
+    Sorry for the account
+
+[2026-06-23T15:01:57.360000+00:00] dinesh58 (id=1518994529389252818)
+    Oh dang. Happened around the same time for me too
+    [reply to necrosis._. msg=1518994359494774795]
+
+[2026-06-23T15:02:05.090000+00:00] dinesh58 (id=1518994561811087440)
+    No worries. Didn't have anything else there
+    [reply to necrosis._. msg=1518994495180509325]
+
+[2026-06-23T15:02:33.710000+00:00] dinesh58 (id=1518994681852068050)
+    Guess they caught wind of it and started taking action lol
+
+[2026-06-23T15:03:25.063000+00:00] dinesh58 (id=1518994897242427553)
+    Might have to add a disclaimer to the github repo
+
+[2026-06-23T15:03:25.172000+00:00] necrosis._. (id=1518994897699602583)
+    Yeah most probably we got caught by some filter
+    [reply to dinesh58 msg=1518994681852068050]
+
+[2026-06-23T15:03:59.124000+00:00] necrosis._. (id=1518995040104612003)
+    Yess i was thinking about it, shifted my deployment to vps today will make that change next
+    [reply to dinesh58 msg=1518994897242427553]
+
+[2026-06-23T15:04:28.567000+00:00] dinesh58 (id=1518995163597373540)
+    You had your memory files backed up?
+    [reply to necrosis._. msg=1518995040104612003]
+
+[2026-06-23T15:04:54.589000+00:00] necrosis._. (id=1518995272741683262)
+    Yeah i beta test hermes soo did a backup sometime ago
+    [reply to dinesh58 msg=1518995163597373540]
+
+[2026-06-23T15:04:59.235000+00:00] necrosis._. (id=1518995292228419726)
+    Like 10 days old
+
+[2026-06-23T15:05:15.597000+00:00] dinesh58 (id=1518995360855625949)
+    Ah ok
+
+[2026-06-23T15:05:18.811000+00:00] Translator Bot#1043 (id=1518995374336118914)
+    Oh okay
+    [reply to dinesh58 msg=1518995360855625949]
+
+[2026-06-23T15:05:28.212000+00:00] dinesh58 (id=1518995413766766762)
+    What are you using the agent for btw?
+
+[2026-06-23T15:06:38.152000+00:00] necrosis._. (id=1518995707116392589)
+    Replaced my all ai needs to this instead of claude gpt and i use this as chat interface, it mucj powerful if given right tools mcp etc. Also i can use the same subscription for coding and chatting both
+    [reply to dinesh58 msg=1518995413766766762]
+
+[2026-06-23T15:06:58.445000+00:00] necrosis._. (id=1518995792231272449)
+    Its more like a powerful chat interface for me without extra sub
+
+[2026-06-23T15:08:13.938000+00:00] necrosis._. (id=1518996108871864441)
+    U dont need memory files backup just use mem0 or similar mcp free tier enough let agent use it as memory now even after files are gone i connect the mcp and my agent again knows everything about me
+    [reply to dinesh58 msg=1518995163597373540]
+
+[2026-06-23T15:09:53.342000+00:00] dinesh58 (id=1518996525802324089)
+    Nice. I was looking into memory tools to see if i could use both local agent and cloud one
+
+[2026-06-23T15:10:22.264000+00:00] necrosis._. (id=1518996647109984449)
+    U can connect same mcp account to both
+    [reply to dinesh58 msg=1518996525802324089]
+
+[2026-06-23T15:10:25.844000+00:00] necrosis._. (id=1518996662125858846)
+    Same memory
+
+[2026-06-23T15:10:49.731000+00:00] dinesh58 (id=1518996762315067472)
+    Don't really trust running it locally yet since it seems to be too eager to take large actions. Or might've been due to some memory instruction i gave about about that
+
+[2026-06-23T15:11:46.397000+00:00] necrosis._. (id=1518996999989366834)
+    Yeah better vps, also vps is 24×7
+    [reply to dinesh58 msg=1518996762315067472]
+

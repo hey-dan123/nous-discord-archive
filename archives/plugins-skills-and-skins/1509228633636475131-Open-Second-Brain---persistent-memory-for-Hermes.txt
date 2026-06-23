@@ -188,3 +188,7 @@
 [2026-06-22T19:36:26.888000+00:00] legitimate0481 (id=1518701219730952202)
     im down to try it i dig the dark factory concept
 
+[2026-06-23T17:29:13.008000+00:00] legitimate0481 (id=1519031588782870528)
+    im installing this dark factory thing since last night. question is how do i get to the dashboard i see here
+    [reply to techmeat msg=1516381443067089056]
+
