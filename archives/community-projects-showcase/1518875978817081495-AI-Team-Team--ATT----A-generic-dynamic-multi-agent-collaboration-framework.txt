@@ -1,0 +1,41 @@
+# Thread 'AI-Team-Team (ATT) - A generic dynamic multi-agent collaboration framework' in forum #community-projects-showcase
+# thread_id=1518875978817081495 forum_id=1316137596535177246
+# Started 2026-06-23T09:35:05.955463+00:00
+
+[2026-06-23T07:10:52.701000+00:00] mind_of_charles (id=1518875978817081495)
+    With ATT (AI-Team-Team), AIs can freely form teams, define how they interact, how teams collaborate, and create all sorts of incredibly complex hierarchical (or dynamic) relationships.
+    
+    Just a quick heads-up: this post wasn't fully written by AI (though I used it for a bit of polishing), and it’s definitely not an automated spam post. ATT is also somewhat related to Hermes Agent, and I really hope to discuss this with everyone. Thank you! (Please don't close this post as an advertisement 🙏)
+    
+    ### 🧬 Topology & Lineage Control
+    
+    * **Tree-like Lineage Spawning**: Spawns recursive child agent teams (`AgentTeam`) at runtime to arbitrary depths, strictly bounded by depth limits to prevent stack overflow.
+    * **Autonomous Member Configs**: Defines dynamic child memberships mapping role presets, custom system instructions, and LLM aliases to shape custom agent personalities.
+    * **Dynamic Lineage Migration**: Permits active teams to request parent-hierarchy migrations, arbitrated by modular strategies with loop/cycle detection and parent notification logs.
+    * **Hierarchical Topology Map**: Injects an ASCII-drawn indented tree map of active teams (displaying purposes, status, and progress metrics in real-time) directly into the agent prompt context.
+    * **Global Expert Discovery**: Automatically appends a directory of all active system experts (names, roles, and profiles) into the agent's identity context to facilitate peer discovery.
+    
+    If you find this project interesting, please support it with a ⭐️ Star! Thank you so very much! 🙏
+    
+    👉 **Project Repository**：https://github.com/AI-Team-Team/AI-Team-Team
+    [embed] GitHub - AI-Team-Team/AI-Team-Team: Autonomous Process - Hundreds, ... https://github.com/AI-Team-Team/AI-Team-Team
+
+[2026-06-23T07:12:38.376000+00:00] mind_of_charles (id=1518876422050025643)
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1518875978817081495/1518876421794300025/message.txt?ex=6a3b8366&is=6a3a31e6&hm=d24c71a44abdd9d976eb8266bf8e23f859b5a12cedca6e9b4949a1ab89f6b549&
+
+[2026-06-23T07:13:55.164000+00:00] shaf_2665 (id=1518876744122105966)
+    Nice work
+
+[2026-06-23T07:15:28.364000+00:00] shaf_2665 (id=1518877135031369921)
+    If you want you can integrate hermes-router in this which can provide a massive tokens and context lengths
+
+[2026-06-23T07:16:08.059000+00:00] mind_of_charles (id=1518877301524140152)
+    OK, thanks for the suggestion
+    [reply to shaf_2665 msg=1518877135031369921]
+
+[2026-06-23T07:18:07.034000+00:00] shaf_2665 (id=1518877800541454456)
+    I had pinged you in the post
+
+[2026-06-23T07:18:15.785000+00:00] shaf_2665 (id=1518877837246074880)
+    You can check there
+

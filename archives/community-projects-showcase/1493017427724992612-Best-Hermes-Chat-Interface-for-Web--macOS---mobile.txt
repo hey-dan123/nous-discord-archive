@@ -4616,3 +4616,66 @@
 [2026-06-23T02:50:33.463000+00:00] jconcep (id=1518810466984398859)
     getting this error when trying to use "steer":  Steer unavailable — draft restored. Also i cannot interrupt while it's working.
 
+[2026-06-23T04:17:41.925000+00:00] avidfuturist (id=1518832396743741570)
+    Thanks will look into it and fix!
+    [reply to jconcep msg=1518810466984398859]
+
+[2026-06-23T04:34:38.659000+00:00] realadolan (id=1518836661234962533)
+    The Web UI does not display Claude sessions by default. I just realized that they are only available in the iOS app
+    [reply to avidfuturist msg=1518672044135419925]
+
+[2026-06-23T04:35:14.510000+00:00] realadolan (id=1518836811604955168)
+    (And there's no obvious way to hide these, polluting the app)
+
+[2026-06-23T04:35:30.941000+00:00] avidfuturist (id=1518836880521826464)
+    Ohh this is only shown in the iOS app?
+    [reply to realadolan msg=1518836661234962533]
+
+[2026-06-23T04:35:38.814000+00:00] realadolan (id=1518836913543319602)
+    Yeah
+
+[2026-06-23T04:35:41.162000+00:00] avidfuturist (id=1518836923391545435)
+    That’s different I’ll let Uzi know
+
+[2026-06-23T04:37:01.067000+00:00] realadolan (id=1518837258537402389)
+    I switched to the Web UI for now 😄 the fact that it is responsive makes it usable via PWA, which is perfect
+
+[2026-06-23T04:38:21.451000+00:00] avidfuturist (id=1518837595692597298)
+    Ah okay great! Yeah the webUI itself is meant to work well on mobile too
+    [reply to realadolan msg=1518837258537402389]
+
+[2026-06-23T04:43:02.703000+00:00] avidfuturist (id=1518838775348859011)
+    Is that Claude code thing the only major issue with the iOS app that made you switch over?
+
+[2026-06-23T04:51:00.794000+00:00] realadolan (id=1518840780607848509)
+    Yeah, it's pretty perfect otherwise
+
+[2026-06-23T04:51:21.322000+00:00] avidfuturist (id=1518840866708525117)
+    Okay cool that should be a pretty easy fix for him
+
+[2026-06-23T04:51:39.433000+00:00] realadolan (id=1518840942671695982)
+    Possible making Telegram (and other gateways) sessions deleteable as well?
+    [attachment] 36djzj2.png https://cdn.discordapp.com/attachments/1493017427724992612/1518840941832831167/36djzj2.png?ex=6a3b625b&is=6a3a10db&hm=57a9c5502cd2d445a9ec3213454659bbccbd6bb4aacc4fa177498ca7db5cf800&
+    [attachment] zbk43h5.png https://cdn.discordapp.com/attachments/1493017427724992612/1518840942197477446/zbk43h5.png?ex=6a3b625b&is=6a3a10db&hm=789a7c2561ccea761deca1a86d0de5213446c562c0a22620e750d5934483991c&
+
+[2026-06-23T04:52:25.310000+00:00] avidfuturist (id=1518841135093780611)
+    I think deleting from other gateways or CLI might be tricky, but we can look into adding a hide so they don’t show up on WebUI
+
+[2026-06-23T04:53:24.540000+00:00] realadolan (id=1518841383522271313)
+    I mean we can archive these but that's not what I'm trying to achive 😄
+
+[2026-06-23T04:53:26.642000+00:00] realadolan (id=1518841392338829375)
+    Thank you
+
+[2026-06-23T04:58:53.390000+00:00] avidfuturist (id=1518842762819141672)
+    Thanks for the feedback!
+
+[2026-06-23T05:16:14.620000+00:00] avidfuturist (id=1518847130054295642)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And with **native iOS app and Android support**! 
+    
+    Full setup guide here: https://get-hermes.ai/setup/
+    
+    (Could use feedback and testing of everything from Android, WebUI, desktop apps, and iOS apps, please report any feedback here!)
+

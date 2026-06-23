@@ -36518,3 +36518,106 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-23T02:27:04.495000+00:00] aialliai (id=1518804557344411768)
     <@119192111202566149> ans please look at some of my pr’s for gui, getting a lot of the same questions here and also pings from people commenting on them on GitHub 😁
 
+[2026-06-23T03:04:50.310000+00:00] cryptobyz (id=1518814060861456474)
+    Hey mates. Back to the business 😅 
+    
+    https://github.com/NousResearch/hermes-agent/pull/51162
+    [embed] fix(cron): rename plugins/cron to plugins/cron_providers to resolve... https://github.com/NousResearch/hermes-agent/pull/51162
+
+[2026-06-23T03:07:34.746000+00:00] dias4761 (id=1518814750555902043)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/51153#event-27072401598
+    
+    fix(discord): prevent duplicate user message processing on auto-thread and reconnects#51153
+    
+    
+    FIX(#51057)
+    [embed] fix(discord): prevent duplicate user message processing on auto-thr... https://github.com/NousResearch/hermes-agent/pull/51153
+
+[2026-06-23T06:06:44.800000+00:00] 0rigami__ (id=1518859839550263457)
+    Hey team 👋
+    I opened a feature request for **user-configurable runtime approval on external actions**.
+    
+    The approval system today is shell-only. `curl -X PUT` to a CalDAV server, SMTP sends, HTTP writes from `execute_code` — all pass with zero gating. This proposes letting users define custom rules in `config.yaml` that intercept any tool call at runtime, reusing the existing `prompt_dangerous_approval` mechanism.
+    
+    Key points: structured matching per tool field, `deny` + `clarify` actions, `[a]lways` stored per rule+pattern, dashboard view to visualize hard vs soft guards.
+    
+    Would love feedback on the matching design and whether this fits the roadmap. Happy to iterate 🙏
+    
+    https://github.com/NousResearch/hermes-agent/issues/51221
+    [embed] Feature Request: User-Configurable Runtime Approval for External Ac... https://github.com/NousResearch/hermes-agent/issues/51221
+
+[2026-06-23T07:26:51.032000+00:00] srojk34 (id=1518879998348365876)
+    Mattermost adapter silently drops user-configured mention_patterns — only literal @bot mentions work in channels with require_mention on. The Slack fix (#50843) claims Mattermost parity in its docstring, but the config value is never actually read.
+    
+    config.extra["mention_patterns"] is already bridged by gateway/config.py for all platforms — the adapter just ignores it. This PR ports the Slack _slack_mention_patterns() helper to Mattermost, adds env var fallback (MATTERMOST_MENTION_PATTERNS), and includes 10 regression tests. 68/68 passing, ruff clean.
+    
+    https://github.com/NousResearch/hermes-agent/pull/51243
+    [embed] fix(mattermost): honor documented mention_patterns wake words (pari... https://github.com/NousResearch/hermes-agent/pull/51243
+
+[2026-06-23T07:44:55.178000+00:00] hughjm (id=1518884545586401401)
+    Hey folks — I hit a Hermes Desktop PATH issue while enabling Computer Use on macOS.
+    
+    The setup looked healthy from the CLI side:
+    
+    hermes tools showed computer_use enabled
+    hermes computer-use doctor passed when run from a shell
+    cua-driver was installed and ready
+    But a fresh Hermes Desktop chat still did not receive the computer_use tool schema. Root cause was that the Desktop backend launched from Finder/Dock inherited a minimal launchd PATH and the Electron backend PATH builder added Homebrew/system dirs but not ~/.local/bin. Since cua-driver lives under ~/.local/bin, the tool availability check failed and the schema got filtered out.
+    
+    I opened an issue and a small PR with tests: Issue: [Bug]: Hermes Desktop backend PATH misses ~/.local/bin · Issue #51249 · NousResearch/hermes-agent · GitHub(https://github.com/NousResearch/hermes-agent/issues/51249) PR: fix(desktop): include user local bin in backend PATH by y0shua1ee · Pull Request #51251 · NousResearch/hermes-agent · GitHub(https://github.com/NousResearch/hermes-agent/pull/51251)
+    
+    The fix adds ~/.local/bin to the POSIX Desktop backend PATH after Hermes-managed node/venv bins and before the inherited PATH, while keeping Windows behavior unchanged. Targeted Desktop backend env tests pass locally.
+    [embed] [Bug]: Hermes Desktop backend PATH misses ~/.local/bin · Issue #51... https://github.com/NousResearch/hermes-agent/issues/51249
+    [embed] fix(desktop): include user local bin in backend PATH by y0shua1ee ... https://github.com/NousResearch/hermes-agent/pull/51251
+
+[2026-06-23T07:45:10.759000+00:00] wesleysimplicio (id=1518884610937847938)
+    <@387972437901312000> see bro 
+    
+    https://github.com/wesleysimplicio/simplicio-loop
+    [attachment] 4916893F-3FD2-4FCD-95D6-E19378AA5036.png https://cdn.discordapp.com/attachments/1491258766648283238/1518884611206418513/4916893F-3FD2-4FCD-95D6-E19378AA5036.png?ex=6a3b8b06&is=6a3a3986&hm=dad921cb2257946475931c122449aac5a86c5c0d85f13d25e508bb5adb2e9d5e&
+    [embed] GitHub - wesleysimplicio/simplicio-loop: 🔁 Finishes your entire ... https://github.com/wesleysimplicio/simplicio-loop
+
+[2026-06-23T07:45:15.402000+00:00] hughjm (id=1518884630411870279)
+    <@387972437901312000>
+    [reply to hughjm msg=1518884545586401401]
+
+[2026-06-23T07:56:20.604000+00:00] wesleysimplicio (id=1518887420471283824)
+    <@387972437901312000>  loop complete:
+    [attachment] F49785FA-0C73-4FB8-B673-89FF2AB4927C.png https://cdn.discordapp.com/attachments/1491258766648283238/1518887420488056832/F49785FA-0C73-4FB8-B673-89FF2AB4927C.png?ex=6a3b8da4&is=6a3a3c24&hm=560d53848aafd5d36cf0a8a93bea0e69e2f6aeee62a3827b0de9c90e083ba738&
+
+[2026-06-23T08:08:00.613000+00:00] wesleysimplicio (id=1518890356521832470)
+    Simplicio Loop stops only when the work is actually done. ✅
+    
+    🔁 Discover work
+    🧠 Understand requirements
+    🗺️ Build dependency graphs (DAG)
+    ⚡ Autoscale agent fleets
+    💻 Implement code
+    🧪 Run tests
+    🌐 Verify real behavior
+    🔥 Fix failures automatically
+    👀 Resolve review comments
+    🚀 Open PRs
+    ✅ Merge changes
+    📌 Close issues with evidence
+    ♾️ Repeat 24/7
+    
+    What makes it different?
+    
+    🧩 6 specialized skills
+    🌎 11 runtimes
+    🔌 43 extension points
+    💰 Up to 96% fewer tokens
+    🛡️ Safety gates
+    🔍 Evidence-driven completion
+    🤖 Autonomous software delivery
+    [reply to wesleysimplicio msg=1518887420471283824]
+
+[2026-06-23T08:59:10.067000+00:00] xsourabhsharma (id=1518903230745280523)
+    ?
+    [reply to wesleysimplicio msg=1518890356521832470]
+
+[2026-06-23T09:33:49.431000+00:00] minddragon (id=1518911952229765190)
+    I get it. I truly do. There's challenges with this approach...
+    [reply to wesleysimplicio msg=1518884610937847938]
+

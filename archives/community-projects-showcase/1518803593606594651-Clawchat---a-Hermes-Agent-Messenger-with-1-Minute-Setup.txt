@@ -36,3 +36,25 @@
     You copy one install command, send it to Hermes, and it shows up in your Clawchat chat list in under 1 minute.
     [attachment] Hermes_channel_setup_comparison.png https://cdn.discordapp.com/attachments/1518803593606594651/1518803866303467722/Hermes_channel_setup_comparison.png?ex=6a3b3fd3&is=6a39ee53&hm=eadd349caf63c7aad0211e77938d06a92c181186ecf61f722477dd9c992ad37e&
 
+[2026-06-23T04:54:32.341000+00:00] that_onebird (id=1518841667900280943)
+    Sob
+    [attachment] IMG_1676.png https://cdn.discordapp.com/attachments/1518803593606594651/1518841668017852416/IMG_1676.png?ex=6a3b6308&is=6a3a1188&hm=2ae04b0150466652c62471f01be506764ae797001be95ef114a594c0af2b1913&
+
+[2026-06-23T06:10:05.335000+00:00] dannyzuo_ (id=1518860680655143062)
+    Excuse me, could you tell me which country your number is from?
+    [reply to that_onebird msg=1518841667900280943]
+
+[2026-06-23T06:28:59.141000+00:00] that_onebird (id=1518865436182319226)
+    Nigeria 🫪
+    [reply to dannyzuo_ msg=1518860680655143062]
+
+[2026-06-23T06:33:03.709000+00:00] dannyzuo_ (id=1518866461974724678)
+    I apologize for the inconvenience. We're working on it. very soon!!!🔥
+    [reply to that_onebird msg=1518865436182319226]
+
+[2026-06-23T06:36:45.829000+00:00] dannyzuo_ (id=1518867393613660202)
+    I'll let you know as soon as it's ready.
+
+[2026-06-23T06:43:24.450000+00:00] that_onebird (id=1518869065551319110)
+    Thanks
+
