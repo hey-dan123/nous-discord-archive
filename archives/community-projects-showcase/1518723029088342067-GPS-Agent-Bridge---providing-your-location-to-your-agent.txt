@@ -1,0 +1,20 @@
+# Thread 'GPS-Agent-Bridge - providing your location to your agent' in forum #community-projects-showcase
+# thread_id=1518723029088342067 forum_id=1316137596535177246
+# Started 2026-06-23T02:58:30.851372+00:00
+
+[2026-06-22T21:03:06.644000+00:00] madvulcan (id=1518723029088342067)
+    Something I'm working on - ironing out a few kinks still, but getting close to publishing. Does this look interesting/useful?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1518723029088342067/1518723030271131829/image.png?ex=6a3af48a&is=6a39a30a&hm=15324a362d912cf59aac3e2007ba2cfca18557e18186469159c69504ca10ceec&
+
+[2026-06-22T22:27:28.335000+00:00] madvulcan (id=1518744259358888210)
+    https://github.com/Madvulcan/gps-agent-bridge
+    
+    Ready for user testing. I'd love any feedback! Preferably in the form of a Github issue - my agent is watching that for feedback.
+    
+    All you should need to do is point your agent at that repo, and ask it to set it up for you. Instructions directed at the agent are included in the repo. Your agent should walk you through a few things you'll need to do on your end (such as install and configure a GPS forwarding app on your phone).
+    
+    Current OS support is Linux and Mac. Windows (via WSL or whatever) might work - ask your agent - I'd love feedback on that too!
+    
+    Note that a requirement is that your devices are connected via Tailscale or similar (Wireguard, etc). Your phone and machine need to be on the same virtual network for this to work safely and securely. If you don't have Tailscale setup, the agent should walk you through that as well (it's free!)
+    [embed] GitHub - Madvulcan/gps-agent-bridge: Turn your smartphone into a re... https://github.com/Madvulcan/gps-agent-bridge
+

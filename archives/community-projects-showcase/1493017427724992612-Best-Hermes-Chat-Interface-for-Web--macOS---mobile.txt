@@ -4613,3 +4613,6 @@
     Good point, I'll make that a toggle in settings
     [reply to realadolan msg=1518670999464181790]
 
+[2026-06-23T02:50:33.463000+00:00] jconcep (id=1518810466984398859)
+    getting this error when trying to use "steer":  Steer unavailable — draft restored. Also i cannot interrupt while it's working.
+

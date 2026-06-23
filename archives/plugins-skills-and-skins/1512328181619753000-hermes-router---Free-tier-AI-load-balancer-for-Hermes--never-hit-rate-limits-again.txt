@@ -960,3 +960,15 @@
     Let's see what's your greatest feat
     [attachment] tmp_96b8e7a6-7de9-47b6-a870-213834235c1b.png https://cdn.discordapp.com/attachments/1512328181619753000/1518637789061578934/tmp_96b8e7a6-7de9-47b6-a870-213834235c1b.png?ex=6a3aa527&is=6a3953a7&hm=a6c256fc51229a62845a513b8048f3423a188afdc03033254798bdf27ce9ea77&
 
+[2026-06-23T01:25:12.633000+00:00] shaf_2665 (id=1518788988666773604)
+    # 🧠 hermes-router just got smarter about multi-model providers
+    
+    Until now, if you gave a provider several models (e.g. GEMINI_MODEL=gemini-2.5-flash-lite,gemini-2.5-pro), only the first one was used for routing — the rest were just rate-limit backups.
+    
+    Now every model is a first-class routing candidate, scored on its own strength:
+    • easy questions → the cheap/fast model
+    • hard or tool-using requests → the stronger model
+    • tool-calling & reasoning detected per model (mix model classes freely now!)
+    
+    Per-model capability shows up in /v1/status → model_caps. Fully backward-compatible — single-model setups are unchanged. Thanks to <@292288108362203137>  for the issue + design sketch. 🙌
+

@@ -33,3 +33,13 @@
     
     Realtime-Voice is what I really wanted from my Hermes Agent though - so this gave a platform for that. I like sparring with ChatGPT or Claude via their Live voice mode on ideas/projects - I wanted to do the same with Hermes 🙂 - this still requires the plugin but at the moment it handles a realtime agent loop for uniterupted conversation and hermes becomes a tool the realtime loop calls for background tasks (check memory, do work, etc). Looking forward to pushing that farther!
 
+[2026-06-22T23:12:32.646000+00:00] codename_11 (id=1518755602061328425)
+    Working on pushing voice and multi-profile support 🙂 On the radar is a built in encrypted proxy (optional opt-in) in the relay plugin as an alternative to tailscale and only intended to support remote hermes access. (Because my wife doesn't want tailscale running always on her phone lol).
+    
+    Let me know your thoughts! 🙂
+    
+    https://github.com/Codename-11/hermes-relay
+    
+    https://x.com/axiom_labs_dev/status/2069195530547142747?s=20
+    [embed]  https://twitter.com/axiom_labs_dev/status/2069195530547142747?s=20
+

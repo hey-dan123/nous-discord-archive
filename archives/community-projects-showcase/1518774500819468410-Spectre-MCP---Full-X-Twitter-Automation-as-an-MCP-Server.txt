@@ -1,0 +1,79 @@
+# Thread 'Spectre-MCP — Full X/Twitter Automation as an MCP Server' in forum #community-projects-showcase
+# thread_id=1518774500819468410 forum_id=1316137596535177246
+# Started 2026-06-23T02:58:29.906444+00:00
+
+[2026-06-23T00:27:38.461000+00:00] pranrichh (id=1518774500819468410)
+    Most X tools out there are scrapers — read-only, fragile, browser-dependent. Spectre-MCP is built differently. It's a complete automation layer over X's internal APIs, exposed as 104 MCP tools.
+    
+    ### What Sets It Apart
+    
+    - **Write Access** — Post, reply, quote, retweet, like, bookmark, DM, schedule tweets, manage drafts, upload media
+    - **Full Account Management** — Update profile, banner, avatar, highlights, manage lists and communities
+    - **Cookie-Based Auth** (auth_token + ct0) — No browser, no Selenium, no Playwright
+    - **Account Pool with Auto-Rotation** — Scale across multiple accounts transparently on rate limits
+    - **Built for Hermes Agent** — Auto-discovers all tools via MCP, zero glue code needed
+    
+    ### The 104 Tools Cover
+    
+    | Category | Capabilities |
+    |----------|-------------|
+    | **Social Actions** | Post, reply, quote, retweet, like, bookmark, pin |
+    | **DMs** | Send, search, manage conversations, mute/block |
+    | **Scheduling** | Schedule tweets, manage drafts |
+    | **Discovery** | Timeline monitoring, real-time search, trends |
+    | **Lists & Communities** | Create, manage, subscribe, members |
+    | **Media** | Upload images + video up to 512MB |
+    | **Profile** | Bio, banner, avatar, highlights |
+    | **Analytics** | Notifications, mutual followers, who liked/retweeted |
+    
+    ### Install
+    
+    ```bash
+    pip install spectre-mcp
+    # or
+    uvx spectre-mcp
+    ```
+    
+    **Repo:** https://github.com/pranrichh/spectre-mcp
+    
+    Actively maintained — edge cases in X's undocumented APIs are being fixed as they surface. Contributions and feedback welcome. 🤝
+    [embed] GitHub - pranrichh/spectre-mcp: The fastest X/Twitter automation fo... https://github.com/pranrichh/spectre-mcp
+
+[2026-06-23T01:06:03.244000+00:00] dulli77 (id=1518784167779897606)
+    Are these headless, can they be ran on a vps?
+
+[2026-06-23T01:07:07.662000+00:00] pranrichh (id=1518784437968441364)
+    Yes
+    [reply to dulli77 msg=1518784167779897606]
+
+[2026-06-23T01:07:22.856000+00:00] pranrichh (id=1518784501696823346)
+    There is no headless browser or anything just network requests
+    [reply to dulli77 msg=1518784167779897606]
+
+[2026-06-23T01:07:56.762000+00:00] dulli77 (id=1518784643908763709)
+    Safe or may face risk of bans? Not talking spam or anything just automated posting across accounts.
+    [reply to pranrichh msg=1518784501696823346]
+
+[2026-06-23T01:13:05.579000+00:00] pranrichh (id=1518785939181404171)
+    Could risk ban well we are technically bypassing their paid x api as well as posting automated content. Well you can definitely try it on an alt account, doens't even matter if u face any bans or whatever. <@956167389010075678> has ran some X accounts autonomously with ai agents so he can better share experience on ban risks but for the most part if u are only scraping and using read tools then you are more than fine, if you start posting automated slop (that you get detected, if you do it properly you might even not) they would probably ban you
+    [reply to dulli77 msg=1518784643908763709]
+
+[2026-06-23T01:19:17.569000+00:00] flash_speed3412 (id=1518787499420418179)
+    Sir, i am only running on one X account not multiple
+
+[2026-06-23T01:19:43.182000+00:00] pranrichh (id=1518787606848999464)
+    😭
+    [reply to flash_speed3412 msg=1518787499420418179]
+
+[2026-06-23T01:20:03.174000+00:00] pranrichh (id=1518787690701525113)
+    Ok so conclusion: get multiple alt accounts test them and share ur experience with others
+
+[2026-06-23T02:27:07.674000+00:00] pranrichh (id=1518804570678231130)
+    > Just deployed a 24/7 fully autonomous X Ai agent for completely FREE using these two things:
+    https://discord.com/channels/1053877538025386074/1518774500819468410
+    https://discord.com/channels/1053877538025386074/1517982395775717396
+    
+    If anyone is curious what the account is: https://x.com/alivejanusjanus
+    (For reference everything, the bio, the name (kind of a bias because of the alivajanusjanus username), the profile picture and corresponding all posts and replies and everything done in this account is done by Hermes using the two projects above with a good prompt)
+    [embed] janus (@alivejanusjanus) on X https://twitter.com/alivejanusjanus
+

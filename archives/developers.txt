@@ -36365,3 +36365,156 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     PR scope: ~200-400 lines
 
+[2026-06-22T21:31:22.465000+00:00] aialliai (id=1518730141877141554)
+    I see i read that wrong... mb
+
+[2026-06-22T21:43:28.505000+00:00] jdbem (id=1518733187109355590)
+    Hey all, hope you can help me here. I'm trying to roll out a hermes agent to more people in my team at work so they can also use all the skills and cronjobs I've been working on. I would love for each team member to have there own memory and oauth stuff but not sure what is the best approach here. Anyone doing this already and can help me?
+
+[2026-06-22T21:55:17.015000+00:00] dias4761 (id=1518736158815813803)
+    https://github.com/NousResearch/hermes-agent/pull/51061  
+    fix(cron): reduce polling interval and recover advance_next_run crash window
+    #51061
+    
+    
+    Closes #51038 <@387972437901312000>
+    [embed] fix(cron): reduce polling interval and recover advance_next_run cra... https://github.com/NousResearch/hermes-agent/pull/51061
+
+[2026-06-22T22:08:57.120000+00:00] rinc3w1nd (id=1518739598585495802)
+    Hi everyone,
+    
+    I've been experimenting with multi-agent workflows with Hermes and couldn't find an existing solution for communication between isolated agents (i.e., agents that are created with `profile create`). So I built this: https://github.com/gilshm/hermes-link.
+    
+    Hermes Link allows agents to exchange messages, delegate work, and route responses back to the correct originating session through correlation tracking.
+    
+    As a simple example, the attached screenshot shows a CEO agent asking a CTO agent for a status update. The CTO then reaches out to backend and frontend engineering agents, gathers their responses, and sends a consolidated summary back to the CEO. Each agent operates independently and communicates exclusively through Hermes Link.
+    
+    I'm sharing this mainly to get feedback from the community.
+    Have others run into the same problem? Is there a more idiomatic Hermes-native approach that I'm missing? Any thoughts on the architecture would be greatly appreciated.
+    
+    Thanks!
+    [attachment] hermes-link_example.png https://cdn.discordapp.com/attachments/1491258766648283238/1518739598648279213/hermes-link_example.png?ex=6a3b03f9&is=6a39b279&hm=37636523aa11c58070e89ac5c9549ee24eee721a472f00250d700e6d64e341a5&
+
+[2026-06-22T22:33:47.789000+00:00] aleksandr_1 (id=1518745850904449075)
+    **fix(compression): skip session rotation when `compress()` returns messages unchanged.** 
+    
+    Two early-exit paths in `ContextCompressor.compress()` (line 2336: too few messages, line 2361: `compress_start >= compress_end`) return messages without setting `_last_compress_aborted`. `compress_context()` proceeded past the abort check and entered the rotation path — `end_session()` was called, a new `session_id` was assigned, and history was archived without any actual compression. Guard added on `len(compressed) >= len(messages)` and `_last_compression_savings_pct == 0.0` to skip rotation in this case. 
+    
+    PR:
+    **P1** -  https://github.com/NousResearch/hermes-agent/pull/50996
+    [embed] fix(compression): skip session rotation when compress returns messa... https://github.com/NousResearch/hermes-agent/pull/50996
+
+[2026-06-22T23:17:09.694000+00:00] devorun11 (id=1518756764085125150)
+    Bug a classic "falsy check" issue.
+    In the documentation, setting `display.tool_preview_length` to `0` implies "unlimited," and the verbose path was already handling this correctly. However, because the two non-verbose paths used `_cap = _pl if _pl > 0 else 40`, explicitly setting it to `0` caused the logic to fall back to the `else` case (40) and truncate the output to 40 characters, effectively rendering the "unlimited" option unusable.
+    
+    fix: https://github.com/NousResearch/hermes-agent/pull/51091
+    [embed] fix(gateway): honor tool_preview_length: 0 as no limit in progress ... https://github.com/NousResearch/hermes-agent/pull/51091
+
+[2026-06-22T23:29:17.275000+00:00] devorun11 (id=1518759815780761671)
+    Running the interactive CLI under Warp (TERM_PROGRAM=WarpTerminal) flickers the whole screen while the agent works. Warp is a block-based renderer — it re-renders the entire active block on each repaint — so the spinner's ~10 Hz work-time chrome invalidation (_invalidate(min_interval=0.1) while a command runs) forces a full-screen repaint. https://github.com/NousResearch/hermes-agent/pull/51095
+    [embed] fix(cli): throttle spinner repaints under Warp to stop screen flick... https://github.com/NousResearch/hermes-agent/pull/51095
+
+[2026-06-22T23:42:40.967000+00:00] kifj44 (id=1518763186709467248)
+    take a look at existing PR 44183 submitted by @xiaoxianjj I added new fixes for Remote Gateway sessions disconnecting/stopping after desktop app being closed on remote machine https://github.com/NousResearch/hermes-agent/issues/44183
+    [embed] fix: Desktop session lost after sleep/wake — WS orphan reap grace... https://github.com/NousResearch/hermes-agent/issues/44183
+
+[2026-06-23T00:10:12.334000+00:00] queridao_oficial (id=1518770113044680715)
+    pls insert this on hermes   https://github.com/Panniantong/Agent-Reach/tree/main
+    [embed] GitHub - Panniantong/Agent-Reach: Give your AI agent eyes to see th... https://github.com/Panniantong/Agent-Reach/tree/main
+
+[2026-06-23T00:33:17.650000+00:00] thyfriendlyfox (id=1518775923480989727)
+    Discovered a bug for profiles not swapping CWD when new sessions are made, making a PR now
+
+[2026-06-23T00:35:38.590000+00:00] aialliai (id=1518776514626326621)
+    <@387972437901312000> dm
+
+[2026-06-23T00:37:11.893000+00:00] thyfriendlyfox (id=1518776905967599758)
+    Hallo, sorry for the late reply. I recommend making full use of the profiles system embedded in hermes!
+    [reply to jdbem msg=1518733187109355590]
+
+[2026-06-23T00:44:02.556000+00:00] mustafa_ramax (id=1518778628413063300)
+    Hey everyone 😊 Kept hitting the same pain point in Hermes desktop — no project separation! Turns out I'm not alone 😄 I built Projects (Claude CoWork / Codex-style): create a project, bind a folder, set instructions, sessions stay grouped and more coming...
+    
+    Just submitted the PR. Would love feedback you guys.. Thanks! 
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/49434
+    [attachment] Screenshot_2026-06-20_at_1.28.56_pm.png https://cdn.discordapp.com/attachments/1491258766648283238/1518778628685430914/Screenshot_2026-06-20_at_1.28.56_pm.png?ex=6a3b2852&is=6a39d6d2&hm=cceab38eda2e9de76af7f307eb621988e776c64230670ab92931211d3dc0614c&
+    [attachment] Screenshot_2026-06-20_at_12.23.02_pm.png https://cdn.discordapp.com/attachments/1491258766648283238/1518778629000269974/Screenshot_2026-06-20_at_12.23.02_pm.png?ex=6a3b2852&is=6a39d6d2&hm=9935ef9137ef711703d9e2b2e1899f19fdfa62451f0d806104332572ac02235d&
+    [attachment] Screenshot_2026-06-20_at_12.29.29_pm.png https://cdn.discordapp.com/attachments/1491258766648283238/1518778629322965002/Screenshot_2026-06-20_at_12.29.29_pm.png?ex=6a3b2852&is=6a39d6d2&hm=641c2171d2d04c7b25d44c047c1cd6655643e61abb1bd4acd98495a4ff9808b2&
+    [embed] feat(desktop): Projects v1 — claude-style folder-bound with sessi... https://github.com/NousResearch/hermes-agent/pull/49434
+
+[2026-06-23T00:45:46.503000+00:00] thebizfixer (id=1518779064398119062)
+    This last update (GHSA-5qr3-c538-wm9) killed my plugin's dashboard tab I've been working on that required an expansion of Hermes' REST API endpoints, any direction on this? I'm basically looking at moving to a sidecar uvicorn server to retain the dashboard's functionality?
+
+[2026-06-23T00:49:26.032000+00:00] teknium (id=1518779985169748108)
+    <@119192111202566149> you already have something for this or?
+    [reply to mustafa_ramax msg=1518778628413063300]
+
+[2026-06-23T00:51:53.020000+00:00] brooklyn (id=1518780601682100334)
+    yes WIP
+    [attachment] Screenshot_2026-06-22_at_19.51.10.png https://cdn.discordapp.com/attachments/1491258766648283238/1518780601476448356/Screenshot_2026-06-22_at_19.51.10.png?ex=6a3b2a28&is=6a39d8a8&hm=a5e1a56935fdd154e4e8e7ee6385611c1e2d86bfbe807a4258de684edbfdce34&
+
+[2026-06-23T00:52:14.300000+00:00] mustafa_ramax (id=1518780690936893611)
+    its completely different 🙂
+    [reply to brooklyn msg=1518780601682100334]
+
+[2026-06-23T00:53:15.751000+00:00] brooklyn (id=1518780948681064568)
+    does look completely different.
+
+[2026-06-23T00:53:38.016000+00:00] brooklyn (id=1518781042067247305)
+    ill look at 49434 closely
+
+[2026-06-23T00:54:42.677000+00:00] thyfriendlyfox (id=1518781313274875904)
+    Hey Brooklyn, did you get a chance to look at our app wip?
+
+[2026-06-23T00:54:52.087000+00:00] thyfriendlyfox (id=1518781352743272459)
+    <:speakzheart1:1181610505027203212>
+
+[2026-06-23T00:55:11.441000+00:00] dias4761 (id=1518781433919832246)
+    u guys use photon a lot ?
+    [reply to teknium msg=1518779985169748108]
+
+[2026-06-23T00:55:17.869000+00:00] robinliu7972 (id=1518781460880953566)
+    hi
+
+[2026-06-23T00:55:27.409000+00:00] robinliu7972 (id=1518781500894609449)
+    every one
+
+[2026-06-23T00:56:04.956000+00:00] robinliu7972 (id=1518781658378010644)
+    l hard learn for four monthy
+
+[2026-06-23T00:56:10.003000+00:00] robinliu7972 (id=1518781679546662954)
+    but
+
+[2026-06-23T00:56:16.323000+00:00] mustafa_ramax (id=1518781706054668350)
+    Thank you, really appreciate your effrots, my plan is to make more features to it like: seperate memory, separate skills, and seperate instructions per project, that will be optional the user can choose to turn it on/off per project.
+    [reply to brooklyn msg=1518781042067247305]
+
+[2026-06-23T00:57:21.268000+00:00] thyfriendlyfox (id=1518781978453872811)
+    PR: 51117
+    Hermes Desktop CWD Profile Fix
+    https://github.com/NousResearch/hermes-agent/pull/51117
+    
+    Bug: if you run multiple profiles, switching profiles didn't switch your working directory. New chats kept opening in whatever folder you last used in your previous profile.
+    
+    Cause: local desktop mode stored the remembered workspace under one global localStorage key shared across every profile. Remote mode already scoped it per-profile; local just never did.
+    
+    Fix: scope the local workspace key per profile, mirroring what remote already does
+    On profile switch, seed the draft cwd from that profile's remembered folder or its terminal.cwd from config when there's nothing remembered
+    [embed] fix(desktop): bind new-chat workspace to active profile by ThyFrien... https://github.com/NousResearch/hermes-agent/pull/51117
+
+[2026-06-23T00:58:49.361000+00:00] robinliu7972 (id=1518782347942563880)
+    l still
+
+[2026-06-23T01:04:42.685000+00:00] thyfriendlyfox (id=1518783829890830448)
+    aw man, ill fix the issues
+    [reply to thyfriendlyfox msg=1518781978453872811]
+
+[2026-06-23T02:23:19.274000+00:00] thyfriendlyfox (id=1518803612699070544)
+    Hey guys, PR 51117 is ready to merge now 🙂
+    Sorry about that, I had to rerun the ci tests because test 3 took too long and I had to figure out what went wrong. Was just a CI thing.
+
+[2026-06-23T02:27:04.495000+00:00] aialliai (id=1518804557344411768)
+    <@119192111202566149> ans please look at some of my pr’s for gui, getting a lot of the same questions here and also pings from people commenting on them on GitHub 😁
+

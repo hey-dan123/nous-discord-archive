@@ -1,0 +1,38 @@
+# Thread 'Clawchat - a Hermes Agent Messenger with 1-Minute Setup' in forum #community-projects-showcase
+# thread_id=1518803593606594651 forum_id=1316137596535177246
+# Started 2026-06-23T02:58:29.441990+00:00
+
+[2026-06-23T02:23:14.722000+00:00] dannyzuo_ (id=1518803593606594651)
+    Clawchat lets you chat with Hermes Agent from iOS/macOS/Android/Windows, with a setup flow that takes under 1 minute.Why this matters:
+    
+    For Discord or Telegram-style setup, you usually have to: 
+    • create a bot 
+    • copy a token 
+    • configure permissions 
+    • hunt down server / group / channel IDs 
+    • test it a few times to make sure it actually works
+    
+    With Clawchat, the setup is: 
+    1.Copy the install command 
+    2.Send it to Hermes 
+    3.Wait under 60 seconds 
+    
+    Hermes then appears in your Clawchat chat list automatically. All powered by our open-source connector plugin, with no changes to Hermes required. 
+    
+    The goal is simple: make connecting Hermes feel as easy as sending a message. 
+    Would love to hear what Hermes users think.
+    
+    GitHub: https://github.com/clawling/clawchat-plugin-hermes-agent
+    iOS / macOS / Android/ Windows: https://clawling.com/en/chat/
+    [attachment] video_SorryMakerX_20260623_100908.mp4 https://cdn.discordapp.com/attachments/1518803593606594651/1518803594655043755/video_SorryMakerX_20260623_100908.mp4?ex=6a3b3f92&is=6a39ee12&hm=0f0fa6b5b506fe4f0b4dbf733b6545d49fe9a48cc497066a32efc5eda74ba25a&
+    [embed] GitHub - clawling/clawchat-plugin-hermes-agent https://github.com/clawling/clawchat-plugin-hermes-agent
+    [embed] ClawChat · Not a bot. A full agent. https://clawling.com/en/chat/
+
+[2026-06-23T02:24:19.774000+00:00] dannyzuo_ (id=1518803866454589612)
+    Here’s the setup flow comparison.
+    
+    The main difference is that Clawchat does not ask users to create a bot, manage tokens, or configure permissions manually.
+    
+    You copy one install command, send it to Hermes, and it shows up in your Clawchat chat list in under 1 minute.
+    [attachment] Hermes_channel_setup_comparison.png https://cdn.discordapp.com/attachments/1518803593606594651/1518803866303467722/Hermes_channel_setup_comparison.png?ex=6a3b3fd3&is=6a39ee53&hm=eadd349caf63c7aad0211e77938d06a92c181186ecf61f722477dd9c992ad37e&
+

@@ -547,3 +547,13 @@
 [2026-06-22T16:51:55.288000+00:00] legitimate0481 (id=1518659815239454810)
     how can i check what memory bs projects i installed to review and remove them to make room for that ?
 
+[2026-06-22T22:55:06.538000+00:00] noxerz. (id=1518751214366359824)
+    ask your agent
+    [reply to legitimate0481 msg=1518659815239454810]
+
+[2026-06-23T00:28:19.988000+00:00] _mlsmith_ (id=1518774674996072650)
+    What would I gain using Noxem over Mnemosyne?
+
+[2026-06-23T02:51:07.917000+00:00] _mlsmith_ (id=1518810611495075861)
+    Nevermind, i asked my agent 🙂
+

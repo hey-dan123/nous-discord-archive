@@ -21,3 +21,8 @@
 [2026-06-22T17:18:00.122000+00:00] _big_owen_ (id=1518666378628956190)
     Honestly, totally gonna put the skill to use as I’ve been trying to have my Hermes agent instead of a personal dashboard and been wanting actual prediction market integration but to be honest, I might just make a prediction app website locally for myself as a project but if I encounter any issues, I will definitely let you know
 
+[2026-06-23T02:58:33.916000+00:00] harrynguyen2107 (id=1518812482150338675)
+    Awesome mate, you can check this https://www.pmxt.dev/built-with-pmxt to view dashboard ideas
+    [embed] Built with pmxt — Showcase of Prediction Market Apps https://www.pmxt.dev/built-with-pmxt
+    [reply to _big_owen_ msg=1518666378628956190]
+
