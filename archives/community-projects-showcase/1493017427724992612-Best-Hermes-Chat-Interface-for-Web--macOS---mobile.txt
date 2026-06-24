@@ -4732,3 +4732,10 @@
     
     (Could use feedback and testing of everything from Android, WebUI, desktop apps, and iOS apps, please report any feedback here!)
 
+[2026-06-24T10:05:20.116000+00:00] frostmage10 (id=1519282270203019304)
+    btw, why do yalls not use shadcn?
+    [reply to avidfuturist msg=1519007097751081000]
+
+[2026-06-24T13:20:06.798000+00:00] rearwindowblackwidow_78112 (id=1519331287700340776)
+    Does anyone have experience adding a "auto-router" to the web-ui? I don't want to use open-router.
+

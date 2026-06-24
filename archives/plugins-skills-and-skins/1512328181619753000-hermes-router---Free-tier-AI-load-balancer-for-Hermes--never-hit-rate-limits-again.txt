@@ -1030,3 +1030,22 @@
 [2026-06-24T06:16:56.170000+00:00] markopaasila (id=1519224791687630879)
     You can ask the same question from some ai chat 😂
 
+[2026-06-24T12:04:34.291000+00:00] shaf_2665 (id=1519312276987838465)
+    See the documention
+    Also you can use both free and paid models(Open AI, Anthropic via api keys)
+    Also if you have a chatgpt subscription you also use codex
+    
+    https://hermes-router.vercel.app/getting-started/
+    [embed] Getting Started https://hermes-router.vercel.app/getting-started/
+    [reply to glazaroff msg=1519222700751589386]
+
+[2026-06-24T12:05:18.765000+00:00] shaf_2665 (id=1519312463525576725)
+    Also added support for paid models like Open AI and Anthropic via api keys
+    [reply to markopaasila msg=1519206540563845190]
+
+[2026-06-24T12:05:40.584000+00:00] shaf_2665 (id=1519312555040964689)
+    And codex via chatgpt go or plus subscription
+
+[2026-06-24T13:16:04.566000+00:00] rearwindowblackwidow_78112 (id=1519330271705694298)
+    This is very cool and I'm excited to get it going! Quick question for you, I use Hermes web-ui in a Docker container. Should I install hermes-router in the docker container?
+

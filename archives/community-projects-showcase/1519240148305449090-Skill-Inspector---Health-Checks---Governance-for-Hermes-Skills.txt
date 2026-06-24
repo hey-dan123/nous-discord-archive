@@ -268,3 +268,20 @@
 [2026-06-24T08:18:24.253000+00:00] _.exo._ (id=1519255360123310110)
     I just tell my agents to review their skills and group them adhering to the hermes-agent-skills-authoring skill. Between that and the curator my agents stay pretty lean
 
+[2026-06-24T12:31:46.496000+00:00] johnsonbuilds (id=1519319122952060958)
+    That's interesting.
+    
+    My experience was a bit different. While analyzing my own skill library, I found that most of the challenge wasn't creating skills—it was understanding what had accumulated over time.
+    
+    One thing I'm exploring with Skill Inspector is making those governance signals visible:
+    
+    - Health Score
+    - Utilization
+    - Duplicate Detection
+    - Oversized Packages
+    
+    So even if agents are already reviewing and curating skills, we can actually measure whether the library is staying healthy over time.
+    
+    I'd be curious to see how Skill Inspector scores a well-curated Hermes setup.
+    [reply to _.exo._ msg=1519255360123310110]
+

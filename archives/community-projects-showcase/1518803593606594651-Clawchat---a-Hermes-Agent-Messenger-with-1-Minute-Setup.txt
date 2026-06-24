@@ -91,3 +91,10 @@
     Yeah, we spent a lot of time building support for natural interactions between multiple agents and humans in group chats. We also plan to open-source this communication protocol later on.
     [reply to sorrymakerx msg=1519171458226589706]
 
+[2026-06-24T10:24:30.685000+00:00] luffy20001999 (id=1519287096039178391)
+    What measures does ClawChat have in place regarding user privacy protection? Could you elaborate on that
+
+[2026-06-24T11:13:10.790000+00:00] dannyzuo_ (id=1519299343847260301)
+    Our messenger supports E2EE. Our servers only relay messages and never store any data, so your data is completely safe.
+    [reply to luffy20001999 msg=1519287096039178391]
+

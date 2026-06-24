@@ -65,3 +65,34 @@
 [2026-06-23T18:30:57.500000+00:00] illmania765. (id=1519047126548615178)
     is this designed for, let's say, the jailhouse lawyer or the home person who wants to try to do civil cases on their own? what about contract law, ucc, or that sovereign citizenship stuff? 👋🏿 😎 could i point it at my black's law dictionary, 4th edition, or does it come stock with a law dictionary? 💯
 
+[2026-06-24T10:34:29.851000+00:00] kartojal (id=1519289609123532840)
+    well some are trying to use it in that way, but i do not recommend
+    
+    legal vibecoding feels like programming vibecoding in 2024, could work, but still quite early and can allucinate pretty easily if you rely heavy on it
+
+[2026-06-24T10:35:40.586000+00:00] kartojal (id=1519289905807753426)
+    in Spain for example, there is already judgements where they detected AI allucinations in legal documents and basically they fined lawyers and judges as well
+
+[2026-06-24T10:36:58.835000+00:00] kartojal (id=1519290234007982271)
+    but it could work in cases where you need to draft a legal response or a claim to a telephone company
+
+[2026-06-24T10:40:37.639000+00:00] kartojal (id=1519291151738339368)
+    what i basically do is just download the whole spanish law as markdown documents and create a skill to retrieve that information, using legalize as law database (its just markdown files) https://legalize.dev/
+    [embed] Legalize — Open legislation. Transparent governments. https://legalize.dev/
+
+[2026-06-24T10:56:41.125000+00:00] kartojal (id=1519295192891658302)
+    yes sure! are you familiar with setting up hermes and creating skills? them feel free to setup it for them. Each lawyer works different and if they are tech-savvy they will get used very soon to building their own skills and workflows
+    [reply to wise_mind msg=1518345145127538749]
+
+[2026-06-24T13:11:05.119000+00:00] wise_mind (id=1519329015733686332)
+    I am and I'm aware of these things. I just asked if there's anything in this project that could be useful for them, or useful with some modification.
+
+[2026-06-24T14:13:47.488000+00:00] kartojal (id=1519344796253159514)
+    if is for another country, workflows really differ a lot, also all my skills are in spanish (easier to maintain for them)
+
+[2026-06-24T14:14:30.463000+00:00] kartojal (id=1519344976503505058)
+    the only way is to sit down with the lawyer , see where he needs help and parse that workflow into a skill
+
+[2026-06-24T14:15:35.693000+00:00] kartojal (id=1519345250097823928)
+    i usually create a Telegram group with me, the lawyer or lawyers, and the Hermes Agent telegram bot, so in this way you can steer them if they need, see if some requests requires skills and so on
+

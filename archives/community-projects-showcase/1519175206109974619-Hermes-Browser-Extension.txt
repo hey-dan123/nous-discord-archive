@@ -30,3 +30,6 @@
     [attachment] hermes_browser_extension_v1.png https://cdn.discordapp.com/attachments/1519175206109974619/1519175206592057396/hermes_browser_extension_v1.png?ex=6a3c99aa&is=6a3b482a&hm=9a6d7b68aa770a190a3cddeba8f14a7aa5fc5806f109a4b1494ef049a18ad8e3&
     [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
 
+[2026-06-24T09:36:05.982000+00:00] oninsuka (id=1519274912832028692)
+    so this works from the cloud bro?
+

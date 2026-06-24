@@ -218,3 +218,13 @@
     I can answer more a little bit later.
     [reply to legitimate0481 msg=1519255008133120101]
 
+[2026-06-24T10:18:44.876000+00:00] legitimate0481 (id=1519285645611368478)
+    Got to get workflows working with the dashboard. Do you recommend creating a specific agent profile for workflows and having a sandbox repo for the dark factory workspace enviorment ?
+    [reply to techmeat msg=1519261297638641665]
+
+[2026-06-24T10:31:42.038000+00:00] techmeat (id=1519288905264926812)
+    I've got around 15 profiles set up for different purposes, and in the workflow nodes I assign whichever profile is most relevant - usually the team lead, fullstack developer, QA engineer, or technical writer.
+    
+    On my VPS everything runs without a sandbox, since the VPS itself is basically one big sandbox. But in general, yes - I'd recommend it.
+    [reply to legitimate0481 msg=1519285645611368478]
+

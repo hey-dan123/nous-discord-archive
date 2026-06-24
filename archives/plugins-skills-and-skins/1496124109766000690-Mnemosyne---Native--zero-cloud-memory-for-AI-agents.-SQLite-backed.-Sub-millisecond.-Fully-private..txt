@@ -2238,3 +2238,21 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1518262697316057239/image.png?ex=6a3947d2&is=6a37f652&hm=019858089dde4ef537df91af9dadb2698a621011c1bf46d7941a17ae36c0e7b6&
     [reply to nulledvector msg=1518080574785454270]
 
+[2026-06-24T13:31:21.457000+00:00] buke5122 (id=1519334117425025225)
+    I have that feeling, that my agent doesn't really remember stuff when I need it
+
+[2026-06-24T13:31:39.770000+00:00] buke5122 (id=1519334194235314367)
+    Like 3 Days ago I told him, it was running on my VPS, and not my local computer
+
+[2026-06-24T13:31:47.701000+00:00] buke5122 (id=1519334227500335114)
+    And today, it told me it's running locally on my pc
+
+[2026-06-24T13:32:10.893000+00:00] buke5122 (id=1519334324774768792)
+    Like I have that feeling it's not searching through the memories at every turn
+
+[2026-06-24T13:32:16.142000+00:00] buke5122 (id=1519334346790797342)
+    Am I doing something wrong?
+
+[2026-06-24T13:32:31.543000+00:00] buke5122 (id=1519334411387277443)
+    Is there like a config which I might not have activated?
+

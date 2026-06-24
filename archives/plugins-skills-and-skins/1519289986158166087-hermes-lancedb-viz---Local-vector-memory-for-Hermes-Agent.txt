@@ -1,0 +1,25 @@
+# Thread 'hermes-lancedb-viz — Local vector memory for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1519289986158166087 forum_id=1485392832154832906
+# Started 2026-06-24T14:29:53.782209+00:00
+
+[2026-06-24T10:35:59.743000+00:00] 3l0_ (id=1519289986158166087)
+    Just open-sourced a memory plugin + visualizer I built for Hermes Agent.
+        
+    Why LanceDB instead of SQLite/Chroma/etc:
+     - Zero-footprint: no server, no daemon, just a Rust columnar format on disk. LanceDB is embedded like SQLite but built for vectors from the ground up.
+     - Native hybrid search: BM25 (Tantivy FTS) + vector cosine fused via Reciprocal Rank Fusion. ~98% recall vs 18% vector-only. No separate search stack.
+     - Ollama embeddings: nomic-embed-text (768d), fully local. No API calls, no data leaving your machine.
+     - Versioned writes: old versions can be compacted in one command. 596 MB → 4 MB.
+        
+    What's in the repo:
+     - Plugin: 7 MCP tools (search, add, update, delete, get, list, graph). Auto entity extraction, auto-tagging, quality scoring with decay curve, typed relations.
+     - Visualizer: Docker web UI, 10 pages. Dashboard, memories, timeline, tags, duplicates, UMAP embeddings, semantic clusters, stale cleanup, vis-network graph. Neon OLED theme.
+     - Scripts: re-embedding after batch edits, auto-merge duplicates, smoke test.
+     - Skills: memory-writing guide + system architecture reference.
+        
+    Repo: https://github.com/3L0935/hermes-lancedb-viz
+    
+    MIT license. Setup takes ~5 min if you already have Hermes + Ollama.
+    [attachment] Capture_decran_20260624_123531.png https://cdn.discordapp.com/attachments/1519289986158166087/1519289986749435924/Capture_decran_20260624_123531.png?ex=6a3d048f&is=6a3bb30f&hm=c42f62ea7b1283449bc9a2733a4b7a14ce7209da5f3b64a063c00a5208abc592&
+    [embed] GitHub - 3L0935/hermes-lancedb-viz: LanceDB Memory Graph Visualizer... https://github.com/3L0935/hermes-lancedb-viz
+

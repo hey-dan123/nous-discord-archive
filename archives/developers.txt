@@ -37387,3 +37387,69 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     I know about livekit - but I don't really want to maintain a server/extra-service and would prefer Hermes itself connects to a SIP proxy directly and use the tools he already have.
 
+[2026-06-24T09:33:48.734000+00:00] srojk34 (id=1519274337172193300)
+    I made two corrections that I believe are important. I hope you'll have time to review them. Thank you <@387972437901312000> 
+    
+    PR #51808 — fix(profiles): add allow_unicode=True to write_profile_meta yaml.safe_dump
+    https://github.com/NousResearch/hermes-agent/pull/51808
+    
+    PR #51676 fixed emoji/unicode corruption in config.yaml, tui_gateway, and telegram adapter by adding allow_unicode=True — but missed write_profile_meta() in profiles.py. Profile descriptions (user-set via dashboard or LLM auto-generated) can contain emoji, which PyYAML escapes as fragile \UXXXXXXXX sequences without this flag. Same bug class, same one-line fix + regression test.
+    
+    PR #51811 — fix(gateway): use is_container() in /restart to detect Kubernetes/containerd/CRI-O
+    https://github.com/NousResearch/hermes-agent/pull/51811
+    
+    The /restart handler only checked /.dockerenv and /run/.containerenv to detect containers. Kubernetes pods running containerd or CRI-O have neither file, so /restart took the detached subprocess path — the container's init process kills the helper on exit and the gateway stays dead. Replaced with hermes_constants.is_container() which covers Docker, Podman, K8s, containerd, CRI-O, and LXC. Also added HERMES_S6_SUPERVISED_CHILD to the service-manager check, matching _running_under_gateway_supervisor(). Sibling of #43475 (launchd) and #47131 (is_container for K8s).
+    [embed] fix(profiles): add allow_unicode=True to write_profile_meta yaml.sa... https://github.com/NousResearch/hermes-agent/pull/51808
+    [embed] fix(gateway): use is_container() in /restart to detect Kubernetes/c... https://github.com/NousResearch/hermes-agent/pull/51811
+
+[2026-06-24T09:37:23.660000+00:00] devorun11 (id=1519275238637043753)
+    Bug a real auth bug, carefully fixed 
+    FEISHU_ALLOWED_USERS=* was working in messages but approval card clicks were being rejected — because _allow_group_message’s allowlist policy was mistaking * for a literal ID and eliminating everyone with a set intersection. 
+    https://github.com/NousResearch/hermes-agent/pull/51778
+    [embed] fix(feishu): honor FEISHU_ALLOWED_USERS=* wildcard for approval car... https://github.com/NousResearch/hermes-agent/pull/51778
+
+[2026-06-24T10:09:20.443000+00:00] scottermonkey (id=1519283278207520829)
+    Wanting to keep contributing but I wonder if this litany of PRs is overwhelming the hard working Hermes Agent devs? I'll post mine and keep track. Hope ya'll (including <@387972437901312000>) are okay! Are there other devs besides him I can tag? OR... maybe tagging is redundant (and annoying) when I post about PRs in this channel?
+    
+    Here are two PRs I'd love to see get merged:
+    - https://github.com/NousResearch/hermes-agent/pull/38139 (per model compression threshold settings).
+    - https://github.com/NousResearch/hermes-agent/pull/51377 (per model reasoning effort settings).
+    [embed] feat(agent): support per-model compression overrides by sweetcornna... https://github.com/NousResearch/hermes-agent/pull/38139
+    [embed] feat(config): support per-model reasoning_effort overrides by Scott... https://github.com/NousResearch/hermes-agent/pull/51377
+
+[2026-06-24T11:22:45.879000+00:00] thyfriendlyfox (id=1519301755945615430)
+    Good morning everyone!
+
+[2026-06-24T11:36:22.109000+00:00] inuyasha44_88990 (id=1519305179462238218)
+    Morning boss
+    [reply to thyfriendlyfox msg=1519301755945615430]
+
+[2026-06-24T13:43:44.643000+00:00] dirty_al (id=1519337234573295696)
+    hi <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/51908
+    [embed] fix(profile): auto-allocate conflict-free ports on create or clone ... https://github.com/NousResearch/hermes-agent/pull/51908
+
+[2026-06-24T13:56:12.656000+00:00] jw_mushroom_man (id=1519340371967082707)
+    https://github.com/NousResearch/hermes-agent/pull/44356
+    
+    Updated Excel Side Car Add In
+    [embed] feat(excel): add Excel sidecar (task pane + api_server bridge) by l... https://github.com/NousResearch/hermes-agent/pull/44356
+
+[2026-06-24T14:07:24.018000+00:00] _8bit64k_ (id=1519343187863535626)
+    Does anyone know or have a suggestion on how to deal with plugins not being able to have backend routes now? <@387972437901312000> -- my agent is telling me plugins can only have static assets now? is that correct? no access to backend api's completely breaks several plugins I have installed (and develop)-- what is your best guidance?     WHAT
+        - A new security guard in hermes_cli/web_server.py refuses to auto-import Python backend modules (dashboard/manifest.json → api: plugin_api.py) for any plugin that isn't bundled with Hermes itself.
+        - The guard lives at _NON_BUNDLED_PLUGIN_SOURCES = frozenset({"user", "project"}) in _discover_dashboard_plugins() (line 12363 of web_server.py). User plugins (in ~/.hermes/plugins/) and project plugins (in ./.hermes/plugins/) now can only extend the dashboard with static JS/CSS — not Python backend routes.
+        - Your three plugins (cronalytics, hermes-memory-ui, omatchy) all have "api": "plugin_api.py" in their dashboard/manifest.json. Before this change, the dashboard web server would import that file and mount its FastAPI routes. Now it logs a WARNING and skips the import. The plugin UI tab still loads (the entry: dist/index.js is static and allowed), but every API call the JS makes to its backend route 404s.
+
+[2026-06-24T14:20:31.056000+00:00] leerenmos (id=1519346488940036106)
+    Introducing Fractal Prompt Foundry
+    A framework designed to transform simple prompts into complete, reusable, and scalable AI systems.
+    🔹 Turn ideas into structured AI workflows.
+    🔹 Organize prompts, roles, agents, and tools within a modular architecture.
+    🔹 Build specialized assistants, automations, and multi-agent systems with ease.
+    🔹 Iterate, version, and improve prompts using a professional workflow.
+    🔹 Perfect for developers, founders, creators, and teams building with AI.
+    💡 Instead of relying on isolated prompts, Fractal Prompt Foundry enables you to create true "Prompt Operating Systems" capable of coordinating complex tasks and delivering more consistent, high-quality results.
+    
+    https://github.com/Blackleets/fractal-prompt-foundry
+    [embed] GitHub - Blackleets/fractal-prompt-foundry: Offline prompt evolutio... https://github.com/Blackleets/fractal-prompt-foundry
+
