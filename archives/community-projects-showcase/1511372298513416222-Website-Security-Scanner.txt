@@ -46,3 +46,15 @@
     Is there any data storage while using this app dude?
     [reply to jonkomet msg=1511372298513416222]
 
+[2026-06-24T14:45:25.715000+00:00] jonkomet (id=1519352757994258533)
+    data is stored securely, and only accessible to the user who scans … 
+    There is an option to hide your site from being scanned, and an option to hide it from the Trust Index ( https://VibeLeak.app/trust-index )
+    
+    But you must verify ownership of domain …
+    You can read more about it in the docs ( https://vibeleak.app/docs ) 
+    
+    Everything is public and we are open about everything on how it works throughout the docs and we have some blogs as well
+    [embed] VibeLeak — Website Security Scanner https://vibeleak.app/trust-index
+    [embed] Docs — VibeLeak https://vibeleak.app/docs
+    [reply to 0xscreenslaver msg=1519271980996493392]
+

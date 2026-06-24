@@ -33,3 +33,49 @@
 [2026-06-24T09:36:05.982000+00:00] oninsuka (id=1519274912832028692)
     so this works from the cloud bro?
 
+[2026-06-24T15:40:48.767000+00:00] jonkomet (id=1519366695884554420)
+    I just pushed v0.1.1 of the Hermes Browser Extension: https://github.com/abundantbeing/hermes-browser-extension
+    
+    This update is mostly about making the side panel feel more like a real Hermes surface instead of just a basic browser chat box. The goal is still the same: let Hermes reason over the page you’re already looking at, but now the composer itself is a lot closer to the Desktop flow.
+    
+    What changed in v0.1.1:
+    
+    • Drag/drop attachments directly into the composer
+      PDFs, images, docs, and files can now be dropped straight into the side panel.
+    
+    • Stop the active agent turn
+      While Hermes is responding, there’s now a visible STOP control so you can interrupt a run instead of waiting it out.
+    
+    • Queue / steer the next message
+      You can type while Hermes is working. The send button becomes “QUEUE MESSAGE,” and that next turn gets sent after the current one finishes/stops.
+    
+    • Skills in the browser composer
+      Added `/` and `@` skill autocomplete from Hermes skills. So typing something like `/asci` can surface `/ascii-video`.
+    
+    • Agent profile selector
+      Settings now has an Agent Profile section above Appearance. It uses the Hermes profile APIs when available and falls back cleanly when running against older gateways.
+    
+    • Cleaner refresh UX
+      The big REFRESH button is now a compact `↻` icon button.
+    
+    • Streaming polish
+      Final streamed answers now replace partial delta text correctly instead of leaving stale partial output in the panel.
+    
+    This is still public alpha / load-unpacked for now, not Chrome Web Store yet. But v0.1.1 is a nice step toward the extension feeling like a real browser-native Hermes companion instead of a thin wrapper.
+    
+    If you already cloned it:
+    
+    ```bash
+    git pull
+    npm run build
+    
+    
+    Then reload the unpacked `dist/` folder from your Chrome/Edge extension page.
+    
+    Would love feedback from Hermes users/builders especially around:
+    
+    1. what other Desktop composer features should come over next
+    2. how people expect skills/profiles to work from a browser context
+    [attachment] Browser_Extension_v0.1.1_Update_Ad.png https://cdn.discordapp.com/attachments/1519175206109974619/1519366696198996200/Browser_Extension_v0.1.1_Update_Ad.png?ex=6a3d4c00&is=6a3bfa80&hm=8d296e7fa6b4ea41675238b51bf171619079fc74cc1669ade2ca95e564392590&
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
+

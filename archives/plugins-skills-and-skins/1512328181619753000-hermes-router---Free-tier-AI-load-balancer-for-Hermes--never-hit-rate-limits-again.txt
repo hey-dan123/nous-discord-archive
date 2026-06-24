@@ -1049,3 +1049,18 @@
 [2026-06-24T13:16:04.566000+00:00] rearwindowblackwidow_78112 (id=1519330271705694298)
     This is very cool and I'm excited to get it going! Quick question for you, I use Hermes web-ui in a Docker container. Should I install hermes-router in the docker container?
 
+[2026-06-24T16:31:16.969000+00:00] shaf_2665 (id=1519379397084319774)
+    yeah you can run it inside a container
+    [reply to rearwindowblackwidow_78112 msg=1519330271705694298]
+
+[2026-06-24T17:52:21.425000+00:00] rearwindowblackwidow_78112 (id=1519399800091578459)
+    Ok, I'll try that Shaf. I hope it works! Ideally I'd like Hermes to switch between different Anthropic models. I'm relying on Deepseek v4-pro exclusively for the moment.
+
+[2026-06-24T19:08:18.925000+00:00] futurex24 (id=1519418915631923300)
+    Hii bro thank you for this amazing repo 
+    
+    is there option where depending on prompt or task level in prompt this hermes router will switch specific model where it is specialized in ?
+    
+    I am sorry if this was already asked
+    [reply to shaf_2665 msg=1519312463525576725]
+

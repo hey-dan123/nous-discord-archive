@@ -37453,3 +37453,272 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/Blackleets/fractal-prompt-foundry
     [embed] GitHub - Blackleets/fractal-prompt-foundry: Offline prompt evolutio... https://github.com/Blackleets/fractal-prompt-foundry
 
+[2026-06-24T14:25:40.677000+00:00] drexux (id=1519347787584508086)
+    Could you check it when you have time? <@387972437901312000> Thanks!
+    
+    https://github.com/NousResearch/hermes-agent/pull/51597
+    https://github.com/NousResearch/hermes-agent/pull/51598
+    [embed] fix(agent): guard _parse_dt against unhashable usage-API reset valu... https://github.com/NousResearch/hermes-agent/pull/51597
+    [embed] fix(cron): accept documented "every <weekday> <time>" schedules by ... https://github.com/NousResearch/hermes-agent/pull/51598
+
+[2026-06-24T15:28:44.087000+00:00] .thebakery303 (id=1519363656356466860)
+    Working on prompt engineering+eval pipeline so strong planning model + local implementation model can work together and self evolve/version, so it can spit out faster and modularly architected features more efficiently,
+    
+     has anyone done these?
+
+[2026-06-24T15:33:40.205000+00:00] george006796 (id=1519364898365374517)
+    SWE at Linq here (we run a hosted iMessage API). I built a Hermes platform plugin that connects the agent to iMessage through Linq. fully Apple-native, so real tapback reactions, typing indicators, and read receipts, no Mac relay or BlueBubbles server to babysit. 
+    
+    Plugin lives here: https://github.com/linq-team/hermes-linq-plugin (signed-webhook in, direct Linq REST out, pure Python - no Node sidecar). Smoke-tested end-to-end against hermes-agent v0.16.0.
+    
+    I opened a small docs-only PR to add it as a channel in the user guide (modeled on the photon.md page):  <@387972437901312000> feel free to take a look.  https://github.com/NousResearch/hermes-agent/pull/50903.  it's been sitting at P3 for a couple days, so just flagging it in case someone has a sec to glance at it
+    [embed] GitHub - linq-team/hermes-linq-plugin: Linq iMessage gateway plugin... https://github.com/linq-team/hermes-linq-plugin
+    [embed] Build software better, together https://github.com/NousResearch/hermes-agent/pull/50903.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/50903.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/50903.
+
+[2026-06-24T15:53:32.501000+00:00] iamlukethedev (id=1519369899216994449)
+    <@387972437901312000> I just pushed the the integration of personal finance with Hermes using PLAID based on your issue https://github.com/NousResearch/hermes-agent/issues/12324. Check it out https://github.com/NousResearch/hermes-agent/pull/51983
+    [embed] Issues · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/issues/12324.
+    [embed] feat(finance): provider-agnostic Plaid personal finance integration... https://github.com/NousResearch/hermes-agent/pull/51983
+
+[2026-06-24T15:55:03.079000+00:00] cyclezdon (id=1519370279128797395)
+    super stupid question: haven't still used once hermes for coding. i use it for architectures that then delegate to codex or claude. 
+    
+    which is the 101 of the way you use it?
+
+[2026-06-24T15:56:27.279000+00:00] iamlukethedev (id=1519370632289058827)
+    Check hermesbible.com and you will find different ways to use for coding
+    [reply to cyclezdon msg=1519370279128797395]
+
+[2026-06-24T15:57:07.474000+00:00] cyclezdon (id=1519370800879239268)
+    uh thank.
+
+[2026-06-24T16:17:41.319000+00:00] okaybruh1723 (id=1519375976000389311)
+    hello how do i get Developer role? I got one of my PR merged in here, #12011
+    
+    https://github.com/NousResearch/hermes-agent/pull/16288
+    [embed] fix(slack): config gating, tool_progress default, NO_PROXY support ... https://github.com/NousResearch/hermes-agent/pull/16288
+
+[2026-06-24T16:22:20.492000+00:00] denis_skripnik (id=1519377146936557748)
+    <@387972437901312000> and maintainers, could you please review my open Hermes PRs?
+    
+    I tried to keep them small and focused. Most of them are green and mergeable now; the main blocker seems to be review / branch protection.
+    
+    Priority PRs:
+    
+    1. https://github.com/NousResearch/hermes-agent/pull/50867
+       Makes Telegram voice transcript echo configurable.
+       I just updated it to cover the newer queued/interrupt voice paths too. It is now MERGEABLE / CLEAN and all required checks pass.
+    
+    2. https://github.com/NousResearch/hermes-agent/pull/30899
+       Marks web extraction content as untrusted to reduce indirect prompt-injection risk from websites.
+    
+    3. https://github.com/NousResearch/hermes-agent/pull/45961
+       Allows fallback-specific reasoning config, so fallback providers can use their own reasoning settings without breaking primary runtime restore.
+    
+    4. https://github.com/NousResearch/hermes-agent/pull/37189
+       Adds FB2 document upload support. This is useful for Telegram users who send ebooks as documents.
+    
+    5. https://github.com/NousResearch/hermes-agent/pull/30913
+       Supports explicit text skill activation aliases.
+    
+    6. https://github.com/NousResearch/hermes-agent/pull/30909
+       Improves visibility for fallback restore and subagent model progress.
+    
+    7. https://github.com/NousResearch/hermes-agent/pull/38731
+       Adds inline buttons for cron Telegram delivery.
+    
+    8. https://github.com/NousResearch/hermes-agent/pull/49413
+       Improves desktop accessibility semantics.
+    
+    Also, for Google Tasks:
+    - https://github.com/NousResearch/hermes-agent/pull/35851 is the older/canonical small PR.
+    - https://github.com/NousResearch/hermes-agent/pull/51692 seems more complete and may be a better path if you want full Google Tasks support.
+    
+    I’m happy to adjust, split, or close/supersede anything that does not fit the current direction. I mainly want to understand which PRs are worth pushing forward.
+
+[2026-06-24T16:40:08.572000+00:00] aialliai (id=1519381626788773948)
+    Priority PR's labeled P3 ?
+    [reply to denis_skripnik msg=1519377146936557748]
+
+[2026-06-24T17:01:25.432000+00:00] egilewski (id=1519386982327779599)
+    <@1034832434820292698>, <@446158181022957568>, sorry, which one of you is kshitijk4poor from GitHub? I want to apologies for setting you up with a wrong solution that you had to revert a couple hours ago (https://github.com/NousResearch/hermes-agent/pull/51950#issuecomment-4790851183) and coordinate getting this right now.
+    
+    The still open alternative PR you've mentioned there doesn't seem ready to me. You've also pointed out that my original solution, from the PR that was closed, didn't have the problem of the one you had to revert, so do you want to reopen that PR/me making a new one from the same branch, and iterate on it as necessary?
+    [embed] revert(plugins): restore user dashboard plugin backend API auto-imp... https://github.com/NousResearch/hermes-agent/pull/51950
+
+[2026-06-24T17:23:55.963000+00:00] frowtek (id=1519392646865358940)
+    fix(security): prevent session file cleanup from escaping sessions dir :https://github.com/NousResearch/hermes-agent/pull/52017 <@387972437901312000>
+    [embed] fix(security): prevent session file cleanup from escaping sessions ... https://github.com/NousResearch/hermes-agent/pull/52017
+
+[2026-06-24T17:28:36.727000+00:00] kxee (id=1519393824475189378)
+    itd be me sir
+    [reply to egilewski msg=1519386982327779599]
+
+[2026-06-24T17:29:31.495000+00:00] egilewski (id=1519394054188695742)
+    Ah. Nice to meet you.
+    [reply to kxee msg=1519393824475189378]
+
+[2026-06-24T17:29:59.624000+00:00] kxee (id=1519394172170403951)
+    yeah i had to revert it because of this: https://x.com/8bit64k_x/status/2069786178346229948?s=46
+    [embed]  https://twitter.com/8bit64k_x/status/2069786178346229948?s=46
+
+[2026-06-24T17:31:17.114000+00:00] egilewski (id=1519394497186758858)
+    Yeah, I saw his comment earlier in this channel and thought that it may be related.
+
+[2026-06-24T17:32:50.256000+00:00] egilewski (id=1519394887852621884)
+    So, do you want to reopen my closed PR and tell me what it would take to make it mergable? I think I can do it faster than the author of the other alternative PR.
+
+[2026-06-24T17:33:42.240000+00:00] kxee (id=1519395105889321130)
+    im still not sure whatd be the best way forward for the issue that doesnt block existing user plugins
+
+[2026-06-24T17:34:29.465000+00:00] egilewski (id=1519395303965327432)
+    Sorry to you too. 🙁
+    [reply to _8bit64k_ msg=1519343187863535626]
+
+[2026-06-24T17:36:50.063000+00:00] egilewski (id=1519395893676212437)
+    Are you already deep into that part of the codebase? I'd like a good reason to dive in, but in any case I won't get there as fast as you could.
+
+[2026-06-24T17:39:09.751000+00:00] dias4761 (id=1519396479570018395)
+    hey, can u check a PR? if u can of course
+    [reply to kxee msg=1519395105889321130]
+
+[2026-06-24T17:39:21.044000+00:00] kxee (id=1519396526936555540)
+    which one
+    [reply to dias4761 msg=1519396479570018395]
+
+[2026-06-24T17:39:43.696000+00:00] dias4761 (id=1519396621945667644)
+    https://github.com/NousResearch/hermes-agent/pull/51585 is P0
+    [embed] fix(cache): content-address prompt_cache_key so cron jobs hit provi... https://github.com/NousResearch/hermes-agent/pull/51585
+    [reply to kxee msg=1519396526936555540]
+
+[2026-06-24T17:40:09.076000+00:00] kxee (id=1519396728397103206)
+    not today atleast, i've deprioritized the issue
+    [reply to egilewski msg=1519395893676212437]
+
+[2026-06-24T17:43:52.078000+00:00] egilewski (id=1519397663735414784)
+    I understand. I see what I can do, as I'm very interested in patching at least P0/P1 vulnerabilities.
+    [reply to kxee msg=1519396728397103206]
+
+[2026-06-24T17:44:36.524000+00:00] kxee (id=1519397850155323512)
+    would appreciate any help towards P1s, just make sure that you are not duplicating any work while you’re at it
+    [reply to egilewski msg=1519397663735414784]
+
+[2026-06-24T17:50:30.823000+00:00] teknium (id=1519399336193167501)
+    This is not a security issue
+    [reply to egilewski msg=1519386982327779599]
+
+[2026-06-24T17:50:55.433000+00:00] teknium (id=1519399439414857728)
+    Just do not expose your dashboard to the internet insecurely and you wont have an infected plugin you didn’t choose to install
+
+[2026-06-24T17:51:46.414000+00:00] egilewski (id=1519399653244928000)
+    I'm certainly not interested in wasting my resources, so I'm mostly reviewing to hopefully push existing PRs to what you may find acceptable. But some PRs just seem to be abandoned.
+    [reply to kxee msg=1519397850155323512]
+
+[2026-06-24T17:52:17.579000+00:00] teknium (id=1519399783960150127)
+    Most prs have never been looked at by a human
+
+[2026-06-24T17:52:23.513000+00:00] teknium (id=1519399808849281045)
+    There’s like 14000
+
+[2026-06-24T17:52:29.384000+00:00] dias4761 (id=1519399833474043904)
+    That's a lot of PRs for the moderators :c. It's understandable that this happens.
+    [reply to egilewski msg=1519399653244928000]
+
+[2026-06-24T17:52:31.541000+00:00] teknium (id=1519399842521026580)
+    One day all will have been reviewed
+
+[2026-06-24T17:54:06.183000+00:00] dias4761 (id=1519400239478477011)
+    Even the P0 issue I'm trying to resolve takes a while to analyze (since they have a lot of others to look at, too).
+
+[2026-06-24T17:55:33.311000+00:00] egilewski (id=1519400604919791776)
+    No, I mean abandoned by the authors. I've had ready PRs not merged for a year. At work. I have a very high tolerance for review lag now.
+    [reply to dias4761 msg=1519399833474043904]
+
+[2026-06-24T17:58:00.794000+00:00] egilewski (id=1519401223508201643)
+    Would somebody be interested in correcting the tags on that type/security P1 issue then? https://github.com/NousResearch/hermes-agent/issues/43719
+    [embed] Security: Malicious third-party plugins targeting Hermes dashboards... https://github.com/NousResearch/hermes-agent/issues/43719
+
+[2026-06-24T18:02:44.497000+00:00] dias4761 (id=1519402413444829424)
+    damm,What a wonderful problem to solve
+
+[2026-06-24T18:03:33.743000+00:00] egilewski (id=1519402619997655261)
+    Funny thing that the old "a program without bugs is a program without code" may become a recipe. No code, just weights operating I/O directly. Not that it won't make mistakes, but technically there won't be bugs.
+    [reply to teknium msg=1519399842521026580]
+
+[2026-06-24T18:05:23.790000+00:00] kxee (id=1519403081568354404)
+    <@466492386873311235>
+    [reply to egilewski msg=1519401223508201643]
+
+[2026-06-24T18:17:21.851000+00:00] thyfriendlyfox (id=1519406093334220811)
+    Hey guys, the tags for this PR are incorrect. https://github.com/NousResearch/hermes-agent/pull/51117
+    comp/desktop instead of comp/tui. Any way to change it to desktop?
+    [embed] fix(desktop): bind new-chat workspace to active profile by ThyFrien... https://github.com/NousResearch/hermes-agent/pull/51117
+
+[2026-06-24T18:21:08.781000+00:00] kxee (id=1519407045147885658)
+    fixed :)
+    [reply to thyfriendlyfox msg=1519406093334220811]
+
+[2026-06-24T18:25:14.821000+00:00] _8bit64k_ (id=1519408077114183761)
+    No need to apologize, honestly these things happen when projects are moving fast. It should be expected. I'm grateful everyone responded quickly.  I'll have to read the original issues that you were trying to solve-- but I'd be happy to contribute in anyway I can once I get grounded in the concern. If I want to get up to speed, where/which original items should I look at?
+    [reply to egilewski msg=1519395303965327432]
+
+[2026-06-24T18:31:09.502000+00:00] thyfriendlyfox (id=1519409564754116728)
+    Thank you!!!
+    [reply to kxee msg=1519407045147885658]
+
+[2026-06-24T18:37:20.728000+00:00] egilewski (id=1519411121788817439)
+    I hope you didn't address that question to me. 🙂
+    
+    I myself will prioritize more severe bugs. I agree with Teknium, this is self-inflicted, so I'll just try not to drink-and-configure. Or vibe-configure network, which is probably worse.
+    [reply to _8bit64k_ msg=1519408077114183761]
+
+[2026-06-24T18:41:37.666000+00:00] egilewski (id=1519412199465025566)
+    To be clear, I didn't try to solve the issue I had, I'm just interested in getting Hermes somewhat more secure, so the clanking part of me 🙂 looks at every type/security it may be able to help with.
+    [reply to _8bit64k_ msg=1519408077114183761]
+
+[2026-06-24T18:41:57.812000+00:00] jw_mushroom_man (id=1519412283963346954)
+    <@1476291788443488357> this is sick
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1519412283669872732/image.png?ex=6a3d7675&is=6a3c24f5&hm=ef5ff7d4f333b8900a6d4ed69b8c4655806b2d9674ec8ce074afd6faa5fc0cfc&
+
+[2026-06-24T18:43:25.280000+00:00] _8bit64k_ (id=1519412650830991433)
+    got it. 🙂
+    [reply to egilewski msg=1519412199465025566]
+
+[2026-06-24T18:47:29.439000+00:00] jonkomet (id=1519413674907930734)
+    yessir im loving it .. still adding some minor updates.. also it's open source so if you spot something you want it to do that isn't there you can submit it and i'll review it
+    [reply to jw_mushroom_man msg=1519412283963346954]
+
+[2026-06-24T18:48:16.559000+00:00] jonkomet (id=1519413872543535294)
+    make it so much easier to be in the browser at the same time, while you build or even just regular browsing.. i use it on youtube for asking questions about the video too
+
+[2026-06-24T18:48:42.936000+00:00] jw_mushroom_man (id=1519413983176556704)
+    id debugging a couple things i ran into on start up that ill submit via PR tonight
+    [reply to jonkomet msg=1519413674907930734]
+
+[2026-06-24T18:50:12.878000+00:00] jonkomet (id=1519414360420778014)
+    yes indeed.. let's get this up and going smoothly
+
+[2026-06-24T18:59:13.393000+00:00] frowtek (id=1519416627505008640)
+    fix(gateway): correct misleading "open access" allowlist prompts in platform setup : https://github.com/NousResearch/hermes-agent/pull/52065
+    [embed] fix(gateway): correct misleading "open access" allowlist prompts in... https://github.com/NousResearch/hermes-agent/pull/52065
+    [reply to frowtek msg=1519392646865358940]
+
+[2026-06-24T19:13:23.199000+00:00] sahil_ss9 (id=1519420191849709568)
+    2 PRs opened today
+        - fix(feishu) #52076 — Withdrawn reply fallback across response-code + exception paths
+        - fix(desktop) #52094 — Model visibility persistence (localStorage → profile backend)
+    
+        #52076 – NousResearch/hermes-agent#52042
+        When you reply to a withdrawn tool-progress bubble on Feishu, the response was silently dropped. The 230011 fallback existed in one code path but not the other. This fix covers both paths and breaks a loop where the fallback nullified reply_to only for _send_raw_message to re-instate it from metadata.
+        PR: https://github.com/NousResearch/hermes-agent/pull/52076
+    
+        #52094 – NousResearch/hermes-agent#49114
+        Model visibility preferences were stored only in localStorage, which silently reverts when the Electron userData dir changes. Moved to a profile-scoped JSON file via 2 new RPC methods (model_visibility.get/set). Existing data auto-migrates on first boot. localStorage retained as fallback.
+        PR: https://github.com/NousResearch/hermes-agent/pull/52094
+    
+        Reviewer request: @alt-glitch would appreciate a look at #52076 since you caught the duplicate on the last Feishu PR. Main concern is the thread-metadata fallback logic — I've tested all 160 feishu tests but it could use eyes from someone running the adapter daily. #52094 is a desktop-only change, all 294 tests green.
+    [embed] fix(feishu): handle withdrawn reply targets in both response-code a... https://github.com/NousResearch/hermes-agent/pull/52076
+    [embed] fix(desktop): persist model visibility preferences to profile-scope... https://github.com/NousResearch/hermes-agent/pull/52094
+

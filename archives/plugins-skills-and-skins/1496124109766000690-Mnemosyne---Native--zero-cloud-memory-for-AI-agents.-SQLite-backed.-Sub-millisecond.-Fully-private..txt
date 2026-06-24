@@ -2256,3 +2256,6 @@
 [2026-06-24T13:32:31.543000+00:00] buke5122 (id=1519334411387277443)
     Is there like a config which I might not have activated?
 
+[2026-06-24T15:38:19.003000+00:00] no_orbert (id=1519366067728941127)
+    Same. Daily issues. I am planning to go back to default and use qmd
+

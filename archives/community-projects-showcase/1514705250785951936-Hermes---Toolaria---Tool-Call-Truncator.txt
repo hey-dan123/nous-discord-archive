@@ -69,3 +69,23 @@
     
     **Tests:** 94/94. Backward compatible — all 5 features disabled by default until you set the config keys.
 
+[2026-06-24T19:31:09.308000+00:00] sahil_ss9 (id=1519424663435087903)
+    Toolaria v3.1.0 is out 🧰
+    
+    Quick one for anyone using it: Toolaria rescues oversized tool results to disk
+    and hands the model a small excerpt plus a fetch handle, so big web/MCP outputs
+    stop flooding your context window.
+    
+    This release fixes a sharp edge. The fetch tool (rescuer_fetch) wasn't
+    reachable in toolset-restricted sessions like cron jobs and scoped profiles, so
+    handles raised there couldn't be redeemed. It's now an ambient tool, always
+    available wherever a rescue can happen. And if a host can't guarantee that,
+    Toolaria says so loudly at load instead of failing quietly.
+    
+    A handle you can't fetch is worse than no rescue. That's the whole fix.
+    
+    Grab it: https://github.com/Sahil-SS9/Toolaria
+    
+    It's deliberately light: the headline win, the honest framing, no internals. Want me to also post it to a channel, or is generating it enough? And separately, say the word and I'll run the deploy checklist (merge KenseiAgent branch, sync the live plugin copy, restart gateways) to take the full fix live on your box.
+    [embed] GitHub - Sahil-SS9/Toolaria: Rescue oversized tool results before t... https://github.com/Sahil-SS9/Toolaria
+

@@ -1,0 +1,43 @@
+# Thread 'Claude Workflow Composer (CWC)' in forum #community-projects-showcase
+# thread_id=1519389274167050261 forum_id=1316137596535177246
+# Started 2026-06-24T19:43:29.602484+00:00
+
+[2026-06-24T17:10:31.849000+00:00] fizbott (id=1519389274167050261)
+    Built this for anyone who keeps doing the same multi-step thing in Claude Code over and over.
+    
+    Most workflow tools make you start from a blank canvas and guess what to automate. CWC works backwards: it scans your actual Claude Code history, finds the work you keep repeating by hand, and turns it into a runnable workflow you can run, schedule, and monitor.
+    
+    What makes it different:
+    
+    CWC reads your real Claude Code sessions, clusters repeated patterns, and surfaces the strongest ones as one-click workflows. No guessing what to automate.
+    
+    Features:
+    
+    1. Visual canvas — compose multi-phase Claude Code workflows with React Flow, without hand-writing YAML frontmatter or orchestrator prose
+    
+    2. Real export — generates proper Claude Code skills/agents and a runner that sequences the handoffs, then drops everything straight into ~/.claude/
+    
+    3. Approval gates — pause a run after a step, approve/reject from an inbox, then continue
+    
+    4. Isolated runs — every test run happens in its own worktree, so your actual working tree is never touched
+    
+    5. Observability — live run logs, workflow state, and run history
+    
+    6. Automation — cron triggers + webhooks can fire workflows on a schedule, with a global pause and concurrency cap
+    
+    7. Fully local — loopback-bound server, per-run local token, no DB. Workflows are just .cwc JSON files
+    
+    Install: npx claude-cwc
+    
+    Repo: https://github.com/fayzan123/claude-workflow-composer
+    npm: https://www.npmjs.com/package/claude-cwc
+    
+    Open source. Feedback and contributions welcome.
+    
+    If anyone has ideas for integrating this with Hermes, or general suggestions for improvements, I’d really appreciate the feedback.
+    [attachment] ChatGPT_Image_Jun_24_2026_12_38_24_PM.png https://cdn.discordapp.com/attachments/1519389274167050261/1519389274858848407/ChatGPT_Image_Jun_24_2026_12_38_24_PM.png?ex=6a3d6108&is=6a3c0f88&hm=1b2fde899826806d6b73a838eba6cd01ddd49e31d972d61bf1775bb8210017e3&
+    [embed] GitHub - fayzan123/claude-workflow-composer: Visual desktop app for... https://github.com/fayzan123/claude-workflow-composer
+
+[2026-06-24T17:12:42.128000+00:00] fizbott (id=1519389820596781106)
+    Everything runs locally. Claude runs headlessly through your existing Claude Code subscription, so there’s no API key setup.
+
