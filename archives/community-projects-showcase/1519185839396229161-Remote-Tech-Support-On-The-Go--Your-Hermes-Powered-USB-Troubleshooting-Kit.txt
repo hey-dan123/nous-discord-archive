@@ -1,0 +1,14 @@
+# Thread 'Remote Tech Support On-The-Go: Your Hermes-Powered USB Troubleshooting Kit' in forum #community-projects-showcase
+# thread_id=1519185839396229161 forum_id=1316137596535177246
+# Started 2026-06-24T09:25:12.910152+00:00
+
+[2026-06-24T03:42:09.220000+00:00] mainmeister (id=1519185839396229161)
+    https://github.com/mainmeister/hermes-friend-diag-kit.git
+    
+    https://bumblingelectron.blogspot.com/2026/06/remote-tech-support-on-go-your-hermes.html
+    
+    The Concept: Hermes on a Stick, with a Secure Tunnel
+    Our idea revolves around a standard USB drive containing a few essential tools. When plugged into a friend's Windows computer, it enables a secure SSH connection back to you, the operator (or directly to your Hermes Agent!). The magic comes from Cloudflare Tunnel, which creates an outbound-only connection from their PC, bypassing firewalls and NAT, and routing SSH traffic to a persistent hostname.
+    [embed] GitHub - mainmeister/hermes-friend-diag-kit: Ever wished you could ... https://github.com/mainmeister/hermes-friend-diag-kit.git
+    [embed] Remote Tech Support On-The-Go: Your Hermes-Powered USB Troubleshoot... https://bumblingelectron.blogspot.com/2026/06/remote-tech-support-on-go-your-hermes.html
+

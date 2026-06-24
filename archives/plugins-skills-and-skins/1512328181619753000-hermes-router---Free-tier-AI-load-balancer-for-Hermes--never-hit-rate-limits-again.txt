@@ -1009,3 +1009,24 @@
     instead of a single API key, you have multi API key
     [reply to glazaroff msg=1519093954476245194]
 
+[2026-06-24T05:04:24.763000+00:00] markopaasila (id=1519206540563845190)
+    Unlike fusion, it works with free tiers and free models
+    [reply to glazaroff msg=1519093954476245194]
+
+[2026-06-24T05:52:10.142000+00:00] glazaroff (id=1519218558834311259)
+    Could you gimme an example? Will got the same result like OpenRouter Fusion?
+    [reply to markopaasila msg=1519206540563845190]
+
+[2026-06-24T05:54:18.250000+00:00] glazaroff (id=1519219096158339123)
+    Ok, well, I need to setup 3 models and pick one model which will review the result of those 3 models and provide me the best result? Is that correct?
+
+[2026-06-24T06:00:42.932000+00:00] markopaasila (id=1519220709631725639)
+    No, just set it up and use it.
+
+[2026-06-24T06:08:37.652000+00:00] glazaroff (id=1519222700751589386)
+    Gimme config example for 3 free tiers model, and can I use with OpenAI, Anthropic and Z model, gpt-5.5, opus-4.8 and glm-5.2
+    [reply to markopaasila msg=1519220709631725639]
+
+[2026-06-24T06:16:56.170000+00:00] markopaasila (id=1519224791687630879)
+    You can ask the same question from some ai chat 😂
+

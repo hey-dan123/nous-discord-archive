@@ -192,3 +192,29 @@
     im installing this dark factory thing since last night. question is how do i get to the dashboard i see here
     [reply to techmeat msg=1516381443067089056]
 
+[2026-06-24T08:02:13.171000+00:00] legitimate0481 (id=1519251287110324354)
+    <@357137210941898752> Cant get the workflows dashboard to work "failed to load workflows" in hermes dashboard what could be wrong here?
+
+[2026-06-24T08:12:06.146000+00:00] techmeat (id=1519253774227738675)
+    Hey! First, are you on the latest version of the plugin? A few days ago Hermes shipped some security updates, and they forced a hotfix on the plugin side - so an older build can easily break the workflows dashboard. Once you're updated, the best way to pin down the cause right now is to have your agent read the logs and figure out what actually happened. And honestly, building out a new workflow is best done the same way - just ask the agent to do it for you.
+    [reply to legitimate0481 msg=1519251287110324354]
+
+[2026-06-24T08:17:00.332000+00:00] legitimate0481 (id=1519255008133120101)
+    Im trying agent cant seem to work it out as well... 
+    Latest versio of what? 
+    i installed open-second-brain and hermes-workflows today not too long ago. I also ran hermes plugins update open-second-brain 
+    
+    Questions:
+    1. Is linux env a must or Windows works too? 
+    2. Is Brain vault a must? or configuring my own vault is ok? 
+    3. To connect to the dashboard is through a different port? or through the Workflows tab in hermes dashbaord?
+    4. is the agent name in the config matter?
+    [reply to techmeat msg=1519253774227738675]
+
+[2026-06-24T08:41:59.867000+00:00] techmeat (id=1519261297638641665)
+    1. Honestly I haven't tried running this on Windows myself, but the plugins are written in plain Python & TS, so there shouldn't be any problems.
+    2. The Brain is created by the Open Second Brain plugin on init - but that plugin is optional, and Hermes Workflows will work without it too. Memory just may not always behave correctly without it.
+    ---
+    I can answer more a little bit later.
+    [reply to legitimate0481 msg=1519255008133120101]
+

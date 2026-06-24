@@ -1,0 +1,270 @@
+# Thread 'Skill Inspector – Health Checks & Governance for Hermes Skills' in forum #community-projects-showcase
+# thread_id=1519240148305449090 forum_id=1316137596535177246
+# Started 2026-06-24T09:25:12.444420+00:00
+
+[2026-06-24T07:17:57.473000+00:00] johnsonbuilds (id=1519240148305449090)
+    Hermes proved that agents can learn.
+    
+    But while analyzing my own skill library, I realized something:
+    
+    More skills ≠ better agents.
+    
+    I ran a governance scan against my Hermes installation and found:
+    
+    • 70 skill packages
+    • 415 assets
+    • Only 4 skills had ever been executed
+    • 66 skills had never been used
+    • Several packages contained 50+ templates, scripts, or references
+    
+    It reminded me of software engineering:
+    
+    More code ≠ better software.
+    
+    Likewise:
+    
+    More skills ≠ better agents.
+    
+    As agent ecosystems grow, I think we're going to need more than skill creation.
+    
+    We'll need skill governance.
+    
+    To explore this idea, I built Skill Inspector — an open-source governance tool for Hermes skill libraries.
+    
+    It generates:
+    
+    • Skill Health Scores
+    • Runtime Utilization Reports
+    • Duplicate Detection
+    • Governance Recommendations
+    
+    Open Source:
+    
+    https://github.com/johnsonbuilds/skill-inspector
+    
+    Learn More:
+    
+    https://hermesagentcloud.com/skill-inspector
+    
+    Curious if anyone else has started running into skill sprawl yet.
+    [attachment] report-overview.png https://cdn.discordapp.com/attachments/1519240148305449090/1519240148452114554/report-overview.png?ex=6a3cd625&is=6a3b84a5&hm=84689c3809a807a9eb568bed113a350e1cc05feefb509f33f6be50cb1bba1577&
+    [attachment] unused_skills.png https://cdn.discordapp.com/attachments/1519240148305449090/1519240148787662889/unused_skills.png?ex=6a3cd625&is=6a3b84a5&hm=375f76f548f97e084738bf17dfdcdd603afa005050e575fd6c6575d45a200dea&
+
+[2026-06-24T07:24:47.466000+00:00] johnsonbuilds (id=1519241867940728832)
+    Skill Inspector – Health Checks & Governance for Hermes Skills
+
+[2026-06-24T07:42:04.080000+00:00] johnsonbuilds (id=1519246215815106571)
+    The Hermes agent proved that 'learning' is cool, but it has yet to prove that the return on learning outweighs the cost. This, to me, is the core contradiction.
+    
+    ## Problem #1: Skill Explosion
+    
+    This is the biggest problem, in my opinion.
+    
+    The logic behind Hermes sounds great:
+    
+    Task
+    ↓
+    Experience
+    ↓
+    Skill
+    ↓
+    Store for future reuse
+    
+    Who wouldn't want that?
+    
+    But in reality, most experiences aren't valuable enough to become permanent skills.
+    
+    Imagine this:
+    
+    Day 1:
+    
+    The agent fixes an AWS permission issue.
+    
+    It creates a skill.
+    
+    Day 2:
+    
+    The agent fixes an S3 permission issue.
+    
+    It creates another skill.
+    
+    Day 3:
+    
+    The agent fixes an IAM permission issue.
+    
+    It creates another skill.
+    
+    A year later?
+    
+    You might have thousands of skills.
+    
+    Then a new problem appears:
+    
+    Which one should be used?
+    
+    Humans struggle with this problem already.
+    
+    Why would AI magically solve it?
+    
+    Anyone who has worked in software engineering has seen this before.
+    
+    More code does not automatically create more capability.
+    
+    Very often:
+    
+    # More code
+    
+    More maintenance
+    
+    Skill libraries are no different.
+    
+    More skills do not necessarily create a smarter agent.
+    
+    They may simply create a larger system to maintain.
+
+[2026-06-24T07:42:55.761000+00:00] johnsonbuilds (id=1519246432580669490)
+    ## Problem #2: Learning Quality Cannot Be Guaranteed
+    
+    Hermes implicitly assumes:
+    
+    # Task completed
+    
+    Correct lesson learned
+    
+    I don't think that's always true.
+    
+    Imagine an agent encounters a bug.
+    
+    It retries three times.
+    
+    Eventually the task succeeds.
+    
+    The agent creates a skill:
+    
+    "If this error occurs, retry three times."
+    
+    But what if the real reason wasn't the retries?
+    
+    What if the network simply recovered on its own?
+    
+    The agent learned a pattern.
+    
+    But it learned the wrong lesson.
+    
+    Human organizations already understand this problem.
+    
+    That's why we have:
+    
+    * Code Reviews
+    * Architects
+    * Tech Leads
+    
+    The purpose of all of them is the same:
+    
+    Experience needs review.
+    
+    Not every lesson should become institutional knowledge.
+    
+    One of the biggest unanswered questions in Hermes is:
+    
+    Who reviews the skills?
+
+[2026-06-24T07:43:12.013000+00:00] johnsonbuilds (id=1519246500746756137)
+    ## Problem #3: Retrieval Is Harder Than Learning
+    
+    Many people think learning is the difficult part.
+    
+    I don't.
+    
+    I think everything that happens after learning is much harder.
+    
+    Learning
+    ↓
+    Storage
+    ↓
+    Retrieval
+    ↓
+    Matching
+    ↓
+    Application
+    
+    The hardest parts are at the end.
+    
+    Imagine an agent with 10,000 skills.
+    
+    A task arrives:
+    
+    "Deploy a FastAPI application."
+    
+    Which skill should be selected?
+    
+    * deploy_python
+    * deploy_fastapi
+    * deploy_fastapi_aws
+    * deploy_backend
+    * deploy_api_server
+    
+    Which one is correct?
+    
+    This is an extremely difficult search problem.
+    
+    Many agent projects eventually discover the same thing:
+    
+    Creating skills is easy.
+    
+    Finding the right skill is hard.
+    
+    ---
+
+[2026-06-24T07:43:15.708000+00:00] johnsonbuilds (id=1519246516244709496)
+    ## Problem #4: Diminishing Returns
+    
+    This is the issue that worries me most.
+    
+    Imagine the first 100 skills.
+    
+    Result:
+    
+    Capability improves by 50%.
+    
+    Great.
+    
+    Now imagine the next 1,000 skills.
+    
+    Result:
+    
+    Capability improves by 5%.
+    
+    Still useful.
+    
+    Now imagine 10,000 skills.
+    
+    Maybe capability improves by 1%.
+    
+    Maybe less.
+    
+    Possibly even negative.
+    
+    Because as skill count grows:
+    
+    Search cost
+    ↑
+    
+    Conflict cost
+    ↑
+    
+    Maintenance cost
+    ↑
+    
+    Complexity cost
+    ↑
+    
+    At some point, skill growth can outpace capability growth.
+    
+    When that happens, more learning stops being an advantage.
+    
+    It becomes a burden.
+
+[2026-06-24T08:18:24.253000+00:00] _.exo._ (id=1519255360123310110)
+    I just tell my agents to review their skills and group them adhering to the hermes-agent-skills-authoring skill. Between that and the curator my agents stay pretty lean
+

@@ -593,3 +593,21 @@
     Sweet - I'll check it out in a bit today. Thanks again!
     [reply to magnus919 msg=1518626565683023983]
 
+[2026-06-24T04:24:04.766000+00:00] magnus919 (id=1519196390360748153)
+    #    🐙 GROKTOCRAWL v0.9.0 — Crawl Engine Release
+    
+    - *Cyberdelic kaiju octopus with a glowing brain, Tokyo Harbor at neon night. Don't ask. Just go with it.*
+    - **Crawl Engine** — BFS crawl with streaming SSE. Concurrency, politeness, timeouts. Domain scope, path filters, sitemap parsing. Webhook lifecycle with HMAC signatures.
+    - **Deep Search** — Multi-pass agentic search across 48 engines. Auto-correction, intent classification. Summarization with grounded citations.
+    - **Find Similar** — Semantic similarity search per URL. Content-based discovery across crawled archives.
+    - **Search Monitors** — Watch pages for changes. Cron-triggered re-crawl with diff detection. Alert on content shifts.
+    - **Observability** — Prometheus counters per endpoint. Grafana dashboards. Structured logging with request-ID tracing.
+    - **Security** — SensitiveDataFilter. CircuitBreaker resilience. Gitleaks secret scanning. pip-audit and mypy enforcement.
+    - Plus 49 resolved type errors, Grafana dashboards, Prometheus alerting with runbooks, secret scanning, integration tests across all 7 services, and a fresh set of ADRs documenting every architectural decision.
+    
+    Demo: https://gist.github.com/magnus919/39651279678275c4040c5a9f33819ee1
+    Release Notes: https://github.com/groktopus/groktocrawl/releases/tag/v0.9.0
+    [attachment] openai_gpt-image-2-medium_20260624_000021_d89d42b0.png https://cdn.discordapp.com/attachments/1507053302431486162/1519196390654480494/openai_gpt-image-2-medium_20260624_000021_d89d42b0.png?ex=6a3cad64&is=6a3b5be4&hm=e025d7c2a32380ecea2ed1d883ccaccef47baf081f5b6d3549acc0830389bfa1&
+    [embed] GroktoCrawl v0.9.0 - What's New in the CLI https://gist.github.com/magnus919/39651279678275c4040c5a9f33819ee1
+    [embed] Release v0.9.0 · groktopus/groktocrawl https://github.com/groktopus/groktocrawl/releases/tag/v0.9.0
+
