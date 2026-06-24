@@ -1,0 +1,57 @@
+# Thread '**agent-memory-skill** — strukturiertes Memory für Hermes' in forum #community-projects-showcase
+# thread_id=1519099133338714202 forum_id=1316137596535177246
+# Started 2026-06-24T03:23:59.412783+00:00
+
+[2026-06-23T21:57:36.885000+00:00] xperryx. (id=1519099133338714202)
+    MEMORY.md und USER.md sind flache Listen. Kein Trust-Level, keine TTL per Typ, `write_approval` ist globales on/off. Ich hab das gelöst.
+    
+    **5 Authority Lanes** mit eigener TTL, Confidence und Source-Policy:
+    - `identity` → permanent, confidence ≥ 0.9
+    - `preference` → 14d TTL
+    - `evidence` → 60d TTL
+    - `authorization` → 90d TTL, **nur observation** — Conversation-Messages werden silent rejected. Strukturell, kein Regex.
+    - `procedural` → Verhaltensregeln des Agenten, mandatory human review gate, kein Auto-Approve
+    
+    **Weitere Features:**
+    - **Recall Snippets** — rohe Conversation-Schnipsel getrennt von destillierten Facts gespeichert
+    - **Rebound-Protection** — nach >6h Idle max. 3 non-identity Facts pro Session, kein Flood beim Reconnect
+    - **Conflict Detection** — non-blocking in single-valued Lanes, auto-reconcile
+    - **Smart Injection** — query-aware statt frozen Block, Token-Budget per Lane, authorization wird nie injiziert
+    - **Source Trust** — `tool`/`external` auf `evidence` quarantiniert, können nie `identity`/`authorization` schreiben
+    - **Entity Relations** — directed graph ohne Embeddings, 1-hop Expansion in Prompt-Context
+    - **Provenance** — append-only Audit-Log, Rollback, Snapshots
+    - **German-aware Retrieval** — FTS5 + Synonym-Map + Fold/Stem, deterministisch, null Embeddings
+    
+    Pure stdlib — `sqlite3`, `json`, `hashlib`. Kein Cloud, kein Embedding. Memory überlebt Modellwechsel.
+    
+    🔗 https://github.com/xMannixx/agent-memory-skill
+    Feedback und PRs willkommen.
+    [embed] GitHub - xMannixx/agent-memory-skill: Local-first SQLite memory for... https://github.com/xMannixx/agent-memory-skill
+
+[2026-06-23T21:57:40.248000+00:00] Translator Bot#1043 (id=1519099147444031528)
+    MEMORY.md and USER.md are flat lists. No trust level, no TTL per type, `write_approval` is global on/off. I solved that.
+    
+    **5 Authority Lanes** with their own TTL, Confidence and Source Policy:
+    - `identity` → permanent, confidence ≥ 0.9
+    - `preference` → 14d TTL
+    - `evidence` → 60d TTL
+    - `authorization` → 90d TTL, **observation only** — Conversation messages are silently rejected. Structural, no regex.
+    - `procedural` → rules of conduct of the agent, mandatory human review gate, no auto-approve
+    
+    **Other features:**
+    - **Recall Snippets** — raw conversation snippets stored separately from distilled facts
+    - **Rebound protection** — after >6 hours of idle max. 3 non-identity facts per session, no flood when reconnecting
+    - **Conflict Detection** — non-blocking in single-valued lanes, auto-reconcile
+    - **Smart Injection** — query-aware instead of frozen block, token budget per lane, authorization is never injected
+    - **Source Trust** — `tool`/`external` quarantined on `evidence`, can never write `identity`/`authorization`
+    - **Entity Relations** — directed graph without embeddings, 1-hop expansion in prompt context
+    - **Provenance** — append-only audit log, rollback, snapshots
+    - **German-aware Retrieval** — FTS5 + Synonym Map + Fold/Stem, deterministic, zero embeddings
+    
+    Pure stdlib — `sqlite3`, `json`, `hashlib`. No cloud, no embedding. Memory survives model changes.
+    
+    🔗 https://github.com/xMannixx/agent-memory-skill
+    Feedback and PRs welcome.
+    [embed] GitHub - xMannixx/agent-memory-skill: Local-first SQLite memory for... https://github.com/xMannixx/agent-memory-skill
+    [reply to xperryx. msg=1519099133338714202]
+

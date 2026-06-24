@@ -1001,3 +1001,11 @@
 [2026-06-23T19:31:46.732000+00:00] markopaasila (id=1519062432537120819)
     Now it is working really well! Thank you!
 
+[2026-06-23T21:37:02.148000+00:00] glazaroff (id=1519093954476245194)
+    One more question - hermes-router is something like an OpenRouter Fusion?
+
+[2026-06-24T00:34:10.770000+00:00] shaf_2665 (id=1519138534148149421)
+    sort of, but it runs locally
+    instead of a single API key, you have multi API key
+    [reply to glazaroff msg=1519093954476245194]
+

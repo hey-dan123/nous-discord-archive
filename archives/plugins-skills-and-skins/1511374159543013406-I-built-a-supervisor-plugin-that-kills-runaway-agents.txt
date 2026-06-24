@@ -36,3 +36,6 @@
 [2026-06-11T00:23:08.442000+00:00] cinnabeard (id=1514424713890496612)
     would this fix CoT loops?
 
+[2026-06-24T00:33:14.287000+00:00] averyguilt (id=1519138297241141420)
+    how do i uninstall ts
+

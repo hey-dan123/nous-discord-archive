@@ -32,3 +32,11 @@
 [2026-06-22T17:59:20.223000+00:00] garyritchie (id=1518676780926501057)
     Started adding example templates so you can see what it can do (super simple!): https://github.com/search?q=topic%3Atemplate-project+org%3Agaryritchie&type=Repositories
 
+[2026-06-23T22:20:11.817000+00:00] garyritchie (id=1519104816335425596)
+    There's a GUI now! https://garylritchie.gumroad.com/l/pt-gui
+    [attachment] Screenshot_from_2026-06-23_16-50-14.jpg https://cdn.discordapp.com/attachments/1503823542720925847/1519104816419307673/Screenshot_from_2026-06-23_16-50-14.jpg?ex=6a3c581b&is=6a3b069b&hm=01c5cc7f893e1179d437cfb0e00969e51b031fdbcbd2819db87205ad276e170b&
+    [embed] pt GUI https://garylritchie.gumroad.com/l/pt-gui
+
+[2026-06-23T23:00:30.867000+00:00] garyritchie (id=1519114962566381679)
+    NOTE: pt-gui doesn’t ship with any templates, but you can load examples from here: https://github.com/search?q=topic%3Atemplate-project+org%3Agaryritchie&type=Repositories
+

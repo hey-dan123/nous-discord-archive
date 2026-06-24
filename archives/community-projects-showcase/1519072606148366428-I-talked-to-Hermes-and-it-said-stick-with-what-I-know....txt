@@ -1,0 +1,35 @@
+# Thread 'I talked to Hermes and it said stick with what I know...' in forum #community-projects-showcase
+# thread_id=1519072606148366428 forum_id=1316137596535177246
+# Started 2026-06-24T03:23:59.915981+00:00
+
+[2026-06-23T20:12:12.310000+00:00] n1temare28 (id=1519072606148366428)
+    So, since I'm a degenerate with poor coding skills I decided to have Hermes help me with sports betting. 
+    
+    Tools:
+    Claude 4.6 (API token total: $340)
+    Kimi K2.6 (API token total $120)
+    Odds API Key ($30)
+    TheSportsDB API Key ($10)
+    xcloud.host ($40)
+    
+    Bets:
+    Invested: $415.00
+    Profit: $1,770.00
+    
+    --------------------------
+    Total Invested: $955
+    Total Profit: $815
+    --------------------------
+    
+    
+    The purpose of the project was for Hermes to provide better predictions for legs over time. 
+    
+    I have to be honest at some point of this project I was literally on the verge of quitting due to high token utilization from Claude and several learning curves along the way. 
+    
+    Although Claude was able to help me create the infrastructure for this project, it was Kimi that gave me a lot more flexibility when it came to resolving the same errors I faced with Claude at half of the price. 
+    
+    Enforcing goals, skills. memory and other features has helped my Hermes grow tremendously. Granted there's always room for improvement but thought it was a neat and niche project to share.
+    [attachment] 2298b353-a50e-4184-9438-073e1c89741a.png https://cdn.discordapp.com/attachments/1519072606148366428/1519072606349955122/2298b353-a50e-4184-9438-073e1c89741a.png?ex=6a3c3a1c&is=6a3ae89c&hm=643dc67b0d3f5fc02aefab2a011db5a79112f32fc362600dd8dfbfd16d59487b&
+    [attachment] Screenshot_20260623-153329.png https://cdn.discordapp.com/attachments/1519072606148366428/1519072606723117106/Screenshot_20260623-153329.png?ex=6a3c3a1c&is=6a3ae89c&hm=bdb8e39a1bdea8c2e41fb04a450b7de30bda4f8425cb67b997de037607e3a5cb&
+    [attachment] rn_image_picker_lib_temp_1e1419b8-8e28-4779-b4d7-349f68030a3a2.jpg https://cdn.discordapp.com/attachments/1519072606148366428/1519072607087890522/rn_image_picker_lib_temp_1e1419b8-8e28-4779-b4d7-349f68030a3a2.jpg?ex=6a3c3a1c&is=6a3ae89c&hm=a797ce3abdc677911a8833aebc7b4547e4792470daf6b3fe86ab5c9793c3db5f&
+

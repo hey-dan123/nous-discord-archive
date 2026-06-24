@@ -1,0 +1,10 @@
+# Thread 'CLAWMES' in forum #plugins-skills-and-skins
+# thread_id=1519135458762948698 forum_id=1485392832154832906
+# Started 2026-06-24T03:28:34.596288+00:00
+
+[2026-06-24T00:21:57.541000+00:00] ddfp777 (id=1519135458762948698)
+    Clawmes turns your Hermes agent into an autonomous on chain operator, one that trades, lends, stakes, votes and manages a treasury in your own wallet, while you sleep.
+    https://github.com/clawnchdev/clawmes#readme
+    [attachment] ClawnchBotCLAWMES.jpg https://cdn.discordapp.com/attachments/1519135458762948698/1519135459064942775/ClawnchBotCLAWMES.jpg?ex=6a3c74a5&is=6a3b2325&hm=d8a2604d987dd8253713f9721c85c32ebf9a8ce62bb9571490c2abcf1c6e8e6d&
+    [embed] GitHub - clawnchdev/clawmes: Hermes Agent plugin for crypto: wallet... https://github.com/clawnchdev/clawmes
+

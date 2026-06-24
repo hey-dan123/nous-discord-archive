@@ -1,0 +1,28 @@
+# Thread 'Invitation to submit your abstract to my topical collection' in forum #community-projects-showcase
+# thread_id=1519106393569759292 forum_id=1316137596535177246
+# Started 2026-06-24T03:23:58.940628+00:00
+
+[2026-06-23T22:26:27.859000+00:00] samiratra (id=1519106393569759292)
+    Hey everyone! 👋
+    
+    As we all know, very few journals publish video articles, even though they are massive for sharing techniques and improving research replicability. 📊💡
+    
+    To help bridge this gap, I’m excited to share that I’ve opened a new Topical Collection with JoVE on “Emotion Estimation for Human-Computer Interaction in Social Robots”:
+    
+    👉 View the Collection Here https://www.jove.com/methods-collections/5296/emotion-estimation-for-human-computer-interaction-in-social-robots 🤖🧠
+    
+    Our goal is to pull together a highly visual overview of the methodologies driving emotion estimation and HCI. If you or your lab are working in this space, here is why you should consider submitting:
+    
+    📌 Why Publish with JoVE?
+    
+        • High Visibility: Fully indexed in PubMed, Web of Science, SciFinder, EMBASE, and Scopus (2024 Impact Factor: 1.0).
+        • Zero Video Hassle: You just submit a traditional text manuscript—JoVE handles the entire professional video production process for you.
+        • Inclusivity: Publication fee waivers of up to 90% are available for developing and low-income countries.
+    
+    🚀 How to Contribute
+    If you're interested in contributing a video article on your methods, drop me a DM here or submit your abstract directly through the link below:
+    
+    📥 Submit Your Abstract https://www.jove.com/methods-collections/submit-an-abstract?collection_id=5296
+    
+    Let's make our research more reproducible together! 🌟
+

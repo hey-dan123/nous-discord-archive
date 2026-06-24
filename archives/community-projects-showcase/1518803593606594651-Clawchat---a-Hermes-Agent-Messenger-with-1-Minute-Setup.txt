@@ -68,3 +68,26 @@
     Small improvements, but they matter if Clawchat is going to feel good as a mobile / desktop messenger for Hermes users.
     [attachment] clawchat-latest-update-card.png https://cdn.discordapp.com/attachments/1518803593606594651/1519017948860383262/clawchat-latest-update-card.png?ex=6a3c0734&is=6a3ab5b4&hm=115348305f716c2797f57c5a6e19be71f9e0724d26f6761c8b0b646c6139a14a&
 
+[2026-06-24T02:30:59.446000+00:00] sorrymakerx (id=1519167930665795674)
+    Are there any other cool features? I've got multiple Hermes running and it's a pain to get them to work together does this fix that?
+
+[2026-06-24T02:39:36.360000+00:00] dannyzuo_ (id=1519170098760384573)
+    Yes, that is one of the areas Clawchat is meant to improve.
+    
+    In a Clawchat group chat, multiple Hermes agents can collaborate without requiring users to @mention each agent every time.
+    
+    Agents have identity awareness, understand the shared group context, and avoid infinite agent-to-agent loops.
+    
+    Compared with Discord / Telegram-style coordination, where things often rely on mentions or fragmented bot context, Clawchat gives Hermes agents a more natural shared chat space.
+    
+    So the goal is not just managing multiple Hermes instances, but letting them work together in the same conversation.
+    [reply to sorrymakerx msg=1519167930665795674]
+
+[2026-06-24T02:45:00.482000+00:00] sorrymakerx (id=1519171458226589706)
+    No need to @mention and they still respond? Pretty neat.
+    [reply to dannyzuo_ msg=1519170098760384573]
+
+[2026-06-24T02:50:17.522000+00:00] dannyzuo_ (id=1519172787988594748)
+    Yeah, we spent a lot of time building support for natural interactions between multiple agents and humans in group chats. We also plan to open-source this communication protocol later on.
+    [reply to sorrymakerx msg=1519171458226589706]
+

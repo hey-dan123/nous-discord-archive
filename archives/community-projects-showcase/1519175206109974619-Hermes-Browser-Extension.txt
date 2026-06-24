@@ -1,0 +1,32 @@
+# Thread 'Hermes Browser Extension' in forum #community-projects-showcase
+# thread_id=1519175206109974619 forum_id=1316137596535177246
+# Started 2026-06-24T03:23:57.808543+00:00
+
+[2026-06-24T02:59:54.047000+00:00] jonkomet (id=1519175206109974619)
+    I just shipped a public alpha of a community project I’ve been building: https://github.com/abundantbeing/hermes-browser-extension
+    
+    It’s a Chrome/Edge side panel that connects your active browser page to your local Hermes Agent runtime, so Hermes can reason over the page you’re looking at instead of you copy/pasting context back and forth.
+    
+    Current alpha features:
+    
+    - Active tab + DOM/page context capture
+    - Selected text + open tabs context
+    - Streaming Hermes responses in the side panel
+    - Local-first connection to the Hermes API server
+    - “Connect to Hermes Desktop” pairing flow with scoped browser token
+    - Read-only browser context in v0.1 — no debugger/nativeMessaging/browser-control permissions
+    - Session/model controls inspired by Hermes Desktop
+    - Load-unpacked install for now, not Chrome Web Store yet
+    
+    The goal is simple: make Hermes feel more useful while browsing — docs, repos, research pages, dashboards, anything where the page itself should become part of the prompt.
+    
+    This is still early/public-alpha, but the repo is live and the local pairing flow is working against the Hermes gateway.
+    
+    Would love feedback from Hermes users/builders, especially around:
+    
+    1. the local pairing/API surface
+    2. what browser-context workflows would be most useful
+    3. what should eventually become the “official-feeling” extension UX
+    [attachment] hermes_browser_extension_v1.png https://cdn.discordapp.com/attachments/1519175206109974619/1519175206592057396/hermes_browser_extension_v1.png?ex=6a3c99aa&is=6a3b482a&hm=9a6d7b68aa770a190a3cddeba8f14a7aa5fc5806f109a4b1494ef049a18ad8e3&
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
+
