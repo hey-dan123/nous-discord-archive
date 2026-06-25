@@ -158,3 +158,47 @@
     [attachment] Browser_Extension_v0.1.3_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1519675795931398154/Browser_Extension_v0.1.3_Update_Ad.png?ex=6a3e6bdf&is=6a3d1a5f&hm=4e853197f31aaf89d2a32436cc300e9153b00cb3552c1a7b0185fa0ec4832491&
     [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
 
+[2026-06-25T14:47:59.240000+00:00] jonkomet (id=1519715789790511316)
+    [attachment] hermes_browser_extension_v1.png https://cdn.discordapp.com/attachments/1519175108697264238/1519715789475807342/hermes_browser_extension_v1.png?ex=6a3e911f&is=6a3d3f9f&hm=2128331442e7e6aa914364d9bd6870879c1b991c47846b0956d6f3cffab5cfd6&
+
+[2026-06-25T14:48:50.441000+00:00] jonkomet (id=1519716004543070350)
+    [attachment] hermes_browser_reel_vid.mp4 https://cdn.discordapp.com/attachments/1519175108697264238/1519716002424946759/hermes_browser_reel_vid.mp4?ex=6a3e9151&is=6a3d3fd1&hm=1756a199e956bf6dad7157235d83905452a154fbc4b4919da0b653c6d050f1d1&
+
+[2026-06-25T15:38:33.612000+00:00] jayyjayy18 (id=1519728516868866171)
+    Hey Jon! Been testing v0.1.3 with a remote Hermes API server (Hetzner + Tailscale). Got it 90% working, here's the detailed feedback:
+    
+    What works:
+    Remote API mode with Gateway URL + token setup is clear and intuitive
+    Test Connection passes — health check, session creation, models sync all work
+    CORS setup instructions in the README were easy to follow
+    The "Remote API server. Set API_SERVER_KEY and API_SERVER_CORS_ORIGINS=..." hint text in settings is excellent — caught my CORS misconfig immediately
+    
+    What's failing:
+    Chat returns 403 after Test Connection succeeds. GET /api/sessions works fine (200), but POST /api/sessions/.../chat/stream and /chat both return 403 with 0-byte body
+    A "thinking" indicator flashes briefly before the 403, so the request reaches the agent before the stream breaks
+    Same behavior whether through HTTPS nginx proxy or direct http:// Tailscale IP (Local gateway mode)
+    Direct curl tests through the same endpoints work perfectly — the issue only manifests through Chrome's fetch() API
+    
+    Setup details for repro:
+    Hermes API server on 0.0.0.0:8642 with API_SERVER_KEY set
+    Extension in Remote API mode pointing to limenproject.org/hermes-api/ (nginx reverse proxy with Let's Encrypt, proxy_buffering off, gzip off)
+    CORS origin set to exact extension ID
+    Chrome 149, Windows 10
+    Suspicion: Something in how Chrome's fetch() sends the Authorization header on POST vs GET is tripping the API server's auth middleware. The GET requests authenticate fine (session reads work) but POST chat requests get rejected at the auth layer despite using the same apiFetch() code path.
+    
+    Happy to provide nginx config, full gateway logs, or test with debug builds! (awesome repo btw!!)
+
+[2026-06-25T16:23:53.740000+00:00] jayyjayy18 (id=1519739925912748104)
+    Update on v0.1.3 remote testing — it's getting THROUGH now! SSE streaming is breaking mid-flight but the agent IS receiving and processing requests. I see the "thinking" indicator flash, then 403. Suspect SSE event stream format isn't making it through the nginx reverse proxy to Chrome's fetch() parser — auth, session, and agent all work, it's the SSE wire format that's failing. Regular WebUI works fine through the same proxy. So the issue is specifically SSE + Chrome fetch() + proxy combination.....i think
+
+[2026-06-25T17:18:36.649000+00:00] jonkomet (id=1519753695430967449)
+    submit a PR
+    [reply to jayyjayy18 msg=1519728516868866171]
+
+[2026-06-25T17:33:31.631000+00:00] na.chi (id=1519757449257816064)
+    i worked on the remote connection PR last night with Jon. Are you able to have tailscale serve your dashboard? That way you dont need to turn on API server and u can use the piggyback websocket connectiok i added
+    [reply to jayyjayy18 msg=1519728516868866171]
+
+[2026-06-25T17:34:22.080000+00:00] na.chi (id=1519757660855992503)
+    websocket is going to be more reliable for remote connection and i am following the same model with how the Desktop client connects to Dashboard
+

@@ -38189,3 +38189,171 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-25T14:12:01.877000+00:00] yap.bi (id=1519706741154123868)
     I've gone through and closed all my duplicate PRs (~10 of them). What's left is 40 original, non-duplicate PRs. Would you mind reviewing them when you get a chance? Thanks! <@387972437901312000>
 
+[2026-06-25T14:28:25.759000+00:00] sahil_ss9 (id=1519710867854200953)
+    4 small bug-fix PRs up on hermes-agent if anyone's got a minute to review —
+    
+        🔧 #52209 — web extract was silently falling back when you used an auxiliary backend; now it's properly registered + warns you
+        https://github.com/NousResearch/hermes-agent/pull/52209
+    
+        🔧 #52327 — hermes update was killing the dashboard process mid-flight; now it leaves it alone
+        https://github.com/NousResearch/hermes-agent/pull/52327
+    
+        🔧 #52474 — interrupting a profile install could leave you with a half-broken profile; swapped the delete for an atomic replace so it's all-or-nothing
+        https://github.com/NousResearch/hermes-agent/pull/52474
+    
+        🔧 #52407 — cron output files had no cleanup and would just grow forever; added a 7-day default retention
+        https://github.com/NousResearch/hermes-agent/pull/52407
+    
+        All tests passing, lints clean . Would love a look 🙏
+    [embed] fix: register auxiliary as valid web extract backend and log warnin... https://github.com/NousResearch/hermes-agent/pull/52209
+    [embed] fix: preserve dashboard process across hermes update (#52218) by Sa... https://github.com/NousResearch/hermes-agent/pull/52327
+    [embed] fix: atomic directory replacement in profile install/update to prev... https://github.com/NousResearch/hermes-agent/pull/52474
+    [embed] fix: add default retention for cron output files to prevent disk fi... https://github.com/NousResearch/hermes-agent/pull/52407
+
+[2026-06-25T14:29:26.485000+00:00] sahil_ss9 (id=1519711122557767720)
+    one more  = https://github.com/NousResearch/hermes-agent/pull/52519
+    [embed] fix(tui): add newline delimiter to WebSocket JSON-RPC frames by Sah... https://github.com/NousResearch/hermes-agent/pull/52519
+
+[2026-06-25T14:53:16.525000+00:00] _ostarev_ (id=1519717120579993710)
+    2 small UI/Frontend imperfection fixes. One is for overall size, the other for minimal width(so it doesn't collide with buttons. Images show all the changes done) ```Note: This is for HD Windows devices only. ```https://github.com/NousResearch/hermes-agent/pull/52525
+    [embed] Panel width fixed (HD) + Overlay size fix (also HD) by ostaver · P... https://github.com/NousResearch/hermes-agent/pull/52525
+
+[2026-06-25T15:16:19.683000+00:00] cryptobyz (id=1519722921965260868)
+    Hey mates,
+        Issue: Config-driven platforms default to open policy and fail open when operator leaves allowlist empty or absent, bypassing  
+      gateway authorization
+        PR: https://github.com/NousResearch/hermes-agent/pull/52533
+    [embed] fix(gateway): enforce non-empty allowlists for config-driven platfo... https://github.com/NousResearch/hermes-agent/pull/52533
+
+[2026-06-25T15:42:14.422000+00:00] axmaiqiu (id=1519729443013263391)
+    <@387972437901312000>  I ran into an issue today where Anthropic prompt caching didn’t behave as expected during assistant tool-use turns, and it ended up burning a decent amount of money on my side.
+    While digging into it, I found that Hermes could apply cache_control to the OpenAI-style assistant message, but when that assistant message was converted into Anthropic tool_use blocks, the cache marker could be dropped from the actual request payload.
+    I wasn’t able to 100% reproduce the full real-world caching behavior in a perfectly isolated way, and part of the observed cost impact might also be provider-specific. But the marker-loss itself looks like a real bug to me, and this fix should at least help defend against that class of caching failures. https://github.com/NousResearch/hermes-agent/pull/52534
+    [embed] fix(anthropic): preserve tool use cache markers by qWaitCrypto · P... https://github.com/NousResearch/hermes-agent/pull/52534
+
+[2026-06-25T15:52:16.124000+00:00] teknium (id=1519731966734237829)
+    It wasn’t an anthropic model?
+    [reply to axmaiqiu msg=1519729443013263391]
+
+[2026-06-25T15:54:13.195000+00:00] axmaiqiu (id=1519732457765867683)
+    Yeah, it was through a third-party Anthropic-compatible provider, not native Anthropic directly.
+
+[2026-06-25T15:54:31.792000+00:00] zoeyll (id=1519732535767339132)
+    Hi! This is Jessie from Deepreinforce Team. We are happy to release Ornith-1.0, a family of open-source LLMs specialized for agentic coding.
+    
+    Ornith-1.0 spans the full parameter sizes including 9B Dense, 31B Dense, 35B MoE, and 397B MoE. Post-trained on top of Gemma 4 and Qwen 3.5, it achieves state-of-the-art performance among open-source models of comparable size on coding benchmarks. 
+    
+    More details:
+    
+    x.com/ornith_/status/2070148887067963854
+    huggingface.co/collections/deepreinforce-ai/ornith-10
+
+[2026-06-25T16:25:16.598000+00:00] sahil_ss9 (id=1519740273444520148)
+    <@387972437901312000>  Ive got 2 really small P3 features - any chance I can ask you to have a quick glimpse and see whether either can be considered?
+    1. https://github.com/NousResearch/hermes-agent/pull/52163
+    2. https://github.com/NousResearch/hermes-agent/pull/52173
+    [embed] feat(cli): wire curses session browser into in-chat /resume by Sahi... https://github.com/NousResearch/hermes-agent/pull/52163
+    [embed] feat(cli): --recent N flag to resume with last N messages only by S... https://github.com/NousResearch/hermes-agent/pull/52173
+
+[2026-06-25T16:26:50.541000+00:00] teknium (id=1519740667470024997)
+    Did you set the transport to anthropic?
+    [reply to axmaiqiu msg=1519732457765867683]
+
+[2026-06-25T16:27:11.995000+00:00] teknium (id=1519740757454622831)
+    Nice, put https:// before the link so it embeds
+    [reply to zoeyll msg=1519732535767339132]
+
+[2026-06-25T16:30:28.087000+00:00] axmaiqiu (id=1519741579923816509)
+    As far as I can tell, yes — the transport should have been set correctly.
+    It didn’t happen 100% of the time though, only in some cases. I’ll do more testing tomorrow to better isolate the behavior. Going to sleep for now.<:catlick:1151260427645366375>
+    [reply to teknium msg=1519740667470024997]
+
+[2026-06-25T16:30:51.744000+00:00] thebizfixer (id=1519741679148732576)
+    Is there a third-party plugin developer channel I can join so I can get a heads up for plugin infrastructure changes like the recent namespace update?
+
+[2026-06-25T16:36:03.815000+00:00] kxee (id=1519742988069371955)
+    hey, could you elaborate on that?
+    [reply to thebizfixer msg=1519741679148732576]
+
+[2026-06-25T16:36:10.927000+00:00] kxee (id=1519743017899131073)
+    or possibly point to a commit for the same
+
+[2026-06-25T16:40:18.691000+00:00] apyh (id=1519744057096798329)
+    is this cron -> cron_providers?
+    [reply to thebizfixer msg=1519741679148732576]
+
+[2026-06-25T16:47:55.549000+00:00] teknium (id=1519745973297873188)
+    <a:aPES_Think:493353113332219924>
+
+[2026-06-25T16:52:30.975000+00:00] thebizfixer (id=1519747128518246473)
+    So it was more the CLI refactor now that I'm reviewing, I've pinpointed #568e12761 and #1a626470c, the plugin I've been working on was using CLI subcommands that broke because they used from plugin.xxx, but now plugin no longer resolves. The namespace change landed 3 months before the CLI refactor, but the old monolithic main() provided an alternate path that masked the import bug. The CLI refactor removed the alternate path, so the plugin worked up until that point and updating surprised me with the plugin needing a refactor as well. I guess what I'm getting at is I'm wondering if there is a place I can get a heads up here on the server for coming updates so I can plan accordingly.
+
+[2026-06-25T16:57:35.196000+00:00] thebizfixer (id=1519748404513603765)
+    I've tried to carefully follow plugin documentation, but there isn't a lot in the way of migration notices. There's no plugin infra changelog, either, so that's why I thought I'd ask here.
+
+[2026-06-25T17:32:20.926000+00:00] kaushalpanchal (id=1519757152699551937)
+    hey guys,  just shared a skill in the skills forum,  lets hermes actually research for hours using cron ticks instead of quitting after 10 minutes. been using it for strategy research and it works surprisingly well. check it out if you're into long running autonomous stuff
+    
+    tweeted about it: https://x.com/_Kaushal_p/status/2070149010443092477?s=20
+    
+    forum post: https://discord.com/channels/1053877538025386074/1519755296992657639
+    [embed]  https://twitter.com/_Kaushal_p/status/2070149010443092477?s=20
+
+[2026-06-25T17:33:14.376000+00:00] tomrevo.x (id=1519757376884969645)
+    I don't know if this could help anyone in here but thought i'd share a simple way to pair up with Hermes in Cursor is to just put the terminal on a sidebar and fire it up with `hermes --cli`
+    [attachment] Cursor_plus_Hermes.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1519757376742494218/Cursor_plus_Hermes.jpg?ex=6a3eb7da&is=6a3d665a&hm=3557f141de1b409c89bfef979a6f385c72f7094adb2723f8c1a6667bdff6a991&
+
+[2026-06-25T17:33:40.560000+00:00] tomrevo.x (id=1519757486708490381)
+    I was way overcomplicating it before 😅
+
+[2026-06-25T17:35:36.043000+00:00] kaushalpanchal (id=1519757971079303258)
+    Been thinking about it lately, do you know about  "world models"? I think LLM  might not be capable of achieving this yet.
+
+[2026-06-25T17:36:35.418000+00:00] imandey_ (id=1519758220116099223)
+    Yes I know about it
+
+[2026-06-25T17:40:44.360000+00:00] imandey_ (id=1519759264254525571)
+    Please wright quick
+
+[2026-06-25T17:40:44.904000+00:00] kaushalpanchal (id=1519759266536362006)
+    Three.js of course, is a good way. And Fable 5 was even able to create great detailed geometries i.e 3D models from scratch - But than again, if you really want to build a good experience, you hit bottlnecks like FPS drops, and WebGL by default is also not that great to build high quality games/ experience ( AAA - level) . So you have to use Game Engine right now - But maybe the gap will close soon imo, not sure.
+
+[2026-06-25T17:43:13.827000+00:00] imandey_ (id=1519759891164692650)
+    It is right. I thinking to use unreal engine mcp with Hermes agent.
+
+[2026-06-25T17:44:20.267000+00:00] apyh (id=1519760169834250440)
+    yeah, we're not at 1.0 & have no stability guarantees ATP. we try not to break plugin interfaces, but right now it's a bit unstable as we're figuring it all out. it's mostly best-effort.
+    [reply to thebizfixer msg=1519748404513603765]
+
+[2026-06-25T17:45:08.898000+00:00] apyh (id=1519760373807452312)
+    if your plugin is calling `hermes` itself, like, the `main`, we can't make stability guarantees about that either 😅
+
+[2026-06-25T17:45:17.076000+00:00] apyh (id=1519760408108466187)
+    but as we get closer to 1.0 we'll start figuring this stuff out ^^
+
+[2026-06-25T17:45:23.573000+00:00] apyh (id=1519760435358859385)
+    and offering more stability, or at least notice that things are changing
+
+[2026-06-25T17:57:13.474000+00:00] thebizfixer (id=1519763412899467335)
+    no worries I understand, more notice would be great and is all I'm asking for
+    [reply to apyh msg=1519760435358859385]
+
+[2026-06-25T17:58:07.795000+00:00] apyh (id=1519763640738250802)
+    for things like "a command changed", we can't really give notice
+    [reply to thebizfixer msg=1519763412899467335]
+
+[2026-06-25T17:58:15.384000+00:00] apyh (id=1519763672568827954)
+    the plugin interface itself changing, yeah, sure
+
+[2026-06-25T19:28:34.214000+00:00] frowtek (id=1519786400789172366)
+    fix(security): block google_token.json, google_oauth_pending.json, and pairing/ in read_file guard
+    
+    https://github.com/NousResearch/hermes-agent/pull/52644
+    [embed] fix(security): block google_token.json, google_oauth_pending.json, ... https://github.com/NousResearch/hermes-agent/pull/52644
+
+[2026-06-25T19:51:36.531000+00:00] captainpuru (id=1519792198646759514)
+    hello
+
+[2026-06-25T19:53:07.992000+00:00] captainpuru (id=1519792582262132996)
+    what path(s) on my installation/computer can I find the hermes.md and agents.md files? thanks
+

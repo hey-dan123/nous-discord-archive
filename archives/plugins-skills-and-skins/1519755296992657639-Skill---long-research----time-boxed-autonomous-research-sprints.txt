@@ -1,0 +1,28 @@
+# Thread 'Skill : long-research, ⏰ time-boxed autonomous research sprints' in forum #plugins-skills-and-skins
+# thread_id=1519755296992657639 forum_id=1485392832154832906
+# Started 2026-06-25T20:02:01.587939+00:00
+
+[2026-06-25T17:24:58.491000+00:00] kaushalpanchal (id=1519755296992657639)
+    Hey all, sharing a skill I built for running actual multi-hour research runs without the model quitting early or losing track of time.
+    
+    **The problem:** you say "research X for 4 hours" and the LLM either quits in 10 minutes or rambles forever. It has no clock.
+    
+    **The fix:** this skill moves the clock out of the model. it uses Hermes cron — every 15 min a fresh tick runs, checks the real wall-clock, does ONE focused research step, saves to disk, and exits. Only the actual stop_time ends the run.
+    
+    **What you get back**:
+    
+    - a structured report with an executive summary
+    - every claim cited to a source
+    - a quality self-grade at the end
+    - crash-proof : any tick can die, next one picks up
+    
+    **install**: hermes skills tap add Kaushal-Panchal/hermes-long-research hermes skills install long-research
+    
+    **usage**: "research for 4h", fill in the goal file, say "start", walk away.
+    
+    **repo**: https://github.com/Kaushal-Panchal/hermes-long-research
+    
+    still iterating on it!  Feedback welcome.
+    [attachment] Screenshot_2026-06-25_at_12.12.25_AM.png https://cdn.discordapp.com/attachments/1519755296992657639/1519755297269485578/Screenshot_2026-06-25_at_12.12.25_AM.png?ex=6a3eb5ea&is=6a3d646a&hm=62e44759d41811a05a9a81008c733ec4c787da8b573c73cd16cbc2a82e3e8792&
+    [embed] GitHub - Kaushal-Panchal/hermes-long-research: ⏱️ Time-boxed, s... https://github.com/Kaushal-Panchal/hermes-long-research
+
