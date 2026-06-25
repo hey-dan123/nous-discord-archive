@@ -4739,3 +4739,25 @@
 [2026-06-24T13:20:06.798000+00:00] rearwindowblackwidow_78112 (id=1519331287700340776)
     Does anyone have experience adding a "auto-router" to the web-ui? I don't want to use open-router.
 
+[2026-06-24T22:19:58.295000+00:00] jconcep (id=1519467147485646939)
+    just upgraded webui and now getting this error
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1519467147418406952/image.png?ex=6a3da98e&is=6a3c580e&hm=32ba8960fb720608dba1347988beb407ab1f0d353ce3005481d649a9a5cdfa6b&
+
+[2026-06-24T22:21:16.288000+00:00] avidfuturist (id=1519467474611867849)
+    Thanks will fix!
+    [reply to jconcep msg=1519467147485646939]
+
+[2026-06-25T01:26:27.557000+00:00] rearwindowblackwidow_78112 (id=1519514078652010618)
+    <@933139410281713755> , sorry to ping you. Thank you for making this. Any thoughts on smart routing and how it might work?
+
+[2026-06-25T02:09:01.827000+00:00] avidfuturist (id=1519524792037015612)
+    Not sure about smart routing, sorry!
+    [reply to rearwindowblackwidow_78112 msg=1519514078652010618]
+
+[2026-06-25T02:11:26.315000+00:00] josephcy (id=1519525398063349951)
+    I'm using the android app and the mobile web version, i notice sometimes when i send a message or receive a message the entire chat always jump to the top and i have to scroll down all the time. Happen on the desktop web too, is this a known issue or any setting might causing this?
+
+[2026-06-25T02:15:57.418000+00:00] avidfuturist (id=1519526535151751359)
+    Known issue, should have it squashed soon. actually applied a bunch of fixes today. Can you update to latest webUI and restart and hard refresh and see if it’s gone? That would be helpful to know I got it
+    [reply to josephcy msg=1519525398063349951]
+

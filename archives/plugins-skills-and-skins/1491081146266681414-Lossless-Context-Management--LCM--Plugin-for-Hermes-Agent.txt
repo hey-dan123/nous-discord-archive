@@ -1876,3 +1876,53 @@
     Other than that, yes mostly clear and accurate 🙂
     [reply to _voscko_ msg=1517164464305082368]
 
+[2026-06-24T22:31:02.553000+00:00] w0lfgang88 (id=1519469933585633430)
+    <@387972437901312000> could you take a pass on the current Hermes Agent upstream lanes tied to **hermes-lcm** / compression lineage and decide what should be reviewed, merged, salvaged, or closed?
+
+[2026-06-24T22:31:29.147000+00:00] w0lfgang88 (id=1519470045128818920)
+    ### Ready for review / merge
+    
+    * **#35191** — https://github.com/NousResearch/hermes-agent/pull/35191
+    
+      Direct fix for Barron Roth's **#25115** (https://github.com/NousResearch/hermes-agent/issues/25115).
+    
+      This is a narrow host/context-engine contract change that lets alternative context engines suppress or customize successful automatic compaction status while preserving the existing behavior for the default compressor.
+    
+      I think this should become the source-of-record fix for **#25115**. Mainly just needs a final sanity check on CI and overall merge readiness.
+    
+    * **#40180** — https://github.com/NousResearch/hermes-agent/pull/40180
+    
+      Contributor PR implementing compression-lineage continuity hydration across state, TUI, desktop, and API.
+    
+      This is related to the historical compression-continuation resume issue **#10373** (https://github.com/NousResearch/hermes-agent/issues/10373), not **#25115**.
+    
+      It is broader than #35191 but internally cohesive and already has prior approval. I'd consider it ready for review, not an automatic merge. The main review points are:
+     - backward compatibility
+     - desktop/session deduplication behavior
+     - whether live-model resume should hydrate from lineage/ancestor history versus child/compressed history
+
+[2026-06-24T22:31:47.534000+00:00] w0lfgang88 (id=1519470122249486336)
+    ### Probably close / mark as superseded
+    
+    * **#15742** — https://github.com/NousResearch/hermes-agent/pull/15742
+    
+      Helper-layer resume-tip fix related to **#10373**.
+    
+      The underlying behavior appears to have already landed through merged **#48633**. At most, salvage any useful regression coverage.
+    
+    * **#13374** — https://github.com/NousResearch/hermes-agent/pull/13374
+    
+      TUI resume-tip fix (no linked issue).
+    
+      Currently stale/conflicting and effectively superseded by **#48633**. I'd probably close it with thanks unless <@417568242307956737> wants to rebase it as a small test-only follow-up.
+    
+    ### Related / salvage only
+    
+    * **#26956** — https://github.com/NousResearch/hermes-agent/pull/26956
+    
+      Earlier prior art related to compression-status handling for **#25115**, but broader than the issue and currently conflicting.
+    
+      **#35191** is the narrower, direct fix. I'd only salvage pieces of **#26956** if maintainers decide they want a separate global `compression.status_messages` switch or additional duplicate-status cleanup later.
+    
+    Thanks in advance! I tried my best to do the triage first and separate the clean LCM-relevant candidates from the stale/superseded overlap.
+

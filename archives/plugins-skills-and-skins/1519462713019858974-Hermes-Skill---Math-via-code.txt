@@ -1,0 +1,13 @@
+# Thread 'Hermes Skill - Math-via-code' in forum #plugins-skills-and-skins
+# thread_id=1519462713019858974 forum_id=1485392832154832906
+# Started 2026-06-25T03:03:39.320588+00:00
+
+[2026-06-24T22:02:21.036000+00:00] tomrevo.x (id=1519462713019858974)
+    LLM arithmetic is unreliable — accuracy degrades with context length, and even "simple" multi-step math produces wrong numbers. This skill was born from repeated errors in financial modeling: SDE calculations, P&L analysis, and facility rollups where a single transposed digit or premature rounding cascaded into incorrect deal evaluations.
+    
+    The fix is simple: if there are more than two numbers involved, write code. Every time. No exceptions.
+    
+    https://github.com/tommulkins/hermes-skill-math-via-code
+    [attachment] Gemini_Generated_Image_j48nf5j48nf5j48n.png https://cdn.discordapp.com/attachments/1519462713019858974/1519462713468915844/Gemini_Generated_Image_j48nf5j48nf5j48n.png?ex=6a3da56d&is=6a3c53ed&hm=fb76d2b262ac825ffdc53a9b79dee34d6e919181bd8a5340c45f658a9f9c1d8b&
+    [embed] GitHub - tommulkins/hermes-skill-math-via-code: Hermes Agent skill:... https://github.com/tommulkins/hermes-skill-math-via-code
+

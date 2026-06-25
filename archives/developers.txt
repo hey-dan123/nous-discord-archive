@@ -37722,3 +37722,259 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(feishu): handle withdrawn reply targets in both response-code a... https://github.com/NousResearch/hermes-agent/pull/52076
     [embed] fix(desktop): persist model visibility preferences to profile-scope... https://github.com/NousResearch/hermes-agent/pull/52094
 
+[2026-06-24T20:01:50.611000+00:00] davidg1982 (id=1519432386419495053)
+    <@416749362090213376> I got a few PRs coing your way that I think will be useful
+
+[2026-06-24T20:03:36.044000+00:00] wesleysimplicio (id=1519432828637417564)
+    i will update now bro
+
+[2026-06-24T20:03:37.446000+00:00] wesleysimplicio (id=1519432834518094094)
+    https://github.com/wesleysimplicio/simplicio-loop
+    [embed] GitHub - wesleysimplicio/simplicio-loop: 🔁 Finishes your entire ... https://github.com/wesleysimplicio/simplicio-loop
+
+[2026-06-24T20:04:44.121000+00:00] wesleysimplicio (id=1519433114173309129)
+    It’s incredible—I run it on Hermes, and Hermes delivers with 100% quality and 100% accuracy, backed by quality assurance, parallelism, and proof of delivery.
+
+[2026-06-24T20:05:35.084000+00:00] wesleysimplicio (id=1519433327927627787)
+    I also tested the plugin with Claude and Codex; the loop works well—give it a try, I made it for all of you!
+    
+    I plan to offer a paid version for companies, but that’s for the future.
+
+[2026-06-24T20:08:48.161000+00:00] wesleysimplicio (id=1519434137751261315)
+    To run it on Hermes, you say: Use the simplicio-tasks skill; now do this, do that.
+    [reply to davidg1982 msg=1519432386419495053]
+
+[2026-06-24T20:16:19.738000+00:00] wesleysimplicio (id=1519436031802343507)
+    Thanks for the contribution—I just accepted it! Let's do this together!
+    [reply to davidg1982 msg=1519432386419495053]
+
+[2026-06-24T20:34:41.150000+00:00] wesleysimplicio (id=1519440651458969641)
+    website: https://simpleti.com.br/simplicio-loop/
+    [embed] Simplicio Loop — termina seu backlog enquanto você dorme https://simpleti.com.br/simplicio-loop/
+
+[2026-06-24T20:39:51.646000+00:00] uzunkuyruk (id=1519441953773719552)
+    <@387972437901312000> 
+    
+    **Bug Fix Merged hermes-agent**
+    
+    DuckDuckGo search could sometimes hang for **23+minutes** — no output, no error, just spinning at 19% CPU. Since the gateway runs as a single process, this blocked **all platforms simultaneously** (Telegram, Matrix, CLI, etc.).
+    
+    **Root cause:** `plugins/web/ddgs/provider.py` called `client.text()` with no wall-clock timeout. The DDGS constructor's `timeout` parameter only bounds individual HTTP requests — ddgs's own multi-engine retry loop had no overall cap.
+    
+    **Fix:** Wrap the synchronous ddgs call in a `ThreadPoolExecutor` and cap it with `future.result(timeout=30)`. On timeout, return `success=False` and clean up the hung worker with `cancel_futures=True`.
+    
+    My PR (#37422) was selected as the cleanest approach among competing fixes, salvaged onto current main, and merged today 
+    
+    https://github.com/NousResearch/hermes-agent/pull/52118
+    [embed] fix(ddgs): bound DuckDuckGo search with a wall-clock timeout (#3677... https://github.com/NousResearch/hermes-agent/pull/52118
+
+[2026-06-24T20:48:12.818000+00:00] kxee (id=1519444055841575127)
+    hi yes i merged this
+    [reply to uzunkuyruk msg=1519441953773719552]
+
+[2026-06-24T20:50:39.091000+00:00] davidg1982 (id=1519444669354737847)
+    I was about to make my own hermes bug fix loop, and I already had a loop based on generic development, but I needed something regular to fix bugs. I just wanted it to do its thing and not worry about it. Thanks for incorporating the changes. These are a good loop changes for fixing bugs.
+    [reply to wesleysimplicio msg=1519436031802343507]
+
+[2026-06-24T20:52:09.082000+00:00] uzunkuyruk (id=1519445046804348988)
+    Thanks! Happy it made it in.
+    [reply to kxee msg=1519444055841575127]
+
+[2026-06-24T21:37:19.690000+00:00] kkurottal6611 (id=1519456415918456942)
+    Opened #52113 https://github.com/NousResearch/hermes-agent/pull/52113 
+    
+    wheel installs were shipping zero bundled skills. Turns out a data-files table in pyproject.toml silently overrides setup.py's data_files, so the skills shipping never actually kicked in and sync_skills() just returned total_bundled: 0.
+    
+    Fix moves all bundled dirs (skills, optional-skills, locales, optional-mcps) into setup.py as the single source. Checked the built wheel — 72 skills + 101 optional now ship (was 0). Tests added.
+    [embed] fix(packaging): ship bundled skills in the wheel via setup.py data_... https://github.com/NousResearch/hermes-agent/pull/52113
+
+[2026-06-24T22:00:05.285000+00:00] .thebakery303 (id=1519462143638900746)
+    So i accidently built a different form of memory layer strictly for autonomous agent only use compared to other memory plugins
+    
+    Im trying to push this as a stable hermes plugin for reusability rathee than my personal project collector 
+    
+    https://discord.com/channels/1053877538025386074/1519465199034302705
+
+[2026-06-24T22:28:08.757000+00:00] notgovernor (id=1519469204632371473)
+    So the kanban feature only interoperates with codex? Or can we use it with opencode, or for general none coding tasks?
+
+[2026-06-24T22:38:03.289000+00:00] jw_mushroom_man (id=1519471698280317018)
+    PR #44356
+
+[2026-06-24T22:38:09.419000+00:00] jw_mushroom_man (id=1519471723991535646)
+    [attachment] 2C9C880C-9C48-4D38-87AB-C47680CEE89C.png https://cdn.discordapp.com/attachments/1491258766648283238/1519471723492147240/2C9C880C-9C48-4D38-87AB-C47680CEE89C.png?ex=6a3dadd1&is=6a3c5c51&hm=ac99332c04a5c4d46dd5e9b9da501c6c0ba880833a6b9bf72c31d4cdac608ed0&
+
+[2026-06-24T22:45:58.616000+00:00] aialliai (id=1519473691946258444)
+    I'm going to review this to speed up the process 🙂
+    [reply to jw_mushroom_man msg=1519471698280317018]
+
+[2026-06-24T22:51:27.837000+00:00] drexux (id=1519475072799346879)
+    opened a small bug fix PR
+    
+    fix(gateway): resolve rich-sent index path via canonical get_hermes_home
+    https://github.com/NousResearch/hermes-agent/pull/52164
+    
+    gateway/rich_sent_store.py was computing its store path by hand instead of the canonical get_hermes_home(). This ignored the context-local profile override (and the platform-native home), so the Telegram rich-reply index was written/read from the wrong place — breaking reply-context recovery under non-default profiles. Fix routes _store_path() through get_hermes_home(), matching every other gateway/ module.
+    [embed] fix(gateway): resolve rich-sent index path via canonical get_hermes... https://github.com/NousResearch/hermes-agent/pull/52164
+
+[2026-06-24T22:57:27.231000+00:00] wesleysimplicio (id=1519476580206903406)
+    <@387972437901312000> <@514885421163872256> Today the work was:
+    
+    4 morning meetings (3 dailys)
+    
+    Finish the Simplicio-loop plugin
+    
+    Hermes Agent Start! 
+    3 commands with Simplicio-tasks skill:
+    
+    20 minutes of work:
+    
+    Company 1: generated 2 prs with tasks done and with evidence
+    
+    Company 2: generated 2 prs with tasks made with evidence
+    
+    Company 3: generated 1 pr
+    
+    2 alignment meetings on deliveries and showing line by line what was done
+    
+    Now focus on arranging +2 jobs PJs of 10k - 15k BRL ..
+
+[2026-06-24T23:14:59.064000+00:00] teknium (id=1519480991914262548)
+    👀
+    [reply to egilewski msg=1519402619997655261]
+
+[2026-06-24T23:15:19.527000+00:00] teknium (id=1519481077742174218)
+    My guess is you are using a local model?
+    [reply to uzunkuyruk msg=1519441953773719552]
+
+[2026-06-24T23:26:58.721000+00:00] inuyasha44_88990 (id=1519484010374496366)
+    Hey boss, when you have time try to check that pr
+    [reply to teknium msg=1519480991914262548]
+
+[2026-06-24T23:37:12.652000+00:00] tomrevo.x (id=1519486585387876554)
+    contributing a possible new bundled skill: https://github.com/NousResearch/hermes-agent/pull/52191
+    
+    This skill enforces a hard rule: all multi-step math — no matter how "simple" — goes through execute_code or a Python script. The only exception is a single operation on two numbers.
+    [embed] feat: add math-via-code bundled skill by tommulkins · Pull Request... https://github.com/NousResearch/hermes-agent/pull/52191
+
+[2026-06-24T23:38:20.415000+00:00] bodbod_69191 (id=1519486869606498359)
+    Hi, I think I found a real Hermes Agent bug on Olares related to the Dashboard “Restart Gateway” button.
+    
+    The gateway is actually running and Telegram works, but the Dashboard restart button fails with:
+    
+    no such gateway 'default'
+    register it with `hermes profile create default` first
+    
+    Root cause seems to be that the Dashboard calls `POST /api/gateway/restart`, which spawns `hermes gateway restart`.
+    
+    In Olares/container+s6 mode, this maps the builtin/default profile to the dynamic s6 service `gateway-default`.
+    
+    But on Olares the real gateway is not running as `gateway-default`; it runs under the static s6 service `main-hermes`, whose wrapper starts `hermes gateway run` and supports restart via:
+    
+    /opt/data/.gateway-restart-requested
+    
+    So the Dashboard button targets a missing dynamic registry entry while the real gateway keeps running normally.
+    
+    Expected fix: on Olares/static-wrapper deployments, the Dashboard restart route should touch the wrapper sentinel instead of spawning `hermes gateway restart`, unless a dynamic `gateway-default` service is actually registered.
+    
+    I can share logs / file references if useful.
+
+[2026-06-24T23:41:14.117000+00:00] aialliai (id=1519487598165495999)
+    Check my comment 🙂
+    [reply to jw_mushroom_man msg=1519471723991535646]
+
+[2026-06-24T23:43:56.399000+00:00] jw_mushroom_man (id=1519488278825275465)
+    Ty so much. Will address these and give it a couple more passes.
+    [reply to aialliai msg=1519487598165495999]
+
+[2026-06-24T23:45:40.001000+00:00] bodbod_69191 (id=1519488713363816540)
+    no probs, i love hermes so it s normal if we can give a little hand
+    [attachment] hermes-olares-gateway-bug-pack.zip https://cdn.discordapp.com/attachments/1491258766648283238/1519488713254633594/hermes-olares-gateway-bug-pack.zip?ex=6a3dbda3&is=6a3c6c23&hm=6b8a7c1e167c2f62cfa99703fe41189171f3fff1d350e70b721d32d9fbc8d808&
+
+[2026-06-24T23:45:46.215000+00:00] bg81011 (id=1519488739427090462)
+    Hi, I opened a small bug-fix PR a couple days ago fixes orphaned subprocesses on Windows. (uses taskkill /T for a real tree-kill instead of the wrapper-only proc.terminate, plus a fallback + tests)
+    
+    https://github.com/NousResearch/hermes-agent/pull/49460
+    
+    It's been sitting days with no CI yet, looks like it's stuck on the first-time-contributor approval gate. could someone kick off CI when you get a sec?
+    [embed] fix(tools): tear down the whole process tree on Windows terminal ti... https://github.com/NousResearch/hermes-agent/pull/49460
+
+[2026-06-24T23:46:04.528000+00:00] aialliai (id=1519488816237383820)
+    .zip is not a good move....
+    [reply to bodbod_69191 msg=1519488713363816540]
+
+[2026-06-24T23:46:36.538000+00:00] aialliai (id=1519488950497050624)
+    People tend to not trust those 🙂
+
+[2026-06-24T23:46:38.186000+00:00] bodbod_69191 (id=1519488957409263636)
+    ok let me know how you want me to share then
+
+[2026-06-24T23:47:35.650000+00:00] aialliai (id=1519489198430621908)
+    Well if it's bug fixes, post pr's on github 🙂
+    [reply to bodbod_69191 msg=1519488957409263636]
+
+[2026-06-24T23:48:43.344000+00:00] bodbod_69191 (id=1519489482359963768)
+    i wanted the lads to check before posting bs
+
+[2026-06-24T23:49:14.637000+00:00] bodbod_69191 (id=1519489613612191896)
+    no big deal
+
+[2026-06-24T23:50:24.391000+00:00] aialliai (id=1519489906181935174)
+    It will all be checked automatically and labeled by priority and then you can fix the problems 🙂
+    [reply to bodbod_69191 msg=1519489482359963768]
+
+[2026-06-24T23:50:52.992000+00:00] aialliai (id=1519490026142961797)
+    Hell yeah, apple approved my developer account!
+
+[2026-06-24T23:57:31.178000+00:00] bodbod_69191 (id=1519491696256090273)
+    ok i am on it then, thx - ok it s posted now : https://github.com/NousResearch/hermes-agent/pull/52198
+    [embed] Fix gateway restart for sentinel-managed containers by donbodbod ·... https://github.com/NousResearch/hermes-agent/pull/52198
+    [reply to aialliai msg=1519489906181935174]
+
+[2026-06-24T23:58:04.606000+00:00] aialliai (id=1519491836463284456)
+    And now playstore also!
+    [reply to aialliai msg=1519490026142961797]
+
+[2026-06-24T23:58:51.495000+00:00] aialliai (id=1519492033130139758)
+    Finally! after one week of documents, utility bills, passports and more!
+
+[2026-06-25T00:14:12.699000+00:00] jw_mushroom_man (id=1519495896939757639)
+    <@433824437574303745> I love Hermes so much
+    [attachment] IMG_1496.png https://cdn.discordapp.com/attachments/1491258766648283238/1519495896897683557/IMG_1496.png?ex=6a3dc454&is=6a3c72d4&hm=3d841f305c08adb84c72025ddaddaa0ec7ec6daac91dc26ea2ecee230d665b43&
+
+[2026-06-25T00:16:21.565000+00:00] aialliai (id=1519496437443072222)
+    It's the best!
+    [reply to jw_mushroom_man msg=1519495896939757639]
+
+[2026-06-25T00:31:52.658000+00:00] aialliai (id=1519500342730035213)
+    <@119192111202566149> ❤️  for plowing through the gui pr's 😄
+
+[2026-06-25T01:18:20.071000+00:00] frowtek (id=1519512033987530853)
+    https://github.com/NousResearch/hermes-agent/pull/52193 fix(cli): make Windows active-session lock millisecond-responsive under contention
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/52204  Fix/cron windows git bash resolution
+    [embed] fix(cli): make Windows active-session lock millisecond-responsive u... https://github.com/NousResearch/hermes-agent/pull/52193
+    [embed] Fix/cron windows git bash resolution by Frowtek · Pull Request #52... https://github.com/NousResearch/hermes-agent/pull/52204
+
+[2026-06-25T02:27:31.342000+00:00] dias4761 (id=1519529445679956038)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/52259
+    
+    fix(desktop): don't start a cron scheduler when a live gateway owns cron FIX (#52202)
+    #52259
+    [embed] fix(desktop): don't start a cron scheduler when a live gateway owns... https://github.com/NousResearch/hermes-agent/pull/52259
+
+[2026-06-25T02:31:01.177000+00:00] denis_skripnik (id=1519530325791867041)
+    Yes, fair point. I used “priority” in the human sense — the PRs I personally think are most useful to review first — not as GitHub priority labels.
+    
+    If P3 means “low priority” for the project, I can rephrase. The most practically ready ones are just green/mergeable and waiting for review.
+    
+    Also update: the FB2 PR is no longer relevant because the gateway now supports all file types, so I closed/removed it from my list.
+    
+    I also rebased #38731 and resolved the conflict. It is now MERGEABLE / CLEAN again.
+    [reply to aialliai msg=1519381626788773948]
+
+[2026-06-25T02:37:24.568000+00:00] aialliai (id=1519531933850271804)
+    Just have to be patient, I have 40 pr’s some of them p1,p2,p3! 😁
+    [reply to denis_skripnik msg=1519530325791867041]
+

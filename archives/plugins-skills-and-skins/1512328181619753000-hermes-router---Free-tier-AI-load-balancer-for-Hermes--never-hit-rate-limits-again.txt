@@ -1064,3 +1064,7 @@
     I am sorry if this was already asked
     [reply to shaf_2665 msg=1519312463525576725]
 
+[2026-06-25T00:20:54.864000+00:00] shaf_2665 (id=1519497583742161036)
+    that feature is already in via smart routing
+    [reply to futurex24 msg=1519418915631923300]
+

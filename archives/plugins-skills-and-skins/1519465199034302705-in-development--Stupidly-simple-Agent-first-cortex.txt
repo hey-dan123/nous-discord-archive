@@ -1,0 +1,72 @@
+# Thread 'in development: Stupidly simple Agent first cortex' in forum #plugins-skills-and-skins
+# thread_id=1519465199034302705 forum_id=1485392832154832906
+# Started 2026-06-25T03:03:38.873049+00:00
+
+[2026-06-24T22:15:08.287000+00:00] .thebakery303 (id=1519465931104059503)
+    In development:
+    
+    Problem with other memory providers: they remember facts, but they usually don’t preserve the full dev-solving trail.
+    
+    For coding/config work, I need Hermes to know:
+    
+    What docs should I check?
+    What command did I run?
+    What failed?
+    What fixed it on my machine?
+    What should Hermes not repeat?
+    
+    That’s what my Collective Docs + Experiment Log stack is for.
+    
+    Collective Docs = what should work
+    Experiment Log = what actually worked
+    
+    Compared to others:
+    
+    • Mnemosyne: remembers agent/user/project info. My stack keeps docs + exact fix history.
+    
+    • Holographic: built-in Hermes memory. My stack is Git/Markdown readable and command-focused.
+    
+    • Mem0: extracts useful memories. My stack keeps raw dev details: commands, errors, failed attempts.
+    
+    • Supermemory: cloud context memory. My stack is local-first and tied to my machine.
+    
+    • Honcho: models users/agents/personas. My stack focuses on dev/config problem-solving.
+    
+    • Hindsight: graph/reflection memory. My stack is simpler: what failed, what worked, what command fixed it.
+    
+    • Obsidian: human notes. My stack is agent-first for Hermes to search/reuse.
+    
+    • Plain RAG/docs: shows what docs say. My stack adds what happened when I tried it locally.
+    
+    in development for autonomous install and forget
+    
+    stupidly simple architecture
+    https://github.com/Pukujan/collective-doc-library
+    https://github.com/Pukujan/collective-docs-1
+
+[2026-06-24T22:23:06.894000+00:00] .thebakery303 (id=1519467938527314071)
+    in development: Agent first memory solution
+
+[2026-06-24T22:24:05.158000+00:00] .thebakery303 (id=1519468182904115332)
+    in development: Stupidly simple Agent first cortex
+
+[2026-06-24T22:30:17.088000+00:00] mistermangat (id=1519469742891597914)
+    Obsidian works great as docs and logs between the human and the agent imo.
+
+[2026-06-24T22:33:03.042000+00:00] .thebakery303 (id=1519470438953128149)
+    hmmm obsidian wasnt enough for me so im pursuing this, but I'm open to suggestion if its really worth it,
+    
+    worked very great for me for also using claude+opencode cli in hermes as well as just using hermes to code in general
+    [reply to mistermangat msg=1519469742891597914]
+
+[2026-06-24T22:35:00.885000+00:00] mistermangat (id=1519470933222625340)
+    my obsidian design was a hybrid of the para system and the garry tan system and my hermes agent has instruction and script to understand and manage work product. Required little input from me
+
+[2026-06-24T22:35:51.298000+00:00] .thebakery303 (id=1519471144669810918)
+    would love to know your setup, i ll benchmark it against mine for a simple project build
+    [reply to mistermangat msg=1519470933222625340]
+
+[2026-06-24T22:36:54.788000+00:00] mistermangat (id=1519471410966298744)
+    your github links dont work
+    [reply to .thebakery303 msg=1519471144669810918]
+
