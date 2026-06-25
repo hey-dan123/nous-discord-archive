@@ -1976,3 +1976,7 @@
     wouldn't this affect the LLM provider cache causing a cache miss on every turn? making your average calls cost 10x more. I honestly don't know but i feel like that might be a problem
     [reply to _voscko_ msg=1493534205572026438]
 
+[2026-06-25T09:15:51.956000+00:00] w0lfgang88 (id=1519632208703389907)
+    Good question. Yeah, compression can break provider prompt cache when the prefix changes. But it should still reduce cost overall, because after compaction you’re sending far fewer tokens, and the new compressed prefix can be cached again. If compression caused constant cache misses every turn, that would be a tuning bug, not the intended behavior.
+    [reply to marcincebula msg=1519609390846578708]
+

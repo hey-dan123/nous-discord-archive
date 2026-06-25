@@ -119,3 +119,42 @@
     [attachment] Browser_Extension_v0.1.2_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1519573549449347204/Browser_Extension_v0.1.2_Update_Ad.png?ex=6a3e0ca6&is=6a3cbb26&hm=3e2ea18baac7b67f7c9fcbacdeb83642af23a573c64f9d2a643b44eb70f623c8&
     [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
 
+[2026-06-25T12:09:03.869000+00:00] jonkomet (id=1519675795545788487)
+    I just pushed v0.1.3 of the Hermes Browser Extension<:caduceus:1503692394493775882> :
+    https://github.com/abundantbeing/hermes-browser-extension
+    
+    This update is about making Hermes Browser work cleanly when your Hermes runtime is not on the same machine as your browser.
+    
+    What changed in v0.1.3:
+    
+    - **Remote gateway modes**
+     Choose local API, remote API, or remote dashboard/WebSocket setup from the side-panel settings.
+    
+    - **Dashboard WebSocket bridge**
+     Remote dashboard mode can connect through browser-minted tickets from an authenticated Hermes dashboard tab.
+    
+    - **Clearer manual setup**
+     If automatic pairing is not available, the extension now points you to Gateway URL + token setup instead of throwing a bare 404.
+    
+    - **Remote setup docs**
+     The README now covers trusted remote API setup, CORS origin allowlisting, HTTPS/VPN guidance, and API token basics.
+    
+    - **Stronger browser-context redaction**
+     More provider token shapes, quoted secret values, and compound secret keys are masked before page context reaches Hermes.
+    
+    Still public alpha / load-unpacked for now. Pull latest, run:
+    
+    ```bash
+    npm install
+    npm run package
+    Then reload the unpacked extension from dist/.
+    
+    Would especially love feedback on:
+    
+    local vs remote gateway setup clarity
+    dashboard/WebSocket connection flow
+    manual Gateway URL + token setup
+    whether the settings copy feels obvious enough
+    [attachment] Browser_Extension_v0.1.3_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1519675795931398154/Browser_Extension_v0.1.3_Update_Ad.png?ex=6a3e6bdf&is=6a3d1a5f&hm=4e853197f31aaf89d2a32436cc300e9153b00cb3552c1a7b0185fa0ec4832491&
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
+

@@ -38113,3 +38113,79 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] [Bug]: verify-on-stop nudge leaks ad-hoc verification receipt into ... https://github.com/NousResearch/hermes-agent/issues/52411
     [embed] fix(agent): gate verify-on-stop nudge off for messaging surfaces by... https://github.com/NousResearch/hermes-agent/pull/52412
 
+[2026-06-25T09:01:44.166000+00:00] nuuuuuu0073 (id=1519628652814536805)
+    tthank Sir
+    [reply to teknium msg=1519575108178677791]
+
+[2026-06-25T09:18:19.213000+00:00] shadowplague (id=1519632826344149122)
+    Hi! I've been testing a self-hosted Hermes deployment and had a question about planner behavior.
+    
+    I noticed that when `browser_navigate` encounters a Cloudflare verification page, the behavior seems to depend on the prompting.
+    
+    In one run, the agent repeatedly searched for nonexistent browser wait/synchronization tools and got stuck in a reasoning loop.
+    
+    When I explicitly instructed it to stop if it encountered a Cloudflare/CAPTCHA page that it couldn't bypass, it instead terminated gracefully with a clear explanation.
+    
+    Is there already a built-in mechanism in the planner that detects lack of forward progress or repeated reasoning in browser tasks?
+    
+    Or is graceful termination on verification pages something that's still being improved?
+    
+    I'm mostly curious about the intended design rather than reporting a bug.
+
+[2026-06-25T09:20:23.465000+00:00] nuuuuuu0073 (id=1519633347494805515)
+    https://github.com/NousResearch/hermes-agent/pull/52414
+    [embed] fix(gateway): return empty string instead of hardcoded model placeh... https://github.com/NousResearch/hermes-agent/pull/52414
+
+[2026-06-25T09:20:55.808000+00:00] nuuuuuu0073 (id=1519633483151179876)
+    https://github.com/NousResearch/hermes-agent/pull/52373
+    [embed] fix(agent): remove OS username from system prompt to prevent privac... https://github.com/NousResearch/hermes-agent/pull/52373
+
+[2026-06-25T09:21:25.019000+00:00] nuuuuuu0073 (id=1519633605670993961)
+    https://github.com/NousResearch/hermes-agent/pull/52294
+    [embed] fix(agent): route reasoning model disconnects to timeout, not conte... https://github.com/NousResearch/hermes-agent/pull/52294
+
+[2026-06-25T09:22:09.042000+00:00] nuuuuuu0073 (id=1519633790316711996)
+    https://github.com/NousResearch/hermes-agent/pull/52249
+    [embed] fix: add explicit encoding="utf-8" to subprocess.run calls with tex... https://github.com/NousResearch/hermes-agent/pull/52249
+
+[2026-06-25T09:32:37.168000+00:00] nuuuuuu0073 (id=1519636424868233326)
+    <@387972437901312000> PR #52294 fixes P1 bug #52271, where reasoning models (o1/o3, DeepSeek R1, Nemotron, Grok, and QwQ) can be incorrectly classified as having a context overflow when a transport disconnect occurs. This false classification triggers context compression and can silently delete conversation history.
+    
+    The fix adds reasoning model detection before the context_overflow classification gate and routes these cases to timeout handling instead of context compression. This prevents data loss while allowing existing retry/fallback mechanisms to handle the disconnect correctly.
+    
+    The change is limited to a single file and adds only 21 lines of code. I'd appreciate a review and merge. Thanks!
+    [reply to nuuuuuu0073 msg=1519633605670993961]
+
+[2026-06-25T09:54:22.849000+00:00] .thebakery303 (id=1519641901291278367)
+    released my very own plugin for hermes 🙂 https://discord.com/channels/1053877538025386074/1519640509382000730
+    
+    an ultra fast automated agent first llm wiki with no setup headache,
+    The difference , it's meant to be read by agents first, humans last, auto updates its docs, auto github backup  update and auto versions
+
+[2026-06-25T10:26:25.449000+00:00] erhnysr (id=1519649965260013628)
+    set up hermes agent as a telegram bot, asked it "my node is down at 3am what do I do" and it gave me a full troubleshooting guide. then asked "am i going to make it?" and it responded with "can you provide more context"  this thing is actually running 24/7 now
+    [attachment] Ekran_Resmi_2026-06-25_13.22.50.png https://cdn.discordapp.com/attachments/1491258766648283238/1519649964471353364/Ekran_Resmi_2026-06-25_13.22.50.png?ex=6a3e53d1&is=6a3d0251&hm=c4b6024413c80f81801a4dbb3f60da471a7683425e148b77c5619a6eaacc9e70&
+    [attachment] Ekran_Resmi_2026-06-25_13.23.40.png https://cdn.discordapp.com/attachments/1491258766648283238/1519649965016617081/Ekran_Resmi_2026-06-25_13.23.40.png?ex=6a3e53d1&is=6a3d0251&hm=3d579d0354ee4765f96e54013bc890127b37553836b914bd5ff18ff65adf05c8&
+
+[2026-06-25T10:28:34.497000+00:00] erhnysr (id=1519650506526429204)
+    <@387972437901312000> It's so much fun; I can't get my other work done because I'm chatting with it <:catlick:1151260427645366375>
+    [reply to erhnysr msg=1519649965260013628]
+
+[2026-06-25T10:52:01.656000+00:00] .thebakery303 (id=1519656408579178607)
+    <@387972437901312000> https://discord.com/channels/1053877538025386074/1519640509382000730 hermes seems to absolutely love this scaffold, promote for tests please
+
+[2026-06-25T12:41:04.436000+00:00] devorun11 (id=1519683850987638814)
+    https://github.com/NousResearch/hermes-agent/pull/52482     The dashboard runs inside the gateway, so its spawned hermes gateway restart inherited _HERMES_GATEWAY=1 and got rejected by the restart-loop guard (silent failure); fixed by scrubbing _HERMES_GATEWAY from the spawned action's env, matching what the gateway's own restart watcher already does
+    [embed] fix(dashboard): drop _HERMES_GATEWAY when spawning hermes actions b... https://github.com/NousResearch/hermes-agent/pull/52482
+
+[2026-06-25T12:59:47.113000+00:00] jw_mushroom_man (id=1519688559836004373)
+    I sent you a friend request if that ok. was gonna DM my write up
+    [reply to aialliai msg=1519496437443072222]
+
+[2026-06-25T14:04:51.913000+00:00] devorun11 (id=1519704937754263572)
+    parse_schedule() detected cron jobs using a numeric-only field pattern, causing standard cron jobs containing named months or days to be rejected  https://github.com/NousResearch/hermes-agent/pull/52504
+    [embed] fix(cron): accept named months/weekdays in cron schedules by devoru... https://github.com/NousResearch/hermes-agent/pull/52504
+
+[2026-06-25T14:12:01.877000+00:00] yap.bi (id=1519706741154123868)
+    I've gone through and closed all my duplicate PRs (~10 of them). What's left is 40 original, non-duplicate PRs. Would you mind reviewing them when you get a chance? Thanks! <@387972437901312000>
+

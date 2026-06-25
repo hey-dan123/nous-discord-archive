@@ -1,0 +1,68 @@
+# Thread 'Stupidly Simply Cortex' in forum #community-projects-showcase
+# thread_id=1519640509382000730 forum_id=1316137596535177246
+# Started 2026-06-25T14:28:15.914086+00:00
+
+[2026-06-25T09:48:50.992000+00:00] .thebakery303 (id=1519640509382000730)
+    **Cortex: preflight + closeout for Hermes**
+    
+    Every agent workflow has one hidden failure point:
+    
+    **the moment before the agent starts planning.**
+    
+    That moment decides whether Hermes uses existing evidence or starts guessing again.
+    
+    When Hermes gets a dev/config task, the useful context is usually already somewhere:
+    
+    • local docs
+    • solved fixes
+    • exact commands
+    • failed attempts
+    • changed files
+    • stale dependency notes
+    • repo-specific rules
+    • previous audit logs
+    
+    Most memory systems focus on **what the agent might remember**.
+    
+    Cortex focuses on:
+    
+    **what the agent must check before it is allowed to guess.**
+    
+    Before the task, Cortex runs a **preflight**:
+    
+    • search the doc library
+    • inspect the right shard
+    • check solved audit logs
+    • detect stale docs
+    • preserve changed files
+    • rebuild indexes when needed
+    • surface commands/evidence to reuse
+    
+    After the task, Cortex writes a **closeout**:
+    
+    • what was attempted
+    • what worked
+    • what changed
+    • what command mattered
+    • what model/harness info was exposed
+    • what the next agent should reuse
+    
+    **Comparison:**
+    
+    • **Obsidian** gives humans notes. Cortex gives agents paths to check before acting.
+    • **Honcho** gives user/peer memory. Cortex gives docs, commands, audits, and repo evidence.
+    • **Mnemosyne / Holographic** help retrieve remembered context. Cortex adds canonical files, freshness, shard maps, and closeout logs.
+    • **Vector/RAG systems** find similar text. Cortex connects text to source paths, stale status, changed files, and previous working commands.
+    
+    **Simple pitch:**
+    Cortex helps Hermes solve tasks with local evidence first, then leaves a trail so the next run starts smarter.
+    
+    https://github.com/Pukujan/stupidly-simple-cortex/tree/main
+    [embed] GitHub - Pukujan/stupidly-simple-cortex https://github.com/Pukujan/stupidly-simple-cortex/tree/main
+
+[2026-06-25T09:52:51.389000+00:00] .thebakery303 (id=1519641517680103575)
+    released my very own plugin for hermes 🙂 https://discord.com/channels/1053877538025386074/1519640509382000730
+    
+    an ultra fast automated agent first llm wiki with no setup headache,
+    The difference , it's meant to be read by agents first, humans last, auto updates its docs, auto github backup  update and auto versions
+
