@@ -1,0 +1,33 @@
+# Thread 'HyperNatt Terminal — x402 MCP seller (BTC vault context, Hermes streamable-http)' in forum #community-projects-showcase
+# thread_id=1519621254565593128 forum_id=1316137596535177246
+# Started 2026-06-25T08:58:15.069558+00:00
+
+[2026-06-25T08:32:20.286000+00:00] hamet_18435 (id=1519621254565593128)
+    Production MCP + x402 for Hermes agents — read-only BTC/USDC decision context from a live Hyperliquid vault (not trade advice).
+    
+    **Platform:** https://hypernatt.com
+    **MCP:** https://hypernatt.com/mcp/protocol (streamable-http · 9 tools · v2.5.11)
+    **Repo:** https://github.com/DIALLOUBE-RESEARCH/hypernatt-terminal
+    **Atlas:** listed on Hermes Atlas (Integrations & Bridges)
+    
+    **Free (no wallet):**
+    curl -s https://hypernatt.com/api/m2m/agent/manifest
+    
+    **Hermes config** (~/.hermes/config.yaml):
+    mcp_servers:
+      hypernatt-terminal:
+        url: https://hypernatt.com/mcp/protocol
+        transport: streamable-http
+    
+    **Optional skill:**
+    hermes skills install github/DIALLOUBE-RESEARCH/hypernatt-terminal/skills/hypernatt-terminal
+    
+    **Pricing:** intro-free first call per Decision Core tool · then $0.001 USDC/call via x402 (Base + Solana) · HOLD on signal not charged.
+    
+    Also on x402scan, Smithery, Glama.
+    
+    Feedback welcome — especially Hermes MCP wiring / x402 wallet flow.
+    [attachment] hypernatt_logo_profil.png https://cdn.discordapp.com/attachments/1519621254565593128/1519621254837964870/hypernatt_logo_profil.png?ex=6a3e3914&is=6a3ce794&hm=3ab59b37e87b97eaa904cd96fc4c7d7db66831d46362383ba8c7b25fe1215481&
+    [embed] HYPERNATT - Neural Agentic Trading Technology https://hypernatt.com/
+    [embed] GitHub - DIALLOUBE-RESEARCH/hypernatt-terminal: BTC Decision Termin... https://github.com/DIALLOUBE-RESEARCH/hypernatt-terminal
+

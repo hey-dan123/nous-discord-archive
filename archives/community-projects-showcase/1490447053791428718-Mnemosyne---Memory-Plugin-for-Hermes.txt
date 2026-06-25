@@ -2439,3 +2439,15 @@
     You you!
     [reply to nulledvector msg=1512226283440832714]
 
+[2026-06-25T06:40:46.101000+00:00] daynight (id=1519593177118412921)
+    Do you have a good solution for mnemosyne plugin in a docker setup?
+    [reply to latipun msg=1512085529376722964]
+
+[2026-06-25T06:41:24.545000+00:00] daynight (id=1519593338364235778)
+    It would be great if mnemosyne could be installed as a git plugin for hermes like mnemosyne-dashboard:
+    hermes plugins install wysie/mnemosyne-dashboard --enable
+
+[2026-06-25T08:09:56.950000+00:00] latipun (id=1519615620205908099)
+    I didn't get clear answer. So, I drop hermes docker
+    [reply to daynight msg=1519593177118412921]
+

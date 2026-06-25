@@ -1,0 +1,35 @@
+# Thread 'Nika - Intent As Code' in forum #community-projects-showcase
+# thread_id=1519598836967014490 forum_id=1316137596535177246
+# Started 2026-06-25T08:58:15.499853+00:00
+
+[2026-06-25T07:03:15.514000+00:00] thibaut5495 (id=1519598836967014490)
+    Hello everyone <:nousgirl:1341983870752653352> 
+    
+    I’m building Nika and looking for early feedback from people here who working with local agents / Hermes / AI tooling
+    
+    Nika is an open source language + local runtime for turning repeatable AI work into executable source files 
+    
+    Instead of keeping an agent task inside a prompt, chat history, or custom glue code, Nika lets you describe it as a file
+    
+    steps, model calls, tools, permissions, inputs/outputs, traces/logs 
+    
+    Then the local runtime executes it 🙂
+    
+    So you can read it, edit it, version it in Git, run it locally, debug it, reuse it and audit what happened
+    
+    It’s not a model, not a chat UI, not a replacement for Hermes 
+    
+    Hermes or another agent could generate the Nika file when a task becomes repeatable or important. Nika makes that task explicit, executable and traceable
+    
+    Examples:
+    repo review, document extraction, support triage, client onboarding, weekly reports, local maintenance checks.
+    
+    looking for honest feedback on the concept and use cases 🙏
+    
+    https://nika.sh
+    https://docs.nika.sh
+    https://github.com/supernovae-st/nika
+    [embed] Nika · Intent as Code https://nika.sh/
+    [embed] Introduction - Nika https://docs.nika.sh/
+    [embed] GitHub - supernovae-st/nika: Inference as Code | 5 YAML verbs to or... https://github.com/supernovae-st/nika
+

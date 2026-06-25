@@ -74,3 +74,9 @@
 [2026-06-23T18:35:10.656000+00:00] mrtrenchtrucker (id=1519048188361965703)
     This js extremely similar to how my system works. NOT a true Ultracode but by using the Kanband board you can achieve near parity with Ultracode.
 
+[2026-06-25T07:47:07.199000+00:00] jimpickens3203 (id=1519609875053940826)
+    Ohhh sounds cool I'll check it out
+
+[2026-06-25T08:45:51.482000+00:00] jimpickens3203 (id=1519624656967962685)
+    Does this work with ollama on both the reviewer and the orchestrator? That's the only provider I have
+

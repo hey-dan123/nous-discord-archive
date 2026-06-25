@@ -1926,3 +1926,53 @@
     
     Thanks in advance! I tried my best to do the triage first and separate the clean LCM-relevant candidates from the stale/superseded overlap.
 
+[2026-06-25T05:12:54.786000+00:00] ruangraung (id=1519571067620954192)
+    Hey <@427613574995771414> and <@417568242307956737>, quick question about LCM + Hermes core compatibility.
+    
+    After updating to `Hermes Agent v0.17.0 (upstream 7a65800f)`, LCM fails to activate with this warning on every agent init:
+    
+    ```:WARNING run_agent: Context engine 'lcm' could not be safely copied for this agent (cannot pickle 'sqlite3.Connection' object) — falling back to built-in compressor. Plugin engines that hold uncopyable state (locks, DB connections) should implement __deepcopy__ to copy only mutable budget state. ```
+    
+    The issue is in `hermes-agent's agent_init.py,` it now calls `copy.deepcopy()` on plugin-registered context engines (#42449 for child agent isolation). LCM holds sqlite3.Connection objects that can't be pickled, so deepcopy fails every time.
+    
+    LCM already has `clone_for_agent()` which creates a fresh engine instance without pickling. The fix would be either:
+    • LCM-side: add `__deepcopy__ `that delegates to `clone_for_agent()`
+    • Hermes core: check for `clone_for_agent()` before calling `copy.deepcopy()`
+    
+    I've contributed several merged PRs to LCM before, happy to open another if needed. Just wanted to check if this is already known or if there's a preferred approach before I start on a fix.
+    
+    Logs show this on every session since the hermes update: LCM registers fine but deepcopy fails on agent creation. Appreciate any clarity on this. Thx. Best regards.
+
+[2026-06-25T05:14:39.707000+00:00] _voscko_ (id=1519571507691388948)
+    Ill have a look
+    [reply to ruangraung msg=1519571067620954192]
+
+[2026-06-25T05:29:03.713000+00:00] _voscko_ (id=1519575131595214879)
+    I have submitted a PR. Keep an eye on this one to merge. Please update to main then and try it out. 
+    
+    <@427613574995771414> fyi
+    [reply to ruangraung msg=1519571067620954192]
+
+[2026-06-25T06:00:02.476000+00:00] w0lfgang88 (id=1519582927812300941)
+    Thanks for the detailed report and good diagnosis.
+    
+    This was the right read. Hermes Agent v0.17.0 began isolating plugin context engines with `copy.deepcopy()` during agent initialization, and LCM's SQLite-backed runtime state wasn't deepcopy-safe.
+    
+    <@417568242307956737> opened a fix, and it's now merged into LCM main:
+    
+    https://github.com/stephenschoettler/hermes-lcm/pull/285
+    
+    The fix is entirely LCM-side. `LCMEngine.deepcopy()` now delegates through the existing `clone_for_agent()` boundary, allowing Hermes to safely isolate the engine without attempting to pickle live SQLite connections.
+    
+    I've updated my local `hermes-lcm` checkout to `main` and smoke-tested it against Hermes Agent v0.17.0. The deepcopy warning is gone, and LCM no longer falls back to the built-in compressor during initialization.
+    
+    If you update `hermes-lcm` to the latest `main`, this issue should be resolved.
+    
+    Thanks for catching it and for offering to patch it.
+    [embed] fix: make context engine deepcopy clone-safe by Tosko4 · Pull Requ... https://github.com/stephenschoettler/hermes-lcm/pull/285
+    [reply to ruangraung msg=1519571067620954192]
+
+[2026-06-25T07:45:11.755000+00:00] marcincebula (id=1519609390846578708)
+    wouldn't this affect the LLM provider cache causing a cache miss on every turn? making your average calls cost 10x more. I honestly don't know but i feel like that might be a problem
+    [reply to _voscko_ msg=1493534205572026438]
+

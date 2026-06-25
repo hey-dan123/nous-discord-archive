@@ -37978,3 +37978,138 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Just have to be patient, I have 40 pr’s some of them p1,p2,p3! 😁
     [reply to denis_skripnik msg=1519530325791867041]
 
+[2026-06-25T03:00:30.788000+00:00] teknium (id=1519537748078497952)
+    P0 is highest, P3 or less is lowest
+
+[2026-06-25T03:00:43.595000+00:00] dias4761 (id=1519537801794814022)
+    boss, p0 avaliable
+    [reply to teknium msg=1519537748078497952]
+
+[2026-06-25T03:00:45.297000+00:00] dias4761 (id=1519537808933650514)
+    :v
+
+[2026-06-25T03:00:58.273000+00:00] dias4761 (id=1519537863358939177)
+    u saw ?
+
+[2026-06-25T03:03:23.597000+00:00] dias4761 (id=1519538472891973722)
+    idk if u saw, But I remember tagging you this morning.
+
+[2026-06-25T03:04:54.551000+00:00] teknium (id=1519538854380703825)
+    boss, my hermes machine crashed this morning and I just got it back up
+    [reply to dias4761 msg=1519537801794814022]
+
+[2026-06-25T03:05:24.952000+00:00] dias4761 (id=1519538981891473509)
+    damm o.o
+
+[2026-06-25T03:06:06.344000+00:00] dias4761 (id=1519539155502108712)
+    https://github.com/NousResearch/hermes-agent/pull/51585 here it is
+    [embed] fix(cache): content-address prompt_cache_key so cron jobs hit provi... https://github.com/NousResearch/hermes-agent/pull/51585
+    [reply to teknium msg=1519538854380703825]
+
+[2026-06-25T03:08:24.438000+00:00] nuuuuuu0073 (id=1519539734710452337)
+    https://github.com/NousResearch/hermes-agent/pull/52254
+         - 153 f-strings không có expression -> plain strings
+         - 3 files: gateway/run.py (68), conversation_loop.py (43), main.py (42)
+         - Overhead reduction: f-string compile to str.format()
+    [embed] fix: remove useless f-string prefix from 153 static strings by Alex... https://github.com/NousResearch/hermes-agent/pull/52254
+
+[2026-06-25T04:39:58.084000+00:00] denis_skripnik (id=1519562776731848745)
+    Got it, thanks. I’ll be patient and keep the PRs maintained.
+    
+    I’ll also improve my workflow so my PRs stay current with upstream changes.
+    [reply to aialliai msg=1519531933850271804]
+
+[2026-06-25T05:08:15.181000+00:00] timattrn (id=1519569894872453202)
+    the email gateway leaves every message as read which makes it very hard to use hermes to supervise my inbox. Lots of dup issues and PRs to fix, here's mine:  https://github.com/NousResearch/hermes-agent/pull/48224
+    [embed] fix(email): use BODY.PEEK[] by default, configurable via platforms.... https://github.com/NousResearch/hermes-agent/pull/48224
+
+[2026-06-25T05:20:26.809000+00:00] dias4761 (id=1519572963542831214)
+    <@387972437901312000>  fix(bedrock): enforce guardrails on Claude via InvokeModel headers Closes #52179 
+    
+    https://github.com/NousResearch/hermes-agent/pull/52312
+    [embed] fix(bedrock): enforce guardrails on Claude via InvokeModel headers ... https://github.com/NousResearch/hermes-agent/pull/52312
+
+[2026-06-25T05:27:56.796000+00:00] dongjiang_90131 (id=1519574850924970124)
+    Hi everyone, I'm a new contributor here. I've submitted a PR and kindly ask the maintainers to review it when you have time, thanks a lot!  ❤️https://github.com/NousResearch/hermes-agent/pull/51244 https://github.com/NousResearch/hermes-agent/pull/51178 https://github.com/NousResearch/hermes-agent/pull/50828 https://github.com/NousResearch/hermes-agent/pull/50782
+    [embed] fix(skills-hub): include owner in ClawHub source URLs (#51236) by d... https://github.com/NousResearch/hermes-agent/pull/51244
+    [embed] fix(cli): dispatch /indicator to set the busy-indicator style (#506... https://github.com/NousResearch/hermes-agent/pull/51178
+    [embed] fix(cron): strip code blocks before strict threat-pattern scan to a... https://github.com/NousResearch/hermes-agent/pull/50828
+    [embed] fix(security): block terminal commands that read credential files (... https://github.com/NousResearch/hermes-agent/pull/50782
+
+[2026-06-25T05:28:58.130000+00:00] teknium (id=1519575108178677791)
+    This would've broken half the codebase btw, rejected
+    [reply to nuuuuuu0073 msg=1519539734710452337]
+
+[2026-06-25T06:02:42.621000+00:00] flownium (id=1519583599509110814)
+    https://github.com/NousResearch/hermes-agent/pull/52361
+    [embed] docs: document stuck PR check suites by itsflownium · Pull Request... https://github.com/NousResearch/hermes-agent/pull/52361
+
+[2026-06-25T06:02:47.834000+00:00] flownium (id=1519583621374152725)
+    https://github.com/NousResearch/hermes-agent/pull/52360
+    [embed] fix: refresh live session history by itsflownium · Pull Request #5... https://github.com/NousResearch/hermes-agent/pull/52360
+
+[2026-06-25T06:02:53.092000+00:00] flownium (id=1519583643427803267)
+    https://github.com/NousResearch/hermes-agent/pull/52345
+    [embed] fix: publish API server heartbeat metrics by itsflownium · Pull Re... https://github.com/NousResearch/hermes-agent/pull/52345
+
+[2026-06-25T06:02:57.119000+00:00] flownium (id=1519583660318130287)
+    https://github.com/NousResearch/hermes-agent/pull/52342
+    [embed] fix: preserve profile dirs during force install by itsflownium · P... https://github.com/NousResearch/hermes-agent/pull/52342
+
+[2026-06-25T07:00:09.686000+00:00] uzunkuyruk (id=1519598057547763884)
+    No just Claude <:suprise:1151275539789774898>
+    [reply to teknium msg=1519481077742174218]
+
+[2026-06-25T07:26:48.719000+00:00] flownium (id=1519604764378398850)
+    https://github.com/NousResearch/hermes-agent/pull/52385
+    [embed] fix: prune retired messaging toolset config by itsflownium · Pull ... https://github.com/NousResearch/hermes-agent/pull/52385
+
+[2026-06-25T07:52:26.505000+00:00] loongfay (id=1519611214320107650)
+    HI, <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/47303
+    [embed] feat(Yuanbao)  optimizes media resource processing speed: parallel ... https://github.com/NousResearch/hermes-agent/pull/47303
+
+[2026-06-25T08:24:39.171000+00:00] godsboy7777 (id=1519619320508977162)
+    Hey <@387972437901312000> 👋 small but real fix for the verify-on-stop loop that landed today in #52296 / #52297.
+    
+    It is firing on gateway messaging sessions, including Telegram / Discord, not just coding CLI sessions.
+    
+    When an agent edits files in a chat-bound topic, the edit → verify nudge makes the model write a `/tmp/hermes-verify-*.py` script and post the verification receipt as its reply:
+    
+    ```text
+    ad-hoc verification … PASS … not a canonical full suite green
+    ```
+    
+    So end users get internal verification machinery as chat noise instead of an answer.
+    
+    Screenshot is on the issue / PR.
+    
+    ## Root cause
+    
+    `verify_on_stop_enabled()` defaults ON for every session with no delivery-surface gating.
+    
+    ## Fix
+    
+    The PR makes the default surface-aware:
+    
+    * ON for CLI / TUI / desktop + programmatic
+    * OFF for messaging
+    
+    It keys off `HERMES_SESSION_PLATFORM`, like `skill_commands.py` / `prompt_builder.py`.
+    
+    An explicit `HERMES_VERIFY_ON_STOP` env or boolean `agent.verify_on_stop` config still overrides.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/52411
+    PR: https://github.com/NousResearch/hermes-agent/pull/52412
+    
+    CI is all green:
+    
+    * 32 unit tests, including an e2e through the real config loader
+    * 213 across the config / verification suites
+    
+    Would appreciate a review / merge when you get a sec 🙏
+    
+    It is hitting every file-editing chat topic right now.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1519619320643322027/image.png?ex=6a3e3747&is=6a3ce5c7&hm=fbecdb0fe5c5b438ab7282eb17e0146e4a9baa91292a787b16641f427d1f0517&
+    [embed] [Bug]: verify-on-stop nudge leaks ad-hoc verification receipt into ... https://github.com/NousResearch/hermes-agent/issues/52411
+    [embed] fix(agent): gate verify-on-stop nudge off for messaging surfaces by... https://github.com/NousResearch/hermes-agent/pull/52412
+

@@ -4761,3 +4761,31 @@
     Known issue, should have it squashed soon. actually applied a bunch of fixes today. Can you update to latest webUI and restart and hard refresh and see if it’s gone? That would be helpful to know I got it
     [reply to josephcy msg=1519525398063349951]
 
+[2026-06-25T03:52:38.444000+00:00] josephcy (id=1519550866418438264)
+    The problem still there, and it seems like it also jump to the top when i open another session, or i swap between app, and yes send message and receive response still push it to the top. Tested with WebUI: v0.51.641
+    Agent: v2026.6.19-642-gb177d4ee4
+    
+    on both the android app, or browser on the webui, i also tested with the auto follow new content on and off, but both same. desktop are fine though.
+    [reply to avidfuturist msg=1519526535151751359]
+
+[2026-06-25T05:36:44.141000+00:00] avidfuturist (id=1519577062770343947)
+    Should be resolved in .646 can you confirm when you get a chance?
+    [reply to josephcy msg=1519550866418438264]
+
+[2026-06-25T06:11:38.005000+00:00] josephcy (id=1519585845072498749)
+    Just tested can confirm it is sticking to bottom now, thanks alot for the update 🙏
+    [reply to avidfuturist msg=1519577062770343947]
+
+[2026-06-25T06:11:58.775000+00:00] avidfuturist (id=1519585932188323911)
+    Woohoo, great news!
+    [reply to josephcy msg=1519585845072498749]
+
+[2026-06-25T06:19:36.242000+00:00] avidfuturist (id=1519587850943860886)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And with **native iOS app and Android support**! 
+    
+    Full setup guide here: https://get-hermes.ai/setup/
+    
+    (Could use feedback and testing of everything from Android, WebUI, desktop apps, and iOS apps, please report any feedback here!)
+

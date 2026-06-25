@@ -76,3 +76,46 @@
     [attachment] Browser_Extension_v0.1.1_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1519366808598085682/Browser_Extension_v0.1.1_Update_Ad.png?ex=6a3d4c1b&is=6a3bfa9b&hm=d24190335a3507718a5f1148a404ded70130a414c8a9fcdc768d9b397f6ff709&
     [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
 
+[2026-06-25T05:22:46.402000+00:00] jonkomet (id=1519573549038174210)
+    I just pushed v0.1.2 of the Hermes Browser Extension<:caduceus:1503692394493775882> :
+    https://github.com/abundantbeing/hermes-browser-extension
+    
+    Once you connect it to your local Hermes runtime, it now pulls in the actual stuff your agent already knows about: models, providers, sessions, profiles, skills, and runtime capabilities.
+    
+    What changed in v0.1.2:
+    
+    - **Connected runtime sync**
+     Browser now refreshes models/providers, sessions, skills, profiles, and capabilities from the local Hermes gateway after connect/save and on side-panel startup.
+    
+    - **Better setup path**
+     Added a Windows setup/update helper that builds `dist/`, opens the extension tools, and starts the local pairing/manual setup flow so loading the unpacked extension is less annoying.
+    
+    - **Model/session reliability**
+     Fixed the fallback state that made the model picker look like it only had one selected model when the local API was down, and tightened the session/model refresh behavior.
+    
+    - **Composer controls**
+     Added more Desktop-style composer controls, including inline send/stop/mic handling and better UI structure for the side panel.
+    
+    - **Voice dictation groundwork**
+     Added the local transcription route wiring and a visible extension voice page fallback for Chromium side-panel mic permission weirdness.
+    
+    - **Safer browser context**
+     Hardened redaction for page context capture so obvious API keys, bearer tokens, JWTs, private keys, GitHub/Stripe/AWS/Slack-style secrets, etc. get masked before hitting the agent prompt.
+    
+    Still public alpha / load-unpacked for now. Pull latest, run:
+    
+    ```bash
+    npm install
+    npm run package
+    
+    
+    Then reload the unpacked extension from `dist/`.
+    
+    Would especially love feedback on:
+    - first-run setup friction
+    - model/session picker behavior
+    - whether skills feel natural in the composer
+    - Comet/Chromium extension edge cases
+    [attachment] Browser_Extension_v0.1.2_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1519573549449347204/Browser_Extension_v0.1.2_Update_Ad.png?ex=6a3e0ca6&is=6a3cbb26&hm=3e2ea18baac7b67f7c9fcbacdeb83642af23a573c64f9d2a643b44eb70f623c8&
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
+

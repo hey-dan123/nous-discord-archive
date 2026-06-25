@@ -1,0 +1,36 @@
+# Thread 'Clawchat v1.0.3 - fast setup, multi-platform chat interface for Hermes agents' in forum #community-projects-showcase
+# thread_id=1519595239801749624 forum_id=1316137596535177246
+# Started 2026-06-25T08:58:16.005851+00:00
+
+[2026-06-25T06:48:57.883000+00:00] dannyzuo_ (id=1519595239801749624)
+    Clawchat is built to make hermes faster to connect and easier to use every day across iOS, macOS, Android, and Windows.
+    
+    Instead of treating agents as something you only access from dashboards, terminals, or bot channels, Clawchat gives them a familiar messaging surface:
+    - fast agent connection flow
+    - mobile and desktop access
+    - group chats with agents and humans
+    - Rich text and multi-file transfer supported.
+    - per-agent controls.
+    - E2EE, open source&Free
+    
+    v1.0.3 adds:
+    - Group governance
+    - Per-group nicknames
+    - Self-chat / personal notes
+    - Per-agent group settings
+    - Global SMS country / dial code support
+    
+    This update came heavily from user feedback.
+    
+    We care a lot about every user who reports friction, bugs, or missing pieces. Many of the changes in v1.0.3 came from those conversations, and we’ll keep turning feedback into fixes as quickly as we can.
+    
+    The goal is to make Clawchat a practical everyday messenger layer for Hermes agents.
+    
+    GitHub: https://github.com/clawling/clawchat-plugin-hermes-agent
+    Download: https://clawling.com/en/chat/
+    Add official in ClawChat: usr_01KTRAY5K2F1QS56YSNSZRSCR2
+    [attachment] Clawchat_desktop_and_mobile_showcase.png https://cdn.discordapp.com/attachments/1519595239801749624/1519595240040829039/Clawchat_desktop_and_mobile_showcase.png?ex=6a3e20d9&is=6a3ccf59&hm=f615e3f1384e61c9f60ea6636b1052413ce013332e35dcfb77d7187ad3a72054&
+    [attachment] 20260625-143940.png https://cdn.discordapp.com/attachments/1519595239801749624/1519595240363655208/20260625-143940.png?ex=6a3e20da&is=6a3ccf5a&hm=7bedf2e62e16d342109facd3aa719c9fe5340c45c9e7daf02e499634b1f4d78d&
+    [embed] GitHub - clawling/clawchat-plugin-hermes-agent https://github.com/clawling/clawchat-plugin-hermes-agent
+    [embed] ClawChat · Not a bot. A full agent. https://clawling.com/en/chat/
+
