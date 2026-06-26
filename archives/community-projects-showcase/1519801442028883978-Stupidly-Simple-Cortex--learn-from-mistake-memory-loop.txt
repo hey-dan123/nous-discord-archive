@@ -1,0 +1,106 @@
+# Thread 'Stupidly Simple Cortex: learn from mistake memory loop' in forum #community-projects-showcase
+# thread_id=1519801442028883978 forum_id=1316137596535177246
+# Started 2026-06-26T03:30:15.637000+00:00
+
+[2026-06-25T20:28:20.325000+00:00] .thebakery303 (id=1519801442028883978)
+    **Cortex: preflight + closeout for Hermes**
+    
+    Every agent workflow has one hidden failure point:
+    
+    **the moment before the agent starts planning.**
+    
+    That moment decides whether Hermes uses existing evidence or starts guessing again.
+    
+    When Hermes gets a dev/config task, the useful context is usually already somewhere:
+    
+    • local docs
+    • solved fixes
+    • exact commands
+    • failed attempts
+    • changed files
+    • stale dependency notes
+    • repo-specific rules
+    • previous audit logs
+    
+    Most memory systems focus on **what the agent might remember**.
+    
+    Cortex focuses on:
+    
+    **what the agent must check before it is allowed to guess.**
+    
+    Before the task, Cortex runs a **preflight**:
+    
+    • search the doc library
+    • inspect the right shard
+    • check solved audit logs
+    • detect stale docs
+    • preserve changed files
+    • rebuild indexes when needed
+    • surface commands/evidence to reuse
+    
+    After the task, Cortex writes a **closeout**:
+    
+    • what was attempted
+    • what worked
+    • what changed
+    • what command mattered
+    • what model/harness info was exposed
+    • what the next agent should reuse
+    
+    **Comparison:**
+    
+    • **Obsidian** gives humans notes. Cortex gives agents paths to check before acting.
+    • **Honcho** gives user/peer memory. Cortex gives docs, commands, audits, and repo evidence.
+    • **Mnemosyne / Holographic** help retrieve remembered context. Cortex adds canonical files, freshness, shard maps, and closeout logs.
+    • **Vector/RAG systems** find similar text. Cortex connects text to source paths, stale status, changed files, and previous working commands.
+    
+    **Simple pitch:**
+    Cortex helps Hermes solve tasks with local evidence first, then leaves a trail so the next run starts smarter.
+    
+    https://github.com/Pukujan/stupidly-simple-cortex/tree/main
+    [attachment] IMG_20260625_162516.jpg https://cdn.discordapp.com/attachments/1519801442028883978/1519801442204913744/IMG_20260625_162516.jpg?ex=6a3ee0e4&is=6a3d8f64&hm=22457b51a959ecb551e209951588c944e590d61aa8d007d36a6258a7e4216fd2&
+    [embed] GitHub - Pukujan/stupidly-simple-cortex https://github.com/Pukujan/stupidly-simple-cortex/tree/main
+
+[2026-06-25T20:36:49.682000+00:00] .thebakery303 (id=1519803578426986657)
+    [attachment] IMG_20260625_163547.jpg https://cdn.discordapp.com/attachments/1519801442028883978/1519803578108215296/IMG_20260625_163547.jpg?ex=6a3ee2e1&is=6a3d9161&hm=b2010d69c540d426892897f97fe6849d831552cae5f789ee327045f54ab00db7&
+
+[2026-06-25T20:55:51.901000+00:00] .thebakery303 (id=1519808369240834099)
+    Promotinf
+    [attachment] gemini_remix_20260625_165536.jpg https://cdn.discordapp.com/attachments/1519801442028883978/1519808368850636911/gemini_remix_20260625_165536.jpg?ex=6a3ee757&is=6a3d95d7&hm=b92d6fc133b89bd42cb954c14d4be8e82df69f63720b05f7b2dcec552417b442&
+
+[2026-06-25T21:34:51.295000+00:00] colmeio_66868 (id=1519818181370449961)
+    what if it registers one false positive as learn? will that path be excluded back in from oblivion?
+    how exactly?
+    I mean, how to avoid categorically drift in the long runs?
+
+[2026-06-25T22:03:28.029000+00:00] .thebakery303 (id=1519825381874729021)
+    it only pulls docs from official sources and updates it once per day dynamically if the metadata date is stale by date
+
+[2026-06-25T22:05:09.979000+00:00] .thebakery303 (id=1519825809483894856)
+    the auto planning phase is carried out based on task context, official docs, previous audit log to avoid doing same things again
+    
+    it also pulls all documentation locally to avoid spamming things like hermes skill to look up official docs over and over again unnecessarily
+
+[2026-06-25T22:05:22.680000+00:00] .thebakery303 (id=1519825862755749978)
+    improving latency by 10 seconds atleast
+
+[2026-06-25T22:06:31.370000+00:00] .thebakery303 (id=1519826150862622821)
+    it also creates human readable versions for verification if needed, but only uses different agent only summary pipeline so it can fast fetch exactly what agent needs to read instead of intrepreting what the human language summary says again
+
+[2026-06-25T22:15:31.530000+00:00] .thebakery303 (id=1519828416457871511)
+    hmmm lemme reply based on your
+    particular context,  it auto summerizes what it tried, what worked, what didnt work, and what results it produced,
+    
+    not just that it also remembers what version of prompt, docs, and evals it used during the failures
+    
+    the chance for it to register false positive is very low as its based on output received
+    
+    also it produces human readable format logs as well for manual verifications if needed
+    [reply to colmeio_66868 msg=1519818181370449961]
+
+[2026-06-26T03:18:55.351000+00:00] .thebakery303 (id=1519904768817107005)
+    hermes forgot what to do, but cortex to the rescue
+    🙂
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519801442028883978/1519904768162529310/image.png?ex=6a3f411f&is=6a3def9f&hm=fdb677ff9783ecc3464199e19ff84dc56ec9259537be8efa3c1fc6556de66458&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519801442028883978/1519904768506466446/image.png?ex=6a3f411f&is=6a3def9f&hm=4807080d7a3b9575b334eacfae6bce8929ed237a5fa51bafe662d1861ccd6ed2&
+

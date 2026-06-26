@@ -1,0 +1,8 @@
+# Thread 'Resend Skill for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1519818487667757156 forum_id=1485392832154832906
+# Started 2026-06-26T03:34:36.869840+00:00
+
+[2026-06-25T21:36:04.322000+00:00] gumbyender (id=1519818487667757156)
+    https://github.com/GumbyEnder/hermes-resend-skill
+    [embed] GitHub - GumbyEnder/hermes-resend-skill: resend.com - Hermes specif... https://github.com/GumbyEnder/hermes-resend-skill
+

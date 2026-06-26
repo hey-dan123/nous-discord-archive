@@ -202,3 +202,7 @@
 [2026-06-25T17:34:22.080000+00:00] na.chi (id=1519757660855992503)
     websocket is going to be more reliable for remote connection and i am following the same model with how the Desktop client connects to Dashboard
 
+[2026-06-25T20:42:21.931000+00:00] iruzenn (id=1519804971980296212)
+    i wrote to you about a topic can you give me just a moment ?
+    [reply to jonkomet msg=1519753695430967449]
+

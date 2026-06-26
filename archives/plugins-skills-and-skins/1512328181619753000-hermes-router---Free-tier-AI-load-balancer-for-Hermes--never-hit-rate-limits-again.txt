@@ -1068,3 +1068,46 @@
     that feature is already in via smart routing
     [reply to futurex24 msg=1519418915631923300]
 
+[2026-06-25T21:28:28.618000+00:00] ryansd.858 (id=1519816576306647201)
+    Amazing skill, first and foremost. hermes-router doesn't seem to survive a server restart. Is this by design?
+
+[2026-06-26T02:36:19.398000+00:00] shaf_2665 (id=1519894048373211218)
+    sorry I need to check it currently relealising hermes router run on nohup, will add the feature
+    https://hermes-router.vercel.app/
+    [embed] hermes-router https://hermes-router.vercel.app/
+    [reply to ryansd.858 msg=1519816576306647201]
+
+[2026-06-26T03:04:57.510000+00:00] shaf_2665 (id=1519901254657114122)
+    **🧩 hermes-router now has a clean add-on system — hr features**
+    
+    As the router's grown, optional features piled up behind scattered env vars. Now they're organized into a simple split:
+    
+    🔒 Core (always on) — auth, failover, smart routing, circuit breaker, protocol translation… the stuff that is the router.
+    
+    🔌 Add-ons (opt-in, toggle anytime) — semantic cache, persistent cache, fast routing, cost-currency display, metrics auth, per-key budgets, local models.
+    
+    One command to see and flip everything:
+    
+    
+    `hr features list`                      # what's on, what's off
+    `hr features enable persistent_cache`   # writes .env for you
+    `hr restart`
+    Enabled add-ons now also show in /v1/status, the hr status footer, and the VS Code dashboard (v0.6.1) — so you always know exactly what's running.
+    
+    📦 Docker images refreshed (:latest, :cli, :0.5.0). 100% backward-compatible — your existing env vars work unchanged; this is just a friendlier front-end over them. ⚡
+
+[2026-06-26T03:30:34.792000+00:00] shaf_2665 (id=1519907702485291118)
+    🔁 hermes-router now survives reboots — `hr service`
+    
+    Thanks to <@737151892706295818>  for flagging that a plain `hr start` didn't come back after a server restart — you were spot on. 🙏 Fixed:
+    
+    
+    `hr update`
+    `hr service install`     # installs a systemd service: starts on boot, restarts on crash
+    hr setup now offers this as a step too, and hr doctor will tell you if it's set up. On a server it installs a system service (or a per-user one with linger if you're not root); on macOS it prints a launchd snippet; Docker users were already covered by restart: unless-stopped.
+    
+    Docs updated with a clear "Keep it running (survive reboots)" section 👉 https://hermes-router.vercel.app/deployment/#keep-it-running-survive-reboots
+    
+    Docker images refreshed (:latest, :cli). ⚡
+    [embed] Deployment https://hermes-router.vercel.app/deployment/
+

@@ -18,3 +18,15 @@
     Note that a requirement is that your devices are connected via Tailscale or similar (Wireguard, etc). Your phone and machine need to be on the same virtual network for this to work safely and securely. If you don't have Tailscale setup, the agent should walk you through that as well (it's free!)
     [embed] GitHub - Madvulcan/gps-agent-bridge: Turn your smartphone into a re... https://github.com/Madvulcan/gps-agent-bridge
 
+[2026-06-26T00:22:45.752000+00:00] madvulcan (id=1519860436705480899)
+    Gps-agent-bridge has had a bunch of updates and optimizations. Big news: we now have an Android app specifically designed to work with the GPS Agent Bridge that uses much less battery than the app it defaulted to before (gpsdRelay). 
+    
+    The old app kept pinging location updates constantly, even if you were stationary at home. The new app, GPS Agentbridge Android, has configurable fencing and default timing for updating your location. If you're stationary, it doesn't send updates to the receiving agent constantly - just at whatever frequency you specify. But if you're on the move, it starts updating your agent with your new location. You can specify how far you need to move before it starts updating your location - default is 500 meters before it starts updating your agent's server with your updated location. 
+    
+    This should decrease battery impact substantially.
+    
+    There are two Android APKs available - one uses Google Play services to increase accuracy and further improve battery life. The other is for people who don't want Google Play Services on their phone, and uses only the phone's hardware, at a slight accuracy cost (indoors specially, if GPS is unavailable) and uses slightly more battery.
+    
+    https://github.com/Madvulcan/GPS-AgentBridge-Android
+    [embed] GitHub - Madvulcan/GPS-AgentBridge-Android: Distance-based GPS rela... https://github.com/Madvulcan/GPS-AgentBridge-Android
+

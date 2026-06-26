@@ -1,0 +1,8 @@
+# Thread 'Group similar looking things together completely offline and local.' in forum #community-projects-showcase
+# thread_id=1519877279788957768 forum_id=1316137596535177246
+# Started 2026-06-26T03:30:14.834284+00:00
+
+[2026-06-26T01:29:41.456000+00:00] curiousclump. (id=1519877279788957768)
+    made a little thing where you can just group similar things together, completely offline and local, private. it uses a small vision model to embed the images. then using cosine similarity, I can easily compare the embeddings to rank images based off similarity. this is just super small feature within the entire app. the main thing in the app is fast local semantic search
+    [attachment] dotient-cluster.mov https://cdn.discordapp.com/attachments/1519877279788957768/1519877280636076032/dotient-cluster.mov?ex=6a3f2785&is=6a3dd605&hm=ebc184d09f54de63b4956df1a1322677a6ba707d752752b48f03ea33cf2be4d1&
+

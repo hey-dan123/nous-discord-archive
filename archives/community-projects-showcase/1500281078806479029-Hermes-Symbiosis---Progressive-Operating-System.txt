@@ -436,3 +436,8 @@
 [2026-06-09T12:36:38.507000+00:00] colmeio_66868 (id=1513884529750708305)
     We are exploring local-first self-improving agent infrastructure, pattern compression, tool orchestration, and voice-controlled agent interfaces.
 
+[2026-06-25T21:41:56.807000+00:00] colmeio_66868 (id=1519819966097002699)
+    wake-word is finally wired production grade (still room for improovements)
+    second phase is live chat with frontier real-time
+    wake-word->transcript->command->reply
+

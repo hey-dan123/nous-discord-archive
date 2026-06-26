@@ -2259,3 +2259,9 @@
 [2026-06-24T15:38:19.003000+00:00] no_orbert (id=1519366067728941127)
     Same. Daily issues. I am planning to go back to default and use qmd
 
+[2026-06-26T01:46:45.115000+00:00] jimpickens3203 (id=1519881573326131321)
+    I thought my agent was just getting bad
+
+[2026-06-26T03:00:25.012000+00:00] me.franx (id=1519900111717662851)
+    For Mnemosyne with multiple independent agents, what’s best? Single Hermes harness and multiple profiles each with its own Mnemosyne or multiple WSL with multiple Hermes harnesses?
+

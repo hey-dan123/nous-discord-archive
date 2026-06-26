@@ -38357,3 +38357,341 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-25T19:53:07.992000+00:00] captainpuru (id=1519792582262132996)
     what path(s) on my installation/computer can I find the hermes.md and agents.md files? thanks
 
+[2026-06-25T20:04:07.381000+00:00] _.exo._ (id=1519795347940180058)
+    https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files
+    
+    you make them
+    [embed] Context Files | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files
+    [reply to captainpuru msg=1519792582262132996]
+
+[2026-06-25T20:39:51.208000+00:00] thechaosalchemist (id=1519804339802214471)
+    any reason why we selected CuaDriver and not use chromium for browser automations? have been struggling to get hermes working with cua lately
+    
+    wondering if i should make a PR for chromium
+
+[2026-06-25T20:51:49.494000+00:00] samueltinnerholm (id=1519807352511922409)
+    https://github.com/NousResearch/hermes-agent/pull/52673 <-- super cool PR I just submitted. it ports the Hermes Desktop app to mobile.
+    [embed] feat(mobile): add standalone Hermes iPhone app by realfishsam · Pu... https://github.com/NousResearch/hermes-agent/pull/52673
+
+[2026-06-25T20:55:01.696000+00:00] mburhop (id=1519808158665543732)
+    I've got a Hermes based application that I am switching over to a Hermes plugin.  It has a UI  so starting up the plugin starts the browser and displays the UI. Cool.
+    
+    What I want next is to bring up the UI in the Hermes Desktop. It looks like there are some hooks already but maybe that is for something else?  
+    
+    Is there even a way to display UI in the Hermes Desktop?
+
+[2026-06-25T21:10:32.621000+00:00] devorun11 (id=1519812063247995053)
+    https://github.com/NousResearch/hermes-agent/pull/52700
+    [embed] fix(tui-gateway): decode subprocess output as UTF-8 to stop cp950 c... https://github.com/NousResearch/hermes-agent/pull/52700
+
+[2026-06-25T21:45:47.422000+00:00] the_answers (id=1519820933366284438)
+    <@690519146701783042> thanks for merging my PR!
+    
+    I just got the email about it. 
+    
+    This is my second approved PR  to the project,  LFG! 😆 
+    
+    And I'm cooking up another one as we speak. 
+    
+    Any badge update here on discord that would reflect this, btw?
+    
+    (Pr you approved, for reference, is https://github.com/NousResearch/hermes-agent/pull/50542 )
+    [embed] fix(gateway): pass session_db to compress temp agents so persistenc... https://github.com/NousResearch/hermes-agent/pull/50542
+
+[2026-06-25T21:59:09.807000+00:00] jvitela_10283 (id=1519824298812899420)
+    <@387972437901312000> and Nous Research,
+    
+    I wanted to say thank you for Hermes.
+    
+    It's been a core part of the agent systems I've been shipping. The quality and practical capability stand out, and it's made a real difference in what I can build and iterate on. Grateful for it.
+
+[2026-06-25T22:07:44.488000+00:00] teknium (id=1519826457541476563)
+    So glad to hear ❤️
+    [reply to jvitela_10283 msg=1519824298812899420]
+
+[2026-06-25T22:13:53.740000+00:00] the_answers (id=1519828006296752293)
+    <@387972437901312000> how are you doing? Feel like you've been so busy
+
+[2026-06-25T22:15:13.618000+00:00] the_answers (id=1519828341329367181)
+    I'm about to submit another PR that would close an issue that's been on the gh since April (i just recently came across the same issue in my workflow and saw someone else had written about it too)
+
+[2026-06-25T22:53:22.561000+00:00] the_answers (id=1519837941852278844)
+    <@387972437901312000> <@690519146701783042> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/52718
+    
+    There is a "bug" report that's already out there, and there's a supposed fix but that fix doesn't pass the tests.
+    
+    I've introduced this PR to adress the supposed bug while still keeping with the way things were supposed to he working.
+    [embed] feat(discord): add force_thread_channels config to enable auto-thre... https://github.com/NousResearch/hermes-agent/pull/52718
+
+[2026-06-25T22:56:12.737000+00:00] featured_ (id=1519838655622156358)
+    HEY WE NEED FONT SIZE ON LINUX DESKTOP
+
+[2026-06-25T23:00:12.765000+00:00] sworntech (id=1519839662372425850)
+    **Opened a small focused PR for `hermes status`:**
+    
+    https://github.com/NousResearch/hermes-agent/pull/52730
+    
+    It makes the status model display honor the `model.model` alias for dict-based config, matching the existing `default → model → name` lookup pattern used elsewhere.
+    
+    Also added a focused helper test for that case.
+    
+    2 files changed, no provider resolution or agent execution changes.
+    [embed] fix: honor model alias in status output by Sworntech-dev · Pull Re... https://github.com/NousResearch/hermes-agent/pull/52730
+
+[2026-06-25T23:05:09.074000+00:00] the_answers (id=1519840905182580898)
+    The AI on github noticed #49726 covers the same feature (uncanny that the previous PR even uses similar naming as mine, lol). My PR (#52718) though, takes a similar approach but adds two things:
+    
+    - Wildcard "*" support — force_thread_channels: "*" forces threads on all free-response channels at once
+    
+    - Dedicated _discord_force_thread_channels() method — mirrors the existing _discord_free_response_channels() pattern instead of inline os.getenv()
+    
+    Just in case you wanted to know the differences
+    [reply to the_answers msg=1519837941852278844]
+
+[2026-06-25T23:05:50.503000+00:00] the_answers (id=1519841078948397116)
+    We should get font styles on CLI as well /jk
+    [reply to featured_ msg=1519838655622156358]
+
+[2026-06-25T23:18:48.018000+00:00] _zynix (id=1519844340082409512)
+    Added a Turkish (tr-TR) README translation to help Turkish-speaking users get started. CI needs maintainer approval: https://github.com/NousResearch/hermes-agent/pull/52733
+    
+    Thank you
+
+[2026-06-25T23:24:48.153000+00:00] dias4761 (id=1519845850598346812)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/52312
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/51604
+    
+    
+    https://github.com/NousResearch/hermes-agent/pull/52259
+    
+    https://github.com/NousResearch/hermes-agent/pull/49931
+    
+    https://github.com/NousResearch/hermes-agent/pull/48852
+    
+    when u can see
+    [embed] fix(bedrock): enforce guardrails on Claude via InvokeModel headers ... https://github.com/NousResearch/hermes-agent/pull/52312
+    [embed] fix(auth): scope-isolate resolve_anthropic_token() and cron credent... https://github.com/NousResearch/hermes-agent/pull/51604
+    [embed] fix(desktop): don't start a cron scheduler when a live gateway owns... https://github.com/NousResearch/hermes-agent/pull/52259
+    [embed] fix(terminal): bypass Git Bash wrapper to prevent console flashes o... https://github.com/NousResearch/hermes-agent/pull/49931
+    [embed] fix(gateway): resolve watchdog, env override, and proxy routing on ... https://github.com/NousResearch/hermes-agent/pull/48852
+
+[2026-06-25T23:25:17.081000+00:00] teknium (id=1519845971931168809)
+    ALREADY EXISTS
+    [reply to featured_ msg=1519838655622156358]
+
+[2026-06-25T23:25:22.576000+00:00] teknium (id=1519845994978742383)
+    ctrl + +/-
+
+[2026-06-25T23:25:46.339000+00:00] dias4761 (id=1519846094647853207)
+    These are old issues that I opened and that are still pending (which is why some of them show merge conflicts, since I'm not sure which is the best current implementation)
+
+[2026-06-25T23:29:04.222000+00:00] featured_ (id=1519846924629311498)
+    man i don't want my beautiful app to look like an 80 year old grandmas phone
+    [reply to teknium msg=1519845971931168809]
+
+[2026-06-25T23:29:20.088000+00:00] teknium (id=1519846991176138837)
+    then CTRL -
+    [reply to featured_ msg=1519846924629311498]
+
+[2026-06-25T23:29:31.193000+00:00] teknium (id=1519847037754015874)
+    thank you but please be patient
+    [reply to dias4761 msg=1519846094647853207]
+
+[2026-06-25T23:29:34.408000+00:00] teknium (id=1519847051238572292)
+    Wait times average 2 months
+
+[2026-06-25T23:29:40.598000+00:00] teknium (id=1519847077201448960)
+    so you're gonna need to be patient
+
+[2026-06-25T23:30:25.442000+00:00] dias4761 (id=1519847265290948739)
+    I know, I'm just mentioning it. I know there are a lot of things you guys need to check.
+    [reply to teknium msg=1519847077201448960]
+
+[2026-06-25T23:30:44.918000+00:00] dias4761 (id=1519847346978947103)
+    I'm sorry if it seemed like I was rushing you, boss
+
+[2026-06-25T23:49:52.220000+00:00] mgf.654 (id=1519852159112446123)
+    This work without mac?
+    [reply to samueltinnerholm msg=1519807352511922409]
+
+[2026-06-25T23:59:35.725000+00:00] kortexg (id=1519854606509936801)
+    After the update, the installation crashes. What should I do? Does anyone know how to fix it?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1519854606144897046/image.png?ex=6a3f1267&is=6a3dc0e7&hm=c549e404386fe06ebd74bb8c721abd7c0484aeab48f5738a0efac192e5bce791&
+
+[2026-06-26T00:00:13.530000+00:00] aialliai (id=1519854765075468308)
+    Yeah had that one too....
+
+[2026-06-26T00:00:15.993000+00:00] teknium (id=1519854775405908009)
+    cc <@119192111202566149> <@153017054545444864> <@100390510744584192>
+
+[2026-06-26T00:00:17.281000+00:00] aialliai (id=1519854780808167545)
+    there is a pr
+
+[2026-06-26T00:00:22.660000+00:00] aialliai (id=1519854803369459874)
+    ready for this
+
+[2026-06-26T00:00:26.994000+00:00] teknium (id=1519854821547708426)
+    link it pls
+
+[2026-06-26T00:01:08.537000+00:00] aialliai (id=1519854995791679669)
+    https://github.com/NousResearch/hermes-agent/pull/52736
+    [embed] fix(desktop): bundle simple-git so git-review IPC loads in packaged... https://github.com/NousResearch/hermes-agent/pull/52736
+
+[2026-06-26T00:01:14.583000+00:00] aialliai (id=1519855021150306425)
+    it's by some guy
+
+[2026-06-26T00:01:18.782000+00:00] aialliai (id=1519855038762324019)
+    seems about right
+
+[2026-06-26T00:02:52.479000+00:00] aialliai (id=1519855431756021771)
+    only thing annoying me about it is a missing regression test
+
+[2026-06-26T00:06:07.092000+00:00] dias4761 (id=1519856248022110288)
+    Regression tests are so annoying lol
+    [reply to aialliai msg=1519855431756021771]
+
+[2026-06-26T00:07:33.325000+00:00] aialliai (id=1519856609709527070)
+    But yeah.... I fixed this locally and was about to upload and found this so didn't duplicate...
+
+[2026-06-26T00:08:01.089000+00:00] apyh (id=1519856726159921345)
+    merged a fix
+
+[2026-06-26T00:08:02.737000+00:00] apyh (id=1519856733072392402)
+    pls lmk if it works
+
+[2026-06-26T00:08:20.431000+00:00] aialliai (id=1519856807286407188)
+    annoying? <:why:1478964456531824740>
+    [reply to dias4761 msg=1519856248022110288]
+
+[2026-06-26T00:08:28.504000+00:00] aialliai (id=1519856841146761236)
+    Important
+
+[2026-06-26T00:08:42.217000+00:00] apyh (id=1519856898663256265)
+    https://github.com/NousResearch/hermes-agent/pull/52745
+
+[2026-06-26T00:08:42.405000+00:00] aialliai (id=1519856899451785236)
+    <@1437482793230663731> fixed?
+    [reply to kortexg msg=1519854606509936801]
+
+[2026-06-26T00:08:51.059000+00:00] apyh (id=1519856935749292233)
+    working on it as fast as i can 😭
+    [reply to aialliai msg=1519856841146761236]
+
+[2026-06-26T00:09:05.476000+00:00] apyh (id=1519856996218699856)
+    hella cool damn, this one + the android one..
+    [reply to samueltinnerholm msg=1519807352511922409]
+
+[2026-06-26T00:09:18.534000+00:00] apyh (id=1519857050987921539)
+    no ATM but we're interested in developing it. got any ideas?
+    [reply to mburhop msg=1519808158665543732]
+
+[2026-06-26T00:09:34.876000+00:00] kortexg (id=1519857119531372584)
+    Not yet
+    [reply to aialliai msg=1519856899451785236]
+
+[2026-06-26T00:10:24.638000+00:00] aialliai (id=1519857328248066158)
+    you run hermes update?
+    [reply to kortexg msg=1519857119531372584]
+
+[2026-06-26T00:11:19.786000+00:00] aialliai (id=1519857559555801119)
+    I'm comparing it to my local fix... not downgrading lol 😛
+    [reply to apyh msg=1519856935749292233]
+
+[2026-06-26T00:12:14.944000+00:00] brooklyn (id=1519857790905221292)
+    is fixed btw
+
+[2026-06-26T00:12:27.987000+00:00] brooklyn (id=1519857845611270346)
+    ty <@100390510744584192>
+
+[2026-06-26T00:13:05.483000+00:00] aialliai (id=1519858002881019995)
+    Yep, checks out compared to my fix also....
+    [reply to brooklyn msg=1519857790905221292]
+
+[2026-06-26T00:13:20.785000+00:00] brooklyn (id=1519858067062390935)
+    silly issue lol
+
+[2026-06-26T00:13:25.171000+00:00] brooklyn (id=1519858085458350170)
+    but we gucci
+
+[2026-06-26T00:13:36.284000+00:00] aialliai (id=1519858132069777468)
+    yep... silly stuff can be annoying
+
+[2026-06-26T00:18:31.024000+00:00] apyh (id=1519859368298807497)
+    im ethernet c:
+    [reply to brooklyn msg=1519857845611270346]
+
+[2026-06-26T00:27:08.470000+00:00] srojk34 (id=1519861538624766082)
+    Auxiliary fallback: terminal layers skip context-window screening for compression
+    
+    When a compression task exhausts the first two fallback layers (configured chain + main chain), it falls through to the terminal layers (_try_payment_fallback / _try_main_agent_model_fallback) which return the first reachable model without checking its context window. This can silently select an undersized model (e.g. 32K local endpoint), causing compression to fail — middle turns get dropped without a summary and the prompt cache churns.
+    
+    Fix mirrors the existing min_ctx / _candidate_context_window screen from the upper layers into both terminal layers so undersized candidates are skipped.
+    
+    https://github.com/NousResearch/hermes-agent/pull/52754
+    [embed] fix(auxiliary): screen terminal fallback layers by context window b... https://github.com/NousResearch/hermes-agent/pull/52754
+
+[2026-06-26T00:28:58.643000+00:00] kkurottal6611 (id=1519862000723955803)
+    This fixes a security gap where dangerous commands using Windows absolute home paths (like writing to .ssh/authorized_keys or .hermes/config.yaml) completely bypassed the approval gate and skipped prompts because the backslash stripping clobbered path separators before the home fold could match. I've reordered the sequence and normalized the segments beforehand, so all 550+ tests are now passing cleanly (including 9 previously failing native Windows specs). Ready for review whenever you have a moment! <@387972437901312000> 
+    
+    https://github.com/NousResearch/hermes-agent/pull/52710
+    [embed] fix(approval): fold Windows absolute home paths in dangerous-comman... https://github.com/NousResearch/hermes-agent/pull/52710
+
+[2026-06-26T01:14:47.744000+00:00] nuuuuuu0073 (id=1519873531289014292)
+    https://github.com/NousResearch/hermes-agent/pull/52774
+    [embed] fix(moa): tolerate non-numeric values in hand-edited MoA preset con... https://github.com/NousResearch/hermes-agent/pull/52774
+
+[2026-06-26T01:14:58.531000+00:00] nuuuuuu0073 (id=1519873576532971632)
+    https://github.com/NousResearch/hermes-agent/pull/52775
+    [embed] fix(projects): sanitize branch names to produce valid git refnames ... https://github.com/NousResearch/hermes-agent/pull/52775
+
+[2026-06-26T01:45:59.607000+00:00] teknium (id=1519881382451609762)
+    MoA isnt even out yet how you alreayd fixing it lmao
+    [reply to nuuuuuu0073 msg=1519873531289014292]
+
+[2026-06-26T01:54:27.256000+00:00] nuuuuuu0073 (id=1519883511685709995)
+    Haha, figured it'd be easier to fix the edge cases before everyone starts using it <:bigeyethonk:1151299901616050237>
+    [reply to teknium msg=1519881382451609762]
+
+[2026-06-26T01:56:43.140000+00:00] nuuuuuu0073 (id=1519884081624781002)
+    Partly because the project already has so many contributors, so there isn't much left to fix.  <:catastrophe:1151299904346521610>
+    [reply to teknium msg=1519881382451609762]
+
+[2026-06-26T02:20:56.425000+00:00] davidg1982 (id=1519890177143603261)
+    A good thing 🙂
+
+[2026-06-26T02:40:02.135000+00:00] loongfay (id=1519894982599643146)
+    Hi, <@387972437901312000> , If you have some time, please take a look for this PR: https://github.com/NousResearch/hermes-agent/pull/47303
+    [embed] feat(Yuanbao)  optimizes media resource processing speed: parallel ... https://github.com/NousResearch/hermes-agent/pull/47303
+
+[2026-06-26T02:43:34.081000+00:00] axmaiqiu (id=1519895871565598871)
+    I did more testing today, and I can now reproduce this almost consistently on the Anthropic-compatible endpoint I use.
+    I also confirmed this was not caused by a wrong endpoint/transport setting. My session was running through Hermes’ Anthropic provider path, using the Anthropic Messages endpoint, not the OpenAI-compatible /v1 endpoint.
+    The root cause appears to be in Hermes’ Anthropic adapter. Hermes keeps conversation history internally in an OpenAI-style shape, so an assistant tool call is stored like content="" +  tool_calls=[...]. Prompt caching is applied before conversion, so when one of those assistant tool-call messages is selected as a cache breakpoint, the cache_control marker is placed on the top-level  assistant message. During conversion to Anthropic Messages format, that assistant message is rebuilt as a tool_use content block, but the old adapter did not copy the top-level cache_control onto the generated tool_use block. So Hermes thought it had selected a cache breakpoint, but the actual Anthropic request silently lost it.
+    My fix copies the assistant-level cache marker onto the last cacheable Anthropic assistant block, specifically text or tool_use, and covers both the normal tool-call rebuild path and the ordered  anthropic_content_blocks replay path. This should significantly reduce the cache misses caused by this specific marker-loss bug.
+    Since the bug is in Hermes’ local OpenAI-style to Anthropic Messages conversion layer, I believe the official Anthropic provider path could theoretically hit the same issue too. However, I personally cannot test against the pure official Anthropic API right now, so I can only guarantee reproduction  on my Anthropic-compatible endpoint.
+    [reply to teknium msg=1519740667470024997]
+
+[2026-06-26T03:21:20.518000+00:00] flownium (id=1519905377691373711)
+    https://github.com/NousResearch/hermes-agent/pull/52790
+    [embed] fix: send Feishu markdown tables as post by itsflownium · Pull Req... https://github.com/NousResearch/hermes-agent/pull/52790
+
+[2026-06-26T03:21:25.120000+00:00] flownium (id=1519905396993556530)
+    https://github.com/NousResearch/hermes-agent/pull/52793
+    [embed] fix: avoid recursive chown through symlinks by itsflownium · Pull ... https://github.com/NousResearch/hermes-agent/pull/52793
+
+[2026-06-26T03:21:28.800000+00:00] flownium (id=1519905412428861511)
+    https://github.com/NousResearch/hermes-agent/pull/52799
+    [embed] fix: gate credential pools by provider by itsflownium · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/52799
+
+[2026-06-26T03:21:33.298000+00:00] flownium (id=1519905431294705704)
+    https://github.com/NousResearch/hermes-agent/pull/52802
+    [embed] fix: add Discord threaded free-response channels by itsflownium · ... https://github.com/NousResearch/hermes-agent/pull/52802
+
+[2026-06-26T03:21:36.777000+00:00] flownium (id=1519905445886689390)
+    https://github.com/NousResearch/hermes-agent/pull/52809
+    [embed] fix: support profile default skills by itsflownium · Pull Request ... https://github.com/NousResearch/hermes-agent/pull/52809
+

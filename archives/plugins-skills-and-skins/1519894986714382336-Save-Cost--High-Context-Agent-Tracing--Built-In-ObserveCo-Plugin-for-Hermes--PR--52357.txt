@@ -1,0 +1,30 @@
+# Thread 'Save-Cost, High-Context Agent Tracing: Built-In ObserveCo Plugin for Hermes (PR #52357)' in forum #plugins-skills-and-skins
+# thread_id=1519894986714382336 forum_id=1485392832154832906
+# Started 2026-06-26T03:34:36.069950+00:00
+
+[2026-06-26T02:40:03.116000+00:00] seanfzc6500 (id=1519894986714382336)
+    Hey everyone! 👋
+    
+    I just submitted a new built-in observability plugin for the Hermes Agent to natively stream telemetry over OTLP/HTTP to an ObserveCo listener (PR #52357).
+    
+    key points:
+    
+    Zero-Dependency Footprint: Written using Python's standard library only (urllib.request, json, logging) to prevent core package bloat.
+    
+    Granular Visibility: Includes 11 native hooks tracking agent session lifecycles, token metrics, errors, tool executions, and gateway dispatch.
+    
+    Easy Opt-in: Configured via standard cli paths (hermes plugins enable observability/observeco).
+    
+    The automated Hermes Agent bot review has already cleared it with an Approved verdict! The CI pipeline is currently just waiting on a manual maintainer trigger to run the fork tests.
+    
+    If you're building agentic workflows and want clean outbound OTLP/HTTP tracing without heavy external SDK overhead, check out the PR here: https://github.com/NousResearch/hermes-agent/pull/52357. Would love any early feedback or eyes on it!
+    [embed] Build software better, together https://github.com/NousResearch/hermes-agent/pull/52357.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/52357.
+    [embed]  https://github.com/NousResearch/hermes-agent/pull/52357.
+
+[2026-06-26T03:14:36.266000+00:00] seanfzc6500 (id=1519903682135724173)
+    Save-Cost, High-Context Tracing: Built-In ObserveCo Plugin for Hermes (PR #52357)
+
+[2026-06-26T03:20:00.553000+00:00] seanfzc6500 (id=1519905042293985370)
+    Save-Cost, High-Context Agent Tracing: Built-In ObserveCo Plugin for Hermes (PR #52357)
+

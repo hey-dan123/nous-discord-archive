@@ -1,0 +1,22 @@
+# Thread 'Overhaul - Free Idle Truck Simulator MMO' in forum #community-projects-showcase
+# thread_id=1519832002512031785 forum_id=1316137596535177246
+# Started 2026-06-26T03:30:15.260027+00:00
+
+[2026-06-25T22:29:46.512000+00:00] datthemaster (id=1519832002512031785)
+    Overhaul — a logistics management MMO on real roads. 
+    
+    You start with one van in your real city. The roads are OpenStreetMap, the distances are real, and a 4-hour haul takes 4 real hours. You're not driving — you're dispatching, routing, and building a fleet. Pay for upgrades, buy more and bigger transport vehicles, improve your reputation and take on longer and higher paying jobs. 
+    
+    Weekly Hauls drops 6 cross-country lanes every day — real US city pairs (LA→Chicago, Miami→NYC, international even, etc.), real distances, real drive times. Each lane has a par window. Finish under par → gold. Under 1.5× → silver. Under 2× → bronze. Every player gets the same lanes, same par — leaderboard ranks by speed. All 6 done before the weekly reset? Completion bonus on top.
+    
+    The loop: accept a haul, dispatch your nearest idle van, plan the route, watch it crawl across the country on a real map. Departure timing matters — leave at 4pm, hit rush hour; leave at 4am, open road. Fuel stops, incidents, weather. Your fleet runs while you're away; come back to a digest of what happened. The delay effects are all simulated now for cost but if interest grows in this project, I'll invest to connect some of those dots to play with the added realism. 
+    
+    It's management, not driving. Closer to Transport Tycoon than ETS2. Spreadsheet brains and logistics nerds — this is your game. I just need more feedback to continue to build out the realistic sim of our dreams. 
+    
+    Free, browser-based, no install. 
+    https://overhaul.datthemaster.com/
+    
+    What it is: MMO logistics on real roads. Daily speed challenges against other players. Fleet building. Real-world friction as gameplay.
+    What it isn't: A driving sim. No steering wheel. Early stage — growing slow! Now international! Still lacking the global connection for now but many more home territories should have applicable local jobs and weekly hauls available now.
+    [attachment] screenshot.png https://cdn.discordapp.com/attachments/1519832002512031785/1519832002746908892/screenshot.png?ex=6a3efd5a&is=6a3dabda&hm=ecbdfe850eb41087aec7758582db28f33b767ad711f2e75bd6a20b3a873cb1af&
+

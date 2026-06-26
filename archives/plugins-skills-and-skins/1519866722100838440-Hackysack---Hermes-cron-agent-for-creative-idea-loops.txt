@@ -1,0 +1,18 @@
+# Thread 'Hackysack - Hermes cron-agent for creative idea loops' in forum #plugins-skills-and-skins
+# thread_id=1519866722100838440 forum_id=1485392832154832906
+# Started 2026-06-26T03:34:36.470173+00:00
+
+[2026-06-26T00:47:44.307000+00:00] guideboardlabs (id=1519866722100838440)
+    Full post on X
+    
+    https://x.com/guideboardlabs/status/2070284222594502987?s=46
+    
+    Used the new ideation creation skill from this past release to set up a council of agents cron job for constant new ideas for your projects and gaps you might be missing
+    [embed]  https://twitter.com/guideboardlabs/status/2070284222594502987?s=46
+
+[2026-06-26T00:55:10.110000+00:00] guideboardlabs (id=1519868591934013571)
+    https://github.com/GuideboardLabs/hermes-garage
+    
+    repo with skill available here, ask your Hermes agent to check it out and onboard you with your own Hackysack council
+    [embed] GitHub - GuideboardLabs/hermes-garage: My personal collection of He... https://github.com/GuideboardLabs/hermes-garage
+

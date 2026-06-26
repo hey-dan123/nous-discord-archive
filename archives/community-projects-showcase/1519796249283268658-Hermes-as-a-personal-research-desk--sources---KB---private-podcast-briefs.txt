@@ -1,0 +1,23 @@
+# Thread 'Hermes as a personal research desk: sources → KB → private podcast briefs' in forum #community-projects-showcase
+# thread_id=1519796249283268658 forum_id=1316137596535177246
+# Started 2026-06-26T03:30:16.007754+00:00
+
+[2026-06-25T20:07:42.278000+00:00] tbo1977 (id=1519796249283268658)
+    Sharing a Hermes user story / use case I just published on X:
+    https://x.com/tborges77/status/2070231771174588825?s=20
+    
+    I use Hermes as a local-first research desk. Scheduled jobs watch source streams, capture evidence, and write into a living KB with entities, timelines, backlinks, and source references.
+    
+    The useful part is not a one-off summary. Hermes asks what changed, what connects to older threads, and what deserves a deeper pass.
+    
+    Parallax is my preferred consumption layer: a private podcast-style format where two or three AI hosts/guests discuss a research thread, so I can listen while walking, driving, or away from a screen.
+    
+    The loop is:
+    sources → extraction → local KB → synthesis → private Parallax podcast → personal listening
+    
+    This changed the workflow from “remember to check everything” into “let the pipeline surface what changed and why it matters.”
+    [embed]  https://twitter.com/tborges77/status/2070231771174588825?s=20
+
+[2026-06-25T21:30:46.359000+00:00] sahil_ss9 (id=1519817154034143252)
+    <@689512149730459766>  repo?
+

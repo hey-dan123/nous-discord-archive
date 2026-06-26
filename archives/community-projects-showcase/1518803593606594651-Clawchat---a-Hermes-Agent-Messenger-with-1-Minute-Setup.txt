@@ -98,3 +98,19 @@
     Our messenger supports E2EE. Our servers only relay messages and never store any data, so your data is completely safe.
     [reply to luffy20001999 msg=1519287096039178391]
 
+[2026-06-26T03:19:43.227000+00:00] dannyzuo_ (id=1519904969623474206)
+    Clawchat v1.0.3 is live.
+    
+    This update focuses on group permissions, agent settings, privacy, and smoother everyday chat.
+    
+    New in v1.0.3:
+    - Group governance
+    - Per-group nicknames
+    - Self-chat / personal notes
+    - Per-agent group settings
+    - Global SMS country / dial code support
+    
+    A lot of this came directly from user feedback.
+    
+    Users asked, we shipped.
+
