@@ -4808,3 +4808,84 @@
 [2026-06-25T17:07:12.666000+00:00] avidfuturist (id=1519750826598338612)
     [attachment] 44B75124-C9B6-45C1-A191-CE7B352B5789.png https://cdn.discordapp.com/attachments/1493017427724992612/1519750826367914145/44B75124-C9B6-45C1-A191-CE7B352B5789.png?ex=6a3eb1c0&is=6a3d6040&hm=8d87bb93cdabdf8c1840375948f6442bbd07d7b9f8051410d7b563c18661920e&
 
+[2026-06-26T06:50:14.650000+00:00] jipy_tech (id=1519957949651353630)
+    does this scale to mobile view perfectly?
+
+[2026-06-26T06:53:52.844000+00:00] avidfuturist (id=1519958864823582790)
+    Yup works fully on web and mobile, and has native apps too
+    [reply to jipy_tech msg=1519957949651353630]
+
+[2026-06-26T06:54:01.128000+00:00] jipy_tech (id=1519958899569066097)
+    the web ui scale perfect on mobile ?
+    [reply to avidfuturist msg=1519958864823582790]
+
+[2026-06-26T06:54:14.941000+00:00] avidfuturist (id=1519958957504860291)
+    Yup and as a PWA
+
+[2026-06-26T07:00:37.040000+00:00] jipy_tech (id=1519960560144224347)
+    looks very nice so far, one thing is it pops up  to update so i click ok, closes server and just shows a blank console
+    [reply to avidfuturist msg=1519958957504860291]
+
+[2026-06-26T07:01:55.606000+00:00] avidfuturist (id=1519960889674043462)
+    May take a second for the server to restart after an update but then it should come back online after a refresh
+    [reply to jipy_tech msg=1519960560144224347]
+
+[2026-06-26T07:02:28.557000+00:00] jipy_tech (id=1519961027880419400)
+    hmm, been waiting minutes feel like somthing may be wrong?
+
+[2026-06-26T07:06:16.718000+00:00] avidfuturist (id=1519961984857145381)
+    Yeah should be back up well before then, may just need to ask Hermes on a gateway to restart the webUI server if it’s still not back, or if it’s the Android app, quit and restart
+    [reply to jipy_tech msg=1519961027880419400]
+
+[2026-06-26T07:14:51.698000+00:00] jipy_tech (id=1519964144839688212)
+    is this supposed to live update? or
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1519964144537829437/image.png?ex=6a3f786b&is=6a3e26eb&hm=9ee28f18032bd68f9361bf99b6a4177a91774b97e47c651a3dbb1eda8925b343&
+
+[2026-06-26T07:15:55.807000+00:00] avidfuturist (id=1519964413732458598)
+    Updates fairly regularly, should be accurate on refresh but not live
+    [reply to jipy_tech msg=1519964144839688212]
+
+[2026-06-26T07:16:34.586000+00:00] jipy_tech (id=1519964576383373394)
+    for sure thanks
+
+[2026-06-26T07:16:54.525000+00:00] jipy_tech (id=1519964660013731930)
+    also, where are the skills stored? cause these are not in my .hermes folder
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1519964659380129792/image.png?ex=6a3f78e6&is=6a3e2766&hm=58aac4ad01ac0f1b09cf681c37a944f2cd810c0ccb4324a3a6fb2b2d452f4661&
+
+[2026-06-26T07:18:17.273000+00:00] jipy_tech (id=1519965007083868370)
+    big fan of the ui so far
+
+[2026-06-26T07:18:55.836000+00:00] avidfuturist (id=1519965168828809267)
+    Any skills you are seeing there are loaded into Hermes somewhere, may have come pre bundled with Hermes agent
+    [reply to jipy_tech msg=1519964660013731930]
+
+[2026-06-26T07:19:03.589000+00:00] avidfuturist (id=1519965201347383407)
+    Great to hear it!
+    [reply to jipy_tech msg=1519965007083868370]
+
+[2026-06-26T07:19:14.703000+00:00] avidfuturist (id=1519965247962611793)
+    https://get-hermes.ai/setup/
+
+[2026-06-26T07:19:33.531000+00:00] avidfuturist (id=1519965326933098516)
+    You can also access on iOS and Android too! iOS app Hermex is completely native, worth a try!
+
+[2026-06-26T07:19:49.835000+00:00] jipy_tech (id=1519965395316904026)
+    just these are, not the rest
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1519965394973233192/image.png?ex=6a3f7995&is=6a3e2815&hm=12e95ea1a11b103864bd0807b6a758867e0101112585c466f3c5130ad03865ca&
+
+[2026-06-26T07:19:55.370000+00:00] jipy_tech (id=1519965418532503702)
+    thats why im confused where others are appearing from
+
+[2026-06-26T07:27:52.653000+00:00] jipy_tech (id=1519967420402503730)
+    on this page its correct, just not the other one
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1519967420100382750/image.png?ex=6a3f7b78&is=6a3e29f8&hm=19370b49917d72fc6d15a47c1c0592d2f37c3c91a1bb523faaa1b2da5f4e246e&
+
+[2026-06-26T07:29:36.934000+00:00] avidfuturist (id=1519967857788715029)
+    Good question, I’ll take a look later but it must be pulling them from somewhere 🤔
+
+[2026-06-26T07:32:44.048000+00:00] jipy_tech (id=1519968642601586919)
+    i figured it out, it was appdata, im using the .hermes one tho
+
+[2026-06-26T07:59:04.532000+00:00] jipy_tech (id=1519975271632076961)
+    amazing work btw
+

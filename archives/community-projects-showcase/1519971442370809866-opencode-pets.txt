@@ -1,0 +1,11 @@
+# Thread 'opencode-pets' in forum #community-projects-showcase
+# thread_id=1519971442370809866 forum_id=1316137596535177246
+# Started 2026-06-26T09:21:22.560045+00:00
+
+[2026-06-26T07:43:51.565000+00:00] varoyik (id=1519971442370809866)
+    A desktop companion for OpenCode that reacts to your coding sessions in real time. Drag it, throw it, switch pets, and watch it respond to every tool call and reasoning step with contextual speech bubbles. 
+    
+    https://github.com/varoyik/opencode-pets
+    [attachment] demo.mp4 https://cdn.discordapp.com/attachments/1519971442370809866/1519971443062997033/demo.mp4?ex=6a3f7f37&is=6a3e2db7&hm=c1cb5254110269ea37b41f89ea8350c14db0b8657a6e58ac4a01005d4347a49a&
+    [embed] GitHub - varoyik/opencode-pets: Desktop pet that reacts to your Ope... https://github.com/varoyik/opencode-pets
+

@@ -34,3 +34,15 @@
     [embed] GitHub - clawling/clawchat-plugin-hermes-agent https://github.com/clawling/clawchat-plugin-hermes-agent
     [embed] ClawChat · Not a bot. A full agent. https://clawling.com/en/chat/
 
+[2026-06-26T07:03:07.029000+00:00] dannyzuo_ (id=1519961189243682816)
+    Small polish update from Clawchat v1.0.3:
+    
+    - No stale chats after deleting a friend
+    - Draft indicators now show correctly
+    - Fixed right-click menu in Moments comments
+    - Avatars now sit above message bubbles for better readability
+    
+    Small details, but they matter in daily use.
+    
+    Users asked, we shipped.
+

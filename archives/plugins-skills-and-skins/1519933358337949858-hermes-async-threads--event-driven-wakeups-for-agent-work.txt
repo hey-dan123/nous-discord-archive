@@ -1,0 +1,14 @@
+# Thread 'hermes async threads: event-driven wakeups for agent work' in forum #plugins-skills-and-skins
+# thread_id=1519933358337949858 forum_id=1485392832154832906
+# Started 2026-06-26T09:26:07.896741+00:00
+
+[2026-06-26T05:12:31.624000+00:00] kylekaster (id=1519933358337949858)
+    https://github.com/donovan-yohan/hermes-plugin-async-threads
+    
+    a Hermes plugin that lets external jobs, CI, automations, and agent runtimes send signed events back into the exact conversation where work started
+    
+    no cron polling, no hardcoded chat IDs, no manual nudges to your agent. Hermes owns the route, validates/de-dupes the event, boxes payloads as untrusted data, and either posts a notification or queues a bounded continuation back in-thread.
+    
+    it’s primarily tested today with Discord gateway threads, and solving the problem i had personally of trying to do long-running kanban orchestration from Discord, and wanting to be able to have my agent react to changes in the board, or tickets getting blocked, so it could orchestrate and create new tickets.
+    [attachment] baoyu-async-thread-flow.png https://cdn.discordapp.com/attachments/1519933358337949858/1519933516094374128/baoyu-async-thread-flow.png?ex=6a3f5be5&is=6a3e0a65&hm=1d29d841375eb28e41f1a6bec943aee9c28a88f48712d97bc9aa6b02f5329742&
+

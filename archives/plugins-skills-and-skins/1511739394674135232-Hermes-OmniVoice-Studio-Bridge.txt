@@ -18,3 +18,7 @@
 [2026-06-21T06:04:56.416000+00:00] capslock.b (id=1518134609223749774)
     <@406092441892945920> Hey dont wanna sound promotional but i fw what you're makin and think you might like some of the projects ive got they're in your lane of what you built 🙂
 
+[2026-06-26T04:12:36.667000+00:00] .blockops (id=1519918279995691058)
+    I’m open to checking them out
+    [reply to capslock.b msg=1518134609223749774]
+

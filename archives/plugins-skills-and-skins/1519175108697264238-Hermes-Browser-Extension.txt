@@ -206,3 +206,27 @@
     i wrote to you about a topic can you give me just a moment ?
     [reply to jonkomet msg=1519753695430967449]
 
+[2026-06-26T05:11:34.774000+00:00] jonkomet (id=1519933119891898540)
+    v0.1.4 is live.
+    
+    I tightened up the alpha extension flow so it feels more like a real companion for Hermes Desktop.
+    
+    **What's New In v0.1.4:**
+    
+    **• Browser sessions can now auto-name themselves from your first message, and you can edit the title after.**
+    
+    **• The connection dot now reflects whether the gateway is actually reachable — not just that an API key is saved.**
+    
+    **• The update checker can tell when you’re on the same version but behind main.**
+    
+    **• Agent discovery can scan trusted private hosts/Tailscale boxes, with safer probing so tokens aren’t sent to random ports.**
+    
+    **• The default Nous theme is closer to the Desktop look: deeper blue, softer white, less neon.**
+    
+    *It’s still alpha: load the unpacked extension, connect it to Hermes Desktop, and tell me where it breaks or feels awkward.*
+    
+    Release:
+    https://github.com/abundantbeing/hermes-browser-extension
+    [attachment] Browser_Extension_v0.1.4_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1519933120223252551/Browser_Extension_v0.1.4_Update_Ad.png?ex=6a3f5b86&is=6a3e0a06&hm=918451ff08eab41d280f29feec331723c97cfd16e67ce80e585532853532709f&
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
+

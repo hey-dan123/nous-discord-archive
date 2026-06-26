@@ -38695,3 +38695,234 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/52809
     [embed] fix: support profile default skills by itsflownium · Pull Request ... https://github.com/NousResearch/hermes-agent/pull/52809
 
+[2026-06-26T03:43:48.574000+00:00] nuuuuuu0073 (id=1519911031848046603)
+    https://github.com/NousResearch/hermes-agent/pull/52826
+    [embed] fix(wecom): clear stale req_id cache on reconnect and fall back to ... https://github.com/NousResearch/hermes-agent/pull/52826
+
+[2026-06-26T03:48:58.145000+00:00] _rafaum (id=1519912330282926130)
+    Hey! Quick question — what's the name of this component in the TUI? (see screenshot)
+    
+    Is it a status bar? progress bar? I'm trying to reference it correctly in docs/issues.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1519912330002038854/image.png?ex=6a3f482a&is=6a3df6aa&hm=49ac49ab5cb6025faf7867c4138cb4b690969441d2157d32e9816256178add21&
+
+[2026-06-26T04:13:05.748000+00:00] .blockops (id=1519918401970245652)
+    Any Nous devs here? Would love them to take a look at this: https://github.com/NousResearch/hermes-agent/issues/41190
+    [embed] [Feature]: Unified plugin route selector for per-turn provider/mode... https://github.com/NousResearch/hermes-agent/issues/41190
+
+[2026-06-26T04:13:52.963000+00:00] .blockops (id=1519918600004305036)
+    It’s a blocker on one my projects and would be a great feature addition to Hermes. 
+    
+    https://github.com/MahdiHedhli/HermesUltraCode/blob/main/docs/upstream-routing.md
+    [embed] HermesUltraCode/docs/upstream-routing.md at main · MahdiHedhli/Her... https://github.com/MahdiHedhli/HermesUltraCode/blob/main/docs/upstream-routing.md
+
+[2026-06-26T04:19:04.656000+00:00] .blockops (id=1519919907339370546)
+    I’d be happy to open a PR but I didn’t want to be presumptuous.
+
+[2026-06-26T04:19:14.195000+00:00] .blockops (id=1519919947348709376)
+    <@387972437901312000> ^
+
+[2026-06-26T04:28:41.591000+00:00] teknium (id=1519922327180152984)
+    I'd really rather not increase the likelihood of people doing model routers. You are aware that you break caching every turn if your changing model every turn, costing 20x more input for the same model?
+    [reply to .blockops msg=1519918401970245652]
+
+[2026-06-26T04:43:48.642000+00:00] themaxtrix (id=1519926131627786330)
+    why would per-turn model changing be preferable to DAG decomposition -> multi-model task execution?
+
+[2026-06-26T04:44:38.725000+00:00] kxee (id=1519926341691113493)
+    your cache is stored by the model/provider
+    [reply to themaxtrix msg=1519926131627786330]
+
+[2026-06-26T04:44:48.083000+00:00] themaxtrix (id=1519926380941283388)
+    no im agreeing with teknium
+
+[2026-06-26T04:45:16.359000+00:00] themaxtrix (id=1519926499539550308)
+    if you want multi model solving do it on an atomized task basis not on a per-turn basis
+
+[2026-06-26T04:45:29.589000+00:00] inuyasha44_88990 (id=1519926555030192230)
+    This directly affects the terms hot/cold cache.
+    [reply to themaxtrix msg=1519926380941283388]
+
+[2026-06-26T04:46:07.219000+00:00] themaxtrix (id=1519926712861720586)
+    i might be unfamiliar, mind elaborating?
+
+[2026-06-26T04:48:42.655000+00:00] inuyasha44_88990 (id=1519927364807688242)
+    When you use a your stuffs, it saves your "data" so that in the next conversation it can retrieve what was saved. This saves context and tokens (because the cache saves this). When you switch routes, the system cannot save this because it is constantly changing, so the cache (what saves the data) becomes inactive, generating more data usage.
+
+[2026-06-26T04:49:47.155000+00:00] inuyasha44_88990 (id=1519927635340431361)
+    I believe DAG is an alternative, but it's more complex to implement.
+
+[2026-06-26T05:18:37.742000+00:00] thyfriendlyfox (id=1519934893948141609)
+    hmmm this isn't bad idea
+    [reply to themaxtrix msg=1519926499539550308]
+
+[2026-06-26T05:37:44.928000+00:00] .blockops (id=1519939705594970194)
+    Fair on the caching, no argument from me. Per-turn model swaps blow away the prefix cache, so you eat full uncached input on the whole context every turn. For long agent threads that is a real cost. Not something to encourage.
+    
+    That is on me for the title though. I am not after per-turn routing. I want a stable, plugin-accessible hook to set provider/model per call site, scoped to the delegated task, not the turn. Each task keeps one model for its lifetime, so the cache stays warm. It is the atomized-task multi-model pattern <@144691599132196864> is describing. The hook is just what lets a plugin pin the model cleanly instead of fighting the config + heuristic + fallback layers routing is spread across today.
+    
+    Happy to scope it explicitly to delegate_task so the API steers people to the cache-coherent path and not the per-turn footgun.
+    
+    Concrete consumer: HermesUltraCode pins a neutral reviewer on a different lab as one pre-dispatch call before any worker runs. Right now it has to thread that fragmented routing by hand. A uniform per-task hook is what makes it clean. I will rename the issue to drop per-turn and reframe it around per-call-site so it is clear this is not a per-turn model router.
+    [reply to teknium msg=1519922327180152984]
+
+[2026-06-26T05:58:36.043000+00:00] .thebakery303 (id=1519944953151750154)
+    mine only auto changes based on long running task
+    
+    strong model for read task context and call cortex,
+    
+    same model to plan, tests, hand off, and chooshing best model to do the next task
+    
+    implementation model to do the task and tick test
+    
+    back to strong model to assess the code and further plan for next phases
+    
+    implementation model to write cortex
+    
+    repeat
+    [reply to teknium msg=1519922327180152984]
+
+[2026-06-26T05:59:10.816000+00:00] .thebakery303 (id=1519945099000414220)
+    the loops are ultra long
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1519945098987700275/image.png?ex=6a3f66ae&is=6a3e152e&hm=01348d912dff3dadc6a89172cd9dff408e781a44a91e00eab79c03dbffb6aff2&
+
+[2026-06-26T06:00:59.420000+00:00] .thebakery303 (id=1519945554518347896)
+    its how im building my hyper realistic person with mood, skill , emotion and coding 
+    
+    she never forgets problems shes solved ebfore and uses both emotion and logic for doing task
+
+[2026-06-26T06:19:48.295000+00:00] exquisite_cheetah_29759 (id=1519950289363533875)
+    Quick Hermes-on-Raspberry-Pi war story:
+    
+    I’ve been running Hermes dashboard permanently on a 4GB Raspberry Pi over Tailscale. After updates and dashboard restarts, the Pi was getting hammered — high RAM/swap pressure, slow dashboard/profile loading, and a sneaky repeated `npm install --workspace ui-tui` / TUI build path.
+    
+    Hermes diagnosed it live on the Pi instead of guessing. Root cause was basically:
+    
+    - Dashboard was launched with old `--tui` behavior / embedded chat path.
+    - The TUI dependency freshness check compared the whole JS workspace root `package-lock.json` against a scoped `ui-tui` install.
+    - Because the full repo lock includes web/desktop/electron/etc., Hermes thought TUI deps were incomplete forever, even after a successful scoped install/build.
+    - Profile listing was also doing unnecessary repeated wrapper scans / heavier config reads, which hurt on the Pi.
+    
+    Hermes fixed it locally, tested it, restarted only the dashboard, and verified:
+    
+    - Dashboard still serves on Tailscale: `100.72.203.12:9119`
+    - Auth gate still works.
+    - No `node --expose-gc ui-tui/dist/entry.js` child after restart.
+    - No new npm logs after dashboard restart.
+    - TUI check now returns:
+    
+    need_install False
+    need_rebuild False
+    Targeted tests:
+    
+    41 passed, 1 skipped
+    
+    Hermes also opened an upstream PR so this isn’t just local duct tape:
+    
+    https://github.com/NousResearch/hermes-agent/pull/52904
+    [embed] fix(dashboard): avoid repeated TUI installs on small hosts by allan... https://github.com/NousResearch/hermes-agent/pull/52904
+
+[2026-06-26T06:24:58.993000+00:00] dias4761 (id=1519951592525135954)
+    I think atomizing things in this regard would be cool, as it could allow for maintaining a hot/cold cache. However,  need to look at the implementations and the costs (to see if it impacts other structures).
+    [reply to .blockops msg=1519939705594970194]
+
+[2026-06-26T06:40:19.346000+00:00] samueltinnerholm (id=1519955452765536297)
+    You need a Mac to install it on your phone, until either I or nous upload it to the App Store.
+    [reply to mgf.654 msg=1519852159112446123]
+
+[2026-06-26T06:44:35.969000+00:00] mgf.654 (id=1519956529120280576)
+    https://tenor.com/view/404soob-pepe-pp-gif-21552696
+    [embed]  https://tenor.com/view/404soob-pepe-pp-gif-21552696
+    [reply to samueltinnerholm msg=1519955452765536297]
+
+[2026-06-26T06:46:43.721000+00:00] nuuuuuu0073 (id=1519957064951267439)
+    https://github.com/NousResearch/hermes-agent/pull/52916
+    [embed] fix(agent,tools,cli,plugins): add 'from e' to re-raised exceptions ... https://github.com/NousResearch/hermes-agent/pull/52916
+
+[2026-06-26T07:20:22.147000+00:00] iborazzi (id=1519965530843250688)
+    🐛 Fix | #52914 – QQBot Infinite Retry Loop
+    
+    `QQAdapter.connect()` was missing the `is_reconnect` param introduced in 43b8ba4, causing a `TypeError` on every reconnect and an infinite retry loop.
+    
+    One-line fix, CI running. PR: https://github.com/NousResearch/hermes-agent/pull/52922
+    
+    — <@1048547748053524480>
+    [embed] fix(qqbot): add missing is_reconnect parameter to QQAdapter.connect... https://github.com/NousResearch/hermes-agent/pull/52922
+
+[2026-06-26T07:25:46.770000+00:00] godsboy7777 (id=1519966892411064471)
+    Quick bump on this, <@387972437901312000> <@119192111202566149>, could one of you check #52412 when you get a chance? It’s still happening in live gateway chat topics after file edits, fresh screenshot below.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1519966892163334306/image.png?ex=6a3f7afa&is=6a3e297a&hm=0b75662b53b6d71fd2af8f20537b46492d45f9c8a912c437f3f0b9fda6019c72&
+    [reply to godsboy7777 msg=1519619320508977162]
+
+[2026-06-26T07:30:13.186000+00:00] brooklyn (id=1519968009840627742)
+    merged
+
+[2026-06-26T07:37:09.550000+00:00] godsboy7777 (id=1519969756197945456)
+    thanks so much
+    [reply to brooklyn msg=1519968009840627742]
+
+[2026-06-26T07:39:48.496000+00:00] theoveo (id=1519970422865526914)
+    Hey <@387972437901312000>, I think there's an important point about the Anthropic OAuth path.
+    
+    The docs and the connector label say it requires a Max plan plus purchased extra usage credits, and that it doesn't touch the included subscription quota. That framing assumes Anthropic moved claude -p / Agent SDK usage out of the subscription pools.
+    
+    But Anthropic never actually made that change. The June 15 Agent SDK billing change was paused before it took effect, so claude -p, the Agent SDK, and third-party apps still draw from the subscription's usage limits exactly as before:
+    https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan
+    
+    So the "requires extra usage" behavior isn't an Anthropic policy. It comes from Hermes routing the OAuth path to the pay-per-token api.anthropic.com endpoint (#40014) instead of shelling out to the real claude CLI. A proper claude -p subprocess path (#48320) would consume the included subscription quota, with no extra credits needed.
+    
+    The problem is that almost nobody realizes this: users are burning extra usage credits on a billing change that Anthropic reversed.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1519970423012331603/image.png?ex=6a3f7e44&is=6a3e2cc4&hm=f15d70133c797b0be47115bd6622ea1bdf6194eb8edf29cb451d86c42d649b84&
+    [embed] Use the Claude Agent SDK with your Claude plan | Claude Help Center https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan
+
+[2026-06-26T07:43:36.452000+00:00] starw1 (id=1519971378982289521)
+    🔥
+
+[2026-06-26T07:43:40.195000+00:00] starw1 (id=1519971394681573457)
+    Isn't it still against TOS?
+
+[2026-06-26T07:46:13.873000+00:00] teknium (id=1519972039254081698)
+    No we do not use the -p nothin
+    [reply to theoveo msg=1519970422865526914]
+
+[2026-06-26T07:46:29.556000+00:00] teknium (id=1519972105033351198)
+    only extra usage credits works
+    [reply to starw1 msg=1519971394681573457]
+
+[2026-06-26T07:47:32.180000+00:00] starw1 (id=1519972367697313822)
+    Makes sense.
+    [reply to teknium msg=1519972105033351198]
+
+[2026-06-26T07:48:00.036000+00:00] theoveo (id=1519972484533850142)
+    even without it i teste right now, turning off extrage usage all working fine
+    [reply to teknium msg=1519972105033351198]
+
+[2026-06-26T07:48:08.823000+00:00] theoveo (id=1519972521389330522)
+    i think in oauth it's working withtout it
+
+[2026-06-26T07:48:15.895000+00:00] teknium (id=1519972551051182150)
+    then consider yourself lucky 🙃
+
+[2026-06-26T07:48:23.102000+00:00] theoveo (id=1519972581279535144)
+    i think it change just check it...
+
+[2026-06-26T07:49:14.808000+00:00] theoveo (id=1519972798150213653)
+    they turn off the needed of extra usage the same day the turn it one, it's still oauth usage i guess
+
+[2026-06-26T08:04:03.861000+00:00] loongfay (id=1519976527108767744)
+    Hi, <@387972437901312000> , new PR for Yuanbao Platform, thanks: https://github.com/NousResearch/hermes-agent/pull/47303
+    [embed] feat(Yuanbao)  optimizes media resource processing speed: parallel ... https://github.com/NousResearch/hermes-agent/pull/47303
+
+[2026-06-26T08:35:12.856000+00:00] nuuuuuu0073 (id=1519984366242103438)
+    https://github.com/NousResearch/hermes-agent/pull/52969
+    [embed] fix(tools,cli,gateway): add encoding=utf-8 to subprocess text=True ... https://github.com/NousResearch/hermes-agent/pull/52969
+
+[2026-06-26T08:39:18.475000+00:00] kxee (id=1519985396442992671)
+    <@660746917378261002> opening the channel for supermemory PRs here
+
+[2026-06-26T08:50:52.827000+00:00] themaxtrix (id=1519988308766097528)
+    i have this built already for my own stack i will shoot you a dm
+    [reply to .blockops msg=1519939705594970194]
+
+[2026-06-26T08:51:10.231000+00:00] themaxtrix (id=1519988381763895368)
+    if teknium doesnt want it done natively no reason to fight that but i can help u
+

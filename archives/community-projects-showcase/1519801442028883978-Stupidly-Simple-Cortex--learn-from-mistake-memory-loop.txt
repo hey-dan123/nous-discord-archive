@@ -104,3 +104,12 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1519801442028883978/1519904768162529310/image.png?ex=6a3f411f&is=6a3def9f&hm=fdb677ff9783ecc3464199e19ff84dc56ec9259537be8efa3c1fc6556de66458&
     [attachment] image.png https://cdn.discordapp.com/attachments/1519801442028883978/1519904768506466446/image.png?ex=6a3f411f&is=6a3def9f&hm=4807080d7a3b9575b334eacfae6bce8929ed237a5fa51bafe662d1861ccd6ed2&
 
+[2026-06-26T05:52:28.718000+00:00] .thebakery303 (id=1519943412478906390)
+    update to my cortex system,
+    
+    - now does episodic memory loops,
+    - semantic memory search between tasks,
+    - bench marks models on each episodic phase for future auditing,
+    - can remember which model did better job at which task and auto assign them in kanban board
+    - auto call helper harnesess if needed such as claude code cli, aider cli, opencode cli, etc and mcp such as figma mcp, playwright mcp, doc/search mcp, github mcp
+

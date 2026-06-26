@@ -80,3 +80,7 @@
 [2026-06-25T08:45:51.482000+00:00] jimpickens3203 (id=1519624656967962685)
     Does this work with ollama on both the reviewer and the orchestrator? That's the only provider I have
 
+[2026-06-26T04:15:37.132000+00:00] .blockops (id=1519919036920631447)
+    You’d want to use different models for orchestrator and reviewer for best results to avoid model bias.
+    [reply to jimpickens3203 msg=1519624656967962685]
+

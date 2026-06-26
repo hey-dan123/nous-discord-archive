@@ -1,0 +1,27 @@
+# Thread 'The DeepThink Skill: Making Hermes Slow Down Before Expensive Decisions' in forum #plugins-skills-and-skins
+# thread_id=1519931768612847647 forum_id=1485392832154832906
+# Started 2026-06-26T09:26:08.322897+00:00
+
+[2026-06-26T05:06:12.604000+00:00] jonkomet (id=1519931768612847647)
+    I’m sharing my standalone DeepThink skill handoff as a PDF + Markdown file.
+    
+    DeepThink is a reusable agent skill, not a model or plugin. It gives Hermes a structured loop-based reasoning workflow for moments where a quick answer is too shallow.
+    
+    It runs through:
+    
+    - Surface: first-pass hypothesis
+    - Explore: alternatives, evidence, edge cases
+    - Challenge: assumptions, risks, failure modes
+    - Synthesize: refined answer and convergence check
+    
+    Use it for architecture decisions, security analysis, strategy, tradeoffs, comparing approaches, and “what am I missing?” moments.
+    
+    Install target for Hermes:
+    
+    `~/.hermes/skills/deepthink/SKILL.md`
+    
+    Files attached: clean PDF, Markdown handoff
+    [attachment] deepthink_skill_ad.png https://cdn.discordapp.com/attachments/1519931768612847647/1519931769195991050/deepthink_skill_ad.png?ex=6a3f5a44&is=6a3e08c4&hm=5daf17aff3a73310443832b90452f3e1fd445f154fac3571070754258c6df19b&
+    [attachment] deepthink-skill-handoff-clean.md https://cdn.discordapp.com/attachments/1519931768612847647/1519931769628131499/deepthink-skill-handoff-clean.md?ex=6a3f5a44&is=6a3e08c4&hm=3a6928077b00b56bad014cb075fb91f936a5df4cc4a5987b96c5ed08932da6ec&
+    [attachment] deepthink-skill-handoff-clean.pdf https://cdn.discordapp.com/attachments/1519931768612847647/1519931769984520286/deepthink-skill-handoff-clean.pdf?ex=6a3f5a44&is=6a3e08c4&hm=b37dcb44a93ed3e1d9c90f80c5112315f8d825ffd133ef87d9c55c94d160ebc2&
+

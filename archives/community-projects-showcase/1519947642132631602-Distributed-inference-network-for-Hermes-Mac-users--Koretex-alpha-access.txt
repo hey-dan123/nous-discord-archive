@@ -1,0 +1,19 @@
+# Thread 'Distributed inference network for Hermes Mac users (Koretex alpha access)' in forum #community-projects-showcase
+# thread_id=1519947642132631602 forum_id=1316137596535177246
+# Started 2026-06-26T09:21:23.481016+00:00
+
+[2026-06-26T06:09:17.146000+00:00] bigsmollbrain (id=1519947642132631602)
+    Hey Hermes crew, founder of Koretex here.
+    We're building a distributed inference network on Apple Silicon: pool idle Macs into a network that serves open models, so you own the compute instead of renting it from a cloud. It exposes an OpenAI-compatible endpoint, so you can point Hermes Agent straight at it and run your agent on a sovereign network of Macs.
+    It's a clean fit for how a lot of us already run Hermes: local-first, open models, private by default, no vendor in the loop. The difference is you're not capped by a single machine, the network gives your agent more models and more headroom to draw on.
+    We're opening early alpha, and fellow Hermes Mac users are exactly who we want in first. 
+    Everyone who joins gets 1000 free credits to run real workloads on the network, plus a direct line to the team and a real say in what gets built. 
+    
+    Mission is simple: sovereign silicon for all.
+    If you'd like in, drop a comment or DM me.
+    
+    Links:
+    koretex.ai
+    x.com/koretexai
+    [attachment] koretex-icon-500.png https://cdn.discordapp.com/attachments/1519947642132631602/1519947642350731346/koretex-icon-500.png?ex=6a3f690d&is=6a3e178d&hm=ebd4fd90bfa5a23973f8b875c9a3ecc31f530e7dd57e7f1e9ce4c53424baebab&
+

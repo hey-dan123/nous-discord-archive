@@ -1980,3 +1980,17 @@
     Good question. Yeah, compression can break provider prompt cache when the prefix changes. But it should still reduce cost overall, because after compaction you’re sending far fewer tokens, and the new compressed prefix can be cached again. If compression caused constant cache misses every turn, that would be a tuning bug, not the intended behavior.
     [reply to marcincebula msg=1519609390846578708]
 
+[2026-06-26T06:23:24.833000+00:00] _voscko_ (id=1519951197589475462)
+    Yeah, fair question.
+    
+    hermes-lcm does not compact on every turn. Most turns just add the new messages at the end, so the provider cache can still work normally.
+    
+    It only compacts when the context gets large enough, and even then only if there is old enough history to summarize. Recent messages stay unchanged.
+    
+    So yes, the turn where compaction happens can cause a cache miss, because the beginning of the prompt changes. But after that, the new shorter prompt can be cached again.
+    
+    We also check for this in practice. LCM status shows cache read/write numbers when the provider reports them, and the benchmarks include a “repeated compaction” check, basically: after we compact once, are we already so close to the limit that we would need to compact again right away?
+    
+    In our large-context Codex benchmark, the tuned LCM settings have repeated-compaction risk at 0, versus 1 for the baseline/default settings. Retrieval still passes too, meaning the old summarized info can still be found when needed.
+    [reply to marcincebula msg=1519609390846578708]
+
