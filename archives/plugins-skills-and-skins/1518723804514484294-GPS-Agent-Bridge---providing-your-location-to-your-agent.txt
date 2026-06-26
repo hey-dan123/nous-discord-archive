@@ -30,3 +30,8 @@
     https://github.com/Madvulcan/GPS-AgentBridge-Android
     [embed] GitHub - Madvulcan/GPS-AgentBridge-Android: Distance-based GPS rela... https://github.com/Madvulcan/GPS-AgentBridge-Android
 
+[2026-06-26T19:31:17.948000+00:00] madvulcan (id=1520149475404808313)
+    Big battery-saving update to the Android app - deep sleep mode.  GPS is turned completely off when stationary, and the phone's accelerometer is is armed instead. This sensor costs less than 0.01% battery per hour and fires the instant the phone is physically moved (picked up, walked with, car door closes). GPS then snaps back to active 30s polling. Overnight, this means near-zero battery drain — the phone only checks GPS when you actually pick it up.
+    
+    The app will still send location updates to the agent/server at the max interval specified by the user (default every 10 minutes), but with these updates, that interval can be turned up higher, saving more battery life (less waking up and polling for GPS data and sending it if the phone hasn't moved).
+

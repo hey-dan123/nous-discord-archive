@@ -43,3 +43,33 @@
     https://x.com/axiom_labs_dev/status/2069195530547142747?s=20
     [embed]  https://twitter.com/axiom_labs_dev/status/2069195530547142747?s=20
 
+[2026-06-26T16:16:21.227000+00:00] colmeio_66868 (id=1520100415801135316)
+    hello, i am currently working on wake-word -> trannscript -> LLM process
+
+[2026-06-26T16:16:37.686000+00:00] colmeio_66868 (id=1520100484835184660)
+    noticed that your transcript phase is highly mature, but no wake-word
+
+[2026-06-26T16:17:09.280000+00:00] colmeio_66868 (id=1520100617350021181)
+    you can just suck up my wake-word pattern learnings from wasm-agent and add in front of the transcript so you can evolve your seamlessly communication
+
+[2026-06-26T16:17:31.664000+00:00] colmeio_66868 (id=1520100711235321876)
+    as i am adapting and absorving your transcript pipeline
+
+[2026-06-26T16:17:46.052000+00:00] colmeio_66868 (id=1520100771583099000)
+    i am going omni directional with webassembly + webgpu
+
+[2026-06-26T16:18:18.887000+00:00] colmeio_66868 (id=1520100909303201802)
+    but wake-word requires native shell so I had to use kotlin as well for the end-points that i want to quickly talk and play
+
+[2026-06-26T16:19:20.270000+00:00] colmeio_66868 (id=1520101166761902211)
+    the roalmap is to build a super computer by orchestration each end-point (device) as node and having a agentic-orchestrator to spaw nodes as containers in the back-end
+    we can talk if our ideias overlap somehow
+
+[2026-06-26T16:19:44.473000+00:00] colmeio_66868 (id=1520101268276646081)
+    https://github.com/Magaav/hermes-orchestrator
+    [embed] GitHub - Magaav/hermes-orchestrator: Hermes Agent Orchestrator https://github.com/Magaav/hermes-orchestrator
+
+[2026-06-26T16:20:02.631000+00:00] colmeio_66868 (id=1520101344437076150)
+    https://github.com/Magaav/hackathon-hermes-symbiosis
+    [embed] GitHub - Magaav/hackathon-hermes-symbiosis https://github.com/Magaav/hackathon-hermes-symbiosis
+

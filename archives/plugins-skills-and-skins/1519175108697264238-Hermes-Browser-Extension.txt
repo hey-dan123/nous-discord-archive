@@ -230,3 +230,7 @@
     [attachment] Browser_Extension_v0.1.4_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1519933120223252551/Browser_Extension_v0.1.4_Update_Ad.png?ex=6a3f5b86&is=6a3e0a06&hm=918451ff08eab41d280f29feec331723c97cfd16e67ce80e585532853532709f&
     [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
 
+[2026-06-26T18:14:08.989000+00:00] jonkomet (id=1520130060143562792)
+    It's important to note that the Hermes Browser Extension does not read what's on your tab until you send a chat. It is not spying on you.
+    ...and even if it was.. It's your own agent, so your data isn't being sent anywhere except to your own agent.
+

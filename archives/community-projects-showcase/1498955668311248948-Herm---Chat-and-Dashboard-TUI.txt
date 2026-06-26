@@ -1520,3 +1520,59 @@
     how?? looks really cool tbh
     [reply to valiendovrga msg=1518894894947631114]
 
+[2026-06-26T14:50:02.649000+00:00] selwind (id=1520078695270711517)
+    might be a dumb question, but how do you copy from the tui ? i'm having trouble lol
+    also i can mouse scroll up and down, but i cant click on the thing to go up or down, is that normal ?
+
+[2026-06-26T15:49:44.858000+00:00] tonyporj (id=1520093720144248974)
+    Hi,  sorry to tag, but i really want to have something like this .. is this something custom? or a plugin? --- i already know about herm, but to have the dashboard and those buttons above.. Can you teach me please
+    [reply to valiendovrga msg=1518894894947631114]
+
+[2026-06-26T17:40:49.994000+00:00] liftaris (id=1520121675750969455)
+    When you select text then release, it copies to your clipboard automatically.
+    
+    For the scroll, I'm able to click and drag the scroll thumb, in the chat at least. Where were you seeing the click/drag-to-scroll not working? Might also depend on which terminal you use
+    [reply to selwind msg=1520078695270711517]
+
+[2026-06-26T17:43:18.048000+00:00] selwind (id=1520122296734449765)
+    the little white thing for scrolling ! also i'm using vscode terminal, maybe that's the issue and i should be using something else ? for copying im not even able to select text lol, so yea might be vs code terminal
+    [attachment] image.png https://cdn.discordapp.com/attachments/1498955668311248948/1520122296247914546/image.png?ex=6a400bb5&is=6a3eba35&hm=2a54afc691bc4229536e8ec0e992cfa4300a2852f96b132a49dc7892f4000175&
+    [reply to liftaris msg=1520121675750969455]
+
+[2026-06-26T17:43:24.510000+00:00] selwind (id=1520122323838046208)
+    thank you btw 🙂
+
+[2026-06-26T17:45:46.509000+00:00] liftaris (id=1520122919425015991)
+    You can't click and drag on text at all? You should be able to do that even in vscode. Btw text won't stay highlighted, the highlight will go away once you release
+
+[2026-06-26T17:46:18.175000+00:00] liftaris (id=1520123052241850509)
+    But yeah it does seem to have something to do with input handling, if that's not working and scroll isn't working, there's something getting in the way
+
+[2026-06-26T17:46:42.315000+00:00] selwind (id=1520123153492344942)
+    nop, no highlights even, i click and drag but nothing, even the cursor stays the same (it doesnt transform to the thing  || )
+
+[2026-06-26T17:47:12.371000+00:00] selwind (id=1520123279556350062)
+    i have no idea where to look first for this issue lol
+
+[2026-06-26T17:48:32.552000+00:00] liftaris (id=1520123615859839118)
+    What terminal are you using, in vscode? It's most likely your systems' default terminal
+
+[2026-06-26T17:48:47.953000+00:00] selwind (id=1520123680456442060)
+    yes system default terminal in vscode
+
+[2026-06-26T17:49:05.475000+00:00] liftaris (id=1520123753948778536)
+    What's your system though 😅
+    [reply to selwind msg=1520123279556350062]
+
+[2026-06-26T17:49:24.387000+00:00] selwind (id=1520123833271582910)
+    ahh lol, its wsl2 (windows main, hermes on wsl2)
+
+[2026-06-26T17:51:26.390000+00:00] tunacookie (id=1520124344989257748)
+    Im able to use it in vscode windows normally but my hermes is native windows and i use powershell
+
+[2026-06-26T17:52:38.648000+00:00] liftaris (id=1520124648061407273)
+    Ahh ok ok, things can get funky with WSL, but it's better than power shell. Honestly it could be a compatibility issue within herm with wsl, but I'm not sure what the fix is at first glance
+
+[2026-06-26T17:53:14.218000+00:00] selwind (id=1520124797252665486)
+    no worries, thanks anyway ❤️ and i like the interface btw ! <:nousgirl:1341983870752653352>
+

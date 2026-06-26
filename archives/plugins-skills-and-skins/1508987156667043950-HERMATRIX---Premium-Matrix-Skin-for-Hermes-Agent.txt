@@ -58,3 +58,7 @@
 [2026-06-26T14:23:47.650000+00:00] biscuit3851 (id=1520072089246236672)
     Would be cool to have more screenshot of your theme
 
+[2026-06-26T18:51:21.162000+00:00] lipebez (id=1520139422555836568)
+    Thanks for the feedback! I’ll add more screenshots of the theme soon.
+    [reply to biscuit3851 msg=1520072089246236672]
+

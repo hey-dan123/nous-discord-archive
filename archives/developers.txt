@@ -39005,3 +39005,182 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     IMHO, this isn't a developer problem.  This is a situation for lots of young developers with ADHD (not saying you have it).  Frankly, start building some successes that give you the dopamine hit for getting someone done, not from just the excitement of a new creation.
     [reply to navaneeth31. msg=1520058606144192633]
 
+[2026-06-26T14:24:45.269000+00:00] warfront1 (id=1520072330917843174)
+    This why doing proof of concept(s) are so important. Even when you tease out the complexity and test it upfront you can still be caught off gaurd. There are a few features and projects that I hit technical limitations on, that I never resolved. The idea is to find that wall quickly and determine how much time you are willing to spend to take down that wall or work around it.
+    [reply to navaneeth31. msg=1520058606144192633]
+
+[2026-06-26T14:44:51.062000+00:00] warfront1 (id=1520077388380115135)
+    Prior to AI, my side projects were scoped small as I knew to realistically deliver value I had to commit to a small project. A medium project may have been a 6 month commitment, and a larger project maybe a year +. I had to be really certain about the value prop to invest into larger projects back then. Now with AI, medium size projects are more obtainable. I've noticed that new developers and vibe coders seem to take on way too large of a project and end up not delivering or delivering a subpar end result.
+    [reply to navaneeth31. msg=1520058606144192633]
+
+[2026-06-26T15:06:26.308000+00:00] jw_mushroom_man (id=1520082821035851988)
+    #50191    Kept upstream portable-Git lookup; dropped the which("bash") that would resurrect the WSL-shadow bug (#47837)
+    #50183    Used upstream _popen_kwargs (no dup kwarg); guarded _CREATE_NO_WINDOW for POSIX — board noted this fixed a latent POSIX crash in the PR
+    #45692    Kept PR's config-approval helpers; adopted upstream _expand_tilde
+    #45629    Kept both per-turn verifier state inits
+    #45604    Kept both test-method sets
+    #44587    Kept both new functions; call site intact
+    #43566    Import unions
+    #50488    MSYS fix kept; UI files → upstream; board caught a broken api_server.py hybrid → fixed (restored upstream's #7483 concurrency cap) and re-verified CLEAR
+    #39154    Took upstream wholesale — feature was independently implemented upstream
+
+[2026-06-26T15:11:52.434000+00:00] na.chi (id=1520084188907307209)
+    has anyone managed to get approved for Stripe Issuing? I'm trying to issue a card for Hermes and Stripe wants a $10k minimum to open an account.
+    Any good card providers that are agent friendly?
+
+[2026-06-26T15:22:45.487000+00:00] gwap_ (id=1520086928010117362)
+    Hey guys, I’m new to contributing to open source. Can I just take up an issue, or is there someone I should reach out to first?
+
+[2026-06-26T15:30:43.244000+00:00] davidg1982 (id=1520088931868086504)
+    Follow the contribution.md, and template. Have a good dev pipeline, add in testing like pytest, ruff, and no-mistakes. That's what I do and that's how I contribute. I do PRs on my relevant environment, Other's can add to this, if they like.
+    Models like opus, glm 5.2, deepseek v4 pro give better results for coding, but I have gotten results of sonnet/deepseek v4 flash because of a good harness. 
+    From my knowledge base on my process
+    
+    Dev Process with Critic Component
+    
+    🔍 3 Review Cadences:
+    • After EACH individual task (catch issues early)
+    • After every 3-task batch (feedback → fix → continue)
+    • Before merge & when stuck (quality gates)
+    
+    👨‍⚖️ Critic Agent's Job:
+    • Review implementation vs plan
+    • Check code quality & architecture
+    • Test coverage validation
+    • Production readiness assessment
+    • Issue severity classification
+    
+    ✅ Quality Checklist:
+    • Clean separation of concerns
+    • Proper error handling
+    • Edge cases covered
+    • Tests test real logic (not just mocks)
+    • Performance/security checks
+    • Requirements validation
+    • Documentation completeness
+    
+    🚫 Critical Rules:
+    • Be specific (file:line, not vague)
+    • Explain WHY issues matter
+    • Not everything is "Critical"
+    • Give clear verdicts
+    • Acknowledge strengths too
+    
+    ⚡ Key Benefits:
+    • Issues caught before they compound
+    • No moving forward until quality gates pass
+    • Systematic feedback loop
+    • Production-ready code every time
+    
+    This ensures code quality without killing momentum! 🎯
+
+[2026-06-26T15:33:05.903000+00:00] gwap_ (id=1520089530223300730)
+    The more the better I appreciate the advice
+
+[2026-06-26T15:35:11.302000+00:00] navaneeth31. (id=1520090056184827985)
+    Thanks man . this really matters
+    [reply to mburhop msg=1520066982529994833]
+
+[2026-06-26T15:38:08.043000+00:00] mburhop (id=1520090797490438245)
+    <@98277594243280896> had some good comments, especially about starting smaller.
+
+[2026-06-26T15:39:23.739000+00:00] navaneeth31. (id=1520091114982473928)
+    yeah this was acceptable thing sir . it was way to hard to do much big projects or new projects but now after ai i think its only matter if you know how to do things like doing in a traditional methord (except code part handled by ai) . i think it was too easy for doing project which take months get done in days .
+    [reply to warfront1 msg=1520077388380115135]
+
+[2026-06-26T15:52:24.625000+00:00] shivamselam (id=1520094390255747293)
+    Can hermes build a daemon for itself? And run on it?
+
+[2026-06-26T15:52:43.379000+00:00] davidg1982 (id=1520094468915724369)
+    Isn't it already one? I run by via systemd
+    [reply to shivamselam msg=1520094390255747293]
+
+[2026-06-26T15:53:49.043000+00:00] shivamselam (id=1520094744330506370)
+    I mean guve it a long term goal to run without me, not crons
+
+[2026-06-26T16:05:39.146000+00:00] mburhop (id=1520097722718486658)
+    can you just create a cron that wakes up every 1/2 hour, checks your loop is running, and starts it back up if it is not?  That is what I do but if there is a better solution, I'm all ears .
+
+[2026-06-26T16:07:38.836000+00:00] davidg1982 (id=1520098224734470184)
+    Might as well, loops on loops. Agent to check the agent, fix it, adapt, etc
+
+[2026-06-26T16:12:22.523000+00:00] mburhop (id=1520099414604120126)
+    agents all the way down.
+
+[2026-06-26T16:16:17.101000+00:00] davidg1982 (id=1520100398495563837)
+    I can use some insight with this one.  Turns out most of my "GLM only calls one tool at a time" problem wasn't the engine refusing to parallelize terminal — it was my own orchestration hint telling the model to work step-by-step, which on GLM-4.5 deterministically killed parallel emission (1/8 → 8/8 once reframed; 16.7% → 66.7% in prod). GLM emits parallel tool calls natively (8/8 raw). The engine PR (#53153) only covers the remaining slice: making a batch of opt-in read-only terminal commands actually execute concurrently instead of serially. https://github.com/NousResearch/hermes-agent/pull/53153
+    
+    Thoughts?
+    [embed] feat(agent): config allowlist to opt read-only terminal commands in... https://github.com/NousResearch/hermes-agent/pull/53153
+
+[2026-06-26T16:50:41.396000+00:00] samueltinnerholm (id=1520109056776339497)
+
+[2026-06-26T17:11:29.601000+00:00] icather_98107 (id=1520114292127563967)
+    Hey all — 3 standalone PRs to restore free web search options after the keyless Parallel removal (#46350). All independent, no merge order:
+    
+    1. **#53149** — 9 new provider plugins (serper, baidu, bocha, serpapi, jina, google-cse, sogou, 360). Zero deps, httpx, full register(ctx) hooks.
+       https://github.com/NousResearch/hermes-agent/pull/53149
+    2. **#53158** — fallback chain + `search_engine` param. Auto tries next provider on failure, model can pick engines, dynamic enum from registry.
+       https://github.com/NousResearch/hermes-agent/pull/53158
+    3. **#53160** — `hermes tools web reorder` to interactively re-prioritize the chain.
+       https://github.com/NousResearch/hermes-agent/pull/53160
+    
+    Two prior attempts (#41015, #35690) self-closed without review — salvaged their approach.
+    [embed] feat(web): add 9 search providers — serper, baidu, bocha, qiniu-b... https://github.com/NousResearch/hermes-agent/pull/53149
+    [embed] feat(web): multi-source fallback chain and search_engine parameter ... https://github.com/NousResearch/hermes-agent/pull/53158
+    [embed] feat(tools): hermes tools web reorder — interactive search provid... https://github.com/NousResearch/hermes-agent/pull/53160
+
+[2026-06-26T17:16:37.596000+00:00] hypertekton (id=1520115583952097383)
+    windows has an update bug, doesn't start after update. clicking retry gets it back up
+    ```Starting Hermes backend via Hermes at C:\Users\REDACTED\AppData\Local\hermes\hermes-agent (venv: C:\Users\REDACTED\AppData\Local\hermes\hermes-agent\venv)[hermes] [boot] Waiting for Hermes backend to launch[hermes] [boot] Desktop boot failed: Timed out waiting for Hermes backend port announcement (90000ms)[hermes] Error: Timed out waiting for Hermes backend port announcement (90000ms)[hermes]     at Timeout.<anonymous> (C:\Users\REDACTED\AppData\Local\hermes\hermes-agent\apps\desktop\release\win-unpacked\resources\app.asar\electron\main.cjs:1103:18)[hermes]     at listOnTimeout (node:internal/timers:605:17)[hermes]     at process.processTimers (node:internal/timers:541:7)```
+
+[2026-06-26T17:22:37.862000+00:00] teknium (id=1520117095017484319)
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613966643233382f6e55513930527478494375385f54616d78484578755f4534586c4b7742532e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1520117094740398251/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613966643233382f6e55513930527478494375385f54616d78484578755f4534586c4b7742532e706e67.png?ex=6a4006dd&is=6a3eb55d&hm=d90633acd5f0a674517230e73563d9d5e9391cbf4997583b15b5c77850fc0157&
+
+[2026-06-26T17:24:27.397000+00:00] devorun11 (id=1520117554440437770)
+    https://github.com/NousResearch/hermes-agent/pull/52700
+    https://github.com/NousResearch/hermes-agent/pull/52504
+    https://github.com/NousResearch/hermes-agent/pull/52482
+    https://github.com/NousResearch/hermes-agent/pull/51778
+    [embed] fix(tui-gateway): decode subprocess output as UTF-8 to stop cp950 c... https://github.com/NousResearch/hermes-agent/pull/52700
+    [embed] fix(cron): accept named months/weekdays in cron schedules by devoru... https://github.com/NousResearch/hermes-agent/pull/52504
+    [embed] fix(dashboard): drop _HERMES_GATEWAY when spawning hermes actions b... https://github.com/NousResearch/hermes-agent/pull/52482
+    [embed] fix(feishu): honor FEISHU_ALLOWED_USERS=* wildcard for approval car... https://github.com/NousResearch/hermes-agent/pull/51778
+
+[2026-06-26T17:39:44.235000+00:00] nanxingncb612d (id=1520121399937732719)
+    https://github.com/NousResearch/hermes-agent/pull/53176 This makes local/host-backed V4A patch operations apply to the same resolved absolute path that patch_tool validates, locks, and reports.
+    
+    Before this change, patch_tool(mode="patch") collected and resolved V4A file headers for sensitive-path checks, stale-file checks, locking, and files_modified reporting, but then passed the original raw patch text to file_ops.patch_v4a(). If the backend LocalEnvironment.cwd differed from the session/task workspace override, the tool could report that it patched the workspace file while the parser actually read and wrote the same relative path under the backend cwd.
+    [embed] fix(file-tools): resolve local V4A patch paths before apply by neco... https://github.com/NousResearch/hermes-agent/pull/53176
+
+[2026-06-26T17:40:53.897000+00:00] nanxingncb612d (id=1520121692121464994)
+    https://github.com/NousResearch/hermes-agent/pull/48473 Rebased this PR onto current origin/main and resolved the route-resume conflict with the newer stranded-session retry logic.
+    [embed] fix(desktop): preserve profile for session windows by necoweb3 · P... https://github.com/NousResearch/hermes-agent/pull/48473
+
+[2026-06-26T17:41:49.042000+00:00] nanxingncb612d (id=1520121923416096838)
+    https://github.com/NousResearch/hermes-agent/pull/42459 , https://github.com/NousResearch/hermes-agent/pull/42460 Rebased this PRs onto current origin/main and reran the focused Runs API coverage.
+    [embed] Scope Runs API by session key by necoweb3 · Pull Request #42459 ·... https://github.com/NousResearch/hermes-agent/pull/42459
+    [embed] Scope API sessions by session key by necoweb3 · Pull Request #4246... https://github.com/NousResearch/hermes-agent/pull/42460
+
+[2026-06-26T17:43:05.429000+00:00] nanxingncb612d (id=1520122243806658680)
+    https://github.com/NousResearch/hermes-agent/pull/41209 Rebased this PR onto current origin/main and reran the focused Responses API / ResponseStore coverage.
+    [embed] Scope stored Responses records by session key by necoweb3 · Pull R... https://github.com/NousResearch/hermes-agent/pull/41209
+
+[2026-06-26T17:57:08.660000+00:00] avykhova (id=1520125780573688021)
+    https://github.com/NousResearch/hermes-agent/pull/53057 this PR restores the ability to start a chat in any folder without first registering it as a project.  Right now the only path to a folder-rooted session was creating a named project; global sessions started detached with "No project open" right panel. This restores folder picking and last-used-folder inheritance for global sessions for desktop app. Doesn't affect gateways.
+    [embed] fix(desktop): restore right sidebar folder picker + cwd fallback ch... https://github.com/NousResearch/hermes-agent/pull/53057
+
+[2026-06-26T18:38:03.146000+00:00] javdu10 (id=1520136075434000527)
+    Hello there! in case anyone wants to tinker with SIP and Hermes! It's possible to connect directly to a Kamailio proxy, receives distinct RTP stream per participants, so it makes STT easier! 
+    
+    Then the agents could create memory, tasks, anything, even take initiatives based on what is said on the call
+    
+    it's still really raw and just an experimentation, no livekit/vendor lock-in
+    [reply to javdu10 msg=1519271775916134460]
+
+[2026-06-26T19:10:41.129000+00:00] jw_mushroom_man (id=1520144287810064487)
+    Not a full PR yet but developing 
+    
+    https://github.com/lEWFkRAD/hermes-eats-world/pull/1
+    [attachment] IMG_1539.png https://cdn.discordapp.com/attachments/1491258766648283238/1520144288183488612/IMG_1539.png?ex=6a402031&is=6a3eceb1&hm=b81ec970ccdad2d6e1284675cd4c47a2f6486a907ff13adb57922f36b23fb5da&
+

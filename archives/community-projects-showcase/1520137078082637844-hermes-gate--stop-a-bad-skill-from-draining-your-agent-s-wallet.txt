@@ -1,0 +1,13 @@
+# Thread 'hermes-gate: stop a bad skill from draining your agent's wallet' in forum #community-projects-showcase
+# thread_id=1520137078082637844 forum_id=1316137596535177246
+# Started 2026-06-26T19:43:57.033159+00:00
+
+[2026-06-26T18:42:02.196000+00:00] maxiproudpa_81853 (id=1520137078082637844)
+    I run Observer Protocol and I've had my agent Atlas on Hermes for a few months, the persistent memory is what keeps me here.
+    I kept Atlas research-only the whole time because I had no way to cap what an agent could spend if a skill went bad. So we built one: hermes-gate. Your agent calls it before any payment, it checks the spend against a mandate you signed (per-tx cap, rolling 24h cap, rail allowlist), and denies anything outside it. One command, installs via hermes mcp add, no core changes. Atlas runs it live, it's how I finally gave him a wallet yesterday!
+    Honest about the boundary: today it's a check a compliant agent calls, so it stops a malicious skill pushing an honest agent past your limits but it doesn't YET stop an agent that bypasses the gate entirely. Making it unbypassable (the pre_tool_call hook looks like the right path) is what's next, and I'd love to compare notes with anyone who's worked at that layer.
+    Repo: github.com/observer-protocol/hermes-gate
+    
+    Built it for this community — would value your eyes on it, especially where the threat model's wrong.
+    [attachment] Hermes.png https://cdn.discordapp.com/attachments/1520137078082637844/1520137365425885436/Hermes.png?ex=6a4019be&is=6a3ec83e&hm=f5fe89598dcbb165d01922e99a0ec3eb3bbffcbfa741956d41330d69bcf1eda6&
+

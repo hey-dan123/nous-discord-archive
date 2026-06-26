@@ -113,3 +113,14 @@
     - can remember which model did better job at which task and auto assign them in kanban board
     - auto call helper harnesess if needed such as claude code cli, aider cli, opencode cli, etc and mcp such as figma mcp, playwright mcp, doc/search mcp, github mcp
 
+[2026-06-26T16:12:11.787000+00:00] colmeio_66868 (id=1520099369574072421)
+    think every repo being agetic
+    so, you just need to figure it out the best pattern to improove token efficiency during evolution
+    (less mistakes, faster proven path, even faster theoretical path)
+    that is stupidly simple and required for every single repository in the future
+    just a simple contract
+    and that enforces the interceptation of some steps in the chain of reasoning
+
+[2026-06-26T16:13:07.939000+00:00] colmeio_66868 (id=1520099605092630700)
+    no need to huge harnesses bc it is token inneficient itself, just a context warm-up is enought to archieving this kind of high stakes behavior
+

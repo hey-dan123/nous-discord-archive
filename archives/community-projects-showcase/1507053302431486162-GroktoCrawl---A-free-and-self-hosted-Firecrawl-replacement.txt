@@ -619,3 +619,10 @@
     welp, I told my local model (newest qwen moe) to test all functions. Here are the results:
     [attachment] image.png https://cdn.discordapp.com/attachments/1507053302431486162/1519773812508332112/image.png?ex=6a3ec728&is=6a3d75a8&hm=3b553a3a515a6f0f624f23f6118b83b61f314c56934f96c5c073dbe6b5e91660&
 
+[2026-06-26T15:54:03.463000+00:00] magnus919 (id=1520094804812239021)
+    Can you ask your Hermes to investigate root cause of the problems you’re experiencing and to file individual issues against upstream?
+    [reply to hurricane041696 msg=1519773812798001152]
+
+[2026-06-26T18:34:35.132000+00:00] magnus919 (id=1520135202960183481)
+    [attachment] openai_gpt-image-2-medium_20260626_143345_60a65718.png https://cdn.discordapp.com/attachments/1507053302431486162/1520135202612183151/openai_gpt-image-2-medium_20260626_143345_60a65718.png?ex=6a4017bb&is=6a3ec63b&hm=27ca7f7774a67ce87ba4757f65769838b268951a1d2f2d486f9a9bff96996076&
+

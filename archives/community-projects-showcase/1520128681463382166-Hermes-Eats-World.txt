@@ -1,0 +1,14 @@
+# Thread 'Hermes Eats World' in forum #community-projects-showcase
+# thread_id=1520128681463382166 forum_id=1316137596535177246
+# Started 2026-06-26T19:43:57.422005+00:00
+
+[2026-06-26T18:08:40.286000+00:00] jw_mushroom_man (id=1520128681463382166)
+    Hermes Eats World — hand Hermes any running Windows application and it wraps around it, ingests it, and operates it under your direction. Instead of screenshot-and-click theater, it perceives the app as structure: walk the UIA tree, classify a tier (native API → accessibility → vision fallback), act through real control patterns, and verify against a pre/post snapshot diff. Runs as a Python WebSocket sidecar Hermes calls as a tool, with every action routed through Interceptor and logged to OathLedger. Phase 0 spike is proven — find_window, UWP frame drilling, thread-timeout UIA, DPI-correct capture. It was built first for a partner whose hands don’t cooperate the way they used to.
+    [attachment] IMG_1539.png https://cdn.discordapp.com/attachments/1520128681463382166/1520128681958182922/IMG_1539.png?ex=6a4011a8&is=6a3ec028&hm=d6f6e01be520502f57ffa094df071d4e02030d5876c36eb54fc50496fa1a154a&
+
+[2026-06-26T18:09:29.019000+00:00] jw_mushroom_man (id=1520128885864398878)
+    Drag in any app. Hermes eats it — perceives it as structure, not pixels, and operates it under your direction. Accessibility infrastructure that happens to be the coolest way to use software.
+
+[2026-06-26T19:09:24.564000+00:00] jw_mushroom_man (id=1520143966673047552)
+    https://github.com/lEWFkRAD/hermes-eats-world/pull/1
+

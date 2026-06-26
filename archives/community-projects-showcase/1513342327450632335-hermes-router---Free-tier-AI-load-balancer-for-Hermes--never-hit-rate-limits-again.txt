@@ -884,3 +884,9 @@
 [2026-06-26T11:58:01.147000+00:00] markopaasila (id=1520035403753586782)
     Please add support for opencode go 🙏
 
+[2026-06-26T15:20:43.956000+00:00] shaf_2665 (id=1520086418272031008)
+    Sure, if it's like codex subscription I can
+
+[2026-06-26T16:13:07.348000+00:00] markopaasila (id=1520099602613801013)
+    It also has a free tier
+
