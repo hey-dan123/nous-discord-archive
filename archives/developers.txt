@@ -38926,3 +38926,82 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-26T08:51:10.231000+00:00] themaxtrix (id=1519988381763895368)
     if teknium doesnt want it done natively no reason to fight that but i can help u
 
+[2026-06-26T10:05:42.692000+00:00] johann_39576 (id=1520007140624961629)
+    is there any tool calling dataset available for fine tuning models like gemma 4 26b?
+
+[2026-06-26T11:06:16.389000+00:00] xsourabhsharma (id=1520022381454954546)
+    req. some nits
+    [reply to loongfay msg=1519976527108767744]
+
+[2026-06-26T11:10:46.472000+00:00] xsourabhsharma (id=1520023514265161882)
+    Nits:
+    - `return_exceptions=True` may still be needed if `_download_and_cache` can fail outside `_resolve_one`’s try block.
+    - `_DEBOUNCE_WINDOW` changing from 1.5 to 2.5 is a behavior change, so a quick note would help.
+    - The concurrency default reason feels weak. Better to tie it to backend limits or test results.
+    - Add tests for `active = []` and boundary values `1` and `12`.
+    [reply to loongfay msg=1519976527108767744]
+
+[2026-06-26T13:15:20.317000+00:00] 2cosmonautes (id=1520054861843136635)
+    Hi all! 
+    I've got a client fully set up and ready (Linux/WSL2 + CUDA, Docker w/ NVIDIA toolkit working, Solana wallet funded on devnet). My GPU is an RTX 4070 laptop with 8 GB VRAM.
+    
+    My understanding is that the runs to date have been datacenter-scale (the shipped Consilience 40B / Hermes work), well beyond what 8 GB can handle. Question: of the models currently training, is there any live or upcoming run small enough to accept an 8 GB consumer card as a compute provider? Or is participation realistically datacenter-GPU only at this stage?
+    
+    If something does fit, I'd appreciate a pointer to the run ID + authorization process. Just trying to confirm before I wait on a slot. Thanks!
+
+[2026-06-26T13:30:13.028000+00:00] navaneeth31. (id=1520058606144192633)
+    Hey guys,
+    
+    I'm a 19M developer/builder, and I wanted to ask if anyone else has experienced something similar.
+    
+    I'm the kind of person who starts a lot of projects and gets really excited about them. I usually have plenty of ideas, resources, and motivation at the beginning. But when I hit a difficult problem, a bug that takes too long to solve, or something unexpected, I sometimes end up leaving the project unfinished.
+    
+    For example, recently I was working on a project that I genuinely believe has a lot of potential. I got stuck on a problem, spent hours trying to fix it, got frustrated, got a headache, and eventually stopped working on it. Now it's sitting there like a half-built building.
+    
+    The weird part is that when I try to come back to it later, I feel overwhelmed or even afraid of opening it again. My mind starts asking questions like:
+    
+    "Is this actually possible?"
+    
+    "What if I spend more time and still can't solve it?"
+    
+    "Am I overestimating myself?"
+    
+    "Are others thinking this should be easy while I'm struggling?"
+    
+    Because of this, I've been thinking that maybe I need a teammate—someone who's more of a finisher or an all-rounder. Someone who can help me think through problems, keep momentum going, and maybe guide me when I get stuck.
+    
+    I don't think my issue is a lack of ideas or resources. If anything, I have too many ideas. It feels more like I struggle with consistency, handling setbacks, and pushing through the difficult parts of a project.
+    
+    So I'm curious:
+    
+    Has anyone else experienced this?
+    
+    Is this a common thing among developers, founders, or builders?
+    
+    What did you do to overcome it?
+    
+    Did finding a teammate, co-founder, mentor, or accountability partner help?
+    
+    Or am I approaching this the wrong way?
+    
+    I'd really appreciate hearing from people who've gone through something similar.
+
+[2026-06-26T13:41:50.589000+00:00] jw_mushroom_man (id=1520061531927085056)
+    https://github.com/NousResearch/hermes-agent/pull/52685
+    
+    I told hermes to work on the windows build overnight
+    [embed] fix(windows): comprehensive Windows compatibility overhaul by lEWFk... https://github.com/NousResearch/hermes-agent/pull/52685
+
+[2026-06-26T13:44:54.177000+00:00] jw_mushroom_man (id=1520062301951229983)
+    i have to delete that mess lolo
+
+[2026-06-26T13:57:43.950000+00:00] jw_mushroom_man (id=1520065530613071903)
+    that being said, i am very impressed by the sheer amount of work it did
+
+[2026-06-26T13:58:06.333000+00:00] jw_mushroom_man (id=1520065624494182470)
+    i jsut wish it was*good* work
+
+[2026-06-26T14:03:30.114000+00:00] mburhop (id=1520066982529994833)
+    IMHO, this isn't a developer problem.  This is a situation for lots of young developers with ADHD (not saying you have it).  Frankly, start building some successes that give you the dopamine hit for getting someone done, not from just the excitement of a new creation.
+    [reply to navaneeth31. msg=1520058606144192633]
+

@@ -881,3 +881,6 @@
     Docker images refreshed (:latest, :cli). ⚡
     [embed] Deployment https://hermes-router.vercel.app/deployment/
 
+[2026-06-26T11:58:01.147000+00:00] markopaasila (id=1520035403753586782)
+    Please add support for opencode go 🙏
+

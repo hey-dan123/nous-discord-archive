@@ -84,3 +84,6 @@
     You’d want to use different models for orchestrator and reviewer for best results to avoid model bias.
     [reply to jimpickens3203 msg=1519624656967962685]
 
+[2026-06-26T12:20:48.751000+00:00] markopaasila (id=1520041139900776540)
+    This looks very good. I’ve been wondering how to get kanban tasks to a better start. By default it jumps too quickly to work. A proper refinement step seems like a low hanging fruit
+

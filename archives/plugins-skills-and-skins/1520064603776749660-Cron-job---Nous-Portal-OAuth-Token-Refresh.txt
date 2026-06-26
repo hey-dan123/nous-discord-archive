@@ -1,0 +1,10 @@
+# Thread 'Cron job - Nous Portal OAuth Token Refresh' in forum #plugins-skills-and-skins
+# thread_id=1520064603776749660 forum_id=1485392832154832906
+# Started 2026-06-26T14:25:03.096204+00:00
+
+[2026-06-26T13:54:02.975000+00:00] tomrevo.x (id=1520064603776749660)
+    Just a simple gist to add as a cron job to your Hermes.  Keeps your portal token refreshed so portal tools don't silently fail (undiscoverable)
+    
+    https://gist.github.com/tommulkins/102a767553db0fd23429a287a435776f
+    [embed] Proactive Nous Portal OAuth token refresh watchdog for Hermes Agent... https://gist.github.com/tommulkins/102a767553db0fd23429a287a435776f
+

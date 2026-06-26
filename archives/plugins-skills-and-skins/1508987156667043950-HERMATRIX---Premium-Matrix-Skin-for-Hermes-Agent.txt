@@ -55,3 +55,6 @@
     [attachment] hermes-matrix.png https://cdn.discordapp.com/attachments/1508987156667043950/1519920534647738528/hermes-matrix.png?ex=6a3f4fce&is=6a3dfe4e&hm=9d90af054684de10791247331229c84651979a593d8da3788b546022b86ddb1b&
     [embed] GitHub - lipebez/hermes-matrix-skin: Premium Matrix-inspired skin f... https://github.com/lipebez/hermes-matrix-skin
 
+[2026-06-26T14:23:47.650000+00:00] biscuit3851 (id=1520072089246236672)
+    Would be cool to have more screenshot of your theme
+
