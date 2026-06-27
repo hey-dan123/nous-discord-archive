@@ -4907,3 +4907,7 @@
 [2026-06-26T22:48:39.291000+00:00] jipy_tech (id=1520199141597118565)
     [attachment] image0.gif https://cdn.discordapp.com/attachments/1493017427724992612/1520199141299327046/image0.gif?ex=6a405347&is=6a3f01c7&hm=c23bf21f91715692aeaab66eb5babd3372085ebe73c2a0b3b0e238ff3c77b144&
 
+[2026-06-27T06:22:45.671000+00:00] josephcy (id=1520313421198004344)
+    just an idea not sure if this is even possible, but because phone isn't connected to tailscale 24/7 so it would be great if this is possible. 
+    **Auto switching the base url depending on the network?** similar to the home assistant app and the immich app, for example at home wifi it would switch to 192.168.x.x as the base url, and when it's not home wifi, it switch to maybe tailscale ip?
+

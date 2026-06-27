@@ -484,3 +484,9 @@
     Actually, coding architect and coding writer would be a good areas of focus for the review. Happy to contribute.
     [reply to datarevised msg=1516974785844740256]
 
+[2026-06-27T03:11:53.980000+00:00] magnus919 (id=1520265389324374106)
+    Chief of Staff. You'll want to give it additional skills/tools for your own particular productivity tools.
+    
+    https://github.com/magnus919/hermes-profiles/tree/main/profiles/chief-of-staff
+    [embed] hermes-profiles/profiles/chief-of-staff at main · magnus919/hermes... https://github.com/magnus919/hermes-profiles/tree/main/profiles/chief-of-staff
+

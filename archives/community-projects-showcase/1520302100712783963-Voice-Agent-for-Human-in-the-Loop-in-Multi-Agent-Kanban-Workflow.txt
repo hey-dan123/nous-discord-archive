@@ -1,0 +1,14 @@
+# Thread 'Voice Agent for Human-in-the-Loop in Multi-Agent Kanban Workflow' in forum #community-projects-showcase
+# thread_id=1520302100712783963 forum_id=1316137596535177246
+# Started 2026-06-27T08:33:24.745280+00:00
+
+[2026-06-27T05:37:46.657000+00:00] sic_warmersun (id=1520302100712783963)
+    Hi
+    
+    I've been experimenting with having a voice agent running that can facilitate the Human-in-the-Loop decisions, judgement calls with voice dialog.
+    Other use cases supported are learning/presentation, and AI cohost for video recording.
+    
+    MIT licensed, perhaps some will find it useful.
+    https://github.com/warmersun/voice-agent
+    [embed] GitHub - warmersun/voice-agent https://github.com/warmersun/voice-agent
+

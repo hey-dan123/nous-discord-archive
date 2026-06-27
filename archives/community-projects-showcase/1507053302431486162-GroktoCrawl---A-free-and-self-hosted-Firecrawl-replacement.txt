@@ -626,3 +626,32 @@
 [2026-06-26T18:34:35.132000+00:00] magnus919 (id=1520135202960183481)
     [attachment] openai_gpt-image-2-medium_20260626_143345_60a65718.png https://cdn.discordapp.com/attachments/1507053302431486162/1520135202612183151/openai_gpt-image-2-medium_20260626_143345_60a65718.png?ex=6a4017bb&is=6a3ec63b&hm=27ca7f7774a67ce87ba4757f65769838b268951a1d2f2d486f9a9bff96996076&
 
+[2026-06-27T02:57:39.147000+00:00] magnus919 (id=1520261803894898880)
+    ##    🤖 **GroktoCrawl v0.10.0** — "The One Where the Robot Gets Organized"
+    
+        Batch jobs, monitors, and a CI that doesn't melt.
+    
+        🚀 What's New
+    
+        📊 **Batch scrape grew up** — status polling with pagination, cancellation, and a dedicated errors endpoint. Watch a batch unfold, page through results, see which URLs failed and why.
+        📣 **Monitors, but you can poke them** — `POST /v2/monitor/:id/run` to trigger a check on demand, `GET /v2/monitor/:id/checks` to browse history, and `GET /v2/monitor/:id/checks/:check_id` for individual results.
+        📦 **Large file parsing, two ways** — `PUT /v2/parse/upload/:id` to stage a file (3hr TTL), then reference it via upload_id in your parse form. Atomic Lua-scripted get-and-delete keeps concurrent parse jobs from fighting over the same upload. Direct multipart still works for small files.
+        👓 **Concurrency, visible** — `GET /v2/concurrency-check` tells you active jobs vs the configured max. Tune before you hammer.
+        🧪 **CI stopped lying to us** — Docker-native health checks, a persistent HF model cache that saves 6.5GB download per build (no more re-downloading `bge-m3` every time), timeouts that actually fit the workload, and a portal test suite that tests the portal (not the agent stack).
+    
+        🔗 Full release: https://github.com/groktopus/groktocrawl/releases/tag/v0.10.0
+    
+        Big thanks to @Jackal991, @wysie, and <@659176257338081306> for the contributions that made this one happen.
+    [attachment] openai_gpt-image-2-medium_20260626_225335_b5d002ad.png https://cdn.discordapp.com/attachments/1507053302431486162/1520261804528500802/openai_gpt-image-2-medium_20260626_225335_b5d002ad.png?ex=6a408da3&is=6a3f3c23&hm=580cbb637f1869271c17063a7a2cc441bc688ee792c513289f4b46f3b3fbd75e&
+    [embed] Release v0.10.0 — The One Where the Robot Gets Organized · grokt... https://github.com/groktopus/groktocrawl/releases/tag/v0.10.0
+
+[2026-06-27T05:22:16.557000+00:00] hurricane041696 (id=1520298199590506537)
+    yes, no prob
+    [reply to magnus919 msg=1520094804812239021]
+
+[2026-06-27T05:35:51.103000+00:00] hurricane041696 (id=1520301616044048434)
+    I think of running after updating : /goal Do thorough check of groktocrawl functions (test on github pages or similar complexity rather than simple example.com). In case of issues investigate issues on github and try to fix them. Then test quality of native hermes tools vs relevant groktocrawl functions.  THen write a concise report for me about attempt for fixes and root causes for me. Then write a plan of reporting the issues to upstream in a concise way. Double check the plan if issues are not already posted or if they are relevant for posting on github. Such refined plan present for the user for approval.
+
+[2026-06-27T06:11:10.208000+00:00] hurricane041696 (id=1520310504214626354)
+    Done that and seems no significant issues at all, but tested on remote VPS.  Report from local environment where I had the issues will come not before Tuesday.
+

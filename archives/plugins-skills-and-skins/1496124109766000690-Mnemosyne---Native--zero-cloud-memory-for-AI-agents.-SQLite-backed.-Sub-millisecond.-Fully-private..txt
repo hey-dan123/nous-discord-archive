@@ -2269,3 +2269,13 @@
     Are you sure you run remember X and you see the plugin running?
     [reply to buke5122 msg=1519334117425025225]
 
+[2026-06-27T08:38:33.841000+00:00] buke5122 (id=1520347597099892797)
+    The plugin was there all the time
+    [reply to 0xlfg msg=1520252575172264036]
+
+[2026-06-27T08:39:05.459000+00:00] buke5122 (id=1520347729715269683)
+    I'm not proactively saying "My client this and that has been doing that and this"
+
+[2026-06-27T08:39:11.282000+00:00] buke5122 (id=1520347754138701935)
+    What's memory even there for?
+

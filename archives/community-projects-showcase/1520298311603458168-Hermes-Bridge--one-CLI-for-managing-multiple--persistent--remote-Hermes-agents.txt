@@ -1,0 +1,25 @@
+# Thread 'Hermes-Bridge: one CLI for managing multiple, persistent, remote Hermes agents' in forum #community-projects-showcase
+# thread_id=1520298311603458168 forum_id=1316137596535177246
+# Started 2026-06-27T08:33:25.175254+00:00
+
+[2026-06-27T05:22:43.263000+00:00] carpdiem (id=1520298311603458168)
+    I live in my terminal, and I love the TUI.
+    
+    I also have a bunch of agents running on remote machines with intentionally separate scopes & auth (eg, one personal agent, another to manage a side-business of mine, another for my wife, etc...).
+    
+    I _hate_ sessions getting interrupted by a lost ssh connection because my macbook decided to turn on screen lock.
+    
+    So, I built an as-simple-as-possible CLI shim to fix all that:
+    https://github.com/carpdiem/hermes-bridge
+    
+    It's a small CLI that makes remote `tmux` the home base for each Hermes agent; your laptop is just the window into that session.
+    
+    When you type config-registered agent names like `personal`, `business`, or `family`, Hermes Bridge SSHes to the right machine/account and starts or reattaches to the right remote `tmux` session.
+    
+    So each agent can keep its own machine, auth, inboxes, and config, but a sleeping laptop or dropped SSH connection doesn't kill the work—you just reconnect and pick up where you left off. And all the while, you've only got a single, unified interface to deal with.
+    [attachment] hermes_bridge_explainer.png https://cdn.discordapp.com/attachments/1520298311603458168/1520298312312426686/hermes_bridge_explainer.png?ex=6a40afa3&is=6a3f5e23&hm=e2d880ce47115828a691d5ae945fa9542dacc5eea82cac6680cffbd35314ab94&
+    [embed] GitHub - carpdiem/hermes-bridge https://github.com/carpdiem/hermes-bridge
+
+[2026-06-27T06:35:45.056000+00:00] shaf_2665 (id=1520316690175627304)
+    That's really a good idea
+

@@ -39290,3 +39290,91 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     hermes has auxiliary models for various tools
     [reply to scattered42 msg=1520234649102581921]
 
+[2026-06-27T03:10:15.760000+00:00] nuuuuuu0073 (id=1520264977359835136)
+    https://github.com/NousResearch/hermes-agent/pull/53376
+    [embed] fix(supermemory): read API key from .env via get_env_value() (#3499... https://github.com/NousResearch/hermes-agent/pull/53376
+
+[2026-06-27T03:41:21.221000+00:00] nuuuuuu0073 (id=1520272801670627408)
+    https://github.com/NousResearch/hermes-agent/pull/53385
+    [embed] fix(supermemory): resolve default container sentinels to None (#272... https://github.com/NousResearch/hermes-agent/pull/53385
+
+[2026-06-27T04:09:04.318000+00:00] mustafa_ramax (id=1520279777204768778)
+    Clauver — AI Phone Calls for Hermes Agent (free, open source)
+      
+    I lost my voice for 2 months — thought it was cancer. Couldn't even book a doctor appointment by phone. Every AI voice tool I found was expensive. So I built my own to replace my voice, free and open source, and now it works with Hermes.
+      
+    **What it does:** Your Hermes makes real phone calls. Full two-way conversation — speaks, listens, responds. Uses your existing LLM/TTS/STT. You only pay phone minutes (~$0.013/min).
+      
+    Free TTS (Edge) + Free STT (local Whisper) — zero extra AI cost. Same providers you already have in your Hermes config.
+      
+    Just tell Hermes:
+      • "Call my doctor and book tomorrow at 2pm"
+      • "Call me at 7am with my top 3 priorities"
+      • "Call me when you're done with a brief report"
+      • "Call this lead and ask if Thursday works for a meeting"
+      
+    Setup: skill install → run setup script → run provision script (auto-connects Twilio + LiveKit) → done in 5 min.
+      
+    I'm recovering now (no cancer thankfully) 😊 and I want this to help others — anyone who can't speak, has phone anxiety, or wants Hermes to handle phone tasks for them.
+      
+     **Contributors welcome:** inbound call handler, structured results to chat, call recordings.
+      
+      ⭐ https://github.com/mustafa-ramax/clauver-voice-hermes
+      
+      Your support is really appreciated, thanks! 🙏
+    [attachment] 0627.mov https://cdn.discordapp.com/attachments/1491258766648283238/1520279778580631663/0627.mov?ex=6a409e60&is=6a3f4ce0&hm=6324d44ee32bc6be0770ac1821897c88ec6404123e2ed5aae3f5e8d082d37171&
+    [embed] GitHub - mustafa-ramax/clauver-voice-hermes: Clauver Telephony For ... https://github.com/mustafa-ramax/clauver-voice-hermes
+
+[2026-06-27T04:32:07.012000+00:00] windlovegrass (id=1520285576643874936)
+    Hi! I can see fal tools like fal.queue.bytedance.seedance-2.0.text-to-video listed in the billing page. Is there a REST API endpoint to call these fal tools programmatically using my API key? The API docs only show /chat/completions and /completions. Thanks!
+
+[2026-06-27T05:25:47.175000+00:00] hypertekton (id=1520299082986291330)
+    whisper is so slow, there's better options
+    [reply to mustafa_ramax msg=1520279777204768778]
+
+[2026-06-27T05:48:32.934000+00:00] hypertekton (id=1520304811394732083)
+    can someone from the Hermes team <@387972437901312000> address the issue of there being TONS of terminal windows flashing in windows, because all the merged PRs arent using CREATE_NO_WINDOW on subprocess calls... by adding an automated check on all submitted code that calls subprocess? Windows hermes is almost unusable last few days. There's a bajillion bug reports about it, plus associated PRs, and will continue to come up if it's not heavily guarded against. There should be a thorough codebase sweep to kill all instances of this bug, and then a process implemented to keep the same bug recurring.
+    
+    See (just from the last 24 hours, but the windows terminal popups have been an issue for weeks):
+    https://github.com/NousResearch/hermes-agent/issues/53424
+    https://github.com/NousResearch/hermes-agent/issues/53370
+    https://github.com/NousResearch/hermes-agent/issues/53342
+    https://github.com/NousResearch/hermes-agent/issues/53282
+    https://github.com/NousResearch/hermes-agent/issues/53273
+    https://github.com/NousResearch/hermes-agent/issues/53065
+    https://github.com/NousResearch/hermes-agent/issues/53016
+    [embed] [Bug] Windows: rapid conhost.exe window flashing due to missing CRE... https://github.com/NousResearch/hermes-agent/issues/53424
+    [embed] fix(windows): suppress console window flash when spawning gh auth t... https://github.com/NousResearch/hermes-agent/issues/53370
+    [embed] [Bug]: The Hermes desktop client on Windows keeps flickering black ... https://github.com/NousResearch/hermes-agent/issues/53342
+    [embed] Windows: Console window flashes on every subprocess call (missing C... https://github.com/NousResearch/hermes-agent/issues/53282
+    [embed] Windows Desktop GUI: CREATE_NO_WINDOW insufficient — cmd windows ... https://github.com/NousResearch/hermes-agent/issues/53273
+
+[2026-06-27T06:38:10.404000+00:00] nanxingncb612d (id=1520317299809325066)
+    https://github.com/NousResearch/hermes-agent/pull/53442 This binds the ACP session's session_id into Hermes' session ContextVars before running the agent, not just the session_key.
+    [embed] fix(acp): isolate subprocess session_id across concurrent ACP promp... https://github.com/NousResearch/hermes-agent/pull/53442
+
+[2026-06-27T07:12:01.552000+00:00] nanxingncb612d (id=1520325819061243944)
+    https://github.com/NousResearch/hermes-agent/pull/53454 Fixes two runtime/tooling issues:
+    
+    >Pass session_id into set_session_vars() in the ACP adapter so concurrent prompts do not leak HERMES_SESSION_ID into child subprocess environments.
+    >Rewrite V4A patch file headers to the resolved host workspace path before applying patches through local file operations.
+    [embed] fix(acp,file): isolate session env vars and resolve V4A patch paths... https://github.com/NousResearch/hermes-agent/pull/53454
+
+[2026-06-27T07:28:42.221000+00:00] nuuuuuu0073 (id=1520330016171233320)
+    https://github.com/NousResearch/hermes-agent/pull/53464
+    [embed] fix: use lazy %s formatting in logger calls instead of f-strings by... https://github.com/NousResearch/hermes-agent/pull/53464
+
+[2026-06-27T08:25:03.466000+00:00] dias4761 (id=1520344198140657684)
+    https://github.com/NousResearch/hermes-agent/pull/53492  fix(skills): scan agent-created skill writes by default (fail-closed) Closes #53491
+    [embed] fix(skills): scan agent-created skill writes by default (fail-close... https://github.com/NousResearch/hermes-agent/pull/53492
+
+[2026-06-27T08:28:06.015000+00:00] memosr.eth (id=1520344963806793828)
+    Pushed a fix for #29249 (plugin tool_override bypass). 
+    The opt-in gate only covered the ctx.register_tool wrapper - a plugin could skip it by importing tools.registry and calling register(..., override=True) directly. 
+    
+    Moved enforcement to the registry sink so both paths hit the same gate during plugin load. 
+    Built-in/MCP registrations are unaffected. Added a regression test for the direct-import bypass. CI green, 74/74 tests pass - ready for re-review.
+    
+    https://github.com/NousResearch/hermes-agent/pull/29249
+    [embed] fix(security): require operator opt-in for plugin tool_override to ... https://github.com/NousResearch/hermes-agent/pull/29249
+

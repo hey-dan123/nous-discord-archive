@@ -1,0 +1,21 @@
+# Thread 'CLI for image generation and editing with advanced features (inpaint, outpaint, and more soon..)' in forum #community-projects-showcase
+# thread_id=1520284223250890903 forum_id=1316137596535177246
+# Started 2026-06-27T08:33:26.030343+00:00
+
+[2026-06-27T04:26:44.338000+00:00] ncxton (id=1520284223250890903)
+    i'm working on Potaco, a CLI for image generation and editing across multiple AI providers (OpenAI, fal, Vercel AI Gateway, or any OpenAI-compatible endpoint)
+    
+    why use Potaco over the built-in tool?
+    - **image editing** — inpainting with masks (white=edit, black=keep), rectangular/circular masks, and outpainting to extend a canvas. The built-in tool only does generation.
+    - **per-request control** — `--size`, `--quality`, `--n`, `--seed`, `--guidance-scale`, `--negative-prompt` for fine-tuned results.
+    - **multi-provider** — switch between OpenAI, fal, Vercel, or a custom OpenAI-compatible endpoint with `potaco use <provider>`. Pick whatever fits your budget or quality needs.
+    - **model discovery** — `potaco models` lists and picks available models from the active provider so you're not locked to one.
+    - **reproducibility** — `--seed` for consistent results and `--dry-run` to inspect the request payload without spending credits.
+    - **agent-friendly** — `--json` output, `--stdout` for piping raw bytes, and `--non-interactive` for agents.
+    - **encrypted credentials** stored locally — no plain-text API keys on disk.
+    
+    still in beta, so there are rough edges. feedback and contributions welcome!
+    
+    check it out: https://github.com/ncxton/potaco
+    [embed] GitHub - ncxton/potaco: Multi-provider CLI for image generation and... https://github.com/ncxton/potaco
+

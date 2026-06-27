@@ -1,0 +1,24 @@
+# Thread 'Liminal, the GAME ENGINE for agents' in forum #community-projects-showcase
+# thread_id=1520294125260509274 forum_id=1316137596535177246
+# Started 2026-06-27T08:33:25.607045+00:00
+
+[2026-06-27T05:06:05.161000+00:00] gloggers (id=1520294125260509274)
+    I've always loved game development, and with the innovation of agentic development, what better idea than to give Claude (or any other MCP compatible harness) its own game development environment!
+    
+    My friend and I created a game engine for agents, "Liminal". Completely free and open-source, Liminal has MCP integration, Skills for development, one-click static platform builds, a Unity-like scene editor with Cameras, an element inspector, Lua scripting, and more.
+    
+    This idea spun off when I was attempting to create a PSX-style retro 3D game using Claude's Fable 5 (RIP).
+    
+    It's usable agentically AND traditionally via the Liminal editor app. It comes with themes, customizable window layouts (ImGUI), and built-in playtesting.
+    
+    The built-in Lua library also has local LLM inference capabilities via llama.cpp, this can be used to integrate LLM technology into your game during gameplay! (Need a capable computer or use a crappy model!)
+    
+    Give it a try, let us know what you think, and maybe even throw in a PR with new features. This is a big passion project for me, and I want to make it the best it can be.
+    
+    GitHub: https://github.com/Wilcus-Industries/liminal
+    Website: https://liminal.wilcus.com
+    [attachment] liminal-editor.gif https://cdn.discordapp.com/attachments/1520294125260509274/1520294126250102945/liminal-editor.gif?ex=6a40abbd&is=6a3f5a3d&hm=0344e158b739766d2d18c941780f9f5e8ef1c22dbeb3e91b2c24ad66fe856336&
+    [attachment] liminal_app.png https://cdn.discordapp.com/attachments/1520294125260509274/1520294127474966680/liminal_app.png?ex=6a40abbd&is=6a3f5a3d&hm=c91e016ba32192fffe8199a9076d16c55a368cc34b030b85e1a669ed160ce3c5&
+    [embed] GitHub - Wilcus-Industries/liminal: The game engine for agents. https://github.com/Wilcus-Industries/liminal
+    [embed] LIMINAL - The game engine for agents https://liminal.wilcus.com/
+
