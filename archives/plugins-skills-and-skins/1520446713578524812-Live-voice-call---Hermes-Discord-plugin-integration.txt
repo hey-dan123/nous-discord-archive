@@ -1,0 +1,81 @@
+# Thread 'Live voice call - Hermes Discord plugin integration 📲' in forum #plugins-skills-and-skins
+# thread_id=1520446713578524812 forum_id=1485392832154832906
+# Started 2026-06-27T19:22:33.232008+00:00
+
+[2026-06-27T15:12:25.051000+00:00] capslock.b (id=1520446713578524812)
+    **me and <@1377972181312606279>  fixed <:catlick:1151260427645366375> the /voice command.... tts/stt is cringe <:catlick:1151260427645366375> **
+    
+    We are building toward a Discord-native agent workspace where voice calls can become:
+    
+    > 🎙️ **Live agent sessions**  
+    > Full-duplex Discord voice into Gemini Live.
+    
+    > 🧠 **Structured planning**  
+    > SORA bridge elements turn messy calls into goals, subgoals, contradictions, and acceptance criteria.
+    
+    > 🛠️ **Real tool execution**  
+    > GitHub, web lookup, Home Assistant, Spotify, email brief, local tools, sidecar API, and multi-CLI delegation.
+    
+    > 🖥️ **Screen-aware debugging**  
+    > Push frames through the local sidecar so “look at this and help me” becomes possible.
+    
+    > 🔐 **Safer transcripts**  
+    > JSONL logs, tool-call trails, redaction paths, Honcho context, and AFK handoff.
+    
+    > 🐧 **Self-hosted Linux stack**  
+    > One Hermes gateway, one venv, one plugin install, one `systemctl --user restart hermes-gateway`.
+    
+    Not a chatbot.  
+    Not a black box.  
+    Not a polished demo with nothing underneath.
+    
+    A real, rough, inspectable system that needs builders.
+    [attachment] file_00000000271c7243878e071e14c7383c.png https://cdn.discordapp.com/attachments/1520446713578524812/1520446714345947146/file_00000000271c7243878e071e14c7383c.png?ex=6a4139d9&is=6a3fe859&hm=5f5f095eb6a8c0871ceab329cb37ca89a9c3c1ba90801f72a7ca246e0606bec1&
+
+[2026-06-27T15:13:29.576000+00:00] capslock.b (id=1520446984216117388)
+    ## ⚙️ Provider-flexible, not provider-trapped
+    
+    The current live voice path uses **Gemini Live**, but Hermes is the gateway layer.
+    
+    The goal is bigger than one model or one vendor:
+    
+    > **Voice → provider routing → tools → action → transcript → memory → follow-up**
+    
+    Current and emerging paths include:
+    
+    **Gemini Live** for full-duplex voice.  
+    **opencode / codex / gemini / numasec / hermes-api** for CLI and agent delegation.  
+    **GitHub / Home Assistant / Spotify / web tools** for real actions.  
+    **Vapi sibling path** as an alternate voice/telephony direction, not the same thing as the Gemini Live bridge.
+    
+    ## 🔥 High-impact areas
+    
+    🔌 **Voice hackers** — Discord voice `4006`, reconnects, latency, `discord.py` internals.  
+    🧩 **Tool builders** — Notion, Linear, Obsidian, Docker, email, calendar, file diff, repo actions.  
+    🛠️ **CLI integrators** — opencode / codex / gemini routing, health checks, timeouts, fallback logic.  
+    🔐 **Security reviewers** — `/frame` auth, sidecar hardening, transcript redaction, token/PII safety.  
+    🐛 **Bug hunters** — long-call testing, weird edge cases, logs, reproducible issues.  
+    📚 **Docs people** — make setup, diagrams, and contribution paths painfully clear.
+    
+    If you want to contribute to agent infrastructure while it is still being formed, this is the window.
+
+[2026-06-27T15:14:43.371000+00:00] capslock.b (id=1520447293734653952)
+    **Try it. Fork it. Break it. Patch it.**
+    
+    -# MIT licensed. Built by <@1377972181312606279> and <@1474100257762578597> 😉
+
+[2026-06-27T15:19:55.800000+00:00] capslock.b (id=1520448604156854353)
+    It started as:
+    
+    > **“Can Hermes join Discord voice and actually work with us live?”**
+    
+    Now it can.
+    
+    This is the interesting part: it is **early**, **working**, **open source**, and still shapeable.
+    
+    ***Git in my profile***
+
+[2026-06-27T15:23:20.840000+00:00] capslock.b (id=1520449464157077594)
+    https://github.com/Capslockb/hermes-live-discord-agent-plugin
+    [embed] GitHub - Capslockb/hermes-live-discord-agent-plugin: Hermes Live Di... https://github.com/Capslockb/hermes-live-discord-agent-plugin
+

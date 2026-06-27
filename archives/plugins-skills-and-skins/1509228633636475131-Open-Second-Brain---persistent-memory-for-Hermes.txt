@@ -228,3 +228,6 @@
     On my VPS everything runs without a sandbox, since the VPS itself is basically one big sandbox. But in general, yes - I'd recommend it.
     [reply to legitimate0481 msg=1519285645611368478]
 
+[2026-06-27T16:16:31.693000+00:00] no_orbert (id=1520462847564447764)
+    I just came from Mnemosyne. Wanted to say thank you. Its work fine atm.  I use this with qmd and wikillm.
+

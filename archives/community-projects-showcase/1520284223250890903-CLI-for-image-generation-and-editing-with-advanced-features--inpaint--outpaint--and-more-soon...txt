@@ -19,3 +19,12 @@
     check it out: https://github.com/ncxton/potaco
     [embed] GitHub - ncxton/potaco: Multi-provider CLI for image generation and... https://github.com/ncxton/potaco
 
+[2026-06-27T18:26:11.228000+00:00] ncxton (id=1520495477299347617)
+    lastest version extends and improve support for custom providers
+
+[2026-06-27T18:26:23.792000+00:00] ncxton (id=1520495529996320870)
+    skill also got optimized. more token-efficient now.
+
+[2026-06-27T18:26:32.062000+00:00] ncxton (id=1520495564683215031)
+    <a:catPls:1151260428710715582>
+

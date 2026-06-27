@@ -34,3 +34,8 @@
     <@357137210941898752> is the hermes bworkflows plugin broken? i mean, i cant seem to fix it using the hermes as well even though i copied the prompt it gave to fix itself, its not working at all... it looks like this:
     [attachment] image.png https://cdn.discordapp.com/attachments/1518589825257701486/1519488042706931712/image.png?ex=6a3dbd04&is=6a3c6b84&hm=8375812676bce5609ef2a83560395f9a3b7a242e5a8e98a3cd2423de526d5594&
 
+[2026-06-27T17:30:31.882000+00:00] techmeat (id=1520481471066931360)
+    Sorry for the delay, I am currently on vacation without my laptop. The current version was tested on Linux and Mac. I will be able to look into the logs and work on a fix in a few days.
+    If you could try running the plugin with Claude Code or something similar and ask it to generate a bug report, that would be great. I might be able to check and fix it faster via remote access if the hotel Wi-Fi allows it.
+    [reply to tonyporj msg=1519488042992140479]
+

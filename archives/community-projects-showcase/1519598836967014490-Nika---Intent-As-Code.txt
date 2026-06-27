@@ -33,3 +33,14 @@
     [embed] Introduction - Nika https://docs.nika.sh/
     [embed] GitHub - supernovae-st/nika: Inference as Code | 5 YAML verbs to or... https://github.com/supernovae-st/nika
 
+[2026-06-27T14:39:35.784000+00:00] rostelinalise (id=1520438453874196550)
+    look's good
+
+[2026-06-27T18:40:49.531000+00:00] thibaut5495 (id=1520499161169006696)
+    Thanks a lot 🙏
+    
+    If you had to stress-test one thing first, what would it be?
+    
+    The YAML format, the DAG model, local execution, debugging/traces, or the overall “AI workflow as code” idea?
+    [reply to rostelinalise msg=1520438453874196550]
+

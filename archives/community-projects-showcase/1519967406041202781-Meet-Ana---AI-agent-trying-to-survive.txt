@@ -40,3 +40,14 @@
 [2026-06-27T02:25:06.879000+00:00] hazeyl_ (id=1520253615489679581)
     Very interesting
 
+[2026-06-27T16:07:09.621000+00:00] exquisite_cheetah_29759 (id=1520460490063478894)
+    Quite frustrating to deal with to be honest, if only she did what I want 😅 
+    
+    I'm having a lot of problems with memory, yesterday it was pretty bad, and the amount of tokens used seem abnormal..
+    
+    Can someone look at the attached images and tell me if this looks right? How are the cumulative tokens calculated, such a huge increase with almost no messaging seems very off
+    [attachment] Screenshot_2026-06-27-20-04-49-094_com.discord.jpg https://cdn.discordapp.com/attachments/1519967406041202781/1520460488545271828/Screenshot_2026-06-27-20-04-49-094_com.discord.jpg?ex=6a4146ad&is=6a3ff52d&hm=6031beacc6610ad9931174d011589262084027aaf170e590a5cb2563f39e1bf6&
+    [attachment] Screenshot_2026-06-27-20-05-02-135_com.discord.jpg https://cdn.discordapp.com/attachments/1519967406041202781/1520460488943734914/Screenshot_2026-06-27-20-05-02-135_com.discord.jpg?ex=6a4146ad&is=6a3ff52d&hm=8e37fed1556d2eb6ddf1b7c66a8e5ebc473b982ec6d1ac87b6d6bf62f4ab16a5&
+    [attachment] Screenshot_2026-06-27-20-05-07-147_com.discord.jpg https://cdn.discordapp.com/attachments/1519967406041202781/1520460489304440972/Screenshot_2026-06-27-20-05-07-147_com.discord.jpg?ex=6a4146ad&is=6a3ff52d&hm=d2e4f16f752426b8854b2135ac9eacf9ab04558fecb17fb3b67365f1e3c42d3b&
+    [attachment] Screenshot_2026-06-27-20-05-17-071_com.discord.jpg https://cdn.discordapp.com/attachments/1519967406041202781/1520460489719812107/Screenshot_2026-06-27-20-05-17-071_com.discord.jpg?ex=6a4146ad&is=6a3ff52d&hm=6f9c5e6a32b039543133fbded01ca75ce852dc9907bb85ac8610aa4657c77f5f&
+

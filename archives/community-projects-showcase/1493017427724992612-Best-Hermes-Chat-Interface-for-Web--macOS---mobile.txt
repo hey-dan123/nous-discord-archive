@@ -4911,3 +4911,16 @@
     just an idea not sure if this is even possible, but because phone isn't connected to tailscale 24/7 so it would be great if this is possible. 
     **Auto switching the base url depending on the network?** similar to the home assistant app and the immich app, for example at home wifi it would switch to 192.168.x.x as the base url, and when it's not home wifi, it switch to maybe tailscale ip?
 
+[2026-06-27T16:39:56.861000+00:00] avidfuturist (id=1520468741266214953)
+    Android app supports multiple connections which can be configured for that reason
+    [reply to josephcy msg=1520313421198004344]
+
+[2026-06-27T18:16:55.206000+00:00] hydraxiann (id=1520493145173786806)
+    Ok, so played a bit around, installed llama.cpp via termux, loaded up hermes-webui-v0.1.4-pre-release.apk
+    
+    Bugs: 
+    tapping hermes icon top left brings a empty menu
+    Can't scroll in the chat by swiping
+    And found out that the npu in it needs the model to be converted to int8. Didn't use the npu/gpu at all with the model i used, so it can't perform well at all. 1-4 tokens per sec
+    [reply to fleety13 msg=1518514616857006181]
+

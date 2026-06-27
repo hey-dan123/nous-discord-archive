@@ -23,3 +23,7 @@
 [2026-06-27T06:35:45.056000+00:00] shaf_2665 (id=1520316690175627304)
     That's really a good idea
 
+[2026-06-27T17:19:04.012000+00:00] carpdiem (id=1520478585930911794)
+    Btw, happy to contribute it back upstream to you all if it would be helpful! Hermes is the best thing I've seen this whole wave of AI and I'm happy to just help it become better!
+    [reply to shaf_2665 msg=1520316690175627304]
+

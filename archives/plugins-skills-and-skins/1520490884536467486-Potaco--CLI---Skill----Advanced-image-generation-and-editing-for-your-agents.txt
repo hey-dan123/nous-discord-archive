@@ -1,0 +1,24 @@
+# Thread 'Potaco (CLI + Skill) - Advanced image generation and editing for your agents' in forum #plugins-skills-and-skins
+# thread_id=1520490884536467486 forum_id=1485392832154832906
+# Started 2026-06-27T19:22:32.780416+00:00
+
+[2026-06-27T18:07:56.228000+00:00] ncxton (id=1520490884536467486)
+    I made `potaco` skill for agents.
+    
+    It helps agents use the `potaco` CLI safely for image generation and editing. The skill covers:
+    
+    - Text-to-image generation
+    - Image editing, inpainting, and outpainting
+    - OpenAI, fal, Vercel AI Gateway, and custom OpenAI-compatible providers
+    - Model discovery and provider setup guidance
+    - Troubleshooting CLI failures without leaking credentials
+    
+    The main thing I wanted was a safer way for agents to work with image providers. The skill explicitly avoids asking users to paste API keys into chat, prefers interactive auth, checks `potaco version` before doing anything, and treats prompts, image paths, base URLs, and debug logs as sensitive.
+    
+    Install: `npx skills add ncxton/potaco`
+    Repo: https://github.com/ncxton/potaco
+    [embed] GitHub - ncxton/potaco: Multi-provider CLI for image generation and... https://github.com/ncxton/potaco
+
+[2026-06-27T18:08:38.630000+00:00] ncxton (id=1520491062383349770)
+    Potaco (CLI + Skill) - Advanced image generation and editing for your agents
+

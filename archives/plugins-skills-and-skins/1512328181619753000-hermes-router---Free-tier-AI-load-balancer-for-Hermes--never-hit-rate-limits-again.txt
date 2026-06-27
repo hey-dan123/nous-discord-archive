@@ -1111,3 +1111,20 @@
     Docker images refreshed (:latest, :cli). ⚡
     [embed] Deployment https://hermes-router.vercel.app/deployment/
 
+[2026-06-27T14:20:26.171000+00:00] shaf_2665 (id=1520433632047530144)
+    # 🧩 OpenCode is now a provider in hermes-router
+    
+    Big thanks to <@292288108362203137>  for the suggestion 🙏 — it's live!
+    
+    OpenCode Zen is an OpenAI-compatible gateway of coding-tuned models with a rotating pool of genuinely free ones. Add it in two commands:
+    
+    
+    `hr auth add opencode`      # paste your key from opencode.ai → API Keys
+    `hr restart`
+    It defaults to free models (DeepSeek V4 Flash, MiniMax M3, Qwen3.6…), and since OpenCode's free promos rotate, the router automatically skips an ended one and fails over to the next — so your free pool keeps working. Premium models (Claude, GPT, Gemini, GLM, Kimi…) work too via OPENCODE_MODEL.
+    
+    OpenCode Go (the $5→$10/mo subscription tier) works as well — same key, just enable Go billing and `hr auth add opencode_go`.
+    
+    No sketchy OAuth hacks — it's a clean API-key integration. 🚀
+    Update with `hr update` (or pull shafiq735/hermes-router:latest).
+

@@ -1,0 +1,55 @@
+# Thread 'We fixed the /voice command  - NEED HELP !' in forum #community-projects-showcase
+# thread_id=1520447548702331104 forum_id=1316137596535177246
+# Started 2026-06-27T19:17:29.198520+00:00
+
+[2026-06-27T15:15:44.160000+00:00] capslock.b (id=1520447548702331104)
+    **me and <@1377972181312606279>  fixed <:catlick:1151260427645366375> the /voice command.... tts/stt is cringe <:catlick:1151260427645366375> **
+    
+    We are building toward a Discord-native agent workspace where voice calls can become:
+    
+    > 🎙️ **Live agent sessions**  
+    > Full-duplex Discord voice into Gemini Live.
+    
+    > 🧠 **Structured planning**  
+    > SORA bridge elements turn messy calls into goals, subgoals, contradictions, and acceptance criteria.
+    
+    > 🛠️ **Real tool execution**  
+    > GitHub, web lookup, Home Assistant, Spotify, email brief, local tools, sidecar API, and multi-CLI delegation.
+    
+    > 🖥️ **Screen-aware debugging**  
+    > Push frames through the local sidecar so “look at this and help me” becomes possible.
+    
+    > 🔐 **Safer transcripts**  
+    > JSONL logs, tool-call trails, redaction paths, Honcho context, and AFK handoff.
+    
+    > 🐧 **Self-hosted Linux stack**  
+    > One Hermes gateway, one venv, one plugin install, one `systemctl --user restart hermes-gateway`.
+    
+    Not a chatbot.  
+    Not a black box.  
+    Not a polished demo with nothing underneath.
+    
+    A real, rough, inspectable system that needs builders.
+    [attachment] file_000000008768724693cc81961f27970c.png https://cdn.discordapp.com/attachments/1520447548702331104/1520447549389934722/file_000000008768724693cc81961f27970c.png?ex=6a413aa0&is=6a3fe920&hm=75423ab3c68f15cb5355e52d9ecf1e0424cc8b317bfab8d9862feb61c43b0ce6&
+
+[2026-06-27T15:19:28.337000+00:00] capslock.b (id=1520448488968683600)
+    It started as:
+    
+    > **“Can Hermes join Discord voice and actually work with us live?”**
+    
+    Now it can.
+    
+    This is the interesting part: it is **early**, **working**, **open source**, and still shapeable.
+    
+    ***Git in my profile***
+
+[2026-06-27T15:23:11.225000+00:00] capslock.b (id=1520449423828582536)
+    https://github.com/Capslockb/hermes-live-discord-agent-plugin
+    [embed] GitHub - Capslockb/hermes-live-discord-agent-plugin: Hermes Live Di... https://github.com/Capslockb/hermes-live-discord-agent-plugin
+
+[2026-06-27T15:26:24.691000+00:00] capslock.b (id=1520450235283804221)
+    We fixed the /voice command  - NEED HELP !
+
+[2026-06-27T15:27:27.965000+00:00] capslock.b (id=1520450500674453584)
+    [attachment] file_00000000d0947243becfd271fd4947e5.png https://cdn.discordapp.com/attachments/1520447548702331104/1520450500246372453/file_00000000d0947243becfd271fd4947e5.png?ex=6a413d5f&is=6a3febdf&hm=23e9357e18c0b25f183aa9062e16b62bff28381440449c2731fe644be8e94313&
+
