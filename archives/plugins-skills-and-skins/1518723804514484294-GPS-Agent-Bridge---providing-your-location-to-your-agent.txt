@@ -35,3 +35,10 @@
     
     The app will still send location updates to the agent/server at the max interval specified by the user (default every 10 minutes), but with these updates, that interval can be turned up higher, saving more battery life (less waking up and polling for GPS data and sending it if the phone hasn't moved).
 
+[2026-06-26T20:14:20.538000+00:00] madvulcan (id=1520160307572379878)
+    The sort of detail the agent can have about your movements. Censored the stuff closest to home, but you get the idea. Your agent can know where you are, where you've been, and remember important places. It can recommend places and services near you, plan travel, etc.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1518723804514484294/1520160307295682610/image.png?ex=6a402f1c&is=6a3edd9c&hm=1c0f86ed8f89b6e9558d122a8139dad5b074b85e48d35611f1dc36af39058da3&
+
+[2026-06-26T20:46:53.310000+00:00] madvulcan (id=1520168498092052761)
+    Currently, using Tailscale (or Wireguard/direct VPN/etc) > UDP port is the only option for sending data from one's phone to agent. On the roadmap: Additional communication pathways, covering TCP, HTTP POST, MQTT, and WebSocket as alternatives to UDP. Potentially, using communication channels you might already have set up, like Matrix, Telegram, etc though those may be finicky.
+

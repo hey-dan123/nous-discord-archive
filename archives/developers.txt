@@ -39184,3 +39184,109 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/lEWFkRAD/hermes-eats-world/pull/1
     [attachment] IMG_1539.png https://cdn.discordapp.com/attachments/1491258766648283238/1520144288183488612/IMG_1539.png?ex=6a402031&is=6a3eceb1&hm=b81ec970ccdad2d6e1284675cd4c47a2f6486a907ff13adb57922f36b23fb5da&
 
+[2026-06-26T20:00:50.429000+00:00] .tetsu (id=1520156909729222769)
+    Got any plans to Ornith-ize qwen 3.5 122B? Seems the logical choice for 128GB strix halo/DGX peeps. Would fit nicely at Q6.
+    [reply to zoeyll msg=1519732535767339132]
+
+[2026-06-26T20:03:40.924000+00:00] .tetsu (id=1520157624837083229)
+    if nothing else, that's a nice ass poster
+    [reply to jw_mushroom_man msg=1520144287810064487]
+
+[2026-06-26T20:27:29.096000+00:00] sethtam (id=1520163615024611448)
+    Okay I just posted the LM studio bug to the Github bug report
+
+[2026-06-26T20:31:34.194000+00:00] .ron_ki (id=1520164643040006204)
+    I wonder why Deepseek v4 flash burns so many more tokens then GLM 5.2 lol. GLM 5.2 was cheaper in execution because it did not burn so many tokens and solved the problem in a better way. That's crazy. My task was not so difficult: Setup an automated script that backups my Hermes folder from /opt/data to Github automatically. You should create meaningful commit messages.
+
+[2026-06-26T20:31:53.348000+00:00] .ron_ki (id=1520164723377574059)
+    Anyone else experiencing this?
+
+[2026-06-26T20:45:15.412000+00:00] mepanda88 (id=1520168087478075464)
+    Who else find Claude not as good as the hype it gets?
+
+[2026-06-26T20:51:34.364000+00:00] dias4761 (id=1520169676917833728)
+    <@387972437901312000>  are u there  ?, send me dm when u can
+
+[2026-06-26T21:21:07.259000+00:00] sahil_ss9 (id=1520177112978428055)
+    🟢 #53270 — fix: add per-job allow_silent flag for recurring briefing/report jobs
+        Recurring briefing/report jobs that must always deliver were being suppressed by [SILENT] on quiet days. Added a per-job allow_silent flag — when False, the SILENT instruction is omitted from the prompt and any SILENT response is delivered anyway.
+        https://github.com/NousResearch/hermes-agent/pull/53270
+    
+        🟢 #53209 — fix(desktop): prevent infinite download loop on Windows when clicking file artifacts
+        Windows users clicking a file artifact in the desktop app got stuck in an infinite download loop. Fixed the click handler to break the cycle.
+        https://github.com/NousResearch/hermes-agent/pull/53209
+    
+        🟢 #53183 — fix: offload agent resource cleanup to executor thread with timeout
+        The gateway event loop was blocking on agent.close() / shutdown_memory_provider() for seconds, causing zombie sessions after long responses + /new. Offloaded cleanup to a worker thread with a 30s timeout.
+        https://github.com/NousResearch/hermes-agent/pull/53183
+    
+        🟢 #53118 — fix(desktop): stage esbuild binary when ignore-scripts=true prevents postinstall
+        npm install --ignore-scripts skips esbuild's postinstall, leaving the binary missing and the desktop build broken. Now stages the binary explicitly when postinstall is skipped.
+        https://github.com/NousResearch/hermes-agent/pull/53118
+
+[2026-06-26T21:21:36.828000+00:00] sahil_ss9 (id=1520177236999667802)
+    🟢 #53102 — fix(desktop): lazy-require simple-git so module loads when dep is missing
+        Desktop app crashed at import time if simple-git wasn't installed. Moved the import behind a lazy require so it only loads when actually used.
+        https://github.com/NousResearch/hermes-agent/pull/53102
+    
+        🟢 #53074 — fix: exempt /dashboard-plugins/ from OAuth auth gate
+        The dashboard plugins route was behind the OAuth gate, blocking unauthenticated plugin access. Added the path to the exemption list.
+        https://github.com/NousResearch/hermes-agent/pull/53074
+    
+        🟢 #52770 — fix: handle missing user indices in checkpoint restore
+        Checkpoint restore crashed when user indices were absent from the saved state. Added a safe fallback so restore completes gracefully.
+        https://github.com/NousResearch/hermes-agent/pull/52770
+    
+        🟢 #52699 — fix(tui): prevent unresolved model placeholder from being persisted as sticky session binding
+        An unresolved {model} placeholder in the TUI was getting written into the session binding, locking sessions to a non-existent model. Now strips the placeholder before persisting.
+        https://github.com/NousResearch/hermes-agent/pull/52699
+    
+        🟢 #52667 — fix(telegram): filter out bot's own messages from inbound processing
+        Telegram echoes the bot's own messages back through the update stream, causing duplicate processing loops. Now filters out messages from the bot's own user ID.
+        https://github.com/NousResearch/hermes-agent/pull/52667
+
+[2026-06-26T21:21:42.731000+00:00] sahil_ss9 (id=1520177261758906478)
+    🟢 #52519 — fix(tui): add newline delimiter to WebSocket JSON-RPC frames
+        WebSocket frames on Windows were arriving concatenated without delimiters, breaking JSON-RPC parsing. Added \n as a frame delimiter.
+        https://github.com/NousResearch/hermes-agent/pull/52519
+    
+        🟢 #52474 — fix: atomic directory replacement in profile install/update
+        Profile installs were doing non-atomic directory swaps, leaving a partial/corrupt profile on interruption. Now uses atomic rename + fallback.
+        https://github.com/NousResearch/hermes-agent/pull/52474
+    
+        🟢 #52407 — fix: add default retention for cron output files to prevent disk fill
+        Cron output files accumulated forever with no cleanup, eventually filling the disk. Added a default retention policy so old outputs get pruned automatically.
+        https://github.com/NousResearch/hermes-agent/pull/52407
+    
+    
+    
+        👋 11 PRs open and ready for review — mostly P1/P2 gateway, desktop, TUI, and cron fixes. Would appreciate a look when anyone has a moment. Cheers!
+
+[2026-06-26T23:55:35.734000+00:00] srojk34 (id=1520215987780321340)
+    <@387972437901312000> You can check it when you have time. I think it's a fix that's worth looking at.
+    
+    Found three adapter.send() paths in gateway/run.py that bypass the secret-redaction and provider-error sanitization pipeline widened in #53316 — compression-abort, aux-model-fallback, and background-task failure notifications all interpolate raw str(e) into chat messages. A misconfigured auxiliary.compression.model returning a 401 with an API key in the error body leaks it to every chat surface. Fix applies the same two-layer defence (_redact_gateway_user_facing_secrets + _looks_like_gateway_provider_error → generic replacement) to all three paths. 9 new tests, 114 existing pass.
+    
+    https://github.com/NousResearch/hermes-agent/pull/53334
+    [embed] fix(gateway): sanitize error text in compression-failure and backgr... https://github.com/NousResearch/hermes-agent/pull/53334
+
+[2026-06-27T00:26:22.360000+00:00] detraxsenpai (id=1520223733091139614)
+    I faced the same thing Gemma 12b was spitting more token and doing less things while qwen35b was doing more in less tokens, i guess smart models understand better what we want
+    [reply to .ron_ki msg=1520164643040006204]
+
+[2026-06-27T01:08:07.020000+00:00] diamondeyesfox (id=1520234238396469385)
+    https://github.com/NousResearch/hermes-agent/pull/53351
+    [attachment] Screenshot_20260626_193029_Discord.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1520234238736334938/Screenshot_20260626_193029_Discord.jpg?ex=6a4073f7&is=6a3f2277&hm=0b0ce29134dd7029cfa0364aa2bf18149f8c0a4389c846e5693fb49cc7d7c68f&
+    [embed] fix(agent): rebaseline in-place compression flushes by DiamondEyesF... https://github.com/NousResearch/hermes-agent/pull/53351
+
+[2026-06-27T01:09:44.940000+00:00] scattered42 (id=1520234649102581921)
+    Is there a roadmap item to have Hermes support a model just for tool? I like that about OpenClaw. At the same time, I don't know that it really makes a big diff.
+
+[2026-06-27T01:51:36.982000+00:00] nuuuuuu0073 (id=1520245185370525696)
+    https://github.com/NousResearch/hermes-agent/pull/53365
+    [embed] feat(cron): add delivery_policy to bypass [SILENT] suppression (#53... https://github.com/NousResearch/hermes-agent/pull/53365
+
+[2026-06-27T02:40:50.472000+00:00] hypertekton (id=1520257573205315605)
+    hermes has auxiliary models for various tools
+    [reply to scattered42 msg=1520234649102581921]
+

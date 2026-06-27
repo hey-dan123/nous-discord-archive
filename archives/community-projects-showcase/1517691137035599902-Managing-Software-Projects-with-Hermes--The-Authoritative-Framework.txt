@@ -17,3 +17,6 @@
     Pushed a bunch of updates including a new FAQ https://nesquena.github.io/steward-os/docs/reference/faq.html
     [embed] FAQ https://nesquena.github.io/steward-os/docs/reference/faq.html
 
+[2026-06-26T22:42:01.232000+00:00] avidfuturist (id=1520197472016793630)
+    Received a bunch of feedback and pushed updates, thanks everyone so far. Would love more feedback!
+

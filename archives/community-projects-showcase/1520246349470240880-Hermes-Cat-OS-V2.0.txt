@@ -1,0 +1,25 @@
+# Thread 'Hermes Cat OS V2.0' in forum #community-projects-showcase
+# thread_id=1520246349470240880 forum_id=1316137596535177246
+# Started 2026-06-27T02:53:43.346845+00:00
+
+[2026-06-27T01:56:14.525000+00:00] mgf.654 (id=1520246349470240880)
+    Im make Hermes Cat Multiagents Dashboard for controll all from Phone
+    
+    - Dashboard: health score, errors, API costs
+    - Activity: includes workers and a Kanban board
+    - Benchmark: shows the most frequently used models and their performance
+    - Providers: shows which providers you use most often
+    - Memory: memory, "prompt soul" memory, etc.
+    - Agents: a tab with worker profiles and the option to select a model
+    - Cron: includes a "trigger now" function and a history of recent runs
+    - Logs: displays real-time system logs from the last 10 minutes
+    - Chat: features an interactive mascot and options to select the agent model and the underlying model; updates live, allowing you to switch models within the same chat session
+    
+    Supports "allow once" and all tools; very fast performance (100–500ms).
+    
+    
+    
+    
+    I love animation when Hermes reply
+    [attachment] ScreenRecording_06-27-2026_03-15-32_1.mov https://cdn.discordapp.com/attachments/1520246349470240880/1520246350577533080/ScreenRecording_06-27-2026_03-15-32_1.mov?ex=6a407f3e&is=6a3f2dbe&hm=7336b97f9b1993e644c491630611fb3b9c1f825d392a6a64dfc072b681d74466&
+

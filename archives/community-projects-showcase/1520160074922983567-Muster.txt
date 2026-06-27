@@ -1,0 +1,29 @@
+# Thread 'Muster' in forum #community-projects-showcase
+# thread_id=1520160074922983567 forum_id=1316137596535177246
+# Started 2026-06-27T02:53:44.143142+00:00
+
+[2026-06-26T20:13:25.070000+00:00] goblin_stark (id=1520160074922983567)
+    hey people, me and my friend are working on **Muster**, an open-source AI agent harness you can actually audit.
+    
+    If you use AI agents, you probably need this: Muster tracks every token, keeps memory scoped so context does not leak, supports multiple models/providers, connects with MCP tools, and includes eval-gated learning so agents improve with proof instead of vibes.
+    
+    Why it is worth checking out:
+    
+    - See where your AI token spend is going with a real token ledger
+    - Reduce wasted context in long agent sessions
+    - Use OpenAI, Claude, local models, and other providers without lock-in
+    - Keep agent memory separated by tenant, workspace, user, role, and session
+    - Run integrity checks to catch corrupt transcripts, duplicate runs, drift, and poisoned context
+    - Build with MCP, capability packs, flows, and self-hosted TypeScript code
+    - Open source and MIT licensed
+    
+    If you are building with agents, automations, MCP servers, or long-running AI workflows, Muster is the kind of infrastructure you will wish you had earlier.
+    
+    Please star the repo and share it with someone building serious AI agent systems:
+    
+    https://github.com/Dkm0315/muster
+    
+    Website: https://themuster.dev
+    [embed] GitHub - Dkm0315/muster: The AI agent harness you can audit: token-... https://github.com/Dkm0315/muster
+    [embed] Muster — the AI agent harness you can audit https://themuster.dev/
+

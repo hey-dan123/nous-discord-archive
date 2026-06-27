@@ -124,3 +124,7 @@
 [2026-06-26T16:13:07.939000+00:00] colmeio_66868 (id=1520099605092630700)
     no need to huge harnesses bc it is token inneficient itself, just a context warm-up is enought to archieving this kind of high stakes behavior
 
+[2026-06-26T23:03:17.752000+00:00] .thebakery303 (id=1520202826129870969)
+    yup it catches its own false positives with tdd
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519801442028883978/1520202825739669625/image.png?ex=6a4056b5&is=6a3f0535&hm=fbbb9fb84589b972d50a58976173230ef99ced560db8cfc21f90161e5f40afa7&
+

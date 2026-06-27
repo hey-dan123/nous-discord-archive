@@ -234,3 +234,32 @@
     It's important to note that the Hermes Browser Extension does not read what's on your tab until you send a chat. It is not spying on you.
     ...and even if it was.. It's your own agent, so your data isn't being sent anywhere except to your own agent.
 
+[2026-06-27T02:26:57.818000+00:00] jonkomet (id=1520254080801439795)
+    **v0.1.5**
+    
+    Compatibility + trust update for Hermes Browser Extension.
+    
+    **What changed**
+    
+    - Added a Hermes compatibility panel backed by `/v1/capabilities`, with legacy fallback for older gateways.
+    - Made first-run Connect skip missing pairing routes and guide users directly to Manual setup when browser pairing is not advertised.
+    - Added capability-gated voice dictation: Hermes STT when available, Browser speech fallback when the connected runtime does not expose audio transcription.
+    - Added token hygiene UI with masked token state, connection mode, last-tested timestamp, and one-click token clearing.
+    - Added a collapsible “What Hermes saw” receipt after sent turns so users can inspect tab/context/attachment/redaction payloads.
+    - Gated image upload and profile APIs behind capabilities so missing routes become clear fallback warnings.
+    - Added public permissions, data-flow, and privacy docs for shipped behavior.
+    
+    ** Verification**
+    
+    - `npm run verify` passed.
+    - `npm run build` passed.
+    - Built unpacked extension at `dist/`.
+    
+    **Install**
+    
+    Download the archive below, extract it, then load the extracted extension folder in `chrome://extensions` / `edge://extensions` with Developer Mode enabled.
+    
+    https://github.com/abundantbeing/hermes-browser-extension/releases/tag/v0.1.5
+    [attachment] Browser_Extension_v0.1.5_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1520254081409487048/Browser_Extension_v0.1.5_Update_Ad.png?ex=6a408671&is=6a3f34f1&hm=fd64062cc040942190e9832a184f670032837d9e131c46cdb73728584753ce33&
+    [embed] Release v0.1.5 · abundantbeing/hermes-browser-extension https://github.com/abundantbeing/hermes-browser-extension/releases/tag/v0.1.5
+

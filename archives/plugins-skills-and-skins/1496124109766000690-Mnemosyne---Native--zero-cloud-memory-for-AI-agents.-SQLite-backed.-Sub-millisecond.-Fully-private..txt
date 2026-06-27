@@ -2265,3 +2265,7 @@
 [2026-06-26T03:00:25.012000+00:00] me.franx (id=1519900111717662851)
     For Mnemosyne with multiple independent agents, what’s best? Single Hermes harness and multiple profiles each with its own Mnemosyne or multiple WSL with multiple Hermes harnesses?
 
+[2026-06-27T02:20:58.848000+00:00] 0xlfg (id=1520252575172264036)
+    Are you sure you run remember X and you see the plugin running?
+    [reply to buke5122 msg=1519334117425025225]
+
