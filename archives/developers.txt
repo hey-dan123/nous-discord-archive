@@ -39378,3 +39378,70 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/29249
     [embed] fix(security): require operator opt-in for plugin tool_override to ... https://github.com/NousResearch/hermes-agent/pull/29249
 
+[2026-06-27T08:38:17.307000+00:00] srojk34 (id=1520347527751401502)
+    The gateway writes AUXILIARY_{TASK}_API_KEY and AUXILIARY_{TASK}_BASE_URL env vars at startup for each configured auxiliary task (vision, compression, approval, plus plugin-registered ones). The static _HERMES_PROVIDER_ENV_BLOCKLIST correctly blocks main provider keys (OPENAI_API_KEY, ANTHROPIC_API_KEY, etc.) but doesn't cover these dynamically-generated names, so _sanitize_subprocess_env passes them through to every terminal() and process_registry.spawn() child. Added a prefix+suffix guard that blocks the secret auxiliary vars while still allowing non-secret ones (_PROVIDER, _MODEL) through. 8 new tests, 43 total pass.
+    
+    https://github.com/NousResearch/hermes-agent/pull/53503
+    [embed] harden(tools): block AUXILIARY_*_API_KEY and _BASE_URL from subproc... https://github.com/NousResearch/hermes-agent/pull/53503
+
+[2026-06-27T09:10:33.605000+00:00] srojk34 (id=1520355649173721238)
+    MoA one-shot (/moa <prompt>) restore runs inside the try block, so when _handle_message_with_agent raises, the model override is never reverted — all subsequent messages silently route through the MoA reference fan-out permanently. The restore data lives on the per-turn event object (not on session/self like CLI/TUI), so it's permanently lost when the event goes out of scope. Moved the restore to the finally block. 
+    
+    https://github.com/NousResearch/hermes-agent/pull/53523
+    [embed] fix(gateway): restore MoA one-shot model override on failed turns b... https://github.com/NousResearch/hermes-agent/pull/53523
+
+[2026-06-27T09:21:28.529000+00:00] flownium (id=1520358396123943013)
+    https://github.com/NousResearch/hermes-agent/pull/53513
+    [embed] fix: preserve native paste transactions for ime by itsflownium · P... https://github.com/NousResearch/hermes-agent/pull/53513
+
+[2026-06-27T09:21:31.779000+00:00] flownium (id=1520358409755558008)
+    https://github.com/NousResearch/hermes-agent/pull/53519
+    [embed] docs: clarify Apple Reminders sharing handoff by itsflownium · Pul... https://github.com/NousResearch/hermes-agent/pull/53519
+
+[2026-06-27T09:21:34.631000+00:00] flownium (id=1520358421717844068)
+    https://github.com/NousResearch/hermes-agent/pull/53506
+    [embed] fix: tolerate streamed final text artifacts by itsflownium · Pull ... https://github.com/NousResearch/hermes-agent/pull/53506
+
+[2026-06-27T09:21:37.561000+00:00] flownium (id=1520358434006892635)
+    https://github.com/NousResearch/hermes-agent/pull/53502
+    [embed] fix: apply moa switches to live tui agent by itsflownium · Pull Re... https://github.com/NousResearch/hermes-agent/pull/53502
+
+[2026-06-27T09:21:41.132000+00:00] flownium (id=1520358448985018489)
+    https://github.com/NousResearch/hermes-agent/pull/53490
+    [embed] fix: cache profile skill counts by itsflownium · Pull Request #534... https://github.com/NousResearch/hermes-agent/pull/53490
+
+[2026-06-27T09:21:44.386000+00:00] flownium (id=1520358462633148467)
+    https://github.com/NousResearch/hermes-agent/pull/53488
+    [embed] fix: scope desktop audio requests to profile by itsflownium · Pull... https://github.com/NousResearch/hermes-agent/pull/53488
+
+[2026-06-27T09:21:48.132000+00:00] flownium (id=1520358478345015416)
+    https://github.com/NousResearch/hermes-agent/pull/53474
+    [embed] fix: handle legacy function roles in compression by itsflownium · ... https://github.com/NousResearch/hermes-agent/pull/53474
+
+[2026-06-27T10:14:25.724000+00:00] mustafa_ramax (id=1520371722245902417)
+    its the "free" option, i supported all other providers like deepgram or elevanlabs etc...
+    [reply to hypertekton msg=1520299082986291330]
+
+[2026-06-27T10:24:46.423000+00:00] ajo6268 (id=1520374325646065755)
+    Slow on local?
+    
+    I’m running it at less than 0.3 secs per transcription in discord voice chat?
+    [reply to hypertekton msg=1520299082986291330]
+
+[2026-06-27T10:25:22.538000+00:00] ajo6268 (id=1520374477123354635)
+    But - to do that - I had to separate it from the Hermes docker as that only runs the CPU version of whisper…
+
+[2026-06-27T10:26:24.100000+00:00] ajo6268 (id=1520374735332970627)
+    So now I run Hermes in one dock - Whisper 3.5 Lsrge Turbo GPU in another and kokoro gpu enabled in a 3rd docker - and they all launch from the same docker-compose.yml on a docker-net it creates between them
+
+[2026-06-27T10:26:53.311000+00:00] ajo6268 (id=1520374857852780584)
+    Went from 27 seconds average inside Hermes docker to less than 0.5 outside
+
+[2026-06-27T10:33:02.050000+00:00] srojk34 (id=1520376404456243300)
+    These look so cute 😊 Thank you for the merge, boss. My name finally appears on the list with 5 commits. It's so cool to be part of this community. Being a part of the Hermès agent that I work with all day is truly something special.
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613966663665392f6858315964644f4d33666d4f2d654d6662693078365f6d336452774836502e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1520376404129353830/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30613966663665392f6858315964644f4d33666d4f2d654d6662693078365f6d336452774836502e706e67.png?ex=6a40f85d&is=6a3fa6dd&hm=b5d73ebbfc9f43ba3d7ec409dc72773887f57f57f317873632b29e7faa3edfa4&
+    [reply to srojk34 msg=1520355649173721238]
+
+[2026-06-27T13:09:11.594000+00:00] ghostbeartrader (id=1520415703172255774)
+    I reported a semver problem with node the other day. Didn't see this channel. Here's a copy to the message I just pasted in <#1476316988992258300> https://discord.com/channels/1053877538025386074/1476316988992258300/1520414452313358466
+

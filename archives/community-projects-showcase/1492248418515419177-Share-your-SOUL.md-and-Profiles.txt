@@ -490,3 +490,7 @@
     https://github.com/magnus919/hermes-profiles/tree/main/profiles/chief-of-staff
     [embed] hermes-profiles/profiles/chief-of-staff at main · magnus919/hermes... https://github.com/magnus919/hermes-profiles/tree/main/profiles/chief-of-staff
 
+[2026-06-27T10:56:59.112000+00:00] alfinpogform (id=1520382431931400252)
+    how do I get Hermes to always create these files in the folders  they need to be?
+    [reply to fleety13 msg=1510830714499760219]
+

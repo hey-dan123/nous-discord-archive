@@ -2279,3 +2279,12 @@
 [2026-06-27T08:39:11.282000+00:00] buke5122 (id=1520347754138701935)
     What's memory even there for?
 
+[2026-06-27T08:39:31.201000+00:00] buke5122 (id=1520347837685174314)
+    And the Auto sleep thing was kind of broken
+
+[2026-06-27T08:40:00.730000+00:00] buke5122 (id=1520347961538646056)
+    Deinstalled mnemosyne entirely
+
+[2026-06-27T08:40:21.041000+00:00] buke5122 (id=1520348046729150585)
+    Trying my luck again when I get home
+

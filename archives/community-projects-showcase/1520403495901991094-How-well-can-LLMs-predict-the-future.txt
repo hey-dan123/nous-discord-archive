@@ -1,0 +1,14 @@
+# Thread 'How well can LLMs predict the future' in forum #community-projects-showcase
+# thread_id=1520403495901991094 forum_id=1316137596535177246
+# Started 2026-06-27T13:28:18.105273+00:00
+
+[2026-06-27T12:20:41.154000+00:00] aleleta (id=1520403495901991094)
+    did some work on evaling LLMs on how well they can predict the future!
+    
+    https://x.com/agapekeleta/status/2070818483068129581?s=46
+    
+    benchmark also here: https://benchmark.aleatoricai.com
+    [attachment] IMG_5644.jpg https://cdn.discordapp.com/attachments/1520403495901991094/1520403496577269942/IMG_5644.jpg?ex=6a411199&is=6a3fc019&hm=7046a49f197cf3a459a7f6d7a382a12026df4254d85b6d92caf19a0fb7e65797&
+    [embed]  https://twitter.com/agapekeleta/status/2070818483068129581?s=46
+    [embed] Foresight Bench https://benchmark.aleatoricai.com/
+

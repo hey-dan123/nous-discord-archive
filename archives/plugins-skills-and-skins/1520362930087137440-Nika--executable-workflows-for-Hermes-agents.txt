@@ -1,0 +1,36 @@
+# Thread 'Nika: executable workflows for Hermes agents' in forum #plugins-skills-and-skins
+# thread_id=1520362930087137440 forum_id=1485392832154832906
+# Started 2026-06-27T13:33:13.028691+00:00
+
+[2026-06-27T09:39:29.510000+00:00] thibaut5495 (id=1520362930087137440)
+    Sharing Nika here because I’d love feedback from Hermes builders
+    
+    GitHub: https://github.com/supernovae-st/nika
+    Docs: https://docs.nika.sh
+    Site: https://nika.sh
+    
+    Nika is not a Hermes skin and not exactly a skill
+    
+    It’s an open-source language + local runtime for turning repeatable AI/agent work into executable .nika.yaml files.
+    
+    The idea is:
+    
+    Hermes can reason, use skills and decide what should happen.
+    
+    Nika makes the procedure explicit:
+    steps, model calls, tools/skills used, permissions, inputs/outputs, approval gates, and execution traces
+    
+    So instead of an important agent process living only in prompts, chat history, or custom glue code, it becomes a readable file you can version in Git, run locally, replay, and audit.
+    
+    Example use case:
+    
+    A Hermes business agent handles a customer issue:
+    read ticket → check payment/order → decide refund or retry → ask approval if money moves → draft reply → save trace.
+    
+    With Nika, that whole flow can be written as one executable workflow file.
+    
+    Still pre-launch / early, but I’m looking for honest feedback so does this make sense as a companion layer for Hermes agents and skills?
+    [embed] GitHub - supernovae-st/nika: Inference as Code | 5 YAML verbs to or... https://github.com/supernovae-st/nika
+    [embed] Introduction - Nika https://docs.nika.sh/
+    [embed] Nika · Intent as Code https://nika.sh/
+

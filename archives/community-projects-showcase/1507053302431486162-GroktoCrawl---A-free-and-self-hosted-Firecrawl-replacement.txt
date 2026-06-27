@@ -655,3 +655,7 @@
 [2026-06-27T06:11:10.208000+00:00] hurricane041696 (id=1520310504214626354)
     Done that and seems no significant issues at all, but tested on remote VPS.  Report from local environment where I had the issues will come not before Tuesday.
 
+[2026-06-27T13:20:55.532000+00:00] magnus919 (id=1520418655702089739)
+    Merged your fix and added some scaffolding to do a better job in the future of making sure the CLI and API track together
+    [reply to hurricane041696 msg=1520298199590506537]
+

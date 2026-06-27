@@ -12,3 +12,6 @@
     https://github.com/warmersun/voice-agent
     [embed] GitHub - warmersun/voice-agent https://github.com/warmersun/voice-agent
 
+[2026-06-27T12:45:43.324000+00:00] capslock.b (id=1520409796459757769)
+    Hey, maybe my projects might interest you!
+
