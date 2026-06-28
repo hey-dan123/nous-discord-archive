@@ -2298,3 +2298,11 @@
 [2026-06-28T13:39:26.420000+00:00] buke5122 (id=1520785702969933986)
     Maybe my expectations are too high lol
 
+[2026-06-28T15:34:44.957000+00:00] buke5122 (id=1520814721417220237)
+    I have the auto sleep enabled, but it doesnt consolidate. I cant seem to find whats wrong. Any solutions?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1520814720582684833/image.png?ex=6a429094&is=6a413f14&hm=8520103bd557bb7aa8386a7b0a03677d921c6373011eda3a1141dacc177026a7&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496124109766000690/1520814720972488885/image.png?ex=6a429094&is=6a413f14&hm=781e1ec070272b051a87414f5fa06aa3ab565ad819e3b714f1597a5131b0f128&
+
+[2026-06-28T16:11:31.755000+00:00] buke5122 (id=1520823977398767676)
+    Fixed it. the auto sleep environment variable was empty. Replaced it, and generatet 5 episodic memories out of 90 working memories
+

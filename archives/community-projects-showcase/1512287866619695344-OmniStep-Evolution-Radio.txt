@@ -91,3 +91,7 @@
 [2026-06-19T14:11:54.674000+00:00] shadowhunter9450 (id=1517532383748816948)
     just loaded up your omnistep model. trying to see how i get this running with llama-cpp. it seems to think it's onl a text capable model since there isn't a separate --mmproj file. any tips? for test processing though this little model is a speed demon. 1,062 tok/s pp and 140 tok/s generation on my rig
 
+[2026-06-28T13:50:58.248000+00:00] shadowhunter9450 (id=1520788604706623618)
+    <@575461682151686145> see this? https://arxiv.org/abs/2606.25041. Looks very relevant you what you are doing
+    [embed] Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models https://arxiv.org/abs/2606.25041
+

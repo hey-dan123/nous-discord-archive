@@ -26,3 +26,6 @@
     [attachment] IMG_4421.JPG https://cdn.discordapp.com/attachments/1520689307160019127/1520689307528990730/IMG_4421.JPG?ex=6a421bc7&is=6a40ca47&hm=7c1baed189e44888072b849a488978f78348b5024dcdede34859af1d9f08caae&
     [embed] GitHub - shiro-0x/hersona: Attribute template collection for AI age... https://github.com/shiro-0x/hersona
 
+[2026-06-28T18:42:24.721000+00:00] btdoverclock (id=1520861948290535474)
+    this looks like a real cool project I might check it out later
+

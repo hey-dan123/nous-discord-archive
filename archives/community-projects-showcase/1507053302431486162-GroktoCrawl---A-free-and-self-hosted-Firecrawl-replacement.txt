@@ -659,3 +659,22 @@
     Merged your fix and added some scaffolding to do a better job in the future of making sure the CLI and API track together
     [reply to hurricane041696 msg=1520298199590506537]
 
+[2026-06-28T18:11:30.781000+00:00] magnus919 (id=1520854172302442628)
+    https://github.com/groktopus/groktocrawl/releases/tag/v0.10.1
+    [embed] Release v0.10.1 — The One That Fights Back · groktopus/groktocrawl https://github.com/groktopus/groktocrawl/releases/tag/v0.10.1
+
+[2026-06-28T18:20:55.140000+00:00] selwind (id=1520856539395788911)
+    🎉 🎉 🎉
+
+[2026-06-28T18:26:21.322000+00:00] selwind (id=1520857907502121142)
+    <@659176257338081306> question please, currently i'm using a researcher profile that you created (with artifact pyramids, research methodology and research workflow skills),  i remember you telling me groktocrawl is for text only, so for my agent to do a reference research (images needed), can my researcher just download the images he finds in the websites ? or is it not compatible with groktocrawl ? (i tested the reference research without groktocrawl at the moment and agent is downloading images so far with searxng, searxncrawl mcp and camofox as a browser). 
+    I also found gallery-dl (https://github.com/mikf/gallery-dl) for image downloading, does it integrate with groktocrawl as a new adapter ? (i saw this in the adding a new adapter section in your github) or is it something else completely ? 
+    Thanks ❤️
+
+[2026-06-28T18:55:14.136000+00:00] magnus919 (id=1520865175450685620)
+    Groktocrawl is highly optimized for text extraction. It’s not going to be a good tool for grabbing images.
+    [reply to selwind msg=1520857907502121142]
+
+[2026-06-28T18:57:23.869000+00:00] selwind (id=1520865719590322289)
+    fair,  thank you ! hopefully maybe in the future images can be a part of groktopus 🙏
+

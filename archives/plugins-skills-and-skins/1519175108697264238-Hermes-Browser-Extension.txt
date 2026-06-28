@@ -266,3 +266,36 @@
 [2026-06-27T11:53:54.104000+00:00] jonkomet (id=1520396755445743738)
     [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1520396755173249186/image.png?ex=6a410b52&is=6a3fb9d2&hm=d348d46427fe8099ab9491c6ab124eddfb3ac30fa21c648b0452196e03472659&
 
+[2026-06-28T17:45:56.910000+00:00] jonkomet (id=1520847738781040750)
+    **v0.1.6 of the Hermes Browser Extension 🪽 **
+    GitHub -https://github.com/abundantbeing/hermes-browser-extension/releases/tag/v0.1.6: Browser-native side panel for Hermes Agent — connect web context to your local Hermes runtime. · GitHub
+    
+    This one is the context control + trust release: quicker browser workflows, clearer tab context, and stronger sensitive-page redaction without changing the permission surface.
+    
+    **What changed in v0.1.6:**
+    
+    • Quick commands Added built-in actions and slash commands for common browser-context work: summarize, explain, rewrite, tabs, action items, and more.
+    
+    • Follow or pin tab context The side panel can follow the active browser tab or stay pinned to a specific tab, so switching tabs does not silently change what Hermes sees.
+    
+    • Per-tab conversations Pinned tabs keep their own local message cache and Hermes Browser session binding, so separate tab workstreams stay separated.
+    
+    • Selectable open-tab context Added a tab picker with select-all / deselect-all controls so you can choose which open tabs are included in prompt context.
+    
+    • Sensitive-tab redaction Banking, password, payment, health, and similar restricted tabs get masked before active-tab or open-tab summaries hit the prompt.
+    
+    • Same permission surface v0.1.6 keeps the existing v0.1 host-permission model while shipping context-control and privacy improvements. Narrower optional host permissions are still a future migration.
+    
+    *Install / update:*
+    bash npm install npm run package
+    Then reload the unpacked extension from dist/, or download the release archive and load the extracted folder.
+    
+    **Would especially love feedback on:**
+    
+    quick command usefulness
+    follow vs pinned-tab behavior
+    tab picker clarity
+    whether the context controls feel obvious enough
+    [attachment] Browser_Extension_v0.1.61_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1520847738365808760/Browser_Extension_v0.1.61_Update_Ad.png?ex=6a42af54&is=6a415dd4&hm=01f8714b627a6908d2cee3805e857245f109c026fdedee31a243b1d798bdb7fe&
+    [embed] Release v0.1.6 · abundantbeing/hermes-browser-extension https://github.com/abundantbeing/hermes-browser-extension/releases/tag/v0.1.6
+

@@ -40201,3 +40201,53 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix: register auxiliary as valid web extract backend and log warnin... https://github.com/NousResearch/hermes-agent/pull/52209
     [embed] feat(cli): --recent N flag to resume with last N messages only by S... https://github.com/NousResearch/hermes-agent/pull/52173
 
+[2026-06-28T14:17:39.753000+00:00] aialliai (id=1520795321905578084)
+    So today this night and morning I ran an experiment on a stock Hermes desktop setup with a few rules and such. Simple task, make a demo video with narration. Script ready, plugin maybe minor fixes needed. Well $40 of nous credits later I had it reflect on the actions and found some room for improvement. Wondering what approch to put in a PR, but will do that after I finish some projects! 🤔
+
+[2026-06-28T14:24:15.119000+00:00] aialliai (id=1520796980190646322)
+    At least I was using Nous portal <:pepecryyay:1368670825640886283>
+
+[2026-06-28T14:34:02.080000+00:00] nyrhe (id=1520799442083778711)
+    Thanks for adding my idea, it works great now. I do have another issue though, I know nothing about coding. My agent made a PR. Basically, when the session times out from being idle too long, nothing gets sent to my supermemory. And even during the session, nothing gets sent unless it makes a tool call to store some info but I think during session that's probably normal. So that's it, thanks in advance!
+    
+    https://github.com/NousResearch/hermes-agent/pull/54293
+    [embed] fix(gateway): call _cleanup_agent_resources before idle-TTL evictio... https://github.com/NousResearch/hermes-agent/pull/54293
+    [reply to teknium msg=1513935040848068728]
+
+[2026-06-28T16:18:53.543000+00:00] princekid_ (id=1520825830391939213)
+    Hey guys, hope you’re doing well. I have a small Hermes PR: #49296 updates the desktop model picker so it shows only configured providers by default, making the picker less cluttered and more relevant to the user’s actual setup. I run into the issue a lot when using hermes desktop because I am constantly switching models.
+    
+    Could a maintainer take a look if they get a chance? 
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/49296
+    
+    I also ran the targeted local checks:
+    - configured-only Python subset: 6 passed
+    - desktop model-options query test: 2 passed
+    
+    Maintainer edits are enabled too. Thanks!
+    [embed] feat(picker): show configured providers by default by SilentKnight8... https://github.com/NousResearch/hermes-agent/pull/49296
+
+[2026-06-28T16:58:56.668000+00:00] teknium (id=1520835909828743328)
+    <:salute:1072217852385435768>
+    [reply to aialliai msg=1520795321905578084]
+
+[2026-06-28T17:09:37.149000+00:00] warofchange (id=1520838596200763545)
+    First PR merged into NousResearch/hermes-agent! 🎉
+    
+    What I fixed:
+    The README showed source ~/.bashrc as the post-install step for all platforms but that's a bash command that doesn't work in native Windows PowerShell. Split the block into platform-specific instructions: bash reload for Linux/macOS/WSL2/Termux, and "open a new terminal" for Windows native PowerShell.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/54346
+    
+    Small docs-only fix, no runtime changes, no duplicates. Waiting for review!
+    [embed] docs(windows): clarify post-install shell reload step for native Po... https://github.com/NousResearch/hermes-agent/pull/54346
+
+[2026-06-28T17:40:21.241000+00:00] hizzgdev (id=1520846330883215583)
+    <@387972437901312000> would you please take a look?
+    [reply to hizzgdev msg=1520765617500717178]
+
+[2026-06-28T18:38:34.328000+00:00] teknium (id=1520860981952118954)
+    No you need to be patient 17000 others are also in line
+    [reply to hizzgdev msg=1520846330883215583]
+
