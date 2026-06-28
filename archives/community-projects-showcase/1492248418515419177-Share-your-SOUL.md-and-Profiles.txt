@@ -494,3 +494,10 @@
     how do I get Hermes to always create these files in the folders  they need to be?
     [reply to fleety13 msg=1510830714499760219]
 
+[2026-06-28T01:09:39.310000+00:00] fleety13 (id=1520597013354250260)
+    SOUL will always be generated in the profile root.  Ask/tell Hermes to always make an AGENTS.md in each profiles CWD.
+    [reply to alfinpogform msg=1520382431931400252]
+
+[2026-06-28T01:12:35.882000+00:00] fleety13 (id=1520597753950896208)
+    If you want a profile to concentrate it's work in a particular folder e.g. <profile name>/workspace/ that's where Hermes should put the Agents file and assign the current working directory. CWD
+

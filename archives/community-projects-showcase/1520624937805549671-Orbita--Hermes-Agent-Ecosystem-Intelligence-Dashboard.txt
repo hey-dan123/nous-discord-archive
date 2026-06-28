@@ -1,0 +1,31 @@
+# Thread 'Orbita, Hermes Agent Ecosystem Intelligence Dashboard' in forum #community-projects-showcase
+# thread_id=1520624937805549671 forum_id=1316137596535177246
+# Started 2026-06-28T03:36:02.588262+00:00
+
+[2026-06-28T03:00:37.018000+00:00] warofchange (id=1520624937805549671)
+    I built Orbita to track the Hermes Agent ecosystem and competing AI projects on a daily basis so you never miss a trend, a release, or a shift in momentum.
+    
+    As Hermes Agent grows, the ecosystem around it is expanding fast. New repos, new releases, new research dropping every single day. Keeping up with all of it manually is time consuming and easy to miss. Orbita solves exactly that.
+    
+    Here's how it works: every morning at 07:00 UTC, GitHub Actions automatically kicks in. A Python script hits the GitHub API and detects changes in stars, forks, commits, and releases across all tracked repositories. At the same time, it scrapes news sources from Nous Research, OpenAI, and Anthropic to surface any new content. All findings are committed as JSON files directly into the repo, and Vercel automatically rebuilds the dashboard. By the time you wake up, everything is already updated you don't have to touch anything.
+    
+    The dashboard gives you star growth trends, daily commit activity, new release detection, and a live news feed all in one place. It also ships as a Hermes skill, so you can run /competitive-intel directly through the agent if you prefer.
+    
+    What's included in v0.1:
+    
+    • Live GitHub tracker - daily changes in stars, forks, commits and releases
+    • News feed - Nous Research, OpenAI and Anthropic sources scraped automatically
+    • Star growth chart - cross repo growth trends visualized over time
+    • Commit activity graph - daily commit volume tracked with bar charts
+    • Release detection - new version tags caught and listed instantly
+    • GitHub Actions automation - runs every morning at 07:00 UTC, findings auto committed
+    • Hermes skill layer - run /competitive-intel directly through the agent
+    •Vercel deployment - no database, JSON-based, self hostable in 5 minutes
+    
+    Live: https://orbita-three-liard.vercel.app
+    Repo: https://github.com/waroffchange/orbita
+    
+    Feedback is always good. 👇
+    [embed] Orbita https://orbita-three-liard.vercel.app/
+    [embed] GitHub - waroffchange/orbita https://github.com/waroffchange/orbita
+

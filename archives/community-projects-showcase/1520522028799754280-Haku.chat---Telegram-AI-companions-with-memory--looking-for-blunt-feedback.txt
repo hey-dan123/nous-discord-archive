@@ -1,0 +1,20 @@
+# Thread 'Haku.chat — Telegram AI companions with memory, looking for blunt feedback' in forum #community-projects-showcase
+# thread_id=1520522028799754280 forum_id=1316137596535177246
+# Started 2026-06-28T03:36:03.015523+00:00
+
+[2026-06-27T20:11:41.599000+00:00] jnwlsn__62097 (id=1520522028799754280)
+    Hey Nous folks — sharing a small project we’re testing: Haku.chat, AI companions on Telegram focused on continuity, persistent memory, and a warmer / less “corporate therapist” feel.
+    
+    It’s a free beta right now: no payment, no card, no app install. Mara and Marcus are live from the site.
+    
+    What we’re trying to improve:
+    - memory that actually matters later
+    - natural follow-ups without feeling scripted
+    - companions with opinions, humor, and personality instead of generic validation
+    - daily/proactive messages that don’t become repetitive
+    
+    Try it here: https://haku.chat/
+    
+    If anyone tests it, I’d really value blunt builder feedback: what feels alive vs generic, where memory breaks, what makes you want to keep talking, and what feels creepy/boring/broken.
+    [embed] Haku.chat — Fresh mint color test https://haku.chat/
+

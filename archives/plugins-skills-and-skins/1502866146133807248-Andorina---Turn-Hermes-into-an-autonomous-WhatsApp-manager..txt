@@ -559,3 +559,23 @@
     https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
     [embed] GitHub - AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes: Turn Hermes... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes
 
+[2026-06-27T19:57:12.586000+00:00] vayaperson (id=1520518383894921397)
+    **Next Steps & Current Priorities**
+    
+    We're shifting focus from adding new features to improving stability, code quality, and overall structure.
+    
+    **Current roadmap:**
+    
+    * 🛠️ Unify phone number/JID handling and split the main orchestrator into smaller, cleaner modules *(currently in progress)*.
+    * 🔒 Freeze the core engine to minimize future breaking changes.
+    * ⚡ Add an auto-disconnect system that safely disables crashed games/plugins without interrupting the WhatsApp connection.
+    * 🎨 Reorganize and polish the web panel UI, including fixing mobile responsiveness.
+    * 📝 Investigate and fix the user notes system, where notes aren't always being read correctly.
+    * 🐞 Collect bug reports from real-world users and different environments.
+    * 📚 Rewrite the documentation from scratch once everything is stable.
+    
+    The next updates will focus on making the project more robust, maintainable, and easier to use before introducing major new features.
+    
+    More info: https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/discussions/16
+    [embed] Next Steps & Code Cleanup · AndorinaAI Andorina-WhatsApp-Agent-for... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/discussions/16
+

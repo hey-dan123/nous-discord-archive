@@ -11,3 +11,26 @@
     Is it royalty-free or like Pinterest
     [reply to americanbiker msg=1519939284474265620]
 
+[2026-06-27T20:21:44.966000+00:00] americanbiker (id=1520524559504249003)
+    <@797839073578319882>  yes I made all the images & I"m making a VOL1 update right meow with 500 new images 🙂 enjoy
+
+[2026-06-27T21:44:34.608000+00:00] hazeyl_ (id=1520545403693564085)
+    I know I'm about to ask a really stupid wuestion, but are all the images *AI generated?*
+    [reply to americanbiker msg=1520524559504249003]
+
+[2026-06-27T21:59:42.659000+00:00] americanbiker (id=1520549212335505619)
+    Yes they are all made in Hermes and a local Flux-cumfy server. this whole project is all made with Hermes <@797839073578319882>   I made a pipeline in a mcp in Hermes that I say make 500 images this is the subject here's the positive and negitive prompts & Hermes changes the prompt for each image from there, once the image is made Hermes then reviews the image and ok's it or rejects it via g-rails I setup, if the image is ok then Hermes converts the image format & then looks for a profile that fits the image and page a image page on the site and then adds the image to the caterory  and that's the process. over the the last 8 weeks of work to make the image gen randon but in the scope of the subject and to ok/reject the image was a pain to make. But I have it all automatic now with Hermes nailing 99% of images and review & porting process now.
+
+[2026-06-27T22:31:42.765000+00:00] hazeyl_ (id=1520557265843912896)
+    Holy shit
+    [reply to americanbiker msg=1520549212335505619]
+
+[2026-06-27T22:31:47.872000+00:00] hazeyl_ (id=1520557287264092403)
+    Okay this is an awesome project
+
+[2026-06-27T22:31:51.880000+00:00] hazeyl_ (id=1520557304074862705)
+    Engineering wise
+
+[2026-06-27T23:25:01.018000+00:00] americanbiker (id=1520570680289267774)
+    ah thank you I"ll be releasing the dark photo project in a few weeks for folks that would like to do this them selfs 🙂 I tried to do something like this with other agents and it just kinda feel apart over time no matter how much time I spent. With Hermes I was able to keep all this local and stay on track with min slop/drift "It's lots of moving parts" and was able to fast track the project. This is made me a huge fan of the Hermes project, I'm now working on a web design/ app factory next all run on a local network with all frameworks you can think of and thus far Hermes is staying right on track and should be ready in a few weeks I'll also make that public like the Dark photo project. Glad you like the project and thank you for the kind words 🙂
+

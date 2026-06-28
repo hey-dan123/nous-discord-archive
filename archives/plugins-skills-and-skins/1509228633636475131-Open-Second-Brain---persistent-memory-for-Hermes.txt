@@ -231,3 +231,10 @@
 [2026-06-27T16:16:31.693000+00:00] no_orbert (id=1520462847564447764)
     I just came from Mnemosyne. Wanted to say thank you. Its work fine atm.  I use this with qmd and wikillm.
 
+[2026-06-27T22:07:31.800000+00:00] buke5122 (id=1520551180055351486)
+    How many tokens does it cost?
+    [reply to no_orbert msg=1520462847564447764]
+
+[2026-06-27T22:19:02.993000+00:00] buke5122 (id=1520554079129047223)
+    And how good does it work when having a huge amount of memoriess=
+

@@ -39,3 +39,9 @@
     Faster failure recovery — a crashed model load fails its slot in ~2 s instead of waiting out the full load-health timeout, so a bad load no longer wedges the queue.
     [embed] Release Turbohaul Manager v0.4.0 · MrTrenchTrucker/turbohaul-manager https://github.com/MrTrenchTrucker/turbohaul-manager/releases/tag/v0.4.0
 
+[2026-06-28T02:48:47.948000+00:00] mrtrenchtrucker (id=1520621963750539434)
+    New version v0.5.0 released! HUGE Upgrade! Single Series, Series-parallel, Double Parallel. Better documentation, You can now only send the newest KV Cache context for a 30x pre fill speedup especially as the context grows! UI/UX upgrades as well!
+    
+    https://github.com/MrTrenchTrucker/turbohaul-manager/releases/tag/v0.5.0
+    [embed] Release v0.5.0 · MrTrenchTrucker/turbohaul-manager https://github.com/MrTrenchTrucker/turbohaul-manager/releases/tag/v0.5.0
+

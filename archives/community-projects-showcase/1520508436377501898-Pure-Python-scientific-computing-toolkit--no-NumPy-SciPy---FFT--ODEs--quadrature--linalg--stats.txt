@@ -1,0 +1,19 @@
+# Thread 'Pure-Python scientific computing toolkit (no NumPy/SciPy): FFT, ODEs, quadrature, linalg, stats' in forum #community-projects-showcase
+# thread_id=1520508436377501898 forum_id=1316137596535177246
+# Started 2026-06-28T03:36:03.429058+00:00
+
+[2026-06-27T19:17:40.913000+00:00] 1453furox (id=1520508436377501898)
+    Cognitive Discovery System (CDS)  a scientific computing library written in pure Python. No NumPy, no SciPy, no compiled extensions. Zero dependencies, runs anywhere.
+    
+    18 modules: quantum circuit simulation, FFT/IFFT, ODE solvers, numerical integration, linear algebra, statistics, Monte Carlo, optimization, graph algorithms, symbolic math, a from-scratch NLP stack (BPE → attention → MiniGPT + scalar autograd), and a hypothesis-generation module.
+    
+    The idea: pure Python can't beat C on raw loops, but it can close the gap algorithmically — O(N log N) FFT, O(N³) LU decomposition (instead of O(N!) determinants), O(1) probabilistic quantum measurement. Not a NumPy replacement; a readable, dependency-light toolkit.
+    
+    1,441 tests · 100% coverage · on PyPI https://pypi.org/project/cognitive-discovery-system/
+    
+    Repo: https://github.com/Furox88/cognitive-discovery-system Install: pip install cognitive-discovery-system 
+    
+    If you find it useful, a star on the repo means a lot. The autograd part is the one I'd most appreciate eyes on.
+    If anyone has time to glance at the from-scratch autograd implementation, that's the part I'm least sure about. Open to feedback.
+    [embed] GitHub - Furox88/cognitive-discovery-system: Cognitive Discovery Sy... https://github.com/Furox88/cognitive-discovery-system
+

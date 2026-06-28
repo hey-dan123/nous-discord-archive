@@ -39554,3 +39554,153 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     nothing happening over here... totally normal setup... lol
     [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1520507133844656219/image.png?ex=6a41721e&is=6a40209e&hm=653156269e5c615037cab2a6ed5112cc10f50a2f7ef4bfa597ed6b0cfc7ba28c&
 
+[2026-06-27T20:14:29.874000+00:00] nanxingncb612d (id=1520522734596133116)
+    https://github.com/NousResearch/hermes-agent/pull/53789 Fix a race condition in HonchoSessionManager.shutdown() where new messages could be enqueued between flush_all() and the shutdown sentinel, causing data loss.
+    [embed] Fix/honcho shutdown race by necoweb3 · Pull Request #53789 · Nous... https://github.com/NousResearch/hermes-agent/pull/53789
+
+[2026-06-27T20:14:42.157000+00:00] nanxingncb612d (id=1520522786114769078)
+    https://github.com/NousResearch/hermes-agent/pull/53790 Fix a thread-safety bug in model_tools.py where the process-global _last_resolved_tool_names was written and read without synchronization, risking stale or partial reads in concurrent tool dispatch.
+    [embed] Fix/model tools global lock by necoweb3 · Pull Request #53790 · N... https://github.com/NousResearch/hermes-agent/pull/53790
+
+[2026-06-27T20:57:32.168000+00:00] undifined. (id=1520533565522055389)
+    The update does make it work longer,  not sure if it is better,  missing output.
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1520533565262135408/image0.jpg?ex=6a418abc&is=6a40393c&hm=8164ec92dacfab2033a18900abe9320ac3c6cd0f8f8ff008f91ba77e2bc8cb56&
+
+[2026-06-27T21:11:00.743000+00:00] dias4761 (id=1520536956931674223)
+    <@387972437901312000> 
+    
+    Skills the agent creates autonomously via skill_manage are persisted to the user's disk without any security scan in the default configuration. Unlike an ephemeral terminal() call, a skill is persistent: it survives restarts and session swaps and is reloaded into the agent's context on every run. A prompt-injected agent (e.g. via a malicious tool/MCP result) can therefore plant a malicious skill that executes in future sessions.
+    
+    https://github.com/NousResearch/hermes-agent/issues/53491
+    [embed] Skills: guard_agent_created off by default + ask-policy leaks findi... https://github.com/NousResearch/hermes-agent/issues/53491
+
+[2026-06-27T22:21:12.184000+00:00] jw_mushroom_man (id=1520554620995371141)
+    https://github.com/NousResearch/hermes-agent/pull/53848Mixture-of-Agents 
+    sessions in Hermes couldn't stream — the user stared at a blank screen until the whole response finished, sometimes for minutes. This PR makes the MoA aggregator stream its output live by reusing Hermes's existing streaming engine (tool-call reassembly, fallback, and all), so you see the work as it happens with no new moving parts.
+
+[2026-06-27T22:26:02.991000+00:00] srojk34 (id=1520555840728469766)
+    PR #53835 — fix(dashboard-auth): tolerate missing id_token on OIDC refresh grant
+    
+    _exchange() unconditionally required id_token in the token response, but OIDC Core §12.2 makes it optional on refresh. Self-hosted IDPs like Keycloak, Authentik, and Dex often omit id_token on refresh grants — this caused ProviderError on every transparent refresh, bouncing users to the login screen roughly every 15 minutes. Fix: on the refresh path only, fall back to the IDP's access_token when it's a verifiable JWT. Login path still enforces id_token. 3 regression tests, 69/69 pass.
+    
+    https://github.com/NousResearch/hermes-agent/pull/53835
+    [embed] fix(dashboard-auth): tolerate missing id_token on OIDC refresh gran... https://github.com/NousResearch/hermes-agent/pull/53835
+
+[2026-06-27T22:45:09.846000+00:00] jw_mushroom_man (id=1520560650986852473)
+    https://github.com/NousResearch/hermes-agent/pull/53852
+    
+    Adds an "attach app / window" capability to the desktop composer: the user clicks + → "App window…", picks an open desktop window, and Hermes can see and control that window — driving it through the hermes-eats-world sidecar (Windows UI-automation engine). Selecting a window also enters dock mode — the app tiles to the left and Hermes snaps to a narrow control panel on the right ("Controlling " + Undock).
+    
+    It's recognition-over-recall assistive tech: instead of describing a window, you point at it and talk.
+    
+    The feature is built in layers — window list → picker UI → agent control (@window: context ref) → live preview → dock — and went through an adversarial self-review; all surfaced release blockers are fixed in this branch (see Changes Made).
+    
+    Companion PR required: this depends on sidecar changes (precise --hwnd targeting, --list --json, --capture, --move, orchestrator depth/digit fixes) in lEWFkRAD/hermes-eats-world @ feat/phase0-sprint1. Merge/availability of the sidecar is required for the feature to function.
+    [embed] Feat/composer attach window by lEWFkRAD · Pull Request #53852 · N... https://github.com/NousResearch/hermes-agent/pull/53852
+
+[2026-06-27T22:45:55.837000+00:00] jw_mushroom_man (id=1520560843887083732)
+    https://github.com/lEWFkRAD/hermes-eats-world/tree/feat/phase0-sprint1 Companion
+
+[2026-06-27T22:46:34.047000+00:00] teknium (id=1520561004151312535)
+    Windows terminal flashing is unfixable
+
+[2026-06-27T22:46:38.870000+00:00] teknium (id=1520561024380567763)
+    Nothing I try makes it stop
+
+[2026-06-27T22:46:46.687000+00:00] teknium (id=1520561057167315275)
+    Windows users are just doomed for now
+
+[2026-06-27T22:47:43.592000+00:00] dias4761 (id=1520561295844315237)
+    I'd already done something about that. Let's see if it works.
+    [reply to teknium msg=1520561057167315275]
+
+[2026-06-27T22:47:49.220000+00:00] jw_mushroom_man (id=1520561319449727156)
+    https://klipy.com/gifs/sam-i-can-fix-that-2
+    [embed] Sam: I Can Fix That https://klipy.com/gifs/sam-i-can-fix-that-2
+    [reply to teknium msg=1520561004151312535]
+
+[2026-06-27T22:48:03.104000+00:00] jw_mushroom_man (id=1520561377683701790)
+    i think i have a pr ar for it too lemme look
+    [reply to dias4761 msg=1520561295844315237]
+
+[2026-06-27T22:49:00.450000+00:00] teknium (id=1520561618210128062)
+    I just tried 15 fixes for this from open PRs
+    [reply to dias4761 msg=1520561295844315237]
+
+[2026-06-27T22:49:05.767000+00:00] teknium (id=1520561640511246347)
+    none fixed it, at least most made it worse
+
+[2026-06-27T22:49:06.658000+00:00] dias4761 (id=1520561644248498346)
+    https://github.com/NousResearch/hermes-agent/pull/49931
+    [embed] fix(terminal): bypass Git Bash wrapper to prevent console flashes o... https://github.com/NousResearch/hermes-agent/pull/49931
+
+[2026-06-27T22:49:14.003000+00:00] teknium (id=1520561675055661149)
+    Yes I already tried that
+
+[2026-06-27T22:49:21.883000+00:00] dias4761 (id=1520561708106645644)
+    mamma mia
+
+[2026-06-27T22:49:23.583000+00:00] Translator Bot#1043 (id=1520561715236835462)
+    Oh mama
+    [reply to dias4761 msg=1520561708106645644]
+
+[2026-06-27T22:49:33.560000+00:00] dias4761 (id=1520561757083406467)
+    https://tenor.com/view/dog-crying-meme-doggo-crys-megan-soo-crying-dog-gif-5276199764143986284
+    [embed]  https://tenor.com/view/dog-crying-meme-doggo-crys-megan-soo-crying-dog-gif-5276199764143986284
+
+[2026-06-27T22:49:43.356000+00:00] teknium (id=1520561798170804316)
+    You literally need ASI to build windows apps that work <a:roflmao:393566686965530678>
+
+[2026-06-27T22:50:22.329000+00:00] dias4761 (id=1520561961635418344)
+    Well, I think we need to come up with another hypothesis for this. XD
+
+[2026-06-27T22:53:07.692000+00:00] teknium (id=1520562655218368533)
+    Its all on <@153017054545444864>'s shoulders now
+
+[2026-06-27T22:58:35.132000+00:00] dias4761 (id=1520564028601008228)
+    the final boss
+
+[2026-06-27T23:06:25.614000+00:00] flownium (id=1520566001945808896)
+    lol
+    [reply to dias4761 msg=1520564028601008228]
+
+[2026-06-27T23:08:45.594000+00:00] dias4761 (id=1520566589064220932)
+    hey, are u hiring people ?
+    [reply to teknium msg=1520562655218368533]
+
+[2026-06-27T23:21:47.560000+00:00] sworntech (id=1520569868867473439)
+    **Opened a small docs-only PR**:
+    
+    https://github.com/NousResearch/hermes-agent/pull/53862
+    
+    Clarifies the SiYuan optional skill prerequisites. The skill metadata lists `jq` and the examples use `jq`, but the intro still said “No extra tools needed.”
+    
+    Updated the source skill and generated docs page to keep them in sync.
+    
+    2 files changed, no runtime behavior change.
+    [embed] docs: clarify SiYuan jq requirement by Sworntech-dev · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/53862
+
+[2026-06-27T23:49:48.761000+00:00] hypertekton (id=1520576920335552748)
+    the insane flashing started like in the past ~4 days. before there were some, but not in the same volume. maybe that is useful
+    [reply to teknium msg=1520561004151312535]
+
+[2026-06-27T23:50:13.130000+00:00] hypertekton (id=1520577022546542772)
+    we always knew microsoft would be the final boss of ASI...
+
+[2026-06-27T23:53:19.578000+00:00] undifined. (id=1520577804566269983)
+    https://github.com/microsoft/terminal/issues/7308
+    [embed] Windows Terminal With Git Bash Flickering · Issue #7308 · microso... https://github.com/microsoft/terminal/issues/7308
+
+[2026-06-27T23:54:43.805000+00:00] undifined. (id=1520578157839781948)
+    6 years,  and not truly solved
+
+[2026-06-28T01:32:35.303000+00:00] gille (id=1520602784687460423)
+    https://github.com/NousResearch/hermes-agent/pull/53879 should squash it. needs testing. might break something i can't think of rn. requires desktop rebuild to test fully. if ya are comfortable with moving around installs and know how to, and wanna test it as a full on should not flash anymore for most if not all of the stuff we control from the app or gateway after restart type thing in windows, lmk how testing goes. <:chaos:1259024603720716409>
+    [embed] fix(windows): hide backend subprocess windows by default by helix4u... https://github.com/NousResearch/hermes-agent/pull/53879
+
+[2026-06-28T02:57:20.204000+00:00] banisha_ (id=1520624112307802182)
+    could someone take a look at this? i have a pr ready, but I only have read access, what is the correct path to being added as a contributor?
+    
+    https://github.com/NousResearch/hermes-agent/issues/53932
+    [embed] feat(moa): allow reference slots to set reasoning_effort · Issue #... https://github.com/NousResearch/hermes-agent/issues/53932
+

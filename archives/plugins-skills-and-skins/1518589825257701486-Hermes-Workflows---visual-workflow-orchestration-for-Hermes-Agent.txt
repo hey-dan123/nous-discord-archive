@@ -39,3 +39,11 @@
     If you could try running the plugin with Claude Code or something similar and ask it to generate a bug report, that would be great. I might be able to check and fix it faster via remote access if the hotel Wi-Fi allows it.
     [reply to tonyporj msg=1519488042992140479]
 
+[2026-06-27T20:55:54.805000+00:00] tonyporj (id=1520533157152162032)
+    Thanks for the reply. 
+    Thats ok Serg, im a newbie on this and not a developer, also I am not subscribed to claude, im only using free credits on it(tbh i dont have the budget for it for now, saying it so that you know that I wont be able to use it). and its my first day of vacation as well lol. im not going to be on my pc for the day. anyway, ill see what i can do with this and give you a report later^^,)  - goal should be, make this very easy to use and install.
+    [reply to techmeat msg=1520481471066931360]
+
+[2026-06-27T22:47:28.290000+00:00] propersites (id=1520561231663202407)
+    Thanks for sharing! Watched your video, why  install nemoclaw then Hermes? Is that just to sandbox it or are there any advantages? Would love to work with node based system for traceability of workflows
+
