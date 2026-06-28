@@ -39863,3 +39863,341 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     hello all you beautiful nous people i have been grinding on https://www.dregg.net/ (AGPL code: https://github.com/emberian/dregg) for about a month continuously and i'm hoping to have something actually cool to show off for the tweet 😎. there's tool gateways and things like that, been integrating with hermes...
     [embed] Dragon's Egg (dregg) https://www.dregg.net/
 
+[2026-06-28T09:28:32.379000+00:00] chr1558 (id=1520722561745420409)
+    Hopefully I followed the contribution guidelines correctly. I wrote a small documentation fix for the SearXNG setup instructions.
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/54117
+    Pull Request: https://github.com/NousResearch/hermes-agent/pull/54127#issue-4761735166
+    [embed] [Docs]: SearXNG configuration instructions are outdated · Issue #5... https://github.com/NousResearch/hermes-agent/issues/54117
+    [embed] docs: fix incorrect web search searxng instructions by chrispersico... https://github.com/NousResearch/hermes-agent/pull/54127
+
+[2026-06-28T09:54:45.929000+00:00] teknium (id=1520729161692348466)
+    merged
+    [reply to chr1558 msg=1520722561745420409]
+
+[2026-06-28T10:40:49.776000+00:00] srojk34 (id=1520740754107011194)
+    PR #54184 — projects_db SQLITE_BUSY retry
+    https://github.com/NousResearch/hermes-agent/pull/54184
+    
+    The kanban BUSY-retry fix (#54137) hardened kanban_db's local write_txn but left the shared sqlite_util.write_txn unprotected. projects_db imports the shared helper and is written concurrently by the TUI gateway, agent tools, and CLI — with only a 5s default busy_timeout vs kanban's 120s. Added jittered retry to the shared helper + raised projects_db timeout to 30s.
+    
+    PR #54187 — browser_get_images SSRF guard
+    https://github.com/NousResearch/hermes-agent/pull/54187
+    
+    The SSRF cluster (#54132) sealed browser_snapshot, browser_vision, and _browser_eval against eval-navigated private pages, but browser_get_images was missed — it bypasses _browser_eval and calls _run_browser_command("eval", ...) directly. Added the same page-URL recheck so image src/alt from private pages can't leak.
+    [embed] fix(projects): retry shared write_txn on transient SQLITE_BUSY by s... https://github.com/NousResearch/hermes-agent/pull/54184
+    [embed] fix(browser): extend private-network guard to browser_get_images by... https://github.com/NousResearch/hermes-agent/pull/54187
+
+[2026-06-28T10:46:39.920000+00:00] hansnostar (id=1520742222717255761)
+    I've tried to fix this problem for 5+hrs and I cant fix it. Please help me. Context: My Hermes agent chat in whatsapp worked perfectly in the morning. After an hour it started to get this syntax error and I cant fix it.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1520742222763528302/image.png?ex=6a424d0f&is=6a40fb8f&hm=647f64a3d43da6de65c41d7d8908fadb317ad6ef65bc8b4094636ea84812326c&
+
+[2026-06-28T10:52:10.954000+00:00] srojk34 (id=1520743611174752346)
+    I'm investigating the issue.
+    [reply to hansnostar msg=1520742222717255761]
+
+[2026-06-28T10:57:07.331000+00:00] srojk34 (id=1520744854269988984)
+    This is most likely a file corruption during auto-update. tools/approval.py isn't in the _UPDATE_CRITICAL_FILES list, so the post-update syntax check doesn't validate it — a corrupted file slips through unnoticed.
+    
+    Try these steps in your hermes install directory:
+    
+    1. Check if the file is actually corrupted
+    head -5 tools/approval.py
+    
+    2. Clear stale .pyc caches
+    find . -type d -name __pycache__ -exec rm -rf {} +
+    
+    3. Restore the file from git
+    git checkout -- tools/approval.py
+    
+    4. Or do a full forced update
+    hermes update --force
+    [reply to hansnostar msg=1520742222717255761]
+
+[2026-06-28T11:38:16.085000+00:00] teknium (id=1520755208974766190)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1520755208727040020/image.png?ex=6a425928&is=6a4107a8&hm=2777d239776ddbb61bec72a0dc960d0d9f807bf7a0c25e630553dec5f24901a0&
+
+[2026-06-28T11:41:29.782000+00:00] srojk34 (id=1520756021398732873)
+    Hermes is sprinting toward perfection, truly living up to its legendary name ✌️
+    [reply to teknium msg=1520755208974766190]
+
+[2026-06-28T11:44:39.840000+00:00] teknium (id=1520756818559766528)
+    https://github.com/NousResearch/hermes-agent/issues/54220
+    [embed] [Tracking] Windows Desktop GUI: console windows (cmd/conhost/git/gh... https://github.com/NousResearch/hermes-agent/issues/54220
+
+[2026-06-28T11:50:35.564000+00:00] ajo6268 (id=1520758310574493866)
+    I'm not a coder - more an AI Product Manager / Claude vibecoder - but I have had to do a lot of patches / surgery to get Hermes Agent (Lunk) to work as a full disocrd Voice Bot working in a shared voice channel with more than one participant - spent 2 or 3 days refining what makes this work.
+    
+    🧠 **Lunk — everything that's been built (TL;DR)**
+    
+    🎙️ **Voice — listening**
+    • **He can hear you at all** — always on — Discord forces DAVE encryption; without our fix = zero transcripts.
+    • **Turn-taking pause** — `voice.silence_duration` (2.3s) — waits for slow speakers, won't cut you off.
+    • **Barge-in** — `discord.voice_bargein.*` — interrupt him mid-reply just by talking.
+    • **Noise gate** — `voice.min_rms` (250) — ignores silence/background so he doesn't transcribe junk.
+    
+    🗣️ **Wake word & room recording** *(new)*
+    • **Wake word "lunkspeak"** — `/wakeword on|off` — when ON he only replies if you say *lunkspeak* (a unique word, works anywhere in the sentence, can't false-fire on normal chat). Word list tunable, no rebuild.
+    • **Snappy under noise** — `voice.wake_listen_silence` (0.6s) / `wake_listen_maxflush` (5s) — wake word triggers fast even with a TV on (no 2.3s wait).
+    • **Written transcript** — auto when wake ON — every spoken line gets posted to the channel, attributed, so anyone who can't listen has the convo in text.
+    • **Voice memory** — `voice.voice_catchup_minutes` (15) — when you address him he gets the last ~15 min of room talk as context (kept separate from text history).
+    
+    ⚡ **Speed & brevity**
+    • **Think-off on voice** — auto (say *"think" / "properly" / "take your time"* to force full reasoning) — spoken replies ~1–7s instead of ~15s. Typed turns always think.
+    • **Brevity** — `voice.brevity_prompt` — spoken replies kept to 1–2 sentences, no symbols read aloud.
+    • **Plain speech** — auto — strips markdown/maths/emoji from what's *spoken* (text replies keep formatting).
+    
+    If anyone's interested - wants to discuss etc - happy to...
+    He mainly runs off all local (5090) but I do sometime use codex auth for 5.4 mini brain - though normally running Gemma4:12b local thourgh ollama / separate whisper docker and kokoro docker both with GPU use and docker net to the hermes docker.
+
+[2026-06-28T12:01:13.442000+00:00] nanxingncb612d (id=1520760986028740618)
+    https://github.com/NousResearch/hermes-agent/pull/54213 This hardens the Teams adapter so explicit user-allowlist policies are enforced before any inbound message side effects occur. When a Teams sender is not allowed by TEAMS_ALLOWED_USERS or GATEWAY_ALLOWED_USERS, the adapter now drops the message before attachment downloads, cache writes, and event dispatch.
+    [embed] fix(teams): reject unauthorized users before attachment side effect... https://github.com/NousResearch/hermes-agent/pull/54213
+
+[2026-06-28T12:01:34.764000+00:00] nanxingncb612d (id=1520761075459559444)
+    https://github.com/NousResearch/hermes-agent/pull/54223 Credential-pool refresh failures now redact sensitive exception text before persisting last_auth_error.message into auth state.
+    [embed] fix(auth): redact credential pool refresh errors by necoweb3 · Pul... https://github.com/NousResearch/hermes-agent/pull/54223
+
+[2026-06-28T12:13:07.387000+00:00] nanxingncb612d (id=1520763980531109898)
+    https://github.com/NousResearch/hermes-agent/pull/54231 Dashboard OAuth error paths now redact credential-bearing exception text before returning it through API responses or OAuth session state.
+    [embed] fix(dashboard): redact oauth error responses by necoweb3 · Pull Re... https://github.com/NousResearch/hermes-agent/pull/54231
+
+[2026-06-28T12:13:19.316000+00:00] nanxingncb612d (id=1520764030564696064)
+    https://github.com/NousResearch/hermes-agent/pull/54232 TUI gateway error messages now redact credential-bearing exception text before sending it over JSON-RPC/events or printing turn-dispatch errors.
+    [embed] fix(tui): redact gateway error messages by necoweb3 · Pull Request... https://github.com/NousResearch/hermes-agent/pull/54232
+
+[2026-06-28T12:19:37.671000+00:00] hizzgdev (id=1520765617500717178)
+    Hey folks! Just opened a PR to add a text-based interactive model picker for the Weixin/WeChat gateway adapter (fixing the broken /model command switch). Could a maintainer please help approve the workflow to let the CI run and review? Appreciate it!
+    https://github.com/NousResearch/hermes-agent/pull/48199
+    [embed] fix(gateway): add text-based model picker to Weixin adapter by zzgb... https://github.com/NousResearch/hermes-agent/pull/48199
+
+[2026-06-28T13:04:10.654000+00:00] syedabdurr2hman (id=1520776828804141206)
+    <@387972437901312000> two hermes-agent things:
+    
+    1) PR #54255 — fixes the local llama.cpp BG-review context overflow
+    (#54115/#54118): adds a default guard that skips the same-model review
+    when local n_ctx usage is high. Triaged P3. https://github.com/NousResearch/hermes-agent/pull/54255
+    
+    2) ⚠️ Malware on #54201 — `kumedorobe` posted a fake "hermes_fix.apk"
+    linking to throwaway repo keracocobe/123 (module[.]apk). Hermes ships no
+    APK — please hide it & ban the account. Warned + reported via GH abuse. https://github.com/NousResearch/hermes-agent/issues/54201#issuecomment-4826151657
+    [embed] fix(background-review): skip same-model review near local context l... https://github.com/NousResearch/hermes-agent/pull/54255
+    [embed] [Windows] terminal tool hangs when launching GUI programs via .exe ... https://github.com/NousResearch/hermes-agent/issues/54201
+
+[2026-06-28T13:07:38.717000+00:00] sahil_ss9 (id=1520777701483483187)
+    Hey <@387972437901312000> and <@297574774329049098>esearch/devs — I've got 35 PRs open on hermes-agent that could use your eyes. Here's the breakdown.
+    
+    
+    
+        One thing blocking a bunch of these: the Docker build-arm64 job is failing with a GHCR permissions issue (denied: installation not allowed to Write organization package). That's an upstream CI config thing, nothing to do with the PRs themselves. About 11 PRs can't get green checks until this is fixed.
+    
+    
+    
+        PRs that need a rebase (6):
+    
+        #53183 — The gateway stops processing messages after a long response + /new because cleanup runs on the event loop
+        Offloaded cleanup to a background thread with a timeout so the event loop stays responsive
+        https://github.com/NousResearch/hermes-agent/pull/53183
+    
+        #53118 — Desktop build breaks when npm has ignore-scripts=true because esbuild's platform binary never gets installed
+        The fix checks for the missing binary and stages it before the build runs
+        https://github.com/NousResearch/hermes-agent/pull/53118
+    
+        #53102 — Desktop crashes at startup with "Cannot find module 'simple-git'" when the dependency isn't in the packaged bundle
+        Lazy-require simple-git so it only loads when actually needed, not at startup
+        https://github.com/NousResearch/hermes-agent/pull/53102
+    
+        #52407 — Cron output files pile up forever and eventually fill the disk
+        Added automatic retention so old cron output files get pruned
+        https://github.com/NousResearch/hermes-agent/pull/52407
+    
+        #52094 — Desktop model visibility preferences reset whenever localStorage gets cleared
+        Moved preferences to the profile-scoped backend store so they actually persist
+        https://github.com/NousResearch/hermes-agent/pull/52094
+    
+        #43780 — Multi-profile setups have no way to react when the curator finishes a pass without polling log directories
+        Added a post_curator_run plugin hook so profiles can react immediately
+        https://github.com/NousResearch/hermes-agent/pull/43780
+    [embed] fix: offload agent resource cleanup to executor thread with timeout... https://github.com/NousResearch/hermes-agent/pull/53183
+    [embed] fix(desktop): stage esbuild binary when ignore-scripts=true prevent... https://github.com/NousResearch/hermes-agent/pull/53118
+    [embed] fix(desktop): lazy-require simple-git so module loads when dep is m... https://github.com/NousResearch/hermes-agent/pull/53102
+    [embed] fix: add default retention for cron output files to prevent disk fi... https://github.com/NousResearch/hermes-agent/pull/52407
+    [embed] fix(desktop): persist model visibility preferences to profile-scope... https://github.com/NousResearch/hermes-agent/pull/52094
+
+[2026-06-28T13:07:54.642000+00:00] sahil_ss9 (id=1520777768277901342)
+    Two PRs with flaky CI (tests pass locally, just timing issues):
+    
+        #54113 — When a profile manifest references a bundled skill whose file is missing, the skill gets silently suppressed forever
+        Tracked deletions via explicit tombstone files so sync can pick them up properly
+        https://github.com/NousResearch/hermes-agent/pull/54113
+        (Failing CI: test_protocol.py hits the 140s timeout on slice 2/8 — known flake, all 75 tests actually pass)
+    
+        #53669 — Symlinks in the skills directory get copied to a random tempdir that Docker can't reach
+        Used a stable hermes-relative path so Docker bind-mounts work reliably
+        https://github.com/NousResearch/hermes-agent/pull/53669
+        (Failing CI: one test has a race condition where the process exits before the assertion checks it — 84/85 tests pass)
+    
+    
+    
+        Three older feature PRs that could use a decision (no CI ever ran, no reviews yet):
+    
+        #42171 — There's no adversarial code review skill in the ecosystem, so skill/plugin PRs only get human review
+        Hermaguard: a read-only bug-hunting skill that attacks changes from three angles and consolidates findings
+        https://github.com/NousResearch/hermes-agent/pull/42171
+    
+        #33186 — The security-guidance plugin has flat output with no severity ranking and no way to run an on-demand audit
+        Added severity tiers (critical/high/medium/low), an audit CLI tool, and code execution coverage
+        https://github.com/NousResearch/hermes-agent/pull/33186
+    
+        #43780 (also in the rebase list above) — post_curator_run hook
+    [embed] fix: track bundled-skill deletions via explicit tombstone file by S... https://github.com/NousResearch/hermes-agent/pull/54113
+    [embed] fix(credential_files): use stable hermes-relative path for symlink-... https://github.com/NousResearch/hermes-agent/pull/53669
+    [embed] feat(skills): add hermaguard adversarial bug-hunting skill by Sahil... https://github.com/NousResearch/hermes-agent/pull/42171
+    [embed] feat(plugins): enhance security-guidance with severity tiers, audit... https://github.com/NousResearch/hermes-agent/pull/33186
+
+[2026-06-28T13:08:21.831000+00:00] sahil_ss9 (id=1520777882316836894)
+    And the rest — 23 PRs that are clean, reviewed by tonydwb (LGTM), just need a human thumb on them:
+    
+        #54235 — Running GUI programs through the terminal tool on Windows hangs the session because only the bash wrapper gets killed
+        Kill the entire process tree on Windows so GUI children get properly reaped
+        https://github.com/NousResearch/hermes-agent/pull/54235
+    
+        #53999 — Signal attachments live on the Hermes host filesystem and can't be reached by a separate signal-cli container
+        Inline them as data URIs at the JSON-RPC boundary so the container gets the actual bytes
+        https://github.com/NousResearch/hermes-agent/pull/53999
+    
+        #53808 — Dashboard probes keep calling gh auth token for Copilot even after the user removed that credential source
+        Gate the token resolution behind source-suppression checks so removed sources stay quiet
+        https://github.com/NousResearch/hermes-agent/pull/53808
+    
+        #53709 — Per-platform streaming settings ignore the global streaming.enabled switch, so turning it off globally doesn't actually stop streaming
+        All per-platform streaming checks now respect the global master switch
+        https://github.com/NousResearch/hermes-agent/pull/53709
+    
+        #53648 — Every git call on Windows flashes a visible CMD window
+        Hidden via CREATE_NO_WINDOW on all git subprocess calls
+        https://github.com/NousResearch/hermes-agent/pull/53648
+    
+        #53460 — Chinese Windows crashes when subprocess output contains UTF-8 Chinese characters
+        Added encoding=utf-8, errors=replace to every subprocess text=True call
+        https://github.com/NousResearch/hermes-agent/pull/53460
+    
+        #53437 — The web TUI dashboard shows a big blank area at the bottom after a long conversation
+        Fixed xterm.js viewport sizing so the output stays visible
+        https://github.com/NousResearch/hermes-agent/pull/53437
+    [embed] fix: kill entire process tree on Windows to prevent GUI program han... https://github.com/NousResearch/hermes-agent/pull/54235
+    [embed] fix: inline Signal attachments for RPC sends by Sahil-SS9 · Pull R... https://github.com/NousResearch/hermes-agent/pull/53999
+    [embed] fix: gate Copilot token resolution on source suppression (#53781) b... https://github.com/NousResearch/hermes-agent/pull/53808
+    [embed] fix: gate per-platform streaming behind global streaming.enabled (#... https://github.com/NousResearch/hermes-agent/pull/53709
+    [embed] fix: hide console window on Windows git subprocess calls (#53631) b... https://github.com/NousResearch/hermes-agent/pull/53648
+
+[2026-06-28T13:08:39.777000+00:00] sahil_ss9 (id=1520777957587681331)
+    #53422 — Cron jobs with restricted toolsets still get every MCP server auto-injected, bypassing the restriction
+        MCP tools now respect enabled_toolsets on cron jobs
+        https://github.com/NousResearch/hermes-agent/pull/53422
+    
+        #53381 — The TUI gateway completely ignores Ctrl+C (SIG_IGN), leaving you stuck if the terminal wedges
+        Two-stage handler — first Ctrl+C drains sessions gracefully, second one force-exits
+        https://github.com/NousResearch/hermes-agent/pull/53381
+    
+        #53371 — Windows installer hardcodes Python 3.11 even when the project requires a different version
+        Derives the Python version from pyproject.toml at install time
+        https://github.com/NousResearch/hermes-agent/pull/53371
+    
+        #53356 — Desktop repo scanner walks your entire home directory with no way to exclude folders, and accepts broken .git dirs
+        Added configurable scan roots, exclude paths, and .git HEAD validation
+        https://github.com/NousResearch/hermes-agent/pull/53356
+    
+        #53291 — Hundreds of subprocess calls on Windows each flash a console window
+        Applied a global subprocess patch so all calls inherit CREATE_NO_WINDOW
+        https://github.com/NousResearch/hermes-agent/pull/53291
+    
+        #53270 — Recurring briefing jobs get the generic [SILENT] suppression that makes them useless
+        Added a per-job allow_silent flag so briefings can opt out of silence
+        https://github.com/NousResearch/hermes-agent/pull/53270
+    
+        #53209 — Clicking a file artifact in Desktop on Windows triggers an infinite download loop that fills your Downloads folder
+        Fixed the shell.openPath() empty-return handling to stop the loop
+        https://github.com/NousResearch/hermes-agent/pull/53209
+    
+        #53074 — Plugin static assets (JS/CSS) served from /dashboard-plugins/ get blocked by the OAuth gate because script tags can't send auth headers
+        Exempted /dashboard-plugins/ from the OAuth gate so plugin assets load properly
+        https://github.com/NousResearch/hermes-agent/pull/53074
+    [embed] fix(cron): MCP tools must respect enabled_toolsets on cron jobs by ... https://github.com/NousResearch/hermes-agent/pull/53422
+    [embed] fix: replace SIG_IGN for SIGINT with two-stage handler in TUI gatew... https://github.com/NousResearch/hermes-agent/pull/53381
+    [embed] fix(install): derive Python versions from pyproject.toml requires-p... https://github.com/NousResearch/hermes-agent/pull/53371
+    [embed] fix: add configurable scan roots, exclude paths, and .git validatio... https://github.com/NousResearch/hermes-agent/pull/53356
+    [embed] fix: suppress console window flashes on Windows via global subproce... https://github.com/NousResearch/hermes-agent/pull/53291
+
+[2026-06-28T13:08:59.354000+00:00] sahil_ss9 (id=1520778039699705876)
+    #53270 — Recurring briefing jobs get the generic [SILENT] suppression that makes them useless
+        Added a per-job allow_silent flag so briefings can opt out of silence
+        https://github.com/NousResearch/hermes-agent/pull/53270
+    
+        #53209 — Clicking a file artifact in Desktop on Windows triggers an infinite download loop that fills your Downloads folder
+        Fixed the shell.openPath() empty-return handling to stop the loop
+        https://github.com/NousResearch/hermes-agent/pull/53209
+    
+        #53074 — Plugin static assets (JS/CSS) served from /dashboard-plugins/ get blocked by the OAuth gate because script tags can't send auth headers
+        Exempted /dashboard-plugins/ from the OAuth gate so plugin assets load properly
+        https://github.com/NousResearch/hermes-agent/pull/53074
+    
+        #52770 — Checkpoint restore in Desktop fails when the session history changed and the user ordinal is now out of bounds
+        Clamp the ordinal to the last available index so restore never errors out
+        https://github.com/NousResearch/hermes-agent/pull/52770
+    
+        #52699 — TUI resolves a hardcoded placeholder model and permanently bakes it into the session, overriding the real model
+        Prevent the placeholder from being persisted as the sticky session binding
+        https://github.com/NousResearch/hermes-agent/pull/52699
+    
+        #52519 — WebSocket JSON-RPC frames on Windows can corrupt multi-byte UTF-8 characters at system boundaries
+        Added newline delimiters to match StdioTransport framing
+        https://github.com/NousResearch/hermes-agent/pull/52519
+    
+        #52474 — Profile install with --force deletes the old directory in place, and a transient failure on Windows leaves things broken
+        Switched to atomic rename-then-copy instead of delete-in-place
+        https://github.com/NousResearch/hermes-agent/pull/52474
+    [embed] fix: add per-job allow_silent flag for recurring briefing/report jo... https://github.com/NousResearch/hermes-agent/pull/53270
+    [embed] fix(desktop): prevent infinite download loop on Windows when clicki... https://github.com/NousResearch/hermes-agent/pull/53209
+    [embed] fix: exempt /dashboard-plugins/ from OAuth auth gate (#53066) by Sa... https://github.com/NousResearch/hermes-agent/pull/53074
+    [embed] handle missing user indices in checkpoint restore by Sahil-SS9 · P... https://github.com/NousResearch/hermes-agent/pull/52770
+    [embed] fix(tui): prevent unresolved model placeholder from being persisted... https://github.com/NousResearch/hermes-agent/pull/52699
+
+[2026-06-28T13:10:02.406000+00:00] sahil_ss9 (id=1520778304158826627)
+    #52519 — WebSocket JSON-RPC frames on Windows can corrupt multi-byte UTF-8 characters at system boundaries
+        Added newline delimiters to match StdioTransport framing
+        https://github.com/NousResearch/hermes-agent/pull/52519
+    
+        #52474 — Profile install with --force deletes the old directory in place, and a transient failure on Windows leaves things broken
+        Switched to atomic rename-then-copy instead of delete-in-place
+        https://github.com/NousResearch/hermes-agent/pull/52474
+    
+        #52327 — Running hermes update from the dashboard kills the dashboard because it's the parent process
+        Preserve the dashboard process across updates so it stays running
+        https://github.com/NousResearch/hermes-agent/pull/52327
+    
+        #52209 — Setting web.extract_backend=auxiliary is silently ignored and falls back to auto-detection
+        Registered auxiliary as a valid backend and added a warning when config falls through
+        https://github.com/NousResearch/hermes-agent/pull/52209
+    
+        #52173 — Resuming a long session reloads every message, costing tokens even for a quick check-in
+        Added --recent N to load only the last N messages
+        https://github.com/NousResearch/hermes-agent/pull/52173
+    
+        #52163 — /resume without arguments shows a static numbered table instead of an interactive picker
+        Wired the curses session browser into /resume for keyboard navigation and search
+        https://github.com/NousResearch/hermes-agent/pull/52163
+    
+        #52076 — The Feishu message-withdrawn error can reinstate the wrong reply target and cause cascading failures
+        Handle withdrawn reply targets cleanly in both the response-code and exception paths
+        https://github.com/NousResearch/hermes-agent/pull/52076
+    
+    
+    
+        Happy to rebase the conflicted ones if you give me the go-ahead. The main blocker is the Docker arm64 infra issue . 30 PRs can't turn green until that's sorted.
+    [embed] fix(tui): add newline delimiter to WebSocket JSON-RPC frames by Sah... https://github.com/NousResearch/hermes-agent/pull/52519
+    [embed] fix: atomic directory replacement in profile install/update to prev... https://github.com/NousResearch/hermes-agent/pull/52474
+    [embed] fix: preserve dashboard process across hermes update (#52218) by Sa... https://github.com/NousResearch/hermes-agent/pull/52327
+    [embed] fix: register auxiliary as valid web extract backend and log warnin... https://github.com/NousResearch/hermes-agent/pull/52209
+    [embed] feat(cli): --recent N flag to resume with last N messages only by S... https://github.com/NousResearch/hermes-agent/pull/52173
+

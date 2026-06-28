@@ -4924,3 +4924,43 @@
     And found out that the npu in it needs the model to be converted to int8. Didn't use the npu/gpu at all with the model i used, so it can't perform well at all. 1-4 tokens per sec
     [reply to fleety13 msg=1518514616857006181]
 
+[2026-06-28T10:39:00.191000+00:00] josephcy (id=1520740294474072227)
+    i notice this happen then i suspect it's from the update using the webui does not do the same update process as `hermes update` so i ask hermes to check it says the update mostly just do `git pull --ff-only` 
+    
+    ```The WebUI update path for Agent is basically:
+    
+    - git fetch
+    - git pull --ff-only
+    - stash tracked local changes if needed
+    - purge some pycache
+    - restart/re-exec the WebUI process
+    
+    It does not run the official:
+    
+    hermes update
+    
+    That matters.
+    
+    Official hermes update does much more:
+    
+    - pre-update backup
+    - quick snapshot
+    - fetch/pull with rollback guard
+    - syntax validation
+    - dependency reinstall
+    - node dependency refresh
+    - web build
+    - bundled skill sync
+    - profile skill sync
+    - profile .env backfill
+    - config migration
+    - cron job safety restore
+    - model catalog refresh
+    - auto-restart all gateways
+    
+    The WebUI Agent updater does not do that full sequence.```
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1520740294146916442/image.png?ex=6a424b44&is=6a40f9c4&hm=8a999ce726d3999b27b4902f0cc7917c7abf716d1a89b1a3699a480310f59fa7&
+
+[2026-06-28T10:39:54.392000+00:00] josephcy (id=1520740521809543281)
+    right now i had check the ignore agent update, but i guess it's probably better the update can use the same sequence of the same way hermes update itself?
+

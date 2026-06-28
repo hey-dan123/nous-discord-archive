@@ -249,3 +249,12 @@
     Its works for me, with mnemosyne I had a issue every Hermes Desktop update.
     [reply to btdoverclock msg=1520663471392296971]
 
+[2026-06-28T11:54:25.459000+00:00] techmeat (id=1520759274823876608)
+    Honestly I can't give you a hard number yet - only a subjective sense that it's pretty minimal, since it runs fast with the models I use day to day. I have been thinking about actually measuring it though, and maybe building a small dashboard for the plugin with token/usage analytics and stats - not sure yet whether that's something people would actually want.
+    
+    If you (or anyone) have ideas or any thoughts on how to improve the plugin on that front, I'd really appreciate it. 🙏
+    [reply to buke5122 msg=1520551180055351486]
+
+[2026-06-28T13:40:56.579000+00:00] buke5122 (id=1520786081124192257)
+    But how good does it work when your brain grows to a large amount of memories? Will the consistency keep up to vector database memory systems?
+

@@ -1,0 +1,21 @@
+# Thread 'Discord Agent Bot - Easily build a server.' in forum #community-projects-showcase
+# thread_id=1520745752987566141 forum_id=1316137596535177246
+# Started 2026-06-28T13:42:09.234609+00:00
+
+[2026-06-28T11:00:41.602000+00:00] simor6 (id=1520745752987566141)
+    Just want link? here: https://ava.simoapps.com/
+    
+    
+    I built Ava, an AI-powered Discord agent that lets you manage your server using Llms.
+    
+    Instead of configuring everything manually, you can simply tell Ava what you want. For example, "Create a gaming server with staff roles, tickets, welcome messages, and moderation logs." Ava understands the request, plans the necessary steps, and completes everything automatically while showing live progress.
+    
+    Ava can create and manage channels, roles, permissions, server settings, moderation systems, ticket systems, welcome and leave messages, and much more. She can also send rich embed messages, generate AI server icons, remember important information across conversations, retrieve server information when needed, and even ask follow-up questions if she needs clarification before taking action.
+    
+    The goal was to make Discord server management feel like talking to another person instead of configuring dozens of settings and commands.
+    
+    If you'd like to try Ava check out the links below.
+    https://ava.simoapps.com/
+    [attachment] Building_a_Complete_Discord_Server_with_AI___Tickets__Welcome_Messages___More1080P_HD.mp4 https://cdn.discordapp.com/attachments/1520745752987566141/1520745753675567247/Building_a_Complete_Discord_Server_with_AI___Tickets__Welcome_Messages___More1080P_HD.mp4?ex=6a425059&is=6a40fed9&hm=ea45b3b5bdf9e83969911985dd0d302cda783a7ab65b0534c30b0cb8aa51c965&
+    [embed] Ava | AI Discord Agent That Builds and Manages Your Server https://ava.simoapps.com/
+

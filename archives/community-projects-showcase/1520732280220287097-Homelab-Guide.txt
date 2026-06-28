@@ -1,0 +1,26 @@
+# Thread 'Homelab Guide' in forum #community-projects-showcase
+# thread_id=1520732280220287097 forum_id=1316137596535177246
+# Started 2026-06-28T13:42:09.639119+00:00
+
+[2026-06-28T10:07:09.444000+00:00] j0hnnybgoode (id=1520732280220287097)
+    1. get a 50$ NUC from ebay
+    2. follow the guide
+    3. enjoy your personal own homelab
+    
+    https://homelab-guide.netlify.app/
+    
+    im not a tech-savy person, i was affraid id get stuck somewhere in the middle of the installation process.
+    so i asked Claude to create me the most detailed and jargon-free tutorial so i can install Hermes on my cheap NUC, and access it from anywhere in the world.
+    after countless back-n-forth, this is the final Guide version claude gave me.
+    
+    its all theoretical tho.
+    none of it was tested IRL yet.
+    i havent found the time to actually follow along all these instructions and build it IRL.
+    
+    if you spot any flaws, lemme know so i can fix the guide.
+    if you have any other suggestions, lemme know.
+    all constructive criticism is welcomed.
+    all bashing/negativism is ignored.
+    
+    sharing for the sake of sharing.
+

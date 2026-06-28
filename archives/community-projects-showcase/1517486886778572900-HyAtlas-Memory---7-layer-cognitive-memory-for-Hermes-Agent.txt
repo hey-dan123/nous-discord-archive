@@ -110,3 +110,6 @@
 [2026-06-23T08:36:28.770000+00:00] tunacookie (id=1518897521051566090)
     if memory doesnt seem to save on the dashboard, a good hyatlas stop  and hyatlas start on the terminal should help.
 
+[2026-06-28T08:52:39.625000+00:00] tunacookie (id=1520713532440707123)
+    V2 Release Coming soon, did a big overhaul make it more reliable, made it so all layers work properly, etc all the backend stuff, V2.x+ onwards will be working on polishing the dashboard
+

@@ -2288,3 +2288,13 @@
 [2026-06-27T08:40:21.041000+00:00] buke5122 (id=1520348046729150585)
     Trying my luck again when I get home
 
+[2026-06-28T12:38:15.989000+00:00] 0xlfg (id=1520770308066377809)
+    Doesn't sound like you are using it properly
+
+[2026-06-28T13:39:17.816000+00:00] buke5122 (id=1520785666882146354)
+    Reinstalled it. Seems to be kind of working now
+    [reply to 0xlfg msg=1520770308066377809]
+
+[2026-06-28T13:39:26.420000+00:00] buke5122 (id=1520785702969933986)
+    Maybe my expectations are too high lol
+

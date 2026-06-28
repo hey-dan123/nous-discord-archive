@@ -1,0 +1,15 @@
+# Thread 'I built Tether LLM debugger for OpenClaw and Hermes' in forum #community-projects-showcase
+# thread_id=1520752256754909184 forum_id=1316137596535177246
+# Started 2026-06-28T13:42:08.820664+00:00
+
+[2026-06-28T11:26:32.221000+00:00] fucktheperson (id=1520752256754909184)
+    Built a debugger for local AI agents called Tether.
+    If your OpenClaw or Hermes agent ever did something unexpected and you had no idea where it went wrong, this is for that.
+    Point your agent's base_url at Tether's proxy. It captures every LLM call and shows it as a node graph with time-travel replay, per-node cost, and latency. No SDK changes, no config.
+    Fully local. Nothing leaves your machine. macOS and Linux.
+    GitHub: ||github.com/Hqzdev/Tether||
+    Site: ||tetherapp.vercel.app||
+    
+    If you're running multi-agent setups or custom skills, that's the exact use case I'm building for. Feedback welcome.
+    [attachment] video.mp4 https://cdn.discordapp.com/attachments/1520752256754909184/1520752257002377397/video.mp4?ex=6a425668&is=6a4104e8&hm=0ca91ae627d7f1b4866b7d2ff007a5893522f95820ae01c237de546fb7c99564&
+

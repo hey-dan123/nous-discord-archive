@@ -501,3 +501,12 @@
 [2026-06-28T01:12:35.882000+00:00] fleety13 (id=1520597753950896208)
     If you want a profile to concentrate it's work in a particular folder e.g. <profile name>/workspace/ that's where Hermes should put the Agents file and assign the current working directory. CWD
 
+[2026-06-28T09:10:55.405000+00:00] shiro1001 (id=1520718128475148358)
+    Hello, everyone.
+    Hermes' memory system is truly wonderful, so I created a mechanism that lets AI agents have personalities and speech patterns like  anime characters, making conversations with them much more enjoyable.
+    It works by providing instructions to soul.md. If you could try using it and share your feedback after taking a look, I would really appreciate it.
+    The goal is to make interactions with AI agents more fun, but I’d like to improve the areas where efficiency is lacking.
+    
+    https://github.com/shiro-0x/hersona
+    [embed] GitHub - shiro-0x/hersona: Attribute template collection for AI age... https://github.com/shiro-0x/hersona
+
