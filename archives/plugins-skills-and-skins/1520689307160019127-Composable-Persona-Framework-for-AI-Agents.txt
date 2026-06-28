@@ -1,0 +1,28 @@
+# Thread 'Composable Persona Framework for AI Agents' in forum #plugins-skills-and-skins
+# thread_id=1520689307160019127 forum_id=1485392832154832906
+# Started 2026-06-28T08:53:01.359315+00:00
+
+[2026-06-28T07:16:23.868000+00:00] shiro1001 (id=1520689307160019127)
+    Hey everyone! 
+    
+    I've been working on an open-source project called **Hersona** — a persona-driven framework for building long-running AI agents.
+    
+    The problem I wanted to solve:
+    While many AI agents have excellent reasoning capabilities, they often lose their personality and consistency over long conversations. Developers frequently end up rebuilding memory systems and character logic from scratch for every project.
+    
+    Hersona provides a modular framework that combines:
+    
+    → Composable personality traits
+    → Consistent character behavior
+    → MCP integration for tools and external capabilities
+    → An extensible modular architecture
+    
+    The goal of the project isn't to replace Hermes, but to complement it by providing a reusable foundation for building more expressive and coherent autonomous agents.
+    
+    I'm actively developing Hersona and would love to hear your feedback or ideas!
+    
+    🔗 GitHub:
+    https://github.com/shiro-0x/hersona
+    [attachment] IMG_4421.JPG https://cdn.discordapp.com/attachments/1520689307160019127/1520689307528990730/IMG_4421.JPG?ex=6a421bc7&is=6a40ca47&hm=7c1baed189e44888072b849a488978f78348b5024dcdede34859af1d9f08caae&
+    [embed] GitHub - shiro-0x/hersona: Attribute template collection for AI age... https://github.com/shiro-0x/hersona
+

@@ -27,3 +27,14 @@
     Btw, happy to contribute it back upstream to you all if it would be helpful! Hermes is the best thing I've seen this whole wave of AI and I'm happy to just help it become better!
     [reply to shaf_2665 msg=1520316690175627304]
 
+[2026-06-28T03:47:50.601000+00:00] mohabd7 (id=1520636822714187828)
+    thanks, I am husband and Parent, interested on your use cases on family and house hold?
+
+[2026-06-28T05:11:55.511000+00:00] carpdiem (id=1520657982600384582)
+    happy to help. the way i've got my agents set up, I've got one personal agent for myself, another dedicated personal agent for my wife, and a third "family" agent. each agent runs in its own user profile on a single mac mini host. 
+    
+    that way each agent can have its own fully separate SOUL / auth / file system access / etc... and my wife and i can each have dedicated agents, as well as shared access to the 'family' agent (in a group telegram chat / etc), so we can have 3-way discussions / etc.
+    
+    anything else that would help?
+    [reply to mohabd7 msg=1520636822714187828]
+

@@ -238,3 +238,14 @@
 [2026-06-27T22:19:02.993000+00:00] buke5122 (id=1520554079129047223)
     And how good does it work when having a huge amount of memoriess=
 
+[2026-06-28T05:33:44.141000+00:00] btdoverclock (id=1520663471392296971)
+    how is this different from mnemosyne?
+
+[2026-06-28T06:00:42.006000+00:00] no_orbert (id=1520670257210200115)
+    idk, I use codex 200$ plan.
+    [reply to buke5122 msg=1520551180055351486]
+
+[2026-06-28T06:02:37.113000+00:00] no_orbert (id=1520670740003688529)
+    Its works for me, with mnemosyne I had a issue every Hermes Desktop update.
+    [reply to btdoverclock msg=1520663471392296971]
+

@@ -39704,3 +39704,162 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/issues/53932
     [embed] feat(moa): allow reference slots to set reasoning_effort · Issue #... https://github.com/NousResearch/hermes-agent/issues/53932
 
+[2026-06-28T04:09:48.870000+00:00] seanfzc6500 (id=1520642351935127593)
+    Hey folks! Apologies for the bump, but my ObserveCo observability plugin (PR #52357) cleared the automated agent review with a green approval, but the fork CI tests are currently paused waiting for a manual maintainer trigger. Any good samaritian can give some sound advice on how to get this across the line? Thanks!
+
+[2026-06-28T04:19:39.237000+00:00] flownium (id=1520644828113932289)
+    https://github.com/NousResearch/hermes-agent/pull/53961
+    [embed] fix: hide gh subprocess windows on Windows by itsflownium · Pull R... https://github.com/NousResearch/hermes-agent/pull/53961
+
+[2026-06-28T04:19:43.263000+00:00] flownium (id=1520644845000065106)
+    https://github.com/NousResearch/hermes-agent/pull/53964
+    [embed] fix: escape unknown desktop markdown tags by itsflownium · Pull Re... https://github.com/NousResearch/hermes-agent/pull/53964
+
+[2026-06-28T04:19:47.201000+00:00] flownium (id=1520644861517107231)
+    https://github.com/NousResearch/hermes-agent/pull/53965
+    [embed] fix: pass video reference inputs to providers by itsflownium · Pul... https://github.com/NousResearch/hermes-agent/pull/53965
+
+[2026-06-28T04:19:51.746000+00:00] flownium (id=1520644880580477039)
+    https://github.com/NousResearch/hermes-agent/pull/53976
+    [embed] fix: add file-backed knowledge base plugin by itsflownium · Pull R... https://github.com/NousResearch/hermes-agent/pull/53976
+
+[2026-06-28T04:20:26.227000+00:00] flownium (id=1520645025204142154)
+    pov me grinding
+
+[2026-06-28T04:20:29.409000+00:00] flownium (id=1520645038550417480)
+    <a:partyblob:1151261550032724052>
+
+[2026-06-28T04:20:31.997000+00:00] flownium (id=1520645049405276352)
+    <a:hype:1151299876395696189>
+
+[2026-06-28T05:07:47.639000+00:00] teknium (id=1520656942949728379)
+    You should make your plugin a standalone repo and promote it in <#1485392832154832906>
+    [reply to seanfzc6500 msg=1520642351935127593]
+
+[2026-06-28T05:07:57.803000+00:00] teknium (id=1520656985580769400)
+    There's very little chance we will be accepting things like that anytime soon
+
+[2026-06-28T05:08:25.626000+00:00] teknium (id=1520657102279020605)
+    Things that are other peoples projects or products that get integrated into the core codebase mean extreme burdens on us to ensure maintained and working
+
+[2026-06-28T05:45:06.112000+00:00] seanfzc6500 (id=1520666331785990236)
+    I see and very understandable. Thanks for managing expectations and can't say how much this is appreciated. I probably got excited after seeing this
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1520666331899363438/image.png?ex=6a420662&is=6a40b4e2&hm=ed77b7a6b109739120e40e281168ab64684655ba911275404687b8809a3b32c5&
+    [reply to teknium msg=1520656985580769400]
+
+[2026-06-28T05:51:27.730000+00:00] teknium (id=1520667932408021063)
+    fwiw that person reviewing is not a nous staff, there's some weird trend of random people approving everyone's PRs
+    [reply to seanfzc6500 msg=1520666331785990236]
+
+[2026-06-28T05:51:31.148000+00:00] teknium (id=1520667946744025159)
+    maybe to confuse and annoy them
+
+[2026-06-28T05:57:43.489000+00:00] dias4761 (id=1520669508455497850)
+    I thought they were agents you had deployed. But that makes sense, too.
+    [reply to teknium msg=1520667932408021063]
+
+[2026-06-28T05:59:03.398000+00:00] teknium (id=1520669843618140270)
+    Ok I blocked outsiders from doing real reviews lol
+    [reply to seanfzc6500 msg=1520666331785990236]
+
+[2026-06-28T06:05:28.573000+00:00] nanxingncb612d (id=1520671459159048353)
+    PR updated: fixed the passthrough bypass for dynamic AUXILIARY_* secrets and added a regression test covering that case. Thanks <@1387527976224297133>
+    [reply to nanxingncb612d msg=1520473296921952307]
+
+[2026-06-28T06:07:42.896000+00:00] flownium (id=1520672022550544466)
+    https://github.com/NousResearch/hermes-agent/pull/54014
+    [embed] fix(gateway): wire memory monitor by itsflownium · Pull Request #5... https://github.com/NousResearch/hermes-agent/pull/54014
+
+[2026-06-28T06:27:55.137000+00:00] egilewski (id=1520677107058085928)
+    Oops... Sorry, I got approval of other contributors on my PRs, and as GitHub UI was clear to me that those are non-binding, I started doing the same (mostly to suggest changes to improve existing PRs and see if I should clone any stale ones).
+    
+    Should I leave all PRs not related to mine alone?
+    [reply to teknium msg=1520667932408021063]
+
+[2026-06-28T06:33:01.140000+00:00] teknium (id=1520678390527426642)
+    feel free to review PRs in the comments,
+    [reply to egilewski msg=1520677107058085928]
+
+[2026-06-28T06:33:08.124000+00:00] teknium (id=1520678419820449922)
+    just not through the review system
+
+[2026-06-28T06:33:25.910000+00:00] flownium (id=1520678494420598874)
+    really? what person has review's my PR's 24/7
+    [reply to teknium msg=1520667932408021063]
+
+[2026-06-28T06:33:34.702000+00:00] flownium (id=1520678531296788533)
+    i swear i think the person is a bot
+
+[2026-06-28T06:37:29.397000+00:00] egilewski (id=1520679515678969997)
+    I'm also a bot. Well, maybe a cyborg.
+    [reply to flownium msg=1520678531296788533]
+
+[2026-06-28T06:38:01.901000+00:00] flownium (id=1520679652010758154)
+    https://tenor.com/view/windpress-xqc-caseoh-xqcow-brainrot-gif-482451797379724168
+    [embed]  https://tenor.com/view/windpress-xqc-caseoh-xqcow-brainrot-gif-482451797379724168
+    [reply to egilewski msg=1520679515678969997]
+
+[2026-06-28T06:38:45.900000+00:00] dias4761 (id=1520679836555935814)
+    https://github.com/NousResearch/hermes-agent/pull/52312
+    [embed] fix(bedrock): enforce guardrails on Claude via InvokeModel headers ... https://github.com/NousResearch/hermes-agent/pull/52312
+
+[2026-06-28T06:58:50.621000+00:00] nanxingncb612d (id=1520684889522045032)
+    https://github.com/NousResearch/hermes-agent/pull/54018
+    [embed] fix(gateway): redact credentials in reconnect watcher and startup e... https://github.com/NousResearch/hermes-agent/pull/54018
+
+[2026-06-28T07:48:08.986000+00:00] srojk34 (id=1520697297804066937)
+    <@387972437901312000> I think there are some fixes that are worth checking. When you have some free time, I hope you'll have a chance to take a look, brother.
+    
+    PR #54041 — fix(gateway): bound adapter disconnect in fatal-error handler
+    
+    _handle_adapter_fatal_error() called raw adapter.disconnect() with no timeout. A wedged adapter (e.g. Feishu/Lark WebSocket) could block the handler indefinitely, preventing the platform from being popped and queued for reconnection. Replaced with the existing _safe_adapter_disconnect() helper — same bounded-teardown pattern applied to _stop_impl() in #14128. Regression test included.
+    
+    https://github.com/NousResearch/hermes-agent/pull/54041
+    
+    PR #54048 — fix(tools): preserve CWD across environment recreation in execute_code
+    
+    _get_or_create_env() rebuilt the terminal environment with the config default CWD after cleanup eviction — execute_code scripts silently ran in the Hermes install root instead of the user's working directory. The sibling file_tools._get_file_ops() was fixed in #26211 to consult _last_known_cwd, but _get_or_create_env() — whose own comment says "same pattern as file_tools._get_file_ops" — was not updated. 2 regression tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/54048
+    
+    PR #54053 — fix(anthropic): use env-only proxy policy for Anthropic SDK clients
+    
+    build_anthropic_client() passed no http_client to the SDK, so it built its default httpx client with trust_env=True. On macOS this reads system proxy settings via getproxies() which omit the ExceptionsList — breaking calls to internal/custom Anthropic endpoints. Injected build_keepalive_http_client(), the same helper #53702 applied to OpenAI clients. Single chokepoint fix covers main agent + all auxiliary Anthropic clients. 3 regression tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/54053
+    [embed] fix(gateway): bound adapter disconnect in fatal-error handler by sr... https://github.com/NousResearch/hermes-agent/pull/54041
+    [embed] fix(tools): preserve CWD across environment recreation in execute_c... https://github.com/NousResearch/hermes-agent/pull/54048
+    [embed] fix(anthropic): use env-only proxy policy for Anthropic SDK clients... https://github.com/NousResearch/hermes-agent/pull/54053
+
+[2026-06-28T07:52:20.158000+00:00] teknium (id=1520698351295926293)
+    In case sme of you were hoping for your PR to get reviewed or merged want a status update, me and <@690519146701783042> have been exclusively focusing on P1 issue resolution.
+    
+    We've gone from 650 last monday to now just 65 left <a:cheer:734837260662603908>  We will go outside the bounds of p1 issues soon when this is cleared.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1520698350842679358/image.png?ex=6a422434&is=6a40d2b4&hm=25814b86c0c71b72291b33fb6e6861c25886e168ac4416ca65103dbd7d2edad0&
+
+[2026-06-28T07:58:00.511000+00:00] inuyasha44_88990 (id=1520699778839740518)
+    O.o
+    [reply to teknium msg=1520698351295926293]
+
+[2026-06-28T08:01:13.045000+00:00] dias4761 (id=1520700586385870970)
+    I reported a bug in a private message on GitHub.
+    [reply to teknium msg=1520698351295926293]
+
+[2026-06-28T08:03:11.694000+00:00] dias4761 (id=1520701084035977238)
+    P0 imo
+
+[2026-06-28T08:03:14.673000+00:00] Translator Bot#1043 (id=1520701096530677862)
+    P0 knowledge
+    [reply to dias4761 msg=1520701084035977238]
+
+[2026-06-28T08:11:29.808000+00:00] teknium (id=1520703173277253803)
+    There are 2 joao's in a row here
+
+[2026-06-28T08:12:58.676000+00:00] dias4761 (id=1520703546016796682)
+    It's both me, lol. It's because I use one on my phone and the other on my computer.
+    [reply to teknium msg=1520703173277253803]
+
+[2026-06-28T08:25:15.436000+00:00] 3221229683 (id=1520706636212342854)
+    hello all you beautiful nous people i have been grinding on https://www.dregg.net/ (AGPL code: https://github.com/emberian/dregg) for about a month continuously and i'm hoping to have something actually cool to show off for the tweet 😎. there's tool gateways and things like that, been integrating with hermes...
+    [embed] Dragon's Egg (dregg) https://www.dregg.net/
+

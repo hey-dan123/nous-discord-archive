@@ -1,0 +1,8 @@
+# Thread 'MCP for Hermes and Tailscale' in forum #plugins-skills-and-skins
+# thread_id=1520652866782498827 forum_id=1485392832154832906
+# Started 2026-06-28T08:53:01.865080+00:00
+
+[2026-06-28T04:51:35.805000+00:00] gumbyender (id=1520652866782498827)
+    https://github.com/GumbyEnder/mcp-tailscale
+    [embed] GitHub - GumbyEnder/mcp-tailscale: MCP server wrapping Tailscale CL... https://github.com/GumbyEnder/mcp-tailscale
+
