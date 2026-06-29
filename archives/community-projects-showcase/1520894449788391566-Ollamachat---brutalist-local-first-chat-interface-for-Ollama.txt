@@ -1,0 +1,23 @@
+# Thread 'Ollamachat — brutalist local-first chat interface for Ollama' in forum #community-projects-showcase
+# thread_id=1520894449788391566 forum_id=1316137596535177246
+# Started 2026-06-29T03:40:34.206477+00:00
+
+[2026-06-28T20:51:33.682000+00:00] brutalbuild (id=1520894449788391566)
+    Built with React + TypeScript + Tailwind + Zustand. Connects to a local Ollama instance, streams responses, persists conversations. No backend.
+        
+        Brutalist design throughout — black background, monospace, 2px borders, zero radius, bracket-style buttons.
+        
+        Features:
+        - Streaming responses with stop/retry
+        - Conversation history with Zustand persist
+        - Model selection from installed Ollama models
+        - Connection status monitoring
+        - Keyboard shortcuts
+        
+        Stack: React 18, TypeScript, Vite, Tailwind CSS, Zustand.
+        
+        Code: github.com/brutal-build/ollamachat
+        
+        Would appreciate any feedback.
+    [attachment] Untitled.png https://cdn.discordapp.com/attachments/1520894449788391566/1520894449994043433/Untitled.png?ex=6a42dad5&is=6a418955&hm=40e8fa241a4edeb5b20e7a6d57e669b341119370f3c20eb28a61f23164bcd026&
+

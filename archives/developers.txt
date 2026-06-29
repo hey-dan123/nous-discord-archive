@@ -40251,3 +40251,238 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     No you need to be patient 17000 others are also in line
     [reply to hizzgdev msg=1520846330883215583]
 
+[2026-06-28T19:41:58.285000+00:00] hypertekton (id=1520876936904315051)
+    Updated. I'll test today and report back, hopefully its gone for good.
+    [reply to teknium msg=1520756818559766528]
+
+[2026-06-28T19:43:49.042000+00:00] teknium (id=1520877401452708003)
+    fwiw I cant make it happen anymore no matter what I do lol
+    [reply to hypertekton msg=1520876936904315051]
+
+[2026-06-28T19:44:02.140000+00:00] teknium (id=1520877456389836881)
+    But there are still reports of it happening after unfortunately <#1520538194557403328>
+
+[2026-06-28T19:44:48.978000+00:00] hypertekton (id=1520877652842647642)
+    🤔
+
+[2026-06-28T19:53:58.441000+00:00] shivamselam (id=1520879957457506305)
+    is there a mobile client for hermes? where i leave my laptop on (screen on), and connect to it remotely from anywhere in the world? correct me if my framing is wrong
+
+[2026-06-28T20:05:48.083000+00:00] teknium (id=1520882933911650305)
+    the dashboard's your best bet rn
+    [reply to shivamselam msg=1520879957457506305]
+
+[2026-06-28T20:06:24.631000+00:00] shivamselam (id=1520883087205208234)
+    the web dashboard?
+    [reply to teknium msg=1520882933911650305]
+
+[2026-06-28T20:07:06.014000+00:00] hypertekton (id=1520883260777955468)
+    what the use case? you can already message it with several messaging mechanisms
+    [reply to shivamselam msg=1520879957457506305]
+
+[2026-06-28T20:07:21.282000+00:00] hypertekton (id=1520883324816462056)
+    or you can use a tunnel if you know how to do that
+
+[2026-06-28T20:08:13.419000+00:00] shivamselam (id=1520883543495151797)
+    i know, there's a /resume command, but I wanted it to be exactly show up all my sessions from the desktop app, lol, i know sounds too demanding 😆
+
+[2026-06-28T20:08:34.806000+00:00] shivamselam (id=1520883633198600273)
+    how do i do that?
+    [reply to hypertekton msg=1520883324816462056]
+
+[2026-06-28T20:11:37.354000+00:00] teknium (id=1520884398860533991)
+    https://github.com/NousResearch/hermes-agent/pull/54417
+    [embed] fix(windows): cover remaining console-flash spawn legs by teknium1 ... https://github.com/NousResearch/hermes-agent/pull/54417
+
+[2026-06-28T20:16:29.691000+00:00] hypertekton (id=1520885625010651347)
+    ask about tailscale
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1520885624389763072/image.png?ex=6a42d29d&is=6a41811d&hm=b610d25957927aa28090b1ed439b387b0d118b0d4a69f847e635d389b7d3587d&
+    [reply to shivamselam msg=1520883633198600273]
+
+[2026-06-28T20:18:02.037000+00:00] shivamselam (id=1520886012337848391)
+    I already have tailscale, through which i load by web dashboard, seems like i only have messaging apps and web dashboard, have to wait for dedicated desktoplike mobile app, thsnk you <@387972437901312000> and <@256968918894116866>
+    [reply to hypertekton msg=1520885625010651347]
+
+[2026-06-28T20:18:30.668000+00:00] hypertekton (id=1520886132424835115)
+    you can install the web dashboard as a PWA
+    [reply to shivamselam msg=1520886012337848391]
+
+[2026-06-28T20:19:09.782000+00:00] hypertekton (id=1520886296481103933)
+    there are some community mobile apps, search in <#1316137596535177246> but they're unofficial
+
+[2026-06-28T20:21:38.491000+00:00] shivamselam (id=1520886920211861545)
+    i think i know how, in my laptop, configure tailscale, and coonect to it from my phone, keep laptop on, correct? becaue i already have a hermes instance hosted in a vps, and i access it through discord and sometimes web dashboard using taislcale on both my laptop and phone, but now i have new clean instance of hermes on laptop only, was looking for a remote setup for this too, lol
+
+[2026-06-28T20:22:45.886000+00:00] hypertekton (id=1520887202886717692)
+    why not use the VPS one?
+    [reply to shivamselam msg=1520886920211861545]
+
+[2026-06-28T20:23:27.597000+00:00] shivamselam (id=1520887377835327519)
+    its running on free oracle, using free gemma api, very weak in speed and intelligence 😭
+
+[2026-06-28T20:24:30.181000+00:00] shivamselam (id=1520887640331911364)
+    using it for small automations, and emergency stuffs, I'm trying to make hermes run automated businesses, its a challenge, but seems possible, experimenting with both vps and desktop instance
+
+[2026-06-28T20:26:23.741000+00:00] hypertekton (id=1520888116636811275)
+    oh gemma is not up to task imo
+
+[2026-06-28T20:27:50.203000+00:00] hypertekton (id=1520888479284727888)
+    you can get good models for use with nous portal (free tier) or opencode, or pay for either (or both)
+
+[2026-06-28T20:35:33.412000+00:00] shivamselam (id=1520890422124347392)
+    I don’t know nous had a free tier, my desktop harness now using opencode zen free models, if i had money, i wouldn’t be asking these questions, thanks <@256968918894116866> appreciate the advice
+
+[2026-06-28T20:36:51.056000+00:00] hypertekton (id=1520890747786625046)
+    opencode go is pretty cheap. you can also like get kilocode (free models) etc and set up a bunch of fallbacks. can get a lot done for free if you jump enough hoops
+    [reply to shivamselam msg=1520890422124347392]
+
+[2026-06-28T20:37:10.378000+00:00] hypertekton (id=1520890828828971021)
+    nvidia nim has free models (but their servers are usually slow)
+
+[2026-06-28T20:37:19.562000+00:00] _voscko_ (id=1520890867349454908)
+    How do we get a developer role here? 😁 would like to know, X PR's merged? Or something else? 🤞
+
+[2026-06-28T20:40:39.016000+00:00] shivamselam (id=1520891703920164964)
+    Thank you, will try kilocode too, and have been saving to get opencode go or zen, currently my oracle hermes fallback is nvidia nim, sort of working
+    [reply to hypertekton msg=1520890747786625046]
+
+[2026-06-28T20:41:00.579000+00:00] hypertekton (id=1520891794362073138)
+    you could setup a proxy for google that automatically rotates a bunch of keys from a bunch of google accounts to get around the rate limits... (breaks ToS but a lot of people do it anyway)
+
+[2026-06-28T20:41:15.749000+00:00] hypertekton (id=1520891857989533906)
+    anyway this is more talk for <#1476316988992258300> channel
+
+[2026-06-28T20:43:23.694000+00:00] shivamselam (id=1520892394629894406)
+    Oh wow, haven’t even thought of that, will try too, can hermes eventually become like good enough to execute business tasks for me for long term? I want it to beat polsia and paperclip
+    [reply to hypertekton msg=1520891794362073138]
+
+[2026-06-28T20:46:06.708000+00:00] hypertekton (id=1520893078360293418)
+    "business tasks" is a very broad category. but yes. its less about hermes and more about how you constrain and direct the agent.
+
+[2026-06-28T20:48:27.657000+00:00] hypertekton (id=1520893669543248032)
+    and having a good LLM that is not dumb
+
+[2026-06-28T20:49:07.442000+00:00] shivamselam (id=1520893836413505637)
+    Exactly, i thought local models were the answer but currently paying for api is cheaper
+    [reply to hypertekton msg=1520893669543248032]
+
+[2026-06-28T20:50:09.985000+00:00] hypertekton (id=1520894098737729537)
+    local models if you have a massive GPU, can go far... but that GPU ain't free... in the end $10-20 monthly for a basic sub is far, far cheaper and will get you far smarter AI
+
+[2026-06-28T20:50:14.478000+00:00] shivamselam (id=1520894117582733483)
+    Should i ask Hermes to build this, or treat hermes itself as a system (the business OS)? I’m sorry for alot of these dumb questions
+
+[2026-06-28T20:50:53.897000+00:00] hypertekton (id=1520894282918133810)
+    <#1476316988992258300> <#1487849039696236857>
+    [reply to shivamselam msg=1520894117582733483]
+
+[2026-06-28T20:59:03.514000+00:00] teknium (id=1520896336520679597)
+    <@256968918894116866> just merged another coverage PR
+
+[2026-06-28T20:59:08.357000+00:00] teknium (id=1520896356833562817)
+    can you update and lmk if any terminals spawn
+
+[2026-06-28T20:59:53.025000+00:00] teknium (id=1520896544184733777)
+    https://github.com/NousResearch/hermes-agent/pull/54417
+    [embed] fix(windows): cover remaining console-flash spawn legs by teknium1 ... https://github.com/NousResearch/hermes-agent/pull/54417
+
+[2026-06-28T21:00:12.110000+00:00] hypertekton (id=1520896624233021520)
+    on it
+    [reply to teknium msg=1520896356833562817]
+
+[2026-06-28T21:04:54.579000+00:00] maxfreedompollard (id=1520897808993882285)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent-self-evolution/pull/139
+    [embed] feat: emit a pull request for an evolved skill by MaxFreedomPollard... https://github.com/NousResearch/hermes-agent-self-evolution/pull/139
+
+[2026-06-28T21:08:55.085000+00:00] hypertekton (id=1520898817749160068)
+    <@387972437901312000> there were some just as the update finished and the desktop app restarted
+
+[2026-06-28T21:14:52.140000+00:00] hypertekton (id=1520900315346370640)
+    might take time for more thorough testing, got to eat and have some family time, but will get back to it later
+
+[2026-06-28T21:16:37.469000+00:00] teknium (id=1520900757128347751)
+    np! thanks!
+
+[2026-06-28T21:24:05.889000+00:00] srojk34 (id=1520902637938147469)
+    PR #53503 updated — addressed review feedback
+    https://github.com/NousResearch/hermes-agent/pull/53503
+    
+    Extended AUXILIARY_*_API_KEY / _BASE_URL filtering to the _make_run_env() foreground terminal path — the original patch only covered _sanitize_subprocess_env(), leaving the main terminal() execution path uncovered. Added 3 regression tests through _make_run_env(). All 51 tests pass.
+    [embed] harden(tools): block AUXILIARY_*_API_KEY and _BASE_URL from subproc... https://github.com/NousResearch/hermes-agent/pull/53503
+    [reply to teknium msg=1520900757128347751]
+
+[2026-06-28T22:05:02.334000+00:00] queridao_oficial (id=1520912941015236669)
+    I would like to make a very important suggestion for Hermes Desktop: it's very important to be able to expand the terminal to view the commands the model is executing. One option to view the model using the terminal is a fully expanded PowerShell window.
+
+[2026-06-28T22:34:03.405000+00:00] nanxingncb612d (id=1520920243596165140)
+    https://github.com/NousResearch/hermes-agent/pull/54477 This extends the browser private-network SSRF guard to browser_console() when it is used in console-output mode.
+    [embed] fix(browser): extend private-network guard to browser_console by ne... https://github.com/NousResearch/hermes-agent/pull/54477
+
+[2026-06-29T00:10:03.524000+00:00] sahil_ss9 (id=1520944403286589651)
+    https://github.com/NousResearch/hermes-agent/pull/54500
+    [embed] fix(agent): reset api_mode to chat_completions when switching to Mo... https://github.com/NousResearch/hermes-agent/pull/54500
+
+[2026-06-29T01:05:20.290000+00:00] skholmes (id=1520958314811490346)
+    Love Hermes and just joined the discord! 🙂
+    
+    Here's a PR to improve my slack usability. I have a few slack workflows that hermes agent can assist with. 
+    So I needed this to help with it:
+    
+    https://github.com/NousResearch/hermes-agent/pull/54535
+    [embed] feat(slack): add read-only Slack channel history tool by sk-holmes ... https://github.com/NousResearch/hermes-agent/pull/54535
+
+[2026-06-29T01:29:53.246000+00:00] maxfreedompollard (id=1520964492836475000)
+    Brilliant idea - I wanted this as well. Awesome.
+    [reply to skholmes msg=1520958314811490346]
+
+[2026-06-29T01:50:57.234000+00:00] nanxingncb612d (id=1520969794386530334)
+    https://github.com/NousResearch/hermes-agent/pull/54555 This prevents delegated child agents from receiving blocked tools through mixed platform bundles such as hermes-telegram.
+    [embed] fix(delegate): subtract blocked tools from child agents by necoweb3... https://github.com/NousResearch/hermes-agent/pull/54555
+
+[2026-06-29T02:17:26.416000+00:00] asta01940 (id=1520976459898818640)
+    <@387972437901312000> 
+    https://github.com/NousResearch/hermes-agent/pull/12847
+         This is my **first contribution** to Hermes Agent, and it would mean a lot to me to get it across the finish line!
+    
+         PR #12847 — docs-only fix for `_build_system_prompt()` layer comments:
+    
+         ✅ Already approved by @ether-btc
+         ✅ No runtime changes, purely documentation
+    
+         It's been sitting for a couple months — anything blocking it? Happy to rebase if needed.
+    
+         Thanks so much for maintaining this awesome project! 🙏
+    [embed] docs(agent): align _build_system_prompt layer comments with impleme... https://github.com/NousResearch/hermes-agent/pull/12847
+
+[2026-06-29T02:31:46.058000+00:00] jw_mushroom_man (id=1520980065498960003)
+    https://github.com/NousResearch/hermes-agent/pull/54565
+    [embed] fix(photon): launch the iMessage sidecar headless on Windows by lEW... https://github.com/NousResearch/hermes-agent/pull/54565
+
+[2026-06-29T02:33:07.047000+00:00] jw_mushroom_man (id=1520980405191311581)
+    <@387972437901312000> windows terminal hell stuff
+
+[2026-06-29T02:39:16.174000+00:00] maxfreedompollard (id=1520981953422164099)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/54575
+    [embed] fix(patch): reject wrong-region matches in the fuzzy edit fallback ... https://github.com/NousResearch/hermes-agent/pull/54575
+
+[2026-06-29T02:52:40.458000+00:00] nathanwindsor (id=1520985326833635328)
+    Where are the benchmarks showing that MoA outperforms Anthropic and GPT?
+
+[2026-06-29T03:10:47.118000+00:00] maxfreedompollard (id=1520989884616282223)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/54580
+    [embed] fix(gateway): keep code indentation when a long message is split by... https://github.com/NousResearch/hermes-agent/pull/54580
+
+[2026-06-29T03:10:50.836000+00:00] maxfreedompollard (id=1520989900210700288)
+    <@387972437901312000>  54579 reports that when a reply is long enough to be split into multiple messages, truncate_message strips the leading indentation off the first code line of every continuation chunk, so a code block that spans more than one message arrives de-indented and no longer runs. 54572 reports that the patch tool's fuzzy fallback can edit the wrong region: when old_string is not an exact match, the block_anchor and context_aware strategies will overwrite a block that merely shares an anchor line (or half its lines), destroying lines the caller never named while still reporting a successful match.
+
+[2026-06-29T03:34:23.156000+00:00] skholmes (id=1520995823909867631)
+    Curious what I can do to increase the priority here and provide any extra useful info.
+    Since it's my first PR for hermes (more to come for sure) i would love to follow your guidelines and make it easy 
+    I already read through the contribution page
+    
+    how I use this feature is, I add my chief of staff to different slack queues that I maintain and ask it to find the recent messages and start processing them. say one day at a time and so on 
+    Then i approve the outcomes and it helps automate a lot of my manual curations etc
+    
+    Other people may find this kind of thing useful though I don't know
+    [reply to maxfreedompollard msg=1520964492836475000]
+

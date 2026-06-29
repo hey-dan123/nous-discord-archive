@@ -1,0 +1,22 @@
+# Thread 'Resonant Lattice Memory: a neuroplastic long-horizon, local first, memory plugin for hermes-agent' in forum #plugins-skills-and-skins
+# thread_id=1520954056099758171 forum_id=1485392832154832906
+# Started 2026-06-29T03:45:56.055830+00:00
+
+[2026-06-29T00:48:24.934000+00:00] markfree (id=1520954056099758171)
+    I built a drop-in MemoryProvider for hermes-agent that gives an agent a **real** long-term memory instead of a flat log that grows forever. The core idea is that facts behave like resonant circuits. A memory that keeps getting struck stays in tune and rings loud, so it gets reinforced and promoted into a durable tier. The ones that nothing resonates with fade to silence and eventually get pruned. The whole system  is driven by usage cycles (think dream cycles that decay, promote, abstract, and resolve conflicts), not by wall-clock timers, so it keeps what matters and forgets the noise on its own.
+    
+    The thesis behind it: for an agent that is expected to earn, spend, or runs real operations, memory is the load-bearing wall. It has to do four things well. Recall the right thing across sessions, never fabricate a fact, obey the standing rules you pin into it, and resist being poisoned or going stale. The system is built and tested around exactly those four properties.
+    
+    Under the hood it is a three-tier resonance store (short, mid, long) over SQLite plus sqlite-vec, with holographic (HRR) compositional encoding and an entity graph. Recall is hybrid (vector plus keyword) with a precision gate and an authority preference for pinned facts. Anti-fabrication is enforced by source-quote attestation, and the agent can influence memory (reinforce, pin, give feedback) but cannot silently destroy it. It runs local-first on Ollama: a small embedding model plus any reasoning model you like for the off-hot-path consolidation. There is also an experimental encryption tier (at-rest plus a homomorphic blind-recall preview) if you want it.
+    
+    https://github.com/FreeMark/resonant-lattice-memory
+    [embed] GitHub - FreeMark/resonant-lattice-memory: Neuroplastic local-first... https://github.com/FreeMark/resonant-lattice-memory
+
+[2026-06-29T00:48:38.702000+00:00] markfree (id=1520954113846935653)
+    Also, It is not just claims. The repo ships the full test suite and the raw results. Recall at 1 and at 10 holds at 1.0 up to roughly 48k live rows with sub-linear latency, pinned policies survive decay, gaming, flooding, and delete attempts, contradictions get flagged with zero false positives on the controls, and correct behavior emerges from memory on two different model families (gemma4 and nemotron3) scored on real model output. 
+    
+    **If you want one document, start with results/CONSOLIDATED_RESULTS.md, which describes every test and shows its measured table.**
+    
+    Then have your agent install it:
+    The repo is written so an agent can read the README, verify the system on its own machine, deploy it into hermes, and configure it, which is the same loop a human and an agent used to build and harden it. It is MIT licensed. Would love feedback, issues, and stress tests from anyone! (Especially people running money or ops agents.)
+

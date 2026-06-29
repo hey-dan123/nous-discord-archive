@@ -914,3 +914,23 @@
     let me know if it works for you, since I don't have a opencode go subscription I can't reverse engineer it, so I used the same method as chatgpt
     [reply to markopaasila msg=1520099602613801013]
 
+[2026-06-29T01:35:53.601000+00:00] shaf_2665 (id=1520966004275150921)
+    ## 🚀 hermes-router vNext — Vision Support 👀
+    
+    Images are now first-class citizens in hermes-router.
+    
+    Instead of sending raw images to your agent core, hermes-router now analyzes and understands image inputs itself, then forwards only the relevant context to your agent.
+    
+    This means:
+    - ⚡ Faster multimodal routing
+    - 🧠 Cleaner agent architecture
+    - 📷 Native vision support
+    - 🔄 No changes required to your existing agents
+    
+    ***Update with:***
+    
+    `hr update`
+    
+    Github Link: https://github.com/Shaf2665/Hermes-router
+    [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
+

@@ -46,3 +46,15 @@
     
     Users asked, we shipped.
 
+[2026-06-29T02:58:22.259000+00:00] dannyzuo_ (id=1520986760450932838)
+    Small Clawchat polish update:
+    
+    - Fixed group chat navigation when tapping “Send Message”
+    - Fixed macOS window control overlap
+    - iOS now supports pasting images directly into the chat input
+    
+    Small fixes, but they make the daily chat experience much smoother.
+    
+    As always, these came from real user feedback.
+    Users reported, we shipped.
+

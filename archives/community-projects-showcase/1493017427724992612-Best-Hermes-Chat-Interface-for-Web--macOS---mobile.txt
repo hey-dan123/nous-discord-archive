@@ -4964,3 +4964,15 @@
 [2026-06-28T10:39:54.392000+00:00] josephcy (id=1520740521809543281)
     right now i had check the ignore agent update, but i guess it's probably better the update can use the same sequence of the same way hermes update itself?
 
+[2026-06-29T00:36:36.658000+00:00] avidfuturist (id=1520951085374898266)
+    Captured will fix!
+    [reply to josephcy msg=1520740294474072227]
+
+[2026-06-29T00:36:51.595000+00:00] avidfuturist (id=1520951148024959148)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And with **native iOS app and Android support**! 
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+    [attachment] 44B75124-C9B6-45C1-A191-CE7B352B5789.png https://cdn.discordapp.com/attachments/1493017427724992612/1520951148318687344/44B75124-C9B6-45C1-A191-CE7B352B5789.png?ex=6a430fa3&is=6a41be23&hm=c71fc1433b9ebb4f47f8fbea8a2ecebe546455b466f124bda44caac3d309fc5d&
+

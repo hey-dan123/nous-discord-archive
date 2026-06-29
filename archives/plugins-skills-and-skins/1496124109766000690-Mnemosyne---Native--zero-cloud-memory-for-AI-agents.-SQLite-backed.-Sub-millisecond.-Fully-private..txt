@@ -2306,3 +2306,7 @@
 [2026-06-28T16:11:31.755000+00:00] buke5122 (id=1520823977398767676)
     Fixed it. the auto sleep environment variable was empty. Replaced it, and generatet 5 episodic memories out of 90 working memories
 
+[2026-06-28T21:34:00.773000+00:00] reneetoufee (id=1520905133062488224)
+    I have my agents sharing access to the same Mnemosyne database. I recently worked with Claude Code Opus 4.8 to do a full efficiency analysis of my Hermes environment as I migrated it from a HP MiniPC to a stronger Ubuntu vm on proxmox. That was one of the recommendations it made, and it’s really working better for me.
+    [reply to me.franx msg=1519900111717662851]
+

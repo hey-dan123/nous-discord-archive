@@ -1,0 +1,27 @@
+# Thread 'tokenomics — LLM-spend report + FinOps, inside Hermes' in forum #plugins-skills-and-skins
+# thread_id=1520968626985766962 forum_id=1485392832154832906
+# Started 2026-06-29T03:45:55.559244+00:00
+
+[2026-06-29T01:46:18.904000+00:00] jasonperlow (id=1520968626985766962)
+    Reads Hermes's own session store (~/.hermes/state.db — per-session tokens + cost) and prints a spend report or a FinOps view (allocation / realized $-per-Mtok / cheapest-equivalent advisor / burn forecast). Read-only, no core changes.
+    
+    Install + enable (plugins are opt-in):
+    
+    `hermes plugins install ncz-os/tokenomics`
+    `hermes plugins enable tokenomics`
+    `hermes gateway restart` (for the gateway/TUI; the CLI works right away)
+    
+    Use:
+    
+    `hermes tokenomics`               # spend report, last 30 days
+    `hermes tokenomics --days 90`    # different window
+    `hermes tokenomics --finops`       # FinOps view (allocation / realized $-per-Mtok / advisor / forecast)
+    `hermes tokenomics --ingest-only`   # just sync state.db -> ledger, no report
+    `hermes tokenomics --pricing pricing.json`  # estimate cost only where Hermes didn't record it
+    
+    Also on PyPI (into Hermes's venv): 
+    
+    `pip install ncz-tokenomics`
+    
+    Same canonical ledger maps Hermes / Goose / OpenClaw / Zoder spend into one report. Apache-2.0
+
