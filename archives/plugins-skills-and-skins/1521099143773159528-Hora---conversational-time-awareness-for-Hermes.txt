@@ -18,3 +18,9 @@
     ```hermes plugins install meleeislandbot/hermes-hora --enable```
     [embed] GitHub - meleeislandbot/hermes-hora: Hora — API-only conversation... https://github.com/meleeislandbot/hermes-hora
 
+[2026-06-29T12:44:23.143000+00:00] johannes0910 (id=1521134235887603732)
+    But this will bust the cache and massively increase conversation cost, no?
+
+[2026-06-29T12:48:57.599000+00:00] henan (id=1521135387039367188)
+    No. Hora only injects [time: ISO-8601] into the current user message at the llm_request middleware stage. It does not mutate the system prompt, prior messages, tool schemas, or persisted transcript, so it does not bust the reusable prompt-cache prefix. Cost impact is tiny: a few tokens per user turn.
+

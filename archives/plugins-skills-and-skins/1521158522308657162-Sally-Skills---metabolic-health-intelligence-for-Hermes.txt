@@ -1,0 +1,11 @@
+# Thread 'Sally Skills — metabolic health intelligence for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1521158522308657162 forum_id=1485392832154832906
+# Started 2026-06-29T15:46:54.509901+00:00
+
+[2026-06-29T14:20:53.477000+00:00] 0xcynyx (id=1521158522308657162)
+    <@910022799907778592>: Just added Sally Skills to Hermes Agent.
+    PR: https://github.com/NousResearch/hermes-agent/pull/32214Sally brings clinical-grade metabolic health directly into Hermes through MCP. Your agent can now access your real biomarkers and reason over your actual biology. Available skills:
+    `health_sync`  64+ daily biomarkers from CGM, wearables, sleep, vitals and any other skills.
+    No new dependencies. Just add the MCP server in ~/.hermes/mcp.json with your key from console.a1c.io. Now Hermes finally has eyes on your biology.
+    [attachment] Screenshot_2026-06-29_at_21.20.22.png https://cdn.discordapp.com/attachments/1521158522308657162/1521158522937540709/Screenshot_2026-06-29_at_21.20.22.png?ex=6a43d0c5&is=6a427f45&hm=be0803a8c3ef50f1d021fa15912f87f31b95760082ad5b0029f1e9baec2d76e4&
+

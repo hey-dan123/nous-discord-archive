@@ -29,3 +29,21 @@
     [embed] Orbita https://orbita-three-liard.vercel.app/
     [embed] GitHub - waroffchange/orbita https://github.com/waroffchange/orbita
 
+[2026-06-29T13:22:09.035000+00:00] warofchange (id=1521143739727216883)
+    🛰️ Orbita v1.1 Update
+    
+    Just shipped three new features to the dashboard:
+    
+    What's new in v1.1:
+    
+    📊 Trend Score - each repo now gets a momentum score based on the last 7 days of star growth, commits, and releases. Repos are labeled 🔥 Hot / ↑ Rising / ~ Stable / · Quiet with a visual momentum bar
+    📅 Weekly Summary page - a dedicated /weekly view showing 7-day aggregated deltas per repo: total star change, commit count, new releases, and articles per news source - all in one table
+    ⚙️ Manage page - a /manage UI to add or remove tracked repos and news sources directly from the dashboard without touching any config files
+    
+    Live: https://orbita-three-liard.vercel.app
+    Repo: https://github.com/waroffchange/orbita
+    
+    More features coming feedback and repo suggestions still welcome! 👇
+    [embed] Orbita https://orbita-three-liard.vercel.app/
+    [embed] GitHub - waroffchange/orbita https://github.com/waroffchange/orbita
+

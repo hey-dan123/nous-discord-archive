@@ -58,3 +58,12 @@
     As always, these came from real user feedback.
     Users reported, we shipped.
 
+[2026-06-29T15:17:17.962000+00:00] dannyzuo_ (id=1521172717867499693)
+    We don’t think dashboards and messenger interfaces are competing.
+    
+    They solve different parts of the workflow:
+    dashboards are better for monitoring and configuration;
+    messengers are better for quick interaction, mobile access, files, and follow-up.
+    
+    Clawchat is focused on that second layer.
+

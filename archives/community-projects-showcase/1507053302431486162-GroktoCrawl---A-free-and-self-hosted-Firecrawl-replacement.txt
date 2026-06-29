@@ -678,3 +678,77 @@
 [2026-06-28T18:57:23.869000+00:00] selwind (id=1520865719590322289)
     fair,  thank you ! hopefully maybe in the future images can be a part of groktopus 🙏
 
+[2026-06-29T11:25:07.011000+00:00] magnus919 (id=1521114287224000512)
+    I'm asking Hermes how crazy it would be to add this 😄
+    [reply to selwind msg=1520865719590322289]
+
+[2026-06-29T11:35:29.044000+00:00] magnus919 (id=1521116896219365547)
+    Apparently this is not as crazy as I thought it would be... GroktoCrawl (and by extension SlopSearX) already have image data & just throw it away during the markdown conversion. So we're thinking through what would need to change in API endpoints + CLI to enable preserving image references in markdown conversion + adding image files to the artifact pyramid that groktocrawl produces (the artifact pyramid is the other thing that makes this a lot easier to figure out)
+    [reply to selwind msg=1520865719590322289]
+
+[2026-06-29T11:37:23.825000+00:00] selwind (id=1521117377645907988)
+    absolutely awesome, i already use artifact pyramid in my research agent !  maybe you can check https://codeberg.org/mikf/gallery-dl to get ideas from them on image downloading ? (i dont know im just shooting in the dark)
+    [reply to magnus919 msg=1521116896219365547]
+
+[2026-06-29T11:37:56.796000+00:00] magnus919 (id=1521117515936301106)
+    yeah I had my agent look at that but we don't even need it
+    [reply to selwind msg=1521117377645907988]
+
+[2026-06-29T11:38:30.574000+00:00] magnus919 (id=1521117657611374602)
+    ```
+        scrape — the core change
+    
+        This is where images already live in the DOM. The scraper fetches the page, parser extracts content, readability-lxml builds a cleaned DOM, markdownify converts to markdown. The <img> tags are present through the readability stage and then discarded.
+    
+        Change: tell markdownify to preserve images (alt inline). The markdown output becomes richer, the image stays in context, no separate metadata structure needed.
+    
+        CLI:
+        - groktocrawl scrape <url> — inline images in the markdown by default, no new flag
+        - groktocrawl scrape <url> --no-images — strip them (current behavior, explicit opt-out)
+        - groktocrawl scrape <url> --download-images — post-process: extract all ... refs, HTTP GET each URL into _images/, rewrite paths to local
+    
+    
+    
+        crawl — inherits from scrape
+    
+        Same change. Each page in the crawl gets inline images. With --download-images, it accumulates all discovered images across all pages into the crawl output directory.
+    
+        No separate pathing needed — the crawl output already structures pages by URL.
+    ```
+
+[2026-06-29T11:39:12.728000+00:00] selwind (id=1521117834418065449)
+    welllllll i thought it would be a massive change lol
+
+[2026-06-29T11:39:26.845000+00:00] magnus919 (id=1521117893629182002)
+    oh there's more to it than this 😄
+
+[2026-06-29T11:45:29.567000+00:00] magnus919 (id=1521119414995386468)
+    starting to file issues for it here: https://github.com/groktopus/groktocrawl/milestone/5
+    [embed] groktopus/groktocrawl https://github.com/groktopus/groktocrawl/milestone/5
+    [reply to selwind msg=1521117834418065449]
+
+[2026-06-29T11:48:46.116000+00:00] magnus919 (id=1521120239381643355)
+    also checking out SlopSearX to see if anything is needed there. Probably just adding image search engines. I've got a ton of useful engines in there but they are geared for text search.
+
+[2026-06-29T11:53:02.480000+00:00] magnus919 (id=1521121314650460250)
+    ha! surfaced a bug in slopsearx. Will fix that, then start work on v0.11.0
+
+[2026-06-29T11:53:08.677000+00:00] selwind (id=1521121340642295908)
+    https://tenor.com/view/octopuses-are-intelligent-octopuses101-smart-octopus-clever-octopuses-wise-octopuses-gif-18643827
+    [embed]  https://tenor.com/view/octopuses-are-intelligent-octopuses101-smart-octopus-clever-octopuses-wise-octopuses-gif-18643827
+
+[2026-06-29T11:53:53.928000+00:00] selwind (id=1521121530439012442)
+    https://tenor.com/view/ted-wood-ted-wood-octopus-octopus-wood-ted-gif-13096069
+    [embed]  https://tenor.com/view/ted-wood-ted-wood-octopus-octopus-wood-ted-gif-13096069
+
+[2026-06-29T11:54:14.854000+00:00] selwind (id=1521121618208751646)
+    thank you for the hard work 🎉 🔥 🔥
+
+[2026-06-29T12:01:27.384000+00:00] magnus919 (id=1521123432371322880)
+    [attachment] openai_gpt-image-2-medium_20260629_080104_0f1b422f.png https://cdn.discordapp.com/attachments/1507053302431486162/1521123432006156298/openai_gpt-image-2-medium_20260629_080104_0f1b422f.png?ex=6a43b017&is=6a425e97&hm=024e3a675703ab7b4e2d842bf3e6df5d20c8db451bc7ac3d546cff5942c9af22&
+
+[2026-06-29T12:31:48.317000+00:00] magnus919 (id=1521131069917757563)
+    https://github.com/groktopus/groktocrawl/pull/376
+    [embed] feat: image support across the stack (v0.11.0) by magnus919 · Pull... https://github.com/groktopus/groktocrawl/pull/376
+    [reply to selwind msg=1520857907502121142]
+

@@ -40614,3 +40614,71 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-29T09:49:15.550000+00:00] alfa_010 (id=1521090163847991347)
     <@387972437901312000>
 
+[2026-06-29T11:01:49.769000+00:00] teknium (id=1521108426766417970)
+    definitely not able to merge that right now no
+    [reply to alfa_010 msg=1521089731822227569]
+
+[2026-06-29T11:26:40.764000+00:00] fullslop (id=1521114680452448267)
+    Hey all, I submitted a bug report and PR to fix the Kanban board:
+    https://github.com/NousResearch/hermes-agent/issues/54823
+    https://github.com/NousResearch/hermes-agent/pull/54849
+    
+    moving items from Review to Done is forbidden. Not sure if this is intentional but it felt unintuitive and buggy to me.
+    [attachment] telegram-cloud-photo-size-5-6204238340098297560-w.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1521114680792191238/telegram-cloud-photo-size-5-6204238340098297560-w.jpg?ex=6a43a7f0&is=6a425670&hm=df36bbbbdb57ab5a2a0d24851760112ce2834c1ffc6cf559b1d82fc1320fc92e&
+
+[2026-06-29T11:52:00.138000+00:00] wnuuee (id=1521121053169025135)
+    Noticed that when adding tooltips to statusbar buttons, the Gateway button tooltip doesn't work. It's the only button with `variant === 'menu'`, and `<Tip>` was wrapping `<DropdownMenu>` which is a React context provider, not a DOM element, so Radix couldn't attach hover listeners and the tooltip failed. <@387972437901312000> <@119192111202566149> 
+    
+    Fixed: https://github.com/NousResearch/hermes-agent/pull/54859
+    [attachment] Gateway.gif https://cdn.discordapp.com/attachments/1491258766648283238/1521121053613494405/Gateway.gif?ex=6a43ade0&is=6a425c60&hm=d024663a271493c8d2618fa8da3ab7ebe5eb8bee48cfb6778f069b4d26b5820a&
+    [embed] fix(desktop): show tooltip on Gateway statusbar button by wnuuee1 ... https://github.com/NousResearch/hermes-agent/pull/54859
+
+[2026-06-29T12:57:34.873000+00:00] princekid_ (id=1521137556643643462)
+    If we notice a bug or feature improvement could we just create a PR with the change?
+
+[2026-06-29T13:08:41.418000+00:00] realadolan (id=1521140352336138414)
+    What?
+    [reply to princekid_ msg=1521137556643643462]
+
+[2026-06-29T13:20:41.030000+00:00] reprograma. (id=1521143370607493230)
+
+[2026-06-29T13:20:41.355000+00:00] reprograma. (id=1521143371970773032)
+    Wondering what would be needed to moved this back to Tier 1 - and whether we can help
+
+[2026-06-29T13:34:51.117000+00:00] princekid_ (id=1521146936130928661)
+    Could we create a PR
+    [reply to realadolan msg=1521140352336138414]
+
+[2026-06-29T13:38:32.927000+00:00] realadolan (id=1521147866469499121)
+    Oh, yes you can just create a PR. I sometimes open an issue before then PR immediately after to let the maintainer know what was exactly fixed
+    [reply to princekid_ msg=1521146936130928661]
+
+[2026-06-29T13:39:17.818000+00:00] realadolan (id=1521148054756135033)
+    Be sure to read here before contributing: https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+    [embed] hermes-agent/CONTRIBUTING.md at main · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/blob/main/CONTRIBUTING.md
+
+[2026-06-29T13:40:52.957000+00:00] xdarkchain (id=1521148453797761135)
+    <@387972437901312000> Is it fine to push the rich text now? Because it needs a lot of changes and improvements.
+    If someone is too lazy to update their TG or is not supported on their client, they can simply disable it instead of holding this back for a lot of users.
+
+[2026-06-29T14:07:21.816000+00:00] tkdchen (id=1521155117955678289)
+    <@387972437901312000> Could you please review a small PR https://github.com/NousResearch/hermes-agent/pull/54921 when you have time?
+    [embed] fix(tests): test_user_config_skipped_when_flag_set is affected by r... https://github.com/NousResearch/hermes-agent/pull/54921
+
+[2026-06-29T15:07:34.427000+00:00] warofchange (id=1521170270344188023)
+    Just opened my second PR to NousResearch/hermes-agent!
+    
+    What I fixed:
+    CONTRIBUTING.md told contributors that scripts/run_tests.sh uses "4 xdist workers" — but the script itself explicitly says "No xdist, no shared workers." It actually runs a custom per-file subprocess isolation strategy. One-line fix, but anyone following the docs would have a wrong mental model of how the test suite works.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/54956
+    
+    Small docs accuracy fix, 1 file, 1 line
+    [embed] docs(contributing): fix incorrect xdist reference in run_tests comm... https://github.com/NousResearch/hermes-agent/pull/54956
+
+[2026-06-29T15:18:01.928000+00:00] blockcipher (id=1521172902274404443)
+    [bugfix](https://github.com/NousResearch/hermes-agent/pull/54978): actually two bugfixes related to `/steer`
+    1. ensures that `/steer` only applies to a running turn and becomes a regular message if turn as been completed already
+    2. provides visual feedback that the `/steer` input was accepted
+    [embed] fix(steer): only inject /steer into a running turn; confirm busy-in... https://github.com/NousResearch/hermes-agent/pull/54978
+

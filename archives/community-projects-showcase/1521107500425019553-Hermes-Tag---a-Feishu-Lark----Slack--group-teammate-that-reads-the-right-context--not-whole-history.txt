@@ -1,0 +1,21 @@
+# Thread 'Hermes Tag — a Feishu/Lark (+ Slack) group teammate that reads the right context, not whole history' in forum #community-projects-showcase
+# thread_id=1521107500425019553 forum_id=1316137596535177246
+# Started 2026-06-29T15:42:22.891067+00:00
+
+[2026-06-29T10:58:08.912000+00:00] february1867 (id=1521107500425019553)
+    TL;DR
+    Install: hermes plugins install DanielLi202/hermes-tag
+    Repo: https://github.com/DanielLi202/hermes-tag
+    
+    Run a Hermes bot in a busy group and you hit one of two problems: it answers off your last message alone, or it dumps the whole history into the model. Hermes Tag is the in-between.
+    
+    You @ it, and it replies in the thread using that chat's bounded memory plus the evidence that actually matters: the images someone posted, the notes around them, the replies that relate. Not just your last line. Not the whole backlog. It stays silent until you mention it.
+    
+    It's a context-selection layer sitting over Hermes's Feishu platform; Slack runs through the same seam. Instead of full-history RAG it picks a scope per message (focused_reply, deictic_recent, plain), keeps memory per-chat so nothing leaks between groups, and gives admins an audit trail — /tag admin audit is redacted, and the allowlist is the only thing it stores from.
+    
+    Real recording : three charts get posted, some notes and chatter, then a late @, and it answers from exactly those.
+    
+    It's early (v0.3.x). On Feishu you'll need an org admin to grant one scope (im:message.group_msg) for full background context — without it, @-replies still work but it can't see unmentioned messages. Glad to help if anyone wants it running in their group.
+    [attachment] demo.en.mp4 https://cdn.discordapp.com/attachments/1521107500425019553/1521107500601184296/demo.en.mp4?ex=6a43a140&is=6a424fc0&hm=23a9805559ae924ea7eded32856979817cd6bb869a13e9d06459342b39d3342c&
+    [embed] GitHub - DanielLi202/hermes-tag: Post images, add notes, let the th... https://github.com/DanielLi202/hermes-tag
+

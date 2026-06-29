@@ -1,0 +1,15 @@
+# Thread 'FLUID' in forum #community-projects-showcase
+# thread_id=1521166357666861178 forum_id=1316137596535177246
+# Started 2026-06-29T15:42:22.505653+00:00
+
+[2026-06-29T14:52:01.572000+00:00] enonforetsam (id=1521166357666861178)
+    Make Cool Art in Your Browser - No Signup, Free Forever
+    [attachment] Screenshot_2026-06-28_at_00.06.51.png https://cdn.discordapp.com/attachments/1521166357666861178/1521166368928698459/Screenshot_2026-06-28_at_00.06.51.png?ex=6a43d814&is=6a428694&hm=c3941ded2d7e6cc0c0578e10137eb114f29d1e40ec60a8593b5502008c8dcddb&
+
+[2026-06-29T14:52:39.618000+00:00] enonforetsam (id=1521166517243215943)
+    https://fluid.krackeddevs.com/
+    [embed] FLUID — generative assets for your site https://fluid.krackeddevs.com/
+
+[2026-06-29T14:53:46.002000+00:00] enonforetsam (id=1521166795678158908)
+    [attachment] velvet-current.mp4 https://cdn.discordapp.com/attachments/1521166357666861178/1521166795254267934/velvet-current.mp4?ex=6a43d879&is=6a4286f9&hm=8ecb674de643bf6dc1d659d0e0957b9deacfef739dc3d892ac1449a9e308a4e8&
+
