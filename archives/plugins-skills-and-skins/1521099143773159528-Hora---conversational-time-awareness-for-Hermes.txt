@@ -1,0 +1,20 @@
+# Thread 'Hora — conversational time awareness for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1521099143773159528 forum_id=1485392832154832906
+# Started 2026-06-29T10:58:23.681418+00:00
+
+[2026-06-29T10:24:56.531000+00:00] henan (id=1521099143773159528)
+    I’ve built a small Hermes plugin called Hora. (https://github.com/meleeislandbot/hermes-hora)
+    
+    Hora gives Hermes lightweight awareness of when user messages were received. It does this by adding an API-only temporal prefix to user messages right before the LLM call:
+    
+    ```[time: 2026-06-29T07:55:00+02:00] continue where we left off```
+    
+    The important part: this prefix is only sent to the model. It does not modify persisted transcripts, memory, or the visible chat history.
+    
+    The goal is simple: let the model naturally reason about time gaps in a conversation without adding complex temporal logic to Hermes core. For example, it can better infer when context may be stale, when a recap might be useful, or when “continue this” refers to something from minutes vs. days ago.
+    
+    Install:
+    
+    ```hermes plugins install meleeislandbot/hermes-hora --enable```
+    [embed] GitHub - meleeislandbot/hermes-hora: Hora — API-only conversation... https://github.com/meleeislandbot/hermes-hora
+

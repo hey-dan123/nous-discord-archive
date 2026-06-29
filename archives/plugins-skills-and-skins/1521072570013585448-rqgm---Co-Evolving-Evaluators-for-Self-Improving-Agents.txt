@@ -1,0 +1,22 @@
+# Thread '🧬 rqgm — Co-Evolving Evaluators for Self-Improving Agents' in forum #plugins-skills-and-skins
+# thread_id=1521072570013585448 forum_id=1485392832154832906
+# Started 2026-06-29T10:58:24.077346+00:00
+
+[2026-06-29T08:39:20.853000+00:00] seanfzc6500 (id=1521072570013585448)
+    Just dropped a zero-dependency Python package implementing the Red Queen Gödel Machine (arXiv 2606.26294, Cambridge).
+    
+    The problem: Every self-improvement loop eventually stalls. The agent learns to satisfy a fixed evaluator rather than genuinely improving. RLHF reward hacking, benchmark overfitting, LLM-as-a-judge collapse — same root cause.
+    
+    The fix: Co-evolve the evaluator alongside the agent. Epoch-based utility evolution. When the hack ratio (strict/loose) drops below threshold, tolerances tighten. The bar keeps rising.
+    
+    python pip install rqgm
+    
+    Zero dependencies. 35 tests. Apache 2.0.
+    
+    GitHub - observeco/rqgm-core · GitHub
+    
+    Would love feedback — especially from anyone running self-improvement loops with Hermes agents.
+
+[2026-06-29T08:39:50.892000+00:00] seanfzc6500 (id=1521072696006541534)
+    🧬 rqgm — Co-Evolving Evaluators for Self-Improving Agents
+

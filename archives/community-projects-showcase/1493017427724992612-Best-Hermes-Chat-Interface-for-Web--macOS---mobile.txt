@@ -4976,3 +4976,7 @@
     ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
     [attachment] 44B75124-C9B6-45C1-A191-CE7B352B5789.png https://cdn.discordapp.com/attachments/1493017427724992612/1520951148318687344/44B75124-C9B6-45C1-A191-CE7B352B5789.png?ex=6a430fa3&is=6a41be23&hm=c71fc1433b9ebb4f47f8fbea8a2ecebe546455b466f124bda44caac3d309fc5d&
 
+[2026-06-29T06:10:02.352000+00:00] deor42 (id=1521034995337138338)
+    I've recently set up a bunch of my servers with the Tailscale Https certificates, so I use the Tailscale magic DNS address everywhere now.
+    [reply to josephcy msg=1520313421198004344]
+

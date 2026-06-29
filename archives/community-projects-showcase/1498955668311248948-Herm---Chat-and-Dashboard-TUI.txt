@@ -1576,3 +1576,6 @@
 [2026-06-26T17:53:14.218000+00:00] selwind (id=1520124797252665486)
     no worries, thanks anyway ❤️ and i like the interface btw ! <:nousgirl:1341983870752653352>
 
+[2026-06-29T04:22:07.004000+00:00] pvpsk (id=1521007835758989322)
+    how do i keep updated with herm, seems like after updating Hermes today i have broken chat responses and loop saying `connected . model_name . n skills . n tools`
+

@@ -934,3 +934,22 @@
     Github Link: https://github.com/Shaf2665/Hermes-router
     [embed] GitHub - Shaf2665/Hermes-router: Free-tier AI load balancer — aut... https://github.com/Shaf2665/Hermes-router
 
+[2026-06-29T03:47:49.741000+00:00] shaf_2665 (id=1520999206972559511)
+    # 🚀 hermes-router v0.8.0 — Live Monitoring Dashboard
+    
+    You can now see everything your router is doing. Just open http://localhost:8319/ in a browser — no install, no extra service, it ships inside the router itself.
+    
+    What you get:
+    📊 Provider health — requests, error rates, latency, tokens, cost & circuit-breaker state, all live
+    📜 Request log — every call as it happens (provider, model, latency, complexity, cache hits), filterable
+    ⚡ Cache & add-ons — hit rates, semantic cache, and which features are on
+    🔑 Key & budget usage — per-key requests, daily tokens/cost & rate-limit headroom
+    
+    It's pure HTML/JS (~25KB, no framework, no CDN) and reads existing endpoints, so it adds basically zero memory to the router. Auto-refreshes every 5s.
+    
+    🧩 VS Code: new ⬈ Web dashboard button opens it straight from the extension (v0.8.0 on the Marketplace)
+    🐳 Docker: works out of the box — already on the mapped port
+    🔒 Remote? Tunnel it: ssh -L 8319:127.0.0.1:8319 user@server
+    
+    Update with `hr update` (or pull the latest Docker image) and open the dashboard 🎉
+

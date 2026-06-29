@@ -47,3 +47,7 @@
 [2026-06-27T22:47:28.290000+00:00] propersites (id=1520561231663202407)
     Thanks for sharing! Watched your video, why  install nemoclaw then Hermes? Is that just to sandbox it or are there any advantages? Would love to work with node based system for traceability of workflows
 
+[2026-06-29T03:47:18.791000+00:00] tonyporj (id=1520999077158850570)
+    Hi, did you successfully install the workflows plugin? and is it successfully rendering on the Hermes Dashboard canvas?
+    [reply to propersites msg=1520561231663202407]
+

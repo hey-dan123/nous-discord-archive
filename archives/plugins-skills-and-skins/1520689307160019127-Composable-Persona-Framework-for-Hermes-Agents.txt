@@ -1,0 +1,7 @@
+# Thread 'Composable Persona Framework for Hermes Agents' in forum #plugins-skills-and-skins
+# thread_id=1520689307160019127 forum_id=1485392832154832906
+# Started 2026-06-29T10:58:25.356777+00:00
+
+[2026-06-29T05:05:15.387000+00:00] shiro1001 (id=1521018692224155648)
+    Composable Persona Framework for Hermes Agents
+

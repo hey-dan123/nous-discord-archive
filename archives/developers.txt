@@ -40486,3 +40486,131 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Other people may find this kind of thing useful though I don't know
     [reply to maxfreedompollard msg=1520964492836475000]
 
+[2026-06-29T05:02:42.701000+00:00] rares27 (id=1521018051812659311)
+    <@428014785045725184> who do I need to contact for collaborating with you guys? We build 2d real-time animated characters and we'd like to make a plugin for Hermes.
+
+[2026-06-29T05:03:10.963000+00:00] definitely_not_cthulhu (id=1521018170352079000)
+    uhhh
+
+[2026-06-29T05:03:22.452000+00:00] definitely_not_cthulhu (id=1521018218540433458)
+    good question
+
+[2026-06-29T05:04:13.490000+00:00] rares27 (id=1521018432609325207)
+    I can send you a demo in DMs if you want to get an idea first. It's production ready.
+
+[2026-06-29T05:04:45.579000+00:00] definitely_not_cthulhu (id=1521018567200604203)
+    You're probably going to want to get in touch with Tek for that sort of thing. I mostly just work on infrastructure.
+
+[2026-06-29T05:05:03.610000+00:00] rares27 (id=1521018642827968696)
+    What's the best way to get in touch with him?
+
+[2026-06-29T05:05:07.525000+00:00] definitely_not_cthulhu (id=1521018659248803862)
+    Or at least, Tek can route you to the right person
+
+[2026-06-29T05:05:19.591000+00:00] definitely_not_cthulhu (id=1521018709857013832)
+    <@387972437901312000> ^ when you're around
+
+[2026-06-29T05:05:30.457000+00:00] rares27 (id=1521018755432448001)
+    Thanks 🙂
+
+[2026-06-29T05:44:50.703000+00:00] teknium (id=1521028655021686864)
+    <@481397023505907713> it'd be <@808920669147889664>
+    [reply to definitely_not_cthulhu msg=1521018709857013832]
+
+[2026-06-29T05:45:04.174000+00:00] teknium (id=1521028711523029003)
+    On the tweet.
+    [reply to nathanwindsor msg=1520985326833635328]
+
+[2026-06-29T05:50:03.616000+00:00] mukduk (id=1521029967473807471)
+    Howdy! Just wanted to say thank you to everyone working on the Hermes agent. Took a long time for me to finally settle down with a harness and Hermes is def the best. Finally doing cool stuff with computers.
+
+[2026-06-29T05:51:52.989000+00:00] nathanwindsor (id=1521030426217681037)
+    Would you point me to where it is? I don't see it, and neither do others:
+    https://x.com/aakashgupta/status/2071130478514696347?s=20
+    
+    Thank you 🙏
+    [embed]  https://twitter.com/aakashgupta/status/2071130478514696347?s=20
+    [reply to teknium msg=1521028711523029003]
+
+[2026-06-29T05:52:21.439000+00:00] nathanwindsor (id=1521030545545363588)
+    BTW, I've used Hermes for a couple months, and it's fantastic! You guys are doing great work! Congrats to you and your team!
+
+[2026-06-29T05:54:33.237000+00:00] teknium (id=1521031098346242178)
+    Its the latestannouncement in <#1490858802726043759>
+    [reply to nathanwindsor msg=1521030426217681037]
+
+[2026-06-29T06:24:00.631000+00:00] teccne (id=1521038511334232167)
+    This addresses a bug where starting hermes dashboard gets stuck on “installing tui dependencies”, unsure what the usual time to merge is but hope it gets through soon
+    https://github.com/NousResearch/hermes-agent/pull/54291
+    [embed] fix(cli): scope TUI npm-install check to target workspace deps by v... https://github.com/NousResearch/hermes-agent/pull/54291
+
+[2026-06-29T06:24:35.763000+00:00] teccne (id=1521038658688520246)
+    (Not my PR, but it solves my problem 😭)
+
+[2026-06-29T06:48:18.049000+00:00] rares27 (id=1521044624188112967)
+    I DM'd them. Thanks!
+    [reply to teknium msg=1521028655021686864]
+
+[2026-06-29T07:03:19.342000+00:00] yatesalex (id=1521048404485083187)
+    Hey guys, are you going to share a deep dive of how you built your benchmark? The one you used for MoA.
+    
+    This would be awesome to see
+
+[2026-06-29T07:03:19.597000+00:00] fattchris. (id=1521048405554499744)
+    Stoked to submit my first PR
+    https://github.com/NousResearch/hermes-agent/pull/54040
+    [embed] fix(telegram): handle forwarded text messages that fall through fil... https://github.com/NousResearch/hermes-agent/pull/54040
+
+[2026-06-29T07:05:28.114000+00:00] soobinhomee (id=1521048944593866802)
+    anyone can help me plz i need some volunteers
+
+[2026-06-29T07:26:44.399000+00:00] jonkomet (id=1521054297721147403)
+    need this looked into for the Hermes Browser Extension , model providers universal connections via API
+    
+    the PR exposes this on the Hermes API server:
+    
+    GET /api/model/options
+    
+    And it reuses Hermes’ existing shared model inventory:
+    
+    hermes_cli.inventory.build_models_payload(load_picker_context(), ...)
+    
+    That is the same source used by the dashboard/TUI model picker. So for any user, it should return the model/provider universe known to their active Hermes profile, including:
+    
+    - built-in Hermes providers
+    - configured/authenticated providers
+    - unconfigured provider rows with setup/auth hints
+    - custom/user providers where Hermes inventory supports them
+    - context/pricing/capability metadata where Hermes has it
+    - refresh behavior for live provider catalogs
+    - the currently selected provider/model from that user’s config
+    
+    https://github.com/NousResearch/hermes-agent/pull/54689
+    [embed] fix(api-server): expose model options inventory by abundantbeing ·... https://github.com/NousResearch/hermes-agent/pull/54689
+
+[2026-06-29T08:22:56.851000+00:00] sahil_ss9 (id=1521068442810191914)
+    https://github.com/NousResearch/hermes-agent/pull/54560
+    https://github.com/NousResearch/hermes-agent/pull/54723
+    https://github.com/NousResearch/hermes-agent/pull/54738
+    [embed] fix: offload blocking profiles endpoints from asyncio event loop (#... https://github.com/NousResearch/hermes-agent/pull/54560
+    [embed] fix(auth): set api_mode=codex_responses for xai-oauth fallback acti... https://github.com/NousResearch/hermes-agent/pull/54723
+    [embed] fix(agent): add generic tool-verifier footer for unverified tool fa... https://github.com/NousResearch/hermes-agent/pull/54738
+
+[2026-06-29T08:45:21.980000+00:00] .fanki (id=1521074084690137108)
+    If there's no problem with this, can it be merged? That would helpful <@387972437901312000>
+    [reply to _zynix msg=1519844340082409512]
+
+[2026-06-29T09:47:32.547000+00:00] alfa_010 (id=1521089731822227569)
+    yo guys can you please approve this pr🙏 
+    
+    https://github.com/NousResearch/hermes-agent/pull/52673
+    
+    its like 450 people have upvoted this Reddit post and are waiting for this to get approved
+    
+    https://www.reddit.com/r/hermesagent/comments/1ugv7i7/hermes_mobile/?sort=new
+    [embed] feat(mobile): add native mobile shell for Hermes Desktop by realfis... https://github.com/NousResearch/hermes-agent/pull/52673
+    [embed] Hermes Mobile https://www.reddit.com/r/hermesagent/comments/1ugv7i7/hermes_mobile/?sort=new
+
+[2026-06-29T09:49:15.550000+00:00] alfa_010 (id=1521090163847991347)
+    <@387972437901312000>
+
