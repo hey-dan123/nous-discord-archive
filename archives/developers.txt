@@ -40682,3 +40682,88 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     2. provides visual feedback that the `/steer` input was accepted
     [embed] fix(steer): only inject /steer into a running turn; confirm busy-in... https://github.com/NousResearch/hermes-agent/pull/54978
 
+[2026-06-29T16:50:55.606000+00:00] sahil_ss9 (id=1521196279974203402)
+    https://github.com/NousResearch/hermes-agent/pull/55003
+
+[2026-06-29T16:51:13.306000+00:00] sahil_ss9 (id=1521196354213511169)
+    https://github.com/NousResearch/hermes-agent/pull/54979
+
+[2026-06-29T16:51:23.486000+00:00] sahil_ss9 (id=1521196396911267932)
+    https://github.com/NousResearch/hermes-agent/pull/54924
+
+[2026-06-29T16:51:38.257000+00:00] sahil_ss9 (id=1521196458865594479)
+    https://github.com/NousResearch/hermes-agent/pull/54908
+
+[2026-06-29T16:53:37.748000+00:00] sahil_ss9 (id=1521196960047042743)
+    road to 1000 open PRs 🦾
+
+[2026-06-29T17:34:09.639000+00:00] teknium (id=1521207160137191565)
+    cc <@119192111202566149>
+    [reply to wnuuee msg=1521121053169025135]
+
+[2026-06-29T17:34:29.026000+00:00] teknium (id=1521207241452032144)
+    You saw the bug yesterday someone presented right
+    [reply to xdarkchain msg=1521148453797761135]
+
+[2026-06-29T17:34:32.541000+00:00] teknium (id=1521207256195141672)
+    were you able to get them fixed?
+
+[2026-06-29T17:35:25.737000+00:00] xdarkchain (id=1521207479315333230)
+    I didn’t get any response from them so I wasn’t able to replicate it.
+    [reply to teknium msg=1521207256195141672]
+
+[2026-06-29T17:36:12.101000+00:00] xdarkchain (id=1521207673780048103)
+    As last resort I can apply the fixes needed and switch them off in case the whole thing is off
+
+[2026-06-29T17:36:35.466000+00:00] xdarkchain (id=1521207771780091984)
+    So it’d be a togglea option
+
+[2026-06-29T17:36:58.958000+00:00] xdarkchain (id=1521207870312415312)
+    Since the current code doesn’t respect or use the rich text at all if it’s enabled
+
+[2026-06-29T17:37:33.874000+00:00] xdarkchain (id=1521208016760865008)
+    The prompt generator isn’t aggressive enough and the message splitter is using the old length.
+
+[2026-06-29T17:38:35.259000+00:00] xdarkchain (id=1521208274228347043)
+    Let me see what I can do, I will try to add a new behavior, if it’s off then it’d be MV2 but if it’s on, it will use a new set of rules.
+
+[2026-06-29T17:38:55.837000+00:00] xdarkchain (id=1521208360538738828)
+    Because right now on means nothing, literally useless.
+
+[2026-06-29T18:18:21.893000+00:00] xdarkchain (id=1521218284496621568)
+    <@387972437901312000> Check this PR please because  without, the rich text is pretty much nonexistent.
+    
+    https://github.com/NousResearch/hermes-agent/pull/55068
+    [embed] feat(telegram): implement rich message support and enhance platform... https://github.com/NousResearch/hermes-agent/pull/55068
+
+[2026-06-29T18:50:35.044000+00:00] realadolan (id=1521226392719593562)
+    Let's get Mistral into the first-class party. https://github.com/NousResearch/hermes-agent/pull/50289
+    [embed] feat: add Mistral AI as first-class LLM provider by Adolanium · Pu... https://github.com/NousResearch/hermes-agent/pull/50289
+
+[2026-06-29T19:31:57.492000+00:00] maxfreedompollard (id=1521236804861427884)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/55078
+    
+    The tool-schema sanitizer was walking default/const values as if they were schemas, so a literal like default: ["read","write"] got rewritten into [{"type":"object","properties":{}}, ...] for every backend; fixed by treating default/const as literal data alongside required/enum/examples. → my estimate: P2 (silent, default-path, but it corrupts advisory metadata the model only uses as a hint; tools still validate args).
+    [embed] Preserve literal default and const values in tool schema sanitizer ... https://github.com/NousResearch/hermes-agent/pull/55078
+
+[2026-06-29T19:32:22.383000+00:00] maxfreedompollard (id=1521236909261852923)
+    https://github.com/NousResearch/hermes-agent/pull/55082 <@387972437901312000> 
+    
+    MCP schema normalization renamed any key called definitions to $defs, so a tool parameter literally named definitions was renamed (and dropped from required), handing the model a wrong contract; fixed by only renaming the definitions keyword at schema-node level, not property names. → my estimate: P2 (real broken-tool contract with no workaround, but only triggers for the specific param name definitions, so narrow).
+    [embed] Do not rename an MCP tool parameter named "definitions" to "$defs" ... https://github.com/NousResearch/hermes-agent/pull/55082
+
+[2026-06-29T19:32:43.625000+00:00] maxfreedompollard (id=1521236998357254374)
+    https://github.com/NousResearch/hermes-agent/pull/55093 <@387972437901312000> 
+    
+    On Bedrock Converse, a tool that returns an empty string produced a {"text":""} block, which the API rejects with a 400 that then re-fails on every replay/retry and wedges the conversation; fixed by applying the same empty-content placeholder guard the user/assistant path already had. → my estimate: P1 (common trigger, a core feature broken on a supported provider with no workaround once it's baked into history; borderline P0 given the retry-loop behavior).
+    [embed] Guard empty Bedrock Converse tool results against empty text blocks... https://github.com/NousResearch/hermes-agent/pull/55093
+
+[2026-06-29T19:33:55.349000+00:00] maxfreedompollard (id=1521237299189252217)
+    Some fixed "wrong scope" bugs. 
+    
+    Drilling in, two of them are the same root mistake: a recursive walk that can't tell apart things that look identical but mean different things.
+    
+    #55078 conflated a JSON-Schema keyword with a literal value — it walked default/const values as if they were schemas.
+    #55082 conflated a keyword with a user-chosen name — it rewrote the definitions keyword and a property literally named definitions.
+    #55093 is the mirror image: the same guard existed on one branch (user/assistant content) but was missing on its sibling branch (tool results).
+

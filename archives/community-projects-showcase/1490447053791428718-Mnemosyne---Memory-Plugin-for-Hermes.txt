@@ -2451,3 +2451,6 @@
     I didn't get clear answer. So, I drop hermes docker
     [reply to daynight msg=1519593177118412921]
 
+[2026-06-29T17:07:49.423000+00:00] panbartosz (id=1521200532230766632)
+    Does Mnemosyne actually load embeddings per profile or is my agent bullshitting me? That's a lot of ram with multiple profiles.
+
