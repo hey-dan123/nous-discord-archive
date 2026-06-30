@@ -40767,3 +40767,113 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     #55082 conflated a keyword with a user-chosen name — it rewrote the definitions keyword and a property literally named definitions.
     #55093 is the mirror image: the same guard existed on one branch (user/assistant content) but was missing on its sibling branch (tool results).
 
+[2026-06-29T20:14:06.537000+00:00] realadolan (id=1521247412444991568)
+    And now, it's ClinePass time: https://github.com/NousResearch/hermes-agent/pull/55148
+    [embed] feat: add ClinePass as first-class LLM provider by Adolanium · Pul... https://github.com/NousResearch/hermes-agent/pull/55148
+    [reply to realadolan msg=1521226392719593562]
+
+[2026-06-29T21:24:30.868000+00:00] sys32.eth (id=1521265130573135932)
+    <@411637224476770325> sent the email boss but the thread is closed so i can t ping you there ::)
+
+[2026-06-29T21:24:41.714000+00:00] kainan_e (id=1521265176064688190)
+    sorry about that, no problem
+
+[2026-06-29T21:24:43.301000+00:00] kainan_e (id=1521265182721179818)
+    got it
+
+[2026-06-29T21:25:19.758000+00:00] sys32.eth (id=1521265335632920738)
+    oh mb i also dmd u thought u sleeping 😄
+    [reply to kainan_e msg=1521265176064688190]
+
+[2026-06-29T21:26:21.570000+00:00] kainan_e (id=1521265594890981427)
+    I also replied to the email so you know for sure that we got it ^^.
+    [reply to sys32.eth msg=1521265335632920738]
+
+[2026-06-29T21:27:35.640000+00:00] sys32.eth (id=1521265905563074702)
+    haha thank you so much . really appreciate this
+    [reply to kainan_e msg=1521265594890981427]
+
+[2026-06-29T22:07:36.735000+00:00] yatesalex (id=1521275976485703791)
+    Hey guys, who works on evals at Nous?
+
+[2026-06-29T23:05:37.801000+00:00] neekoadams (id=1521290577134485514)
+    https://github.com/NousResearch/hermes-agent/pull/55244
+    [embed] feat: add Desktop composer enter mode toggle by unleashed-nick · P... https://github.com/NousResearch/hermes-agent/pull/55244
+
+[2026-06-29T23:41:37.956000+00:00] nanxingncb612d (id=1521299637481504798)
+    https://github.com/NousResearch/hermes-agent/pull/55256 This prevents Hermes credentials from being inherited by LSP language-server subprocesses.
+    
+    agent/lsp/client.py previously spawned each language server with dict(os.environ), then applied explicit LSP env overrides. That copied provider keys, GitHub tokens, bot tokens, dashboard tokens, and other Hermes process credentials into workspace-scoped language server processes.
+    [embed] fix(lsp): strip credentials from language server env by necoweb3 ·... https://github.com/NousResearch/hermes-agent/pull/55256
+
+[2026-06-29T23:57:12.786000+00:00] nanxingncb612d (id=1521303558442586162)
+    https://github.com/NousResearch/hermes-agent/pull/55271 This redacts secrets from cron failure summaries before they are delivered to chat platforms.
+    
+    _summarize_cron_failure_for_delivery() already compacts noisy provider/script failures before sending them to Discord, Slack, Telegram, and other delivery targets, but it previously used the raw error text. If a provider or tool error included an API key or token, that secret could be copied into the delivered failure message.
+    [embed] Fix/cron delivery credential leak by necoweb3 · Pull Request #5527... https://github.com/NousResearch/hermes-agent/pull/55271
+
+[2026-06-29T23:57:50.638000+00:00] nanxingncb612d (id=1521303717205250159)
+    https://github.com/NousResearch/hermes-agent/pull/55272 his rejects unauthorized Slack message events before the adapter performs file metadata fetches or media processing.
+    
+    The gateway runner performs the final _is_user_authorized check after the adapter has already constructed a MessageEvent. For Slack messages with files, that meant an unauthorized sender could still trigger Slack files_info calls and file-processing work before the runner rejected the event.
+    [embed] Fix/slack pre auth media download by necoweb3 · Pull Request #5527... https://github.com/NousResearch/hermes-agent/pull/55272
+
+[2026-06-30T00:01:47.659000+00:00] quark2world (id=1521304711343378504)
+    Why is blank-slate hermes still 2.2gb 😭
+
+[2026-06-30T00:04:07.563000+00:00] blockcipher (id=1521305298143416440)
+    [bugfix](https://github.com/NousResearch/hermes-agent/pull/55198): `NOUS_INFERENCE_BASE_URL` is ignored in some cases and requests are sent directly to the public endpoint
+    [embed] fix(runtime): honor NOUS_INFERENCE_BASE_URL across pool/explicit/au... https://github.com/NousResearch/hermes-agent/pull/55198
+
+[2026-06-30T00:08:39.425000+00:00] nanxingncb612d (id=1521306438415159369)
+    https://github.com/NousResearch/hermes-agent/pull/55273 This rejects unauthorized Discord messages before attachment bytes are read or cached.
+    [embed] Fix/discord pre auth media download by necoweb3 · Pull Request #55... https://github.com/NousResearch/hermes-agent/pull/55273
+
+[2026-06-30T02:27:38.731000+00:00] haru_7612 (id=1521341415999668355)
+    is there anyone looking for dev?
+
+[2026-06-30T02:44:28.493000+00:00] maxfreedompollard (id=1521345651248599060)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/55093
+    [embed] Guard empty Bedrock Converse tool results against empty text blocks... https://github.com/NousResearch/hermes-agent/pull/55093
+
+[2026-06-30T02:44:47.799000+00:00] maxfreedompollard (id=1521345732223963186)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/55126
+    [embed] Merge consecutive same-role contents for native Gemini (fix paralle... https://github.com/NousResearch/hermes-agent/pull/55126
+
+[2026-06-30T02:45:30.074000+00:00] maxfreedompollard (id=1521345909537902773)
+    https://github.com/NousResearch/hermes-agent/pull/55135
+    [embed] Convert image tool results to Converse image blocks for Bedrock by ... https://github.com/NousResearch/hermes-agent/pull/55135
+
+[2026-06-30T02:45:40.949000+00:00] maxfreedompollard (id=1521345955151085701)
+    https://github.com/NousResearch/hermes-agent/pull/55144
+    [embed] Sanitize lone surrogates in markdown_to_signal before UTF-16 offset... https://github.com/NousResearch/hermes-agent/pull/55144
+
+[2026-06-30T02:45:51.138000+00:00] maxfreedompollard (id=1521345997886849045)
+    https://github.com/NousResearch/hermes-agent/pull/55310
+    [embed] Strip lone surrogates from chat-surface replies at the gateway deli... https://github.com/NousResearch/hermes-agent/pull/55310
+
+[2026-06-30T02:46:07.469000+00:00] maxfreedompollard (id=1521346066384158741)
+    https://github.com/NousResearch/hermes-agent/pull/55315
+    [embed] Preserve large integers in tool-argument coercion (no float roundin... https://github.com/NousResearch/hermes-agent/pull/55315
+
+[2026-06-30T02:46:16.539000+00:00] maxfreedompollard (id=1521346104426233906)
+    https://github.com/NousResearch/hermes-agent/pull/55368
+    [embed] Resolve symlinks in the ACP auto-approve sensitive-path guard by Ma... https://github.com/NousResearch/hermes-agent/pull/55368
+
+[2026-06-30T02:46:24.474000+00:00] maxfreedompollard (id=1521346137708167218)
+    https://github.com/NousResearch/hermes-agent/pull/55370
+    [embed] Keep leading-zero union values as strings in tool-argument coercion... https://github.com/NousResearch/hermes-agent/pull/55370
+
+[2026-06-30T02:47:33.071000+00:00] maxfreedompollard (id=1521346425424838667)
+    #55093 — Bedrock Converse converted an empty tool result into a {"text": ""} block, which the API rejects and which re-fails on every retry, wedging the conversation.
+    #55126 — Native Gemini emitted consecutive same-role contents for parallel tool calls, which violates the API's strict user/model alternation and 400s.
+    #55135 — Bedrock flattened image tool results (screenshots, vision) into a base64 text dump, so the model never saw the image and the request bloated toward the size limit.
+    #55144 — Signal's markdown_to_signal did UTF-16 offset math that crashed (UnicodeEncodeError) on a lone surrogate, aborting any formatted reply.
+    #55310 — The delivered reply was never surrogate-sanitized (only the stored copy was), so a lone surrogate crashed Telegram's per-reply length check and blocked delivery.
+    #55315 — Tool-argument coercion ran integers through float, silently rounding 64-bit ids (Discord/Telegram snowflakes) so tools acted on the wrong entity.
+    #55368 — The ACP auto-approve guard checked only the literal path, so a symlink to a sensitive file (e.g. ~/.ssh/authorized_keys) was written without prompting.
+    #55370 — Union integer|string tool args dropped leading zeros ("007" → 7), corrupting zip codes, area codes, and zero-padded ids the model meant as text.
+
+[2026-06-30T03:19:20.063000+00:00] thyfriendlyfox (id=1521354423929143356)
+    Good evening everyone 🙂 Had a good weekend
+

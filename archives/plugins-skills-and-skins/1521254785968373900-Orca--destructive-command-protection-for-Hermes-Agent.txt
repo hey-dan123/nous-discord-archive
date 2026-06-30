@@ -1,0 +1,35 @@
+# Thread 'Orca: destructive command protection for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1521254785968373900 forum_id=1485392832154832906
+# Started 2026-06-30T03:32:58.714019+00:00
+
+[2026-06-29T20:43:24.522000+00:00] chriskarani (id=1521254785968373900)
+    Hey everyone, I’ve been building an open-source safety layer for AI coding agents and just added Hermes support.
+    
+    The problem I’m trying to solve is simple: as agents get more autonomous, I want to let them work longer without babysitting every command, but I don’t want them doing irreversible things like:
+    
+    `git reset --hard`
+    `git push --force`
+    `rm -rf ./src`
+    `terraform destroy`
+    `kubectl delete`
+    `DROP TABLE` users
+    
+    Orca intercepts high-risk commands before they execute, blocks or challenges them, and explains why with safer alternatives.
+    
+    It’s not meant to replace Docker or claim perfect sandboxing. The goal is narrower:
+    Stop agents from doing irreversible things without approval.
+    
+    Repo:
+    https://github.com/christopherkarani/Orca
+    
+    `curl -fsSL https://raw.githubusercontent.com/christopherkarani/Orca/main/scripts/install.sh | sh`
+    
+    Run Hermes through Orca:
+    
+    `orca run -- hermes`
+    
+    I’d really appreciate feedback from Hermes users, especially roasts, edge cases, “this would never work because...” comments, or ideas for commands and policies Hermes agents should never run by default.
+    
+    If the idea seems useful, a GitHub star also helps a lot.
+    [embed] GitHub - christopherkarani/Orca: 🚦 Stop AI agents from deleting ... https://github.com/christopherkarani/Orca
+

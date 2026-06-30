@@ -1,0 +1,29 @@
+# Thread 'Hermes Mobile — a small PWA plugin for the existing Hermes Dashboard' in forum #plugins-skills-and-skins
+# thread_id=1521290460008681572 forum_id=1485392832154832906
+# Started 2026-06-30T03:32:58.344742+00:00
+
+[2026-06-29T23:05:09.876000+00:00] stasstep (id=1521290460008681572)
+    I built this because Telegram is great for quick prompts, session switching, and approvals, but it doesn’t cover the way I use Hermes when real work is running.
+    
+    Sometimes I don’t want to chat with the agent. I want to quickly see what is happening: active sessions, approvals, activity, cron, kanban, system status, and agent profiles.
+    
+    There are already full WebUIs and dashboards with PWA support. This is not trying to replace them. It’s a smaller thing: a plugin that lives inside the Hermes Dashboard you already run.
+    
+    Install it, open the new **Mobile** tab, scan the QR code, open it on your phone, and add it as a PWA.
+    
+    Same Dashboard auth/session, same origin. No second server, no separate login, no API keys in the browser client.
+    
+    bash
+    hermes plugins install stasstepv/hermes-pwa
+    hermes plugins enable hermes-pwa
+    
+    Repo:
+    https://github.com/stasstepv/hermes-pwa
+    
+    Still beta (`0.1.2-beta`). If this is useful for your setup, please try the install and open an issue if something breaks. I’ve mostly tested it on my own Hermes instance so far, so real install/PWA feedback would help a lot — especially iOS.
+    [attachment] cron.png https://cdn.discordapp.com/attachments/1521290460008681572/1521290460138836080/cron.png?ex=6a444ba5&is=6a42fa25&hm=e26432562b416cfe7460311d90877b27f6f5316f326927ca8248b4428180a9a2&
+    [attachment] home-screen.png https://cdn.discordapp.com/attachments/1521290460008681572/1521290460658794516/home-screen.png?ex=6a444ba6&is=6a42fa26&hm=4c47e13cbd741d6496360cdfce76c854d75babb5b6ac9aafd0d5c13fccc32e4a&
+    [attachment] menu.png https://cdn.discordapp.com/attachments/1521290460008681572/1521290460998402058/menu.png?ex=6a444ba6&is=6a42fa26&hm=cf01fb357b2f2f30628720db1e8898689b5dc9df0d0b203b8d62c2ee88bd6ae8&
+    [attachment] projects.png https://cdn.discordapp.com/attachments/1521290460008681572/1521290461384409139/projects.png?ex=6a444ba6&is=6a42fa26&hm=d72a37a6e17496d471a8d46f739c28be095b94c07c1112f5c00235cc27365bb1&
+    [embed] GitHub - stasstepv/hermes-pwa: Unofficial mobile PWA for Hermes Age... https://github.com/stasstepv/hermes-pwa
+

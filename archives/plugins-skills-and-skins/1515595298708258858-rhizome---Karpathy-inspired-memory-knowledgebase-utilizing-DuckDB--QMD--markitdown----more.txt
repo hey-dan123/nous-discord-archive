@@ -26,3 +26,6 @@
     Everything stays as normal [[wikilinked]] markdown in your Obsidian vault
     Works with multiple agents at once and keeps everything local when you want it that way
 
+[2026-06-30T02:46:33.857000+00:00] ai.degen (id=1521346177063456891)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1515595298708258858/1521346176991887582/image.png?ex=6a447f89&is=6a432e09&hm=6e7399e56c19acb9eee1d707039640b2b504caaf4e21607aeb2ce594fc735bbb&
+

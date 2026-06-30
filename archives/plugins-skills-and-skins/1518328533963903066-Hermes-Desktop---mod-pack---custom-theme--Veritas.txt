@@ -36,3 +36,16 @@
     Truth in wine
     [reply to biscuit3851 msg=1520072959853596863]
 
+[2026-06-30T02:33:07.786000+00:00] Translator Bot#1043 (id=1521342796156506113)
+    To the truth I long for
+
+[2026-06-30T02:33:38.083000+00:00] Translator Bot#1043 (id=1521342923231203368)
+    To the truth I long for
+
+[2026-06-30T02:34:10.841000+00:00] wise_mind (id=1521343060628475976)
+    Ad veritatem aspiro
+
+[2026-06-30T02:34:15.005000+00:00] Translator Bot#1043 (id=1521343078093422732)
+    I aspire to the truth
+    [reply to wise_mind msg=1521343060628475976]
+

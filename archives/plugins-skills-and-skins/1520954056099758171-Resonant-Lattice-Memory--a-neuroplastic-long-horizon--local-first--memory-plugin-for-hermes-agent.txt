@@ -20,3 +20,69 @@
     Then have your agent install it:
     The repo is written so an agent can read the README, verify the system on its own machine, deploy it into hermes, and configure it, which is the same loop a human and an agent used to build and harden it. It is MIT licensed. Would love feedback, issues, and stress tests from anyone! (Especially people running money or ops agents.)
 
+[2026-06-29T20:57:08.295000+00:00] markfree (id=1521258241122631922)
+    Alright, I finally have some time to sit and introduce myself. I’ve been traveling for work (drone light show season), so things have been busy.
+    
+    My name is Free, or at least that's what everyone calls me. I have been tinkering with hermes-agent since version 0.9 with the primary focus of building an agent that can run locally across my 48gb vram setup while being very precise and functional. Along the way I have tried many memory plugins, even beyond the default plugins shipped with hermes. They all do their jobs quite well but to me none of it felt like an actual memory - or at least the way I reverse engineered my own memory. 
+    
+    Over the last 2 months I have been working on Resonant Lattice Memory. An actual epistemic (knowledge) engine that can be paired with the exceptional logic engines that are modern LLMs. 
+    
+    At a fundamental level, the system is designed so that high-quality reasoning from stronger models gets captured in their outputs and then distilled into persistent, queryable knowledge structures. This allows a smaller primary agent to benefit from that reasoning at a fraction of the token cost of repeatedly invoking the stronger model.
+    
+    During testing my typical setup was gemma4:12b running on a 3090ti with ~140k context window. This was my primary llm for hermes-agent. The memory layer was running nemotron-3-super on ollama and a local embedding model. When I get a dgx spark I'll move nemotron 3 local. I tested with the 24b range models (gemma, qwen, granite, etc) and they all ran perfect as well but my setup makes them slow currently. 
+    
+    It's impossible to explain everything it does all at once so I'm happy to answer any questions. I really just wanted an agent that felt like it had an actual memory. Sometimes it's hard to get my thoughts into proper words, language is an abstracted layer inherently, so I hope the system and the code will speak for itself.
+
+[2026-06-29T20:58:22.961000+00:00] markfree (id=1521258554294665318)
+    There is also a first-class (but still maturing) homomorphic blind store mode you can enable via `encryption_mode: blind`. This was built to realize the deeper goal of functional sovereign memory where:
+    
+    - Only the primary owner ever holds the master secret (derived from a passphrase via Argon2id + HKDF).
+    - The untrusted store node only ever sees public and evaluation keys.
+    - A delegated agent only ever receives *re-encrypted* results via proxy re-encryption (PRE) that it can decrypt with its limited use-key — it cannot read the raw store.
+    
+    Both Tier 0 (SQLCipher encrypted-at-rest) and Tier 1 (CKKS homomorphic blind store) are implemented and working. The blind tier already supports:
+    
+    - Encrypted embeddings (`semantic_he`) and HRR lifts (`semantic_he_hrr`) using separate CKKS contexts.
+    - Scaled resonance maintenance (`semantic_he_meta`).
+    - AEAD-encrypted entity name sets with client-side overlap detection (`semantic_he_entities`).
+    - Proxy re-encryption of recall scores so the store can return results without ever decrypting them.
+    - Per-cycle scope bounding (`ScopeLimiter` + re-encryption audit log) to prevent a compromised agent from exfiltrating the entire memory.
+    
+    I have this working well on the node (including write-path completeness and the multi-keyset keystore), but the remaining experimental pieces are:
+    
+    - Autonomous blind dream-cycle maintenance using the lightweight (depth-1) maintenance context + decay-from-origin (the current path still leans on the deeper context for in-place decay).
+    - Full integration of pure-CKKS blind argmax / top-k into the live recall path (so the store can return only winning facts without the client learning the full ranking).
+    - Production hardening of the comparison circuits (security level + bootstrapping) and tighter wiring of the scope/re-encryption policy enforcement into the hot path.
+    - Key rotation, sealed storage (TPM / once-per-boot unlock), and multi-user delegation stories.
+
+[2026-06-29T21:10:21.749000+00:00] staggeredsix (id=1521261569109921832)
+    sounds close to a project I've been working on for a few years ;D
+    [reply to markfree msg=1520954056099758171]
+
+[2026-06-29T21:37:15.247000+00:00] markfree (id=1521268336611295463)
+    It started as a personal project to reverse engineer my own brain lol. A month ago it was like 4500 lines of code in 2 massive python files. Slowly bit by bit I refactored it into about 15,000 lines across 30 or so files and added features along the way. Each time I built anything into it I tried to build a corresponding test to validate it. I tried to keep all of the tests and their results packaged in the repo as well.
+    Feel free to fork it or contribute to it if it helps manifest your creation!
+    [reply to staggeredsix msg=1521261569109921832]
+
+[2026-06-29T21:39:41.454000+00:00] staggeredsix (id=1521268949847904366)
+    not trying to steal your thunder here : https://github.com/mmckeen-nv/DML
+    [embed] GitHub - mmckeen-nv/DML: Protoype contextual memory system for mode... https://github.com/mmckeen-nv/DML
+    [reply to markfree msg=1521268336611295463]
+
+[2026-06-29T21:39:57.821000+00:00] staggeredsix (id=1521269018495811625)
+    Similar!
+
+[2026-06-29T23:10:37.678000+00:00] markfree (id=1521291834910052372)
+    Awesome, no thunder stolen, the more the merrier. I ultimately want the most functional ai agent running at home as possible lol. When I get some time in the coming days I will dig into it and see what I can learn! Thanks for sharing it
+    [reply to staggeredsix msg=1521268949847904366]
+
+[2026-06-29T23:12:52.985000+00:00] staggeredsix (id=1521292402428608553)
+    Of course! It is a bit janky sometimes but to give you an idea - not only does it remember things it also can cut out a TON of compactions
+
+[2026-06-29T23:14:15.771000+00:00] staggeredsix (id=1521292749658128394)
+    I'm still working on it. There's a whole agent memory layer where agentic runs are stored with results, what the agent did etc. It is little a little scratch pad for agents to use and recall. Turned a 45 minute long horizon run into a 10 minute one 🙂
+
+[2026-06-29T23:14:59.959000+00:00] staggeredsix (id=1521292934996299827)
+    Hermes was able to build this with 2 context compactions using Rhino and Blender
+    [attachment] Screenshot_2026-06-29_at_5.14.34_PM.png https://cdn.discordapp.com/attachments/1520954056099758171/1521292934627066006/Screenshot_2026-06-29_at_5.14.34_PM.png?ex=6a444df3&is=6a42fc73&hm=189a2b620ade3594e93bae15a7714f2f7c01665d7ce10af6d650a0681aa417db&
+

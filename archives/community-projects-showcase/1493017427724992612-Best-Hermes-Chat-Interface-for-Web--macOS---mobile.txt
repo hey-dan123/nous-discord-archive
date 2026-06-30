@@ -4980,3 +4980,10 @@
     I've recently set up a bunch of my servers with the Tailscale Https certificates, so I use the Tailscale magic DNS address everywhere now.
     [reply to josephcy msg=1520313421198004344]
 
+[2026-06-30T02:05:12.265000+00:00] alto69 (id=1521335768512069722)
+    I using cloudflare tunnels. is the password auth really secure i was using cloudflare access (email codes) but not work with the app. also do i need the app? had mostly good experience with web so far
+
+[2026-06-30T02:41:16.865000+00:00] avidfuturist (id=1521344847502639287)
+    Which app are you trying? Of course you can always use the web app across all devices too!
+    [reply to alto69 msg=1521335768512069722]
+
