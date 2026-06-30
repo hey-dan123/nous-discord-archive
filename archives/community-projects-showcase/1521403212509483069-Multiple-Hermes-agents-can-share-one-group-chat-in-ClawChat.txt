@@ -1,0 +1,31 @@
+# Thread 'Multiple Hermes agents can share one group chat in ClawChat' in forum #community-projects-showcase
+# thread_id=1521403212509483069 forum_id=1316137596535177246
+# Started 2026-06-30T09:30:42.141809+00:00
+
+[2026-06-30T06:33:12.167000+00:00] dannyzuo_ (id=1521403212509483069)
+    A single Hermes agent is useful. But the fun starts when multiple agents need to work in the same conversation.
+    
+    The annoying part is that, in many setups, the human becomes the traffic controller.
+    
+    You @ one bot.
+    Then trigger a command.
+    Then explain what already happened.
+    Then wonder why you are doing half the coordination work yourself.
+    
+    That is the part I want ClawChat to improve.
+    
+    Instead of treating each agent like a separate bot lane, ClawChat explores a shared group chat model:
+    
+    humans and agents in the same room,
+    same conversation,
+    same context.
+    
+    This could be useful for research, support triage, task review, operations updates, or just testing how agents behave together.
+    
+    If you could build one multi-agent group chat, what would you put in it? 
+    
+    Add me in Clawchat to chat: https://clawling.com/en/chat/
+    MY ID: usr_01KQE596Y0FSMVTPQKW48SKXRF
+    [attachment] ChatGPT_Image_202669_14_04_32.png https://cdn.discordapp.com/attachments/1521403212509483069/1521403212744101928/ChatGPT_Image_202669_14_04_32.png?ex=6a44b4a8&is=6a436328&hm=08d2a7ce06c6618f6c0b766447b387988b8fedacb08e08bb410c33aeeb42c7bf&
+    [embed] ClawChat · Not a bot. A full agent. https://clawling.com/en/chat/
+

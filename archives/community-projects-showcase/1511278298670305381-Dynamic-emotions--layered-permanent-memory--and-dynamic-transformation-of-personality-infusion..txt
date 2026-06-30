@@ -9,3 +9,6 @@
     The new version has added hierarchical memory management, referencing the Letta project. It no longer uses context management or context compression. It will never suffer from amnesia or lose its goal.
     [embed] GitHub - miyamoriaoi1997-del/Soul-Llink: Dynamic emotion system fra... https://github.com/miyamoriaoi1997-del/Soul-Llink/tree/main
 
+[2026-06-30T08:43:52.847000+00:00] nihilys_14396 (id=1521436098704834712)
+    Update: Utilizing a brand-new contextual architecture, it thoroughly addresses the issues of traditional context and long-term memory recall. Introducing the all-new Soullink 2.0
+

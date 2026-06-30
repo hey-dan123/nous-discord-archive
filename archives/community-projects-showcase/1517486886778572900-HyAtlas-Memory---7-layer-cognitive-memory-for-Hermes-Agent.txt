@@ -113,3 +113,27 @@
 [2026-06-28T08:52:39.625000+00:00] tunacookie (id=1520713532440707123)
     V2 Release Coming soon, did a big overhaul make it more reliable, made it so all layers work properly, etc all the backend stuff, V2.x+ onwards will be working on polishing the dashboard
 
+[2026-06-30T08:24:05.529000+00:00] tunacookie (id=1521431118732333136)
+    Been working hard on this. 
+    HyAtlas Memory v2.0.0 — changelog from 1.5
+    >
+    New
+    In-process L5 writer — entities get extracted and indexed to Qdrant during System2 digest, no separate batch script needed
+    L6 schemas + L7 intentions in Kuzu — graph store now actually populated (was zero before)
+    L4 identity dedup — pre-write cosine dedup + identity_type tagging + evolution chains on search
+    Robust S2 JSON parser — handles LLM think-block wrapping (was dropping all operations when models wrap output in `` tags)
+    1024-d embeddings — bge-large-en-v1.5, up from 384-d bge-small , will be better in the long term when memory becomes more(more retrieval)
+    Hybrid v2 reader — better retrieval than the legacy pipeline
+    >
+    Changed
+    Dashboard shows real L5/L6/L7 counts from live graph
+    Memory Observatory 3D graph populates with real nodes
+    Clean install works without hermes-agent present (try/except + stubs)
+    No hardcoded Windows paths — all scripts use HERMES_HOME env var
+    >
+    🔗 https://github.com/tuancookiez-hub/HyAtlas-Memory
+    [embed] GitHub - tuancookiez-hub/HyAtlas-Memory: A plugin for Hermes to con... https://github.com/tuancookiez-hub/HyAtlas-Memory
+
+[2026-06-30T08:29:26.593000+00:00] tunacookie (id=1521432465372217374)
+    Now to work on dashboard polish.
+

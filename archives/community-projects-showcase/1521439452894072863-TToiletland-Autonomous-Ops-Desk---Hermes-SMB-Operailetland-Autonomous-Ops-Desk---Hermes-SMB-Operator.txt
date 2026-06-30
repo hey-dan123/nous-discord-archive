@@ -1,0 +1,16 @@
+# Thread 'TToiletland Autonomous Ops Desk / Hermes SMB Operailetland Autonomous Ops Desk / Hermes SMB Operator' in forum #community-projects-showcase
+# thread_id=1521439452894072863 forum_id=1316137596535177246
+# Started 2026-06-30T09:30:41.649240+00:00
+
+[2026-06-30T08:57:12.548000+00:00] philmcneal (id=1521439452894072863)
+    Sharing my Hermes Agent Business Hackathon demo:
+    
+    X demo post: https://x.com/ToiletlandCA/status/2071878317477937430
+    Video: https://youtu.be/S7ch-7ZyuDE
+    
+    Local-first SMB operations control room: email triage, warranty command, Stripe/parts approval rail, Google Ads draft loop, Agent Pulse, and audit trail.
+    
+    Redacted fixtures only. Live actions disabled. Hermes recommends. Owner decides. Audit proves it.
+    [embed]  https://twitter.com/ToiletlandCA/status/2071878317477937430
+    [embed] Toiletland × Hermes — Autonomous Ops Desk Demo https://www.youtube.com/watch?v=S7ch-7ZyuDE
+

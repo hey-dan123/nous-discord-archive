@@ -299,3 +299,8 @@
     [attachment] Browser_Extension_v0.1.61_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1520847738365808760/Browser_Extension_v0.1.61_Update_Ad.png?ex=6a42af54&is=6a415dd4&hm=01f8714b627a6908d2cee3805e857245f109c026fdedee31a243b1d798bdb7fe&
     [embed] Release v0.1.6 · abundantbeing/hermes-browser-extension https://github.com/abundantbeing/hermes-browser-extension/releases/tag/v0.1.6
 
+[2026-06-30T03:47:50.346000+00:00] jonkomet (id=1521361597375975587)
+    v0.1.7 loading some new features.. PLUS 1 MAJOR one
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1521361596444577894/image.png?ex=6a448de6&is=6a433c66&hm=08e3379e3dc698d92fc4dcd2e74660daf538caffc2706323dbe7c503b1632386&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1521361596985774100/image.png?ex=6a448de6&is=6a433c66&hm=0818868a7e2570e1da841b4f42ab1fd844a87961ab825543b003379dc33d58a9&
+

@@ -40877,3 +40877,51 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-06-30T03:19:20.063000+00:00] thyfriendlyfox (id=1521354423929143356)
     Good evening everyone 🙂 Had a good weekend
 
+[2026-06-30T03:31:49.430000+00:00] dias4761 (id=1521357567002153093)
+    lets code !
+    [reply to thyfriendlyfox msg=1521354423929143356]
+
+[2026-06-30T04:04:06.589000+00:00] tdamre (id=1521365692035764345)
+    hello all
+
+[2026-06-30T04:04:10.846000+00:00] tdamre (id=1521365709890912318)
+    <:BeardedNousGirl:1506796582987632690>
+
+[2026-06-30T04:49:59.182000+00:00] gille (id=1521377237247463475)
+    heyo
+
+[2026-06-30T04:50:00.340000+00:00] Translator Bot#1043 (id=1521377242104729810)
+    there
+    [reply to gille msg=1521377237247463475]
+
+[2026-06-30T06:17:21.713000+00:00] zeeshu77 (id=1521399226016206918)
+    <@411637224476770325>  hey buddy
+
+[2026-06-30T07:41:35.180000+00:00] avykhova (id=1521420421793054741)
+    Hi, I want to draw your attention to my pr, that restores the folder picker for the session on a desktop app: https://github.com/NousResearch/hermes-agent/pull/53057#issuecomment-4825376696
+    [embed] fix(desktop): restore right sidebar folder picker + cwd fallback ch... https://github.com/NousResearch/hermes-agent/pull/53057
+
+[2026-06-30T07:55:37.875000+00:00] loongfay (id=1521423956312064010)
+    hi, <@387972437901312000> , https://github.com/NousResearch/hermes-agent/pull/47303
+    [embed] feat(Yuanbao)  optimizes media resource processing speed: parallel ... https://github.com/NousResearch/hermes-agent/pull/47303
+
+[2026-06-30T08:30:35.878000+00:00] flownium (id=1521432755974574121)
+    heyo
+    [reply to gille msg=1521377237247463475]
+
+[2026-06-30T08:30:38.425000+00:00] Translator Bot#1043 (id=1521432766657462342)
+    there
+    [reply to flownium msg=1521432755974574121]
+
+[2026-06-30T08:30:40.454000+00:00] flownium (id=1521432775167836292)
+    https://github.com/NousResearch/hermes-agent/pull/55508
+    [embed] fix(openviking): surface stored user profile by itsflownium · Pull... https://github.com/NousResearch/hermes-agent/pull/55508
+
+[2026-06-30T08:30:46.773000+00:00] flownium (id=1521432801671381075)
+    https://github.com/NousResearch/hermes-agent/pull/55502
+    [embed] fix(desktop): avoid caching streaming markdown parses by itsflowniu... https://github.com/NousResearch/hermes-agent/pull/55502
+
+[2026-06-30T08:30:54.301000+00:00] flownium (id=1521432833246232699)
+    https://github.com/NousResearch/hermes-agent/pull/55496
+    [embed] fix(telegram): honor group user allowlists by itsflownium · Pull R... https://github.com/NousResearch/hermes-agent/pull/55496
+

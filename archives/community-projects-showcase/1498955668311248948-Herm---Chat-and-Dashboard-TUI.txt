@@ -1579,3 +1579,6 @@
 [2026-06-29T04:22:07.004000+00:00] pvpsk (id=1521007835758989322)
     how do i keep updated with herm, seems like after updating Hermes today i have broken chat responses and loop saying `connected . model_name . n skills . n tools`
 
+[2026-06-30T09:00:05.108000+00:00] tunacookie (id=1521440176662908929)
+    idk why my herm feels fragile lately.. not sure how to explain it.
+

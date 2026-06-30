@@ -4987,3 +4987,20 @@
     Which app are you trying? Of course you can always use the web app across all devices too!
     [reply to alto69 msg=1521335768512069722]
 
+[2026-06-30T04:22:46.653000+00:00] alto69 (id=1521370389924548670)
+    Android app. What is benefit
+
+[2026-06-30T04:37:14.909000+00:00] avidfuturist (id=1521374031654289508)
+    Android app is basically an optimized version of the web app that works best for Android, but if web app is working for you, fine to stick with that
+    [reply to alto69 msg=1521370389924548670]
+
+[2026-06-30T04:37:58.707000+00:00] avidfuturist (id=1521374215356416202)
+    Also if you share the error you are getting I’ll look into it. I use Android app via tailscale and works great
+
+[2026-06-30T04:47:15.292000+00:00] alto69 (id=1521376549843112066)
+    Cool. Keen for voice mode. It's still under development right. Or was just mine broken (chrome all tts)
+
+[2026-06-30T04:48:47.286000+00:00] avidfuturist (id=1521376935693910059)
+    Voice mode should work already, may need to wire up a TTS provider in settings. There’s dictation and an actual voice mode you can enable. If there’s an error or issue, I can look into it. Browser based default doesn’t always work the best on mobile.
+    [reply to alto69 msg=1521376549843112066]
+
