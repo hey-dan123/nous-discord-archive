@@ -1994,3 +1994,37 @@
     In our large-context Codex benchmark, the tuned LCM settings have repeated-compaction risk at 0, versus 1 for the baseline/default settings. Retrieval still passes too, meaning the old summarized info can still be found when needed.
     [reply to marcincebula msg=1519609390846578708]
 
+[2026-06-30T14:32:30.310000+00:00] w0lfgang88 (id=1521523832903696546)
+    https://x.com/SteveSchoettler/status/2071965032095920543?s=20
+    [embed]  https://twitter.com/SteveSchoettler/status/2071965032095920543?s=20
+
+[2026-06-30T15:58:56.609000+00:00] _voscko_ (id=1521545585818341467)
+    This is a really nice release, including all the other PRs that contributors provided. Just a shout out to everyone to make sure you update and enjoy the new, more stable version
+
+[2026-06-30T18:17:50.001000+00:00] _voscko_ (id=1521580538597740637)
+    Maybe some additional info:
+    
+    This patch release tightens the trust boundary around LCM’s core promise: bounded active context with recoverable source history.
+    
+    What changed:
+    - `lcm_grep` can filter by Discord channel/thread/forum-topic lane
+    - post-turn ingest follows the active LCM clone more reliably instead of falling back to the wrong singleton in multi-lane gateway use
+    
+    🧬 Safer context-engine cloning
+    - LCM is now deepcopy/clone-safe for newer Hermes Agent runtimes
+    - cloned engines preserve model route, context-window, and runtime metadata
+    - active clone resolution is more defensive across old and new host hook paths
+    
+    🧭 Stronger operator diagnostics
+    - `/lcm doctor` and `lcm_doctor` are better aligned
+    - payload warnings are surfaced more clearly
+    - false positives from log/example payload refs are reduced
+    - diagnostic paths are hardened
+    
+    🛠️ Context-window and integrity fixes
+    - Codex OAuth effective context windows are capped/aligned more safely
+    - gpt-5.5 compaction thresholds now match the real backend window better
+    - raw tool-call and externalized payload refs are preserved more accurately
+    - raw session ownership survives compression rollover
+    [reply to w0lfgang88 msg=1521523832903696546]
+

@@ -1,0 +1,20 @@
+# Thread 'Canwoy - Free Hermes web instance, Hermes Gateway + OpenAI API compatible + SSH access. ALPHA V.' in forum #community-projects-showcase
+# thread_id=1521568257050415297 forum_id=1316137596535177246
+# Started 2026-06-30T19:52:29.660229+00:00
+
+[2026-06-30T17:29:01.852000+00:00] hennadios_ (id=1521568257050415297)
+    Hello everyone, would like to share something I and my friend are working on. 
+    
+    Canwoy - Free Hermes web instance (includes a chat with free models if you need to), Hermes Gateway + OpenAI API compatible + SSH access. Very early version and looking for feedback from people. Full redesign soon, ios app and more.
+    
+    We offer once instance for free so you can jump right in and access your Hermes agent from anywhere. Looking for early users and all the feedback is much appreciated.
+    
+    Try here: https://app.canwoy.com
+    [attachment] image_2026-06-30_13-24-35.png https://cdn.discordapp.com/attachments/1521568257050415297/1521568257491079390/image_2026-06-30_13-24-35.png?ex=6a454e5d&is=6a43fcdd&hm=b71967a090d598916668d49c0ef7c9a44eea5903970908c28b9828c11ec5b18d&
+    [attachment] image_2026-06-26_09-40-45.png https://cdn.discordapp.com/attachments/1521568257050415297/1521568258522873876/image_2026-06-26_09-40-45.png?ex=6a454e5e&is=6a43fcde&hm=99dcb20716b8a44eb5c74081be0debe60a6ce5f46e626d93f84b89d32b8c7962&
+
+[2026-06-30T17:33:37.017000+00:00] hennadios_ (id=1521569411176333424)
+    I automated our X and LinkedIn accounts to research, create, and schedule content by building a Hermes agent that acts as a social media manager.
+    
+    Our goal is to enable people to create multiple agents for different purposes and provide easy, convenient access to them from both desktop and mobile devices.
+

@@ -5,3 +5,6 @@
 [2026-06-29T05:05:15.387000+00:00] shiro1001 (id=1521018692224155648)
     Composable Persona Framework for Hermes Agents
 
+[2026-06-30T15:43:42.280000+00:00] shiro1001 (id=1521541750844297347)
+    I also plan to add Korean and Chinese speech patterns in a future update.
+

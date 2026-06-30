@@ -1,0 +1,9 @@
+# Thread 'Set of pi cases designed for Hermes' in forum #community-projects-showcase
+# thread_id=1521586755210317956 forum_id=1316137596535177246
+# Started 2026-06-30T19:52:29.285867+00:00
+
+[2026-06-30T18:42:32.157000+00:00] .salt555 (id=1521586755210317956)
+    I’m working on a 3d printable case design for the pi5+nvme base+ battery hat +screen.
+    CRT vibes with customizable back plate for any pi setup.
+    [attachment] IMG_8189.mov https://cdn.discordapp.com/attachments/1521586755210317956/1521586755583868999/IMG_8189.mov?ex=6a455f98&is=6a440e18&hm=db97858d7e3a02654fe0f67c4b6826d7c3e28c881f92a4f820cbbe61d67b34df&
+

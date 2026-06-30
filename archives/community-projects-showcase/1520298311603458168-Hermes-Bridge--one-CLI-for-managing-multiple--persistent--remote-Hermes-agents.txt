@@ -42,3 +42,21 @@
     Thanks, can you show me how do you do that,? how do you have the profiles? also what are the use cases and the different skillsl that save you time?
     [reply to carpdiem msg=1520657982600384582]
 
+[2026-06-30T19:15:46.624000+00:00] carpdiem (id=1521595120611491901)
+    i actually don't use profiles. i literally just have a separate mac os user account for each hermes agent, so each has their own filestystem permissions / user home directory / etc
+    
+    so i've got macos users like: admin, hermes-personal, hermes-llc, hermes-family, hermes-wife
+    
+    then a lot of the specialization comes from really extensive work with the SOUL.md & USER.md, where I've actually exported all of my previous AI tool usage from, eg, OpenAI/etc and had the relevant hermes agents go over and analyze all of it to extract relevant things for their own domains.
+    
+    each agent gets some extra custom treatment: individual telegram bots, per-agent specified google workspace access (eg, my 'hermes-llc' gets access to the google drive workspace for my side-hobby llc, but my 'hermes-personal' gets access to my personal google drive/etc)
+    
+    and since it's on a dedicated mac mini, i also use dropbox folders for easy file sharing & collaboration with my laptop. so while each agent gets its own user home directory to play in, it also gets a single folder shared from my dropbox, like ../Dropbox/hermes-personal/ with some subdirectory structure inside of it so i can drag-and-drop files to share from my laptop, or automatically get new files (that the agents generate) synced right back to my laptop
+    [reply to mohabd7 msg=1520993103844999308]
+
+[2026-06-30T19:16:34.045000+00:00] carpdiem (id=1521595319509323958)
+    then, combine that with hermes-bridge above, and i've got a unified interface for persistent agents, with strong OS-level access limitations and separations
+
+[2026-06-30T19:16:57.265000+00:00] carpdiem (id=1521595416901058742)
+    maybe you can do some of this with profiles? but tbh, i'm not sure
+

@@ -258,3 +258,10 @@
 [2026-06-28T13:40:56.579000+00:00] buke5122 (id=1520786081124192257)
     But how good does it work when your brain grows to a large amount of memories? Will the consistency keep up to vector database memory systems?
 
+[2026-06-30T15:33:10.019000+00:00] no_orbert (id=1521539098949451817)
+    - Error: Memory tool 'brain_note' failed: {'code': -32602, 'message': 'missing required argument: text'}
+    - Duration S: 0.003902912139892578
+    
+    I recive this many times, but after a couple second its works:
+    [attachment] image.png https://cdn.discordapp.com/attachments/1509228633636475131/1521539098030903419/image.png?ex=6a453335&is=6a43e1b5&hm=38685ddddc58e94e6d04a9bc0c240ed6c62e19dcc5389b78d2a7c2d3a677866b&
+

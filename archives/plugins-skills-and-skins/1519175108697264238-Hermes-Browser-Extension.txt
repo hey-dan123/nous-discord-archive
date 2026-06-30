@@ -328,3 +328,7 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1521463415283908729/image.png?ex=6a44ecb9&is=6a439b39&hm=b5d209a7b7a97ba1490f0b8287a1a006c12216d6004175411b72e4bb1c973db3&
     [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
 
+[2026-06-30T17:05:35.889000+00:00] jonkomet (id=1521562360014442597)
+    new addition to the /commands on hermes browser extension so you know what the quick commands do💫
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1521562359494344784/image.png?ex=6a4548df&is=6a43f75f&hm=d7e25421e3b06b4ff39dd0e9d92098dd7595c68ec7eb9e91ca94535f445503b7&
+

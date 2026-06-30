@@ -14,3 +14,15 @@
     [embed]  https://twitter.com/ToiletlandCA/status/2071878317477937430
     [embed] Toiletland × Hermes — Autonomous Ops Desk Demo https://www.youtube.com/watch?v=S7ch-7ZyuDE
 
+[2026-06-30T15:33:53.282000+00:00] philmcneal (id=1521539280407892140)
+    Update: final public-masked live-readonly proof video + corrected X post.
+    
+    Video: https://youtu.be/BDsFZqQUK8A
+    X demo post: https://x.com/ToiletlandCA/status/2071977729655033944
+    
+    This updated clip shows the live-readonly proof safely: 20 redacted email + WooCommerce snapshots, raw records stored: 0, live mutations: 0. Public footage masks domains, subjects, Woo totals/statuses/dates/line counts, customer fields, and order IDs.
+    
+    Hermes recommends. Owner decides. Audit proves it.
+    [embed] Toiletland × Hermes — Live Read-Only Ops Desk Proof https://www.youtube.com/watch?v=BDsFZqQUK8A
+    [embed]  https://twitter.com/ToiletlandCA/status/2071977729655033944
+

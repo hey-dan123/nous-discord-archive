@@ -27,3 +27,10 @@
     [attachment] IMG_4745.png https://cdn.discordapp.com/attachments/1520246349470240880/1520942716123480284/IMG_4745.png?ex=6a4307c9&is=6a41b649&hm=e859b0b6595baa10ef9979b4c51f0202eebce73696c3cd40d08d0cb722c387bb&
     [attachment] IMG_4720.png https://cdn.discordapp.com/attachments/1520246349470240880/1520942716890910962/IMG_4720.png?ex=6a4307c9&is=6a41b649&hm=01dd82160edb4ef0347ff0ec8485d78b66b07d72c2d84aac2bb6d550b908c895&
 
+[2026-06-30T18:33:20.850000+00:00] mgf.654 (id=1521584442861158664)
+    100% final version , add cpu and temp , reasoning low med high xhigh , alert mascotte with Orange circle
+    [attachment] ScreenRecording_06-30-2026_19-28-57_1.mov https://cdn.discordapp.com/attachments/1520246349470240880/1521584441892540496/ScreenRecording_06-30-2026_19-28-57_1.mov?ex=6a455d70&is=6a440bf0&hm=a4739b375135b5026bd8446ae000b7430ac8901d92f2586857fe4d8b1a61034f&
+
+[2026-06-30T18:33:27.744000+00:00] mgf.654 (id=1521584471776825645)
+    [attachment] ScreenRecording_06-30-2026_19-11-21_1.mov https://cdn.discordapp.com/attachments/1520246349470240880/1521584471277699183/ScreenRecording_06-30-2026_19-11-21_1.mov?ex=6a455d77&is=6a440bf7&hm=4f3262a0c69bca4b6a2e669d81c97c2069567fef57d4b412ad00cf1b0ff4b689&
+

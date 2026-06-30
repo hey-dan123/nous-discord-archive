@@ -404,3 +404,20 @@
 [2026-06-08T09:11:19.677000+00:00] obcyy (id=1513470472967164004)
     \=
 
+[2026-06-30T17:55:00.851000+00:00] spranab (id=1521574795966156870)
+    yantrikdb-hermes-plugin v0.7.0 🚀
+    
+    Built on the new YantrikDB 0.9.0 engine ("close the memory gaps") — four additive features, all opt-in:
+    
+    🔹 Engine-backed hygiene — yantrikdb_hygiene now flags stale memories from the engine's real access stats (low-importance + cold + rarely recalled), not a plugin heuristic.
+    🔹 Knowledge gaps (new) — yantrikdb_knowledge_gaps surfaces queries you ask often but answer poorly. "What is my memory missing?" — nobody else exposes this.
+    🔹 Conversation buffer (new) — verbatim last-N turns, auto-captured and kept across Hermes compression. Read with yantrikdb_recent_turns.
+    🔹 Task store (new) — yantrikdb_tasks: durable, namespace-scoped chores in the substrate (status/priority/subtasks). Persists across sessions.
+    
+    Tool surface 18 → 21. Needs yantrikdb>=0.9.0 (also pulls a write-reliability fix). No new deps, zero behaviour change for existing setups. 302 tests pass on both 0.8.0 and 0.9.0.
+    
+    
+    pip install -U yantrikdb-hermes-plugin
+    Full notes: https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.7.0
+    [embed] Release v0.7.0 — Build on the engine · yantrikos/yantrikdb-herme... https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.7.0
+

@@ -5011,3 +5011,145 @@
     what exactly does this mean - i cannot steer in a web session
     [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1521515564076372113/image.png?ex=6a451d4a&is=6a43cbca&hm=a15d86ad6a16cfff6f876372368ecc7451114d239ab2fdf6d274c20762dc59ae&
 
+[2026-06-30T14:44:36.556000+00:00] avidfuturist (id=1521526879000068236)
+    Yes this is about Hermes across all your devices, we have an android app available - https://get-hermes.ai/setup/ explains how to get setup
+    [reply to cryptobredda msg=1521469178081710163]
+
+[2026-06-30T15:23:15.604000+00:00] cryptobredda (id=1521536605792370858)
+    oh this is the Hermex app? this is done all in here?
+
+[2026-06-30T15:23:17.355000+00:00] cryptobredda (id=1521536613136601128)
+    nice
+
+[2026-06-30T15:23:50.093000+00:00] cryptobredda (id=1521536750449856676)
+    one question about the app, can it handle multiple VPS? I have more than one VPS running hermes and I would like to manage them all with one app. would this be suitable?
+
+[2026-06-30T15:31:35.867000+00:00] avidfuturist (id=1521538704047472730)
+    Hermex is by another author but it’s built in our WebUI ecosystem!
+    [reply to cryptobredda msg=1521536605792370858]
+
+[2026-06-30T15:31:59.745000+00:00] avidfuturist (id=1521538804199194634)
+    Yes it can! Android client supports multiple remote connections! And you can switch between them
+    [reply to cryptobredda msg=1521536750449856676]
+
+[2026-06-30T15:34:08.919000+00:00] cryptobredda (id=1521539345994088690)
+    YOU LYING
+    [reply to avidfuturist msg=1521538804199194634]
+
+[2026-06-30T15:34:13.533000+00:00] cryptobredda (id=1521539365346480169)
+    absolute legend
+
+[2026-06-30T15:34:51.938000+00:00] avidfuturist (id=1521539526428987392)
+    Give it a try and let us know what you think! We are actively developing it so any feedback is welcome
+
+[2026-06-30T15:36:45.565000+00:00] cryptobredda (id=1521540003015032942)
+    I might do my friend... I might do...
+    [reply to avidfuturist msg=1521539526428987392]
+
+[2026-06-30T15:37:09.988000+00:00] cryptobredda (id=1521540105452392652)
+    this is really good.. my only issue I had was the fact that I didnt have a single point of contact for all my hermes.. other than telegram
+
+[2026-06-30T15:37:25.833000+00:00] cryptobredda (id=1521540171911139499)
+    got android pictures to share? so I can see what we working with?
+
+[2026-06-30T15:40:25.667000+00:00] avidfuturist (id=1521540926189732090)
+    [attachment] Screenshot_20260630_210942_Hermes_WebUI.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1521540925841608734/Screenshot_20260630_210942_Hermes_WebUI.jpg?ex=6a4534e9&is=6a43e369&hm=fff63382c50fd4a9ae720cf0dd7dfbffc5247886dce2eba9944b2cad01957c29&
+    [reply to cryptobredda msg=1521540105452392652]
+
+[2026-06-30T15:40:42.627000+00:00] avidfuturist (id=1521540997325258923)
+    Theme is selectable obviously there’s 20
+
+[2026-06-30T15:40:59.854000+00:00] avidfuturist (id=1521541069580402811)
+    There’s also an extension system for adding a bunch of additional features
+
+[2026-06-30T15:56:00.504000+00:00] avidfuturist (id=1521544847180435497)
+    [attachment] Screenshot_20260630-164952.png https://cdn.discordapp.com/attachments/1493017427724992612/1521544845825413281/Screenshot_20260630-164952.png?ex=6a453890&is=6a43e710&hm=ec118f36536b017034c9571493617bcfac9e54baf7b7d2f48d544544a88c71d5&
+    [attachment] Screenshot_20260630-165021.png https://cdn.discordapp.com/attachments/1493017427724992612/1521544846240907414/Screenshot_20260630-165021.png?ex=6a453890&is=6a43e710&hm=1a799d988c7ddb2864836ef78e515f58afdadf53d680dbdc645a015951b3bd64&
+    [attachment] Screenshot_20260630-165036.png https://cdn.discordapp.com/attachments/1493017427724992612/1521544846622457997/Screenshot_20260630-165036.png?ex=6a453890&is=6a43e710&hm=2437d242ec31240ee3a410d93b585890c6491ad66a8e44b8ab38545018298405&
+
+[2026-06-30T15:56:06.181000+00:00] avidfuturist (id=1521544870991499296)
+    Few more screenshots from the Android app
+
+[2026-06-30T16:17:51.748000+00:00] cryptobredda (id=1521550346936258681)
+    I see!!
+
+[2026-06-30T16:18:03.491000+00:00] cryptobredda (id=1521550396189966436)
+    nice one mate. love it. I will get around installing it this weekend
+
+[2026-06-30T16:21:20.759000+00:00] avidfuturist (id=1521551223591796736)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And with **native iOS app and Android support**! 
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+
+[2026-06-30T16:21:44.818000+00:00] avidfuturist (id=1521551324502687855)
+    [attachment] 44B75124-C9B6-45C1-A191-CE7B352B5789.png https://cdn.discordapp.com/attachments/1493017427724992612/1521551324162822316/44B75124-C9B6-45C1-A191-CE7B352B5789.png?ex=6a453e98&is=6a43ed18&hm=0c461d4c4bd33d740fa72f4909e38227d0287a33f560748f4a6653ee2c941751&
+
+[2026-06-30T18:18:58.019000+00:00] jconcep (id=1521580823885643998)
+    Is there a target date when sessions will be avaialable in a remote connection?
+
+[2026-06-30T18:24:04.533000+00:00] avidfuturist (id=1521582109498671305)
+    Can you elaborate on what isn’t available today?
+    [reply to jconcep msg=1521580823885643998]
+
+[2026-06-30T18:24:55.185000+00:00] jconcep (id=1521582321948557343)
+    So only thing i see available in desktop app is Chat and that's it - this expected?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1521582321403170903/image.png?ex=6a455b77&is=6a4409f7&hm=4ee1dd5d7f83283c0048eb21502a7bf5e32fc96804a5ec6c360a1c057be9ee5d&
+    [reply to avidfuturist msg=1521582109498671305]
+
+[2026-06-30T18:27:00.771000+00:00] avidfuturist (id=1521582848694554674)
+    That’s Hermes One, not related to this project. That’s built by <@703810415972450305>
+    [reply to jconcep msg=1521582321948557343]
+
+[2026-06-30T18:27:32.173000+00:00] jconcep (id=1521582980404088962)
+    did i download wrong thing?
+    [reply to avidfuturist msg=1521582848694554674]
+
+[2026-06-30T18:27:41.511000+00:00] jconcep (id=1521583019570233524)
+    oh okay - got it
+
+[2026-06-30T18:27:48.296000+00:00] avidfuturist (id=1521583048028848340)
+    I mean it’s a great third party desktop app - it’s just not our app
+
+[2026-06-30T18:28:15.363000+00:00] jconcep (id=1521583161555943647)
+    So here is only hermes-webui?
+
+[2026-06-30T18:28:25.928000+00:00] avidfuturist (id=1521583205868769501)
+    Our desktop app is here https://github.com/hermes-webui/hermes-desktop-rust/issues
+    [embed] Issues · hermes-webui/hermes-desktop-rust https://github.com/hermes-webui/hermes-desktop-rust/issues
+
+[2026-06-30T18:28:31.605000+00:00] avidfuturist (id=1521583229679960194)
+    Yup this channel is specifically for Hermes webUI
+
+[2026-06-30T18:31:22.185000+00:00] jconcep (id=1521583945144205405)
+    wait that is what i downloaded: Hermes.WebUI.Desktop_0.6.7_lin_x86_64.deb
+
+[2026-06-30T18:39:54.649000+00:00] jconcep (id=1521586094574145536)
+    my apologies - i had tried the Hermes One and it never cleaned up the installer - all good now
+
+[2026-06-30T18:41:21.465000+00:00] avidfuturist (id=1521586458706841840)
+    Ah okay all good! Yeah the webUI desktop app should work more or less exactly the same everywhere! One of the benefits
+
+[2026-06-30T18:41:26.459000+00:00] jconcep (id=1521586479653064834)
+    is this the expected layout? This is on linux
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1521586479359328487/image.png?ex=6a455f56&is=6a440dd6&hm=e928cff7e8cb0834e7049f1a71ef7ab0cc588b471a1a515716030cb8f37ba7bc&
+
+[2026-06-30T18:41:55.294000+00:00] avidfuturist (id=1521586600595947610)
+    😂 Definitely not the massive blank space at the top
+
+[2026-06-30T18:42:06.975000+00:00] avidfuturist (id=1521586649589350460)
+    Unfortunately Linux is our least or not at all tested platform
+
+[2026-06-30T18:42:17.236000+00:00] avidfuturist (id=1521586692627107841)
+    I’ll take that as feedback and try to fix it tho thanks
+
+[2026-06-30T18:42:26.509000+00:00] jconcep (id=1521586731521020015)
+    Perfect 🤣
+
+[2026-06-30T18:42:30.484000+00:00] avidfuturist (id=1521586748193247408)
+    You may be better off using directly in the browser until we get that patched haha
+
+[2026-06-30T18:42:57.004000+00:00] jconcep (id=1521586859426320556)
+    thank you
+

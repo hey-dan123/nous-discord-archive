@@ -174,3 +174,22 @@
     Added npx forge-memory update 😉
     [reply to jodfie msg=1513295227715322000]
 
+[2026-06-30T14:46:27.248000+00:00] _albertjames (id=1521527343276097616)
+    Forge 0.3.19 update 😗 
+    
+    Main changes since 0.3.0: Artifact Store, much better iPhone/Watch sync, Claude Code support, safer installs, and cleaner agent behavior.
+    
+    Forge now has an Artifact Store. You can save images, PDFs, docs, spreadsheets, and other files with title, description, provenance, safety state, danger score, links, versions, and audit history.
+    
+    Uploads now use a guided modal flow. You can add several files at once, fill details only where needed, use LLM enrichment, and link artifacts to normal Forge entities. Agents can help with metadata and scans, but cannot autonomously open, run, or download file bytes.
+    
+    Artifact Store also got delete/archive and pagination, so large collections should not break or crowd the UI.
+    
+    The iPhone and Watch sync path is much stronger now: faster HealthKit uploads, better Iroh/Tailscale routing, clearer sync status, recovery handling, and more reliable Watch command/action relay.
+    
+    Forge Memory also got safer update support and a Claude Code adapter, so Claude, Codex, Hermes, OpenClaw, and Forge Memory can share the same Forge runtime more consistently.
+    
+    Psyche and agent flows improved too. Agents should ask better questions, especially around beliefs, modes, triggers, behavior patterns, and meaningful records instead of just collecting fields.
+    
+    You can still join the TestFlight beta here: https://testflight.apple.com/join/BDC7nuMk
+

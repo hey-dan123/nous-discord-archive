@@ -1,0 +1,34 @@
+# Thread 'Update Reflect Theme' in forum #plugins-skills-and-skins
+# thread_id=1521591670905241752 forum_id=1485392832154832906
+# Started 2026-06-30T19:56:58.382550+00:00
+
+[2026-06-30T19:02:04.150000+00:00] dalekc72 (id=1521591670905241752)
+    I updated the Hermes Dashboard theme focused on the Kanban.  I am a big fan of the Multica.ai UI as it is more visually appealing to me.  
+    
+    Reflect Theme — Update Summary
+    Repo: github.com/daletkc/hermes-theme-reflect (file: reflect.yaml)
+    Goal: Bring the Hermes Kanban dashboard — especially the task detail drawer — in line with the clean, "Linear/multica"-style look.
+    
+    Kanban Board
+    - Status columns now wrap into a responsive grid (auto-fill, minmax(280px, 1fr)) instead of scrolling horizontally — Done/Archived columns are always in view.
+    - Card task IDs (e.g. t_bb27da70) brightened and enlarged (0.65rem → 0.72rem) — they were too dim/small to read.
+    - Green "complete" pill (the n/n badge) fixed — it had grey text on bright green (unreadable); now dark-green text on green, bold, high-contrast.
+    
+    Task Detail Drawer (the big one)
+    - Wider panel (up to min(1320px, 94vw)) with content held in a centered reading column so it doesn't feel cavernous.
+    - Solid opaque panel sitting sharply in front of a light, blurred backdrop (was hazy / let the menu bleed through).
+    - Metadata, Description, and Worker-Log now render as "cards" — a slightly lighter background with a real rounded border.
+    - Metadata rows restyled to quiet label-left / value-right rows with hover highlight (multica "PropRow" style).
+    - Section headers (Description, Dependencies, etc.) brightened to a legible mid-tone — readable but still secondary to the white content.
+    - Action buttons set to Title Case (Triage, Ready, Complete…); dependency chips made pill-shaped.
+    
+    Typography
+    - Fonts matched to multica exactly: body/UI = Inter, monospace = Geist Mono (with multica's fallback chain). (We briefly tried Geist for the body font, then reverted to Inter to match.)
+    - Base font size 15px → 16px to match multica's sizing.
+    
+    https://github.com/daletkc/hermes-theme-reflect
+    [attachment] Screenshot_30-06-2026_at_11.14.png https://cdn.discordapp.com/attachments/1521591670905241752/1521591671228334240/Screenshot_30-06-2026_at_11.14.png?ex=6a45642c&is=6a4412ac&hm=f4c33dd62be13806311b1153c52cd4bab6b283f1e05ef69af44e7c49910448f5&
+    [attachment] Screenshot_30-06-2026_at_11.13.png https://cdn.discordapp.com/attachments/1521591670905241752/1521591671970861306/Screenshot_30-06-2026_at_11.13.png?ex=6a45642c&is=6a4412ac&hm=38e96a2e308b562729dfad2a7a49040022fc4cf998d374ff9668daac13286951&
+    [attachment] Screenshot_30-06-2026_at_11.12.png https://cdn.discordapp.com/attachments/1521591670905241752/1521591673052987472/Screenshot_30-06-2026_at_11.12.png?ex=6a45642c&is=6a4412ac&hm=b86410f61472c24500558a8c3fffd5b64b611924fda6a4d1b070aa6113a3421b&
+    [embed] GitHub - daletkc/hermes-theme-reflect: Premium dark theme for the H... https://github.com/daletkc/hermes-theme-reflect
+
