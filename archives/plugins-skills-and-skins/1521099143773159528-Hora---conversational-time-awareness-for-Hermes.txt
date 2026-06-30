@@ -24,3 +24,6 @@
 [2026-06-29T12:48:57.599000+00:00] henan (id=1521135387039367188)
     No. Hora only injects [time: ISO-8601] into the current user message at the llm_request middleware stage. It does not mutate the system prompt, prior messages, tool schemas, or persisted transcript, so it does not bust the reusable prompt-cache prefix. Cost impact is tiny: a few tokens per user turn.
 
+[2026-06-30T12:21:16.752000+00:00] henan (id=1521490808807755918)
+    Currently working on a small but powerful idea for SOUL.md: teaching agents that conversations don’t happen outside of time. Not just reading timestamps, but using elapsed time to understand continuity, urgency, staleness, and even when something feels temporally suspicious
+

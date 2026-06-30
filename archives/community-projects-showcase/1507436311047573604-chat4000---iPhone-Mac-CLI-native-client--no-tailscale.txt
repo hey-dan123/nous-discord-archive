@@ -312,3 +312,9 @@
 [2026-06-21T01:31:58.994000+00:00] starw1 (id=1518065917337014273)
     This is amazing!!!!
 
+[2026-06-30T13:28:13.749000+00:00] haimbender (id=1521507657314471957)
+    [attachment] Chat4000_demo_0.mp4 https://cdn.discordapp.com/attachments/1507436311047573604/1521507656504840263/Chat4000_demo_0.mp4?ex=6a4515ed&is=6a43c46d&hm=98160f9b03675726d27e557cc35bdfd13005bec3def8317eb81e1097f6f2764e&
+
+[2026-06-30T13:28:33.345000+00:00] haimbender (id=1521507739506053231)
+    new version is up, supports sessions and HTML cards and easy install
+

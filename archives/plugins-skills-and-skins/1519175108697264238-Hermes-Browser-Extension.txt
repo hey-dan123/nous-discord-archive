@@ -304,3 +304,27 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1521361596444577894/image.png?ex=6a448de6&is=6a433c66&hm=08e3379e3dc698d92fc4dcd2e74660daf538caffc2706323dbe7c503b1632386&
     [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1521361596985774100/image.png?ex=6a448de6&is=6a433c66&hm=0818868a7e2570e1da841b4f42ab1fd844a87961ab825543b003379dc33d58a9&
 
+[2026-06-30T10:32:25.128000+00:00] jonkomet (id=1521463413190951013)
+    Hermes Browser Extension v0.1.7 is ready 🪽
+    
+    This release is about browser context staying under your control.
+    
+    The headline: **tab-scoped side panels** are now the default. Open Hermes on a tab and the panel stays attached to that tab instead of globally following you around the browser. If you want one global panel, there’s still a setting for that.
+    
+    Also new:
+    - **Chat only / no page mode** — talk to Hermes without sending active tab title/URL, open tabs, selected text, page metadata, transcript, or page text.
+    - **Browser Behavior settings** — auto-name browser sessions, choose prompt context sources, and switch between tab-attached/global panel mode.
+    - **Context scope menu** — Chat only, Follow active tab, Pin current tab, and Page only/selected-tab controls.
+    - **Cleaner “What Hermes saw” receipts** — context meter and receipts now report what actually got sent.
+    - **Hermes compatibility panel** — older gateways degrade into explicit fallback/manual modes instead of mystery broken routes.
+    - **Remote API fix** — trusted `http://host:8642` API servers work with a token while dashboard WebSocket mode stays HTTPS-only.
+    - **Slash command polish** — `/rewrite` and `/action-items` match docs, and slash commands preserve attachments.
+    
+    Repo:
+    https://github.com/abundantbeing/hermes-browser-extension
+    [attachment] Browser_Extension_v0.1.7_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1521463413874753577/Browser_Extension_v0.1.7_Update_Ad.png?ex=6a44ecb9&is=6a439b39&hm=008fb4a81f1dfe5a13849f6f34fe387f2bfc4c0187fa82aee3bd63ab4256f4dd&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1521463414541652049/image.png?ex=6a44ecb9&is=6a439b39&hm=ebeb8bf709f040e1460e9bd11351430f13de821c37b8a2767e3cf47c26b6ca95&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1521463414893842552/image.png?ex=6a44ecb9&is=6a439b39&hm=7199b7f4005da62f6679206b0740553e001e5aa378da0f72bfe6e5d7a4fa87af&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1521463415283908729/image.png?ex=6a44ecb9&is=6a439b39&hm=b5d209a7b7a97ba1490f0b8287a1a006c12216d6004175411b72e4bb1c973db3&
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
+

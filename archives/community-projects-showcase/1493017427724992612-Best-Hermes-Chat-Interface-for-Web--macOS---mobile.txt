@@ -5004,3 +5004,10 @@
     Voice mode should work already, may need to wire up a TTS provider in settings. There’s dictation and an actual voice mode you can enable. If there’s an error or issue, I can look into it. Browser based default doesn’t always work the best on mobile.
     [reply to alto69 msg=1521376549843112066]
 
+[2026-06-30T10:55:19.585000+00:00] cryptobredda (id=1521469178081710163)
+    just seen this thread, is this thread about having Hermes on android?
+
+[2026-06-30T13:59:38.929000+00:00] jconcep (id=1521515564332486787)
+    what exactly does this mean - i cannot steer in a web session
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1521515564076372113/image.png?ex=6a451d4a&is=6a43cbca&hm=a15d86ad6a16cfff6f876372368ecc7451114d239ab2fdf6d274c20762dc59ae&
+

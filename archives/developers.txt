@@ -40925,3 +40925,145 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/55496
     [embed] fix(telegram): honor group user allowlists by itsflownium · Pull R... https://github.com/NousResearch/hermes-agent/pull/55496
 
+[2026-06-30T10:15:21.638000+00:00] nanxingncb612d (id=1521459120362754159)
+    https://github.com/NousResearch/hermes-agent/pull/55556 This prevents Hermes credentials from being inherited by LSP auto-install subprocesses.
+    
+    agent/lsp/install.py can auto-install language servers with npm install, go install, or pip install. Those subprocesses previously inherited the parent Hermes environment by default, and the Go path explicitly copied os.environ. That can expose provider keys, GitHub tokens, bot tokens, dashboard session tokens, and other Hermes credentials to package-manager subprocesses and install-time scripts.
+    [embed] fix(lsp): strip credentials from installer env by necoweb3 · Pull ... https://github.com/NousResearch/hermes-agent/pull/55556
+
+[2026-06-30T10:30:15.107000+00:00] realadolan (id=1521462867843350682)
+    https://github.com/NousResearch/hermes-agent/pull/55148
+    [embed] feat: add ClinePass as first-class LLM provider by Adolanium · Pul... https://github.com/NousResearch/hermes-agent/pull/55148
+
+[2026-06-30T11:07:24.425000+00:00] nanxingncb612d (id=1521472218280759437)
+    https://github.com/NousResearch/hermes-agent/pull/55600 This prevents Kanban worker subprocesses from inheriting provider and gateway credentials from the dispatching process environment.
+    
+    _default_spawn() launches workers for the assignee profile by setting HERMES_HOME / HERMES_PROFILE, but it previously started from dict(os.environ). Because Hermes credential resolution checks process env before the profile .env, a worker intended to run under one profile could still see provider keys and internal gateway secrets from the dispatcher/default profile.
+    [embed] fix(kanban): strip parent credentials from worker env by necoweb3 ... https://github.com/NousResearch/hermes-agent/pull/55600
+
+[2026-06-30T11:42:32.454000+00:00] kyssta69 (id=1521481059995357254)
+    im back
+
+[2026-06-30T11:42:35.347000+00:00] kyssta69 (id=1521481072129343641)
+    https://github.com/NousResearch/hermes-agent/pull/55624
+    
+    **Problem**: Bug #55462: group/forum Telegram chats ignored TELEGRAM_GROUP_ALLOWED_USERS. The adapter now checks the group allowlist first in supergroups/forums, falls back to global users, and leaves DM behavior unchanged.
+    [embed] fix(telegram): authorize TELEGRAM_GROUP_ALLOWED_USERS in group/foru... https://github.com/NousResearch/hermes-agent/pull/55624
+
+[2026-06-30T11:46:51.571000+00:00] maxfreedompollard (id=1521482146810695780)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/55378
+    [embed] Import re in the SMS adapter (fixes NameError on every standalone S... https://github.com/NousResearch/hermes-agent/pull/55378
+
+[2026-06-30T11:47:06.850000+00:00] maxfreedompollard (id=1521482210895593592)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/55382
+    [embed] Make email header decoding resilient to malformed encoded-words by ... https://github.com/NousResearch/hermes-agent/pull/55382
+
+[2026-06-30T11:47:17.202000+00:00] maxfreedompollard (id=1521482254314901547)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/55384
+    [embed] Tolerate an unknown email body charset in _extract_text_body by Max... https://github.com/NousResearch/hermes-agent/pull/55384
+
+[2026-06-30T12:01:28.156000+00:00] chaosxue (id=1521485823474798772)
+    Maintainer eyes appreciated on #51226 (impl of RFC #36765): two no-op-default ContextEngine hooks that kill the should_compress=True backdoor. Cluster's converged — #41918 co-authored, #50053 conceded the overlap. Rebased, MERGEABLE, tested. Just needs a call on the canonical surface + a workflow approval so CI can report. Can adjust naming/anything. 🙏
+    
+    https://github.com/NousResearch/hermes-agent/pull/51226
+    [embed] feat(context-engine): add select_context() + on_turn_complete() hoo... https://github.com/NousResearch/hermes-agent/pull/51226
+
+[2026-06-30T12:08:36.535000+00:00] thyfriendlyfox (id=1521487620226416810)
+    Any updates on checking out our PR for a thin client mobile app?
+    
+    https://github.com/NousResearch/hermes-agent/pull/49834
+    [embed] feat(mobile): Hermes Agent Android app — Capacitor thin client (c... https://github.com/NousResearch/hermes-agent/pull/49834
+
+[2026-06-30T12:16:11.179000+00:00] skholmes (id=1521489527141568672)
+    https://github.com/NousResearch/hermes-agent/pull/55639
+    
+    Opened a small Codex fix: content-filter incomplete responses should be treated as terminal refusals.
+    
+    This is scoped to `status=incomplete` + `incomplete_details.reason=content_filter`; related empty/null Codex response PRs do not cover this exact shape.
+    [embed] fix(agent): treat Codex incomplete content filter as refusal by sk-... https://github.com/NousResearch/hermes-agent/pull/55639
+
+[2026-06-30T12:17:02.081000+00:00] skholmes (id=1521489740640026714)
+    https://github.com/NousResearch/hermes-agent/pull/55640
+    
+    And found a second one while trying to debug the first
+    Opened a session_search/context hygiene fix: stop old compaction summaries and huge tool-call payloads from boomeranging back into fresh context.
+    
+    It also fixes the TUI context counter using cumulative tokens as “current context,”.
+    [embed] fix(context): bound session recall payloads by sk-holmes · Pull Re... https://github.com/NousResearch/hermes-agent/pull/55640
+
+[2026-06-30T12:34:38.399000+00:00] w4r0275 (id=1521494171159105607)
+    can you do a system check
+
+[2026-06-30T12:36:07.497000+00:00] w4r0275 (id=1521494544863068332)
+    hello
+
+[2026-06-30T12:48:21.929000+00:00] jw_mushroom_man (id=1521497625294016572)
+    <@387972437901312000> Ty for approving my MoA streaming PR.
+
+[2026-06-30T12:53:14.799000+00:00] kyssta69 (id=1521498853680087160)
+    https://github.com/NousResearch/hermes-agent/pull/55657
+    
+    **Problem**: Background review skill writes now require skill_view to load the exact target file first, preventing autonomous skill_manage patches from corrupting unseen skill content. Added targeted coverage for SKILL.md and supporting-file overwrite paths.
+    [embed] fix(skills): require review forks to read before writing skills by ... https://github.com/NousResearch/hermes-agent/pull/55657
+
+[2026-06-30T13:02:45.053000+00:00] maxfreedompollard (id=1521501245498462332)
+    https://github.com/NousResearch/hermes-agent/pull/55643 <@387972437901312000>
+    [embed] fix(gemini): collapse array-typed tool schemas instead of crashing ... https://github.com/NousResearch/hermes-agent/pull/55643
+
+[2026-06-30T13:06:31.700000+00:00] navaneeth31. (id=1521502196124876840)
+    How do founders decide whether to persist through technical obstacles or move on? 
+    
+    One challenge I've noticed while building projects is that technical roadblocks can make it difficult to evaluate whether a project is worth continuing.
+    
+    Sometimes a problem turns out to be solvable with enough persistence. Other times, the obstacle reveals that the original assumptions were flawed and the project should be changed or abandoned.
+    
+    For founders who have built products from idea to launch:
+    
+    How do you determine whether a difficult technical challenge is just part of the process versus a sign that you're pursuing the wrong approach?
+    
+    Are there frameworks or decision-making processes you use when progress stalls?
+    
+    Have you found ways to reduce the emotional attachment that can make these decisions harder?
+    
+    I'm interested in hearing how experienced founders think about persistence, execution risk, and deciding where to invest their time when building early-stage products.
+
+[2026-06-30T13:10:41.083000+00:00] nanxingncb612d (id=1521503242113257472)
+    https://github.com/NousResearch/hermes-agent/pull/55653 Adds 4 new DANGEROUS_PATTERNS in tools/approval.py to detect dangerous commands obfuscated through encoding/transformation before being piped to a shell.
+    [embed] fix(approval): detect encoding-based dangerous command bypass by ne... https://github.com/NousResearch/hermes-agent/pull/55653
+
+[2026-06-30T13:12:19.921000+00:00] realadolan (id=1521503656669741189)
+    LongCat joins the chat: https://github.com/NousResearch/hermes-agent/pull/55662
+    [embed] feat: add LongCat as first-class LLM provider by Adolanium · Pull ... https://github.com/NousResearch/hermes-agent/pull/55662
+    [reply to realadolan msg=1521247412444991568]
+
+[2026-06-30T13:43:10.264000+00:00] warofchange (id=1521511417570660494)
+    Just opened another small but meaningful PR to hermes-agent:
+    
+    Problem: cli-config.yaml.example shipped with max_turns: 60 as an active (uncommented) value — but the real default across the codebase is 90, confirmed in three separate places:
+    
+    hermes_cli/config.py → DEFAULT_CONFIG["agent"]["max_turns"] = 90
+    hermes_cli/_parser.py → --max-turns help text says "default: 90"
+    AGENTS.md → AIAgent.__init__(max_iterations: int = 90)
+    Anyone who copied the example config verbatim ended up with a lower iteration budget than intended, with no hint in the comment that the real default was different.
+    
+    Fix: Aligned the example value to 90 and added (default: 90) to the comment — matching the annotation style already used by other keys in the same file.
+    
+    Two lines changed, one file touched, zero runtime impact.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/55673
+    [embed] docs(config): align max_turns example with actual default (90) by w... https://github.com/NousResearch/hermes-agent/pull/55673
+
+[2026-06-30T14:05:06.795000+00:00] reprograma. (id=1521516939502157984)
+    @here I've opened an issue here:
+    https://github.com/NousResearch/hermes-agent/issues/55391
+    
+    This is not for a PR, it's related to the recent change of Nix to a Tier 2 platform:
+    https://discord.com/channels/1053877538025386074/1491258766648283238/1521143370607493230
+    
+    I know quite a few people who use this install method...
+    
+    I'd like to know what can we do to move it back to a supported Tier 1 - if we have enough supporters for this, what would be the blessed path to ensure we get Nix as a Tier 1?
+    
+    cc <@387972437901312000>
+    [embed] [Feature]: Make Nix an explicitly supported install path · Issue #... https://github.com/NousResearch/hermes-agent/issues/55391
+

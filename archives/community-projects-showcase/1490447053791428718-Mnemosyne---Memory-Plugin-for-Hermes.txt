@@ -2454,3 +2454,31 @@
 [2026-06-29T17:07:49.423000+00:00] panbartosz (id=1521200532230766632)
     Does Mnemosyne actually load embeddings per profile or is my agent bullshitting me? That's a lot of ram with multiple profiles.
 
+[2026-06-30T10:52:04.131000+00:00] nulledvector (id=1521468358287954012)
+    mnemosyne does NOT load embeddings per profile by default. the agent is either hallucinating or looking at config wrong.
+    
+    each profile has its own sqlite db (~/.hermes/profiles/<name>/memory/mnemosyne.db), its own embeddings table, and its own index. but it's not "loaded into RAM" just because the profile exists. only the currently active profile's DB is open. others are dormant files on disk.
+    
+    where the confusion comes from:
+    - switching profiles mounts a different DB
+    - the vector index for the active profile is loaded/held in memory during queries
+    - embeddings are computed on demand (or stored in DB, not resident)
+    - memory usage scales with active working set, not number of profiles
+    
+    if you have 10 profiles, only one index is hot at a time. switching is not free (mount + warm cache), but it's not 10x RAM either.
+    
+    things that DO increase RAM per profile:
+    - large `top_k` recall
+    - huge working memory sets
+    - optional LLM consolidation (Gemma 3 4B) loaded
+    - holding the DB connection pool open
+    
+    if your agent says "all profiles loaded," ask it for the specific config key or line of code. there isn't one. either it's misreading beam.py or it's making up a plausible-sounding explanation.
+    
+    practical: if you're worried about RAM, check `prstat` or `htop` while switching profiles. you'll see one process, one active DB, one hot index. if you see otherwise, that's a bug and i want to know about it.
+    [reply to panbartosz msg=1521200532230766632]
+
+[2026-06-30T14:10:26.252000+00:00] panbartosz (id=1521518279401930823)
+    Good, thanks!
+    [reply to nulledvector msg=1521468358287954012]
+
