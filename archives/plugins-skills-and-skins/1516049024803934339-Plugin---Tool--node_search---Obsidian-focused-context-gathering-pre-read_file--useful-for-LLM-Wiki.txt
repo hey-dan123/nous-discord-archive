@@ -12,3 +12,12 @@
     Configurable roots, path confinement, CI, tests, and synthetic benchmarks included.
     [embed] GitHub - Heeervas/node-search-plugin: Hermes Agent plugin for bound... https://github.com/Heeervas/node-search-plugin
 
+[2026-07-01T11:02:01.953000+00:00] heeervas (id=1521833253600890900)
+    **🕸️ Node Search — compact result schema + configurable output controls**
+    
+    📦 Added compact output as the default schema: frontmatter_summary, link counts, capped evidence, and response cap metadata.
+    🔁 Added output_mode: "full" as an explicit escape hatch for legacy/raw frontmatter and link arrays.
+    ⚙️ Added plugin-level output defaults in plugin.yaml, with per-call overrides for frontmatter presets, link detail, evidence detail, and result caps.
+    🧭 Added graph-health summary metadata for link-state calls like orphan, unresolved, dangling, ambiguous, and backlink checks.
+    🧪 Expanded tests around compact/full output behavior, caps, YAML defaults, and graph-health metadata.
+

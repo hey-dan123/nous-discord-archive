@@ -39,3 +39,12 @@
     Any feedback is hugely appreciated
     [reply to billiejeanz0243 msg=1519204939241488455]
 
+[2026-07-01T11:00:21.009000+00:00] heeervas (id=1521832830211067944)
+    **🤝 Profile Delegate — hardened JSON parsing + safer OSS defaults**
+    
+    🧠 Fixed delegated result parsing so warning-prefixed stdout + nested JSON no longer returns the wrong inner object.
+    🧪 Added regression coverage for warning preludes, nested rating maps, multi-object stdout, and full delegate boundary parsing.
+    ⏱️ Exposed configurable timeout defaults in schema/docs (PROFILE_DELEGATE_DEFAULT_TIMEOUT_SECONDS, PROFILE_DELEGATE_MAX_TIMEOUT_SECONDS).
+    📄 Clarified transport: prompts use @file:<prompt.txt>, results are parsed from captured stdout/stderr — not stdin.
+    ✅ Verified with 45 passed, syntax checks, live smoke after gateway restart.
+

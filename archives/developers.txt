@@ -41641,3 +41641,237 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(config): honor codex app server api_mode alias by kyssta-exe ·... https://github.com/NousResearch/hermes-agent/pull/56238
     [embed] fix(cli): restore Kilo alpha router models by kyssta-exe · Pull Re... https://github.com/NousResearch/hermes-agent/pull/56156
 
+[2026-07-01T10:04:31.056000+00:00] tkdchen (id=1521818779489665065)
+    <@387972437901312000> This is small fix for another test https://github.com/NousResearch/hermes-agent/pull/56258. Please review when you get a chance.
+    [embed] fix(tests): Wrong project root resolution by tkdchen · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/56258
+
+[2026-07-01T10:27:14.542000+00:00] nanxingncb612d (id=1521824498364710982)
+    https://github.com/NousResearch/hermes-agent/pull/56245 Strip Hermes secrets from platform bridge subprocess environments.
+    
+    Raft and WhatsApp both spawn local bridge subprocesses from the gateway process. Those subprocesses previously inherited the full gateway os.environ:
+    
+    plugins/platforms/raft/adapter.py used {**os.environ, "RAFT_CHANNEL_TOKEN": ...}.
+    plugins/platforms/whatsapp/adapter.py called with_hermes_node_path() with no base env, which copies os.environ.
+    That leaks unrelated Hermes credentials and gateway-internal secrets into platform bridge child processes, including provider API keys, AUXILIARY_* side-LLM credentials, and GATEWAY_RELAY_* material.
+    [embed] fix(platforms): strip secrets from bridge subprocess env by necoweb... https://github.com/NousResearch/hermes-agent/pull/56245
+
+[2026-07-01T10:27:37.498000+00:00] nanxingncb612d (id=1521824594649157792)
+    https://github.com/NousResearch/hermes-agent/pull/56272 Detect destructive Windows shell built-ins in the dangerous-command approval gate.
+    
+    The approval classifier already catches Unix deletion paths (rm -rf), interpreter execution (python -c, node -e, etc.), and recent encoded/decode-to-shell bypasses. However, Windows shell front-ends could execute equivalent destructive file deletion without matching any approval pattern:
+    
+    cmd /c del /f /q C:\...
+    cmd /c rmdir /s /q C:\...
+    powershell -Command Remove-Item -Recurse -Force C:\...
+    pwsh -c rm -Recurse -Force C:\...
+    powershell -EncodedCommand ...
+    These returned safe from detect_dangerous_command() and could proceed without an approval prompt.
+    [embed] fix(approval): detect Windows destructive shell commands by necoweb... https://github.com/NousResearch/hermes-agent/pull/56272
+
+[2026-07-01T10:28:42.930000+00:00] lodl_de (id=1521824869090853046)
+    Please Nous Team <@387972437901312000> merge this one - we are waiting so long now <:catastrophe:1151299904346521610> 
+    https://github.com/NousResearch/hermes-agent/pull/8427
+    [embed] feat(vertex): add Vertex AI provider for Gemini models (service acc... https://github.com/NousResearch/hermes-agent/pull/8427
+
+[2026-07-01T10:48:13.572000+00:00] srojk34 (id=1521829779119149056)
+    <@387972437901312000> I've made a few fixes that I think are worth checking whenever you have time. Good luck, boss
+    
+    🔧 4 new PRs — security fixes from tonight's merge-wave audit
+    
+    1. Approval bypass fix
+    git reset --hard, git branch --delete --force, and sudo --stdin/--askpass all had abbreviated-flag bypasses (e.g. git reset --har executes identically to --hard but wasn't caught by the exact-string regex). Verified live against real git/sudo binaries.
+    https://github.com/NousResearch/hermes-agent/pull/56281
+    
+    2. Discord prompt-injection gap
+    Slack's thread context already tags non-allowlisted senders as [unverified] to stop indirect prompt injection — Discord's _fetch_channel_context never got the same treatment. Ported the fix over.
+    https://github.com/NousResearch/hermes-agent/pull/56287
+    
+    3. Cross-tenant credential leak
+    Anthropic OAuth file, Nous Portal auth.json, and the session-mirror index were all resolved once at import time instead of per-call, so under the multiplexed gateway one profile could read/write another profile's credentials. Same bug class as the earlier cache-dir fix.
+    https://github.com/NousResearch/hermes-agent/pull/56302
+    
+    4. /status shows garbage token count
+    Right after a compression fires, last_prompt_tokens is set to -1 as a sentinel — but -1 is truthy in Python, so it slipped past an or 0 guard and got displayed as "Context: -1 / 128,000 tokens" (and even persisted into the session record). Clamped at both the source and the display layer.
+    https://github.com/NousResearch/hermes-agent/pull/56305
+
+[2026-07-01T11:11:15.668000+00:00] kyssta69 (id=1521835576049795253)
+    https://github.com/NousResearch/hermes-agent/pull/56326
+    
+    **Problem**: Fixed #56303 by keeping persist user-message overrides out of the live provider-facing message list while still writing clean content/timestamps to session persistence. Added regression coverage for the tool-loop flush path.
+    [embed] fix(agent): avoid mutating live persist overrides by kyssta-exe · ... https://github.com/NousResearch/hermes-agent/pull/56326
+
+[2026-07-01T11:15:53.351000+00:00] jw_mushroom_man (id=1521836740736712734)
+    Like Three more of my  PRs got merged let’s gooooo
+
+[2026-07-01T11:24:37.451000+00:00] nanxingncb612d (id=1521838938971705406)
+    https://github.com/NousResearch/hermes-agent/pull/56332 This routes custom STT/TTS command-provider subprocesses through the centralized sanitized subprocess environment.
+    [embed] fix(voice): sanitize command provider subprocess env by necoweb3 ·... https://github.com/NousResearch/hermes-agent/pull/56332
+
+[2026-07-01T11:31:03.101000+00:00] srojk34 (id=1521840556504911872)
+    1. Cross-profile checkpoint/cache leak
+    Same import-time-frozen-path bug class as earlier — this time it's the code-editing checkpoint store (checkpoint_manager.py) and Telegram sticker cache (sticker_cache.py). Under the multiplexed gateway, one profile's checkpoints/cache could get read from or written into a different profile's store.
+    https://github.com/NousResearch/hermes-agent/pull/56315
+    
+    2. MoA slot model: auto sentinel ignored
+    The "auto" sentinel (meaning "inherit main model") was only normalized for config-derived model values, not for the explicit model arg that MoA reference/aggregator slots pass — so a preset configured with model: auto sent the literal string "auto" to the provider as a model id.
+    https://github.com/NousResearch/hermes-agent/pull/56319
+    
+    3. MoA reference fan-out couldn't be interrupted
+    Unlike the tool-call executor, the MoA reference-model fan-out had no way to check for a user interrupt — a live turn would block until every reference model finished or hit its own timeout, sometimes minutes. Added the same interrupt-check pattern, scoped narrowly to avoid touching timeout values (kept separate from two other open PRs already adjusting those).
+    https://github.com/NousResearch/hermes-agent/pull/56344
+
+[2026-07-01T12:05:42.218000+00:00] srojk34 (id=1521849276953526353)
+    #56367 auxiliary_client.py log-spam dedup (3 more dead-ends)
+    Following up on today's earlier fix that demoted 4 repeated-warning dead-ends to deduped debug logs — found 3 more with the identical shape: named custom provider missing api_key, named custom provider missing base_url, and copilot-acp with no model configured. All spam the logs on every call for a persistently-misconfigured provider.
+    https://github.com/NousResearch/hermes-agent/pull/56367
+    
+    #56369 Matrix E2EE permanently disabled after one transient failure
+    Same bug shape as a fix merged earlier today for _device_id_unverified — but this time it's _encryption. If E2EE setup hits a transient failure once (missing-deps race, locked crypto-store file), the flag downgrades to False and is never reset, so every future reconnect silently skips E2EE setup entirely instead of retrying — even after the transient cause clears.
+    https://github.com/NousResearch/hermes-agent/pull/56369
+
+[2026-07-01T12:16:38.069000+00:00] srojk34 (id=1521852027792003092)
+    I opened a total of 9 PRs today.
+    
+    1    #56281    Approval bypass (git reset/branch/sudo abbreviation)
+    2    #56287    Discord unverified sender tagging
+    3    #56302    Cross-profile OAuth/auth/session path leak
+    4    #56305    /status -1 context sentinel
+    5    #56315    Checkpoint/sticker cache profile leak
+    6    #56319    MoA model: auto sentinel
+    7    #56344    MoA reference fan-out interrupt
+    8    #56367    auxiliary_client.py log-spam dedup
+    9    #56369    Matrix E2EE reconnect reset
+    
+    Today I found more issues than I expected, and I fixed every single one of them. It was genuinely exhausting. Now I'm off to touch some grass. Good luck to all the developers out there ✌️
+
+[2026-07-01T12:16:39.407000+00:00] warofchange (id=1521852033404244038)
+    Docs fix for HERMES_MAX_ITERATIONS
+    
+    Spotted a stale entry in the env-vars reference. HERMES_MAX_ITERATIONS is documented as a normal user-settable variable — but the codebase treats it as a deprecated backward-compat bridge:
+    
+    • The setup wizard actively removes it from .env (hermes_cli/setup.py)
+    • doctor.py flags it as a stale "ghost" shadowing agent.max_turns in config.yaml
+    • Tests assert it must not be in OPTIONAL_ENV_VARS (issue #17534)
+    
+    The iteration budget is set via agent.max_turns in config.yaml. The old doc pointed users at a value the wizard silently deletes.
+    
+    Fix is a single line, matching how other deprecated vars in the same file are already documented (TERMINAL_CWD, MESSAGING_CWD, HERMES_TOOL_PROGRESS). Docs-only, zero behavior change.
+    
+    https://github.com/NousResearch/hermes-agent/pull/56376
+    [embed] docs(env): mark HERMES_MAX_ITERATIONS as deprecated in environment-... https://github.com/NousResearch/hermes-agent/pull/56376
+
+[2026-07-01T12:23:45.989000+00:00] teknium (id=1521853822618566666)
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30616130376662392f5251746966596366396a64596f74714853495948745f57577734576f4b6b2e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1521853822316580894/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30616130376662392f5251746966596366396a64596f74714853495948745f57577734576f4b6b2e706e67.png?ex=6a465851&is=6a4506d1&hm=33b8a616859e679fe00498866296d960c33c7e5919952adcbc65775a7b502d5e&
+    [reply to lodl_de msg=1521824869090853046]
+
+[2026-07-01T12:24:37.759000+00:00] lodl_de (id=1521854039757951027)
+    thanks so much for pushing ❤️
+    [reply to teknium msg=1521853822618566666]
+
+[2026-07-01T12:33:53.064000+00:00] cardimatt02 (id=1521856368875667496)
+    **Per-profile routing on the OpenAI-compatible API server (/p/{profile}/v1/...) — tracked anywhere, or PR welcome?**
+    
+    Hey 👋 Running Hermes in Kubernetes with profiles as independently-addressable agents: I'd like a single multiplex gateway to expose each served profile to OpenAI-compatible clients(LiteLLM / OpenWebUI) as its own model — one pod, N profiles,instead of one pod per profile.
+    
+    From reading the code + issues, here's my understanding — please correct me:
+    - The multiplex design (#50051) intends the default profile's single shared listener to serve every profile via the /p/{profile}/prefix, and webhook.py implements exactly that.
+    - But the /v1/* routes on api_server.py never got the /p/{profile}/variant — and #48273 explicitly called api_server profile routing a "focused follow-on" that was deferred. So today a multiplex gateway can't expose its secondary profiles over the OpenAI API(secondary profiles enabling api_server hit MultiplexConfigError bydesign).
+    
+    Questions:
+    - Is there a tracking issue for extending the /p/{profile}/ prefix to the /v1 API surface? I couldn't find one.
+    - Would a PR mirroring the webhook adapter's /p/{profile}/ routing + SessionSource.profile stamping onto the api_server routes be welcome, or is there a reason it was left out beyond "not yet done"?
+    (Cron's multi-profile side looks handled by #54913 — thanks for that.)
+
+[2026-07-01T12:46:49.379000+00:00] teknium (id=1521859624977039611)
+    <@428014785045725184> is working on this to some degree
+    [reply to cardimatt02 msg=1521856368875667496]
+
+[2026-07-01T12:47:12.539000+00:00] skholmes (id=1521859722117124107)
+    Been using this slack improvement and it's been great for my workflows.
+    Any chance it can get to higher than P3?
+    https://github.com/NousResearch/hermes-agent/pull/54535
+    
+    https://github.com/NousResearch/hermes-agent/pull/55639
+    https://github.com/NousResearch/hermes-agent/pull/55640
+    Also fixed Codex context issues and with these three PR's my agents have been incredibly smooth running
+    Love Hermes 🚀 
+    
+    Any chance we can get these in ser <@387972437901312000>
+    [embed] feat(slack): add read-only Slack channel history tool by sk-holmes ... https://github.com/NousResearch/hermes-agent/pull/54535
+    [embed] fix(agent): treat Codex incomplete content filter as refusal by sk-... https://github.com/NousResearch/hermes-agent/pull/55639
+    [embed] fix(context): bound session recall payloads by sk-holmes · Pull Re... https://github.com/NousResearch/hermes-agent/pull/55640
+
+[2026-07-01T12:50:00.649000+00:00] cardimatt02 (id=1521860427221434419)
+    Ok, i will wait for <@428014785045725184> responce. Thanks
+    [reply to teknium msg=1521859624977039611]
+
+[2026-07-01T12:59:01.156000+00:00] kainan_e (id=1521862694272241775)
+    What
+
+[2026-07-01T12:59:04.818000+00:00] Translator Bot#1043 (id=1521862709631783033)
+    Wow
+    [reply to kainan_e msg=1521862694272241775]
+
+[2026-07-01T12:59:14.890000+00:00] aialliai (id=1521862751876546651)
+    <#1476316988992258300>
+    [reply to kainan_e msg=1521862694272241775]
+
+[2026-07-01T13:01:52.947000+00:00] aialliai (id=1521863414815920199)
+    Thank you 🙂
+    [reply to kainan_e msg=1521862694272241775]
+
+[2026-07-01T13:15:50.002000+00:00] yasya_eth (id=1521866925678923866)
+    <@387972437901312000>  Hey! Just opened my  PR here #56383. Fixes a dedup/staleness bug in the file tools: read-dedup and the "changed since last read" warning were checking mtimes on the host filesystem even when the backend was remote (docker/ssh/modal/etc.), so it could silently serve stale content on non-local backends. Tests included, verified no regressions against upstream.
+    
+    Would appreciate a look when you get a chance: https://github.com/NousResearch/hermes-agent/pull/56383
+    [embed] fix(tools): don't apply host-mtime dedup/staleness on remote backen... https://github.com/NousResearch/hermes-agent/pull/56383
+
+[2026-07-01T13:16:31.465000+00:00] rudra_telnyx_32035 (id=1521867099587350621)
+    Hey team, I opened PR #55660 for the new `voice_call` Hermes platform plugin:
+    
+    https://github.com/NousResearch/hermes-agent/pull/55660
+    
+    It adds outbound/inbound PSTN calling via Telnyx, Twilio, Plivo, plus a mock provider for local testing. It also includes CLI/slash/tool
+    support, webhook security, docs, and focused test coverage.
+    
+    Would be nice if this gets merged 🤞
+    [embed] feat(plugin): voice call by dynamite-bud · Pull Request #55660 · ... https://github.com/NousResearch/hermes-agent/pull/55660
+
+[2026-07-01T13:24:15.996000+00:00] o327723_han (id=1521869047971446964)
+    Hi! I noticed a Discord identity issue and wanted to flag it:
+    
+    When Hermes receives a Discord DM, the session context prompt only shows the user's display name (e.g. **User:** Alice), not their Discord user ID — even though the Discord adapter already passes `user_id`.
+    
+    Since display names are trivially spoofable (anyone can rename their nickname), the LLM can't reliably tell who it's actually talking to. This breaks permission rules that depend on knowing the real sender (e.g. "only user X can change settings").
+    
+    Root cause looks like `gateway/session.py` — when `user_name` is set, `user_id` is omitted from the system prompt (`description` + `**User:**` block). The adapter in `plugins/platforms/discord/adapter.py` is fine.
+    
+    Suggested fix: always show both when available, e.g. `**User:** Alice [123456789012345678]`.
+    
+    Happy to open a PR if this sounds reasonable. Thanks!
+
+[2026-07-01T13:25:52.797000+00:00] ros77997 (id=1521869453984534610)
+    Looking for a Hermes Dev to help me setup Gbrain?
+
+[2026-07-01T13:44:43.981000+00:00] yasya_eth (id=1521874198514110474)
+    <@387972437901312000> I apologize, I forgot to write that it was approved
+    https://github.com/NousResearch/hermes-agent/pull/56383
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1521874198597730315/image.png?ex=6a466b4c&is=6a4519cc&hm=1a3372a07053202c32b9f7f49517f47b704d9f6bd46515aba98f3b1d65e9163f&
+    [embed] fix(tools): don't apply host-mtime dedup/staleness on remote backen... https://github.com/NousResearch/hermes-agent/pull/56383
+    [reply to yasya_eth msg=1521866925678923866]
+
+[2026-07-01T14:06:40.827000+00:00] huntsyea (id=1521879721766289430)
+    <@387972437901312000> I have been working on Photon and getting Hermes side to parity. Two PRs and working on couple more.
+    
+    Rich Link Support (send & receive):
+    https://github.com/NousResearch/hermes-agent/pull/54646
+    
+    Hardening state (restart survives) based on recent photon updates:
+     https://github.com/NousResearch/hermes-agent/pull/56006
+    [embed] feat(photon): support rich link previews by huntsyea · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/54646
+    [embed] fix(photon): persist send and reaction state by huntsyea · Pull Re... https://github.com/NousResearch/hermes-agent/pull/56006
+
+[2026-07-01T14:19:11.642000+00:00] egilewski (id=1521882870912647168)
+    Don't think too much of it, it's just one of thousands contributors like us. However now, that all P0 and P1 issues and PRs were closed (for like a second), you're only competing with the other 6685 open P2 PRs.
+    [reply to yasya_eth msg=1521874198514110474]
+

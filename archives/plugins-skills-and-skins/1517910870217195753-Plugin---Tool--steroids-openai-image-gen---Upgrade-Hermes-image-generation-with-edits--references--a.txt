@@ -30,3 +30,12 @@
     
     So you can ask it to run several images in parallel
 
+[2026-07-01T11:01:25.652000+00:00] heeervas (id=1521833101343457332)
+    **🖼️ Steroids OpenAI Image Gen — Codex size handling + safer image normalization
+    **
+    📐 Improved Codex-backed image generation when requested sizes are treated as orientation hints instead of exact pixels.
+    🧩 Added resize/pad normalization to return deterministic target dimensions while preserving the full generated image. (1/2)
+    🧪 Added PNG dimension tests for the normalization path.
+    🔐 Preserved existing auth/error-handling paths while tightening Codex response handling.
+    🧰 Makes downstream Hermes image tooling more predictable for square/portrait/landscape outputs.
+

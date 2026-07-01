@@ -1,0 +1,30 @@
+# Thread 'Connecting Hermes to Production APIs for an AI GTM Workflow - Hubspot, Apollo, Resend' in forum #community-projects-showcase
+# thread_id=1521849528012112062 forum_id=1316137596535177246
+# Started 2026-07-01T14:30:32.409746+00:00
+
+[2026-07-01T12:06:42.075000+00:00] charu1603 (id=1521849528012112062)
+    Hey everyone!
+    
+    I've been exploring Hermes over the last few days, and I wanted to build something practical while learning the ecosystem.
+    I ended up building a simple AI GTM agent. The workflow is pretty straightforward:
+    
+    - Fetch new contacts from HubSpot
+    - Enrich them with Apollo.io
+    - Generate a personalized outreach email
+    - Send it using Resend
+    
+    For the execution layer, I used Swytchcode, so Hermes only has access to the APIs I expose. It also handles retries, policy enforcement, authentication, and audit logs, which makes experimenting with production APIs much easier.
+    
+    I recorded a short demo showing the entire workflow from start to finish.
+    
+    Demo: https://youtu.be/zKd98_0vR-E?si=Nk0BuJ66j5dvqC1U
+    website link - https://dub.sh/s9dyIjc
+    
+    I'd really appreciate any feedback from people building with Hermes. If there's another workflow you'd like to see, let me know!
+    [attachment] Screenshot_2026-07-01_174117.png https://cdn.discordapp.com/attachments/1521849528012112062/1521851416648355931/Screenshot_2026-07-01_174117.png?ex=6a465614&is=6a450494&hm=16cea12ad08c7678edb50c5532dfebbc60f4739e8dd6fc8bc6998b70f7c02e32&
+    [attachment] Screenshot_2026-07-01_174322.png https://cdn.discordapp.com/attachments/1521849528012112062/1521851417206460506/Screenshot_2026-07-01_174322.png?ex=6a465614&is=6a450494&hm=dc63deecc99cef4adff5405405814142249177443f7107b700558e1c13b7be76&
+    [embed] How I build a GTM AI Agent with Hermes, HubSpot, Apollo.io and Resend https://www.youtube.com/watch?v=zKd98_0vR-E
+
+[2026-07-01T12:15:19.382000+00:00] charu1603 (id=1521851697754800170)
+    Connecting Hermes to Production APIs for an AI GTM Workflow - Hubspot, Apollo, Resend
+

@@ -51,3 +51,6 @@
     Hi, did you successfully install the workflows plugin? and is it successfully rendering on the Hermes Dashboard canvas?
     [reply to propersites msg=1520561231663202407]
 
+[2026-07-01T09:50:43.724000+00:00] ogxoutcast (id=1521815309407748217)
+    it told me i need it tho
+
