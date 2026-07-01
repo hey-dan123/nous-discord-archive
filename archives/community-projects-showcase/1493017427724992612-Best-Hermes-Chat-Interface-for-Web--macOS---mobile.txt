@@ -5153,3 +5153,16 @@
 [2026-06-30T18:42:57.004000+00:00] jconcep (id=1521586859426320556)
     thank you
 
+[2026-06-30T20:20:13.398000+00:00] avidfuturist (id=1521611339037151383)
+    <@400344390804963340> update 0.6.8 might fix the Linux desktop issue you had. can you test when you get a chance?
+
+[2026-07-01T00:05:31.212000+00:00] alto69 (id=1521668036858347581)
+    Propose ship with voice mode TTS: Open-LLM-VTuber    45 MB    253 files:
+    The code is MIT, but it ships with Live2D sample models under a separate restricted license (Live2D Free Material License). If you ship those bundled, you'd need a commercial agreement with Live2D Inc. for enterprise use. The fix is simply swapping the sample avatars for your own or properly licensed Live2D models — the code itself is clean MIT.
+
+[2026-07-01T00:12:45.236000+00:00] alto69 (id=1521669857286946838)
+    [attachment] Screenshot_2026-07-01_at_10.12.27_am.png https://cdn.discordapp.com/attachments/1493017427724992612/1521669857202929775/Screenshot_2026-07-01_at_10.12.27_am.png?ex=6a45acfd&is=6a445b7d&hm=cc69fec97c64e70534efc25646fe1cb179af0ffc5f50d9ca2e8a3ee8b84a1f20&
+
+[2026-07-01T02:06:44.365000+00:00] alto69 (id=1521698542672941168)
+    For now I switched to Piper TTS and is working. packaged TTS were broken for me
+

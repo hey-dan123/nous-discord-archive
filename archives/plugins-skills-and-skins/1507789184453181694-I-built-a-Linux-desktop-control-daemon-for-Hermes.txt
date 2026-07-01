@@ -114,3 +114,9 @@
 [2026-06-12T13:30:59.983000+00:00] coe0718 (id=1514985372969467994)
     Awesome thanks.
 
+[2026-06-30T21:34:59.607000+00:00] coe0718 (id=1521630155561369723)
+    New update. 
+    
+    https://github.com/coe0718/deskbrid/releases/tag/v1.2.0
+    [embed] Release v1.2.0 · coe0718/deskbrid https://github.com/coe0718/deskbrid/releases/tag/v1.2.0
+

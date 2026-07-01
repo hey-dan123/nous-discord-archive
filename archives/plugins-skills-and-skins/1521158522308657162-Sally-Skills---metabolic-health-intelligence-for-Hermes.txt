@@ -9,3 +9,6 @@
     No new dependencies. Just add the MCP server in ~/.hermes/mcp.json with your key from console.a1c.io. Now Hermes finally has eyes on your biology.
     [attachment] Screenshot_2026-06-29_at_21.20.22.png https://cdn.discordapp.com/attachments/1521158522308657162/1521158522937540709/Screenshot_2026-06-29_at_21.20.22.png?ex=6a43d0c5&is=6a427f45&hm=be0803a8c3ef50f1d021fa15912f87f31b95760082ad5b0029f1e9baec2d76e4&
 
+[2026-06-30T23:59:10.191000+00:00] nwminer9687 (id=1521666438740316401)
+    Repo 404s.
+

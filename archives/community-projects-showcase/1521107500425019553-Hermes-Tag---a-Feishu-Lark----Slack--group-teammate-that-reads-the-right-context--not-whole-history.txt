@@ -19,3 +19,7 @@
     [attachment] demo.en.mp4 https://cdn.discordapp.com/attachments/1521107500425019553/1521107500601184296/demo.en.mp4?ex=6a43a140&is=6a424fc0&hm=23a9805559ae924ea7eded32856979817cd6bb869a13e9d06459342b39d3342c&
     [embed] GitHub - DanielLi202/hermes-tag: Post images, add notes, let the th... https://github.com/DanielLi202/hermes-tag
 
+[2026-07-01T02:18:51.310000+00:00] february1867 (id=1521701591701258411)
+    0.3.0 released, added DingTalk channel support. more details in https://github.com/DanielLi202/hermes-tag/releases/tag/v0.3.0
+    [embed] Release v0.3.0 · DanielLi202/hermes-tag https://github.com/DanielLi202/hermes-tag/releases/tag/v0.3.0
+

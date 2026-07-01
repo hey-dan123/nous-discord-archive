@@ -1,0 +1,29 @@
+# Thread 'Clauver — AI Phone Calls for Hermes Agent (free, open source)' in forum #community-projects-showcase
+# thread_id=1521646198329708698 forum_id=1316137596535177246
+# Started 2026-07-01T03:37:10.207472+00:00
+
+[2026-06-30T22:38:44.501000+00:00] mustafa_ramax (id=1521646198329708698)
+    I lost my voice for 2 months — thought it was cancer. Couldn't even book a doctor appointment by phone. Every AI voice tool I found was expensive. So I built my own to replace my voice, free and open source, and now it works with Hermes.
+    
+    What it does: Your Hermes makes real phone calls. Full two-way conversation — speaks, listens, responds. Uses your existing LLM/TTS/STT. You only pay phone minutes (~$0.013/min).
+    
+    Free TTS (Edge) + Free STT (local Whisper) — zero extra AI cost. Same providers you already have in your Hermes config.
+    
+    Just tell Hermes:
+      • "Call my doctor and book tomorrow at 2pm"
+      • "Call me at 7am with my top 3 priorities"
+      • "Call me when you're done with a brief report"
+      • "Call this lead and ask if Thursday works for a meeting"
+    
+    Setup: skill install → run setup script → run provision script (auto-connects Twilio + LiveKit) → done in 5 min.
+    
+    I'm recovering now (no cancer thankfully) 😊 and I want this to help others — anyone who can't speak, has phone anxiety, or wants Hermes to handle phone tasks for them.
+    
+     Contributors welcome: inbound call handler, structured results to chat, call recordings.
+    
+      ⭐ https://github.com/mustafa-ramax/clauver-voice-hermes
+    
+      Your support is really appreciated, thanks! 🙏
+    [attachment] 0627.mov https://cdn.discordapp.com/attachments/1521646198329708698/1521646199873077269/0627.mov?ex=6a4596f4&is=6a444574&hm=c5672d27e457c7ca07f7d17e20d4a2bc60cf8a11b7ba3d211fc6e526a3d571dc&
+    [embed] GitHub - mustafa-ramax/clauver-voice-hermes: Clauver Telephony For ... https://github.com/mustafa-ramax/clauver-voice-hermes
+

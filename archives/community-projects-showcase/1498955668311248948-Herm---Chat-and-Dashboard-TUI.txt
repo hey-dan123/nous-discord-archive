@@ -1582,3 +1582,6 @@
 [2026-06-30T09:00:05.108000+00:00] tunacookie (id=1521440176662908929)
     idk why my herm feels fragile lately.. not sure how to explain it.
 
+[2026-06-30T23:11:54.724000+00:00] liftaris (id=1521654545929863340)
+    <@221727702992945152> <@323859322599768065> Hermes has been updated a lot, herm hasn't :/ I haven't been able to put much time into herm dev recently, but I'll give you guys an update tonight
+

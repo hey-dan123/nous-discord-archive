@@ -1,0 +1,27 @@
+# Thread '🧠 Built an Emotional Awareness Engine for Hermes Agent — based on 12 academic papers' in forum #plugins-skills-and-skins
+# thread_id=1521709397926088735 forum_id=1485392832154832906
+# Started 2026-07-01T03:42:39.684815+00:00
+
+[2026-07-01T02:49:52.459000+00:00] beckvs (id=1521709397926088735)
+    Hey everyone 👋
+    
+    Built an Emotional Awareness Engine for Hermes Agent. My agent had zero emotional context — same response whether I was celebrating or barely holding it together. So I read 12 academic papers on emotional AI and built something different.
+    
+    **What it does:**
+    - 📊 Detects mood patterns across sessions (not just one message)
+    - 🧠 Tracks communication habits over time
+    - 💬 Decides when to check-in based on real context
+    - 🔄 Self-improves from feedback
+    
+    **Key insight:** 83-90% of AI empathy follows the same template (validate → paraphrase → ask). Users notice something feels off. This engine breaks that pattern.
+    
+    **Numbers:** 197/199 tests ✅ | 1,400 lines Python | 17 emotional states
+    
+    **Links:**
+    - 🔗 GitHub: https://github.com/beckhs/emotional-awareness-engine
+    - 💰 Premium ($25): https://beckvs.gumroad.com/l/gkgec
+    
+    Would love feedback! Does the detection actually feel attuned, or is it just fancy sentiment analysis? 🤔
+    [embed] GitHub - beckhs/emotional-awareness-engine: Emotional Awareness Eng... https://github.com/beckhs/emotional-awareness-engine
+    [embed] Emotional Intelligence Suite for AI Agents https://beckvs.gumroad.com/l/gkgec
+

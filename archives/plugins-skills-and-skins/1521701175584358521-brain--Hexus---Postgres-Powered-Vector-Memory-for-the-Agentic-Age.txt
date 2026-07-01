@@ -1,0 +1,28 @@
+# Thread ':brain: Hexus — Postgres-Powered Vector Memory for the Agentic Age' in forum #plugins-skills-and-skins
+# thread_id=1521701175584358521 forum_id=1485392832154832906
+# Started 2026-07-01T03:42:40.164983+00:00
+
+[2026-07-01T02:17:12.100000+00:00] codenamekt (id=1521701175584358521)
+    If you've hit the limits of Hermes' built-in memory (tiny char budget, no semantic search, resets between sessions) — Hexus is a plugin-based memory provider that fixes all of it.
+    
+    **What it is:** A drop-in memory provider plugin for Hermes Agent backed by PostgreSQL + pgvector. Stores embeddings locally via sentence-transformers — zero API cost, zero data leaving your machine.
+    
+    **Key features:**
+    
+    **Hybrid search** — blends vector similarity + full-text search + temporal decay. New memories weighted higher, old ones fade. Configurable weights per query.
+    **Local embeddings (384-dim)** — runs MiniLM-L6-v2 via sentence-transformers on-device. No API keys, no external service, no data exfiltration. Falls back to Ollama or OpenAI-compatible endpoint if configured.
+    **Entity graph** — tracks co-occurrence between entities. Ask "what docker images did we configure alongside Traefik?" and it walks the co-occurrence graph to find the answer.
+    **CCR (Compressed Content Representation)** — auto-compresses large payloads before storing. JSON→key summaries, logs→error highlights, code→definition stubs. Keeps your context token budget sane.
+    **Async writer** — non-blocking writes with a bounded queue. If the DB lags, it drops the oldest write instead of blocking the agent loop. Graceful degradation.
+    **Conversation turn capture** — every substantive user/assistant exchange gets embedded. Full session recall across days and sessions.
+    **Lifecycle webhooks** — HMAC-signed webhooks on startup, shutdown, and config changes. Hooks into monitoring and CI/CD.
+    
+    Try it out, give feedback, star the repo if you find it useful — anything is appreciated and welcome!
+    
+    https://github.com/codenamekt/hexus
+    [attachment] hexus.png https://cdn.discordapp.com/attachments/1521701175584358521/1521701175857254533/hexus.png?ex=6a45ca28&is=6a4478a8&hm=c692b4bb238c02da2d03ee1ca4e31937f6be509ce4db6ba04097d658881ac868&
+    [embed] GitHub - codenamekt/hexus: Postgres-Powered Vector Memory for the A... https://github.com/codenamekt/hexus
+
+[2026-07-01T02:35:11.450000+00:00] codenamekt (id=1521705702706511962)
+    :brain: Hexus — Postgres-Powered Vector Memory for the Agentic Age
+

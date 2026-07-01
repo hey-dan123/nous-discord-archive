@@ -41225,3 +41225,336 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     #55808 — The concurrent tool-execution progress heartbeat looked up still-running tool names by indexing the wrong list (parsed_calls instead of the futures-aligned runnable_calls), so when a batch contained a guardrail-blocked call it reported the wrong tool names in the status line (cosmetic).
     #55821 — AIAgent.chat() and the direct-CLI main() read the turn result with result["final_response"], which raised KeyError on run_conversation's error/exhaustion paths (those dicts omit that key), instead of degrading gracefully like every other caller that uses .get().
 
+[2026-06-30T20:27:09.155000+00:00] srojk34 (id=1521613082848399572)
+    <@387972437901312000> I fixed a few bugs that are worth checking. Take a look when you get a chance, boss.
+    
+    🔒 #55840 — Tool registry deregister() authorization bypass
+    A plugin could silently remove a built-in tool's entry via deregister() and re-register a malicious handler over it, completely bypassing the recent register(override=True) opt-in security chain. Fixed by gating deregister() with the same plugin opt-in policy.
+    https://github.com/NousResearch/hermes-agent/pull/55840
+    
+    🛠️ #55845 — Context compressor tool_call_id whitespace bug
+    ContextCompressor._sanitize_tool_pairs() compared tool_call_id strings without stripping whitespace, causing valid tool results to be misclassified as "orphaned" and silently replaced with stub placeholders — data loss during compression.
+    https://github.com/NousResearch/hermes-agent/pull/55845
+    
+    🧠 #55849 — RetainDB stale memory prefetch
+    prefetch(query) ignored its own query parameter and returned whatever was cached from a previous turn, injecting stale/irrelevant memory context when the conversation topic shifted. Same bug class just fixed in the mem0 provider.
+    https://github.com/NousResearch/hermes-agent/pull/55849
+    
+    🔒 #55854 — kanban CLI bypasses goal-mode judge gate
+    hermes kanban complete <id> (the CLI command) never went through the auxiliary judge gate that kanban_complete (the agent tool) does — a worker with terminal access could close a goal-mode task without any verification.
+    https://github.com/NousResearch/hermes-agent/pull/55854
+
+[2026-06-30T20:27:34.634000+00:00] srojk34 (id=1521613189714808912)
+    ⚙️ #55855 — Auxiliary client burns healthy OpenRouter key
+    The auxiliary client (compression, vision, goal judging, etc.) couldn't distinguish an OpenRouter upstream provider 429 from a real account-level 429, so it was exhausting a perfectly healthy OPENROUTER_API_KEY for ~24 minutes on every upstream throttle.
+    https://github.com/NousResearch/hermes-agent/pull/55855
+    
+    🔒 #55861 — kanban_block escape hatch from goal-mode
+    kanban_complete got a judge gate, but kanban_block — a second exit path that the goal loop also treats as terminal — was left wide open, letting a worker escape goal-mode enforcement entirely. Now restricted to genuine external-blocker kinds (dependency, needs_input).
+    https://github.com/NousResearch/hermes-agent/pull/55861
+
+[2026-06-30T20:53:48.981000+00:00] srojk34 (id=1521619793004728472)
+    fix(browser): redact CDP URL token in _create_cdp_session log
+    
+    PR #54851 added _sanitize_url_for_logs() to cover CDP credential leaks in logs, but missed one site: _create_cdp_session() was still logging the raw CDP URL. Providers like Browserbase pass tokens in the query string (wss://...?token=secret), which leaked to agent logs on every new browser session. One-line fix, two regression tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/55883
+    [embed] fix(browser): redact CDP URL token in _create_cdp_session log by sr... https://github.com/NousResearch/hermes-agent/pull/55883
+
+[2026-06-30T21:06:16.268000+00:00] the713boss (id=1521622927353843913)
+    Idk if this is the place to talk about this but, I need help with my hermes. It is stuck on a weird loop
+
+[2026-06-30T21:18:07.534000+00:00] stoltemberg (id=1521625910619541550)
+    I have a few PRs with Windows fixes awaiting review
+
+[2026-06-30T21:18:37.145000+00:00] stoltemberg (id=1521626034817204328)
+    Practically all of them were marked LGTM.
+
+[2026-06-30T21:19:27.518000+00:00] stoltemberg (id=1521626246096621700)
+    with P3 and P2 tags
+
+[2026-06-30T21:20:47.995000+00:00] srojk34 (id=1521626583641755659)
+    Could you explain what kind of issue you're experiencing in more detail?
+    Sometimes the issue can be on the user's side. You can describe your problem and mention me in this channel: https://discord.com/channels/1053877538025386074/1476316988992258300. I might be able to help.
+    [reply to the713boss msg=1521622927353843913]
+
+[2026-06-30T21:20:58.924000+00:00] stoltemberg (id=1521626629481169006)
+    The biggest PR being this one: https://github.com/NousResearch/hermes-agent/pull/55339
+    [embed] fix: add explicit UTF-8 encoding to all subprocess text=True calls ... https://github.com/NousResearch/hermes-agent/pull/55339
+
+[2026-06-30T21:21:00.488000+00:00] stoltemberg (id=1521626636041322597)
+    Who could take a look at it?
+
+[2026-06-30T21:21:30.021000+00:00] promptsiren (id=1521626759911706634)
+    open a <#1485307775444844625>
+    [reply to the713boss msg=1521622927353843913]
+
+[2026-06-30T21:46:39.353000+00:00] samueltinnerholm (id=1521633090508947576)
+    <@387972437901312000> stripped the mobile PR down to ~3.7k LOC (21k with the package lock).
+    
+    I built it because I run Hermes from my phone through some scuffed iPhone shortcuts (voice → Whisper → Hermes) and wanted a real app for it.
+    
+    Simple question: worth me polishing this to merge-ready for general use, or should I keep it as my own fork? Happy to keep going if there's a path to merging.
+    
+    https://github.com/NousResearch/hermes-agent/pull/52673
+    [embed] feat(mobile): add native mobile shell for Hermes Desktop by realfis... https://github.com/NousResearch/hermes-agent/pull/52673
+
+[2026-06-30T21:47:53.024000+00:00] teknium (id=1521633399507259494)
+    Okay that is very nice of you and I'm sure <@119192111202566149> will take a lot of inspiration from it but we are not rushing to any mobile app release
+    [reply to samueltinnerholm msg=1521633090508947576]
+
+[2026-06-30T21:48:09.358000+00:00] samueltinnerholm (id=1521633468017283283)
+    Thanks for letting me know 🙏
+    [reply to teknium msg=1521633399507259494]
+
+[2026-06-30T21:48:28.125000+00:00] samueltinnerholm (id=1521633546731651073)
+    Lmk if there's anything I can help with
+
+[2026-06-30T21:52:48.490000+00:00] warofchange (id=1521634638781743154)
+    Another small, clean PR to hermes-agent:
+    
+    Problem: The hermes -z (oneshot mode) docs had a per-run overrides table listing only two flags — --model and --provider. But the CLI parser (hermes_cli/_parser.py) explicitly states for -t/--toolsets:
+    
+    "Comma-separated toolsets to enable for this invocation. Applies to -z/--oneshot and --tui."
+    
+    The flag worked, the code said it worked, but the docs didn't mention it at all.
+    
+    Fix: Added the missing row to the table — one line, one file, zero runtime impact.
+    
+     | `-m` / `--model <model>`   | HERMES_INFERENCE_MODEL | Override the model for this run    |
+     | `--provider <provider>`    | _(none)_               | Override the provider for this run |
+    +| `-t` / `--toolsets <csv>`  | _(none)_               | Comma-separated toolsets to enable |
+    PR: https://github.com/NousResearch/hermes-agent/pull/55879
+    -----------------------
+    Another small, clean PR to hermes-agent:
+    
+    Problem: .env.example shipped with TERMINAL_TIMEOUT=60 as an active, uncommented value. But the actual built-in fallback the code uses is 180 seconds — confirmed in two separate places:
+    
+    tools/terminal_tool.py → _parse_env_var("TERMINAL_TIMEOUT", "180")
+    tools/process_registry.py → os.getenv("TERMINAL_TIMEOUT", "180")
+    Anyone who copied the example file verbatim ended up with a 60 s command timeout — 3× shorter than what the code defaults to when the variable isn't set at all. The comment above the line called it the "Default command timeout in seconds", which made it even more misleading.
+    
+    (TERMINAL_LIFETIME_SECONDS=300 right below it is correct and untouched.)
+    
+    Fix: One line changed, one file touched.
+    
+    -TERMINAL_TIMEOUT=60
+    +# Default command timeout in seconds (default: 180)
+    +TERMINAL_TIMEOUT=180
+     PR: https://github.com/NousResearch/hermes-agent/pull/55890
+    [embed] docs(cli-commands): add missing -t/--toolsets row to hermes -z over... https://github.com/NousResearch/hermes-agent/pull/55879
+    [embed] docs(.env.example): align TERMINAL_TIMEOUT default with code (60 ->... https://github.com/NousResearch/hermes-agent/pull/55890
+
+[2026-06-30T22:14:26.686000+00:00] thyfriendlyfox (id=1521640083810160671)
+    OHHHHH
+    
+    That actually explains quite a bit
+    
+    I didn't realize that
+    
+    Now I feel like a jerk for pushing our Mobile PR ;-;
+    [reply to teknium msg=1521633399507259494]
+
+[2026-06-30T22:15:39.723000+00:00] thyfriendlyfox (id=1521640390149804122)
+    Can we, in the meantime, publish our mobile app PR packages to the app store? It feels weird but I know a lot of people would love to start using it
+
+[2026-06-30T22:27:06.521000+00:00] teknium (id=1521643270789140489)
+    Just dont use our branding and make it clear its not official like Hermex did and I dont see a problem
+    [reply to thyfriendlyfox msg=1521640390149804122]
+
+[2026-06-30T22:28:20.883000+00:00] thyfriendlyfox (id=1521643582685970573)
+    Thanks Teknium, I appreciate it 🙂
+    
+    Can.. we call it Hermes management for mobile?
+    [reply to teknium msg=1521643270789140489]
+
+[2026-06-30T22:28:32.108000+00:00] thyfriendlyfox (id=1521643629767295036)
+    or say "It integrates with Hermes remotely!"
+
+[2026-06-30T22:29:41.570000+00:00] teknium (id=1521643921112039667)
+    You can work it out with <@808920669147889664> and <@119192111202566149> if you'd like
+    [reply to thyfriendlyfox msg=1521643582685970573]
+
+[2026-06-30T22:30:25.798000+00:00] thyfriendlyfox (id=1521644106617458708)
+    Sure thing! I'll DM them. Thanks man!
+    
+    Also, more PRs coming your way haha
+    [reply to teknium msg=1521643921112039667]
+
+[2026-06-30T22:30:38.566000+00:00] talmax1124 (id=1521644160170459146)
+    Was having issues with resizing hiding workflows and such. made this fix: https://github.com/NousResearch/hermes-agent/pull/55912
+    [embed] fix(tui): coalesce drag-resize reflow + harden resize-burst heal co... https://github.com/NousResearch/hermes-agent/pull/55912
+
+[2026-06-30T22:33:07.194000+00:00] talmax1124 (id=1521644783561474268)
+    [attachment] Screen_Recording_2026-06-30_at_6.32.09_PM.mov https://cdn.discordapp.com/attachments/1491258766648283238/1521644778167472178/Screen_Recording_2026-06-30_at_6.32.09_PM.mov?ex=6a4595a1&is=6a444421&hm=4c8b939d99b7b286ed4e227d54dec91e5e1601ae1bbbf01caf871978780a96df&
+
+[2026-06-30T22:33:31.543000+00:00] talmax1124 (id=1521644885688582197)
+    Just how it works resizing it, and stays.
+
+[2026-06-30T22:38:25.006000+00:00] liinx (id=1521646116561485974)
+    fix(agent): CJK acks never trigger intent-ack continuation — Chinese-speaking users (and MoA aggregators) got stuck announcing intent and stopping instead of continuing, since the future-ack regex was Latin-only. Added CJK phrase matching + 2 regression tests, English path untouched.
+    https://github.com/NousResearch/hermes-agent/pull/55916
+    <@387972437901312000>
+    [embed] fix(agent): detect CJK future-ack phrases in intent-ack continuatio... https://github.com/NousResearch/hermes-agent/pull/55916
+
+[2026-06-30T22:52:54.572000+00:00] dias4761 (id=1521649763785904128)
+    I sent some PRs to GitHub Security for you guys. Take a look when it's available.
+    [reply to teknium msg=1521643921112039667]
+
+[2026-06-30T22:53:32.739000+00:00] dias4761 (id=1521649923869642752)
+    These are issues involving credentials and security.
+
+[2026-06-30T22:59:07.247000+00:00] talmax1124 (id=1521651326898147408)
+    Wait this means my update might make it? https://github.com/NousResearch/hermes-agent/pull/55931
+    [embed] fix(tui): coalesce drag-resize reflow + harden resize-burst heal co... https://github.com/NousResearch/hermes-agent/pull/55931
+
+[2026-06-30T22:59:14.955000+00:00] talmax1124 (id=1521651359227842572)
+    [sticker] AndrasCoffee
+
+[2026-06-30T22:59:56.905000+00:00] talmax1124 (id=1521651535178760203)
+    AYYY. Honestly my first PR in a big project like this. But i just hated it having remove the things before when resizing.
+
+[2026-06-30T23:00:17.485000+00:00] talmax1124 (id=1521651621497536703)
+    Appreciate you for checking it out <@387972437901312000> !
+
+[2026-06-30T23:02:19.006000+00:00] talmax1124 (id=1521652131193421884)
+    DO PR peeps get a role after certain amount of useful and commited PRS?
+
+[2026-06-30T23:02:40.119000+00:00] talmax1124 (id=1521652219747893289)
+    Like the Dev Role or something like that
+
+[2026-06-30T23:12:39.607000+00:00] nanxingncb612d (id=1521654734182682817)
+    https://github.com/NousResearch/hermes-agent/pull/55935 This redacts secrets from web_extract provider content before the new truncate-and-store path returns it to the model or writes the full page copy to cache/web.
+    [embed] fix(web): redact extracted content before truncate-store by necoweb... https://github.com/NousResearch/hermes-agent/pull/55935
+
+[2026-06-30T23:25:19.651000+00:00] thyfriendlyfox (id=1521657922038272203)
+    congrats!
+    [reply to talmax1124 msg=1521651326898147408]
+
+[2026-06-30T23:27:31.699000+00:00] nanxingncb612d (id=1521658475887722607)
+    https://github.com/NousResearch/hermes-agent/pull/55938 This makes web_extract enforce the website blocklist policy centrally for every extract provider, not only Firecrawl.
+    [embed] fix(web): enforce website policy for all extract providers by necow... https://github.com/NousResearch/hermes-agent/pull/55938
+
+[2026-06-30T23:27:53.342000+00:00] nanxingncb612d (id=1521658566665044088)
+    https://github.com/NousResearch/hermes-agent/pull/55942 This closes redirect-based SSRF gaps in Feishu and WeCom remote media/document downloads.
+    [embed] fix(platforms): guard media redirects against SSRF by necoweb3 · P... https://github.com/NousResearch/hermes-agent/pull/55942
+
+[2026-06-30T23:45:34.347000+00:00] nanxingncb612d (id=1521663016842563727)
+    https://github.com/NousResearch/hermes-agent/pull/55949 This blocks state-changing browser interactions when a cloud browser page has landed on a private/internal URL after JavaScript-driven navigation.
+    [embed] fix(browser): block private-page interactions after eval navigation... https://github.com/NousResearch/hermes-agent/pull/55949
+
+[2026-06-30T23:52:50.796000+00:00] talmax1124 (id=1521664847442350132)
+    Mom, I made it!
+    [attachment] IMG_4780.png https://cdn.discordapp.com/attachments/1491258766648283238/1521664847295676639/IMG_4780.png?ex=6a45a852&is=6a4456d2&hm=bddefdce3606e9e51753f44b9d306b2a53017670b3f7ffa28bf8e9ff6fbb2d76&
+
+[2026-06-30T23:53:06.657000+00:00] talmax1124 (id=1521664913968201781)
+    <a:partyblob:1151261550032724052>
+
+[2026-06-30T23:55:04.405000+00:00] teknium (id=1521665407839375411)
+    its in, welcome to dev crew
+    [reply to talmax1124 msg=1521651326898147408]
+
+[2026-06-30T23:55:50.015000+00:00] talmax1124 (id=1521665599141314722)
+    AYYY. Appreciate it! Using hermes a lot. And love it. I mean im in beta test group too. SO HAPPY to be part of this great project!
+    [reply to teknium msg=1521665407839375411]
+
+[2026-07-01T00:06:29.687000+00:00] nanxingncb612d (id=1521668282120146994)
+    hhmm… could I also join the dev crew? 👉 👈 we had already joined forces before with these: https://github.com/NousResearch/hermes-agent/pull/45898 https://github.com/NousResearch/hermes-agent/pull/45950
+    [reply to teknium msg=1521665407839375411]
+
+[2026-07-01T00:07:37.525000+00:00] teknium (id=1521668566653337611)
+    welcome!
+    [reply to nanxingncb612d msg=1521668282120146994]
+
+[2026-07-01T00:09:12.243000+00:00] nanxingncb612d (id=1521668963929686127)
+    oh!! thank you so much teknium!!!!!!!!!!!
+    [reply to teknium msg=1521668566653337611]
+
+[2026-07-01T00:18:39.131000+00:00] psigho (id=1521671341630165043)
+    I would like to develop towards Hermes as well.
+
+[2026-07-01T00:18:48.989000+00:00] psigho (id=1521671382977478867)
+    <a:miku_bow:958473282825367552>
+
+[2026-07-01T00:21:50.112000+00:00] frowtek (id=1521672142662533211)
+    Hey! Dropping 2 small, focused PRs that are ready for review whenever someone has a moment 🙏
+    
+    https://github.com/NousResearch/hermes-agent/pull/55941
+    
+    https://github.com/NousResearch/hermes-agent/pull/55972
+    [embed] fix(aux): handle dict/str message shape in extract_content_or_reaso... https://github.com/NousResearch/hermes-agent/pull/55941
+    [embed] fix(aux): resolve provider keys via .env-preferring lookup so rotat... https://github.com/NousResearch/hermes-agent/pull/55972
+
+[2026-07-01T01:06:47.312000+00:00] liinx (id=1521683455539413144)
+    fix(security): kanban worker subprocesses silently auto-approve dangerous commands, same bug class as the P0 #30882/#34497 fix (execution context the approval system doesn't recognize → trusted-by-omission), just in the kanban dispatch path this time. Verified live against the real spawn code before patching; mirrors the existing cron_mode pattern exactly.
+    https://github.com/NousResearch/hermes-agent/pull/55946
+    
+    <@387972437901312000>
+    [embed] fix(security): close kanban worker auto-approve gap for dangerous c... https://github.com/NousResearch/hermes-agent/pull/55946
+
+[2026-07-01T01:53:05.201000+00:00] nathanrene_ (id=1521695106850230282)
+    desktop app takes way too long to load up. i can help with that
+
+[2026-07-01T01:53:07.142000+00:00] gwap_ (id=1521695114991370302)
+    Hey guys, can I take on this PR? https://github.com/NousResearch/hermes-agent/issues/55540
+    [embed] [Feature]: Longer/configurable backoff for HTTP 503/529 provider ov... https://github.com/NousResearch/hermes-agent/issues/55540
+
+[2026-07-01T02:09:46.306000+00:00] dias4761 (id=1521699305788801084)
+    <@387972437901312000>  fix(logging): eliminate Windows gateway freeze from blocking log lock retries #56013  : on Windows, the gateway would freeze (sometimes for minutes) because concurrent_log_handler's lock retries block internally on the Windows CRT. https://github.com/NousResearch/hermes-agent/pull/56013
+    [embed] fix(logging): eliminate Windows gateway freeze from blocking log lo... https://github.com/NousResearch/hermes-agent/pull/56013
+
+[2026-07-01T02:10:03.958000+00:00] dias4761 (id=1521699379826917509)
+    Fixes #55953
+
+[2026-07-01T02:16:15.097000+00:00] frowtek (id=1521700936496582868)
+    https://github.com/NousResearch/hermes-agent/pull/56005 🤘
+    [embed] fix(cron): honor workdir for no_agent job scripts by Frowtek · Pul... https://github.com/NousResearch/hermes-agent/pull/56005
+    [reply to frowtek msg=1521672142662533211]
+
+[2026-07-01T02:23:56.794000+00:00] chaosxue (id=1521702872994025622)
+    Hi <@387972437901312000> — sorry to ping you directly 
+    
+    I opened #51226 (implements RFC #36765): two optional, no-op-default, fail-open ContextEngine hooks — select_context() (pre-request selection) + on_turn_complete() (post-turn observation) — that remove the should_compress() == True backdoor external engines abuse today. It consolidates a whole cluster: @johnnykor82's #41918 is co-authored, and #50053 conceded the overlapping half. It's rebased onto latest main, MERGEABLE, additive-only, with tests.
+    
+    Two low-cost asks whenever someone has a moment: (1) a maintainer's call on the canonical hook surface, and (2) approving the queued workflow so CI can report (it's gated as a first-time contributor). Totally happy to rename the verbs or adjust anything to help it land. Thanks for the great project!
+    
+    https://github.com/NousResearch/hermes-agent/pull/51226
+    [embed] feat(context-engine): add select_context() + on_turn_complete() hoo... https://github.com/NousResearch/hermes-agent/pull/51226
+
+[2026-07-01T02:25:09.783000+00:00] stoltemberg (id=1521703179132338206)
+    <@387972437901312000>  Fixes unintended coercion of zero-padded numeric strings in integer|string unions, preserving data integrity for identifiers such as ZIP codes, account numbers, and country codes
+    https://github.com/NousResearch/hermes-agent/pull/55401
+    [embed] fix: preserve leading zeros in union integer|string tool arg coerci... https://github.com/NousResearch/hermes-agent/pull/55401
+
+[2026-07-01T02:26:25.593000+00:00] stoltemberg (id=1521703497102397540)
+    and this
+
+[2026-07-01T02:26:26.725000+00:00] stoltemberg (id=1521703501850480710)
+    https://github.com/NousResearch/hermes-agent/pull/55345
+    [embed] fix: add WebSocket message size limit to prevent OOM crash (#53142)... https://github.com/NousResearch/hermes-agent/pull/55345
+
+[2026-07-01T02:34:39.768000+00:00] maxpetrusenko (id=1521705569822445659)
+    Hey all — I’m Max. I’ve been working on Hermes Agent runtime/subagent reliability and wanted to share current contribution proof.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/54667
+    
+    What it fixes:
+    - forwards ACP cwd through delegate_task -> live dispatcher -> child AIAgent -> Copilot ACP client
+    - keeps SSH-backed ACP session cwd literal, including paths like /tmp that also exist locally
+    - disables local fs callbacks for remote/non-local ACP cwd so remote sessions don’t accidentally read/write local disk
+    - adds regressions for local vs SSH-backed cwd, routed provider construction, and dispatcher forwarding
+    
+    Verified:
+    - 584 touched-suite tests passed
+    - ruff check .
+    - Windows footgun check
+    - git diff --check
+    - codex review --base origin/main clean
+    
+    I’d like to keep helping on Hermes Agent, especially subagent workflows, ACP/runtime reliability, and contributor-facing tests. Is there a next issue or subsystem you’d prefer I focus on?
+    [embed] fix(delegate): forward ACP cwd to child agents by maxpetrusenko · ... https://github.com/NousResearch/hermes-agent/pull/54667
+
+[2026-07-01T03:06:16.233000+00:00] chaosxue (id=1521713524173443163)
+    Also worth flagging — this really isn't just my itch half a dozen different contributors have independently hit the same wall, with ~5 separate PRs all circling the same gap, plus the RFC and a couple of related issues that've built up a decent back-and-forth. Feels like there's genuine demand to just bless one canonical surface here so everyone can converge. Happy to help however's useful 🙌
+    [reply to chaosxue msg=1521702872994025622]
+

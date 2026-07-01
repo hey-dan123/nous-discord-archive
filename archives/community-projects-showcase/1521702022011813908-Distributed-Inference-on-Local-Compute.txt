@@ -1,0 +1,28 @@
+# Thread 'Distributed Inference on Local Compute' in forum #community-projects-showcase
+# thread_id=1521702022011813908 forum_id=1316137596535177246
+# Started 2026-07-01T03:37:09.690299+00:00
+
+[2026-07-01T02:20:33.904000+00:00] bigsmollbrain (id=1521702022011813908)
+    Hermes now runs on Koretex 🐳
+    
+    Koretex is a distributed inference network, a pool of independent consumer machines serving open models instead of a centralized datacenter. 
+    
+    We just wired it into Hermes, so you can point your agent at the network and run on it directly.
+    
+    And it's live, not a mockup: here's Hermes serving NVIDIA's Nemotron 3 Nano 30B through Koretex right now, a real agent running on distributed community compute.
+    
+    Your Hermes agent draws on a network of open models, not a single machine or a metered cloud API.
+    
+    The people supplying the compute earn for it, instead of the value flowing to a datacenter.
+    
+    Private, open, sovereign, the same ethos this community already runs on.
+    
+    We're in early alpha and Hermes users are exactly who we want testing it. Everyone who joins gets 1,000,000 free credits to run real workloads on the network, plus a direct line to me and real say in where it goes. No referral games, just early access and honest feedback.
+    
+    Want in? Drop a comment or DM me. Open source must win.
+    
+    https://x.com/koretexai/status/2072140391852523888?s=20
+    [attachment] Screenshot_2026-07-01_121933.png https://cdn.discordapp.com/attachments/1521702022011813908/1521702022292705360/Screenshot_2026-07-01_121933.png?ex=6a45caf1&is=6a447971&hm=6f68be27f6dd445af0d7e63345b4bd1df8e75e1d3017f73d790353f8c2fe0e5a&
+    [attachment] Screenshot_2026-07-01_114748.png https://cdn.discordapp.com/attachments/1521702022011813908/1521702022733365361/Screenshot_2026-07-01_114748.png?ex=6a45caf2&is=6a447972&hm=56525dec6312d88ad18d104ec973250ee27c5030709306529ff92b2ee9170c1a&
+    [embed]  https://twitter.com/koretexai/status/2072140391852523888?s=20
+
