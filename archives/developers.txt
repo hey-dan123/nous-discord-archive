@@ -41558,3 +41558,86 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Also worth flagging — this really isn't just my itch half a dozen different contributors have independently hit the same wall, with ~5 separate PRs all circling the same gap, plus the RFC and a couple of related issues that've built up a decent back-and-forth. Feels like there's genuine demand to just bless one canonical surface here so everyone can converge. Happy to help however's useful 🙌
     [reply to chaosxue msg=1521702872994025622]
 
+[2026-07-01T03:37:21.881000+00:00] gwap_ (id=1521721349268050022)
+    Is there no standard to picking up an issue? I was working on one that I asked for and a PR was opened lmao
+
+[2026-07-01T03:53:38.701000+00:00] dias4761 (id=1521725446348210307)
+    <@387972437901312000>   https://github.com/NousResearch/hermes-agent/pull/56036  fix(telegram): close reconnect races that leave adapter half-destroyed  :fter a network blip, the Telegram adapter self-restarts, logs ✓ telegram connected, and then the gateway silently stops processing any further messages — while gateway_state.json keeps reporting connected/running and the process itself stays alive (or, on Windows, dies with a non-standard exit code). This PR fixes the root cause: a pair of concurrency bugs that let more than one recovery attempt run against the same Telegram adapter instance at once.
+    [embed] fix(telegram): close reconnect races that leave adapter half-destro... https://github.com/NousResearch/hermes-agent/pull/56036
+
+[2026-07-01T03:59:21.070000+00:00] dias4761 (id=1521726882347876478)
+    p1 issues
+
+[2026-07-01T04:19:18.411000+00:00] trivunous (id=1521731904360157194)
+    https://github.com/NousResearch/hermes-agent/pull/56028
+    [embed] fix(gateway): guard NoneType in Telegram reconnect after network er... https://github.com/NousResearch/hermes-agent/pull/56028
+
+[2026-07-01T04:19:19.858000+00:00] trivunous (id=1521731910429311006)
+    fix(gateway): guard NoneType in Telegram reconnect after network error
+
+[2026-07-01T04:33:46.645000+00:00] gwap_ (id=1521735545997365258)
+    <@387972437901312000>
+    [reply to gwap_ msg=1521721349268050022]
+
+[2026-07-01T04:34:24.242000+00:00] gwap_ (id=1521735703690612881)
+    Just curious because it’s happened twice already lol unless I just need to open a PR
+
+[2026-07-01T04:37:09.504000+00:00] teknium (id=1521736396849811526)
+    ?
+
+[2026-07-01T04:37:18.375000+00:00] teknium (id=1521736434057216070)
+    We don’t control who works on an issue no
+
+[2026-07-01T04:50:01.425000+00:00] kyssta69 (id=1521739634520883294)
+    https://github.com/NousResearch/hermes-agent/pull/56064
+    
+    **Problem**: Fixed #56056 by appending a fallback assistant response when max-iteration summary generation fails, preserving user/assistant role alternation on resume.
+    [embed] fix(agent): preserve alternation on max-iteration summary failure b... https://github.com/NousResearch/hermes-agent/pull/56064
+
+[2026-07-01T04:52:01.619000+00:00] kyssta69 (id=1521740138651193476)
+    https://github.com/NousResearch/hermes-agent/pull/56068
+    
+    **Problem**: Fixed #56059 by applying the shared tool output byte cap to MCP tool results before they enter the agent context.
+    [embed] fix(mcp): cap tool result size by kyssta-exe · Pull Request #56068... https://github.com/NousResearch/hermes-agent/pull/56068
+
+[2026-07-01T04:55:30.440000+00:00] kyssta69 (id=1521741014510080081)
+    https://github.com/NousResearch/hermes-agent/pull/56069
+    
+    **Problem**: Fixed #56047 by resolving execute_code project-mode subprocess cwd from the session.cwd.set task override before global fallbacks.
+    [embed] fix(code-exec): honor session cwd override by kyssta-exe · Pull Re... https://github.com/NousResearch/hermes-agent/pull/56069
+
+[2026-07-01T07:35:24.943000+00:00] kurly4ok (id=1521781256772386886)
+    <@387972437901312000> thanks for mentioning and giving the credits to my PRs, glad I could help
+    https://github.com/NousResearch/hermes-agent/issues/32846
+    [embed] Bug: Race condition in OpenAI client replacement can close active c... https://github.com/NousResearch/hermes-agent/issues/32846
+
+[2026-07-01T07:37:33.767000+00:00] teknium (id=1521781797099409500)
+    Looking forward to the future ones!
+    [reply to kurly4ok msg=1521781256772386886]
+
+[2026-07-01T07:45:39.927000+00:00] loongfay (id=1521783836202107020)
+    HI, <@387972437901312000>, I have a PR, dou you have some time to take a look? thanks: https://github.com/NousResearch/hermes-agent/pull/47303
+    [embed] feat(Yuanbao)  optimizes media resource processing speed: parallel ... https://github.com/NousResearch/hermes-agent/pull/47303
+
+[2026-07-01T08:35:50.092000+00:00] inuyasha44_88990 (id=1521796461749338373)
+    Hey sr. P1 avaliable
+    [reply to teknium msg=1521781797099409500]
+
+[2026-07-01T08:36:11.476000+00:00] inuyasha44_88990 (id=1521796551440339105)
+    https://github.com/NousResearch/hermes-agent/pull/56036
+    [embed] fix(telegram): close reconnect races that leave adapter half-destro... https://github.com/NousResearch/hermes-agent/pull/56036
+
+[2026-07-01T08:36:18.679000+00:00] inuyasha44_88990 (id=1521796581651648612)
+    Check when u have time pls
+
+[2026-07-01T09:37:08.579000+00:00] kyssta69 (id=1521811890442076271)
+    https://github.com/NousResearch/hermes-agent/pull/56238
+    
+    **Problem**: Fixes Codex App Server config confusion by honoring model.api_mode: codex_app_server as a compatibility alias for model.openai_runtime, with targeted runtime-provider coverage.
+    
+    https://github.com/NousResearch/hermes-agent/pull/56156
+    
+    **Problem**: Kilo Code's fallback model picker was missing OpenRouter alpha router entries such as owl-alpha. Added the alpha router IDs to the Kilo catalog and covered the fallback picker with a regression test.
+    [embed] fix(config): honor codex app server api_mode alias by kyssta-exe ·... https://github.com/NousResearch/hermes-agent/pull/56238
+    [embed] fix(cli): restore Kilo alpha router models by kyssta-exe · Pull Re... https://github.com/NousResearch/hermes-agent/pull/56156
+

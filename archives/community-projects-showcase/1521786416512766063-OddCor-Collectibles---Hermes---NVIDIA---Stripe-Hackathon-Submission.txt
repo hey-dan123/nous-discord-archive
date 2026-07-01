@@ -1,0 +1,20 @@
+# Thread 'OddCor Collectibles — Hermes × NVIDIA × Stripe Hackathon Submission' in forum #community-projects-showcase
+# thread_id=1521786416512766063 forum_id=1316137596535177246
+# Started 2026-07-01T09:41:41.976259+00:00
+
+[2026-07-01T07:55:55.121000+00:00] .therabbit (id=1521786416512766063)
+    OddCor Collectibles — Hermes × NVIDIA × Stripe Hackathon Submission
+        
+        OddCor already existed as my collector-run business. The hackathon build was the operating framework around it: Hermes Agent orchestration, NVIDIA Nemotron 3 Ultra for pricing reasoning, NemoClaw/OpenShell for sandboxed worker lanes, and live Stripe Checkout with human approval gates.
+        
+       Agents propose, operator controls what goes live. The storefront (https://oddcor-collectibles.vercel.app) shows only priced, approved inventory. The operator console is Discord-auth protected. Stripe handles payments; payment/shipping details stay in Stripe. NemoClaw/OpenShell keeps worker lanes sandboxed and away from Stripe secrets.
+        
+        Real small-business use case: idle graded/raw card inventory → agent prices with market comps → operator approves/challenges/holds → live Stripe checkout → webhook confirms → fulfillment queue.
+        
+        X post: https://x.com/rabbitknows/status/2072226218179748131
+    [embed] OddCor Collectibles - Agent-Managed Inventory https://oddcor-collectibles.vercel.app/
+    [embed]  https://twitter.com/rabbitknows/status/2072226218179748131
+
+[2026-07-01T08:35:54.687000+00:00] lathamba. (id=1521796481021906997)
+    wrong place to submit it
+

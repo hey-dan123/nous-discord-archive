@@ -5166,3 +5166,29 @@
 [2026-07-01T02:06:44.365000+00:00] alto69 (id=1521698542672941168)
     For now I switched to Piper TTS and is working. packaged TTS were broken for me
 
+[2026-07-01T06:11:05.995000+00:00] avidfuturist (id=1521760038006296646)
+    Glad you got it working
+    [reply to alto69 msg=1521698542672941168]
+
+[2026-07-01T06:18:22.249000+00:00] alto69 (id=1521761867788320828)
+    actually it having issue speaking and rearming listening again. is it just me
+
+[2026-07-01T06:21:08.264000+00:00] avidfuturist (id=1521762564105699429)
+    If you can explain the issues and specific ones you are trying and what you are seeing in more detail I can try to investigate them to see if we can fix
+    [reply to alto69 msg=1521761867788320828]
+
+[2026-07-01T06:52:31.641000+00:00] alto69 (id=1521770463561257041)
+    the hermes native discord version is full duplex (which may simplify and complicate?). its been getting stuck on thinking for browser speech synthesis, piper tts and edge tts.
+
+[2026-07-01T07:08:44.227000+00:00] alto69 (id=1521774542882607207)
+    [attachment] Screenshot_2026-07-01_at_5.02.48_pm.png https://cdn.discordapp.com/attachments/1493017427724992612/1521774542769619044/Screenshot_2026-07-01_at_5.02.48_pm.png?ex=6a460e7c&is=6a44bcfc&hm=537cc394d21d210ac972a694a3ebdb4c004cf457636f90f1b7b51dbad830fb8f&
+
+[2026-07-01T07:16:32.201000+00:00] lathamba. (id=1521776505707827300)
+    yo can you add a sexy as live command center/mission control OS style dashboard to it with more of a premium feel with cool features like 2d pixelated workspace
+
+[2026-07-01T07:36:32.068000+00:00] alto69 (id=1521781538314915910)
+    try this? observeco/observeco
+
+[2026-07-01T08:23:04.647000+00:00] lathamba. (id=1521793251240185946)
+    …?
+

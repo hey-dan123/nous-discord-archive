@@ -1167,3 +1167,6 @@
     
     Update with `hr update` (or pull the latest Docker image) and open the dashboard 🎉
 
+[2026-07-01T09:26:46.747000+00:00] heeervas (id=1521809282289635329)
+    Can you send a screenshot of the dashboard? can't update now
+

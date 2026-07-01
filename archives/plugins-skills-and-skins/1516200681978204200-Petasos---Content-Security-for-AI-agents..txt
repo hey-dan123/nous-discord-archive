@@ -17,3 +17,6 @@
     [attachment] city-pop-petatsos.png https://cdn.discordapp.com/attachments/1516200681978204200/1516200682938564688/city-pop-petatsos.png?ex=6a31c76c&is=6a3075ec&hm=fa4ac9ca5c734bb709d66990dcf9ee878a6f659a03d56b344700ac2700c81318&
     [attachment] petasos-demo-web.mp4 https://cdn.discordapp.com/attachments/1516200681978204200/1516200683567579136/petasos-demo-web.mp4?ex=6a31c76c&is=6a3075ec&hm=ea952a72d5f638304ca40fe9efcddeff90351d91602252bfdcc547dee7d9fd1e&
 
+[2026-07-01T03:55:50.573000+00:00] zionitechernobyl (id=1521725999459602472)
+    Just dropped Profile/role awareness today, along with a ton of other features. If security is still a concern for you or your team, take a look.
+
