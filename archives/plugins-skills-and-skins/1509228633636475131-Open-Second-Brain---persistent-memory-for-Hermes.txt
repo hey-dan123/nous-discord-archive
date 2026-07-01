@@ -265,3 +265,10 @@
     I recive this many times, but after a couple second its works:
     [attachment] image.png https://cdn.discordapp.com/attachments/1509228633636475131/1521539098030903419/image.png?ex=6a453335&is=6a43e1b5&hm=38685ddddc58e94e6d04a9bc0c240ed6c62e19dcc5389b78d2a7c2d3a677866b&
 
+[2026-07-01T16:56:35.540000+00:00] autoferrit (id=1521922481491808519)
+    ive been using mnemosyne and isworking great. You went from that to OSB? Mnemosyne seemed more efficient for memory/old session session recall but im still new.
+    [reply to no_orbert msg=1520462847564447764]
+
+[2026-07-01T16:57:18.691000+00:00] autoferrit (id=1521922662480216084)
+    maybe i didnt try OSB long enough?
+

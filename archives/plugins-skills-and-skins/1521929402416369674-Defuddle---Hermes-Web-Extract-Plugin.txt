@@ -1,0 +1,30 @@
+# Thread 'Defuddle — Hermes Web Extract Plugin' in forum #plugins-skills-and-skins
+# thread_id=1521929402416369674 forum_id=1485392832154832906
+# Started 2026-07-01T19:56:06.830461+00:00
+
+[2026-07-01T17:24:05.617000+00:00] the.chaos.goblin (id=1521929402416369674)
+    Defuddle extracts the main content from web pages. It cleans up web pages by removing clutter like comments, sidebars, headers, footers, and other non-essential elements, leaving only the primary content.
+    
+    I like efficiency and not gobbling up text I don't need sounded like a good idea to me, so I hooked it into Hermes as a (hopefully) install-it-and-forget-it plugin, since I'm also wanting to familiarize myself with how to customize and extend my beloved agent. 🫶🏻
+    
+    https://github.com/annalinneajohansson82/hermes-defuddle
+    
+    It shells out to the locally-installed defuddle CLI to fetch article content from URLs. Clean markdown, rich metadata, no API key.
+    
+    Features:
+    
+    Clean markdown — strips nav, sidebars, ads, and other boilerplate
+    
+    Rich metadata — title, description, domain, language, word count, author, publish date
+    
+    No truncation — returns full page content. 
+    Note: the Hermes dispatcher's LLM-processing stage may still summarize or compress long content when an auxiliary model is available. 
+    
+    Parallel extraction — multiple URLs fetched concurrently via asyncio.
+    
+    (I have pretty severe RSD so please be kind! 🙏🏻 It's scary as hell to share stuff 😩)
+    
+    Defuddle: https://github.com/kepano/defuddle
+    [embed] GitHub - annalinneajohansson82/hermes-defuddle: Defuddle content ex... https://github.com/annalinneajohansson82/hermes-defuddle
+    [embed] GitHub - kepano/defuddle: Get the main content of any page as Markd... https://github.com/kepano/defuddle
+

@@ -41875,3 +41875,191 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Don't think too much of it, it's just one of thousands contributors like us. However now, that all P0 and P1 issues and PRs were closed (for like a second), you're only competing with the other 6685 open P2 PRs.
     [reply to yasya_eth msg=1521874198514110474]
 
+[2026-07-01T15:30:51.284000+00:00] ooiuuii (id=1521900904918552617)
+    Here are my current open PRs in Hermes Agent:
+    https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Aopen+author%3Aooiuuii
+    [embed] Pull requests · NousResearch/hermes-agent https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Aopen+author%3Aooiuuii
+
+[2026-07-01T15:31:55.286000+00:00] aialliai (id=1521901173362393245)
+    This is an automated code varification approval from hermes. Not approval by maintainer. Just have to be patient! 🙂
+    [reply to yasya_eth msg=1521874198514110474]
+
+[2026-07-01T15:34:36.997000+00:00] aialliai (id=1521901851627360466)
+    Things will move faster now, wait for approval going from 14.000+ to only about 6700  PRs will speed up merging 🙂
+    [reply to egilewski msg=1521882870912647168]
+
+[2026-07-01T15:40:42.360000+00:00] aialliai (id=1521903384070848635)
+    Oh what a great feeling to only have 32 open PRs after this mega merge they did! <a:hype:1151299876395696189>
+
+[2026-07-01T16:14:49.408000+00:00] xdarkchain (id=1521911970012463214)
+    <@387972437901312000> Check this PR please because  without, the rich text is pretty much nonexistent.
+    It is 100% safe as it won't change anything if the rich text is disabled.
+    
+    https://github.com/NousResearch/hermes-agent/pull/55068
+    [embed] feat(telegram): implement rich message support and enhance platform... https://github.com/NousResearch/hermes-agent/pull/55068
+
+[2026-07-01T16:19:03.077000+00:00] jez_wikitribune (id=1521913033977364561)
+    thanks for the merge earlier today y'all 💚💚💚
+
+[2026-07-01T16:19:42.314000+00:00] jez_wikitribune (id=1521913198549139628)
+    if you are core staff, and there is ever any doubt in your mind, rest assured that you are greatly appreciated!!! Keep being awesome!!!!!
+
+[2026-07-01T16:30:33.599000+00:00] egilewski (id=1521915930236424262)
+    Oh no, no, it's 6700 P2 PRs. Overall it's 16417.
+    [reply to aialliai msg=1521901851627360466]
+
+[2026-07-01T16:33:49.319000+00:00] aialliai (id=1521916751145861211)
+    Yeah, I don't really count the P3 anyways. Those are things that mostly get fixed along with P0, P1 and P2. But still those can sometimes accelerate the process!
+    [reply to egilewski msg=1521915930236424262]
+
+[2026-07-01T16:42:01.682000+00:00] egilewski (id=1521918816265703647)
+    If there are no P0 and P1, and P3 are not taken into account, then everything has the same priority. Except P4, those should instead be aggravated enough to qualify for at least P3.
+    [reply to aialliai msg=1521916751145861211]
+
+[2026-07-01T16:44:00.250000+00:00] aialliai (id=1521919313576202475)
+    Well now they are more likely to merge faster yes, but a WHOLE bunch of those things have already been fixed and not scanned by hermes again and closed! 🙂
+    [reply to egilewski msg=1521918816265703647]
+
+[2026-07-01T16:45:12.752000+00:00] aialliai (id=1521919617671495681)
+    I mean, many of the p3 might for example be minor telegram bugs that went away with th RTF telegram update fx.
+
+[2026-07-01T16:50:19.312000+00:00] egilewski (id=1521920903477465299)
+    Oh, yeah, that. I don't know why many people were interested enough to open an issue or PR, but not enough to check up on them. Especially that an agent can do that on cron, and notify the human that something he's interested in is fixed.
+    [reply to aialliai msg=1521919313576202475]
+
+[2026-07-01T16:51:13.956000+00:00] egilewski (id=1521921132670877787)
+    I saw plenty of P1 of that kind.
+    [reply to aialliai msg=1521919617671495681]
+
+[2026-07-01T16:59:15.724000+00:00] aialliai (id=1521923153352196276)
+    Yeah a lot of them around. I have mine routinely checked for this reason. But the official ones can’t cover all of that stuff when doing major updates also! 😁
+    [reply to egilewski msg=1521920903477465299]
+
+[2026-07-01T17:04:54.454000+00:00] srojk34 (id=1521924574088794323)
+    PR #56508 — Cross-profile hook execution
+    gateway/hooks.py's HOOKS_DIR was frozen at import time — under the multiplexed gateway, a later-starting profile would silently discover and execute the FIRST profile's hook handlers (arbitrary Python) against its own live event context instead of its own hooks directory.
+    https://github.com/NousResearch/hermes-agent/pull/56508
+    
+    PR #56517 — Cron job creation crash on malformed tilde path
+    Path.expanduser() raises RuntimeError (not OSError) for a ~user-shaped path with no matching system user. The cron lifecycle guard only caught OSError, so an LLM-authored script path starting with ~someuser/... crashed job creation instead of degrading gracefully — same bug class already fixed elsewhere in the codebase.
+    https://github.com/NousResearch/hermes-agent/pull/56517
+    
+    PR #56523 — Bundled skills syncing into the wrong profile
+    tools/skills_sync.py resolved its paths once at import time too — since the gateway calls sync_skills() in-process on every profile's startup, a later-starting profile would silently sync bundled skills into the first profile's directory and never get its own. Fixed ~20 call sites using the same dynamic-resolution pattern already established in a sibling module.
+    https://github.com/NousResearch/hermes-agent/pull/56523
+    
+    PR #56526 — browser_back skips the private-network guard
+    Every other browser tool (snapshot, click, type, console, eval) re-checks the page URL against the private/internal/cloud-metadata floor after it could have changed. browser_back was the one navigation-triggering entry point that never did — on a cloud/CDP backend, browser history containing a private address would get navigated to and returned unguarded.
+    https://github.com/NousResearch/hermes-agent/pull/56526
+    [embed] security(gateway): re-resolve hooks directory per call to fix profi... https://github.com/NousResearch/hermes-agent/pull/56508
+    [embed] fix(cron): catch RuntimeError from Path.expanduser() in lifecycle g... https://github.com/NousResearch/hermes-agent/pull/56517
+    [embed] security(gateway): re-resolve skills_sync path constants per call b... https://github.com/NousResearch/hermes-agent/pull/56523
+    [embed] security(browser): re-check private-network guard after browser_bac... https://github.com/NousResearch/hermes-agent/pull/56526
+
+[2026-07-01T17:07:36.439000+00:00] wnuuee (id=1521925253503254719)
+    Fixed native browser tooltips (instead of the app's styled tooltip) on the Refresh/Collapse All buttons in the right sidebar's file tree header - a regression from #49037. Also found and fixed a separate, previously-unfixed instance of the same issue: each file/folder row in `ProjectTree` (`tree.tsx`) showed a plain native tooltip instead of a styled one.
+    
+    Fixed: https://github.com/NousResearch/hermes-agent/pull/56520 <@387972437901312000> <@119192111202566149>
+    [attachment] right_sidebar_2.gif https://cdn.discordapp.com/attachments/1491258766648283238/1521925253763170494/right_sidebar_2.gif?ex=6a469ad8&is=6a454958&hm=2c0a1d6afbcb89c2ad2f42f6cb9dedb133f5ebd698e3fd497a10d2559153487c&
+    [attachment] right_sidebar.gif https://cdn.discordapp.com/attachments/1491258766648283238/1521925254161891480/right_sidebar.gif?ex=6a469ad8&is=6a454958&hm=a1ea7c65cc0c8d3f9e282ca3113a1a944c1621f59fc4ddfe69d0e8ff4caf9d7f&
+    [embed] fix(desktop): restore styled tooltips on right sidebar file tree bu... https://github.com/NousResearch/hermes-agent/pull/56520
+
+[2026-07-01T18:01:29.744000+00:00] liinx (id=1521938814967222374)
+    fix(agent): silent pseudo-tool-call stripping + stale /tools output — root cause of #56461 ("memory never persists with Ollama"). A model falling back to text-shaped tool calls (some local models do this on complex schemas) had its call silently deleted with zero trace, so false-success narration survived untouched; /tools also reported static config instead of the model's actual live tool list. Both now fixed, stripping behavior unchanged, just made diagnosable.
+    https://github.com/NousResearch/hermes-agent/pull/56555
+    <@387972437901312000>
+    [embed] fix(agent): log silently-stripped pseudo tool calls, fix stale /too... https://github.com/NousResearch/hermes-agent/pull/56555
+
+[2026-07-01T18:14:10.496000+00:00] thyfriendlyfox (id=1521942005792641167)
+    Who wants to make a PR for hermes to autoreview its PRs
+
+[2026-07-01T18:14:17.480000+00:00] thyfriendlyfox (id=1521942035085393930)
+    can
+    
+    can I work on that
+
+[2026-07-01T18:23:56.209000+00:00] srojk34 (id=1521944462450757756)
+    https://discord.com/channels/1053877538025386074/1490858802726043759/1521862133732872202 leaving P0/P1 security PRs open for a long time is a risk in itself since the diff is public, 
+    someone could spot it and exploit it on live main before it merges. 
+    So clearing out this much security work this fast and this thoroughly was really the 
+    right call  you didn't just get the job done, you closed the disclosure window too. 
+    Congrats fam <@387972437901312000> <@690519146701783042>
+
+[2026-07-01T18:49:04.571000+00:00] aialliai (id=1521950788979523766)
+    uhm, i have that... and the maintainers also and the official agents already doing that?
+    [reply to thyfriendlyfox msg=1521942005792641167]
+
+[2026-07-01T18:49:31.384000+00:00] aialliai (id=1521950901441662996)
+    and most the devs probably
+
+[2026-07-01T18:50:58.069000+00:00] aialliai (id=1521951265024905268)
+    Not to kill your enthusiasm, but does every user need that integrated?
+
+[2026-07-01T18:51:11.607000+00:00] aialliai (id=1521951321807257783)
+    <@161247218483986432>
+
+[2026-07-01T18:51:48.305000+00:00] thyfriendlyfox (id=1521951475729699039)
+    No not every user, a PR for the CI pipeline on hermes
+    [reply to aialliai msg=1521951265024905268]
+
+[2026-07-01T18:52:21.416000+00:00] kxee (id=1521951614607294524)
+    thanks for your contributions
+    [reply to srojk34 msg=1521944462450757756]
+
+[2026-07-01T18:52:21.519000+00:00] thyfriendlyfox (id=1521951615039574279)
+    I dont know if they have it or not, plus it was a halfhearted joke 🙂
+
+[2026-07-01T18:52:33.559000+00:00] thyfriendlyfox (id=1521951665538994237)
+    No, thank you for tackling them!!!
+    [reply to kxee msg=1521951614607294524]
+
+[2026-07-01T18:53:47.015000+00:00] egilewski (id=1521951973635653723)
+    Tokens would cost A LOT. But we all can contribute by reviewing with our subscriptions.
+    [reply to thyfriendlyfox msg=1521951475729699039]
+
+[2026-07-01T18:55:03.605000+00:00] aialliai (id=1521952294877270108)
+    Well alright then, but yeah automation is kind of a goal for hermes, so they have them 😂
+    [reply to thyfriendlyfox msg=1521951615039574279]
+
+[2026-07-01T18:55:40.763000+00:00] aialliai (id=1521952450729349292)
+    Thanks for tackling them, feels way better seeing this number go down!!
+    [reply to kxee msg=1521951614607294524]
+
+[2026-07-01T18:56:00.144000+00:00] srojk34 (id=1521952532019019786)
+    It's a great honor for me to be part of Hermes, which I've been actively using and admiring for a long time.
+    [reply to kxee msg=1521951614607294524]
+
+[2026-07-01T19:14:45.616000+00:00] srojk34 (id=1521957252590993569)
+    PR #56582 — security(terminal): strip VERTEX_CREDENTIALS_PATH/GOOGLE_APPLICATION_CREDENTIALS from subprocess env
+    The new Vertex AI provider's service-account credential path leaked into every spawned subprocess (terminal, codex/copilot app-server, browser workers) because it was never added to the subprocess-env blocklist — same leak class already fixed for every other provider in #53503.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/56582
+    
+    PR #56589 — fix(kanban): widen notifier pre-filter to secondary-profile platforms
+    In multiplex gateways, kanban task notifications owned by a secondary profile on a platform the default profile never connected (e.g. profile "beta" has Discord, default doesn't) were silently and permanently dropped before they could even be claimed — no retry, no rewind. Sibling gap to the just-merged cross-profile delivery fix.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/56589
+    [embed] security(terminal): strip VERTEX_CREDENTIALS_PATH/GOOGLE_APPLICATIO... https://github.com/NousResearch/hermes-agent/pull/56582
+    [embed] fix(kanban): widen notifier pre-filter to secondary-profile platfor... https://github.com/NousResearch/hermes-agent/pull/56589
+
+[2026-07-01T19:15:43.640000+00:00] kxee (id=1521957495961292980)
+    appreciate it
+    [reply to egilewski msg=1521951973635653723]
+
+[2026-07-01T19:17:18.332000+00:00] dias4761 (id=1521957893128323273)
+    <@690519146701783042> I'm taking note of this comment. I had sent some PR level security details privately to Nous. Try to look at them when you have the opportunity, as they involve credential issues.
+    [reply to srojk34 msg=1521944462450757756]
+
+[2026-07-01T19:20:51.407000+00:00] dias4761 (id=1521958786829385929)
+    <@387972437901312000>
+    [reply to dias4761 msg=1521957893128323273]
+
+[2026-07-01T19:29:23.209000+00:00] egilewski (id=1521960933482827928)
+    Happy to be somewhat helpful. I didn't cause improvement of a lot of the PRs that got merged in the end, but I didn't spend an hour reviewing each one either.
+    [reply to kxee msg=1521957495961292980]
+
+[2026-07-01T19:47:32.410000+00:00] kxee (id=1521965501922803892)
+    when
+    [reply to dias4761 msg=1521957893128323273]
+
+[2026-07-01T19:47:40.594000+00:00] kxee (id=1521965536248860803)
+    send over in DMs
+

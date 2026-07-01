@@ -1,0 +1,8 @@
+# Thread 'One workspace. Every coding agent.' in forum #community-projects-showcase
+# thread_id=1521964766363385856 forum_id=1316137596535177246
+# Started 2026-07-01T19:51:24.444512+00:00
+
+[2026-07-01T19:44:37.039000+00:00] boldpanther (id=1521964766363385856)
+    Hii everyone, we built and released https://lori.sh/ (A single workspace to run any agent with any provider) . Its in initial preview, i would really appreciate you all giving it a try and share feedback for improvements:)
+    [embed] Lori: One workspace. Every coding agent. https://lori.sh/
+

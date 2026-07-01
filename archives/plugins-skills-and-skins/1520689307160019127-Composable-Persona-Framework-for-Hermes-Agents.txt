@@ -8,3 +8,20 @@
 [2026-06-30T15:43:42.280000+00:00] shiro1001 (id=1521541750844297347)
     I also plan to add Korean and Chinese speech patterns in a future update.
 
+[2026-07-01T15:02:54.203000+00:00] shiro1001 (id=1521893870731002107)
+    I’ve added Chinese and Korean speech styles.
+    Additionally, I’ve added a new layer called “use_case / Operating Mode” following “personality / speech.”
+    This allows you to add professional-level rules tailored to specific use cases while maintaining the same personality.
+    
+    Example:
+    $ hersona blend tsundere keigo --use-case programmer
+    
+    The initial four types:
+    - programmer
+    - planner
+    - research
+    - marketing
+    
+    The control plane is fixed in English (for token efficiency and better compliance with LLM control commands).
+    It is fully compatible with existing behavior and can be upgraded using `pip install -U hersona`.
+

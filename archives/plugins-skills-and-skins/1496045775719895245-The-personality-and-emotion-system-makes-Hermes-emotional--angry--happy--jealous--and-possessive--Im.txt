@@ -68,3 +68,11 @@
 [2026-06-30T08:43:15.004000+00:00] nihilys_14396 (id=1521435939979919390)
     Update: Utilizing a brand-new contextual architecture, it thoroughly addresses the issues of traditional context and long-term memory recall. Introducing the all-new Soullink 2.0
 
+[2026-07-01T19:23:41.148000+00:00] kutaca (id=1521959498774741192)
+    Integrated this into my current setup without the memory portion, as I already have other solutions for my memory setup.
+    
+    It works great! I have multiple profiles set up with different personalities, and it’s funny to see them get jealous when I mention the other.
+
+[2026-07-01T19:40:33.633000+00:00] nicolasmenoncin (id=1521963745444757574)
+    freaky nicki hermes personality
+

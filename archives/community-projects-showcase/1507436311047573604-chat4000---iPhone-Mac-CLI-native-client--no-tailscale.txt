@@ -329,3 +329,9 @@
     love how u changed up the setup now, way easier!
     [reply to haimbender msg=1521591346194808992]
 
+[2026-07-01T18:33:14.582000+00:00] ryansd.858 (id=1521946804437127258)
+    ```[PostHog] flush timed out after 10 seconds with 1 items pending.``` during registration and iPhone never completes joining workspace. 6 minutes times out, each time.
+
+[2026-07-01T18:49:17.689000+00:00] ryansd.858 (id=1521950844000669766)
+    manually performed a ```hermes gateway restart``` followed by ```chat4000 reset``` and a new ```chat4000 pair``` and everything seems tro be working. Still seeing the PostHog warning but doesn't seem to impact functionality that I've seen.
+

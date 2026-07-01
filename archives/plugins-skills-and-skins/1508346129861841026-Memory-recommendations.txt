@@ -92,3 +92,10 @@
     https://github.com/itechmeat/open-second-brain there is also this
     [embed] GitHub - itechmeat/open-second-brain: Local-first 🧠 memory for H... https://github.com/itechmeat/open-second-brain
 
+[2026-07-01T15:05:00.879000+00:00] dre108 (id=1521894402048524460)
+    https://github.com/yoloshii/ClawMem combines the best features from most of them, is FOSS and fully-local if you want it to be.
+    [embed] GitHub - yoloshii/ClawMem: On-device memory layer for AI agents. Cl... https://github.com/yoloshii/ClawMem
+
+[2026-07-01T15:06:09.072000+00:00] dre108 (id=1521894688070565949)
+    It also only takes up the memory plugin slot, leaving the context engine plugin slot free for lossless-lcm
+

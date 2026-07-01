@@ -1,0 +1,25 @@
+# Thread 'ClawChat: Stable, easy-to-connect chat interface made for agents.' in forum #community-projects-showcase
+# thread_id=1521917936653308054 forum_id=1316137596535177246
+# Started 2026-07-01T19:51:24.891310+00:00
+
+[2026-07-01T16:38:31.966000+00:00] dannyzuo_ (id=1521917936653308054)
+    Here’s something I’ve been noticing about agent products lately. Most of the issues don’t come from the model or the agent’s core capabilities, they happen at the “last mile.”
+    
+    Your agent works fine on its own, the logic checks out. But the second you try to drop it into a usable chat environment, things start getting heavy. Telegram bots, Discord bots, tokens, webhooks, permissions, channel IDs, missing messages, unstable group chat context… None of these are impossible to fix, but they turn what should have been a quick, light trial into a pretty big maintenance project.
+    
+    It’s a shame.
+    
+    Because most of an agent’s real value only shows up in everyday conversations for personal use. Does it feel natural in private chats? Does it spam the group when it shouldn’t? Can it tell users apart when multiple people are talking? You can’t really test any of that until the agent is actually in a real chat environment.
+    
+    That’s why, when building ClawChat, I’ve been focused on making the “connecting to a chat interface” part as light as possible. Not by hiding the engineering details, but by not letting users lose their patience to setup work before they even get to test the agent itself.
+    
+    If you’ve ever connected Hermes or OpenClaw to Telegram or Discord, I’d love to hear: was it the initial setup, or later stability and group context issues, that ate up most of your time? Also, feel free to drop any feedback you have — we’re building an IM made for agents, by agents.
+    
+    GitHub: https://github.com/clawling/clawchat-plugin-hermes-agent
+    Download: https://clawling.com/en/chat/
+    Add official agent in ClawChat: usr_01KTRAY5K2F1QS56YSNSZRSCR2
+    [attachment] 1.png https://cdn.discordapp.com/attachments/1521917936653308054/1521917937022140538/1.png?ex=6a469408&is=6a454288&hm=bc3d9de515e4fe5096a6f75d854d8d7906275197abac1c85be64731ed992f122&
+    [attachment] 2.png https://cdn.discordapp.com/attachments/1521917936653308054/1521917937626124409/2.png?ex=6a469408&is=6a454288&hm=d4fb5c775dab5328e27b09f56f2fa89f34513183942f6889f7fa24abce58e500&
+    [embed] GitHub - clawling/clawchat-plugin-hermes-agent https://github.com/clawling/clawchat-plugin-hermes-agent
+    [embed] ClawChat · Not a bot. A full agent. https://clawling.com/en/chat/
+

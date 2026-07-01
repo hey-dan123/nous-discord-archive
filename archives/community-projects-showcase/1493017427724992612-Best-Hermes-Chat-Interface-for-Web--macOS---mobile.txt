@@ -5192,3 +5192,30 @@
 [2026-07-01T08:23:04.647000+00:00] lathamba. (id=1521793251240185946)
     …?
 
+[2026-07-01T14:51:06.357000+00:00] curtis_szmania (id=1521890901809561750)
+    <@933139410281713755>  hermes-webui, I use the telegram integration with the agent sometimes when I'm on my phone, but those sessions don't seem to show up in the WebUI sessions or the CLI sessions tabs in the webui. any ideas?
+
+[2026-07-01T15:42:49.079000+00:00] _123321_ (id=1521903915568988321)
+    really in a hurry today, sorry for running, maybe take a look if clanker is delulu as usual 🙏 thanks
+
+[2026-07-01T16:18:01.711000+00:00] curtis_szmania (id=1521912776589574306)
+    Please ignore, I just saw a telegram prompt appear in my webui sessions tab. It just takes time to appear I guess.
+    [reply to curtis_szmania msg=1521890901809561750]
+
+[2026-07-01T16:49:58.140000+00:00] avidfuturist (id=1521920814675656866)
+    Yup it does show all telegram sessions once they sync!
+    [reply to curtis_szmania msg=1521912776589574306]
+
+[2026-07-01T17:13:41.075000+00:00] _123321_ (id=1521926782897360908)
+    txt fix
+    [attachment] clonk.txt https://cdn.discordapp.com/attachments/1493017427724992612/1521926782738104320/clonk.txt?ex=6a469c45&is=6a454ac5&hm=b7af504a1f1ba1278aef736a0ac598f5dfa5b35977efd3649f592414c2684ed3&
+    [reply to _123321_ msg=1521903915568988321]
+
+[2026-07-01T17:15:11.904000+00:00] avidfuturist (id=1521927163862057063)
+    Thanks, will take a look!
+    [reply to _123321_ msg=1521926782897360908]
+
+[2026-07-01T18:56:55.660000+00:00] avidfuturist (id=1521952764870004787)
+    I believe several of these are already fixed in latest! Lmk if things are looking better after the next update
+    [reply to _123321_ msg=1521926782897360908]
+
