@@ -18,3 +18,14 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1518476004211822602/1518476007957336074/image.png?ex=6a3a0e7c&is=6a38bcfc&hm=42c45801eb44c8897519157586e85f11e092241b95e0f02cd02abba574220868&
     [embed] GitHub - FelineStateMachine/hermes-openspec: A plugin for hermes th... https://github.com/FelineStateMachine/hermes-openspec
 
+[2026-07-02T14:08:15.856000+00:00] dami.zip (id=1522242508212404445)
+    Updated mobile support.
+    
+    Added change order sorting integrated into the slug database. This allows agents to declare order for tasks.
+    
+    Dashboard reflects change sort order, if present.
+    [attachment] Screenshot_20260702_080555_Chrome.jpg https://cdn.discordapp.com/attachments/1518476004211822602/1522242507897966674/Screenshot_20260702_080555_Chrome.jpg?ex=6a47c24f&is=6a4670cf&hm=9ba2582d850006f3f5191b5b04b830545e8ca5111ea673db4681fe404e689dfe&
+
+[2026-07-02T19:18:11.885000+00:00] ruffer3000 (id=1522320505611358369)
+    Are you using this together with the kanban board? If so, what's your setup?
+

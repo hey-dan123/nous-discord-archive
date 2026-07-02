@@ -6,3 +6,7 @@
     Hii everyone, we built and released https://lori.sh/ (A single workspace to run any agent with any provider) . Its in initial preview, i would really appreciate you all giving it a try and share feedback for improvements:)
     [embed] Lori: One workspace. Every coding agent. https://lori.sh/
 
+[2026-07-02T18:33:08.040000+00:00] boldpanther (id=1522309164863324271)
+    https://x.com/loridotsh/status/2072738857599303772/video/1?s=46
+    [embed]  https://twitter.com/loridotsh/status/2072738857599303772/video/1?s=46
+

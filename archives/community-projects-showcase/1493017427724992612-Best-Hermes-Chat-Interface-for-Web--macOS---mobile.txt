@@ -5226,3 +5226,7 @@
     
     ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
 
+[2026-07-02T17:26:44.898000+00:00] avidfuturist (id=1522292458355163289)
+    Lmk if things are all good now once you have a chance to test the latest update
+    [reply to _123321_ msg=1521926782897360908]
+

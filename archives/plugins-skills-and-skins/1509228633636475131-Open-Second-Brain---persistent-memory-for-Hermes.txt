@@ -272,3 +272,10 @@
 [2026-07-01T16:57:18.691000+00:00] autoferrit (id=1521922662480216084)
     maybe i didnt try OSB long enough?
 
+[2026-07-02T15:12:58.196000+00:00] no_orbert (id=1522258791926730883)
+    Tbh for my workflow this works better at the moment. I am not a programmer I am doing Shopify, Customer Support and ads management
+    [reply to autoferrit msg=1521922481491808519]
+
+[2026-07-02T16:25:40.462000+00:00] autoferrit (id=1522277088596459631)
+    Ah. Willing to share a little about that? I’m also using obsidian as a second brain vault
+

@@ -25,3 +25,29 @@
 [2026-06-11T01:08:32.183000+00:00] eucdee (id=1514436138088140932)
     I run models on my 8gb 3080 mobile gpu, but its too slow, maybe take a look at the jetson nano or the dgx spark ... those can run some advanced models.. I also would have thought 26b models work well, guess we need to be around 200b for quality models. Mac mini pro or dgx spark will run some of these
 
+[2026-07-02T16:01:04.737000+00:00] _tobie (id=1522270898957320326)
+    The ornith is one of the best local llm for agents i tested so far. Even the 9b is more efficient than larger models (locally runnable, for me it's  ~35b moe/27B )
+    
+    I have to try the tier above but so far i'm really impressed (without over optimization)
+    
+    With other dumber or bigger but slower models i had to rely on scripts everytime, i'm now confident ornith will be able to use mcp/tools/skill without supervision.
+
+[2026-07-02T16:02:44.494000+00:00] _tobie (id=1522271317368377437)
+    I still have token output pain (15/s is still slow) but it does its job in less turns than others local models
+
+[2026-07-02T16:06:03.178000+00:00] _tobie (id=1522272150709342351)
+    This said, i still want to script most of my flows to avoid inference turns (when the model is active with the context already loaded, i have to wait more or less 30sec-1min for an answer that involves tools where it was about 1:30/2min for other models)
+
+[2026-07-02T16:14:29.645000+00:00] _tobie (id=1522274274986168501)
+    No, i think the issue here is not that our local models are too slow/dumb it's because we're overcharging the model (intel) while we undercharge what our (dumbest) computer already knows : running scripts brainless. 
+    
+    The idea here is between a fake ia assistant (siri as we know it) and a frontier model in its ecosystem.
+    
+    Rely massively on scripts (to spare tokens (=time/money)) while allowing the model to build the scripts it needs for flexibility.
+    [reply to eucdee msg=1514436138088140932]
+
+[2026-07-02T16:21:08.634000+00:00] _tobie (id=1522275948467323011)
+    Imo frontier models are oversized for the huge part of its use. 
+    
+    And like the chineese open sourced projects, i think the future is more in optimization than it is in enlarging models by trillion and trillion parameters.
+

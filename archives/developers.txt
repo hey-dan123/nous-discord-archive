@@ -42527,3 +42527,57 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(telegram): add parse_mode to media captions so markdown renders... https://github.com/NousResearch/hermes-agent/pull/32118
     [embed] fix(telegram): render media captions as MarkdownV2 so Detailed Anal... https://github.com/NousResearch/hermes-agent/pull/32893
 
+[2026-07-02T14:01:53.165000+00:00] warofchange (id=1522240903090147529)
+    fix outdated API-timeout guidance in the Ollama guide
+    
+    The local Ollama setup guide tells CPU-only users the API timeout "is not a config.yaml key" and points them only at the legacy HERMES_API_TIMEOUT env var. That guidance predates the request_timeout_seconds config feature — the timeout is configurable from config.yaml, and the config value actually takes precedence over the env var:
+    
+    • hermes_cli/timeouts.py reads providers.<id>.request_timeout_seconds
+    • run_agent.py documents the resolution order: config key resolves before HERMES_API_TIMEOUT
+    • configuration.md + env-vars reference both confirm the config value "wins over the legacy env var"
+    
+    Fix is a single additive line — keeps the existing env-var example valid while pointing users at the preferred config key. Docs-only, zero behavior change.
+    
+     https://github.com/NousResearch/hermes-agent/pull/57110
+    [embed] docs(ollama): correct API-timeout guidance to include config.yaml k... https://github.com/NousResearch/hermes-agent/pull/57110
+
+[2026-07-02T14:41:04.335000+00:00] jw_mushroom_man (id=1522250764611752017)
+    https://github.com/NousResearch/hermes-agent/pull/57119
+    [embed] fix(logging): stop pytest runs from writing to the live agent.log b... https://github.com/NousResearch/hermes-agent/pull/57119
+
+[2026-07-02T15:33:21.472000+00:00] jw_mushroom_man (id=1522263922718281838)
+    https://github.com/NousResearch/hermes-agent/pull/57152
+    [embed] fix(tests): Windows-aware path-list split and UTF-8 progress output... https://github.com/NousResearch/hermes-agent/pull/57152
+
+[2026-07-02T15:37:45.114000+00:00] warofchange (id=1522265028512976958)
+    Unit tests for has_binary_extension
+    
+    First non-docs contribution — adding real test coverage. has_binary_extension (tools/binary_extensions.py) is a pure helper that file_tools uses to skip binary files during text-based operations, but it had no direct tests.
+    
+    The suite pins its contract:
+    • Binary extensions → True (images, archives, executables, audio, fonts, DBs)
+    • Case-insensitive matching (IMAGE.PNG → True)
+    • Text extensions → False (.py, .txt, .md, .json)
+    • .pdf deliberately not binary (it's text-inspectable — documented intent)
+    • No extension → False; multi-dot uses last ext (archive.tar.gz → .gz)
+    • A dot in a directory segment isn't mistaken for an extension
+    
+    Pure input→output assertions — no mocks, no network, no filesystem. Zero production code touched. Without these, a future edit to BINARY_EXTENSIONS or the .pdf exclusion would pass silently.
+    
+    pytest tests/tools/test_binary_extensions.py -v
+     https://github.com/NousResearch/hermes-agent/pull/57174
+    [embed] test(tools): add unit tests for has_binary_extension by waroffchang... https://github.com/NousResearch/hermes-agent/pull/57174
+
+[2026-07-02T17:23:48.222000+00:00] ghostbeartrader (id=1522291717322182676)
+    On the Desktop app can we get selectable fonts with size please? I need binoculars to read this
+
+[2026-07-02T17:34:15.420000+00:00] abdullahx990 (id=1522294347981389986)
+    Hi, how to Add custom provider in desktop app ?
+
+[2026-07-02T17:34:49.463000+00:00] ghostbeartrader (id=1522294490767949925)
+    Who nerfed sudo passwd?
+
+[2026-07-02T17:39:43.114000+00:00] abdullahx990 (id=1522295722429517895)
+    https://github.com/NousResearch/hermes-agent/issues/38975
+    [embed] Desktop UI: add full custom OpenAI-compatible provider setup · Iss... https://github.com/NousResearch/hermes-agent/issues/38975
+
