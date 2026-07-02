@@ -28,3 +28,10 @@
 [2026-07-01T12:15:19.382000+00:00] charu1603 (id=1521851697754800170)
     Connecting Hermes to Production APIs for an AI GTM Workflow - Hubspot, Apollo, Resend
 
+[2026-07-02T06:22:57.813000+00:00] chilarai (id=1522125411452981408)
+    Could you tell me why would you need Swytchcode when we already have a lot of other tools?
+
+[2026-07-02T06:51:58.801000+00:00] charu1603 (id=1522132713686044693)
+    We weren't trying to build another agent framework. We kept running into the same reliability problems once agents started calling real APIs, auth, retries, schema changes, rate limits, long-running workflows. Swytchcode exists to solve that execution layer, so developers don't have to rebuild it for every project.
+    [reply to chilarai msg=1522125411452981408]
+

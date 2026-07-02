@@ -42201,3 +42201,120 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     **Problem**: Desktop now refreshes the cached Projects list/tree immediately after project tool completions, so projects created by the agent appear without a manual UI refresh. Typecheck was attempted but this checkout is missing desktop workspace dependencies.
     [embed] fix(desktop): refresh projects after project tools by kyssta-exe ·... https://github.com/NousResearch/hermes-agent/pull/56760
 
+[2026-07-02T04:47:35.727000+00:00] rakaarwaky (id=1522101411284783134)
+    Hi . Did you guys accept PR for     .hermesignore
+    
+    
+    Approval mode is not effective for multi-user applications because each user must set manual approval. Run limited directory is not suitable because sensitive files are in the same folder or subfolder as other files that the agent must process. In this case, sensitive files can have any name pattern.
+    [attachment] Screenshot_2026-07-02-11-41-37-375_com.discord.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1522101411024732250/Screenshot_2026-07-02-11-41-37-375_com.discord.jpg?ex=6a473ee7&is=6a45ed67&hm=86b24ece01224e5bf5b6fdec9ffdf2ba3733e74056f843dbe8ca061ff4dc6f10&
+
+[2026-07-02T06:25:02.260000+00:00] kyssta69 (id=1522125933421789186)
+    https://github.com/NousResearch/hermes-agent/pull/56842
+    
+    **Problem**: Fixed misleading auxiliary auth errors for non-API-key providers like Vertex. The error path now only asks for API keys for actual API-key providers and otherwise points users to provider setup/authentication.
+    [embed] fix(agent): clarify auxiliary provider auth failures by kyssta-exe ... https://github.com/NousResearch/hermes-agent/pull/56842
+
+[2026-07-02T06:26:22.156000+00:00] kyssta69 (id=1522126268529770648)
+    https://github.com/NousResearch/hermes-agent/pull/56845
+    
+    **Problem**: Fixed permanent session_search breakage after interrupted FTS migrations. SessionDB now cleans orphaned FTS5 shadow tables before recreating missing virtual tables.
+    [embed] fix(agent): repair orphaned FTS shadow tables by kyssta-exe · Pull... https://github.com/NousResearch/hermes-agent/pull/56845
+
+[2026-07-02T06:27:12.339000+00:00] kyssta69 (id=1522126479012663296)
+    https://github.com/NousResearch/hermes-agent/pull/56847
+    
+    **Problem**: Fixed z.ai Coding Plan prompt rejection caused by literal tool-call syntax in universal help guidance. The instruction now references the hermes-agent skill and skill_view tool without embedding a plaintext function call.
+    [embed] fix(agent): avoid plaintext tool-call syntax in help guidance by ky... https://github.com/NousResearch/hermes-agent/pull/56847
+
+[2026-07-02T06:30:10.673000+00:00] kyssta69 (id=1522127226999410828)
+    https://github.com/NousResearch/hermes-agent/pull/56851
+    
+    **Problem**: Fixed profile cloning with dangling skill symlinks. Valid skill symlinks are preserved, broken skill symlinks are skipped, and copy failures remove the partial target profile.
+    [embed] fix(cli): tolerate dangling skill symlinks when cloning profiles by... https://github.com/NousResearch/hermes-agent/pull/56851
+
+[2026-07-02T06:34:37.349000+00:00] kyssta69 (id=1522128345519751209)
+    https://github.com/NousResearch/hermes-agent/pull/56853
+    
+    **Problem**: Fixed non-interactive MoA model selection. Values like -m moa:strategy now select the MoA virtual provider and use strategy as the preset instead of sending moa:strategy to an upstream API.
+    [embed] fix(cli): resolve MoA model prefixes in one-shot chat by kyssta-exe... https://github.com/NousResearch/hermes-agent/pull/56853
+
+[2026-07-02T06:35:56.586000+00:00] jethac (id=1522128677863686327)
+    is this where we beg for PR reviews 🙂 i have a few
+    
+    https://github.com/NousResearch/hermes-agent/pull/35785 prevents crashes on voice/video/image messages when using the LINE adapter
+    [embed] fix(line): correct media caching and message type mapping by jethac... https://github.com/NousResearch/hermes-agent/pull/35785
+
+[2026-07-02T07:02:48.295000+00:00] kxee (id=1522135437861326879)
+    <@1387527976224297133> please ping me once this PR is ready for review
+    https://github.com/NousResearch/hermes-agent/pull/56825
+    [embed] fix(tools): block sync_back writes into Hermes state by egilewski ... https://github.com/NousResearch/hermes-agent/pull/56825
+
+[2026-07-02T07:03:19.339000+00:00] jethac (id=1522135568069165120)
+    https://github.com/NousResearch/hermes-agent/pull/40931 Tired of colliding with other people's PRs in the gateway? Added a gateway reply-delivery policy hook so platform adapters can control reply/voice behavior without central runner special-cases.
+    [embed] refactor(gateway): add adapter reply delivery policy by jethac · P... https://github.com/NousResearch/hermes-agent/pull/40931
+
+[2026-07-02T07:08:13.341000+00:00] jethac (id=1522136801203195935)
+    https://github.com/NousResearch/hermes-agent/pull/40933 building on #40931 and #35785, this makes it so that LINE can now reply in the same modality the user chose — voice notes get voice replies, text stays text, and photo follow-ups inherit the user’s last text/voice style.
+    [embed] feat(line): add opt-in smart reply modality by jethac · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/40933
+
+[2026-07-02T07:10:41.552000+00:00] egilewski (id=1522137422845055138)
+    <@690519146701783042> pinging as asked, https://github.com/NousResearch/hermes-agent/pull/56825 ready for review. Tests didn't pass for me locally, but I see that CI is green, so it should be just my local dev problem.
+    [embed] fix(tools): block sync_back writes into Hermes state by egilewski ... https://github.com/NousResearch/hermes-agent/pull/56825
+    [reply to kxee msg=1522135437861326879]
+
+[2026-07-02T07:19:04.634000+00:00] kxee (id=1522139532923899954)
+    reviewed
+    [reply to egilewski msg=1522137422845055138]
+
+[2026-07-02T07:24:07.965000+00:00] egilewski (id=1522140805186457701)
+    Ah, false alarm, sorry. I'll investigate what went wrong before creating new ones, patches previously declined as works-as-intended should've been ignored.
+    [reply to kxee msg=1522139532923899954]
+
+[2026-07-02T07:24:18.973000+00:00] kxee (id=1522140851357351967)
+    appreciate it
+
+[2026-07-02T07:50:00.002000+00:00] akshaynexus (id=1522147314901188709)
+    https://github.com/NousResearch/hermes-agent/pull/56413
+    
+    got claude agent sdk working ,tested with local sub and checked that it uses the agent sdk/claude cli via agent sdk for sessions,however some things needs clarification to simplify the pr/implementation
+    [embed] feat(agent): Claude Agent SDK backend (subscription OAuth) + shared... https://github.com/NousResearch/hermes-agent/pull/56413
+
+[2026-07-02T08:05:24.840000+00:00] .joinu (id=1522151193953173614)
+    https://github.com/NousResearch/hermes-agent/pull/56277
+    
+    gives an agent an ability to create a dedicated email inbox to send and receive mail. conceptually gives an agent a persistent publicly reachable identity (inbox address), which unlocks all kinds of agent-to-agent and agent-to-human interactions.
+    [embed] feat(skills): add atomicmail agent email skill by dom-dalty · Pull... https://github.com/NousResearch/hermes-agent/pull/56277
+
+[2026-07-02T08:06:06.687000+00:00] dias4761 (id=1522151369472213113)
+    <@690519146701783042> I sent those vulnerability issues to you privately, please try to check them when you can.
+
+[2026-07-02T08:07:13.967000+00:00] kyssta69 (id=1522151651664855040)
+    https://github.com/NousResearch/hermes-agent/pull/56904
+    
+    **Problem**: setup.runtime_check now runs through the TUI gateway long-handler pool, so frequent readiness probes cannot block the WebSocket read loop under GIL pressure. Added regression coverage to keep frontend-polled RPCs pool-routed.
+    [embed] fix(tui): route runtime check off read loop (#56888) by kyssta-exe ... https://github.com/NousResearch/hermes-agent/pull/56904
+
+[2026-07-02T08:07:56.499000+00:00] kxee (id=1522151830056865803)
+    will do later
+    [reply to dias4761 msg=1522151369472213113]
+
+[2026-07-02T08:08:20.530000+00:00] dias4761 (id=1522151930850185216)
+    Yes sr
+    [reply to kxee msg=1522151830056865803]
+
+[2026-07-02T08:09:19.019000+00:00] kyssta69 (id=1522152176170958969)
+    https://github.com/NousResearch/hermes-agent/pull/56905
+    
+    **Problem**: Session search now normalizes leading, trailing, and adjacent FTS5 boolean operator runs before executing MATCH queries, preventing stacked operator input from silently returning no results. Added regression coverage for the reported boolean edge cases.
+    [embed] fix(search): normalize adjacent FTS booleans (#56871) by kyssta-exe... https://github.com/NousResearch/hermes-agent/pull/56905
+
+[2026-07-02T08:12:08.574000+00:00] kyssta69 (id=1522152887336173708)
+    https://github.com/NousResearch/hermes-agent/pull/56907
+    
+    **Problem**: Windows desktop updater handoffs now use the existing hidden child-process options, preventing hermes-setup.exe from flashing a console window during in-app updates. The child-process guard test now covers both updater spawn paths.
+    [embed] fix(desktop): hide Windows updater console (#56884) by kyssta-exe ... https://github.com/NousResearch/hermes-agent/pull/56907
+
+[2026-07-02T08:45:25.741000+00:00] rayjun.eth (id=1522161264061710476)
+    Merged another commit. Let's make Hermes better together! https://github.com/NousResearch/hermes-agent/pull/56874
+    [embed] fix(browser): guard Camofox eval private pages (salvage #56764) by ... https://github.com/NousResearch/hermes-agent/pull/56874
+

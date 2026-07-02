@@ -1,0 +1,14 @@
+# Thread 'Surf — one data skill for your agent (83+ commands, no API key needed)' in forum #plugins-skills-and-skins
+# thread_id=1522087547172421833 forum_id=1485392832154832906
+# Started 2026-07-02T08:57:35.820696+00:00
+
+[2026-07-02T03:52:30.265000+00:00] happysean (id=1522087547172421833)
+    Surf — your AI agent's onchain brain.
+    One skill, 83+ read-only commands across 15 data domains: real-time prices, wallets, tokens, DeFi/TVL, social intelligence, on-chain SQL, prediction markets CEX listings, news, and cross-domain search — 40+ chains, 200+ data sources.
+    
+    We also opened a PR to add it to optional-skills/blockchain:
+    https://github.com/NousResearch/hermes-agent/pull/56755
+    Skills Guard scan is clean and it follows the HARDLINE skill standards. Review feedback very welcome!
+    [attachment] og.png https://cdn.discordapp.com/attachments/1522087547172421833/1522087547541655582/og.png?ex=6a4731fe&is=6a45e07e&hm=07f9b2a942974ddf74403b51070be7344f945db7a10b916d7abfde57670b9833&
+    [embed] feat(skills): add surf crypto data skill by HappySean2845 · Pull R... https://github.com/NousResearch/hermes-agent/pull/56755
+
