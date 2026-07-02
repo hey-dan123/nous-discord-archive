@@ -42063,3 +42063,141 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-01T19:47:40.594000+00:00] kxee (id=1521965536248860803)
     send over in DMs
 
+[2026-07-01T20:00:09.991000+00:00] definitely_not_cthulhu (id=1521968679447953539)
+    More than happy to look at a PR, it's somewhere in the middle of my priority list
+    [reply to cardimatt02 msg=1521856368875667496]
+
+[2026-07-01T20:24:05.115000+00:00] cyberyellowninja (id=1521974698794025061)
+
+[2026-07-01T21:04:17.785000+00:00] aleksandr_1 (id=1521984818265460977)
+    **1. fix(agent): build Anthropic client before mutating agent state in `try_activate_fallback`. **
+    Found that when `fb_api_mode == "anthropic_messages"`, `agent.model`/`provider`/`base_url`/`api_mode` were committed before `build_anthropic_client()` ran. If that call raised (e.g. `ImportError` when the `anthropic` package isn't installed), the `except` handler recursed to the next fallback entry without rolling back the already committed fields, leaving the agent pointing at `provider="anthropic"` with `_anthropic_client=None`, crashing the next completion call. Moved the client build before the state commit, mirroring how the OpenAI compatible branch already verifies `fb_client` before touching state.
+    **PR: P2 -** https://github.com/NousResearch/hermes-agent/pull/56462
+    
+    **2. fix(tools): checkpoint restore no longer hides a missing pre-rollback safety net. **
+    Found that `_dir_file_count()` walked the raw filesystem including directories already excluded from git tracking (`node_modules/`, `.venv/`, etc.), so a normal project could cross the 50k file count guard and silently disable checkpointing entirely. Separately, `restore()` discarded the return value of its pre-rollback snapshot call and proceeded with `git checkout` regardless, with the CLI unconditionally claiming a snapshot was saved. Fixed the count to respect the same excludes git uses, and surfaced a warning instead of a false claim when the safety net doesn't fire.
+    **PR: P2 -** https://github.com/NousResearch/hermes-agent/pull/56606
+    [embed] fix(agent): build Anthropic client before mutating agent state in t... https://github.com/NousResearch/hermes-agent/pull/56462
+    [embed] fix(tools): checkpoint restore no longer hides a missing pre-rollba... https://github.com/NousResearch/hermes-agent/pull/56606
+
+[2026-07-01T21:31:31.165000+00:00] dias4761 (id=1521991669157990432)
+    i send in your DMS in discord . Check it when you have time. <@690519146701783042>
+    [reply to kxee msg=1521965536248860803]
+
+[2026-07-01T21:48:30.423000+00:00] jonkomet (id=1521995944235896853)
+    small PR for a v0.18.0 API server dependency issue I hit locally:
+    
+    https://github.com/NousResearch/hermes-agent/pull/56633
+    
+    After updating to Hermes Agent v0.18.0, my gateway was still running and `API_SERVER_ENABLED=true` was set, but the API server stayed disconnected / nothing was listening on `127.0.0.1:8642`.
+    
+    Root cause looked like `gateway/platforms/api_server.py` imports `aiohttp.web`, but `aiohttp==3.14.1` was only present in optional extras like `messaging`, `slack`, `matrix`, etc. So a normal install/update can have the gateway alive while the API server adapter fails to bind.
+    
+    The PR just:
+    - moves/adds `aiohttp==3.14.1` into core deps
+    - updates `uv.lock`
+    - adds a small regression test that API server runtime deps are core deps
+    
+    Verification on the PR branch:
+    `python -m pytest tests/test_api_server_dependency.py tests/gateway/test_api_server_runs.py tests/gateway/test_api_server_bind_guard.py -q -o 'addopts='`
+    
+    Result was `42 passed`.
+    
+    Would appreciate a sanity check on whether making `aiohttp` core is the right fix, or if you’d prefer an `api_server` extra / lazy dependency path instead.
+    [embed] fix: include aiohttp for API server runtime by abundantbeing · Pul... https://github.com/NousResearch/hermes-agent/pull/56633
+
+[2026-07-01T22:20:15.843000+00:00] undifined. (id=1522003936146362458)
+    Fixed. The issue wasn’t a Rust config flag — it was that this checker was running rustfmt --check on every .rs write, which produces the broken “Rust 2015” false positives on real Cargo projects. I removed .rs from the per-file shell linters in /home/dev/.hermes/hermes-agent/tools/file_operations.py, so the checker will no longer waste cycles on that phantom signal.
+
+[2026-07-01T22:31:31.557000+00:00] eddlm (id=1522006770296291499)
+    By the way MoA works, it feels like having agents with high intelligence disparity might not be optimal, in your experience working through it you guys have seen better results with 2 of the same model, or models in closer intelligence/size brackets?
+
+[2026-07-01T23:16:04.115000+00:00] golldyck (id=1522017979817132163)
+    Hi <@387972437901312000>, spent some time in hermes-agent and pushed three small fixes.
+    
+    The first one, PR 56415, is about compaction. It could grow the context instead of shrinking it, so now it just skips compression when the summary would end up bigger than the region it replaces.
+    https://github.com/NousResearch/hermes-agent/pull/56415
+    
+    The second, PR 56458, is in tool args. They ignored the declared union order, so a string-first union got coerced away from the original value. Now it honors the declared order.
+    https://github.com/NousResearch/hermes-agent/pull/56458
+    
+    The third, PR 56418, is env_bool. It ignored its default when the var was unset or empty, so now it returns the default properly.
+    https://github.com/NousResearch/hermes-agent/pull/56418
+    
+    Happy to rework any of them if you'd handle it differently.
+    [embed] fix(compaction): skip compression when it cannot reduce the token c... https://github.com/NousResearch/hermes-agent/pull/56415
+    [embed] fix(tools): honor declared union order for string members by golldy... https://github.com/NousResearch/hermes-agent/pull/56458
+    [embed] fix(utils): honor env_bool default when the variable is unset or em... https://github.com/NousResearch/hermes-agent/pull/56418
+
+[2026-07-01T23:29:32.483000+00:00] nanxingncb612d (id=1522021370358267914)
+    https://github.com/NousResearch/hermes-agent/pull/56664 This applies the browser private-network guard to the raw browser_cdp escape hatch.
+    
+    The high-level browser tools already block interactions with pages that have landed on private/internal URLs when the SSRF guard is active. browser_cdp was outside that guard path, so raw CDP calls could still read or interact with the same private page context.
+    [embed] fix(browser): apply private-page guard to raw CDP calls by necoweb3... https://github.com/NousResearch/hermes-agent/pull/56664
+
+[2026-07-01T23:29:46.901000+00:00] nanxingncb612d (id=1522021430831742977)
+    https://github.com/NousResearch/hermes-agent/pull/56668 This prevents hermes_subprocess_env(inherit_credentials=True) from passing non-provider Hermes tool and messaging secrets into model-driving child processes such as Codex/Copilot app-server subprocesses.
+    [embed] fix(security): strip non-provider secrets from inherited child envs... https://github.com/NousResearch/hermes-agent/pull/56668
+
+[2026-07-01T23:29:59.502000+00:00] nanxingncb612d (id=1522021483684298964)
+    https://github.com/NousResearch/hermes-agent/pull/56679 Blocks browser_dialog from accepting or dismissing JavaScript dialogs when the active dialog belongs to a private/internal page.
+    [embed] fix(browser): block dialog responses on private pages by necoweb3 ... https://github.com/NousResearch/hermes-agent/pull/56679
+
+[2026-07-01T23:46:57.524000+00:00] riexrick (id=1522025753577914591)
+    hi, i just pulled latest image and build the hermes gateway using docker portainer, but it says version 0.17.0 in the dashboard is it expected? it sounds like we have lots of change since last month but i didnt see versin bump
+
+[2026-07-02T00:11:48.821000+00:00] srojk34 (id=1522032008530886837)
+    PR #56680 — Vertex AI cross-profile credential leak 
+    In a multiplex gateway, one profile's turn could silently authenticate using a different profile's GCP service-account credentials (raw os.environ reads bypassed the profile secret scope).
+    https://github.com/NousResearch/hermes-agent/pull/56680
+    
+    PR #56682 — Think-block leak (kanban task body + profile description)
+    Reasoning models (MiniMax, DeepSeek, etc.) leaked raw <think> blocks into the promoted kanban task body and the profile's dashboard description on JSON-parse failure — two remaining call sites of a bug already fixed once in title_generator.py.
+    https://github.com/NousResearch/hermes-agent/pull/56682
+    
+    PR #56688 — Vertex missing from both provider registries
+    PROVIDER_REGISTRY and HERMES_OVERLAYS had no "vertex" entry — every auxiliary Vertex call (vision, title generation, MoA slots) was dead code, and 401 token refresh never worked either.
+    https://github.com/NousResearch/hermes-agent/pull/56688
+    
+    PR #56691 — Explicit provider: moa config crashed
+    Setting auxiliary.<task>.provider: moa crashed with a nonsensical MOA_API_KEY error — it needed to unwrap to the preset's aggregator, same as the already-fixed implicit case.
+    https://github.com/NousResearch/hermes-agent/pull/56691
+    [embed] security(vertex): route credential/project/region resolution throug... https://github.com/NousResearch/hermes-agent/pull/56680
+    [embed] fix(kanban,profiles): strip think blocks before using raw auxiliary... https://github.com/NousResearch/hermes-agent/pull/56682
+    [embed] fix(vertex,moa): register vertex in PROVIDER_REGISTRY and HERMES_OV... https://github.com/NousResearch/hermes-agent/pull/56688
+    [embed] fix(auxiliary): unwrap explicit provider:moa to its aggregator, not... https://github.com/NousResearch/hermes-agent/pull/56691
+
+[2026-07-02T00:49:17.074000+00:00] gohamnovashade (id=1522041438387310723)
+    Thank you all for the amazing work in this incredible tool
+
+[2026-07-02T01:19:41.760000+00:00] fullslop (id=1522049091675226274)
+    I fixed a bug in desktop app, please lmk https://github.com/NousResearch/hermes-agent/pull/56689 <@387972437901312000>
+    [embed] fix(skills): resolve skills dir from active profile by jplew · Pul... https://github.com/NousResearch/hermes-agent/pull/56689
+
+[2026-07-02T02:15:08.355000+00:00] hypertekton (id=1522063044425809990)
+    A group of xAI TTS PRs:
+    1. Use the API's text_normalization param https://github.com/NousResearch/hermes-agent/pull/56686
+    2. Update incomplete xAI TTS docs https://github.com/NousResearch/hermes-agent/pull/56703
+    3. Surface all missing xAI TTS params in https://github.com/NousResearch/hermes-agent/pull/56724
+    [embed] feat(xai-tts): wire text_normalization parameter by Cdddo · Pull R... https://github.com/NousResearch/hermes-agent/pull/56686
+    [embed] docs(xai-tts) Add missing configuration parameters by Cdddo · Pull... https://github.com/NousResearch/hermes-agent/pull/56703
+    [embed] fix(desktop): surface all xAI TTS params in desktop GUI config by C... https://github.com/NousResearch/hermes-agent/pull/56724
+
+[2026-07-02T03:11:19.593000+00:00] kyssta69 (id=1522077184422973460)
+    https://github.com/NousResearch/hermes-agent/pull/56758
+    
+    **Problem**: MoA context-length resolution now passes configured overrides and custom provider metadata through to the acting aggregator lookup, preventing custom aggregator models from falling back to 256k. Added a regression test covering custom-provider context_length overrides.
+    [embed] fix(agent): pass MoA context overrides to aggregator by kyssta-exe ... https://github.com/NousResearch/hermes-agent/pull/56758
+
+[2026-07-02T03:11:26.986000+00:00] kyssta69 (id=1522077215431463163)
+    https://github.com/NousResearch/hermes-agent/pull/56734
+    
+    **Problem**: Windows Git Bash/MSYS was rewriting native Windows flags such as /FO and /TN into paths. The fix sets MSYS_NO_PATHCONV=1 for Windows terminal subprocess envs while preserving explicit user overrides.
+    [embed] fix(terminal): disable MSYS path conversion on Windows by kyssta-ex... https://github.com/NousResearch/hermes-agent/pull/56734
+
+[2026-07-02T03:12:35.383000+00:00] kyssta69 (id=1522077502309138562)
+    https://github.com/NousResearch/hermes-agent/pull/56760
+    
+    **Problem**: Desktop now refreshes the cached Projects list/tree immediately after project tool completions, so projects created by the agent appear without a manual UI refresh. Typecheck was attempted but this checkout is missing desktop workspace dependencies.
+    [embed] fix(desktop): refresh projects after project tools by kyssta-exe ·... https://github.com/NousResearch/hermes-agent/pull/56760
+

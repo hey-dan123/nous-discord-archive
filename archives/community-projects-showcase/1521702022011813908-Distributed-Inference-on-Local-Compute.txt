@@ -26,3 +26,7 @@
     [attachment] Screenshot_2026-07-01_114748.png https://cdn.discordapp.com/attachments/1521702022011813908/1521702022733365361/Screenshot_2026-07-01_114748.png?ex=6a45caf2&is=6a447972&hm=56525dec6312d88ad18d104ec973250ee27c5030709306529ff92b2ee9170c1a&
     [embed]  https://twitter.com/koretexai/status/2072140391852523888?s=20
 
+[2026-07-02T02:44:00.779000+00:00] bigsmollbrain (id=1522070310738722816)
+    We've added a new Hermes skill to use Koretex! Here's a video demo https://x.com/koretexai/status/2072206351481307627?s=20
+    [embed]  https://twitter.com/koretexai/status/2072206351481307627?s=20
+
