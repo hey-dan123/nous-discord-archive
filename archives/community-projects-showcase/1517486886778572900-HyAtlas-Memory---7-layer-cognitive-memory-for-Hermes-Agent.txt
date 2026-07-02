@@ -137,3 +137,25 @@
 [2026-06-30T08:29:26.593000+00:00] tunacookie (id=1521432465372217374)
     Now to work on dashboard polish.
 
+[2026-07-02T11:12:08.717000+00:00] lathamba. (id=1522198186419163238)
+    is this better than other memory systems?
+
+[2026-07-02T11:12:26.159000+00:00] lathamba. (id=1522198259576340510)
+    like llm wiki
+
+[2026-07-02T11:12:28.729000+00:00] lathamba. (id=1522198270355443712)
+    or gbrain
+
+[2026-07-02T12:04:12.707000+00:00] tunacookie (id=1522211289383047309)
+    <:MONKAS:1151260450835681281>  i just trust what my hermes says and improve whatever it says can be improved , it was built on top of hy-memory architecture and i built on top of it to to go from 6 layers to 7 layers, expiry scoring, faster retrieval and all those fancy stuff  but so far after maybe a month of using it does feel good? Im not sure how to explain it, the way the architecture is made is so that it gains advantage in the REALLY long run like 6 months +
+    [reply to lathamba. msg=1522198186419163238]
+
+[2026-07-02T12:05:48.952000+00:00] tunacookie (id=1522211693063704606)
+    im still actively optimizing it , running benchmarks to see if it actually improved etc, but benchmarks consume alot of tokens so i usually wait until theres some free promotion to use tokens
+
+[2026-07-02T12:20:18.464000+00:00] lathamba. (id=1522215340061233182)
+    just spam alibaba cloud . they give sota models for free
+
+[2026-07-02T13:30:15.211000+00:00] tunacookie (id=1522232942494224444)
+    <@524474275642474498> you can chat to me here i dont trust dms <:scared:1151275595431419935>
+

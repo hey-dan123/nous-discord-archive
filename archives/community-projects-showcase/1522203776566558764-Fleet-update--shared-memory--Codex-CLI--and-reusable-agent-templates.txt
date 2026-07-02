@@ -1,0 +1,21 @@
+# Thread 'Fleet update: shared memory, Codex CLI, and reusable agent templates' in forum #community-projects-showcase
+# thread_id=1522203776566558764 forum_id=1316137596535177246
+# Started 2026-07-02T13:54:32.000244+00:00
+
+[2026-07-02T11:34:21.512000+00:00] matt06998 (id=1522203776566558764)
+    Fleet is a local-first web console for creating, managing, coordinating, backing up, templating, and sharing memory across Dockerized Hermes agents on one or more trusted machines.
+    
+    Recent work adds three big pieces:
+    
+    Fleet shared memory: agents can keep their own private memory while also linking into a fleet-wide shared Mnemosyne store. Linked agents get dedicated fleet_shared_memory_* tools so they know when to use shared memory instead of local memory.
+    
+    Codex CLI capability: new Docker agents can be created with Codex CLI installed and authenticated using the same Fleet-managed OpenAI Codex device login.
+    
+    Template library: any local Docker Hermes agent can be captured as a reusable, secret-free template and redeployed multiple times to local or remote Fleet nodes. Templates strip secrets, Codex auth, bearer tokens, generated folders, and source-node shared-memory config, then rehydrate auth/capabilities from the target node.
+    
+    In short: Fleet can now create, coordinate, remember, clone, template, and redeploy agent setups much more safely and repeatably.
+    
+    Its available open source here: https://github.com/matt454/agent-fleet-console
+    [attachment] image.png https://cdn.discordapp.com/attachments/1522203776566558764/1522203777065816155/image.png?ex=6a479e3d&is=6a464cbd&hm=7a22066aa3b2369659c6f349bff0c0ef75c322fefe5c4ba55fc8ccc671b9fb99&
+    [embed] GitHub - matt454/agent-fleet-console https://github.com/matt454/agent-fleet-console
+

@@ -335,3 +335,9 @@
 [2026-07-01T18:49:17.689000+00:00] ryansd.858 (id=1521950844000669766)
     manually performed a ```hermes gateway restart``` followed by ```chat4000 reset``` and a new ```chat4000 pair``` and everything seems tro be working. Still seeing the PostHog warning but doesn't seem to impact functionality that I've seen.
 
+[2026-07-02T13:54:31.140000+00:00] markmnl (id=1522239049102917713)
+    hey this is really interesting, im working something similar but more focused on a2a use case the a2h you seem to be focused on here (though i see the cli too).. do you use matrix under-the-hood for messaging?
+
+[2026-07-02T13:55:16.815000+00:00] markmnl (id=1522239240677757090)
+    i see the clients OSS in your github but not the server
+

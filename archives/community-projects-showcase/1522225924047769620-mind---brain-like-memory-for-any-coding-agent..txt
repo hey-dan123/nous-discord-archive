@@ -1,0 +1,23 @@
+# Thread 'mind — brain-like memory for any coding agent.' in forum #community-projects-showcase
+# thread_id=1522225924047769620 forum_id=1316137596535177246
+# Started 2026-07-02T13:54:31.613381+00:00
+
+[2026-07-02T13:02:21.883000+00:00] ida7emj (id=1522225924047769620)
+    Introducing
+    
+    mind 
+    
+    Your agent doesn’t start from zero anymore.
+    
+    It keeps the important stuff in working memory, recalls related context even from rough hints, and turns repeated patterns into long-term knowledge.
+    
+    Between sessions, the Dreamer cleans things up: strengthens what proved useful, cuts noise, and flags contradictions.
+    
+    So the more you use it, the less you have to re-explain yourself.
+    
+    Your agent won’t forget you or your work now.
+    
+    https://github.com/Da7-Tech/mind
+    [attachment] --_.._.png https://cdn.discordapp.com/attachments/1522225924047769620/1522225924312137858/--_.._.png?ex=6a47b2dd&is=6a46615d&hm=1d84732353319619b3e4631178043bca42babb52fd122142941b6730c184640e&
+    [embed] GitHub - Da7-Tech/mind: Brain-like memory for any coding agent: spr... https://github.com/Da7-Tech/mind
+

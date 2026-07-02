@@ -42318,3 +42318,212 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Merged another commit. Let's make Hermes better together! https://github.com/NousResearch/hermes-agent/pull/56874
     [embed] fix(browser): guard Camofox eval private pages (salvage #56764) by ... https://github.com/NousResearch/hermes-agent/pull/56874
 
+[2026-07-02T08:57:17.140000+00:00] kxee (id=1522164247885254796)
+    yay
+    [reply to rayjun.eth msg=1522161264061710476]
+
+[2026-07-02T09:08:45.455000+00:00] frowtek (id=1522167134887743648)
+    https://github.com/NousResearch/hermes-agent/pull/56909 HTTP 408 Request Timeout was classified as a non-retryable format_error (same bucket as a 400), so a transient proxy timeout aborts the turn instead of retrying. Routes 408 → retryable timeout.
+    
+    https://github.com/NousResearch/hermes-agent/pull/56913 Kanban decompose feeds raw aux-model output to a naive first-{ … last-} JSON slice. Reasoning models' <think> braces break the slice, so decompose fails as "malformed JSON" even on valid output. Strips think blocks first.
+    
+    
+     https://github.com/NousResearch/hermes-agent/pull/56925 The /goal judge parses the verdict with a non-greedy first-{…} fallback and no think-strip, so reasoning judge models cause a wrong verdict (finished goal keeps running) or spurious parse-fails that auto-pause the loop. Strips think blocks first.
+
+[2026-07-02T09:22:09.831000+00:00] daaku.rowdy (id=1522170508685217862)
+    where do devs show some kickass usecases of hermes?
+
+[2026-07-02T09:44:06.016000+00:00] trivunous (id=1522176029165355018)
+    https://github.com/NousResearch/hermes-agent/pull/56765
+    [embed] fix: kitty keyboard protocol corruption after TUI /quit by AlexFucu... https://github.com/NousResearch/hermes-agent/pull/56765
+
+[2026-07-02T09:52:33.878000+00:00] kyssta69 (id=1522178159292846091)
+    https://github.com/NousResearch/hermes-agent/pull/56963
+    
+    **Problem**: Plain-text dangerous-command approvals ignored per-platform tool_progress and exposed command text on chat platforms. The fallback now resolves the platform display setting and hides the command preview unless progress previews are enabled.
+    [embed] fix(gateway): honor tool_progress for approval previews by kyssta-e... https://github.com/NousResearch/hermes-agent/pull/56963
+
+[2026-07-02T10:00:17.102000+00:00] wnuuee (id=1522180102195122247)
+    Continuing the tooltip unification: brought another set of buttons in line with the app's styled tooltips the user message bubble's action buttons (Edit message, Stop, Restore checkpoint), plus the Send edited message button in the inline edit composer. Replaced native `title=` attributes with the styled `<Tip>` component, same pattern as #56520. <@387972437901312000> <@119192111202566149> 
+    
+    Fixed: https://github.com/NousResearch/hermes-agent/pull/56961
+    [attachment] user-message_1.gif https://cdn.discordapp.com/attachments/1491258766648283238/1522180102325010562/user-message_1.gif?ex=6a478831&is=6a4636b1&hm=82f5a2b9107da818a0825d10ff22a0ee1995a42b2bcf23eb0418adeb8d526f1e&
+    [attachment] user-message_2.gif https://cdn.discordapp.com/attachments/1491258766648283238/1522180102631325806/user-message_2.gif?ex=6a478831&is=6a4636b1&hm=967cc6de79ca31d46b41d34b8145e7aae298fe18cdde02f2dc6e4b641a87114f&
+    [embed] fix(desktop): add styled tooltips to user message action buttons by... https://github.com/NousResearch/hermes-agent/pull/56961
+    [reply to wnuuee msg=1521925253503254719]
+
+[2026-07-02T10:33:36.399000+00:00] nanxingncb612d (id=1522188487854395444)
+    https://github.com/NousResearch/hermes-agent/pull/56964 Reject unauthorized Google Chat senders before the adapter builds a MessageEvent.
+    [embed] fix(google-chat): reject unauthorized senders before attachment pro... https://github.com/NousResearch/hermes-agent/pull/56964
+
+[2026-07-02T10:33:54.872000+00:00] nanxingncb612d (id=1522188565335769128)
+    https://github.com/NousResearch/hermes-agent/pull/56972 Re-check web_extract provider result URLs before returning or storing extracted content.
+    [embed] fix(web_extract): re-check provider final URLs before storing conte... https://github.com/NousResearch/hermes-agent/pull/56972
+
+[2026-07-02T10:34:08.224000+00:00] nanxingncb612d (id=1522188621338382406)
+    https://github.com/NousResearch/hermes-agent/pull/56977 Azure Foundry's model.auth_mode: entra_id path can authenticate through Azure SDK environment credentials such as AZURE_CLIENT_SECRET or AZURE_FEDERATED_TOKEN_FILE. Those values were not included in Hermes subprocess env stripping, so they could be inherited by spawned terminal commands and non-terminal child processes.
+    
+    This is the same credential-exposure class as the recent Vertex credential path fix: the provider does not use a normal static API key in PROVIDER_REGISTRY, so the env sanitizer did not recognize all provider-auth material.
+    [embed] fix(security): strip Azure Entra credentials from subprocess env by... https://github.com/NousResearch/hermes-agent/pull/56977
+
+[2026-07-02T10:34:53.735000+00:00] janezeroon (id=1522188812225216602)
+    <@690519146701783042>  can you review this please.. 🙏 
+    
+    it's about codex image-gen
+    https://github.com/NousResearch/hermes-agent/pull/55828
+    [embed] feat(image-gen): support Codex image inputs by CrazyBoyM · Pull Re... https://github.com/NousResearch/hermes-agent/pull/55828
+
+[2026-07-02T11:04:27.190000+00:00] nanxingncb612d (id=1522196250634616943)
+    https://github.com/NousResearch/hermes-agent/pull/56992 @diff, @staged, and @git:N context references attach raw git patch output without checking whether the patch touches credential-denied files. That means a staged or committed .env / Hermes auth file can be injected into model context even though direct @file:.env expansion is blocked by the canonical read deny-list.
+    [embed] fix(security): block credential files in context git refs by necowe... https://github.com/NousResearch/hermes-agent/pull/56992
+
+[2026-07-02T11:07:58.889000+00:00] jonathanljs (id=1522197138564579442)
+    Not sure if this is the right place, but I've had some troubles with Bitdefender thinking that Hermes is malicious (or blocking a website it tried to access (xml.metricdriftlane.xyz)
+
+[2026-07-02T11:25:25.961000+00:00] witcheer (id=1522201530302861544)
+    could it be linked to this https://github.com/NousResearch/hermes-agent/issues/48411
+    [embed] uv.exe in hermes/bin flagged as malware (Malware.AI / Trojan ...!ml... https://github.com/NousResearch/hermes-agent/issues/48411
+    [reply to jonathanljs msg=1522197138564579442]
+
+[2026-07-02T11:27:09.565000+00:00] alelpoan (id=1522201964849533050)
+    The Structure section was out of date vs actual code. Replaced the stale tree with a fully-annotated map of the current src/ layout. <@387972437901312000>  🫡 
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/57005
+    [embed] docs(web): update src/ structure to reflect current layout by alelp... https://github.com/NousResearch/hermes-agent/pull/57005
+
+[2026-07-02T11:29:19.911000+00:00] kyssta69 (id=1522202511560282275)
+    https://github.com/NousResearch/hermes-agent/pull/57011
+    
+    **Problem**: Fixes Fireworks custom OpenAI-compatible providers rejecting browser tool schemas with unresolved local JSON Schema refs by inlining #/$defs references only for Fireworks requests.
+    [embed] fix(agent): inline Fireworks local tool schema refs by kyssta-exe ... https://github.com/NousResearch/hermes-agent/pull/57011
+
+[2026-07-02T11:32:55.721000+00:00] kyssta69 (id=1522203416733028474)
+    https://github.com/NousResearch/hermes-agent/pull/57015
+    
+    **Problem**: Fixes Desktop cold-start remembering delegate subagent sessions by rewriting subagent route ids to their parent session before persisting the remembered chat.
+    [embed] fix(desktop): remember delegate parent sessions by kyssta-exe · Pu... https://github.com/NousResearch/hermes-agent/pull/57015
+
+[2026-07-02T11:38:48.595000+00:00] jw_mushroom_man (id=1522204896793985024)
+    https://github.com/NousResearch/hermes-agent/pull/57019
+    
+    adds an opt in gateway watcher that keeps the prefix hot.  instead of reconstructing the prompt, the warmer replays what Hermes actually sent.  the agent request builder snapshot, the most recent chat completions since to each local endpoint.
+    [embed] Feat/prefix warmer by lEWFkRAD · Pull Request #57019 · NousResear... https://github.com/NousResearch/hermes-agent/pull/57019
+
+[2026-07-02T11:39:33.463000+00:00] jw_mushroom_man (id=1522205084983754893)
+    <@433824437574303745> can you get eyes on this sometime today?
+
+[2026-07-02T11:49:53.263000+00:00] kxee (id=1522207684613636187)
+    merged
+    [reply to janezeroon msg=1522188812225216602]
+
+[2026-07-02T12:07:03.728000+00:00] jw_mushroom_man (id=1522212006696980560)
+    https://github.com/NousResearch/hermes-agent/pull/57043
+    
+    This PR adds an optional per-slot reasoning_effort key on MoA reference slots
+
+[2026-07-02T12:09:09.322000+00:00] jw_mushroom_man (id=1522212533476393000)
+    With this PR, pytest tests/cli tests/gateway/test_status.py tests/tools/test_windows_native_support.py tests/test_windows_subprocess_no_window_flags.py is fully green on native Windows (1180 passed, 5 legitimately skipped) and stays green on POSIX.
+    
+    https://github.com/NousResearch/hermes-agent/pull/57016
+    [embed] fix(windows): native Windows correctness fixes + green CLI test sui... https://github.com/NousResearch/hermes-agent/pull/57016
+
+[2026-07-02T12:16:08.581000+00:00] .joinu (id=1522214291976093826)
+    <@690519146701783042> hi
+    I wanted to ask you about a favour. Can you please help me identifying if this PR was properly bot-audited? I did some changes to it after tenki review and I’m not sure if all is good now, since the bot didn’t do any follow-up, and during it’s CI there was a number of failures (which are outside of the proposed changes scope). 
+    Thank you in advance!
+    [reply to .joinu msg=1522151193953173614]
+
+[2026-07-02T12:20:02.645000+00:00] jw_mushroom_man (id=1522215273711796376)
+    https://github.com/NousResearch/hermes-agent/pull/52685
+    
+    Comprehensive Windows Overhall
+
+[2026-07-02T12:28:02.823000+00:00] jw_mushroom_man (id=1522217287724306533)
+    https://github.com/NousResearch/hermes-agent/pull/57059
+    
+    Stops idle desktop/TUI tabs from permanently pinning max_concurrent_sessions slots.
+
+[2026-07-02T13:07:34.737000+00:00] kyssta69 (id=1522227236252418128)
+    https://github.com/NousResearch/hermes-agent/pull/57078
+    
+    **Problem**: Fixed the TUI slash command catalog collision where /compact appeared as both the /compress alias and a TUI display toggle. Registry commands and aliases now take precedence over TUI-only extras, with regression coverage.
+    [embed] fix(tui): let command aliases override TUI extras by kyssta-exe · ... https://github.com/NousResearch/hermes-agent/pull/57078
+
+[2026-07-02T13:09:39.658000+00:00] kyssta69 (id=1522227760209334322)
+    https://github.com/NousResearch/hermes-agent/pull/57080
+    
+    **Problem**: Fixed Edge TTS explicit .ogg output so MP3 bytes are no longer saved under an OGG extension. Edge now writes a temporary MP3, converts it to Ogg/Opus, and marks the result voice-compatible for native voice delivery.
+    [embed] fix(tts): convert explicit Edge OGG output by kyssta-exe · Pull Re... https://github.com/NousResearch/hermes-agent/pull/57080
+
+[2026-07-02T13:12:15.751000+00:00] kyssta69 (id=1522228414910828575)
+    https://github.com/NousResearch/hermes-agent/pull/57084
+    
+    **Problem**: Fixed the base gateway auto-TTS path so Telegram voice replies request an explicit .ogg output path, while non-Telegram platforms keep the default TTS output behavior. Added focused coverage for the Telegram/non-Telegram path selection.
+    [embed] fix(gateway): request OGG for Telegram auto TTS by kyssta-exe · Pu... https://github.com/NousResearch/hermes-agent/pull/57084
+
+[2026-07-02T13:14:00.327000+00:00] kyssta69 (id=1522228853534097578)
+    https://github.com/NousResearch/hermes-agent/pull/57087
+    
+    **Problem**: Fixed packaged TUI launch for Homebrew/Linuxbrew-style installs by checking the bundled hermes_cli/tui_dist entry before requiring a source ui-tui workspace. Added regression coverage for package layouts that omit ui-tui/.
+    [embed] fix(tui): prefer bundled dist before workspace check by kyssta-exe ... https://github.com/NousResearch/hermes-agent/pull/57087
+
+[2026-07-02T13:21:50.086000+00:00] quantumnargle (id=1522230823846150174)
+    https://github.com/NousResearch/hermes-agent/pull/56368
+    
+    Fixes native vision routing for the kimi-coding provider when the configured model is kimi-for-coding (default)
+    
+    Can someone help review thanks!
+    [embed] fix(vision): enable native vision for kimi-coding provider and reso... https://github.com/NousResearch/hermes-agent/pull/56368
+
+[2026-07-02T13:37:39.108000+00:00] tak0000001 (id=1522234804333051914)
+    hello, How setup my SimpleX gateway? I'm trying but still not working
+
+[2026-07-02T13:41:28.073000+00:00] godsboy7777 (id=1522235764682002493)
+    Hey <@387972437901312000>, could you review this Telegram caption fix when you have a chance?
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/57090
+    Issue: https://github.com/NousResearch/hermes-agent/issues/32029
+    Related older PRs:
+    https://github.com/NousResearch/hermes-agent/pull/32118
+    https://github.com/NousResearch/hermes-agent/pull/32893
+    
+    ## Motivation
+    
+    Telegram media replies, especially MP3 / TTS replies, were sending the assistant response as a plain media caption.
+    
+    That made Telegram show raw Markdown like `**bold**`, backticks, and code fences instead of rendering rich Markdown formatting.
+    
+    I added the real before-fix screenshot to the PR body so the symptom is visible.
+    
+    ## What this PR fixes
+    
+    * Sends Telegram media captions with MarkdownV2 parse mode
+    * Covers voice / audio, photos, documents, videos, animations, uploaded-photo fallback, and media groups
+    * Retries with a plain caption if Telegram rejects MarkdownV2 entities
+    * Keeps that retry compatible with the stale private-topic reply-anchor fallback
+    
+    ## Why this PR is still needed
+    
+    The older PRs address the same bug class, but they target:
+    
+    ```text
+    gateway/platforms/telegram.py
+    ```
+    
+    That is no longer the active Telegram path on current `main`.
+    
+    This PR applies the fix to:
+    
+    ```text
+    plugins/platforms/telegram/adapter.py
+    ```
+    
+    It also adds coverage for the current adapter and covers fallback cases that could otherwise bypass the Markdown retry.
+    
+    CI is green, including Python slices, lints, TypeScript, docs, supply-chain checks, and Docker image builds.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1522235765138915338/image.png?ex=6a47bc08&is=6a466a88&hm=93fce485f65e396cd4c29780b1493d48066a58b48f6e020348338e6e760dd363&
+    [embed] fix(telegram): render media captions with MarkdownV2 by GodsBoy · ... https://github.com/NousResearch/hermes-agent/pull/57090
+    [embed] [Bug]: Telegram TTS voice reply caption sent as plain text, breakin... https://github.com/NousResearch/hermes-agent/issues/32029
+    [embed] fix(telegram): add parse_mode to media captions so markdown renders... https://github.com/NousResearch/hermes-agent/pull/32118
+    [embed] fix(telegram): render media captions as MarkdownV2 so Detailed Anal... https://github.com/NousResearch/hermes-agent/pull/32893
+

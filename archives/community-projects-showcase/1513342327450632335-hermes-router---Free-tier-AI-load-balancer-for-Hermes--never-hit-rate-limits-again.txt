@@ -953,3 +953,6 @@
     
     Update with `hr update` (or pull the latest Docker image) and open the dashboard 🎉
 
+[2026-07-02T11:10:20.044000+00:00] lathamba. (id=1522197730611695717)
+    upload screen shots for the usage dashboard
+

@@ -30,3 +30,6 @@
 [2026-06-14T13:06:02.035000+00:00] captain_sandy (id=1515703865851379862)
     This is incredible <@683856839586480221> , thank you very much for building this. Criminally underrated!!
 
+[2026-07-02T13:02:42.655000+00:00] d0ggyw00f (id=1522226011171852538)
+    PolyGnosis/PolyBrain has been officially replaced by Hermes MoA
+
