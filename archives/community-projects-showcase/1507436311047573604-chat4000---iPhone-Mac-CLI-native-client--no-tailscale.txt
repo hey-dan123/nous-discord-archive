@@ -341,3 +341,11 @@
 [2026-07-02T13:55:16.815000+00:00] markmnl (id=1522239240677757090)
     i see the clients OSS in your github but not the server
 
+[2026-07-02T20:25:57.970000+00:00] haimbender (id=1522337560007807157)
+    yeah, u can dm me and ask me about it if you need
+    [reply to markmnl msg=1522239049102917713]
+
+[2026-07-02T20:26:16.296000+00:00] haimbender (id=1522337636872749197)
+    heya, i tried to dm you but can't, i'd love to learn more about this error 🙏🏻
+    [reply to ryansd.858 msg=1521950844000669766]
+

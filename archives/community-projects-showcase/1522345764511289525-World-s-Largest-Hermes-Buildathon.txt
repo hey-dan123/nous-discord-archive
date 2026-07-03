@@ -1,0 +1,30 @@
+# Thread 'World's Largest Hermes Buildathon' in forum #community-projects-showcase
+# thread_id=1522345764511289525 forum_id=1316137596535177246
+# Started 2026-07-03T02:45:12.245387+00:00
+
+[2026-07-02T20:58:34.076000+00:00] anondisctrol (id=1522345764511289525)
+    We are doing a hermes buildathon across 10 cities and 5 countries.
+    
+    This is not an official Nous Research event. But the team knows we are doing this and we have their blessings. 
+    
+    Backed by OpenAI, Convex, Cloudflare, ElevenLabs, & Wispr Flow. Proudly presented by GrowthX.
+    
+    Happening across
+    - San Francisco
+    - Paris
+    - Singapore
+    - Jaipur
+    - Delhi
+    - Mumbai
+    - Pune
+    - London
+    - Hyderabad
+    - & Bengaluru
+    
+    Please join and let's build some cool shit.
+    https://growthx.club/docs/host-hermes-buildathon
+    [attachment] NEW.png https://cdn.discordapp.com/attachments/1522345764511289525/1522345764926390453/NEW.png?ex=6a48227a&is=6a46d0fa&hm=440cd6ece19b9c556804a1ee913fa474b7fddfb65e0c08c200ecb43a85e7e143&
+
+[2026-07-02T21:06:48.553000+00:00] anondisctrol (id=1522347838498013296)
+    World's Largest Hermes Buildathon
+

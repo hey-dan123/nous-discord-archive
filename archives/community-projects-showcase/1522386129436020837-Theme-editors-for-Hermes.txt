@@ -1,0 +1,14 @@
+# Thread 'Theme editors for Hermes' in forum #community-projects-showcase
+# thread_id=1522386129436020837 forum_id=1316137596535177246
+# Started 2026-07-03T02:45:11.245051+00:00
+
+[2026-07-02T23:38:57.824000+00:00] drahcir_rahl (id=1522386129436020837)
+    Yeah, I built two, LOL 
+    Choices! Theme editors for Hermes 😉
+    
+    https://github.com/rahlquist/theme_editor_talaria
+    https://github.com/rahlquist/talaria-theme-editor
+    Have fun!
+    [embed] GitHub - rahlquist/theme_editor_talaria: Standalone visual theme ed... https://github.com/rahlquist/theme_editor_talaria
+    [embed] GitHub - rahlquist/talaria-theme-editor https://github.com/rahlquist/talaria-theme-editor
+

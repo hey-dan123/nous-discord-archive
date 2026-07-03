@@ -27,3 +27,19 @@
 [2026-06-30T12:21:16.752000+00:00] henan (id=1521490808807755918)
     Currently working on a small but powerful idea for SOUL.md: teaching agents that conversations don’t happen outside of time. Not just reading timestamps, but using elapsed time to understand continuity, urgency, staleness, and even when something feels temporally suspicious
 
+[2026-07-02T20:45:58.327000+00:00] henan (id=1522342594670235829)
+    Hora v0.1.1 hotfix is live
+    
+    This fixes native Hermes gateway timestamp handling: prefixes like
+    [Tue 2026-04-28 13:40:53 CEST]
+    are now parsed and converted to Hora’s ISO [time: ...] reception stamp while preserving the original message time.
+    
+    Also included:
+    -recommended SOUL.md temporal-context prompt
+    -extra test coverage for first unstamped user messages
+    
+    Update:
+    ```
+    hermes plugins update hermes-hora
+    ```
+

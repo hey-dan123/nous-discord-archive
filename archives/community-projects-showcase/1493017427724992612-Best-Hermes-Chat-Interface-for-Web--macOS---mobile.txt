@@ -5230,3 +5230,42 @@
     Lmk if things are all good now once you have a chance to test the latest update
     [reply to _123321_ msg=1521926782897360908]
 
+[2026-07-02T21:16:13.369000+00:00] frostmage10 (id=1522350207508025414)
+    <@933139410281713755> https://github.com/uzairansaruzi/hermex
+    [embed] GitHub - uzairansaruzi/hermex: Native iPhone app for your Hermes agent https://github.com/uzairansaruzi/hermex
+
+[2026-07-02T21:16:33.891000+00:00] frostmage10 (id=1522350293583659109)
+    Can someone with insane aura and grind, 1:1 copy paste everything and port it to android
+
+[2026-07-02T21:16:37.859000+00:00] frostmage10 (id=1522350310226657371)
+    The ui and everything
+
+[2026-07-02T21:29:19.330000+00:00] avidfuturist (id=1522353504067522570)
+    Yup Uzi’s iOS app is open source now, super cool!
+    [reply to frostmage10 msg=1522350207508025414]
+
+[2026-07-02T21:29:41.789000+00:00] avidfuturist (id=1522353598267265124)
+    I’m putting together detailed organized API docs for the bridge that he used so anyone could build an app using the same WebUI bridge!
+
+[2026-07-02T21:50:12.841000+00:00] avidfuturist (id=1522358761673461802)
+    https://get-hermes.ai/api-docs/ - introduced the bridge API, the same bridge Hermex uses to create that iOS experience. Anyone could create any native Hermes client using this API
+    [attachment] IMG_5694.png https://cdn.discordapp.com/attachments/1493017427724992612/1522358761954611271/IMG_5694.png?ex=6a482e94&is=6a46dd14&hm=4ff5fc7efab5ef32be41a4bdd4e9b0206ce1a4a7a8f170bbd6f95c66a0b2949c&
+    [embed] Hermes Bridge API https://get-hermes.ai/api-docs/
+
+[2026-07-02T22:22:08.133000+00:00] frostmage10 (id=1522366794990616636)
+    .
+    [reply to frostmage10 msg=1522350293583659109]
+
+[2026-07-02T23:19:31.058000+00:00] thisisuzii (id=1522381235664715786)
+    Yess opensource now!
+    
+    sorry for not being active here - had a million discord notifications so things got lost lol
+
+[2026-07-03T01:01:18.004000+00:00] gh5aerial (id=1522406850052755676)
+    can it works with hermes installed on local computer ?
+    [reply to frostmage10 msg=1522350207508025414]
+
+[2026-07-03T01:01:51.722000+00:00] avidfuturist (id=1522406991476162692)
+    Yes can work with any Hermes with tailscale setup as long as the local computer is running
+    [reply to gh5aerial msg=1522406850052755676]
+

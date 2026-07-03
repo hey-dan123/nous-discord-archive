@@ -29,3 +29,19 @@
 [2026-07-02T19:18:11.885000+00:00] ruffer3000 (id=1522320505611358369)
     Are you using this together with the kanban board? If so, what's your setup?
 
+[2026-07-02T20:15:20.948000+00:00] dami.zip (id=1522334888144146503)
+    I found the change board as the replacement for kanban to plan work. This keeps it local to project openspec change files and exposes it for orchestration the same way.
+    [reply to ruffer3000 msg=1522320505611358369]
+
+[2026-07-02T20:16:21.466000+00:00] dami.zip (id=1522335141974904935)
+    The only feature I saw that I clearly lack is the comment system, which I felt can exist outside the system (such as a different thread to edit or directly changing/merging openspec definitions.
+
+[2026-07-02T20:19:56.785000+00:00] dami.zip (id=1522336045088379082)
+    I guess you could use the kanban board in combo, but you'd have to handle the orchestration and alignment of create change -> task -> review -> complete change -> complete task -> promote change specs to hold the fr/nfr.
+
+[2026-07-02T20:49:52.167000+00:00] ruffer3000 (id=1522343575466016880)
+    At work I use openspec with planotator which provides a much nicer way (than screaming at the agent) to give feedback about specific parts of the spec. But there the setup is slightly different. My main interface there is the chat with the orchestrator.
+
+[2026-07-02T21:54:26.636000+00:00] dami.zip (id=1522359826166976664)
+    Ahh gotcha, I mostly ideate with it in chat and then have it sync that into it. I work off lots of technical spikes for this work, so it's very bottom-up
+

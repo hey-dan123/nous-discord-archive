@@ -1,0 +1,10 @@
+# Thread 'Platform to find Co-founder, investor, early users, mentor' in forum #community-projects-showcase
+# thread_id=1522375236899700998 forum_id=1316137596535177246
+# Started 2026-07-03T02:45:11.778389+00:00
+
+[2026-07-02T22:55:40.841000+00:00] william_zhu3541 (id=1522375236899700998)
+    The world is full of people you'd love working with, and who'd love working with you. You just haven't found each other yet.
+    Introduce InOrbit (think LinkedIn + Boardy): You post what you need and what you can offer, and it matches you with people who complement you.
+    Great for Finding Co-founder, investor, early users, mentor. You can even create and post in your own private high trust groups: https://beinorbit.com/
+    [embed] InOrbit: Find the people who move you forward. https://beinorbit.com/
+

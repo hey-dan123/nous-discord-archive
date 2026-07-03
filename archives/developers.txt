@@ -42581,3 +42581,106 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/issues/38975
     [embed] Desktop UI: add full custom OpenAI-compatible provider setup · Iss... https://github.com/NousResearch/hermes-agent/issues/38975
 
+[2026-07-02T20:18:05.965000+00:00] drexux (id=1522335580275347618)
+    https://github.com/NousResearch/hermes-agent/pull/56976 <@387972437901312000>
+    [embed] Fix/lazy deps pip fallback env scrub by Drexuxux · Pull Request #5... https://github.com/NousResearch/hermes-agent/pull/56976
+
+[2026-07-02T20:19:11.504000+00:00] teknium (id=1522335855165833359)
+    Hermes requires uv is used for the venv
+    [reply to drexux msg=1522335580275347618]
+
+[2026-07-02T20:19:15.086000+00:00] teknium (id=1522335870189965372)
+    why would you not have uv installed
+
+[2026-07-02T20:26:39.183000+00:00] aleksandr_1 (id=1522337732867788811)
+    **fix(agent): reset stale summary auth/network failure flags at session boundaries**. 
+    
+    Found that _last_summary_auth_failure and _last_summary_network_failure in ContextCompressor were set on an auth or network error during summary generation, but never cleared by on_session_end(), on_session_reset(), or the manual /compress force=True retry path, despite falling into the exact same cross-session contamination category those methods already guard for other fields. A one-time auth or network hiccup could make a later, unrelated compression failure report the wrong cause and abort instead of falling back or retrying, with no way to recover other than a lucky summary success. Cleared both flags in all three places.
+    
+    **PR:**  https://github.com/NousResearch/hermes-agent/pull/57316
+    [embed] fix(agent): reset stale summary auth/network failure flags at sessi... https://github.com/NousResearch/hermes-agent/pull/57316
+
+[2026-07-02T20:49:56.382000+00:00] maxfreedompollard (id=1522343593145270387)
+    PR #57324  https://github.com/NousResearch/hermes-agent/pull/57324
+    
+    If you run Hermes in Chinese/Japanese/German/etc., every session reset still barked at you in English — the `/new` reply's Model/Provider/Context block and the whole "Session automatically reset" notice were hardcoded strings sitting two lines away from code that already uses the i18n system. This localizes both into all 16 catalogs (closes #53466). Matters because it's the single most-seen system message on Feishu/DingTalk/Telegram installs with a non-English `display.language` — the mixed-language reply made every reset feel broken.
+    [embed] feat(i18n): localize session info block and auto-reset notice by Ma... https://github.com/NousResearch/hermes-agent/pull/57324
+
+[2026-07-02T20:50:19.931000+00:00] maxfreedompollard (id=1522343691916935208)
+    PR #57325  https://github.com/NousResearch/hermes-agent/pull/57325
+    
+    Guardrail for a failure mode the current i18n tests structurally can't see: the catalogs are checked against each other, but nothing checks the code against the catalogs. So a `t()` call with a key missing from *every* catalog ships green and users get the raw `gateway.foo.bar` string in chat — that literally happened with `gateway.verbose.mode_log` this week and had to be hand-backfilled into 16 files. Two AST-based tests now scan the 300+ `t()` call sites and fail with file:line if a key doesn't resolve in en.yaml or a call omits a `{placeholder}` kwarg. Cheap (~0.4s), and it makes the whole class of "raw key path in production chat" regressions impossible to merge.
+    [embed] test(i18n): pin t() keys and format kwargs used in code to the Engl... https://github.com/NousResearch/hermes-agent/pull/57325
+
+[2026-07-02T21:36:26.071000+00:00] aleksandr_1 (id=1522355293948743922)
+    **fix(gateway): reject relay inbound events claiming an unadvertised platform. **
+    
+    Found that RelayAdapter._on_inbound() routed every inbound event straight to handle_message() regardless of its claimed platform, with no check against what the connection actually advertised at hello. _event_from_wire() builds SessionSource from the connector's wire payload as a module-level function with no access to the transport's advertised identity set, so a relay event tagged source.platform="telegram" with a chat_id matching a real, active Telegram chat produces the exact same session key a genuine Telegram message would, landing in that chat's real, live session. build_session_key() is a pure function of the SessionSource fields with no notion of which transport delivered the event. Added a check in _on_inbound() against the existing _platform_is_fronted() helper, rejecting any claimed platform outside the set advertised at this connection's hello handshake, while still allowing the generic "relay" platform and any platform in a multi-platform ("N hellos") connection through unaffected.
+    
+    **PR:**  https://github.com/NousResearch/hermes-agent/pull/57358
+    [embed] fix(gateway): reject relay inbound events claiming an unadvertised ... https://github.com/NousResearch/hermes-agent/pull/57358
+
+[2026-07-02T22:23:03.714000+00:00] edwardirby (id=1522367028113965131)
+    Wanted to get feedback on https://github.com/NousResearch/hermes-agent/pull/13314. I modified this PR to leverage hermes MCP client. It now transform the PR from a custom-plugin integration into a lightweight MCP catalog entry with onboarding support only 10 files touched with additions. The approach aligns with the Footprint Ladder and "extend, don't duplicate" principles in AGENTS.md.
+    [embed] feat: add You.com MCP catalog entry, research skill, and onboarding... https://github.com/NousResearch/hermes-agent/pull/13314
+
+[2026-07-02T22:24:10.460000+00:00] samueltinnerholm (id=1522367308067110953)
+    <@387972437901312000> is it alright if I publish this on the app store? https://github.com/NousResearch/hermes-agent/pull/52673
+    
+    It has your branding, so I wanted to check first.
+    [embed] feat(mobile): add native mobile shell for Hermes Desktop by realfis... https://github.com/NousResearch/hermes-agent/pull/52673
+
+[2026-07-02T22:42:56.257000+00:00] fullslop (id=1522372030002102272)
+    at the risk of putting words in his mouth, did you search this chat history? there are prs like this every other day and they all get denied
+    [reply to samueltinnerholm msg=1522367308067110953]
+
+[2026-07-02T22:46:13.012000+00:00] nanxingncb612d (id=1522372855252258876)
+    https://github.com/NousResearch/hermes-agent/pull/57383 This extends the Camofox private-page guard to input actions (camofox_click, camofox_type, and camofox_press).
+    [embed] fix(browser): block Camofox input on private pages by necoweb3 · P... https://github.com/NousResearch/hermes-agent/pull/57383
+
+[2026-07-02T22:55:46.740000+00:00] samueltinnerholm (id=1522375261641900054)
+    I didn’t ask him to merge it? I asked if it’s alright I publish it. People have DMed me asking me to release it on TestFlight and the App Store so they can use it but I won’t want to do so without their permission.
+    [reply to fullslop msg=1522372030002102272]
+
+[2026-07-02T23:00:12.353000+00:00] fullslop (id=1522376375703703693)
+    you can't use the name
+    [reply to samueltinnerholm msg=1522375261641900054]
+
+[2026-07-02T23:04:28.820000+00:00] nanxingncb612d (id=1522377451404267530)
+    https://github.com/NousResearch/hermes-agent/pull/57394 This adds post-navigation redirect checks to the Camofox browser backend before camofox_navigate() returns a result or takes its automatic compact snapshot.
+    [embed] fix(browser): block Camofox private redirects before auto-snapshot ... https://github.com/NousResearch/hermes-agent/pull/57394
+
+[2026-07-02T23:25:43.177000+00:00] teknium (id=1522382796444794981)
+    No
+    [reply to samueltinnerholm msg=1522367308067110953]
+
+[2026-07-02T23:33:08.204000+00:00] nanxingncb612d (id=1522384663023321300)
+    https://github.com/NousResearch/hermes-agent/pull/57403
+    [embed] fix(simplex): guard media delivery paths by necoweb3 · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/57403
+
+[2026-07-03T00:33:17.050000+00:00] fullslop (id=1522399799620403371)
+    https://github.com/NousResearch/hermes-agent/pull/57409
+    I fixed a bug with Desktop installer, should prevent the dreaded “INSTALL DID NOT FINISH” error blocking startup
+    [embed] fix(installer): self-repair corrupt desktop npm tree by jplew · Pu... https://github.com/NousResearch/hermes-agent/pull/57409
+
+[2026-07-03T00:37:48.764000+00:00] tunacookie (id=1522400939271524503)
+    does review pane work for you on hermes desktop? ctrl + g, nothing shows up on the pane for me, and i dont know how to make something appear there
+    [reply to fullslop msg=1522399799620403371]
+
+[2026-07-03T01:40:19.240000+00:00] warofchange (id=1522416669908140092)
+    Unit tests for has_traversal_component
+    
+    Adding test coverage for a security helper. has_traversal_component (tools/path_security.py) is a pure, I/O-free guard used by skills_tool, tts_tool, file_tools, and skill_manager_tool to reject path-traversal attempts before expensive path resolution — but the module had no tests.
+    
+    The suite pins its contract:
+    • A .. path component is flagged (a/../b, ../etc/passwd, .., foo/bar/..)
+    • Clean relative paths pass (a/b/c, safe/path.txt)
+    • .. as a substring is NOT flagged (a/b..c/d, file..txt) — must be a whole component
+    • Triple-dot (...), current-dir (./a), and empty string are not traversal
+    
+    Why it matters: a future "simplification" to something like ".." in path_str would introduce false positives (e.g. file..txt) and pass silently. These tests lock the substring-vs-component behavior on a real security boundary. Pure input→output assertions — no mocks, no network, no filesystem. Zero production code touched.
+    
+    pytest tests/tools/test_path_security.py -v
+    PR: https://github.com/NousResearch/hermes-agent/pull/57442
+    [embed] test(tools): add unit tests for has_traversal_component by waroffch... https://github.com/NousResearch/hermes-agent/pull/57442
+
