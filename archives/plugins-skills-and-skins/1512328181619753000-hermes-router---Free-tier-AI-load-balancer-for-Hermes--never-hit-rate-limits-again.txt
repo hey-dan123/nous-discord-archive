@@ -1170,3 +1170,6 @@
 [2026-07-01T09:26:46.747000+00:00] heeervas (id=1521809282289635329)
     Can you send a screenshot of the dashboard? can't update now
 
+[2026-07-03T19:02:34.598000+00:00] markopaasila (id=1522678962210472228)
+    Do the routes/models heal? I have multiple showing degraded but the provider dashboards say zero usage.
+

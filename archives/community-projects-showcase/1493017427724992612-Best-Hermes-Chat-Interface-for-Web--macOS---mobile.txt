@@ -5273,3 +5273,17 @@
     will do, quotas should be back in 2h 🤞
     [reply to avidfuturist msg=1522292458355163289]
 
+[2026-07-03T18:01:06.734000+00:00] avidfuturist (id=1522663494187483217)
+    Thanks!
+    [reply to _123321_ msg=1522525270651834448]
+
+[2026-07-03T19:08:47.022000+00:00] avidfuturist (id=1522680524269682748)
+    Lots of fixes out the last few days! Good time to try the WebUI if you haven’t yet or tried and were running into issues!
+
+[2026-07-03T19:08:56.407000+00:00] avidfuturist (id=1522680563633360946)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for more details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And with **native iOS app and Android support**! 
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+

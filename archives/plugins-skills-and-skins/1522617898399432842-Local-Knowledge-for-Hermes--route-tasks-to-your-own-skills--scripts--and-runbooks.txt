@@ -1,0 +1,49 @@
+# Thread 'Local Knowledge for Hermes: route tasks to your own skills, scripts, and runbooks' in forum #plugins-skills-and-skins
+# thread_id=1522617898399432842 forum_id=1485392832154832906
+# Started 2026-07-03T19:22:51.091649+00:00
+
+[2026-07-03T14:59:55.851000+00:00] alex19752009 (id=1522617898399432842)
+    I published a small Hermes plugin for people whose setup has grown local skills, scripts, runbooks, cron jobs, MCP wrappers, or ops notes.
+    
+    Repo: https://github.com/stepanov1975/hermes-local-knowledge
+    Latest release: https://github.com/stepanov1975/hermes-local-knowledge/releases/tag/v0.2.9
+    
+    `local_knowledge` indexes whole local artifacts, not random RAG chunks. Its job is to help Hermes answer: "which local thing should I inspect first?" before it starts guessing paths or doing broad searches.
+    
+    What it adds:
+    - `knowledge_search`
+    - `knowledge_get`
+    - `knowledge_neighbors`
+    - `knowledge_feedback`
+    - `knowledge_usage_report`
+    
+    Good fit if you ask Hermes things like:
+    - "Which script handles backups?"
+    - "Find the runbook for this service."
+    - "Which local skill covers Paperless review?"
+    - "What MCP wrapper or cron job is related to this?"
+    
+    Install:
+    ```bash
+    hermes plugins install https://github.com/stepanov1975/hermes-local-knowledge.git --enable
+    ```
+    
+    Point it at a high-signal local repo, for example your Hermes customizations or ops docs:
+    ```bash
+    hermes config set local_knowledge.source_root "$HOME/repos/your-local-docs-or-customizations"
+    hermes config set local_knowledge.state_dir "$HOME/.hermes/local_knowledge"
+    ```
+    
+    For proactive routing, install the companion skill too:
+    ```bash
+    hermes skills install https://raw.githubusercontent.com/stepanov1975/hermes-local-knowledge/main/skills/local-knowledge-router/SKILL.md --name local-knowledge-router
+    ```
+    
+    Then restart Hermes or start a fresh session.
+    
+    v0.2.9 bundles the router skill with the plugin for explicit namespaced loads, includes wheel package data, and has CI, Ruff, mypy, CodeQL, and security scans passing.
+    
+    MIT licensed. Feedback welcome, especially if your local skill/runbook layout differs from mine.
+    [embed] GitHub - stepanov1975/hermes-local-knowledge: Reusable Hermes Agent... https://github.com/stepanov1975/hermes-local-knowledge
+    [embed] Release v0.2.9 · stepanov1975/hermes-local-knowledge https://github.com/stepanov1975/hermes-local-knowledge/releases/tag/v0.2.9
+

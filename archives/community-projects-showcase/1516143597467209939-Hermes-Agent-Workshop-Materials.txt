@@ -40,3 +40,39 @@
 [2026-06-21T14:41:46.621000+00:00] _name_name_ (id=1518264675450753035)
     @kainan_e  I talked to you via the contact for on the site. Pinging you here. This worked was delivered last weekend, im delivering it again interally at a client on Tuesday, and im not scheduled to deliver it July 18th publicly for ~40 people at a local tech group for our city. Would love to make sure the workshop aligns more tightly with how Nous wants things done. Maybe you've already got some internal materials? If it makes sense, maybe I can help contribute some offical materials to the docs site people can run for their own teams.
 
+[2026-07-03T18:01:56.716000+00:00] _name_name_ (id=1522663703827452096)
+    <@427722857955459073> <@935997247605317652>
+
+[2026-07-03T18:03:38.597000+00:00] yxssxn (id=1522664131147333744)
+    we need like a delegate program or something
+
+[2026-07-03T18:04:13.814000+00:00] _name_name_ (id=1522664278858141909)
+    I'd sign up for something like that. Maybe we can get someone from Nous' eyes on this
+    [reply to yxssxn msg=1522664131147333744]
+
+[2026-07-03T18:04:43.242000+00:00] _name_name_ (id=1522664402287853659)
+    Next step with these workshop materials, I think I need to actually record some videos.
+
+[2026-07-03T18:05:28.744000+00:00] yxssxn (id=1522664593137340497)
+    <@695026360090886274> i’ve found this playlist quite helpful beyond the basics https://youtube.com/playlist?list=PLmpUb_PWAkDx-VWjh00tVCji794xAa_IX&si=xs2DSWbaJyPRnZ-M
+    [embed] Hermes Agent Masterclass https://youtube.com/playlist?list=PLmpUb_PWAkDx-VWjh00tVCji794xAa_IX&si=xs2DSWbaJyPRnZ-M
+
+[2026-07-03T18:06:11.251000+00:00] _name_name_ (id=1522664771424354355)
+    This is great, thanks. Maybe I can reuse some of this for my upcomming workshop
+
+[2026-07-03T18:06:44.215000+00:00] _name_name_ (id=1522664909685391380)
+    I've been thinking that 1 site with a few guided setup paths showing you how to implement specific use cases in Hermes would be pretty cool
+
+[2026-07-03T18:07:23.472000+00:00] _name_name_ (id=1522665074341314692)
+    I made this self-bootstrapping skill for a daily news briefing. https://github.com/chrishart0/hermes-workshop/blob/master/examples/skills/daily-intelligence-report/SKILL.md
+    [embed] hermes-workshop/examples/skills/daily-intelligence-report/SKILL.md ... https://github.com/chrishart0/hermes-workshop/blob/master/examples/skills/daily-intelligence-report/SKILL.md
+
+[2026-07-03T18:07:35.454000+00:00] yxssxn (id=1522665124597469427)
+    yeah you can make slides in html pretty cleanly
+
+[2026-07-03T18:08:02.670000+00:00] _name_name_ (id=1522665238749774015)
+    I used MARP for the slides in the repo
+
+[2026-07-03T18:09:29.472000+00:00] yxssxn (id=1522665602823753965)
+    i’ll check them out later when i’m at my desk
+

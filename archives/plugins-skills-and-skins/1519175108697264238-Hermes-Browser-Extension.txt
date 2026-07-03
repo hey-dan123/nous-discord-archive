@@ -342,3 +342,6 @@
     - the plugin is compatible with that runtime/profile
     - Browser isn’t intentionally using a restricted/basic mode
 
+[2026-07-03T18:13:03.414000+00:00] jonkomet (id=1522666500161540096)
+    v0.1.8 coming out today, runing testing currently on context windows and usage, and model routing, per when someone changes their model sometimes it does not register that the model has changed it still routes the user through the default model which is annoying<:BeardedNousGirl:1506796582987632690>
+
