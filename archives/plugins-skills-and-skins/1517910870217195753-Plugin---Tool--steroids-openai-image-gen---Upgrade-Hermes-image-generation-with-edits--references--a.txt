@@ -39,3 +39,12 @@
     🔐 Preserved existing auth/error-handling paths while tightening Codex response handling.
     🧰 Makes downstream Hermes image tooling more predictable for square/portrait/landscape outputs.
 
+[2026-07-03T06:26:50.195000+00:00] heeervas (id=1522488773999591475)
+    Have to check the PR but probably this plugin won’t be maintained: 
+    
+    https://github.com/NousResearch/hermes-agent/pull/57017
+    
+    —-
+    maybe for background process but idk
+    [embed] feat(image-gen): support Codex image inputs (salvage #55828) by ksh... https://github.com/NousResearch/hermes-agent/pull/57017
+

@@ -5269,3 +5269,7 @@
     Yes can work with any Hermes with tailscale setup as long as the local computer is running
     [reply to gh5aerial msg=1522406850052755676]
 
+[2026-07-03T08:51:51.675000+00:00] _123321_ (id=1522525270651834448)
+    will do, quotas should be back in 2h 🤞
+    [reply to avidfuturist msg=1522292458355163289]
+

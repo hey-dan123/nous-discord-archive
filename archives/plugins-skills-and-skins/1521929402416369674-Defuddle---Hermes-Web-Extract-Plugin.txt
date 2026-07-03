@@ -28,3 +28,20 @@
     [embed] GitHub - annalinneajohansson82/hermes-defuddle: Defuddle content ex... https://github.com/annalinneajohansson82/hermes-defuddle
     [embed] GitHub - kepano/defuddle: Get the main content of any page as Markd... https://github.com/kepano/defuddle
 
+[2026-07-03T07:40:03.236000+00:00] lemoussel (id=1522507199748898858)
+    Heads up — this is a really nice idea, but as-is it'll hit a dispatcher bug that keeps it from actually being used. If your plugin registers its provider under a custom name (e.g. `defuddle`) and someone sets:
+    ```
+    web:
+      extract_backend: defuddle
+    ```
+    Hermes Agent will **silently ignore it** and fall back to whatever other backend gets auto-detected (Tavily, Exa, etc. — whichever API key happens to be set in the environment). No error, no warning — it just quietly uses a different provider than the one configured.
+    
+    I ran into the exact same issue trying to wire up a local extraction plugin (`pageprune`) and filed it here: https://github.com/NousResearch/hermes-agent/issues/57581
+    
+    Root cause in short: `web_extract()` in `tools/web_tools.py` still resolves `web.extract_backend` through a legacy helper (`_get_extract_backend()` → `_is_backend_available()`) that only recognizes a hardcoded list of built-in backends (`exa`, `parallel`, `firecrawl`, `tavily`, `searxng`, `brave-free`, `ddgs`, `xai`). Any plugin-registered provider name outside that list fails the check and gets dropped, even though it's correctly registered in the plugin registry. The registry itself (`agent/web_search_registry.py`, `get_active_extract_provider()`) already handles plugin providers correctly — the dispatcher just doesn't call it first.
+    
+    So `hermes-defuddle` will register fine and show up in the logs as "registered web provider," but it won't actually get dispatched to unless you either patch that allow-list locally or wait for the fix from the issue above. Worth flagging in your README so people don't think it's silently broken on their end. 
+    
+    Happy to help test once a fix lands.
+    [embed] [Bug]: Plugin-registered web providers can't be selected via web.ex... https://github.com/NousResearch/hermes-agent/issues/57581
+

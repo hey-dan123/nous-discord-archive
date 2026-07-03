@@ -1,0 +1,19 @@
+# Thread 'Analogy as the core of Hermes memory' in forum #community-projects-showcase
+# thread_id=1522436026725961891 forum_id=1316137596535177246
+# Started 2026-07-03T08:58:58.591762+00:00
+
+[2026-07-03T02:57:14.265000+00:00] angler6756 (id=1522436026725961891)
+    I built an open-source hybrid memory MemoryProvider for hermes-agent and wanted to share it here. It unifies structured facts + semantic vectors + a knowledge graph in one incrementally-maintained SQLite file (no batch rebuild, no separate vector DB). The part I'm most curious for feedback on: a per-turn analogy slot that surfaces a memory which is structurally similar to the current situation but superficially different
+    
+    HRR phase vectors are gated against a MiniLM surface-similarity ceiling, so it feels like "this reminds me of…" rather than "same topic." Plus emergent chunking, usage-driven (never age-driven) forgetting, and a graph browser so the memory's inspectable. Been running it against my own agent for a few weeks. Would genuinely love thoughts on the analogy gating or the entity-resolution design. 
+    
+    Repo: https://github.com/sheldon904/hermes-hybrid-memory
+    
+    The lessons and design were derived from Douglas Hofstadter's paper here:
+    https://worrydream.com/refs/Hofstadter_2001_-_Analogy_as_the_Core_of_Cognition.pdf
+    YT vid here: 
+    https://www.youtube.com/watch?v=n8m7lFQ3njk
+    [attachment] hermes-hybrid-memory-social-preview.png https://cdn.discordapp.com/attachments/1522436026725961891/1522436027241857104/hermes-hybrid-memory-social-preview.png?ex=6a48768a&is=6a47250a&hm=346626f887572792261e6b9e89fd7fc1c4648b6fc20fc85869f4e60ef5d422c4&
+    [embed] GitHub - sheldon904/hermes-hybrid-memory: Graph + vector + holograp... https://github.com/sheldon904/hermes-hybrid-memory
+    [embed] Analogy as the Core of Cognition https://www.youtube.com/watch?v=n8m7lFQ3njk
+

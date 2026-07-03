@@ -114,3 +114,23 @@
     
     Users asked, we shipped.
 
+[2026-07-03T02:50:50.611000+00:00] dannyzuo_ (id=1522434417564450857)
+    Hi, the latest version is available for download. Your account is now ready to use. sorry for the wait🥹
+    [reply to that_onebird msg=1518869065551319110]
+
+[2026-07-03T05:15:26.016000+00:00] that_onebird (id=1522470804850348143)
+    https://klipy.com/gifs/pragmata-1
+    [embed] pragmata https://klipy.com/gifs/pragmata-1
+    [reply to dannyzuo_ msg=1522434417564450857]
+
+[2026-07-03T06:16:24.643000+00:00] that_onebird (id=1522486150244077668)
+    It keeps calling the wrong provider
+    [attachment] IMG_2005.png https://cdn.discordapp.com/attachments/1518803593606594651/1522486149975773234/IMG_2005.png?ex=6a48a538&is=6a4753b8&hm=4acbacd7e3b0688c85d6b46ba537c3a60fa43afcc649e401d1c2879fa73c5749&
+
+[2026-07-03T06:59:33.790000+00:00] dannyzuo_ (id=1522497009913696398)
+    u need to enter a Manifest Key to proceed.
+    Please get one at https://app.manifest.build 
+    Your last message was mistakenly treated as a key to validate.
+    [embed] Manifest https://app.manifest.build/
+    [reply to that_onebird msg=1522486150244077668]
+

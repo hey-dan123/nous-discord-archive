@@ -42684,3 +42684,48 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     PR: https://github.com/NousResearch/hermes-agent/pull/57442
     [embed] test(tools): add unit tests for has_traversal_component by waroffch... https://github.com/NousResearch/hermes-agent/pull/57442
 
+[2026-07-03T03:20:38.376000+00:00] srojk34 (id=1522441915994476574)
+    <@387972437901312000> I made a few more fixes today as well. You can review them whenever you have time.
+    
+    🔒 security(browser): apply private-page guard to browser_cdp frame_id routing
+    https://github.com/NousResearch/hermes-agent/pull/57464
+    
+    🔒 security(approval): close hardline bypass via interpreter -c payloads (sh -c "rm -rf /" was slipping past the --yolo-proof floor)
+    https://github.com/NousResearch/hermes-agent/pull/57475
+    
+    🔒 security(gateway): anchor api_server MEDIA tag resolution to safe paths (path traversal / arbitrary file read)
+    https://github.com/NousResearch/hermes-agent/pull/57479
+    
+    🐛 fix(gateway): resolve write_tool_log's log dir through get_hermes_home() (cross-profile log leak in multiplex mode)
+    https://github.com/NousResearch/hermes-agent/pull/57483
+    
+    🐛 fix(status): flag platform tokens visible only to the shell, not .env
+    https://github.com/NousResearch/hermes-agent/pull/57488
+    
+    🐛 fix(moa): stop reference_max_tokens from also capping the aggregator (regressed a previously-fixed truncation bug)
+    https://github.com/NousResearch/hermes-agent/pull/57493
+    [embed] fix(browser): apply private-page guard to browser_cdp frame_id rout... https://github.com/NousResearch/hermes-agent/pull/57464
+    [embed] security(approval): close hardline bypass via interpreter -c payloa... https://github.com/NousResearch/hermes-agent/pull/57475
+    [embed] security(gateway): anchor api_server MEDIA tag resolution to safe p... https://github.com/NousResearch/hermes-agent/pull/57479
+    [embed] fix(gateway): resolve write_tool_log's log dir through get_hermes_h... https://github.com/NousResearch/hermes-agent/pull/57483
+    [embed] fix(status): flag platform tokens visible only to the shell, not .e... https://github.com/NousResearch/hermes-agent/pull/57488
+
+[2026-07-03T06:11:42.436000+00:00] bsquared0pen (id=1522484966582124684)
+    Fixes an issue from the new Blank Slate mode where full subtraction removes  core tools out from under every other enabled toolset that legitimately provides them.
+    https://github.com/NousResearch/hermes-agent/pull/57546
+    [embed] fix(toolsets): preserve core tools when a posture toolset is in dis... https://github.com/NousResearch/hermes-agent/pull/57546
+
+[2026-07-03T06:25:19.027000+00:00] fullslop (id=1522488391613022230)
+    I'm on Mac so it's cmd + G for me and yes it works
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1522488391566889020/image.png?ex=6a48a74f&is=6a4755cf&hm=f90ae261fe9e981ce1acf720f2d833c4c3325e1c9fa2320951b0ddac016dd01e&
+    [reply to tunacookie msg=1522400939271524503]
+
+[2026-07-03T08:16:33.533000+00:00] tunacookie (id=1522516386520236172)
+    Like it shows the diff and stuff?
+    [reply to fullslop msg=1522488391613022230]
+
+[2026-07-03T08:36:24.012000+00:00] frowtek (id=1522521379751198763)
+    fix(file-sync): re-deliver deferred Ctrl+C via raise_signal, not os.kill (Windows hard-kill)
+    https://github.com/NousResearch/hermes-agent/pull/57599
+    [embed] fix(file-sync): re-deliver deferred Ctrl+C via raise_signal, not os... https://github.com/NousResearch/hermes-agent/pull/57599
+
