@@ -6,3 +6,17 @@
     Hey everybody! I built a graph view for my semantic search app. about 98% of the nodes in the graph are image files. Each edge/connection, is made if two images have a similarity threshold greater than .78. So as you can see, clusters and populated areas start to form where there are more similar images, allowing users to grasp a birds eye view of their personal archive. There is also a auto cluster algorithm behind the scenes as you can see in the sidebar. If a certain number of nodes are entangled properly within a unified group, a cluster is detected. All you have to do is review the images within the cluster and give it a label, nice and easy organization. Let me know what yall think or if you want the link to actually use the app!
     [attachment] 2026-07-03_00-10-15.mp4 https://cdn.discordapp.com/attachments/1522460849938235552/1522460855667789915/2026-07-03_00-10-15.mp4?ex=6a488da9&is=6a473c29&hm=45e6ada00f78c930bb6132c3a4f421f7a58e3bededda218f86ed6abea4936599&
 
+[2026-07-03T11:12:45.358000+00:00] lathamba. (id=1522560727968256120)
+    send send
+
+[2026-07-03T11:12:49.118000+00:00] lathamba. (id=1522560743738703883)
+    looks mad cool
+
+[2026-07-03T11:15:05.363000+00:00] altick (id=1522561315191914526)
+    indeed :p
+
+[2026-07-03T12:06:15.794000+00:00] curiousclump. (id=1522574193512677467)
+    https://dotient.com
+    [embed] Dotient \ Home https://dotient.com/
+    [reply to lathamba. msg=1522560727968256120]
+

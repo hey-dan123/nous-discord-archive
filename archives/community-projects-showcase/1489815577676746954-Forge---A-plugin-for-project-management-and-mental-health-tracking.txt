@@ -193,3 +193,19 @@
     
     You can still join the TestFlight beta here: https://testflight.apple.com/join/BDC7nuMk
 
+[2026-07-03T12:47:20.746000+00:00] _albertjames (id=1522584532270846103)
+    Forge 0.3.24 is released.
+    
+    Since 0.3.19, Life Events became a real timeline for important events and periods.
+    
+    Life Events can now last hours, days, weeks, or months, so trips, stays, festivals, visits, retreats, work phases, courses, health episodes, and custom life periods can sit in one chronology.
+    
+    The Life Events view now has duration-aware cards, upcoming/current/past state, long-span handling, and a guided modal creation flow with grouped event types and span presets.
+    
+    Calendar and artifact links stay connected through the normal Forge graph, so Life Events can link to tickets, notes, wiki pages, goals, Psyche records, tasks, movement context, and other entities.
+    
+    OpenClaw, Codex, Hermes, Forge Memory, docs, and OpenAPI were updated for the new period model and event catalog.
+    
+    TestFlight beta:
+    https://testflight.apple.com/join/BDC7nuMk
+
