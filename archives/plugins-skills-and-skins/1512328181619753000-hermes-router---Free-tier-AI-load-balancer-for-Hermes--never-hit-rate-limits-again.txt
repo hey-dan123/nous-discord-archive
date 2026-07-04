@@ -1173,3 +1173,32 @@
 [2026-07-03T19:02:34.598000+00:00] markopaasila (id=1522678962210472228)
     Do the routes/models heal? I have multiple showing degraded but the provider dashboards say zero usage.
 
+[2026-07-04T00:59:19.192000+00:00] w9h. (id=1522768739584446474)
+    Any idea why my dashboard isn't reading the data/showing it? I've ran multiple successful and unsuccessful requests through the router and yet my dashboard shows no data, p.s. here's a screenshot for the guy who wanted one
+    [attachment] Screenshot_20260704-015637.png https://cdn.discordapp.com/attachments/1512328181619753000/1522768739328852108/Screenshot_20260704-015637.png?ex=6a49ac67&is=6a485ae7&hm=aa5eeebf02f8e3cdd0c6a337651ceca5bfa94dcfd9effb139a5a5ee1bbd2bba9&
+    [reply to shaf_2665 msg=1520999185829073018]
+
+[2026-07-04T01:02:08.302000+00:00] shaf_2665 (id=1522769448883458099)
+    will check and update
+    [reply to w9h. msg=1522768739584446474]
+
+[2026-07-04T01:02:40.839000+00:00] shaf_2665 (id=1522769585353261116)
+    you can use hr restart command for re-probing the model
+    [reply to markopaasila msg=1522678962210472228]
+
+[2026-07-04T01:02:46.027000+00:00] shaf_2665 (id=1522769607113441410)
+    sure
+    [reply to heeervas msg=1521809282289635329]
+
+[2026-07-04T01:40:48.185000+00:00] shaf_2665 (id=1522779179178004691)
+    a quick question for you have you entered the token correctly when prompted in the browser?
+    [reply to w9h. msg=1522768739584446474]
+
+[2026-07-04T01:53:28.501000+00:00] shaf_2665 (id=1522782368174440498)
+    For those who asked for the screenshots of the dashboard, here it is.
+    
+    Make sure you enter the correct API key when prompted in dashboard.
+    
+    You can edit your API key in the .env file and do a `hr restart` for it to take effect.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512328181619753000/1522782367574528021/image.png?ex=6a49b918&is=6a486798&hm=184935dfad2f022ad44999478ef8ae6f7b86365e50d88c82a29a85c541f53775&
+

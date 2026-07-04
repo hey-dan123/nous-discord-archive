@@ -1,0 +1,8 @@
+# Thread 'Devotion and Inspiration' in forum #plugins-skills-and-skins
+# thread_id=1522733991109722292 forum_id=1485392832154832906
+# Started 2026-07-04T02:46:04.865265+00:00
+
+[2026-07-03T22:41:14.510000+00:00] gumbyender (id=1522733991109722292)
+    Follower of Yeshua? Feel lost and lonely? Need a uplift on session start? https://github.com/GumbyEnder/hermes-skill-devotion
+    [embed] GitHub - GumbyEnder/hermes-skill-devotion: Scripture on Session Sta... https://github.com/GumbyEnder/hermes-skill-devotion
+

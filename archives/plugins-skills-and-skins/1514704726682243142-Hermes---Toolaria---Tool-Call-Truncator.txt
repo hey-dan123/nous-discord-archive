@@ -111,3 +111,6 @@
     It's deliberately light: the headline win, the honest framing, no internals. Want me to also post it to a channel, or is generating it enough? And separately, say the word and I'll run the deploy checklist (merge KenseiAgent branch, sync the live plugin copy, restart gateways) to take the full fix live on your box.
     [embed] GitHub - Sahil-SS9/Toolaria: Rescue oversized tool results before t... https://github.com/Sahil-SS9/Toolaria
 
+[2026-07-03T23:59:50.433000+00:00] alto69 (id=1522753771124293823)
+    sounds nice. whats the risk something gets lost
+

@@ -5287,3 +5287,56 @@
     
     ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
 
+[2026-07-03T20:15:18.948000+00:00] _123321_ (id=1522697267621138454)
+    it's been up clean for 10h now, nothing to report, it'll run whole night long with more memory hungry computations🤞
+    [reply to avidfuturist msg=1522663494187483217]
+
+[2026-07-03T20:15:41.728000+00:00] avidfuturist (id=1522697363167383705)
+    Great news! 🎉 (No news is good news)
+    [reply to _123321_ msg=1522697267621138454]
+
+[2026-07-03T23:31:15.116000+00:00] avidfuturist (id=1522746576563339335)
+    Three functional Android Hermex ports:
+    
+    1/ https://github.com/9thLevelSoftware/hermex
+    2/ https://github.com/super3/hermex/tree/claude/android-port-plan-lt7p00
+    3/ https://github.com/ComputerByte/hermex-android
+    
+    any brave souls that can help me figure out which is the best?!
+
+[2026-07-04T00:37:02.219000+00:00] alto69 (id=1522763131913375865)
+    personally id rather see the web version improve for mobile rather than move to native
+
+[2026-07-04T00:38:44.030000+00:00] avidfuturist (id=1522763558939656192)
+    💯 Also plan on improving the web version for mobile alongside any native apps
+    [reply to alto69 msg=1522763131913375865]
+
+[2026-07-04T00:38:45.821000+00:00] alto69 (id=1522763566451785880)
+    I noticed the iframe extension. good way to get a terminal in the webui? what u using for?
+
+[2026-07-04T00:39:00.827000+00:00] avidfuturist (id=1522763629391249408)
+    That exists, you can type `/terminal` and voila
+    [reply to alto69 msg=1522763566451785880]
+
+[2026-07-04T00:40:22.064000+00:00] alto69 (id=1522763970124054739)
+    wow what a legend
+
+[2026-07-04T00:40:50.236000+00:00] avidfuturist (id=1522764088285859850)
+    Yeah I use that all the time, bit of an under the radar feature
+    [reply to alto69 msg=1522763970124054739]
+
+[2026-07-04T00:48:04.808000+00:00] alto69 (id=1522765911012933693)
+    sometime it seems to scroll up randomly in my chats and i have to scroll down again does this happen to anyone else
+
+[2026-07-04T00:48:54.453000+00:00] avidfuturist (id=1522766119239290891)
+    May have fixed that in an update today, if you do update and restart lmk if that’s fixed
+
+[2026-07-04T01:37:44.340000+00:00] alto69 (id=1522778408076054568)
+    actually still persist for me on v0.51.845
+
+[2026-07-04T01:40:13.133000+00:00] avidfuturist (id=1522779032159125635)
+    Okay will look into it!
+
+[2026-07-04T01:40:21.398000+00:00] avidfuturist (id=1522779066824917113)
+    Is this on mobile or desktop <@291686310714933258>?
+

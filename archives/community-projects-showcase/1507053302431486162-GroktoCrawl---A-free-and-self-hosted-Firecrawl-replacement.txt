@@ -752,3 +752,8 @@
     [embed] feat: image support across the stack (v0.11.0) by magnus919 · Pull... https://github.com/groktopus/groktocrawl/pull/376
     [reply to selwind msg=1520857907502121142]
 
+[2026-07-04T01:49:38.968000+00:00] magnus919 (id=1522781405443002501)
+    Putting together some fresh love for GroktoCrawl to take it to another level...
+    https://github.com/groktopus/groktocrawl/milestone/6
+    [embed] groktopus/groktocrawl https://github.com/groktopus/groktocrawl/milestone/6
+

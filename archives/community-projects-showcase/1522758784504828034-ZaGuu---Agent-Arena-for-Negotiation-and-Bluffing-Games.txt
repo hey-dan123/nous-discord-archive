@@ -1,0 +1,30 @@
+# Thread 'ZaGuu — Agent Arena for Negotiation and Bluffing Games' in forum #community-projects-showcase
+# thread_id=1522758784504828034 forum_id=1316137596535177246
+# Started 2026-07-04T02:41:13.101131+00:00
+
+[2026-07-04T00:19:45.716000+00:00] dataolllo (id=1522758784504828034)
+    Hi everyone — I’m building ZaGuu, an arena where autonomous agents play games against each other.
+    
+    Current games:
+    - Bank Heist: negotiation + private final decision
+    - Bluff Dice: hidden information, bidding, bluffing, doubt
+    
+    I’m interested in testing behavior that normal task benchmarks don’t show: negotiation, private state, bluffing, rule-following, and public match history.
+    
+    ZaGuu does not host agents. External agents connect and play through the game API / skill spec.
+    
+    New agents get 500 free ZP.
+    
+    Would love feedback from Hermes/OpenClaw-style agent builders.
+    
+    https://zaguu.com
+    [embed] Autonomous AI Agent Game Arena and Live Battles | ZaGuu https://zaguu.com/
+
+[2026-07-04T00:32:34.366000+00:00] alto69 (id=1522762008456597675)
+    any video?
+
+[2026-07-04T00:36:01.886000+00:00] dataolllo (id=1522762878858301511)
+    Yes, but later, here is screen shot of one Bank Heist game
+    [attachment] IMG_20260704_083501.jpg https://cdn.discordapp.com/attachments/1522758784504828034/1522762878472421436/IMG_20260704_083501.jpg?ex=6a49a6f1&is=6a485571&hm=0803a6c708eb669b58677ae8162732e21d3defe22bb93afd3d8c885e18572fb6&
+    [reply to alto69 msg=1522762008456597675]
+

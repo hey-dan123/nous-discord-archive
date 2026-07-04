@@ -1,0 +1,29 @@
+# Thread 'HELP - iOS Shortcuts > Hermes' in forum #community-projects-showcase
+# thread_id=1522716222939070565 forum_id=1316137596535177246
+# Started 2026-07-04T02:41:13.510998+00:00
+
+[2026-07-03T21:30:38.248000+00:00] tom_jackson_7 (id=1522716222939070565)
+    Hi All,
+    
+    I couldn’t actually decide which area best to post this but hoping some genius picks this up. 
+    
+    I have for many years built deep and critical shortcuts on my Apple Devices. If I did anything a lot, I’d generally built a shortcut for it. 
+    
+    Since setting up Hermes I’ve had a few shortcuts setup but these have been functional via iMessage and Bluebubbles. 
+    
+    For example, “Add Task” shortcut would prepare some default text to be sent to Hermes via iMessage but then pop up with a text or voice for me to say the task. Tapping finish sent it over to Hermes and it took care of the rest. 
+    
+    More recently I’ve much preferred working with Hermes exclusively via telegram. Unfortunately, I can’t seem to send a message in the same way to a bot on telegram as it will only send to a contact. I’ve built shortcuts using telegram urls with chat ID’s but these aren’t working as it sends it from the bot, not to the bot. 
+    
+    Has anyone ever done anything similar??
+    
+    Really keen to bin off iMessage as the route of contact but very keen to get my 16+ Hermes shortcuts up and running with telegram or any other way!
+    
+    ✌️
+
+[2026-07-03T22:06:02.552000+00:00] mburhop (id=1522725132915966133)
+    So you are asking for help with telegram?  Or do you think this is Hermes thing?
+
+[2026-07-03T22:13:59.648000+00:00] tom_jackson_7 (id=1522727134001369248)
+    It’s more how people can communicate with Hermes via iOS Shortcuts. Ultimately not entirely Hermes as once it gets the instructions it works great but I figured there must be someone here which is running something that fires off requests without typing each one out every time
+

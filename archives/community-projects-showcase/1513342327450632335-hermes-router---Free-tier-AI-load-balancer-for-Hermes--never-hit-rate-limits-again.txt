@@ -956,3 +956,15 @@
 [2026-07-02T11:10:20.044000+00:00] lathamba. (id=1522197730611695717)
     upload screen shots for the usage dashboard
 
+[2026-07-04T01:02:57.513000+00:00] shaf_2665 (id=1522769655289348270)
+    sure
+    [reply to lathamba. msg=1522197730611695717]
+
+[2026-07-04T01:52:46.652000+00:00] shaf_2665 (id=1522782192646885443)
+    For those who asked for the screenshots of the dashboard, here it is.
+    
+    Make sure you enter the correct API key when prompted in dashboard.
+    
+    You can edit your API key in the .env file and do a `hr restart` for it to take effect.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1513342327450632335/1522782192550281417/image.png?ex=6a49b8ee&is=6a48676e&hm=e3bb6b51a5575226462821e40ea63e6046c7ac3c4af642bd83ae77afe317c1e3&
+

@@ -43064,3 +43064,84 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-03T19:16:22.603000+00:00] avf00 (id=1522682435115159602)
     i want to add debouncing to chat messages in hermes for more typical user behavior, but i see that there are 5k+ PRs, it's crazy, are you using an agent to look at them?
 
+[2026-07-03T20:15:58.828000+00:00] avf00 (id=1522697434889846824)
+    i'm interested in a post or something about how hermes is developed
+
+[2026-07-03T22:30:25.921000+00:00] kkurottal6611 (id=1522731270730420255)
+    https://github.com/NousResearch/hermes-agent/pull/57681
+    https://github.com/NousResearch/hermes-agent/pull/57737
+    https://github.com/NousResearch/hermes-agent/pull/57756
+    [embed] fix(tts): close temp WAV handle before playback in streaming fallba... https://github.com/NousResearch/hermes-agent/pull/57681
+    [embed] fix(gateway): match profile by whole token in _matches_current_prof... https://github.com/NousResearch/hermes-agent/pull/57737
+    [embed] fix(ssh): reject Windows ..\ traversal in _ssh_bulk_upload sync-bas... https://github.com/NousResearch/hermes-agent/pull/57756
+
+[2026-07-03T22:31:41.784000+00:00] nanxingncb612d (id=1522731588922904677)
+    https://github.com/NousResearch/hermes-agent/pull/57953
+    [embed] fix(dashboard): apply write guard to fs editor saves by necoweb3 ·... https://github.com/NousResearch/hermes-agent/pull/57953
+
+[2026-07-03T22:31:45.414000+00:00] nanxingncb612d (id=1522731604147962087)
+    https://github.com/NousResearch/hermes-agent/pull/57950
+    [embed] fix(tts): block output to protected paths by necoweb3 · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/57950
+
+[2026-07-03T22:36:33.900000+00:00] nanxingncb612d (id=1522732814146207924)
+    https://github.com/NousResearch/hermes-agent/pull/57963
+    [embed] fix(transcription): guard local inputs against credential reads by ... https://github.com/NousResearch/hermes-agent/pull/57963
+
+[2026-07-03T22:46:55.666000+00:00] nanxingncb612d (id=1522735422021697718)
+    https://github.com/NousResearch/hermes-agent/pull/57966
+    [embed] fix(browser): block private CDP createTarget URLs by necoweb3 · Pu... https://github.com/NousResearch/hermes-agent/pull/57966
+
+[2026-07-03T23:07:24.477000+00:00] casualsav (id=1522740576028721282)
+    Done: https://github.com/casualsav/hermes-fable-consult
+    
+    hermes-fable-consult adds a /fable skill that gets your Hermes agent a second opinion from Claude Fable 5 — a stronger-judgment model — at two points per task, without letting it drive. You draft a plan; the skill runs Fable as a context-blind claude -p --model fable --safe-mode subprocess, and it replies in a compact code that emits only what changes — deltas to apply, terse path:line CODE findings, empty sections dropped, ~400 tokens max — so you pay for judgment, not prose. Your agent builds it, then the skill --resumes that same session for a warm review of only the diff, returning SHIP / FIX-THEN-SHIP / RECONSULT. --safe-mode keeps your local CLAUDE.md/skills out of Fable's context, a usage check catches silent model downgrades, and a hard two-touch limit means high-leverage review on the moves that matter — cheaply, twice.
+    [embed] GitHub - casualsav/hermes-fable-consult: On-demand /fable skill for... https://github.com/casualsav/hermes-fable-consult
+    [reply to casualsav msg=1522678641207541933]
+
+[2026-07-03T23:13:17.803000+00:00] alelpoan (id=1522742057985114192)
+    Wanted to polish the UX a bit more, noticed the Copy icon in the expanded tool output was slightly overlapping the scrollbar, and it had no tooltip either. Fixed both, and while I was at it, aligned the tooltip side with Refresh/More for consistency. <@387972437901312000> <@119192111202566149> 
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/57969
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1522742058241097878/image.png?ex=6a49938d&is=6a48420d&hm=35765d1d0fe440a670ff17e30cf6d5446841e1b6843c180c9938bb5073b45a91&
+    [embed] fix(desktop): fix scrollbar overlap and add tooltip on tool output ... https://github.com/NousResearch/hermes-agent/pull/57969
+
+[2026-07-03T23:25:55.273000+00:00] warofchange (id=1522745235044831252)
+    Fix a misleading command in the OpenClaw migration guide
+    
+    The migration guide's "Archived" table tells users to recreate their memory backend with hermes honcho:
+    
+    Memory backend → Configure via hermes honcho
+    
+    But hermes honcho is only registered when Honcho is already the active memory provider — which a freshly-migrated user doesn't have yet. So the guide points its exact audience (fresh-install migrators) at a command that isn't available to them.
+    
+    Source of truth confirms the right entry point:
+    • features/honcho.md: "the hermes honcho subcommand is only registered when Honcho is the active memory provider… on a fresh install, configure Honcho directly with hermes memory setup honcho"
+    • hermes_cli/subcommands/memory.py: setup takes a positional provider arg — "Provider to configure directly (e.g. honcho)"
+    
+    -Configure via `hermes honcho`
+    +Configure via `hermes memory setup honcho`
+    Docs-only, 1 line, provable by direct file comparison. Zero behavior change.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/57978
+    [embed] docs(migrate): point memory-backend recreation at hermes memory set... https://github.com/NousResearch/hermes-agent/pull/57978
+
+[2026-07-03T23:53:03.302000+00:00] brooklyn (id=1522752063493242991)
+    Merged
+    [reply to alelpoan msg=1522742057985114192]
+
+[2026-07-04T00:54:20.408000+00:00] aleksandr_1 (id=1522767486393782362)
+    **fix(security): close skill-scanning and command-approval gaps for non-shell/Windows scripts**
+    
+    How to reproduce: I found that Skills Guard's pre-install scanner only recognized shell/Python/config extensions, so a malicious PowerShell (`.ps1`), batch (`.bat`/`.cmd`), or extensionless script bundled in a skill got zero content scanning while the identical payload in a `.sh` file would have been flagged. Separately, running an arbitrary `.ps1` via `powershell -File` matched no approval pattern at all and was auto-approved with no warning. Separately again, an "ask" verdict from `should_allow_install()` was treated the same as a hard block, so those installs never reached the y/N confirmation they were supposed to get.
+    
+    **Fix**: added `.ps1`/`.psm1`/`.psd1`/`.bat`/`.cmd` and extensionless files to the scanner's coverage. Added an approval pattern for `powershell`/`pwsh -File` execution. Fixed the install flow to distinguish "ask" from "blocked" so ask-verdict skills fall through to the actual confirmation prompt.
+    
+    **PR**:  https://github.com/NousResearch/hermes-agent/pull/57990
+    [embed] fix(security): close skill-scanning and command-approval gaps for n... https://github.com/NousResearch/hermes-agent/pull/57990
+
+[2026-07-04T02:30:51.276000+00:00] kkurottal6611 (id=1522791775054336111)
+    https://github.com/NousResearch/hermes-agent/pull/57998 , https://github.com/NousResearch/hermes-agent/pull/58006
+    [embed] fix(file-tools): resolve SSH remote paths as POSIX on a Windows hos... https://github.com/NousResearch/hermes-agent/pull/57998
+    [embed] fix(web-server): close OAuth token TOCTOU by writing 0o600 atomical... https://github.com/NousResearch/hermes-agent/pull/58006
+    [reply to kkurottal6611 msg=1522731270730420255]
+

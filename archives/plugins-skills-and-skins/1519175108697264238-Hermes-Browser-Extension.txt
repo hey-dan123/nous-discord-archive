@@ -345,3 +345,10 @@
 [2026-07-03T18:13:03.414000+00:00] jonkomet (id=1522666500161540096)
     v0.1.8 coming out today, runing testing currently on context windows and usage, and model routing, per when someone changes their model sometimes it does not register that the model has changed it still routes the user through the default model which is annoying<:BeardedNousGirl:1506796582987632690>
 
+[2026-07-03T21:28:02.014000+00:00] jonkomet (id=1522715567646183444)
+    new animation styles coming for all tool calls.. and so much more loading in...
+    fixed model switching cutoffs, so it can actually switch models properly now, file attachments were hardened ..
+    solution solved for steering is coming as well so now you can steer mid conversation on the hermes browser extension
+    and some other additions along the way
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1522715567390195752/image.png?ex=6a497ae1&is=6a482961&hm=c546dfb2d01d60272cd9faea8768a9a1435de66c65cf546f244d44db7ae08d2c&
+

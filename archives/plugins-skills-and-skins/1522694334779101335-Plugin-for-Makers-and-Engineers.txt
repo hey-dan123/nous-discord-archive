@@ -1,0 +1,28 @@
+# Thread 'Plugin for Makers and Engineers' in forum #plugins-skills-and-skins
+# thread_id=1522694334779101335 forum_id=1485392832154832906
+# Started 2026-07-04T02:46:05.257640+00:00
+
+[2026-07-03T20:03:39.704000+00:00] mburhop (id=1522694334779101335)
+    I put together a plugin for the community projects contest, but I'm really pretty serious about it.  Software aside, I'm into 3D printing, CAD, and 3D graphics.   
+    
+    It is in alpha, so you can try it here:
+    
+    `hermes plugins install burhop/hermes-plugin-wright --enable`
+    
+    I wanted something that would allow me to assign agents to "engineering" tasks, with viewers and other functionality for viewing 3D files.  
+    
+    It is super MCP friendly with a little more hand holding for the users.  While engineers are smart, that doesn't mean they are Hermes smart 🙂
+    
+    Here is the install:
+    
+    hermes plugins install burhop/hermes-plugin-wright --enable
+    
+    Any help testing or coding is appreciated. IF you are writing MCPs  this is at least another platform for testing.
+    
+     And, of course, the repo:  
+    https://github.com/burhop/wright/
+    [embed] GitHub - burhop/wright: A digital engineer, designer, and mechanica... https://github.com/burhop/wright/
+
+[2026-07-03T20:06:12.518000+00:00] mburhop (id=1522694975727603814)
+    If anyone gets as far as using this, Let me know what additional functionality you want. I"ve got some free time right now.
+
