@@ -1202,3 +1202,8 @@
     You can edit your API key in the .env file and do a `hr restart` for it to take effect.
     [attachment] image.png https://cdn.discordapp.com/attachments/1512328181619753000/1522782367574528021/image.png?ex=6a49b918&is=6a486798&hm=184935dfad2f022ad44999478ef8ae6f7b86365e50d88c82a29a85c541f53775&
 
+[2026-07-04T16:08:03.621000+00:00] shaf_2665 (id=1522997431615094955)
+    Hi guys,
+    currently working on improving the vs code extenstion of hermes router so I would like to know your suggestions to improve it.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512328181619753000/1522997431254646975/image.png?ex=6a4a8163&is=6a492fe3&hm=c11dbbc578e817c7b58148fc2e9c2696dacef3e0cd2b9eb5d923e376829d47b6&
+

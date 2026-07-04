@@ -981,3 +981,12 @@
 [2026-07-04T13:17:31.370000+00:00] tonyporj (id=1522954514444058785)
     Added 6 api keys for opencode zen and go. For free tiers. While still being able to use frontiter paid subscription models in opencode go on my hermes agent. This is a steal, but its too early to say.. ill updste😁🙌 ty <@1272778978624540704>
 
+[2026-07-04T16:07:39.578000+00:00] shaf_2665 (id=1522997330771447888)
+    Hi guys,
+    currently working on improving the vs code extenstion of hermes router so I would like to know your suggestions to improve it.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1513342327450632335/1522997330075451522/image.png?ex=6a4a814b&is=6a492fcb&hm=79d04c894e926a5e450b34adc98a2f2c51be2d9efac9f96bfff6f50dab5d321a&
+
+[2026-07-04T16:08:52.703000+00:00] shaf_2665 (id=1522997637480185866)
+    opencode go is also supported in hermes-router
+    [reply to tonyporj msg=1522954514444058785]
+

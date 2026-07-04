@@ -76,3 +76,14 @@
 [2026-07-01T19:40:33.633000+00:00] nicolasmenoncin (id=1521963745444757574)
     freaky nicki hermes personality
 
+[2026-07-04T18:29:28.437000+00:00] buke5122 (id=1523033019513045214)
+    Its like a minor, real minor thing, but the links here in the pyproject.toml are like non-existent lol
+    [attachment] image.png https://cdn.discordapp.com/attachments/1496045775719895245/1523033018913128629/image.png?ex=6a4aa288&is=6a495108&hm=b4627fb7197636cbac081a60eca6ea239bc7453e0000ee6ceeb0c476f65dc4bd&
+
+[2026-07-04T18:35:47.969000+00:00] buke5122 (id=1523034611385499841)
+    How exactly did you set it up wothout the memory?
+    [reply to kutaca msg=1521959498774741192]
+
+[2026-07-04T19:00:40.903000+00:00] kutaca (id=1523040873204551924)
+    i just told hermes to implement without the memory.
+

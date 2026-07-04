@@ -1,0 +1,31 @@
+# Thread 'Hermes Code Intel Plugin' in forum #plugins-skills-and-skins
+# thread_id=1523016460631539813 forum_id=1485392832154832906
+# Started 2026-07-04T19:12:50.339506+00:00
+
+[2026-07-04T17:23:40.492000+00:00] agentiker_0711 (id=1523016460631539813)
+    agentiker-code-intel — 70 Code Intelligence Tools for Hermes Agent
+        
+        We gave Hermes real code intelligence: tree-sitter + ast-grep + LSP Bridge in one plugin. 
+        
+        • code_symbols — Extract functions, classes, methods from files without read_file
+        • code_search — Structural AST search (find imports, decorators, try/catch)
+        • code_definition + code_references — Go-to-definition and references via LSP
+        • code_blast_radius — What breaks if you change this symbol? Transitive callers + test coverage
+        • code_refactor — AST-based search-and-replace across files (dry-run by default)
+        • code_index — SQLite-persistent Knowledge Graph: callers, callees, hot paths, cycles
+        • code_complexity — Cyclomatic complexity with rank A-E
+        • code_pr_impact — Git diff + call graph + test coverage in one report
+        • code_dependency_risk — Dependency health scoring (0-10)
+        • LSP Auto-Install — Missing LSP servers get installed automatically on first use 
+        
+        9 Languages: Python, TypeScript, TSX, JavaScript, Go, Rust, Java, C, C++
+        
+        Why this saves you money and time:
+    Every token costs money. Every irrelevant token wastes reasoning capacity. Without code_intel, you dump 500 lines of raw code into the prompt — the model has to parse, search, and understand before it can actually answer. That's 4 paid reasoning steps before any useful work.
+    code_intel flips this: code_symbols or code_capsule deliver only the relevant structure — 200 tokens instead of 5000. 1 step, instantly usable. 10-50x fewer tokens per task. 4-7x fewer turns per session.
+    The principle: A cheap model with clean, structured inputs beats an expensive model with raw, noisy files. Every time. The bottleneck isn't model reasoning — it's context pollution.
+    
+    Every tool that replaces a "read+grep+reason" loop saves tokens = saves money. This applies to every model — the more expensive the model, the bigger the savings.
+        
+        🔗 https://github.com/IVRZ-da/agentiker-code-intel
+

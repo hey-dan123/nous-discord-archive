@@ -398,3 +398,6 @@
     [attachment] Browser_Extension_v0.1.8_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1522806179980378143/Browser_Extension_v0.1.8_Update_Ad.png?ex=6a49cf45&is=6a487dc5&hm=13e38af52db56e7566e898ed725b6eb00c7165fd138f3c9c3e5264f90e1e52bd&
     [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
 
+[2026-07-04T14:50:26.656000+00:00] heeervas (id=1522977898888298496)
+    Compatible with docker?
+

@@ -47,3 +47,13 @@
     Thanks again! I really appreciate your feedback.
     [reply to btdoverclock msg=1522826339852222607]
 
+[2026-07-04T16:43:20.998000+00:00] buke5122 (id=1523006312538050671)
+    This wont destroy the prompt caching, right?
+
+[2026-07-04T18:54:27.257000+00:00] shiro1001 (id=1523039306019639386)
+    No—Hersona itself does not interfere with prompt caching.
+    Hersona is a prompt composition library. The recommended workflow is to compose the persona once (or only when it actually changes), and then reuse that generated system prompt throughout the conversation.
+    If you rebuild the full system prompt on every single request, the cache efficiency will naturally drop. However, this is true for any prompt generation method, not a problem specific to Hersona.
+    Thanks for asking! It's a great question.
+    [reply to buke5122 msg=1523006312538050671]
+

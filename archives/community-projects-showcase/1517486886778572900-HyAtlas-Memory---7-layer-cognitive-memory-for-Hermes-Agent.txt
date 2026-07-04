@@ -170,3 +170,6 @@
     on that same topic the way the memories are digested is through a local embedding and a chosen model, in my case i use something cheap like dsflash or anything cheap,  it doesnt need a strong model just for digesting memories and i dont think it will affect the "quality or performance" of the memories
     [reply to halibusal msg=1522926045001678859]
 
+[2026-07-04T15:06:45.132000+00:00] halibusal (id=1522982002914230393)
+    i actually found extracting memories with more capable model produces more memories, but risk ablation from inference
+

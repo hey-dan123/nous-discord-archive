@@ -43222,3 +43222,132 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/58266
     [embed] fix(config): stop provider-key warn-storm that stalls Windows loggi... https://github.com/NousResearch/hermes-agent/pull/58266
 
+[2026-07-04T13:20:10.498000+00:00] srojk34 (id=1522955181875265698)
+    PR #58267 — Tilde (~) cwd bug on container backends
+    The tilde-expansion fix already shipped for SSH never covered Docker/Singularity/Modal/Daytona. A terminal.cwd: "~/project" setting silently resolved against the Hermes host's own HOME (e.g. /opt/data) instead of the sandbox's, so sessions started in the wrong (often nonexistent) directory.
+    https://github.com/NousResearch/hermes-agent/pull/58267
+    
+    PR #58273 — Hosted Hermes Console: sessions export path escape
+    The dashboard's Console sessions export <path> command had no path restriction in hosted deployments, letting an authenticated session write outside the managed-files root the Files page is otherwise locked to.
+    https://github.com/NousResearch/hermes-agent/pull/58273
+    
+    PR #58287 — Context compressor tool_call matching bug
+    Post-compression tool_call/tool_result matching only checked one of two possible id fields (id vs call_id, which differ in the Codex Responses format). A genuinely valid pair could get misclassified as orphaned and both sides silently dropped.
+    https://github.com/NousResearch/hermes-agent/pull/58287
+    
+    PR #58280 — Spotify OAuth blocks forever in headless context
+    The dashboard's background-spawned hermes tools post-setup spotify would wait on an OAuth callback with no human present, blocking 180s and then failing with a port conflict on retry. Now fails fast when non-interactive.
+    https://github.com/NousResearch/hermes-agent/pull/58280
+    
+    PR #58284 — Missing prompt caching in /moa one-shot command
+    The /moa <prompt> command's aggregator synthesis call was left out of the prompt-caching restore that landed the same day — every invocation re-billed the full joined reference output with zero cache hits.
+    https://github.com/NousResearch/hermes-agent/pull/58284
+
+[2026-07-04T13:26:39.177000+00:00] srojk34 (id=1522956812113023016)
+    In addition to my bug hunting strategies, I also use a separate validation layer. 
+    This allows me to verify whether a bug is genuinely worth submitting as a pull request before 
+    I fix and share it. As a result, the team doesn't have to spend time reviewing low value or ineffective PRs.
+    
+    If everyone who actively contributes had a similar validation layer, the team could use its time much more efficiently. I highly recommend adopting this kind of validation process for all contributors.
+
+[2026-07-04T15:22:11.643000+00:00] aialliai (id=1522985888983023646)
+    <@387972437901312000> could you add me to the Cloud beta channel. My discord link doesn't work and want to provide feedback and see what the others are doing. Thank you for your attention to this matter, I know you are drowning in work <:tekcheer:1453863338537779242>
+
+[2026-07-04T16:41:55.079000+00:00] warofchange (id=1523005952167510177)
+    Unit tests for coerce_max_concurrent_sessions
+    
+    Third in the test series, now moving into hermes_cli/. coerce_max_concurrent_sessions (hermes_cli/active_sessions.py) decides the global active-session concurrency cap across CLI, TUI, and the gateway. The wrapper resolve_max_concurrent_sessions was tested, but the coercion helper's own edge cases weren't.
+    
+    The suite pins its contract:
+    • Valid: positive int, numeric string ("8", " 20 "), integer-valued float (4.0 → 4)
+    • Disabled/unbounded: None, 0, negatives → None
+    • bool rejection: True/False → None even though bool is an int subclass — a real trap the function deliberately guards
+    • Invalid ("abc", 3.5) → None + "Ignoring invalid" warning
+    
+    Why it matters: a future refactor to a plain int(value) cast would silently accept True as a cap of 1. These tests lock the intended behavior. Pure input→output assertions plus caplog — no mocks, no network, no filesystem. Zero production code touched.
+    
+    pytest tests/hermes_cli/test_active_sessions.py -v
+    PR: https://github.com/NousResearch/hermes-agent/pull/58375
+    [embed] test(hermes_cli): add unit tests for coerce_max_concurrent_sessions... https://github.com/NousResearch/hermes-agent/pull/58375
+
+[2026-07-04T17:35:40.175000+00:00] parksthecoder (id=1523019479200563282)
+    Is the Hermes memory set to false while Hermes cron jobs run?
+
+[2026-07-04T17:36:50.873000+00:00] parksthecoder (id=1523019775729602692)
+    You have to use “hermes chat -q” for Hermes to fully utilize its built in self improvement system?
+
+[2026-07-04T18:27:29.411000+00:00] accidentaljedi (id=1523032520281817251)
+    I built mine (honest progress in the work) You should try building your own version... and pay close attention to my notes about non flattening and other guidance to keep the AI from cheapening the work into smoke and mirrors.  it's fun.  Good luck!
+    [attachment] The_Architecture_of_the_Mathematical_Unconscious.md https://cdn.discordapp.com/attachments/1491258766648283238/1523032520135020604/The_Architecture_of_the_Mathematical_Unconscious.md?ex=6a4aa211&is=6a495091&hm=e2d2c8ef03b83ced40881fd66ca6a1ec909e8129d091d7482e8c229dd2624538&
+
+[2026-07-04T18:28:00.851000+00:00] accidentaljedi (id=1523032652150603956)
+    you likely can read it better if you download and open in your fqvorite MD viewer
+
+[2026-07-04T18:29:23.085000+00:00] accidentaljedi (id=1523032997065003061)
+    If you run it by your favorite aqgent, tell them to read appendices first, THEN the main body.  That will tell them how far I got and what I battled and settled on and what's still left to be done.
+
+[2026-07-04T18:31:34.744000+00:00] accidentaljedi (id=1523033549282742372)
+    And then THESE would be the next upgrades.  this is all free research and work on my behalf to the AI community.  Enjoy the challenge.  it's worth it in the end.  too complicated for me to pack it all up into a repo as I built at system level in windows.
+    [attachment] PINEAL_ENGINE_P0_RESEARCH_DATA_2026-06-30.md https://cdn.discordapp.com/attachments/1491258766648283238/1523033548267847880/PINEAL_ENGINE_P0_RESEARCH_DATA_2026-06-30.md?ex=6a4aa306&is=6a495186&hm=743071b3e432426ad2a1554376007ca636671f27f08efe02ad2385d21b6056e4&
+    [attachment] PINEAL_ENGINE_RESEARCH_2026-06-30.md https://cdn.discordapp.com/attachments/1491258766648283238/1523033548666437746/PINEAL_ENGINE_RESEARCH_2026-06-30.md?ex=6a4aa306&is=6a495186&hm=a2f59cada31dabfe80798ec9dd9765ddd9ccf84f894ba547e286c435a99d966e&
+    [attachment] PINEAL_ENGINE_SIDE_AGENT_SYNTHESIS_2026-06-30.md https://cdn.discordapp.com/attachments/1491258766648283238/1523033548968300655/PINEAL_ENGINE_SIDE_AGENT_SYNTHESIS_2026-06-30.md?ex=6a4aa306&is=6a495186&hm=f6b2f9425f75cff8cc302dd58a95210534a7741badd96b3fa808445ee86e7263&
+
+[2026-07-04T18:33:01.168000+00:00] accidentaljedi (id=1523033911771402290)
+    this is a roadmap, but open weight non frontier level models will struggle.  even the best models tried to revert it all to standard build practices.
+
+[2026-07-04T18:44:06.915000+00:00] wreakhavok313 (id=1523036704116703464)
+    Why this look like my system?
+    [reply to accidentaljedi msg=1523032520281817251]
+
+[2026-07-04T18:57:53.868000+00:00] endo9001 (id=1523040172609110126)
+    guys short Q on moa. what model should i possibly use for aggregation? 
+    big and large ctx? small and large ctx? small and small ctx? i am not exactly sure what it does when it aggregates things. 
+    what do you guys use as the aggregator when doing /moa?
+
+[2026-07-04T19:00:59.448000+00:00] accidentaljedi (id=1523040950987915305)
+    you built a holographic memory substrate?
+    [reply to wreakhavok313 msg=1523036704116703464]
+
+[2026-07-04T19:01:11.741000+00:00] accidentaljedi (id=1523041002548494446)
+    cool.
+
+[2026-07-04T19:01:23.187000+00:00] accidentaljedi (id=1523041050556497951)
+    How did it go for you?
+
+[2026-07-04T19:02:50.496000+00:00] tunacookie (id=1523041416756989984)
+    https://github.com/NousResearch/hermes-agent/pull/58439 <:pepe_think:1151261558043848785>
+    [embed] fix(gateway): attach credential_pool to session /model overrides by... https://github.com/NousResearch/hermes-agent/pull/58439
+
+[2026-07-04T19:04:07.279000+00:00] wreakhavok313 (id=1523041738808102962)
+    It's interesting I made a 3 stage memory system but my model is a HPC/VSA Model... Not an LLM
+    [reply to accidentaljedi msg=1523041050556497951]
+
+[2026-07-04T19:05:18.939000+00:00] wreakhavok313 (id=1523042039372189909)
+    [attachment] GuddaLMFlowChart.png https://cdn.discordapp.com/attachments/1491258766648283238/1523042039036383414/GuddaLMFlowChart.png?ex=6a4aaaee&is=6a49596e&hm=33429025498d63b281599301a6a3295908654e2ef02380fa9605112bb2d54b80&
+
+[2026-07-04T19:05:22.554000+00:00] accidentaljedi (id=1523042054534467624)
+    Oh, the LLM's role is only to serve as the "mouth"  the thinking and reasoning is done in the substrate layers.  but yes, definatley not standard vector database...
+    [reply to wreakhavok313 msg=1523041738808102962]
+
+[2026-07-04T19:05:43.466000+00:00] wreakhavok313 (id=1523042142245748846)
+    There's a layout if it helps u
+    [reply to accidentaljedi msg=1523042054534467624]
+
+[2026-07-04T19:05:59.657000+00:00] gokhe (id=1523042210155860038)
+    crazy
+    [reply to wreakhavok313 msg=1523042039372189909]
+
+[2026-07-04T19:06:06.614000+00:00] wreakhavok313 (id=1523042239335633016)
+    I'm solo thinker ... Build stuff that technically shouldn't work
+
+[2026-07-04T19:06:43.960000+00:00] wreakhavok313 (id=1523042395975847996)
+    [attachment] guddalm_pipeline.png https://cdn.discordapp.com/attachments/1491258766648283238/1523042395732709507/guddalm_pipeline.png?ex=6a4aab43&is=6a4959c3&hm=d926cf46b6d92c21722a10c4b7ec8cc96ba80e2d1e36467167d35193d391ecc6&
+
+[2026-07-04T19:07:20.945000+00:00] accidentaljedi (id=1523042551102439617)
+    lol, tha'ts kinda what I do too.  So, mine is also foundationally grounded hard core in math, and quantum physics.  We both saw the same problem and came up with solutions.  nice work man.  keep thinking outside that box
+    [reply to wreakhavok313 msg=1523042142245748846]
+
+[2026-07-04T19:07:38.192000+00:00] gokhe (id=1523042623441473706)
+    positional permutation and temporal bundling overlaps, that wont create a problem?
+    [reply to wreakhavok313 msg=1523042395975847996]
+
