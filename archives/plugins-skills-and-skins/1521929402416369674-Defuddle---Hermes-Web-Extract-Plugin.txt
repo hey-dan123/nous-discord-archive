@@ -49,3 +49,6 @@
     Thank you for letting me know this! Will have a closer look this weekend. 🙂
     [reply to lemoussel msg=1522507199748898858]
 
+[2026-07-04T06:22:20.719000+00:00] lemoussel (id=1522850031600799824)
+    Fixed. https://discord.com/channels/1053877538025386074/1522509828881383566/1522616647456915577
+

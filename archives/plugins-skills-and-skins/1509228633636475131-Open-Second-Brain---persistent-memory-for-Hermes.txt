@@ -279,3 +279,7 @@
 [2026-07-02T16:25:40.462000+00:00] autoferrit (id=1522277088596459631)
     Ah. Willing to share a little about that? I’m also using obsidian as a second brain vault
 
+[2026-07-04T08:21:17.250000+00:00] cptalx. (id=1522879964381446144)
+    Mnemosyne doesn't automatically write memories on every turn. Have you found this to be an issue?
+    [reply to autoferrit msg=1521922481491808519]
+

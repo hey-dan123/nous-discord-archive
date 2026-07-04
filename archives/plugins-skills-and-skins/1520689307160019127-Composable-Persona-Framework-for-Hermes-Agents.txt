@@ -25,3 +25,25 @@
     The control plane is fixed in English (for token efficiency and better compliance with LLM control commands).
     It is fully compatible with existing behavior and can be upgraded using `pip install -U hersona`.
 
+[2026-07-04T02:50:53.778000+00:00] btdoverclock (id=1522796818713411735)
+    I finally tried out the project today and I think its quite neat. I can't read japanese so I couldn't understand half the documentation I think some more english docs would be quite nice especially on your website https://shiro-0x.github.io/hersona/app/. It would also help if this were more intuitive to use or maybe its just me. I do really like the blend feature and its awesome I haven't seen any other project do this.
+
+[2026-07-04T04:35:32.962000+00:00] shiro1001 (id=1522823155519848478)
+    Thank you so much for trying out Hersona!
+    I'm really happy to hear that you found the project neat and enjoyed using it. Your feedback means a lot to me.
+    I'm sorry the Japanese-heavy documentation made it hard to understand everything. That's completely on me. I'll prioritize adding more English documentation and optimizing the website so it's much more accessible for international users.
+    If you have any other thoughts or suggestions on how to make it more intuitive, please feel free to share. Your input really helps me improve the project.
+    Thank you again for taking the time to try it and leave such kind feedback!
+    [reply to btdoverclock msg=1522796818713411735]
+
+[2026-07-04T04:48:12.166000+00:00] btdoverclock (id=1522826339852222607)
+    i found that the hersona recommend command and the quiz to be really nice. I think it would be awesome if you had the option to immediately turn the result into a prompt injection block or SOUL.md without needing to manually re-enter the options into hersona blend.
+    [reply to shiro1001 msg=1522823155519848478]
+
+[2026-07-04T06:32:18.958000+00:00] shiro1001 (id=1522852540797157426)
+    Thank you so much for the suggestion!
+    I’m really glad you enjoyed being able to choose personality traits by talking with the agent.
+    That’s a fantastic idea—thank you! I’ll definitely consider adding an option to generate a prompt injection block or a SOUL.md directly from the result.
+    Thanks again! I really appreciate your feedback.
+    [reply to btdoverclock msg=1522826339852222607]
+

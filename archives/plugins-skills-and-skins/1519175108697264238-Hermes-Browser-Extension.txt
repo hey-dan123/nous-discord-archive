@@ -352,3 +352,49 @@
     and some other additions along the way
     [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1522715567390195752/image.png?ex=6a497ae1&is=6a482961&hm=c546dfb2d01d60272cd9faea8768a9a1435de66c65cf546f244d44db7ae08d2c&
 
+[2026-07-04T03:28:05.618000+00:00] jonkomet (id=1522806179728851045)
+    I just pushed **v0.1.8 of the Hermes Browser Extension** ⚕️
+    https://github.com/abundantbeing/hermes-browser-extension
+    
+    This is the **runtime-clarity + chat-steering release**: live agent work is cleaner, active runs can be steered properly, Browser chat is much leaner, and model/context state now stays closer to what Hermes actually ran.
+    
+    **What changed in v0.1.8:**
+    
+    - **Live Tool Activity Strip**
+      Tool calls now render as compact structured activity in the side panel instead of raw `[tool]` markdown spilling into assistant messages. File reads, edits, terminal/process work, browser/web calls, media/image actions, and runtime/meta events get cleaner labels and safer previews.
+    
+    - **Chat steering**
+      Browser now supports steering active Hermes runs through the advertised `session.steer` capability instead of prompt-injecting slash commands. While Hermes is running, submitting typed text now steers by default; Queue is still available as an explicit separate action. If a runtime reports that steer text was accepted but not injected, Browser restores the text to the composer with a warning instead of auto-sending it as a normal next prompt.
+    
+    - **Cleaner streaming UI while Hermes works**
+     The assistant thinking/status animation got tightened up too: dots stay attached to the active phrase, the pacing is calmer, clipping is fixed, and reduced-motion users still get the safer path.
+    
+    - **Lean Browser chat / lower token waste**
+      Browser chat now sends low-token agent options for simple turns. Compatible Hermes runtimes can skip the full toolset, memory block, and context files for chat-only Browser requests. This is the fix for the 50k+ input-token pattern we were seeing on normal Browser turns.
+    
+    - **Runtime-aware context meter**
+      The context meter can now use Hermes session/runtime usage when available, including model, provider, token usage, and context-window size. Same-session refreshes no longer overwrite the active runtime-confirmed model/provider with stale session-list metadata.
+    
+    - **API-first model catalog**
+      Model discovery now prefers the connected Hermes API server’s real `/api/model/options` catalog before falling back to dashboard scraping or session-history discovery. This gives the picker better provider/model rows and more accurate context metadata.
+    
+    - **Provider/model/reasoning controls actually matter**
+      Browser now forwards selected provider/model choices and reasoning settings more directly to Hermes. Explicit Browser selections win over stale session defaults, and reasoning effort maps into the runtime request instead of being just UI chrome.
+    
+    - **Strict Fast mode**
+      Fast/priority routing is now strict opt-in. Stored values like `false`, `off`, or `0` no longer accidentally become truthy and trigger `model_options.fast: true` or priority service-tier requests.
+    
+    - **Sharper gateway diagnostics**
+      The extension now distinguishes unreachable gateway, auth/CORS/missing-route problems, and upstream Hermes runtime/tool tracebacks. Some failures can show as connected-with-warning instead of making the whole Browser connection look dead.
+    
+    - **Known Python traceback classification**
+      Gateway diagnostics now recognize the Python `NoneType` / `int()` traceback class and give better next-step copy, including checking Hermes logs and running `hermes computer-use doctor` when computer-use/cua-driver is involved.
+    
+    - **Hermes Browser session parity**
+      Browser-created sessions persist under the `hermes_browser` source, and the session grouping path mirrors Desktop-style source groups. Desktop can show these as **Hermes Browser Extension** instead of burying them under generic API/local history.
+    
+    - **Docs + version cleanup**
+      README, changelog, permissions, privacy, data-flow, security docs, package version, manifests, and build metadata are all synced for v0.1.8. The public alpha / load-unpacked install path is current again.
+    [attachment] Browser_Extension_v0.1.8_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1522806179980378143/Browser_Extension_v0.1.8_Update_Ad.png?ex=6a49cf45&is=6a487dc5&hm=13e38af52db56e7566e898ed725b6eb00c7165fd138f3c9c3e5264f90e1e52bd&
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
+

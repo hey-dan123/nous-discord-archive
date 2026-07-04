@@ -1,0 +1,18 @@
+# Thread 'self-audit: agent clean-up skill' in forum #plugins-skills-and-skins
+# thread_id=1522799460126691499 forum_id=1485392832154832906
+# Started 2026-07-04T08:38:22.712051+00:00
+
+[2026-07-04T03:01:23.540000+00:00] guideboardlabs (id=1522799460126691499)
+    Built a self-audit skill for Hermes Agent to clean up the internal state drift that accumulates over time. Memory stores collect duplicate and contradictory entries, sessions that should have auto-closed stay open for weeks, cron jobs fail silently, and backup files pile up. None of it is catastrophic, but the agent gradually gets dumber as the cruft compounds. The skill audits memory, the session database, cron jobs, disk cruft, the session export script, and then verifies everything still works. It deduplicates memory, closes stale sessions, pauses failing jobs, prunes orphaned files, patches missing cleanup logic if needed, and generates a report in under a minute. The first run found 114 unclosed sessions going back two weeks, which turned out to be the root cause of Hermes re-answering messages and resurrecting shelved work. It now lives at ~/.hermes/skills/devops/self-audit/SKILL.md and is something I run whenever the agent starts acting haunted.
+    
+    Prompt if your system is heavy with customizations in the X thread below
+    
+    https://x.com/guideboardlabs/status/2073211032713957755?s=46
+    
+    Source in my skills repo here
+    
+    https://github.com/GuideboardLabs/hermes-garage
+    [attachment] copy_AC962ABD-2363-4822-A3D0-E3CEE0EEA574.jpg https://cdn.discordapp.com/attachments/1522799460126691499/1522799460386734181/copy_AC962ABD-2363-4822-A3D0-E3CEE0EEA574.jpg?ex=6a49c903&is=6a487783&hm=e54bf39033495320ab0162e3363858105d615e0d3fd927febfcade0783237953&
+    [embed]  https://twitter.com/guideboardlabs/status/2073211032713957755?s=46
+    [embed] GitHub - GuideboardLabs/hermes-garage: scanfi's Hermes Agent tools,... https://github.com/GuideboardLabs/hermes-garage
+

@@ -5340,3 +5340,12 @@
 [2026-07-04T01:40:21.398000+00:00] avidfuturist (id=1522779066824917113)
     Is this on mobile or desktop <@291686310714933258>?
 
+[2026-07-04T02:54:46.379000+00:00] latipun (id=1522797794312847583)
+    For anyone who want to see `hermes pets` live in the desktop ✨
+    https://github.com/latipun7/hermes-webui-companion
+    [embed] GitHub - latipun7/hermes-webui-companion: A native desktop pet rend... https://github.com/latipun7/hermes-webui-companion
+
+[2026-07-04T06:33:36.055000+00:00] avidfuturist (id=1522852864165281843)
+    Can you try again, I think this may have been fixed in latest
+    [reply to alto69 msg=1522778408076054568]
+

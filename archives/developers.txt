@@ -43145,3 +43145,48 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [embed] fix(web-server): close OAuth token TOCTOU by writing 0o600 atomical... https://github.com/NousResearch/hermes-agent/pull/58006
     [reply to kkurottal6611 msg=1522731270730420255]
 
+[2026-07-04T02:56:19.185000+00:00] danspicytaco (id=1522798183569162272)
+    **fix(desktop): keep shell command fences rendered as code blocks**
+    
+    **How to reproduce**: In Desktop, ask for a fenced shell command block. If the model emits it as `text`, Desktop can demote it to prose. That wraps the command as normal text and lets `$HOME` / `$USER` hit markdown math parsing, so shell variables render as weird italic/math text instead of code.
+    
+    **Fix**: added shell-command signals so command-looking `text` fences stay as code blocks, and added common shell aliases like `zsh`, `fish`, `powershell`, and `ps1` to the code-language path.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/58023
+    [embed] fix: keep shell fences rendered as code blocks by DanSpicyTaco · P... https://github.com/NousResearch/hermes-agent/pull/58023
+
+[2026-07-04T03:35:43.751000+00:00] tunacookie (id=1522808101278056469)
+    https://github.com/NousResearch/hermes-agent/pull/58042
+    [embed] feat(desktop): add commit graph to review pane by tuancookiez-hub ... https://github.com/NousResearch/hermes-agent/pull/58042
+
+[2026-07-04T04:03:22.233000+00:00] jw_mushroom_man (id=1522815057455616081)
+    https://github.com/NousResearch/hermes-agent/issues/58052
+    [embed] [Feature]: Proprioception — let the agent sense its own model-bac... https://github.com/NousResearch/hermes-agent/issues/58052
+
+[2026-07-04T04:03:37.609000+00:00] jw_mushroom_man (id=1522815121947230321)
+    Any thoughts?
+
+[2026-07-04T04:04:06.045000+00:00] jw_mushroom_man (id=1522815241216458873)
+    <@575461682151686145> this might interest you since you run local often
+
+[2026-07-04T04:48:25.993000+00:00] mando07181 (id=1522826397846863882)
+    https://github.com/NousResearch/hermes-agent/pull/52329
+    [embed] fix(delegate): keep finished subagents visible with terminal status... https://github.com/NousResearch/hermes-agent/pull/52329
+
+[2026-07-04T05:08:05.727000+00:00] mando07181 (id=1522831346010165268)
+    https://github.com/NousResearch/hermes-agent/pull/53322
+    [embed] fix(cron): forward model/provider overrides on cron create CLI by i... https://github.com/NousResearch/hermes-agent/pull/53322
+
+[2026-07-04T05:08:32.027000+00:00] mando07181 (id=1522831456320098446)
+    https://github.com/NousResearch/hermes-agent/pull/53323
+    [embed] fix(terminal): don't hardcode 'Linux environment' in tool descripti... https://github.com/NousResearch/hermes-agent/pull/53323
+
+[2026-07-04T05:20:23.230000+00:00] ruithecat (id=1522834439321817128)
+    is this an imposter or squatter?
+    https://hermes-agent.ai/integrations
+    [embed] Hermes Agent Integrations https://hermes-agent.ai/integrations
+
+[2026-07-04T06:58:24.779000+00:00] khancold (id=1522859108326309988)
+    Could someone please help trigger the CI for this PR when you get a chance? Thanks! https://github.com/NousResearch/hermes-agent/pull/56522
+    [embed] fix: handle streamed provider error events by KhanCold · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/56522
+
