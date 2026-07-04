@@ -45,3 +45,7 @@
 [2026-07-02T21:54:26.636000+00:00] dami.zip (id=1522359826166976664)
     Ahh gotcha, I mostly ideate with it in chat and then have it sync that into it. I work off lots of technical spikes for this work, so it's very bottom-up
 
+[2026-07-04T12:40:42.443000+00:00] maksimstolpasov (id=1522945249532706930)
+    How did you connect Plannotator to Hermes?
+    [reply to ruffer3000 msg=1522343575466016880]
+

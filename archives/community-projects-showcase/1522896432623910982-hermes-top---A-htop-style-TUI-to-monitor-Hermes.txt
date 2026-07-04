@@ -1,0 +1,26 @@
+# Thread 'hermes-top - A htop style TUI to monitor Hermes' in forum #community-projects-showcase
+# thread_id=1522896432623910982 forum_id=1316137596535177246
+# Started 2026-07-04T13:19:58.307570+00:00
+
+[2026-07-04T09:26:43.585000+00:00] markmnl (id=1522896432623910982)
+    I'v developed a htop style TUI which lists local hermes sessions, events and actions therein. The user can tab around the panes use the arrow keys to scroll and expand indvidual items. My motivation was I wanted to see what hermes was doing on my system beyond the summarised response we get in the interactive interface. hermes-top polls the hermes local sqlite db with extremely small read-only transactions so as not get in the way of the running agent.
+    
+    https://github.com/markmnl/hermes-top
+    
+    Requires Go 1.25+ and Hermes (tested with Go 1.26 and Hermes v0.18 on Linux)
+    
+    Clone and build with:
+    ```
+    git clone https://github.com/markmnl/hermes-top.git
+    cd hermes-top
+    go build ./...
+    go build -o hermes-top ./cmd/...
+    ```
+    
+    Run:
+    ```
+    ./hermes-top
+    ```
+    [attachment] Screenshot_From_2026-07-04_17-14-20.png https://cdn.discordapp.com/attachments/1522896432623910982/1522896433022500886/Screenshot_From_2026-07-04_17-14-20.png?ex=6a4a2353&is=6a48d1d3&hm=6cd486ded2fcb96d841883f3cc1f341d0ef13dae68612b1f8874885dc3de9926&
+    [embed] GitHub - markmnl/hermes-top: A read-only, `htop`/`btop`-style live ... https://github.com/markmnl/hermes-top
+

@@ -352,3 +352,6 @@
 [2026-07-03T10:56:13.765000+00:00] badbunny2222 (id=1522556568925896824)
     installing the MacOS version, will let you know how it goes
 
+[2026-07-04T11:46:35.366000+00:00] badbunny2222 (id=1522931630304526476)
+    am I supposed to the MacStore one or the dmg on the site?
+

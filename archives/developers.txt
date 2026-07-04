@@ -43190,3 +43190,35 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Could someone please help trigger the CI for this PR when you get a chance? Thanks! https://github.com/NousResearch/hermes-agent/pull/56522
     [embed] fix: handle streamed provider error events by KhanCold · Pull Requ... https://github.com/NousResearch/hermes-agent/pull/56522
 
+[2026-07-04T11:42:14.951000+00:00] gokhe (id=1522930538044719166)
+    feat(compression): allow suppressing Codex gpt-5.5 autoraise notice
+    
+    https://github.com/NousResearch/hermes-agent/pull/58240
+    [embed] feat(compression): allow suppressing Codex gpt-5.5 autoraise notice... https://github.com/NousResearch/hermes-agent/pull/58240
+
+[2026-07-04T11:43:37.559000+00:00] gokhe (id=1522930884528050356)
+    what a scam lmao,
+    
+    I have hosted my hermes for mere 3$ on hetzner.
+    [attachment] CleanShot_2026-07-04_at_17.12.592x.png https://cdn.discordapp.com/attachments/1491258766648283238/1522930884196569140/CleanShot_2026-07-04_at_17.12.592x.png?ex=6a4a4369&is=6a48f1e9&hm=382450b5b09a87afcb0e5d662c770daad69960a49d1f3abc048268ca211c3d9c&
+    [reply to ruithecat msg=1522834439321817128]
+
+[2026-07-04T11:50:32.521000+00:00] groovy_pizza31 (id=1522932625004564661)
+    Hi do any of you know how I can get a free api key with generous limits or how I can link my google ai pro sub to hermes
+
+[2026-07-04T11:52:51.060000+00:00] wnuuee (id=1522933206079377521)
+    Fixed a bug where opening the terminal tab's context menu caused the right sidebar to spuriously slide open on its own. 
+    <@387972437901312000> <@119192111202566149> <@690519146701783042> 
+    
+    Fixed: https://github.com/NousResearch/hermes-agent/pull/58243
+    [attachment] rail_fix.gif https://cdn.discordapp.com/attachments/1491258766648283238/1522933206486093864/rail_fix.gif?ex=6a4a4593&is=6a48f413&hm=b368e1c379f7801f760bfa1f49cb51e83cbfa695cb7d825112a193348f67513e&
+    [embed] fix(desktop): right sidebar spuriously reveals when opening the ter... https://github.com/NousResearch/hermes-agent/pull/58243
+
+[2026-07-04T12:25:31.781000+00:00] kxee (id=1522941429939310592)
+    <@119192111202566149> :o
+    [reply to mando07181 msg=1522826397846863882]
+
+[2026-07-04T12:56:19.544000+00:00] jw_mushroom_man (id=1522949180019048650)
+    https://github.com/NousResearch/hermes-agent/pull/58266
+    [embed] fix(config): stop provider-key warn-storm that stalls Windows loggi... https://github.com/NousResearch/hermes-agent/pull/58266
+

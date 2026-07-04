@@ -1,0 +1,45 @@
+# Thread 'Cross-session self-wake: Have your agent wake with notifications it sends itself (msg, cron, kanban)' in forum #community-projects-showcase
+# thread_id=1522924470065434734 forum_id=1316137596535177246
+# Started 2026-07-04T13:19:57.358092+00:00
+
+[2026-07-04T11:18:08.232000+00:00] decisionparalysis (id=1522924470065434734)
+    This self-wake plugin allows sessions / workers / notifications to wake the agent in a user-facing surface extending the existing mechanism.
+    
+    It's already reduced my cognitive load on multi-session set-up with things like:
+    
+    * Open / move parallel work across sessions without me pasting or re-explaining.
+    * No more cross-profile kanban workers getting stuck on false "this needs human review" 
+    * I no longer have to tell my agent to please run `uv cache prune`  when a watchdog finds the disk at critical space levels.
+    
+    https://github.com/mentatzoe/hermes-self-wake-plugin
+    
+    If you have a similar setup (parallel themed sessions, dedicated monitors, overly cautious kanban workers), or if you're ~~an Imperial Radch fan like me~~ also interested in agent continuity mechanisms, I'd love for you to try it. 
+    
+    If you're already solving this a different way, I'd love to hear how. And if you find it helpful, manage to break it, or tell me why something does or doesn't quite work, even **better**. 
+    
+    > **Note:** I'm not trying to reinvent `/goal`. That's the right tool when you want one session to keep grinding on an objective. This is for when the thing that matters happens outside the session that needs to act.
+    
+    ## But... why?
+    > Long backstory alert - I'm a bit of a large language model myself and idk how to be succinct, apparently 💀
+    
+    I keep several sessions with my agent in parallel, split by topic, so that one workstream doesn't rot another's context. It works really well if you like working on several topics in parallel and like to keep neatly organised in threads.
+    
+    Inspiration, however, is rudely human. It arrives with no respect for your neat categories, and turns you into a human clipboard: copy the finding from one thread, switch, paste, explain. 
+    
+    Same story with monitoring: Having to say "hey buddy, shouldn't *you* do that instead?" every time I got an alert meant to be autonomous was funny... for a while.
+    
+    I started to use `send_message` across sessions, but it still required me to go to the message, wake the agent. `agent_wake` on crons was *somewhat helpful,* but still opaque to me, as the notification was "dead." Same with the kanban worker subscriptions. 
+    
+    After looking to make sure I wasn't just re-implementing a new core feature bc I was too busy to keep up, I tried building it from scratch. I got some (expected but still hilarious) failure modes like self-loopback chaos*, and was about to give up when **I saw a gateway restart wake a session by accident.** I say by accident because I try to be very careful with doing *proper* restarts. Goes to show.
+    
+     I didn't want the agent to just go ahead and change the core of Hermes... and then have to suffer through a stash and merge upgrade from hell whenever things changed. Sending a vibe-PR or issue seemed even worse. 
+     
+     Rather than waiting on the gaps being filled natively, a plugin with a shim *(and a bit of monkeypatching)* extending existing native capabilities seemed like the best option. If the Nous Research team ever wants to implement it, it can be moved over. If not, I lose nothing.
+    
+    Since I have *opinions* about people when they choose to just reinvibe the wheel without RTFM first (I, too, have published THE ULTIMATE TEMPLATE FOR (https://xkcd.com/927/)... oh), but I don't have the bandwidth to write it myself, I've hesitated for quite a bit about sharing it, as it's multi-agent... *cough* engineered. 
+    
+    I'm confident that I've been telling junior / mid / sr human developers what to do long enough, and doing the thing long enough myself to ~~know what I'm doing~~ at least know one or two ways in which things can fail, but... There be dragons.
+    [attachment] Screenshot_2026-07-03_at_18.58.20.png https://cdn.discordapp.com/attachments/1522924470065434734/1522924470254309376/Screenshot_2026-07-03_at_18.58.20.png?ex=6a4a3d70&is=6a48ebf0&hm=1aef1e039e99865b67f563dc550c0397947a1bb26754077f5f72524c69a11bb2&
+    [embed] GitHub - mentatzoe/hermes-self-wake-plugin: Hermes self-wake plugin... https://github.com/mentatzoe/hermes-self-wake-plugin
+    [embed] xkcd: Standards https://xkcd.com/927/
+

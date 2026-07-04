@@ -159,3 +159,14 @@
 [2026-07-02T13:30:15.211000+00:00] tunacookie (id=1522232942494224444)
     <@524474275642474498> you can chat to me here i dont trust dms <:scared:1151275595431419935>
 
+[2026-07-04T11:23:40.847000+00:00] halibusal (id=1522925865153855590)
+    hey curious how you handle agent degredation within different sessions that use different capability agents?
+
+[2026-07-04T11:24:23.726000+00:00] halibusal (id=1522926045001678859)
+    like memories captured from minimax m3 then used during opus 4.8 session. do you find it degrades performance?
+
+[2026-07-04T11:56:09.677000+00:00] tunacookie (id=1522934039139450891)
+    i think using a different model degrades performance no matter what... because it changes how they reason dont think it has anything to do with memory.  
+    on that same topic the way the memories are digested is through a local embedding and a chosen model, in my case i use something cheap like dsflash or anything cheap,  it doesnt need a strong model just for digesting memories and i dont think it will affect the "quality or performance" of the memories
+    [reply to halibusal msg=1522926045001678859]
+

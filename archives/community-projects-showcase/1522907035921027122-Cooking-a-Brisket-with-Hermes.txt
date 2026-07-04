@@ -1,0 +1,8 @@
+# Thread 'Cooking a Brisket with Hermes' in forum #community-projects-showcase
+# thread_id=1522907035921027122 forum_id=1316137596535177246
+# Started 2026-07-04T13:19:57.777021+00:00
+
+[2026-07-04T10:08:51.608000+00:00] base698 (id=1522907035921027122)
+    https://westcot.io/projects/agentic-brisket-summary/
+    [embed] Agentic brisket: the summary — Justin Thomas https://westcot.io/projects/agentic-brisket-summary/
+
