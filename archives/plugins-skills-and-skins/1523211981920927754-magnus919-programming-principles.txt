@@ -1,0 +1,14 @@
+# Thread 'magnus919/programming-principles' in forum #plugins-skills-and-skins
+# thread_id=1523211981920927754 forum_id=1485392832154832906
+# Started 2026-07-05T08:54:33.612639+00:00
+
+[2026-07-05T06:20:36.400000+00:00] magnus919 (id=1523211981920927754)
+    An Agent Skills-format skill containing synthesized programming principles from 14 classic software engineering books.
+    
+    https://github.com/magnus919/programming-principles
+    [attachment] pretzel-c0gb6oemw0q0d54ppx6uah.webp https://cdn.discordapp.com/attachments/1523211981920927754/1523211982558203914/pretzel-c0gb6oemw0q0d54ppx6uah.webp?ex=6a4b4934&is=6a49f7b4&hm=f9f7be69f74f24ef0b358170d12e1ece915e9938ed70d10c551117b0864679f4&
+    [embed] GitHub - magnus919/programming-principles: Agent Skills-format prog... https://github.com/magnus919/programming-principles
+
+[2026-07-05T06:21:17.806000+00:00] magnus919 (id=1523212155590021202)
+    magnus919/programming-principles
+

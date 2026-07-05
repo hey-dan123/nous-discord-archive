@@ -990,3 +990,20 @@
     opencode go is also supported in hermes-router
     [reply to tonyporj msg=1522954514444058785]
 
+[2026-07-05T07:18:48.155000+00:00] tonyporj (id=1523226627402629172)
+    hi, Im not subscribed to opencode go, and im having difficulties on using the opencode go models .. I have my hermes router on docker then my  i have my opencode go api key on the hermes .env. what should i do? did i miss something thats why it isnt working properly.. it says the hermes router is perfectly healthy but opencode go is not usable as it always has this api error calls
+    [reply to shaf_2665 msg=1522997637480185866]
+
+[2026-07-05T08:17:22.055000+00:00] shaf_2665 (id=1523241365767716916)
+    ## 🐛 Bug Fix Update — thanks for the reports!
+    
+    Two issues found by the community, both fixed and pushed:
+    
+    1. **hr setup/hr auth/hr model/hr mode** failing on macOS 🍎
+    Reported by <@207041642224549888> — macOS's default bash (3.2) doesn't support the lowercasing syntax our scripts used, causing bad substitution and Unknown provider errors. Fixed with a portable alternative that works on any bash version.
+    
+    2. OpenCode Go always erroring 🔧
+    Reported by <@215303553768488970> — turns out opencode_go needs Go billing actually enabled on your OpenCode account (having the key alone isn't enough — it's just the router's signal that you've subscribed). We also found and fixed a real bug while investigating: a provider stuck with a bad/unsubscribed key was getting retried on every single request forever instead of backing off. Now it cools down properly like any other unhealthy provider.
+    
+    Pull the latest with `hr update` (or git pull + restart) to get both fixes. 🙏
+
