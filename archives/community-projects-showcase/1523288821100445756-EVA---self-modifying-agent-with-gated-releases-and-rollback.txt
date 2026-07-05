@@ -1,0 +1,36 @@
+# Thread 'EVA – self-modifying agent with gated releases and rollback' in forum #community-projects-showcase
+# thread_id=1523288821100445756 forum_id=1316137596535177246
+# Started 2026-07-05T13:26:10.793666+00:00
+
+[2026-07-05T11:25:56.288000+00:00] nobias0700 (id=1523288821100445756)
+    Hey everyone -  I’m working on EVA, my small open-source research project around controlled self-modification for LLM agents.
+    
+    Since this community is building and discussing Hermes Agent, I thought the architecture might be interesting here, motivated by the question:
+    
+    What would it look like if an agent could modify its own runtime through a gated release process instead of editing itself live?
+    
+    EVA’s loop is:
+    
+    active release → candidate → tests/ratchet → kernel gate → promotion → ledger → rollback
+    
+    The kernel stays small and non-evolving. The evolvable release contains the agent loop, tools, adapters, memory, context compaction, TUI and self-model.
+    
+    It’s experimental, not production-safe, and runs in Docker with a safe sandbox by default.
+    
+    I’d love technical feedback on:
+    - whether the kernel/release boundary makes sense
+    - whether the gates are meaningful or too easy to game
+    - whether the seed is already too large
+    - how this compares to skill/memory-based growth in Hermes
+    
+    Repo:
+    https://github.com/arturkorb3/eva-evolutional-agent
+    
+    Docs:
+    https://arturkorb3.github.io/eva-evolutional-agent/
+    
+    Demo: https://raw.githubusercontent.com/arturkorb3/eva-evolutional-agent/main/docs/Eva-improve.gif
+    [embed] GitHub - arturkorb3/eva-evolutional-agent: EVA - a minimal self-evo... https://github.com/arturkorb3/eva-evolutional-agent
+    [embed] EVA — Evolvable Virtual Agent https://arturkorb3.github.io/eva-evolutional-agent/
+    [embed]  https://raw.githubusercontent.com/arturkorb3/eva-evolutional-agent/main/docs/Eva-improve.gif
+

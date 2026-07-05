@@ -5349,3 +5349,22 @@
     Can you try again, I think this may have been fixed in latest
     [reply to alto69 msg=1522778408076054568]
 
+[2026-07-05T09:58:29.002000+00:00] alto69 (id=1523266812387524691)
+    yes thanks i tried scrolling when i should have pressed the button 🫶
+    [reply to avidfuturist msg=1522852864165281843]
+
+[2026-07-05T09:58:45.607000+00:00] alto69 (id=1523266882034208878)
+    why not extension
+    [reply to latipun msg=1522797794312847583]
+
+[2026-07-05T10:04:38.257000+00:00] alto69 (id=1523268361155248178)
+    what is the state of affairs on fully-fleshed-out extension system . what do you think about Linux XFCE desktop in Hermes WebUI extension id like to have more visibility into my agent using apps but havent gone beyond hydro13/tandem-browser
+
+[2026-07-05T11:24:18.278000+00:00] _123321_ (id=1523288410016710796)
+    Ok, got more time today, but **very** low trust in the current model reporting this (glm5.2) given the repeated failure modes i find myself currently facing. If the entire report is bunk i wouldn't be surprised, will try to have a more apt model verify it.
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1493017427724992612/1523288409689292870/message.txt?ex=6a4b9062&is=6a4a3ee2&hm=cf973b0e6de4a60dfafe4874bb0ccb4aa26d1bd0e59f94df6c6d5ca04344909b&
+
+[2026-07-05T11:37:07.604000+00:00] _123321_ (id=1523291636803567627)
+    here's what qwen3.7max had to add, really hope this helps 🤞
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1493017427724992612/1523291636304580771/message.txt?ex=6a4b9363&is=6a4a41e3&hm=b7f8f966bd3cf1bdf0da14796931a310a9e49a591892b3b682a575dba086653a&
+

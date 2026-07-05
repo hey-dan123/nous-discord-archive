@@ -1243,3 +1243,6 @@
     
     Pull the latest with `hr update` (or git pull + restart) to get both fixes. 🙏
 
+[2026-07-05T12:14:35.752000+00:00] gus003698 (id=1523301066219720774)
+    For usage monitoring and fallbacks by Hermes due to free quota exceeded errors I run liteLLM, Prometheus and Alertmanager on the same Hermes machine. Does hr offer usage monitoring and alerting for paid models ? if not, can I stack hr with liteLLM? My current config is that providers' API keys are spoofed by liteLLM and hermes uses one key to liteLLM. How this would need to be overcome?
+

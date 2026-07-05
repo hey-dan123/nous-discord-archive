@@ -404,3 +404,15 @@
 [2026-07-04T20:30:44.408000+00:00] tonyporj (id=1523063537147187302)
     for example i have an llm wiki, is there a way to add a command there to for example: /ingest - ingest this whatever topic of the page i am currently in right now to my Wiki?
 
+[2026-07-05T12:05:24.632000+00:00] jonkomet (id=1523298754655027273)
+    yes, just tell your agent to do that.. it does everything hermes can already do
+    [reply to tonyporj msg=1523063537147187302]
+
+[2026-07-05T12:06:19.312000+00:00] jonkomet (id=1523298983999705100)
+    essentially yes, you just have to connect your endpoints to it... works with all local and remote gateway setups, and I just added a layer to add custom model sourcing
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1523298984032997396/image.png?ex=6a4b9a3b&is=6a4a48bb&hm=32d01ded31c57a8c79a40e21d7af7f41c8fe80b82a0c89ab96b3d7fa7d901370&
+    [reply to heeervas msg=1522977898888298496]
+
+[2026-07-05T12:28:18.837000+00:00] jonkomet (id=1523304518488424610)
+    Along with Alt+H being a new shortcut button to open the Hermes Browser Extension, which is live now
+

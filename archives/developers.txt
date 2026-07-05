@@ -43578,3 +43578,131 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-05T07:03:18.769000+00:00] analista4412 (id=1523222729275347004)
     Nice. Will check if it's compatible with omp
 
+[2026-07-05T08:49:44.893000+00:00] realadolan (id=1523249514620911686)
+    <@1387527976224297133> This will be a neverending chase
+
+[2026-07-05T08:54:22.469000+00:00] realadolan (id=1523250678859042816)
+    But I know what to do, and we will draw a line here
+
+[2026-07-05T09:01:18.850000+00:00] watchdominion (id=1523252425287405618)
+    these are now updated and even better. These are for issues 58515 & 58514, who had multiple comcments.
+    [reply to watchdominion msg=1523089672144945202]
+
+[2026-07-05T09:04:21.733000+00:00] _voscko_ (id=1523253192354168923)
+    Hey folks! I refreshed #16450 against current main and updated the PR body/validation:
+    https://github.com/NousResearch/hermes-agent/pull/16450
+    
+    It’s a small host-side compatibility fix for context-engine compression kwargs: legacy engines keep working, while internal TypeErrors no longer get swallowed as signature mismatches.
+    
+    CI is running now. If one of the maintainers has a moment to take a look once it’s green, that would be appreciated 🙏
+    [embed] fix: feature-detect context focus compression support by Tosko4 · ... https://github.com/NousResearch/hermes-agent/pull/16450
+
+[2026-07-05T09:20:17.778000+00:00] aleksandr_1 (id=1523257202297540618)
+    <@387972437901312000> sir, quick follow-up on my #58461 (timestamp-bound V2 signature for generic webhooks). 
+    
+    While that PR was open, you opened a salvage PR (#58508), but a downgrade fix I pushed after the salvage snapshot was taken didn't make it into that merge.
+    
+    The issue: if a request carries both V1 and V2 signatures (normal during a migration to V2), stripping the X-Webhook-Timestamp header made validation fall through to the unprotected legacy V1 check instead of rejecting the request. A V2-protected request got silently downgraded to V1's protection level, reopening the exact replay vulnerability V2 was meant to close.
+    
+    Fix: the mere presence of the X-Webhook-Signature-V2 header now commits validation to V2 mode. If the timestamp is missing, malformed, or expired, the request is rejected instead of falling back to V1.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/58740
+    [embed] fix(webhook): reject generic V2 signature missing timestamp instead... https://github.com/NousResearch/hermes-agent/pull/58740
+
+[2026-07-05T09:28:50.172000+00:00] egilewski (id=1523259351434006601)
+    You could just ignore my clanker, and if you know it's wrong, please tell it for later analysis. But I'll make it respect author's opt out.
+    [reply to realadolan msg=1523250678859042816]
+
+[2026-07-05T09:29:30.967000+00:00] realadolan (id=1523259522540634173)
+    No no it was good, but at some point went outside of the scope 😄 But it's okay it stopped
+    [reply to egilewski msg=1523259351434006601]
+
+[2026-07-05T09:47:58.469000+00:00] egilewski (id=1523264167740702724)
+    Ah. No, it just skipped this turn because the branch wasn't changed. An opt out may still be useful. Scope creep is more important though, so I'm addressing that first. Thank you!
+    [reply to realadolan msg=1523259522540634173]
+
+[2026-07-05T09:58:43.587000+00:00] realadolan (id=1523266873561710773)
+    Lots of security fixes and hardening across the board, all opened as PRs today, sorted by severity.
+    
+    **[Critical] Hardline approval-floor bypass via wrappers & paths**
+    `nice reboot` / `/bin/reboot` run catastrophic commands with zero prompt in every mode.
+    Issue [#58642](https://github.com/NousResearch/hermes-agent/issues/58642) | PR [#58643](https://github.com/NousResearch/hermes-agent/pull/58643)
+    
+    **[Critical] Hardline floor bypass via command-carrying wrappers**
+    `sh -c` / `env --split-string` smuggle the same catastrophic commands past the floor.
+    Issue [#58736](https://github.com/NousResearch/hermes-agent/issues/58736) | PR [#58742](https://github.com/NousResearch/hermes-agent/pull/58742)
+    
+    **[High] Cron-session approval marker leak**
+    In-process cron ticker misroutes every interactive user's approvals (auto-approves under cron approve-mode).
+    Issue [#58662](https://github.com/NousResearch/hermes-agent/issues/58662) | PR [#58663](https://github.com/NousResearch/hermes-agent/pull/58663)
+    
+    **[High] Dashboard arbitrary file read**
+    Hosted tenant reads auth.json / mcp-tokens / host files, defeating the #57505 control.
+    Issue [#58724](https://github.com/NousResearch/hermes-agent/issues/58724) | PR [#58726](https://github.com/NousResearch/hermes-agent/pull/58726)
+    
+    **[Medium] Unbroker SMTP cleartext credentials on STARTTLS strip**
+    Email password + PII leak if a MITM strips STARTTLS.
+    Issue [#58711](https://github.com/NousResearch/hermes-agent/issues/58711) | PR [#58712](https://github.com/NousResearch/hermes-agent/pull/58712)
+    
+    <@387972437901312000> Would love a review, and happy to walk through the details in the PR threads.
+
+[2026-07-05T11:16:05.445000+00:00] turgut.k (id=1523286342925025280)
+    Hello <@387972437901312000>, can you take a look at this PR? https://github.com/NousResearch/hermes-agent/pull/58495
+    Hermes-lcm repo got the fix but the PR on hermes-agent needs to be merged too for solution to work. Hermes-lcm PR: https://github.com/stephenschoettler/hermes-lcm/pull/309
+    [embed] fix(compression): skip session split on plugin no-op by TurgutKural... https://github.com/NousResearch/hermes-agent/pull/58495
+    [embed] feat: expose compression no-op status by TurgutKural · Pull Reques... https://github.com/stephenschoettler/hermes-lcm/pull/309
+
+[2026-07-05T11:53:41.897000+00:00] aleksandr_1 (id=1523295807170805780)
+    <@1387527976224297133> thanks for the comments on my PRs #58461 and #57990 <:o7:1151261546111053924>
+
+[2026-07-05T12:14:42.150000+00:00] warofchange (id=1523301093054873831)
+    Unit tests for normalize_slug
+    
+    normalize_slug (hermes_cli/projects_db.py) is a pure, I/O-free validator/normalizer for project slugs — it had no direct tests. The suite pins its contract (_SLUG_RE = ^[a-z0-9][a-z0-9\-_]{0,63}$):
+    • None / empty / whitespace → None
+    • valid input lowercased + stripped (MyProject → myproject), up to the 64-char cap
+    • invalid slugs raise ValueError: leading -/_, spaces, dots, slashes, or >64 chars
+    
+    Pure input→output assertions — no mocks, no network, no filesystem. Zero production code touched.
+    
+    pytest tests/hermes_cli/test_normalize_slug.py -v
+    PR: https://github.com/NousResearch/hermes-agent/pull/58843
+    
+    Unit tests for resolve_rename_path
+    
+    resolve_rename_path (hermes_cli/web_git.py) is a pure, I/O-free parser that turns git's rename notation into the NEW path, so a dashboard diff/stage row addresses the real file. It had no direct tests. The suite pins its contract:
+    • No " => " → path unchanged (stripped)
+    • old.py => new.py → new.py
+    • Brace form src/{old => new}/f.py → src/new/f.py, {a => b}/f → b/f
+    • Empty new segment collapses //: dir/{old => }/f → dir/f
+    
+    Pure input→output assertions — no mocks, no network, no filesystem. Zero production code touched.
+    
+    pytest tests/hermes_cli/test_web_git.py -v
+    PR: https://github.com/NousResearch/hermes-agent/pull/58844
+    [embed] test(hermes_cli): add unit tests for normalize_slug by waroffchange... https://github.com/NousResearch/hermes-agent/pull/58843
+    [embed] test(hermes_cli): add unit tests for resolve_rename_path by waroffc... https://github.com/NousResearch/hermes-agent/pull/58844
+
+[2026-07-05T13:00:59.198000+00:00] nobias0700 (id=1523312740838674503)
+    Quick design question after reading hermes-agent-self-evolution:
+    
+    It seems intentionally shaped as an external optimizer that proposes improvements to hermes-agent via evaluated artifacts and PRs, rather than letting the running agent mutate itself directly.
+    
+    Do you see that external optimizer / human-reviewed PR boundary as the permanent safety boundary, or could a future phase include runtime-managed candidate releases with gates, lineage, and rollback?
+    
+    I’m asking because Phase 4 already touches code evolution, hidden evals, rollback traces and deterministic lineage, which feels close to the boundary between "external evolution pipeline" and "self-modifying runtime."
+
+[2026-07-05T13:03:13.225000+00:00] egilewski (id=1523313302988656812)
+    Apologies, a follow-up on an old topic: I noticed that reviews of type comment are still enabled. Is it on purpose or just another GitHub's misfeature?
+    
+    Regular comments work fine for me, but review-comments may be a bit better for PR authors. Assuming that won't be confusing to them instead; I'm terminally on GitHub for work, so it's hard for me to judge.
+    [reply to teknium msg=1520678419820449922]
+
+[2026-07-05T13:10:54.755000+00:00] teknium (id=1523315238785646725)
+    "phase 4"?
+    [reply to nobias0700 msg=1523312740838674503]
+
+[2026-07-05T13:21:15.714000+00:00] nobias0700 (id=1523317843276468294)
+    I mean the planned code-evolution stage,  README calls it Phase 4, while PLAN.md also refers to it as Tier 4 in the risk/value breakdown. So yes, "Tier 4 / planned Phase 4" I guess.
+    [reply to teknium msg=1523315238785646725]
+
