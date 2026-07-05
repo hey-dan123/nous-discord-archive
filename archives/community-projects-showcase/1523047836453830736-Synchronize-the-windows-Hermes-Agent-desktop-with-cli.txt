@@ -1,0 +1,7 @@
+# Thread 'Synchronize the windows Hermes Agent desktop with cli?' in forum #community-projects-showcase
+# thread_id=1523047836453830736 forum_id=1316137596535177246
+# Started 2026-07-05T02:51:53.557451+00:00
+
+[2026-07-04T19:28:21.071000+00:00] glizlack6777 (id=1523047836453830736)
+    Has anyone found a way to do this with say 1 button. I want to use the windows desktop more but its always a little bit different than the cli. Its tedius to update everything 2x and make sure everythying is synched. Aka updates, profile changes, I want it to be more like cli and tui working hand in hand, but with the pretty interface of windows deskto hermes.
+

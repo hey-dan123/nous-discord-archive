@@ -283,3 +283,7 @@
     Mnemosyne doesn't automatically write memories on every turn. Have you found this to be an issue?
     [reply to autoferrit msg=1521922481491808519]
 
+[2026-07-04T23:29:59.254000+00:00] autoferrit (id=1523108646240784600)
+    Not sure I'll have to look. I should know if it does or not. I know yelling it to remember something helps for cross session references
+    [reply to cptalx. msg=1522879964381446144]
+

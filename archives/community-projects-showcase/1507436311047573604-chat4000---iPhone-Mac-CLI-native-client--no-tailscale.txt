@@ -355,3 +355,7 @@
 [2026-07-04T11:46:35.366000+00:00] badbunny2222 (id=1522931630304526476)
     am I supposed to the MacStore one or the dmg on the site?
 
+[2026-07-05T00:25:24.185000+00:00] starw1 (id=1523122592012177509)
+    Go to the GitHub.
+    [reply to badbunny2222 msg=1522931630304526476]
+

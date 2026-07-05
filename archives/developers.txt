@@ -43351,3 +43351,204 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     positional permutation and temporal bundling overlaps, that wont create a problem?
     [reply to wreakhavok313 msg=1523042395975847996]
 
+[2026-07-04T19:08:13.339000+00:00] wreakhavok313 (id=1523042770858672351)
+    I'm experimenting I set it up where bsc, map, fhrr all run independent
+    [reply to gokhe msg=1523042623441473706]
+
+[2026-07-04T19:08:29.436000+00:00] jonkomet (id=1523042838374383649)
+    https://github.com/NousResearch/hermes-agent/pull/54466
+    
+    please get this one in .. it just allows API to allow streaming.. i can do it locally but for browser extension others can't steer without it
+    [embed] feat(api): steer active runs by abundantbeing · Pull Request #5446... https://github.com/NousResearch/hermes-agent/pull/54466
+
+[2026-07-04T19:08:49.149000+00:00] gokhe (id=1523042921056567507)
+    nice
+    [reply to wreakhavok313 msg=1523042770858672351]
+
+[2026-07-04T19:08:58.869000+00:00] wreakhavok313 (id=1523042961825206362)
+    I have a custom set up that runs bsc and map and the superimposes them for collaborative answer
+
+[2026-07-04T19:09:05.259000+00:00] gokhe (id=1523042988626940006)
+    is there somewhere i can follow your work?
+    [reply to wreakhavok313 msg=1523042770858672351]
+
+[2026-07-04T19:09:23.452000+00:00] wreakhavok313 (id=1523043064933777508)
+    I opened a vsa repo
+
+[2026-07-04T19:09:32.251000+00:00] jw_mushroom_man (id=1523043101839589528)
+    https://github.com/NousResearch/hermes-agent/pull/58447
+    [embed] feat(plugins): chronoception — a sense of elapsed time between tu... https://github.com/NousResearch/hermes-agent/pull/58447
+
+[2026-07-04T19:09:53.717000+00:00] gokhe (id=1523043191874519092)
+    share link plis
+    [reply to wreakhavok313 msg=1523043064933777508]
+
+[2026-07-04T19:10:07.294000+00:00] jw_mushroom_man (id=1523043248820719810)
+    https://github.com/NousResearch/hermes-agent/pull/58455
+    [embed] feat(moa): opt-in recency-weighted "brief" reference view by lEWFkR... https://github.com/NousResearch/hermes-agent/pull/58455
+
+[2026-07-04T19:10:32.652000+00:00] wreakhavok313 (id=1523043355179614248)
+    https://github.com/tariqselassie-hub/GuddaLM_VSA
+    [embed] GitHub - tariqselassie-hub/GuddaLM_VSA: Treat it as a garden ... no... https://github.com/tariqselassie-hub/GuddaLM_VSA
+
+[2026-07-04T19:10:54.688000+00:00] jw_mushroom_man (id=1523043447605301329)
+    https://github.com/NousResearch/hermes-agent/issues/58052
+    
+    part of this
+    [embed] [Feature]: Proprioception — let the agent sense its own model-bac... https://github.com/NousResearch/hermes-agent/issues/58052
+    [reply to jw_mushroom_man msg=1523043248820719810]
+
+[2026-07-04T19:11:05.201000+00:00] wreakhavok313 (id=1523043491700150433)
+    It's the primitives I built my custom engine on... All vector primitives
+
+[2026-07-04T19:11:12.416000+00:00] gokhe (id=1523043521961918637)
+    crazy
+    [reply to wreakhavok313 msg=1523043491700150433]
+
+[2026-07-04T19:17:24.462000+00:00] wreakhavok313 (id=1523045082436206885)
+    I'm going chemistry route... I got ran outta cryptography 😂😂😂
+
+[2026-07-04T19:32:14.523000+00:00] accidentaljedi (id=1523048815622357194)
+    this is just a single pass analysis, so I wouldn't base build plans from it, but.  seems like your project can use some my my projects primitives, and mine can use much of yours as well.  you have all the plans from mine right there.  love to hear if you find it useful in any ways.
+    [reply to wreakhavok313 msg=1523043491700150433]
+
+[2026-07-04T19:32:17.526000+00:00] accidentaljedi (id=1523048828217852006)
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1491258766648283238/1523048828310257734/message.txt?ex=6a4ab141&is=6a495fc1&hm=65729ea66ad72c6bb5cec4f3da0bc76b2fbc36b82f527ae54e3d466ed354e274&
+
+[2026-07-04T19:38:04.101000+00:00] wreakhavok313 (id=1523050281859023029)
+    U got link? Or your project private?... I haven't seen many venturing this direction
+    [reply to accidentaljedi msg=1523048815622357194]
+
+[2026-07-04T19:41:52.547000+00:00] accidentaljedi (id=1523051240030998719)
+    I haven't uploaded it to any githubs yet.  but that dissertation should be able to guide anything from.  I'll see if I can zip it up somehow.  kinda tough because it's currently all tied directly into my system.  I haven't built the install parts and uploaded to gihub just yet.  let me see if I can make a repo and upload it for you to see it all structured out more clearly
+    [reply to wreakhavok313 msg=1523050281859023029]
+
+[2026-07-04T19:47:35.601000+00:00] wreakhavok313 (id=1523052678903627816)
+    No I got you... I'll research the key terms in the 3 differences .... I use a skill that adds a feature test vs baseline and... Then we decide if it's viable ... All options aren't good options .. especially if it sound good on paper
+
+[2026-07-04T19:56:26.890000+00:00] javiermares (id=1523054907291074601)
+    i can't immediately contribute to this but i live in nixos and i want to help
+    [reply to reprograma. msg=1522602270515269683]
+
+[2026-07-04T20:03:31.486000+00:00] accidentaljedi (id=1523056688176037988)
+    I have a Zip I can send. you'd be refactoring from python to rust, but as this started in Rust, i don't think it will be a big deal.
+    [reply to wreakhavok313 msg=1523052678903627816]
+
+[2026-07-04T20:07:02.586000+00:00] accidentaljedi (id=1523057573593485563)
+    Do you mind if I study yours a little an borrow from it where it fits?  I'll properly cite the contributions' I find of course, when it comes time for the Repo
+
+[2026-07-04T20:09:39.829000+00:00] wreakhavok313 (id=1523058233118429316)
+    Send to dm
+    [reply to accidentaljedi msg=1523056688176037988]
+
+[2026-07-04T21:32:37.122000+00:00] accidentaljedi (id=1523079109398495395)
+    tied to DM, but it wouldn't go through.  So, here's link to download it from Mega  https://transfer.it/t/YeBCvSoR0bRL
+    [reply to wreakhavok313 msg=1523058233118429316]
+
+[2026-07-04T21:43:13.777000+00:00] teknium (id=1523081779722850444)
+    https://fxtwitter.com/Teknium/status/2073521617146438093
+    [embed]  https://fxtwitter.com/Teknium/status/2073521617146438093
+
+[2026-07-04T21:49:17.821000+00:00] wreakhavok313 (id=1523083306634051745)
+    Thanks got it and added you
+    [reply to accidentaljedi msg=1523079109398495395]
+
+[2026-07-04T21:59:41.746000+00:00] teknium (id=1523085923565310032)
+    Every dev who has PRs in queue, hit up <#1523079833825972365> and let us know what would make it so your PR could be a plugin, so you can distribute your work in a stable way (no pointing people to X branch and then waiting for it to merge)
+
+[2026-07-04T22:14:35.477000+00:00] watchdominion (id=1523089672144945202)
+    I checked some issues on GitHub and put some small fixes in that might help some people out 🙂 
+    
+    
+    
+    1️⃣ PR #58519 — fix(config): load_config() cache served stale unexpanded ${VAR} literals when .env loaded after the first config read (root-caused issue #58514, wasn't what the reporter thought). Env-ref snapshot now invalidates the cache. 3 new tests, 195 config tests green.
+    https://github.com/NousResearch/hermes-agent/pull/58519
+    
+    2️⃣ PR #58520 — fix(agent): explicit provider arg bypassed auxiliary.<task>.base_url/api_key config (issue #58515). Conservative fix preserving explicit-arg priority. 5 new tests, 468 aux tests green.
+    https://github.com/NousResearch/hermes-agent/pull/58520
+    [embed] fix(config): invalidate load_config cache when referenced ${VAR} en... https://github.com/NousResearch/hermes-agent/pull/58519
+    [embed] fix(agent): honor auxiliary.<task>.base_url/api_key when provider i... https://github.com/NousResearch/hermes-agent/pull/58520
+
+[2026-07-04T22:21:56.753000+00:00] liinx (id=1523091522990510333)
+    PR #58524 — feat(plugins): classify_api_error hook, so provider plugins can own their error quirks
+    
+    <@387972437901312000>  Answering the plugin-interface expansion ask with code instead of a suggestion. A big slice of the PR queue is single-provider error-classification patches (#58451, #58355, #58502, #58474, #58366, …) — each one an edit to agent/error_classifier.py waiting on review. This adds a classify_api_error plugin hook consulted BEFORE the built-in pipeline, so a model-provider plugin can classify (or correct) its provider's errors without touching core. First valid result wins, exceptions isolated — a broken plugin can never break classification.
+    
+    Proof it converts waiting PRs: the bundled reference plugin re-implements #58451 (credit @webtecnica) in ~25 lines — OpenRouter's "No endpoints found that support tool use" 404 now classifies as model_not_found with immediate fallback instead of burning 3-5 retries on a deterministic rejection. Ships opt-in, so it can't conflict if #58451 lands in core anyway.
+    
+    Zero behavior change when no plugin claims an error: all 179 existing classifier tests pass untouched. 14 new tests, including a no-mocks end-to-end through real plugin discovery.
+    
+    https://github.com/NousResearch/hermes-agent/pull/58524
+    [embed] feat(plugins): classify_api_error hook — provider plugins own the... https://github.com/NousResearch/hermes-agent/pull/58524
+
+[2026-07-04T22:40:52.866000+00:00] liinx (id=1523096288193675436)
+    PR #58538 — docs: plugin author guide, the full authoring surface in one reference
+    
+    Follow-up to the plugin-interface expansion ask: before expanding the interface, the interface we already have deserves a doc. Right now the entire plugin authoring contract lives in code comments — VALID_HOOKS, PluginContext docstrings, middleware.py. If we want devs publishing plugins instead of queueing PRs, they need one page they can read start to finish.
+    
+    docs/plugins.md covers the whole surface: quick start, all four discovery sources + precedence, plugin.yaml + the five kinds with their exact loading rules, every register_* method, all 23 hooks with per-hook return contracts, the 4 middleware kinds (next_call semantics included), backend provider registries, distribution via hermes plugins install (all URL forms), debugging with HERMES_PLUGINS_DEBUG, and a "converting your waiting PR into a plugin" mapping table — which seam fits which PR-shape, per teknium's ask.
+    
+    Accuracy: written from the source, then mechanically verified — a script cross-checks every hook name, middleware kind, and ctx method in the doc against the live modules (zero unknown names, zero hooks missing). Doc-only, no runtime surface, can land independently of #58524.
+    
+    https://github.com/NousResearch/hermes-agent/pull/58538
+    [embed] docs: plugin author guide — the full authoring surface in one ref... https://github.com/NousResearch/hermes-agent/pull/58538
+
+[2026-07-04T23:18:37.821000+00:00] sysdoc (id=1523105788103626944)
+    <@387972437901312000> Once again! Brilliant! ⁠https://discord.com/channels/1053877538025386074/1490858802726043759/1523079833825972365
+
+[2026-07-04T23:29:05.780000+00:00] sysdoc (id=1523108421954703440)
+    <@387972437901312000> Freaking bangin'! Dewd! Keep it up bruh! Appreciate ya bigly! lol!
+
+[2026-07-04T23:44:31.708000+00:00] flownium (id=1523112305578082427)
+    https://github.com/NousResearch/hermes-agent/pull/58560
+    [embed] fix: prefer explicit anthropic api key by itsflownium · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/58560
+
+[2026-07-04T23:47:02.745000+00:00] sprmn24 (id=1523112939073048837)
+    Hey <@387972437901312000> , I opened a few PRs today — take a look when you get a chance ser :
+    
+    fix(bedrock): guard client cache dicts with a threading.Lock  https://github.com/NousResearch/hermes-agent/pull/57343
+    
+     fix(bedrock): acquire cache lock in reset_client_cache and invalidate_runtime_client 
+    https://github.com/NousResearch/hermes-agent/pull/58561
+    [embed] fix(bedrock): guard client cache dicts with a threading.Lock by spr... https://github.com/NousResearch/hermes-agent/pull/57343
+    [embed] fix(bedrock): acquire cache lock in reset_client_cache and invalida... https://github.com/NousResearch/hermes-agent/pull/58561
+
+[2026-07-05T01:11:03.285000+00:00] trivunous (id=1523134080630132756)
+    https://github.com/NousResearch/hermes-agent/pull/58583
+    [embed] fix(discord): restore allow-all default when no allowlists configur... https://github.com/NousResearch/hermes-agent/pull/58583
+
+[2026-07-05T02:05:47.977000+00:00] warofchange (id=1523147857627054210)
+    Fix a stale action-pin version comment in CI
+    
+    Fresh area this time — GitHub Actions workflows. In .github/workflows/lint.yml, the SHA-pinned actions/setup-python is labeled # v5, but that exact SHA (a309ff8b…) is actually v6.2.0 — as correctly commented in four other workflows in the repo (skills-index.yml, docs-site-checks.yml, upload_to_pypi.yml, deploy-site.yml). Only lint.yml mislabels it, a leftover from a previous pin bump.
+    
+    -uses: actions/setup-python@a309ff8b…d02405 # v5
+    +uses: actions/setup-python@a309ff8b…d02405 # v6.2.0
+    Why it matters: the version comment beside a SHA pin is the human-readable reference used when auditing or bumping actions. A stale # v5 on a v6.2.0 SHA misleads maintainers into thinking lint.yml lags a major version behind — and could prompt an erroneous "update" that churns the pin.
+    
+    Comment-only, 1 line the executed SHA is unchanged, so CI behavior is identical. Provable by direct in-repo comparison against the four sibling pins.
+    
+    PR:  https://github.com/NousResearch/hermes-agent/pull/58611
+    [embed] ci(lint): correct stale setup-python version comment (v5 -> v6.2.0)... https://github.com/NousResearch/hermes-agent/pull/58611
+
+[2026-07-05T02:10:41.454000+00:00] ooiuuii (id=1523149088558809088)
+    Hi! I have Hermes Agent contributions that were merged through maintainer salvage PRs, and I also have several PRs still in queue.
+    
+    GitHub: <@1098566276521140269>
+    
+    Merged via maintainer salvage PRs:
+    - https://github.com/NousResearch/hermes-agent/pull/58501
+      Salvages #58466 and #58377 by <@1098566276521140269> onto current main, authorship preserved.
+    - https://github.com/NousResearch/hermes-agent/pull/58502
+      Salvages #58433 by <@1098566276521140269> onto current main, authorship preserved.
+    
+    Additional PRs in queue:
+    - https://github.com/NousResearch/hermes-agent/pull/58478
+    - https://github.com/NousResearch/hermes-agent/pull/58472
+    - https://github.com/NousResearch/hermes-agent/pull/58450
+    - https://github.com/NousResearch/hermes-agent/pull/58389
+    
+    I saw the note asking devs with PRs in queue to discuss plugin/interface ideas. Could a maintainer let me know whether my remaining PRs should be plugin/skill/interface work or core PRs?
+    
+    Also, I checked Channels & Roles and didn’t see a public Developer/Contributor role to self-assign. Since some of my contributions were merged via maintainer salvage PRs with authorship preserved, could someone help verify whether I can receive the Developer/Contributor status on Discord?
+

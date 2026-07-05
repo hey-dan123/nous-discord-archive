@@ -401,3 +401,6 @@
 [2026-07-04T14:50:26.656000+00:00] heeervas (id=1522977898888298496)
     Compatible with docker?
 
+[2026-07-04T20:30:44.408000+00:00] tonyporj (id=1523063537147187302)
+    for example i have an llm wiki, is there a way to add a command there to for example: /ingest - ingest this whatever topic of the page i am currently in right now to my Wiki?
+

@@ -579,3 +579,24 @@
     More info: https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/discussions/16
     [embed] Next Steps & Code Cleanup · AndorinaAI Andorina-WhatsApp-Agent-for... https://github.com/AndorinaAI/Andorina-WhatsApp-Agent-for-Hermes/discussions/16
 
+[2026-07-04T20:08:44.593000+00:00] vayaperson (id=1523058001441853450)
+    Hey everyone,
+    
+    Just letting you know I'm going to pause active development on Andorina for about one or two months. I've actually already been quiet for about 3 weeks, so this is more about naming what was already happening.
+    
+    Before stepping back, the orchestrator split is done, so that part is closed and stable.
+    
+    Right now I have too many things going on at once: work, several other projects, and organizing the Lóstrego festival. Rather than let everything start to crumble by trying to juggle it all, I'd rather focus and get things done one at a time, step by step.
+    
+    This doesn't mean Andorina is being abandoned, just that I need this time to clear my head before coming back with energy. I'll try to stay on top of anything critical, but don't expect new updates or features for now.
+    
+    Thanks for the patience and for continuing to support the project. Back soon.
+
+[2026-07-04T21:15:14.592000+00:00] _voscko_ (id=1523074736710615151)
+    Thanks for sharing the update. My holidays started, and this was on my to-do list to try out. If there are bugs or PRs, are you okay with accepting them in the meantime, or are you going to pick those up two months from now?
+    [reply to vayaperson msg=1523058001441853450]
+
+[2026-07-04T22:18:44.305000+00:00] vayaperson (id=1523090715805089793)
+    I'll be keeping an eye on critical issues and important bugs, but active development will be paused for now. We'll still fix bugs, and if something essential comes up or there's room to improve an existing feature, we'll take care of it when time and resources allow.
+    [reply to _voscko_ msg=1523074736710615151]
+

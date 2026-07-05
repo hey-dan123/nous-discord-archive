@@ -1,0 +1,15 @@
+# Thread 'hermes-agente-auto-wake** v0.1.0' in forum #plugins-skills-and-skins
+# thread_id=1523053917057974293 forum_id=1485392832154832906
+# Started 2026-07-05T02:56:39.250871+00:00
+
+[2026-07-04T19:52:30.800000+00:00] tio_zoni_ (id=1523053917057974293)
+    Self-monitoring + auto-recovery for [Hermes Agent]
+    
+    A 3-layer watchdog that detects when your Hermes daemon goes zombie (no heartbeat) and triggers corrective actions: stale session cleanup, disk check, memory audit, daemon restart, and Telegram alerts.
+    
+    **Why:** my Hermes daemon crashed at 3am and nobody noticed until morning. Now it monitors itself.
+    
+    *
+    🔗 https://github.com/shootzjmr/hermes-agente-auto-wake
+    [embed] GitHub - shootzjmr/hermes-agente-auto-wake: 3-layer self-monitoring... https://github.com/shootzjmr/hermes-agente-auto-wake
+

@@ -20,3 +20,9 @@
 [2026-06-26T22:42:01.232000+00:00] avidfuturist (id=1520197472016793630)
     Received a bunch of feedback and pushed updates, thanks everyone so far. Would love more feedback!
 
+[2026-07-04T22:11:35.441000+00:00] avidfuturist (id=1523088917019099188)
+    Added in a bunch of battle tested coding principles every agent should include https://nesquena.github.io/steward-os/docs/reference/coding-principles.html
+    
+    This page and skill alone should be provided to every agent working on OSS software projects
+    [embed] Coding principles https://nesquena.github.io/steward-os/docs/reference/coding-principles.html
+

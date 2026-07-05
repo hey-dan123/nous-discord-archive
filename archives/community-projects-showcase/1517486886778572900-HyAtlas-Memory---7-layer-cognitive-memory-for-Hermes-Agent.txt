@@ -173,3 +173,9 @@
 [2026-07-04T15:06:45.132000+00:00] halibusal (id=1522982002914230393)
     i actually found extracting memories with more capable model produces more memories, but risk ablation from inference
 
+[2026-07-04T23:29:59.103000+00:00] tunacookie (id=1523108645607575632)
+    https://github.com/tuancookiez-hub/HyAtlas-Memory/releases/tag/v2.1.0
+    
+    organized the files to hopefully in the future make migration easier and not have multiple places it should live…
+    [embed] Release v2.1.0 — HYATLAS_HOME runtime layout + multi-key LLM resi... https://github.com/tuancookiez-hub/HyAtlas-Memory/releases/tag/v2.1.0
+

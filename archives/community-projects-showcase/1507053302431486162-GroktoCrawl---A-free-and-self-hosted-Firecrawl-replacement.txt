@@ -757,3 +757,38 @@
     https://github.com/groktopus/groktocrawl/milestone/6
     [embed] groktopus/groktocrawl https://github.com/groktopus/groktocrawl/milestone/6
 
+[2026-07-04T22:04:52.534000+00:00] magnus919 (id=1523087227104788661)
+    ##    🦑 GroktoCrawl v0.12 — The Agent-Native Research Platform
+    
+        The self-hosted Firecrawl alternative just got a lot smarter. v0.12 transforms GroktoCrawl from a web scraper into a full research platform for AI agents.
+    
+        What's new:
+    
+        🔎 **Structured search** — groktocrawl search --output-schema returns JSON matching your schema. One command, grounded sources.
+    
+        📁 **Artifact-pyramid output** — groktocrawl agent "research X" --pyramid writes L1→L2→L3 progressive disclosure to disk.
+    
+        🏢 **Entity enrichment** — groktocrawl enrich bulk-fills fields for companies, people, or products from live web data.
+    
+        ⚡ **Search type spectrum** — --search-type fast|rich|deep|images lets you trade speed for depth.
+    
+        🧠 **Session protocol** — Server-side research state. Accumulate results across steps, agents retrieve only what they need.
+    
+        📋 **Plan-consent mode** — Generate a research plan, review it, then execute. Full visibility into the agent's strategy.
+    
+        🎯 **Depth injection** — Drill into specific findings without re-running the full research.
+    
+        💾 **Research memory** — Semantic cache across sessions. Repeat queries return instantly. Zero config.
+    
+        🔌 **MCP server** — 20 GroktoCrawl tools exposed as MCP tools on port 8002. Connect any MCP client.
+    
+    - Zero `.env` changes. All new features ship with sensible defaults.
+    - Full walkthrough with real CLI output: https://gist.github.com/magnus919/89e3b480cc241d5872a2a1c383162e53
+    - Repo: https://github.com/groktopus/groktocrawl
+    - MIT licensed. Self-hosted.
+    [embed] GroktoCrawl v0.12 — The Agent-Native Research Platform: structure... https://gist.github.com/magnus919/89e3b480cc241d5872a2a1c383162e53
+    [embed] GitHub - groktopus/groktocrawl: Self-hosted, API-compatible Firecra... https://github.com/groktopus/groktocrawl
+
+[2026-07-04T22:09:08.249000+00:00] magnus919 (id=1523088299651235881)
+    [attachment] openai_gpt-image-2-medium_20260704_180738_7772f0aa.png https://cdn.discordapp.com/attachments/1507053302431486162/1523088299160371220/openai_gpt-image-2-medium_20260704_180738_7772f0aa.png?ex=6a4ad604&is=6a498484&hm=771b6a32d18801954cbd1d6fc61ba7ac82b3bd7fbda4546f8cef33eb3f5637dc&
+
