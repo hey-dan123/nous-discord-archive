@@ -30,3 +30,6 @@
     We've added a new Hermes skill to use Koretex! Here's a video demo https://x.com/koretexai/status/2072206351481307627?s=20
     [embed]  https://twitter.com/koretexai/status/2072206351481307627?s=20
 
+[2026-07-05T14:49:15.567000+00:00] bigsmollbrain (id=1523339988585152533)
+    Let us know which models you'd like hosted, no matter how niche, and we'll try to get it.
+

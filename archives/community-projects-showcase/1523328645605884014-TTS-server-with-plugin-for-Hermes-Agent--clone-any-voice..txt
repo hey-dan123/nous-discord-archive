@@ -1,0 +1,22 @@
+# Thread 'TTS server with plugin for Hermes Agent, clone any voice.' in forum #community-projects-showcase
+# thread_id=1523328645605884014 forum_id=1316137596535177246
+# Started 2026-07-05T19:14:20.773113+00:00
+
+[2026-07-05T14:04:11.190000+00:00] .voidhaze (id=1523328645605884014)
+    Hi Guys, made a wrapper around OmniVoice with integration with Hermes Agent. This allows you to clone any voice and have hermes use that voice. Also supports running as a MCP server. Let me know what you guys think.
+    
+    Github: https://github.com/voidhaze/AdjutantVoice
+    [embed] GitHub - voidhaze/AdjutantVoice: Voice conversion pipeline experime... https://github.com/voidhaze/AdjutantVoice
+
+[2026-07-05T14:25:37.643000+00:00] .voidhaze (id=1523334041380720812)
+    TTS server with plugin for Hermes Agent, clone any voice.
+
+[2026-07-05T15:22:55.509000+00:00] artsbro (id=1523348460835700736)
+    Yeah! Omnivoice is simply the best out there at the moment. Thanks for doing this. Perhaps it could become some backbone for future integrations of more local TTS solutions too as an officially supported plugin perhaps.
+
+[2026-07-05T15:30:09.414000+00:00] .voidhaze (id=1523350280765309009)
+    No problem, was a bit of a passion project. Originally I just wanted to clone the Starcraft 2 Adjutant voice, but there was nothing out there that was open source. So I was like... well I got some time. I would have bundled the cloned Adjutant voice pack, however having looked up Blizzard's legal docs; it's some what unclear. I reached out to them but they have not yet replied.
+
+[2026-07-05T15:54:06.031000+00:00] .voidhaze (id=1523356306373738617)
+    Official support would be cool, however I think I will have make it run leaner first, it's currently a tad resource heavy.
+

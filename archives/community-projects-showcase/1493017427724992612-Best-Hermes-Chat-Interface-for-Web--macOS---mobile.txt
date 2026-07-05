@@ -5368,3 +5368,25 @@
     here's what qwen3.7max had to add, really hope this helps 🤞
     [attachment] message.txt https://cdn.discordapp.com/attachments/1493017427724992612/1523291636304580771/message.txt?ex=6a4b9363&is=6a4a41e3&hm=b7f8f966bd3cf1bdf0da14796931a310a9e49a591892b3b682a575dba086653a&
 
+[2026-07-05T15:09:36.521000+00:00] latipun (id=1523345109637267556)
+    there's already `desktop-companion` extension that do a good job to expose WebUI state, I'll just need to render it
+    Also, WebUI is web app, so, we can't show desktop app that is windowless from Browser. The closest a standard browser can get right now is through a relatively recent web API called the Document Picture-in-Picture API. However, it still fails your other requirements:
+    - It cannot be transparent to the desktop
+    - It is not windowless; the OS forces a window frame, a title bar
+    [reply to alto69 msg=1523266882034208878]
+
+[2026-07-05T17:03:35.889000+00:00] avidfuturist (id=1523373796025831546)
+    Extensions system exists now! Access and install extensions in settings. https://github.com/hermes-webui/hermes-webui-extensions/pull/39
+    [embed] feat: add hermes-desktop — Linux XFCE desktop in Hermes WebUI by ... https://github.com/hermes-webui/hermes-webui-extensions/pull/39
+    [reply to alto69 msg=1523268361155248178]
+
+[2026-07-05T17:14:55.681000+00:00] avidfuturist (id=1523376647280136273)
+    Thanks! Can you point your agent to https://github.com/nesquena/hermes-webui/issues/4633 and ask them if that last comment is accurate and anything to add?
+    
+    Because most of the non hallucinated stuff there has already been addressed
+    [reply to _123321_ msg=1523291636803567627]
+
+[2026-07-05T17:32:17.570000+00:00] _123321_ (id=1523381017279201300)
+    on it, will have results late in the night early morning
+    [reply to avidfuturist msg=1523376647280136273]
+

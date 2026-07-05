@@ -416,3 +416,8 @@
 [2026-07-05T12:28:18.837000+00:00] jonkomet (id=1523304518488424610)
     Along with Alt+H being a new shortcut button to open the Hermes Browser Extension, which is live now
 
+[2026-07-05T16:41:33.840000+00:00] jonkomet (id=1523368250950553741)
+    I’m also daily shipping updates , it is hard to post all about everything that gets updated or changed until I do a new verison release ..
+    
+    So im just gonna start posting videos
+

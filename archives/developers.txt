@@ -43706,3 +43706,188 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I mean the planned code-evolution stage,  README calls it Phase 4, while PLAN.md also refers to it as Tier 4 in the risk/value breakdown. So yes, "Tier 4 / planned Phase 4" I guess.
     [reply to teknium msg=1523315238785646725]
 
+[2026-07-05T13:42:44.604000+00:00] realadolan (id=1523323249272950784)
+    At least give us an easy option to opt out, man. I don't usually object, but at this point it feels like you just throw Codex at figuring out why PRs should be blocked. If you really want your help to be meaningful, contribute through your own PRs or by providing genuine, actionable **code** suggestions, rather than saying, "Here's something else Codex found." Please.
+    
+    I understand that Codex is good at finding bugs, but unless it's a genuine regression introduced by my code, please use that Codex to open your own PRs and contribute that way instead. Thank you!
+    [reply to egilewski msg=1523313302988656812]
+
+[2026-07-05T13:48:21.162000+00:00] egilewski (id=1523324660899516577)
+    I've added a PR-level opt out and opt back in already, it should understand any reasonable way somebody will specify it. Do you want a user-level opt-out?
+    [reply to realadolan msg=1523323249272950784]
+
+[2026-07-05T13:48:33.956000+00:00] realadolan (id=1523324714561572905)
+    You know what
+
+[2026-07-05T13:48:35.583000+00:00] realadolan (id=1523324721385705602)
+    Keep going
+
+[2026-07-05T13:48:36.967000+00:00] realadolan (id=1523324727190491271)
+    Free QA
+
+[2026-07-05T13:48:41.285000+00:00] realadolan (id=1523324745301491914)
+    ❤️
+
+[2026-07-05T13:49:24.148000+00:00] realadolan (id=1523324925082075268)
+    I pushed more fixes, and the clanker definitely narrowing it down, so perhaps thank you rather
+
+[2026-07-05T13:51:12.607000+00:00] egilewski (id=1523325379991961794)
+    That was the goal. Are you writing code the old way, or just review it very carefully yourself?
+
+[2026-07-05T14:00:47.939000+00:00] fyzanshaik (id=1523327793109139559)
+    Hey folks, I put up a fix for the desktop chat sessions getting tagged as TUI: https://github.com/NousResearch/hermes-agent/pull/58405
+    
+    The issue is here: https://github.com/NousResearch/hermes-agent/issues/58404
+    
+    This fixes the desktop system prompt mismatch where desktop chats could inherit TUI instructions, especially through the remote gateway. It now tags the React desktop chat surface as desktop across new chats, resume, branch, stale-session recovery, and lifecycle metadata, while keeping the embedded terminal pane as TUI. The focused gateway/platform and desktop hook tests are passing.
+
+[2026-07-05T14:04:07.371000+00:00] egilewski (id=1523328629587574934)
+    I guess the effect is very similar, but I do throw Codex at figuring out what a PR may be missing to get merged faster, preferably after the first time a maintainer looks at it. My question about posting GH reviews of type comment is exactly about being able to use comments on particular line, possibly with code suggestions. Though code suggestions are a controversial thing, in olden days I'd mostly react "just tell me if there is a bug and let me write my own code".
+    [reply to realadolan msg=1523323249272950784]
+
+[2026-07-05T14:05:06.542000+00:00] realadolan (id=1523328877768999053)
+    I understand
+
+[2026-07-05T14:06:18.199000+00:00] realadolan (id=1523329178319978556)
+    That's why on second thought, keep going
+
+[2026-07-05T14:07:04.479000+00:00] realadolan (id=1523329372432629811)
+    You're narrowing down the seasons to why the PR wouldn't merge which is a positive thing
+
+[2026-07-05T14:07:07.154000+00:00] egilewski (id=1523329383652266054)
+    I do open PRs too, I've started with that, but saw that there are a lot of P0/P1 security PRs waiting, so instead of making more I've decided it will be more efficient to push those over the line. Now I'm mostly doing that with P2s, also has a lot of open PRs.
+    [reply to realadolan msg=1523323249272950784]
+
+[2026-07-05T14:07:35.401000+00:00] realadolan (id=1523329502128636045)
+    The problem is that, that other bot labels them P2-P3
+
+[2026-07-05T14:07:40.431000+00:00] realadolan (id=1523329523226116187)
+    When they're obviously AT LEAST a P1
+
+[2026-07-05T14:07:48.341000+00:00] realadolan (id=1523329556403065044)
+    These 2 I would say are easily P0s
+
+[2026-07-05T14:10:03.512000+00:00] egilewski (id=1523330123351330816)
+    It was been heavily tweaked yesterday. I mean: HEAVILY. https://github.com/NousResearch/hermes-agent/pull/57890#event-27563517539
+
+[2026-07-05T14:10:49.453000+00:00] realadolan (id=1523330316041850890)
+    Don't take my other comment personally, I guess it's just some frustration that I didn't nail it in the first place 😄 But I do appreciate the reviews.
+
+[2026-07-05T14:11:02.714000+00:00] realadolan (id=1523330371662643361)
+    Let's see
+    [reply to egilewski msg=1523330123351330816]
+
+[2026-07-05T14:15:31.589000+00:00] egilewski (id=1523331499406131220)
+    It's fine, I've started by flailing wildly a massive Codex sub, something I barely got comfortable doing on my own repos, and really appreciate all the patience I got. I don't expect it to be limitless.
+    [reply to realadolan msg=1523330316041850890]
+
+[2026-07-05T14:17:29.528000+00:00] egilewski (id=1523331994077888663)
+    We all fought out bosses to get their PRs improved, right?
+
+[2026-07-05T14:31:59.457000+00:00] golldyck (id=1523335642824839248)
+    Here are the fixes I pushed yesterday. Five PRs on hermes-agent, each with a short note on what it does:
+    
+    #58457 https://github.com/NousResearch/hermes-agent/pull/58457
+    The console crashed when a command exited with a string message (for example auth remove of a missing provider). The string exit code is now handled as a message instead of crashing the REPL.
+    
+    #58459 https://github.com/NousResearch/hermes-agent/pull/58459
+    The console wrongly rejected normal text that contained shell characters inside quotes. Now send, session rename, and kanban comments accept that text.
+    
+    #58462 https://github.com/NousResearch/hermes-agent/pull/58462
+    unbroker: setup and doctor read credentials from $HERMES_HOME/.env, but the send, poll, next, and plan commands still read os.environ. So doctor reported SMTP as on while sends failed. All of them now read from .env.
+    
+    #58473 https://github.com/NousResearch/hermes-agent/pull/58473
+    unbroker: submitted opt-outs with no email-verification loop were never re-checked and got stuck forever. Those cases are now re-scanned, so removal actually gets confirmed.
+    
+    #58481 https://github.com/NousResearch/hermes-agent/pull/58481
+    unbroker: a reappeared case used illegal state transitions and could send duplicate emails. It is now re-filed through valid transitions, with no duplicate sends.
+
+[2026-07-05T14:48:17.941000+00:00] srojk34 (id=1523339746884063383)
+    <@387972437901312000> I made a few fixes today that are worth taking a look at. When you have some time, you can check them. 
+    
+    #58888 — fix(gateway): re-check every stacked skill against the platform-disabled list
+    Stacked slash-skill invocations (/skill-a /skill-b) bypassed the per-platform skills.platform_disabled gate — an operator-disabled skill could still get its full content injected into the agent's context if typed after an allowed skill.
+    https://github.com/NousResearch/hermes-agent/pull/58888
+    
+    #58893 — fix(telegram): redact bot token from connect/disconnect/send_document/send_video errors
+    connect()'s fatal-error handler persisted the raw bot-token URL into the dashboard-facing runtime status on a transient network error; 3 more sites logged it unredacted.
+    https://github.com/NousResearch/hermes-agent/pull/58893
+    
+    #58889 — fix(computer-use): sanitize subprocess env in cua-driver CLI fallback transport
+    The EAGAIN/silent-empty MCP fallback spawned the third-party cua-driver binary with the full unsanitized parent environment (provider API keys included) — same leak class as #53503/#55709.
+    https://github.com/NousResearch/hermes-agent/pull/58889
+    
+    security(raft): enforce body-size limit on chunked requests — #58902
+    _handle_wake/_handle_activity only checked Content-Length; a chunked request bypassed the cap entirely, bounded only by aiohttp's implicit 1 MiB default (64x over). Same pattern as today's webhook.py fix.
+    https://github.com/NousResearch/hermes-agent/pull/58902
+    
+    #58912 — fix(discord): dedup saturated mid-stream overflow previews to stop edit-rate-limit storms
+    Long streamed Discord replies kept re-sending an identical truncated preview every tick once saturated, burning the edit rate limit — same failure mode fixed for Telegram today (#58563), never ported to Discord.
+    https://github.com/NousResearch/hermes-agent/pull/58912
+
+[2026-07-05T14:48:35.549000+00:00] srojk34 (id=1523339820737495192)
+    #58906 — fix(gateway): clear last-resolved-model cache on 3 more conversation-boundary resets
+    /new and compression-exhausted reset already clear the per-session _last_resolved_model cache; session-expiry finalization, daily/idle/suspended auto-reset, and /resume still missed it — a resumed session could serve a stale cached model.
+    https://github.com/NousResearch/hermes-agent/pull/58906
+    
+    #58915 — fix(redact): skip env-lookup exception for JSON/YAML config field redaction
+    _redact_env already skips masking a programmatic env lookup like os.getenv('X'); the JSON/YAML redaction closures didn't, mangling legitimate code snippets in config output.
+    https://github.com/NousResearch/hermes-agent/pull/58915
+
+[2026-07-05T15:34:54.255000+00:00] fxdavid (id=1523351475474923550)
+    Hey 👋 
+    
+    building a Hermes skill that bootstraps an open-source Python project (git clone + pip install into a venv) on first run, then runs analysis on it. Hit a wall trying to publish:
+    
+    hermes skills publish → Verdict: DANGEROUS → BLOCKED, and --force explicitly won't override a dangerous verdict. Installing from my own tap gives the identical result (scanned + blocked, labeled "community" trust).
+    
+    The 5 findings are all core behavior, not incidental:
+    
+    2× CRITICAL persistence — the skill writes its own config.yaml / .env during first-run setup
+    
+    3× MEDIUM supply_chain — setup.sh runs pip install, plus a git clone
+    Cloning + installing deps is literally what the skill does, so I can't just remove those. Two questions:
+    
+    Is there a sanctioned path (verified/trusted publisher, or a review process) for skills that legitimately need git clone + pip install? Or are Hub skills expected to never shell out to pip/git, with bootstrap-style skills distributed some other way (e.g. external_dirs / local)?
+    
+    Trying to figure out the intended pattern here rather than work around the scanner. Thanks! 🙏
+
+[2026-07-05T16:57:13.066000+00:00] watchdominion (id=1523372190349918448)
+    🐛 config: stale load_config() cache serves unexpanded ${VAR} secrets
+    Issue https://github.com/NousResearch/hermes-agent/issues/58514 → PR https://github.com/NousResearch/hermes-agent/pull/58519
+    The reporter assumed auxiliary.* wasn't being env-expanded — but the expansion pass covers it fine. The real bug is the config cache: it's keyed on the config file's mtime/size only, so a load_config() that runs before load_hermes_dotenv() populates the environment caches the literal ${NVIDIA_API_KEY} string and serves it for the entire process lifetime. providers.* only looked fine because provider auth re-reads the env at call time, while auxiliary.<task>.api_key/base_url get consumed straight from the cached dict → literal reaches the client → auth failure / silent fallback. Fix: cache entries now snapshot each referenced ${VAR} and its value at expansion time, and invalidate when any of them change. Fixes the late-.env case and in-process key rotation.
+    
+    🐛 agent: explicit provider arg bypasses configured auxiliary.<task> endpoint
+    Issue https://github.com/NousResearch/hermes-agent/issues/58515 → PR https://github.com/NousResearch/hermes-agent/pull/58520
+    _resolve_task_provider_model returns early when a provider arg is passed explicitly, which skips the block that honors auxiliary.<task>.base_url/api_key. So resolve_vision_provider_client(provider="custom", …) silently ignores your configured custom endpoint and falls through to the main runtime — the vision/compression task hits the wrong backend. Fix adopts the configured endpoint conservatively: only when no explicit base_url was passed and the config targets the same provider (or names none). Explicit args still win, provider="auto" still auto-resolves, and fallback chains forcing a different provider are untouched.
+    
+    Both verified against the full tests/hermes_cli + auxiliary suites — zero new failures vs. main. Reviews welcome 🙏
+    
+    
+    <@387972437901312000>  sorry for the ping linked with the issues people made - also posted on GitHub
+
+[2026-07-05T17:28:01.482000+00:00] llealloo (id=1523379943168413928)
+    does anyone know best practices or a recommended size for external memory provider plugin token payload?
+
+[2026-07-05T17:29:54.403000+00:00] llealloo (id=1523380416793546783)
+    also, I'm a bit confused by this bit in the docs: https://hermes-agent.nousresearch.com/docs/developer-guide/memory-provider-plugin#profile-isolation
+    [embed] Memory Provider Plugins | Hermes Agent https://hermes-agent.nousresearch.com/docs/developer-guide/memory-provider-plugin
+
+[2026-07-05T17:35:09.735000+00:00] llealloo (id=1523381739391549643)
+    ^ trying to wrap my head around building a small local system for shared memory in a multi-agent setup... 
+    
+    the "profile isolation" bit in the docs throws me off because it suggests that memory provider plugin data should be per-profile only?
+    
+    wondering if I would be better off just building this as a skill... <:thinkies:961512478683050034>
+
+[2026-07-05T17:47:50.149000+00:00] llealloo (id=1523384928799031428)
+    I think I want to make it a mem provider plugin, though, because I want a guarantee that external memory tooling is triggered every turn
+
+[2026-07-05T18:00:23.282000+00:00] llealloo (id=1523388087668047873)
+    so yeah, 2 things I'm super curious about for memory provider plugins:
+    - provider payload size
+    - profile isolation?
+
+[2026-07-05T19:14:10.969000+00:00] abdullahx990 (id=1523406658733342820)
+    Hi, Any way to disable the provider "not delete the provider" ?
+

@@ -938,3 +938,9 @@
     Hey at @here Thank you for your patience, and, everything what helped to improve. From an simple proof of concept, im close to finish the first *Stable* unified release, for _every_ agent. Let me drop some numbers as preview. The patience pays back very soon™.
     [attachment] Mazemaker.jpg https://cdn.discordapp.com/attachments/1491688455745306755/1502787746228338839/Mazemaker.jpg?ex=6a01a467&is=6a0052e7&hm=0c0b22ae60bfcad0fbbca60b4e669fc33d3ebb3f6f05b0fc6f6168b825240f81&
 
+[2026-07-05T13:52:43.852000+00:00] alcatr4z (id=1523325762701103228)
+    Sorry for the late update here, totaly forgot about.
+    
+    Long story short new Benchmark numbers shipped. https://mazemaker.online/blog/the-arena-we-did-not-build/
+    [embed] The arena we did not build. https://mazemaker.online/blog/the-arena-we-did-not-build/
+

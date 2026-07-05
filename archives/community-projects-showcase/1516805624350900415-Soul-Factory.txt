@@ -22,3 +22,7 @@
 [2026-06-29T17:15:51.379000+00:00] sourcebased (id=1521202553700876438)
     Great project! I tried the builder to forge a new soul, but it errors: ModuleNotFoundError: No module named 'refinery.fetch'
 
+[2026-07-05T19:14:15.869000+00:00] thedavidmurray (id=1523406679285301268)
+    Thank you for the feedback, applying a fix! Sorry I missed this when you first sent it
+    [reply to sourcebased msg=1521202553700876438]
+

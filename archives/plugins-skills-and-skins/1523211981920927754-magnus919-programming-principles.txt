@@ -12,3 +12,7 @@
 [2026-07-05T06:21:17.806000+00:00] magnus919 (id=1523212155590021202)
     magnus919/programming-principles
 
+[2026-07-05T17:37:06.756000+00:00] magnus919 (id=1523382230213333146)
+    I'm using this on GroktoCrawl now and it's given me some great insights about what to improve. https://github.com/groktopus/groktocrawl/milestone/7
+    [embed] groktopus/groktocrawl https://github.com/groktopus/groktocrawl/milestone/7
+

@@ -795,3 +795,70 @@
 [2026-07-05T06:16:43.657000+00:00] cbslayer (id=1523211005726031942)
     huge man, keep going this is what everone needs
 
+[2026-07-05T14:25:48.119000+00:00] selwind (id=1523334085320118312)
+    I'm a bit confused, github shows v0.11 still  <@659176257338081306>
+
+[2026-07-05T17:29:05.941000+00:00] magnus919 (id=1523380213529051290)
+    yeah I saw that as well. Even though all of the parts passed CI, there was a final part of cutting the release that didn't pass integration tests for some reason. Working on that now.
+    [reply to selwind msg=1523334085320118312]
+
+[2026-07-05T17:30:48.837000+00:00] magnus919 (id=1523380645106024458)
+    unreleated: I used this new skill https://github.com/magnus919/programming-principles to critique the architecture and codebase for GroktoCrawl and came up with 6 really actionable improvements I should make (there was more than that, but these were higher priority). https://github.com/groktopus/groktocrawl/milestone/7
+    [embed] GitHub - magnus919/programming-principles: Agent Skills-format prog... https://github.com/magnus919/programming-principles
+    [embed] groktopus/groktocrawl https://github.com/groktopus/groktocrawl/milestone/7
+
+[2026-07-05T17:33:29.667000+00:00] selwind (id=1523381319676067980)
+    synthesizing principles from multiple books.... to get a skill, interesting !
+
+[2026-07-05T17:35:52.945000+00:00] magnus919 (id=1523381920627556563)
+    Matt Pocock had the idea but didn't take it to its conclusion.
+    [reply to selwind msg=1523381319676067980]
+
+[2026-07-05T17:36:11.261000+00:00] magnus919 (id=1523381997450432664)
+    actually I think he got the idea from someone else but the execution was sloppy
+
+[2026-07-05T17:38:29.272000+00:00] selwind (id=1523382576310652998)
+    I came up with the idea of synthetizing only one book to get a skill, but multiple books !! need to try it !  I used /learn and asked my agent to read a designing book (specifically how to research references / inspiration for creative project) but the result wasnt what i expected, maybe multiple books could produce something robust
+
+[2026-07-05T17:38:43.988000+00:00] magnus919 (id=1523382638033895455)
+    I'm probably going to expand this skill with some of my own hand-picked books, but I have to first distill those books into references for the skill.
+    [reply to selwind msg=1523381319676067980]
+
+[2026-07-05T17:39:21.866000+00:00] selwind (id=1523382796905873633)
+    I thought using /learn from hermes is distilling the material into references for creating a skill, am i wrong ?
+    [reply to magnus919 msg=1523382638033895455]
+
+[2026-07-05T17:39:54.380000+00:00] magnus919 (id=1523382933279211610)
+    I've done this before. `/learn` is ok. Try my <#1507205228238471260> skill for something more comprehensive. It'll even create supporting python scripts if there are repeatable patterns for it to practice.
+    [reply to selwind msg=1523382576310652998]
+
+[2026-07-05T17:40:31.081000+00:00] selwind (id=1523383087214628884)
+    let me check that ... ! 🔥
+    [reply to magnus919 msg=1523382933279211610]
+
+[2026-07-05T17:40:40.719000+00:00] magnus919 (id=1523383127639330886)
+    it does, but the skills that come out are a lot less complete than what comes out of `/agent-skills` in my experience.
+    
+    I also do a pass with `/skillopt` to further improve the skill before sharing.
+    [reply to selwind msg=1523382796905873633]
+
+[2026-07-05T17:40:58.261000+00:00] magnus919 (id=1523383201215676569)
+    <#1510103629506281743> `/skillopt` is one of mine. Doesn't come with hermes.
+
+[2026-07-05T17:41:23.527000+00:00] selwind (id=1523383307189096519)
+    Gold knowledge, thank you sir 🤘
+
+[2026-07-05T17:42:08.777000+00:00] magnus919 (id=1523383496981221386)
+    I have to take some of the stuff I've tried PR'ing into Hermes and just create my own 3rd party skills. Like I've got one for importing everything from your Claude Code memories into any Hermes memory provider.
+
+[2026-07-05T17:43:04.285000+00:00] selwind (id=1523383729798774885)
+    And the profiles (your profiles)
+
+[2026-07-05T17:47:36.998000+00:00] magnus919 (id=1523384873640005794)
+    I've already got those published. 
+    
+    Oh I've been learning how to use `droid` as my coding agent... I did have Hermes really well dialed-in for making narrowly scoped open source contributions but for more ambitious unattended coding work, I've really been liking `droid` (FactoryAI). But I use Hermes to prepare the mission files for it.
+    
+    Anyway... yeah... that's how I've been getting more ambitious about changes in GroktoCrawl recently. I start ideating with Hermes about what would put it way ahead of Firecrawl, Exa, etc. What would make it useful to Claude desktop/mobile users, and so on. That's how we ended up with *stateful* research sessions in 0.12, like where you can ask followup questions and groktocrawl will build on research it's already done for you. Or even though I don't favor MCP servers, we've got one now that in theory should allow you to use GroktoCrawl *inside* of your Claude mobile app. But I'm not a Claude subscriber anymore so I haven't had a chance to test that outside of CI.
+    [reply to selwind msg=1523383729798774885]
+
