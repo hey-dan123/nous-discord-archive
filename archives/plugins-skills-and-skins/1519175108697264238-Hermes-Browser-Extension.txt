@@ -421,3 +421,72 @@
     
     So im just gonna start posting videos
 
+[2026-07-05T23:07:22.910000+00:00] jonkomet (id=1523465345187315753)
+    Hermes Browser Extension **v0.1.9** is live <:caduceus:1503692394493775882>
+    https://github.com/abundantbeing/hermes-browser-extension/
+    
+    This release covers everything new since **v0.1.8**. The theme is supportability: making the Browser Extension easier to run, debug, verify, and build on before larger workflow/control surfaces land.
+    
+    What’s new in **v0.1.9**:
+    
+    - **Browser Context Protocol v1**
+      Browser context now has a stable `hermes.browser.context.v1` module with deterministic payload hashes, chat-only fallback prompts, and literal untrusted-context receipts. Existing prompt/hash/receipt paths stay compatibility-preserving wrappers.
+    
+    - **Copy Diagnostics**
+      Settings now has a Copy Diagnostics button that creates a redacted support report with browser family, extension/build version, gateway origin, connection state, capability flags, selected model/provider, context mode, extractor mode, and last visible error. It strips tokens, cookies, page text, selected text, tab titles, and full URLs.
+    
+    - **Compatibility matrix + clearer fallback states**
+      README and the side panel now spell out Chrome/Edge/Chromium support, Chromium-fork best effort, Firefox/Safari preview status, local/remote Gateway modes, Browser Context Protocol support, private companion prototype status, and the surfaces intentionally not shipped yet.
+    
+    - **Stable runtime/tool event names**
+      Hermes stream aliases now normalize into stable Browser event names for the Tool Activity Strip. Browser-control-shaped events are denied/disabled in v0.1.9 — this release is still read-only browser context, not page-control automation.
+    
+    - **Private Companion Plugin skeleton**
+      Added `companion-plugin/` with policy constants, protocol helpers, context store, events, tools, hooks, install notes, and skill docs. It is fail-soft by design: no API-server route assumptions, no side-channel dependency, no browser-control/page-action channels.
+    
+    - **Runtime controls tightened**
+      Model/provider/reasoning controls were cleaned up so the side panel stays closer to the actual runtime request path instead of acting like stale UI chrome.
+    
+    - **Startup/readiness behavior improved**
+      Added readiness checks around unconfigured or unreachable gateways, sparse model/capability data, and selected-model state, so older or partial Hermes runtimes degrade more clearly instead of looking randomly broken.
+    
+    - **Model discovery + contributor credits**
+      Continued hardening model discovery and credited external contributions for custom model source discovery and OpenAI-style SSE stream handling.
+    
+    - **Security hardening for Issue #27**
+      Session group labels now render through DOM text nodes instead of gateway-derived `innerHTML`, extension-page image sources are constrained through CSP, and regression guards were added for both.
+    
+    - **CI + public release hygiene**
+      Added GitHub verification workflow coverage, restored the README side-panel visual state, kept public docs user-facing, and synced package/manifest/build metadata to `0.1.9`.
+    
+    - **Release assets**
+      The release archive is attached, and the new generated v0.1.9 update ad is attached too.
+    
+    Verification:
+    - `npm run verify` passes with **181/181 tests**
+    - JS syntax checks passing
+    - manifest check passing
+    - build/package complete
+    - secret scan clean
+    - GitNexus reviewed the intentional runtime/support blast radius
+    
+    Still public alpha / load-unpacked for now:
+    
+    ```bash
+    npm install
+    npm run build
+    
+    
+    Then reload the unpacked `dist/` folder in Chrome, Edge, Comet, or another Chromium browser.
+    
+    Feedback wanted on: Copy Diagnostics, compatibility rows, older-runtime fallback copy, Tool Activity Strip naming, and whether support reports give enough info without leaking private page data.
+    [attachment] Browser_Extension_v0.1.9_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1523465345438978270/Browser_Extension_v0.1.9_Update_Ad.png?ex=6a4c352a&is=6a4ae3aa&hm=dd3e74bc2f85771efa8710ab7e9aac1c8b1bdab825d7f49ec35ce24532b17743&
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension/
+
+[2026-07-05T23:44:49.187000+00:00] jonkomet (id=1523474766755926126)
+    https://x.com/jonkomet/status/2073908723693596679?s=20
+    [embed]  https://twitter.com/jonkomet/status/2073908723693596679?s=20
+
+[2026-07-06T00:25:19.469000+00:00] jonkomet (id=1523484960097304657)
+    [attachment] hermes_browser_extension_video_screen_ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1523484959912886272/hermes_browser_extension_video_screen_ad.png?ex=6a4c476f&is=6a4af5ef&hm=87f338af62f3cd020aec209f1f9c62b95c71d04ff7ef8b04a3d83ea9641ee90b&
+

@@ -862,3 +862,8 @@
     Anyway... yeah... that's how I've been getting more ambitious about changes in GroktoCrawl recently. I start ideating with Hermes about what would put it way ahead of Firecrawl, Exa, etc. What would make it useful to Claude desktop/mobile users, and so on. That's how we ended up with *stateful* research sessions in 0.12, like where you can ask followup questions and groktocrawl will build on research it's already done for you. Or even though I don't favor MCP servers, we've got one now that in theory should allow you to use GroktoCrawl *inside* of your Claude mobile app. But I'm not a Claude subscriber anymore so I haven't had a chance to test that outside of CI.
     [reply to selwind msg=1523383729798774885]
 
+[2026-07-05T19:58:42.823000+00:00] magnus919 (id=1523417865301131477)
+    https://github.com/groktopus/groktocrawl/releases/tag/v0.12.0
+    [embed] Release v0.12.0 · groktopus/groktocrawl https://github.com/groktopus/groktocrawl/releases/tag/v0.12.0
+    [reply to selwind msg=1523334085320118312]
+

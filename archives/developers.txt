@@ -43891,3 +43891,110 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-05T19:14:10.969000+00:00] abdullahx990 (id=1523406658733342820)
     Hi, Any way to disable the provider "not delete the provider" ?
 
+[2026-07-05T19:50:02.933000+00:00] surv84 (id=1523415684724424884)
+    has supporting Profile Distributions from a monorepo been considered? I intend to ship several profiles within my org, and using common tooling in a monorepo to test/validate/handle common injections/common skills/etc would be very useful
+
+[2026-07-05T20:16:04.175000+00:00] fxdavid (id=1523422233047859351)
+    where we should ask these kinds of question? i have. a problem with publishing skills in the skills hub. <@606590420713078788> <@81637470604627968> <@575461682151686145>  (sorry to ping all of you)
+    [reply to fxdavid msg=1523351475474923550]
+
+[2026-07-05T20:17:52.578000+00:00] gille (id=1523422687723257886)
+    you're probably in the right place here.
+    [reply to fxdavid msg=1523422233047859351]
+
+[2026-07-05T20:19:27.765000+00:00] aialliai (id=1523423086966476830)
+    Southpaw is going to answer you really well here. However, in my case, I would ask Hermes what is blocking which part of the code and what you need to modify to make this work
+    [reply to fxdavid msg=1523422233047859351]
+
+[2026-07-05T20:20:24.618000+00:00] gille (id=1523423325425242344)
+    ```
+    Right now, no, there is not a general “verified publisher” path for community Hub skills that need to bootstrap arbitrary code and write Hermes config on first run.
+    
+    I checked the current guard path. `git clone` and unpinned `pip install` are medium supply-chain findings, but those are not what make the publish impossible by themselves. Medium findings alone do not produce a dangerous verdict. The hard blocker is the critical persistence class, especially writing/referencing Hermes config or env files like `.hermes/config.yaml`, `.hermes/SOUL.md`, or secrets/config files.
+    
+    So the intended pattern today is:
+    
+    - Hub skill: mostly instructions, references, scripts, and user-approved commands
+    - local/external skill: okay for your own trusted bootstrap workflow
+    - bootstrap/install step: should be explicit/user-run, not hidden as first-run persistence from a community Hub skill
+    - if it needs dependencies, prefer pinned deps and an explicit setup command the user chooses to run
+    - if it needs config, have the user set config explicitly instead of the skill writing Hermes config/env itself
+    
+    `skills.external_dirs` or local installation is probably the right distribution path for this shape today. For Hub, I’d split it: publish the safe skill wrapper/instructions, and keep the project clone/venv/bootstrap as an explicit user-run setup step.
+    ```
+    [reply to fxdavid msg=1523351475474923550]
+
+[2026-07-05T20:21:10.978000+00:00] .s0uthpaw (id=1523423519873040426)
+    <#1476316988992258300> is where we discuss specifically Hermes-Agent questions and workflows.
+    <#1491258766648283238> is where developers will get more hands on with PR's and feature requests
+    <#1149866623109439599> and the voice channels are more for AI dev as a whole; not specifically Hermes-Agent, but I do answer a lot of Hermes-Agent questions in the voice chat personally <:deephermes2:1368661185192394853>
+    [reply to fxdavid msg=1523422233047859351]
+
+[2026-07-05T20:29:19.759000+00:00] promptsiren (id=1523425569969279097)
+    **What you can do:**
+    - Add a `.skillignore` file to exclude files that contain the flagged strings but aren't part of the installed skill (e.g. a `docs/` or `references/` subdirectory with setup notes). Ignored paths are excluded from both structural checks and pattern scanning (`scan_skill` honors `.skillignore`).
+    - Audit which file and line is triggering `agent_config_mod` / `hermes_config_mod`. The scan report includes file + line number. If it's a comment or doc string that just *names* `AGENTS.md` or `config.yaml`, moving that content to an ignored path clears the finding without changing behavior.
+    - If the skill genuinely writes to `.hermes/config.yaml` at first-run setup, that's the pattern the scanner is designed to block — skills writing agent config is treated as a persistence vector regardless of intent. The sanctioned alternative is to document the required config keys in `## Prerequisites` and have the user set them via `hermes setup` or by editing `config.yaml` manually; the skill reads them via `os.environ.get()` or the config loader at runtime.
+    
+    `--force` is explicitly blocked for `community` and `trusted` sources on a `dangerous` verdict (`should_allow_install` in `tools/skills_guard.py`). There is no flag to override it. The only trust levels that bypass dangerous blocks are `builtin` (ships with Hermes) and `agent-created` (which surfaces as an `ask` prompt to the agent, not a hard block).
+    
+    For bootstrap-style skills that legitimately need `git clone` + `pip install`: those medium findings won't block you once the critical ones are cleared. The scanner accepts them as informational.
+    [reply to fxdavid msg=1523351475474923550]
+
+[2026-07-05T20:34:51.575000+00:00] llealloo (id=1523426961706450964)
+    🙏
+    [reply to cash.williams msg=1520455363000795386]
+
+[2026-07-05T20:46:15.729000+00:00] teknium (id=1523429831256178796)
+    I mean it'd require disabling all comments if you couldn't comment <a:aPES_Think:493353113332219924>
+    [reply to egilewski msg=1523313302988656812]
+
+[2026-07-05T20:46:54.366000+00:00] teknium (id=1523429993311633548)
+    Oh, I havent worked on that repo in months - I plan to try making an automated kanban or cronjob based system to self improve the self improvement repo and have those agents submit PRs to hermes that optimize things autonomously
+    [reply to nobias0700 msg=1523317843276468294]
+
+[2026-07-05T20:47:40.602000+00:00] teknium (id=1523430187239342180)
+    yes
+    [reply to chr1558 msg=1520458932978454568]
+
+[2026-07-05T20:55:09.117000+00:00] teknium (id=1523432068447604932)
+    ```    Key mechanics:
+        
+        1. The 3× MEDIUM supply_chain findings (git_clone, unpinned_pip_install) do not block anything. _determine_verdict() (skills_guard.py:1064): criticals → dangerous, highs → caution, medium/low alone → safe. Bootstrap skills that clone + pip install are fully Hub-compatible on their own. (Pinning versions even downgrades the pip finding away entirely — the pattern is specifically unpinned pip install.)
+        
+        2. The block comes entirely from the 2× CRITICAL persistence findings, and those patterns don't fire on "writes a config.yaml" generically — they fire on references to agent config files:
+           - agent_config_mod: AGENTS.md|CLAUDE.md|.cursorrules|.clinerules
+           - hermes_config_mod: .hermes/config.yaml|.hermes/SOUL.md
+        
+           So either his SKILL.md/scripts literally mention ~/.hermes/config.yaml / .env under .hermes/, or prose mentions AGENTS.md (e.g. "the cloned repo's AGENTS.md"). If the skill writes the cloned project's own config.yaml/.env, that wouldn't trip these — the report's pattern IDs + line numbers will show exactly which lines matched.
+        
+        3. Sanctioned paths that exist today:
+           - metadata.hermes.config in SKILL.md frontmatter — the intended interface for skills needing config values. Settings live under skills.config.<key>, prompted during setup and injected at load time. No direct .hermes/config.yaml writes needed, and no scanner hit.
+           - .skillignore — excludes dev/docs artifacts (design notes, postmortem prose) from the scan, though it can't exclude SKILL.md itself.
+           - Skills must never touch ~/.hermes/.env — that's secrets-only and agent-owned; a skill writing it is exactly what the critical is for.```
+    [reply to fxdavid msg=1523351475474923550]
+
+[2026-07-05T22:10:37.007000+00:00] watchdominion (id=1523451059794608298)
+    Thanks for merging 🙏  my first two PRs - merged - hopefully many to come 🙏
+
+[2026-07-05T23:20:39.626000+00:00] sprmn24 (id=1523468686856421477)
+    Issue: Termux venv repair path hardcoded group="all" instead of "termux-all"
+    Fix: detect Termux same as rest of _cmd_update_impl
+    https://github.com/NousResearch/hermes-agent/pull/59216
+    
+    
+    Issue: _commit_memory_before_soft_evict reads _store._entries without lock on daemon thread
+    Fix: acquire _store._lock before accessing _entries
+    https://github.com/NousResearch/hermes-agent/pull/59227
+    
+    Issue: Console executor pool permanently wedged after 4 stuck workers, hangs dashboard console for all sessions
+    Fix: recycle pool automatically when all workers are stuck
+    https://github.com/NousResearch/hermes-agent/pull/59240
+    [embed] fix(cli): use termux-all group in venv repair path on Termux by spr... https://github.com/NousResearch/hermes-agent/pull/59216
+    [embed] fix(gateway): acquire session-store lock in _commit_memory_before_s... https://github.com/NousResearch/hermes-agent/pull/59227
+    [embed] fix(dashboard): recycle console executor when all workers are perma... https://github.com/NousResearch/hermes-agent/pull/59240
+
+[2026-07-05T23:40:07.041000+00:00] hakan_pak (id=1523473583349956619)
+    Bug: In the multi-profile gateway, the automatic-reset notification banner ( Session automatically reset … Model: <x>) was reading the base `config.yaml` instead of the active profile's configuration, thereby displaying the incorrect model (#59003) fix https://github.com/NousResearch/hermes-agent/pull/59039
+    [embed] fix(gateway): report the routed profile's model in the auto-reset b... https://github.com/NousResearch/hermes-agent/pull/59039
+

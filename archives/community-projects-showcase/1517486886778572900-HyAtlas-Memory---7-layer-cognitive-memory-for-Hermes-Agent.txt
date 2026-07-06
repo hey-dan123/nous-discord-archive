@@ -179,3 +179,38 @@
     organized the files to hopefully in the future make migration easier and not have multiple places it should live…
     [embed] Release v2.1.0 — HYATLAS_HOME runtime layout + multi-key LLM resi... https://github.com/tuancookiez-hub/HyAtlas-Memory/releases/tag/v2.1.0
 
+[2026-07-05T21:16:48.662000+00:00] tunacookie (id=1523437519134396490)
+    Planning an architechture overhaul. that will improve everything to the next step for Release v3.0
+
+[2026-07-05T23:42:05.795000+00:00] tunacookie (id=1523474081440071800)
+    🚀 **HyAtlas-Memory v3.0.0** — Full SDK Fork + Reasoning Model Compatibility
+    
+    The entire hy-memory 1.2.20 SDK is now first-party code. No external dependency. Every line owned and maintained by HyAtlas.
+    
+    **What's new vs v2.1.0:**
+    
+    📦 **Full SDK Fork** — 70 files, 42K+ lines forked into `src/hyatlas_memory/core/`. Zero external `hy-memory` pip dependency. 23 monkey-patches promoted to 13 first-class integrations.
+    
+    🧠 **L5 Knowledge Graph** — In-process entity/relation extraction → Kuzu graph. Upstream hy-memory doesn't have this (their "L5" is just profile summary text). Live endpoint at `/api/v1/graph` — verified with 1,444 nodes and 6,374 relations.
+    
+    🤖 **Reasoning Model Compatibility** — Think-block parsing for MiniMax-M3, DeepSeek-R1, and other reasoning models. Handles closed and unclosed/truncated think blocks. `agent_max_tokens` raised to 8192 for reasoning budget.
+
+[2026-07-05T23:43:03.494000+00:00] tunacookie (id=1523474323447349441)
+    💭 **Emotion-Aware Memory** — LLM-based valence/arousal scoring wired into the write path. Emotionally significant memories resist time decay.
+    
+    🔧 **Kuzu WAL Checkpoint Fix** — `close()` now calls `CHECKPOINT` + `db.close()` instead of just nulling refs. Upstream has the same bug. Verified: 0KB WAL after shutdown.
+    
+    🛡️ **Operational Hardening** — VDB circuit breaker, L1_RAW rolling delete + dedup, multi-key LLM rotation, auto-forgetting with recency scoring.
+    
+    **E2E verified:** write → L2 extraction → S2 digest → L5 graph → search → graph endpoint → circuit breaker. Zero JSON parse errors with deepseek-v4-flash.
+    
+    **Up and running with:** deepseek-v4-flash · BAAI/bge-large-en-v1.5 (1024d) · Qdrant · Kuzu
+    
+    📦 Repo: https://github.com/tuancookiez-hub/HyAtlas-Memory
+    🏷️ Release: v3.0.0 https://github.com/tuancookiez-hub/HyAtlas-Memory/releases/tag/v3.0.0
+    [embed] GitHub - tuancookiez-hub/HyAtlas-Memory: A plugin for Hermes to con... https://github.com/tuancookiez-hub/HyAtlas-Memory
+    [embed] Release v3.0.0 — Full SDK fork, L5 knowledge graph, reasoning mod... https://github.com/tuancookiez-hub/HyAtlas-Memory/releases/tag/v3.0.0
+
+[2026-07-06T00:33:03.572000+00:00] tunacookie (id=1523486906686636072)
+    [attachment] 69682D67-FA10-48D8-873E-478FCB10B731.jpg https://cdn.discordapp.com/attachments/1517486886778572900/1523486906275336302/69682D67-FA10-48D8-873E-478FCB10B731.jpg?ex=6a4c493f&is=6a4af7bf&hm=5afdd3299d85a7fc190d1872d3fab8804494d86328e0e04dbfbe14b1283c3d16&
+
