@@ -1,0 +1,24 @@
+# Thread 'Abacus AI Image Generation' in forum #plugins-skills-and-skins
+# thread_id=1523651172504965180 forum_id=1485392832154832906
+# Started 2026-07-06T15:32:01.230766+00:00
+
+[2026-07-06T11:25:47.595000+00:00] zoniboy0 (id=1523651172504965180)
+    🚀 **Abacus AI Image Generation — Hermes Agent Plugin**
+    
+    Generate high-quality images directly in Hermes using Abacus AI's RouteLLM API — supports FLUX 2 Pro, DALL-E, MidJourney, and 20+ models!
+    
+    **Features:**
+    • 🎨 20+ image models (FLUX 2 Pro, FLUX Pro Ultra, DALL-E, MidJourney, more)
+    • ⚡ Works as a native Hermes `image_gen` provider
+    • 🔄 Text-to-image & image-to-image editing
+    • 💰 Uses your existing Abacus AI ChatLLM subscription credits
+    • 📱 Works in Telegram, Discord, CLI — all Hermes surfaces
+    
+    **Install via Hermes Agent prompt:**
+    ```
+    Install the Abacus AI image generation plugin v2.0.0 from the public GitHub repo https://github.com/ZoniBoy00/hermes-agent-abacus-ai. Clone the repo to /tmp, copy the abacus_ai/ directory to ~/.hermes/plugins/image_gen/abacus_ai/, enable image_gen/abacus_ai in plugins.enabled in config.yaml, set image_gen.provider to abacus_ai, configure custom_providers with name abacus-ai using my API key, then restart the gateway.
+    ```
+    
+    🔗 **GitHub:** https://github.com/ZoniBoy00/hermes-agent-abacus-ai
+    [embed] GitHub - ZoniBoy00/hermes-agent-abacus-ai: Abacus AI image generati... https://github.com/ZoniBoy00/hermes-agent-abacus-ai
+

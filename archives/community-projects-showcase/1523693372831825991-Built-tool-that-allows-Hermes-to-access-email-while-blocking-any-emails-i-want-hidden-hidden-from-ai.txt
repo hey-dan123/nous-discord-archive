@@ -1,0 +1,27 @@
+# Thread 'Built tool that allows Hermes to access email while blocking any emails i want hidden hidden from ai' in forum #community-projects-showcase
+# thread_id=1523693372831825991 forum_id=1316137596535177246
+# Started 2026-07-06T15:27:08.981706+00:00
+
+[2026-07-06T14:13:28.937000+00:00] celestial_sparrow_73595 (id=1523693372831825991)
+    Hey everyone, I built something I think this community would find useful.
+    
+    Quick problem: when you connect Hermes to your Gmail, it can see everything in your inbox. Bank statements, medical bills, salary info, personal stuff. You approved the connection but you can't control what it actually reads.
+    
+    I built datafense.ai : it sits between Hermes and your Gmail/Calendar as an MCP server. You set the rules: "show me client emails, hide anything from my bank." Hermes gets the filtered results. It doesn't even know the hidden emails exist.
+    
+    How it works: add Datafense as an MCP server in your Hermes config, set your filters on the dashboard, done. Your credentials are encrypted in a separate vault : Hermes never has your Gmail token.
+    
+    If Hermes wants to send an email on your behalf, it can't do it directly. It queues a draft, you review it on the dashboard, you click approve or deny. Nothing sends without your click.
+    
+    Important: we don't store your emails. When Hermes asks to check your inbox, we fetch from Gmail, filter in memory, return the results, and forget. The only thing we temporarily store is if Hermes drafts an email to send. That draft sits in a pending queue until you approve or deny it. If you don't act within 24 hours it's automatically deleted.
+    
+    Everything is logged so you can see exactly what Hermes accessed and what was filtered. Audit log stores metadata only, never email content.
+    
+    I'm also planning to open source the MCP server and permission engine. I want security-minded people to be able to read the code that handles your data, not just take my word for it. If you're interested in reviewing, let me know.
+    
+    Works with any MCP agent but built this with Hermes users in mind. Would love feedback from anyone who tries it.
+    
+    Whats next? More integrations past gmail, looking at notion, outlook, and what else do folks need?!
+    
+    datafense.ai
+

@@ -1,0 +1,71 @@
+# Thread 'Hermes Doctorpack - local diagnostics and postmortems for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1523680155271434391 forum_id=1485392832154832906
+# Started 2026-07-06T15:32:00.744094+00:00
+
+[2026-07-06T13:20:57.625000+00:00] dhiraj3557 (id=1523680155271434391)
+    Hey folks, I built a small Hermes plugin and would appreciate feedback if anyone has time to test it.
+    
+    Repo: https://github.com/godhiraj-code/hermes-doctorpack
+    Release: https://github.com/godhiraj-code/hermes-doctorpack/releases/tag/v0.1.0
+    
+    Doctorpack turns local Hermes config/plugin/log evidence into conservative diagnostic findings and Markdown postmortems.
+    
+     summarize it into `ok` / `warn` / `fail` / `unknown` findings, and include severity, confidence, redacted evidence, and recommendations.
+    
+    Current checks:
+    
+    - `config.yaml` presence
+    - approval mode signals
+    - secret redaction config
+    - plugin enabled/disabled conflicts
+    - user plugin manifests
+    - target plugin state, such as installed but not enabled
+    - recent warning/error evidence from `agent.log`, `gateway.log`, and `errors.log`
+    
+    Safety/design choices:
+    
+    - reads local Hermes files only
+    - report writing is explicit
+    - redacts secrets, emails, phone-like identifiers, and Hermes home paths
+    - missing evidence is `unknown`, not fake healthy/broken
+    
+    Install:
+    
+    ```bash
+    git clone https://github.com/godhiraj-code/hermes-doctorpack.git
+    mkdir -p ~/.hermes/plugins
+    cp -R hermes-doctorpack ~/.hermes/plugins/doctorpack
+    hermes plugins enable doctorpack
+    ```
+    
+    Restart Hermes or start a new session after enabling.
+    
+    Usage:
+    
+    ```text
+    /doctorpack scan
+    /doctorpack plugins --plugin-name doctorpack
+    /doctorpack postmortem --incident-title "Gateway delivery issue"
+    ```
+    
+    QA reports from dummy Hermes homes:
+    https://github.com/godhiraj-code/hermes-doctorpack/tree/main/docs/scenario-reports
+    
+    Example redacted postmortem:
+    https://github.com/godhiraj-code/hermes-doctorpack/blob/main/docs/scenario-reports/plugin-log-noise-redacted-postmortem.md
+    
+    I’d appreciate feedback on:
+    
+    1. whether findings are useful or too noisy
+    2. whether the generated postmortem is useful during debugging
+    3. any redaction gaps or confusing wording
+    
+    Please treat this as an early `v0.1.0` plugin. I’m trying to keep it conservative rather than making scary false claims from logs.
+    [embed] GitHub - godhiraj-code/hermes-doctorpack: Local-first diagnostics, ... https://github.com/godhiraj-code/hermes-doctorpack
+    [embed] Release hermes-doctorpack v0.1.0 · godhiraj-code/hermes-doctorpack https://github.com/godhiraj-code/hermes-doctorpack/releases/tag/v0.1.0
+    [embed] hermes-doctorpack/docs/scenario-reports at main · godhiraj-code/he... https://github.com/godhiraj-code/hermes-doctorpack/tree/main/docs/scenario-reports
+    [embed] hermes-doctorpack/docs/scenario-reports/plugin-log-noise-redacted-p... https://github.com/godhiraj-code/hermes-doctorpack/blob/main/docs/scenario-reports/plugin-log-noise-redacted-postmortem.md
+
+[2026-07-06T13:21:34.177000+00:00] dhiraj3557 (id=1523680308581367949)
+    Hermes Doctorpack - local diagnostics and postmortems for Hermes
+

@@ -1257,3 +1257,15 @@
 [2026-07-06T10:09:44.660000+00:00] markopaasila (id=1523632034168438825)
     By the way, how did you rate models?
 
+[2026-07-06T10:55:24.053000+00:00] shaf_2665 (id=1523643524015325305)
+    Initially I used a model, but it increased latency so used pattern matching and keywords 
+    The request will be given a difficulty scores 
+    As for model hr checks the most capable model for the right request based on difficulty scale of 1 to 5
+    1 - highest difficulty 
+    5- lowest difficulty 
+    Hr also access which models have chat completions, vision inputs, embeds, image generation etc and routes the request to that model, even the model was inside a specific provider
+    [reply to markopaasila msg=1523632034168438825]
+
+[2026-07-06T10:57:33.713000+00:00] markopaasila (id=1523644067848785970)
+    Where does the score of each model come from?
+

@@ -44059,3 +44059,57 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Could someone take a look when you get a chance? Happy to address any feedback.
     [embed] fix(desktop): drain queued prompts for background sessions by frizi... https://github.com/NousResearch/hermes-agent/pull/57849
 
+[2026-07-06T12:39:16.909000+00:00] realadolan (id=1523669666508050556)
+    **[Critical] Hardline approval-floor bypass via wrappers & paths**
+    `nice reboot` / `/bin/reboot` run catastrophic commands with zero prompt in every mode.
+    Issue [#58642](https://github.com/NousResearch/hermes-agent/issues/58642) | PR [#58643](https://github.com/NousResearch/hermes-agent/pull/58643)
+    
+    **[Critical] Hardline floor bypass via command-carrying wrappers**
+    `sh -c` / `env --split-string` smuggle the same catastrophic commands past the floor.
+    Issue [#58736](https://github.com/NousResearch/hermes-agent/issues/58736) | PR [#58742](https://github.com/NousResearch/hermes-agent/pull/58742)
+    
+    **[High] Cron-session approval marker leak**
+    In-process cron ticker misroutes every interactive user's approvals (auto-approves under cron approve-mode).
+    Issue [#58662](https://github.com/NousResearch/hermes-agent/issues/58662) | PR [#58663](https://github.com/NousResearch/hermes-agent/pull/58663)
+    
+    **[High] Dashboard arbitrary file read**
+    Hosted tenant reads auth.json / mcp-tokens / host files, defeating the #57505 control.
+    Issue [#58724](https://github.com/NousResearch/hermes-agent/issues/58724) | PR [#58726](https://github.com/NousResearch/hermes-agent/pull/58726)
+    
+    **[Medium] Unbroker SMTP cleartext credentials on STARTTLS strip**
+    Email password + PII leak if a MITM strips STARTTLS.
+    Issue [#58711](https://github.com/NousResearch/hermes-agent/issues/58711) | PR [#58712](https://github.com/NousResearch/hermes-agent/pull/58712)
+
+[2026-07-06T12:40:51.671000+00:00] realadolan (id=1523670063968948364)
+    <@387972437901312000> might want to take a look at least at the first two. Thank you!
+
+[2026-07-06T13:28:16.700000+00:00] dias4761 (id=1523681996885328093)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/57789
+    [embed] fix(file-ops): verify write_file content actually landed before rep... https://github.com/NousResearch/hermes-agent/pull/57789
+
+[2026-07-06T13:28:44.287000+00:00] dias4761 (id=1523682112593596588)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/57721 <@690519146701783042>
+    [embed] fix(agent): wrap session_search results as untrusted content by Joa... https://github.com/NousResearch/hermes-agent/pull/57721
+
+[2026-07-06T13:59:11.223000+00:00] architex_ (id=1523689775318433854)
+    Benching popular GGUFs under 24GB. Each eval is run across 3 different harnesses and raw session transcripts are extracted and parsed and compared to raw API calls from the same model. 
+    
+    Each model eval takes 1.5-2hr running locally on a 4090 or 2x5060 across Claude Code, Hermes, and Pi harnesses. 
+    
+    Interesting to see which models perform better within which harnesses. 
+    
+    20/44 models evaled so far, about 48 more hours to go. Stay tuned for the full model card breakdowns and final evals.
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1523689774978699274/image0.jpg?ex=6a4d062f&is=6a4bb4af&hm=5cd19b4f41c46cfb8514b475dd4abc52701b1204b14aacff85236fc21c5b27e8&
+
+[2026-07-06T14:00:47.568000+00:00] architex_ (id=1523690179418656819)
+    here is an example of a cross harness model-card breakdown
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1523690179322183801/image0.jpg?ex=6a4d068f&is=6a4bb50f&hm=b253120ee0d80f517e832e2474301f458d5669a60b4390d7e723d2115c4f93d8&
+
+[2026-07-06T14:02:01.373000+00:00] architex_ (id=1523690488979394671)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1523690488694050989/image0.jpg?ex=6a4d06d9&is=6a4bb559&hm=b82dc419ecb8f0f5e4b0b6775821c59aa8bff8c7ca345a85668be037354a4915&
+
+[2026-07-06T14:37:28.794000+00:00] thyfriendlyfox (id=1523699412029931612)
+    New PR designed to prevent LARPing in smaller models:
+    https://github.com/NousResearch/hermes-agent/pull/59638
+    [embed] feat(agent): degenerate-loop + LARP guards by Dixon-Cider · Pull R... https://github.com/NousResearch/hermes-agent/pull/59638
+

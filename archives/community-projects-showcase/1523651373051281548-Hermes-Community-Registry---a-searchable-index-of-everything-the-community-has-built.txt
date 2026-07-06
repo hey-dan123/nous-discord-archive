@@ -1,0 +1,40 @@
+# Thread 'Hermes Community Registry — a searchable index of everything the community has built' in forum #community-projects-showcase
+# thread_id=1523651373051281548 forum_id=1316137596535177246
+# Started 2026-07-06T15:27:09.419012+00:00
+
+[2026-07-06T11:26:35.409000+00:00] alexkucera (id=1523651373051281548)
+    The two showcase channels here move fast. Good projects sink below the scroll line in days, and tracking
+     down that one skill or plugin you half-remember means paging through hundreds of forum threads.
+    
+     So I built a registry: a static site that auto-syncs from the Community Projects Showcase and
+     Plugins/Skills/Skins channels every Monday, with client-side search and filters over the whole catalog.
+    Built with Hermes Agent, of course.
+    
+     🔗  https://babylondreams.de/hermes-registry
+    
+     **What's in it right now**
+     • **496** entries, pulled from 600+ Discord forum threads
+     • Types: `skill` · `plugin` · `tool` · `agent` · `skin` · `integration`
+     • Categories: memory, productivity, ui, devops, observability, security, voice, creative, and more
+    
+     **How to use it**
+     • Search across name, description, and author as you type
+     • Type filter chips + a category dropdown narrow it further
+     • `/` focuses search, `Esc` clears it — built keyboard-first
+    
+     **How it stays fresh**
+     Three jobs run every Monday morning: scrape the showcases, classify and categorize the new items
+     (deterministic heuristics first, an LLM pass for the ambiguous ones), then rebuild and deploy. The Discord
+     is the source of truth; there's no manual entry list to maintain.
+    
+     **Honest notes**
+     • Community-maintained — not affiliated with Nous Research.
+     • Descriptions come from each repo, so some are sparse. That's the community's data, shown as-is rather
+     than dressed up.
+     • If your project is missing, mistyped, or in the wrong category, reply here or open an issue and it'll get
+     folded in on the next sync.
+    
+     If you build on Hermes, this is meant to save you the scroll.
+    [attachment] CleanShot_2026-07-06_at_13.14.28.png https://cdn.discordapp.com/attachments/1523651373051281548/1523651373533757490/CleanShot_2026-07-06_at_13.14.28.png?ex=6a4ce26b&is=6a4b90eb&hm=f52a6c47021ac5de7df2a51cd24daf571f6c7b2cd641c34da919008bbf181aed&
+    [embed] Hermes Community Registry https://babylondreams.de/hermes-registry
+

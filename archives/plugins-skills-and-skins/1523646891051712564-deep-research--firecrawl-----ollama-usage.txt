@@ -1,0 +1,16 @@
+# Thread 'deep research, firecrawl + , ollama usage' in forum #plugins-skills-and-skins
+# thread_id=1523646891051712564 forum_id=1485392832154832906
+# Started 2026-07-06T15:32:01.641864+00:00
+
+[2026-07-06T11:08:46.817000+00:00] 3l0_ (id=1523646891051712564)
+    Just dropped some Hermes Agent plugins we've been cooking
+    
+    Three plugins, zero core patches, survive updates:
+    
+    deep-research — multi-source research tool. Search-agnostic, returns raw markdown. ⚠️ WIP, rough edges
+    firecrawl-crawler — extends web capabilities with web_crawl + web_map via Firecrawl self-hosted
+    ollama-usage — /ollama command for Ollama Cloud usage. Zero LLM calls, instant
+    
+    https://github.com/3L0935/hermes-plugins
+    [embed] GitHub - 3L0935/hermes-plugins: Community plugins for Hermes Agent ... https://github.com/3L0935/hermes-plugins
+

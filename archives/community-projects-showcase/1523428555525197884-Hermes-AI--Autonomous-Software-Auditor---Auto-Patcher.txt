@@ -35,3 +35,31 @@
     
     The Solution: We are implementing an advanced JSON-input compiler. The framework will programmatically unpack, parse, and stitch together complex multi-file structures fetched from the block explorer APIs, allowing the AI Auditor Agent to grasp the full project architecture comprehensively.
 
+[2026-07-06T13:14:10.598000+00:00] baileys344 (id=1523678448076329022)
+    HERMES SECURITY AND DETECTIVE SERVICES UPDATE
+
+[2026-07-06T13:14:55.843000+00:00] baileys344 (id=1523678637847740638)
+    Mathematical Deduction Model
+    Problem: LLMs can generate subjective security scores, leading to inconsistent audit outputs.
+    
+    Solution: We enforced a strict, mathematical Deduction Methodology mapped to SWC standards. Audits initialize at 100 points. The AI acts as a cold auditor, subtracting points based on risk severity (Critical: 30-40, High: 15-25 pts). Unverified bytecode is automatically capped at a max score of 40.
+
+[2026-07-06T13:15:05.535000+00:00] baileys344 (id=1523678678498807899)
+    Token Distribution & Whale Tracking
+    Problem: Flawless code can still pose a "Rug Pull" risk if a single entity controls the liquidity.
+    
+    Solution: We integrated a deep-layer BaseScan API matrix (analyze_token_distribution). The agent pulls live Total Supply metrics, lists the top 5 holders, and calculates exact percentages (e.g., 24.15%). Any wallet exceeding a 25% unlocked threshold triggers an automatic centralization penalty.
+
+[2026-07-06T13:15:13.572000+00:00] baileys344 (id=1523678712208425111)
+    Global Enterprise Format
+    Solution: To pitch effectively to international ecosystems like Nous Research and Hermes, we standardized the PDF engine, AI reasoning, and outputs into a fully polished, professional English format.
+
+[2026-07-06T13:15:23.524000+00:00] baileys344 (id=1523678753950007326)
+    Anti-Crash PDF Architecture
+    Problem: Raw LLM formatting (markdown/un-escaped XML tags) often crashes standard PDF pipelines.
+    
+    Solution: We developed a pre-rendering regex sanitization engine. It isolates raw code into elegant container styles (CodeBox) and neutralizes character collisions, making report generation completely crash-proof.
+
+[2026-07-06T13:15:36.641000+00:00] baileys344 (id=1523678808966955161)
+    Hermes Detective is now a fully autonomous, data-driven agent that binds on-chain wallet intelligence with mathematical vulnerability metrics. The codebase is fully tested, stable, and pushed to our production GitHub repository.
+
