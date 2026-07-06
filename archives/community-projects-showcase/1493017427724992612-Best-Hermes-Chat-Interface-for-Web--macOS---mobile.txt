@@ -5397,3 +5397,14 @@
 [2026-07-06T14:02:12.494000+00:00] celestial_sparrow_73595 (id=1523690535624118352)
     this is super cool ! is it free to use?
 
+[2026-07-06T16:30:23.499000+00:00] avidfuturist (id=1523727827202084905)
+    Yes, free and open source!
+    [reply to celestial_sparrow_73595 msg=1523690535624118352]
+
+[2026-07-06T16:55:25.875000+00:00] avidfuturist (id=1523734128623751230)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And **native iOS and Android app support**! 
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+

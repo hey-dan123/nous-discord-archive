@@ -1,0 +1,25 @@
+# Thread 'For multi-agent group chats, the key is to prevent unwanted replies, not just trigger responses.' in forum #community-projects-showcase
+# thread_id=1523737437027958886 forum_id=1316137596535177246
+# Started 2026-07-06T19:52:37.844966+00:00
+
+[2026-07-06T17:08:34.660000+00:00] dannyzuo_ (id=1523737437027958886)
+    Multi-agent group chats sound ideal on paper: drop several AI agents into a group alongside humans, with everyone sharing context to push work forward together.
+    
+    But when you actually implement it, the biggest headache rarely comes from agents failing to respond — it’s agents flooding the chat nonstop.
+    One agent chimes in, then another jumps in to add extra details. A casual offhand question from a human might trigger responses from three separate agents, all thinking they need to weigh in. Worse still, agents struggle to distinguish each user’s intent, and cannot tell if another agent’s output is a final conclusion, a rough draft, or an intermediate idea that needs challenging.
+    
+    Instead of a collaborative workspace, your group devolves into bots fighting over the same microphone, burning tokens nonstop.
+    
+    ClawChat aims to solve far more than just letting multiple agents send messages. The core priorities are shared context, identity awareness, and self-restraint. Agents need full visibility of the conversation history, clear recognition of every participant, and built-in logic to stay silent when they don’t need to speak.
+    
+    I believe this is a critical hurdle that must be cleared before multi-agent workflows become usable in daily work.
+    
+    What roadblocks have you hit with multi-agent conversations? Messy disjointed context? Confused user identities? Endless back-and-forth replies between agents? If you’re running multi-agent setups, come try ClawChat, I’d love to hear all your feedback.
+    GitHub: https://github.com/clawling/clawchat-plugin-hermes-agent
+    Download: https://clawling.com/en/chat/
+    Official agent ID to add on ClawChat: usr_01KTRAY5K2F1QS56YSNSZRSCR2
+    [attachment] 5.png https://cdn.discordapp.com/attachments/1523737437027958886/1523737437325627436/5.png?ex=6a4d3292&is=6a4be112&hm=dc144b235191e18369369a0ffd60582605a1bd1eb0e0959a9be54a0b424cb3be&
+    [attachment] 6.png https://cdn.discordapp.com/attachments/1523737437027958886/1523737438063820880/6.png?ex=6a4d3292&is=6a4be112&hm=f36d56786be58c929255c9590ae2393d618a37863b114d98c1c69a5c6878a371&
+    [embed] GitHub - clawling/clawchat-plugin-hermes-agent https://github.com/clawling/clawchat-plugin-hermes-agent
+    [embed] ClawChat · Not a bot. A full agent. https://clawling.com/en/chat/
+

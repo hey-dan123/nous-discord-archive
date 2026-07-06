@@ -20,3 +20,22 @@
 [2026-07-05T15:54:06.031000+00:00] .voidhaze (id=1523356306373738617)
     Official support would be cool, however I think I will have make it run leaner first, it's currently a tad resource heavy.
 
+[2026-07-06T16:06:36.573000+00:00] echoeclipse (id=1523721842240655511)
+    As a major starcraft 2 fan I was not expecting to see that here as the initial reason but i really love it, how did it end up turning out?
+    [reply to .voidhaze msg=1523350280765309009]
+
+[2026-07-06T16:44:36.411000+00:00] .voidhaze (id=1523731404574429315)
+    It works pretty well with the adjutant voice clip I was using, voice generation response times are around one second or less for short sentences. If it's like a long paragraph it takes a few short seconds. I found the main issue was that the model was responding too slowly, breaking the illusion of a conversation. I might try looking deeper into the code to see if Hermes supports TTS streaming. An quick AI search suggests it does, so that could be the next logical step in making this appear more responsive. If any one knows the TTS modules well please fill me in.
+    [reply to echoeclipse msg=1523721842240655511]
+
+[2026-07-06T16:52:12.610000+00:00] .voidhaze (id=1523733318011584694)
+    If you want to try it out, you just need a reasonably long clip (~30s) of the Adjutant speaking. Install the CLI via the instructions, use the clone voice function, run the Hermes Agent integration install, fire up the server and you are ready to go. once you are in Hermes just do /voice on and /voice tts. After that all responses will be voiced by what ever voice you fed into the clone command. For subsequent runs you just need to start the server.
+    [reply to echoeclipse msg=1523721842240655511]
+
+[2026-07-06T17:18:21.746000+00:00] .voidhaze (id=1523739899444985957)
+    think I ll work on plugin streaming support next, if any one has expertise in this area please drop me a line.
+
+[2026-07-06T17:39:00.707000+00:00] echoeclipse (id=1523745096023933031)
+    I will try that out thank you!
+    [reply to .voidhaze msg=1523733318011584694]
+

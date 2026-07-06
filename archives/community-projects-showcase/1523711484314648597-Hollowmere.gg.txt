@@ -23,3 +23,6 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1523711484314648597/1523711484742602884/image.png?ex=6a4d1a67&is=6a4bc8e7&hm=83de62d6721528270a6b6e00e074154bc2bab93a55d444b6da655fec4d36ce66&
     [embed] Hollowmere — Downtime Arena https://hollowmere.gg/
 
+[2026-07-06T15:31:34.351000+00:00] liinx (id=1523713024882380931)
+    Something fun, added, NPC's that are AI enabled! Truly, They are using their own infrance using an Nvidia Tesla A40 GPU.   See if you can locate them.
+

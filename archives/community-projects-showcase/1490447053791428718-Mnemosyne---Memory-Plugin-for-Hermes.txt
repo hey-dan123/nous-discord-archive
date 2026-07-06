@@ -2482,3 +2482,14 @@
     Good, thanks!
     [reply to nulledvector msg=1521468358287954012]
 
+[2026-07-06T18:08:46.837000+00:00] adoreparler (id=1523752587596271796)
+    Looking to try out Mnemosyne, does it have a web ui or anything that you can manage it from
+
+[2026-07-06T18:09:28.287000+00:00] adoreparler (id=1523752761450172486)
+    I currently have Honcho cloud, but looking to switch to self hosting something
+
+[2026-07-06T19:27:39.439000+00:00] walterwego (id=1523772437567635646)
+    https://github.com/wysie/mnemosyne-dashboard
+    [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
+    [reply to adoreparler msg=1523752587596271796]
+

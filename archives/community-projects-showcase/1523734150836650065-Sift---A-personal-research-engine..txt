@@ -1,0 +1,23 @@
+# Thread 'Sift - A personal research engine.' in forum #community-projects-showcase
+# thread_id=1523734150836650065 forum_id=1316137596535177246
+# Started 2026-07-06T19:52:38.271554+00:00
+
+[2026-07-06T16:55:31.171000+00:00] parallelcontinuities (id=1523734150836650065)
+    https://github.com/gh0stprince/sift
+    
+    your problem is that you need answers, not blue links. google gives you 10 pages to skim. research is either tedious or untrustworthy. notebooklm is good, but costs an extra fee that you can't afford with all your subs. introducing sift: sift searches the web, reads the pages, and gives you a real answer with inline citations - like having a research assistant who does the legwork and shows their work.
+    
+    **how it works:**
+    - **non-technical:** you ask a question and sift finds relevant sources, extracts the content, and synthesizes an answer with footnotes pointing to where it got each fact. you get the answer and the trail of breadcrumbs.
+    - **technical:** it's a local-first research CLI with SQLite+FTS5 indexing, RSS feed ingestion, and recursive link-following ("pulses"). it stores pages locally for full-text search and uses any OpenAI-compatible API for synthesis. your data, your machine, your API keys (or local AI).
+    
+    **the win:**
+    instead of opening 12 tabs and reading for an hour, you get a cited summary in seconds. for deep research, build a local corpus with ***sift pulse "topic"*** - now your own searchable archive of the web's best sources.
+    
+    ```bash
+    sift feeds init && sift ingest  # Load your sources
+    sift ask "What is retrieval-augmented generation?"  # Get answers```
+    
+    ***sift***: search less, know more.
+    [embed] GitHub - gh0stprince/sift: A personal research engine. Search, craw... https://github.com/gh0stprince/sift
+

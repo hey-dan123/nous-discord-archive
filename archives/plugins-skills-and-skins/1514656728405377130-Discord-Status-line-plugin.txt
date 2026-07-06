@@ -21,3 +21,15 @@
 [2026-06-12T12:25:20.375000+00:00] qaudy (id=1514968849056010425)
     ill give it a download
 
+[2026-07-06T17:37:04.202000+00:00] phospheneoverdrive (id=1523744607366676631)
+    Heads up for anyone following along: the status line plugin got fixed today. It had been completely silent after a recent Hermes internal change — turns out the plugin was patching a copy of the Discord adapter that nobody was actually using (Python namespace quirk). So silent failure.
+    
+    What changed:
+    - Fixed the import so the patch actually lands where it needs to
+    - Gave it a lazy startup so it doesn't try to patch before the Discord adapter is even loaded
+    - Added `{session_id}` as a template variable — you can add it to your status line like `session:{session_id}` if you want to track which session a response belongs to
+    
+    The default template now includes `session:{session_id}` as inline code at the end. You can customize it in `config.yaml` as usual.
+    
+    If you're running the plugin, pull latest and restart the gateway.
+

@@ -38,3 +38,13 @@
     [attachment] CleanShot_2026-07-06_at_13.14.28.png https://cdn.discordapp.com/attachments/1523651373051281548/1523651373533757490/CleanShot_2026-07-06_at_13.14.28.png?ex=6a4ce26b&is=6a4b90eb&hm=f52a6c47021ac5de7df2a51cd24daf571f6c7b2cd641c34da919008bbf181aed&
     [embed] Hermes Community Registry https://babylondreams.de/hermes-registry
 
+[2026-07-06T15:31:13.368000+00:00] jcrabapple (id=1523712936873562132)
+    Nice! I had my agent make a skill for it! 
+    
+    https://github.com/jcrabapple/hermes-skills/tree/main/hermes-community-registry
+    [embed] hermes-skills/hermes-community-registry at main · jcrabapple/herme... https://github.com/jcrabapple/hermes-skills/tree/main/hermes-community-registry
+
+[2026-07-06T15:33:54.031000+00:00] alexkucera (id=1523713610743025705)
+    Very cool!
+    [reply to jcrabapple msg=1523712936873562132]
+
