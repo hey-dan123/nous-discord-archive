@@ -5390,3 +5390,7 @@
     on it, will have results late in the night early morning
     [reply to avidfuturist msg=1523376647280136273]
 
+[2026-07-06T08:57:26.145000+00:00] alto69 (id=1523613837117489252)
+    Nudge https://github.com/nesquena/hermes-webui/pull/5508#issuecomment-4890700594
+    [embed] feat(core): add registerHermesSessionOpenHandler + renderTranscript... https://github.com/nesquena/hermes-webui/pull/5508
+

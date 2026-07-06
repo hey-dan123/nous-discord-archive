@@ -1,0 +1,36 @@
+# Thread 'SVG-UI Micro Graphic Generator' in forum #community-projects-showcase
+# thread_id=1523568570435375225 forum_id=1316137596535177246
+# Started 2026-07-06T10:14:55.066124+00:00
+
+[2026-07-06T05:57:33.727000+00:00] americanbiker (id=1523568570435375225)
+    **Micro Graphic Generator**
+    A procedural, zero-dependency, single-file HTML/SVG micro-graphic generator inspired by FUI/HUD design, technical line art, and abstract data visualization.
+    
+    **Overview**
+    The Micro Graphic Generator dynamically sculpts complex, high-resolution SVG compositions on the fly using a mathematically driven procedural layout engine. It is designed to act as an endless source of inspiration or background assets for sci-fi, cyberpunk, editorial, and abstract design workflows. Every time the page is refreshed, a completely unique graphic is generated.
+    
+    **Features**
+    Procedural Layout Engine: The core system combines base grid skeletons (Binary Space Partitioning, Concentric Rings, Cellular Automata) with radical mutators (Sparsify, Explode, Greeble, Frame) to mathematically generate thousands of unique macro-architectures.
+    FUI & Tech Elements: Generates HUD crosshairs, broken targeting rings, data waveforms, circuit traces, parallel hatch shading, and perspective wireframes.
+    *Cultural Aesthetics*:
+    Ensō (円相): Procedural sumi-e style brush strokes and ink wash.
+    Adinkra (Gyaman): Traditional West African visual symbols and geometry.
+    CJK (中日韓): Generative kanji, katakana, and hanko (red seal) compositions.
+    Zero Dependencies: Everything runs in vanilla JavaScript inside a single index.html file. No build steps, no external libraries, no NPM packages.
+    Architecture
+    The system operates in three main phases:
+    
+    *Palette Selection*: Chooses from a curated set of monochrome, high-contrast, or accented color palettes.
+    *Macro Layout*: The layoutProcedural() engine mathematically divides the canvas into a series of structural cells using recursive algorithms.
+    *Micro Generation*: Every individual cell independently picks a drawing instruction from a flat pool of 30+ generators (ranging from barcodes to mountain landscapes) and renders it using raw SVG DOM elements.
+    *Usage*: Simply open index.html in any modern web browser. Refresh the page to generate a new composition.
+    
+    **Inspiration**
+    Inspired by Chad Ashley (@cgpov), danhdox/glyph, and various Fantasy User Interface (FUI) artists.
+    
+    ```All made with Hermes, Enjoy :)``` https://21gsoul.com
+    [attachment] microglyph-33c44fa7.png https://cdn.discordapp.com/attachments/1523568570435375225/1523568570670518272/microglyph-33c44fa7.png?ex=6a4c954d&is=6a4b43cd&hm=8a8346dee2da204da62531761e426f015e492450ab05fef1ff447524d13455e0&
+    [attachment] microglyph-3336f4e2.png https://cdn.discordapp.com/attachments/1523568570435375225/1523568571001737337/microglyph-3336f4e2.png?ex=6a4c954d&is=6a4b43cd&hm=70b348c9a97aea6092f2f61e7de5921f3a0ba7866f6f753f81d92cf7a22c1afc&
+    [attachment] microglyph-3512f75f.png https://cdn.discordapp.com/attachments/1523568570435375225/1523568571370963054/microglyph-3512f75f.png?ex=6a4c954d&is=6a4b43cd&hm=8b3ad9cdd040781bad6754ac55598c61074be2f5782f2f6e30ca53ede2096c6e&
+    [embed] 21gSOUL — Generative micro-graphics for interfaces https://21gsoul.com/
+

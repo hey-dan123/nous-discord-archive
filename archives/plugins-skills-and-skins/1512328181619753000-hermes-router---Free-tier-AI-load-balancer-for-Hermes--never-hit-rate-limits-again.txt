@@ -1246,3 +1246,14 @@
 [2026-07-05T12:14:35.752000+00:00] gus003698 (id=1523301066219720774)
     For usage monitoring and fallbacks by Hermes due to free quota exceeded errors I run liteLLM, Prometheus and Alertmanager on the same Hermes machine. Does hr offer usage monitoring and alerting for paid models ? if not, can I stack hr with liteLLM? My current config is that providers' API keys are spoofed by liteLLM and hermes uses one key to liteLLM. How this would need to be overcome?
 
+[2026-07-06T03:42:26.731000+00:00] shaf_2665 (id=1523534567229755564)
+    Hey <@638515892338294824>  — good question! Quick answer: you don't need LiteLLM for this.
+    
+    /metrics is already native Prometheus format, so your existing Prometheus + Alertmanager can point straight at Hermes — no extra gateway needed. Just added a full guide with a scrape config + ready-to-use alert rules (spend threshold, error rate, circuit breaker down, latency) to the docs: see Monitoring → Alerting.
+    
+    One thing worth fixing in your setup though: routing Hermes through a single key to LiteLLM means Hermes only sees "one provider, one key" — it's not actually doing its own multi-key rotation/failover anymore, LiteLLM is doing that instead. You're running two routers and only getting the benefit of one. Recommend dropping LiteLLM and pointing your real provider keys directly into Hermes (hr auth add <provider>), then aiming Prometheus at Hermes's /metrics directly. 🙂
+    [reply to gus003698 msg=1523301066219720774]
+
+[2026-07-06T10:09:44.660000+00:00] markopaasila (id=1523632034168438825)
+    By the way, how did you rate models?
+
