@@ -1,0 +1,32 @@
+# Thread 'windows-control — Remote machine control plugin for Hermes (BETA v1.1.0)' in forum #plugins-skills-and-skins
+# thread_id=1523983879403208755 forum_id=1485392832154832906
+# Started 2026-07-07T09:42:33.122476+00:00
+
+[2026-07-07T09:27:51.101000+00:00] scwallito (id=1523983879403208755)
+    🖥️ **windows-control — Remote machine control for Hermes (BETA v1.1.0)**
+    
+    Plugin + lightweight agent giving Hermes **22 tools** to control remote PCs. `v1.1.0-beta` — ready for testing!
+    
+    🔧 **Tools:** 🖱️ mouse · ⌨️ keyboard · 🪟 windows & open_app · 📸 screenshot · ⚙️ exec & system · 📁 files
+    
+    🏗️ `Hermes ──HTTP──► Agent (~100MB RAM, .exe 23.5MiB)` — one Hermes, many agents, LAN or VPN.
+    
+    📦 **Repo:**
+    | Agent | FastAPI + Jinja2, 10 routers, 4 middlewares |
+    | Dashboard | Dark responsive UI, IP/status filters, CSV/JSON export |
+    | Tray | pystray green/yellow/red, menu |
+    | Logging | JSON Lines audit, request/response capture |
+    | Build | Standalone `.exe`, Windows installer, `uv sync` |
+    | Plugin | 4-file convention, clean |
+    
+    ✅ 80 tests · Ruff clean · 0 secrets · rate limiting · token auth
+    
+    🧪 Tested on **Windows 10**. macOS help wanted!
+    
+    ⚠️ **Beta issues:** CMD UTF-8 encoding, open_app param passing, window_focus timeout
+    
+    🔗 https://github.com/scwall/hermes-client-agent
+    
+    🙏 **Contributions welcome:** 🍎 macOS · 🐧 Linux · 🧪 Win11 testing · 🐛 encoding fixes · 🔑 Ed25519 auth · 📦 .deb/.rpm · 🌐 multi-agent dashboard
+    [embed] GitHub - scwall/hermes-client-agent https://github.com/scwall/hermes-client-agent
+

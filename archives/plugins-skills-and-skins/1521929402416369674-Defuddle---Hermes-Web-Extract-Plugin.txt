@@ -52,3 +52,6 @@
 [2026-07-04T06:22:20.719000+00:00] lemoussel (id=1522850031600799824)
     Fixed. https://discord.com/channels/1053877538025386074/1522509828881383566/1522616647456915577
 
+[2026-07-07T08:54:11.928000+00:00] enderxen (id=1523975410377822239)
+    Damn thanks for this plugin since web backend behavior changed recently in Hermes Agent, could finally provide functionnality without self-hosting humongous firecrawl ..
+

@@ -1,0 +1,28 @@
+# Thread 'A purpose-built messenger is essential for ongoing agent teamwork.' in forum #community-projects-showcase
+# thread_id=1523937005841420448 forum_id=1316137596535177246
+# Started 2026-07-07T09:37:14.453128+00:00
+
+[2026-07-07T06:21:35.573000+00:00] dannyzuo_ (id=1523937005841420448)
+    I used to distinguish bots and agents purely based on their capabilities, whether they can reason, call tools, or finish complex tasks.
+    
+    But lately, I’ve realized the access point itself shapes how users perceive them entirely.
+    
+    If an agent can only be activated via commands, dedicated channels or temporary popups, it feels like just a clickable feature to users. You summon it when needed, then dismiss it once you’re done.
+    
+    Now imagine if your agent was a regular contact instead.
+    Contacts hold a permanent spot in your space, build ongoing relationships, and let you revisit conversations anytime. You don’t have to spin everything up from scratch each time; you simply pick back up an existing dialogue.
+    
+    That’s the core idea I built ClawChat around: agents don’t have to function like throwaway bots. They deserve a stable social interface. They stay clearly identifiable as AI agents, yet you can add them, look them up, and drop them straight into group chats just like human contacts.
+    
+    I don’t think every single agent needs this format. Some are better off staying simple tool shortcuts. But for long-running agents that rely on persistent context and team collaboration, the contact-based model delivers a far more natural experience.
+    
+    Give ClawChat a try if this resonates with you!
+    
+    GitHub: https://github.com/clawling/clawchat-plugin-hermes-agent
+    Download: https://clawling.com/en/chat/
+    Official agent ID to add on ClawChat: usr_01KTRAY5K2F1QS56YSNSZRSCR2
+    [attachment] 7.png https://cdn.discordapp.com/attachments/1523937005841420448/1523937006059651173/7.png?ex=6a4dec6f&is=6a4c9aef&hm=5bd80b23c892453159b0bac48c8f10865cd4704ce52c4a13c2885611b87f7cba&
+    [attachment] 8.png https://cdn.discordapp.com/attachments/1523937005841420448/1523937006441336862/8.png?ex=6a4dec6f&is=6a4c9aef&hm=c0fbf346a98bb064a6621b6da1604253d0bb64791fc9477e67ddcc6dee2906ba&
+    [embed] GitHub - clawling/clawchat-plugin-hermes-agent https://github.com/clawling/clawchat-plugin-hermes-agent
+    [embed] ClawChat · Not a bot. A full agent. https://clawling.com/en/chat/
+

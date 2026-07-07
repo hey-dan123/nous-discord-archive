@@ -1,0 +1,102 @@
+# Thread 'JoySword MMORPG - A Brutal Stress Test on Frozen, Undocumented, Legacy Software & Agentic AI' in forum #community-projects-showcase
+# thread_id=1523944007678296154 forum_id=1316137596535177246
+# Started 2026-07-07T09:37:14.034103+00:00
+
+[2026-07-07T06:49:24.941000+00:00] oleegg (id=1523944007678296154)
+    I spent the last few weeks traversing over 50 million lines of legacy software archaeology resurrecting a dead MMORPG stack through AI orchestration 💀
+    old MSSQL databases, packet systems, launchers, infra ghosts from another technological era
+    ~$600–700 total token spend coordinating Gemini, Kimi, Opus, GPT-5.5 through Hermes + my own orchestration framework LUMI
+    the terrifying realization wasnt “AI can code”
+    
+    it was:
+    AI can survive bounded execution
+    but continuity across long-lived systems is still the real boss fight
+    every fix exposed another buried machine room underneath the previous one 😭
+    eventually stopped debugging the MMORPG and started debugging cognition itself
+    somehow the whole thing stabilized and came back online
+    genuinely one of the most surreal engineering experiences of my life
+    [attachment] Screenshot_2026-07-07_at_12.42.54_AM.png https://cdn.discordapp.com/attachments/1523944007678296154/1523944007892471910/Screenshot_2026-07-07_at_12.42.54_AM.png?ex=6a4df2f4&is=6a4ca174&hm=e7e9d7c3e5c379cce9e11a6947a7bbcd1790eee449d7b543546a74da2430b5e1&
+
+[2026-07-07T06:50:17.168000+00:00] oleegg (id=1523944226734215178)
+    here is a brief from the milestones I did: JoySword Online — Project Milestones
+    
+    🪦 Phase 1 — Software Archaeology
+    
+    Restored ancient MSSQL databases
+    Traversed 50M+ LOC of legacy infrastructure
+    Reverse-mapped launcher/server/client behavior
+    Identified hidden deployment/network assumptions
+    
+    🧠 Phase 2 — AI Orchestration
+    
+    Coordinated Gemini, Kimi, Opus, GPT-5.5 through Hermes
+    Used LUMI for bounded execution + continuity workflows
+    Built verification/recovery/orchestration pipelines
+    ~$600–700 total token spend
+    
+    ⚡ Phase 3 — Infrastructure Resurrection
+    
+    Rebuilt login/world/channel server stack
+    Restored launcher + account systems
+    Patched client routing + remote connectivity
+    Achieved stable multiplayer sessions again
+    
+    🏗️ Phase 4 — Modernization
+    
+    Built Next.js account portal
+    Created Electron launcher
+    Added patch automation + diagnostics
+    Implemented cloud + deployment tooling
+    
+    👁️ Phase 5 — The Real Boss Fight
+    
+    Solved synchronization drift
+    Fixed DB corruption + ghost deployments
+    Stabilized orchestration continuity
+    Realized the hardest problem wasn’t code generation… it was continuity
+    
+    🌅 Final Outcome
+    A dead MMORPG infrastructure stack came back online through AI-orchestrated engineering + human continuity management.
+
+[2026-07-07T06:50:27.481000+00:00] oleegg (id=1523944269990072360)
+    [attachment] Screenshot_2026-07-07_at_12.31.33_AM.png https://cdn.discordapp.com/attachments/1523944007678296154/1523944269482692749/Screenshot_2026-07-07_at_12.31.33_AM.png?ex=6a4df333&is=6a4ca1b3&hm=982a7ef7b45e05ac7a5fe97fdf5f5d85800c80cf1e63fee6c3c08cbaa0d1ac69&
+
+[2026-07-07T06:50:56.335000+00:00] oleegg (id=1523944391012646942)
+    [attachment] Screenshot_2026-07-07_at_12.50.41_AM.png https://cdn.discordapp.com/attachments/1523944007678296154/1523944390442356837/Screenshot_2026-07-07_at_12.50.41_AM.png?ex=6a4df350&is=6a4ca1d0&hm=20d49f04b8e55e20adcb5121193a71d0465cfd81b714e02ecfb64754fbff0cc9&
+
+[2026-07-07T06:51:44.274000+00:00] oleegg (id=1523944592083390544)
+    LUMI is my internal HERMES plugin (previously dietcode, I have shared this in the past, LUMI is a private plugin)
+
+[2026-07-07T06:52:59.232000+00:00] oleegg (id=1523944906480029707)
+    This project was exclusively built with HERMES & Nous Portal
+
+[2026-07-07T06:55:56.380000+00:00] oleegg (id=1523945649492459650)
+    The end result is this live service -> https://onjoysword.top/
+    [embed] JoySword — Classic Anime Action MMORPG Realm https://onjoysword.top/
+
+[2026-07-07T06:57:58.680000+00:00] oleegg (id=1523946162456101034)
+    My total spend is completely missing though (am estimating it is somewhere $600-700) but here is the previous reciept I have so far
+
+[2026-07-07T06:58:40.709000+00:00] oleegg (id=1523946338738376737)
+    [attachment] Screenshot_2026-07-07_at_12.58.30_AM.png https://cdn.discordapp.com/attachments/1523944007678296154/1523946338692370432/Screenshot_2026-07-07_at_12.58.30_AM.png?ex=6a4df520&is=6a4ca3a0&hm=8e0d7b97d596372b9f8288426b77cbfa3267180ff2bb769ee4966174d5da1b6a&
+
+[2026-07-07T07:49:35.098000+00:00] rachakyy (id=1523959149774372964)
+    oooh elsword online?good old day , so this is kinda like private server ?is there anything new with game mechanic ?but im not sure if this right channel tho, also i cant test it
+    [attachment] image.png https://cdn.discordapp.com/attachments/1523944007678296154/1523959149489164368/image.png?ex=6a4e010f&is=6a4caf8f&hm=59320f1eb0ea7b276c98756154ffa5669cacc8ae590327dd9966f12246420663&
+
+[2026-07-07T07:50:34.177000+00:00] oleegg (id=1523959397569531976)
+    sorry the launcher is weird as hell point to the folder (open the locate game and then click on the folder where the client is)
+    [reply to rachakyy msg=1523959149774372964]
+
+[2026-07-07T07:50:55.455000+00:00] oleegg (id=1523959486815932437)
+    or double click the .bat file
+
+[2026-07-07T07:52:27.724000+00:00] oleegg (id=1523959873820295198)
+    during my testing I tried to simplify this as much as possible but eh I couldnt fix this Launcher bug where it doesnt map the client directory by itself
+
+[2026-07-07T07:53:43.860000+00:00] oleegg (id=1523960193157693593)
+    also the error is mostly cosmetic and a false positive. I will double check and see if I can push a hotfix though
+
+[2026-07-07T07:54:30.319000+00:00] oleegg (id=1523960388021129256)
+    yes this is a private server restored by hermes
+

@@ -2028,3 +2028,7 @@
     - raw session ownership survives compression rollover
     [reply to w0lfgang88 msg=1521523832903696546]
 
+[2026-07-07T04:06:26.879000+00:00] w0lfgang88 (id=1523902995513737278)
+    https://x.com/SteveSchoettler/status/2074344120135590245?s=20
+    [embed]  https://twitter.com/SteveSchoettler/status/2074344120135590245?s=20
+

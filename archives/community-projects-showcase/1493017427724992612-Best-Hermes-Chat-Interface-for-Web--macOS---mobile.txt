@@ -5437,3 +5437,10 @@
     Thanks I commented back. Unfortunately no smoking gun yet on how to fix it. If it finds more please do have it post
     [reply to _123321_ msg=1523843995887730749]
 
+[2026-07-07T03:42:01.581000+00:00] avidfuturist (id=1523896849608605818)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And **native iOS and Android app support**! 
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+

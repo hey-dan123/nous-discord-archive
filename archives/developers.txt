@@ -44218,3 +44218,46 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     [#58922](https://github.com/NousResearch/hermes-agent/pull/58922) — Desktop crashes on binary file preview (null guard)
     [#58920](https://github.com/NousResearch/hermes-agent/pull/58920) — MOA config save missing save_traces/trace_dir fields
 
+[2026-07-07T04:02:44.165000+00:00] _hwrd_ (id=1523902061383647264)
+    small bug fix ready for review: https://github.com/NousResearch/hermes-agent/pull/39946
+    
+     When FileSyncManager.sync() fails, it was advancing _last_sync_time, which rate-limited the next retry and left remote files stale for up to _sync_interval. One line removed in the  failure path, one test added. Clean 1-commit diff on top of current main.
+    [embed] fix(file-sync): don't rate-limit retry after a failed sync cycle by... https://github.com/NousResearch/hermes-agent/pull/39946
+
+[2026-07-07T04:10:26.810000+00:00] fullslop (id=1523904001857552465)
+    <@387972437901312000> bumping this bug & PR: 
+    https://github.com/NousResearch/hermes-agent/issues/40677
+    https://github.com/NousResearch/hermes-agent/pull/56689
+    
+    as proof, I just had another user confirm my PR worked for them:
+    https://discord.com/channels/1053877538025386074/1476316988992258300/1523902025723674776
+    [embed] [Bug]: Profile-local skills are unavailable in Dashboard/TUI/Deskto... https://github.com/NousResearch/hermes-agent/issues/40677
+    [embed] fix(skills): resolve skills dir from active profile by jplew · Pul... https://github.com/NousResearch/hermes-agent/pull/56689
+
+[2026-07-07T08:30:47.715000+00:00] watchdominion (id=1523969520681615512)
+    Was awesome to get my first two PRs merged. (https://github.com/NousResearch/hermes-agent/pull/58519 — the load_config() cache serving stale unexpanded ${VAR} secrets, and https://github.com/NousResearch/hermes-agent/pull/58520 — explicit provider args bypassing auxiliary.<task> endpoints).
+    
+    Opened a third today: https://github.com/NousResearch/hermes-agent/pull/60085 — kanban task notifications never reached TUI/desktop sessions (#59890). The documented TUI notify poller for kanban_notify_subs was never actually implemented, so every subscription sat at last_event_id=0 forever. Heads-up that triage flagged it as overlapping #59963, which landed a few hours before mine on the same gap — I've laid out the behavioral differences on the PR (session-key resolution via the ContextVar bridge, multi-board, terminal unsubscribe, agent-turn chaining, +8 regression tests) and I'm happy either way: whichever version the maintainers prefer, I'll help fold the rest in.
+    
+    Also posted wire-level repro-triage on #60064 (MoA custom_provider 401) — couldn't reproduce it on main or the release, details in the thread.
+    
+    I'm planning to keep contributing regularly — mostly root-cause bug fixes with tests. 
+    
+    Is the developer role something I could get at this point, and is there anything specific the core team wants help with? Happy to pick up whatever's hurting most. <@387972437901312000>
+
+[2026-07-07T09:32:56.481000+00:00] scwallito (id=1523985160259768351)
+    Hey everyone! 👋
+    
+    Just shipped v1.1.0-beta of a project I've been chipping away at — a lightweight agent that lets Hermes control a remote PC over HTTP.
+    
+    The idea was simple: I didn't want to install Hermes on every machine. So I built a tiny Python agent (~100MB RAM, even ships as a standalone .exe) that sits on a Windows box and exposes a REST API. Then on the Hermes side, a plugin registers 22 tools — mouse, keyboard, screenshots, window management, exec, files — that call that API.
+    
+    Ended up going a bit overboard with the extras: a dark web dashboard with live logs, a system tray icon, structured audit logging, 80 tests, Ruff clean, the works. 😅
+    
+    Works great on my Windows 10 laptop. macOS and Linux agents are next — if anyone wants to jump in and help build those, I'd love the company!
+    
+    https://github.com/scwall/hermes-client-agent
+    
+    Happy to answer questions or onboard contributors. Cheers! 🚀
+    [embed] GitHub - scwall/hermes-client-agent https://github.com/scwall/hermes-client-agent
+
