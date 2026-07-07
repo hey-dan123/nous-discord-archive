@@ -46,3 +46,6 @@
     not yet, checking it out. Do you know how it performs compared to OmniVoice?
     [reply to admund__ msg=1523923638980448307]
 
+[2026-07-07T16:23:20.637000+00:00] .voidhaze (id=1524088441455902841)
+    side note: this currently only supported on Linux, you may be able to install it on windows and mac with a bit of wrangling, but the Hermes Agent integration installation will not work out of the box.
+

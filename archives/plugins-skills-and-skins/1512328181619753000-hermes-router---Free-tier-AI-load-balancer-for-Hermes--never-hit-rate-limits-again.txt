@@ -1273,3 +1273,10 @@
     Wow, you are quick! Asked question and solution it there 🙂 Rising the bar - how does hr calculate USD cost? Openrouter sends in payload and shares logs (as they say), kilo just shares price list, others - dunno. But, that would be super cool if hr can calculate or extract from payload USDs and serve to Prometheus. Who knows how long and how good free models will be, and perhaps all we will hunt for cheap and good enough, instead of free?
     [reply to shaf_2665 msg=1523534567229755564]
 
+[2026-07-07T16:37:44.699000+00:00] buke5122 (id=1524092065594740917)
+    Where is this proxy key?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1512328181619753000/1524092064969654412/image.png?ex=6a4e7cd8&is=6a4d2b58&hm=aa087c8cac46a22df7e4f926c100d47842fad5872c35cce7d74d8d1ae44fadd5&
+
+[2026-07-07T18:35:33.959000+00:00] buke5122 (id=1524121716219969587)
+    Nvm, asked my agent
+

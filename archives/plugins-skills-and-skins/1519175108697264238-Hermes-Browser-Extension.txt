@@ -530,3 +530,16 @@
     [embed] Release v0.1.10 · abundantbeing/hermes-browser-extension https://github.com/abundantbeing/hermes-browser-extension/releases/tag/v0.1.10
     [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
 
+[2026-07-07T15:39:31.632000+00:00] admund__ (id=1524077414609850450)
+    Will it work with Teams workspace browser?
+
+[2026-07-07T15:59:11.174000+00:00] jonkomet (id=1524082361967312946)
+    Not tested yet. 
+    If it’s real Edge/Chromium with extension support, probably yes.
+    If it’s the embedded Teams WebView/in-app browser, probably not currently. 
+    Hermes Browser Extension needs a normal Chromium extension runtime + side panel support.
+    [reply to admund__ msg=1524077414609850450]
+
+[2026-07-07T16:37:06.010000+00:00] admund__ (id=1524091903321309414)
+    Claude can do this so i hope also Hermes will.
+

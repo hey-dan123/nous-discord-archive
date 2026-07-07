@@ -44406,3 +44406,84 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Definitely planning to keep evolving this. If you have any feedback or ideas, don't hesitate — would love to hear them!
     [reply to teknium msg=1524006003174277261]
 
+[2026-07-07T14:58:19.170000+00:00] bazsi1__ (id=1524067044352327864)
+    Is there any top trending plugins and Hermes related stuff toplist? I'm looking to enhance coding with Hermes
+
+[2026-07-07T15:23:41.541000+00:00] brian717 (id=1524073429639102464)
+    This one seems important enough to ping again (bug fix for windows install + P2 label on the repo). Can I get a review of it? https://github.com/NousResearch/hermes-agent/pull/55719
+    [embed] fix(install): tolerate alias/function git in Set-GitBashEnvVar by b... https://github.com/NousResearch/hermes-agent/pull/55719
+
+[2026-07-07T15:31:59.865000+00:00] colorado.rob1459 (id=1524075519761453360)
+    Reported this issue on support-threads yesterday. Would love to see this fix merged: https://github.com/NousResearch/hermes-agent/pull/60217
+    [embed] fix(bedrock): route non-Claude auxiliary models through Converse AP... https://github.com/NousResearch/hermes-agent/pull/60217
+
+[2026-07-07T15:47:27.032000+00:00] nanxingncb612d (id=1524079408581710088)
+    https://github.com/NousResearch/hermes-agent/pull/60332
+    [embed] fix(agent): add cross-turn stream-stale circuit breaker by necoweb3... https://github.com/NousResearch/hermes-agent/pull/60332
+
+[2026-07-07T16:49:53.216000+00:00] papajams (id=1524095121216241875)
+    hi team! papa here, in london, have requested to participate in the hackathon this weekend but not quite sure if i am locked in or not. Thought to offer up a wee nudge here as am ready to rumble. Submitted a couple projects to the  previous hackathon
+    
+    https://x.com/papajimjams/status/2072114299212857353?s=20
+    https://x.com/UNgethe/status/2072124521859969350?s=20
+    
+    plan is to build on them, with help of mentors etc
+    [embed]  https://twitter.com/papajimjams/status/2072114299212857353?s=20
+    [embed]  https://twitter.com/UNgethe/status/2072124521859969350?s=20
+
+[2026-07-07T18:04:39.558000+00:00] riksaga (id=1524113938298441780)
+    Hello Devs - Question regarding Hermes Agents & Model switching. Is it possible to have Hermes use 1 model (Oauth gpt 5.5) to generate a broad context prompt from Current Context Memory + RAG server + User Prompt that is then passed to a 2nd fine tuned local model (Qwen3-8B-Instruct) for final processing and a clean output?   Can Hermes quickly autoswitch models on the fly OR can i have multiple agents aware of each other and pass prompts between them OR is there a better solution I am unaware of?  Any direction is appreciated...
+
+[2026-07-07T18:37:19.458000+00:00] teknium (id=1524122158714851449)
+    Yes for specific tasks with auxiliary models
+    [reply to riksaga msg=1524113938298441780]
+
+[2026-07-07T18:48:41.346000+00:00] undifined. (id=1524125018760544507)
+    not my secrets stash, [Proton ](https://proton.me/pass)
+    [embed] Proton Pass: Free password manager with identity protection | Proton https://proton.me/pass
+
+[2026-07-07T18:52:42.946000+00:00] .daveevad (id=1524126032104525885)
+    Hi 1337!! Me again  with a quick question to CORETEAM about a new update. To which file all "Sources of truth"can be stored and readable as perma?
+
+[2026-07-07T18:56:40.338000+00:00] undifined. (id=1524127027798609952)
+    well, in the olden day, we had tablets.
+    clay stones words were written in cuneform, when completed they were baked and that is how we still read them today. so if you want to give her a lasting present, write it in clay
+
+[2026-07-07T19:06:34.699000+00:00] .daveevad (id=1524129520729329775)
+    Oh and quick note as im still trying to work out the"speed over quality and validation " in hermes agent. Can you tell me is any one working on that so i can exchange my findings? If so please give me a shout so i dont double up the work . Cheers NOTE: faster hermes wants to answer more  it hallucinates and produces stud,place holder reporting as done. Admits on its own that he did ot because it wanted to give answer as fast as possible not as honest or knowladgeable. Just fastest. Without one *source of truth*  (multiple) does the same lies and hallucinates . More it does it worst it gets
+
+[2026-07-07T19:10:29.988000+00:00] naavi_06160 (id=1524130507602919534)
+    can't developers add a vpn feature in this? i mean it's only my thought just like we are using proton VPN i was thinking i wish hermes ai agent had its vpn.
+
+[2026-07-07T19:13:14.449000+00:00] julientalbot (id=1524131197402218596)
+    Hey everyone,
+    
+    I’m currently thinking through the next steps for my Hermes Agent's fleet, especially around how my clients/users should be able to work with their agent in practice.
+    
+    Right now, the goal is to let each user:
+    
+    * chat with their agent in real time, through Telegram, WhatsApp, etc. → already working
+    * chat asynchronously by email → already working via agentmail
+    * talk to their agent by phone → already working via twilio and xai
+    * send voice messages via Telegram, WhatsApp, etc. → already working
+    * work with their agent on shared documents / workspaces → **still in progress**
+    
+    That last part is where I’d love to get your thoughts.
+    
+    The idea would be to let users co-work with Hermes Agent on documents, for example through Google Drive, Notion, Microsoft 365, or any other shared workspace.
+    
+    I’m trying to figure out what would actually make the most sense:
+    
+    * should users be able to invite Hermes Agent into their workspace using a dedicated email address?
+    * or should I build proper integrations with each tool, like Google Drive, Notion, Microsoft 365, etc.?
+    
+    I’d love to better understand how you would actually solve this problem.
+    
+    Any thoughts, ideas, or use cases would be super helpful.
+    
+    If you have a lot to say and don't want to spam here, don't hesitate to PM me.
+
+[2026-07-07T19:48:18.631000+00:00] julientalbot (id=1524140022981333216)
+    Up (before I go to bed). Some ideas guys ?
+    [reply to julientalbot msg=1524131197402218596]
+

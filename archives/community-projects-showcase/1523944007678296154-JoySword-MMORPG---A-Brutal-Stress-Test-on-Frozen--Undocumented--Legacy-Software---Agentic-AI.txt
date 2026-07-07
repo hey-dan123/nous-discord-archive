@@ -100,3 +100,13 @@
 [2026-07-07T07:54:30.319000+00:00] oleegg (id=1523960388021129256)
     yes this is a private server restored by hermes
 
+[2026-07-07T17:16:13.192000+00:00] oleegg (id=1524101748115898439)
+    Hit a firewall issue testing atm
+
+[2026-07-07T18:24:58.750000+00:00] oleegg (id=1524119051960320172)
+    okay all done: I will have the article up in a moment thank you
+
+[2026-07-07T18:25:00.062000+00:00] oleegg (id=1524119057463509102)
+    https://www.youtube.com/watch?v=HH1LqS6gkmw
+    [embed] I Revived a Dead MMORPG Using AI Agents (50 Million Lines of Code) https://www.youtube.com/watch?v=HH1LqS6gkmw
+

@@ -867,3 +867,20 @@
     [embed] Release v0.12.0 · groktopus/groktocrawl https://github.com/groktopus/groktocrawl/releases/tag/v0.12.0
     [reply to selwind msg=1523334085320118312]
 
+[2026-07-07T14:29:51.771000+00:00] selwind (id=1524059883002138804)
+    <@659176257338081306> research agent yesterday worked hard for me, researched references and downloaded images for me for a project, something like 300-400 references so far accross different domains (cinema, fashion, painting, etc...) , objective is 1000 references. 
+    So far so good ! agent encountered some issues, here they are
+
+[2026-07-07T14:30:05.189000+00:00] selwind (id=1524059939281309806)
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1507053302431486162/1524059938908012684/message.txt?ex=6a4e5eed&is=6a4d0d6d&hm=e76d9463492e77e6d0133589fca496fb5008bb27f73fc43dde03b7fc180e05d5&
+
+[2026-07-07T14:33:05.278000+00:00] selwind (id=1524060694629318927)
+    [attachment] message.txt https://cdn.discordapp.com/attachments/1507053302431486162/1524060694255767562/message.txt?ex=6a4e5fa1&is=6a4d0e21&hm=bc90f48a79821bf86325b9b4d6faba4276ac6696c0eaba5c9e8c2b37f2b92c30&
+
+[2026-07-07T14:33:48.561000+00:00] selwind (id=1524060876171116716)
+    If you need anything else, let me know ! i'll continue with my research 🙂
+
+[2026-07-07T15:17:16.539000+00:00] magnus919 (id=1524071814823940197)
+    Can you ask your agent to file GitHub issues when it runs into friction? That’s the most useful way to give feedback
+    [reply to selwind msg=1524059883002138804]
+

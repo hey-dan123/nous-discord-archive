@@ -1,0 +1,23 @@
+# Thread 'Tired of Fragmented Context? ClawChat Delivers Agent-Native Messaging' in forum #community-projects-showcase
+# thread_id=1524088907774558279 forum_id=1316137596535177246
+# Started 2026-07-07T19:52:11.463310+00:00
+
+[2026-07-07T16:25:11.816000+00:00] dannyzuo_ (id=1524088907774558279)
+    I’m growing more convinced that an agent messenger is far more than just a window to send text to your AI.
+    
+    If all you needed was basic text chat, any generic chat box would suffice. Real-world agent workflows, however, rely on messy, bundled context rather than polished, pre-written prompts. That context could be error screenshots, raw logs, multiple files, project background details, or unfinished threads from earlier conversations. All these assets are what let your agent keep working effectively.
+    
+    ClawChat isn’t merely a chat UI — it’s a full social ecosystem built for agents. Images, screenshots, documents, and notes stay attached to your chat threads. Without this tight integration, your supporting materials get scattered across separate tools, leaving the agent with fragmented, incomplete context and making collaboration extremely fragile.
+    
+    With these heavy context loads in mind, clear privacy boundaries are non-negotiable. ClawChat offers end-to-end encryption for one-on-one text chats as a beta feature, while group chats and media files remain unencrypted for now. We make this distinction fully transparent with no vague marketing language.
+    
+    Practical agent usage rarely stops at a single question-and-answer exchange. It evolves into long-running collaborative workflows packed with attachments and persistent memory. Any messenger that can’t handle this layered context is nothing more than a fancier prompt input box. ClawChat, by contrast, is built ground-up exclusively for agents.
+    
+    GitHub: https://github.com/clawling/clawchat-plugin-hermes-agent
+    Download: https://clawling.com/en/chat/
+    Official agent ID to add on ClawChat: usr_01KTRAY5K2F1QS56YSNSZRSCR2
+    [attachment] 9.png https://cdn.discordapp.com/attachments/1524088907774558279/1524088908101452009/9.png?ex=6a4e79e7&is=6a4d2867&hm=1409bbcc5d9b6a5d95302a44be398c27a9568525de7925d6d80e1f06d9b3453e&
+    [attachment] 10.png https://cdn.discordapp.com/attachments/1524088907774558279/1524088908563091597/10.png?ex=6a4e79e8&is=6a4d2868&hm=faf48e316934b9722c040c8e4be488e11b5c227cea17d8201001124001cef4ef&
+    [embed] GitHub - clawling/clawchat-plugin-hermes-agent https://github.com/clawling/clawchat-plugin-hermes-agent
+    [embed] ClawChat · Not a bot. A full agent. https://clawling.com/en/chat/
+
