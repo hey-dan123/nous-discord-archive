@@ -1269,3 +1269,7 @@
 [2026-07-06T10:57:33.713000+00:00] markopaasila (id=1523644067848785970)
     Where does the score of each model come from?
 
+[2026-07-06T21:06:27.327000+00:00] gus003698 (id=1523797300932247572)
+    Wow, you are quick! Asked question and solution it there 🙂 Rising the bar - how does hr calculate USD cost? Openrouter sends in payload and shares logs (as they say), kilo just shares price list, others - dunno. But, that would be super cool if hr can calculate or extract from payload USDs and serve to Prometheus. Who knows how long and how good free models will be, and perhaps all we will hunt for cheap and good enough, instead of free?
+    [reply to shaf_2665 msg=1523534567229755564]
+

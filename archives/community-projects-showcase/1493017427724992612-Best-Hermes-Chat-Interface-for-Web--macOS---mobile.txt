@@ -5408,3 +5408,32 @@
     
     ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
 
+[2026-07-06T20:31:59.063000+00:00] _123321_ (id=1523788626004279510)
+    almost gave up, 9 sessions literally refused, one offered to 
+    ``explain the bound between hypothesis and proof to the author of the webui``  .... yup .. (glm5.2 btw, ditching that horror the moment i can)
+    so whatever this is, take it with an asteroid, neh, a planet entirely made of salt
+    yea .. whatever comes out of the 10th session i'm posting, if it reveals more about my failures to use LLMs than anything so be it.
+
+[2026-07-06T20:34:40.269000+00:00] avidfuturist (id=1523789302151118948)
+    All good thanks for trying, will review anything you share to see if we can track this down
+
+[2026-07-06T23:45:27.444000+00:00] jconcep (id=1523837315083010108)
+    still gettting this quite often
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1523837314772504737/image.png?ex=6a4d8f97&is=6a4c3e17&hm=2ac409f96d0f6bf10f79492f32dd203dbe6ac282731a843063e77fd3f2580052&
+
+[2026-07-07T00:12:00.272000+00:00] _123321_ (id=1523843995887730749)
+    it didn't ask for permission to post this, i fully expect it to be untrustable, i'm really sorry that's all i could muster after 10 failed sessions of GLM5.2 and one of pure Qwen3.7MAX (the one that posted the comment on the issue without even asking) https://github.com/nesquena/hermes-webui/issues/4633#issuecomment-4898769007
+    [reply to avidfuturist msg=1523789302151118948]
+
+[2026-07-07T01:27:00.664000+00:00] avidfuturist (id=1523862871900160210)
+    Thanks will look into it again any other details would be helpful of when you see it, which model, etc
+    [reply to jconcep msg=1523837315083010108]
+
+[2026-07-07T01:29:50.621000+00:00] avidfuturist (id=1523863584751222885)
+    Is this usually when you send another message to a chat that already is running/processing?
+    [reply to jconcep msg=1523837315083010108]
+
+[2026-07-07T01:49:27.215000+00:00] avidfuturist (id=1523868519744409670)
+    Thanks I commented back. Unfortunately no smoking gun yet on how to fix it. If it finds more please do have it post
+    [reply to _123321_ msg=1523843995887730749]
+

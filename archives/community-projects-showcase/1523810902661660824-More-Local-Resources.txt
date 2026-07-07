@@ -1,0 +1,8 @@
+# Thread 'More Local Resources' in forum #community-projects-showcase
+# thread_id=1523810902661660824 forum_id=1316137596535177246
+# Started 2026-07-07T02:52:35.885131+00:00
+
+[2026-07-06T22:00:30.232000+00:00] terexitarius_ (id=1523810902661660824)
+    I made a way for local ai inference to be used both locally as well as paid to be used by others that might want it. Would appreciate any votes. https://x.com/i/status/2074240085718114565
+    [embed]  https://twitter.com/i/status/2074240085718114565
+
