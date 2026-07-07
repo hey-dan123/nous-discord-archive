@@ -42,3 +42,7 @@
 [2026-07-07T05:28:28.665000+00:00] admund__ (id=1523923638980448307)
     Did you try Voxcpm2?
 
+[2026-07-07T12:03:34.088000+00:00] .voidhaze (id=1524023066731086027)
+    not yet, checking it out. Do you know how it performs compared to OmniVoice?
+    [reply to admund__ msg=1523923638980448307]
+

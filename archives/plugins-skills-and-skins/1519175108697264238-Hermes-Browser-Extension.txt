@@ -490,3 +490,43 @@
 [2026-07-06T00:25:19.469000+00:00] jonkomet (id=1523484960097304657)
     [attachment] hermes_browser_extension_video_screen_ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1523484959912886272/hermes_browser_extension_video_screen_ad.png?ex=6a4c476f&is=6a4af5ef&hm=87f338af62f3cd020aec209f1f9c62b95c71d04ff7ef8b04a3d83ea9641ee90b&
 
+[2026-07-07T14:18:36.315000+00:00] jonkomet (id=1524057049934336180)
+    **Hermes Browser Extension v0.1.10 is ready<:hermesbrowserextensionv1:1519892262438441110> **
+    
+    This is the supportability + integration bridge release for running Hermes from the browser panel without pretending the page is trusted input.
+    
+    **What changed**
+    
+    - **Companion Plugin MVP** — optional Hermes plugin with `browser_context_status`, `browser_get_context`, `browser_clear_context`, and `browser_event_log` tools, plus `pre_llm_call` / `post_tool_call` hooks.
+    - **Browser Context Protocol receipts** — browser context now carries stable hashes and “What Hermes saw” receipts so you can verify what was sent.
+    - **Sanitized context cache** — the plugin stores safe metadata only: scope, origin, section counts, redaction/truncation state, and bounded diagnostic events. No raw page text, cookies, bearer tokens, full URLs, or prompt payloads.
+    - **Truthful `/meta`** — new `/meta`, `/metadata`, and `/head` aliases summarize only metadata actually captured by Browser context and call out what was not captured.
+    - **Copy Diagnostics** — public-safe support reports with extension/browser/build/gateway/capability/model/context state, while stripping secrets and page content.
+    - **Session controls** — create/switch Browser sessions, copy session IDs, rename sessions, and generate cleaner first-message titles.
+    - **Model Scope Lock** — Browser model selection is scoped to the extension/session and does not mutate Hermes Desktop/global defaults.
+    - **UI polish** — loading skeletons, context-meter glow states, tool-activity fade-in, command-menu polish, and compact session actions.
+    
+    **Contributors**
+    
+    - PR #31 by `@iruzen-dono` — Companion Plugin context cache/tools/hooks groundwork.
+    - PR #32 by `@iruzen-dono` — `/meta` command + CSS polish groundwork.
+    - Release integration, supportability hardening, docs, packaging, session/model controls, and launch asset by `@abundantbeing`.
+    
+    Reviewed but not shipped in this release: PR #29 by `@bradlishman`, PR #30 by `@barteqpl`, and PR #33 by `@Doom-pixel-alt`.
+    
+    **Install / update**
+    
+    1. Download or build v0.1.10.
+    2. Open Chrome/Edge/Chromium `chrome://extensions`.
+    3. Enable Developer Mode.
+    4. Click **Load unpacked** and select the fresh `dist/` folder.
+    5. If an old unpacked card still shows v0.1.9, remove it and load the new v0.1.10 `dist/` folder.
+    
+    Release notes: https://github.com/abundantbeing/hermes-browser-extension/releases/tag/v0.1.10
+    Repo: https://github.com/abundantbeing/hermes-browser-extension
+    
+    Attach the v0.1.10 ad image: `assets/readme/hermes-browser-update-ad-v010.png`
+    [attachment] Browser_Extension_v0.1.10_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1524057050521276618/Browser_Extension_v0.1.10_Update_Ad.png?ex=6a4e5c3c&is=6a4d0abc&hm=ee1bb571be6d28323f044eb70e25ae5686bc558414140b9cca92acbf4acebf10&
+    [embed] Release v0.1.10 · abundantbeing/hermes-browser-extension https://github.com/abundantbeing/hermes-browser-extension/releases/tag/v0.1.10
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
+

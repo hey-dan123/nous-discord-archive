@@ -44261,3 +44261,148 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Happy to answer questions or onboard contributors. Cheers! 🚀
     [embed] GitHub - scwall/hermes-client-agent https://github.com/scwall/hermes-client-agent
 
+[2026-07-07T10:14:57.898000+00:00] kyssta69 (id=1523995735849435199)
+    **fix(memory): detect duplicate new_content in ambiguous replace (#60089)**
+    PR: <https://github.com/NousResearch/hermes-agent/pull/60147>
+    → MemoryStore.replace() now tells the model when its intended text already exists, preventing duplicate entries on ambiguous-match fallback.
+    
+    **fix(tool-guardrails): detect content repetition across varying argument sets (#60084)**
+    PR: <https://github.com/NousResearch/hermes-agent/pull/60148>
+    → Content-hash tracker catches loops where args vary but result is identical — including repeated multimodal results with unique base64 payloads.
+    
+    **fix(weixin): mitigate aiohttp connection pool poisoning (#60025)**
+    PR: <https://github.com/NousResearch/hermes-agent/pull/60149>
+    → force_close=True on TCPConnector + retry logic prevents stale keep-alive connections from poisoning the pool (aio-libs/aiohttp#12795).
+    
+    **fix(setup): raise Python upper bound to support 3.14 (#59877)**
+    PR: <https://github.com/NousResearch/hermes-agent/pull/60150>
+    → Bumps requires-python to <3.15 so users on Python 3.14 can install without 'requires a different Python' error.
+
+[2026-07-07T10:33:13.615000+00:00] godsboy7777 (id=1524000331619500052)
+    <@387972437901312000>, could you review this gateway session resume fix when you get a gap?
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/60138
+    Issue: https://github.com/NousResearch/hermes-agent/issues/60136
+    
+    This follows up on the merged `/sessions search <query>` work in #57685 and the earlier broader PR #57595.
+    
+    ## Problem
+    
+    `/sessions search <query>` correctly finds older sessions and shows a numbered list in gateway chats, but `/resume <number>` was still resolving the number against the default recent `/resume` list.
+    
+    So a user could see item 6 in search results, send:
+    
+    ```text
+    /resume 6
+    ```
+    
+    and get an out-of-range error or the wrong recent item.
+    
+    ## Fix
+    
+    The gateway now remembers the latest numbered session list per gateway session key.
+    
+    `/resume <number>` first resolves against that latest list, then falls back to the old bare `/resume` behaviour when no list is armed.
+    
+    The remembered choices are bounded to the 10 displayed rows and stored only after existing visibility filtering.
+    
+    Final resume authorisation is unchanged, including:
+    
+    * Continuation resolution
+    * Matrix room checks
+    * Owner checks
+    * Existing switch path
+    
+    ## Why it matters
+    
+    This makes old session recovery work directly from Telegram, WhatsApp, and other shared gateway slash-command platforms.
+    
+    Users no longer need to go to the VPS terminal, run:
+    
+    ```bash
+    hermes sessions browse
+    ```
+    
+    resume the old session there, and then hand it back to Telegram just because the session is older than the recent list.
+    
+    ## Validation
+    
+    * Manual VPS Telegram test confirmed the reported flow works
+    * Local targeted tests: `72 passed`
+    * Command used:
+    
+    ```bash
+    scripts/run_tests.sh tests/gateway/test_resume_command.py tests/hermes_cli/test_session_listing.py -q
+    ```
+    
+    * CI is green: `23 success`, `7 skipped`, `1 neutral`, `0 failed`
+    [attachment] session-resume-technical-breakdown.png https://cdn.discordapp.com/attachments/1491258766648283238/1524000331837734972/session-resume-technical-breakdown.png?ex=6a4e2769&is=6a4cd5e9&hm=e077734b26d46aec3fd12d6c5fd606b0c0ac08fd0b769b9ab32f97b85e9540db&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1524000332391256175/image.png?ex=6a4e2769&is=6a4cd5e9&hm=b10fcf45e01ff397b2db438f733110899acb980c85d88db463f44e90ab26dd41&
+    [embed] fix(gateway): resume numbered session search results by GodsBoy · ... https://github.com/NousResearch/hermes-agent/pull/60138
+    [embed] Gateway /resume <number> ignores /sessions search result numbering ... https://github.com/NousResearch/hermes-agent/issues/60136
+
+[2026-07-07T10:55:45.819000+00:00] teknium (id=1524006003174277261)
+    Interesting!
+    [reply to scwallito msg=1523985160259768351]
+
+[2026-07-07T10:56:50.283000+00:00] teknium (id=1524006273555759225)
+    Reviewing
+    [reply to vampyren msg=1523782300033093852]
+
+[2026-07-07T11:40:52.906000+00:00] miha.ilo (id=1524017357519978627)
+    https://github.com/NousResearch/hermes-agent/pull/60158 - Pin current model for quick access 
+    I change thinking levels often and I shouldnt search for my currently used model to change it .
+    [attachment] 60158-current-model-row.png https://cdn.discordapp.com/attachments/1491258766648283238/1524017357746344086/60158-current-model-row.png?ex=6a4e3744&is=6a4ce5c4&hm=a28d7452111ab312740db00173439cc390f040cefd9ea72c77e03cc18e51eaea&
+
+[2026-07-07T12:33:56.320000+00:00] vampyren (id=1524030709726056478)
+    Awesome, thank you! 
+    ps. love the infographic you create also! Any special tool/skill?
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1524030709151432825/image.png?ex=6a4e43b4&is=6a4cf234&hm=3fba32b73ba93cfdda074cb58ff7718ecd8bbf8c7c8eaa4e76307f34028282bf&
+    [reply to teknium msg=1524006273555759225]
+
+[2026-07-07T12:34:33.168000+00:00] teknium (id=1524030864277770320)
+    yes the baoyu-infographic skill builtin to hermes
+    [reply to vampyren msg=1524030709726056478]
+
+[2026-07-07T12:35:32.688000+00:00] vampyren (id=1524031113922875493)
+    ah that, used it a few time but i think i did not provide good enough prompt, my result are nothing like yours 🙂 have to improve my skill on it. Good to know its just me hehe
+    [reply to teknium msg=1524030864277770320]
+
+[2026-07-07T12:37:08.107000+00:00] kkurottal6611 (id=1524031514139033651)
+    https://github.com/NousResearch/hermes-agent/pull/58006 The Anthropic OAuth writer was doing os.replace then a post-hoc chmod, leaving a tiny TOCTOU window where tokens sat at default 0o644 umask and could be sniffed by other local users. Switched it to utils.atomic_json_write(mode=0o600) to force strict permissions right at creation.
+    [embed] fix(web-server): close OAuth token TOCTOU by writing 0o600 atomical... https://github.com/NousResearch/hermes-agent/pull/58006
+
+[2026-07-07T12:39:33.882000+00:00] teknium (id=1524032125563572304)
+    it needs gpt-image-2 image model and I made custom themes fwiw
+    [reply to vampyren msg=1524031113922875493]
+
+[2026-07-07T12:40:57.171000+00:00] vampyren (id=1524032474902954066)
+    ahh cool, thanks for the tips
+
+[2026-07-07T12:47:37.938000+00:00] papapino_vii (id=1524034155841585222)
+    Nuclear.
+
+[2026-07-07T12:54:36.267000+00:00] teknium (id=1524035910440714342)
+    What's your twitter account name if you have it
+    [reply to vampyren msg=1524030709726056478]
+
+[2026-07-07T13:09:26.721000+00:00] godsboy7777 (id=1524039645275488317)
+    hey <@387972437901312000> this is still an issue if you can check when you get a moment. did open PR to fix as needed.
+    
+    https://github.com/NousResearch/hermes-agent/pull/57090
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1524039644768108579/image.png?ex=6a4e4c06&is=6a4cfa86&hm=e475aa1fa303230864b3927c2b64a07a0a05b227ab7fd529bab7605d9cf93266&
+    [embed] fix(telegram): render media captions with MarkdownV2 by GodsBoy · ... https://github.com/NousResearch/hermes-agent/pull/57090
+    [reply to godsboy7777 msg=1522235764682002493]
+
+[2026-07-07T13:13:56.682000+00:00] realadolan (id=1524040777573994669)
+    https://github.com/NousResearch/hermes-agent/pull/60249 Added UI scaling control to the Appearance settings. Maybe one of the easiest wins
+    [embed] feat(desktop): add UI scale setting to appearance settings by Adola... https://github.com/NousResearch/hermes-agent/pull/60249
+
+[2026-07-07T14:07:53.121000+00:00] scwallito (id=1524054352183169029)
+    Thanks! 🙏
+    
+    Already made a few improvements since shipping — config now loads from .env and config.yaml instead of a separate state.json, much cleaner. 
+    
+    Definitely planning to keep evolving this. If you have any feedback or ideas, don't hesitate — would love to hear them!
+    [reply to teknium msg=1524006003174277261]
+

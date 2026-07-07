@@ -36,3 +36,7 @@
 [2026-07-06T13:41:41.631000+00:00] jabberwocky1989 (id=1523685373010509914)
     Good morning! Just curious, you say this has been replaced by the Hermes MoA, but I don't see any kind of adversarial review function. Are you intending to keep up polygnosis  in the meantime, or do you expect this feature to eventually be added to Hermes MoA natively?
 
+[2026-07-07T14:16:17.298000+00:00] d0ggyw00f (id=1524056466854641765)
+    I will be yes, to be fair that is right I haven't checked properly
+    [reply to jabberwocky1989 msg=1523685373010509914]
+

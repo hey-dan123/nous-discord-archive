@@ -2032,3 +2032,32 @@
     https://x.com/SteveSchoettler/status/2074344120135590245?s=20
     [embed]  https://twitter.com/SteveSchoettler/status/2074344120135590245?s=20
 
+[2026-07-07T12:18:07.849000+00:00] _voscko_ (id=1524026731550478386)
+    This was one ride.. a lot of PR's streamed in, which is nice!
+    
+    Maybe some additional info:
+    
+    This release hardens the core LCM promise even further: bounded active context, while the recoverable source history stays intact.
+    
+    What changed:
+    
+    • 📦 Payload and storage safety
+    Externalized payloads, persisted Hermes tool outputs, ignored-message drops, redacted durable retries and JSONL import/export paths are now handled more defensively.
+    
+    • 🩺 Better operator visibility
+    "lcm_inspect", compression no-op status and compaction telemetry give operators more ways to see what LCM is doing without having to poke at internals.
+    
+    • 🧯 Stronger guardrails
+    Lifecycle/DAG writes are serialized more safely, frontiers stay monotonic, payload paths are contained, redaction is ReDoS-safe, summary spend is bounded, and future-schema rollback is protected.
+    
+    • ⚙️ Performance and validation
+    Hot-path benchmarks, preset validation and ruff CI help catch regressions earlier instead of letting small cracks turn into weird runtime ghosts.
+    
+    • 🧩 WS5 engine split
+    The big architectural one: the engine decomposition is now completed and documented. The internals are split into cleaner mixins and helper modules, while the public LCM surface stays stable.
+    
+    Massive credit to <@427613574995771414>  for driving this and keeping the release tight.
+    
+    Bounded context, unbounded memory. Nothing is ever lost.
+    [reply to w0lfgang88 msg=1523902995513737278]
+

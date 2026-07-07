@@ -253,3 +253,6 @@
     I’ll post updates in here when I’m not in the vc working on it
     [reply to vj_mekanix msg=1517716245938569528]
 
+[2026-07-07T14:12:39.786000+00:00] iam_rxpii (id=1524055554543058984)
+    Alright so ive been a bit busy with learning some other things in unreal but ill have hermes go through our notes and update the repo soon
+
