@@ -1,0 +1,25 @@
+# Thread 'skill-retriever — semantic skill search for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1524287131168805014 forum_id=1485392832154832906
+# Started 2026-07-08T08:29:14.525656+00:00
+
+[2026-07-08T05:32:51.956000+00:00] alto69 (id=1524287131168805014)
+    Tired of your LLM scanning the same 100 skill names every turn? I built a Hermes plugin that adds a semantic retrieval layer on top of the OOTB skill system.
+    
+    How it works:
+    
+    1,198 skills (998 community corpus + your local Hermes skills) organized into a 10,000-category capability taxonomy (extracted from AgentSkillOS)
+    On each query, it multi-level LLM-navigates the tree and injects only the top-5 relevant skills as hints — zero system prompt bloat
+    Borrows your existing Hermes LLM — no extra API keys needed
+    Why it's not just the OOTB catalog:
+    
+    OOTB: flat list every turn, all skills visible, ~1-5K tokens burned always
+    This: hints only when relevant, scales to 10K+ skills, finds non-obvious matches via taxonomy traversal
+    The tradeoff is ~1-3 cheap LLM calls per turn vs constant system prompt overhead. For anyone with 50+ skills, the tree wins.
+    
+    MIT, works as a pre_llm_call plugin, 40 tests, install in one command:
+    
+    git clone https://github.com/ChonSong/skill-retriever.git
+    cd skill-retriever && bash scripts/install.sh && hermes gateway restartCopy
+    The community corpus was pre-scanned for safety — zero flagged.
+    [embed] GitHub - ChonSong/skill-retriever: AgentSkillOS-powered semantic sk... https://github.com/ChonSong/skill-retriever.git
+

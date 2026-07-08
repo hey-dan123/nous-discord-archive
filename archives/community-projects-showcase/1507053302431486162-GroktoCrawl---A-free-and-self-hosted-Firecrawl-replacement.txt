@@ -895,3 +895,21 @@
     [embed] This Is The Way Mandalorian https://klipy.com/gifs/this-is-the-way-mandalorian-2
     [reply to selwind msg=1524175889007378562]
 
+[2026-07-08T03:12:22.041000+00:00] hurricane041696 (id=1524251773542600867)
+    So there is deep-research or there is not. Because I got this chain of thought when requested deep research (finished under 10 seconds): "The user is right to question this. The groktocrawl agent on this instance produced a mediocre result — it didn't do "deep research" in the sensethat a native GPT/Gemini deep research would. It scraped one accessible source and reported gaps.
+    The user's point about 5 minutes for Gemini/GPT deep research is accurate — those services do multi-step research with many queries, sourcesynthesis, and verification. The groktocrawl agent on this self-hosted instance is different — it's a local service with its own LLM backend, andthe quality depends on that backend's capabilities and the search engines available (which are crippled behind Proton VPN).
+    I should be honest about this. The research is "done" in the sense that the groktocrawl job completed, but it's not the quality of a native deepresearch. I should offer to use native tools (web_search + web_extract + LLM synthesis) for a deeper result."
+
+[2026-07-08T04:48:50.193000+00:00] magnus919 (id=1524276050811682982)
+    Yeah I’d like it to be better, too. I’ll definitely be working on this.
+    [reply to hurricane041696 msg=1524251773542600867]
+
+[2026-07-08T05:03:42.986000+00:00] magnus919 (id=1524279795456802866)
+    Figured it out. The code for actual deep research is already in there but it’s not wired up well.
+    [reply to hurricane041696 msg=1524251773542600867]
+
+[2026-07-08T05:09:26.913000+00:00] magnus919 (id=1524281237991329862)
+    https://github.com/groktopus/groktocrawl/issues/418
+    [embed] feat(agent): add search-type flag for research depth control · Iss... https://github.com/groktopus/groktocrawl/issues/418
+    [reply to hurricane041696 msg=1524251773542600867]
+

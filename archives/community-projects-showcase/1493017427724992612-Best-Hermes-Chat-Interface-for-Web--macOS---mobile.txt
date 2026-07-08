@@ -5457,3 +5457,20 @@
     Native Android UI that connects into WebUI, need feedback to improve
     [embed] Release Hermex Android v0.11.2-preview · ComputerByte/hermex-android https://github.com/ComputerByte/hermex-android/releases/tag/v0.11.2-preview
 
+[2026-07-08T06:09:49.379000+00:00] frostmage10 (id=1524296431714701372)
+    Who is the dev?
+    [reply to avidfuturist msg=1524209768258994377]
+
+[2026-07-08T06:09:55.852000+00:00] frostmage10 (id=1524296458864693331)
+    This is promising
+
+[2026-07-08T06:12:09.154000+00:00] avidfuturist (id=1524297017973801062)
+    The dev is a redditor. I’ve already had several folks test it with positive feedback so far
+    [reply to frostmage10 msg=1524296431714701372]
+
+[2026-07-08T06:35:27.390000+00:00] frostmage10 (id=1524302882600521799)
+    Need it to be more polished
+
+[2026-07-08T06:39:04.824000+00:00] frostmage10 (id=1524303794584948846)
+    I see the android slop leak ngl
+

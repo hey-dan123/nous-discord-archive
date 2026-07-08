@@ -55,3 +55,7 @@
 [2026-07-07T08:54:11.928000+00:00] enderxen (id=1523975410377822239)
     Damn thanks for this plugin since web backend behavior changed recently in Hermes Agent, could finally provide functionnality without self-hosting humongous firecrawl ..
 
+[2026-07-08T07:44:17.376000+00:00] the.chaos.goblin (id=1524320205017190441)
+    I'm so glad it's useful! 😄
+    [reply to enderxen msg=1523975410377822239]
+

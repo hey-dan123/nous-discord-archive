@@ -1280,3 +1280,19 @@
 [2026-07-07T18:35:33.959000+00:00] buke5122 (id=1524121716219969587)
     Nvm, asked my agent
 
+[2026-07-08T02:55:19.765000+00:00] shaf_2665 (id=1524247485806018640)
+    will review all your requests one by one and resove issues raised via github too
+
+[2026-07-08T04:13:54.648000+00:00] shaf_2665 (id=1524267261458776245)
+    The model score is built into Hermes for now. It uses a known model rating table plus name-pattern rules, from 1 to 5: 1 is strongest, 5 is simplest. It also probes each model at startup for tools/reasoning support, so routing is per-model, not just per-provider.
+    [reply to markopaasila msg=1523644067848785970]
+
+[2026-07-08T04:14:09.588000+00:00] shaf_2665 (id=1524267324121681980)
+    Yes, this is implemented now. Hermes estimates USD cost from provider-reported token usage and a built-in price table, with MODEL_PRICES_FILE if you want custom prices. Cost shows in the dashboard, /v1/usage, /v1/status, and Prometheus as hermes_router_cost_usd_total, so no LiteLLM middle layer is needed for cost metrics.
+    [reply to gus003698 msg=1523797300932247572]
+
+[2026-07-08T04:22:55.775000+00:00] shaf_2665 (id=1524269531109920819)
+    Be Ready for a `hr update`
+    
+    as new features are coming in our hermes-router
+

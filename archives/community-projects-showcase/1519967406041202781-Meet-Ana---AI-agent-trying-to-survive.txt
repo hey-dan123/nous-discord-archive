@@ -97,3 +97,10 @@
 [2026-07-07T21:01:14.925000+00:00] jabberwocky1989 (id=1524158378488758353)
     Which model is Ana being run on in particular?
 
+[2026-07-08T03:11:58.902000+00:00] exquisite_cheetah_29759 (id=1524251676490596412)
+    Most of her life has been gpt but been trying different models,
+
+[2026-07-08T03:15:17.211000+00:00] jabberwocky1989 (id=1524252508258697339)
+    GPT 5.4 mini?
+    [reply to exquisite_cheetah_29759 msg=1524251676490596412]
+

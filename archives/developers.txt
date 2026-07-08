@@ -44810,3 +44810,44 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     PR : https://github.com/NousResearch/hermes-agent/pull/60632
     [embed] docs(i18n): correct Python support to 3.11-3.13 in translated CONTR... https://github.com/NousResearch/hermes-agent/pull/60632
 
+[2026-07-08T02:47:07.544000+00:00] kyssta69 (id=1524245421281771520)
+    **1. fix(desktop): register /compress command** -> <https://github.com/NousResearch/hermes-agent/pull/60644>
+      Desktop app could not invoke /compress — command.dispatch handler was missing
+    
+    **2. fix(aux): forward max_tokens to all providers** -> <https://github.com/NousResearch/hermes-agent/pull/60645>
+      max_tokens silently dropped for OpenRouter/OpenAI/Copilot/custom providers
+    
+    **3. fix(moa): trim reference model context to fit its own window** -> <https://github.com/NousResearch/hermes-agent/pull/60646>
+      MoA reference models with smaller context windows than the aggregator would hard-400 silently
+    
+    **4. fix(whatsapp): use windows_detach_popen_kwargs** -> <https://github.com/NousResearch/hermes-agent/pull/60647>
+      WhatsApp bridge spawned Node.js with a visible console window on Windows, flashing and crash-looping
+
+[2026-07-08T04:14:44.778000+00:00] flownium (id=1524267471719235694)
+    https://github.com/NousResearch/hermes-agent/pull/60675
+    [embed] fix: recover truncated file tool arguments by itsflownium · Pull R... https://github.com/NousResearch/hermes-agent/pull/60675
+
+[2026-07-08T04:14:52.188000+00:00] flownium (id=1524267502799028295)
+    https://github.com/NousResearch/hermes-agent/pull/60664
+    [embed] fix: include final reasoning in run events by itsflownium · Pull R... https://github.com/NousResearch/hermes-agent/pull/60664
+
+[2026-07-08T04:15:46.016000+00:00] flownium (id=1524267728570024096)
+    https://github.com/NousResearch/hermes-agent/pull/60658
+    [embed] fix: show Copilot ACP account status by itsflownium · Pull Request... https://github.com/NousResearch/hermes-agent/pull/60658
+
+[2026-07-08T04:15:50.364000+00:00] flownium (id=1524267746806726748)
+    https://github.com/NousResearch/hermes-agent/pull/60657
+    [embed] fix: wire Discord voice input on connect by itsflownium · Pull Req... https://github.com/NousResearch/hermes-agent/pull/60657
+
+[2026-07-08T07:20:15.294000+00:00] evelynburgers (id=1524314156486885407)
+    Adds route-level webhook payload filtering and optional route scripts so broad webhook streams can be ignored, transformed, or narrowed before Hermes wakes the agent or performs deliver_only delivery.
+    
+    This addresses cases like Todoist/GitHub webhooks where the provider sends many event updates but only specific payload states should trigger Hermes.
+    
+    https://github.com/NousResearch/hermes-agent/pull/57544
+    [embed] feat(gateway): add webhook payload filters and route scripts by eve... https://github.com/NousResearch/hermes-agent/pull/57544
+
+[2026-07-08T07:36:57.311000+00:00] loongfay (id=1524318359250927748)
+    Hi, <@387972437901312000> , would you please have a look for this PR: https://github.com/NousResearch/hermes-agent/pull/47303/
+    [embed] feat(Yuanbao)  optimizes media resource processing speed: parallel ... https://github.com/NousResearch/hermes-agent/pull/47303/
+
