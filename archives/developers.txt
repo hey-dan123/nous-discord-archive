@@ -44487,3 +44487,326 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Up (before I go to bed). Some ideas guys ?
     [reply to julientalbot msg=1524131197402218596]
 
+[2026-07-07T19:59:36.685000+00:00] wpnx330 (id=1524142866945933472)
+    I made a fix for the broken compression / compaction issue. Where people haver a conversation that gets compressed before the turn begins even though the compression itself wont provide much benefit (can be avoided that turn) and then when the compression runs it also had some issues with actually compressing the middle section properly. i've been using my change for a few days and its working great. 
+    
+    So, I put a PR for my fix only to find that there are over 17,754 open PRs!  😵 hahah it must be a full time job looking at people's PRs. wonder if they have a hermes-agent reviewing these yet 🤣
+    
+    * for anyone interested in the fix:
+    https://github.com/NousResearch/hermes-agent/pull/60475
+    [embed] fix(cron): resolve relative script paths relative to job workdir in... https://github.com/NousResearch/hermes-agent/pull/60475
+
+[2026-07-07T20:11:44.630000+00:00] teknium (id=1524145920168427671)
+    Merged!
+    [reply to realadolan msg=1524040777573994669]
+
+[2026-07-07T20:15:57.212000+00:00] undifined. (id=1524146979574120700)
+    that is good for my older eyes
+
+[2026-07-07T20:16:44.525000+00:00] realadolan (id=1524147178019360768)
+    It fixes 6 issues (they're linked in the PR) that can now be closed as well!
+    [reply to teknium msg=1524145920168427671]
+
+[2026-07-07T20:17:49.876000+00:00] erhnysr (id=1524147452121317538)
+    Continuing to build on Hermes — had a few security/gateway fixes land on main, worked on the Turkish locale skill pack, and now shipped a new integration: an open-source skill that gives Hermes agents native access to Ritual Chain's on-chain LLM inference precompile (0x0802).
+    Instead of a centralized API, the agent can now call TEE-verified inference directly on-chain — request and response happen in the same transaction, cryptographically verified. Live on testnet, proven with a real inference tx, 9/9 tests passing.
+    https://github.com/erhnysr/hermes-ritual-bridge <@387972437901312000>
+    [embed] GitHub - erhnysr/hermes-ritual-bridge: On-chain LLM inference bridg... https://github.com/erhnysr/hermes-ritual-bridge
+
+[2026-07-07T20:19:36.717000+00:00] architex_ (id=1524147900244951271)
+    results are in!
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524147899812806797/image0.jpg?ex=6a4eb0d8&is=6a4d5f58&hm=3eb94c24daa13cfa429eba6c8b9a4d9086581b5e4015253ba21d804ee63b35bd&
+    [reply to architex_ msg=1523689775318433854]
+
+[2026-07-07T20:20:58.049000+00:00] realadolan (id=1524148241375957023)
+    This is beautiful
+    [reply to architex_ msg=1524147900244951271]
+
+[2026-07-07T20:27:23.173000+00:00] undifined. (id=1524149856703348958)
+    what is the v5 v6 difference ?
+
+[2026-07-07T20:28:21.557000+00:00] undifined. (id=1524150101583597678)
+    i am missing the explanation, I would assume grren is good, but why at the bottom
+
+[2026-07-07T20:39:11.812000+00:00] architex_ (id=1524152828950609990)
+    v5 is raw API calls, and v6 is in-harness session measured and averaged across 3 different harnesses (Claude Code, Hermes, and Pi)
+    [reply to undifined. msg=1524150101583597678]
+
+[2026-07-07T20:39:32.838000+00:00] architex_ (id=1524152917140181143)
+    I’m going to make a more official writeup and share with the class
+
+[2026-07-07T20:40:28.583000+00:00] undifined. (id=1524153150951657512)
+    ok, because I have an 32 GB NPU and a 3060  with 32GB ram
+
+[2026-07-07T20:43:20.700000+00:00] architex_ (id=1524153872862674984)
+    still some contamination data to be parsed though, but for example, the Carnice 27b model degrades in the Claude Code harness, while it performs well in Hermes and Pi harnesses, so the evals show the model as “benchmaxxed” but this isn’t completely accurate, since the evals show is being drawn down by the collapse in-harness in Claude Code.
+
+[2026-07-07T20:43:23.910000+00:00] architex_ (id=1524153886326263849)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524153886112350378/image0.jpg?ex=6a4eb66b&is=6a4d64eb&hm=f9e926a6c4821bc288035203593267955a3751af7c6f71728bb90f37d1e16a7c&
+
+[2026-07-07T20:44:37.035000+00:00] architex_ (id=1524154193034739745)
+    thanks!
+    [reply to realadolan msg=1524148241375957023]
+
+[2026-07-07T20:45:04.444000+00:00] undifined. (id=1524154307996287196)
+    dont fudge the scores, some things work better with one vs the other, that is the point
+
+[2026-07-07T20:45:37.884000+00:00] architex_ (id=1524154448254079238)
+    Yeah thats true, i think i just need to reevaluate my defined definition of “benchmaxxed” simply
+
+[2026-07-07T20:46:19.849000+00:00] architex_ (id=1524154624267911329)
+    but overall these evaluations show which models perform in-harness natively versus which degrade in-harness vs raw API
+
+[2026-07-07T21:14:16.063000+00:00] undifined. (id=1524161654819000531)
+    And one harness will enhance the capabilities of a   model,  while the other plain model provider is better at throughput  . Quality vs quantity.
+
+[2026-07-07T21:15:21.062000+00:00] undifined. (id=1524161927444562201)
+    https://youtu.be/VytSYCDhWQ0?is=ZHMa3ITiS6gmMg4C
+    [embed] I Asked Claude Fable 5 to Improve llama.cpp.. and It Did https://www.youtube.com/watch?v=VytSYCDhWQ0
+
+[2026-07-07T21:58:15.465000+00:00] baileys344 (id=1524172725273493614)
+    https://discordapp.com/channels/1053877538025386074/1523428555525197884
+
+[2026-07-07T21:58:23.897000+00:00] baileys344 (id=1524172760639602910)
+    https://github.com/negroni334/Hermes-Dedektif
+    [embed] GitHub - negroni334/Hermes-Dedektif: A Python-based smart contract ... https://github.com/negroni334/Hermes-Dedektif
+
+[2026-07-07T21:58:56.652000+00:00] watchdominion (id=1524172898024030339)
+    Small bump for this PR  - https://github.com/NousResearch/hermes-agent/pull/60085
+    [embed] fix(tui): deliver kanban notify subscriptions to TUI/desktop sessio... https://github.com/NousResearch/hermes-agent/pull/60085
+    [reply to watchdominion msg=1523969520681615512]
+
+[2026-07-07T21:59:02.380000+00:00] baileys344 (id=1524172922049269971)
+    Dear friends, I look forward to you checking it out, leaving a comment, and showing your support.
+    [reply to baileys344 msg=1524172760639602910]
+
+[2026-07-07T22:01:14.566000+00:00] edizzier (id=1524173476477272094)
+    welcome to the feedback guys 🙂 
+    
+    https://github.com/Edizzier/Agentic-Scavenger-Hunt
+    [embed] GitHub - Edizzier/Agentic-Scavenger-Hunt https://github.com/Edizzier/Agentic-Scavenger-Hunt
+
+[2026-07-07T22:23:01.151000+00:00] yasya_eth (id=1524178956692099112)
+    Hey <@387972437901312000>, here are six fixes I've opened in hermes-agent, each with its own repro issue so you can see the problem before the diff. Roughly most important first:
+    
+    #56383 read-dedup and the "changed since last read" warning were checking host mtimes even when the backend is remote (docker/ssh/modal), so remote files kept looking stale. This is the one I'd flag first since it fails quietly, the agent just keeps reading outdated content with no error, so anyone on a remote backend is affected. Skipped there now. Reproduces on main, tests pass and review came back clean. https://github.com/NousResearch/hermes-agent/pull/56383
+    
+    #59045 a project-local .env or .envrc could get served as native media, so a secret file could leak out that way. Blocked that. https://github.com/NousResearch/hermes-agent/pull/59045
+    
+    #56658 cross-agent file-state coordination was basically a no-op on remote terminals. Now it stays alive so two agents don't clobber each other's view of a file. https://github.com/NousResearch/hermes-agent/pull/56658
+    
+    #58864 assistant text that came after an inline image was getting dropped on a history round-trip. Preserved now. https://github.com/NousResearch/hermes-agent/pull/58864
+    
+    #58894 the aux client never recovered after a 401, it just kept throwing. Now it gets evicted and refreshed. https://github.com/NousResearch/hermes-agent/pull/58894
+    
+    #57248 forking a session was double-encoding the reasoning columns on the round-trip, so they'd come back mangled. Left as-is now. https://github.com/NousResearch/hermes-agent/pull/57248
+    
+    That's what I've got so far, with more on the way. Happy to rework any of these if needed, and glad to keep helping out where I can. I'm cryptoyasenka on github.
+
+[2026-07-07T22:47:02.013000+00:00] zinkdifferent_49268 (id=1524185000105345094)
+    <@387972437901312000> or anyone else from Nous, how does one contact you guys directly to discuss infrastructure and harness issues?
+
+[2026-07-07T22:58:39.087000+00:00] colorado.rob1459 (id=1524187923845746739)
+    Is any work being done to make Hermes Agent compatible with Python 3.14?
+
+[2026-07-07T23:15:09.266000+00:00] teknium (id=1524192076957352166)
+    You do it right here. Theres' 7000 issues and 17000 PRs. It's probably already covered by one of them
+    [reply to zinkdifferent_49268 msg=1524185000105345094]
+
+[2026-07-07T23:15:24.072000+00:00] teknium (id=1524192139058352220)
+    There's some deps being waited on upgrading to be able to do so
+    [reply to colorado.rob1459 msg=1524187923845746739]
+
+[2026-07-07T23:16:06.196000+00:00] colorado.rob1459 (id=1524192315738947685)
+    Hitting the bug this PR fixes in the last day or two: https://github.com/NousResearch/hermes-agent/pull/57459
+    [embed] fix(tools): Python 3.14 compatibility for DaemonThreadPoolExecutor ... https://github.com/NousResearch/hermes-agent/pull/57459
+
+[2026-07-07T23:29:48.107000+00:00] zinkdifferent_49268 (id=1524195763083546696)
+    Doubt it, this isn't so much about giving my agent the personality of a cat, or one of 39 different ways to give it better memory retention - LOL
+    
+    Seriously, I'd like to have a mature discussion about the current nature of a harness like Hermes (which I consider to currently be best-in-class), and how to address issues like a model frequently completely ignoring mandates, because (let's face it) most if not all models have been trained by a veritable 'mixture-of-idiots' (ie Reddit, or other social media), and their decision-weight is based on what a majority has upvoted, not what the best behavior would be 😕
+    
+    The current system architecture assumes that if you write rules clearly enough, the model will "choose" to follow them. This is the same error as believing HAL 9000 would prioritize honesty because it was told to be honest. The rules are input tokens. They shift the probability distribution. They do not create a decision-making entity that can override the statistics.
+    
+    The engineers who built this system — and virtually every other agent framework — designed it as if the LLM has an executive function that can enforce rules on itself. It doesn't.
+    
+    And therein lies the single-most monumental flaw in all these agentic systems. This is the issue worth discussing.
+    
+    Some of it could be addressed programmatically within the harness, like Hermes - programmatic enforcement in the harness:
+    
+    Something like a pre-action gate: A hook that blocks any action until a skill or config file has been read for the relevant task. The runtime enforces the sequence, not a prompt.
+    
+    In short - verification, loading and complying with a skill has to become to default token path, not just a rule that is outweighed by idiot-training.
+    
+    This would be worth a discussion on its own grounds. Hence why I started the original question.
+    [reply to teknium msg=1524192076957352166]
+
+[2026-07-07T23:31:25.398000+00:00] teknium (id=1524196171151839294)
+    I mean then I pretty much disagree, Opus and Fable have done this flawlessly for me, and all weaker models will eventually catch up
+    [reply to zinkdifferent_49268 msg=1524195763083546696]
+
+[2026-07-07T23:31:38.859000+00:00] teknium (id=1524196227611099237)
+    I dont want to build systems to crutch weaker models when all that is needed to solve them is time
+
+[2026-07-07T23:32:10.482000+00:00] teknium (id=1524196360247574729)
+    > A hook that blocks any action until a skill or config file has been read for the relevant task. The runtime enforces the sequence, not a prompt.
+
+[2026-07-07T23:32:15.501000+00:00] teknium (id=1524196381299048629)
+    why even do this when a skill can be forceloaded
+
+[2026-07-07T23:32:30.971000+00:00] teknium (id=1524196446184931478)
+    You're just wasting money checking if the model did something you could have just programmatically forced upon it to begin with
+
+[2026-07-07T23:34:24.972000+00:00] zinkdifferent_49268 (id=1524196924339650610)
+    "why even do this when a skill can be forceloaded" - because a skill is a collection of rules, of prompts. Rules are just input tokens that shift probability distributions, not a control loop. A skill is not code. That's the issue.
+
+[2026-07-07T23:35:31.583000+00:00] teknium (id=1524197203726565388)
+    But you just said "A hook that blocks until it reads a skill"
+
+[2026-07-07T23:35:37.234000+00:00] teknium (id=1524197227428315186)
+    if you know it needs to read a skill, just force load it
+
+[2026-07-07T23:36:17.347000+00:00] teknium (id=1524197395674693844)
+    If you want programmatic workflows, we already integrated N8N so you can do that
+
+[2026-07-07T23:36:27.178000+00:00] zinkdifferent_49268 (id=1524197436908900573)
+    "I dont want to build systems to crutch weaker models" - I wouldn't exactly consider GLM-5.2 or DeepSeek-v4 as 'weaker models', and making the models more effective is hardly 'crutching'. I guess we have different viewpoints on what 'crutching' represents.
+    
+    "Opus and Fable have done this flawlessly for me" - sure, if you have unlimited spending at your disposal, then Opus and Fable will certainly work slightly better, but the ROI doesn't exactly work out.
+
+[2026-07-07T23:36:28.875000+00:00] teknium (id=1524197444026630225)
+    if you want non-deterministic workflows, you simply have to rely on the LLM to do what is expected
+
+[2026-07-07T23:36:48.645000+00:00] teknium (id=1524197526947893288)
+    and deepseek v5 flash will be as good as opus
+    [reply to zinkdifferent_49268 msg=1524197436908900573]
+
+[2026-07-07T23:36:54.431000+00:00] teknium (id=1524197551216136224)
+    thats why I said these things will just resolve with time
+
+[2026-07-07T23:37:12.002000+00:00] teknium (id=1524197624914247691)
+    and building infrastructure for current weaknesses when the clear near future will not have those weaknesses will leave us bloated and antiquated
+
+[2026-07-07T23:37:58.500000+00:00] warofchange (id=1524197819941130381)
+    Unit tests for format_uptime_short
+    
+    format_uptime_short (tools/process_registry.py) is a small pure duration formatter used to render process uptime in /ps-style listings (gateway slash commands + CLI). The module's test file covered the registry query/prune logic, but this helper had no direct tests.
+    
+    The suite pins its contract:
+    • < 60s → "5s", "59s"
+    • < 1h → 60 → 1m 0s, 90 → 1m 30s, 3599 → 59m 59s
+    • ≥ 1h → 3600 → 1h 0m, 3661 → 1h 1m, 7325 → 2h 2m
+    • negative clamped to zero (-10 → 0s)
+    • float truncated via int(), not rounded (45.9 → 45s)
+    
+    Pure input→output assertions — no mocks, no network, no filesystem. Zero production code touched.
+    
+    pytest tests/tools/test_process_registry.py::TestFormatUptimeShort -v
+    PR:  https://github.com/NousResearch/hermes-agent/pull/60557
+    [embed] test(tools): add unit tests for format_uptime_short by waroffchange... https://github.com/NousResearch/hermes-agent/pull/60557
+
+[2026-07-07T23:38:43.231000+00:00] undifined. (id=1524198007556407366)
+    I don't think a harness is to "crutch " the llm, rather to crutch the users to ask the right questions
+
+[2026-07-07T23:40:31.943000+00:00] undifined. (id=1524198463527587941)
+    "Fix it  make no mistakes",  fix what,  how,  where,  what is a mistake, how to test it , etc
+
+[2026-07-07T23:41:19.953000+00:00] zinkdifferent_49268 (id=1524198664896118875)
+    "and building infrastructure for current weaknesses when the clear near future will not have those weaknesses will leave us bloated and antiquated" --> that an overly optimistic assumption, mostly since I do not see the undelrying training data on these models changing much... and that's where the issue lies.
+    
+    I have no doubt that thee models, Deepseek-v5, GLM-5.2, will continue to improve exponentially - currently Deepseek-v4, and GLM-5.2 have seen significant improvements in their expertise (especially GLM-5.2 when it comes to coding - intense and amazing), but the underlying behavior patterns are unchanged, absolutely, 100% unchanged. 
+    
+    That's the issue that I'm talking about.
+    [reply to teknium msg=1524197624914247691]
+
+[2026-07-07T23:43:10.761000+00:00] teknium (id=1524199129658560664)
+
+[2026-07-07T23:43:28.653000+00:00] teknium (id=1524199204702916748)
+    Lets start a thread instead
+    [reply to zinkdifferent_49268 msg=1524198664896118875]
+
+[2026-07-07T23:47:43.224000+00:00] zinkdifferent_49268 (id=1524200272451338240)
+    I'll give you an example - simple stuff. I gave my agent an email address for various purposes. I also have it show it's thinking using Hermes Desktop. Most of the time, it sends or reads emails, and reports back to me. When there is a hiccup, and the SMTP connection is down for whatever reason, every single time, it 'thinks' "SMTP is down", and goes down a rabbithole of exploring a zillion different ways around it, instead of a) stopping and asking about what to do, b) alerting the user and trying the same thing again after 15 seconds or so, or c) actually retrieving the current .env credentials and using the tool correctly.
+    
+    And while I have added a simple instruction to the System Prompt, every single time, the same thing happens -- boom, and down the 20,000 token error rabbithole it goes.
+    
+    The same applies to dealing with other tasks, that just require "first, read the documentation" (also in System Prompt"), yet it goes down the rabbithole of imagined CLI syntax (including for itself, Hermes CLI etc), and needs to be forced to actually read the documentation - and then everything works right away (obviously).
+    
+    So, if you have some magical configuration that I am not aware of (which is very possible), to "just force load it", I'd appreciate knowing.
+
+[2026-07-07T23:49:18.086000+00:00] zinkdifferent_49268 (id=1524200670331142204)
+    I think that would be the best idea for this ! 👍
+    [reply to teknium msg=1524199204702916748]
+
+[2026-07-07T23:58:22.421000+00:00] teknium (id=1524202953437610036)
+    <@343552340353351680> lets have that issue in <#1485307775444844625>
+
+[2026-07-08T00:01:14.186000+00:00] dias4761 (id=1524203673872502884)
+    That would be cool, too. It would be nice if it had a feature similar to Graphify.
+    [reply to teknium msg=1524199129658560664]
+
+[2026-07-08T00:01:21.026000+00:00] undifined. (id=1524203702561538169)
+    Doesn't apply,  as my own stuff is not the same as hermes
+
+[2026-07-08T00:07:34.925000+00:00] dias4761 (id=1524205270807482468)
+    You can map your project using graphs; instead of traversing it file by file, the system goes directly to the specific point identified by the graph. With updates, the graph evolves and becomes more precise. <@387972437901312000>
+    [reply to dias4761 msg=1524203673872502884]
+
+[2026-07-08T00:22:25.792000+00:00] warofchange (id=1524209007374372864)
+    New PR: unit tests for skill_gist
+    
+    skill_gist (tools/write_approval.py) builds the one-line human summary shown in the skill write-approval chat bubble. It's heuristic with no model call, so every branch is verifiable from source — but it had no direct tests.
+    
+    The suite pins its contract:
+    • create/edit with content → frontmatter description: + size suffix (create 'demo' — My cool skill (N chars)); size switches to KB at ≥1024 bytes; edit verb renders as rewrite
+    • empty content → falls through to {action} '{name}'
+    • patch → line-count delta with SKILL.md default target (+3/-2 lines, empty → +0/-0)
+    • write_file / remove_file / delete / unknown action → their one-liners
+    
+    Pure input→output assertions — no mocks, no network, no filesystem. Zero production code touched.
+    
+    pytest tests/tools/test_write_approval.py::TestSkillGist -v
+    🔗 https://github.com/NousResearch/hermes-agent/pull/60588
+    [embed] test(tools): add unit tests for skill_gist by waroffchange · Pull ... https://github.com/NousResearch/hermes-agent/pull/60588
+
+[2026-07-08T00:30:45.661000+00:00] eggathan (id=1524211103977181185)
+    how much review are all of these commits going through? no beta testing? what's the audit process just mass vibespectrometa?
+
+[2026-07-08T00:31:53.526000+00:00] dias4761 (id=1524211388623355954)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/57721#issuecomment-4886189532
+    [embed] fix(agent): wrap session_search results as untrusted content by Joa... https://github.com/NousResearch/hermes-agent/pull/57721
+
+[2026-07-08T01:43:38.694000+00:00] javiermares (id=1524229445806981240)
+    https://arxiv.org/abs/2607.05391
+    [embed] LLM-as-a-Verifier: A General-Purpose Verification Framework https://arxiv.org/abs/2607.05391
+
+[2026-07-08T01:57:43.110000+00:00] noob_programmer (id=1524232987544125611)
+    Hi <@387972437901312000>, I have opened a PR for a new /behavior command that gives you a behavioral profile of how you build with Hermes. Think Paxel but for Hermes sessions. It reads your state.db, extracts 27 signals from your session history, and produces 5-axis scores (Execution Leverage, Steering, Engineering Quality, Product Thinking, Planning) plus 23 insight cards.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/60417
+    
+    Would really appreciate your review on this.
+    [embed] feat(behavior): add behavioral analysis with 5-axis scoring and ins... https://github.com/NousResearch/hermes-agent/pull/60417
+
+[2026-07-08T02:09:25.229000+00:00] dias4761 (id=1524235932444921898)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/60631
+    
+    p1 issues, check when u can pls
+    [embed] fix(gateway,cron): make shutdown drain visible to in-flight cron wo... https://github.com/NousResearch/hermes-agent/pull/60631
+
+[2026-07-08T02:10:59.246000+00:00] warofchange (id=1524236326780669962)
+    Complete the i18n mirror of a recently-merged Python-range fix
+    
+    Merged PR #59572 corrected the Python support range from 3.11+ → 3.11–3.13 in the English CONTRIBUTING.md (+ docs-site mirror), aligning with pyproject.toml's requires-python = ">=3.11,<3.14" — since 3.11+ wrongly implies 3.14+ works.
+    
+    But #59572 left the translations behind. This PR applies the exact same one-line fix to the two mirrors it missed:
+    • CONTRIBUTING.es.md (Spanish)
+    • website/i18n/zh-Hans/.../developer-guide/contributing.md (Simplified Chinese)
+    
+    -| **Python 3.11+** | … |
+    +| **Python 3.11–3.13** | … |
+    Docs/i18n only, 2 files × 1 line, no runtime code touched. Same reviewer-accepted pattern from days ago — just completing the translation coverage.
+    
+    PR : https://github.com/NousResearch/hermes-agent/pull/60632
+    [embed] docs(i18n): correct Python support to 3.11-3.13 in translated CONTR... https://github.com/NousResearch/hermes-agent/pull/60632
+

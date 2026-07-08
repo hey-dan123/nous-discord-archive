@@ -1,0 +1,21 @@
+# Thread 'Agentic Scavenger Hunt' in forum #community-projects-showcase
+# thread_id=1524171547567329330 forum_id=1316137596535177246
+# Started 2026-07-08T02:29:36.274123+00:00
+
+[2026-07-07T21:53:34.678000+00:00] edizzier (id=1524171547567329330)
+    Hey everyone, just wanted to share something I’ve been working on lately. I finally pushed my first autonomous AI agent project to GitHub.
+    
+    Basically, instead of just a standard chatbot that answers whatever you ask, this agent actually thinks for itself. When you give it a question, it decides if it knows the answer or if it needs to dig deeper. If it doesn't know, it takes the initiative to search the web, cross-reference data, and keeps digging until it’s sure.
+    
+    I also spent a lot of time on the error handling. Well, you know how APIs can get flaky and just crash? I made sure the agent catches those errors and handles them gracefully without breaking. It even gives me a clean report in the terminal with its thought process and efficiency stats after it finishes.
+    
+    Everything is open-source, so feel free to check out the code or even clone it to run it yourself. The setup steps are in the README. I’d love to hear what you guys think or if you have any suggestions on how to improve the logic.
+    
+    Here is the link: 
+    https://github.com/Edizzier/Agentic-Scavenger-Hunt
+    [attachment] Agentic_Scavenger_Hunt.png https://cdn.discordapp.com/attachments/1524171547567329330/1524171547864989756/Agentic_Scavenger_Hunt.png?ex=6a4ec6de&is=6a4d755e&hm=aeebd5147eab28100e06d2e228de914d455ec0f1216f43ade6e3b73cc7e84058&
+    [embed] GitHub - Edizzier/Agentic-Scavenger-Hunt https://github.com/Edizzier/Agentic-Scavenger-Hunt
+
+[2026-07-07T21:57:51.952000+00:00] baileys344 (id=1524172626652696686)
+    I’ll take a look at your repo and definitely use the parts that interest me or that I need. I’ll reach out to you here if I have any questions. Good luck!
+

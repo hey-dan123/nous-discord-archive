@@ -25,3 +25,19 @@
     
     datafense.ai
 
+[2026-07-07T20:19:51.438000+00:00] celestial_sparrow_73595 (id=1524147961989431326)
+    Give your ai limited access to your inbox and only allow it to see what you allow!! Would any changes to the filtering be useful for you? its free to use and im about to open source it! would love feedback!
+
+[2026-07-07T20:20:17.464000+00:00] celestial_sparrow_73595 (id=1524148071150125076)
+    What we've built (why it's useful)
+    
+    🛡 Default-deny. Every new agent starts with zero access. You explicitly grant read email, send email, read calendar, etc. — one toggle at a time, per agent, per account.
+    🎛 Granular content filters. Block bank alerts, password resets, or any keyword or sender. Allow only specific domains. Filtered emails are invisible to the agent — it doesn't even know they exist.
+    ✋ Every write requires your one-tap approval. When your AI drafts an email or a calendar event, it queues for your review. Approve or deny with one click. Zero autonomous sends. Zero autonomous invites.
+    📜 Full audit log. Every request your AI makes — granted, denied, or filtered — is logged. Metadata only, no email content. You can see exactly what your AI did, when, and what got blocked.
+    ⏰ Time-window schedules. Restrict when your AI can access data (e.g. Mon-Fri 9-6). Outside the window, it's automatically denied.
+    🔌 Works with the AI tools you already use. Claude (Cowork custom connector), Claude Code, Cursor, Hermes/MyClaw, OpenClaw — anything that speaks MCP.
+
+[2026-07-07T20:22:21.763000+00:00] celestial_sparrow_73595 (id=1524148592498053120)
+    Also would love to know what integrations you all want to see next? notion? outlook? or what would help you so that your agent can use it but you can still control what it accesses?
+

@@ -1,0 +1,45 @@
+# Thread 'Noisegate: stop terminal walls from eating your agent context' in forum #plugins-skills-and-skins
+# thread_id=1524170752511709304 forum_id=1485392832154832906
+# Started 2026-07-08T02:34:56.441864+00:00
+
+[2026-07-07T21:50:25.122000+00:00] _voscko_ (id=1524170752511709304)
+    I just released **Noisegate**: a small Hermes Agent plugin + CLI that does one very specific thing:
+    
+    It keeps giant terminal/tool outputs from flooding your agent’s context.
+    
+    You know the pain: you run tests, a build, a grep, a noisy CLI, or some cursed wall of logs, and suddenly half the conversation is just terminal soup. The agent now has less room to think, more junk to sift through, and more chances to miss the actual signal.
+    
+    Noisegate sits in front of that mess and compacts it deterministically.
+    
+    No model summarization.  
+    No magic black box.  
+    No raw-output archive by default.  
+    Just boring, careful, predictable output reduction.
+    
+    It is built for Hermes first, but also works as a standalone CLI:
+    
+    ```bash
+    uvx --from noisegate-hermes noisegate install-hermes
+    ```
+    
+    What it does:
+    
+    - compacts noisy terminal/tool output before it bloats context
+    - preserves important head/tail information
+    - protects exact content like files, diffs, patches, search/context retrieval, and unknown tools
+    - fails open, so if compaction is unsafe, the original output stays intact
+    - includes a `noisegate wrap -- <command>` CLI for local use
+    - publishes on PyPI and npm as `noisegate-hermes`
+    
+    The whole idea is simple:
+    
+    **Agents should spend context on reasoning, not on 4,000 lines of pytest noise.**
+    
+    If you use Hermes, build agent tooling, or care about keeping long-running agent sessions clean, I’d love for you to try it.
+    
+    And if the idea makes sense to you, please star the repo. It genuinely helps visibility and tells me this is worth pushing further.
+    
+    Repo: https://github.com/Tosko4/noisegate
+    [attachment] file_000000008cbc7230aa6ca42fe502a04a.png https://cdn.discordapp.com/attachments/1524170752511709304/1524181187617357966/file_000000008cbc7230aa6ca42fe502a04a.png?ex=6a4ecfd9&is=6a4d7e59&hm=09c5fd754289464319a4fcd849c7dc10a244149d3d1d17b77008a2dd541712e2&
+    [embed] GitHub - Tosko4/noisegate: Gate the noise. Keep the signal. Determi... https://github.com/Tosko4/noisegate
+

@@ -1,0 +1,18 @@
+# Thread 'Livingcolor plugin -> TMA end-to-end from Jira to sprint report/Stripe billing' in forum #plugins-skills-and-skins
+# thread_id=1524187758539571320 forum_id=1485392832154832906
+# Started 2026-07-08T02:34:55.994118+00:00
+
+[2026-07-07T22:57:59.675000+00:00] _tamsi__ (id=1524187758539571320)
+    Just shipped a demo of LivingColor
+    a Hermes plugin that turns Jira + GitLab/Github into an agent-driven delivery pipeline.
+    Human gates at every sensitive step.
+    
+    
+    https://github.com/abecms/livingcolor-plugin
+    https://github.com/Tamsi/livingcolor-skills
+    https://github.com/Tamsi/livingcolor-evolution
+    [attachment] demo-plugin-stripe.mp4 https://cdn.discordapp.com/attachments/1524187758539571320/1524187760783659039/demo-plugin-stripe.mp4?ex=6a4ed5f8&is=6a4d8478&hm=01a3b26a0538434ab842d797907a5aa762021ba025fe1440b1deedec7f1dad77&
+    [embed] GitHub - abecms/livingcolor-plugin: Livingcolor plugin for Hermes a... https://github.com/abecms/livingcolor-plugin
+    [embed] GitHub - Tamsi/livingcolor-skills: Livingcolor plugin skills https://github.com/Tamsi/livingcolor-skills
+    [embed] GitHub - Tamsi/livingcolor-evolution: Auto evolution for hermes-ski... https://github.com/Tamsi/livingcolor-evolution
+

@@ -884,3 +884,14 @@
     Can you ask your agent to file GitHub issues when it runs into friction? That’s the most useful way to give feedback
     [reply to selwind msg=1524059883002138804]
 
+[2026-07-07T22:10:14.292000+00:00] selwind (id=1524175740252192768)
+    Done, hopefully it'll help 🙂
+
+[2026-07-07T22:10:49.758000+00:00] selwind (id=1524175889007378562)
+    If you have any question regarding any of these, ask me and i'll ask my agent to elaborate.
+
+[2026-07-08T00:18:22.477000+00:00] magnus919 (id=1524207986837426196)
+    https://klipy.com/gifs/this-is-the-way-mandalorian-2
+    [embed] This Is The Way Mandalorian https://klipy.com/gifs/this-is-the-way-mandalorian-2
+    [reply to selwind msg=1524175889007378562]
+

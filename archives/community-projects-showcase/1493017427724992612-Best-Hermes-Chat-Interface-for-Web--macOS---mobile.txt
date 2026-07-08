@@ -5444,3 +5444,16 @@
     
     ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
 
+[2026-07-07T23:14:10.209000+00:00] alto69 (id=1524191829254475920)
+    I was thinking about 2fa auth. Should be core? Use google authenticator? Integrate with mobile apps? Email codes? Also if there multiple incorrect passwords does it lock out. That'd do it for me
+
+[2026-07-07T23:20:56.311000+00:00] avidfuturist (id=1524193532569583738)
+    I think we already have it so you can enable Passkey, I think passkey is the simpler/better approach
+    [reply to alto69 msg=1524191829254475920]
+
+[2026-07-08T00:25:27.201000+00:00] avidfuturist (id=1524209768258994377)
+    Could use more testers for Hermex for Android: https://github.com/ComputerByte/hermex-android/releases/tag/v0.11.2-preview
+    
+    Native Android UI that connects into WebUI, need feedback to improve
+    [embed] Release Hermex Android v0.11.2-preview · ComputerByte/hermex-android https://github.com/ComputerByte/hermex-android/releases/tag/v0.11.2-preview
+

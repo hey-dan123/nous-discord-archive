@@ -94,3 +94,6 @@
 [2026-07-07T15:20:01.649000+00:00] jabberwocky1989 (id=1524072507345207367)
     If you give her an anime waifu picture, nobody will hurt her. EZ mode.
 
+[2026-07-07T21:01:14.925000+00:00] jabberwocky1989 (id=1524158378488758353)
+    Which model is Ana being run on in particular?
+

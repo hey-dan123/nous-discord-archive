@@ -57,3 +57,30 @@
     Thanks for asking! It's a great question.
     [reply to buke5122 msg=1523006312538050671]
 
+[2026-07-07T20:39:33.962000+00:00] shiro1001 (id=1524152921854447738)
+    I would like to let you know that I have updated to hersona v1.8.0.
+    
+    https://github.com/shiro-0x/hersona
+    
+    Quiz → SOUL / export  
+    Run recommend, then --export or --soul — no manual blend typing.
+    
+    Persona lock (default on)  
+    Keeps SOUL as the source of truth; use --no-persona-lock to opt out.
+    
+    Operating modes (20)  
+    More --use-case profiles for dev, ops, writing, community, etc.
+    
+    Persona packs (14)  
+    Ready-made recipes: hersona personas list / install.
+    
+    Verified updates  
+    hersona update checks checksums.json; see SECURITY.md.
+    
+    hersona bench  
+    Measure persona maintenance on transcripts; optional token cost estimate.
+    
+    Demo site  
+    Bilingual quiz, copy injection block, mobile-friendly UI.
+    [embed] GitHub - shiro-0x/hersona: Attribute template collection for AI age... https://github.com/shiro-0x/hersona
+

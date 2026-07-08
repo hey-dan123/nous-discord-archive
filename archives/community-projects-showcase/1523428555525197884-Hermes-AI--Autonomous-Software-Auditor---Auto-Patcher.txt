@@ -63,3 +63,36 @@
 [2026-07-06T13:15:36.641000+00:00] baileys344 (id=1523678808966955161)
     Hermes Detective is now a fully autonomous, data-driven agent that binds on-chain wallet intelligence with mathematical vulnerability metrics. The codebase is fully tested, stable, and pushed to our production GitHub repository.
 
+[2026-07-07T21:53:07.749000+00:00] baileys344 (id=1524171434618917064)
+    HERMES SECURITY SUITE - RELEASE NOTES (V1.1.0) 
+    
+    A website was designed for the wallet search interface.
+    https://hermes-dedektif-7mej6r7vhihgjrfuzayqgi.streamlit.app/
+    https://github.com/negroni334/Hermes-Dedektif
+    
+    📄 1. Report Engine & PDF Security Layer
+    Regex Filtering Core: An automated sanitization layer was integrated to parse and clean non-compliant HTML/Markdown structures delivered by the AI agent (Gemini/OpenRouter).
+    
+    Syntax Standardization: Faulty or unclosed tags that previously caused the PDF rendering engine (ReportLab) to crash were mapped and converted to strict XML-compliant structures.
+    
+    Fail-Safe Fallback Mechanism: A defensive code block was implemented within the document generation loop. If any structural anomaly is detected, the system strips raw tags immediately, guaranteeing uninterrupted PDF generation.
+    
+    🗄️ 2. Global Live Telemetry & Persistence Matrix
+    File-Based Persistence Layer: A local storage system (scan_counter.txt) was established to decouple data retention from volatile server memory (RAM), preserving tracking data across server restarts.
+    
+    Concurrent Synchronization: Global thread-safe functions were deployed to intercept every successful contract audit, merging multi-user transaction counts into a single master ledger.
+    
+    Real-Time Metrics: Static, placeholder visitor numbers were removed. The interface now utilizes a dynamic st.metric component to display the actual total number of smart contracts audited globally to all active visitors simultaneously.
+    
+    ⚡ 3. UI Flow & State Management
+    Infinite Loop Resolution: The state-resetting refresh loops that previously cleared the Streamlit cache and erased the active intelligence reports were entirely eliminated from the lifecycle.
+    
+    Interface Anchoring: Automated asynchronous UI anchoring was established. The extracted security scores, holder distribution tables, and the standalone PDF download button now remain locked and persistent on screen upon execution.
+
+[2026-07-07T21:59:33.053000+00:00] edizzier (id=1524173050701021207)
+    Hermes AI is an impressive project that effectively bridges the gap between high-speed static analysis and advanced semantic reasoning. By combining a local filtering layer with autonomous patching and clear security reporting, you have built a powerful tool that makes complex vulnerability remediation both accessible and actionable. This dual-engine approach is a great solution for modern developers looking to secure their codebase against nuanced logic threats, and the transparency of your open-source implementation is truly commendable. Great work on creating such a practical and well-structured security asset.
+
+[2026-07-07T22:01:03.239000+00:00] baileys344 (id=1524173428968390797)
+    Thanks for your interest. I'm continuing to develop it; I'm going to create a powerful beast. 🙂
+    [reply to edizzier msg=1524173050701021207]
+

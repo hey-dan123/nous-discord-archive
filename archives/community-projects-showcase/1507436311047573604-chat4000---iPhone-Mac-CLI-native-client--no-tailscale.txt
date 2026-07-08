@@ -359,3 +359,14 @@
     Go to the GitHub.
     [reply to badbunny2222 msg=1522931630304526476]
 
+[2026-07-07T20:57:29.784000+00:00] badbunny2222 (id=1524157434178961488)
+    did u build it from gh?
+    [reply to starw1 msg=1523122592012177509]
+
+[2026-07-07T20:57:55.628000+00:00] starw1 (id=1524157542576558192)
+    I downloaded the DMg
+    [reply to badbunny2222 msg=1524157434178961488]
+
+[2026-07-07T20:58:02.395000+00:00] starw1 (id=1524157570959540305)
+    I connected it with the Hermes add-on
+

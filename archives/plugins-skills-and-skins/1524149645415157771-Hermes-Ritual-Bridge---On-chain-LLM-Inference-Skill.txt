@@ -1,0 +1,16 @@
+# Thread 'Hermes Ritual Bridge — On-chain LLM Inference Skill' in forum #plugins-skills-and-skins
+# thread_id=1524149645415157771 forum_id=1485392832154832906
+# Started 2026-07-08T02:34:56.953961+00:00
+
+[2026-07-07T20:26:32.798000+00:00] erhnysr (id=1524149645415157771)
+    Built an open-source skill that gives Hermes agents native access to Ritual Chain's on-chain LLM inference precompile (0x0802).
+    Instead of relying on a centralized API, a Hermes agent can now call TEE-verified inference directly on-chain — request and response happen in the same transaction, cryptographically verified.
+    Current features:
+          Solidity contract deployed live on Ritual testnet
+          Real inference executed on-chain (verified tx)
+          Packaged as a native Hermes skill (hermes skills tap compatible)
+          9/9 tests passing
+    https://github.com/erhnysr/hermes-ritual-bridge
+    [attachment] hermes.png https://cdn.discordapp.com/attachments/1524149645415157771/1524149645608091769/hermes.png?ex=6a4eb278&is=6a4d60f8&hm=c1a30df5e225f86bb0c85533e8f183309493a17d4c51fdb67ea2590b7fe7bbf7&
+    [embed] GitHub - erhnysr/hermes-ritual-bridge: On-chain LLM inference bridg... https://github.com/erhnysr/hermes-ritual-bridge
+
