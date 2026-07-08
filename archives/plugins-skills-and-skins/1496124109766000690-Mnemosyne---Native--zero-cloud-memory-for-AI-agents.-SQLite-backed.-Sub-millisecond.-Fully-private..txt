@@ -2317,3 +2317,10 @@
      user_profile_enabled: false or true
     On my default profile commands seem working, but when I create another profile (which cloned from default), things are confused.
 
+[2026-07-08T14:48:17.830000+00:00] buke5122 (id=1524426910015160330)
+    Just disable both. Personally, i have the memory_enabled on true, but it only puts things in there like in which path specific informations go, not a "I like this x pizza" memory
+    [reply to digital_love_two msg=1524309713540481074]
+
+[2026-07-08T14:48:31.984000+00:00] buke5122 (id=1524426969381474445)
+    Its recommended to have both turned off
+

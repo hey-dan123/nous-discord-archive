@@ -241,3 +241,9 @@
 [2026-07-07T22:08:20.656000+00:00] tunacookie (id=1524175263628267691)
     [attachment] image.png https://cdn.discordapp.com/attachments/1517486886778572900/1524175263280402563/image.png?ex=6a4eca54&is=6a4d78d4&hm=8af11e85331c0aceeabc64f4356f63c7d436d7a7eb2b9b51f7c837f1714cd861&
 
+[2026-07-08T16:39:42.109000+00:00] tunacookie (id=1524454945913442517)
+    [attachment] The_Ultimate_Guide_to_React_Native_Optimization_2026.pdf https://cdn.discordapp.com/attachments/1517486886778572900/1524454945443807353/The_Ultimate_Guide_to_React_Native_Optimization_2026.pdf?ex=6a4fcecd&is=6a4e7d4d&hm=e8b1ab333aeec4bf32ac39dcb51bca258b0c87ab8fc8c17282c87b84ccb42016&
+
+[2026-07-08T17:02:07.419000+00:00] halibusal (id=1524460588552687898)
+    Tuna can I dm you, I want to know if we can work on something together?
+

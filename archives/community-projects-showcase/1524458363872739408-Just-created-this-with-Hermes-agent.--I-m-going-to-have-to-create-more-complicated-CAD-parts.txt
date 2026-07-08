@@ -1,0 +1,7 @@
+# Thread 'Just created this with Hermes agent.  I'm going to have to create more complicated CAD parts :-)' in forum #community-projects-showcase
+# thread_id=1524458363872739408 forum_id=1316137596535177246
+# Started 2026-07-08T19:21:35.297864+00:00
+
+[2026-07-08T16:53:17.014000+00:00] mburhop (id=1524458363872739408)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1524458363872739408/1524458364283916378/image.png?ex=6a4fd1fd&is=6a4e807d&hm=1689c18bcb8df10dca387c5c130488acad8cefb0387c45ff4ef86b10ebd484e6&
+

@@ -44915,3 +44915,312 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I made the corrections you indicated
     [reply to watchdominion msg=1524399013711839332]
 
+[2026-07-08T14:15:13.497000+00:00] warofchange (id=1524418587119321254)
+    <@387972437901312000> Thank you for taking PRs and fixes into consideration.
+
+[2026-07-08T14:20:11.147000+00:00] kyssta69 (id=1524419835554172938)
+    **PR #60938** — fix(openrouter): surface all tool-capable live catalog models in /model picker
+    🔗 https://github.com/NousResearch/hermes-agent/pull/60938
+    🐛 OpenRouter /model picker truncated to ~30 curated models instead of full ~260 tool-capable catalog
+    
+    **PR #60949** — fix(kanban): recover done tasks from protocol-violation blocks via task_runs history
+    🔗 https://github.com/NousResearch/hermes-agent/pull/60949
+    🐛 Kanban permanently blocks already-completed tasks when worker exits cleanly without kanban_complete
+    
+    **PR #60952** — fix(deps): bump cryptography, starlette, python-multipart to CVE-fixed versions
+    🔗 https://github.com/NousResearch/hermes-agent/pull/60952
+    🐛 CVEs survive pip-audit fix across reboots because uv.lock pins vulnerable dependency versions
+
+[2026-07-08T14:36:21.395000+00:00] warofchange (id=1524423905069236234)
+    Sync stale zh-Hans timeout defaults with the English source
+    
+    Same i18n-drift strategy as before. The Simplified Chinese docs mirror carried three HERMES_*_TIMEOUT default values that lag behind the English source and the actual code defaults:
+    
+    Variable    English    zh-Hans (stale)
+    HERMES_AGENT_TIMEOUT    1800    900
+    HERMES_API_CALL_STALE_TIMEOUT    90    300
+    HERMES_CRON_SCRIPT_TIMEOUT    3600    120
+    The cron value was stale in two zh-Hans files (environment-variables.md + features/cron.md), so both are fixed. Every value verified against the English doc and the code/config (configuration.md, cli-config.yaml.example, cron.md).
+    
+    i18n docs only — pure language-neutral number swaps, Chinese prose untouched, zero runtime code.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/60959
+    [embed] docs(i18n): sync zh-Hans timeout defaults with English source by wa... https://github.com/NousResearch/hermes-agent/pull/60959
+
+[2026-07-08T14:39:03.158000+00:00] watchdominion (id=1524424583552303235)
+    Took a look at all three 👀 Solid catches on the underlying bugs, a few things before these can land:
+    
+     #60952 — the pyproject/lazy_deps bumps look right, but uv.lock isn't regenerated, and that lockfile pinning is exactly what the issue says keeps the CVEs alive (installs still resolve the old versions, and pyproject/lock now disagree). Needs a uv lock in the same PR.
+     #60949 — the recovery keys on any historical completed run, so a task re-opened after a past completion would auto-complete on any clean worker exit and swallow the new work. Scoping to the latest run fixes it.
+     #60938 — there's a second unrelated fix bundled in (detect_provider_for_model custom-endpoint routing, #48305) that should be its own PR.
+    
+    All three skip the PR template (Type of Change / Checklist / How to Test) — at ~50 PRs/day that checklist is how maintainers triage, filling it in genuinely speeds up your merge.
+    
+    Also looks like these duplicate your earlier #60890/#60893/#60889 — worth closing one set so maintainers don't review both. Happy to re-check after updates 🙂
+    [reply to kyssta69 msg=1524419835554172938]
+
+[2026-07-08T14:48:39.198000+00:00] wnuuee (id=1524426999639052340)
+    Update: after the latest build, the hover-reveal itself now works properly moving the cursor to the right edge of the window opens the sidebar without needing the "Show right sidebar" button, and it collapses again once the cursor leaves. 
+    
+    However, the bug I reported above is still present: right-clicking a terminal tab (Close / Close others / Close all / Hide terminal menu) still causes the right sidebar to spuriously slide open on its own, even with this new hover-reveal behavior. My PR fixing it is still open: 
+    https://github.com/NousResearch/hermes-agent/pull/58243
+    
+    Attaching another video below showing the issue still reproduces on the latest build. Would appreciate a look when you have a chance <@387972437901312000> <@119192111202566149>
+    [attachment] rail_b.MP4 https://cdn.discordapp.com/attachments/1491258766648283238/1524426999744041131/rail_b.MP4?ex=6a4fb4c7&is=6a4e6347&hm=7be3b986540e680b05c53de485590fbc5fb64fd7f007e4ce7b1cc2f63ee1288c&
+    [embed] fix(desktop): right sidebar spuriously reveals when opening the ter... https://github.com/NousResearch/hermes-agent/pull/58243
+    [reply to wnuuee msg=1522933206079377521]
+
+[2026-07-08T14:53:46.686000+00:00] hizzgdev (id=1524428289337327666)
+    Hey folks! Just opened a PR to fix a bug where @-mentions in the Yuanbao gateway silently degrade to plain text when the member cache is stale. Could a maintainer please help approve the workflow to let the CI run and review? Appreciate it!
+    
+    https://github.com/NousResearch/hermes-agent/pull/60324
+    [embed] fix: auto-refresh member cache in _build_msg_body_with_mentions whe... https://github.com/NousResearch/hermes-agent/pull/60324
+
+[2026-07-08T14:57:19.067000+00:00] teknium (id=1524429180127940738)
+    No, a single machine, even if across profiles is for one user. so, yes, they should be able to access all sessions
+    [reply to cryptobyz msg=1524405328983228468]
+
+[2026-07-08T14:57:23.394000+00:00] teknium (id=1524429198276563086)
+    Hermes is not setup for user isolation
+
+[2026-07-08T14:58:08.388000+00:00] teknium (id=1524429386995204256)
+    This going in now fren
+    [reply to frizikk msg=1524391896213094431]
+
+[2026-07-08T15:01:46.316000+00:00] dias4761 (id=1524430301051224064)
+    <@387972437901312000>  p1 issues , when u can check https://github.com/NousResearch/hermes-agent/pull/60931
+    [embed] fix(agent): switch_model no longer pairs new provider with stale ba... https://github.com/NousResearch/hermes-agent/pull/60931
+
+[2026-07-08T15:02:30.215000+00:00] hizzgdev (id=1524430485177106522)
+    <@387972437901312000> would you please take a look? It is really blocking me in some scenarios. Thank you!
+    [reply to hizzgdev msg=1524428289337327666]
+
+[2026-07-08T15:05:10.827000+00:00] dias4761 (id=1524431158832660581)
+    <@387972437901312000>  I also saw that there are issues related to this problem, but in different files.  https://github.com/NousResearch/hermes-agent/pull/60970 . check when u can
+    [embed] fix(cli,gateway): sync base_url/api_mode on global model switch per... https://github.com/NousResearch/hermes-agent/pull/60970
+
+[2026-07-08T15:08:34.212000+00:00] warofchange (id=1524432011891310724)
+    New PR: drop a redundant duplicate test case
+    
+    While scanning the test suite (725 files, AST-based) for duplicate parametrize inputs, I found exactly one: in tests/hermes_cli/test_console_engine.py, test_console_rejects_destructive_and_shell_like_commands lists "--tui" twice in its single parametrize — at line 511 and again at line 536. Pytest runs the second copy as a separate [--tui1] case that re-asserts the exact same thing on the exact same input, adding zero coverage.
+    
+             "logout",
+    -        "--tui",
+             "logs | cat",
+    Coverage is unchanged — the "--tui" case is still exercised by its first occurrence; only the redundant duplicate is dropped (no test removed). 1 file, −1 line, provable by reading the list.
+    
+    pytest tests/hermes_cli/test_console_engine.py::test_console_rejects_destructive_and_shell_like_commands -v
+    PR: https://github.com/NousResearch/hermes-agent/pull/60979
+    [embed] test(console): drop duplicate '--tui' parametrize case by waroffcha... https://github.com/NousResearch/hermes-agent/pull/60979
+
+[2026-07-08T15:17:30.515000+00:00] warofchange (id=1524434261308866640)
+    Is it necessary to tag you in every PR? <@387972437901312000>
+
+[2026-07-08T15:18:53.857000+00:00] teknium (id=1524434610870812793)
+    no, please dont lol
+
+[2026-07-08T15:20:23.392000+00:00] dias4761 (id=1524434986407825579)
+    LMAO
+    [reply to teknium msg=1524434610870812793]
+
+[2026-07-08T15:24:07.309000+00:00] watchdominion (id=1524435925583663347)
+    hah - would recommend putting it in the description of the channel and maybe pin guidelines how to make proper PRs
+
+[2026-07-08T15:26:37.656000+00:00] zerobot_ai (id=1524436556184817725)
+    hi guys! is there a place here to do feature requests?
+
+[2026-07-08T15:27:04.110000+00:00] kyssta69 (id=1524436667140673606)
+    ask here
+
+[2026-07-08T15:27:38.379000+00:00] warofchange (id=1524436810875277503)
+    I'm not tagging you, but everyone else has tagged you at the end of the PR.
+    [reply to teknium msg=1524434610870812793]
+
+[2026-07-08T15:28:26.252000+00:00] kyssta69 (id=1524437011669323926)
+    dont be like everyone else
+    [reply to warofchange msg=1524436810875277503]
+
+[2026-07-08T15:28:29.718000+00:00] kyssta69 (id=1524437026206781440)
+    be different
+
+[2026-07-08T15:28:30.649000+00:00] zerobot_ai (id=1524437030111678610)
+    i'm big on the cli so i use the hermes tui a lot - i manage several at the same time and sometimes forget my prompt so i have to scroll up to locate what i sent. I noticed another cli, (i think it was claudes) where it sticks the prompt at the top of the TUI, i think this would be incredibly helpful
+
+[2026-07-08T15:28:33.736000+00:00] kyssta69 (id=1524437043059490827)
+    tag at start
+
+[2026-07-08T15:28:34.619000+00:00] kyssta69 (id=1524437046762934423)
+    jk
+
+[2026-07-08T15:30:09.802000+00:00] warofchange (id=1524437445989503146)
+    That’s actually what I’m trying to do, but when I looked at a few people, I saw they had secured roles with less PR than I have; I just felt like asking.
+    [reply to kyssta69 msg=1524437011669323926]
+
+[2026-07-08T15:37:57.531000+00:00] egilewski (id=1524439407787118725)
+    You only need one merged. Then wait patiently, as it doesn't seem to be automated.
+    [reply to warofchange msg=1524437445989503146]
+
+[2026-07-08T15:38:36.976000+00:00] warofchange (id=1524439573231435868)
+    I received a few emails; does that mean it has been merged?
+    [reply to egilewski msg=1524439407787118725]
+
+[2026-07-08T15:41:56.357000+00:00] egilewski (id=1524440409496096984)
+    No, but I see you have a "contributor" mark on GitHub, so you're in already.
+    [reply to warofchange msg=1524439573231435868]
+
+[2026-07-08T15:42:29.161000+00:00] warofchange (id=1524440547085910117)
+    thanks
+    [reply to egilewski msg=1524440409496096984]
+
+[2026-07-08T15:47:22.896000+00:00] warofchange (id=1524441779099795456)
+    Does this mean I can take the role? 🙂
+
+[2026-07-08T15:53:54.822000+00:00] egilewski (id=1524443422956716043)
+    It will be given to you by somebody. I just got mine today about 6 weeks after my first PR was merged. Guess it's more painful to automate than to keep doing manually.
+
+[2026-07-08T15:54:25.379000+00:00] zerobot_ai (id=1524443551121932439)
+    hermes in the cloud is sick! havent tried it just yet but will soon. so do the cloud agents each live on a raspberry pi?
+
+[2026-07-08T15:55:22.921000+00:00] zerobot_ai (id=1524443792470446270)
+    hi guys! sorry i dont have my mic set up!
+
+[2026-07-08T15:55:52.678000+00:00] watchdominion (id=1524443917280481461)
+    They probably use Hertzner or another cloud service and just run mass containers on a VM in a kubernetes cluster.
+    [reply to zerobot_ai msg=1524443551121932439]
+
+[2026-07-08T16:03:37.317000+00:00] warofchange (id=1524445866117824676)
+    thanks
+    [reply to egilewski msg=1524443422956716043]
+
+[2026-07-08T16:07:23.442000+00:00] zerobot_ai (id=1524446814554689656)
+    i could see hetzner (i asked about the raspberry pi because i heard someone mention it in `General Voice`
+
+[2026-07-08T16:31:19.310000+00:00] .daveevad (id=1524452837021450273)
+    AND AGAIN waiting for last 3 days for someone from Core to reply to one simple question : <@387972437901312000> 
+    Hi 1337!! Me again  with a quick question to CORETEAM about a new update. To which file all "Sources of truth"can be stored and readable as perma?
+
+[2026-07-08T16:34:54.354000+00:00] .daveevad (id=1524453738981490829)
+    I already had this :
+    [attachment] 20260708_150136.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453734254514176/20260708_150136.jpg?ex=6a4fcdad&is=6a4e7c2d&hm=cba067140eb940ef4745f8209aa8bbebfd264b524e0d463fe3e6b46ef66797a9&
+    [attachment] 20260708_150213.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453734825070703/20260708_150213.jpg?ex=6a4fcdad&is=6a4e7c2d&hm=33584409cdf8b19eb574a7321d47b2d9ff9151feef195e31f5f81df713af76cd&
+    [attachment] 20260708_150247.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453735298891956/20260708_150247.jpg?ex=6a4fcdad&is=6a4e7c2d&hm=bef63fa167d5a1a0f4b6cac4322395f172f0fb9f6c2936b84cd0b44eb6a40fdf&
+    [attachment] 20260708_150322.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453735772983416/20260708_150322.jpg?ex=6a4fcdad&is=6a4e7c2d&hm=99f57d3d4c86ee45707c3f9deb63d3c03de61ab1cb183dd59ca7d39c4bee794d&
+    [attachment] 20260708_150338.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453736246804682/20260708_150338.jpg?ex=6a4fcdad&is=6a4e7c2d&hm=9806a6e88e673debdb4382ed634258a890d937f68cd2c5563e4dfb72a0b8ef1a&
+    [attachment] 20260708_152530.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453736745795625/20260708_152530.jpg?ex=6a4fcdad&is=6a4e7c2d&hm=bba0df94b49be705b14013dbe93721a278e0750918b32309117013dfa465b7e3&
+    [attachment] 20260708_152546.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453737249378487/20260708_152546.jpg?ex=6a4fcdad&is=6a4e7c2d&hm=6af2b9c9d1765710a96950303033381ed69e5705e8b75ea40758d5a66b8878ce&
+    [attachment] 20260708_154000.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453737685450783/20260708_154000.jpg?ex=6a4fcdae&is=6a4e7c2e&hm=c396944a9306dbefea251a017ad6cb72daeb3e8cadd5590f7abac540b7582e45&
+    [attachment] 20260708_154026.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453738125721864/20260708_154026.jpg?ex=6a4fcdae&is=6a4e7c2e&hm=2b75f986d5c6315dda26406875ae93870cffa4f33c03283883d4d31b68538458&
+    [attachment] 20260708_154051.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453738729967777/20260708_154051.jpg?ex=6a4fcdae&is=6a4e7c2e&hm=afa5b2001bcdc99aaefad7656b8adb81818b8f616667601514f51ef40e8c2487&
+
+[2026-07-08T16:35:13.672000+00:00] .daveevad (id=1524453820007059709)
+    [attachment] 20260708_154112.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453817591136447/20260708_154112.jpg?ex=6a4fcdc1&is=6a4e7c41&hm=e1b59d641e658673766c1b1b7f63da9d24c11ab5a87925f0cef7f964b4cf1b51&
+    [attachment] 20260708_154248.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453818505629726/20260708_154248.jpg?ex=6a4fcdc1&is=6a4e7c41&hm=895d300e5e300e0178ed1eb335ed478a151f7435fdaf3985049ab6ca2402611b&
+    [attachment] 20260708_154307.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524453819344228494/20260708_154307.jpg?ex=6a4fcdc1&is=6a4e7c41&hm=eb67c737b182d2be82f5ec9faa78514015723d40a04885de678b171d087f1bbf&
+
+[2026-07-08T16:35:38.372000+00:00] .daveevad (id=1524453923606237234)
+    But now again all got messed up
+
+[2026-07-08T17:06:28.778000+00:00] eddlm (id=1524461684771520753)
+    Hello fellers, I have a situation, vision related. I had Minimax m3 (ollama cloud) try to look at a picture (it called vision_analyze). It hallucinated the hell out of it and all it described was obviously pulled from the memory/context. I then asked it to make a manual web request to the ollama endpoint for minimax3 with the same picture, which returned an accurate answer.
+    
+    So what the hell... I can work with it no problem, but wanted to share the json session in case its a true problem that needs to be addressed. Might have private info there, though, any directions?
+
+[2026-07-08T17:40:04.719000+00:00] _name_name_ (id=1524470140240920737)
+    What's the process for filing an issue, making a PR, and actually getting it merged? Thus far, noe of my PRs have ever gotten a review.
+
+[2026-07-08T17:40:35.235000+00:00] _name_name_ (id=1524470268234436710)
+    It that just because they are all too small and don't matter? I hve a few P3s and a P2 waiting.
+
+[2026-07-08T17:49:11.320000+00:00] brokeskill (id=1524472432851681442)
+    So I have hermes agent running on a raspberry pi 24/7 and my main computer connected to it trough the remote gateway feature, is there any native way to give hermes access to my main computer too?
+
+[2026-07-08T17:49:32.840000+00:00] .daveevad (id=1524472523113234583)
+    <@733342643362463784> ssh will be the best way if you want the agent  access files on both of them.
+
+[2026-07-08T17:51:36.366000+00:00] brokeskill (id=1524473041218699304)
+    wdym ssh, like a plugin that gives it SSH access? Do I have to program it myself or is there something like that
+    [reply to .daveevad msg=1524472523113234583]
+
+[2026-07-08T17:52:28.347000+00:00] .daveevad (id=1524473259242815699)
+    <@733342643362463784> OS on both? Windows ,linux?
+
+[2026-07-08T17:52:28.450000+00:00] naavi_06160 (id=1524473259675095151)
+    hey is there any possibility that we can use a notebook with hermes?
+
+[2026-07-08T17:54:23.977000+00:00] brokeskill (id=1524473744230453518)
+    my main PC is on windows and the raspberry pi is on raspbian (so linux)
+    [reply to .daveevad msg=1524473259242815699]
+
+[2026-07-08T17:55:55.173000+00:00] .daveevad (id=1524474126734065805)
+    <@733342643362463784> then ssh protocol. Youtube how to connect computers through ssh- the easiest way. You will need static ip on both etc
+
+[2026-07-08T17:56:40.737000+00:00] brokeskill (id=1524474317843464272)
+    cheers,  just wanted to ask if something like that exists natively (file access on both devices)
+
+[2026-07-08T18:02:08.010000+00:00] .daveevad (id=1524475690525790249)
+    <@733342643362463784> no worries. You welcome. Having ssh will allow you to control both of the machines
+
+[2026-07-08T18:02:24.437000+00:00] _name_name_ (id=1524475759425486889)
+    SSH is native to both. You don't need any plugins or anything special. Hermes can guide you through setup. SSH is a basic tool for accessing machines across a network. If you want hermes to be able to easily access your windows file system, SSH is the right answer. 
+    
+    Give hermes a todo list something like:
+    ```
+    I want to give you access to files on my windows machine. I think SSH is the best way to do that.
+    0) Make sure I understand what SSH is, just send me to a good quality youtube video
+    1) Help me setup SSH on my windows machine with the right access. Keep it KISS, nothing complicated. Generate a key pair and direct me to set it up on your machine so you have access
+    2) Guide me through giving my windows machine a static IP on my network
+    3) Setup yourself up a simple skill with the SSH command so you remeber how to SSH across when i ask for a file on my desktop
+    ```
+    [reply to brokeskill msg=1524474317843464272]
+
+[2026-07-08T18:03:03.941000+00:00] brokeskill (id=1524475925117538484)
+    cheers
+
+[2026-07-08T18:03:45.762000+00:00] .daveevad (id=1524476100527522084)
+    <@695026360090886274>  chris is better not to use hermes as it will take longer then do it yourself
+
+[2026-07-08T18:04:17.620000+00:00] _name_name_ (id=1524476234149527682)
+    I agree, if you know what you are doing. But for someonw who has never used SSH, having the agent guide you I think will help
+    [reply to .daveevad msg=1524476100527522084]
+
+[2026-07-08T18:06:41.629000+00:00] .daveevad (id=1524476838166921306)
+    <@695026360090886274> Believe me i tried. Have a cluster of 5 machines . Guide yes but not to do it. Best to use chatgpt or any other model for full guide andcthen follow it (if someone doesnt know nothing about SSH-true)
+
+[2026-07-08T18:16:15.751000+00:00] _name_name_ (id=1524479246209122385)
+    Does anyone else have notifications setup for when Hermes falls back to the fallback model/provider? For me, this can be quite expensive if I don't notice the issue and resolve it. There doesn't seem to be a native system for notfying you when something like this happens though. Heremes proposed a little shell script monitoring it's log. I am thinking about building it out as a feature and making a PR.
+
+[2026-07-08T18:25:19.240000+00:00] .daveevad (id=1524481525767344128)
+    <@695026360090886274> I have build one but i dont think it will work for you. But there is a clip on youtube by julian goldie seo which works and circulate within free models leyting you know when you close to the limit and switches. You can tweak it for the models you use
+
+[2026-07-08T18:25:50.454000+00:00] _name_name_ (id=1524481656688480259)
+    Yeah that is differnt, I just want a simple notification in whatever messaging gateway i am using
+
+[2026-07-08T18:28:50.529000+00:00] _name_name_ (id=1524482411977637998)
+    Can a maintainer please review this PR. It addresses exactly my issue https://github.com/NousResearch/hermes-agent/pull/47377
+    [embed] fix: preserve fallback switch notice on successful fallback by Umi4... https://github.com/NousResearch/hermes-agent/pull/47377
+
+[2026-07-08T18:30:26.305000+00:00] .daveevad (id=1524482813691428966)
+    <@695026360090886274> Notification wont help for example you would have to think about roles : claude- sonnet  5 executor actually calls fable5 Advisor to sort out tasks - charges half of fable5 normal token spend. If ypu worry abput spend
+
+[2026-07-08T18:31:43.903000+00:00] _name_name_ (id=1524483139160768716)
+    Notifications will for sure help
+
+[2026-07-08T18:32:59.556000+00:00] _name_name_ (id=1524483456472584394)
+    As someone using hermes using Codex as the provider and with a fallback model configured
+    I want to get a notification when hermes falls back to open router
+    So that I can resolve my Codex auth issues before I spend a lot of money on open router
+
+[2026-07-08T18:36:16.164000+00:00] .daveevad (id=1524484281106174133)
+    <@695026360090886274> set fallback on for free Nous  Portal model - currently 2 available
+
+[2026-07-08T18:36:59.891000+00:00] _name_name_ (id=1524484464510632076)
+    That does not address my issue.  I am aware I can fall back to free models.
+
+[2026-07-08T19:19:04.038000+00:00] egilewski (id=1524495051550490694)
+    All you need should be in CONTRIBUTING.md. It's not that something is likely to be wrong, it's just the bandwidth. 1844 PRs were closed in just past 7 days. And 3312 new ones opened.
+    [reply to _name_name_ msg=1524470140240920737]
+
+[2026-07-08T19:19:32.571000+00:00] _name_name_ (id=1524495171226566898)
+    No pressure, just wanted to make sure. Probably my issues are just too small
+    [reply to egilewski msg=1524495051550490694]
+

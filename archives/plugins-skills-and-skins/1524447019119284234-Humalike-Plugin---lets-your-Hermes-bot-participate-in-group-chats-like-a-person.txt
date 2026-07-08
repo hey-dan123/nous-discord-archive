@@ -1,0 +1,20 @@
+# Thread 'Humalike Plugin - lets your Hermes bot participate in group chats like a person' in forum #plugins-skills-and-skins
+# thread_id=1524447019119284234 forum_id=1485392832154832906
+# Started 2026-07-08T19:26:30.495074+00:00
+
+[2026-07-08T16:08:12.214000+00:00] marticarmona (id=1524447019119284234)
+    Bots break in group chats: they answer every message, instantly, all the time. This plugin gives your Hermes bot the social sense to participate like a person. It knows when to jump in, when to stay quiet, and how to sound like a member of the group.
+    
+    What it does:
+    - Turn-taking: decides when to reply vs stay silent, and splits responses into natural, human-paced messages instead of one wall of bot text
+    - Persona: /soul enhance turns a one-line description into a full character with a real voice
+    - Theory of mind: considers how a message will land for the reader before sending it
+    - Social learning: picks up your group's slang, formatting, and jokes, so the bot sounds like a member, not a visitor
+    
+    Setup is one clone + enable; the plugin auto-configures itself on first start. Powered by the Humalike APIs.
+    
+    🔗 https://github.com/Humalike/hermes-humalike-plugin
+    
+    Would love to chat with anyone about the plugin, and I'm just as curious to hear what you're using Hermes for!
+    [embed] GitHub - Humalike/hermes-humalike-plugin: A Hermes Agent plugin tha... https://github.com/Humalike/hermes-humalike-plugin
+

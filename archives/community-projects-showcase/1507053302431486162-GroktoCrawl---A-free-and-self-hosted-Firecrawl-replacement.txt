@@ -952,3 +952,9 @@
 [2026-07-08T13:51:04.116000+00:00] magnus919 (id=1524412507974930463)
     Also this means it’s going to chew some tokens when it works
 
+[2026-07-08T14:15:09.435000+00:00] hurricane041696 (id=1524418570082324491)
+    yup i have LLM endpoint and api provided for groktocrawl, that 's not problem
+
+[2026-07-08T14:20:31.013000+00:00] hurricane041696 (id=1524419918878085141)
+    when this will be done I will run thorogh testing of all functions again, on my remote VPS and local (via VPN and not) to file issues
+

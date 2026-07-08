@@ -2493,3 +2493,9 @@
     [embed] GitHub - wysie/mnemosyne-dashboard: Local-only read-only web dashbo... https://github.com/wysie/mnemosyne-dashboard
     [reply to adoreparler msg=1523752587596271796]
 
+[2026-07-08T16:51:16.937000+00:00] adoreparler (id=1524457860233433238)
+    Anyone here use/used Honcho and then Mnemosyne to give any feedback they have
+
+[2026-07-08T16:51:47.537000+00:00] adoreparler (id=1524457988579004667)
+    I will be setting up Mnemosyne when I get sometime to try it out
+

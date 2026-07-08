@@ -1,0 +1,7 @@
+# Thread 'Humalike Plugin - lets your Hermes bot participate in group chats like a person' in forum #plugins-skills-and-skins
+# thread_id=1524446565811622009 forum_id=1485392832154832906
+# Started 2026-07-08T19:26:30.855136+00:00
+
+[2026-07-08T16:06:40.071000+00:00] marticarmona (id=1524446632643661964)
+    Humalike Plugin - lets your Hermes bot participate in group chats like a person
+

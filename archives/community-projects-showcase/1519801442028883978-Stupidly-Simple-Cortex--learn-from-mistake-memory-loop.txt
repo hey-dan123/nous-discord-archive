@@ -128,3 +128,6 @@
     yup it catches its own false positives with tdd
     [attachment] image.png https://cdn.discordapp.com/attachments/1519801442028883978/1520202825739669625/image.png?ex=6a4056b5&is=6a3f0535&hm=fbbb9fb84589b972d50a58976173230ef99ced560db8cfc21f90161e5f40afa7&
 
+[2026-07-08T14:07:16.099000+00:00] jimpickens3203 (id=1524416584766984363)
+    The github link doesn't work
+
