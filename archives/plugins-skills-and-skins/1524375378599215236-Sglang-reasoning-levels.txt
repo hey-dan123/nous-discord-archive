@@ -1,0 +1,8 @@
+# Thread 'Sglang reasoning levels' in forum #plugins-skills-and-skins
+# thread_id=1524375378599215236 forum_id=1485392832154832906
+# Started 2026-07-08T14:04:13.389113+00:00
+
+[2026-07-08T11:23:31.783000+00:00] robertotomas_2023 (id=1524375378599215236)
+    sglang has trouble with some reasoning levels like xhigh. This fixes that: https://gist.github.com/robbiemu/10f1bb443dd363321a06f8ecd898e689
+    [embed] __init__.py https://gist.github.com/robbiemu/10f1bb443dd363321a06f8ecd898e689
+

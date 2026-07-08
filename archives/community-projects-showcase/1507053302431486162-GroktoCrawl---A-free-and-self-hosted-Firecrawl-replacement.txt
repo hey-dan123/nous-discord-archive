@@ -913,3 +913,42 @@
     [embed] feat(agent): add search-type flag for research depth control · Iss... https://github.com/groktopus/groktocrawl/issues/418
     [reply to hurricane041696 msg=1524251773542600867]
 
+[2026-07-08T12:10:20.804000+00:00] hurricane041696 (id=1524387160487362670)
+    I specifically seek for local equivalent of  deep-research that I do on these web subs of GPT and Gemini.
+
+[2026-07-08T12:49:51.692000+00:00] magnus919 (id=1524397104712122448)
+    Hermes was coding while I slept. I just watched the PR merge and I’m about to smoke test to see if it’s wired right now. Will put together a gist to show what’s different.
+    [reply to hurricane041696 msg=1524387160487362670]
+
+[2026-07-08T12:51:49.540000+00:00] magnus919 (id=1524397599002722405)
+    Going to start with something like:
+    ```
+    
+    Prove it. Run deep research on the rise and fall of the American railroad industry. Capture the GroktoCrawl CLI commands that you run, as well as how long each command takes to run. The point here isn’t for us to learn everything about the railroad industry (but hold on to the artifact pyramid that comes out; we will do something with that). The point is to see if we are truly getting deep research results back now. And to put together a gist that we can share to demonstrate it.
+    ```
+
+[2026-07-08T13:22:13.266000+00:00] magnus919 (id=1524405248263983225)
+    So I’m chatting up Gemini about how agentic deep research should work 😂 and using the chat outputs to help Hermes get way more ambitious about groktocrawl’s deep research path
+    [reply to hurricane041696 msg=1524387160487362670]
+
+[2026-07-08T13:33:28.308000+00:00] hurricane041696 (id=1524408079595208746)
+    Also run deep research there (if possible , i think they have promo 1$ dollar for a month running now) to see how it works real time. It has stages and it shows off .
+    [reply to magnus919 msg=1524405248263983225]
+
+[2026-07-08T13:35:10.251000+00:00] hurricane041696 (id=1524408507175010405)
+    I could run research too and share results and some intermediate steps
+
+[2026-07-08T13:49:10.818000+00:00] magnus919 (id=1524412032768807126)
+    I ran Gemini deep research *on deep research*, fed it back the GroktoCrawl code base, and we are teasing out specific gaps to close.
+    
+    I think this is going to force GroktoCrawl to require LLM. I’m ready to fully commit to that. It’s been more optional until now.
+
+[2026-07-08T13:49:46.286000+00:00] magnus919 (id=1524412181532115154)
+    What’s coming back is absolute gold
+
+[2026-07-08T13:50:19.783000+00:00] magnus919 (id=1524412322028847174)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1507053302431486162/1524412321781518527/image0.jpg?ex=6a4fa71b&is=6a4e559b&hm=71714ebac6cf3d8daf7e6c27c01e4b9f51bacc2ff7283bbcbb3059af4ed977ed&
+
+[2026-07-08T13:51:04.116000+00:00] magnus919 (id=1524412507974930463)
+    Also this means it’s going to chew some tokens when it works
+

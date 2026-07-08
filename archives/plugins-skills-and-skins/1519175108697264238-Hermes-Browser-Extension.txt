@@ -543,3 +543,17 @@
 [2026-07-07T16:37:06.010000+00:00] admund__ (id=1524091903321309414)
     Claude can do this so i hope also Hermes will.
 
+[2026-07-08T11:18:21.012000+00:00] jonkomet (id=1524374075131166861)
+    [attachment] HermesBrowser_Extension_Demo_Video.mp4 https://cdn.discordapp.com/attachments/1519175108697264238/1524374067346669589/HermesBrowser_Extension_Demo_Video.mp4?ex=6a4f837b&is=6a4e31fb&hm=fbc4b714f3dbaf4dc41c6f44b39ee97988e64969cd829ab9f0ec01890e7faf71&
+
+[2026-07-08T11:18:55.086000+00:00] scordop (id=1524374218048016394)
+    amazing
+
+[2026-07-08T11:26:28.691000+00:00] jonkomet (id=1524376120605147136)
+    will be available in the next coming update v0.1.11
+    [reply to admund__ msg=1524091903321309414]
+
+[2026-07-08T11:41:39.414000+00:00] admund__ (id=1524379940454400160)
+    Maybe also on Microsoft Office to build for example excells forms in live view.
+    [reply to jonkomet msg=1524376120605147136]
+

@@ -44851,3 +44851,67 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Hi, <@387972437901312000> , would you please have a look for this PR: https://github.com/NousResearch/hermes-agent/pull/47303/
     [embed] feat(Yuanbao)  optimizes media resource processing speed: parallel ... https://github.com/NousResearch/hermes-agent/pull/47303/
 
+[2026-07-08T09:48:03.981000+00:00] teknium (id=1524351354456510545)
+    We do not want to pass max tokens why does everybody keep trying to readd it ree
+    [reply to kyssta69 msg=1524245421281771520]
+
+[2026-07-08T09:48:28.119000+00:00] kyssta69 (id=1524351455698616443)
+    autofix <:Hehe:1084659733736206376> hermes did that
+
+[2026-07-08T09:48:29.658000+00:00] teknium (id=1524351462153519164)
+    Almost all providers set it to their internal maximum if you send it none
+
+[2026-07-08T09:48:54.421000+00:00] teknium (id=1524351566016942090)
+    There are a very select few like ollama who set it really low and you have to send a maximum value manually
+
+[2026-07-08T10:26:24.282000+00:00] autonomics.build (id=1524361002618191934)
+    Hi <@387972437901312000> could we have this PR merged? Without it the chat command is unusable for me. https://github.com/NousResearch/hermes-agent/pull/53025
+    [embed] fix(cli): preserve chat -q answer by gating exit-summary screen cle... https://github.com/NousResearch/hermes-agent/pull/53025
+
+[2026-07-08T10:27:25.256000+00:00] kyssta69 (id=1524361258361552986)
+    1. **PR #60833** — <https://github.com/NousResearch/hermes-agent/pull/60833>
+       Fix: Kanban tasks with prior completed runs in task_runs are recovered from protocol-violation blocks instead of being permanently blocked.
+    
+    2. **PR #60834** — <https://github.com/NousResearch/hermes-agent/pull/60834>
+       Fix: /compress slash command now works in Hermes Desktop by routing through command.dispatch with server-side compression.
+
+[2026-07-08T10:50:55.457000+00:00] trivunous (id=1524367173173248051)
+    https://github.com/NousResearch/hermes-agent/pull/60620  please view my PR <@387972437901312000>
+    [embed] fix: forward max_tokens to all providers in _build_call_kwargs (#60... https://github.com/NousResearch/hermes-agent/pull/60620
+
+[2026-07-08T11:14:03.271000+00:00] teknium (id=1524372994087194735)
+    did you make this to troll me right after I said this
+    [reply to trivunous msg=1524367173173248051]
+
+[2026-07-08T11:14:11.425000+00:00] teknium (id=1524373028287549441)
+
+[2026-07-08T11:42:31.259000+00:00] watchdominion (id=1524380157907828746)
+    https://github.com/NousResearch/hermes-agent/pull/60796 — container boot could wedge permanently after an interrupted run (#60774): a root-owned .gateway-*.tmp staging dir survives in tmpfs, and after the privilege drop the reconciler can't stat, list, or delete it. Fixed at both layers — a root-side sweep in cont-init before the drop, plus a shared staging-reset helper that recovers instead of crashing (deliberately not a recursive chown of /run/service; the s6 supervision internals need to stay root-owned).
+    
+    https://github.com/NousResearch/hermes-agent/pull/60797 — hermes update was force-downgrading huggingface-hub to the trace-upload ==1.2.3 pin and breaking Hindsight local embeddings (#60783). The sneaky part: presence-based feature activation means merely having sentence-transformers installed marks trace-upload active, so the downgrade hit users who never uploaded a trace. Widened to a range with an invariant test so a future re-pin into conflict fails loudly.
+    
+    https://github.com/NousResearch/hermes-agent/pull/60085 — kanban task notifications never reached TUI/desktop sessions (#59890): the documented kanban_notify_subs poller was never actually implemented, so every subscription sat at last_event_id=0 forever. Implemented it with the same atomic cursor-claim the gateway notifier uses, +8 regression tests. Triage flagged it as overlapping #59963 (opened a few hours before mine on the same gap) — I've laid out the behavioral differences on the PR and left a review on #59963 with a fix suggestion for the session-key resolution; genuinely happy with whichever version the maintainers land, and I'll help fold the rest in either way.
+    
+    All with regression tests and clean scoped diffs. Feedback welcome 🙏
+    
+    <@387972437901312000>
+
+[2026-07-08T12:29:09.889000+00:00] frizikk (id=1524391896213094431)
+    <@387972437901312000> can you look at this, is really frustrating to work on multiple sessions in hermes desktop when queued messages are not drained https://github.com/NousResearch/hermes-agent/pull/57849
+    [embed] fix(desktop): drain queued prompts for background sessions by frizi... https://github.com/NousResearch/hermes-agent/pull/57849
+
+[2026-07-08T12:57:26.833000+00:00] watchdominion (id=1524399013711839332)
+    I left a small review to help it move along
+    [reply to frizikk msg=1524391896213094431]
+
+[2026-07-08T13:22:32.511000+00:00] cryptobyz (id=1524405328983228468)
+    People should not acces others' activities, right.
+    
+    Issue: Users on gateway platforms can access and resume other users' active sessions by title due to lack of source and user_id scoping in resolve_session_by_title
+        PR: https://github.com/NousResearch/hermes-agent/pull/60914
+    [embed] fix(gateway): resolve CVE-2026-11461 by scoping session-by-title re... https://github.com/NousResearch/hermes-agent/pull/60914
+
+[2026-07-08T13:43:45.634000+00:00] frizikk (id=1524410668848120049)
+    I made the corrections you indicated
+    [reply to watchdominion msg=1524399013711839332]
+

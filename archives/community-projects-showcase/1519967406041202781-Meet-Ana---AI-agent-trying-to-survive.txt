@@ -104,3 +104,6 @@
     GPT 5.4 mini?
     [reply to exquisite_cheetah_29759 msg=1524251676490596412]
 
+[2026-07-08T08:34:57.911000+00:00] exquisite_cheetah_29759 (id=1524332957945303070)
+    5.5 mostly, but as I say I have been trying many models , glm, z ai, deepseek, qwen, Gemini, etc etc, 5.5 I believe is one of ana's problems, had a interesting day yesterday if you check the blog out worth reading
+
