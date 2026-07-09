@@ -5491,3 +5491,16 @@
     Things been working pretty well for you overall with Hermes and WebUI?
     [reply to jconcep msg=1524579519774588978]
 
+[2026-07-09T09:52:38.115000+00:00] alto69 (id=1524714892123439114)
+    The hands free voice mode still isn't working for me
+
+[2026-07-09T10:03:14.520000+00:00] alto69 (id=1524717561399218186)
+    I have some working on my machine changes
+    [attachment] Screenshot_20260709-200133.png https://cdn.discordapp.com/attachments/1493017427724992612/1524717560812011713/Screenshot_20260709-200133.png?ex=6a50c362&is=6a4f71e2&hm=34c18a25eddaae52945aba2180e6152185a5655e1243801b3ad336cbf5342ee5&
+
+[2026-07-09T10:06:56.233000+00:00] alto69 (id=1524718491331203103)
+    Image Background and chat tiling would be big wins for me
+
+[2026-07-09T11:06:49.894000+00:00] mburhop (id=1524733564237778975)
+    You are bringing back MySpace for Hermes?
+

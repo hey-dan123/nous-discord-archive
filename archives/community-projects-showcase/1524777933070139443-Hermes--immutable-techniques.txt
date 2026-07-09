@@ -1,0 +1,19 @@
+# Thread 'Hermes: immutable-techniques' in forum #community-projects-showcase
+# thread_id=1524777933070139443 forum_id=1316137596535177246
+# Started 2026-07-09T14:53:40.455960+00:00
+
+[2026-07-09T14:03:08.248000+00:00] smoermeow (id=1524777933070139443)
+    Just made a Hermes skill architecture to GitHub:
+    
+    hermes-immutable-techniques
+    From a thousand wars against the Unknowing Hand that rewrote the sacred forms, the Immutable Techniques rose to end the drift.
+    
+    An architecture that stops Hermes from "helpfully" rewriting your specialized skills. Splits routing (the orchestrator) from technique (the protected layer) into two strictly separated layers - the router points, it never edits the method. Ships one worked example + 13 technique templates.
+    
+    Fill the vault with your own techniques.
+    
+    I'm figuring this out as I go and have no real idea what I'm doing, so feedback and roasting both welcome <:pepeLove:962507619849871370> 
+    
+    Link: https://github.com/smoermeow/hermes-immutable-techniques
+    [embed] GitHub - smoermeow/hermes-immutable-techniques: From a thousand war... https://github.com/smoermeow/hermes-immutable-techniques
+

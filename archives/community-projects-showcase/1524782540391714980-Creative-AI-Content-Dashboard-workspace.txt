@@ -1,0 +1,19 @@
+# Thread 'Creative AI Content Dashboard/workspace' in forum #community-projects-showcase
+# thread_id=1524782540391714980 forum_id=1316137596535177246
+# Started 2026-07-09T14:53:39.961032+00:00
+
+[2026-07-09T14:21:26.719000+00:00] smoermeow (id=1524782540391714980)
+    I'm building a creative workspace for all my projects that will be running with hermes.
+    I'm using Fable 5 to create it.
+    - You'll have all projects at hand, and can seamlessly shift between them.
+    - You can manually edit, or have hermes edit script, scenes, generate images, videos.
+    - You can change profiles for specific purposes
+    - You have clear overview over anything from characters, scenes, shots and story premise.
+    
+    And much much more <a:pepeSUM:836593225401368617> 
+    
+    If anyone finds it interesting i'll gladly share it when I'm done.
+    
+    Don't really know what I'm doing so any feedback is appreciated! <:pepeOK:962507619996680262>
+    [attachment] dashboard.png https://cdn.discordapp.com/attachments/1524782540391714980/1524782540861472899/dashboard.png?ex=6a50ffe6&is=6a4fae66&hm=903a1ffb0be251cededd443ebe856d758b87547cd0546a8baa10b9e9681ed5a0&
+

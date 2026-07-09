@@ -1,0 +1,8 @@
+# Thread 'Tamashii : how one line bypassed Hermes's builtin memory system' in forum #community-projects-showcase
+# thread_id=1524743241566781531 forum_id=1316137596535177246
+# Started 2026-07-09T14:53:40.843304+00:00
+
+[2026-07-09T11:45:17.149000+00:00] afoxmind (id=1524743241566781531)
+    https://github.com/mrpandafr/ub1k/blob/main/blog/HACKED-HERMES-EN.md
+    [embed] ub1k/blog/HACKED-HERMES-EN.md at main · mrpandafr/ub1k https://github.com/mrpandafr/ub1k/blob/main/blog/HACKED-HERMES-EN.md
+

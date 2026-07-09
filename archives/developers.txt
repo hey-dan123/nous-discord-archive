@@ -45351,3 +45351,38 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Any chance https://github.com/NousResearch/hermes-agent/pull/33769 will be merged in? It's P3, but  6 weeks? <:pepecryyay:1368670825640886283>
     [embed] feat(web): add Oxylabs AI Studio as a web provider plugin by aleksa... https://github.com/NousResearch/hermes-agent/pull/33769
 
+[2026-07-09T10:12:20.844000+00:00] lf1up (id=1524719852848156743)
+    It seems there is a bug with Honcho's memory inside the cloud version instance.
+    I'm on a freshly created small instance of Hermes Cloud right now.
+    
+    I receive this when I try to install required deps:
+    ```
+    error: Failed to install: honcho_ai-2.2.0-py3-none-any.whl (honcho-ai==2.2.0)                                                                
+         Caused by: Failed to create directory `/opt/hermes/.venv/lib/python3.13/site-packages/honcho_ai-2.2.0.dist-info`                           
+         Caused by: failed to create directory `/opt/hermes/.venv/lib/python3.13/site-packages/honcho_ai-2.2.0.dist-info`:                          
+       Permission denied (os error 13)
+    ```
+    
+    And here is the reason:
+    ```
+    Now I understand the issue. The LAZY_DEPS allowlist pins honcho-ai==2.0.1, but the error message shows                                      
+        honcho-ai==2.2.0 being installed.
+    ```
+
+[2026-07-09T11:04:18.954000+00:00] watchdominion (id=1524732931149664376)
+    Friendly bump on three bug-fix PRs from me that are ready for maintainer eyes 🙏
+    
+    https://github.com/NousResearch/hermes-agent/pull/60796 — container boot wedges permanently after an interrupted run (#60774): a root-owned .gateway-*.tmp staging dir survives in tmpfs and the post-privilege-drop reconciler can't remove it. Fixed at both layers: a root-side sweep in cont-init before the drop, plus a shared staging-reset helper that recovers instead of crashing. Deliberately avoids the recursive chown of /run/service — the s6 supervision internals need to stay root-owned. 4 regression tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/60797 — hermes update force-downgrades huggingface-hub to the trace-upload ==1.2.3 pin and breaks Hindsight local embeddings (#60783). Presence-based feature activation means just having sentence-transformers installed triggers the downgrade — even for users who never uploaded a trace. Widened to a range (the LAZY_DEPS norm) with an invariant test that fails loudly if it's ever re-pinned into conflict.
+    
+    https://github.com/NousResearch/hermes-agent/pull/60085 — kanban task notifications never reach TUI/desktop sessions (#59890, since confirmed by another user on Hermes Studio): the documented poller for kanban_notify_subs was never implemented, so subscriptions sit at last_event_id=0 forever. Implements it with the same atomic cursor-claim the gateway notifier uses, +8 tests. Overlaps #59963 — comparison is on the PR and I've reviewed theirs too; happy with whichever lands.
+
+[2026-07-09T13:59:19.394000+00:00] bitsandtea (id=1524776973187022878)
+    Hello gents any updates on the hackathon results so far?
+
+[2026-07-09T14:29:37.363000+00:00] radc0rp (id=1524784598301540463)
+    this was the update I saw from yesterday
+    https://discord.com/channels/1053877538025386074/1476316988992258300/1524425956104863744
+    [reply to bitsandtea msg=1524776973187022878]
+
