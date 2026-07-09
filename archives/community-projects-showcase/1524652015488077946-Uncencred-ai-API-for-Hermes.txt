@@ -1,0 +1,8 @@
+# Thread 'Uncencred ai API for Hermes' in forum #community-projects-showcase
+# thread_id=1524652015488077946 forum_id=1316137596535177246
+# Started 2026-07-09T09:35:20.495810+00:00
+
+[2026-07-09T05:42:47.157000+00:00] kizo0027 (id=1524652015488077946)
+    Dadgpt  is the Fully Uncencored ai Build on top of Deepseek v4 pro the latest deepseek family model it is capable of doing crazy things give it a shot https://dadgpt.live  You can use the APi Directly in the hermes agent
+    [embed] DadGPT - Uncensored AI Chat, Coding Assistant & API https://dadgpt.live/
+

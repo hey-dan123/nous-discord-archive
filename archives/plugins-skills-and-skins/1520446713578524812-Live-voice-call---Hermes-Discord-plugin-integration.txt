@@ -79,3 +79,6 @@
     https://github.com/Capslockb/hermes-live-discord-agent-plugin
     [embed] GitHub - Capslockb/hermes-live-discord-agent-plugin: Hermes Live Di... https://github.com/Capslockb/hermes-live-discord-agent-plugin
 
+[2026-07-09T03:01:01.005000+00:00] sounderstanding (id=1524611304936177766)
+    Any plans to incorporate local full duplex models like Qwen3 Omni/MiniCPM/NVIDIA PersonaPlex?
+

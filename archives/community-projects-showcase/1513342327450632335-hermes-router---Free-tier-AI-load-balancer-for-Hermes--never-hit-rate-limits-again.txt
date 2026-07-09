@@ -1007,3 +1007,12 @@
     
     Pull the latest with `hr update` (or git pull + restart) to get both fixes. 🙏
 
+[2026-07-09T04:28:30.869000+00:00] shaf_2665 (id=1524633324461756497)
+    **New Updates on Hermes-router:**
+    
+    Clean UI for Web Dashboard and extension dashboard.
+    
+    grab it via `hr update`
+    [attachment] image.png https://cdn.discordapp.com/attachments/1513342327450632335/1524633323627090010/image.png?ex=6a5074ee&is=6a4f236e&hm=2c747d64d642d8b1159b87ba2611fd9a8f3a635bccacc903e56dcd4c629b1d6d&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1513342327450632335/1524633324071682098/image.png?ex=6a5074ee&is=6a4f236e&hm=2cb1d25d811d13cd4246a05cd25770776235d769b0dd6e31b2a1549b7e68c53f&
+

@@ -23,3 +23,18 @@
     0.3.0 released, added DingTalk channel support. more details in https://github.com/DanielLi202/hermes-tag/releases/tag/v0.3.0
     [embed] Release v0.3.0 · DanielLi202/hermes-tag https://github.com/DanielLi202/hermes-tag/releases/tag/v0.3.0
 
+[2026-07-09T07:10:14.048000+00:00] february1867 (id=1524674022543986728)
+    v0.4.0 — the "why is the bot ignoring my group" release
+    
+    The most common failure report I got wasn't a crash. It was silence: you add the bot to a group, the config says it can read group messages, and it just... doesn't. Almost every time, the Feishu app never actually got the im:message.group_msg grant — the config claimed it, the app didn't hold it, and nothing anywhere told you.
+    
+    So now the plugin checks. Once per process it verifies the config's claim against what the app actually holds (the probe itself needs no extra permission). On a mismatch it logs, writes an audit event, and DMs the admins once, with the fix spelled out. /tag status shows the verdict: capability_check=ok|mismatch|upgrade_available|unknown.
+    
+    Also in this release:
+    
+    sender identity is normalized to open_id at ingress, so admin checks and stored authors stay stable even when the employee-id scope is granted
+    a known-limits page mapping "bot looks broken" symptoms to what's actually a Feishu-platform or hermes-core limit (connection, rate limits, media, account types): https://github.com/DanielLi202/hermes-tag/blob/main/docs/known-limits.md
+    Release notes: https://github.com/DanielLi202/hermes-tag/releases/tag/v0.4.0
+    [embed] hermes-tag/docs/known-limits.md at main · DanielLi202/hermes-tag https://github.com/DanielLi202/hermes-tag/blob/main/docs/known-limits.md
+    [embed] Release v0.4.0 — Trust & Diagnostics · DanielLi202/hermes-tag https://github.com/DanielLi202/hermes-tag/releases/tag/v0.4.0
+

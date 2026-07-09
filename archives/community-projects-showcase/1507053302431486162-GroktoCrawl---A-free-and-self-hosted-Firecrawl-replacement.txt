@@ -964,3 +964,13 @@
 [2026-07-09T00:18:15.790000+00:00] hurricane041696 (id=1524570346655842314)
     [attachment] image.png https://cdn.discordapp.com/attachments/1507053302431486162/1524570346349662228/image.png?ex=6a503a47&is=6a4ee8c7&hm=dcad0949981032d500a80181491fdcff7d5a9b0c9d5cc7385c9187cef78aa04a&
 
+[2026-07-09T02:49:34.008000+00:00] magnus919 (id=1524608423461912627)
+    FWIW I’ve been messing with LangGraph today/tonight outside of groktocrawl to kind of sus out if it works the way I think it works. Before I commit to a path I want to try pydantic also.
+    
+    But fundamentally what I’m working on here should make Groktocrawl WAY more effective at larger / more complex / more ambitious research jobs. 
+    
+    This is less about the scraping and more about the orchestration and synthesis.
+
+[2026-07-09T03:20:53.161000+00:00] selwind (id=1524616305200595134)
+    When it's ready let me know, i'm gonna throw a 1500 reference research around a theme, across a lot of domains with an explicit of minimum 2 - 4 images per reference 😄
+

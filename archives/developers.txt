@@ -45321,3 +45321,33 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/61236
     [embed] feat(api): backend-acknowledged session model lock with runtime rou... https://github.com/NousResearch/hermes-agent/pull/61236
 
+[2026-07-09T02:56:40.495000+00:00] daring_flamingo_73353 (id=1524610212277915658)
+    Hey buddy, I want to know if this feature about sharing links can be merged into the main branch? https://github.com/nesquena/hermes-webui/pull/5337
+    [embed] Add public read-only conversation sharing by MicoRobot · Pull Requ... https://github.com/nesquena/hermes-webui/pull/5337
+
+[2026-07-09T03:28:46.784000+00:00] loongfay (id=1524618291719700570)
+    Hi, <@387972437901312000>, a small PR, when you are free, please have a look: https://github.com/NousResearch/hermes-agent/pull/61274
+    [embed] perf(Yuanbao) reduce redundant resource-URL RPC in inbound media re... https://github.com/NousResearch/hermes-agent/pull/61274
+
+[2026-07-09T05:42:05.288000+00:00] joui2k (id=1524651839876763668)
+    have you tried to let claude code fix it for you?
+    [reply to .daveevad msg=1524526540220530738]
+
+[2026-07-09T06:06:52.875000+00:00] .daveevad (id=1524658079269126205)
+    <@252425296475586560> i dont use frontier american models , all gather data (i suspect Hermes is too) and i just need name of the file to fix it myself without spending any money.( if you developed your own sysyem from scratch) All american models has a spywate embedded in . My susyem is to *customised*and  i dont allow AI  no frontier models in.  Only 1 machine has outside access to the   internet. If you build a proper architectire anh harness you can use cheap models and achive almost the same resault. My Hermie at the moment sits at model mem 60000 , user mem at 30000kb and i  dont allow auto skill creation. I notoced long time ago to use open claw to fix hermes and vice versa.
+
+[2026-07-09T06:35:36.025000+00:00] trivunous (id=1524665306683932752)
+    https://github.com/NousResearch/hermes-agent/pull/61209
+    [embed] fix(gateway): prevent hygiene compression from destroying archived ... https://github.com/NousResearch/hermes-agent/pull/61209
+
+[2026-07-09T07:37:03.242000+00:00] realadolan (id=1524680771993079910)
+    https://github.com/NousResearch/hermes-agent/pull/61345
+    [embed] fix(export): escape tool-call name in HTML session export by Adolan... https://github.com/NousResearch/hermes-agent/pull/61345
+
+[2026-07-09T07:41:18.053000+00:00] massilock (id=1524681840747876434)
+    do anyone here help me https://discord.com/channels/1053877538025386074/1524668687162806292
+
+[2026-07-09T08:57:58.981000+00:00] aleksas. (id=1524701138438328464)
+    Any chance https://github.com/NousResearch/hermes-agent/pull/33769 will be merged in? It's P3, but  6 weeks? <:pepecryyay:1368670825640886283>
+    [embed] feat(web): add Oxylabs AI Studio as a web provider plugin by aleksa... https://github.com/NousResearch/hermes-agent/pull/33769
+

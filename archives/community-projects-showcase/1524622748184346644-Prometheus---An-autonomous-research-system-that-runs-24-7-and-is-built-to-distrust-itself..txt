@@ -1,0 +1,42 @@
+# Thread 'Prometheus - An autonomous research system that runs 24/7 and is built to distrust itself.' in forum #community-projects-showcase
+# thread_id=1524622748184346644 forum_id=1316137596535177246
+# Started 2026-07-09T09:35:20.945509+00:00
+
+[2026-07-09T03:46:29.288000+00:00] sause.eth (id=1524622748184346644)
+    Self-directing research fleet: it generates its own questions, dispatches LLM workers to run real experiments with preserved code, extracts claims with scoped confidence, and then spends a large fraction of its compute attacking its own conclusions — adversarial replication, cross-domain disconfirmation, novelty verification against the actual literature indexes, and calibration audits that measure how often the system's own confidence is wrong.
+    
+    It is not a chatbot, not a demo loop, and not turnkey. It is a working reference deployment: ~90 scheduled jobs, ~100 orchestration scripts, two SQLite WAL databases, three fail-open runtime plugins, and a local vLLM worker fleet on a single RTX 5090 — running continuously and processing over 100,000 tasks to date.
+    ```
+     curiosities ──► scoring ──► task queue (priority lanes) ──► kanban dispatcher
+          ▲                                                            │
+          │                                              ┌─────────────┴─────────────┐
+          │                                              ▼                           ▼
+          │                                    local A1 workers            API-lane workers
+          │                                  (vLLM on RTX 5090,          (burst / frontier
+          │                                   free, 6×96K ctx)             capability)
+          │                                              └─────────────┬─────────────┘
+          │                                                            ▼
+          │                                            experiments (code preserved,
+          │                                             results → worker_results)
+          │                                                            ▼
+          │                                              claims (scoped confidence,
+          │                                               claim_hash identity)
+          │                                                            ▼
+          │            ┌───────────────────────────────────────────────┴───────┐
+          │            ▼                   ▼                   ▼               ▼
+          │      adversarial         cross-domain         novelty vs      independence
+          │      attack lane         disconfirmation      literature      & circularity
+          │      (replication,       gate                 indexes         gates
+          │       contradiction)                                              │
+          │            └───────────────────┬───────────────────┬──────────────┘
+          │                                ▼                   ▼
+          │                      calibration loop        discovery spotlight
+          │                      (meta-prober,           (the terminus: what
+          │                       mechanism trust)        actually survived)
+          └────────────────────────────────┘
+            contradictions and calibration misses become new curiosities
+    ```
+    
+    https://github.com/slow4cyl/prometheus
+    [embed] GitHub - slow4cyl/prometheus: Autonomous research system: self-dire... https://github.com/slow4cyl/prometheus
+
