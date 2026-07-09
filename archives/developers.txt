@@ -45224,3 +45224,100 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     No pressure, just wanted to make sure. Probably my issues are just too small
     [reply to egilewski msg=1524495051550490694]
 
+[2026-07-08T19:23:52.870000+00:00] egilewski (id=1524496262999703553)
+    I'm just one of the 1700 contributors. But if you think that severity of any of them is severely underestimated, this is the place to pitch.
+    [reply to _name_name_ msg=1524495171226566898]
+
+[2026-07-08T19:24:22.438000+00:00] _name_name_ (id=1524496387016884234)
+    I do not, so far all my issues have been priotized correctly as P2 or P3 I think
+
+[2026-07-08T19:57:26.453000+00:00] _.exo._ (id=1524504708578807908)
+    <@695026360090886274> i have a frankenstein build of hermes with all my personal patches on top of the latest release. if something is a real issue i make a PR and keep it pushing. but normally i run hermes-agent from my personal branch. If it's bothering enough people it will definitely get some traction but just fix it for yourself ideally while the PR  is getting sorted out by the maintainers. there's also a possibility that other persons opened a PR for a similar issue that may be a more ideal solution. ultimately fix it for yourself and propose the solution to the community in the PR
+
+[2026-07-08T20:37:27.039000+00:00] baileys344 (id=1524514777366532279)
+    https://discordapp.com/channels/1053877538025386074/1523428555525197884
+
+[2026-07-08T20:38:06.633000+00:00] baileys344 (id=1524514943435804762)
+    https://github.com/negroni334/Hermes-Dedektif
+    [embed] GitHub - negroni334/Hermes-Dedektif: A Python-based smart contract ... https://github.com/negroni334/Hermes-Dedektif
+
+[2026-07-08T20:50:20.071000+00:00] papajams (id=1524518019697737738)
+    no london crew/team in the discord?
+    [reply to papajams msg=1524095121216241875]
+
+[2026-07-08T20:53:10.077000+00:00] aialliai (id=1524518732754587658)
+    some...
+
+[2026-07-08T21:17:11.490000+00:00] .daveevad (id=1524524778478764152)
+    Widows bug
+    [attachment] 20260708_221540.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524524778180837477/20260708_221540.jpg?ex=6a500fd7&is=6a4ebe57&hm=97c9402023648a685382c70f1bb024035abc4915c23da814c6a2915eecb23cf2&
+
+[2026-07-08T21:17:32.932000+00:00] .daveevad (id=1524524868413165679)
+    Doesnt matter what model
+
+[2026-07-08T21:17:50.099000+00:00] joui2k (id=1524524940416651367)
+    hermes doctor --fix
+    [reply to .daveevad msg=1524524868413165679]
+
+[2026-07-08T21:18:07.241000+00:00] .daveevad (id=1524525012315406559)
+    <@252425296475586560> Doesnt work
+
+[2026-07-08T21:18:26.997000+00:00] joui2k (id=1524525095178207335)
+    hermes update?
+    [reply to .daveevad msg=1524525012315406559]
+
+[2026-07-08T21:20:33.140000+00:00] .daveevad (id=1524525624260169799)
+    <@252425296475586560> After update. I only update to newest 1 of 5 machines to check the updates as my system isxto customised and updates just brake it
+
+[2026-07-08T21:21:26.063000+00:00] joui2k (id=1524525846235185312)
+    And the one that has errors is customised?
+    [reply to .daveevad msg=1524525624260169799]
+
+[2026-07-08T21:24:11.522000+00:00] .daveevad (id=1524526540220530738)
+    <@252425296475586560> no,  this one is  not. After the  Trinity memory update i will not install any updates. Im still fixing my system after that one  and cant get it to the way it worked
+
+[2026-07-08T21:26:09.930000+00:00] .daveevad (id=1524527036859940977)
+    Now 3 days im waiting for someone from Core team to tell me which file currently holds "source of truth"  and no one even bothers to answer
+
+[2026-07-08T21:27:10.368000+00:00] .daveevad (id=1524527290355028088)
+    Already posted on linkedin , if no one ansewrs will go to youtube and X
+
+[2026-07-08T22:22:16.644000+00:00] aleksandr_1 (id=1524541157881810974)
+    <@387972437901312000> , sir, I recently opened two PRs on the same topic:
+    
+    #57990. Closes a gap in the skills scanner (`.ps1`/`.bat`/extensionless files weren't being scanned at all) and a gap in approval checking for PowerShell `-File`, plus separately fixes a bug where an "ask" verdict on skill install could silently turn into an install with no confirmation in non-interactive contexts (e.g. the Desktop app).
+    
+    #57666. Closes a bypass of the MCP security check via general-purpose interpreters (`python3`/`node`/`perl`/`ruby` instead of a shell) and a bypass of approval detection via obfuscated flag forms (`-uc` instead of `-u -c`, no-space-glued values, versioned binaries like `python3.11`).
+    
+    Both have approval as their common denominator. While maintaining them, I kept running into new flag shapes that the regex just didn't cover, one combination after another. It became clear this wasn't a matter of individual missed cases but the method itself: a regex trying to recognize flags in a flat string structurally can't reliably solve command-line argument parsing.
+    
+    So today I sent a third PR, **refactor(approval): replace regex inline-script-execution detection with tokenizer-based**, which replaces all of that regex logic (`-c`/`-e`/`--eval`/`-p`/`--print`, PowerShell `-File`/`-Command`, heredoc) with tokenization: `shlex.split()` plus a per-language flag table. This isn't a patch for one more found case, it's a replacement of the approach itself; the tokenizer checks every token of the command independently, instead of trying to guess in advance which flags come before the target one and in what form.
+    
+    In my view the value isn't just in closing the issues already found, but in that it preemptively closes a whole class of similar shapes that could turn up down the line, for example `node -p`/`--print` (real inline execution, but without the `e` or `c` letter the old regex looked for), `perl -pe` (a combined flag where `-e` is glued to `-p` with no space), or flags that take their own argument like `-W ignore -c`. The tokenizer is designed so these can't become a hole in the first place.
+    
+    The approach fits the existing architecture naturally: `shlex.split()` is already used in this same file (`_literal_command_substitution_output`) and in `hermes_cli/mcp_security.py` (`_command_basename`), so it's not a new pattern. Integration is minimal, one fallback function in `detect_dangerous_command()`, no signature changes, and every call site (including the TUI gateway and cron deny-mode) automatically picks up the new detection. 
+    
+    **332 tests passing, including 34 new ones.**
+    
+    **PR**: https://github.com/NousResearch/hermes-agent/pull/60801
+    [embed] refactor(approval): replace regex inline-script-execution detection... https://github.com/NousResearch/hermes-agent/pull/60801
+
+[2026-07-09T00:39:55.497000+00:00] trivunous (id=1524575798021853184)
+    I don't see it, bro
+    [reply to teknium msg=1524372994087194735]
+
+[2026-07-09T01:20:17.892000+00:00] aialliai (id=1524585958282891354)
+    <@387972437901312000>  check your pm's  🤙
+
+[2026-07-09T01:20:33.310000+00:00] aialliai (id=1524586022950801489)
+    or dm's
+    [reply to aialliai msg=1524585958282891354]
+
+[2026-07-09T01:43:14.808000+00:00] sause.eth (id=1524591733487177903)
+    my first try at this 👀 hope fable did alright :x
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1524591733470396487/image.png?ex=6a504e32&is=6a4efcb2&hm=c293d1caf727be1e9cc868f1776d9101eb1b9af3979f06e666c2c674096982ef&
+
+[2026-07-09T01:45:21.655000+00:00] jonkomet (id=1524592265522053291)
+    https://github.com/NousResearch/hermes-agent/pull/61236
+    [embed] feat(api): backend-acknowledged session model lock with runtime rou... https://github.com/NousResearch/hermes-agent/pull/61236
+

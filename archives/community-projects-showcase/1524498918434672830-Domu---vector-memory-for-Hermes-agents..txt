@@ -1,0 +1,24 @@
+# Thread 'Domu — vector memory for Hermes agents.' in forum #community-projects-showcase
+# thread_id=1524498918434672830 forum_id=1316137596535177246
+# Started 2026-07-09T02:46:09.332443+00:00
+
+[2026-07-08T19:34:25.975000+00:00] afoxmind (id=1524498918434672830)
+    We built a memory provider for Hermes that runs on Elasticsearch — kNN + BM25 + RRF native. No SQL, no ORM, no 600KB monoliths. ~1 100 lines of code across 6 files, covering the full MemoryProvider ABC.
+        
+     What it does:
+      - L1/L2/L3 concentric recall around conversation focus
+      - Synapse: a gate filter that discards tool-call noise before indexing (tested: 177 msg → 2 indexed, 175 filtered)
+      - Multi-agent isolation on a single ES cluster (bank_id + scope)
+      - Time-vectors: focus drift recorded per turn
+      - 3 tools: recall / remember / forget
+        
+      Stack:
+      - Elasticsearch 8.18 (kNN, BM25, RRF)
+      - bge-small-en-v1.5 (384d, local)
+      - Hermes Agent MemoryProvider ABC (315 lines)
+        
+     Code: github.com/mrpandafr/domu
+                 github.com/mrpandafr/vectormind (the vector engine)
+    MIT.
+    Built by K1SS Atelier 0, Besançon.
+

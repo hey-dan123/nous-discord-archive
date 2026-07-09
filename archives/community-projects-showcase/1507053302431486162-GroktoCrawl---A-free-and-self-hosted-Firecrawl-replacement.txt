@@ -958,3 +958,9 @@
 [2026-07-08T14:20:31.013000+00:00] hurricane041696 (id=1524419918878085141)
     when this will be done I will run thorogh testing of all functions again, on my remote VPS and local (via VPN and not) to file issues
 
+[2026-07-08T22:13:33.026000+00:00] magnus919 (id=1524538961668866089)
+    Now that it’s getting more LLM heavy I’m tempted to redo some bits around LangGraph
+
+[2026-07-09T00:18:15.790000+00:00] hurricane041696 (id=1524570346655842314)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1507053302431486162/1524570346349662228/image.png?ex=6a503a47&is=6a4ee8c7&hm=dcad0949981032d500a80181491fdcff7d5a9b0c9d5cc7385c9187cef78aa04a&
+

@@ -1,0 +1,27 @@
+# Thread 'Tired of typing the same prompts just to analyze a file? I built Hermes Drop.' in forum #community-projects-showcase
+# thread_id=1524526336960499923 forum_id=1316137596535177246
+# Started 2026-07-09T02:46:08.936035+00:00
+
+[2026-07-08T21:23:23.061000+00:00] gokberkb. (id=1524526336960499923)
+    Hey everyone,
+    
+    I love the Hermes ecosystem, but constantly switching to the terminal and writing repetitive prompts every time I needed to read a schematic, check a PDF, or analyze an image was slowing me down. I wanted a completely frictionless way to interact with my local agent.
+    
+    So, I built Hermes Drop. It’s a minimalist, desktop dropzone for Hermes.
+    
+    What it does:
+    
+    Zero Prompting: You don't type anything. Just drag a file (PDF, code, image) and drop it on the UI. The app detects the file type, formats the perfect command, and triggers Hermes in the background.
+    
+    100% Local & Lightweight: Built with Python and CustomTkinter. No bloated web servers, no heavy frameworks.
+    
+    Zero Friction: Just a clean, dark-mode window that sits on your desktop, ready to process your files instantly.
+    
+    It's completely open-source. I built this mainly to solve my own workflow issues and learn, but I'd love to hear your feedback or feature ideas!
+    
+    https://github.com/ankaramasterz/hermes-drop
+    [embed] GitHub - ankaramasterz/hermes-drop: A frictionless, drag-and-drop U... https://github.com/ankaramasterz/hermes-drop
+
+[2026-07-08T21:26:28.971000+00:00] baileys344 (id=1524527116723425320)
+    You've put together some great content well done. If you think you need any help with this, feel free to ask me.
+

@@ -1,0 +1,11 @@
+# Thread 'Codex orchestration workflow for claude Fable' in forum #community-projects-showcase
+# thread_id=1524573475283402857 forum_id=1316137596535177246
+# Started 2026-07-09T02:46:08.521793+00:00
+
+[2026-07-09T00:30:41.713000+00:00] axosio (id=1524573475283402857)
+    I average around 40x the usage from fable with similar output quality, codex gives a lot more subsidization. I know others have done this as well but I'd say mine has a unique twist. MIT license with instructions on how to use it. Enjoy and hope y'all create something great with this - https://github.com/chrisb4096-alt/codex-worker
+    [embed] GitHub - chrisb4096-alt/codex-worker: Run Claude Code multi-agent w... https://github.com/chrisb4096-alt/codex-worker
+
+[2026-07-09T00:31:52.541000+00:00] axosio (id=1524573772357697599)
+    **40x usage when using dynamic workflows
+

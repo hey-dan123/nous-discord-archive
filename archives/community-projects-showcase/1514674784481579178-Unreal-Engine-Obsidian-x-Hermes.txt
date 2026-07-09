@@ -264,3 +264,12 @@
     It begins!!
     [attachment] image0.jpg https://cdn.discordapp.com/attachments/1514674784481579178/1524472666285670561/image0.jpg?ex=6a4fdf4e&is=6a4e8dce&hm=c4b411b2eab68b77e642384d7857cef3cc47b191399053f15e7b1920c14d046f&
 
+[2026-07-08T23:31:57.645000+00:00] iam_rxpii (id=1524558694271025162)
+    v1.5 is out now. ive been busy but finally getting back to it. I decided to switch over to unreal 5.8. I plan on eventually shipping my game ideas in 5.8 with the mcp anyways so i hope these small updates help. 
+    https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/blob/main/CHANGELOG.md
+    [embed] Unreal-Engine-Obsidian/CHANGELOG.md at main · theheavenlyd3mon/Unr... https://github.com/theheavenlyd3mon/Unreal-Engine-Obsidian/blob/main/CHANGELOG.md
+
+[2026-07-08T23:32:17.643000+00:00] iam_rxpii (id=1524558778148716645)
+    hows this going? got any updates?
+    [reply to donnymacuk msg=1524472666583732356]
+

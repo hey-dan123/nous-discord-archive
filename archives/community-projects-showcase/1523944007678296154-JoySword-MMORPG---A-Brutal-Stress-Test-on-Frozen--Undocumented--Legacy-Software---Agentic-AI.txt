@@ -110,3 +110,6 @@
     https://www.youtube.com/watch?v=HH1LqS6gkmw
     [embed] I Revived a Dead MMORPG Using AI Agents (50 Million Lines of Code) https://www.youtube.com/watch?v=HH1LqS6gkmw
 
+[2026-07-08T21:15:08.045000+00:00] oleegg (id=1524524260712780047)
+    preparing for a release here is a moment so folks can try it out locally, although my local tunnel work around worked for a minute I am experiencing continuous deployment issues and the tunnel keeps collapsing so that didnt work will have it up on github or a mirror here in a moment
+
