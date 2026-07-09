@@ -113,3 +113,12 @@
 [2026-07-08T21:15:08.045000+00:00] oleegg (id=1524524260712780047)
     preparing for a release here is a moment so folks can try it out locally, although my local tunnel work around worked for a minute I am experiencing continuous deployment issues and the tunnel keeps collapsing so that didnt work will have it up on github or a mirror here in a moment
 
+[2026-07-09T16:32:16.926000+00:00] oleegg (id=1524815466546200707)
+    the mirror I provided yesterday I noticed was incomplete, I published a version with a corrupted database
+
+[2026-07-09T16:32:33.272000+00:00] oleegg (id=1524815535106166985)
+    will update this
+
+[2026-07-09T16:32:59.198000+00:00] iam_rxpii (id=1524815643847688274)
+    following this for sure
+

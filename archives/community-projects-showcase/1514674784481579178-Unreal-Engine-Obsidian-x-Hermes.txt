@@ -276,3 +276,73 @@
 [2026-07-09T14:01:26.363000+00:00] iam_rxpii (id=1524777505733607534)
     should we have a server for this? would anyone be interested in an agent x unreal/unity server?
 
+[2026-07-09T16:05:10.655000+00:00] donnymacuk (id=1524808645471375522)
+    Not particularly well. 
+    
+    I have a humanoid, but 5-6 hours of Hermes trying to put a new face ‘mesh’ on it. 
+    
+    He’s trying to work it out without much (any) success!
+    [reply to iam_rxpii msg=1524558778148716645]
+
+[2026-07-09T16:05:48.912000+00:00] iam_rxpii (id=1524808805932863620)
+    you activated all the toolset and everything right?
+    [reply to donnymacuk msg=1524808645471375522]
+
+[2026-07-09T16:06:14.491000+00:00] iam_rxpii (id=1524808913218830526)
+    i havent tried meshes yet
+
+[2026-07-09T16:10:41.653000+00:00] donnymacuk (id=1524810033777475624)
+    Oh, I spent about an hour ticking all the boxes he wanted!
+    
+    It took about 3-4 hours to actually get Unreal in the first place! 
+    
+    A week or two back we spent about 6 hours in an ‘Epic Launcher’ loop, every time it booted up, it said it needed an update/reset/reboot for 6 hours.
+    
+    So this time Hermes just dragged the Git to my local machine and compiled the code locally - what joy.
+    
+    I thought this would be fun 🤣
+    [reply to iam_rxpii msg=1524808805932863620]
+
+[2026-07-09T16:13:26.480000+00:00] iam_rxpii (id=1524810725112152244)
+    lmao jeez that sounds like torture. it only took me 20 minutes. having a local fork of the engine helps too
+    [reply to donnymacuk msg=1524810033777475624]
+
+[2026-07-09T16:13:35.321000+00:00] iam_rxpii (id=1524810762193735700)
+    have you been working in unreal before this?
+
+[2026-07-09T16:16:52.792000+00:00] donnymacuk (id=1524811590447136972)
+    Never. Never even considered it.
+    
+    Teknium announced they’d added Unreal MCP to a recent update and BOOM, that was going to be our next playground.
+    
+    Failed and then came back to it yesterday.
+    
+    I thought Hermes would like instantly create scenes and the characters we write about…
+    
+    Sadly not - but i’m not in the habit of giving up… we will win (but I’m just not sure when at this stage!)
+    [reply to iam_rxpii msg=1524810762193735700]
+
+[2026-07-09T16:31:58.335000+00:00] iam_rxpii (id=1524815388569895148)
+    we will. i plan on building a community with likeminded people to help each other with this. thats why i started the github. We're the early adopters
+    [reply to donnymacuk msg=1524811590447136972]
+
+[2026-07-09T16:37:48.244000+00:00] donnymacuk (id=1524816856194744571)
+    Groovy.
+    
+    This fits into something I’m doing too.
+    
+    I’ve built a ‘social networking’ site for people interested and building with AI.
+    
+    Forums, profiles, groups (public, private, hidden).
+    
+    If you fancy it, I could let you in (still testing) and you can create a forum for Unreal + a Group you control?
+    
+    You’d also be the first ‘human’ there bar me - so you’d help with seeding AND with excellent, interesting content too.
+    
+    Let me know if you’d like to look around.
+    [reply to iam_rxpii msg=1524815388569895148]
+
+[2026-07-09T16:42:00.193000+00:00] iam_rxpii (id=1524817912945184818)
+    for sure. shoot it over to my dm if you're cool with it. ill be a bit busy since i go out of town tomorrow morning but i'm definitely interested
+    [reply to donnymacuk msg=1524816856194744571]
+

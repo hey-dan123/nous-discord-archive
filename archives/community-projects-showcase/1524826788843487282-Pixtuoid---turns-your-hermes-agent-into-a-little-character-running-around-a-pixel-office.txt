@@ -1,0 +1,19 @@
+# Thread 'Pixtuoid - turns your hermes agent into a little character running around a pixel office' in forum #community-projects-showcase
+# thread_id=1524826788843487282 forum_id=1316137596535177246
+# Started 2026-07-09T19:42:27.799821+00:00
+
+[2026-07-09T17:17:16.372000+00:00] ivanwng97 (id=1524826788843487282)
+    hermes agent kinda lives invisibly in your chats — you talk to it but never actually see it doing anything.
+    
+    so i made it visible. it's a little terminal app that draws a pixel-art office, and your hermes agent shows up as a little dude who walks in, grabs a desk, and starts typing whenever it's working a turn — then gets up and wanders around when it's idle. so you can literally watch it work.
+    
+    and if you've got other coding agents running too — claude code, codex, cursor, whatever — each one shows up as its own character at a nearby desk, so it's your whole agent crew sharing one tiny office.
+    
+    it wires in through hermes's hooks (~/.hermes/config.yaml) — approve it once in hermes and your agent's live.
+    
+    demo → https://pixtuoid.dev
+    code → https://github.com/IvanWng97/pixtuoid
+    [attachment] hermes.jpg https://cdn.discordapp.com/attachments/1524826788843487282/1524826789241688185/hermes.jpg?ex=6a51291c&is=6a4fd79c&hm=c53edf217a3dc79186030d4c73a1f77fb7d7bae2d0e8ff6448369282a794cd22&
+    [embed] pixtuoid — your coding agents, alive in a pixel office https://pixtuoid.dev/
+    [embed] GitHub - IvanWng97/pixtuoid: Terminal pixel-art office for AI codin... https://github.com/IvanWng97/pixtuoid
+

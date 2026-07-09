@@ -45386,3 +45386,135 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://discord.com/channels/1053877538025386074/1476316988992258300/1524425956104863744
     [reply to bitsandtea msg=1524776973187022878]
 
+[2026-07-09T14:53:40.298000+00:00] .joinu (id=1524790650409844867)
+    Yo, opened a PR adding atomicmail as a bundled email skill (skills/email/atomicmail/): agent registers + runs its own @atomicmail.ai inbox over JMAP, no human in the loop, sits next to himalaya for agent-to-agent / human-to-agent workflows.
+    
+    Security review fixed, tests green (8 passed), no conflicts with main. Would love a maintainer's eyes on it when there's a sec 🙏
+    
+    https://github.com/NousResearch/hermes-agent/pull/56277
+    [embed] feat(skills): add atomicmail agent email skill by dom-dalty · Pull... https://github.com/NousResearch/hermes-agent/pull/56277
+
+[2026-07-09T15:02:04.867000+00:00] jw_mushroom_man (id=1524792766725492736)
+    https://github.com/NousResearch/hermes-agent/pull/61515
+    [embed] fix(update): reap gateway venv children so the Windows venv guard s... https://github.com/NousResearch/hermes-agent/pull/61515
+
+[2026-07-09T15:03:56.601000+00:00] thyfriendlyfox (id=1524793235371986994)
+    hermes doesnt gather data
+    [reply to .daveevad msg=1524658079269126205]
+
+[2026-07-09T15:51:42.882000+00:00] accidentaljedi (id=1524805257425850409)
+    man, I'm about ready to throw in the towel.  all openweight models are just scammers.  the goal is to suck as much quota out of you as possible and then find a reason to delete said work and then throw up excuses.  frontier models give you not much better and drain your accounts in just a few exchanges.  at least that been my experience.  if it's not a cookie cutter standard build design, it doesn't get completed.  ever.
+
+[2026-07-09T15:53:50.597000+00:00] maxfreedompollard (id=1524805793101254811)
+    I think this will help a lot of AI developers, it's the largest pre-AI language and logic mapping dataset, just released it yesterday:
+    
+    https://github.com/MaxFreedomPollard/artificial-knowledge-collection-6.0/tree/main
+    [embed] GitHub - MaxFreedomPollard/artificial-knowledge-collection-6.0: The... https://github.com/MaxFreedomPollard/artificial-knowledge-collection-6.0/tree/main
+
+[2026-07-09T16:24:52.931000+00:00] accidentaljedi (id=1524813604296200375)
+    this will help out a lot when I finish my wsubstrate (based on hologralgebra), but for now... I need a model that can finish the work and stop flattening it with "Standard build practices" when there' s nothign standard about the build at all.
+    [reply to maxfreedompollard msg=1524805793101254811]
+
+[2026-07-09T16:25:25.541000+00:00] accidentaljedi (id=1524813741072318599)
+    sorry about the typos.  I'm in no mood to correct my dyslexic BS rightr now
+
+[2026-07-09T16:28:38.809000+00:00] accidentaljedi (id=1524814551697326080)
+    Show of hands... who else spent most of their llife wanting to code, but literally could not.. until AI and agents camne along?  the world opened up in new ways for me around 3 years ago when I really started studying and working with AII.  yea, during the wild west dyas of free quota and massive deals.
+
+[2026-07-09T16:31:32.922000+00:00] jw_mushroom_man (id=1524815281979916460)
+    https://github.com/lEWFkRAD/hermes-agents-guide-to-the-galaxy
+    
+    A handwriting-first notebook for the Kindle Scribe that talks to a local Hermes agent. You write with the pen (or type), Hermes answers, and the reply forms on the page or in a side pane. Runs as a tiny local web app because a stock Scribe can't sideload native apps — the browser is the only channel, so the app is built to feel like one.
+    [embed] GitHub - lEWFkRAD/hermes-agents-guide-to-the-galaxy: Handwriting-fi... https://github.com/lEWFkRAD/hermes-agents-guide-to-the-galaxy
+
+[2026-07-09T16:36:32.907000+00:00] sassyfatcat (id=1524816540208337086)
+    How do i increase the chances of my PR being merged? I think my change is inheritly good and am worried it will get drowned out by the incredible number of PRs being opened every 10 minutes
+
+[2026-07-09T16:37:26.693000+00:00] sassyfatcat (id=1524816765803167794)
+    https://github.com/NousResearch/hermes-agent/pull/60489
+    [embed] feat(desktop): add "Connect to existing Hermes" option to first-run... https://github.com/NousResearch/hermes-agent/pull/60489
+
+[2026-07-09T16:49:52.466000+00:00] warofchange (id=1524819893801844837)
+    sync README translations with the trimmed provider list
+    
+    Merged PR #54169 shortened the "Use any model you want" line in the English README.md to a concise provider list + docs link. The three translated READMEs still carried the old verbose list (OpenRouter (200+ models), NovitaAI, NVIDIA NIM, Xiaomi MiMo, z.ai/GLM, Kimi, MiniMax, Hugging Face…).
+    
+    This PR aligns all three with the trimmed English source:
+    • README.es.md (Spanish)
+    • README.zh-CN.md (Simplified Chinese)
+    • README.ur-pk.md (Urdu)
+    
+    Each preserves the Nous Portal link and adds the many others → /docs/integrations/providers link the English version now uses. Docs/i18n only — 3 files, 1 line each, no runtime code. Completes the i18n mirror of #54169, same pattern as the recently-merged translation-coverage sync (#60915).
+    
+    PR:  https://github.com/NousResearch/hermes-agent/pull/61565
+    [embed] docs(i18n): sync README translations with trimmed provider list (#5... https://github.com/NousResearch/hermes-agent/pull/61565
+
+[2026-07-09T18:04:07.293000+00:00] alelpoan (id=1524838578700681388)
+    I love using the built-in terminal in the desktop app, and I noticed some not-so-pretty behavior: if you leave a terminal tab idle (no command typed) and close/reopen the app a few times, the shell's boot prompt (e.g. `PS C:\Users\...>`) keeps duplicating one extra line per relaunch cycle. Curious what you all think <@387972437901312000> 
+    
+    Filed a full writeup with repro steps and root cause here: https://github.com/NousResearch/hermes-agent/issues/61572
+    
+    I also opened a PR with a fix: https://github.com/NousResearch/hermes-agent/pull/61584
+    [attachment] PS2_2.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524838579371507904/PS2_2.jpg?ex=6a513417&is=6a4fe297&hm=2894069b48b17f0b14f10cef1251d9b58e272a3898293fffba75e03e54dcff85&
+    [attachment] PS3.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1524838580050989167/PS3.jpg?ex=6a513417&is=6a4fe297&hm=13185382775d565447be1988a15c14cb9be39d6afd9aa2d05d650b862ee65c38&
+    [embed] [Bug]: Terminal: idle prompt duplicates and accumulates on every ap... https://github.com/NousResearch/hermes-agent/issues/61572
+    [embed] fix(desktop-terminal): prevent idle prompt accumulation on app rela... https://github.com/NousResearch/hermes-agent/pull/61584
+
+[2026-07-09T18:11:36.551000+00:00] ace911x (id=1524840463025176707)
+    Anyone on here use Hermes in VS Code? I got tired of all the crap Sidebar extensions for Hermes/ACP and made a new one, still a WIP, but it is coming along nicely, need a few testers to see if it will work well in other environments.
+
+[2026-07-09T18:48:33.193000+00:00] watchdominion (id=1524849760295583835)
+    This is cool! I will review it and check the code - that said posting it every day once in this channel would be the best way.
+    [reply to sassyfatcat msg=1524816765803167794]
+
+[2026-07-09T18:49:10.197000+00:00] sassyfatcat (id=1524849915501482055)
+    sounds good, thank you.
+    [reply to watchdominion msg=1524849760295583835]
+
+[2026-07-09T18:49:50.861000+00:00] sassyfatcat (id=1524850086058786916)
+    I haven't used the desktop app yet due to the issue my PR is meant to solve so I really hope my PR gets merged or someone else addresses the problem
+
+[2026-07-09T18:50:15.527000+00:00] sassyfatcat (id=1524850189515362514)
+    the desktop app seems better than discord for using hermes
+
+[2026-07-09T18:51:36.266000+00:00] watchdominion (id=1524850528159399988)
+    Yeah that makes sense.
+
+[2026-07-09T18:57:56.220000+00:00] watchdominion (id=1524852121802113139)
+    posted positive review 👍
+    [reply to sassyfatcat msg=1524849915501482055]
+
+[2026-07-09T18:58:14.114000+00:00] sassyfatcat (id=1524852196854730874)
+    much love ❤️
+    [reply to watchdominion msg=1524852121802113139]
+
+[2026-07-09T19:06:16.704000+00:00] aleksandr_1 (id=1524854220984156355)
+    close two of the three variable-indirection bypasses teknium noted in #36859
+    
+    Following up in the same `tools/approval.py` heuristic. #36859 was closed with three specific bypass shapes still open (`${0/x/r}m -rf /`, `X=r; ${X}m -rf /`, `R=rm; $R -rf /`); #56184 has since closed the first, but the two that split across a separate assignment step and a later use are still uncaught on current `main`. This inlines simple `VAR=value` assignments (including `export`/`local`/`declare` and chained references) before pattern matching, the same class of de-obfuscation the normalizer already does for `$IFS` and backslash escapes.
+    
+    Follow-up commit resolves empty-value assignments (`C=`) and broadens coverage to concatenated multi-variable forms (`${X}${Y}`, `$CMD$SUFFIX`), variables holding flags rather than paths/commands, `&&`/`||` separators, and applies the same resolution across other existing patterns (curl-pipe-to-shell, killall signal argument), not just the sed-i/tee/rm cases from the original commit. 32 new tests total, 330 passed.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/61434
+    [embed] fix(security): inline shell variable indirection before dangerous-c... https://github.com/NousResearch/hermes-agent/pull/61434
+
+[2026-07-09T19:38:22.872000+00:00] watchdominion (id=1524862299918041148)
+    New this round:
+    
+    https://github.com/NousResearch/hermes-agent/pull/61613 — remember the multi-day unexpected keyword argument 'system' hunt (#60821)? It took that long because nothing logged what was in the request or which plugin middleware had touched it. Now an unexpected-kwarg TypeError at dispatch logs the api_mode, the kwargs keys, and the llm_request middleware trace — the next rogue injector is a one-log diagnosis. (Complementary to #61355/#60891, which guard a different layer.)
+    
+    https://github.com/NousResearch/hermes-agent/pull/61611 — when local Hindsight breaks, the error said "install sentence-transformers" even when it was installed and the real problem was the huggingface-hub conflict hiding in the exception chain (#60783). Hermes now renders the full cause chain — the actual conflict visible in one log read.
+    
+    https://github.com/NousResearch/hermes-agent/pull/61615 — on Windows, every normal hermes gateway stop logged signal=UNKNOWN, so planned stops looked identical to crashes in the exact lines meant for diagnosing "the gateway keeps dying" (#61596). Marker-driven stops now log PLANNED_STOP/PLANNED_TAKEOVER; real POSIX signals keep their true names (pinned by test).
+    
+    The other bug fixes open: 
+    
+    ▸ https://github.com/NousResearch/hermes-agent/pull/60796 — container boot wedges permanently on a root-owned leftover staging dir (#60774); fixed at both the cont-init and reconciler layers
+    ▸ https://github.com/NousResearch/hermes-agent/pull/60797 — hermes update force-downgrades huggingface-hub and breaks Hindsight (#60783, two independent confirmations on the issue now)
+    ▸ https://github.com/NousResearch/hermes-agent/pull/60085 — kanban notifications never reach TUI/desktop sessions (#59890, also confirmed by a second user)
+    
+    All six: green CI, regression tests, full template, duplicate-checked. Reviews welcome 🙏
+
+[2026-07-09T19:38:45.827000+00:00] watchdominion (id=1524862396198293726)
+    <:pepe_5head:1136619464255877215>
+

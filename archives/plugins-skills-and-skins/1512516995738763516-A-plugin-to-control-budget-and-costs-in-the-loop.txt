@@ -115,3 +115,22 @@
     [attachment] 05-cron-tab.png https://cdn.discordapp.com/attachments/1512516995738763516/1516505463053615204/05-cron-tab.png?ex=6a32e345&is=6a3191c5&hm=919ebce4266bee82dcc56eaf43c318a4aeb8ac611113c41b0b4aef62238a6027&
     [attachment] 06-budgets-tab.png https://cdn.discordapp.com/attachments/1512516995738763516/1516505463422849205/06-budgets-tab.png?ex=6a32e345&is=6a3191c5&hm=5abbae38eeb19bcfec0efb2264fb400589d51027536d50cdcd7ec7e030da2da1&
 
+[2026-07-09T15:23:49.229000+00:00] nadiamermedev (id=1524798237616242763)
+    🩺 hermes-telemetry v0.8.0 is out! — Agent Intelligence
+    
+    Observability + budget guardrails for Hermes Agent. Captures tokens, cost, latency & tool calls per session and cron job — and it's the only plugin that can stop a run before it overspends.
+    
+    ✨ Headline: Agent Intelligence (3 read-only analytics over existing telemetry — no new capture, no schema change)
+    • /stats efficiency — Agent Efficiency Score (0–100): output ratio minus error & turn penalties
+    • /stats smells — AI Smell Detection: 5 heuristics (Context Rotation, Loop Trap, Tool Thrashing, High Error Rate, Massive Session)
+    • /budget forecast — Burn-rate Forecast: projected spend + estimated breach date
+    
+    🔧 Also new
+    • MoA attribution — re-attributes Mixture-of-Agents calls to the aggregator's real provider/model (no more spurious moa pricing fallback), tagging each row with its preset
+    • Subagent → per-cron-job budgets — nested/async delegate_task spend rolls up to the root cron job via a recursive walk of the delegation tree; global is regrouped, never double-counted
+    • Per-profile scoping — every dashboard surface now respects the selected profile or is explicitly labeled Global
+    
+    🩹 Fixes
+    • /stats models now splits $0 rows three ways (subscription/free-tier › free tier › no price entry)
+    • Standalone dashboard works offline (vendored Chart.js)
+

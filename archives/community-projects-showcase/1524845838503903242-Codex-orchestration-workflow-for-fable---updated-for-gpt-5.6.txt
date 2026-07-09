@@ -1,0 +1,8 @@
+# Thread 'Codex orchestration workflow for fable - updated for gpt-5.6' in forum #community-projects-showcase
+# thread_id=1524845838503903242 forum_id=1316137596535177246
+# Started 2026-07-09T19:42:27.395272+00:00
+
+[2026-07-09T18:32:58.165000+00:00] axosio (id=1524845838503903242)
+    https://github.com/chrisb4096-alt/codex-worker Plugging this again due to gpt 5.6 release. Codex SDK uses subscription, and this allows fable to take a back seat during dynamic workflows. I replaced the default agent with 5.6-sol and updated the orchestration logic to lean more on what I've seen from reviews, documentation, and benchmarks on 5.6. MIT license and usage instructions are in the readme. Saves about 40x on fable usage during dynamic workflows, and Codex usage feels near-infinite on the $200 plan. Let me know if you guys have any feedback
+    [embed] GitHub - chrisb4096-alt/codex-worker: Run Claude Code multi-agent w... https://github.com/chrisb4096-alt/codex-worker
+

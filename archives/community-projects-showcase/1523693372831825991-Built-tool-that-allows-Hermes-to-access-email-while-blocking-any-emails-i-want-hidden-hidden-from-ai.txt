@@ -41,3 +41,6 @@
 [2026-07-07T20:22:21.763000+00:00] celestial_sparrow_73595 (id=1524148592498053120)
     Also would love to know what integrations you all want to see next? notion? outlook? or what would help you so that your agent can use it but you can still control what it accesses?
 
+[2026-07-09T18:52:45.841000+00:00] ozmotaz (id=1524850819978105063)
+    this is cool would you consider open sourcing it?
+

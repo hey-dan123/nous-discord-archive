@@ -1,0 +1,23 @@
+# Thread 'Openshark- an open-source AI harness built on Rust. Inspired by Hermes Openclaw Opencode & Claw Code' in forum #community-projects-showcase
+# thread_id=1524801788266680470 forum_id=1316137596535177246
+# Started 2026-07-09T19:42:28.566970+00:00
+
+[2026-07-09T15:37:55.770000+00:00] synthalorian (id=1524801788266680470)
+    https://github.com/synthalorian/openshark
+    [embed] GitHub - synthalorian/openshark: The harness that learns. The agent... https://github.com/synthalorian/openshark
+
+[2026-07-09T17:32:54.291000+00:00] synthalorian (id=1524830722760638474)
+    Openshark, the open-source AI harness built on Rust. Basically a child of Hermes, Openclaw, and Claw
+
+[2026-07-09T17:33:44.671000+00:00] synthalorian (id=1524830934069805257)
+    Openshark, the open-source AI harness built on Rust. Inspired by Hermes, Openclaw, and Claw Code.
+
+[2026-07-09T17:34:11.488000+00:00] synthalorian (id=1524831046548459643)
+    Openshark, the open-source AI harness built on Rust. Inspired by Hermes, Opencode, and Claw Code.
+
+[2026-07-09T17:35:08.729000+00:00] synthalorian (id=1524831286634741851)
+    Openshark- an open-source AI harness built on Rust. Inspired by Hermes, Opencode, and Claw Code.
+
+[2026-07-09T18:07:00.724000+00:00] synthalorian (id=1524839306122760222)
+    Openshark- an open-source AI harness built on Rust. Inspired by Hermes Openclaw Opencode & Claw Code
+
