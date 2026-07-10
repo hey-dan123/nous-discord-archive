@@ -44,3 +44,6 @@
 [2026-07-09T18:52:45.841000+00:00] ozmotaz (id=1524850819978105063)
     this is cool would you consider open sourcing it?
 
+[2026-07-10T01:41:38.330000+00:00] celestial_sparrow_73595 (id=1524953716694978621)
+    Yes I’m working on open sourcing ! Also working on releasing a self hosted version if you’re interested in that if you like to host your own stuff
+

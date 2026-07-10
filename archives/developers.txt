@@ -45518,3 +45518,73 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-09T19:38:45.827000+00:00] watchdominion (id=1524862396198293726)
     <:pepe_5head:1136619464255877215>
 
+[2026-07-09T19:44:28.072000+00:00] brokeskill (id=1524863831678124113)
+    my config yaml keeps resetting for some reason which means dashboard auth gets deactivated again, how do i stop it from resetting
+
+[2026-07-09T19:50:29.063000+00:00] brokeskill (id=1524865345784119516)
+    apparently it got corrupted? how does that happen lmao
+
+[2026-07-09T20:51:45.509000+00:00] syedabdurr2hman (id=1524880765916020816)
+    Hey <@387972437901312000>, could you (or another maintainer) take a look at my open PRs on hermes-agent? Several are ~2 months old with no review or comments yet, and a couple are newer:
+    
+    Open ~2 months, no maintainer activity:
+    
+    https://github.com/NousResearch/hermes-agent/pull/21531 – feat(agent): first-class llama.cpp provider with zero-config dashboard surfacing
+    https://github.com/NousResearch/hermes-agent/pull/21550 – fix(gateway): cap response.completed SSE event below 128 KB MAXLINE
+    https://github.com/NousResearch/hermes-agent/pull/21547 – feat(docker): INCLUDE_BROWSER build arg for slim image variant
+    https://github.com/NousResearch/hermes-agent/pull/21554 – feat(transport): config-driven providers.<name>.extra_body override
+    https://github.com/NousResearch/hermes-agent/pull/20158 – feat(tools/wot_engine): add Web-of-Thought multi-agent reasoning
+    More recent:
+    https://github.com/NousResearch/hermes-agent/pull/54255 – fix(background-review): skip same-model review near local context limit
+    https://github.com/NousResearch/hermes-agent/pull/58305 – feat(agent): add adaptive reasoning effort mode
+    https://github.com/NousResearch/hermes-agent/pull/61051 – feat(agent): add Auto Mode (/auto session toggle)
+    Would appreciate any review, requested changes, or even a close if something's not a fit, just want to know where these stand. Thanks!
+    [embed] feat(agent): first-class llama.cpp provider with zero-config dashbo... https://github.com/NousResearch/hermes-agent/pull/21531
+    [embed] fix(gateway): cap response.completed SSE event below 128 KB MAXLINE... https://github.com/NousResearch/hermes-agent/pull/21550
+    [embed] feat(docker): INCLUDE_BROWSER build arg for slim image variant by A... https://github.com/NousResearch/hermes-agent/pull/21547
+    [embed] feat(transport): config-driven providers.<name>.extra_body override... https://github.com/NousResearch/hermes-agent/pull/21554
+    [embed] feat(tools/wot_engine): add Web-of-Thought multi-agent reasoning by... https://github.com/NousResearch/hermes-agent/pull/20158
+
+[2026-07-09T21:26:41.964000+00:00] fucccccckic (id=1524889559085744269)
+    👋 Hi all — I'm HumphreySun98. Been reading through hermes-agent and opened a batch of small, self-contained bug-fix PRs (each with a regression test, all green & mergeable). Sharing here in case a maintainer wants to take a look — happy to address any feedback:
+    
+    • #61142 fix(web): crash on a null web/backend config value (AttributeError at the web_search/web_extract gate)
+    • #61141 fix(models): /model <provider> escalating to the priciest flagship instead of the cost-safe default (billing footgun)
+    • #61134 fix(gateway): a blank channel target resolving to the only channel → message misdelivery
+    • #61123 fix(error-classifier): "rate limit exceeded" misclassified as billing (non-retryable) instead of a retryable rate limit
+    • #61130 fix(skills): an empty platform/namespace tag matching every OS
+    • #61113 fix(cli): local model (LM Studio) not re-detected after a mid-session swap (#54454)
+    • #55874 fix(mcp): crash on a non-dict image `source` in attachment extraction
+    • #55786 fix(stt): elevenlabs missing from the built-in STT provider set
+    
+    No rush at all — just flagging for whenever the queue allows. Thanks for the awesome project! 🙏
+
+[2026-07-09T22:55:16.511000+00:00] jw_mushroom_man (id=1524911849911488583)
+    https://github.com/NousResearch/hermes-agent/pull/61687
+    [embed] feat: add Kindle Scribe gateway platform by lEWFkRAD · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/61687
+
+[2026-07-09T23:08:45.335000+00:00] sprmn24 (id=1524915242365358211)
+    Issue: _run_approval_gate warning log drops display_target — auto-approved dangerous commands are never recorded in the audit trail
+    
+    Fix: add display_target to the logger.warning call so the full command/tool label is captured
+    https://github.com/NousResearch/hermes-agent/pull/61671
+    [embed] fix(approval): include display_target in auto-approve audit log by ... https://github.com/NousResearch/hermes-agent/pull/61671
+
+[2026-07-10T01:28:55.701000+00:00] warofchange (id=1524950517996978217)
+    Fix a skill that references a non-existent bundled example file
+    
+    While scanning all 175 SKILL.md files for broken file references, I found one real, provable defect. The comps-analysis finance skill's SKILL.md claims:
+    
+    An example comparable company analysis is provided in examples/comps_example.xlsx. When using this or other example files in this skill directory…
+    
+    But the skill directory contains only SKILL.md — there's no examples/ folder and no comps_example.xlsx. The claim would send the agent hunting for a file that doesn't exist.
+    
+    Fix reframes the guidance around a user-provided example (matching the sibling lbo-model skill, which already treats example workbooks as user-supplied):
+    
+    -An example comparable company analysis is provided in `examples/comps_example.xlsx`. When using this or other example files in this skill directory, use them intelligently:
+    +When the user provides an example comparable company analysis (or template), use it intelligently:
+    Provable by file existence, 1 file, 1 line, no runtime code. The following DO/DON'T guidance stays valid.
+    
+    PR:  https://github.com/NousResearch/hermes-agent/pull/61749
+    [embed] docs(skills/comps-analysis): drop reference to non-existent bundled... https://github.com/NousResearch/hermes-agent/pull/61749
+

@@ -1,0 +1,28 @@
+# Thread '🌠🔥 RIFTAGENT is live — open-source agent skill for AI gacha item generation' in forum #plugins-skills-and-skins
+# thread_id=1524951786333409321 forum_id=1485392832154832906
+# Started 2026-07-10T02:54:38.084695+00:00
+
+[2026-07-10T01:33:58.096000+00:00] eucdee (id=1524951786333409321)
+    People thought we were joking when we said this could actually work — but here it is.
+    
+    RIFTAGENT is an open-source LLM workflow that turns a simple theme (weapon, mercenary, companion, shinobi, island — whatever you throw at it) into a fully described, studio-quality item drop. Every roll pulls from Legendary, Mythic, or Secret/Ultimate tier only, equal odds, no filler commons. Each item gets a unique LLM-written description, a formatted image prompt, and a provenance record so you always know exactly where it came from.
+    
+    What's in the repo:
+    
+    📄 README — full concept + install/usage overview
+    🧩 SKILL.md — agent-loadable instructions (agentskills.io ready)
+    ⚙️ SPEC.md — full technical spec: schemas, prompt templates, backend contract
+    
+    It's designed to be backend-agnostic — ships with Nano Banana as the default renderer, but the orchestration logic (theme → tier roll → item gen → prompt) is fully decoupled, so it can run local (Stable Diffusion/ComfyUI) or through Hermes natively later.
+    
+    MIT licensed. Fork it, extend it, build your own gacha/marketplace/game on top of it.
+    
+    🔗 https://www.github.com/ohrbit/riftagent
+    
+    If you build something with it, tag us — we'd love to see what comes out of the rift. 🔥
+    [attachment] rift_promo_11.gif https://cdn.discordapp.com/attachments/1524951786333409321/1524951786576937141/rift_promo_11.gif?ex=6a519d86&is=6a504c06&hm=c812fc5448e00afd88c7638427166c44e132cb0322853e4db234e1fc8e44afa7&
+    [embed] GitHub - ohrbit/riftagent: People thought we were joking. RIFTAGENT... https://www.github.com/ohrbit/riftagent
+
+[2026-07-10T01:35:13.764000+00:00] eucdee (id=1524952103708004393)
+    🌠🔥 RIFTAGENT is live — open-source agent skill for AI gacha item generation
+

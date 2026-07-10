@@ -2499,3 +2499,6 @@
 [2026-07-08T16:51:47.537000+00:00] adoreparler (id=1524457988579004667)
     I will be setting up Mnemosyne when I get sometime to try it out
 
+[2026-07-10T02:45:39.140000+00:00] ghostbeartrader (id=1524969826219589804)
+    Mnemosyne + Obsidian brain God Tier
+
