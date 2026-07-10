@@ -2502,3 +2502,10 @@
 [2026-07-10T02:45:39.140000+00:00] ghostbeartrader (id=1524969826219589804)
     Mnemosyne + Obsidian brain God Tier
 
+[2026-07-10T03:10:59.042000+00:00] llealloo (id=1524976201150496799)
+    I have been thinking about trying mnemosyne, but I also want to have an OKF spec obsidian compatible vault and I'm not sure how the two would intersect
+    [reply to ghostbeartrader msg=1524969826219589804]
+
+[2026-07-10T03:21:16.250000+00:00] llealloo (id=1524978789908746280)
+    also I'm curious how it would work in a multi agent setup with the sync feature
+

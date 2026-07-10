@@ -9,3 +9,6 @@
 [2026-07-09T11:52:49.610000+00:00] t01101011 (id=1524745139325767800)
     snappy website I love it
 
+[2026-07-10T06:30:29.395000+00:00] chilarai (id=1525026408450097194)
+    Wow! will it make sense for people to try out a couple of demo prompts before signing up?
+

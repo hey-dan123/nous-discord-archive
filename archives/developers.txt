@@ -45588,3 +45588,64 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     PR:  https://github.com/NousResearch/hermes-agent/pull/61749
     [embed] docs(skills/comps-analysis): drop reference to non-existent bundled... https://github.com/NousResearch/hermes-agent/pull/61749
 
+[2026-07-10T02:57:27.716000+00:00] vissirexa2449 (id=1524972798202609665)
+    Hey All, dropping two small PRs I put together, both came out of stuff I ran into using a local model in unattended sessions. No new dependencies in either, both scoped tight.
+    
+    #60087, repeated tool results guard (fixes #60084)
+    
+    The current loop guards key on the tool call signature or on a classified failure. They miss the case where the arguments change every call but the result comes back the same. 
+    Example: execute_code wrapping a fetch against a source that keeps 404ing or soft blocking a scraper. failed is false so none of the existing counters fire. There was also a related gap where the same image reloaded 6 times through a vision tool never got flagged, because the base64 payload is unique each call even when the actual content is identical. This adds a content hash tracker that ignores the tool name and args, warns by default and only hard stops if you turn that on, and normalizes multimodal results so distinct images still count as real progress.
+    
+    https://github.com/NousResearch/hermes-agent/pull/60087
+    
+    #60090, duplicate entry trap on memory replace (fixes #60089)
+    
+    MemoryStore.replace() already rejects an ambiguous replace, but the natural fallback to add() then creates a duplicate when the replacement text already exists as its own entry. I hit this repeatably on a local model: replace, ambiguous match, fallback add, duplicate, with no signal back that the fact was already recorded. The exact duplicate add() case is already guarded upstream, so this just closes the same gap on the replace() path using the same exact string check. Added 3 tests, all tests pass.
+    
+    https://github.com/NousResearch/hermes-agent/pull/60090
+    
+    Would appreciate a review. Thanks 🙏
+    [embed] feat(guardrails): detect repeated tool results independent of args/... https://github.com/NousResearch/hermes-agent/pull/60087
+    [embed] fix(memory): guard against duplicate-entry trap on ambiguous replac... https://github.com/NousResearch/hermes-agent/pull/60090
+
+[2026-07-10T04:21:18.269000+00:00] noob_programmer (id=1524993897871446097)
+    Hey <@387972437901312000> , would appreciate a review when you get a chance. Happy to adjust the approach if you have preferences on how the behavioral analysis should integrate.
+    https://github.com/NousResearch/hermes-agent/pull/60417
+    [embed] feat(behavior): add behavioral analysis with 5-axis scoring and ins... https://github.com/NousResearch/hermes-agent/pull/60417
+
+[2026-07-10T04:58:14.404000+00:00] xdarkchain (id=1525003193015210047)
+    <@387972437901312000> The rich telegram for hermes is so inconsistent, please take a look at the PR which I sent you last week, it is like we don’t have rich text in hermes at all.
+    
+    Also we don’t have max and ultra reasoning for Sol in the command, I was able to set it in the config but the command lacks the argument.
+
+[2026-07-10T04:59:27.633000+00:00] xdarkchain (id=1525003500159762525)
+    https://github.com/NousResearch/hermes-agent/pull/55068
+    [embed] feat(telegram): implement rich message support and enhance platform... https://github.com/NousResearch/hermes-agent/pull/55068
+
+[2026-07-10T04:59:33.698000+00:00] xdarkchain (id=1525003525598478407)
+    This is the PR.
+
+[2026-07-10T05:00:58.693000+00:00] xdarkchain (id=1525003882093084822)
+    It’s safe as it’s sitting behind the config activation so if someone doesn’t enable the rich text they will have the same exact default behavior as of now.
+
+[2026-07-10T07:21:57.710000+00:00] thedavidmurray (id=1525039361782055033)
+    opened a PR on autoreason: a bilevel layer (arXiv:2603.23420 applied to the subjective-domain tournament). 
+    
+    The inner A/B/AB→Borda loop stays untouched. An outer loop reads its trace, diagnoses the one dominant bottleneck (premature convergence / judge herding / candidate collapse / oscillation / position bias), injects one mechanism, and keeps it only if a quality gate passes and rounds-to-converge strictly drops. It basically automates the manual remedy pick in run_46_remedies.py: read the trace, choose the fix, keep it if it earned its place.
+    
+    Additive + one backward-compatible change (run_autoreason_pass gains an optional config=None, default = today's behavior). 
+    
+    The PR itself was refined by bilevel autoreason. The inner tournament sharpened the writeup, the outer loop diagnosed "healthy" and correctly declined to intervene, then it got an adversarial review pass before going out. 
+    
+    https://github.com/NousResearch/autoreason/pull/2
+    
+    cc <@262153666511765505>
+    [embed] Add bilevel autoreason: an outer meta-loop that adapts the inner lo... https://github.com/NousResearch/autoreason/pull/2
+
+[2026-07-10T07:53:54.295000+00:00] jonnadul (id=1525047400522059847)
+    I got a Nvidia GeForce RTX 5070 Ti, what are the best local models to run that I can connect into hermes agent? So far I tried Gemma, Laguna and a couple others but most of them error out with a truncation issue when I invoke Hermes chat.
+
+[2026-07-10T09:08:50.066000+00:00] watchdominion (id=1525066257152610456)
+    the better chat would be <#1476316988992258300>. this chat is for development on hermes-agent!
+    [reply to jonnadul msg=1525047400522059847]
+
