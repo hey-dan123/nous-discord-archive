@@ -8,3 +8,6 @@
 [2026-07-10T06:25:37.835000+00:00] chilarai (id=1525025185558695966)
     This is really interesting. What CAD tool did you use?
 
+[2026-07-10T13:40:05.831000+00:00] mburhop (id=1525134522658717778)
+    It can work with any that has a good API.  I can get free versions of OnShape, Solid Edge, and FreeCAD.  I could make it work with others but I don't have the licenses and I'm too lazy to apply to their partner program.
+

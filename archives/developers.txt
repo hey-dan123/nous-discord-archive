@@ -45649,3 +45649,128 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     the better chat would be <#1476316988992258300>. this chat is for development on hermes-agent!
     [reply to jonnadul msg=1525047400522059847]
 
+[2026-07-10T09:45:05.192000+00:00] sahil_ss9 (id=1525075380292030589)
+    PR #61978
+        Title: fix: harden tui_gateway subprocess reads against Windows locale UnicodeDecodeError
+        Issue: #53137 — On Windows with a non-UTF-8 system locale (e.g. GBK on Chinese Windows), text-mode subprocess reads in tui_gateway/server.py crashed with an unhandled UnicodeDecodeError when child processes emitted bytes invalid in that locale, silently killing the gateway.
+        Fix: Forces encoding="utf-8", errors="replace" on every text-mode subprocess read in tui_gateway/server.py (slash worker, cli.exec, pdftoppm, shell.exec, quick-command exec) so non-UTF-8 child output decodes lossily instead of crashing.
+        Link: https://github.com/NousResearch/hermes-agent/pull/61978
+    
+    
+    
+        PR #61872
+        Title: fix: capture gateway silent crashes with last-resort crash diagnostics
+        Issue: #52942 — The gateway was observed dying with zero log output — no traceback, no warning, just a silent stop. The existing asyncio exception handler only catches exceptions that propagate to the event loop; exceptions in worker threads or ones that escape asyncio.run entirely bypass it and vanish.
+        Fix: Installs process-global last-resort crash hooks (sys.excepthook + threading.excepthook) that write the full traceback directly to <hermes_home>/logs/gateway-crash-diag.log, bypassing the logging system which may itself be wedged at crash time. Hooks are idempotent and self-defensive.
+        Link: https://github.com/NousResearch/hermes-agent/pull/61872
+    [embed] fix: harden tui_gateway subprocess reads against Windows locale Uni... https://github.com/NousResearch/hermes-agent/pull/61978
+    [embed] fix: capture gateway silent crashes with last-resort crash diagnost... https://github.com/NousResearch/hermes-agent/pull/61872
+
+[2026-07-10T09:45:17.208000+00:00] sahil_ss9 (id=1525075430690918491)
+    PR #61833
+        Title: fix(install): normalize accented-username 8.3 short paths
+        Issue: #52842 — On Windows, when the user-profile folder name contains an accented character (e.g. Rubén), Windows exposes the profile root as an 8.3 short alias (C:\Users\RUBN~1). The installer's COM resolver failed to expand these on non-English locales, causing every downstream provider cmdlet to abort with "No existe ningún objeto en la ruta de acceso especificada".
+        Fix: ConvertTo-LongPath now prefers kernel32!GetLongPathNameW (P/Invoke) which expands any 8.3 short component including accented-username aliases. New Normalize-ProfileEnvVars normalizes TEMP, TMP, LOCALAPPDATA, APPDATA, and USERPROFILE up front so profile-rooted defaults are never short.
+        Link: https://github.com/NousResearch/hermes-agent/pull/61833
+    
+    
+    
+        PR #61653
+        Title: fix: profile terminal.cwd overrides desktop app-global workspace
+        Issue: #52589 — In the Desktop app (app-global remote mode), a new session for a named profile inherited the desktop's app-global workspace cwd instead of that profile's configured terminal.cwd.
+        Fix: In _completion_cwd, when a named profile is requested and the client cwd equals the launch profile's own configured directory (the inherited desktop default), defer to the named profile's terminal.cwd. Explicit per-session workspace picks are still honoured, so intentional navigation is unaffected. Local single-profile users are untouched.
+        Link: https://github.com/NousResearch/hermes-agent/pull/61653
+    [embed] fix(install): normalize accented-username 8.3 short paths (GH #5284... https://github.com/NousResearch/hermes-agent/pull/61833
+    [embed] fix: profile terminal.cwd overrides desktop app-global workspace (#... https://github.com/NousResearch/hermes-agent/pull/61653
+
+[2026-07-10T09:45:28.515000+00:00] sahil_ss9 (id=1525075478116044892)
+    PR #61464
+        Title: fix(photon): do not retry shared-line 'Target not allowed' outbound rejections
+        Issue: #51897 — Photon's free shared-line pool rejects outbound sends with Target not allowed for this project. This is a permanent upstream rejection, not transient — yet the retry loop kept retrying the same rejected target through its backoff loop, then downgraded to plain text and retried again, never recognizing the failure as final.
+        Fix: Adds a _is_fatal_error() classifier for permanent rejections (shared-line / free-tier Target not allowed, not allowed for this project). Short-circuits _send_with_retry on fatal errors: no retry loop, no plain-text downgrade — surfaced once with a clear message. Transient errors still retry exactly as before.
+        Link: https://github.com/NousResearch/hermes-agent/pull/61464
+    
+    
+    
+        PR #58429
+        Title: fix: case-insensitive provider matching in model picker
+        Issue: #58393 — Custom OpenAI-compatible providers configured with custom:My-Provider (mixed case) could not be reliably shown or selected in the Desktop model picker. The is_current comparison failed due to a case-sensitivity mismatch between the lowercased picker slug and the raw config.yaml provider name.
+        Fix: Normalises current_provider to lowercase once at the top of list_authenticated_providers() and uses it for all is_current comparisons. The frontend model picker now also uses normalize() (trim + lowercase) for the isCurrent comparison.
+        Link: https://github.com/NousResearch/hermes-agent/pull/58429
+    [embed] fix(photon): do not retry shared-line 'Target not allowed' outbound... https://github.com/NousResearch/hermes-agent/pull/61464
+    [embed] fix: case-insensitive provider matching in model picker by Sahil-SS... https://github.com/NousResearch/hermes-agent/pull/58429
+
+[2026-07-10T09:46:55.316000+00:00] sahil_ss9 (id=1525075842185691136)
+    Hey <@387972437901312000>  these are 6 bug-fix PRs. Ive got like 60+ open PRs on the
+        still open — would appreciate a review pass when you get a chance. Happy to address any feedback. Cheers 🙏
+
+[2026-07-10T09:47:29.553000+00:00] egilewski (id=1525075985786208289)
+    I think the channel name "developers" is doubly misleading. On one hand that's the job title of a large number of Hermes users, on the other in non-opensource that implies contact with the employees. How about "pr-firehose"?
+
+[2026-07-10T09:48:35.576000+00:00] teknium (id=1525076262706745405)
+    There’s plenty of contact with the employees in all channels
+
+[2026-07-10T09:56:33.018000+00:00] egilewski (id=1525078265243504760)
+    People will have a better chance to get answers from you on questions not related to PRs and contributing in <#1485307775444844625>, won't they? I'm noticing lately a lot of questions that don't get answers here (which seems appropriate to me), but maybe would've been answered there.
+
+[2026-07-10T10:13:31.799000+00:00] trivunous (id=1525082538320728214)
+    https://github.com/NousResearch/hermes-agent/pull/60135
+    [embed] fix: hermes status checks credential pool when env var is absent (#... https://github.com/NousResearch/hermes-agent/pull/60135
+
+[2026-07-10T11:10:09.094000+00:00] 0xhellno (id=1525096787608604693)
+    opened small PR: smart-mode approvals were invisible to observer plugins unless the guard escalates to a human. audit logs / notifiers missed the majority of auto approve+deny decisions. #62021 fixes it at both sites, additive, no behavior change: https://github.com/NousResearch/hermes-agent/pull/62021
+    [embed] fix(approval): fire approval hooks on smart-mode auto approve/deny ... https://github.com/NousResearch/hermes-agent/pull/62021
+
+[2026-07-10T11:12:41.616000+00:00] 0xhellno (id=1525097427332501575)
+    submitted tiny fix: the transform_terminal_output hook doesn’t receive session_id or tool_call_id, so plugins can’t attribute terminal output to a session/command. similar hooks already do this. feedback welcome: https://github.com/NousResearch/hermes-agent/pull/62024
+    [embed] Add session_id and tool_call_id to transform_terminal_output hook b... https://github.com/NousResearch/hermes-agent/pull/62024
+
+[2026-07-10T11:20:00.515000+00:00] watchdominion (id=1525099268208332953)
+    Maybe an opt in role like developer-access (which will be different from developer role would be good? )
+
+[2026-07-10T11:20:41.803000+00:00] watchdominion (id=1525099441382752417)
+    And then maybe some description about what this channel is good and basic things like following template and adding tests
+
+[2026-07-10T11:28:18.883000+00:00] egilewski (id=1525101358514966568)
+    It may be, but I don't know how to do that well, so I proposed the only thing that seemed like an easy win to me.
+
+[2026-07-10T11:43:36.043000+00:00] watchdominion (id=1525105205362954262)
+    Ah yeah it’s more a question to maintainers 🙂 how we can help the process - i am reviewing a lot of PRs in the meantime!
+    [reply to egilewski msg=1525101358514966568]
+
+[2026-07-10T12:52:40.463000+00:00] brokeskill (id=1525122588320464916)
+    does the following error code mean that it refuses to run the cron job because it changed the model (or in my case, different provider)? how would i fix that? My providers constantly change because of miniscule rate limits
+    ```py
+    RuntimeError: Skipped to prevent unintended spend: global inference config drifted since this job was created
+    (provider 'nvidia' -> 'custom';
+    model 'nvidia/nemotron-3-ultra-550b-a55b'
+    -> 'nvidia/nemotron-3-ultra-550b-a55b:free'),
+    and this job is unpinned. ```
+
+[2026-07-10T12:59:52.917000+00:00] warofchange (id=1525124402163748914)
+    Fix a stale doc path in docker-compose.yml
+    
+    Scanning file types not checked before (Dockerfile, docker-compose, requirements.txt…), I found one clean broken reference. The setup comment in docker-compose.yml points readers at:
+    
+    See docs/user-guide/api-server.md before doing this on an internet-facing host.
+    
+    But the real page lives at user-guide/**features/**api-server.md — the features/ segment is missing, so following it lands on a 404. Every other reference in the repo (sidebars.ts, integrations/index.md, programmatic-integration.md, windows-wsl-quickstart.md, generate-llms-txt.py) uses user-guide/features/api-server; this comment is the lone outlier.
+    
+    -#     and API_SERVER_HOST. See docs/user-guide/api-server.md before doing
+    +#     and API_SERVER_HOST. See docs/user-guide/features/api-server.md before doing
+    Provable by file existence + majority pattern. Comment-only, 1 file, 1 line, zero container behavior change.
+    
+    PR : https://github.com/NousResearch/hermes-agent/pull/62064
+    [embed] docs(docker-compose): fix stale api-server doc path (add missing fe... https://github.com/NousResearch/hermes-agent/pull/62064
+
+[2026-07-10T13:33:29.849000+00:00] trivunous (id=1525132861789962242)
+    https://github.com/NousResearch/hermes-agent/pull/59276
+    [embed] fix(cli): guard empty message text in _display_resumed_history by A... https://github.com/NousResearch/hermes-agent/pull/59276
+
+[2026-07-10T13:36:56.906000+00:00] trivunous (id=1525133730249965688)
+    I have 3 merged commits. How many merged commits are required to receive the Rove DEV role?
+
+[2026-07-10T13:49:30.943000+00:00] autumnn5389 (id=1525136892910239875)
+    Haha, 1000 commit bro, try more <:catlick:1151260427645366375>
+    [reply to trivunous msg=1525133730249965688]
+

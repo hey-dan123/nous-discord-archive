@@ -5587,3 +5587,25 @@
     If you’d like to help us test new stuff, and get daily releases like before, select experimental!
     [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1524966316191256607/image.png?ex=6a51ab0e&is=6a50598e&hm=966867abc5536e29d69a860ee9a6c6c315f96af9bb50e09186398c3af893db28&
 
+[2026-07-10T11:01:41.195000+00:00] alto69 (id=1525094657325928650)
+    my download as pdf is white on white
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1525094656994574468/image.png?ex=6a522295&is=6a50d115&hm=37c89180a55dd83a0eb29e7f56cc92f867ff93b19a60edb8198623b8407d361b&
+
+[2026-07-10T11:03:11.141000+00:00] alto69 (id=1525095034586796133)
+    if i zoom out i get this margin
+    [attachment] 2E1B99D9-26BF-45B6-BB4D-705072275BF3.png https://cdn.discordapp.com/attachments/1493017427724992612/1525095034125549730/2E1B99D9-26BF-45B6-BB4D-705072275BF3.png?ex=6a5222ef&is=6a50d16f&hm=181d6fa12449c9c1fe8f0febf4e09790b32a96a719cb7b214cc388e5a150f773&
+
+[2026-07-10T11:40:11.155000+00:00] alto69 (id=1525104346000523349)
+    [attachment] more_apps.txt https://cdn.discordapp.com/attachments/1493017427724992612/1525104345526304788/more_apps.txt?ex=6a522b9b&is=6a50da1b&hm=3428172711e5e0f0dbb1d9d6950a2bf859fe52ab4f9324ee66127b52006dde21&
+
+[2026-07-10T11:46:28.652000+00:00] alto69 (id=1525105929337442325)
+    The One Decision Point
+    The icon picker needs icons.js cooperation. Two paths:
+    
+    Path A (self-contained): Copy the icon name list into the extension. Works today, no core PR, but the list goes stale when icons.js adds new icons.
+    
+    Path B (clean): A 1-line PR to icons.js: window.LUCIDE_ICONS = Object.keys(LI_PATHS);. Then the extension reads window.LUCIDE_ICONS || Object.keys(LI_PATHS) with a graceful fallback.
+    
+    Recommendation: Path B. It's a single line, zero overhead, purely additive, and benefits any future extension that needs to render icons by name.
+    [reply to alto69 msg=1525104346000523349]
+

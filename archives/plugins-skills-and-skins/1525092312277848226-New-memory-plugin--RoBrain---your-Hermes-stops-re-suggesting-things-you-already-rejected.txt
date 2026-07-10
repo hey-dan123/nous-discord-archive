@@ -1,0 +1,31 @@
+# Thread '🧠 New memory plugin: RoBrain — your Hermes stops re-suggesting things you already rejected' in forum #plugins-skills-and-skins
+# thread_id=1525092312277848226 forum_id=1485392832154832906
+# Started 2026-07-10T14:25:47.535165+00:00
+
+[2026-07-10T10:52:22.092000+00:00] sailormoon_26726 (id=1525092312277848226)
+    Most memory gives your agent recall. RoBrain gives it vetoes: it captures what you decided and what you ruled out and why.
+    
+    Real exchange from my own project this morning (screenshot below). Months of sessions, nobody ever hand-wrote this down. It didn't just refuse — it cited the recorded reason and redirected the cost question to the actual constraint. 
+    
+    What the plugin does
+    
+    📥 Passive capture — turns ship to your RoBrain server, which extracts decisions (and vetoes) server-side; the plugin needs no LLM key of its own
+    📤 Recall — project decision summary in the system prompt + per-turn retrieval, rejections rendered as explicit REJECTED: x — reason warnings
+    🔧 robrain_search tool — the agent checks decision history before committing to an approach
+    🛟 Fail-open — RoBrain down means degraded recall, never a blocked agent
+    Fully self-hosted — your own Postgres, Apache-2.0, multi-arch image, optional fully-local LLM mode (Ollama/LM Studio/vLLM). The same store captures from Claude Code, Cursor, Copilot, and Codex CLI, so your Hermes shares one decision memory with every tool you code in.
+    
+    Install — three commands, no clone (ships as a standalone plugin per hermes-agent's contribution policy):
+    
+    npx robrain@latest up               # Postgres + Perception from ghcr.io
+    npx robrain@latest install --hermes # plugin → ~/.hermes/plugins/robrain
+    hermes memory setup                 # select "robrain"
+    Receipts over claims: the repo ships VetoBench, a reproducible benchmark of exactly this failure mode — without decision memory, the agent re-proposed a rejected approach in up to 9/10 tasks; with vetoes in context, 0/50 across five archived runs, every retrieved context committed in-repo. 23 plugin tests + a tarball-install CI gate, verified end-to-end against a live deployment.
+    
+    🔗 https://robrain.dev · repo: https://github.com/adelinamart/robrain ·
+    Feedback and PRs welcome — including benchmark adapters that make us look bad. 🙂
+    [attachment] roBrain.png https://cdn.discordapp.com/attachments/1525092312277848226/1525092312604999820/roBrain.png?ex=6a522066&is=6a50cee6&hm=55d3e03fbd4ff96d1888252a92a6ebe284c1891c6e8690940f8ea672d66289d4&
+    [attachment] Screenshot_2026-07-10_at_12.46.32_PM.png https://cdn.discordapp.com/attachments/1525092312277848226/1525092312974360596/Screenshot_2026-07-10_at_12.46.32_PM.png?ex=6a522066&is=6a50cee6&hm=0a49b2d4c61ea9e06df4f76b143afba35bce0861a2401b5942b35fea918375c5&
+    [embed] RoBrain — shared memory with judgment for AI teams https://robrain.dev/
+    [embed] GitHub - adelinamart/robrain: Shared memory across your team and yo... https://github.com/adelinamart/robrain
+

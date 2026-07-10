@@ -1,0 +1,30 @@
+# Thread 'Built a plugin to track everything Hermes installs' in forum #community-projects-showcase
+# thread_id=1525134018004254890 forum_id=1316137596535177246
+# Started 2026-07-10T14:20:54.683003+00:00
+
+[2026-07-10T13:38:05.512000+00:00] chilarai (id=1525134018004254890)
+    Hey everyone!
+    
+    While using Hermes, I realized I was quickly losing track of what it had installed on my machine like packages, Docker images, cloned repositories, services, etc.
+    
+    So I built a small OSS plugin called **Agent Install Monitor**
+    
+    It records things like:
+    
+    * npm/pnpm/yarn installs
+    * pip/uv installs
+    * brew/apt installs
+    * Docker pulls and runs
+    * git clone
+    * and a few other common setup actions
+    
+    The goal is simple: visibility. It doesn't change how Hermes works, uninstall anything, or add approvals. It just keeps a local history of what Hermes installed during each session.
+    
+    I'd love feedback from the community:
+    
+    * What installation actions should it track that I might have missed?
+    * Would session summaries or export be useful?
+    
+    Repo: https://github.com/swytchcodehq/agent-install-monitor
+    [embed] GitHub - swytchcodehq/agent-install-monitor: Monitor everything you... https://github.com/swytchcodehq/agent-install-monitor
+

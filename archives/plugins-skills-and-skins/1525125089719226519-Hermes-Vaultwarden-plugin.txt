@@ -1,0 +1,40 @@
+# Thread 'Hermes Vaultwarden plugin' in forum #plugins-skills-and-skins
+# thread_id=1525125089719226519 forum_id=1485392832154832906
+# Started 2026-07-10T14:25:47.163716+00:00
+
+[2026-07-10T13:02:36.843000+00:00] ansicode (id=1525125089719226519)
+    🔐 New plugin: Vaultwarden secrets for Hermes Agent
+    
+    I’ve released hermes-vaultwarden, an external SecretSource plugin that lets Hermes load environment variables directly from a self-hosted Vaultwarden instance or a Bitwarden Password Manager vault.
+    
+    Hermes already supports Bitwarden Secrets Manager through bws, but Vaultwarden implements the Password Manager API instead. This plugin bridges that gap using the standard bw CLI.
+    
+    What it supports
+    
+    - Import custom fields from a vault item as environment variables
+    - Optional mapping of login.username, login.password and notes
+    - Interactive setup with hermes vaultwarden setup
+    - Status, sync and disable commands
+    - Protected session token and conflict handling
+    - Secure disk cache with 0600 permissions
+    - Graceful startup failures if the vault is locked or unavailable
+    
+    Quick install
+    
+    > git clone https://github.com/hansipie/hermes-vaultwarden ~/Code/hermes-vaultwarden
+    > ln -s ~/Code/hermes-vaultwarden ~/.hermes/plugins/vaultwarden
+    
+    Then configure the Bitwarden CLI and run:
+    
+    > bw config server https://your-vaultwarden.example.com
+    > bw login
+    > export BW_SESSION=$(bw unlock --raw)
+    > hermes vaultwarden setup
+    
+    Repository and full documentation:
+    
+    https://github.com/hansipie/hermes-vaultwarden
+    
+    This is the first public release. Feedback, bug reports and contributions are welcome, especially from people running Hermes with a self-hosted Vaultwarden setup.
+    [embed] GitHub - hansipie/hermes-vaultwarden: Hermes Agent plugin: Vaultwar... https://github.com/hansipie/hermes-vaultwarden
+
