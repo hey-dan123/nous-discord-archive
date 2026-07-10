@@ -45774,3 +45774,145 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Haha, 1000 commit bro, try more <:catlick:1151260427645366375>
     [reply to trivunous msg=1525133730249965688]
 
+[2026-07-10T14:25:21.963000+00:00] george006796 (id=1525145914941898802)
+    https://github.com/NousResearch/hermes-agent/pull/50903
+    [embed] feat(platforms): add Linq iMessage as a bundled platform plugin by ... https://github.com/NousResearch/hermes-agent/pull/50903
+
+[2026-07-10T14:26:12.358000+00:00] george006796 (id=1525146126313980036)
+    would love a review whenever someone has a few mins: adds iMessage support with Linq API for Hermes Agent
+
+[2026-07-10T15:16:07.327000+00:00] alelpoan (id=1525158688124309705)
+    Fixed those ugly black blocks in terminal tooltips. 
+    
+    Issue: https://github.com/NousResearch/hermes-agent/issues/62022
+    PR: https://github.com/NousResearch/hermes-agent/pull/62139
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1525158688237817946/image.png?ex=6a525e37&is=6a510cb7&hm=442cfcd7f1274359f91e4654b4bfa04e80710888cac1f7829f2776ce314b2008&
+
+[2026-07-10T15:17:42.641000+00:00] dias4761 (id=1525159087900201192)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/62144 p1 issue check when u have time
+    [embed] fix(desktop): pin composer draft scope to the swap-effect owner, no... https://github.com/NousResearch/hermes-agent/pull/62144
+
+[2026-07-10T15:18:31.147000+00:00] teknium (id=1525159291349237900)
+    I dont need to be pinged of these
+    [reply to dias4761 msg=1525159087900201192]
+
+[2026-07-10T15:18:36.288000+00:00] teknium (id=1525159312912027830)
+    We have them constantly monitored
+
+[2026-07-10T15:18:39.873000+00:00] dias4761 (id=1525159327948734484)
+    sry :c
+
+[2026-07-10T15:53:38.765000+00:00] sassyfatcat (id=1525168131339714800)
+    https://github.com/NousResearch/hermes-agent/pull/60489/
+    [embed] feat(desktop): add "Connect to existing Hermes" option to first-run... https://github.com/NousResearch/hermes-agent/pull/60489/
+
+[2026-07-10T15:54:04.997000+00:00] sassyfatcat (id=1525168241364828421)
+    Would be a very nice QOL change for people using hermes-desktop with a  remote instance
+
+[2026-07-10T15:59:50.523000+00:00] kerozelvin (id=1525169690605781002)
+    https://github.com/NousResearch/hermes-agent/pull/61798   This got labeled as P3, but the issue crashes Hermes Desktop in Linux every time you run hermes update.  Hoping it can be upgraded to P1.
+    [embed] fix(desktop): rebuild missing node-pty payload by KeroZelvin · Pul... https://github.com/NousResearch/hermes-agent/pull/61798
+
+[2026-07-10T16:01:54.370000+00:00] egilewski (id=1525170210057879832)
+    Try to create an issue for that PR, to help the bot estimate it better.
+    [reply to kerozelvin msg=1525169690605781002]
+
+[2026-07-10T16:34:01.174000+00:00] frizikk (id=1525178291659603968)
+    Just finished a complete Polish localization for Hermes Agent — Desktop, Dashboard, and CLI/TUI. Fully reviewed, tested  - https://github.com/NousResearch/hermes-agent/pull/62056
+    [attachment] 0e2d19d1-e633-49bf-a7cc-b39e6cdeb5a5.png https://cdn.discordapp.com/attachments/1491258766648283238/1525178292502528010/0e2d19d1-e633-49bf-a7cc-b39e6cdeb5a5.png?ex=6a527079&is=6a511ef9&hm=10191dc7f51451c43d5d3c70ddf30be6fa232a244de59dd9c9d62b3b42ed704c&
+    [embed] feat(i18n): add complete Polish UI localization by frizikk · Pull ... https://github.com/NousResearch/hermes-agent/pull/62056
+
+[2026-07-10T17:11:02.515000+00:00] dias4761 (id=1525187608639176775)
+    P1 issue https://github.com/NousResearch/hermes-agent/pull/62198 : fix  #62151
+    [embed] fix(cron): stop inactivity watchdogs from being blind to a wedged A... https://github.com/NousResearch/hermes-agent/pull/62198
+
+[2026-07-10T17:56:56.067000+00:00] .mkos. (id=1525199157873086637)
+    Hi! Given that you sometimes push a lot of updates on Fridays, I was wondering if there is any chance this could be reviewed? (It is not mine, but I would use my Agent SDK credits with Hermes a lot .)
+    https://github.com/NousResearch/hermes-agent/pull/56413
+    [embed] feat(agent): Claude Agent SDK backend (subscription OAuth) + shared... https://github.com/NousResearch/hermes-agent/pull/56413
+
+[2026-07-10T18:02:02.455000+00:00] warofchange (id=1525200442957500608)
+    Follow up on the comps-analysis skill fix (PR #61749) — at the maintainer's request
+    
+    After the earlier fix, <@387972437901312000> review flagged a follow-up: the Simplified Chinese generated-skill page still carried the same broken examples/comps_example.xlsx reference. As he noted, the English skill-doc generator only writes under website/docs — not website/i18n — so the Chinese mirror needed a manual edit.
+    
+    Done at his request — pushed a second commit syncing the zh-Hans page (finance-comps-analysis.md:58) to the same user-provided wording as the English SKILL.md:
+    
+    -示例可比公司分析文件位于 `examples/comps_example.xlsx`。使用此 skill 目录中的示例文件时，请智慧地加以运用：
+    +当用户提供示例可比公司分析（或模板）时，请智慧地加以运用：
+    The PR now covers both files (English source + Chinese mirror), and the review feedback is fully addressed.
+    
+    PR:  https://github.com/NousResearch/hermes-agent/pull/61749
+    [embed] docs(skills/comps-analysis): drop reference to non-existent bundled... https://github.com/NousResearch/hermes-agent/pull/61749
+
+[2026-07-10T18:08:15.908000+00:00] dias4761 (id=1525202009333043232)
+    p1 issue https://github.com/NousResearch/hermes-agent/pull/62225
+    
+    
+    fix: #27038
+    [embed] fix(codex): drop oversized message ids on Responses input replay by... https://github.com/NousResearch/hermes-agent/pull/62225
+
+[2026-07-10T18:08:40.564000+00:00] cyberyellowninja (id=1525202112747802664)
+    Hi,
+    
+    We built a memory consolidation skill for Hermes inspired by "grandamenium/dream-skill".
+    
+    Every night at 03:00 it reads session history, runs M3 for memory consolidation, updates structured memory files (decisions, corrections, preferences), and regenerates an always-loaded synthesis file ("~/.hermes/dream.md").
+    
+    It's working well, but I'd estimate it's still around 80% of ChatGPT/Claude-style memory quality.
+    
+    A few areas where Hermes could improve:
+    
+    1. mmx CLI bug — "--messages-file -" (stdin) returns ""$ is not iterable"". Current workaround: inline prompts.
+    2. No tool calling — M3 generates file updates through a text protocol instead of native file tools.
+    3. Signal noise — grep-based extraction produces false positives; semantic retrieval would likely work better.
+    4. Greek support — only basic extraction patterns are implemented today.
+    
+    Full architecture, implementation details, known limitations, and suggested improvements are documented in the attached "axiom-dream-doc.md".
+    
+    Code:
+    
+    "~/.hermes/skills/axiom-dream/"
+    
+    Files:
+    
+    "SKILL.md"
+    "should-dream.sh"
+    "gather-signal.sh"
+    "axiom-dream.py"
+    
+    If anyone wants to adapt, improve, publish, or integrate parts of it into Hermes or the upstream dream-skill project, feel free.
+    
+    — Ioannis + Axiom (M3)
+    2026-07-10
+    [attachment] axiom-dream-doc.md https://cdn.discordapp.com/attachments/1491258766648283238/1525202112475168818/axiom-dream-doc.md?ex=6a5286a8&is=6a513528&hm=94be4c7b7e1108d491a168a9e524a47f03b63d1eb43d8ed04484509cfa09a1ca&
+
+[2026-07-10T18:35:33.247000+00:00] dias4761 (id=1525208876830425161)
+    https://github.com/NousResearch/hermes-agent/pull/62242  fix(codex): never replay message-item id on Copilot Responses connections
+    [embed] fix(codex): never replay message-item id on Copilot Responses conne... https://github.com/NousResearch/hermes-agent/pull/62242
+
+[2026-07-10T18:35:40.370000+00:00] dias4761 (id=1525208906706714747)
+    #32716
+
+[2026-07-10T18:45:32.895000+00:00] egilewski (id=1525211391936565329)
+    Polandball is upside down.
+    [reply to frizikk msg=1525178291659603968]
+
+[2026-07-10T18:51:48.172000+00:00] egilewski (id=1525212965962518725)
+    I see that didn't help. Is it an incompatibility with NPM 12 (released 2 days ago)? And Hermes tried to use it without any hacks? If so, then maybe for a P1 it should then be framed like that: Hermes breaks with latest stable NPM.
+    [reply to kerozelvin msg=1525169690605781002]
+
+[2026-07-10T19:20:15.940000+00:00] watchdominion (id=1525220128860541128)
+    Took a look at #61798 — the P1 ask is legit. I reproduced the core bug on current main: with the native payload missing, the rebuild helper exits 0 without building anything (node-pty is hoisted to the workspace root, @electron/rebuild never finds it), and node-pty 1.1.0 ships no Linux prebuilds at all, so there's nothing to fall back on. Plus the content stamp still matches, so hermes update can't self-heal. Deterministic full startup failure on Linux source installs — posted verification details on the PR. <@118959613751197697>
+
+[2026-07-10T19:20:28.946000+00:00] kerozelvin (id=1525220183411654687)
+    Yes, npm 12.0.0 became stable on July 8 and was the latest version when this reproduced. It happened on stock Hermes v0.18.2 using the normal hermes update followed by hermes desktop; no source patches or unusual launch flags were involved.
+    
+    npm 12’s new default blocks dependency install scripts and native node-gyp builds unless explicitly allowed. That prevented node-pty from producing its Linux native binding, while Hermes still accepted and launched the incomplete Desktop package.
+    
+    npm 12.0.1 is now the latest release, and it still blocks node-pty, Electron, esbuild, and three other Hermes dependencies.  Latest stable npm 12 can leave stock Hermes Desktop unlaunchable on Linux after the normal update path.
+    [reply to egilewski msg=1525212965962518725]
+
+[2026-07-10T19:20:59.650000+00:00] watchdominion (id=1525220312193437838)
+    As someone who always updates his packages I feel your pain hah
+

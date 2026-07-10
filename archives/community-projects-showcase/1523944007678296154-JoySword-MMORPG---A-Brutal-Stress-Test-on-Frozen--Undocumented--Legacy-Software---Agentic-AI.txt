@@ -122,3 +122,7 @@
 [2026-07-09T16:32:59.198000+00:00] iam_rxpii (id=1524815643847688274)
     following this for sure
 
+[2026-07-10T15:00:16.217000+00:00] oleegg (id=1525154698879959130)
+    I tested the game last night it works, since this game has some weird goofy IP issues if ya downloaded the client/launcher before ya gonna have to redownload it again because this has the correct patch, also the registration works now on the website ->https://onjoysword.top/
+    [embed] JoySword — Classic Anime Action MMORPG Realm https://onjoysword.top/
+

@@ -1,0 +1,34 @@
+# Thread 'Tappy – OSS output workspace for Hermes/agent workflows' in forum #community-projects-showcase
+# thread_id=1525190544601518150 forum_id=1316137596535177246
+# Started 2026-07-10T19:24:04.263759+00:00
+
+[2026-07-10T17:22:42.503000+00:00] m62773 (id=1525190544601518150)
+    Just launched Tappy — an MIT-licensed open-source workspace/output layer for agents.
+    
+    The idea: agents like Hermes can start anywhere, but their work needs somewhere durable to land.
+    
+    Tappy gives agents a place to create and update real workspace objects instead of just leaving output in chat/logs/files:
+    
+    • docs
+    • source-backed blocks
+    • React/Python/code blocks
+    • visible runs
+    • reviewable changes
+    • PDF/PPTX exports
+    • BYOA workflows via MCP
+    
+    So a Hermes-style agent could do the work, then push the result into Tappy as editable/reviewable workspace state.
+    
+    The goal is not to replace the agent.
+    
+    It’s to give open agents a better output surface.
+    
+    Repo: https://github.com/MustafaK99/tappy
+    Live: https://tappy.sh
+    
+    Would love feedback from Hermes/OSS agent people on what output primitives external agents should have next.
+    
+    allows for multi-agent collab so mulitple agents can collaborate together all self-hosted and free so you keep your own data
+    [embed] GitHub - MustafaK99/tappy: The open-source agent-native workspace ... https://github.com/MustafaK99/tappy
+    [embed] Tappy — Agent-Native Workspace https://tappy.sh/
+

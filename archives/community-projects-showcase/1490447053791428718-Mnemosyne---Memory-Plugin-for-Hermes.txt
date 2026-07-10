@@ -2509,3 +2509,52 @@
 [2026-07-10T03:21:16.250000+00:00] llealloo (id=1524978789908746280)
     also I'm curious how it would work in a multi agent setup with the sync feature
 
+[2026-07-10T16:17:48.338000+00:00] ghostbeartrader (id=1525174211289809051)
+    I don't know what OKF spec vault means. I have both running with an obsidian graph node visualizer/editor in place. Also I'm working on a solution to a write conflict I'm having with sqlite contentions and multiple agent simultaneous writes. I can paste a document about it if any of you need help with that. I run 40+ agents on several different servers.
+
+[2026-07-10T16:22:57.651000+00:00] llealloo (id=1525175508642435182)
+    okf == open knowledge format
+
+[2026-07-10T16:24:05.466000+00:00] llealloo (id=1525175793079287849)
+    it's something google released on June 12th that specs out a format for markdown wikis
+
+[2026-07-10T16:28:43.371000+00:00] ghostbeartrader (id=1525176958697209947)
+    ah ty. I think you can tell your orchestrator how to do it and it will update all of your agents to follow that format.
+
+[2026-07-10T16:28:51.619000+00:00] ghostbeartrader (id=1525176993291829422)
+    Not a bad idea
+
+[2026-07-10T16:33:33.896000+00:00] ghostbeartrader (id=1525178177247510669)
+    I'm having the orchestrator write the solution for multiple agent use of single brain. I'm using DSv4Flash so it's taking a couple tries to get it to do what I want. Give me a couple minutes. Should have a solution here
+
+[2026-07-10T17:17:59.639000+00:00] llealloo (id=1525189358184038571)
+    lol, that's almost exactly what I tried with my current setup
+    
+    I actually prebuilt the okf vault outside of hermes using codex outlining the entire multi agent setup (including deployment & maintenance), then fed my hermes orchestrator the vault and it did pretty well setting everything up in one go.
+    
+    but, I later realized a bunch of shortcomings in the orig design which sent me back to the drawing board researching about a memory system... which lead me here to mnemosyne
+    [reply to ghostbeartrader msg=1525178177247510669]
+
+[2026-07-10T17:20:10.267000+00:00] llealloo (id=1525189906077585529)
+    I'm especially interested in multi agent use cases, like I wonder how mnemosyne sync could be used to get scoped memories between agents (I have an agent for personal I share with my bf, then one for business, and then a private one)
+
+[2026-07-10T17:22:03.743000+00:00] .maxlife (id=1525190382030164190)
+    Would love tour thought one these articles and is it something worth integrating to your memory system:   https://x.com/chewadot/status/2071564521735684253?s=46&t=zLpu9UGdvhLSlkfXiwvX-w      And    https://x.com/leopardracer/status/2073340097051689327?s=46&t=zLpu9UGdvhLSlkfXiwvX-w    And     https://x.com/polydao/status/2066904909849440434?s=46&t=zLpu9UGdvhLSlkfXiwvX-w
+    [embed]  https://twitter.com/chewadot/status/2071564521735684253?s=46&t=zLpu9UGdvhLSlkfXiwvX-w
+    [embed]  https://twitter.com/leopardracer/status/2073340097051689327?s=46&t=zLpu9UGdvhLSlkfXiwvX-w
+    [embed]  https://twitter.com/polydao/status/2066904909849440434?s=46&t=zLpu9UGdvhLSlkfXiwvX-w
+    [reply to nulledvector msg=1490447053791428718]
+
+[2026-07-10T17:23:56.936000+00:00] .maxlife (id=1525190856796278926)
+    Thisnine also seems relevant:  https://x.com/kocer_eth/status/2070188026794283036?s=46&t=zLpu9UGdvhLSlkfXiwvX-w
+    [embed]  https://twitter.com/kocer_eth/status/2070188026794283036?s=46&t=zLpu9UGdvhLSlkfXiwvX-w
+
+[2026-07-10T17:24:37.484000+00:00] .maxlife (id=1525191026866786415)
+    Hope these spur some thought and help you scale broader… i will be playing with all of this woth a Hermes agent soon
+
+[2026-07-10T17:28:08.616000+00:00] llealloo (id=1525191912418705468)
+    obsidian second brains are so June 2026
+
+[2026-07-10T17:28:59.613000+00:00] llealloo (id=1525192126315368549)
+    that's like a year old in AI-time
+

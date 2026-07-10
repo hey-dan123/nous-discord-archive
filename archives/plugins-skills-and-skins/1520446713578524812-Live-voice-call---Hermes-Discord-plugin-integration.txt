@@ -82,3 +82,32 @@
 [2026-07-09T03:01:01.005000+00:00] sounderstanding (id=1524611304936177766)
     Any plans to incorporate local full duplex models like Qwen3 Omni/MiniCPM/NVIDIA PersonaPlex?
 
+[2026-07-10T19:08:24.091000+00:00] capslock.b (id=1525217143149428736)
+    <@720268006554468423> Great idea; I'm upgrading my homelab atm to some better specs to run these duplex models, so I will defo look into implementing this
+    
+    What models you reccomend? Im very unfamiliar with local
+
+[2026-07-10T19:11:26.361000+00:00] sounderstanding (id=1525217907645087936)
+    Those 3 I listed would be the best available right now for local for now that I know of. Ideally they could pass off to more capable models, like just be used for the full duplex audio ability. They are otherwise small and not very capable. Maybe there is something lighter out there that just specializes in full duplex audio that could then pass to a powerful local model.
+
+[2026-07-10T19:12:32.120000+00:00] capslock.b (id=1525218183458459648)
+    Awesome; this is really intriguing to me I haven't played with local at all thanks a bunch
+
+[2026-07-10T19:14:32.016000+00:00] sounderstanding (id=1525218686338727976)
+    Mind you they are already pretty light. But the notion of full duplex as the new chat gpt chat mode  is showing off is Ideally the closest thing we can get to natural conversions. If you add stuff like emotion detection stt like sensevoice feeding emotion promptable tts, you'd have the holy grail of communication with llms
+
+[2026-07-10T19:18:44.317000+00:00] capslock.b (id=1525219744565821611)
+    Was actually working on a emotion detection and expression with the use of high end providers who's models have expression tags; if local can get close this is super exciting, you can expect this within the next update; holy grail is what I'm chasing so feel free to add to the repo or modify it as you please 😉
+
+[2026-07-10T19:21:24.952000+00:00] sounderstanding (id=1525220418317975703)
+    Sensevoice can do emotion detection on cpu under or under 1/2gb vram depending on quant and engine and is faster stt than whisper with similiar WER.
+
+[2026-07-10T19:23:23.815000+00:00] capslock.b (id=1525220916865405039)
+    So Basically, if I implement this into a Full tower PC server, its overpowered right? Maybe you know or have like any crazy ideas for a full AI computer, lemme know 😉
+
+[2026-07-10T19:25:50.794000+00:00] unique_dominique7 (id=1525221533339877407)
+    I got That going on nah fr, I need ideas im busy working on making a full rtx2060 PC into a server lmao, yall got any crazy ideas No one would believe? Im working on em🤣🤣✨️
+
+[2026-07-10T19:26:46.344000+00:00] unique_dominique7 (id=1525221766333730846)
+    Wait caps, If we doing the same thing, what if we build a model together with developers right, That runs from Their and our computer so we start making a cloud?.... idk crazy idea by me😇😇
+

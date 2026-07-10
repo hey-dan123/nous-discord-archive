@@ -11,3 +11,6 @@
 [2026-07-10T13:40:05.831000+00:00] mburhop (id=1525134522658717778)
     It can work with any that has a good API.  I can get free versions of OnShape, Solid Edge, and FreeCAD.  I could make it work with others but I don't have the licenses and I'm too lazy to apply to their partner program.
 
+[2026-07-10T14:42:40.046000+00:00] javi089985 (id=1525150268977840178)
+    Cool! Any special skill of feedback loop to iterate or it is just prompting the description of the part u are making?
+

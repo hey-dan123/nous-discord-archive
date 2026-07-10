@@ -38,3 +38,9 @@
     This is the first public release. Feedback, bug reports and contributions are welcome, especially from people running Hermes with a self-hosted Vaultwarden setup.
     [embed] GitHub - hansipie/hermes-vaultwarden: Hermes Agent plugin: Vaultwar... https://github.com/hansipie/hermes-vaultwarden
 
+[2026-07-10T16:16:37.271000+00:00] naughtyswege (id=1525173913213079714)
+    Will be testing out tn 🙏
+
+[2026-07-10T18:00:00.541000+00:00] .nisegami (id=1525199931613118544)
+    wasn't the bw cli the project that had a major security issue recently?
+

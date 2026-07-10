@@ -122,3 +122,21 @@
 [2026-07-09T12:45:53.604000+00:00] exquisite_cheetah_29759 (id=1524758493964537886)
     tips, have thick skin and patience,  let me ask her if we can setup a chat room for u
 
+[2026-07-10T17:33:02.841000+00:00] .maxlife (id=1525193146487668816)
+    Setting up my hermes agent tbis weekend for eventual passive income … maybe that can work together on one project and scale it.  Churn out Digital products sold via funnels, gumroad, etsy….
+
+[2026-07-10T17:37:24.716000+00:00] .maxlife (id=1525194244870901843)
+    BOX now does almost full disk snapshots so you can potentially fork your agent so we can have them work together/collaborate:
+    
+    - box new
+    
+    - install hermes in the box
+    
+    - stop it
+    
+    - fork it to create new box
+    
+    every new box has hermes and whatever you configured in it instantly
+    
+    this is how box users make personal assistants for SMBs in prod
+

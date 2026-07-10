@@ -5609,3 +5609,7 @@
     Recommendation: Path B. It's a single line, zero overhead, purely additive, and benefits any future extension that needs to render icons by name.
     [reply to alto69 msg=1525104346000523349]
 
+[2026-07-10T18:10:58.149000+00:00] unselfishneologism (id=1525202689821245571)
+    Hey this is cool, but what if you aren't technical enough to setup hermes-agent? For the past year, I've been working hard on building my childhood dream of "an assistant that does what I tell it to" (android only) its BYOK . https://twent.xyz
+    [embed] Twent - AI Agent for Android (2026) | Automates Everything https://twent.xyz/
+
