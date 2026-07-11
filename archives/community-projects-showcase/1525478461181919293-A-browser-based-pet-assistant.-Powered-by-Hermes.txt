@@ -1,0 +1,17 @@
+# Thread 'A browser-based pet assistant. Powered by Hermes' in forum #community-projects-showcase
+# thread_id=1525478461181919293 forum_id=1316137596535177246
+# Started 2026-07-11T13:13:39.677226+00:00
+
+[2026-07-11T12:26:47.165000+00:00] fro0z1 (id=1525478461181919293)
+    https://github.com/solyanviktor-star/yasenka
+    
+    Yasenka - Browser Pet Assistant
+    
+    Yasenka (Yasia) is a tiny catgirl who lives right on top of any web page. She walks and runs along the page structure, you can drag her around, throw her, pet her, and feed her - she gains XP and levels up as she grows. Beyond being adorable, she's genuinely useful: she can download videos from the page (YouTube, TikTok, Twitter/X, Instagram) and keep quick notes and links saved locally in your browser. githubgithub
+    
+    How Hermes makes her smarter
+    
+    Hermes is Yasia's brain. Powered by the Hermes model, she goes from a cute animated sprite to a real assistant: she can understand what's on the page you're browsing, answer your questions in her speech bubble, chat with you in natural language, and react to context instead of just playing canned animations. The more you interact with her, the more Hermes lets her respond like a true companion - summarizing articles, helping with your notes, and giving her a personality of her own.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1525478461181919293/1525478461370536027/image.png?ex=6a538807&is=6a523687&hm=ca4ec3c638ddfb5d14c632a5ce07c09b54acc3109b318c61a7ea2aa0312f53ef&
+    [embed] GitHub - solyanviktor-star/yasenka https://github.com/solyanviktor-star/yasenka
+

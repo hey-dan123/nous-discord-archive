@@ -1,0 +1,21 @@
+# Thread 'Agent assisted character design' in forum #plugins-skills-and-skins
+# thread_id=1525431847163658323 forum_id=1485392832154832906
+# Started 2026-07-11T13:19:11.569644+00:00
+
+[2026-07-11T09:21:33.517000+00:00] tripledawn (id=1525431847163658323)
+    For anyone who works with character design — or just keeps getting generic image-gen results — I published a set of skills for locking characters down and iterating on them.
+    
+        Whether you’re newer to this or already deep in it, and whether you give the agent image tools or not, there should be something useful here. 
+    
+        Three independent skills — use whichever matches where you are:
+        1. Seed → bible — turn a rough idea or pile of notes into locks vs. open knobs, and optionally a character bible / handoff
+        2. Sparks — anti-generic visual design: prompt rules, a small design-decision sparks DB, and image decomposition so you can iterate one component at a time instead of re-rolling the whole character
+        3. Draft economy — make generations count: match model/tool to the look, draft cheap before finishing, spend compute/credits where it pays
+    
+        On Hermes: point the agent at the repo and ask it to install the skills — it can handle the clone/symlink setup for you.
+    
+        https://github.com/schorjonathan-code/character-design-agentic-workflows
+    
+        Looking for feedback — what works, what’s confusing, what you’d want next.
+    [embed] GitHub - schorjonathan-code/character-design-agentic-workflows https://github.com/schorjonathan-code/character-design-agentic-workflows
+

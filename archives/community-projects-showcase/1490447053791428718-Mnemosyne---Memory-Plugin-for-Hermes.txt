@@ -2577,3 +2577,6 @@
 [2026-07-10T22:33:57.060000+00:00] llealloo (id=1525268871370506371)
     mnemosyne looks neat for session memory, I'm just wondering how it would intersect with a canonical source like a markdown wiki/vault
 
+[2026-07-11T10:48:32.073000+00:00] nootnoota (id=1525453735374094467)
+    will this work with claude?
+

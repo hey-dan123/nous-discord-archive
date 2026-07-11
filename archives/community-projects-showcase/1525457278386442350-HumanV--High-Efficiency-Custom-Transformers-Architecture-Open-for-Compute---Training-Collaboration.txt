@@ -1,0 +1,28 @@
+# Thread 'HumanV: High-Efficiency Custom Transformers Architecture Open for Compute & Training Collaboration' in forum #community-projects-showcase
+# thread_id=1525457278386442350 forum_id=1316137596535177246
+# Started 2026-07-11T13:13:40.136046+00:00
+
+[2026-07-11T11:02:36.793000+00:00] immoeinp (id=1525457278386442350)
+    Hello Nous Community!
+    
+    We have developed HumanV, a custom-engineered, highly efficient causal language model architecture designed from scratch to integrate natively with the Hugging Face ecosystem. While the architecture is fully implemented and tested, we lack the computational resources for full-scale training and are looking for compute partners (individuals, labs, or companies) with GPU/TPU access.
+    
+    Key Advantages:
+    1. Hybrid Local-Global Block Sparse Attention: Alternates full and sliding-window layers, slashing memory footprint and supporting long contexts via optimized prefill/decode phases.
+    2. GQA & Partial RoPE: Reduces KV cache overhead during inference and applies positional encodings to a specific percentage of head dimensions.
+    3. Production-Ready HF Integration: 100% compliant with the transformers API. Resolves critical bfloat16/SDPA mask handling and ensures strict inference-mode separation.
+    
+    Collaboration:
+    You bring the compute; we provide the architecture, maintenance, and optimization support.
+    
+    GitHub Repository:
+    https://github.com/humanprojectceo/transformers/tree/recovered-main/src/transformers/models/humanv
+    
+    Contact Us:
+    - Telegram: @Iionemessi
+    - Email: info@humanv.ir
+    
+    Best regards,
+    The HumanV Team
+    [embed] transformers/src/transformers/models/humanv at recovered-main · hu... https://github.com/humanprojectceo/transformers/tree/recovered-main/src/transformers/models/humanv
+

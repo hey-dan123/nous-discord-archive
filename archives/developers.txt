@@ -46033,3 +46033,67 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Yep but no part of nous research, juste collaborating in Hermes
     [reply to bhyrd msg=1525397164992233656]
 
+[2026-07-11T08:11:39.233000+00:00] zeke3299 (id=1525414255061372998)
+    <@387972437901312000> heyo tek, it's been a couple months and still wondering if you're just rocking vscode or found any other IDE that suited ur needs
+
+[2026-07-11T09:34:46.659000+00:00] undifined. (id=1525435173842190388)
+    Have you tried zed
+    [reply to zeke3299 msg=1525414255061372998]
+
+[2026-07-11T09:35:36.958000+00:00] bhyrd (id=1525435384811749377)
+    Anyone here interested in startups?
+
+[2026-07-11T09:37:44.305000+00:00] undifined. (id=1525435918943522816)
+    yes
+    [reply to bhyrd msg=1525435384811749377]
+
+[2026-07-11T09:44:26.426000+00:00] bhyrd (id=1525437605561241651)
+    Are you doing your own ?
+    [reply to undifined. msg=1525435918943522816]
+
+[2026-07-11T09:45:13.977000+00:00] undifined. (id=1525437805004718160)
+    I have had 2 companies before, I might start one again
+
+[2026-07-11T09:46:37.976000+00:00] bhyrd (id=1525438157322059858)
+    Thats awesome, what spaces are you interested in?
+    [reply to undifined. msg=1525437805004718160]
+
+[2026-07-11T09:48:27.873000+00:00] undifined. (id=1525438618263359608)
+    hardware and software
+
+[2026-07-11T10:01:54.688000+00:00] teknium (id=1525442002290741268)
+    Same setup
+    [reply to zeke3299 msg=1525414255061372998]
+
+[2026-07-11T10:25:44.850000+00:00] trivunous (id=1525448000825069668)
+    https://github.com/NousResearch/hermes-agent/pull/62578
+    [embed] fix(mcp): strip non-list required values in _repair_object_shape by... https://github.com/NousResearch/hermes-agent/pull/62578
+
+[2026-07-11T11:29:26.309000+00:00] frowtek (id=1525464029185966182)
+    https://github.com/NousResearch/hermes-agent/pull/62561 web_search→web_extract chain crashes context compression (dict + str TypeError). Fix unwraps the URL.
+    
+    https://github.com/NousResearch/hermes-agent/pull/62567 /reload-mcp silently loses its reload note from state.db (aliased persist args). Fix actually saves it.
+    
+    https://github.com/NousResearch/hermes-agent/pull/62573 ACP tool label crashes (KeyError: 0) when web_extract urls isn't a list. Fix guards it.
+    
+    https://github.com/NousResearch/hermes-agent/pull/62577 Tool-progress preview shows a raw dict repr for web_extract. Fix coerces it to the URL.
+    
+    https://github.com/NousResearch/hermes-agent/pull/62588 A malformed tool arg crashes the ACP render + history replay. Fix wraps it with a safe fallback.
+    [embed] fix(compressor): unwrap web_extract dict URLs in tool-result summar... https://github.com/NousResearch/hermes-agent/pull/62561
+    [embed] fix(cli): persist the /reload-mcp note instead of silently dropping... https://github.com/NousResearch/hermes-agent/pull/62567
+    [embed] fix(acp): handle non-list web_extract urls in build_tool_title by F... https://github.com/NousResearch/hermes-agent/pull/62573
+    [embed] Fix: display web extract preview dict url by Frowtek · Pull Reques... https://github.com/NousResearch/hermes-agent/pull/62577
+    [embed] fix(acp): don't let a malformed tool argument abort the tool-call r... https://github.com/NousResearch/hermes-agent/pull/62588
+
+[2026-07-11T12:07:01.129000+00:00] aleksandr_1 (id=1525473486586511471)
+    <@387972437901312000>, sir, thank you for the review and comments on my PR #61434, I made all the fixes according to your suggestions.
+    
+    Scope-aware substitution now tracks command-prefix assignments and `unset` correctly (verified against your exact example), assignment recognition works right after `$(`, `(`, and `{` by reusing the existing tokenizer instead of writing a new one, and the quoted-tilde test is replaced with a non-match regression plus a check confirming quoted non-tilde values still resolve. While at it, I also found and closed a more serious inverse case in the same scope-tracking logic, where a scoped override was silently suppressing a real sensitive-path write instead of just producing an extra prompt.
+    
+    339 tests passing locally, including all the new regressions you asked for.
+    
+     https://github.com/NousResearch/hermes-agent/pull/61434
+    
+    <:o7:1151261546111053924>
+    [embed] fix(security): inline shell variable indirection before dangerous-c... https://github.com/NousResearch/hermes-agent/pull/61434
+

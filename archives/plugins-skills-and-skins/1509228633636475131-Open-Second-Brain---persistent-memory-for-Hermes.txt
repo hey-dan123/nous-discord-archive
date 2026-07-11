@@ -316,3 +316,11 @@
     [attachment] chrome_uQ1Ssfs2nx.png https://cdn.discordapp.com/attachments/1509228633636475131/1525255221872300133/chrome_uQ1Ssfs2nx.png?ex=6a52b81e&is=6a51669e&hm=c8cdb010bee962dc6742da8c4638a6c6d762a731d152797d01a8c49a946b549f&
     [attachment] chrome_1XqTNMCHDt.png https://cdn.discordapp.com/attachments/1509228633636475131/1525255222279278714/chrome_1XqTNMCHDt.png?ex=6a52b81e&is=6a51669e&hm=1647a6a1f73dba063192494678181867a967e76b45cb18dd27ffca88665591d8&
 
+[2026-07-11T08:57:56.663000+00:00] digital_love_two (id=1525425904447393894)
+    I'm testing with your plugin. I asked my agent install it. But after using it for a few days, brain always show errors and o2b seems not installing at all.
+    So I check and see some errors:
+    .hermes/plugins/open-second-brain: No such file or directory
+    And I can run "o2b doctor status". The result show vault and config file are writable. (?)
+    The latest brain note error show:
+    Memory tool 'brain_note' failed: unexpected EOF from MCP server
+
