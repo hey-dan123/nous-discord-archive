@@ -287,3 +287,32 @@
     Not sure I'll have to look. I should know if it does or not. I know yelling it to remember something helps for cross session references
     [reply to cptalx. msg=1522879964381446144]
 
+[2026-07-10T21:39:42.970000+00:00] lipebez (id=1525255222727938058)
+    Hi! I use Open Second Brain every day as Hermes' memory provider, and I wanted a visual way to follow the vault, the connections between notes, and memory activity.
+    
+    So I built a read-only companion for the Hermes Dashboard. It is already working with the vault configured in OSB, without creating a separate memory system or performing mutations.
+    
+    The prototype includes:
+    
+    • Vault and Brain explorer with filters
+    • Note inspector with properties, content, and backlinks
+    • Quick search and command palette
+    • Activity, artifacts, Vault Notes, and Active Memory timeline
+    • Focus Graph with overview, 1-hop, 2-hop, hubs, orphans, and broken links
+    • Classic 2D graph with pan, drag, and zoom
+    • 3D mode with perspective, depth, orbit controls, zoom, and selection focus
+    • Responsive mobile modes for Vault, Note, Graph, and Activity
+    
+    The current version is intentionally read-only: it does not run dream, edit preferences, reindex, or delete files.
+    
+    Current validation:
+    
+    • 18 automated tests passing
+    • Real behavioral QA at 1440×900, 1280×577, 1024×768, and 390×844
+    • 2D and 3D tested with selection, zoom, orbit, and automatic framing
+    • Scrolling and layout verified on desktop and mobile
+    
+    😄
+    [attachment] chrome_uQ1Ssfs2nx.png https://cdn.discordapp.com/attachments/1509228633636475131/1525255221872300133/chrome_uQ1Ssfs2nx.png?ex=6a52b81e&is=6a51669e&hm=c8cdb010bee962dc6742da8c4638a6c6d762a731d152797d01a8c49a946b549f&
+    [attachment] chrome_1XqTNMCHDt.png https://cdn.discordapp.com/attachments/1509228633636475131/1525255222279278714/chrome_1XqTNMCHDt.png?ex=6a52b81e&is=6a51669e&hm=1647a6a1f73dba063192494678181867a967e76b45cb18dd27ffca88665591d8&
+

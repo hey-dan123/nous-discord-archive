@@ -45916,3 +45916,97 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-10T19:20:59.650000+00:00] watchdominion (id=1525220312193437838)
     As someone who always updates his packages I feel your pain hah
 
+[2026-07-10T19:23:59.226000+00:00] egilewski (id=1525221065390035106)
+    <@119192111202566149>, I believe that's your domain.
+    [reply to kerozelvin msg=1525220183411654687]
+
+[2026-07-10T19:24:00.461000+00:00] brokeskill (id=1525221070570000638)
+    do inline widgets like with claude exist on the Herme Desktop GUI?
+
+[2026-07-10T19:27:58.652000+00:00] dias4761 (id=1525222069615460443)
+    https://github.com/NousResearch/hermes-agent/pull/62266 
+    
+    
+     fix(codex): clamp prompt_cache_key to 64 chars for Codex/ChatGPT backend FIX :#62063
+    [embed] fix(codex): clamp prompt_cache_key to 64 chars for Codex/ChatGPT ba... https://github.com/NousResearch/hermes-agent/pull/62266
+
+[2026-07-10T20:08:48.546000+00:00] fro0z1 (id=1525232345215668285)
+    Here are all our PRs in NousResearch/hermes-agent with links (10 open + 1 closed by us as a duplicate):
+    
+      Security
+    
+      - #60421 ✅ "fully addressed" by reviewer - API key leaked via cross-origin redirect in fetch_models
+      https://github.com/NousResearch/hermes-agent/pull/60421
+      - #62145 — pairing brute-force lockout counted lifetime typos instead of consecutive ones (could lock out the owner and reject a valid code)
+      https://github.com/NousResearch/hermes-agent/pull/62145
+      - #60427 — Photon auth token was world-readable before chmod (TOCTOU)
+      https://github.com/NousResearch/hermes-agent/pull/60427
+      - #56927 — redirect-based SSRF in download_url (yuanbao)
+      https://github.com/NousResearch/hermes-agent/pull/56927
+    
+      Windows / encoding 
+    
+      - #62090 — ACP handlers read/wrote project files without UTF-8
+      https://github.com/NousResearch/hermes-agent/pull/62090
+      - #62123 — .env writers in mem0 and hindsight without UTF-8
+      https://github.com/NousResearch/hermes-agent/pull/62123
+      - #60895 — auth remove misread a BOM'd .env (Windows/Notepad)
+      https://github.com/NousResearch/hermes-agent/pull/60895
+    
+      Bug / CI / docs
+    
+      - #60422 — skills_list silently dropped skills with an empty/numeric name
+      https://github.com/NousResearch/hermes-agent/pull/60422
+      - #56493 — CI: .hadolint.yaml didn't map to the docker lane
+      https://github.com/NousResearch/hermes-agent/pull/56493
+      - #62136 — docs: wrong --help defaults in batch_runner (opus vs sonnet)
+      https://github.com/NousResearch/hermes-agent/pull/62136
+
+[2026-07-10T20:29:48.824000+00:00] watchdominion (id=1525237631204724916)
+    I saw I already reviewed some - will take a look and review the rest
+
+[2026-07-10T20:30:02.832000+00:00] makanansari (id=1525237689958273084)
+    Hey everyone, I just wanted to report that Hermes had some problems with the proxy. With OpenCode, I managed to create an auto-detect proxy script that checks whether Windows is using a proxy and updates the Hermes environment accordingly. Without this script, I couldn't run or update it. Maybe Hermes should include something like this by default?
+
+[2026-07-10T20:47:28.199000+00:00] darkphoenix5527 (id=1525242074545520702)
+    is there a channel with learning resources ?
+
+[2026-07-10T20:52:42.850000+00:00] egilewski (id=1525243394287468675)
+    Hey, I believe your suggestion will get lost here. If you create an issue on GitHub it may take a lot of time, but currently those at least don't get autoclosed. An easier way would be to create a plugin though: https://discord.com/channels/1053877538025386074/1490858802726043759/1523079833825972365
+    [reply to makanansari msg=1525237689958273084]
+
+[2026-07-10T21:55:52.942000+00:00] mf9.01 (id=1525259291085504553)
+    Can hermes run headlessly (on linux without a GUI, as a service)
+
+[2026-07-10T21:56:02.803000+00:00] mf9.01 (id=1525259332445405346)
+    Cuz that would be a great feature imo
+
+[2026-07-10T21:56:11.709000+00:00] evelynburgers (id=1525259369799876811)
+    yes that's how mine is
+    [reply to mf9.01 msg=1525259291085504553]
+
+[2026-07-10T21:56:19.552000+00:00] mf9.01 (id=1525259402695938148)
+    That's sweet
+
+[2026-07-10T21:56:58.673000+00:00] mf9.01 (id=1525259566781173820)
+    Then you could probably create something like Codex Cloud except self hosted and just VPN into your home network from anywhere and control it from your phone
+
+[2026-07-10T21:58:32.735000+00:00] evelynburgers (id=1525259961305927763)
+    Yeah
+
+[2026-07-10T22:20:38.210000+00:00] undifined. (id=1525265520751018094)
+    I do
+
+[2026-07-11T00:58:22.396000+00:00] ainzooalgown1305 (id=1525305216424087663)
+    <@988454956627542097> <@119192111202566149> Please re open ⁠
+    https://discord.com/channels/1053877538025386074/1524681922264174642  Thank you
+
+[2026-07-11T01:01:59.995000+00:00] xxxigm (id=1525306129100312607)
+    Could you open a new thread and continue the conversation there?
+    [reply to ainzooalgown1305 msg=1525305216424087663]
+
+[2026-07-11T01:09:41.996000+00:00] casualsav (id=1525308066872950894)
+    My first and only month w/ a Claude max sub
+    Their API pricing equivalents are ridiculous
+    [attachment] Screenshot_20260710-172318_Telegram2.png https://cdn.discordapp.com/attachments/1491258766648283238/1525308066504114206/Screenshot_20260710-172318_Telegram2.png?ex=6a52e955&is=6a5197d5&hm=fec799804f6fb52b4dbca8629e8f257daf18c4044127c760c583c00e6133cee7&
+

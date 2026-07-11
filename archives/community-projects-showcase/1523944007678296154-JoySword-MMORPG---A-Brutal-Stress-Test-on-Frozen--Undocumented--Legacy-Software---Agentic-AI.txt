@@ -126,3 +126,12 @@
     I tested the game last night it works, since this game has some weird goofy IP issues if ya downloaded the client/launcher before ya gonna have to redownload it again because this has the correct patch, also the registration works now on the website ->https://onjoysword.top/
     [embed] JoySword — Classic Anime Action MMORPG Realm https://onjoysword.top/
 
+[2026-07-10T22:03:54.166000+00:00] oleegg (id=1525261309484990574)
+    the game works like 80% of the way, claiming some items that havent been tested will crash the server though, am investigating
+
+[2026-07-10T22:04:13.320000+00:00] oleegg (id=1525261389822824459)
+    🤨
+
+[2026-07-11T02:18:26.710000+00:00] oleegg (id=1525325367177515090)
+    I fixed the enhancement system, the gamebalance is fixed
+

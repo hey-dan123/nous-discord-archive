@@ -1,0 +1,40 @@
+# Thread '[WIP] LunarPup - A space skating game with dogs' in forum #community-projects-showcase
+# thread_id=1525246709310029974 forum_id=1316137596535177246
+# Started 2026-07-11T02:27:14.115065+00:00
+
+[2026-07-10T21:05:53.213000+00:00] tsurg (id=1525246709310029974)
+    LunarPup started when we (<#1503197965571854368> community) were watching the GPT 5.6 announcement livestream.
+    Somebody in the VC pointed out that the announcement was space themed.
+    
+    Then <@1008603268890501230> used the google search box AI to vibecode the first prototype of this game with a dog on a skateboard on the moon.
+    he shared the demo with us through some HTML to website sharing platform. I still don't think that he thought this would become a community project.
+    
+    In the next minute or so, I downloaded the html file and plonked it into cursor auto mode. I told it to spin up a small bun project that supported multiplayer. (I had to use a workaround to get it to work on the edge with serverless hosting).
+    
+    ## *I quickly published the game. It was fun for 60 seconds.*
+    ---
+    
+    Anyway, I think we have a vision in place.
+    *Skating. Space. Dogs. Multiplayer.*
+    
+    After,
+    1 day of vibecoding
+    1 complete redesign
+    10% of a cursor 20$ plan,
+    
+    check it out at https://github.com/Tsurgcom/lunarpup.
+    
+    PS.
+    Consider starring it, it really helps with motivation. Thnks
+    [attachment] image.png https://cdn.discordapp.com/attachments/1525246709310029974/1525246709783859262/image.png?ex=6a52b031&is=6a515eb1&hm=fb4b3051ca70e779ec6ea237a51ed1193e3068e46e6cc4d093a20ddd7e98d31e&
+    [embed] GitHub - Tsurgcom/lunarpup https://github.com/Tsurgcom/lunarpup
+
+[2026-07-10T21:08:51.745000+00:00] tsurg (id=1525247458127642775)
+    This project is in collaboration with <@1008603268890501230>, <@575461682151686145> ( and Degen <@112417562863636480>) and the rest of the vc1 community.
+
+[2026-07-10T21:27:11.185000+00:00] tsurg (id=1525252069513236702)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1525246709310029974/1525252069051600979/image.png?ex=6a52b52f&is=6a5163af&hm=65077f899950953162fb5f03bc2dbfb820aacb256e636554c7dbc7b8c58defbe&
+
+[2026-07-10T21:27:15.791000+00:00] tsurg (id=1525252088831934686)
+    -# by <@112417562863636480>
+

@@ -47,3 +47,24 @@
 [2026-07-10T01:41:38.330000+00:00] celestial_sparrow_73595 (id=1524953716694978621)
     Yes I’m working on open sourcing ! Also working on releasing a self hosted version if you’re interested in that if you like to host your own stuff
 
+[2026-07-10T20:48:41.474000+00:00] celestial_sparrow_73595 (id=1525242381882888293)
+    <@228251547216117761> would you rather use the self hosted version or if i open source you would want to use the cloud version?
+
+[2026-07-10T20:54:57.206000+00:00] ozmotaz (id=1525243957817118830)
+    Maybe either one but likely self host, since Its not something I'd probably run on a cloud version for privacy concerns. Nothing personal. The website doesn't strike me with confidence. Again, not personal, I'm sure it's legit but would be hard to convince my team to use it in its current state without seeing the source code haha
+
+[2026-07-10T20:56:05.763000+00:00] celestial_sparrow_73595 (id=1525244245366276207)
+    100% fair id feel the same its the sane view from privacy lens in my opinion ! ok yes im trying to release self host asap and also open source the code.
+
+[2026-07-10T20:56:16.008000+00:00] ozmotaz (id=1525244288336658632)
+    My goal is basically to allow people to connect Gmail on my team and not give agents full inbox access so your message/product definitely has appeal though I'm sure to others.
+
+[2026-07-10T20:58:59.356000+00:00] ozmotaz (id=1525244973467832422)
+    Frankly surprised there isn't something like this (at least I'm aware of?) So if you're able to go thru privacy steps and whatnot I'm sure there's more public interest
+
+[2026-07-10T21:01:05.383000+00:00] celestial_sparrow_73595 (id=1525245502063378664)
+    for sure, we built it because we could not find a solution for it and theres tons of sensitive stuff ive had in my personal inbox i didnt want the ai/llm company getting access to . are there integrations besides gmail youd like to see next?
+
+[2026-07-10T21:12:50.654000+00:00] celestial_sparrow_73595 (id=1525248460184354970)
+    yes were in the middle of the casa security review, once we get their final approval  google will remove the "this app isnt verified" warning when folks are connecting their gmail as it works today
+

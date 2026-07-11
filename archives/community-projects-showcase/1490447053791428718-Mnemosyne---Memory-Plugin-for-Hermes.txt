@@ -2558,3 +2558,22 @@
 [2026-07-10T17:28:59.613000+00:00] llealloo (id=1525192126315368549)
     that's like a year old in AI-time
 
+[2026-07-10T19:42:44.221000+00:00] nulledvector (id=1525225783960928428)
+    Hey thanks for these! will check them out and see if I can implement something
+
+[2026-07-10T19:46:32.887000+00:00] .maxlife (id=1525226743055519854)
+    Looking forward to the latest.  Thanks
+    [reply to llealloo msg=1525191912418705468]
+
+[2026-07-10T22:14:07.064000+00:00] .maxlife (id=1525263880165785743)
+    what do u recommend as a  memory hack for Hermes agents now?
+    [reply to llealloo msg=1525191912418705468]
+
+[2026-07-10T22:33:04.178000+00:00] llealloo (id=1525268649567588355)
+    I think a knowledge base in like a vault form seems interesting... and open knowledge format looks like a good candidate to create something that might have some futureproof-ness 😄 not totally sure though (the spec was published less than a month ago from google)
+    
+    it kind of seems like this is the puzzle everyone is trying to solve, so there are about a million different options
+
+[2026-07-10T22:33:57.060000+00:00] llealloo (id=1525268871370506371)
+    mnemosyne looks neat for session memory, I'm just wondering how it would intersect with a canonical source like a markdown wiki/vault
+
