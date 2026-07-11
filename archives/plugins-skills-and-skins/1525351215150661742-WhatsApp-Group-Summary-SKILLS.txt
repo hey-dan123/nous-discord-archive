@@ -1,0 +1,28 @@
+# Thread 'WhatsApp Group Summary SKILLS' in forum #plugins-skills-and-skins
+# thread_id=1525351215150661742 forum_id=1485392832154832906
+# Started 2026-07-11T07:56:45.055403+00:00
+
+[2026-07-11T04:01:09.347000+00:00] mocasus (id=1525351215150661742)
+    🚀 **WhatsApp Group Summary Bot** — Now on npm!
+    
+    `npx whatsapp-group-summary`
+    
+    Problem: Hermes WhatsApp only records messages from whitelisted users or @mentions. Group chat from 100+ members? Completely invisible.
+    
+    Solution:
+    • Record ALL group messages silently to JSONL
+    • Zero token cost for regular chat
+    • Bot only responds when @mentioned
+    • Auto-summary 2x daily (07:00 & 23:00 WIB)
+    • Clean WhatsApp-friendly format, casual tone
+    • Optional 🔥 Roast Mode (sarcastic summaries)
+    
+    Architecture: Bridge (Node.js) → Adapter (Python) → JSONL Logs → Cron Jobs → Summary
+    
+    Install: `npx whatsapp-group-summary`
+    
+    Repo: https://github.com/mocasus/whatsapp-group-summary
+    npm:
+    https://npmjs.com/package/whatsapp-group-summary
+    [embed] GitHub - mocasus/whatsapp-group-summary: WhatsApp group chat summar... https://github.com/mocasus/whatsapp-group-summary
+

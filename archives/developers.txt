@@ -46010,3 +46010,26 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Their API pricing equivalents are ridiculous
     [attachment] Screenshot_20260710-172318_Telegram2.png https://cdn.discordapp.com/attachments/1491258766648283238/1525308066504114206/Screenshot_20260710-172318_Telegram2.png?ex=6a52e955&is=6a5197d5&hm=fec799804f6fb52b4dbca8629e8f257daf18c4044127c760c583c00e6133cee7&
 
+[2026-07-11T05:11:14.892000+00:00] zdstudios37 (id=1525368854484746331)
+    https://github.com/ZDStudios/AIOS
+    [embed] GitHub - ZDStudios/AIOS: Five open-source AI agents. One operating ... https://github.com/ZDStudios/AIOS
+
+[2026-07-11T05:40:27.393000+00:00] makanansari (id=1525376205006704650)
+    Thanks, I did mention it there too 🙌
+    [reply to egilewski msg=1525243394287468675]
+
+[2026-07-11T06:27:12.347000+00:00] 311u1 (id=1525387969836486756)
+    crazy good value right now, but if they stop subsidising the subscriptions then opensource models will be the go to
+    [reply to casualsav msg=1525308066872950894]
+
+[2026-07-11T06:53:54.091000+00:00] theoveo (id=1525394688037879879)
+    <@387972437901312000> I checked Hermes with Claude CLI is no longer consuming extra usage
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1525394687811125268/image0.jpg?ex=6a533a02&is=6a51e882&hm=7bf14cd554beb5181849e090af19e777800126bb58ccccc33b6ef76d8245f7ae&
+
+[2026-07-11T07:03:44.643000+00:00] bhyrd (id=1525397164992233656)
+    <@1092408323380367381> yo u a dev
+
+[2026-07-11T07:50:38.958000+00:00] theoveo (id=1525408969084899419)
+    Yep but no part of nous research, juste collaborating in Hermes
+    [reply to bhyrd msg=1525397164992233656]
+

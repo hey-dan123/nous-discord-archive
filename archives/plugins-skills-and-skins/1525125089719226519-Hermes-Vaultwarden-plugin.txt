@@ -44,3 +44,13 @@
 [2026-07-10T18:00:00.541000+00:00] .nisegami (id=1525199931613118544)
     wasn't the bw cli the project that had a major security issue recently?
 
+[2026-07-11T07:16:11.895000+00:00] ansicode (id=1525400299194421400)
+    DNK
+
+[2026-07-11T07:16:14.501000+00:00] Translator Bot#1043 (id=1525400310124777543)
+    DNA
+    [reply to ansicode msg=1525400299194421400]
+
+[2026-07-11T07:30:35.245000+00:00] ansicode (id=1525403920346648666)
+    Homeworks done! ... Yes, if you installed Bitwarden CLI via npm between 5:57 PM and 7:30 PM (New York time) on April 22nd, you need to clean up your machine immediately!! The package @bitwarden/cli version 2026.4.0 was compromised for 93 minutes, and the malware it contained caused damage for the 334 people who downloaded it during that window.
+
