@@ -1,0 +1,17 @@
+# Thread 'Hermes Agent Plugin Suite — 4 production-grade utilities (MIT)' in forum #plugins-skills-and-skins
+# thread_id=1525502281368207390 forum_id=1485392832154832906
+# Started 2026-07-11T19:04:57.682769+00:00
+
+[2026-07-11T14:01:26.340000+00:00] ohtok2026 (id=1525502281368207390)
+    Sharing four plugins built and hardened on a 24/7 Hermes production instance.
+    
+    **🔒 L0 Safety Guard** — Mechanical safety interceptor Blocks forbidden operations (NAS writes, backup deletes, credential leaks, injection patterns) at the hook level with zero token overhead. 4 hooks, rule-based enforcement. → `github.com/ohtokaah-sys/hermes-plugin-l0-safety-guard`
+    
+    **🧠 Memory Summary Hook** — Per-session memory compression Regenerates a compressed (<5KB) MEMORY.md summary on the first turn of each new conversation using DeepSeek V3. Subsequent turns reuse the cache — no additional API cost. → `github.com/ohtokaah-sys/hermes-plugin-memory-summary`
+    
+    **⚓ Conclusion Anchor** — Real-time fact verification Extracts factual claims from every agent response, cross-references against MEMORY.md, and pushes an alert when contradictions are detected. Catches hallucinations before the user sees them. → `github.com/ohtokaah-sys/hermes-plugin-conclusion-anchor`
+    
+    **🛡️ Security Baseline** — One-command audit script Scans file permissions, credential storage hygiene, systemd units, and config files for common misconfigurations. Color-coded PASS/FAIL with remediation hints. Pure bash, zero dependencies. → `github.com/ohtokaah-sys/hermes-security-baseline`
+    
+    All have READMEs with installation instructions. Install via `git clone` into `~/.hermes/plugins/`, restart gateway. PRs and issues welcome.
+

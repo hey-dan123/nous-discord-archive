@@ -1,0 +1,14 @@
+# Thread '97.5% cache hit rate · 86亿 tokens/month · not just for coding' in forum #community-projects-showcase
+# thread_id=1525505046706651348 forum_id=1316137596535177246
+# Started 2026-07-11T18:59:20.422368+00:00
+
+[2026-07-11T14:12:25.648000+00:00] ohtok2026 (id=1525505046706651348)
+    24/7 Hermes production instance across architecture, ops, marketing, legal writing, travel. The number isn't from a benchmark — it's from live multi-domain throughput.
+    Three-layer architecture:
+    **① Progressive disclosure** — 200K total constitution compressed to 20K fixed prefix. DeepSeek caches by prefix hash. Byte-identical first 20K = full KV cache reuse.
+    **② External enforcers** — Hard script gates (regex, vector recall) route context. The agent never decides what it loads — the pipeline does. Zero reasoning overhead, zero variance.
+    **③ Conversation-boundary refresh** — Prefix updates at dialog start, never mid-stream. Short-term memory in context window. Long-term in next conversation.
+    Full writeup: https://github.com/ohtokaah-sys/hermes-plugin-memory-summary#readme
+    Anyone else tracking multi-domain cache metrics?
+    [embed] GitHub - ohtokaah-sys/hermes-plugin-memory-summary: Hermes Memory S... https://github.com/ohtokaah-sys/hermes-plugin-memory-summary
+

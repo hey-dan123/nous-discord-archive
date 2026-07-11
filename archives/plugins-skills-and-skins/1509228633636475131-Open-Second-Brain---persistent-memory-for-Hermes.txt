@@ -324,3 +324,50 @@
     The latest brain note error show:
     Memory tool 'brain_note' failed: unexpected EOF from MCP server
 
+[2026-07-11T16:13:26.586000+00:00] techmeat (id=1525535501287821502)
+    Thanks for the report! Good news - this isn't a bug in the brain itself, it's an install issue we've already fixed.
+    
+    What the errors are telling us: the plugin folder (`~/.hermes/plugins/open-second-brain`) isn't actually there, so when Hermes tries to save a memory it can't start the tool - that's the "unexpected EOF" message. Your o2b doctor looks fine because that runs in your own shell, but Hermes runs it in a stripped-down environment where it can't find bun, which is why it fails only from the agent.
+    
+    Please have your agent run this to reinstall the latest version and reconnect it:
+    `hermes plugins install itechmeat/open-second-brain --enable`
+    `hermes gateway restart`
+    `~/.hermes/plugins/open-second-brain/scripts/o2b install-cli`
+    Also make sure bun is installed (`which bun - if empty: curl -fsSL https://bun.sh/install | bash`), then restart the gateway and try again. That should clear it up.
+    
+    If it still errors after that, please open a GitHub issue and paste the output of which bun o2b plus the gateway log around the failure - happy to dig in from there.
+    [reply to digital_love_two msg=1525425904447393894]
+
+[2026-07-11T16:28:46.039000+00:00] busbato (id=1525539357753081976)
+    i was about to set up gary tan's 'gbrain' with hermes. Is second-brain a better option? do they compliment each other or would that be duplicative?
+
+[2026-07-11T16:29:25.188000+00:00] techmeat (id=1525539521956151468)
+    This is incredibly cool - honestly one of the best community contributions I've seen for Open Second Brain. 🤯
+    
+    What I love most is that you got the philosophy exactly right: it's a read-only lens over the same vault, no separate memory system, no mutations. And it's clear you actually understood the internals - preferences vs. signals, inbox, logs, apply-evidence events, Active Memory, backlinks, the kind: frontmatter - not just a graph on top. The 2D/3D graph, the inspector, the command palette, and how cleanly it blends into the Dashboard theme all look fantastic.
+    
+    I'd love to figure out the best home for this together. Two directions, and I genuinely want your preference:
+    
+    - Keep it as your own companion plugin - we'd happily feature/link it as an official community tool, and you keep full ownership and freedom to evolve it.
+    - Or, if you're open to it, bring it into the plugin's repository in an adapted form, as a first-party visual companion.
+    
+    To help me think it through, a few practical questions:
+    
+    - How does it read the vault - parsing the .md files directly, or going through o2b (CLI/MCP) read surfaces? That mostly decides how future-proof it is against changes to the Brain layout.
+    - Is it a standalone app or a Dashboard panel/plugin?
+    - Is there a repo yet, and what license are you thinking?
+    - Your 18 tests - do they run against a real vault or fixtures?
+    
+    Either way, thank you for building this - it's genuinely impressive work. 🙌
+    [reply to lipebez msg=1525255222727938058]
+
+[2026-07-11T16:43:07.267000+00:00] techmeat (id=1525542970005389463)
+    I haven't used gbrain as a product myself, but its principles - along with ideas from several other memory projects - informed OSB's design, so a lot of what those tools do well is already baked in.
+    
+    They'd mostly overlap, though: both want to be your agent's memory layer, so running both is duplicative, not complementary - pick one. And for Hermes, OSB is the more integrated choice, since it's a native memory provider (plain Markdown in your vault, no daemon or hidden vector store).
+    [reply to busbato msg=1525539357753081976]
+
+[2026-07-11T17:19:18.525000+00:00] busbato (id=1525552076921507901)
+    perfect. thanks for the reply.
+    [reply to techmeat msg=1525542970005389463]
+

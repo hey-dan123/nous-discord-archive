@@ -974,3 +974,15 @@
 [2026-07-09T03:20:53.161000+00:00] selwind (id=1524616305200595134)
     When it's ready let me know, i'm gonna throw a 1500 reference research around a theme, across a lot of domains with an explicit of minimum 2 - 4 images per reference 😄
 
+[2026-07-11T16:35:00.058000+00:00] magnus919 (id=1525540926502604982)
+    There's a couple of things going on right now that are slowing down development on Groktocrawl...
+    
+    1. I recently subscribed to ChatGPT with the release of GPT-5.6 models. GPT-5.6 **has been finding issues across my projects** that DeepSeek v4 didn't just *create*, but failed to catch in periodic audits. I've been going through and just doing code cleanups across this and other projects and building confidence in GPT-5.6 to become my daily driver model family.
+    
+    2. My work with `LangGraph` combined with the increasing sophistication of what GroktoCrawl is trying to do has got me thinking about a partial re-architecting of the tool. Some of the components would remain largely the same, but I think there's a big opportunity here to work with a framework like `LangGraph` to get more ambitious about what this platform can be (as a deep research tool) while at the same time making it *more* reliable and the results coming out of it *more* trustworthy and *more* refined. 
+    
+    So I'm privately working with LangGraph on some other workflows to figure out how to work with it, what its strengths are, its boundaries. Building confidence in it before I commit GroktoCrawl to this path.
+    
+    Some initial thoughts about where this is likely going are in an open discussion on GitHub: https://github.com/groktopus/groktocrawl/discussions/427
+    [embed] Discussion: explicit research orchestration with LangGraph and dura... https://github.com/groktopus/groktocrawl/discussions/427
+

@@ -1,0 +1,17 @@
+# Thread 'Building 2C2T.DRT and an AI sidebar assistant !' in forum #community-projects-showcase
+# thread_id=1525563430222692392 forum_id=1316137596535177246
+# Started 2026-07-11T18:59:19.150967+00:00
+
+[2026-07-11T18:04:25.363000+00:00] ascendus_ (id=1525563430222692392)
+    ## Here are the repos : 
+    - https://github.com/Doom-pixel-alt/2C2T.DRT
+    - https://github.com/Doom-pixel-alt/Sidebar-AI-Assistant
+    
+    ## Current version :
+    - v0.2.3 => 07/11/2026
+    - v0.2.1 => 07/11/2026
+    
+    Check it out ! 🚀
+    [embed] GitHub - Doom-pixel-alt/2C2T.DRT: Train AI models on your CPU inste... https://github.com/Doom-pixel-alt/2C2T.DRT
+    [embed] GitHub - Doom-pixel-alt/Sidebar-AI-Assistant: Multi-provider AI ass... https://github.com/Doom-pixel-alt/Sidebar-AI-Assistant
+

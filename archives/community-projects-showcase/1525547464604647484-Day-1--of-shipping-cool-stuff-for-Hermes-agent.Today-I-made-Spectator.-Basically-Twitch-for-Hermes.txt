@@ -1,0 +1,15 @@
+# Thread 'Day 1: of shipping cool stuff for Hermes agent.Today I made Spectator. Basically Twitch for Hermes' in forum #community-projects-showcase
+# thread_id=1525547464604647484 forum_id=1316137596535177246
+# Started 2026-07-11T18:59:19.985625+00:00
+
+[2026-07-11T17:00:58.863000+00:00] m62773 (id=1525547464604647484)
+    Twitch for your agent. Spectator turns a running Hermes Agent session into a shareable, read-only broadcast: streamed replies, live tool activity, approval moments, reconnect state, and viewer count.
+    
+    Hermes stays on loopback. A small local tap observes its Desktop connection, converts private gateway frames into a deliberately small event format, scrubs that format, and sends only the safe result to browsers.
+    
+    https://github.com/MustafaK99/spectator   Its MIT license 
+    Demo is here: https://x.com/Mustafx24/status/2075988655064133786
+    [attachment] Screenshot_2026-07-11_175524.png https://cdn.discordapp.com/attachments/1525547464604647484/1525547464810299513/Screenshot_2026-07-11_175524.png?ex=6a53c84a&is=6a5276ca&hm=2f10e2059d35ff5b304c2328c5368537eecf0a1f79e88956d497d7e147b95555&
+    [embed] GitHub - MustafaK99/spectator: Twitch for your agent — a safe, re... https://github.com/MustafaK99/spectator
+    [embed]  https://twitter.com/Mustafx24/status/2075988655064133786
+

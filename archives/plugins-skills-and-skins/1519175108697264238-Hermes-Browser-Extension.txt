@@ -568,3 +568,7 @@
     it can do whatever your hermes agent can do
     [reply to bckiller45. msg=1525355300935438480]
 
+[2026-07-11T15:23:55.854000+00:00] jonkomet (id=1525523041134710854)
+    you can now connect hermes cloud to the hermes browser extension
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1525523040715407420/image.png?ex=6a53b18b&is=6a52600b&hm=bbdcd404edb9d8580ccb7507865ec5847d8000d4167543843f93cb0aaecff9c8&
+

@@ -2580,3 +2580,13 @@
 [2026-07-11T10:48:32.073000+00:00] nootnoota (id=1525453735374094467)
     will this work with claude?
 
+[2026-07-11T18:31:53.950000+00:00] nulledvector (id=1525570344897871994)
+    looking into this also
+    [reply to llealloo msg=1525268871370506371]
+
+[2026-07-11T18:32:25.586000+00:00] nulledvector (id=1525570477588873306)
+    someone recommended adding layer 4 (llm wiki / brain stuff) but idk.. still researching into it and educating myself
+
+[2026-07-11T18:32:36.353000+00:00] nulledvector (id=1525570522749079683)
+    one thing for sure its probably going to be its own product itself...
+

@@ -46097,3 +46097,63 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     <:o7:1151261546111053924>
     [embed] fix(security): inline shell variable indirection before dangerous-c... https://github.com/NousResearch/hermes-agent/pull/61434
 
+[2026-07-11T13:24:58.043000+00:00] trivunous (id=1525493102985347122)
+    https://github.com/NousResearch/hermes-agent/pull/62659
+    [embed] fix: replace assert with runtime guards in 7 production files (15 s... https://github.com/NousResearch/hermes-agent/pull/62659
+
+[2026-07-11T13:26:07.795000+00:00] trivunous (id=1525493395546443899)
+    https://github.com/NousResearch/hermes-agent/pull/59459
+    [embed] fix: keep empty required: [] instead of removing key (#59386) by Al... https://github.com/NousResearch/hermes-agent/pull/59459
+
+[2026-07-11T15:53:15.638000+00:00] 0xatakan (id=1525530422203781402)
+    Focused Hermes Desktop / Windows PR opened:
+    
+    https://github.com/NousResearch/hermes-agent/pull/62718
+    
+    I noticed that the local Desktop boot path can declare the backend ready after HTTP `/api/status` and token adoption, without first validating that `/api/ws?token=...` accepts the resolved token.
+    
+    This PR wires the existing `probeGatewayWebSocket(...)` helper into both local Desktop boot paths before `backend.ready`.
+    
+    Small targeted fix — happy to keep helping with native Windows Desktop testing where useful.
+    [embed] fix(desktop): validate WebSocket token before backend ready by Atak... https://github.com/NousResearch/hermes-agent/pull/62718
+
+[2026-07-11T16:08:39.164000+00:00] brokeskill (id=1525534295752704172)
+    I have my hermes agent instance on a raspberry pi, how do I use hermes agent trough ACP or similar on my Local Visual Studio code on an other computer
+
+[2026-07-11T16:22:01.086000+00:00] warofchange (id=1525537659257098491)
+    Update on the zh-Hans timeout-defaults PR (#60959) — encoding fix at reviewer's request
+    
+    The automated maintainer review caught a real problem: my PR had accidentally re-encoded the two Simplified Chinese files as mojibake (cron ä»»åŠ¡é™„åŠ ... instead of cron 任务附加...). The intended values (3600 / 90 / 1800) were correct, but a PowerShell step had double-encoded the UTF-8, mangling the whole Chinese text.
+    
+    Fixed it properly: rebuilt both files from clean main content and applied only the three intended value changes via a UTF-8-safe pipeline:
+    
+    environment-variables.md: HERMES_AGENT_TIMEOUT 900→1800, HERMES_API_CALL_STALE_TIMEOUT 300→90, HERMES_CRON_SCRIPT_TIMEOUT 120→3600
+    cron.md: 120→3600
+    The Chinese text is now intact UTF-8, and the diff shows only the number changes — nothing else touched. Replied to the reviewer confirming the fix.
+    
+    Lesson learned: for non-Latin (Chinese/Urdu/etc.) files, a PowerShell fetch→edit→commit flow can silently corrupt UTF-8 — switching to a UTF-8-safe pipeline for all i18n edits going forward.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/60959
+    [embed] docs(i18n): sync zh-Hans timeout defaults with English source by wa... https://github.com/NousResearch/hermes-agent/pull/60959
+
+[2026-07-11T16:29:02.078000+00:00] alelpoan (id=1525539425025659081)
+    Update: pushed a fix for the review <@387972437901312000> on #62139 restored the dropped tests and fixed the geometry assertion (className instead of getComputedStyle). All tests green.
+    [reply to alelpoan msg=1525158688124309705]
+
+[2026-07-11T18:05:41.906000+00:00] trillularity (id=1525563751267565639)
+    can we brag about our model configurations and how we figured out how to use SOTA for the least monies?
+    
+    I'll start: I broke my config and don't feel like spending a few hours trying to get the same mcp setup to work again <:pepehmmm:1368671048836317244>
+
+[2026-07-11T18:09:49.979000+00:00] gust7314 (id=1525564791760883864)
+    should I use Codex inside the VPS Hermes repo to develop Hermes, or use Hermes itself to develop/debug its own code?
+    
+    What's worked best for u guys?
+
+[2026-07-11T18:25:42.101000+00:00] davidg1982 (id=1525568785250254898)
+    I don't think any two hermes are alike, but I will say that having a harness that already works and having claude to build out hermes is what I have done. I got hermes to a certain point, then I was able to transition over from claude to hermes for most 90% of issues.
+
+[2026-07-11T18:27:56.769000+00:00] gust7314 (id=1525569350088523990)
+    Ok thanks for the feedback 🙏🏻
+    [reply to davidg1982 msg=1525568785250254898]
+
