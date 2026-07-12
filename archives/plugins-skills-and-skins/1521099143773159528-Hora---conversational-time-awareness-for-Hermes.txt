@@ -43,3 +43,11 @@
     hermes plugins update hermes-hora
     ```
 
+[2026-07-12T08:10:27.206000+00:00] ruffer3000 (id=1525776340824101015)
+    Ayyo, there is a bug in Hermes where HERMES_CRON_SESSION is set globaly on the gateway after a cron job executes, and then it is inherited by all sessions on the gateway from there on. So setting exclude_cron to true would effectively disable the plugin completely. Not sure if it's worth changing how you detect cron sessions, but in case anyone is wondering why their agents are dumb with time, that just might be it.
+    
+    https://github.com/NousResearch/hermes-agent/issues/57736
+    https://github.com/NousResearch/hermes-agent/issues/56771
+    [embed] HERMES_CRON_SESSION set process-globally: interactive gateway sessi... https://github.com/NousResearch/hermes-agent/issues/57736
+    [embed] [Bug]: `execute_code` blocked in interactive Telegram gateway sessi... https://github.com/NousResearch/hermes-agent/issues/56771
+

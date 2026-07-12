@@ -135,3 +135,7 @@
 [2026-07-11T02:18:26.710000+00:00] oleegg (id=1525325367177515090)
     I fixed the enhancement system, the gamebalance is fixed
 
+[2026-07-12T03:09:15.715000+00:00] oleegg (id=1525700543497113682)
+    I finished the restoration, you can check it out here: https://github.com/CardSorting/JoySwordOnline
+    [embed] GitHub - CardSorting/JoySwordOnline: Modernized, self-hosted deploy... https://github.com/CardSorting/JoySwordOnline
+

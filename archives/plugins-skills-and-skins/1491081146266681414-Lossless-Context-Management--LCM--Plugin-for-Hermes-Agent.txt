@@ -2061,3 +2061,16 @@
     Bounded context, unbounded memory. Nothing is ever lost.
     [reply to w0lfgang88 msg=1523902995513737278]
 
+[2026-07-12T05:03:20.902000+00:00] k.shepherd (id=1525729254292193422)
+    Has there been any issues using reasoning models with LCM? I know Title Generation is borked with Hermes if you're using a Reasoning model.
+
+[2026-07-12T06:34:50.463000+00:00] _voscko_ (id=1525752279179853945)
+    No general incompatibility with reasoning models. We’ve used them with LCM successfully as both the main model and the compression model.
+    
+    There have been a few reasoning-specific edge cases, though. Some models inline /reasoning content in the visible response, which could contaminate stored summaries. LCM now strips those blocks, rejects reasoning-only or truncated summaries, and falls back through the summary chain or deterministic compression rather than persisting bad output #75, #149
+    
+    The title-generation problem is separate: that’s a Hermes auxiliary-task issue rather than an LCM issue. Hermes has had bugs around reasoning models consuming the title output budget or returning reasoning instead of visible content. Some paths have been fixed, although #18529 is still open at Hermes Agent.
+    
+    One unrelated model-specific caveat: there’s also an open Qwen chat-template issue where compaction can remove the only user-role message #355. That’s provider message-shape compatibility, not reasoning itself.
+    [reply to k.shepherd msg=1525729254292193422]
+

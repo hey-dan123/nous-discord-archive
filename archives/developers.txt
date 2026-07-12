@@ -46264,3 +46264,41 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-12T01:58:58.871000+00:00] teknium (id=1525682856771194992)
     Maybe for deepseek flash or gpt luna
 
+[2026-07-12T03:02:55.473000+00:00] haythamalghoul (id=1525698948646572093)
+    Quick multi-user question:
+    
+    Can multiple teammates share one Hermes Agent environment with permission-based access, so we work in a common setup and agent/skill improvements are available to everyone?
+    
+    Specifically looking for recommended patterns around:
+    - multi-user / shared runtime vs profiles
+    - permission / allowlist controls
+    - sharing agent development (skills/config) across the team so upgrades benefit all users
+    
+    Links to current docs/patterns appreciated. Thanks!
+
+[2026-07-12T03:05:14.935000+00:00] jw_mushroom_man (id=1525699533592334459)
+    Included journey comparability cause I thought it’d be neat
+    [attachment] 9F999A1F-D74A-4722-B629-7854EAEBCCF3.png https://cdn.discordapp.com/attachments/1491258766648283238/1525699532766187761/9F999A1F-D74A-4722-B629-7854EAEBCCF3.png?ex=6a5455ea&is=6a53046a&hm=e6020d878844c1f7d05c8bc8a1fc54e02684225f51e53c18af47cc14aad1ca84&
+
+[2026-07-12T03:51:07.144000+00:00] realadolan (id=1525711077193547878)
+    https://github.com/NousResearch/hermes-agent/pull/62859
+    [embed] fix(tui): dispatch custom skill bundles as agent turns by Adolanium... https://github.com/NousResearch/hermes-agent/pull/62859
+
+[2026-07-12T04:44:35.578000+00:00] theasmith83d (id=1525724534341111918)
+    Hello Hermes folks , anyone working on an Agent As A Service offering via Hermes ? If so would love to collaborate, please reach out
+
+[2026-07-12T07:35:33.524000+00:00] realadolan (id=1525767559285313598)
+    How would that work? Do the users get only one task, or do they just get a hosted agent? How would that work?
+    [reply to theasmith83d msg=1525724534341111918]
+
+[2026-07-12T07:35:55.400000+00:00] realadolan (id=1525767651039903754)
+    I am asking because hosted agents are already a thing. You have Nous Portal cloud, you have agent37, etc
+
+[2026-07-12T07:43:53.031000+00:00] ciacon (id=1525769654369259662)
+    My first PR up as a draft https://github.com/NousResearch/hermes-agent/pull/63044
+    [embed] feat(discord): add opt-in bounded room observation by ciacon · Pul... https://github.com/NousResearch/hermes-agent/pull/63044
+
+[2026-07-12T08:03:44.021000+00:00] undifined. (id=1525774649743511705)
+    I am sorry about your loss, take time ok
+    [reply to teknium msg=1525600391851671683]
+

@@ -1,0 +1,9 @@
+# Thread 'LLM Platform for Hermes Agents' in forum #community-projects-showcase
+# thread_id=1525758821526409266 forum_id=1316137596535177246
+# Started 2026-07-12T08:13:17.183802+00:00
+
+[2026-07-12T07:00:50.280000+00:00] samir_97396 (id=1525758821526409266)
+    Try my hosted LLMs including GLM 5.2, kimi, and more at https://gateway.nept.cloud
+    [attachment] Screenshot_2026-07-12_at_3.00.43_AM.png https://cdn.discordapp.com/attachments/1525758821526409266/1525758821975195731/Screenshot_2026-07-12_at_3.00.43_AM.png?ex=6a548d22&is=6a533ba2&hm=b20ee532b1f31135f65fe80963f261cb83f0ba9079ac2f82caee8834dd27dad7&
+    [embed] Nept AI https://gateway.nept.cloud/
+

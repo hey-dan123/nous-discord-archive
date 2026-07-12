@@ -14,3 +14,22 @@
     https://github.com/FloorIsGround/skills
     [embed] GitHub - FloorIsGround/skills https://github.com/FloorIsGround/skills
 
+[2026-07-12T04:10:46.204000+00:00] fate6862 (id=1525716022529753158)
+    yeah i've been messing with the same thing actually. tried fable's patterns and tried baking that fan-out plus decomposition logic into delegation skills
+    
+    glm was way too slow for me. good model but waiting 30s+ for a response defeats the whole point of parallelizing stuff
+    
+    switched to deepseek v4 pro for coding subagents and flash for normal chat. the speed difference makes the whole thing actually usable. pro responds in a few seconds so the parallelism pays off
+    
+    the part i keep going back and tweaking is the judgement prompt, when to fan out vs when to just do it yourself. still not where i want it
+    
+    what's your setup looking like?
+    [reply to flooristired msg=1525632117923516487]
+
+[2026-07-12T04:18:39.979000+00:00] flooristired (id=1525718009686130698)
+    you can look at it in the repo
+
+[2026-07-12T04:19:56.855000+00:00] flooristired (id=1525718332127576154)
+    https://github.com/FloorIsGround/skills/blob/main/fan-out-delegation/SKILL.md this is the when to use delegation skill
+    [embed] skills/fan-out-delegation/SKILL.md at main · FloorIsGround/skills https://github.com/FloorIsGround/skills/blob/main/fan-out-delegation/SKILL.md
+

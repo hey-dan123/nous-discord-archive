@@ -1,0 +1,15 @@
+# Thread 'Northwind - Made for the hackathon, lf feedback!' in forum #community-projects-showcase
+# thread_id=1525728865199329300 forum_id=1316137596535177246
+# Started 2026-07-12T08:13:17.566573+00:00
+
+[2026-07-12T05:01:48.135000+00:00] squaredcube_19005 (id=1525728865199329300)
+    https://x.com/SquaredCubeRBX/status/2072209958020804775
+    
+    Run a call center in a single GPU!
+    
+    https://github.com/Hcoder10/personaplex-business-ft
+    
+    a lot of the architecture stuff I led, but this was mostly agent made aside from the architecture due to the limited time I had in the hackathon & what i wanted to achieve
+    [embed]  https://twitter.com/SquaredCubeRBX/status/2072209958020804775
+    [embed] GitHub - Hcoder10/personaplex-business-ft https://github.com/Hcoder10/personaplex-business-ft
+

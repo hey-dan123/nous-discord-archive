@@ -5649,3 +5649,18 @@
     
     ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
 
+[2026-07-12T04:51:59.980000+00:00] k.shepherd (id=1525726398298325093)
+    Is there continued work on optimizing the chat rendering process? With long chats I'll have both the input prompt section start to lag and the chat experience itself. I'm curious if there's a way to review how Open WebUI renders there chat as it never appears to lag.
+    [reply to avidfuturist msg=1525302026114830436]
+
+[2026-07-12T04:52:42.357000+00:00] avidfuturist (id=1525726576040218654)
+    Yes there is some work happening right now which will improve this a lot soon - also try enabling virtualization in settings as that can help quite a bit
+    [reply to k.shepherd msg=1525726398298325093]
+
+[2026-07-12T04:56:53.319000+00:00] k.shepherd (id=1525727628651135089)
+    I have, been loving the webui but definitely feel limited by the performance. Would love to see how I could potentially help the progress on this tool.
+    Ui/UX updates and refinement and performance optimization. If there's a method (as I'm very new to all of this) would love to know.
+    
+    When is the performance updates planned to come out? Is there early access or testing available?
+    [reply to avidfuturist msg=1525726576040218654]
+
