@@ -1,0 +1,35 @@
+# Thread 'Human Approval For Delegation' in forum #plugins-skills-and-skins
+# thread_id=1525920285784543364 forum_id=1485392832154832906
+# Started 2026-07-12T19:07:39.027195+00:00
+
+[2026-07-12T17:42:26.359000+00:00] kendotdev (id=1525920285784543364)
+    Built a small plugin after an agent spawned a batch of subagents on a job that didn't need them, and I wasn't expecting them; re-running the same job with delegation disabled produced almost as good a result for less than half the tokens:
+    
+    ### What It Does
+    Intercepts every delegate_task call and routes it through the once/session/always/deny approval gate, showing the goal(s) and task count before you pay for subagents. An enviroment var `DELEGATION_GATE_MODE=block` refuses delegation outright and works with `--yolo` and on older runtimes that don't support the approve action yet (newer than 36308f066 needed for prompt mode).
+    
+    ### Why?
+    There are config knobs to turn for delegation now but no way to request approval or simply deny it without removing the delegation toolset.
+    
+    ### Install
+    Install for the default or a specific profile:
+    - `hermes plugins install kenpritchard/hermes-delegation-gate --enable`
+    - `hermes -p myprofile plugins install kenpritchard/hermes-delegation-gate --enable`
+    
+    ### Usage
+    Standard usage simply let the agent work and prompt you for approval to delegate tasks. Try a prompt like this:
+    ```
+    Use delegate_task to list the contents of this directory and return the count. Do not do it yourself.
+    ```
+    
+    If running YOLO and you want it to block, start your agent with the env var set:
+    ```
+    DELEGATION_GATE_MODE=block hermes -p myprofile --yolo
+    ```
+    
+    Other ways to set the env var including Windows are in the readme in the repo.
+    
+    ### Repo
+    https://github.com/kenpritchard/hermes-delegation-gate
+    [embed] GitHub - kenpritchard/hermes-delegation-gate: Hermes Agent plugin: ... https://github.com/kenpritchard/hermes-delegation-gate
+

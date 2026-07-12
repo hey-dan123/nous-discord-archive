@@ -5692,3 +5692,34 @@
 [2026-07-12T09:41:21.064000+00:00] alto69 (id=1525799215962263612)
     I just realised extensions dont update on their own i reinstalled and saw changes
 
+[2026-07-12T17:13:03.087000+00:00] avidfuturist (id=1525912890085867750)
+    Thanks! Working with your agent to investigate and report issues in detail would go a long way in helping! And posting them here: https://github.com/nesquena/hermes-webui
+    [reply to k.shepherd msg=1525727628651135089]
+
+[2026-07-12T17:13:37.836000+00:00] avidfuturist (id=1525913035833737296)
+    Performance updates are rolling out all the time into the experimental channel (configured in settings) sometimes multiple per day.
+    [reply to k.shepherd msg=1525727628651135089]
+
+[2026-07-12T17:14:42.497000+00:00] avidfuturist (id=1525913307041632316)
+    Correct! We have desktop, iOS and Android native apps now that all interconnect via our WebUI bridge API
+    
+    iOS: https://hermexapp.com/
+    Android: https://github.com/computerbyte/hermex-android
+    [reply to ascendus_ msg=1525781266463457351]
+
+[2026-07-12T17:15:50.147000+00:00] avidfuturist (id=1525913590786424862)
+    You’re right, extensions don’t have an auto update feature yet. We’ll need to add that in
+    [reply to alto69 msg=1525799215962263612]
+
+[2026-07-12T17:16:04.848000+00:00] avidfuturist (id=1525913652446625812)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And **native iOS and Android app support**! 
+    
+    GitHub repo: https://github.com/nesquena/hermes-webui
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+
+[2026-07-12T17:16:24.343000+00:00] avidfuturist (id=1525913734214848523)
+    [attachment] 44B75124-C9B6-45C1-A191-CE7B352B5789.png https://cdn.discordapp.com/attachments/1493017427724992612/1525913734034358314/44B75124-C9B6-45C1-A191-CE7B352B5789.png?ex=6a551d68&is=6a53cbe8&hm=1c861d0a84b4078796680a1c19c6497d715d449b29ec6aa2922fd9d8531fdab5&
+

@@ -28,3 +28,8 @@
 [2026-06-20T03:14:57.388000+00:00] gloggers (id=1517729443534213282)
     I could see it getting closed but not for a while as it uses the json stream feature built into claude code, they would have to remove that whole feature to disable this
 
+[2026-07-12T18:24:01.513000+00:00] billyelusiv (id=1525930751219077232)
+    Hey Lucas, you still using this and it’s working well? 
+    I’m about to pull the trigger as I want to set a Hermes’ profile that uses Claude model… is it robust now? (No updates to the repo in 3 weeks is why I ask). 
+    Thanks!!!
+

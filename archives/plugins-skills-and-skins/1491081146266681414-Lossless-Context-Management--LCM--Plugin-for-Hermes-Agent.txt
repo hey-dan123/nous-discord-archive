@@ -2074,3 +2074,17 @@
     One unrelated model-specific caveat: there’s also an open Qwen chat-template issue where compaction can remove the only user-role message #355. That’s provider message-shape compatibility, not reasoning itself.
     [reply to k.shepherd msg=1525729254292193422]
 
+[2026-07-12T14:22:07.192000+00:00] k.shepherd (id=1525869873744580699)
+    Okay appreciate it. Yeah I'm using Qwen3.6 and it seems smart but I'm worried that some of these bugs are leading to a degraded experience for me. I've got 32GB of VRAM, so unsure if you'd have any other recommendations for a Model. If you do, appreciate it.
+    [reply to _voscko_ msg=1525752279179853945]
+
+[2026-07-12T15:00:32.629000+00:00] _voscko_ (id=1525879543448207442)
+    I've tried responding to your question <@178727331567763456> but AutoMod keeps flagging something... it is absurdly strict for some reason and I don't know what's wrong lol.. but let me try to answer you in bits, maybe it helps
+
+[2026-07-12T15:00:57.630000+00:00] k.shepherd (id=1525879648309870722)
+    Feel free to DM me, appreciate eit
+    [reply to _voscko_ msg=1525879543448207442]
+
+[2026-07-12T15:01:15.684000+00:00] _voscko_ (id=1525879724033966111)
+    Honestly, I wouldn't switch away from Qwen3.6 solely because of this.
+

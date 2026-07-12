@@ -1,0 +1,10 @@
+# Thread 'Hermes Agents Guide to the Galaxy' in forum #plugins-skills-and-skins
+# thread_id=1525881034154053732 forum_id=1485392832154832906
+# Started 2026-07-12T19:07:39.939228+00:00
+
+[2026-07-12T15:06:28.041000+00:00] jw_mushroom_man (id=1525881034154053732)
+    https://github.com/lEWFkRAD/hermes-agents-guide-to-the-galaxy
+    A handwriting-first notebook for the Kindle Scribe that talks to a local Hermes agent. You write with the pen (or type), Hermes answers, and the reply forms on the page or in a side pane. Runs as a tiny local web app because a stock Scribe can't sideload native apps — the browser is the only channel, so the app is built to feel like one.
+    [attachment] FC8FF40A-757D-454B-80AF-001F89A160EC.png https://cdn.discordapp.com/attachments/1525881034154053732/1525882910966546464/FC8FF40A-757D-454B-80AF-001F89A160EC.png?ex=6a5500b3&is=6a53af33&hm=cf884884ca1ad7406cabe86ccd4535e4c3a628e059bb17891573c6be313b5c0c&
+    [embed] GitHub - lEWFkRAD/hermes-agents-guide-to-the-galaxy: Handwriting-fi... https://github.com/lEWFkRAD/hermes-agents-guide-to-the-galaxy
+

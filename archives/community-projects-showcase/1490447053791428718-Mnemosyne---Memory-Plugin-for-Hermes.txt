@@ -2590,3 +2590,6 @@
 [2026-07-11T18:32:36.353000+00:00] nulledvector (id=1525570522749079683)
     one thing for sure its probably going to be its own product itself...
 
+[2026-07-12T18:01:19.952000+00:00] llealloo (id=1525925040418328670)
+    the issue I keep running into with it is token cost/bloat
+

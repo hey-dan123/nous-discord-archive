@@ -51,3 +51,13 @@
     [embed] HERMES_CRON_SESSION set process-globally: interactive gateway sessi... https://github.com/NousResearch/hermes-agent/issues/57736
     [embed] [Bug]: `execute_code` blocked in interactive Telegram gateway sessi... https://github.com/NousResearch/hermes-agent/issues/56771
 
+[2026-07-12T17:56:20.666000+00:00] henan (id=1525923785121857660)
+    Thanks for catching this — you were right. HERMES_CRON_SESSION can leak process-wide, which caused Hora’s default exclude_cron: true behavior to disable the plugin after the first cron run.
+    
+    Fixed in Hora v0.1.2: the request-scoped middleware platform is now authoritative, while the environment variable is only used as a fallback when no platform is provided. This keeps real cron jobs excluded without affecting interactive sessions.
+    
+    Update with:
+    
+    hermes plugins update hermes-hora
+    [reply to ruffer3000 msg=1525776340824101015]
+

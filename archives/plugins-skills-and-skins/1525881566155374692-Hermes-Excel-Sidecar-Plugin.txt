@@ -1,0 +1,11 @@
+# Thread 'Hermes Excel Sidecar Plugin' in forum #plugins-skills-and-skins
+# thread_id=1525881566155374692 forum_id=1485392832154832906
+# Started 2026-07-12T19:07:39.509725+00:00
+
+[2026-07-12T15:08:34.880000+00:00] jw_mushroom_man (id=1525881566155374692)
+    A local Excel sidecar for Hermes: an Office.js task pane plus a small zero-dependency Node bridge that connects a live workbook to the Hermes api_server platform. Chat with Hermes in a side panel while it reads sheet data, writes tables and formulas, formats ranges, and parses attached documents — without ever touching your filesystem.
+    
+    https://github.com/lEWFkRAD/hermes-excel-sidecar
+    [attachment] 0C049DE6-12A5-4D1B-97FB-07A0234A2355.png https://cdn.discordapp.com/attachments/1525881566155374692/1525881566478209054/0C049DE6-12A5-4D1B-97FB-07A0234A2355.png?ex=6a54ff72&is=6a53adf2&hm=a16cf9eb5a963a312f0e56cb5eede412013db83725cb5b1417c303f816d178ad&
+    [embed] GitHub - lEWFkRAD/hermes-excel-sidecar: Installable Hermes plugin: ... https://github.com/lEWFkRAD/hermes-excel-sidecar
+

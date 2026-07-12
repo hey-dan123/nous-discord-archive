@@ -46378,3 +46378,57 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     does github have a good mcp or way to access issues for hermes ? I try to find issues to work on via codex but it rate limits all the time. Also made my first small pr today which was cool https://github.com/NousResearch/hermes-agent/pull/63157
     [embed] fix(desktop): preserve lane session recency order by MustafaK99 · ... https://github.com/NousResearch/hermes-agent/pull/63157
 
+[2026-07-12T14:04:08.198000+00:00] egilewski (id=1525865348115599390)
+    Either API or `gh` will be sufficient if you authenticate it.
+    [reply to m62773 msg=1525849018020663477]
+
+[2026-07-12T14:31:53.797000+00:00] m62773 (id=1525872334144012490)
+    Thanks, authenticated gh was exactly what I needed. It also made it much easier to check issue timelines and avoid duplicating existing PRs. Ended up picking up this Kanban/delegate_task lifecycle bug too: https://github.com/NousResearch/hermes-agent/pull/63218
+    [embed] fix(kanban): keep delegated results in worker turn by MustafaK99 ·... https://github.com/NousResearch/hermes-agent/pull/63218
+
+[2026-07-12T14:32:11.709000+00:00] ciacon (id=1525872409272651817)
+    that's seemingly not how things panned out <:Prayge:1151275585000185968>
+    [reply to godsboy7777 msg=1525848264924991569]
+
+[2026-07-12T14:33:38.862000+00:00] godsboy7777 (id=1525872774818566204)
+    I only saw other comments now. Sorry for your loss <@387972437901312000> .😩
+    [reply to ciacon msg=1525872409272651817]
+
+[2026-07-12T15:17:18.432000+00:00] jw_mushroom_man (id=1525883762091495585)
+    https://github.com/lEWFkRAD/hermes-excel-sidecar
+    
+    large excel plug in update.
+    [embed] GitHub - lEWFkRAD/hermes-excel-sidecar: Installable Hermes plugin: ... https://github.com/lEWFkRAD/hermes-excel-sidecar
+
+[2026-07-12T16:18:12.638000+00:00] nanxingncb612d (id=1525899088942338181)
+    https://github.com/NousResearch/hermes-agent/pull/63274
+    [embed] fix(cli): persist close transcript without history alias by necoweb... https://github.com/NousResearch/hermes-agent/pull/63274
+
+[2026-07-12T16:22:57.203000+00:00] ciacon (id=1525900282494455869)
+    Now up for review / comments. Believe the PR is waiting for someone to kick off the CI.
+    Attempting to tackle the fact that Hermes does not keep a state between users in a room. Opt-in feature.
+    https://github.com/NousResearch/hermes-agent/pull/63044
+    [embed] feat(discord): add opt-in bounded room observation by ciacon · Pul... https://github.com/NousResearch/hermes-agent/pull/63044
+
+[2026-07-12T16:23:38.805000+00:00] ciacon (id=1525900456985890991)
+    Have a similar patch set for Telegram, but backed off from tackling multiple surfaces at the same time.
+    [reply to ciacon msg=1525900282494455869]
+
+[2026-07-12T16:45:07.232000+00:00] princekid_ (id=1525905861040410644)
+    Hey guys,
+    
+    I created Issue #63243 https://github.com/NousResearch/hermes-agent/issues/63243: the post-reconnect heartbeat probe (_verify_polling_after_reconnect) treats every failure as a network problem and a revoked token gets fed into the reconnect ladder for ~5 min of stop/drain/restart churn instead of surfacing as an auth error. It also awaits recovery directly, bypassing the _polling_error_task guard, so a second concurrent recovery can race it into a self-inflicted 409. Gap left by #62098, which fixed the other two probes.
+    
+    Fix: classify with the shared _looks_like_network_error() from #62098 and route both entry points through _schedule_polling_recovery(). One function + tests. PR #63247
+    [embed] bug(telegram): post-reconnect probe routes auth errors into reconne... https://github.com/NousResearch/hermes-agent/issues/63243
+
+[2026-07-12T17:15:42.117000+00:00] undifined. (id=1525913557106036909)
+    funny that today telegram blocked my hermes even while its just me and hermes
+
+[2026-07-12T17:27:38.709000+00:00] synmonger (id=1525916562710593666)
+    ask hermes to fix it
+    [reply to andrew03961 msg=1525793012633043044]
+
+[2026-07-12T18:54:06.054000+00:00] brokeskill (id=1525938320012738601)
+    What tools can bypass cloudflare protections?
+

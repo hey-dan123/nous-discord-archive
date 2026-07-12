@@ -139,3 +139,6 @@
     I finished the restoration, you can check it out here: https://github.com/CardSorting/JoySwordOnline
     [embed] GitHub - CardSorting/JoySwordOnline: Modernized, self-hosted deploy... https://github.com/CardSorting/JoySwordOnline
 
+[2026-07-12T16:33:44.030000+00:00] oleegg (id=1525902995483529257)
+    the game server is now closed. the azure credits have finished. they granted me $200 and that has been used up. 🫡
+

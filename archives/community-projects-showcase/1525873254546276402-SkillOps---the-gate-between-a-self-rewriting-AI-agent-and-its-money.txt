@@ -1,0 +1,21 @@
+# Thread 'SkillOps - the gate between a self-rewriting AI agent and its money' in forum #community-projects-showcase
+# thread_id=1525873254546276402 forum_id=1316137596535177246
+# Started 2026-07-12T19:02:08.437192+00:00
+
+[2026-07-12T14:35:33.238000+00:00] flexthree (id=1525873254546276402)
+    Teams constantly update and share skills. Then we empower agents to spend on them — pay vendors, buy compute, settle invoices. Two problems nobody's solving:
+    
+    Use case 1 -> We all now share skills. One skill, many teams, different truths. The skill version one team is happy with, another team in the same org is not - and both can be right. Blindly shipping "the latest" to everyone is how the wrong version authorizes a payment. SkillOps certifies **per team**: the exact same bytes can be authorized for Procurement and refused for Finance, by policy, not by accident.
+    
+    Use case 2 -> Self-improving agents that spend. **Hermes auto-improves a skill that's wired to move money**. That improvement has to be evaluated before it's allowed to pay - money-spenders need that. SkillOps re-runs that team's eval and lets Stripe capture only if the exact version running right now is certified; otherwise it voids the charge and heals back to the last good version.
+    
+    The version it checks is a SHA measured from disk inside the decision, so the agent can't fake what it's running. And every decision is a hash-chained, tamper-evident audit row. Fail-closed by construction.
+    
+    Built on Nous Hermes × NVIDIA (Nemotron + NemoClaw) × Stripe. Hackathon submission. Now updated.
+    🎥 https://youtu.be/0e5NYMkQywM
+     💻 https://github.com/mishoko/accelerated-business-hackathon-NVIDIAAI-stripe-NousResearch
+    [attachment] Screenshot_2026-07-12_at_5.33.39_PM.png https://cdn.discordapp.com/attachments/1525873254546276402/1525873255288672536/Screenshot_2026-07-12_at_5.33.39_PM.png?ex=6a54f7b5&is=6a53a635&hm=ba5844125e3d68d54277023e6791843c7cf25c268366ac0f7328afcf6e978dd6&
+    [attachment] Screenshot_2026-07-12_at_5.35.08_PM.png https://cdn.discordapp.com/attachments/1525873254546276402/1525873256287174686/Screenshot_2026-07-12_at_5.35.08_PM.png?ex=6a54f7b5&is=6a53a635&hm=c5d7c094bed68f90d196e06f9716b7d7a7fbb1dc15de678c9e908285699d6c9b&
+    [embed] Stop agents from paying on code they just rewrote -  SkillOps (Nous... https://www.youtube.com/watch?v=0e5NYMkQywM
+    [embed] GitHub - mishoko/accelerated-business-hackathon-NVIDIAAI-stripe-Nou... https://github.com/mishoko/accelerated-business-hackathon-NVIDIAAI-stripe-NousResearch
+
