@@ -46157,3 +46157,110 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Ok thanks for the feedback 🙏🏻
     [reply to davidg1982 msg=1525568785250254898]
 
+[2026-07-11T19:06:06.081000+00:00] warofchange (id=1525578952159269014)
+    <:BeardedNousGirl:1506796582987632690>
+
+[2026-07-11T19:14:43.095000+00:00] godsboy7777 (id=1525581120673022044)
+    Hi <@387972437901312000>, just following up on two small Hermes Agent fixes when you get a gap:
+    
+    1. Gateway numbered session resume
+    https://github.com/NousResearch/hermes-agent/pull/60138
+    
+    This follows the merged "/sessions search" work and fixes numbered resume so "/resume <number>" resolves against the latest displayed session list, including "/sessions search" results.
+    
+    I refreshed it against current "main", resolved the conflict, and the full CI suite is green.
+    
+    2. Telegram media caption formatting
+    https://github.com/NousResearch/hermes-agent/pull/57090
+    
+    This fixes Telegram media captions being sent without the expected MarkdownV2 rendering.
+    
+    It is also clean, mergeable, and fully green.
+    
+    Would appreciate a review when convenient. If someone else is currently handling the gateway or Telegram areas, I am happy to follow their direction.
+    [embed] fix(gateway): resume numbered session search results by GodsBoy · ... https://github.com/NousResearch/hermes-agent/pull/60138
+    [embed] fix(telegram): render media captions with MarkdownV2 by GodsBoy · ... https://github.com/NousResearch/hermes-agent/pull/57090
+
+[2026-07-11T20:31:17.702000+00:00] teknium (id=1525600391851671683)
+    Just fyi my dog is in the icu, i won’t be moving very fast
+
+[2026-07-11T20:34:28.462000+00:00] undifined. (id=1525601191956975739)
+    I hope all will be okay
+
+[2026-07-11T20:34:33.384000+00:00] frowtek (id=1525601212601208934)
+    Praying for your dog, hopefully everything will be fine 🙏 😭
+    [reply to teknium msg=1525600391851671683]
+
+[2026-07-11T20:51:27.827000+00:00] realadolan (id=1525605467483799744)
+    Holy shit man, hope he will be fine!
+    [reply to teknium msg=1525600391851671683]
+
+[2026-07-11T21:00:56.349000+00:00] wernerhp (id=1525607852037636362)
+    Hey all, I have a few Pull Requests in a mergeable state and awaiting review on NousResearch/hermes-agent: #51953, #54229, #57356, #57690, #54230, #54193. I'd appreciate your eyes on them when convenient. Thanks in advance!
+
+[2026-07-11T22:55:16.950000+00:00] watchdominion (id=1525636627483988059)
+    Wishing you and your dog all the best
+    [reply to teknium msg=1525600391851671683]
+
+[2026-07-11T22:56:20.322000+00:00] 0xatakan (id=1525636893285290066)
+    Sorry man. I’m hoping for the best.
+    [reply to teknium msg=1525600391851671683]
+
+[2026-07-11T23:05:51.846000+00:00] sprmn24 (id=1525639290430820443)
+    I'm so sorry to hear that. I hope your dog makes a full recovery.
+    [reply to teknium msg=1525600391851671683]
+
+[2026-07-11T23:29:30.857000+00:00] jw_mushroom_man (id=1525645242194198569)
+    https://github.com/lEWFkRAD/hermes-agents-guide-to-the-galaxy/releases/tag/v0.1.0
+    [embed] Release v0.1.0 — First public Kindle Scribe baseline · lEWFkRAD/... https://github.com/lEWFkRAD/hermes-agents-guide-to-the-galaxy/releases/tag/v0.1.0
+
+[2026-07-11T23:30:03.717000+00:00] jw_mushroom_man (id=1525645380019159271)
+    ty <@659176257338081306> for helping get this off the ground
+
+[2026-07-11T23:52:08.136000+00:00] packetfloodz (id=1525650935035068526)
+    I've put together a self-hosted web extraction provider for crawl4ai as a bundled plugin (plugins/web/crawl4ai/). It follows the same pattern as existing firecrawl/parallel/exa providers. No new dependencies. No core file changes. Just 3 files, ~180 lines.
+    
+    Branch here: https://github.com/mblauser/hermes-agent/tree/feat/crawl4ai-plugin
+    
+    Would appreciate feedback before I open the formal PR; particularly around the third-party integration policy in CONTRIBUTING.md since crawl4ai is simply a self-hosted (Docker container) open-source alternative to firecrawl (no third-party API costs). It pairs naturally with searxng for a fully self-hosted search+extract stack.
+    
+    Since searxng is already in-tree, might this also be welcome, or does it belong as a standalone plugin?
+    [embed] GitHub - mblauser/hermes-agent at feat/crawl4ai-plugin https://github.com/mblauser/hermes-agent/tree/feat/crawl4ai-plugin
+
+[2026-07-11T23:53:07.216000+00:00] sprmn24 (id=1525651182834548756)
+    PR #62890
+    Issue: acquire_scoped_lock() has a TOCTOU race — two concurrent gateway processes can both grab the same scoped lock during the empty-file init window
+    
+    Fix: verify lock file identity before returning success + deterministic regression test
+    https://github.com/NousResearch/hermes-agent/pull/62890
+    
+    PR #62898
+    Issue: _check_stale_giveup raises RuntimeError which the retry classifier treats as unknown/retryable, ends up doing 14–28s backoff before failover — kind of defeats the whole point
+    
+    Fix: switched to TimeoutError so it hits the timeout path and fails over immediately
+    https://github.com/NousResearch/hermes-agent/pull/62898
+    
+    PR #62899
+    Issue: readiness probe marks draining as "ok" — draining instances reject new work so traffic keeps getting routed there for no reason
+    Fix: only running is "ok" now, draining returns "degraded"
+    https://github.com/NousResearch/hermes-agent/pull/62899
+    
+    PR #62901
+    Issue: _split_text_chunks() falls back to limit (platform units) instead of _cp_budget (code points) when no newline is found — on UTF-16 adapters emoji make chunks blow past MAX_MESSAGE_LENGTH
+    Fix: use _cp_budget consistently for both the guard and the hard split
+    https://github.com/NousResearch/hermes-agent/pull/62901
+
+[2026-07-12T00:04:36.663000+00:00] sprmn24 (id=1525654074584727602)
+    Wow, that's speed! Actually, it reminded me of that BMW M5 commercial.
+    [reply to sprmn24 msg=1525651182834548756]
+
+[2026-07-12T01:36:35.895000+00:00] quantranger_63113 (id=1525677223921717259)
+    I am a heavy user of tokens. I was running on free tokens so far through hackathons, but today I recently got Nuos Plus for 20 dollars. Do you think it is enough, or should I switch to the 100 dollar or the 200 dollar one?
+
+[2026-07-12T01:58:48.297000+00:00] teknium (id=1525682812420620394)
+    Depends entirely on model and usage
+    [reply to quantranger_63113 msg=1525677223921717259]
+
+[2026-07-12T01:58:58.871000+00:00] teknium (id=1525682856771194992)
+    Maybe for deepseek flash or gpt luna
+

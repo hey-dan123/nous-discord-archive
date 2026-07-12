@@ -21,3 +21,23 @@
     ***sift***: search less, know more.
     [embed] GitHub - gh0stprince/sift: A personal research engine. Search, craw... https://github.com/gh0stprince/sift
 
+[2026-07-11T22:51:35.355000+00:00] parallelcontinuities (id=1525635698047324211)
+    <@513320193963982852> i heard you might like research engines....
+
+[2026-07-11T22:57:51.640000+00:00] ellyhae (id=1525637276300742786)
+    this is great, thanks! I was looking into how to wrangle gbrain or hindsight to do exactly this
+
+[2026-07-11T22:59:07.064000+00:00] ellyhae (id=1525637592651923476)
+    do you know how well it does with limited context or weak models? I try to host everything locally, so I only use qwen3.6 27B
+
+[2026-07-11T23:00:15.221000+00:00] parallelcontinuities (id=1525637878523101366)
+    i would definitely give it a run, i haven't tested it on weaker models but i'd assume it'd definitely operate a bit slower. i've tested primarily on dsv4 flash and once i get my new machine i'll be doing some local testing as well with qwythos
+
+[2026-07-11T23:01:10.700000+00:00] parallelcontinuities (id=1525638111219159160)
+    context length can also be tuned, so i don't think you have to worry there
+    
+    edit: specifically, there's build_context() which caps out at 2000 chars, 10 results by default - this can be tweaked, --live mode also builds from duckduckgo snippets which loses some context, still gives you the link, and would be more model-mindful
+
+[2026-07-11T23:02:23.827000+00:00] ellyhae (id=1525638417935761538)
+    sounds good, I'll give it a try then👍
+

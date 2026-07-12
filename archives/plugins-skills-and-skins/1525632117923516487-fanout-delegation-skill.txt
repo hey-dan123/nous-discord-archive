@@ -1,0 +1,16 @@
+# Thread 'fanout delegation skill' in forum #plugins-skills-and-skins
+# thread_id=1525632117923516487 forum_id=1485392832154832906
+# Started 2026-07-12T02:37:53.579414+00:00
+
+[2026-07-11T22:37:21.787000+00:00] flooristired (id=1525632117923516487)
+    I've been tweaking a delegation skill some for sol to use proactively with fanning out and delegating to several tasks to lower cost coding subagents using GLM 5.2 atm and its been going well, anyone else want to give it a shot? 
+    
+    I wanted to try and get the behavior of fable's fan out and granular decomposition of tasks and impart that to sol. So these skills are my attempt.
+    
+    Comes with a general agent delegation skill, and a proactive use skill that helps a model make a judgement of when to use subagents, or if parallelizing several tasks is useful.
+    
+    I didn't write most of this stuff myself I just went back and forth between fable and sol for a while working on this, my bit of testing has been satisfactory for my needs though!
+    
+    https://github.com/FloorIsGround/skills
+    [embed] GitHub - FloorIsGround/skills https://github.com/FloorIsGround/skills
+

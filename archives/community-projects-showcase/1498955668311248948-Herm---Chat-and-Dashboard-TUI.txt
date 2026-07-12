@@ -1585,3 +1585,10 @@
 [2026-06-30T23:11:54.724000+00:00] liftaris (id=1521654545929863340)
     <@221727702992945152> <@323859322599768065> Hermes has been updated a lot, herm hasn't :/ I haven't been able to put much time into herm dev recently, but I'll give you guys an update tonight
 
+[2026-07-11T22:12:23.287000+00:00] hydro._ (id=1525625832758972568)
+    <@209037396983939072> how do we inject this into the web dashboard?
+
+[2026-07-11T22:20:39.567000+00:00] liftaris (id=1525627914308026612)
+    I don't know, but <@398709623567155200> does!
+    [reply to hydro._ msg=1525625832758972568]
+

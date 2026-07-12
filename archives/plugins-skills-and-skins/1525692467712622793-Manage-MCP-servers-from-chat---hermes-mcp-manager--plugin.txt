@@ -1,0 +1,20 @@
+# Thread '— Manage MCP servers from chat — hermes-mcp-manager (plugin)' in forum #plugins-skills-and-skins
+# thread_id=1525692467712622793 forum_id=1485392832154832906
+# Started 2026-07-12T02:37:52.584320+00:00
+
+[2026-07-12T02:37:10.298000+00:00] pinkyhi (id=1525692467712622793)
+    /mcp + in-context catalog
+    With a dozen MCP servers you either burn ~45k tokens of schemas every turn, or defer loading and the agent can't even see what exists. And mid-session your only lever is /reload-mcp or editing config + restart. This fixes both:
+    
+    🧩 In-context catalog (~0.5k tokens) — the agent always knows what servers exist (active / off / disabled) and proposes one when a task needs it; only you enable it. Plus a read-only mcp_catalog tool.
+    🔀 /mcp list | on | off <name> — deterministic slash command (never goes through the model, works in the Discord picker). Toggles a server's tools live via agent.disabled_toolsets — persisted to config, effective next message, no restart.
+    🔌 Control-plane only: never touches MCP transport, no second list to drift.
+    
+    Fills the open /mcp slash-command question from issue #690. Offline tests included.
+    
+    hermes plugins install pinkyhi/hermes-mcp-manager --enable
+    https://github.com/pinkyhi/hermes-mcp-manager
+    
+    Feedback and PRs welcome 🙏
+    [embed] GitHub - pinkyhi/hermes-mcp-manager: Manage MCP servers from chat f... https://github.com/pinkyhi/hermes-mcp-manager
+

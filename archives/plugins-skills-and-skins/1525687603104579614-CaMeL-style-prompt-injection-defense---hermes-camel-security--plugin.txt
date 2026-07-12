@@ -1,0 +1,25 @@
+# Thread 'CaMeL-style prompt-injection defense — hermes-camel-security (plugin)' in forum #plugins-skills-and-skins
+# thread_id=1525687603104579614 forum_id=1485392832154832906
+# Started 2026-07-12T02:37:53.113801+00:00
+
+[2026-07-12T02:17:50.485000+00:00] pinkyhi (id=1525687603104579614)
+    Your agent reads a web page, the page says "run this command", and the agent has your terminal. This plugin closes that door — same CaMeL idea as the in-core PR #3987, but pure plugin, works on stock Hermes today.
+    
+    🛡️ Approval gate + audit — dangerous tool calls pause for /approve / /deny; everything logged. Windows-aware, no double-prompts.
+    🧯 Web quarantine — the main agent can't call web tools directly; raw page content never enters its context.
+    📋 plan_execute — web research runs as a typed plan written before any untrusted data is seen; taint is tracked per value and every side effect checked. Tainted → you is fine, → exec/upload denied, ambiguous → you're asked. Raw bytes never come back, even in errors.
+    
+    Untrusted content can shape the answer, not what the agent does. Site rules are plain YAML, no code. 239 tests, live on two production profiles.
+    
+    hermes plugins install pinkyhi/hermes-camel-security --enable
+    https://github.com/pinkyhi/hermes-camel-security
+    
+    Feedback and PRs welcome 🙏
+    [embed] GitHub - pinkyhi/hermes-camel-security: Prompt-injection defense fo... https://github.com/pinkyhi/hermes-camel-security
+
+[2026-07-12T02:34:32.454000+00:00] pinkyhi (id=1525691805666902116)
+    Plugin: CaMeL-style prompt-injection defense — hermes-camel-security
+
+[2026-07-12T02:35:23.998000+00:00] pinkyhi (id=1525692021858107392)
+    CaMeL-style prompt-injection defense — hermes-camel-security (plugin)
+

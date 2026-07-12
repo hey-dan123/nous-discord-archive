@@ -26,3 +26,18 @@
 [2026-07-01T02:35:11.450000+00:00] codenamekt (id=1521705702706511962)
     :brain: Hexus — Postgres-Powered Vector Memory for the Agentic Age
 
+[2026-07-11T21:33:26.272000+00:00] codenamekt (id=1525616030607609917)
+    🚀 v0.9.2 dropped!
+    
+    Been a minute since I last shared, and a LOT has changed under the hood. Here are the highlights:
+    
+    🧠 Long document? No problem. The embedder now handles long inputs properly with token aware truncation, warnings, and max token limits. No more silent failures on big chunks of text.
+    
+    🔒 Multi agent isolation is here. Each agent's memories are now properly walled off at the data layer. SQL safety is baked in. Your agents won't accidentally peek at each other's notes anymore.
+    
+    🛡️ MCP HTTP got tougher. Bearer auth, loopback defaults, and a cleanup confirm gate. Ready for production use.
+    
+    📦 The wheel actually works now. All subpackages ship properly. No more surprise ImportErrors when you pip install.
+    
+    💜 Shoutout to @0xNyk for adding hexus to the awesome-hermes-agent list!
+

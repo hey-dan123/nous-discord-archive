@@ -13,3 +13,6 @@
     [embed] GitHub - MustafaK99/spectator: Twitch for your agent — a safe, re... https://github.com/MustafaK99/spectator
     [embed]  https://twitter.com/Mustafx24/status/2075988655064133786
 
+[2026-07-11T20:31:10.913000+00:00] parallelcontinuities (id=1525600363376279635)
+    this is pretty cool! i'm testing this out rn as a secure viewer for twitch :P
+

@@ -57,3 +57,7 @@
 [2026-07-10T00:36:39.637000+00:00] jw_mushroom_man (id=1524937364391198950)
     [attachment] Generated_image_1_1.png https://cdn.discordapp.com/attachments/1524809005703233576/1524937364147798166/Generated_image_1_1.png?ex=6a519017&is=6a503e97&hm=974a75341a628f8e72405eabe7e6a904bb166fe26109773ec339805de6d98c8d&
 
+[2026-07-11T23:29:34.543000+00:00] jw_mushroom_man (id=1525645257654534346)
+    https://github.com/lEWFkRAD/hermes-agents-guide-to-the-galaxy/releases/tag/v0.1.0
+    [embed] Release v0.1.0 — First public Kindle Scribe baseline · lEWFkRAD/... https://github.com/lEWFkRAD/hermes-agents-guide-to-the-galaxy/releases/tag/v0.1.0
+
