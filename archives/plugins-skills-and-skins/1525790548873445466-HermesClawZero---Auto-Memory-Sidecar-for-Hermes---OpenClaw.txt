@@ -1,0 +1,33 @@
+# Thread 'HermesClawZero — Auto‑Memory Sidecar for Hermes & OpenClaw' in forum #plugins-skills-and-skins
+# thread_id=1525790548873445466 forum_id=1485392832154832906
+# Started 2026-07-12T13:19:28.402274+00:00
+
+[2026-07-12T09:06:54.669000+00:00] vulcor1 (id=1525790548873445466)
+    HermesClawZero — Zero‑Config Memory Sidecar (v1.6.0)
+    PostgreSQL‑backed long‑term memory für Hermes & OpenClaw — mit Live‑Dashboard, Galaxy‑View, Graph, Tiers, Editor, Merge, Feedback & Nudge.
+    
+    Highlights:
+    
+    One‑Click Install direkt aus Hermes/OpenClaw
+    
+    Dashboard: Timeline · Semantic Search · Health · Tenant Isolation
+    
+    Memory Galaxy: 3D Canvas, Orbits, Glow Nodes, Nebula Shader
+    
+    Knowledge Graph: Entities + Relationships + Traversal
+    
+    Memory Tiers: Hot/Warm/Standard/Cold
+    
+    Versioning + Compression + Consolidation + Dedup
+    
+    MCP Tools: capture/search/list/stats/delete/review
+    
+    Zero API Keys: Ollama embeddings, full local control
+    
+    Docker Stack: FastAPI + PostgreSQL + pgvector + Ollama
+    
+    Repo: https://github.com/SunMe1977/HermesClawZero-ConfigSidecar (github.com in Bing)  
+    Dashboard: http://localhost:8010/dashboard
+    [attachment] logo.webp https://cdn.discordapp.com/attachments/1525790548873445466/1525790549083291658/logo.webp?ex=6a54aaae&is=6a53592e&hm=87177e981ed61a2b5552c92545f75c5d4fa6ba61e2cbf5d4eaa62c1223a5c9bd&
+    [embed] GitHub - SunMe1977/HermesClawZero-ConfigSidecar: HermesClaw Zero‑... https://github.com/SunMe1977/HermesClawZero-ConfigSidecar
+

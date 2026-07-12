@@ -16,3 +16,6 @@
 [2026-07-11T20:31:10.913000+00:00] parallelcontinuities (id=1525600363376279635)
     this is pretty cool! i'm testing this out rn as a secure viewer for twitch :P
 
+[2026-07-12T10:21:09.079000+00:00] m62773 (id=1525809232023261194)
+    thanks I want to extend it more and add interactiveness thinking maybe allowing you to poll viewers as well
+

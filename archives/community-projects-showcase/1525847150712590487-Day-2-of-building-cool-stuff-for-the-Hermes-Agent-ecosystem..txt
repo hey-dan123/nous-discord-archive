@@ -1,0 +1,13 @@
+# Thread 'Day 2 of building cool stuff for the Hermes Agent ecosystem.' in forum #community-projects-showcase
+# thread_id=1525847150712590487 forum_id=1316137596535177246
+# Started 2026-07-12T13:14:39.291938+00:00
+
+[2026-07-12T12:51:49.599000+00:00] m62773 (id=1525847150712590487)
+    Today I shipped Replay — basically VLC for your Hermes Agent.
+    Export any Hermes session as JSONL, drop it into Replay, and watch the whole run back on a cinematic, scrubbable timeline: messages, tool calls, failures, tests and all.
+    Everything runs locally in your browser. Nothing gets uploaded.
+    🔗 Try it: https://mustafak99.github.io/replay/
+    💻 Repo: https://github.com/MustafaK99/replay
+    [embed] Replay — Hermes session player https://mustafak99.github.io/replay/
+    [embed] GitHub - MustafaK99/replay: A cinematic, local-first player for Her... https://github.com/MustafaK99/replay
+

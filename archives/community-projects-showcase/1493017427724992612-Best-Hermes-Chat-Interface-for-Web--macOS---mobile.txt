@@ -5664,3 +5664,31 @@
     When is the performance updates planned to come out? Is there early access or testing available?
     [reply to avidfuturist msg=1525726576040218654]
 
+[2026-07-12T08:30:01.570000+00:00] ascendus_ (id=1525781266463457351)
+    what do you mean about a native native iOS and Android app support ? you made a phone hermes app?
+    [reply to avidfuturist msg=1525655560815382621]
+
+[2026-07-12T08:35:50.566000+00:00] mr.gamespy (id=1525782730258780350)
+    Yes
+    [reply to ascendus_ msg=1525781266463457351]
+
+[2026-07-12T08:36:26.118000+00:00] mr.gamespy (id=1525782879374802985)
+    https://get-hermes.ai/setup/
+    [embed] Set up Hermes WebUI — on every device https://get-hermes.ai/setup/
+    [reply to ascendus_ msg=1525781266463457351]
+
+[2026-07-12T08:36:33.140000+00:00] mr.gamespy (id=1525782908827078718)
+    Scroll down to iOS
+
+[2026-07-12T08:36:50.492000+00:00] mr.gamespy (id=1525782981606768743)
+    Android is in testing, DM him for access
+
+[2026-07-12T08:37:26.056000+00:00] mr.gamespy (id=1525783130773000212)
+    Unofficial of course
+
+[2026-07-12T08:37:44.770000+00:00] mr.gamespy (id=1525783209265336430)
+    Still great, if you want to get away from the messenger apps
+
+[2026-07-12T09:41:21.064000+00:00] alto69 (id=1525799215962263612)
+    I just realised extensions dont update on their own i reinstalled and saw changes
+

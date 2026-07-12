@@ -46302,3 +46302,79 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     I am sorry about your loss, take time ok
     [reply to teknium msg=1525600391851671683]
 
+[2026-07-12T08:19:44.077000+00:00] one9255 (id=1525778676510363648)
+    Why for every cron job it sends me this message below attached to the cronjob response :
+    
+    Cronjob Response: cron1 metrics every 3 days
+    (job_id: b06c4bc26f5e)
+    -------------
+    
+    It attached the name of the cronjob and job ID etc with every response of every Cronjob
+    
+    I asked it to stop it says it fixed it but it did not
+
+[2026-07-12T08:24:17.289000+00:00] ciacon (id=1525779822444285962)
+    Would someone be kind enough to kick Cl into action on this draft PR? 🙂
+    GitHub is waiting for a maintainer to approve the fork workflow
+    [reply to ciacon msg=1525769654369259662]
+
+[2026-07-12T09:16:42.075000+00:00] andrew03961 (id=1525793012633043044)
+    I'm keeping getting the "state.db malformed" warning. I'm new to Hermes Agents, and I followed the Docker setup instruction from the official docs to serve the backend. How do you solve this issue?
+
+[2026-07-12T09:40:19.247000+00:00] brokeskill (id=1525798956683100210)
+    Hermes Agent takes a whileee summarizing the thread, is there any way I can speed it up?
+
+[2026-07-12T10:14:11.092000+00:00] gust7314 (id=1525807478858584124)
+    Decreased the number of token at which compression happen?
+    [reply to brokeskill msg=1525798956683100210]
+
+[2026-07-12T11:20:14.096000+00:00] brokeskill (id=1525824100902371419)
+    set to auto i guess?
+    [attachment] wk9n5sr.png https://cdn.discordapp.com/attachments/1491258766648283238/1525824100260380813/wk9n5sr.png?ex=6a54c9ed&is=6a53786d&hm=36463effa628b24d6186bcf618dea8d4bb29bffe295677174fb061c39c0e50a7&
+    [reply to gust7314 msg=1525807478858584124]
+
+[2026-07-12T11:21:41.118000+00:00] gust7314 (id=1525824465898831983)
+    This video might help: https://www.youtube.com/watch?v=n32qq7Kwzh0
+    
+    I don't know if it's possible to personalize from the ui you just showed
+    [embed] Hermes Architecture EXPLAINED: Memory, Context & Gateways https://www.youtube.com/watch?v=n32qq7Kwzh0
+    [reply to brokeskill msg=1525824100902371419]
+
+[2026-07-12T12:00:55.023000+00:00] warofchange (id=1525834338891993129)
+    Sync the forgotten desktop app version (0.17.0 → 0.18.2)
+    
+    Scanning for version drift across the repo, I found one file left behind. apps/desktop/package.json still declares "version": "0.17.0", while the current release is 0.18.2 — matched everywhere else:
+    
+    • hermes_cli/__init__.py → 0.18.2 (canonical source release.py reads)
+    • pyproject.toml → 0.18.2
+    • acp_registry/agent.json → 0.18.2 (a test enforces this one)
+    • apps/desktop/package.json → 0.17.0 ← forgotten
+    
+    scripts/release.py explicitly rewrites this field on every bump ("keep the desktop app version in lockstep with the Python package… it must track pyproject to avoid drift"), but unlike the ACP manifest there's no test guarding it, so the drift slipped through the 0.18.0 → 0.18.1 → 0.18.2 releases.
+    
+    -  "version": "0.17.0",
+    +  "version": "0.18.2",
+    Packaging metadata only — the About panel reads the live version at runtime, so no behavior change. 1 file, 1 line, provable against three canonical sources.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/63167
+    [embed] chore(version): sync desktop package.json version with release (0.1... https://github.com/NousResearch/hermes-agent/pull/63167
+
+[2026-07-12T12:22:09.216000+00:00] leerenmos (id=1525839683245047879)
+    APO isn't another AI observability dashboard.
+    It's evolving into an AI Forensics Lab: every autonomous agent execution becomes an investigation with evidence, causality, replay, autopsy, and prevention.
+    Not just what happened… but why it happened and how to make sure it never happens again.
+    The future of reliable AI agents starts here.
+    
+    https://github.com/Blackleets/apo
+    
+    <:nousgirl:1341983870752653352>
+    [embed] GitHub - Blackleets/apo https://github.com/Blackleets/apo
+
+[2026-07-12T12:56:15.248000+00:00] godsboy7777 (id=1525848264924991569)
+    Praying your Dog recovered quickly and that all is well.
+    [reply to teknium msg=1525600391851671683]
+
+[2026-07-12T12:59:14.800000+00:00] m62773 (id=1525849018020663477)
+    does github have a good mcp or way to access issues for hermes ? I try to find issues to work on via codex but it rate limits all the time. Also made my first small pr today which was cool https://github.com/NousResearch/hermes-agent/pull/63157
+    [embed] fix(desktop): preserve lane session recency order by MustafaK99 · ... https://github.com/NousResearch/hermes-agent/pull/63157
+

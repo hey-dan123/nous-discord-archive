@@ -84,3 +84,29 @@
     Bilingual quiz, copy injection block, mobile-friendly UI.
     [embed] GitHub - shiro-0x/hersona: Attribute template collection for AI age... https://github.com/shiro-0x/hersona
 
+[2026-07-12T13:19:30.296000+00:00] shiro1001 (id=1525854116180656198)
+    hersona v1.9.0 is out
+    
+    This release is about controlling persona intensity — and about benchmarks that finally measure what's actually happening.
+    
+    ✨ New features
+    
+    Per-attribute intensity: hersona blend tsundere:strong keigo:mild — each attribute in a blend can now carry its own weight
+    --compact: shrinks the injection block by 14–19% with the same meaning
+    --style-examples N: injects each attribute's own example lines as few-shot tone anchors
+    --humanize: an opt-in directive that suppresses AI-flavored writing (stock openers, needless bullet lists…) + a deterministic naturalness score to measure it
+    zh / ko scoring: measure / bench now score Mandarin and Korean personas (4 languages total)
+    4 new MCP tools: agents can now self-score their own persona maintenance loop
+    📊 Measured, not vibes
+    
+    Persona-override attack scenario at strong: hersona + persona_lock holds 92% maintenance / 100% lock resistance — a hand-written prompt collapses to 8% / 0%
+    Bad numbers are published as-is too (hand-written prompts stay competitive at moderate, single runs swing ±20-40pts, etc.) → full tables in docs/BENCHMARKS.md
+    
+    🔗 Links
+    
+    PyPI: pip install hersona==1.9.0
+    Release notes: https://github.com/shiro-0x/hersona/releases/tag/v1.9.0
+    Full benchmark tables: https://github.com/shiro-0x/hersona/blob/main/docs/BENCHMARKS.md
+    [embed] Release v1.9.0 — Sharpen & Grow: intensity dials, honest benchmar... https://github.com/shiro-0x/hersona/releases/tag/v1.9.0
+    [embed] hersona/docs/BENCHMARKS.md at main · shiro-0x/hersona https://github.com/shiro-0x/hersona/blob/main/docs/BENCHMARKS.md
+

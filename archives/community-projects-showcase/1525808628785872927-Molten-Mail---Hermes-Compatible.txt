@@ -1,0 +1,9 @@
+# Thread 'Molten Mail - Hermes Compatible' in forum #community-projects-showcase
+# thread_id=1525808628785872927 forum_id=1316137596535177246
+# Started 2026-07-12T13:14:39.650466+00:00
+
+[2026-07-12T10:18:45.256000+00:00] captainpuru (id=1525808628785872927)
+    I created Molten Mail for Apple Mac with compatibility for Hermes and would love to get some more community feedback. It can safely manage your email with only read and draft emails - straight to your main draft folder, but never send/delete emails. I built the onboarding setup wizard with a dedicated Hermes set up path and would be great to get additional users experience 
+    
+    It’s on MoltenRock.com website for free download and while it’s pending Apple App Store approval, happy to send over Apple TestFlight and give away some premium licenses for constructive feedback, thanks 🙏
+

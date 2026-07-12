@@ -20,3 +20,7 @@
 [2026-07-11T15:18:12.631000+00:00] seibakas (id=1525521601552978182)
     seems intresting share with me xD
 
+[2026-07-12T10:50:50.843000+00:00] smoermeow (id=1525816705282998293)
+    I'll make a github!
+    [reply to seibakas msg=1525521601552978182]
+
