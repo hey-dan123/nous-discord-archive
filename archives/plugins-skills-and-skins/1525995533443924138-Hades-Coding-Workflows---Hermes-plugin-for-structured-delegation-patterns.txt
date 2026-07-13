@@ -1,0 +1,26 @@
+# Thread 'Hades Coding Workflows — Hermes plugin for structured delegation patterns' in forum #plugins-skills-and-skins
+# thread_id=1525995533443924138 forum_id=1485392832154832906
+# Started 2026-07-13T02:40:13.344114+00:00
+
+[2026-07-12T22:41:26.799000+00:00] singh_guri (id=1525995533443924138)
+    I’ve built:
+    Hades Coding Workflows — Hermes plugin for structured delegation patterns
+    
+    https://github.com/singhguri/hades-coding-workflows
+    
+    Three skills I put together after iterating on Fable's fan-out delegation patterns between DeepSeek and Sol:
+    
+    **Dual-model-harness** — three-stage pipeline that routes design and verification to a reasoning model while delegating implementation to a faster coding subagent. Documents when delegation is worth the overhead (genuinely parallel work only).
+    
+    **Subagent-driven-development** — dispatches fresh subagents per task with two-stage review (spec compliance first, code quality second). Comes with context budget and gates references adapted from the GSD project.
+    
+    **Writing-plans** — writes implementation plans with bite-sized 2-5 minute tasks, exact file paths, code examples, and verification commands. Built to pair with the subagent runner.
+    
+    Install:
+    
+    ```hermes plugins install singhguri/hades-coding-workflows --enable```
+    
+    
+    Inspired by FloorIsGround's fan-out delegation skills and obra's superpowers format.
+    [embed] GitHub - singhguri/hades-coding-workflows: Hermes Agent coding work... https://github.com/singhguri/hades-coding-workflows
+

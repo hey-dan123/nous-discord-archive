@@ -46432,3 +46432,44 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-12T18:54:06.054000+00:00] brokeskill (id=1525938320012738601)
     What tools can bypass cloudflare protections?
 
+[2026-07-12T19:30:39.702000+00:00] watchdominion (id=1525947520839319633)
+    https://github.com/CloakHQ/CloakBrowser
+    [embed] GitHub - CloakHQ/CloakBrowser: Stealth Chromium that passes every b... https://github.com/CloakHQ/CloakBrowser
+
+[2026-07-13T00:11:36.854000+00:00] warofchange (id=1526018224859119676)
+    Use the existing S6_SERVICE_PREFIX constant instead of a hardcoded literal
+    
+    DRY cleanup in hermes_cli/service_manager.py. The file defines S6_SERVICE_PREFIX = "gateway-" and builds s6 service names through it everywhere (f"{S6_SERVICE_PREFIX}{profile}" at lines 618/621, prefix-stripping at 349/832–833) — except one spot.
+    
+    GatewayNotRegisteredError.__init__ hardcodes the prefix in its service= argument:
+    
+    -            service=f"gateway-{profile}",
+    +            service=f"{S6_SERVICE_PREFIX}{profile}",
+    Behavior-neutral (both produce gateway-<profile>), 1 file, 1 line, no import added. After the change, the only remaining gateway- literal in the file is the constant definition itself. Provable by grep.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/63467
+    [embed] refactor(service-manager): use S6_SERVICE_PREFIX instead of hardcod... https://github.com/NousResearch/hermes-agent/pull/63467
+
+[2026-07-13T00:33:56.197000+00:00] packetfloodz (id=1526023842470826145)
+    I'd appreciate any feedback on this crawl4ai plugin before submitting a PR
+    [reply to packetfloodz msg=1525650935035068526]
+
+[2026-07-13T01:48:47.396000+00:00] daisukearamaki (id=1526042679924756490)
+    they won't take it as a pr
+    [reply to packetfloodz msg=1526023842470826145]
+
+[2026-07-13T01:49:35.366000+00:00] daisukearamaki (id=1526042881125646446)
+    https://github.com/NousResearch/hermes-agent/pull/6325#issuecomment-4952554716
+    [embed] feat(web): add native local OSS web stack by axAilotl · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/6325
+
+[2026-07-13T01:53:05.968000+00:00] axmaiqiu (id=1526043764454461450)
+    It looks like <@387972437901312000>  is trying to knock out all the P2 issues—that’s amazing; I’ve suddenly received a ton of messages.
+
+[2026-07-13T02:13:29.087000+00:00] brian717 (id=1526048894587371530)
+    <@387972437901312000> please take another look when you get a chance: https://github.com/NousResearch/hermes-agent/pull/61004. Feels like we're pretty close.
+    [embed] fix(cli): don't let a corrupted hermes_bootstrap brick entry points... https://github.com/NousResearch/hermes-agent/pull/61004
+
+[2026-07-13T02:22:33.742000+00:00] packetfloodz (id=1526051179036020776)
+    Thank you for referring me to these comments. It saves me the round-trip. I'll keep the crawl4ai plugin as a separate repo and share it in <#1485392832154832906> once it's set up.
+    [reply to daisukearamaki msg=1526042679924756490]
+
