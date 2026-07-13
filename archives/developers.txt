@@ -46567,3 +46567,38 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     that'll learn me to land a PR under my worksona
     [reply to egilewski msg=1526146224162607125]
 
+[2026-07-13T10:30:37.989000+00:00] m62773 (id=1526174006070349834)
+    Small Desktop deep-link experiment.
+    Hermes already supports hermes:// for blueprints, so I built a reference Chrome extension showing what else it could enable.
+    “Fix with Hermes” sends a validated GitHub issue URL to Desktop and inserts a reviewable task without auto-sending.
+    Extension: https://github.com/MustafaK99/fix-with-hermes
+    Draft PR: https://github.com/NousResearch/hermes-agent/pull/63692
+    [embed] GitHub - MustafaK99/fix-with-hermes: A Fix with Hermes button for e... https://github.com/MustafaK99/fix-with-hermes
+    [embed] feat(desktop): accept safe GitHub issue deep links by MustafaK99 ·... https://github.com/NousResearch/hermes-agent/pull/63692
+
+[2026-07-13T11:20:54.129000+00:00] skholmes (id=1526186656678285322)
+    Hi all
+    
+    Pinging again about some useful bug fixes for Codex which appears to have more interest 
+    https://github.com/NousResearch/hermes-agent/pull/55639
+    https://github.com/NousResearch/hermes-agent/pull/55640
+    
+    And this slack usability improvement which also has extra interest:
+    https://github.com/NousResearch/hermes-agent/pull/54535
+    
+    cc <@387972437901312000> apologies for the tag and you're probably not back to this yet (sorry for your loss 😢 )
+    
+    ---
+    LMK if I can do anything else to help push these through 🙏
+
+[2026-07-13T11:48:35.056000+00:00] watchdominion (id=1526193623111172126)
+    mods - would it be good to edit the permissions on this channel btw and remove the "embed links off" - this will really make the channel more readable?
+
+[2026-07-13T12:02:14.631000+00:00] teknium (id=1526197060657872897)
+    good idea
+    [reply to watchdominion msg=1526193623111172126]
+
+[2026-07-13T12:02:33.331000+00:00] teknium (id=1526197139091226765)
+    done
+    [reply to watchdominion msg=1526193623111172126]
+

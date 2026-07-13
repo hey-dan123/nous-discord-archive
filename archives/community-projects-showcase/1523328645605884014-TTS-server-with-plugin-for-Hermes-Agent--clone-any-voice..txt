@@ -49,3 +49,6 @@
 [2026-07-07T16:23:20.637000+00:00] .voidhaze (id=1524088441455902841)
     side note: this currently only supported on Linux, you may be able to install it on windows and mac with a bit of wrangling, but the Hermes Agent integration installation will not work out of the box.
 
+[2026-07-13T13:00:33.602000+00:00] .voidhaze (id=1526211736405807136)
+    how are you guys finding it? any thoughts? any bugs?
+

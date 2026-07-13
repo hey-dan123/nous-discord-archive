@@ -1016,3 +1016,18 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1513342327450632335/1524633323627090010/image.png?ex=6a5074ee&is=6a4f236e&hm=2c747d64d642d8b1159b87ba2611fd9a8f3a635bccacc903e56dcd4c629b1d6d&
     [attachment] image.png https://cdn.discordapp.com/attachments/1513342327450632335/1524633324071682098/image.png?ex=6a5074ee&is=6a4f236e&hm=2cb1d25d811d13cd4246a05cd25770776235d769b0dd6e31b2a1549b7e68c53f&
 
+[2026-07-13T10:58:38.699000+00:00] shaf_2665 (id=1526181055479152740)
+    ## 🔑 New on Hermes-router: Access Keys page + provider-scoped keys
+    
+    
+    **Been expanding the dashboard's key management:**
+    
+    • Access Keys page — mint new proxy keys straight from the dashboard for teammates/other apps, with optional rate/budget limits (req/min, req/day, tokens/day, cost/day). Full key is shown once in a copy box, then only the last 6 chars ever again. Edit or revoke keys in place, no restart-and-pray.
+    
+    • Provider scoping — you can now restrict what an access key is allowed to route through. Pick specific providers when creating/editing a key (checkboxes show live "X keys" counts per provider) and that key's requests will only ever hit those providers — never falls back to anything outside its scope.
+    
+    • Safer defaults — since a proxy key now unlocks real dashboard config-write power, the router no longer lets that sit on the shared placeholder value. If you never set your own, it generates a real random key on first boot and saves it to .env for you, logged once so you can grab it.
+    
+    
+    Grab the feast with `hr update` and `hr restart`
+

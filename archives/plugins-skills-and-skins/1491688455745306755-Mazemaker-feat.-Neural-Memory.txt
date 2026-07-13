@@ -944,3 +944,16 @@
     Long story short new Benchmark numbers shipped. https://mazemaker.online/blog/the-arena-we-did-not-build/
     [embed] The arena we did not build. https://mazemaker.online/blog/the-arena-we-did-not-build/
 
+[2026-07-13T11:03:32.012000+00:00] alcatr4z (id=1526182285723045941)
+    Escalating as usual. Here we go @here Hermes-Agent on Android walked the path inside mazemaker.
+    
+    ```bash
+    Mazemaker on Android.
+    Your pod, in your pocket.
+    Your agents' memory doesn't live in our cloud — it lives on your machine, in your pod. The Android app is the thin client that reaches it: recall, dream, think, graph, and the full engine console, on your phone. And in 1.4 it goes further than anything else on Android: a real Linux agent runs on the phone itself — no root, no cloud — plugged straight into your memory.```
+    
+    --
+    
+    https://mazemaker.online/app/
+    [embed] Mazemaker for Android — your pod in your pocket. https://mazemaker.online/app/
+

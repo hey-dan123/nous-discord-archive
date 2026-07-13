@@ -1,0 +1,13 @@
+# Thread 'Day 3 of building cool stuff for Hermes - Fix issue button for Hermes desktop' in forum #community-projects-showcase
+# thread_id=1526172475723878520 forum_id=1316137596535177246
+# Started 2026-07-13T14:29:29.023195+00:00
+
+[2026-07-13T10:24:33.126000+00:00] m62773 (id=1526172475723878520)
+    After two days of finding issues, copying links and writing the same prompt, I made Fix with Hermes.
+    It adds a button to GitHub issues. One click opens the task in Hermes Desktop, ready to work.
+    Repo: https://github.com/MustafaK99/fix-with-hermes
+    Draft PR: https://github.com/NousResearch/hermes-agent/pull/63692
+    [attachment] Screenshot_2026-07-13_112338.png https://cdn.discordapp.com/attachments/1526172475723878520/1526172475866742845/Screenshot_2026-07-13_112338.png?ex=6a560e61&is=6a54bce1&hm=ec741533f198b5f5ccf4625e7faa8a8ea688e8ae38a7e62cd3fc6d2fcc6894b6&
+    [embed] GitHub - MustafaK99/fix-with-hermes: A Fix with Hermes button for e... https://github.com/MustafaK99/fix-with-hermes
+    [embed] feat(desktop): accept safe GitHub issue deep links by MustafaK99 ·... https://github.com/NousResearch/hermes-agent/pull/63692
+
