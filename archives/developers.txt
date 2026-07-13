@@ -46473,3 +46473,97 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Thank you for referring me to these comments. It saves me the round-trip. I'll keep the crawl4ai plugin as a separate repo and share it in <#1485392832154832906> once it's set up.
     [reply to daisukearamaki msg=1526042679924756490]
 
+[2026-07-13T03:01:06.010000+00:00] maxfreedompollard (id=1526060877390807222)
+    <@387972437901312000> 
+    
+    My open PRs on hermes-agent-self-evolution (6). Theme: making Phase 1's results actually trustworthy before moving up the phase ladder.
+    
+    <https://github.com/NousResearch/hermes-agent-self-evolution/pull/150> - Objective ground-truth fitness. Pluggable verifier interface + arxiv reference impl that grades outputs against real facts (IDs, titles, authors, years; all validated live against the arXiv API) instead of keyword overlap. GEPA gets exact "expected X, got Y" feedback to mutate on.
+    
+    <https://github.com/NousResearch/hermes-agent-self-evolution/pull/151> - Semantic preservation + holdout integrity. Implements PLAN.md constraint 4 (evolved skill can't drift off-topic; cosine gate calibrated on real skills: rewrites 0.84+, unrelated pairs under 0.16) and stops holdout contamination. Plus more.
+    
+    <https://github.com/NousResearch/hermes-agent-self-evolution/pull/152> - Run manifests. Every run writes a JSON evidence record: config snapshot, dataset fingerprint, baseline/evolved digests, constraint results, per-example holdout scores, and actual LLM cost in tokens and dollars. Rejected runs get one too, so caught violations become an audit trail instead of vanishing.
+    
+    <https://github.com/NousResearch/hermes-agent-self-evolution/pull/127> - Phase 1 correctness gates. Benchmark gate (TBLite regression check), LM factory, metric fixes, pytest gating.
+    
+    <https://github.com/NousResearch/hermes-agent-self-evolution/pull/136> - Statistical significance gating. Stops declaring any positive holdout delta a "win".
+    
+    <https://github.com/NousResearch/hermes-agent-self-evolution/pull/139> - PR emission. An evolved skill ends as a ready-to-review PR (branch, commit with metrics, body) instead of local output files.
+    
+    All six are independent: each is based on main and none assumes another merges.
+
+[2026-07-13T03:47:12.855000+00:00] chaosxue (id=1526072482380120125)
+    你好 <@387972437901312000> 🙏 抱歉打扰了。RFC #36765 这个缺口已经吸引了挺多贡献者的 ~5 个 PR（ #51226 整合了，还和 @johnnykor82 共同署名），最近又被自动归类到3 个相关的路由 issue（#46991 / #49292 / #49378）。看起来是个反复出现、挺多人都在遇到的需求呢，有空可以跑个 CI 或者看看吗，感激不尽 🙏
+    
+    Hi <@387972437901312000> 🙏 — surfacing demand, not rushing: RFC #36765 has drawn ~5 PRs from several contributors (#51226 consolidates them, co-authored with @johnnykor82) and just got auto-grouped with 3 related routing issues (#46991 / #49292 / #49378). Looks like a recurring, multi-person need. Both my PRs are rebased & mergeable — a CI run / a look whenever you have a moment would be hugely appreciated 🙏
+    
+    https://github.com/NousResearch/hermes-agent/pull/51226
+    [embed] feat(context-engine): add select_context() + on_turn_complete() hoo... https://github.com/NousResearch/hermes-agent/pull/51226
+
+[2026-07-13T03:47:15.753000+00:00] Translator Bot#1043 (id=1526072494534951012)
+    Hello <@387972437901312000> 🙏 Sorry to bother you. RFC #36765 This gap has attracted ~5 PRs from many contributors (#51226 is integrated and co-signed by @johnnykor82), and has recently been automatically classified into 3 related routing issues (#46991 / #49292 / #49378). It seems to be a recurring need that many people are encountering. Can you run a CI or take a look when you have time? Thank you very much 🙏
+    
+    Hi <@387972437901312000> 🙏 — surfacing demand, not rushing: RFC #36765 has drawn ~5 PRs from several contributors (#51226 consolidates them, co-authored with @johnnykor82) and just got auto-grouped with 3 related routing issues (#46991 / #49292 / #49378). Looks like a recurring, multi-person need. Both my PRs are rebased & mergeable — a CI run / a look whenever you have a moment would be hugely appreciated 🙏
+    
+    https://github.com/NousResearch/hermes-agent/pull/51226
+    [embed] feat(context-engine): add select_context() + on_turn_complete() hoo... https://github.com/NousResearch/hermes-agent/pull/51226
+    [reply to chaosxue msg=1526072482380120125]
+
+[2026-07-13T04:28:59.263000+00:00] inuyasha44_88990 (id=1526082995017093191)
+    https://github.com/NousResearch/hermes-agent/issues/59726
+    [embed] config.yaml can stay world-writable indefinitely through ~10 write ... https://github.com/NousResearch/hermes-agent/issues/59726
+
+[2026-07-13T04:30:27.566000+00:00] jethac (id=1526083365386715186)
+    hey friends - would appreciate a lgtm and merge on this. all this does is add my personal email to the AUTHOR_MAP, so i can land work in hermes as not my now defunct google worksona 🙂 https://github.com/NousResearch/hermes-agent/pull/63560
+    [embed] chore(release): map jethachan@gmail.com to jethac in AUTHOR_MAP by ... https://github.com/NousResearch/hermes-agent/pull/63560
+
+[2026-07-13T05:54:03.705000+00:00] jonkomet (id=1526104404598460416)
+    https://github.com/NousResearch/hermes-agent/pull/63266
+    [embed] fix(sessions): preserve Hermes web source categories by abundantbei... https://github.com/NousResearch/hermes-agent/pull/63266
+
+[2026-07-13T05:57:53.552000+00:00] inuyasha44_88990 (id=1526105368646647809)
+    https://github.com/JoaoMarcos44/hermes-agent/pull/1
+    [embed] fix(gateway): make shutdown drain aware of api_server in-flight run... https://github.com/JoaoMarcos44/hermes-agent/pull/1
+
+[2026-07-13T05:58:01.574000+00:00] inuyasha44_88990 (id=1526105402293485640)
+    P1 issue
+
+[2026-07-13T07:33:04.203000+00:00] watchdominion (id=1526129320853114903)
+    I am sorry for your loss teknium. 
+    
+    Friendly reminder on my open bug-fix PRs — all five are green/mergeable against current main, and the sweeper re-validated the premises with salvageability=high on four of them this week:
+    
+    - #60797 — lazy_deps pins huggingface-hub==1.2.3 exactly, so hermes update downgrades the shared dep under transformers/Hindsight → range >=1.2.3,<2.0 (fixes #60783). Sweeper: "clean cherry-pick candidate."
+    https://github.com/NousResearch/hermes-agent/pull/60797
+    - #61611 — Hindsight local-runtime failures drop the exception chain; now surfaces caused by: links so misconfig is diagnosable (offered on #60783's thread).
+    https://github.com/NousResearch/hermes-agent/pull/61611
+    - #61613 — the #60821 hardening: unexpected-kwarg TypeErrors now log api_kwargs keys + the llm_request middleware trace, so plugin-injected kwargs stop being unfindable.
+    https://github.com/NousResearch/hermes-agent/pull/61613
+    - #61615 — Windows planned stops report PLANNED_STOP in shutdown forensics instead of signal=UNKNOWN (fixes #61596).
+    https://github.com/NousResearch/hermes-agent/pull/61615
+    - #60085 — TUI kanban notify subscriptions delivery (fixes #59890) — the overlap question with #59963 is still open, happy to consolidate either direction if a maintainer has a preference.
+    https://github.com/NousResearch/hermes-agent/pull/60085
+    
+    All have regression tests. No rush — just keeping them on the salvage radar. <:nousgirl:1341983870752653352> 
+    
+    In the meantime I will be reviewing other people's PRs like a hawk. <:BeardedNousGirl:1506796582987632690>
+
+[2026-07-13T07:36:01.109000+00:00] asta01940 (id=1526130062850523136)
+    Hi <@387972437901312000>, quick update on PR #13343: I addressed your review feedback and pushed the fixes to the same branch. I also fixed the contributor attribution CI issue.
+    
+    This is my first PR to Hermes, so please let me know if there’s anything else I should adjust for the project’s process.
+    
+    Could you take another look when you have time?
+    https://github.com/NousResearch/hermes-agent/pull/13343
+    [embed] fix(skills): consume related_skills in skill activation flow by cxx... https://github.com/NousResearch/hermes-agent/pull/13343
+
+[2026-07-13T08:40:14.266000+00:00] egilewski (id=1526146224162607125)
+    Don't worry, everybody's added with the first PR or right after it, most likely automatically. For now you can add your email to the same place in AUTHOR_MAP so your PRs won't get conflicts all the time. But it's probably fine to just ignore that CI job.
+    [reply to jethac msg=1526083365386715186]
+
+[2026-07-13T08:41:33.406000+00:00] jethac (id=1526146556099559497)
+    thanks! yeah, i was just annoyed at seeing CI failures on my in-flight PRs
+    
+    that'll learn me to land a PR under my worksona
+    [reply to egilewski msg=1526146224162607125]
+

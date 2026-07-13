@@ -572,3 +572,35 @@
     you can now connect hermes cloud to the hermes browser extension
     [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1525523040715407420/image.png?ex=6a53b18b&is=6a52600b&hm=bbdcd404edb9d8580ccb7507865ec5847d8000d4167543843f93cb0aaecff9c8&
 
+[2026-07-13T04:47:55.289000+00:00] jonkomet (id=1526087759855357953)
+    **Hermes Browser Extension v0.1.11 — Hermes Web Alpha 🪽**
+    
+    Hermes now has a *full browser workspace.*
+    
+    **v0.1.11 introduces Hermes Web Alpha:** a full-page browser UI built around canonical Hermes sessions, rich chat, model and runtime controls, tools, skills, voice, attachments, generated media, and accurate context telemetry.
+    
+    **What’s new**
+    
+    - **Hermes Web Alpha** — Full-page chat with a canonical session rail, rich Markdown, user messages on the right, Hermes responses on the left, and a live context/activity inspector.
+    - **3 New Light + Dark themes** — Senter Space, Aphrodite, and Solstice.
+    - **3 connection modes** — Local gateway, Hermes Cloud Preview, and Remote gateway.
+    - **Better generated media** — Diffusion reveal, full-screen image lightbox, zoom, reset, open, and download.
+    - **Session-scoped runtime controls** — Switch models, providers, reasoning effort, tools, and skills without changing Hermes’ global defaults.
+    - **Stronger session integrity** — Better canonical continuity, correct runtime state, and protection against duplicate turn retries.
+    - **Privacy hardening** — Credential-bearing, nested, and signed URLs are omitted before browser context reaches Hermes.
+    - **More browser coverage** — Firefox preview packaging and native Opera sidebar support.
+    
+    ## Connection note
+    
+    Hermes Web Alpha currently supports token-backed **Local and Remote API** connections. **Hermes Cloud Preview** and ticketed remote dashboards remain Chat-only in the side panel for this release.
+    
+    **Repository:**
+    https://github.com/abundantbeing/hermes-browser-extension
+    [attachment] Browser_Extension_v0.1.11_Update_Ad_A.png https://cdn.discordapp.com/attachments/1519175108697264238/1526087760698409021/Browser_Extension_v0.1.11_Update_Ad_A.png?ex=6a55bf7b&is=6a546dfb&hm=fd55a5a9d704c0a7a736671688cf585d67c0cdf4762e63f1e045f60479baf860&
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
+
+[2026-07-13T04:50:41.288000+00:00] jonkomet (id=1526088456105627688)
+    [attachment] hermes-web-new-session.png https://cdn.discordapp.com/attachments/1519175108697264238/1526088454583357500/hermes-web-new-session.png?ex=6a55c020&is=6a546ea0&hm=8b98e6115937f4b360b764eb065e864c2302aff1373a8dc87d0cc6d3f8ddd9c6&
+    [attachment] hermes-web-rich-chat.png https://cdn.discordapp.com/attachments/1519175108697264238/1526088455132807188/hermes-web-rich-chat.png?ex=6a55c021&is=6a546ea1&hm=d2aba69a304ede845ac7254a72902c8eeb69ce7fe4631659f3a046819d5c81e3&
+    [attachment] hermes-web-settings-nine-themes.png https://cdn.discordapp.com/attachments/1519175108697264238/1526088455581466634/hermes-web-settings-nine-themes.png?ex=6a55c021&is=6a546ea1&hm=81f01d821858a0013c514f3bea9c28218c29cf4cea2638cb9793caffaeea5c5f&
+

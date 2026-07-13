@@ -1,0 +1,14 @@
+# Thread '🕐 I made a Hermes plugin that gives agents a sense of elapsed time' in forum #plugins-skills-and-skins
+# thread_id=1526131614000742440 forum_id=1485392832154832906
+# Started 2026-07-13T09:26:23.903037+00:00
+
+[2026-07-13T07:42:10.932000+00:00] .weequet (id=1526131614000742440)
+    time-gap stays silent during active conversations, but when you return after a meaningful gap—or cross into a new calendar day—it privately reminds Hermes that earlier context may now be stale.
+    
+    No timestamps on every message, no transcript pollution, no in-memory state. It reads the last assistant timestamp from `state.db` in read-only mode and fails open on errors.
+    
+    Just released `v1.0.0`—feedback is very welcome! 🚀
+    
+    https://github.com/Randool/time-gap
+    [embed] GitHub - Randool/time-gap: ⏳Time, but only when it matters. A Her... https://github.com/Randool/time-gap
+

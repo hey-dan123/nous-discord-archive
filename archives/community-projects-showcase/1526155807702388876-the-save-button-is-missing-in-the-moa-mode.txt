@@ -1,0 +1,7 @@
+# Thread 'the save button is missing in the moa mode' in forum #community-projects-showcase
+# thread_id=1526155807702388876 forum_id=1316137596535177246
+# Started 2026-07-13T09:21:27.376232+00:00
+
+[2026-07-13T09:18:19.160000+00:00] lhz0732 (id=1526155807702388876)
+    After setting the MOA reference model in the MOA mode on the Hermes desktop, the save button is missing, preventing me from saving my MOA settings.
+

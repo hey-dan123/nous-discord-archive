@@ -380,3 +380,7 @@
     If you take enough time looking at how it works under the hood, Gbrain is hugely over engineered. I spent 2 weeks analysing it and pageindex, and decided they are too expensive in their design decisions.
     [reply to busbato msg=1525539357753081976]
 
+[2026-07-13T03:32:05.621000+00:00] busbato (id=1526068677164797992)
+    ya I agree. especially at this stage in the game. sticking with markdown and keeping everything simple is the only way to keep things scalable and transferrable in my opinion.
+    [reply to fleety13 msg=1526041545097089114]
+
