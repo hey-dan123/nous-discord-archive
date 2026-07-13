@@ -604,3 +604,6 @@
     [attachment] hermes-web-rich-chat.png https://cdn.discordapp.com/attachments/1519175108697264238/1526088455132807188/hermes-web-rich-chat.png?ex=6a55c021&is=6a546ea1&hm=d2aba69a304ede845ac7254a72902c8eeb69ce7fe4631659f3a046819d5c81e3&
     [attachment] hermes-web-settings-nine-themes.png https://cdn.discordapp.com/attachments/1519175108697264238/1526088455581466634/hermes-web-settings-nine-themes.png?ex=6a55c021&is=6a546ea1&hm=81f01d821858a0013c514f3bea9c28218c29cf4cea2638cb9793caffaeea5c5f&
 
+[2026-07-13T19:14:43.854000+00:00] maxfreedompollard (id=1526305899587834059)
+    Brilliant my man, that's needed.
+

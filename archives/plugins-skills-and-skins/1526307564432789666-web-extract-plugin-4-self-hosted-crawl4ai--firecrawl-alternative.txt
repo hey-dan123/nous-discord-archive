@@ -1,0 +1,14 @@
+# Thread 'web extract plugin 4 self-hosted crawl4ai (firecrawl alternative)' in forum #plugins-skills-and-skins
+# thread_id=1526307564432789666 forum_id=1485392832154832906
+# Started 2026-07-13T19:26:13.929886+00:00
+
+[2026-07-13T19:21:20.784000+00:00] packetfloodz (id=1526307564432789666)
+    Self-hosted crawl4ai web extract plugin for Hermes — https://github.com/mblauser/hermes-plugin-crawl4ai
+    
+    Provides a crawl4ai backend for web_extract. Pairs with searxng for a complete local search + extract stack:
+    - searxng → self-hosted search
+    - crawl4ai → self-hosted extraction (this plugin)
+    
+    No third-party API costs, no data leaves your infrastructure. Uses crawl4ai's /md endpoint for clean LLM-ready markdown.
+    [embed] GitHub - mblauser/hermes-plugin-crawl4ai: Self-hosted web extractio... https://github.com/mblauser/hermes-plugin-crawl4ai
+

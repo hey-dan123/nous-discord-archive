@@ -46602,3 +46602,49 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     done
     [reply to watchdominion msg=1526193623111172126]
 
+[2026-07-13T14:55:13.537000+00:00] canihavesome (id=1526240592944693259)
+    Hey everyone, for those of you using the GPT desktop app, has anyone else experienced this issue? Since the latest update, I've lost a significant number of my conversations and chat history.
+
+[2026-07-13T14:58:20.907000+00:00] danbennett (id=1526241378831700120)
+    Yep I lost all of them and most my codex history too
+
+[2026-07-13T15:16:40.515000+00:00] zauddelig (id=1526245990921928847)
+    Hi is it possible to call delegate_task within a tool?
+
+[2026-07-13T15:43:17.727000+00:00] minddragon (id=1526252690114613452)
+    Slightly OT (sorta) but my condolences on your loss <@387972437901312000>
+
+[2026-07-13T16:39:08.372000+00:00] alelpoan (id=1526266743738073231)
+    UI Scale setting resets to 100% after restarting the app.
+    Fix and tests are ready.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/63842
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1526266743314710599/image.png?ex=6a56662c&is=6a5514ac&hm=cdd947f90451a753333a9de165f5746c51750914050d961aba307aa45b15eee8&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1526266743759311066/image.png?ex=6a56662c&is=6a5514ac&hm=d4929cb28d0e1ba496ae4310f37d5fc6e675cd50d71cf5122c26e883e9a24ab5&
+
+[2026-07-13T17:46:10.101000+00:00] royniki (id=1526283612092108810)
+    https://github.com/NousResearch/hermes-agent/pull/63844
+
+[2026-07-13T17:47:30.296000+00:00] royniki (id=1526283948454314124)
+    I have tried to fix the context window bloating issue, can you please check it once.
+
+[2026-07-13T18:03:30.212000+00:00] 0xhellno (id=1526287974634094712)
+    gentle re-ping on two small, additive PRs that have been sitting:
+    
+    https://github.com/NousResearch/hermes-agent/pull/62024
+    add session_id + tool_call_id to the transform_terminal_output hook. similar pre/post_tool_call already receive both; this one’s left. I want to write a plugin that needs this (#19921 is stalled too)
+    
+    https://github.com/NousResearch/hermes-agent/pull/49019
+    stop tool-failure classifiers from flagging benign nonzero exits (grep/diff/test→1, interrupt→130) as failures (overlapping #54637 was closed unmerged, so the gap’s still open)
+
+[2026-07-13T18:26:59.235000+00:00] zerobot_ai (id=1526293884504772749)
+    hi guys i would really love to know if the hermes cli has a command to hide all the stuff that happens between a prompt and the response?
+
+[2026-07-13T18:27:32.882000+00:00] zerobot_ai (id=1526294025630646392)
+    i dont mind seeing the tool calls but the id like to hide the diffs if possible
+
+[2026-07-13T19:00:19.613000+00:00] galvered12 (id=1526302274698088479)
+
+[2026-07-13T19:04:33.626000+00:00] galvered12 (id=1526303340106092654)
+    Happy to work on a fix myself by the way.. But it'll be pretty substantive so I want to make sure we agree on the way forward
+

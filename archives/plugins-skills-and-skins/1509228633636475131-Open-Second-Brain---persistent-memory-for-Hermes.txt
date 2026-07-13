@@ -384,3 +384,6 @@
     ya I agree. especially at this stage in the game. sticking with markdown and keeping everything simple is the only way to keep things scalable and transferrable in my opinion.
     [reply to fleety13 msg=1526041545097089114]
 
+[2026-07-13T15:07:31.141000+00:00] phospheneoverdrive (id=1526243686680232018)
+    So does this outright replace things like mnemosyne btw? of "Memory" isn't just one definition in llm-related contexts it seems 😆
+

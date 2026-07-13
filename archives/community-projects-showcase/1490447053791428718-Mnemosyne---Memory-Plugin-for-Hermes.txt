@@ -2593,3 +2593,7 @@
 [2026-07-12T18:01:19.952000+00:00] llealloo (id=1525925040418328670)
     the issue I keep running into with it is token cost/bloat
 
+[2026-07-13T16:23:21.194000+00:00] rakaarwaky (id=1526262770985865268)
+    Hermes' built in memory might be right for you. Hermes' session search and skill.md as memory are enough for it to remember your workflow without token bloat costs.
+    [reply to llealloo msg=1525925040418328670]
+

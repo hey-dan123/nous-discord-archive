@@ -986,3 +986,10 @@
     Some initial thoughts about where this is likely going are in an open discussion on GitHub: https://github.com/groktopus/groktocrawl/discussions/427
     [embed] Discussion: explicit research orchestration with LangGraph and dura... https://github.com/groktopus/groktocrawl/discussions/427
 
+[2026-07-13T17:30:33.580000+00:00] selwind (id=1526279684038332566)
+    btw <@659176257338081306> , do you recommend using a payed brave  api key ? because they don't offer free plans anymore
+
+[2026-07-13T17:37:42.175000+00:00] magnus919 (id=1526281481696055316)
+    Yes but there’s a trick. Sign up for a paid plan and your first $5 per month is free (1000 searches). They don’t actually bill you unless you search more than that. And you can set limits on the key so it never goes over. And get email alerts turned on so you know if you’re getting close.
+    [reply to selwind msg=1526279684038332566]
+
