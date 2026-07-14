@@ -46737,3 +46737,45 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-14T01:17:42.730000+00:00] trivunous (id=1526397246814556361)
     https://github.com/NousResearch/hermes-agent/pull/64063
 
+[2026-07-14T04:09:42.330000+00:00] ksoliver3245 (id=1526440530353852467)
+    **New PR up for review — QQBot: group activation modes + C2C streaming replies** 🚀
+    
+    Hey maintainers! I've opened a PR that brings the QQ platform closer to parity
+    with Feishu / Telegram / Slack. Rebased onto the latest `main`, all tests green.
+    
+    **What's in it (2 features, backward-compatible):**
+    - **Group activation modes** — QQBot group chats can be gated by `always` /
+      `mention` mode instead of replying to every message. Adds conservative
+      mention detection (GROUP_AT event / `mentions[].is_you` / `<@!app_id>` tag —
+      never treats an @ of another member as addressing the bot) with
+      runtime > per-group > global precedence.
+    - **C2C streaming replies** — private chats now stream through QQ's official
+      `stream_messages` endpoint, so long replies update a single bubble in place
+      instead of spamming new messages. Group/guild chats transparently fall back
+      to the normal send loop (endpoint is C2C-only).
+    
+    **Safety / compatibility:**
+    - Default behaviour is unchanged (mention mode, per-user sessions, no streaming).
+    - `pytest tests/gateway/test_qqbot.py -q` → **249 passed** (~60 new tests).
+    - Docs updated in `website/docs/user-guide/messaging/qqbot.md`.
+    
+    > ⚠️ **Merge order matters:** the streaming commit builds on top of the group
+    > activation commit (it edits the same `adapter.py` and imports the new
+    > `group_activation` / `group_context` modules). Please merge them **in order —
+    > group activation first, then C2C streaming.** If you land streaming first in
+    > isolation it will conflict and fail to import.
+    
+    Would really appreciate a review when someone has a moment 🙏 Happy to address
+    feedback or split it into two PRs if you'd prefer them reviewed separately.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/64136
+
+[2026-07-14T04:37:39.548000+00:00] ciacon (id=1526447565116149861)
+    Hi there!
+    
+    I was experimenting with Hermes to be a general purpose Discord muse. In my testing Hermes would deal with individuals, but not with a Discord room as a whole. I've implemented and have been testing these changes in my live environment and seen a large improvement for this use case. 
+    
+    Could someone please give me some guidance or feedback on my first PR?
+    
+    feat(discord): add opt-in bounded room observation https://github.com/NousResearch/hermes-agent/pull/63044
+

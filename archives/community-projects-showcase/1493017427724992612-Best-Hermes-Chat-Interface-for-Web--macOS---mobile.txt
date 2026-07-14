@@ -5810,3 +5810,12 @@
     Add me as a friend, I’ll invite you to our dev chat
     [reply to k.shepherd msg=1526405695505830040]
 
+[2026-07-14T02:35:03.220000+00:00] avidfuturist (id=1526416710440189982)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And **native iOS and Android app support**! 
+    
+    GitHub repo: https://github.com/nesquena/hermes-webui
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+

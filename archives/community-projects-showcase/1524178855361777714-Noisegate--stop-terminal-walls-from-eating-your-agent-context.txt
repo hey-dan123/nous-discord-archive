@@ -43,3 +43,27 @@
     [attachment] file_000000008cbc7230aa6ca42fe502a04a.png https://cdn.discordapp.com/attachments/1524178855361777714/1524203953305419840/file_000000008cbc7230aa6ca42fe502a04a.png?ex=6a4ee50c&is=6a4d938c&hm=f54436569563eefb0e59b298541bac64e6ce8c54ffccbdb227bbc3602ec915aa&
     [embed] GitHub - Tosko4/noisegate: Gate the noise. Keep the signal. Determi... https://github.com/Tosko4/noisegate
 
+[2026-07-14T03:15:58.182000+00:00] _voscko_ (id=1526427007297257634)
+    🚦 **Noisegate 0.2.0 is live!**
+    
+    This release makes Noisegate better at the one thing it should do really well: cut the terminal noise without throwing away the useful bit that tells you *why* something broke.
+    
+    What’s new:
+    - better failure details when output space is tight
+    - safer handling of exact reads, code and diffs
+    - stronger Hermes integration and installer checks
+    - clearer diagnostics when you want to peek under the hood
+    
+    In short: less terminal soup, more useful signal. 🍜
+    
+    Update with:
+    
+    ```bash
+    uvx --from noisegate-hermes noisegate install-hermes
+    ```
+    
+    Full release: https://github.com/Tosko4/noisegate/releases/tag/v0.2.0
+    
+    And a shout-out to <@427613574995771414> for contributing! 🙌
+    [embed] Release Noisegate v0.2.0 · Tosko4/noisegate https://github.com/Tosko4/noisegate/releases/tag/v0.2.0
+

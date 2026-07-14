@@ -2605,3 +2605,11 @@
     I personally don’t think the obsidian wiki skill in Hermes is sufficient. The best implementation of a wiki I’ve seen is pi-llm-wiki. https://github.com/zosmaai/pi-llm-wiki
     [embed] GitHub - zosmaai/pi-llm-wiki: Self-maintaining, Obsidian-compatible... https://github.com/zosmaai/pi-llm-wiki
 
+[2026-07-14T03:14:57.880000+00:00] llealloo (id=1526426754372079656)
+    eh I dunno it seems half baked to meld the repo so tightly with obsidian. 
+    
+    even though an obsidian vault is plain markdown, wikilinks are sus <:yuishrug:668316539480440832> 
+    
+    have you looked at this repo, like the actual code? it looks like a nothing burger
+    [reply to _mlsmith_ msg=1526339108958507281]
+
