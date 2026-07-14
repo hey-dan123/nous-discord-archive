@@ -1,0 +1,14 @@
+# Thread 'Hermes Minecraft Gateway' in forum #community-projects-showcase
+# thread_id=1526509824622198965 forum_id=1316137596535177246
+# Started 2026-07-14T13:28:58.417879+00:00
+
+[2026-07-14T08:45:03.371000+00:00] kyssta69 (id=1526509824622198965)
+    Built a Hermes Agent plugin that lets you chat with AI directly inside Minecraft. Each player gets their own session, commands, tools, the whole deal. No server mods needed, just a Mineflayer bot (HermesBot) that joins your world, wanders around, and talks to you in chat. Type `$help` in-game and she responds. Tool progress goes via `/tell` private whisper so public chat stays clean. v0.0.1's out and running on my server.
+    
+    https://github.com/kyssta-exe/hermes-minecraft-gateway
+    [attachment] image.png https://cdn.discordapp.com/attachments/1526509824622198965/1526509826379743233/image.png?ex=6a57488f&is=6a55f70f&hm=edb91fe2d8df8d100c090c0c7f2ad87158cea1dc3550765c571bbfada9768ce2&
+    [embed] GitHub - kyssta-exe/hermes-minecraft-gateway: Minecraft gateway plu... https://github.com/kyssta-exe/hermes-minecraft-gateway
+
+[2026-07-14T08:45:36.480000+00:00] kyssta69 (id=1526509963491545189)
+    taking ideas and cool things to add lmk
+

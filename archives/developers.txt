@@ -46779,3 +46779,45 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     feat(discord): add opt-in bounded room observation https://github.com/NousResearch/hermes-agent/pull/63044
 
+[2026-07-14T09:55:14.946000+00:00] trivunous (id=1526527489248198758)
+    https://github.com/NousResearch/hermes-agent/pull/64237
+
+[2026-07-14T10:03:24.486000+00:00] bitsandtea (id=1526529542527782932)
+    They said a week but maybe forgot about it
+    [reply to iggyal msg=1526388603305984080]
+
+[2026-07-14T10:25:33.351000+00:00] misio0050 (id=1526535116191567903)
+    I am waiting too
+    [reply to bitsandtea msg=1526349930934046721]
+
+[2026-07-14T11:52:04.946000+00:00] scottermonkey (id=1526556891319107655)
+    Please check out this updated PR from back in the dark ages of June. I just modified and tested it to fit current Hermes codebase. If you Have The Power (like <@387972437901312000> or <@690519146701783042>), please merge. If you are a mere peasant like me, comment on the repo, which will make you a "cool kid".
+    # PER MODEL REASONING
+    Right now there's one global agent.reasoning_effort for every model. You switch from zAI GLM 5.2 to Claude Opus 4.8 and have to manually crank the reasoning up or down, then switch it back. Annoying and easy to forget.
+    
+    This adds a simple agent.reasoning_overrides dict in config.yaml:
+    ```
+    agent:
+      reasoning_effort: "medium"
+      reasoning_overrides:
+        "openrouter/anthropic/claude-opus-4.8": "high"
+        "openai/gpt-5.6-sol": "medium"
+        "claude-sonnet-4.6": "xhigh"
+    ```
+    PR: https://github.com/NousResearch/hermes-agent/pull/51377
+    
+    Thank you!
+
+[2026-07-14T12:16:53.931000+00:00] minddragon (id=1526563136574853140)
+    wow. a PR series that I did like six weeks ago gets reviewed by Teknium. Me this am:    😮 
+    
+    Well. Back to work on Hermes 🙂
+
+[2026-07-14T12:42:27.616000+00:00] radc0rp (id=1526569569315983421)
+    They definitely didn't forget about it, I'm sure it's just taking a while to judge the top 3, get prizes and all that in order, etc. I just didn't know if they had a target date for the announcement
+    [reply to bitsandtea msg=1526529542527782932]
+
+[2026-07-14T12:43:38.484000+00:00] warofchange (id=1526569866557919364)
+    <:Prayge:1151275585000185968>
+    [reply to radc0rp msg=1526569569315983421]
+

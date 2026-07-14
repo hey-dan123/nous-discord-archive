@@ -1,0 +1,16 @@
+# Thread 'Now make your Hermes agents Failproof!!' in forum #community-projects-showcase
+# thread_id=1526519350100492379 forum_id=1316137596535177246
+# Started 2026-07-14T13:28:57.964556+00:00
+
+[2026-07-14T09:22:54.422000+00:00] spacemonster42069 (id=1526519350100492379)
+    FailproofAI's Hermes integration live now the announcement and demo: 
+    - https://x.com/failproofai/status/2076671620085899635
+    - https://www.linkedin.com/posts/failproofai_your-hermes-agent-is-out-there-making-its-activity-7482641289860030464-XiBL?utm_source=share&utm_medium=member_desktop&rcm=ACoAACOjso8BZ1s8TCzc6gSp-PID6q9zMXYXPkA
+    
+    🌟 https://github.com/failproofai
+    [attachment] Screenshot_2026-07-14_145241.png https://cdn.discordapp.com/attachments/1526519350100492379/1526519351619092621/Screenshot_2026-07-14_145241.png?ex=6a57516e&is=6a55ffee&hm=3ab7cc85e4e49b5f61a8df50b767a1a87f82e60f5a5e45917f737c1b44a5b088&
+    [embed]  https://twitter.com/failproofai/status/2076671620085899635
+    [embed] Your Hermes agent is out there making its own decisions right now.
+... https://www.linkedin.com/posts/failproofai_your-hermes-agent-is-out-there-making-its-activity-7482641289860030464-XiBL?utm_source=share&utm_medium=member_desktop&rcm=ACoAACOjso8BZ1s8TCzc6gSp-PID6q9zMXYXPkA
+    [embed] Failproof AI https://github.com/failproofai
+

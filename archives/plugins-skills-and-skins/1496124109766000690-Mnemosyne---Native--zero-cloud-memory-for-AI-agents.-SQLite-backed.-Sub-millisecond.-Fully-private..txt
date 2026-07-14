@@ -2324,3 +2324,6 @@
 [2026-07-08T14:48:31.984000+00:00] buke5122 (id=1524426969381474445)
     Its recommended to have both turned off
 
+[2026-07-14T08:58:15.400000+00:00] digital_love_two (id=1526513146632732804)
+    In the document show install for default profile. But if I switch to another profile, how to make it works? I have to install plugin again to this profile, or do something, or do nothing?
+

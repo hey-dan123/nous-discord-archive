@@ -2613,3 +2613,11 @@
     have you looked at this repo, like the actual code? it looks like a nothing burger
     [reply to _mlsmith_ msg=1526339108958507281]
 
+[2026-07-14T10:42:28.949000+00:00] _mlsmith_ (id=1526539375918452737)
+    I personally don’t use obsidian. It’s completely optional. I’ve used this Pi extension for a while and it works great.
+    [reply to llealloo msg=1526426754372079656]
+
+[2026-07-14T10:44:46.329000+00:00] _mlsmith_ (id=1526539952131674176)
+    Although I will say that these days I mostly just rely on Mnemosyne and LCM in Hermes.
+    [reply to llealloo msg=1526426754372079656]
+

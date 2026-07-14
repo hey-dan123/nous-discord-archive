@@ -1,0 +1,15 @@
+# Thread 'DebVisor Wiki with MCP' in forum #plugins-skills-and-skins
+# thread_id=1526517568163020841 forum_id=1485392832154832906
+# Started 2026-07-14T13:34:29.880689+00:00
+
+[2026-07-14T09:15:49.575000+00:00] undifined. (id=1526517568163020841)
+    I have been building this for a few months: a (llm-)wiki 
+    that crawls the internet for information, 
+    stores everything as markdown (okf) files, 
+    with a html prettifier for humans , 
+    and mcp with skill.md for machines.
+    searching something unknown ? 
+    it activates a worker for the search subject
+    https://debvisor.com/wiki/
+    [attachment] image.png https://cdn.discordapp.com/attachments/1526517568163020841/1526517568414941244/image.png?ex=6a574fc5&is=6a55fe45&hm=706965d63cd4ac5a1c9c6ce46d7bc583cccf410909366ea589a93169f46e1d82&
+

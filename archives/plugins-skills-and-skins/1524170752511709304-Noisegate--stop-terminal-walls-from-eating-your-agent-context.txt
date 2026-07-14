@@ -70,3 +70,23 @@
 [2026-07-14T05:30:15.963000+00:00] tonyporj (id=1526460804080209990)
     so is this something like ponytail and toolaria at the same time?
 
+[2026-07-14T09:59:01.542000+00:00] _voscko_ (id=1526528439660707962)
+    Yeah, same general family.. but Noisegate targets the constant stream of noisy output an agent produces while working.  
+    
+    Ponytail reduces unnecessary code. Toolaria rescues oversized results by moving them out of context. Noisegate makes the output itself useful *before* it reaches the model: test runs, package installs, Docker builds, process logs, browser consoles, and terminal spam are deterministically reduced to the failures, summaries, and diagnostics that actually matter.  
+    
+    The nice part is that it works automatically without another LLM call, blind truncation, or a raw-output archive. Files, diffs, source searches, memory, and retrieved context stay exact and when Noisegate isn't certain, it simply gets out of the way. You get a cleaner context window, a more focused agent, and longer useful sessions without changing how you work.  
+    
+    So it isn't literally Ponytail + Toolaria, but it shares their instinct and covers the messy middle: stopping routine tool output from slowly eating the agent's brain 😄
+    [reply to tonyporj msg=1526460804080209990]
+
+[2026-07-14T11:54:33.341000+00:00] tonyporj (id=1526557513732984993)
+    ill update if i can after installing this 😊, ty for the explnxn
+    [reply to _voscko_ msg=1526528439660707962]
+
+[2026-07-14T12:03:02.070000+00:00] _voscko_ (id=1526559647497191516)
+    You’re very welcome! 😊 I'd love to hear how it goes!
+    
+    if you run into anything, just let me know!
+    [reply to tonyporj msg=1526557513732984993]
+

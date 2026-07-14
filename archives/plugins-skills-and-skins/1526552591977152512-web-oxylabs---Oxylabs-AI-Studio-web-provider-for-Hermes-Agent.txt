@@ -1,0 +1,25 @@
+# Thread 'web-oxylabs - Oxylabs AI Studio web provider for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1526552591977152512 forum_id=1485392832154832906
+# Started 2026-07-14T13:34:29.448670+00:00
+
+[2026-07-14T11:34:59.903000+00:00] aleksas. (id=1526552591977152512)
+    Oxylabs AI Studio web provider for Hermes Agent. It registers the oxylabs web backend for search, URL extraction, and crawl-style workflows.
+    
+    Use this plugin when an agent needs current web context, clean page content, or research-ready source material from public webpages. It helps Hermes work with structured, LLM-ready web data instead of raw page noise.
+    
+    ### What it does
+    - Web search: returns ranked results with titles, URLs, and descriptions.
+    - Web extraction: turns webpages into readable markdown or structured content.
+    - Dynamic pages: supports JavaScript rendering when a page needs more than a simple fetch.
+    - Geo-targeted research: can search or extract from a specific location when regional results matter.
+    - Agent-friendly output: gives Hermes cleaner material for summaries, comparisons, notes, and follow-up reasoning.
+    
+    ### Good for
+    - Research agents that need fresh web context.
+    - Product, market, and competitive research across public sources.
+    - Turning webpages into clean summaries, tables, briefs, or notes.
+    - Pages where content is dynamic, noisy, or different by region.
+    
+    https://github.com/oxylabs/hermes-web-oxylabs
+    [embed] GitHub - oxylabs/hermes-web-oxylabs: Oxylabs AI Studio web provider... https://github.com/oxylabs/hermes-web-oxylabs
+
