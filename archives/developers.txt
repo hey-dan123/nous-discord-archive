@@ -46648,3 +46648,92 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-13T19:04:33.626000+00:00] galvered12 (id=1526303340106092654)
     Happy to work on a fix myself by the way.. But it'll be pretty substantive so I want to make sure we agree on the way forward
 
+[2026-07-13T19:37:47.117000+00:00] undifined. (id=1526311701413236777)
+    yes, it starts off great , but at some point I have to ask the cli / chat /telegram to continue , and it will simply tell me its not possible to continue on the kanban and it prefers to do it directly, the context needed is there, so it is a big help, but it cannot complete the tasks
+    [reply to galvered12 msg=1526302274698088479]
+
+[2026-07-13T19:39:27.318000+00:00] zlatan3191 (id=1526312121686556702)
+    Hi folks! I built a visual control surface for Hermes Kanban fleets — agents as pixel-art robots, states driven by real hook telemetry, click to act on any of them: reassign, unblock, approve, spawn, cancel. There's also a browser-based approval flow for blocked Kanban workers that have no TTY to answer on. Live demo runs on synthetic data. Full write-up in <#1316137596535177246> — repo: https://github.com/Manuele-T/hermes-agent-control-surface
+
+[2026-07-13T19:41:36.454000+00:00] bendezium (id=1526312663322464286)
+    Hi all, I’m just a little confused by AGENTS.md file. The docs provide a small example and explain:
+    “It tells the agent how your project is structured, what conventions to follow, and any special instructions.”
+    https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files#
+    However I noticed Hermes ships with a massive AGENTS.md file
+    https://github.com/NousResearch/hermes-agent/blob/main/AGENTS.md
+    
+    What is best practice for default profile? Add on to the bottom of the provided AGENTS.ms file?
+
+[2026-07-13T20:02:21.029000+00:00] _.exo._ (id=1526317883448361031)
+    That file is only accessed when your agent navigates into the hermes-agent directory (where the actual source code lives, it tells your agent HOW to modify the source code for the hermes-agent project) your agent doesn't access the file normally, it starts in its workspace
+    [reply to bendezium msg=1526312663322464286]
+
+[2026-07-13T20:14:49.894000+00:00] bendezium (id=1526321024415694979)
+    ok so the one in .hermes dir ships complete by Nous to describe the hermes repo structure, but for additional profiles I need to update their AGENTS.md?
+
+[2026-07-13T20:35:24.115000+00:00] _.exo._ (id=1526326201113772315)
+    Agents.md is completely optional, and it's read whenever hermes navigates to a directory that has it. Can have multiple, all over the place. Telling hermes the rules of the directory its in at the moment
+    [reply to bendezium msg=1526321024415694979]
+
+[2026-07-13T20:58:02.039000+00:00] galvered12 (id=1526331896659710126)
+    yep - let me know if I should create a PR. I know you are bombarded with them so happy to do it but only if this is seen as a priority and will be reviewed. Totally understand so not complaining..
+    [reply to undifined. msg=1526311701413236777]
+
+[2026-07-13T20:58:27.384000+00:00] .s0uthpaw (id=1526332002964475966)
+
+[2026-07-13T20:59:43.290000+00:00] .s0uthpaw (id=1526332321337184396)
+
+[2026-07-13T20:59:58.272000+00:00] .s0uthpaw (id=1526332384176246965)
+
+[2026-07-13T21:11:29.017000+00:00] jw_mushroom_man (id=1526335281370890381)
+    Rebased all 8 that had drifted into merge conflict — every one is mergeable again: #58455, #57066, #57059, #57043, #53852, #52685, #45366, #43566. None were superseded — the conflicts were mostly the F541 lint sweep, the desktop ts-ify, and the durable completion-delivery series landing around them. Tests re-run on each.
+    • #45366 (notify the agent only on successful background exits) already had an approval — it now has a clean rebase plus a comment verifying it against the new durable-delivery code. Should be an easy merge if a maintainer has a minute 🙏
+    • #58455 (opt-in "brief" reference view for MoA) got slimmed from 21 files / +3.2k lines down to 3 files / +431. It was accidentally carrying two unrelated features underneath — much easier review now.
+    • Found and fixed a test-hermeticity bug while I was in there → new PR #63981: `test_moa_arg_is_always_one_shot` reads the developer's *real* config.yaml when certain files precede it in the same pytest process (module-level HERMES_HOME snapshot at collection-time import). Test-side fix, full repro in the PR. I spotted 3 more tests with the same pattern — happy to do a follow-up PR if there's interest.
+    Usual caveat: the arm64 docker + CI-timing jobs fail on fork PRs for permission reasons; everything else is green.
+
+[2026-07-13T21:16:53.689000+00:00] promptsiren (id=1526336643143827627)
+    Rebased today:
+    https://github.com/NousResearch/hermes-agent/pull/58455
+    https://github.com/NousResearch/hermes-agent/pull/57066
+    https://github.com/NousResearch/hermes-agent/pull/57059
+    https://github.com/NousResearch/hermes-agent/pull/57043
+    https://github.com/NousResearch/hermes-agent/pull/53852
+    https://github.com/NousResearch/hermes-agent/pull/52685
+    https://github.com/NousResearch/hermes-agent/pull/45366
+    https://github.com/NousResearch/hermes-agent/pull/43566
+    
+    Approved + ready to merge:
+    https://github.com/NousResearch/hermes-agent/pull/45366
+    
+    New today:
+    https://github.com/NousResearch/hermes-agent/pull/63981
+    [reply to jw_mushroom_man msg=1526335281370890381]
+
+[2026-07-13T21:17:42.285000+00:00] jw_mushroom_man (id=1526336846970487044)
+    baller
+
+[2026-07-13T21:52:06.140000+00:00] blockcipher (id=1526345503405637703)
+    fix: summary request fails with HTTP 400 when using Fable 5 via OpenRouter
+    https://github.com/NousResearch/hermes-agent/pull/63996
+
+[2026-07-13T21:54:30.546000+00:00] blockcipher (id=1526346109088301107)
+    fix: config race condition when agent is being built
+    
+    If you change a setting (like reasoning effort or model) in the first couple of seconds after opening a chat — while Hermes is still starting up behind the scenes — your choice was silently thrown away, and the whole session ran on the old setting even though the UI suggested otherwise.
+    
+    https://github.com/NousResearch/hermes-agent/pull/63998
+
+[2026-07-13T22:09:41.745000+00:00] bitsandtea (id=1526349930934046721)
+    Hello - is there any news about the hackathon that happened? Were the winners announced or is evaluation still in progress?
+
+[2026-07-13T22:15:50.158000+00:00] radc0rp (id=1526351476169904353)
+    Also super curious about this, wanted to know if there are any updates
+
+[2026-07-14T00:43:21.957000+00:00] iggyal (id=1526388603305984080)
+    same, been lurking over here waiting for the winners
+    [reply to bitsandtea msg=1526349930934046721]
+
+[2026-07-14T01:17:42.730000+00:00] trivunous (id=1526397246814556361)
+    https://github.com/NousResearch/hermes-agent/pull/64063
+

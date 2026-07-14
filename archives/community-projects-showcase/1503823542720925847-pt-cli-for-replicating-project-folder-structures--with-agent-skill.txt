@@ -40,3 +40,10 @@
 [2026-06-23T23:00:30.867000+00:00] garyritchie (id=1519114962566381679)
     NOTE: pt-gui doesn’t ship with any templates, but you can load examples from here: https://github.com/search?q=topic%3Atemplate-project+org%3Agaryritchie&type=Repositories
 
+[2026-07-13T19:24:25.544000+00:00] garyritchie (id=1526308339372392570)
+    pt-cli updated with improved UX. Learn --> Init --> **Update**: Update now only shows what would be added to a template. This streamlined approach mimics what my project closedown typically includes: a task to improve the template with new tools and processes (documentation.)
+    
+    `npm i @garyr/pt-cli` to install
+    
+    And for the GUI I'm working on a deploy pattern where you can list templates available to be learned. No more blank screen with a fresh install.
+

@@ -1,0 +1,25 @@
+# Thread 'Hermes Agent Control Surface — a Kanban fleet as a room you can reach into' in forum #community-projects-showcase
+# thread_id=1526310331842953289 forum_id=1316137596535177246
+# Started 2026-07-14T02:13:12.844681+00:00
+
+[2026-07-13T19:32:20.586000+00:00] zlatan3191 (id=1526310331842953289)
+    Hey folks! Been working on this for a while and would love some feedback before I share it around more.
+    
+    It's a control surface for Hermes fleets.
+    
+    The Kanban board tells you a card is "in progress" — not that the worker's been stuck in a retry loop, or sitting on a blocked `rm -rf` prompt in a terminal you closed an hour ago. So I made it a room: your agents are pixel-art robots at desks, updating live from real hook telemetry. You can tell at a glance which one is stuck, because it looks stuck.
+    
+    Click into any agent to see live tool calls and act — reassign, unblock, leave a note, spawn, cancel — no terminal needed. Chain-of-thought never reaches the UI, and tool output goes through a best-effort redaction pass for common secret shapes.
+    
+    The bit I'm proudest of is the approvals. Kanban workers spawn detached from any TTY, so when one hits an approval-gated command there's no channel to answer on. There's an open upstream issue about this exact gap (nesquena/hermes-webui#2833) — one suggested fix is routing approvals back to the user, and that's what I built. A small plugin opts the worker into the gateway approval queue and resolves it from the browser: the character raises its hand, you approve or deny, it carries on. (Scope note: I haven't fixed the false-completion side of that issue — mine gives you a way to answer the prompt, not a guard against silent failures.)
+    
+    Clone-and-run for now, one-line install coming.
+    
+    Demo (synthetic, read-only - no Hermes needed): https://hermes-agent-control-surface-demo.onrender.com/
+    
+    Repo: https://github.com/Manuele-T/hermes-agent-control-surface
+    
+    Would love to hear what you think — what's broken, what's confusing, or what you'd want from something like this.
+    [attachment] 01.jpeg https://cdn.discordapp.com/attachments/1526310331842953289/1526310332543533106/01.jpeg?ex=6a568ec4&is=6a553d44&hm=a9c7a122d69611cc829ce3ad9a69f06f3cdbad60468d8b24d0c143a1c4e5f3a5&
+    [embed] GitHub - Manuele-T/hermes-agent-control-surface https://github.com/Manuele-T/hermes-agent-control-surface
+

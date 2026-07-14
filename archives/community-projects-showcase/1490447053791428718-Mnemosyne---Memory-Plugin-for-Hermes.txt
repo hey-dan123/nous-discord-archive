@@ -2597,3 +2597,11 @@
     Hermes' built in memory might be right for you. Hermes' session search and skill.md as memory are enough for it to remember your workflow without token bloat costs.
     [reply to llealloo msg=1525925040418328670]
 
+[2026-07-13T21:23:40.116000+00:00] _mlsmith_ (id=1526338347822223471)
+    I would think that’s where Mnemosyne comes in. Rather than the agent searching through wiki pages it gets a quick index based on keywords.
+    [reply to llealloo msg=1525925040418328670]
+
+[2026-07-13T21:26:41.585000+00:00] _mlsmith_ (id=1526339108958507281)
+    I personally don’t think the obsidian wiki skill in Hermes is sufficient. The best implementation of a wiki I’ve seen is pi-llm-wiki. https://github.com/zosmaai/pi-llm-wiki
+    [embed] GitHub - zosmaai/pi-llm-wiki: Self-maintaining, Obsidian-compatible... https://github.com/zosmaai/pi-llm-wiki
+

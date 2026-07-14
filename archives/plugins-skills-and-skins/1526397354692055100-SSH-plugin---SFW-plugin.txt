@@ -1,0 +1,22 @@
+# Thread 'SSH plugin + SFW plugin' in forum #plugins-skills-and-skins
+# thread_id=1526397354692055100 forum_id=1485392832154832906
+# Started 2026-07-14T02:18:04.762798+00:00
+
+[2026-07-14T01:18:08.450000+00:00] theeptic (id=1526397354692055100)
+    I’ve started publishing a couple of small Hermes plugins under the hermes-plugins repo.
+    
+    Hermes SSH gives agents a cleaner way to manage SSH machines, run commands, and keep track of sessions without repeatedly handling connection details.
+    
+    Hermes SFW routes package installs through Socket Firewall Free, adding a supply-chain check before an agent installs dependencies with npm, pnpm, pip, uv, or cargo.
+    
+    Both are early, but they’re already useful guardrails for agents operating against real systems.
+    
+    - Repo: https://github.com/TheEpTic/hermes-plugins  
+    - Hermes SSH on PyPI: https://pypi.org/project/hermes-ssh/  
+    - Hermes SFW on PyPI: https://pypi.org/project/hermes-sfw/
+    [embed] GitHub - TheEpTic/hermes-plugins: Public hermes plugins that I’ve... https://github.com/TheEpTic/hermes-plugins
+    [embed] hermes-sfw https://pypi.org/project/hermes-sfw/
+
+[2026-07-14T01:19:13.942000+00:00] theeptic (id=1526397629385150604)
+    SSH plugin + SFW plugin
+

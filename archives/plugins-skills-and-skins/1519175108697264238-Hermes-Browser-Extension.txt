@@ -607,3 +607,20 @@
 [2026-07-13T19:14:43.854000+00:00] maxfreedompollard (id=1526305899587834059)
     Brilliant my man, that's needed.
 
+[2026-07-13T19:56:52.211000+00:00] billyelusiv (id=1526316504285577369)
+    Hi Jon, you asked for use cases early on, I haven’t installed this yet but my major use case would be web GUI design iteration, essentially like what v0 Vercel does. 
+    Where I can highlight/select elements and prompt a change. 
+    
+    How I currently do it: I have the web page loaded locally, then prompt Hermes’ in a separate chat for the visual changes I want, but I have to describe what section/element I’m referring to, and include a screenshot.
+    Rather than select an element and annotate with “change this to X”.
+
+[2026-07-14T00:38:58.901000+00:00] jonkomet (id=1526387499969282261)
+    we have a pick page element feature and I have already tested it for doing web design and it's insane you can just select a part and have the agent cook...and you can send screenshots as well
+    
+    my thing is.. i want to make sure it can like send to start side sessions (background session subagents) so it doesn't just take over the whole one tab session
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1526387499864293467/image.png?ex=6a56d6a2&is=6a558522&hm=d664905be16bd8cfa8527818835c972ba0ba36cd4d0e3ab6a2142a412abbf82c&
+    [reply to billyelusiv msg=1526316504285577369]
+
+[2026-07-14T00:44:26.835000+00:00] billyelusiv (id=1526388875424043191)
+    oh wow awesome! I'll start having a go with this, thanks so much!
+

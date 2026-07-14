@@ -1,0 +1,24 @@
+# Thread 'Hermes Agentic Workflow Debugger' in forum #community-projects-showcase
+# thread_id=1526352293979623585 forum_id=1316137596535177246
+# Started 2026-07-14T02:13:12.414884+00:00
+
+[2026-07-13T22:19:05.139000+00:00] patricklovesoj (id=1526352293979623585)
+    More of a concept at this point to inspire others but I've started building a solution to improve observability and debugging experience for Hermes enabled automations: https://github.com/patrickluvsoj/agentflow-health
+    
+    
+    
+    Some learnings that led to this ideas 👇
+    #1 Longer running tasks require you to break them into sub-tasks. For instance I have a automation to research businesses which was broken up into
+    - Source list of companies
+    - Run research
+    - Review by another model before publish
+    
+    To debug this, you need track the full pipeline but they lived as separate CRONs or Skills.
+    
+    #2 As you add more automations, keeping track of all of them and their inter-dependencies without visualization becomes difficult.
+    i.e. Forgetting about a skill you created that defaults all research tasks to a specific tool/model that became stale
+    
+    #3 The scaffolding of stitching together CRONS, scripts and skills also helps the agent navigate your automations better
+    [attachment] HNIwffcbEAELwL0.png https://cdn.discordapp.com/attachments/1526352293979623585/1526352294264701118/HNIwffcbEAELwL0.png?ex=6a56b5d9&is=6a556459&hm=f342d993b88aae591ca63c4756484c012af5b9d8506220e95a12c68cc7f936a7&
+    [embed] GitHub - patrickluvsoj/agentflow-health: Local flight recorder & de... https://github.com/patrickluvsoj/agentflow-health
+

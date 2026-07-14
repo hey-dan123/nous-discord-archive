@@ -5727,3 +5727,86 @@
     Thx
     [reply to avidfuturist msg=1525913307041632316]
 
+[2026-07-13T23:58:55.632000+00:00] mr.gamespy (id=1526377419928375296)
+    <@933139410281713755> One challenge I see, is when I goto view my projects in the ios app it lists nothing, when in my desktop ui version of hermes I have 8 projects and all sessions are organized.. In my view, I see the session list but they are not grouped by projects..
+    
+    Is this a settings issue?
+
+[2026-07-14T00:00:42.575000+00:00] avidfuturist (id=1526377868479823913)
+    Which desktop version are you using? The iOS app and the WebUI interface (and desktop WebUI interface) should always be in sync across projects and everything you do, they are all integrated
+    [reply to mr.gamespy msg=1526377419928375296]
+
+[2026-07-14T00:01:12.544000+00:00] avidfuturist (id=1526377994178920488)
+    Which makes me think you are using the official Nous desktop client? For that to sync you’d need to wait for the official mobile apps
+
+[2026-07-14T00:01:37.639000+00:00] mr.gamespy (id=1526378099435114536)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1526378098411569262/image.png?ex=6a56cde1&is=6a557c61&hm=8be16d2ebe572b3b80d56ca6a8f7311b455e033210085a915b7b201f180fff52&
+
+[2026-07-14T00:01:58.310000+00:00] avidfuturist (id=1526378186135572542)
+    Yeah so the official Nous desktop client does its own thing, it’s not interconnected with the WebUI ecosystem of apps and clients
+
+[2026-07-14T00:02:55.560000+00:00] avidfuturist (id=1526378426259341373)
+    There are clients for WebUI for every platform that are all synced but that’s the official Nous desktop app which is only accessible on your desktop right now
+
+[2026-07-14T00:03:42.022000+00:00] avidfuturist (id=1526378621135093911)
+    https://get-hermes.ai/setup/ - you can use any of these clients on mobile or web or desktop and they are all interconnected. Or you can continue to use official Nous on desktop with that limitation. You can still see and import any of the actual sessions though!
+
+[2026-07-14T00:22:13.883000+00:00] mr.gamespy (id=1526383284618006568)
+    So there isnt a current fix to sync desktop with the web version to then sync to the ios app?
+    [reply to avidfuturist msg=1526378621135093911]
+
+[2026-07-14T00:22:28.007000+00:00] mr.gamespy (id=1526383343858352309)
+    To see project etc?
+
+[2026-07-14T00:23:03.716000+00:00] avidfuturist (id=1526383493632753755)
+    I’ll look into it but tbh I don’t think it’s even possible. The desktop app nous has doesn’t make the data available in the same way, it lives in your desktop app
+    [reply to mr.gamespy msg=1526383284618006568]
+
+[2026-07-14T00:23:08.102000+00:00] mr.gamespy (id=1526383512029233233)
+    Ultimate goal is to be able to use my ios phone to check progres throughout the day.. Im not a fan of telegram or discord.
+
+[2026-07-14T00:23:42.538000+00:00] avidfuturist (id=1526383656464154734)
+    Yeah you can still use Hermex for that but at least right now you can only sync projects and stuff like that across all the clients in the WebUI ecosystem (Hermex, WebUI, WebUI desktop apps, etc)
+
+[2026-07-14T01:46:33.679000+00:00] k.shepherd (id=1526404506940739737)
+    Hey! I think I actually put in a Feature Request in Github for this - from what I saw I thought the Projects where stored in Hermes Agent under some sort of projects.md or something, so we could potentially look into migrating where the Projects in Hermes WebUI are stored into the same spot as the Desktop app. Help users who want to use both (even though the desktop app is super laggy - even worse than Hermes WebUI lag lol)
+    [reply to avidfuturist msg=1526383493632753755]
+
+[2026-07-14T01:47:36.183000+00:00] k.shepherd (id=1526404769101643940)
+    https://github.com/nesquena/hermes-webui/issues/5763
+    [embed] migrate WebUI Projects to Hermes Agent upstream projects.* JSON-RPC... https://github.com/nesquena/hermes-webui/issues/5763
+
+[2026-07-14T01:48:17.565000+00:00] avidfuturist (id=1526404942670331965)
+    I’ll take that as a compliment lol - thanks for looking into it. I’m definitely open to an import feature or “project sync” from desktop if it’s feasible
+    [reply to k.shepherd msg=1526404506940739737]
+
+[2026-07-14T01:49:44.231000+00:00] k.shepherd (id=1526405306173620356)
+    I love Hermes WebUI - I'm working right now on some slight UI/UX tweaks on my own personal system to see what I can help with.
+    Still better than what Nous allows us to use directly with Hermes Agent so far.
+    [reply to avidfuturist msg=1526404942670331965]
+
+[2026-07-14T01:49:51.676000+00:00] k.shepherd (id=1526405337400344636)
+    Sorry if it came off wrong lol
+
+[2026-07-14T01:49:59.180000+00:00] k.shepherd (id=1526405368874405949)
+    Hoping to help how I can - learning this whole process myself
+
+[2026-07-14T01:50:42.715000+00:00] avidfuturist (id=1526405551473295491)
+    All good!  I appreciate you contributing too 🙏 thanks for this writeup. Great to hear that we could import in or even stay in sync with the project settings
+
+[2026-07-14T01:50:56.259000+00:00] k.shepherd (id=1526405608281215097)
+    And I believe the storage location was within Hermes Agent not Hermes Desktop specifically (so should hopefully be something Hermes WebUI can access the location they're stored in)
+    [reply to avidfuturist msg=1526404942670331965]
+
+[2026-07-14T01:51:14.710000+00:00] avidfuturist (id=1526405685670051910)
+    Yes I think we should be able to, thanks!
+    [reply to k.shepherd msg=1526405608281215097]
+
+[2026-07-14T01:51:17.055000+00:00] k.shepherd (id=1526405695505830040)
+    Hoping to be more helpful soon, will figure out some of this process and maybe ping you on the side to understand github and PR and such
+    [reply to avidfuturist msg=1526405551473295491]
+
+[2026-07-14T01:51:34.533000+00:00] avidfuturist (id=1526405768813875391)
+    Add me as a friend, I’ll invite you to our dev chat
+    [reply to k.shepherd msg=1526405695505830040]
+

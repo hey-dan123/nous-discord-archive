@@ -421,3 +421,23 @@
     Full notes: https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.7.0
     [embed] Release v0.7.0 — Build on the engine · yantrikos/yantrikdb-herme... https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.7.0
 
+[2026-07-13T20:45:32.366000+00:00] spranab (id=1526328752303374416)
+    yantrikdb-hermes-plugin v0.8.0 — the self-directing substrate 🚀
+    
+    v0.7 gave the memory new primitives. v0.8 wires them into a loop no other Hermes memory provider can do: the memory notices what it doesn't know, queues the work, and hands the agent its own agenda.
+    
+    🔹 Gap → task — on session end, each recurring thing the agent asked but couldn't answer becomes a durable task ("Resolve knowledge gap: …").
+    🔹 "Your memory's agenda" — every session opens with the memory's open tasks + top unresolved gaps, surfaced automatically.
+    🔹 Loop closes itself — agent learns the answer → recall answers it → the task closes → the agenda shrinks.
+    
+    Built entirely on the v0.7 knowledge-gaps + tasks primitives. All opt-in, no new tools, no new deps, zero behaviour change by default. 311 tests on engine 0.8.0 + 0.9.2.
+    
+    See it run (GIF + python demos/self_directing_memory.py):
+    https://github.com/yantrikos/yantrikdb-hermes-plugin/tree/main/assets/demos/self-directing
+    
+    
+    pip install -U yantrikdb-hermes-plugin
+    Notes: https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.8.0
+    [embed] yantrikdb-hermes-plugin/assets/demos/self-directing at main · yant... https://github.com/yantrikos/yantrikdb-hermes-plugin/tree/main/assets/demos/self-directing
+    [embed] Release v0.8.0 — The self-directing substrate · yantrikos/yantri... https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.8.0
+
