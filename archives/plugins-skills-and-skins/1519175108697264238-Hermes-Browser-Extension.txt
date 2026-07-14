@@ -624,3 +624,18 @@
 [2026-07-14T00:44:26.835000+00:00] billyelusiv (id=1526388875424043191)
     oh wow awesome! I'll start having a go with this, thanks so much!
 
+[2026-07-14T15:53:30.356000+00:00] jonkomet (id=1526617647532343367)
+    Working On an update button , where you can check what's new and choose to update, allowing for an easier update process.. and many other things have shipped today, i'm on a roll
+
+[2026-07-14T19:02:15.052000+00:00] jonkomet (id=1526665146749943949)
+    New Loading Screen animation
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1526665146380849342/image.png?ex=6a57d936&is=6a5687b6&hm=d01052332a2a69f17c75ca062b237a490485465b5c91494727317ba7efc1a047&
+
+[2026-07-14T19:03:36.614000+00:00] jonkomet (id=1526665488845897928)
+    UI enhancements
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1526665488485191850/image.png?ex=6a57d988&is=6a568808&hm=c42dc6513ba91e5722dd56e3ada49c8f3696c8f4403dbeb975a4455cb8714f94&
+
+[2026-07-14T19:04:15.460000+00:00] jonkomet (id=1526665651777966181)
+    update button added
+    [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1526665651567984750/image.png?ex=6a57d9af&is=6a56882f&hm=4169e5bef36f1cf2127be6fd94a7b0b889bb9b55e0117ad0291bab9bd0472c2f&
+

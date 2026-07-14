@@ -387,3 +387,6 @@
 [2026-07-13T15:07:31.141000+00:00] phospheneoverdrive (id=1526243686680232018)
     So does this outright replace things like mnemosyne btw? of "Memory" isn't just one definition in llm-related contexts it seems 😆
 
+[2026-07-14T13:50:06.645000+00:00] lymeswold (id=1526586594117681274)
+    I just had my agent install o2b on my Windows laptop. She struggled a bit with the Linux/Windows differences but was eventually successful. One small point she noted: "`This version (v1.30.0) has moved past the event_log_append tool referenced in the install doc — it now exposes a richer brain_* tool set. The identity check is version-specific and no longer applies.`"
+

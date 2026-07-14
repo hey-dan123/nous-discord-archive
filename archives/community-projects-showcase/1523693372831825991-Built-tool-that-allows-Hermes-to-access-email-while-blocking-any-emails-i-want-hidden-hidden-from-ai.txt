@@ -68,3 +68,6 @@
 [2026-07-10T21:12:50.654000+00:00] celestial_sparrow_73595 (id=1525248460184354970)
     yes were in the middle of the casa security review, once we get their final approval  google will remove the "this app isnt verified" warning when folks are connecting their gmail as it works today
 
+[2026-07-14T18:24:23.361000+00:00] ozmotaz (id=1526655618587299923)
+    i was able to test the app and it works great on a throw away inbox i didnt mind testing out. nicely done.
+

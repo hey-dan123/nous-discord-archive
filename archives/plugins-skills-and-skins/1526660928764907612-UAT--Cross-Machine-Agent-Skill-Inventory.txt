@@ -1,0 +1,8 @@
+# Thread 'UAT: Cross-Machine Agent Skill Inventory' in forum #plugins-skills-and-skins
+# thread_id=1526660928764907612 forum_id=1485392832154832906
+# Started 2026-07-14T19:21:19.914098+00:00
+
+[2026-07-14T18:45:29.406000+00:00] wryrye (id=1526660928764907612)
+    We just shipped cross-machine skill inventory: an opt-in, read-only view of the agent skills installed across every machine and harness. We're looking for more harness operators, people responsible for the skills, rules, MCPs, their versions, and maintenance. As a builder or as team, reach out for a partner code for free access. Before we open this up broadly, we want a small group of real multi-machine users to run it for a week or two and tell us what breaks or feels off. A number of teams in regulatory/compliance environments can't build out their harnesses until this level of audit for each tool is in place. This issue is the sign-up sheet: https://github.com/smith-horn/skillsmith/issues/1707. Thanks in advance!
+    [embed] Design partners wanted: UAT Cross-Machine Skill Inventory · Issue ... https://github.com/smith-horn/skillsmith/issues/1707
+

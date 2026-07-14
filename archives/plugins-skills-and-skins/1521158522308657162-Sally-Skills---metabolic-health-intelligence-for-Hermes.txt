@@ -12,3 +12,11 @@
 [2026-06-30T23:59:10.191000+00:00] nwminer9687 (id=1521666438740316401)
     Repo 404s.
 
+[2026-07-14T16:14:53.856000+00:00] 0xcynyx (id=1526623030921658458)
+    It’s https://github.com/a1c-ai-agent/sally-skills <@406831792327491585>  updated
+    [embed] GitHub - a1c-ai-agent/sally-skills: Sally Skill: The metabolic brai... https://github.com/a1c-ai-agent/sally-skills
+
+[2026-07-14T16:15:49.752000+00:00] 0xcynyx (id=1526623265366347917)
+    https://github.com/NousResearch/hermes-agent/pull/32214
+    [embed] feat(optional-skills): add sally-skills by 0xcynyx · Pull Request ... https://github.com/NousResearch/hermes-agent/pull/32214
+

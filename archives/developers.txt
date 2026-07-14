@@ -46821,3 +46821,162 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     <:Prayge:1151275585000185968>
     [reply to radc0rp msg=1526569569315983421]
 
+[2026-07-14T14:20:53.869000+00:00] samuel_soaress (id=1526594341936566342)
+    Hey folks just built a working claude-code-acp provider for Hermes, it runs the local Claude Code CLI through the official @agentclientprotocol/claude-agent-acp adapter (just like the in-tree copilot-acp), so Claude inference stays on your plan instead of the 400 “extra usage” error. Tests + docs are green. Details are on #5257 — I just want a quick placement call before I open the PR: in-tree like copilot-acp, or a standalone plugin? Would love a maintainer’s take 🙏
+    cc <@429384745374187523>  — you built copilot-acp, so you’re probably the right person for this one
+    https://github.com/NousResearch/hermes-agent/issues/5257#issuecomment-4969941944
+
+[2026-07-14T14:21:13.728000+00:00] devbybryan (id=1526594425231245333)
+    They will announce when ready, I already moved on to a second hackathon that I found 😂
+    [reply to radc0rp msg=1526569569315983421]
+
+[2026-07-14T14:25:32.445000+00:00] radc0rp (id=1526595510368997396)
+    I should really do more hackathons tbh
+
+[2026-07-14T14:31:49.092000+00:00] warofchange (id=1526597090141274287)
+    Fix a duplicate kanban key in DEFAULT_CONFIG
+    
+    AST-scanning the config for duplicate dict-literal keys turned up a real one. hermes_cli/config.py declares the top-level "kanban" key twice in DEFAULT_CONFIG:
+    • first block (~L1485): just auto_subscribe_on_create: True
+    • second block (~L2722): the dispatcher settings
+    
+    Python resolves duplicate keys last-wins, so the second block silently replaces the first — kanban.auto_subscribe_on_create never lands in DEFAULT_CONFIG. Behavior is saved only because the consumer defaults it in code (cfg_get(..., default=True)), and the docs say true — but the schema silently drops a documented key.
+    
+    Fix merges the two blocks (moves the key into the surviving block, deletes the dead one). Behavior-neutral, schema now matches the docs.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/64442
+    ----
+    Drop a duplicate trinity vendor-prefix key
+    
+    Same duplicate-key scan flagged _VENDOR_PREFIXES in hermes_cli/model_normalize.py: "trinity": "arcee-ai" is listed twice (identical value). Harmless at runtime (last-wins, same value) but a redundant duplicate — also caught by ruff/flake8 F601.
+    
+             "step": "stepfun",
+    -        "trinity": "arcee-ai",
+         }
+    Removes the redundant second entry; the first is kept. Zero behavior change.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/64443
+
+[2026-07-14T14:32:02.369000+00:00] devbybryan (id=1526597145828921516)
+    <@387972437901312000> what do you think about a Hermes phone app?
+
+[2026-07-14T14:32:26.690000+00:00] devbybryan (id=1526597247838589090)
+    Lmk I’ll send you the link of the one I found due date is this Sunday by 7pm it just started yesterday
+    [reply to radc0rp msg=1526595510368997396]
+
+[2026-07-14T14:36:37.003000+00:00] ataritoto (id=1526598297727537243)
+    Hi everyone! :) 
+    I access Gemini through Gemini Enterprise; I don't have access to the API key, so I have to sign in with my enterprise account to access Gemini. This works great with the Gemini CLI, which offers the option to “Sign In with Google.” Is it possible to add this feature to Hermers Agent so that those of us with enterprise access can take advantage of it?
+    Am I in the right channel to ask this?
+
+[2026-07-14T14:37:22.010000+00:00] erosika (id=1526598486500446228)
+    hi this is a misattribution, i did not build the copilot-acp <a:chaofly:879956807496372225>
+    [reply to samuel_soaress msg=1526594341936566342]
+
+[2026-07-14T14:44:50.042000+00:00] samuel_soaress (id=1526600365682987059)
+    ah my bad . I grabbed the wrong name from git blame on a shallow clone, sorry for the ping! thanks for correcting me , if anyone owns the model-provider/ACP side and has a sec, I'd love a quick placement call on claude-code-acp (in-tree like copilot-acp, or standalone plugin?). Details are on #5257, no rush. <:o7:1151261546111053924>
+    [reply to erosika msg=1526598486500446228]
+
+[2026-07-14T15:29:28.400000+00:00] kerozelvin (id=1526611599530524692)
+    At least a few months back Google was banning accounts who used their Oauth sub to power agents like Hermes or OC.  Double check that they changed their ToS before you use their non-API options in a non antigravity harness.  A work around is to have Hermes running on another model send requests or spawn subagents on the Gemini cli.  Pretty sure that is still in their ToS but not lawyer and stopped using Google when they started banning folks so don’t keep up with their stuff.
+    [reply to ataritoto msg=1526598297727537243]
+
+[2026-07-14T16:07:44.642000+00:00] eshaan0514 (id=1526621230667403344)
+    hello, is this app legit for hermes? 
+    
+    https://apps.apple.com/us/app/hermes-agent-ai-assistant/id6779207146
+    [attachment] IMG_1329.png https://cdn.discordapp.com/attachments/1491258766648283238/1526621230101434528/IMG_1329.png?ex=6a57b050&is=6a565ed0&hm=e635970194dc17675ccc423a3fbb640f447df654f63fc3acc0311ff614deda7a&
+
+[2026-07-14T16:08:13.528000+00:00] radc0rp (id=1526621351824064602)
+    almost definitely not
+
+[2026-07-14T16:09:38.083000+00:00] radc0rp (id=1526621706473701408)
+    cc <@387972437901312000> - don't know if you handle stuff like that but I'm betting that's malware or something sketchy.
+    [attachment] Screenshot_2026-07-14_at_11.09.33_AM.png https://cdn.discordapp.com/attachments/1491258766648283238/1526621706389684335/Screenshot_2026-07-14_at_11.09.33_AM.png?ex=6a57b0c2&is=6a565f42&hm=2d59d9f5036c9db4a8960558d4e3d5408c5e96ae86f5758fdc62074458f697a4&
+
+[2026-07-14T16:13:17.120000+00:00] mbaragiola2581 (id=1526622625181470720)
+    crazy that Apple can be such a pain for legit apps yet this stuff gets released, assuming
+    [reply to eshaan0514 msg=1526621230667403344]
+
+[2026-07-14T16:14:23.425000+00:00] eshaan0514 (id=1526622903284666490)
+    true, i was just wondering if they did have an app so checked. thanks!
+    [reply to mbaragiola2581 msg=1526622625181470720]
+
+[2026-07-14T16:14:25.237000+00:00] mbaragiola2581 (id=1526622910884610125)
+    I have two open PRs for bugfixes that I experienced myself, is there anything else I can do to get them merged?
+    https://github.com/NousResearch/hermes-agent/pull/60897
+    https://github.com/NousResearch/hermes-agent/pull/60390
+
+[2026-07-14T16:14:27.302000+00:00] erosika (id=1526622919545982986)
+    fake
+    [reply to eshaan0514 msg=1526621230667403344]
+
+[2026-07-14T16:14:38.579000+00:00] ssabin. (id=1526622966845280377)
+    Hey everyone,
+    I've been working with Hermes for the past few months and I'm thinking about how to integrate it into more of my workflows.
+    One thing that really interests me is running a single agent against multiple users, e.g. in a Discord server (WhatsApp or Telegram groups would probably work the same way). Two specific questions:
+    1. Hermes stores user preferences in one global memory file that gets injected into every conversation. How do you isolate memory and context per user in a multi-user setup? Is there an existing solution, or is it a build-it-yourself situation?
+    2. Since all conversations run on the same workspace, what's the practical way to prevent the agent from accidentally leaking files or info from one user's session to another? Full sandboxing per conversation, or is there a lighter approach?
+    Has anyone dealt with this? Would love to hear how you approached it
+
+[2026-07-14T16:19:31.025000+00:00] radc0rp (id=1526624193452445747)
+    I tried doing this ages ago. I used VM's via Qemu, and then minimized that with Docker containers. That way they get "full OS access" and they can have sudo privs without worrying about them messing much up. I would imagine you could use Nous' new cloud offering for Hermes instead if you want but I haven't personally used that.
+    
+    A word of warning: IMHO multi-agent workflows in a chat channel aren't very good. You'll end up spending way more time trying to manage the agents rather than getting done what you want to. I would instead try to direct a single Hermes instance to spin up sub-agents to handle kanban items. Worktrees makes this fairly doable.
+    
+    A sort of hacky workaround too is have a message queue where Hermes can send "TODO list items" to be handled at some arbitrary time later, and then direct Hermes to set up a cron job to check the queue and work it. You end up getting ~multi-agent behavior with a single agent.
+    [reply to ssabin. msg=1526622966845280377]
+
+[2026-07-14T16:31:02.535000+00:00] ssabin. (id=1526627093855862884)
+    Thats valuable, thanks.
+    The way I understand this is that Hermes is more valuable for a single person and once multi users come in this architecture doesn't hold and another harness needs to fill the gap, maybe an orchestration of agents with shared data and actions
+
+[2026-07-14T16:31:55.698000+00:00] antonba8456 (id=1526627316837388328)
+    While implementing a secret store plugin I discovered that Hermes Agent checks the list of registered secret stores before plugins are loaded. So inevitably my store produced "unknown source(s)" warnings at start, even though once the agent became accessible (boot finished) then it worked.
+    
+    So I implemented a fix that keeps track of registered secret stores to check after plugins have loaded. I haven't submitted a PR yet as I wanted to see if anybody else also experienced this problem.
+    
+    Here is the fix description:
+    https://github.com/antonba/hermes-agent/blob/fix/gateway-secret-source-reapply/docs/rca-plugin-secret-sources-startup-ordering.md
+
+[2026-07-14T17:04:48.631000+00:00] sassyfatcat (id=1526635591918424064)
+    Adding proper onboarding to the hermes desktop app for those(most people I assume) who use remote hermes instances:
+
+[2026-07-14T17:04:49.923000+00:00] sassyfatcat (id=1526635597337329784)
+    https://github.com/NousResearch/hermes-agent/pull/60489
+
+[2026-07-14T17:35:47.477000+00:00] sassyfatcat (id=1526643388483506356)
+    Would be a big QOL change
+
+[2026-07-14T18:16:18.645000+00:00] fro0z1 (id=1526653585541038190)
+    any helps ?)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1526653585272606740/image.png?ex=6a57ce72&is=6a567cf2&hm=cb2464ae3f0249ee2381fdab6a982407f9caf06badad24a083bbb3dc0e782c81&
+
+[2026-07-14T18:18:36.003000+00:00] ataritoto (id=1526654161662251068)
+    Okn thanks for your detailled answer and your reactivity ;)
+    [reply to kerozelvin msg=1526611599530524692]
+
+[2026-07-14T18:21:50.722000+00:00] teknium (id=1526654978373193998)
+    <#1485307775444844625>
+    [reply to fro0z1 msg=1526653585541038190]
+
+[2026-07-14T18:33:56.343000+00:00] watchdominion (id=1526658021848125450)
+    Bug fixes for Hermes! Made by checking the important issues on Github. 
+    
+    #64525 — disabled_toolsets: [browser] was silently stripping web_search from every session (gateway, cron, CLI), even with web enabled and a valid Tavily key. Taxonomy overlap: web_search was a member of both browser and web, and since disabled toolsets are a strict subtraction (#17309), disabling browser — the natural move with no Chromium — took web search down with it. Fix removes web_search from the browser composite (it belongs to web/search); browser tools are check_fn-gated anyway. Kept the browser_tasks RL distribution intact. Regression test included.
+    https://github.com/NousResearch/hermes-agent/pull/64525
+    
+    Full set of my open bug-fix PRs, all green/mergeable against current main (four sweeper-rated salvageability=high):
+    
+    - #64525 — fix(toolsets): disabled browser no longer strips web_search (fixes #64503)
+    https://github.com/NousResearch/hermes-agent/pull/64525
+    - #60797 — fix(lazy_deps): unpin huggingface-hub to a range so hermes update stops downgrading the shared dep under transformers/Hindsight (fixes #60783). Sweeper: "clean cherry-pick candidate."
+    https://github.com/NousResearch/hermes-agent/pull/60797
+    - #61611 — fix(hindsight): surface the exception chain when the local runtime is unavailable, so misconfig is diagnosable
+    https://github.com/NousResearch/hermes-agent/pull/61611
+    - #61613 — fix(agent): log api_kwargs keys + llm_request middleware trace on unexpected-kwarg TypeError at dispatch (the #60821 hardening)
+    https://github.com/NousResearch/hermes-agent/pull/61613
+    - #61615 — fix(gateway): Windows planned stops report PLANNED_STOP instead of signal=UNKNOWN (fixes #61596)
+    https://github.com/NousResearch/hermes-agent/pull/61615
+    - #60085 — fix(tui): deliver kanban notify subscriptions to TUI/desktop sessions (fixes #59890) — happy to consolidate with #59963 either direction if a maintainer has a preference
+

@@ -5819,3 +5819,13 @@
     
     ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
 
+[2026-07-14T14:37:04.236000+00:00] phospheneoverdrive (id=1526598411950755900)
+    Heya, I see when hitting the stop button as a llm is replying will clear out the agent's response. Is there anyway to keep the incomplete response in the chat?
+
+[2026-07-14T14:37:14.736000+00:00] phospheneoverdrive (id=1526598455991078957)
+    (Or is this a base hermes behavior)
+
+[2026-07-14T18:55:23.280000+00:00] avidfuturist (id=1526663419653263392)
+    Which version are you on? I believe this should already be fixed
+    [reply to phospheneoverdrive msg=1526598411950755900]
+

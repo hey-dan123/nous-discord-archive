@@ -1,0 +1,11 @@
+# Thread 'APO AI FORENSICS' in forum #community-projects-showcase
+# thread_id=1526602773603553432 forum_id=1316137596535177246
+# Started 2026-07-14T19:16:14.334241+00:00
+
+[2026-07-14T14:54:24.135000+00:00] leerenmos (id=1526602773603553432)
+    APO is an AI Forensics platform for autonomous AI agents. Instead of only collecting logs and traces, it investigates every AI execution as a forensic case. It reconstructs what happened, why the agent made each decision, what evidence supports it, which memory or tool influenced the outcome, and how similar failures can be prevented in the future.
+    The goal is to help developers debug, audit, and improve AI agents with replay, causal analysis, AI autopsies, and prevention rules—turning observability into a complete forensic investigation platform.
+    
+    https://github.com/Blackleets/apo:nousgirl:
+    [attachment] file_0000000097cc71f4940930342ded5739.png https://cdn.discordapp.com/attachments/1526602773603553432/1526602774110933153/file_0000000097cc71f4940930342ded5739.png?ex=6a579f20&is=6a564da0&hm=d6e2d31e7938c15683d3c96c399999c08786a73e6966e78c3fa35d096c4d1644&
+

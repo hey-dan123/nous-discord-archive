@@ -1,0 +1,8 @@
+# Thread 'Excel Side Car' in forum #community-projects-showcase
+# thread_id=1526643541856616589 forum_id=1316137596535177246
+# Started 2026-07-14T19:16:13.944795+00:00
+
+[2026-07-14T17:36:24.044000+00:00] jw_mushroom_man (id=1526643541856616589)
+    https://github.com/lEWFkRAD/hermes-excel-sidecar
+    [embed] GitHub - lEWFkRAD/hermes-excel-sidecar: Installable Hermes plugin: ... https://github.com/lEWFkRAD/hermes-excel-sidecar
+
