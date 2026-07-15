@@ -5906,3 +5906,29 @@
     The overall team behind Hermes WebUI may also already have this solved in newer versions I just haven't tested recently.
     [reply to deor42 msg=1526869168408760381]
 
+[2026-07-15T18:05:15.500000+00:00] avidfuturist (id=1527013191975174265)
+    Yeah it’s come a long way, thanks!
+    
+    Right now it doesn’t sync all the details from the desktop app, it’s in sync across the entire WebUI client ecosystem but plan to support integration with the desktop app too
+    [reply to digital_love_two msg=1526933683674550402]
+
+[2026-07-15T18:06:33.912000+00:00] avidfuturist (id=1527013520858808501)
+    I would try it again on and see if you still experience this. I know I don’t anymore on latest experimental releases so if you do have this issue it would also be helpful to report exactly the circumstances, version, setup, so we can try to investigate and continue to improve
+    [reply to k.shepherd msg=1526938615563944178]
+
+[2026-07-15T18:07:14.669000+00:00] k.shepherd (id=1527013691806060594)
+    To confirm, running experimental if I wanted to see if that solves it for me too, how do I set that up?
+    [reply to avidfuturist msg=1527013520858808501]
+
+[2026-07-15T18:07:56.898000+00:00] avidfuturist (id=1527013868927455453)
+    It’s in settings. You can go to settings -> preferences
+    [attachment] image.png https://cdn.discordapp.com/attachments/1493017427724992612/1527013868449038336/image.png?ex=6a591dfc&is=6a57cc7c&hm=28ebd4e62d3336f869dd7c8417421812b93a90f9aa2d6fad6ebd6f4c9a0d2797&
+    [reply to k.shepherd msg=1527013691806060594]
+
+[2026-07-15T18:08:29.967000+00:00] avidfuturist (id=1527014007628632124)
+    But in any case, I’d like to continue to improve things if you are still running into issues, would just need to know more about where to look
+
+[2026-07-15T18:09:25.593000+00:00] avidfuturist (id=1527014240940986440)
+    Glad to hear that it’s been working smoothly for you!
+    [reply to deor42 msg=1526869168408760381]
+

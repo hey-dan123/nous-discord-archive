@@ -102,3 +102,14 @@
     Ty for the feedback so far. Would you all want any integrations besides Gmail? Is there another type
     Of account you want to give access to but want to restrict?
 
+[2026-07-15T17:39:13.515000+00:00] celestial_sparrow_73595 (id=1527006640535244961)
+    btw: We tightened how sender allow-lists work in permission rules. Previously, an allow rule like partner.com would use loose substring matching: meaning an email from attacker@evil-partner.com.fake.org could slip through because the string "partner.com" appears inside that sender address. Now, allow-list patterns match strictly to the exact sender's domain, so lookalike domains can no longer bypass your rules.
+    What action existing users need to take:
+    If you have permission rules with include_senders (the "only show emails from these senders" filter), update any loose patterns to one of these three shapes:
+    
+    Pattern    Matches
+    info@partner.com    Only that exact address
+    partner.com    Any user at exactly @partner.com (apex only, not subdomains)
+    *.partner.com    Any user at @partner.com OR any subdomain like @team.partner.com
+    Rules with loose patterns (like tiktok, journey, .com) will now match zero emails until updated. The dashboard shows guidance on the new pattern shapes.
+

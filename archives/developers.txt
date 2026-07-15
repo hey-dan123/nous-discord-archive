@@ -47131,3 +47131,163 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-15T12:52:07.627000+00:00] warofchange (id=1526934389924298812)
     <:Prayge:1151275585000185968>
 
+[2026-07-15T14:09:38.981000+00:00] jovs_ (id=1526953899116855326)
+    Hello everyone, 
+    
+    WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Discovering Telegram API fallback IPs via DNS-over-HTTPS…
+    ERROR hermes_plugins.telegram_platform.adapter: [Telegram] Failed to connect to Telegram: 'HTTPXRequest' object attribute 'do_request' is read-only
+    
+    I have faced this issue since 6 hours ago and there seems to be no fix yet? my temporary fix is currently to downgrade python-telegram-bot==22.5 . Anybody know about this?
+
+[2026-07-15T14:15:30.471000+00:00] gottz.de (id=1526955373372903605)
+    something tells me pushing like this doesn't result in acceleration
+    [reply to .jakubw msg=1526910225595236373]
+
+[2026-07-15T14:19:50.678000+00:00] ftxuser (id=1526956464760160378)
+    had the same issue - went back to 0.18.0
+    [reply to jovs_ msg=1526953899116855326]
+
+[2026-07-15T14:35:56.224000+00:00] thyfriendlyfox (id=1526960514553352282)
+    woke up today to Teknium reporting on our capacitor thin client mobile app PR
+
+[2026-07-15T14:35:58.074000+00:00] thyfriendlyfox (id=1526960522312810658)
+    this
+
+[2026-07-15T14:36:09.604000+00:00] thyfriendlyfox (id=1526960570673397842)
+    made us vvvv happy 
+    
+    Ty <@387972437901312000> :3 <a:cat_yipee:1125456104579674274>
+
+[2026-07-15T14:38:15.204000+00:00] architex_ (id=1526961097477722113)
+    Uhhhh so Bonsai 27B is cracked.
+    [attachment] IMG_9965.png https://cdn.discordapp.com/attachments/1491258766648283238/1526961097444163695/IMG_9965.png?ex=6a58ecd7&is=6a579b57&hm=0df5de259669f5f1f9d4db312f911f6b37b405bee6b5493050a927b89f9825b0&
+    [reply to architex_ msg=1524147900244951271]
+
+[2026-07-15T14:38:45.749000+00:00] warofchange (id=1526961225592868924)
+    PR #54956 update
+    🔧 Follow-up on the run_tests xdist fix (PR #54956) — at teknium's request
+    
+    The maintainer review flagged a leftover conflict: after I corrected the CONTRIBUTING.md runner comment to "per-file isolation", AGENTS.md still described the wrapper as using -n auto xdist workers — two linked contributor instructions disagreeing. Per run_tests_parallel.py ("drop xdist entirely", one python -m pytest <file> per file) and run_tests.sh ("No xdist, no shared workers"), the AGENTS.md line was stale. Updated it to describe the per-file subprocess isolation so both agree and the see AGENTS.md pointer stays valid.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/54956
+    
+    PR #54346 update
+    🔧 Follow-up on the Windows post-install docs (PR #54346) — at teknium's request
+    
+    Review caught two issues: (1) I'd grouped Termux into the "reload your shell" step, but scripts/install.sh links hermes into a dir already on PATH on Termux — no reload needed; (2) the patch left two trailing blank lines at EOF. Fixed both: Termux excluded from the reload group (now Linux/macOS/WSL2 only), and the EOF whitespace trimmed.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/54346
+    
+    PR #57110 update
+    🔧 Follow-up on the Ollama API-timeout docs (PR #57110) — at teknium's suggestion
+    
+    The reviewer suggested using a concrete config key. Since the guide configures model.provider: "custom", I changed the generic providers.<id>.request_timeout_seconds to providers.custom.request_timeout_seconds so readers can copy it directly for their Ollama endpoint. Kept the HERMES_API_TIMEOUT env-var mention alongside for existing setups.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/57110
+
+[2026-07-15T14:38:58.298000+00:00] thyfriendlyfox (id=1526961278227058828)
+    What.. is that? Is that a leaderboard you made?
+    [reply to architex_ msg=1526961097477722113]
+
+[2026-07-15T14:39:42.942000+00:00] thyfriendlyfox (id=1526961465477828780)
+    And what's the benchmark?
+
+[2026-07-15T14:43:43.135000+00:00] architex_ (id=1526962472920023061)
+    Yes, it’s a leaderboard I made that tests Agentic, Session Coherence, Chaining, Structured outputs, and World modeling across 3 different harnesses (Claude Code, Hermes, and Pi) and averages the scores cross-harness. It also compares raw API calling vs in-harness calling
+    [reply to thyfriendlyfox msg=1526961278227058828]
+
+[2026-07-15T14:44:20.060000+00:00] thyfriendlyfox (id=1526962627794960566)
+    Neato! I like the look of it 😄
+    [reply to architex_ msg=1526962472920023061]
+
+[2026-07-15T14:45:10.525000+00:00] architex_ (id=1526962839460384900)
+    Thanks 🙏
+    [reply to thyfriendlyfox msg=1526962627794960566]
+
+[2026-07-15T14:46:09.758000+00:00] architex_ (id=1526963087901462690)
+    it uses a Catppuccin TUI color scheme
+
+[2026-07-15T15:07:30.606000+00:00] brokeskill (id=1526968460167610438)
+    While in another chat, agents can often write the results in the wrong chat (the currently focused one) and not its original chat. Ive wanted to report this but I saw that apparently it was already fixed? Did I do something wrong? Im on the newest version
+
+[2026-07-15T15:10:00.493000+00:00] caycfigs (id=1526969088838996031)
+    This is the binary one?
+    [reply to architex_ msg=1526961097477722113]
+
+[2026-07-15T16:02:38.686000+00:00] watchdominion (id=1526982335260790784)
+    Open — 6 bug-fix PRs, all rebased onto today's main, four rated salvageability=high by the sweeper:
+    
+    - #64525 — disabled browser toolset no longer strips web_search
+    https://github.com/NousResearch/hermes-agent/pull/64525
+    fixes https://github.com/NousResearch/hermes-agent/issues/64503 (2 comments, root cause independently confirmed)
+    - #60797 — huggingface-hub pin → range; hermes update stops breaking Hindsight. Sweeper: "clean cherry-pick candidate"
+    https://github.com/NousResearch/hermes-agent/pull/60797
+    fixes https://github.com/NousResearch/hermes-agent/issues/60783 (4 comments — new report today measured the fallout: a silent 10-second crash loop that fired 41,550 times over three weeks and wrote a 596 MB error log)
+    - #61611 — Hindsight surfaces the real exception chain on local-runtime failures (offered on the #60783 thread; covers both upstream swallow sites via __context__ chaining)
+    https://github.com/NousResearch/hermes-agent/pull/61611
+    - #61613 — dispatch logs kwarg keys + middleware trace on unexpected-kwarg TypeErrors — the hardening from https://github.com/NousResearch/hermes-agent/issues/60821 (13 comments, root-caused + closed)
+    https://github.com/NousResearch/hermes-agent/pull/61613
+    - #61615 — Windows planned stops report PLANNED_STOP, not signal=UNKNOWN
+    https://github.com/NousResearch/hermes-agent/pull/61615
+    fixes https://github.com/NousResearch/hermes-agent/issues/61596 (caught it fresh — no discussion yet)
+    - #60085 — kanban notify subscriptions reach TUI/desktop sessions
+    https://github.com/NousResearch/hermes-agent/pull/60085
+    fixes https://github.com/NousResearch/hermes-agent/issues/59890 (2 comments)
+    
+    <:PES2_Pray:513342216287027220>
+
+[2026-07-15T16:55:52.391000+00:00] sassyfatcat (id=1526995730630443060)
+    https://github.com/NousResearch/hermes-agent/pull/60489
+
+[2026-07-15T16:56:08.559000+00:00] sassyfatcat (id=1526995798443954247)
+    adding proper onboarding to desktop app for people using remote backends
+
+[2026-07-15T16:56:20.445000+00:00] sassyfatcat (id=1526995848297189448)
+    so you dont need to edit configs before first launch
+
+[2026-07-15T16:59:50.229000+00:00] teknium (id=1526996728195055687)
+    Do you have an issue to reference? Its still happening on latest? Only in GUI or what Ive never seen this in both gui or CLI
+    [reply to brokeskill msg=1526968460167610438]
+
+[2026-07-15T17:09:18.795000+00:00] brokeskill (id=1526999112933965988)
+    So apparently its still open, my bad, i thought both issues linked below were talking about the same/similar problems since they were linked in a comment/mention below
+    https://github.com/NousResearch/hermes-agent/issues/51058
+    https://github.com/NousResearch/hermes-agent/issues/62652, again sorry cant read or something lol
+    [reply to teknium msg=1526996728195055687]
+
+[2026-07-15T17:44:56.258000+00:00] warofchange (id=1527008078103576728)
+    #57978 update
+    Follow-up on the migrate-guide honcho fix (PR #57978) — at teknium's request
+    
+    Review flagged that the Simplified Chinese mirror still recommended hermes honcho (line 174), while the English guide was corrected to hermes memory setup honcho. Same root cause as before: the skill/doc generator doesn't touch website/i18n. Updated the zh-Hans row — both now point at the command that actually works on a fresh install.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/57978
+    
+    #57745 update
+    Follow-up on the write_txn typing PR (#57745) — at teknium's request
+    
+    Sharp review: my PR description overstated the helper's reach — kanban_db.py only imports add_column_if_missing, so the kanban dashboard was never a caller of sqlite_util.write_txn. It has its own write_txn… which was also unannotated.
+    
+    Given the choice between narrowing the description or widening the fix, I widened it: both transaction context managers now carry -> Iterator[sqlite3.Connection], and the description now names the real callers (projects store vs kanban dashboard). Annotation-only, zero behavior change.
+    🔗 https://github.com/NousResearch/hermes-agent/pull/57745
+
+[2026-07-15T18:05:05.906000+00:00] wesleysimplicio (id=1527013151734890678)
+    <@387972437901312000>  https://github.com/NousResearch/hermes-agent/pull/64701
+
+[2026-07-15T18:05:45.618000+00:00] wesleysimplicio (id=1527013318299095090)
+    https://github.com/NousResearch/hermes-agent/pull/64689
+
+[2026-07-15T18:05:55.806000+00:00] wesleysimplicio (id=1527013361030533171)
+    https://github.com/NousResearch/hermes-agent/pull/64680
+
+[2026-07-15T18:06:05.346000+00:00] wesleysimplicio (id=1527013401044193363)
+    https://github.com/NousResearch/hermes-agent/pull/64668
+
+[2026-07-15T18:06:20.789000+00:00] wesleysimplicio (id=1527013465816961066)
+    https://github.com/NousResearch/hermes-agent/pull/59194
+
+[2026-07-15T18:06:30.599000+00:00] wesleysimplicio (id=1527013506963210270)
+    https://github.com/NousResearch/hermes-agent/pull/59189
+
+[2026-07-15T18:22:48.138000+00:00] wesleysimplicio (id=1527017607058948329)
+    last PR: https://github.com/NousResearch/hermes-agent/pull/64731
+
+[2026-07-15T18:53:13.191000+00:00] brokeskill (id=1527025261885784115)
+    Im trying to build a kanban tab for the Hermes Agent Desktop but it gets cleared after every client update, is there any way to let it persist trough updates?
+

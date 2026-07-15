@@ -95,3 +95,6 @@
     <@427613574995771414>
     [embed] Release Noisegate v0.3.0 · Tosko4/noisegate https://github.com/Tosko4/noisegate/releases/tag/v0.3.0
 
+[2026-07-15T18:03:54.547000+00:00] lmvdzande (id=1527012852433682433)
+    what did you use to generate the graphics
+

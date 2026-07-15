@@ -1,0 +1,17 @@
+# Thread 'Smriti: Memory that knows, "when"' in forum #community-projects-showcase
+# thread_id=1526948114538434784 forum_id=1316137596535177246
+# Started 2026-07-15T19:07:12.821118+00:00
+
+[2026-07-15T13:46:39.830000+00:00] neekhilenvy (id=1526948114538434784)
+    Just launched my simplest memory system that i have been growing along with my hermes agent. 
+    
+    The interesting thing is when i asked Grok, Claude, and GPT models to select the simplest low cost, low dep memory system, they all inclined on Smriti, so i gained confifence to build and launch this separately.
+    
+    https://github.com/vn-envy/Smriti
+    
+    Run it, Fork it, Star it for later use
+    
+    Cleanest Apache 2.0 license, Just ask Hermes to plug this in, and see it root for it
+    [attachment] VID-20260715-WA00172.mp4 https://cdn.discordapp.com/attachments/1526948114538434784/1526948115754778664/VID-20260715-WA00172.mp4?ex=6a58e0c0&is=6a578f40&hm=548eb727a1ad344a0a554269a90f0c2a63c4bca84ee00cd7dc8ee04c3dc64f97&
+    [embed] GitHub - vn-envy/Smriti: Zero-infrastructure, local-first memory fo... https://github.com/vn-envy/Smriti
+

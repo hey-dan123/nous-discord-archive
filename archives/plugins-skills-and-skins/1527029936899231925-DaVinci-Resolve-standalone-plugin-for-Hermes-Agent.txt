@@ -1,0 +1,24 @@
+# Thread 'DaVinci Resolve standalone plugin for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1527029936899231925 forum_id=1485392832154832906
+# Started 2026-07-15T19:12:55.093006+00:00
+
+[2026-07-15T19:11:47.801000+00:00] samjwasserman (id=1527029936899231925)
+    I’ve published a standalone Hermes Agent plugin for DaVinci Resolve, following the repository’s standalone-plugin guidance:
+    
+    https://github.com/wassermanproductions/hermes-davinci-resolve-plugin
+    
+    It supports Resolve Studio live control plus free-edition FCPXML and marker CSV workflows. The reviewed hardening is included: package-relative imports with no global sys.path mutation, dry-run-safe interchange defaults, macOS check_fn gating on every tool, and a real PluginManager user-install discovery/registry regression test against current Nous main. Public CI is green, and v0.3.0 is available here:
+    
+    https://github.com/wassermanproductions/hermes-davinci-resolve-plugin/releases/tag/v0.3.0
+    
+    Install:
+    ```bash
+    git clone https://github.com/wassermanproductions/hermes-davinci-resolve-plugin.git ~/.hermes/plugins/davinci-resolve
+    hermes plugins enable davinci-resolve
+    hermes plugins list
+    ```
+    
+    Feedback is very welcome. Thanks again to Teknium for the review and direction.
+    [embed] GitHub - wassermanproductions/hermes-davinci-resolve-plugin: Hermes... https://github.com/wassermanproductions/hermes-davinci-resolve-plugin
+    [embed] Release v0.3.0 — Nous review hardening · wassermanproductions/he... https://github.com/wassermanproductions/hermes-davinci-resolve-plugin/releases/tag/v0.3.0
+

@@ -1,0 +1,12 @@
+# Thread 'Brimo: CDP proxy/security for Hermes' in forum #community-projects-showcase
+# thread_id=1526966155951214772 forum_id=1316137596535177246
+# Started 2026-07-15T19:07:12.373737+00:00
+
+[2026-07-15T14:58:21.238000+00:00] cheeky.lil.pud (id=1526966155951214772)
+    I built a tool that proxies CDP traffic from a Docker container to a host browse while enforcing security rules (whitelist, auditing, etc). The goal is to let Hermes access certain existing browser sessions without giving it full control of the host browser.
+    
+    Anyone think it looks useful?
+    
+    https://github.com/s-moffett/brimo
+    [embed] GitHub - s-moffett/brimo: CDP gateway and security policy layer https://github.com/s-moffett/brimo
+

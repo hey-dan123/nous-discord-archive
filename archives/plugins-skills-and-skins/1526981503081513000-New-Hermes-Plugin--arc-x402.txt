@@ -1,0 +1,22 @@
+# Thread 'New Hermes Plugin: arc-x402' in forum #plugins-skills-and-skins
+# thread_id=1526981503081513000 forum_id=1485392832154832906
+# Started 2026-07-15T19:12:55.538425+00:00
+
+[2026-07-15T15:59:20.279000+00:00] .consumeobeydie (id=1526981503081513000)
+    Autonomous x402 micropayment plugin for Hermes Agent. When Hermes hits an HTTP 402 Payment Required response, it automatically pays with USDC on Arc Testnet and retries — zero human intervention.
+    Tools registered:
+    
+    x402_request — HTTP request with automatic 402 payment on Arc Testnet
+    arc_usdc_transfer — Direct USDC transfer on Arc Testnet
+    arc_wallet_status — Check USDC balance and connectivity
+    
+    Verified on-chain:
+    TX: 0xd49ec419505580f3386e9fcb278f2c00a2d335536113f757b1be7f825c87f136
+    Block: 45960195 · Confirmed in ≤ 0.52s · Fee: 0.00085 USDC
+    Install:
+    hermes plugins install consumeobeydie/hermes-plugin-arc-x402 --enable
+    🔗 Repo: https://github.com/consumeobeydie/hermes-plugin-arc-x402
+    🔗 Related PR: https://github.com/NousResearch/hermes-agent/pull/41233
+    [embed] GitHub - consumeobeydie/hermes-plugin-arc-x402: Autonomous x402 mic... https://github.com/consumeobeydie/hermes-plugin-arc-x402
+    [embed] feat: add x402-payment skill for autonomous USDC micropayments on A... https://github.com/NousResearch/hermes-agent/pull/41233
+
