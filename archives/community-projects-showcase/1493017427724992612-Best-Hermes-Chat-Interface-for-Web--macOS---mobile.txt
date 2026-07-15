@@ -5829,3 +5829,18 @@
     Which version are you on? I believe this should already be fixed
     [reply to phospheneoverdrive msg=1526598411950755900]
 
+[2026-07-15T00:24:24.440000+00:00] avidfuturist (id=1526746220079612114)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And **native iOS and Android app support**! 
+    
+    GitHub repo: https://github.com/nesquena/hermes-webui
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+
+[2026-07-15T01:26:25.035000+00:00] mathewsstar (id=1526761825386107032)
+    Hi everyone,
+    I am experiencing a critical UI issue specifically on the Android app / mobile view of Hermes Web-UI.
+    When I try to change or select a model using the selector button in the bottom input bar (which I have circled in green in the attached screenshot), the dropdown menu does not load or open at all. Tapping the icon or the model name does not trigger any list, making it impossible to switch models on mobile devices.
+    [attachment] 2cbaf6f2-01b6-402b-b467-ff0c5214833e.png https://cdn.discordapp.com/attachments/1493017427724992612/1526761825339838605/2cbaf6f2-01b6-402b-b467-ff0c5214833e.png?ex=6a583341&is=6a56e1c1&hm=85a4a05ad9a8035340507870e1c3678b87f3b2f1b6df8fed17bd3681ef7fa23c&
+

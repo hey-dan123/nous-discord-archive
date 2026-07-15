@@ -1,0 +1,26 @@
+# Thread 'Human-in-Loop Auth for Camofox Browser' in forum #plugins-skills-and-skins
+# thread_id=1526674488958128209 forum_id=1485392832154832906
+# Started 2026-07-15T02:16:18.646832+00:00
+
+[2026-07-14T19:39:22.408000+00:00] toothed. (id=1526674488958128209)
+    I built a small Hermes plugin for Human-in-Loop Camofox Authentication.
+    
+    It temporarily opens a native headed browser window or a private noVNC session, lets the user complete the login manually, and then resumes the task with the same persistent browser profile. The model only receives a confirmation that authentication was completed — not the credentials.
+    
+    ---
+    **Why?**
+    I ran into a common problem with GPT model: they can navigate pages, but they absolutely denies passwords, OTP/MFA codes, CAPTCHA answers, or other authentication secrets. And camofox cannot just open the browser in headed mode - either because it is on Remote Server or because Windows/macOS does not support useVirtualDisplay from Camofox. So, that's the solution
+    ---
+    
+    The plugin provides a Human-in-the-Loop Authentication flow through Camofox. It supports local native mode on Windows/macOS/Linux and Docker + noVNC for VPS/server deployments.
+    
+    Install from GitHub through Hermes:
+    
+    ```shell
+    hermes plugins install --enable tim-toothed/hermes-camofox-human-auth
+    ```
+    
+    Repository:  
+    https://github.com/tim-toothed/hermes-camofox-human-auth
+    [embed] GitHub - tim-toothed/hermes-camofox-human-auth: Human-in-the-loop a... https://github.com/tim-toothed/hermes-camofox-human-auth
+

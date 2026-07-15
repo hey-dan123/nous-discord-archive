@@ -600,3 +600,6 @@
     I'll be keeping an eye on critical issues and important bugs, but active development will be paused for now. We'll still fix bugs, and if something essential comes up or there's room to improve an existing feature, we'll take care of it when time and resources allow.
     [reply to _voscko_ msg=1523074736710615151]
 
+[2026-07-14T20:35:49.832000+00:00] vayaperson (id=1526688696844423218)
+    While experimenting with a personal VPS, I noticed that the panel cannot be launched unless the URL is manually exposed prior to startup. We also identified an issue that prevents the plugin from detecting Hermes installations within Docker containers. I've logged these and will address them as soon as development resumes. Thank you for your understanding and patience.
+

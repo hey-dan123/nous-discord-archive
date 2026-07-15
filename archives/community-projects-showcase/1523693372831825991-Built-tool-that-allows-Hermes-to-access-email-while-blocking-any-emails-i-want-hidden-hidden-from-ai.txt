@@ -71,3 +71,34 @@
 [2026-07-14T18:24:23.361000+00:00] ozmotaz (id=1526655618587299923)
     i was able to test the app and it works great on a throw away inbox i didnt mind testing out. nicely done.
 
+[2026-07-14T19:51:19.443000+00:00] celestial_sparrow_73595 (id=1526677496421023774)
+    Thank you!!
+
+[2026-07-14T19:52:35.420000+00:00] celestial_sparrow_73595 (id=1526677815091658913)
+    Im working on self hosted and trying to get it to you asap ! Wondering would you use cloud version first if I open source the code ? And also wondering from a filtering perspective are you looking for any kind of changes there ?
+
+[2026-07-14T19:54:09.667000+00:00] celestial_sparrow_73595 (id=1526678210392232168)
+    The question on would you use cloud is just me figuring out what to prioritize first whether open sourcing the code or getting self hosted out . I’m working on both but just wanted your take
+
+[2026-07-14T19:56:25.888000+00:00] ozmotaz (id=1526678781744648194)
+    if you open source it, id probably host it myself for me and my clients rather than rely on your cloud version, just for peace of mind
+
+[2026-07-14T19:57:07.875000+00:00] ozmotaz (id=1526678957850628096)
+    id imagine there are lots of security implications for a cloud version
+
+[2026-07-14T19:57:12.372000+00:00] celestial_sparrow_73595 (id=1526678976712544358)
+    Ok makes sense I’m rushing to get it to you self hosted and open source I just have some clean up I need to do before I open source
+
+[2026-07-14T19:58:43.520000+00:00] celestial_sparrow_73595 (id=1526679359014961292)
+    I do hope folks use it so I’m really eager to get out self hosted and also happy you found it useful
+
+[2026-07-14T20:02:33.563000+00:00] ozmotaz (id=1526680323885371515)
+    i do think you have a viable product but with many security hoops to go thru, and this group of people are quite skeptical to give email to a 3rd party is all. having both options is good if you want to monetize it eventually. i'd check what other open source + cloud/saas companies do, so you have best of both worlds 🙂
+
+[2026-07-14T20:19:00.345000+00:00] celestial_sparrow_73595 (id=1526684462748799107)
+    For sure I think a self hosted option is key for security minded (it just makes sense if you know anything about data privacy lol) . I’m gonna have both options for sure and the goal will be to monetize eventually . one day but there are a lot of security hoops to pass through for sure which I’m working towards now even though it’s expensive <:catastrophe:1151299904346521610> . As of right now I would love community adoption for this as I think ai companies shouldn’t just have access to everything as it’s just more training data for them for free and then there is the obvious you don’t want your agent to go rouge when it has unrestricted access to your email . Also open sourcing it will make this even better in my opinion as everyone can inspect and see why they should trust it and also make it better
+
+[2026-07-14T20:20:34.027000+00:00] celestial_sparrow_73595 (id=1526684855679717508)
+    Ty for the feedback so far. Would you all want any integrations besides Gmail? Is there another type
+    Of account you want to give access to but want to restrict?
+

@@ -46980,3 +46980,62 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/61615
     - #60085 — fix(tui): deliver kanban notify subscriptions to TUI/desktop sessions (fixes #59890) — happy to consolidate with #59963 either direction if a maintainer has a preference
 
+[2026-07-14T20:58:24.488000+00:00] wittgenstein9840 (id=1526694378683498617)
+    What have you guys been working on today?
+
+[2026-07-14T20:59:08.225000+00:00] wittgenstein9840 (id=1526694562129510511)
+    To be honest, I’ve focused on developing skills based on evolutionary psychology research.
+
+[2026-07-14T21:01:52.631000+00:00] undifined. (id=1526695251698389132)
+    https://debvisor.com/wiki/stats/
+
+[2026-07-14T21:02:17.584000+00:00] undifined. (id=1526695356358983741)
+    https://debvisor.com/wiki/#
+
+[2026-07-14T21:07:42.444000+00:00] teknium (id=1526696718920585226)
+    [attachment] 68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30616132343237652f344945355a46637a6f7743412d546a4c47773958455f3642325031744d4f2e706e67.png https://cdn.discordapp.com/attachments/1491258766648283238/1526696718417133689/68747470733a2f2f7633622e66616c2e6d656469612f66696c65732f622f30616132343237652f344945355a46637a6f7743412d546a4c47773958455f3642325031744d4f2e706e67.png?ex=6a57f69e&is=6a56a51e&hm=e6df563bf22347703ead4175abcb0f2614d3ce346a66f8db91ba6c8dadbe4c1c&
+
+[2026-07-14T21:21:52.214000+00:00] undifined. (id=1526700283114164344)
+    it chooses the needed model itself ?
+
+[2026-07-14T21:22:48.317000+00:00] sassyfatcat (id=1526700518427328755)
+    I think it adds the ability to set reasoning levels for each aux task
+
+[2026-07-14T21:23:07.260000+00:00] ciacon (id=1526700597879771348)
+    Who here can I ask for some help/guidance with a PR?
+
+[2026-07-14T22:25:54.845000+00:00] sprmn24 (id=1526716400276603031)
+    opened 2 PRs today  take a look when you get a chance <:tekkie:1341983449371639881> 
+    
+    **PR #64592**  fix(agent): canonicalise paths in parallel-batch planner to prevent same-file concurrent mutation
+    
+    Issue: _plan_tool_batch_segments used process cwd instead of tool execution cwd, and abspath() instead of realpath(), so symlink aliases and relative/absolute path pairs resolving to the same physical file were placed in the same parallel segment — allowing write_file + patch to race on the same file (lost update / corrupted write). normcase() also absent for Windows.
+    Fix: new _canonical_path() with realpath+normcase; execution_cwd threaded through _extract_parallel_scope_path, _plan_tool_batch_segments, and both call sites; 5 regression tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/64592
+    
+    **PR #64632** — fix(agent): block later file mutations when a timed-out concurrent worker is left detached
+    
+    Issue: when a parallel segment times out, the worker thread is left detached. If it carries write_file or patch, it can commit its mutation after the dispatcher returned timeout — then overwrite a later segment's successful result (transcript ≠ disk state).
+    
+    Fix: _CONCURRENT_TIMEOUT_MARKER embedded in timeout result; _dangling_mutating_worker guard in execute_tool_calls_segmented blocks later mutating segments; marker-based detection avoids brittle string matching; 2 regression tests. Scope: same-turn batch only.
+    
+    https://github.com/NousResearch/hermes-agent/pull/64632
+    
+    Both are regressions from perf commit #64460.
+
+[2026-07-14T22:27:47.661000+00:00] sprmn24 (id=1526716873461334038)
+    Also ;
+    
+     just wanted to give you a quick update. I went back through some older PRs based on sweeper feedback and addressed the requested changes:
+    
+    PR #62898 — RuntimeError→TimeoutError fix https://github.com/NousResearch/hermes-agent/pull/62898
+    PR #62899 — Draining state health fix  https://github.com/NousResearch/hermes-agent/pull/62899
+    PR #62901 — UTF-16 chunk split boundary fix  https://github.com/NousResearch/hermes-agent/pull/62901
+    PR #62907 — WhatsApp Cloud plugin registry migration https://github.com/NousResearch/hermes-agent/pull/62907
+    PR #24024 — platform_registry check_fn guard + regression test added  https://github.com/NousResearch/hermes-agent/pull/24024
+    All have been updated and force-pushed. Let me know if anything needs further adjustment!
+
+[2026-07-14T23:51:16.185000+00:00] tdamre (id=1526737880733581394)
+    https://github.com/NousResearch/hermes-agent/pull/40120 <@387972437901312000>
+
