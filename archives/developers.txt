@@ -47064,3 +47064,70 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-15T07:28:44.453000+00:00] trivunous (id=1526853007113851012)
     https://github.com/NousResearch/hermes-agent/pull/64808
 
+[2026-07-15T08:24:49.757000+00:00] gottz.de (id=1526867122222006296)
+    Just figured this channel is a thing so.. https://github.com/NousResearch/hermes-agent/pull/64342
+    this, optionally, makes compaction completely user-defined.
+    I'm using this actively but would like to avoid needing to patch hermes updates all the time.
+
+[2026-07-15T09:18:08.632000+00:00] apaarmeet_singh (id=1526880539276087439)
+    addressed a race condition in the Desktop app where prompt.submit could send a message to a stale runtime session when the three session identities (runtime session, selected stored session, route token) were already split at submit entry. This is the PR  https://github.com/NousResearch/hermes-agent/pull/64814   open to feedbacks
+
+[2026-07-15T10:48:24.593000+00:00] isodl (id=1526903255462969464)
+    I've addressed all the feedback you provided and updated the PR. Ready for re review whenever you get a chance <@387972437901312000>. I don't usually post PR's here, this is actually my first time doing so 🙂 https://github.com/NousResearch/hermes-agent/pull/2824
+
+[2026-07-15T10:58:49.372000+00:00] nobitajr79 (id=1526905875976032297)
+    <@387972437901312000>  [Bug Report] Hermes Desktop v0.18.2 — Mixture of Agents dropdown auto-switches provider/model unexpectedly
+    
+    Environment: Windows 10 · Hermes Desktop (native app) · Provider: OpenRouter/Nous Portal · v0.18.2
+    
+    Issue: In Settings → Model → Mixture of Agents preset screen, clicking/interacting with any provider/model dropdown causes it to silently switch to a different provider and model than selected.
+    
+    Affected fields:
+    
+    Reference 1
+    Reference 2
+    Aggregator
+    To reproduce:
+    
+    Open Hermes Desktop → Settings → Model → open default preset
+    Scroll to Reference 1 / Reference 2 / Aggregator
+    Click a dropdown and select/confirm a model
+    Field auto-changes to a different provider/model (e.g. openai-codex · gpt-5.5 → openrouter · deepseek/deepseek-v4-pro)
+    Expected: Each field retains its own selected provider/model independently.
+    
+    Actual: Values leak/swap between sections. No way to reliably lock in a choice.
+    
+    Notes:
+    
+    Desktop-only; not tested on CLI/web dashboard
+    No error dialogs — purely visual/state bug
+    No workaround found
+    Screenshots available showing Reference 1 (openrouter · deepseek/deepseek-v4-pro), Reference 2 (openrouter · deepseek/deepseek-v4-pro), and Aggregator (openrouter · anthropic/claude-opus-4.8) fields.
+    [attachment] Screenshot_2026-07-15_163711.png https://cdn.discordapp.com/attachments/1491258766648283238/1526905873371234355/Screenshot_2026-07-15_163711.png?ex=6a58b968&is=6a5767e8&hm=567c95f412d93ec66942ede8c33195e88cde448b35de00217ed9aa600becd624&
+    [attachment] Screenshot_2026-07-15_163720.png https://cdn.discordapp.com/attachments/1491258766648283238/1526905873987928134/Screenshot_2026-07-15_163720.png?ex=6a58b968&is=6a5767e8&hm=844755c171aa23057d23c20b14a4ed6433d6234020f3adf1b0e7cfd58dfe8acd&
+    [attachment] Screenshot_2026-07-15_163732.png https://cdn.discordapp.com/attachments/1491258766648283238/1526905874700832919/Screenshot_2026-07-15_163732.png?ex=6a58b969&is=6a5767e9&hm=a4fcacfc8dc1c4e908c0a0c2dc9a078dd2c198ecdef356e5b83fa4a01d687ad4&
+
+[2026-07-15T11:12:47.901000+00:00] teknium (id=1526909393021698068)
+    Thanks. Looking
+    [reply to nobitajr79 msg=1526905875976032297]
+
+[2026-07-15T11:15:22.570000+00:00] undifined. (id=1526910041750507642)
+    https://core.telegram.org/bots/api
+
+[2026-07-15T11:16:06.402000+00:00] .jakubw (id=1526910225595236373)
+    <@387972437901312000> I know PR (https://github.com/NousResearch/hermes-agent/pull/57849) is tagged as p3 but take a look
+
+[2026-07-15T12:17:45.923000+00:00] longshen1461 (id=1526925742510964808)
+    Can't I install Hermes on my phone using Termux anymore? Why can't I keep installing it?
+
+[2026-07-15T12:17:55.158000+00:00] longshen1461 (id=1526925781245362309)
+    curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+
+[2026-07-15T12:43:32.206000+00:00] hizzgdev (id=1526932228091678770)
+    Hey <@387972437901312000> , I have addressed all concerns from your review, could you take another look when you get a chance?
+    
+    https://github.com/NousResearch/hermes-agent/pull/48199
+
+[2026-07-15T12:52:07.627000+00:00] warofchange (id=1526934389924298812)
+    <:Prayge:1151275585000185968>
+

@@ -5891,3 +5891,18 @@
     Will file the issue so we can take a look, thanks!
     [reply to mathewsstar msg=1526761825386107032]
 
+[2026-07-15T08:32:57.606000+00:00] deor42 (id=1526869168408760381)
+    I'm curious about what you mean by lag in WebUi. I use Hermes exclusively via WebUi and everything is very snappy and responsive. Hermes and WebUi are both running locally in a proxmox VM with 8gb ram and 2 cores of my Ryzen 7 5800 available to it. I access it locally using the webui web page, webui desktop app or mobile app on my android phone. I also use the same when i'm out and about via Tailscale on my phone or laptop.
+    [reply to k.shepherd msg=1526404506940739737]
+
+[2026-07-15T12:49:19.244000+00:00] digital_love_two (id=1526933683674550402)
+    I just installed hermes webui today for one new Hermes Agent. It seems much better than last time I used it, and it supports Vietnamese. 
+    But how to sync chat sessions from native hermes desktop (all of them install on one WSL). They show web sessions and cli sessions, but cli sessions don't have title.
+
+[2026-07-15T13:08:55.098000+00:00] k.shepherd (id=1526938615563944178)
+    After long sessions, or even like 3 prompts with tons of tool usage from the model, I'll experience lagging in both scrolling but more critically in typing in the next prompt.
+    Ive been messing with the CSS on my end and may have solved this but still playing with things.
+    
+    The overall team behind Hermes WebUI may also already have this solved in newer versions I just haven't tested recently.
+    [reply to deor42 msg=1526869168408760381]
+

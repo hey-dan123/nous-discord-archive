@@ -1,0 +1,21 @@
+# Thread 'Make Hermes Agent write better in your Native Language' in forum #community-projects-showcase
+# thread_id=1526894499786133574 forum_id=1316137596535177246
+# Started 2026-07-15T13:38:54.063922+00:00
+
+[2026-07-15T10:13:37.077000+00:00] annguyen175 (id=1526894499786133574)
+    Why LLMs write in your native language but still sound "sterile":
+    
+    Most models default to planning their concepts in English within their hidden Chain-of-Thought (thinking tokens), only translating to your target language (like Vietnamese) at the very last step. This latent translation layout strips out natural rhythm and phrasing.
+    
+    I solved this on my Hermes Agent setup by building a skill that forces the thinking tokens to execute natively in the target language from character zero. If the model drafts its thoughts in the native language directly, the resulting output matches the natural flow of a native writer—no translation step, no rigid grammar patterns. 
+    
+    Tested this across 10 technical and narrative drafts, and the raw output required zero manual rewriting.
+    
+    The breakdown and skill config: https://thanhan.dev/en/cases/vietnamese-writer-agent
+    
+    ***
+    
+    Footnote: I'm documenting practical use cases (for non-technical starters) we deploy on our local Hermes Agent setups every two weeks at https://thanhan.dev/ to help teams get real work done with agents.
+    [attachment] Screenshot_2026-07-15_at_17.12.51.png https://cdn.discordapp.com/attachments/1526894499786133574/1526894500146839572/Screenshot_2026-07-15_at_17.12.51.png?ex=6a58aed1&is=6a575d51&hm=1cc8e82b4d0fba50ce4485a26ef76fd44c28cff911860f8c1a663a45e995a137&
+    [embed] The Thinking Token Moat: Unlocking Original Vietnamese Drafting on AI https://thanhan.dev/en/cases/vietnamese-writer-agent
+

@@ -90,3 +90,31 @@
     if you run into anything, just let me know!
     [reply to tonyporj msg=1526557513732984993]
 
+[2026-07-15T10:39:18.416000+00:00] _voscko_ (id=1526900964630728784)
+    🚀 **Noisegate v0.3.0 is live**
+    
+    Noisegate is getting better at knowing when to stay quiet, and when evidence must remain untouched.
+    
+    This release brings safer background-process compaction, bounded write diagnostics, stricter MCP and memory-retrieval preservation, tighter artifact safety, and clearer contributor guardrails.
+    
+    Install or update:
+    
+    ```bash
+    uvx --from noisegate-hermes noisegate install-hermes
+    ```
+    
+    Preview first:
+    
+    ```bash
+    uvx --from noisegate-hermes noisegate install-hermes --dry-run
+    ```
+    
+    - GitHub: https://github.com/Tosko4/noisegate/releases/tag/v0.3.0
+     - PyPI: https://pypi.org/project/noisegate-hermes/0.3.0/
+    - npm: https://www.npmjs.com/package/noisegate-hermes/v/0.3.0
+    
+    Less execution noise. More trustworthy evidence
+    
+    <@427613574995771414>
+    [embed] Release Noisegate v0.3.0 · Tosko4/noisegate https://github.com/Tosko4/noisegate/releases/tag/v0.3.0
+

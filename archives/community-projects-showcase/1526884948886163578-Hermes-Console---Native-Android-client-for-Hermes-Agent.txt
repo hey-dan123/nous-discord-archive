@@ -1,0 +1,33 @@
+# Thread 'Hermes Console - Native Android client for Hermes Agent' in forum #community-projects-showcase
+# thread_id=1526884948886163578 forum_id=1316137596535177246
+# Started 2026-07-15T13:38:54.565866+00:00
+
+[2026-07-15T09:35:39.965000+00:00] xpeta (id=1526884948886163578)
+    Hey all,
+    
+    I’ve been working on an Android app for Hermes Agent called Hermes Console.
+    
+    I started it because I wanted a cleaner, more native mobile experience, not just the web UI squeezed into a phone screen.
+    
+    It’s still early, but it’s usable, and I’d love some honest feedback if anyone here wants to try it.
+    
+    Links:
+    - Test group: https://groups.google.com/g/hermes-console-testers
+    
+    - App: https://play.google.com/apps/testing/dev.xpetalab.hermesconsole
+    
+    - Setup: https://hermes.xpetalab.dev/guia/
+    
+    - Bugs, ideas and questions: https://hermes.xpetalab.dev/contact/
+    
+    - Privacy: https://hermes.xpetalab.dev/privacy/
+    
+    No hard sell. If something feels rough, broken, or unnecessary, feel free to say it straight.
+    [embed] Sign in - Google Accounts https://play.google.com/apps/testing/dev.xpetalab.hermesconsole
+    [embed] Guía completa — Hermes Console https://hermes.xpetalab.dev/guia/
+    [embed] Contacto y soporte — Hermes Console https://hermes.xpetalab.dev/contact/
+    [embed] Política de Privacidad — Hermes Console https://hermes.xpetalab.dev/privacy/
+
+[2026-07-15T10:36:37.941000+00:00] xpeta (id=1526900291549794434)
+    Hermes Console - Native Android client for Hermes Agent
+
