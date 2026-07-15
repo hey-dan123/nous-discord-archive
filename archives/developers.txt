@@ -47039,3 +47039,28 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-14T23:51:16.185000+00:00] tdamre (id=1526737880733581394)
     https://github.com/NousResearch/hermes-agent/pull/40120 <@387972437901312000>
 
+[2026-07-15T02:40:58.225000+00:00] kent_53057 (id=1526780587304816790)
+    https://github.com/NousResearch/hermes-agent/pull/20995 <@387972437901312000> please take a look when you have a chance.
+    
+    issue: After a credential-pool key rotation, calling /usage showed the old key's Anthropic account usage.
+
+[2026-07-15T06:14:03.537000+00:00] fullslop (id=1526834212789817386)
+    <@387972437901312000> I addressed your comments and pushed up changes to this PR: https://github.com/NousResearch/hermes-agent/pull/48395
+    re-review when you get the chance 🙏
+
+[2026-07-15T06:15:26.913000+00:00] fullslop (id=1526834562494365736)
+    what a beautiful infographic 🥰
+    [reply to teknium msg=1526696718920585226]
+
+[2026-07-15T06:33:04.390000+00:00] blooddragon90 (id=1526838997874245692)
+    per the feedback and poll in main chat on Fast/Auto/Cold mode for faster warmup and fast mode only for initial convo calls to make conversations feel faster: https://github.com/NousResearch/hermes-agent/pull/64786 here's the PR with options for users, feel free to takeover and edit
+
+[2026-07-15T07:01:20.474000+00:00] teknium (id=1526846111766155386)
+    Thanks <@958058314044956693> <@238593244479488000>
+
+[2026-07-15T07:27:28.839000+00:00] tunacookie (id=1526852689965744158)
+    https://github.com/NousResearch/hermes-agent/pull/64812 not sure if its a window problem or is a me problem but yea the on my side hermes desktop doesnt show any diffs on the review pane
+
+[2026-07-15T07:28:44.453000+00:00] trivunous (id=1526853007113851012)
+    https://github.com/NousResearch/hermes-agent/pull/64808
+

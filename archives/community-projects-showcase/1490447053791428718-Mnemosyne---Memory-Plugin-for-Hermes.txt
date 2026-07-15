@@ -2621,3 +2621,7 @@
     Although I will say that these days I mostly just rely on Mnemosyne and LCM in Hermes.
     [reply to llealloo msg=1526426754372079656]
 
+[2026-07-15T07:35:46.898000+00:00] meaningmean (id=1526854778976600105)
+    Are you trying to clone yourself in a way that uses as few tokens as possible?
+    [reply to llealloo msg=1526426754372079656]
+

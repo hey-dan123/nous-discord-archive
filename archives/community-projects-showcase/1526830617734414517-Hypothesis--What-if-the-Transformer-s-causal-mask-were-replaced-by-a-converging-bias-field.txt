@@ -1,0 +1,34 @@
+# Thread '[Hypothesis] What if the Transformer's causal mask were replaced by a converging bias field?' in forum #community-projects-showcase
+# thread_id=1526830617734414517 forum_id=1316137596535177246
+# Started 2026-07-15T08:05:11.829204+00:00
+
+[2026-07-15T05:59:46.409000+00:00] kratos20011 (id=1526830617734414517)
+    A short architectural hypothesis I've been thinking about. Curious whether anyone finds this interesting, wrong, or already-explored.
+    
+    ### The hypothesis
+    
+    > *What if the causal mask were replaced by a **dynamic, continuous bias field** that is computed at each forward pass and converges via a small number of internal iterations, while the pretrained weights `W_q, W_k, W_v, W_o, W_ffn` remain strictly unchanged?*
+    
+    Concretely, in pseudo-formal notation:
+    
+    ```
+    Standard:  M(i,j) = 0 if j ≤ i else −∞
+    Proposed:  M_0 = 0
+               for τ = 1..N:
+                 target(Q,K) = similarity_measure(Q, K) − mean(similarity)
+                 M_τ = M_{τ−1} + α·λ·(target(Q,K) − M_{τ−1})
+                 if ‖M_τ − M_{τ−1}‖ < ε: break
+               attn = softmax(QKᵀ/√d + M_τ) V
+    ```
+    
+    The pretrained weights are not modified. The bias field is a **task-conditional, per-input modulation** of the attention logits, computed in the forward pass only.
+    
+    ### Why this might be interesting
+    
+    1. **The bias is conditioned on the actual content** of the current input, not on position alone. Two prompts with the same length can get different bias fields if their Q/K geometry differs.
+    2. **The update is incremental (EMA-style)**, not a replacement. This is critical: if the bias were recomputed from scratch at each iteration, the target would move as Q, K change through the softmax, and the system would not converge. The Δ-update is what gives the procedure a well-defined fixed point.
+    3. **The cost is `N×` the attention compute**, but with `N` small (3–10) and trivially parallelizable. No new parameters, no new activations to store beyond the bias tensor itself.
+    4. **The number of iterations is itself a hyperparameter that can be task-dependent** — long-context reasoning might want more iterations, simple next-token prediction can stop at `N=1` (which recovers the standard attention modulo a constant offset).
+    
+    <:BeardedNousGirl:1506796582987632690>
+

@@ -5844,3 +5844,50 @@
     When I try to change or select a model using the selector button in the bottom input bar (which I have circled in green in the attached screenshot), the dropdown menu does not load or open at all. Tapping the icon or the model name does not trigger any list, making it impossible to switch models on mobile devices.
     [attachment] 2cbaf6f2-01b6-402b-b467-ff0c5214833e.png https://cdn.discordapp.com/attachments/1493017427724992612/1526761825339838605/2cbaf6f2-01b6-402b-b467-ff0c5214833e.png?ex=6a583341&is=6a56e1c1&hm=85a4a05ad9a8035340507870e1c3678b87f3b2f1b6df8fed17bd3681ef7fa23c&
 
+[2026-07-15T03:29:04.829000+00:00] phase8 (id=1526792694599520267)
+    im going to be adding the good parts of this to my own setup, thanks
+    
+    Adopt the product patterns, not the codebase.  
+    Do not embed, fork, or try to obtain 1:1 CLI/WebUI parity inside PocketOps.
+    
+    Hermes WebUI is a powerful single-user web surface with broad access to sessions, profiles, skills, cron, workspace files, and agent internals. PocketOps should instead stay:
+    
+    - native-first
+    - mobile-ergonomic
+    - BFF-mediated
+    - typed and allowlisted
+    - operator-focused
+    - auditable for every real action
+    
+    That gives you something more professional than a mobile copy of a terminal UI. POW.
+    
+    What I would bring over
+    
+    1. A real Agent Activity experience — highest value
+    Hermes WebUI’s best interaction idea is not its three-column layout; it is that the user can see what the agent is doing:
+    
+    - streamed answer state
+    - tool/activity cards
+    - queued work
+    - cancellation
+    - approvals
+    - reconnect/recovery behavior
+    - visible turn status
+    
+    PocketOps currently posts to /v1/chat and receives one completed reply string. That is simple and safe, but it feels like waiting on a black box.
+    
+    PocketOps version:
+    - Stream a typed agent-event feed through the BFF.
+    - Show concise, human-readable activity rows:
+      - “Checking HCC overview”
+      - “Inspecting Uptime Kuma”
+      - “Querying memory”
+      - “Running approved maintenance”
+    - Keep raw commands, credentials, full tool payloads, and internal paths out of the phone by default.
+    - Add Cancel only when the BFF can genuinely cancel the underlying run.
+    - On reconnect, restore the turn’s authoritative state rather than guessing.
+
+[2026-07-15T06:28:54.746000+00:00] avidfuturist (id=1526837950791422073)
+    Will file the issue so we can take a look, thanks!
+    [reply to mathewsstar msg=1526761825386107032]
+

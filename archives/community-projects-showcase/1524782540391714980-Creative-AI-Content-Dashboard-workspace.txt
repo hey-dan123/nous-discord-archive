@@ -27,3 +27,16 @@
 [2026-07-13T15:35:58.627000+00:00] malakmemon (id=1526250848395460789)
     yh share it with me looks fire
 
+[2026-07-15T06:51:17.223000+00:00] smoermeow (id=1526843581548199937)
+    Just finishing some edits on it. As it before looked good but was a pain in the ass to actually use. the new setup should be more dynamic and fluid to use. as soon as it's ready i'll make a github
+
+[2026-07-15T08:04:52.075000+00:00] smoermeow (id=1526862098779607103)
+    So the changes are more somethig like this. 
+    
+    Istead of having 10 different project presets this should be more adaptable. The workspace feels more like an actual workspace with a larger chat interface instead of just a floating chat box. 
+    
+    the flaoting chat box will be there on other pages if you need to ask the agent to change anything. 
+    
+    Using gpt5.6-terra for this. It's work really well but often over engineers things... it's like the model sometimes think that it's making a dashboard for an AI not a human so I had a bit of hiccups but I'll share it as soon as I get this done.   😂
+    [attachment] Skrmbillede_2026-07-15_kl._10.01.40.png https://cdn.discordapp.com/attachments/1524782540391714980/1526862098586402906/Skrmbillede_2026-07-15_kl._10.01.40.png?ex=6a5890a4&is=6a573f24&hm=446b2faba0cc79e57b1a977fb73b90b95c7166520b24a05c286a6ea705ad8a9a&
+
