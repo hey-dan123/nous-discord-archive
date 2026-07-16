@@ -25,3 +25,10 @@
 [2026-07-16T03:10:04.256000+00:00] virus_os (id=1527150298555224155)
     Could you please make a Windows version?
 
+[2026-07-16T09:17:27.682000+00:00] rhetorastudio (id=1527242755385065562)
+    Oh wow! Now THIS is badass! As both an AI guy and a DaVinci Resolve Studio guy, i've been looking at how I could integrate hermes into video editing. Definitely checking this out. Kudos to you!
+
+[2026-07-16T09:18:47.514000+00:00] rhetorastudio (id=1527243090224484452)
+    Do you think this could potentially be extended to allow Hermes to view a finished timeline, scan the structure of the project, and then create a davinci python script to be able to recreate the project with new footage?
+    [reply to samjwasserman msg=1527029936899231925]
+

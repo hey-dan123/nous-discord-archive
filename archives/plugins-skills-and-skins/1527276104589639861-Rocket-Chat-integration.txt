@@ -1,0 +1,21 @@
+# Thread 'Rocket Chat integration' in forum #plugins-skills-and-skins
+# thread_id=1527276104589639861 forum_id=1485392832154832906
+# Started 2026-07-16T13:50:17.224258+00:00
+
+[2026-07-16T11:29:58.752000+00:00] mer7320 (id=1527276104589639861)
+    Rocket.Chat plugin for Hermes Agent
+    Adds self-hosted Rocket.Chat as a Hermes gateway platform.
+    Features:
+    DDP WebSocket for incoming messages
+    REST API for outgoing messages
+    DMs, public channels, and private groups
+    Optional threads in channels and groups; flat replies in DMs
+    Configurable mention requirement and free-response channels
+    Images, documents, video, and voice messages
+    Processing reactions
+    Hermes slash commands
+    Agent tools for listing/creating channels, posting messages, and sending DMs
+    Cron delivery and automatic reconnects
+    https://github.com/HalfbitStudio/hermes-plugin-rocketchat
+    [embed] GitHub - HalfbitStudio/hermes-plugin-rocketchat: Rocket.Chat platfo... https://github.com/HalfbitStudio/hermes-plugin-rocketchat
+

@@ -25,3 +25,7 @@
     Happy to answer questions or take criticism. Especially on the 9-roles-vs-3 debate — an Opus review told us we were over-engineered and we only partially agreed.
     [embed] GitHub - ardhaecosystem/RUDR9: One command → full AI engineering ... https://github.com/ardhaecosystem/RUDR9
 
+[2026-07-16T10:50:18.924000+00:00] bazsi1__ (id=1527266122867413102)
+    This is very interesting and looks promising, have you also tried it on non CLI ? I was thinking about the same but i dont know if hermes could do automatic evaluation of normal messages coming from the gateway, to decide if one message needs to activate the whole team or not.
+    [reply to royniki msg=1527113499052867624]
+

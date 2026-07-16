@@ -47432,3 +47432,234 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     you might want to search it within the <#1476316988992258300> channel
     [reply to bhyrd msg=1527203232974245958]
 
+[2026-07-16T08:58:55.852000+00:00] kyssta69 (id=1527238092031791155)
+    https://github.com/NousResearch/hermes-agent/pull/65524
+    
+    **Problem**: Ctrl+W in the desktop terminal pane no longer kills the shell session — it passes through as a word-delete key to the PTY instead of closing the tab.
+
+[2026-07-16T09:27:14.300000+00:00] k_nearest_neighbor (id=1527245215839293480)
+    Minor nit / feature yearn: In the later desktop versions, `/reload-mcp` directs you to fnd a button in the UI to perform this action, but there is no longer such a  button. Have to bounce the app to do it.
+    
+    There used to be an MCP config section in the settings UI and a reload button. I can understand why the config editor was removed, I assume because it can be error prone / complicated to have a feature like that which syncs with the config.yaml;  But it would still be nice to be able to reload the mcp without closing and re-opening. I prefer to just `/reload-mcp`. But not a huge deal.
+
+[2026-07-16T09:37:33.412000+00:00] realadolan (id=1527247812582965329)
+    https://github.com/NousResearch/hermes-agent/pull/65409
+
+[2026-07-16T09:57:11.631000+00:00] techdox (id=1527252754391765052)
+    https://github.com/NousResearch/hermes-agent/pull/65560
+    Adds a glanceable OpenAI Codex subscription-usage item to the Electron Desktop status bar. When the focused session uses openai-codex, Desktop shows the remaining percentage (for example, Codex 79% left) and a popover with plan, quota windows, reset times, account details/credits, refresh state, and a link to the Codex usage page.
+
+[2026-07-16T10:35:30.605000+00:00] kyssta69 (id=1527262396987473990)
+    https://github.com/NousResearch/hermes-agent/pull/65580
+    
+    **Problem**: Profile import crashed on symlinks/hardlinks in tar archives. Now handles them gracefully: recreates relative symlinks, warns on absolute ones, skips other unsupported types instead of aborting.
+
+[2026-07-16T11:01:55.540000+00:00] xbbmai (id=1527269044686815334)
+    Custom skin (`banner_logo` gradient + hero) on **classic CLI** — resize shreds layout. Default skin resizes fine. Same on Terminal.app + Ghostty.
+    
+    Do working third-party skins default to **TUI** instead of classic CLI? Or is there a classic-CLI recipe (width/tag rules) that keeps a big custom HEADER and survives resize? Links to threads/docs/PRs welcome. Hermes 0.18.x macOS.
+
+[2026-07-16T11:05:03.482000+00:00] xbbmai (id=1527269832972701756)
+    Corrected^
+
+[2026-07-16T11:06:43.777000+00:00] nobitajr79 (id=1527270253640421497)
+    Thanks for fixing this problem.
+    [reply to teknium msg=1526909393021698068]
+
+[2026-07-16T11:32:46.314000+00:00] nobitajr79 (id=1527276807395741809)
+    <@387972437901312000>  Bug Report: Hermes Desktop App — Side Panel Toggle Reversed
+    
+    When clicking the right sidebar toggle, the left sidebar hides/unhides instead of the right sidebar. Similarly, clicking the left sidebar toggle affects the right sidebar.
+    
+    Expected behavior
+    
+    Left sidebar toggle button should control only the left chat history panel
+    Right sidebar toggle button should control only the right panel
+    Actual behavior
+    
+    Toggle buttons are swapped/inverted: clicking one side’s toggle affects the opposite side’s panel
+    Steps to reproduce
+    
+    Open the Hermes desktop app
+    Look at the top-left sidebar toggle controls
+    Click the left sidebar toggle
+    Observe: the right sidebar hides/unhides instead of the left
+    Click the right sidebar toggle
+    Observe: the left sidebar hides/unhides instead of the right
+    Environment
+    
+    OS: Windows
+    App: Hermes Desktop GUI -  v0.18.2
+    Severity: Medium (core navigation bug)
+    [attachment] img-1.png https://cdn.discordapp.com/attachments/1491258766648283238/1527276807382892634/img-1.png?ex=6a5a12de&is=6a58c15e&hm=e0087441c8476e6d383a49a4bfb984be63e0e03052c74b095d614e5991571d85&
+
+[2026-07-16T11:34:01.414000+00:00] fro0z1 (id=1527277122387837018)
+    .
+
+[2026-07-16T11:44:45.627000+00:00] architex_ (id=1527279824413130873)
+    this is my own personal eval, i’m happy to open source it in the next few weeks. And yes, marginally it appears Bonsai 27B Q_1 scored a few points better on these evals
+    [reply to loofabackwards msg=1527044531181064319]
+
+[2026-07-16T11:52:58.037000+00:00] godsboy7777 (id=1527281889730367509)
+    <@387972437901312000> could you please review PR #65509 when you have a chance?
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/65509  
+    Issue: https://github.com/NousResearch/hermes-agent/issues/65500
+    
+    It fixes a gateway session-listing issue where `/sessions` and bare `/resume` can hide valid same-chat history on busy installations.
+    
+    A live read-only reproduction found:
+    
+    - 77 physical session rows
+    - 15 logical conversations
+    - All within the affected Telegram DM
+    
+    ## Why I believe this is the right fix
+    
+    - Applies the existing indexed `session_key` filter before the SQL limit, fixing the actual query-order problem
+    - Covers `/sessions`, bare `/resume`, and numeric fallback consistently
+    - Keeps compression projection, current-session exclusion, and existing IDOR authorisation checks intact
+    - Normalises Telegram topic commands to the same lane used by normal routing
+    - Keeps compressed lineages on one routing peer during an authorised cross-lane resume
+    - Requires no migration, backfill, database cleanup, or arbitrary larger fetch window
+    
+    Related PRs #60138, #62138, and #62278 cover numbered-choice memory, model-facing search, and compression-child metadata.
+    
+    None of them fixes this gateway candidate-starvation path.
+    
+    The small primitive overlap with #62138 is called out in the PR and can be rebased away cleanly if that lands first.
+    
+    ## Verification
+    
+    - 565 focused tests passed locally
+    - Every PR CI check is green
+    - All Python slices passed
+    - e2e passed
+    - Lint and type checks passed
+    - Security scans passed
+    - amd64 and arm64 Docker integration tests passed
+
+[2026-07-16T12:06:39.015000+00:00] trivunous (id=1527285333161541672)
+    https://github.com/NousResearch/hermes-agent/pull/65569
+
+[2026-07-16T12:06:44.513000+00:00] trivunous (id=1527285356221829272)
+    https://github.com/NousResearch/hermes-agent/pull/65565
+
+[2026-07-16T12:18:00.560000+00:00] magical_badger_30652 (id=1527288191768465458)
+    Bug: vision_analyze lokal fehlerhaft mit FAL-Provider (404 / blocked private URL)
+    
+    Symptom: Seit Umstellung von auxiliary.vision.provider: nous → fal (FAL_KEY korrekt gesetzt) schlägt vision_analyze mit lokalen Windows-Pfaden fehl:
+    
+    Lokaler Pfad C:\Users\...\composer-images\xxx.png → 404 "Couldn't find that"
+    Lokaler HTTP-Server http://127.0.0.1:8099/xxx.png → blocked: unsafe or private URL
+    Öffentliche URLs (z.B. upload.wikimedia.org) → FAL antwortet (400 von Wikimedia, also FAL selbst lebt)
+    Diagnose: FAL liest nur öffentlich erreichbare URLs und lädt lokale Dateien nicht selbst hoch. Der Hermes-Adapter lädt lokale Bilder bei FAL nicht in FAL-Storage hoch (anders als der frühere nous-Proxy, der lokale Pfade konnte). Daher sind Screenshots/Drag-and-Drop-Bilder über den lokalen Pfad nicht analysierbar.
+    
+    Reproduktion:
+    
+    config.yaml: auxiliary.vision.provider: fal, FAL_KEY gesetzt
+    Hermes neu starten
+    Screenshot im Chat senden (landet unter AppData\Roaming\Hermes\composer-images\)
+    → vision_analyze wirft 404
+    Erwartet: Hermes lädt das lokale Bild vor der Analyse zu FAL (oder eigenem Storage) hoch — wie der nous-Proxy zuvor. Lokal gespeicherte Bilder sollten ohne öffentlichen Host analysierbar sein.
+    
+    System:
+    
+    Hermes Agent (Windows, Python 3.11.15)
+    Model: openai/gpt-5.5 via Nous Portal
+    auxiliary.vision.provider: fal, model: tencent/hy3:free
+    FAL-Key gesetzt (Länge 69)
+    Debug-Report: https://support.nousresearch.com/diagnostics/4a537417-e0a6-42fd-8b66-827f5be4e01d
+
+[2026-07-16T12:18:04.346000+00:00] Translator Bot#1043 (id=1527288207648100492)
+    Bug: vision_analyze locally incorrect with FAL provider (404 / blocked private URL)
+    
+    Symptom: Since switching from auxiliary.vision.provider: nous → fal (FAL_KEY set correctly), vision_analyze fails with local Windows paths:
+    
+    Local path C:\Users\...\composer-images\xxx.png → 404 "Couldn't find that"
+    Local HTTP server http://127.0.0.1:8099/xxx.png → blocked: unsafe or private URL
+    Public URLs (e.g. upload.wikimedia.org) → FAL responds (400 from Wikimedia, so FAL itself is alive)
+    Diagnosis: FAL only reads publicly accessible URLs and does not upload local files itself. The Hermes adapter does not upload local images to FAL storage in FAL (unlike the previous nous proxy, which could local paths). Therefore, screenshots/drag-and-drop images cannot be parsed via the local path.
+    
+    Reproduction:
+    
+    config.yaml: auxiliary.vision.provider: false, FAL_KEY set
+    Restart Hermes
+    Send screenshot in chat (lands under AppData\Roaming\Hermes\composer-images\)
+    → vision_analyze throws 404
+    Expected: Hermes uploads the local image to FAL (or its own storage) before analysis — like the nous proxy before. Locally stored images should be able to be analyzed without a public host.
+    
+    System:
+    
+    Hermes Agent (Windows, Python 3.11.15)
+    Model: openai/gpt-5.5 via Nous Portal
+    auxiliary.vision.provider: fal, model: tencent/hy3:free
+    FAL key set (length 69)
+    Debug report: https://support.nousresearch.com/diagnostics/4a537417-e0a6-42fd-8b66-827f5be4e01d
+    [reply to magical_badger_30652 msg=1527288191768465458]
+
+[2026-07-16T12:25:36.010000+00:00] skholmes (id=1527290102064218174)
+    Wooo I had my first contribution to hermes merge thanks <@387972437901312000> 
+    
+    Addressed all feedback and hardened tests for this one that fixes the recursive context bloat: https://github.com/NousResearch/hermes-agent/pull/55640
+    
+    I did some security reviews and adversarial reviews for my slack improvement pr and found quite a few safety issues to fix as well. Should I split it into multiple PRs? https://github.com/NousResearch/hermes-agent/pull/54535
+
+[2026-07-16T12:28:53.387000+00:00] trivunous (id=1527290929923231987)
+    https://github.com/NousResearch/hermes-agent/pull/65628
+
+[2026-07-16T12:44:01.309000+00:00] drexux (id=1527294738024108242)
+    stop truncate_message hanging on a pathologically small max_length : https://github.com/NousResearch/hermes-agent/pull/65288
+    
+    eject a non-ASCII bearer token with 401 instead of crashing : https://github.com/NousResearch/hermes-agent/pull/65305
+    
+    reject a non-ASCII signature header instead of crashing the endpoint : https://github.com/NousResearch/hermes-agent/pull/65307
+
+[2026-07-16T12:45:20.213000+00:00] undifined. (id=1527295068971601980)
+    telegram has become unusable for me, I did much more than this in a day before:
+    
+    - Outbound is blocked by Telegram's own rate limiting. Since 10:58 the bot has been slapped with escalating Flood control exceeded penalties. The last one, at 13:29:29 (5 min
+         after the restart), set a 5360-second (~89 min) retry-after. That means the gateway's outbound send queue is parked until roughly 14:58 CEST and won't deliver replies until then.
+    - Severity: 859 flood-control events logged today. This is a sustained throttle, almost certainly triggered by high-volume outbound (agent replies + the async delegation fan-out /
+         batch summaries you were sending earlier today).
+
+[2026-07-16T12:47:03.433000+00:00] teknium (id=1527295501907791933)
+    Welcome to dev status 🙂
+    [reply to skholmes msg=1527290102064218174]
+
+[2026-07-16T12:52:19.289000+00:00] pacificprime (id=1527296826703872083)
+    Hey! PR #65646 is ready for review 🙏
+    It fixes stale Desktop context usage after updates/reconnects.
+    
+    https://github.com/NousResearch/hermes-agent/pull/65646
+
+[2026-07-16T12:55:54.678000+00:00] pacificprime (id=1527297730110558280)
+    **********
+    And i would like know is it normal log and terminal spam in subagent windows ?
+
+[2026-07-16T12:59:09.102000+00:00] nobitajr79 (id=1527298545584050236)
+    <@387972437901312000> please see
+    [reply to nobitajr79 msg=1527276807395741809]
+
+[2026-07-16T13:14:01.447000+00:00] trivunous (id=1527302288350117898)
+    https://github.com/NousResearch/hermes-agent/pull/65667
+
+[2026-07-16T13:14:14.704000+00:00] trivunous (id=1527302343954006117)
+    https://github.com/NousResearch/hermes-agent/pull/65663
+
+[2026-07-16T13:16:47.642000+00:00] trivunous (id=1527302985422733452)
+    <@283284606902468609> please delete
+
+[2026-07-16T13:17:10.668000+00:00] pacificprime (id=1527303082000646164)
+    Yeah spammer has been spotted
+
+[2026-07-16T13:24:54.337000+00:00] gottz.de (id=1527305026769518663)
+    Nobody is interested in following other peoples footsteps.
+
+[2026-07-16T13:31:49.278000+00:00] lesterliang (id=1527306767158214797)
+    Hey! PR #60977 is ready for review 🙏 It fixes native-Windows non-C drive paths leaking into Docker’s Linux `-w` argument. The requested regression-test update has been addressed, the review thread is resolved, and the branch is mergeable. CI is still awaiting workflow approval. https://github.com/NousResearch/hermes-agent/pull/60977
+
+[2026-07-16T13:36:21.845000+00:00] teknium (id=1527307910386811090)
+    you can tag @ moderator in the future 🙏
+    [reply to trivunous msg=1527302985422733452]
+

@@ -1,0 +1,28 @@
+# Thread 'Deepgram Voice Plugin — Aura TTS + Nova STT' in forum #plugins-skills-and-skins
+# thread_id=1527277126376620144 forum_id=1485392832154832906
+# Started 2026-07-16T13:50:16.835431+00:00
+
+[2026-07-16T11:34:02.365000+00:00] .jaysonsantos (id=1527277126376620144)
+    Following the standalone-plugin guidance on Hermes Agent issue #10703, I published a Deepgram voice plugin for Hermes Agent:
+    
+    https://github.com/jaysonsantos/hermes-deepgram-voice-plugin
+    
+    It provides:
+    • Deepgram Aura text-to-speech
+    • Deepgram Nova speech-to-text
+    • Hermes provider registration without core changes
+    • Configurable provider/model options
+    
+    Install:
+    hermes plugins install jaysonsantos/hermes-deepgram-voice-plugin --enable
+    
+    Set DEEPGRAM_API_KEY, then configure the Deepgram provider in Hermes.
+    
+    Quality: 32 tests passed (93.75% coverage), Ruff, pre-commit, package build/Twine validation, actual Hermes installer smoke test, and GitHub Actions all pass.
+    
+    Original issue: https://github.com/NousResearch/hermes-agent/issues/10703
+    
+    Feedback welcome!
+    [embed] GitHub - jaysonsantos/hermes-deepgram-voice-plugin: Deepgram Aura T... https://github.com/jaysonsantos/hermes-deepgram-voice-plugin
+    [embed] [Feature]: Add Deepgram as a first-class TTS provider · Issue #107... https://github.com/NousResearch/hermes-agent/issues/10703
+
