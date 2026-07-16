@@ -47291,3 +47291,122 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-15T18:53:13.191000+00:00] brokeskill (id=1527025261885784115)
     Im trying to build a kanban tab for the Hermes Agent Desktop but it gets cleared after every client update, is there any way to let it persist trough updates?
 
+[2026-07-15T19:18:46.401000+00:00] undifined. (id=1527031692634624143)
+    I asked hermes to read the new api and fis it for me, it did
+    [reply to jovs_ msg=1526953899116855326]
+
+[2026-07-15T20:06:46.756000+00:00] okpencil (id=1527043773719253156)
+    how are you thinking about what should be a plugin vs toolset vs package
+
+[2026-07-15T20:09:47.349000+00:00] loofabackwards (id=1527044531181064319)
+    What tool/benchmark is that?   Do I see the  bonsai-ternary is ranked lower than the 1-bit quant?
+    [reply to architex_ msg=1526961097477722113]
+
+[2026-07-15T20:30:35.042000+00:00] inuyasha44_88990 (id=1527049764384800949)
+    <@387972437901312000> I won't be able to fix the PRs. I'm traveling.
+
+[2026-07-15T20:31:04.345000+00:00] inuyasha44_88990 (id=1527049887290490910)
+    Just let u know
+
+[2026-07-15T21:55:50.786000+00:00] jakob0837 (id=1527071221370458373)
+    When context gets compacted session export log timings are wrangled. Anyone noticing that as well? And anyone having a solution?
+
+[2026-07-15T23:24:41.516000+00:00] 0xatakan (id=1527093580072620183)
+    Quick contribution roundup — I realized I had not shared most of my open bug-fix PRs here, so I wanted to leave a structured summary for review.
+    
+    A few of the more substantial ones:
+    
+    PR #65254 — fix(desktop): preserve local model provider endpoint
+    
+    Desktop kept the selected Ollama/custom provider visually, but the model assignment request dropped its configured api_url/base_url. The backend then cleared the endpoint, allowing runtime resolution to fall back to OpenRouter-compatible handling.
+    
+    The fix passes the selected provider's api_url back as base_url and adds regression coverage for the Desktop model picker.
+    
+    Focused Desktop tests: 11/11 passed.
+    https://github.com/NousResearch/hermes-agent/pull/65254
+    
+    
+    PR #65002 — fix: avoid process poll reader lock deadlock
+    
+    process(action="poll") could block indefinitely after the direct child exited when a descendant process inherited and kept stdout open.
+    
+    The reader thread was blocked in read1() while holding the BufferedReader lock, while exit reconciliation attempted a second read from the same buffered stream. The fix avoids that concurrent read while preserving the existing drain behavior when no reader is active.
+    
+    Focused process registry suite: 104 passed.
+    https://github.com/NousResearch/hermes-agent/pull/65002
+    
+    
+    PR #65040 — fix(tui): preserve background delegation on busy submit
+    
+    A mid-turn Desktop/TUI prompt could interrupt the parent agent while a background delegation belonging to the same session was still running, potentially detaching or disrupting the delegation before its result was delivered.
+    
+    The fix adds a session-scoped async delegation check and queues the incoming prompt without interrupting the parent while that delegation is running or finalizing.
+    
+    Relevant suites: 69 passed.
+    https://github.com/NousResearch/hermes-agent/pull/65040
+
+[2026-07-15T23:25:40.844000+00:00] 0xatakan (id=1527093828912418886)
+    PR #64686 — fix(gateway): preserve rate-limit failure metadata
+    
+    A non-empty HTTP 429 response could lose its failed/failure_reason metadata while passing through GatewayRunner. The generated error text could then be treated as a normal assistant response and persisted into the session transcript.
+    
+    The fix preserves the failure metadata so transient-failure handling keeps the user turn without saving the gateway-generated 429 text as assistant output. Regression coverage also verifies that the session can switch providers and continue without replaying the old error.
+    
+    Tests: 19 passed; automated review approved.
+    https://github.com/NousResearch/hermes-agent/pull/64686
+    
+    
+    PR #64623 — fix(schema): preserve dependentRequired property names
+    
+    The schema sanitizer treated dependentRequired property-name strings as nested schemas, corrupting valid MCP tool schemas and potentially causing OpenAI, Codex, and xAI requests to fail with HTTP 400.
+    
+    The fix preserves dependentRequired mappings while continuing to recursively sanitize dependentSchemas, with regression coverage for mutation safety and multiple dependencies.
+    
+    Schema sanitizer suite: 50 passed.
+    https://github.com/NousResearch/hermes-agent/pull/64623
+
+[2026-07-15T23:26:23.718000+00:00] 0xatakan (id=1527094008739004472)
+    Other open fixes:
+    
+    PR #63318 — adds a Windows Desktop preflight that reports external processes blocking a venv update, redacts sensitive arguments, and restores the backend when the update is aborted.
+    https://github.com/NousResearch/hermes-agent/pull/63318
+    
+    PR #63164 — prefers the num_ctx reported by the local Ollama endpoint before hosted GGUF metadata when resolving model context length.
+    https://github.com/NousResearch/hermes-agent/pull/63164
+    
+    PR #62856 — serializes concurrent MCP discovery across processes; updated after review feedback with bounded retry and separate POSIX/Windows locking coverage.
+    https://github.com/NousResearch/hermes-agent/pull/62856
+    
+    PR #62718 — validates Desktop WebSocket tokens before backend readiness instead of delaying authentication until after startup.
+    https://github.com/NousResearch/hermes-agent/pull/62718
+    
+    Happy to adjust or consolidate any of these if maintainers prefer a different direction. Reviews would be appreciated whenever someone gets a chance.
+
+[2026-07-15T23:59:25.734000+00:00] frowtek (id=1527102321916510349)
+    The .json write gate rejected JSONC (tsconfig, VS Code settings); now allows comments + trailing commas.
+    https://github.com/NousResearch/hermes-agent/pull/65169
+    
+    reply-quote text was injected raw into the model turn; a newline could inject a fake ## SYSTEM heading. Neutralized.
+    https://github.com/NousResearch/hermes-agent/pull/65184
+    
+    relay channel-context messages were injected raw; same injection vector. Neutralized.
+    https://github.com/NousResearch/hermes-agent/pull/65198
+    
+     sudo env / /usr/bin/env weren't detected as env dumps; opaque secrets leaked. Now masked.
+    https://github.com/NousResearch/hermes-agent/pull/65209
+
+[2026-07-16T01:42:20.652000+00:00] warofchange (id=1527128221399777330)
+    🔧 Follow-ups on two PRs — at teknium's request
+    
+    #63167 (desktop version drift) — The review made a sharp point: my fix corrected the value (0.17.0 → 0.18.2) but not the recurrence path. release.py rewrites apps/desktop/package.json on every bump, but the publish path only stages VERSION_FILE, PYPROJECT_FILE, and the ACP manifest — so the rewrite never lands in the release commit (exactly what happened in 9de9c25f). Fixed properly: added a DESKTOP_PACKAGE_JSON constant mirroring the ACP-manifest pattern, staged it, and extended test_release_acp_registry.py with a desktop fixture asserting it bumps in lockstep. The PR now fixes the drift and closes the hole that caused it.
+    
+    #60557 (format_uptime_short tests) — Review flagged that my validation instruction called pytest directly, while AGENTS.md mandates scripts/run_tests.sh. Fixed, and applied the same correction preemptively to my other seven open test PRs that carried the same instruction.
+    
+    https://github.com/NousResearch/hermes-agent/pull/63167 
+    https://github.com/NousResearch/hermes-agent/pull/60557
+
+[2026-07-16T02:19:57.472000+00:00] _zynix (id=1527137687189065798)
+    docs: add Turkish (tr-TR) translation for README#52733
+    
+    https://github.com/NousResearch/hermes-agent/pull/52733
+

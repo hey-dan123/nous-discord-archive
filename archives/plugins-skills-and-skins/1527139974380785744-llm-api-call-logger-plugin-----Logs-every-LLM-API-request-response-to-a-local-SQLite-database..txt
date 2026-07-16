@@ -1,0 +1,10 @@
+# Thread 'llm-api-call-logger plugin --  Logs every LLM API request/response to a local SQLite database.' in forum #plugins-skills-and-skins
+# thread_id=1527139974380785744 forum_id=1485392832154832906
+# Started 2026-07-16T02:29:28.415441+00:00
+
+[2026-07-16T02:29:02.781000+00:00] nuffun (id=1527139974380785744)
+    Logs every LLM API request/response to a local SQLite database. Hooks into pre_api_request and post_api_request with zero overhead on the call path (async write queue, 3s flush). Ships with /calls status, /calls latest, and /calls show slash commands for in-session inspection. No more grepping log files to debug prompts or trace provider anomalies.
+    
+    Install: hermes plugins install https://github.com/nuffin/hermes-llm-api-call-logger
+    [embed] GitHub - nuffin/hermes-llm-api-call-logger: Hermes plugin: log ever... https://github.com/nuffin/hermes-llm-api-call-logger
+

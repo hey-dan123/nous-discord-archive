@@ -98,3 +98,14 @@
 [2026-07-15T18:03:54.547000+00:00] lmvdzande (id=1527012852433682433)
     what did you use to generate the graphics
 
+[2026-07-15T20:19:58.363000+00:00] _voscko_ (id=1527047093959790643)
+    I used OpenAI ChatGPT image generator 🤭
+    [reply to lmvdzande msg=1527012852433682433]
+
+[2026-07-15T21:13:22.454000+00:00] lmvdzande (id=1527060532891226122)
+    looks clean can you extract a prompt ?
+
+[2026-07-15T22:17:48.921000+00:00] _voscko_ (id=1527076750029357147)
+    Wasnt special honestly. I directed it to my repo code, asked it to really understand it and come with a few different designs. This one one of the results so I asked to go with that and make an infographic 😄
+    [reply to lmvdzande msg=1527060532891226122]
+

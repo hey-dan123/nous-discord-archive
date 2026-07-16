@@ -1,0 +1,10 @@
+# Thread 'token-consumption-tracker -- Tracks token usage per API call with daily summaries. post' in forum #plugins-skills-and-skins
+# thread_id=1527139780670918666 forum_id=1485392832154832906
+# Started 2026-07-16T02:29:28.831575+00:00
+
+[2026-07-16T02:28:16.597000+00:00] nuffun (id=1527139780670918666)
+    Tracks token usage per API call with daily summaries. post_api_request hook → async SQLite write → /token show for today's report, /token list for per-call breakdown, /token save to export. Useful for keeping an eye on your token budget and comparing model cost efficiency.
+    
+    Install: hermes plugins install https://github.com/nuffin/hermes-token-consumption-tracker
+    [embed] GitHub - nuffin/hermes-token-consumption-tracker: Hermes plugin: tr... https://github.com/nuffin/hermes-token-consumption-tracker
+

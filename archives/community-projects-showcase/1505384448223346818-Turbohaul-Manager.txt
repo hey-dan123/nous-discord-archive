@@ -45,3 +45,16 @@
     https://github.com/MrTrenchTrucker/turbohaul-manager/releases/tag/v0.5.0
     [embed] Release v0.5.0 · MrTrenchTrucker/turbohaul-manager https://github.com/MrTrenchTrucker/turbohaul-manager/releases/tag/v0.5.0
 
+[2026-07-16T01:36:53.083000+00:00] mrtrenchtrucker (id=1527126847475941457)
+    v0.6.0 Now available! Major upgrades! 
+    Everything from stability upgrades, session ID acceptance tags like: is_main, is_curator, is_sub_agennt, is_compression so that Turbohaul Manager knows what to do with the pre computed KV Cache.
+    
+    Pre computed KV Cache can be offloaded to system RAM for is_main while sub agents work! No muddying of context between sub agents so long as the agent sends structured JSON to Turbohaul Manager and even to disk for long term storage! Pick up the conversation fast where you left off a few hours ago!
+    
+     
+    Curator, compression, and auxiliary events can re use the pre computed KV Cache without muddying the main agent's context!
+    More updates coming soon!
+    
+    https://github.com/MrTrenchTrucker/turbohaul-manager
+    [embed] GitHub - MrTrenchTrucker/turbohaul-manager: Ollama-shape inference ... https://github.com/MrTrenchTrucker/turbohaul-manager
+

@@ -603,3 +603,19 @@
 [2026-07-14T20:35:49.832000+00:00] vayaperson (id=1526688696844423218)
     While experimenting with a personal VPS, I noticed that the panel cannot be launched unless the URL is manually exposed prior to startup. We also identified an issue that prevents the plugin from detecting Hermes installations within Docker containers. I've logged these and will address them as soon as development resumes. Thank you for your understanding and patience.
 
+[2026-07-15T20:52:14.318000+00:00] vayaperson (id=1527055213943591162)
+    Although we've said that development would be paused for a few months, we're still trying to make progress whenever we can find a bit of free time.
+    Andoriña started as a personal project to solve a need of our own, and without intending it at first, it grew into something much bigger.
+    We've published a **"Next Steps"** section on GitHub outlining the upcoming tasks we'll be working on.
+    We've also created a separate installer for headless systems. While it was previously possible to install the skill on these systems, the process was tedious and far from intuitive. Even though users of headless environments are generally experienced, our priority is ease of use and making the tool as accessible as possible for individual users.
+    
+    Additionally, although installing the skill on Hermes inside a Docker container was technically possible, the process was even more complicated, often leading to permission issues and path resolution problems.
+    With that said, we're happy to announce that we've completed the unification of WhatsApp ID and LID resolution.
+    
+    We still need to thoroughly test these new features, but we're really pleased that we've been able to find some time to keep moving the project forward.
+    Thank you all for your continued support. We'll be back soon with more frequent updates.
+
+[2026-07-15T22:13:56.579000+00:00] _voscko_ (id=1527075775516246157)
+    Welcome back! Good to read!
+    [reply to vayaperson msg=1527055213943591162]
+

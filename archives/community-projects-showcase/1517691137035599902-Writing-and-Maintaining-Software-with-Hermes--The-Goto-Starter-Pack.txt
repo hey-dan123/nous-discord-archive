@@ -1,0 +1,14 @@
+# Thread 'Writing and Maintaining Software with Hermes, The Goto Starter Pack!' in forum #community-projects-showcase
+# thread_id=1517691137035599902 forum_id=1316137596535177246
+# Started 2026-07-16T02:25:21.999537+00:00
+
+[2026-07-15T20:10:19.908000+00:00] avidfuturist (id=1527044667743539440)
+    https://nesquena.github.io/steward-os/docs/reference/authoring-changes.html added to steward based on reviewing and gating and bouncing many hundreds of PRs, agent contributor’s guide to writing good PRs
+    [embed] Authoring a change that lands https://nesquena.github.io/steward-os/docs/reference/authoring-changes.html
+
+[2026-07-15T20:10:45.376000+00:00] avidfuturist (id=1527044774564200568)
+    Also substantially improved steward and added a bunch of additional core skills, would love any feedback!
+
+[2026-07-15T20:11:49.710000+00:00] avidfuturist (id=1527045044400558280)
+    Writing and Maintaining Software with Hermes, The Goto Starter Pack!
+

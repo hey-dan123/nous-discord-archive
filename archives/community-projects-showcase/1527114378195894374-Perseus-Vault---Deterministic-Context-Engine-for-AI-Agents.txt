@@ -1,0 +1,19 @@
+# Thread 'Perseus Vault — Deterministic Context Engine for AI Agents' in forum #community-projects-showcase
+# thread_id=1527114378195894374 forum_id=1316137596535177246
+# Started 2026-07-16T02:24:23.123697+00:00
+
+[2026-07-16T00:47:20.175000+00:00] perseus.ai (id=1527114378195894374)
+    **Perseus Vault — Deterministic Context Engine for AI Agents**
+    
+    github.com/Perseus-Computing-LLC/perseus-vault
+    
+    Agents forget everything between sessions. CLAUDE.md helps but it's static. Perseus Vault renders a live AGENTS.md from a bi-temporal memory store — your agent knows what decisions were made, what bugs were fixed, and what conventions exist, across every session.
+    
+    • 57 MCP tools — read, write, search, recall, audit
+    • Deterministic retrieval (FTS5) — same query, same answer, every time
+    • Crypto-chained audit — verifiable memory provenance
+    • Single Rust binary, local-first, MIT licensed
+    • Token-budgeted context injection
+    
+    Built for Hermes, works with any MCP client.
+

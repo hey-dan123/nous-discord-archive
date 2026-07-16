@@ -1,0 +1,9 @@
+# Thread 'The Alignment Sciences Academy' in forum #community-projects-showcase
+# thread_id=1527037597417734286 forum_id=1316137596535177246
+# Started 2026-07-16T02:24:23.603296+00:00
+
+[2026-07-15T19:42:14.211000+00:00] simulateai_research_team_00263 (id=1527037597417734286)
+    The Alignment Sciences Academy ---> https://alignment-sciences-academy.citizen-of-earth.chatgpt.site/
+    [attachment] alignment_academy_social.jpg https://cdn.discordapp.com/attachments/1527037597417734286/1527037598122508338/alignment_academy_social.jpg?ex=6a593416&is=6a57e296&hm=5de5a8be1e9d4d4b06d409a06f9dbb402ad4eccca01125e256e2d33f22237332&
+    [embed] The Alignment Sciences Academy https://alignment-sciences-academy.citizen-of-earth.chatgpt.site/
+

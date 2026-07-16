@@ -40,3 +40,8 @@
     Using gpt5.6-terra for this. It's work really well but often over engineers things... it's like the model sometimes think that it's making a dashboard for an AI not a human so I had a bit of hiccups but I'll share it as soon as I get this done.   😂
     [attachment] Skrmbillede_2026-07-15_kl._10.01.40.png https://cdn.discordapp.com/attachments/1524782540391714980/1526862098586402906/Skrmbillede_2026-07-15_kl._10.01.40.png?ex=6a5890a4&is=6a573f24&hm=446b2faba0cc79e57b1a977fb73b90b95c7166520b24a05c286a6ea705ad8a9a&
 
+[2026-07-15T21:55:30.443000+00:00] tolebcore (id=1527071136045600829)
+    What are you trying to do with it? 
+    Use it as internal tool or license it? 
+    If internal tool, I assume you would want to create content at scale. I am interested in what you have planned for it and if you haven’t already I still would like to see it.
+

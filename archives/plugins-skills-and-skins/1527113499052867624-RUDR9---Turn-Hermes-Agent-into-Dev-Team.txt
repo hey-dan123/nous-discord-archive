@@ -1,0 +1,27 @@
+# Thread 'RUDR9 - Turn Hermes Agent into Dev-Team' in forum #plugins-skills-and-skins
+# thread_id=1527113499052867624 forum_id=1485392832154832906
+# Started 2026-07-16T02:29:29.213022+00:00
+
+[2026-07-16T00:43:50.571000+00:00] royniki (id=1527113499052867624)
+    Built something and want to see if anyone else finds this useful.
+    
+    RUDR9 is a one-command installer that turns a fresh Hermes install into a 9-role engineering org. CTO, planner, architect, VCM, builder, security auditor, performance auditor, reviewer. Each one is a Hermes profile with its own SOUL.md, restricted toolsets, and Kanban-based task routing.
+    
+    The idea: you tell the default profile (CTO) what to build. It creates Kanban tasks, the dispatcher spawns the right specialist profile, work flows through the board. You watch it happen on the Kanban dashboard. No ghost implementation.
+    
+    A few things that took iterations to get right:
+    
+    - Authority enforcement is per-profile toolset restrictions, not just prompt instructions. The planner physically can't write files. The security auditor has no terminal. The guard plugin (pre_tool_call hook) is belt and suspenders on top of that.
+    - Builder and Checker are fused into one profile. The validation loop runs in-session instead of crossing context boundaries on every cycle.
+    - Ponytail skill is on all profiles. Lazy senior energy.
+    - Install takes about 30 seconds. Earlier versions took 8 minutes because ponytail was getting security-scanned 8 times. Now it installs once on default and clones inherit it.
+    
+    It's not perfect. The terminal escape hatch exists (Builder and VCM have shell access, so "physically cannot" is overselling it for those two). GitHub MCP uses the deprecated reference server. No CI yet. But the core works, tested in Docker against a fresh Hermes 0.18.2 install.
+    
+    Repo: https://github.com/ardhaecosystem/RUDR9
+    
+    MIT licensed. PRs welcome. We have a Dockerfile if you want to test without touching your setup.
+    
+    Happy to answer questions or take criticism. Especially on the 9-roles-vs-3 debate — an Opus review told us we were over-engineered and we only partially agreed.
+    [embed] GitHub - ardhaecosystem/RUDR9: One command → full AI engineering ... https://github.com/ardhaecosystem/RUDR9
+
