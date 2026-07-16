@@ -5947,3 +5947,7 @@
 [2026-07-16T04:04:41.373000+00:00] curtis_szmania (id=1527164043779903488)
     Anyone have an idea how to get stdio mcp clients to work if your hermes-webui is on a separate container than the hermes-agent? I see them registered/configured but they never get executed/start and the tool list never shows. (i see them in the webui ui). https/sse work just fine.
 
+[2026-07-16T18:04:00.477000+00:00] curtis_szmania (id=1527375265171505282)
+    Anyone else getting error `Error: MoA runtime unavailable (hermes-agent not installed or too old)` when trying to use moa? does hermes-webui support it yet? using latest versions
+    [reply to avidfuturist msg=1527086504168394833]
+

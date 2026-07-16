@@ -1,0 +1,28 @@
+# Thread 'hermes-session-titler — /retitle' in forum #plugins-skills-and-skins
+# thread_id=1527354667665981731 forum_id=1485392832154832906
+# Started 2026-07-16T19:12:10.310098+00:00
+
+[2026-07-16T16:42:09.649000+00:00] nuffun (id=1527354667665981731)
+    Published hermes-session-titler — auto-generate session titles from full conversation history. No more "untitled session 47":
+    
+    https://github.com/nuffin/hermes-session-titler
+    
+    It provides:
+    - /retitle — regenerate the current session title immediately from the full transcript
+    - Auto-titles on /quit (skips if no new messages since session start, to avoid unnecessary LLM calls)
+    - Uses the agent's own model via the auxiliary LLM client — no extra provider setup
+    - Writes directly to Hermes' session DB; titles appear in the TUI session picker and dashboard
+        immediately
+    
+    Install:
+    
+    ```
+    pip install hermes-session-titler
+    ```
+    
+    Survives importlib.reload — CLI context is resolved from PluginManager on every call rather than stashed in a module-level variable.
+    [embed] GitHub - nuffin/hermes-session-titler https://github.com/nuffin/hermes-session-titler
+
+[2026-07-16T16:46:08.914000+00:00] dusilen (id=1527355671216132196)
+    this is such a small thing but i’d genuinely use it. untitled session 47 is painfully real xd
+

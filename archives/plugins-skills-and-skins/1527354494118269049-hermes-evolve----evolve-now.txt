@@ -1,0 +1,27 @@
+# Thread 'hermes-evolve — /evolve now' in forum #plugins-skills-and-skins
+# thread_id=1527354494118269049 forum_id=1485392832154832906
+# Started 2026-07-16T19:12:10.769317+00:00
+
+[2026-07-16T16:41:28.272000+00:00] nuffun (id=1527354494118269049)
+    Following the --now opt-in invalidation pattern from Hermes Agent's prompt-caching design, I published hermes-evolve — hot-reload plugins without restarting your "Hermes company":
+    
+    https://github.com/nuffin/hermes-evolve
+    
+    It provides:
+    - /evolve now — reload all loaded plugin modules, re-register hooks/commands/tools, clear model_tools cache, bump registry generation, clear all stored system prompts
+    - /evolve status — show which plugins are loaded and what will be affected
+    - Works identically across CLI, TUI, Desktop, and Gateway — all modes share the same state.db
+    - Preserves session history; system prompt rebuilds on the next message (one cache miss)
+    
+    Install:
+    
+    ```
+    pip install hermes-evolve
+    ```
+    
+    Then add hermes-evolve to plugins.enabled in config.yaml.
+    
+    Design: follows AGENTS.md § "Prompt Caching Must Not Break" — explicitly opt-in, never automatic.
+    Does not touch the model endpoint or change tools mid-conversation.
+    [embed] GitHub - nuffin/hermes-evolve https://github.com/nuffin/hermes-evolve
+

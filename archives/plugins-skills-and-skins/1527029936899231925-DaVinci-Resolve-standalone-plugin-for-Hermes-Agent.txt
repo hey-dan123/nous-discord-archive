@@ -32,3 +32,6 @@
     Do you think this could potentially be extended to allow Hermes to view a finished timeline, scan the structure of the project, and then create a davinci python script to be able to recreate the project with new footage?
     [reply to samjwasserman msg=1527029936899231925]
 
+[2026-07-16T17:28:43.968000+00:00] jobs3286 (id=1527366387889213562)
+    I will be excited to try this out also, been looking for a way to set up a system to help manage my projects in davinci
+

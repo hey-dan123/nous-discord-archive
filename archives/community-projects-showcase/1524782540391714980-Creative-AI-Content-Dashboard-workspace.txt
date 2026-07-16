@@ -69,3 +69,9 @@
     It's really about having a structured way of working with all my different projects, from large projects to small projects. This will become my main workplace instead of working from Discord, which I use right now.
     [reply to tolebcore msg=1527071136045600829]
 
+[2026-07-16T16:56:48.144000+00:00] tolebcore (id=1527358352340947045)
+    I have a very similar setup, although both are CLIs on my end, I’m curious if you want to monetize this project. 
+    For my CLI setup, I got paying SMMA customers, but want to offload it to a designer, I think that with your setup it’s much easier to monetize as you can hire non technical design people. 
+    Plus if you connect the people that you onboard through zernio, you can optimize the agent to produce content that performs well especially if you decouple hooks, offer and release. 
+    Happy to connect
+

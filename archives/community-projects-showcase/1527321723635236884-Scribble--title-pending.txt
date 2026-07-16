@@ -1,0 +1,10 @@
+# Thread 'Scribble (title pending)' in forum #community-projects-showcase
+# thread_id=1527321723635236884 forum_id=1316137596535177246
+# Started 2026-07-16T19:06:10.658174+00:00
+
+[2026-07-16T14:31:15.180000+00:00] parallelcontinuities (id=1527321723635236884)
+    https://x.com/msmechanon/status/2077761576073850906
+    
+    GH repo coming soon, once i wrangle apple licensing costs
+    [embed]  https://twitter.com/msmechanon/status/2077761576073850906
+

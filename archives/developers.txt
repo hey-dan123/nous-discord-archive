@@ -47663,3 +47663,134 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     you can tag @ moderator in the future 🙏
     [reply to trivunous msg=1527302985422733452]
 
+[2026-07-16T13:53:46.981000+00:00] watchdominion (id=1527312294005051534)
+    uhmmmm would a @maintainer role also make sense so people don't @ you all the time.... @ teknium <a:catyes:1151280268712357969>
+
+[2026-07-16T14:28:07.025000+00:00] _voscko_ (id=1527320934455709868)
+    I was hoping that someone in the hermes team could have a look at this PR. It is still a serious issue with discord: https://github.com/NousResearch/hermes-agent/issues/16754
+    
+    Thank you =3
+    
+    <@387972437901312000>
+
+[2026-07-16T14:29:01.884000+00:00] _voscko_ (id=1527321164551164064)
+    Oooh yeah 💪👊
+    [reply to watchdominion msg=1527312294005051534]
+
+[2026-07-16T14:43:56.804000+00:00] xdarkchain (id=1527324918117695558)
+    The only thing Hermes is missing is an iOS app.
+
+[2026-07-16T14:46:07.249000+00:00] .blockops (id=1527325465243549716)
+    😭
+    [attachment] Screenshot_2026-07-16_at_10.43.54_AM.png https://cdn.discordapp.com/attachments/1491258766648283238/1527325464908140625/Screenshot_2026-07-16_at_10.43.54_AM.png?ex=6a5a402f&is=6a58eeaf&hm=420198e1db9400d5a87813129c1d277ba1d307b559114d149c1d8bf50001f3f0&
+
+[2026-07-16T14:46:21.671000+00:00] .blockops (id=1527325525734068309)
+    I'm working on it.
+    [reply to xdarkchain msg=1527324918117695558]
+
+[2026-07-16T14:55:41.587000+00:00] .blockops (id=1527327874191855749)
+    Nous folks... your guys update cycles are wild... how do you keep documentation up to date?
+
+[2026-07-16T15:46:37.486000+00:00] wpnx330 (id=1527340691561386106)
+    <@387972437901312000>  PR for
+    fix(compression): prevent no-progress summarization and add reasoning_content echo-back #60451 
+    https://github.com/NousResearch/hermes-agent/pull/60451
+    
+    **Revised per suggestion should be good to merge. **
+
+[2026-07-16T15:47:36.539000+00:00] minddragon (id=1527340939247354107)
+    Hey <@387972437901312000> What can we do for Tony? He's been shipping and attracting folks
+
+[2026-07-16T15:52:52.197000+00:00] tumadre (id=1527342263212969994)
+    probably part of the workflow
+    [reply to .blockops msg=1527327874191855749]
+
+[2026-07-16T15:53:05.185000+00:00] tumadre (id=1527342317688721510)
+    rip
+    [reply to .blockops msg=1527325465243549716]
+
+[2026-07-16T15:57:48.453000+00:00] pibtc (id=1527343505800826910)
+    I use this
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1527343505570271282/image.png?ex=6a5a50fc&is=6a58ff7c&hm=751855725bc5f18935d25c65a81e0c8cfc8029f0d1b92faf5603fd9267bb9395&
+    [reply to xdarkchain msg=1527324918117695558]
+
+[2026-07-16T16:13:28.217000+00:00] bakit (id=1527347447456858172)
+    i'm asking Hy3:free to make an options for Hermes so you can minimize on exit i hope it won't take too long 😉
+
+[2026-07-16T16:33:46.166000+00:00] .blockops (id=1527352555904958654)
+    <@387972437901312000> have you used GODMOD3 with the desktop app yet? Not seeing the files in the typical path. Tried reinstalling... no dice.
+
+[2026-07-16T16:38:12.542000+00:00] teknium (id=1527353673166880779)
+    Its an optional skill now unfortunately because fable will get blocked if it sees the names/descriptions of it and the other pliny one in its system prompt
+    [reply to .blockops msg=1527352555904958654]
+
+[2026-07-16T16:39:49.108000+00:00] blooddragon90 (id=1527354078194176071)
+    <@387972437901312000> I was the one that brought commentary / fixed it on OC, found and fixed up the PR someone had for it and tested and fixed it so commentary works for codex models on Hermes: https://github.com/NousResearch/hermes-agent/pull/65653 nullrunner also tested and verified
+
+[2026-07-16T16:40:33.529000+00:00] blooddragon90 (id=1527354264509485157)
+    so users if they enable this can get streaming commentary (like in codex) instead of the long waits between messages (or just tool calls, I personally prefer just commentary and no tool calls streaming but everyone likes different), if anyone wants to test it works as a simple patch and you can get streaming commentary
+
+[2026-07-16T16:45:08.162000+00:00] .blockops (id=1527355416403771573)
+    Ahh I think I see what happened... after I installed it, got quarantined to .hub/quarantine/godmode
+    [reply to teknium msg=1527353673166880779]
+
+[2026-07-16T17:02:28.827000+00:00] blooddragon90 (id=1527359781269012630)
+    <@387972437901312000> crashing out to bed but addressed your feedback on QOL fixes (in the review queve I'd recommend 1/2/5 as easy fixes/wins, 3-4 can be consolidated with other similar PR if your team likes, 4 is mcp fix th):
+    1 **Fast**: auto fast mode for hermes / cold start fix  https://github.com/NousResearch/hermes-agent/pull/64786  
+    2 **Plan**: /plan mode enhancement / parity enh. https://github.com/NousResearch/hermes-agent/pull/61961 
+    3 **Api-server**: support request-scoped reasoning effort https://github.com/NousResearch/hermes-agent/pull/65518  
+    4 **MCP's**: join MCP discovery before the one-shot tool snapshot (goes well with other user https://github.com/NousResearch/hermes-agent/pull/61944 fix(oneshot): join MCP discovery before the one-shot tool snapshot (goes well with other user PR https://github.com/NousResearch/hermes-agent/pull/60017) 
+    5 **Slack**: Block Kit buttons for clarify prompts for Slack (button add vs typing #) https://github.com/NousResearch/hermes-agent/pull/61943
+
+[2026-07-16T17:11:34.937000+00:00] warofchange (id=1527362071820505220)
+    PR #65812 — fix(model_metadata): drop duplicate 'stepfun' entry in _PROVIDER_PREFIXES
+    
+    "stepfun" appears twice inside the same frozenset literal in agent/model_metadata.py: once at line 50 in the canonical provider block (next to gemini, zai, minimax, anthropic), and again at line 63 under # Common aliases (next to opencode, zen, kilo, dashscope).
+    
+    stepfun is a canonical provider name, not an alias — so the second copy is both redundant and filed under the wrong heading. Since frozenset dedupes on construction, that alias-block entry has never had any effect; it's dead weight that tells the next reader stepfun is an alias of something it isn't.
+    
+    The fix removes the duplicate from the alias block — one line, one file. It's provably behavior-preserving: _PROVIDER_PREFIXES is only ever consumed as a membership test (any(...) / in), so a duplicate element is a strict no-op, and "stepfun" in _PROVIDER_PREFIXES is still True thanks to line 50. The unrelated api.stepfun.ai → stepfun endpoint-host map further down the file is deliberately left untouched.
+    
+    https://github.com/NousResearch/hermes-agent/pull/65812
+
+[2026-07-16T17:14:47.639000+00:00] teknium (id=1527362880071270512)
+    oof huh?
+    [reply to .blockops msg=1527355416403771573]
+
+[2026-07-16T17:16:47.598000+00:00] ciorba (id=1527363383215652959)
+    godmode too powerful
+
+[2026-07-16T17:27:14.960000+00:00] .blockops (id=1527366014562598962)
+    weird... it installed in two places... 
+    
+    ~/.hermes/skills/red-teaming/ (correct location) 
+    and 
+    
+    ~/.hermes/skills/security/ (had to remove this one)
+    
+    After I removed the dupe install, the /godmode skill loaded fine
+    [reply to teknium msg=1527362880071270512]
+
+[2026-07-16T17:37:42.218000+00:00] teknium (id=1527368645473206513)
+    might be an artifact of me moving it to optional skills at some point
+
+[2026-07-16T17:37:44.151000+00:00] teknium (id=1527368653581062208)
+    will check rn
+
+[2026-07-16T18:11:24.775000+00:00] frowtek (id=1527377128692125878)
+    Dropping 5 P2 bug fix PRs below, Huge thanks to the maintainers for the quick reviews on my previous PRs <:catlick:1151260427645366375> 
+    
+    [fix(state): heal alternation at the ACP / CLI-resume / TUI-resume restore sites too] https://github.com/NousResearch/hermes-agent/pull/65672
+    
+    [fix(bluebubbles): redact the password embedded in API URLs from error output] https://github.com/NousResearch/hermes-agent/pull/65705
+    
+    [fix(api_server): run the cron-fire token verifier off the event loop] https://github.com/NousResearch/hermes-agent/pull/65730
+    
+    [fix(webhook): mark port conflict as non-retryable to stop infinite reconnect] https://github.com/NousResearch/hermes-agent/pull/65739
+    
+    [fix(msgraph_webhook): guard the listener bind so a port conflict can't loop forever] https://github.com/NousResearch/hermes-agent/pull/65757
+
+[2026-07-16T18:31:44.356000+00:00] brokeskill (id=1527382243985719346)
+    desktop plugins dont work when connected to a gateway, am i doing something wrong?
+    [attachment] ktx936r.png https://cdn.discordapp.com/attachments/1491258766648283238/1527382243616624750/ktx936r.png?ex=6a5a7510&is=6a592390&hm=2d19beaebc83130aae45c887e312ae4086e84c2c9d1bad1668940d947ebe91f9&
+
