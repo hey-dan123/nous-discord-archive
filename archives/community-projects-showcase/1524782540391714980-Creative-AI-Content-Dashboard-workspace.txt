@@ -45,3 +45,27 @@
     Use it as internal tool or license it? 
     If internal tool, I assume you would want to create content at scale. I am interested in what you have planned for it and if you haven’t already I still would like to see it.
 
+[2026-07-16T04:33:16.839000+00:00] smoermeow (id=1527171238965809223)
+    It's a internal specialized for how I personally workflows, but should also adaptable enough that if I change workflow I do not need to redo the whole dashboard. The issue I had with the earlier version was that it was too project-specific. And because I have many different projects, I had to create a new project preset for each project. That's why I'm redoing it now to this type where it's more adaptable.
+    
+    I did think about the possibility of licensing it somehow, but I think it that would be a future version - maybe v3 or v4 😂 
+    
+    # The core idea is: 
+    To create a dashboard where I can have all my creative work I do with AI in one place. 
+    - Having an overview of each project and its assets. 
+    - Access to the prompts I used. 
+    - Access to the skills I used to create image/video gen prompts, scripts, optimizing stories/shots etc. 
+    - Access to the MCP servers I used with my agent so I can easily create image generation calls and video generation calls.
+    
+    - I have Hermes connected to it with and easy way to switch between different profiles I use:
+    -- Showrunner: which is about structuring the project and having an overview. 
+    -- shotdirector: It mainly focuses on helping me rewrite shots and iterate ideas on scripts. 
+    -- promptadapter: which essentially has access to all my prompting skills that I use for different purposes.
+    -- Creative profile; which is essentially a broad profile with access to almost all skills that i have.
+    -- mrcode: mrcode is essentially my coding profile, which helps me build the dashboard and edit the dashboard whenever I need to.
+    
+    Hermes can then also help me migrate my old projects into this new structure and create new projects from nothing.
+    
+    It's really about having a structured way of working with all my different projects, from large projects to small projects. This will become my main workplace instead of working from Discord, which I use right now.
+    [reply to tolebcore msg=1527071136045600829]
+

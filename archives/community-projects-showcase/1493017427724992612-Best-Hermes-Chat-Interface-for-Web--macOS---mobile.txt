@@ -5944,3 +5944,6 @@
 [2026-07-15T22:56:49.848000+00:00] avidfuturist (id=1527086568588836895)
     [attachment] 44B75124-C9B6-45C1-A191-CE7B352B5789.png https://cdn.discordapp.com/attachments/1493017427724992612/1527086568320532550/44B75124-C9B6-45C1-A191-CE7B352B5789.png?ex=6a5961b1&is=6a581031&hm=4ca6327152d3c13500ca1e50e441d7a2358a6870d47c47ce978a860c47e84975&
 
+[2026-07-16T04:04:41.373000+00:00] curtis_szmania (id=1527164043779903488)
+    Anyone have an idea how to get stdio mcp clients to work if your hermes-webui is on a separate container than the hermes-agent? I see them registered/configured but they never get executed/start and the tool list never shows. (i see them in the webui ui). https/sse work just fine.
+

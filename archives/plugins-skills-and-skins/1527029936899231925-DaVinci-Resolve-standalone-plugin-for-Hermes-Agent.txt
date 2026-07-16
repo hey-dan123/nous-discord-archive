@@ -22,3 +22,6 @@
     [embed] GitHub - wassermanproductions/hermes-davinci-resolve-plugin: Hermes... https://github.com/wassermanproductions/hermes-davinci-resolve-plugin
     [embed] Release v0.3.0 — Nous review hardening · wassermanproductions/he... https://github.com/wassermanproductions/hermes-davinci-resolve-plugin/releases/tag/v0.3.0
 
+[2026-07-16T03:10:04.256000+00:00] virus_os (id=1527150298555224155)
+    Could you please make a Windows version?
+

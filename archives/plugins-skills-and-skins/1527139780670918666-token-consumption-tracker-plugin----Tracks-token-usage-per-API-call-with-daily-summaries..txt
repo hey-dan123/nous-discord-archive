@@ -1,0 +1,10 @@
+# Thread 'token-consumption-tracker plugin -- Tracks token usage per API call with daily summaries.' in forum #plugins-skills-and-skins
+# thread_id=1527139780670918666 forum_id=1485392832154832906
+# Started 2026-07-16T08:14:37.165882+00:00
+
+[2026-07-16T07:32:18.736000+00:00] nuffun (id=1527216293747626085)
+    token-consumption-tracker plugin -- Tracks token usage per API call with daily summaries. post
+
+[2026-07-16T07:32:36.470000+00:00] nuffun (id=1527216368129150986)
+    token-consumption-tracker plugin -- Tracks token usage per API call with daily summaries.
+

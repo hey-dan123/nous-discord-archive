@@ -47410,3 +47410,25 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     https://github.com/NousResearch/hermes-agent/pull/52733
 
+[2026-07-16T04:35:11.498000+00:00] toandto (id=1527171719880638566)
+    Just published an LLMTR provider plugin for Hermes — LLMTR is a Türkiye-based, OpenAI-compatible AI gateway that gives you 198+ models (Türkiye-hosted ones, Claude, GPT, Gemini,     DeepSeek, GLM, Qwen, plus ) behind a single endpoint, routed by provider/model slugs just like OpenRouter, with full tool-calling support     that I verified end-to-end. It installs as a standalone plugin with no core changes — just clone it into your plugins folder with git clone   https://github.com/knowhycodata/hermes-llmtr-plugin ~/.hermes/plugins/model-providers/llmtr, set LLMTR_API_KEY, and pick "LLMTR" in hermes model. Grab a key at  https://llmtr.com and the repo is here: https://github.com/knowhycodata/hermes-llmtr-plugin
+
+[2026-07-16T05:41:19.091000+00:00] kyssta69 (id=1527188361171701781)
+    https://github.com/NousResearch/hermes-agent/pull/65396
+    
+    **Problem**: Bug: Codex OAuth 401 error message misleading — said token was 'refreshed by another client' when OpenAI server-side invalidation causes early token death after ~2.5 days despite 10-day expiry.
+    Fix: Updated the error message to mention both server-side invalidation and cross-client consumption as possible causes, with clearer step labels and a more targeted `hermes auth openai-codex` re-auth command.
+
+[2026-07-16T06:04:06.551000+00:00] fullslop (id=1527194096714649741)
+    <@387972437901312000> I addressed your PR comments, please check it out: 
+    
+    https://github.com/NousResearch/hermes-agent/pull/57409
+    https://github.com/NousResearch/hermes-agent/pull/54849
+
+[2026-07-16T06:40:24.805000+00:00] bhyrd (id=1527203232974245958)
+    Does anyone know much about proactive agents?
+
+[2026-07-16T06:49:56.198000+00:00] lazeewhalee (id=1527205629570060411)
+    you might want to search it within the <#1476316988992258300> channel
+    [reply to bhyrd msg=1527203232974245958]
+
