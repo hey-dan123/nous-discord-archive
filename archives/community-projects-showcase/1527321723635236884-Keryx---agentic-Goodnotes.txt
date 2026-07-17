@@ -1,0 +1,20 @@
+# Thread 'Keryx - agentic Goodnotes' in forum #community-projects-showcase
+# thread_id=1527321723635236884 forum_id=1316137596535177246
+# Started 2026-07-17T08:06:17.901926+00:00
+
+[2026-07-17T02:39:17.171000+00:00] parallelcontinuities (id=1527504939184820284)
+    Keryx - agentic Goodnotes
+
+[2026-07-17T02:39:48.715000+00:00] parallelcontinuities (id=1527505071489679440)
+    still in heavy development but this is what k3 spat out for me. i plan on tweaking the design a bit further, might go in by hand for the finishing touches
+    
+    i am a #ipadgirlie when it comes to taking notes but i like having a copy of them on my laptop in markdown form. it's annoying to convert manually, so this just calls hermes gateway right from my ipad. 
+    
+    i have further plans for this but i'm going to stay mysterious about that for now.
+    [attachment] D5987678-8C32-4F3D-A58A-669B6C3B9F6E.jpg https://cdn.discordapp.com/attachments/1527321723635236884/1527505071003402260/D5987678-8C32-4F3D-A58A-669B6C3B9F6E.jpg?ex=6a5ae774&is=6a5995f4&hm=3b13ba0d3fe18fd46e3bee8f8235134252ba227c513027650d32763a042ded72&
+    [attachment] E4075EB5-82B6-47C2-9FEB-63FC666AD5E9.jpg https://cdn.discordapp.com/attachments/1527321723635236884/1527505071250739241/E4075EB5-82B6-47C2-9FEB-63FC666AD5E9.jpg?ex=6a5ae774&is=6a5995f4&hm=1364f61acfeadc1ba6fa4fd3186792d88e99f6c7037846ab7fa2f1cd6f4109a1&
+
+[2026-07-17T03:10:41.770000+00:00] parallelcontinuities (id=1527512843765940236)
+    using nvidia nim ocr for now until I get apple developer but that’s my laptop Hermes in the chat tab
+    [attachment] video-output-454C1AE8-C881-481E-AB71-AD7E5189457C-1.mov https://cdn.discordapp.com/attachments/1527321723635236884/1527512843505631283/video-output-454C1AE8-C881-481E-AB71-AD7E5189457C-1.mov?ex=6a5aeeb1&is=6a599d31&hm=3feb13d3e2f0c71f296431b8e1050b281ef563106620db41630b259d7d95e026&
+

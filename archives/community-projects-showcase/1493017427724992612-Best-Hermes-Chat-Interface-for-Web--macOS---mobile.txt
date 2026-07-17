@@ -5973,3 +5973,9 @@
     but the hermes agent can be on another container correct? I have multi profile docker setup and 1 hermes agent container, and each profile is ona  hermes-webui container
     [reply to avidfuturist msg=1527478315294920774]
 
+[2026-07-17T04:40:33.707000+00:00] digital_love_two (id=1527535459188867246)
+    I have some questions: 
+    + Can I set avatar for each profile? Currently when set for one profile, another use same image.
+    + On Linux (I use Zorin, which run with Wayland), the desktop app have display problem: there are a huge space on the top.
+    + Last night I have a case when approval continue to appear until the app crash.
+

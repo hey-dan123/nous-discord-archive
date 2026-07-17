@@ -1,0 +1,21 @@
+# Thread 'Artcraft MCP with hermes setup' in forum #plugins-skills-and-skins
+# thread_id=1527541402102267904 forum_id=1485392832154832906
+# Started 2026-07-17T08:12:03.173160+00:00
+
+[2026-07-17T05:04:10.608000+00:00] smoermeow (id=1527541402102267904)
+    I made this specifically to be used with hermes but can be adapted to your needs.
+    
+    # Readme intro:
+    "An ArtCraft subscription MCP server built for Hermes Agent. It gives Hermes tools for live model discovery, cost estimation, reference ingestion, image/video generation, local task lookup, and resumable result retrieval.
+    
+    It can also be used by any agent or client that supports local MCP servers over stdio.
+    
+    Contributions are welcome. If you find an error, an outdated ArtCraft parameter, or a way to make the adapter safer or more useful, please open an issue or submit a pull request. Help testing and optimizing the tool across different setups is especially valuable.
+    
+    This MCP does not control the ArtCraft desktop app or its interface. It reads the authenticated session saved by the installed ArtCraft app, optionally reads ArtCraft’s local task database, and calls ArtCraft’s Storyteller subscription API directly.
+    
+    ⚠ Image and video generation spend ArtCraft subscription credits. Discover live parameters, estimate cost, and obtain explicit approval before generation."
+    
+    https://github.com/smoermeow/artcraft-mcp
+    [embed] GitHub - smoermeow/artcraft-mcp: Standalone ArtCraft subscription M... https://github.com/smoermeow/artcraft-mcp
+

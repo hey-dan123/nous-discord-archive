@@ -1,0 +1,49 @@
+# Thread 'ForgeCat: Package, share, and install AI Agents across platforms' in forum #community-projects-showcase
+# thread_id=1527506436572315768 forum_id=1316137596535177246
+# Started 2026-07-17T08:06:16.564033+00:00
+
+[2026-07-17T02:45:14.176000+00:00] seulch (id=1527506436572315768)
+    Hi guys! we built ForgeCat because AI agent setups are becoming hard to share and reuse across tools, teams, and projects.
+    
+    An agent setup is no longer just one prompt. It can include instructions, skills, rules, commands, MCP config, hooks, dependencies, and platform-specific files. Today those pieces are often copied around through GitHub repos, setup docs, or team chat, which makes them hard to inspect, version, install, and maintain across different agent tools.
+    
+    ForgeCat is a CLI plus AI Agent Hub for managing agent profile packages.
+    
+    What it does:
+    
+    Package agents as profiles: bundle an agent with its supporting config, files, skills, rules, MCPs, hooks, etc...
+    
+    Share profiles: publish public profiles for the community, or keep private profiles for a team or personal workflow.
+    
+    Cross-platform compatible: install the same profile into supported tools like Claude Code, Cursor, and Codex, with platform-specific conversion where needed.
+    
+    Safety inspection: inspect profile files and review security checks before applying a profile.
+    
+    Try it:
+    
+        npm install -g forgecat
+        forgecat search [profile]
+        forgecat view [profile]
+        forgecat install [profile]
+    
+    The broader goal is to make reusable AI agents feel more like packages: discoverable, inspectable, versioned, and installable into the tools people already use.
+    
+    Today we support Claude Code, Cursor, and Codex. We are also building with OpenClaw, Hermes, and more agent platforms in mind, where ForgeCat can act as the shared package/distribution layer for reusable agents.
+    
+    Profiles catalog repo:
+    https://github.com/nota-america/forgecat-agent-profiles
+    
+    We would love to hear your feedback on ForgeCat!
+    [attachment] forgecat-01.png https://cdn.discordapp.com/attachments/1527506436572315768/1527506437570302062/forgecat-01.png?ex=6a5ae8ba&is=6a59973a&hm=95c3bc87b73d1a68830097d18f637755cdb44f9325235204bb3e6b194b5859bf&
+    [attachment] 02-pdfr.png https://cdn.discordapp.com/attachments/1527506436572315768/1527506438254100540/02-pdfr.png?ex=6a5ae8ba&is=6a59973a&hm=0431e23d4abb8eeeaacb40227f7cecf42755c47ad6f41300858c2379ccc400f2&
+    [attachment] 03-pdfr.png https://cdn.discordapp.com/attachments/1527506436572315768/1527506438631456910/03-pdfr.png?ex=6a5ae8ba&is=6a59973a&hm=0e2194de7fee4ef1ff3121961c922009965edbacfef3093ea08c0582ceb6107c&
+    [attachment] 04-pdfr.png https://cdn.discordapp.com/attachments/1527506436572315768/1527506439000690748/04-pdfr.png?ex=6a5ae8ba&is=6a59973a&hm=3c8dd6f437ef095ecd2308af38b5b5fb6991851125d717219c5ca0cd7e6db324&
+    [attachment] 05-pdfr.png https://cdn.discordapp.com/attachments/1527506436572315768/1527506439462195221/05-pdfr.png?ex=6a5ae8ba&is=6a59973a&hm=134f8007882b7973e87de3130425882bccc10b4427d32aae982187addda9c81a&
+    [attachment] 06-pdfr.png https://cdn.discordapp.com/attachments/1527506436572315768/1527506439965507584/06-pdfr.png?ex=6a5ae8ba&is=6a59973a&hm=7ce025eea711e47fc231a49fbea1a9f2f2d5280b9f74ac15f49db62db2c78dcd&
+    [embed] GitHub - nota-america/forgecat-agent-profiles: Production-ready AI ... https://github.com/nota-america/forgecat-agent-profiles
+
+[2026-07-17T02:45:47.752000+00:00] seulch (id=1527506577400135721)
+    Check out our website as well!
+    https://www.forgecat.ai/
+    [embed] ForgeCat — The Agent Hub https://www.forgecat.ai/
+

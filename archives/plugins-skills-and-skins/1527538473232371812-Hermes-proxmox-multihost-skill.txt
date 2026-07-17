@@ -1,0 +1,8 @@
+# Thread 'Hermes proxmox multihost skill' in forum #plugins-skills-and-skins
+# thread_id=1527538473232371812 forum_id=1485392832154832906
+# Started 2026-07-17T08:12:03.653694+00:00
+
+[2026-07-17T04:52:32.311000+00:00] drahcir_rahl (id=1527538473232371812)
+    https://github.com/rahlquist/hermes-proxmox-multihost built this from anothers code which I forked and added multi host control registry to. Then cleaned up <@659176257338081306> fine hermes-SkillOpt  and de-spin skills.
+    [embed] GitHub - rahlquist/hermes-proxmox-multihost: Hermes Agent skill: co... https://github.com/rahlquist/hermes-proxmox-multihost
+

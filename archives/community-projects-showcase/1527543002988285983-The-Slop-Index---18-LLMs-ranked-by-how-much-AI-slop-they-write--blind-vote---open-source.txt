@@ -1,0 +1,9 @@
+# Thread 'The Slop Index - 18 LLMs ranked by how much AI slop they write (blind vote + open source)' in forum #community-projects-showcase
+# thread_id=1527543002988285983 forum_id=1316137596535177246
+# Started 2026-07-17T08:06:16.082365+00:00
+
+[2026-07-17T05:10:32.289000+00:00] penguinothepenguin101 (id=1527543002988285983)
+    Been bugged that every lab claims their model "writes like a human," so I built a way to measure it. The Slop Index ranks 18 frontier models (GPT, Claude, Gemini, Grok, DeepSeek, Qwen, Kimi, Mistral, GLM, MiniMax, Meta) by how much recognizable "AI slop" is in their writing, scored against real pre-ChatGPT human text across email/social/essay/chat. The score blends a live human vote (40%) with four mechanical axes (conciseness, templating, rhythm, tells), each on a 0-100 human-likeness scale. There's a blind game, Spot the Slop, where you vote which of two AI samples is sloppier; that Elo is the human 40%, no signup. Two things I didn't expect: every model trips AI detectors at ~100% yet they write nothing alike, and the most expensive model on the board is one of the sloppiest. Fully open source (harness, scenarios, all 19,928 generations). Play/vote: https://slop-game.vercel.app | Report: https://slop-game.vercel.app/benchmark.html | Code: https://github.com/hgaddipati1118/slop-index -- would love this crowd's take on the methodology.
+    [embed] The Slop Index https://slop-game.vercel.app/benchmark.html
+    [embed] GitHub - hgaddipati1118/slop-index: The Slop Index — a benchmark ... https://github.com/hgaddipati1118/slop-index
+

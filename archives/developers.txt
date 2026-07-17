@@ -47936,3 +47936,21 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-17T01:42:39.231000+00:00] alphakilo (id=1527490687191224320)
     Found a bug and opened a PR. Then two people opened PRs from my issue. Bot slop? Or the charitable take that their ran into the same problem and their agents patched, but when going to gh saw  duplicate ticket and chose to still post their fix? lol
 
+[2026-07-17T02:48:59.629000+00:00] daisukearamaki (id=1527507382190735420)
+    Ppl scanning issues to make pr
+
+[2026-07-17T03:36:02.194000+00:00] kyssta69 (id=1527519220886274169)
+    https://github.com/NousResearch/hermes-agent/pull/66079
+    
+    **Problem**: Fix the file tree force-opening the right sidebar when creating a new session — the user's close preference is now respected without being overridden by workspace state transitions.
+
+[2026-07-17T05:35:06.508000+00:00] cloudmate_67249 (id=1527549186311061544)
+    hey anyone can let me know  that anthropic supports oAuth method with hermes?
+
+[2026-07-17T06:37:33.698000+00:00] trivunous (id=1527564903165071421)
+    https://github.com/NousResearch/hermes-agent/pull/66041
+
+[2026-07-17T06:37:57.869000+00:00] trivunous (id=1527565004545724456)
+    OKE bro
+    [reply to teknium msg=1527307910386811090]
+

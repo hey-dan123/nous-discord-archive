@@ -1,0 +1,21 @@
+# Thread 'Alibaba Token Plan Plugin' in forum #plugins-skills-and-skins
+# thread_id=1527577868861706250 forum_id=1485392832154832906
+# Started 2026-07-17T08:12:02.753881+00:00
+
+[2026-07-17T07:29:04.961000+00:00] olivermee (id=1527577868861706250)
+    Shipped a model-provider plugin for the Alibaba Cloud Token Plan (Team Edition), the subscription/Credits billing tier that runs on its own gateways, separate from DashScope pay-as-you-go and the Coding Plan.
+    
+    https://github.com/oliver-mee/hermes-alibaba-token-plan
+    
+    Two providers: alibaba-token-plan (Global/Singapore) and alibaba-token-plan-cn (Beijing). openai_chat transport, reasoning verified live on both gateways. Curated catalog of 14 agentic models (qwen3.7-plus default, plus DeepSeek, Kimi, GLM, MiniMax), with the live /models list merged in behind it.
+    
+    Install is copy-in:
+    
+    `git clone https://github.com/oliver-mee/hermes-alibaba-token-plan
+    cd hermes-alibaba-token-plan && ./install.sh`
+    
+    Set ALIBABA_TOKEN_PLAN_API_KEY (or the _CN_ variant) and hermes doctor picks it up. Registry, picker, aliases and doctor all populate from the profiles, no core edits. Comes with a small pytest suite that runs without a hermes checkout.
+    
+    Started life as an in-tree PR (#52915), repackaged standalone per the provider policy. Two generic core gaps I hit while repackaging are filed as #66133 and #66135 if anyone else is building provider plugins.
+    [embed] GitHub - oliver-mee/hermes-alibaba-token-plan: Hermes Agent model-p... https://github.com/oliver-mee/hermes-alibaba-token-plan
+
