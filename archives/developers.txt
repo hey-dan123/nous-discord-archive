@@ -47979,3 +47979,99 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     The best way is most likely to make a plugin. If it would require more features available for plugins, there is a thread in hermes-announcemets for requesting additions to plugin interface.
     [reply to isaac8268215 msg=1527446913048248471]
 
+[2026-07-17T13:24:04.589000+00:00] kyssta69 (id=1527667205976887446)
+    https://github.com/NousResearch/hermes-agent/pull/66323
+    
+    **Problem**: fix(gateway): catch dispatch exceptions in the main RPC loop so handler crashes don't take down the entire gateway process (#66286)
+
+[2026-07-17T13:25:19.957000+00:00] gottz.de (id=1527667522093187264)
+    I did so recently too. not because the previous pr was bad, but because it was fundamentally lacking.
+    [reply to alphakilo msg=1527490687191224320]
+
+[2026-07-17T13:34:12.677000+00:00] egilewski (id=1527669756482551923)
+    Wheres everyone hiring devs with Hermes
+
+[2026-07-17T14:53:38.309000+00:00] watchdominion (id=1527689744992174092)
+    Open — 7 bug-fix PRs, all rebased on current main and CI-green. Linked with issue and PR. Hoping to get them in before next release to make some users happy <:PepePray:595825355042979840> 
+    
+    - #65452 — string-typed disabled_toolsets (a YAML-quoted '["web"]' or bare web) was iterated character-by-character, silently disabling nothing — 35 tool schemas sent instead of 24 on every call
+    https://github.com/NousResearch/hermes-agent/pull/65452
+    fixes https://github.com/NousResearch/hermes-agent/issues/61264, addresses the schema blowup in https://github.com/NousResearch/hermes-agent/issues/61265 (5 comments — one report measured 570k prompt tokens / 50-minute stalls on local models)
+    - #64525 — disabled browser toolset no longer strips web_search; when the sweeper flagged a distribution co-occurrence regression I restored the exact coupling same-day
+    https://github.com/NousResearch/hermes-agent/pull/64525
+    fixes https://github.com/NousResearch/hermes-agent/issues/64503 (2 comments, root cause independently confirmed)
+    - #60797 — huggingface-hub pin → range; hermes update stops breaking Hindsight. Sweeper: "clean cherry-pick candidate"
+    https://github.com/NousResearch/hermes-agent/pull/60797
+    fixes https://github.com/NousResearch/hermes-agent/issues/60783 (5 comments — a new report measured a silent crash loop that fired 41,550 times over three weeks and wrote a 596 MB log)
+    - #61611 — Hindsight surfaces the real exception chain on local-runtime failures (covers both upstream swallow sites via __context__ chaining)
+    https://github.com/NousResearch/hermes-agent/pull/61611
+    - #61613 — dispatch logs kwarg keys + middleware trace on unexpected-kwarg TypeErrors — turns the next occurrence of the 13-comment #60821 hunt into a one-log diagnosis
+    https://github.com/NousResearch/hermes-agent/pull/61613
+    - #61615 — Windows planned stops report PLANNED_STOP, not signal=UNKNOWN
+    https://github.com/NousResearch/hermes-agent/pull/61615
+    fixes https://github.com/NousResearch/hermes-agent/issues/61596 (caught it fresh)
+    - #60085 — kanban notify subscriptions reach TUI/desktop sessions; sweeper rated it high and its one request (poller-level tests) is in
+    https://github.com/NousResearch/hermes-agent/pull/60085
+    fixes https://github.com/NousResearch/hermes-agent/issues/59890 (2 comments)
+
+[2026-07-17T15:38:04.761000+00:00] robertotomas_2023 (id=1527700928902205460)
+    I could use #19159 or an equivalent, and yesterday I shared in the comments a branch to cherry pick or fold in in some way, with resolutions to the issues <@387972437901312000> had raised there. I'm wondering if I chose the wrong branch, like if I want to go ahead and implement a solution on that work locally, hoping it will be folded in, or not?
+
+[2026-07-17T17:07:37.081000+00:00] blooddragon90 (id=1527723462045597866)
+    **The board your agent builds with you — durable, auditable, operator-governed.**
+    
+    Hermes' agent can already do almost anything. What it can't do today is leave you a
+    place: a persistent, visual workspace it composes, updates, and operates — that you
+    co-own, audit, and govern.
+    
+     This tracker covers the Boardstate delivery that goes with Kanban. the bundling PR
+    (#66381), what's inside it, how to test every claim in one checkout, and the roadmap.
+    https://github.com/NousResearch/hermes-agent/issues/66413   issue tracker
+    https://github.com/NousResearch/hermes-agent/pull/66381  web dash
+    https://github.com/NousResearch/hermes-agent/pull/66425 desktop integration
+    
+    The future is moving to modular, create on demand/no code needed/no deploy/sandboxed UI the agent builds (Codex launched last week+Anthropic + Anthropic launching in their Hermes/OC competitor Conway this month) so I built this for OSS and it's already deployed in OC (vendored) and numerous other projects
+    [attachment] hero.gif https://cdn.discordapp.com/attachments/1491258766648283238/1527723461747675326/hero.gif?ex=6a5bb2d9&is=6a5a6159&hm=7f8596a0bff36e3c9f442fbffc23ff1f4ed87ab13018ed130ad6dc98623d6791&
+
+[2026-07-17T17:07:52.535000+00:00] blooddragon90 (id=1527723526864375829)
+    desktop app too^ (can be installed and tested as plugin here: https://github.com/100yenadmin/boardstate-hermes-plugin)
+    [attachment] desktop-board.png https://cdn.discordapp.com/attachments/1491258766648283238/1527723526889537658/desktop-board.png?ex=6a5bb2e8&is=6a5a6168&hm=b8dc7307eaa2f04ce370ecf2bed554b2df3e50b9d1e61df0e71b541f7d65e324&
+    [reply to blooddragon90 msg=1527723462045597866]
+
+[2026-07-17T17:11:59.030000+00:00] egilewski (id=1527724560739336353)
+    It is allowed to make competing PRs, just preserve the original autorship if reusing code. I usually don't do that unless the original author is unresponsive, but maybe it's already so.
+    [reply to robertotomas_2023 msg=1527700928902205460]
+
+[2026-07-17T17:55:30.932000+00:00] frowtek (id=1527735515850473635)
+    agent cwd enterability fallback
+    https://github.com/NousResearch/hermes-agent/pull/66407
+    Extends #66306 to the runtime_cwd resolvers: an existing-but-inaccessible cwd (leaked /root) now falls back instead of poisoning every command.
+    
+    FTS self-heal on search path
+    https://github.com/NousResearch/hermes-agent/pull/66420
+    Complements #66296: search_messages() now rebuilds + retries on FTS corruption instead of crashing read-only (cron/CLI) search.
+    
+    redact interim-message fallback
+    https://github.com/NousResearch/hermes-agent/pull/66290
+    The no-commentary interim path leaked secrets verbatim to the UI; now redact_sensitive_text scrubs it like the other branch.
+    
+    drain MCP probe pagination
+    https://github.com/NousResearch/hermes-agent/pull/66431
+    The hermes mcp probe counted prompts/resources from page 1 only; now drains nextCursor via _paginate_full_list(), matching the tool count.
+    
+    sanitize escapes in /history
+    https://github.com/NousResearch/hermes-agent/pull/66299
+    /history replayed stored content raw; a crafted turn could clear/retitle the terminal. Now scrubbed via sanitize_display_text, like /resume.
+
+[2026-07-17T18:47:53.832000+00:00] zentropylabs.ai (id=1527748698128388196)
+    Are there any smaller orgs that are still approved for Mythos access? I could use the advanced reasoning for a laboratory/educational modeling tool/AI accountability workbench - and I could use that temporary access to the better model in order to get it finished. I would not want to run anyones bill up unnecessarily, and would only pursue the usage under someones blessing, and cap it.
+
+[2026-07-17T18:59:31.939000+00:00] warofchange (id=1527751626201239706)
+    PR #66468 — fix(matrix): drop duplicate infinity-emoji keys in _approval_reaction_map
+    
+    The Matrix adapter's _approval_reaction_map declares 7 entries but only 5 distinct keys. The ♾ "always" reaction is intentionally mapped twice — with and without the U+FE0F variation selector — so clients that send either form get matched. But two further entries re-add those exact same keys (\u267e\ufe0f and \u267e) in \u-escaped notation. Python parses "♾️" and "\u267e\ufe0f" to the identical string, so these are duplicate dict keys with the identical value "always" — dead re-declarations, most likely a rebase artifact where one branch used literals and another used escapes.
+    
+    The fix removes the two redundant escaped entries and keeps the readable literal forms as canonical. It's provably behavior-preserving: duplicate keys with identical values collapse to the same dict on construction, so the map is byte-for-byte equivalent, and both variation-selector forms are retained so client matching is unchanged. Conveniently the removed lines are pure ASCII (\u escapes), so no emoji bytes are touched.
+    
+    https://github.com/NousResearch/hermes-agent/pull/66468
+

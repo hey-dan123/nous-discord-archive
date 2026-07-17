@@ -9,3 +9,12 @@
 [2026-07-17T12:00:55.638000+00:00] magnus919 (id=1527646280799748146)
     This is really cool! Teeing up a couple of contributions to consider.
 
+[2026-07-17T13:49:49.248000+00:00] drahcir_rahl (id=1527673684746305787)
+    I tend to do things a little different as evidenced when people asked my why I didnt just build a cluster lol. Thanks for the tools to make it smoother.
+
+[2026-07-17T13:50:56.438000+00:00] drahcir_rahl (id=1527673966561460224)
+    just has Archify do diagrams for it too https://rahlquist.github.io/hermes-proxmox-multihost/
+
+[2026-07-17T16:34:33.824000+00:00] k1n0sa (id=1527715143662702662)
+    this is good stuff! Thanks a bunch!
+

@@ -1,0 +1,8 @@
+# Thread 'I Connected My Hermes Profiles to my Reachy Mini Robot' in forum #community-projects-showcase
+# thread_id=1527734097525346437 forum_id=1316137596535177246
+# Started 2026-07-17T19:03:52.796463+00:00
+
+[2026-07-17T17:49:52.777000+00:00] stolinski (id=1527734097525346437)
+    https://www.youtube.com/watch?v=ouLnfWqjjN4
+    [embed] Can This Robot Be My Personal Assistant https://www.youtube.com/watch?v=ouLnfWqjjN4
+

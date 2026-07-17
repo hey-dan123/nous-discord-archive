@@ -1,0 +1,18 @@
+# Thread 'Hermes Agent can now browse the web with Steel Browser' in forum #plugins-skills-and-skins
+# thread_id=1527688738384249005 forum_id=1485392832154832906
+# Started 2026-07-17T19:09:27.325422+00:00
+
+[2026-07-17T14:49:38.315000+00:00] nibalic (id=1527688738384249005)
+    We published a plugin that runs Hermes’ browser_* tools in Steel cloud sessions, with a live viewer, one-shot page extraction, and per-site proxy and CAPTCHA controls.
+    
+    You get $30 in credits, but if you need advanced features (proxy, captcha, ...) please verify with $10 top up.
+    
+    ```
+     hermes plugins install steel-dev/hermes-steel --enable
+     hermes config set browser.cloud_provider steel
+    ```
+    
+    https://github.com/steel-dev/hermes-steel
+    [attachment] hermes-cli-skill.png https://cdn.discordapp.com/attachments/1527688738384249005/1527688739500068986/hermes-cli-skill.png?ex=6a5b9282&is=6a5a4102&hm=e6501415d74b121bd57e4cd660754da449e5f3cec16e792b593da7a8aad6c0bd&
+    [embed] GitHub - steel-dev/hermes-steel: Steel (steel.dev) cloud browser pr... https://github.com/steel-dev/hermes-steel
+

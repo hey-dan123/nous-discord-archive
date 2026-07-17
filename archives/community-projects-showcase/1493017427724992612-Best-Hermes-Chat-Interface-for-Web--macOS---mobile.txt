@@ -5979,3 +5979,10 @@
     + On Linux (I use Zorin, which run with Wayland), the desktop app have display problem: there are a huge space on the top.
     + Last night I have a case when approval continue to appear until the app crash.
 
+[2026-07-17T15:34:16.550000+00:00] phospheneoverdrive (id=1527699971715891201)
+    Hi, found an issue with hermes-webui yesterday. If you were using openai-codex provided models, the "summarize" button was silently failing. Turns out it was sending a parameter that Codex doesn't support, so it just bounced back with a 400 and fell back to a basic local summary instead. Was going to submit a PR for this.
+
+[2026-07-17T16:40:55.124000+00:00] phospheneoverdrive (id=1527716742950948996)
+    https://github.com/nesquena/hermes-webui/pull/6191
+    [reply to phospheneoverdrive msg=1527699971715891201]
+
