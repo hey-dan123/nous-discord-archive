@@ -1,0 +1,27 @@
+# Thread 'Genshin Assistant' in forum #community-projects-showcase
+# thread_id=1527590414960300092 forum_id=1316137596535177246
+# Started 2026-07-17T13:22:55.932890+00:00
+
+[2026-07-17T08:18:56.184000+00:00] theboss121 (id=1527590414960300092)
+    Your personal AI companion for Genshin Impact — built to help you get the most out of your account without the spreadsheet grind.
+    
+    
+    🗡️ Genshin Assistant — Your AI Companion for Teyvat
+    Genshin Impact is a beautiful game with a crushing amount of systems to juggle — characters, weapons, artifacts, teams, domains, bosses, and a meta that never sits still. Genshin Assistant is the companion that takes all of that off your plate. It's an AI-powered assistant that lives with your account and helps you play smarter, build better, and enjoy the game instead of spreadsheeting it.
+    
+    🎯 Build characters around your playstyle
+    Not every character needs to be built the "optimal" way — and with Genshin Assistant, they don't have to be. Tell it how you like to play, and it helps you customize any character to fit your style while still pushing them toward their real potential. From your first constellation to a fully min-maxed unit, it walks you through upgrading each character step by step so nothing gets left on the table.
+    
+    🤖 An assistant that actually teaches the game
+    Attached to the app is a conversational AI that gets to know your roster. It explains what each character does, how their kit works, and why certain decisions matter — so you learn the game faster without grinding wikis. New to a character? Ask. Unsure why a team clicks? It'll break it down. The goal isn't just to give you answers, but to make you a better player.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1527590414960300092/1527590415291908136/image.png?ex=6a5b36f0&is=6a59e570&hm=20a95f994dab0651e3fd52d70a18eb39d31d473826e1b922dab606ba800cf070&
+
+[2026-07-17T08:19:39.335000+00:00] theboss121 (id=1527590595948969994)
+    ⚔️ Conquer end-game content with real teamcraft
+    Spiral Abyss, Imaginarium Theater, and the hardest bosses stop being walls. Genshin Assistant helps you assemble the perfect teams for end-game content, theorycrafts how to get the most out of the characters you actually own, and advises on team selection, artifact rotations, and boss strategies. It looks at your account as a whole and finds the best compositions hiding in your roster — not just the meta picks everyone tells you to pull.
+    
+    🗺️ More than combat — your full account, managed
+    Quests & exploration — get a hand with quests and never wonder where to go next.
+    Material hunting — find exactly where upgrade materials drop and which characters need them.
+    Smart build scheduling — a planner that lines up character progression with domain rotations and boss timers, so you always know what to farm on any given day.
+

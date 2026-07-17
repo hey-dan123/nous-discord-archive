@@ -1,0 +1,25 @@
+# Thread 'Just shipped hermes-task-framework — structured task management for Hermes Agent.' in forum #plugins-skills-and-skins
+# thread_id=1527625934734102558 forum_id=1485392832154832906
+# Started 2026-07-17T13:27:59.479027+00:00
+
+[2026-07-17T10:40:04.758000+00:00] nuffun (id=1527625934734102558)
+    Three layers:
+    - Methodology — decompose complex work into composable operations (info-search, code-write, paper-reproduce…)
+    - Container — tasks/<ts>.<name>-<hash6>/ directories with TASK.md checklists and TASK_MEMORY.md decision logs
+    - Tooling — manage_task.py (lifecycle), update-index.py (index), task-runner.sh (logging)
+    
+    6 skills bundled: task-framework (core), task-tracker (bookkeeping), task-timestamp-convention (naming), task-lifecycle-edge-cases (recovery), task-lifecycle-portability (migration), task-external-repos-pattern (external repos)
+    
+    ```bash
+    pip install hermes-task-framework
+    ```
+    
+    Then just tell your agent "create a task to analyze this PDF" — it auto-creates the directory, writes the checklist, works through phases, and remembers where it left off across sessions.
+    
+    Links:
+    - pip: https://pypi.org/project/hermes-task-framework/
+    - skills source: https://github.com/nuffin/task-framework
+    - pip wrapper: https://github.com/nuffin/hermes-task-framework
+    [embed] GitHub - nuffin/task-framework: Structured task management skills f... https://github.com/nuffin/task-framework
+    [embed] GitHub - nuffin/hermes-task-framework: pip install hermes-task-fram... https://github.com/nuffin/hermes-task-framework
+

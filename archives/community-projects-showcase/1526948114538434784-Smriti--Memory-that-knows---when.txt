@@ -15,3 +15,14 @@
     [attachment] VID-20260715-WA00172.mp4 https://cdn.discordapp.com/attachments/1526948114538434784/1526948115754778664/VID-20260715-WA00172.mp4?ex=6a58e0c0&is=6a578f40&hm=548eb727a1ad344a0a554269a90f0c2a63c4bca84ee00cd7dc8ee04c3dc64f97&
     [embed] GitHub - vn-envy/Smriti: Zero-infrastructure, local-first memory fo... https://github.com/vn-envy/Smriti
 
+[2026-07-17T10:10:57.268000+00:00] neekhilenvy (id=1527618605230067825)
+    We have just released some major fixes, post first user recommendations.
+    
+    Find it here: https://vn-envy.github.io/Smriti/
+    [embed] SMRITI स्मृति — memory that knows when https://vn-envy.github.io/Smriti/
+
+[2026-07-17T10:28:12.958000+00:00] neekhilenvy (id=1527622949228515508)
+    And for those interested in reading technicalities, here is an article in the launch post
+    https://x.com/i/status/2077363529091584231
+    [embed]  https://twitter.com/i/status/2077363529091584231
+

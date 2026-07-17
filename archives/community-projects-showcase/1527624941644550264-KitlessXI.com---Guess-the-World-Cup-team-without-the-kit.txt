@@ -1,0 +1,16 @@
+# Thread 'KitlessXI.com — Guess the World Cup team without the kit' in forum #community-projects-showcase
+# thread_id=1527624941644550264 forum_id=1316137596535177246
+# Started 2026-07-17T13:22:55.500786+00:00
+
+[2026-07-17T10:36:07.987000+00:00] fullslop (id=1527624941644550264)
+    Think you know international football? Kitless XI strips every visual clue from real squad photos, leaving only the players’ faces. Take on a quick Daily V, the Daily XI, or all 48 World Cup teams—and see how good your soccer knowledge really is.
+    
+    This project was built with Hermes:
+    - /goal mode for searching team images
+    - native image generation with GPT Images 2 for edits
+    - all development work
+    
+    Play Now: https://kitlessxi.com
+    [attachment] opengraph-image.png https://cdn.discordapp.com/attachments/1527624941644550264/1527624942227554345/opengraph-image.png?ex=6a5b5718&is=6a5a0598&hm=be9e8b36b7eda6688ad329f3284f11c424eda2ce2cb7c2ae414d5c56e1723776&
+    [embed] Kitless XI https://kitlessxi.com/
+

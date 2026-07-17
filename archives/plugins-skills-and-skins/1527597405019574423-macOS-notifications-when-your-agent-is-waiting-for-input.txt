@@ -1,0 +1,17 @@
+# Thread 'macOS notifications when your agent is waiting for input' in forum #plugins-skills-and-skins
+# thread_id=1527597405019574423 forum_id=1485392832154832906
+# Started 2026-07-17T13:27:59.865441+00:00
+
+[2026-07-17T08:46:42.744000+00:00] kon_yu (id=1527597405019574423)
+    Ever left Hermes running a long task in the background and kept switching tabs just to check if it finished? Or forgot about it entirely and left it waiting for your input?
+    
+    I built a simple macOS notification plugin to fix this: macos-notify
+    It sends a system alert the moment Hermes finishes. Clicking the notification brings your terminal (Ghostty, iTerm2, Warp, etc.) back to the foreground.
+    
+      Install:
+      hermes plugins install konyu/hermes-macos-notify
+      hermes plugins enable macos-notify
+    
+      👉 https://github.com/konyu/hermes-macos-notify
+    [embed] GitHub - konyu/hermes-macos-notify https://github.com/konyu/hermes-macos-notify
+

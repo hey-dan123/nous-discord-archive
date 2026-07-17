@@ -47954,3 +47954,28 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     OKE bro
     [reply to teknium msg=1527307910386811090]
 
+[2026-07-17T09:20:52.478000+00:00] zeke3299 (id=1527606002227085403)
+    anyone using graphify? if so, what's the catch?
+
+[2026-07-17T10:01:53.998000+00:00] trivunous (id=1527616326590529646)
+    https://github.com/NousResearch/hermes-agent/pull/66212
+
+[2026-07-17T11:37:42.515000+00:00] gottz.de (id=1527640437618245812)
+    just took a look. is it only doing a single-pass, creates a json file and uses it for further queries?
+    that's a bit basic.. should serve most use-cases tho.
+    [reply to zeke3299 msg=1527606002227085403]
+
+[2026-07-17T11:50:34.637000+00:00] erik_lu (id=1527643676132507730)
+    Hermes Agent is currently at v0.18.2, which makes me curious about the project’s path to v1.0.0. I know pre-1.0 versioning doesn’t necessarily mean the software is immature, but it usually signals that some core interfaces, architecture, or stability guarantees are still evolving. So what, specifically, is missing between Hermes today and the version you would confidently call 1.0? Is there a concrete milestone—API stability, production reliability, agent autonomy, security, ecosystem maturity, or something more philosophical—that defines that threshold for the team? And, if you’re able to share, is v1.0.0 already on the roadmap? I’d especially love to hear the founders’ perspective, because how a team defines “1.0” often reveals far more about its long-term vision than the version number itself.
+
+[2026-07-17T11:55:58.711000+00:00] drahcir_rahl (id=1527645035397513346)
+    [attachment] magnific_make-me-a-video-of-the-go_nT2aXjFYQD.mp4 https://cdn.discordapp.com/attachments/1491258766648283238/1527645034957246615/magnific_make-me-a-video-of-the-go_nT2aXjFYQD.mp4?ex=6a5b69ce&is=6a5a184e&hm=f013b9bb6b932000393f2364270d2e4370a223915e78fb408030a521d1cf922e&
+
+[2026-07-17T13:09:43.151000+00:00] egilewski (id=1527663592843772054)
+    Maintainers will choose the oldest (yours) if others aren't better. Which those PRs made it easier for you to ensure.
+    [reply to alphakilo msg=1527490687191224320]
+
+[2026-07-17T13:21:46.783000+00:00] egilewski (id=1527666627976630272)
+    The best way is most likely to make a plugin. If it would require more features available for plugins, there is a thread in hermes-announcemets for requesting additions to plugin interface.
+    [reply to isaac8268215 msg=1527446913048248471]
+
