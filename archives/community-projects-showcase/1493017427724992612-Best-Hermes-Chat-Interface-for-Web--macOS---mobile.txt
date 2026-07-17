@@ -5951,3 +5951,25 @@
     Anyone else getting error `Error: MoA runtime unavailable (hermes-agent not installed or too old)` when trying to use moa? does hermes-webui support it yet? using latest versions
     [reply to avidfuturist msg=1527086504168394833]
 
+[2026-07-16T19:15:24.323000+00:00] avidfuturist (id=1527393232923791391)
+    Will investigate, thanks
+    [reply to curtis_szmania msg=1527375265171505282]
+
+[2026-07-16T19:21:53.923000+00:00] avidfuturist (id=1527394867024625775)
+    MoA is fully enabled in WebUi that error tells me the agent WebUI is linked to is somehow not supporting it when WebUI expects it to exist
+    [reply to curtis_szmania msg=1527375265171505282]
+
+[2026-07-16T19:22:26.434000+00:00] avidfuturist (id=1527395003385643039)
+    So in other words, I think the agent linked to that WebUI instance needs to be updated. It may be that it’s using a different version of Hermes agent than you expect or something
+
+[2026-07-17T00:18:42.278000+00:00] curtis_szmania (id=1527469560679370932)
+    Is the hermes webui working on the agent container or do the agents work on the webui container? I'm just trying to understand their environment. Because on the hermes-webui containers `hermes` command doesn't exist.
+    [reply to avidfuturist msg=1527394867024625775]
+
+[2026-07-17T00:53:29.541000+00:00] avidfuturist (id=1527478315294920774)
+    The webUI container needs a Hermes agent instance to operate should be configured in the docker setup
+
+[2026-07-17T01:04:43.300000+00:00] curtis_szmania (id=1527481141244727387)
+    but the hermes agent can be on another container correct? I have multi profile docker setup and 1 hermes agent container, and each profile is ona  hermes-webui container
+    [reply to avidfuturist msg=1527478315294920774]
+

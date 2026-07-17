@@ -1,0 +1,17 @@
+# Thread 'Kernel (cloud browser provider) plugin' in forum #plugins-skills-and-skins
+# thread_id=1527485881366089748 forum_id=1485392832154832906
+# Started 2026-07-17T02:45:44.612570+00:00
+
+[2026-07-17T01:23:33.433000+00:00] rfgarcia (id=1527485881366089748)
+    Hey! Founder of Kernel here. I've been using Hermes as my personal agent for a while I've been mostly happy I've been slighty annoyed that there's no crazy fast cloud browser integration. Today I changed that and shipped a Hermes plugin:
+    
+    https://github.com/kernel/hermes-browser-plugin
+    
+    Besides performance some other reasons to use it:
+    
+    - Very good anti-bot detection
+    - Our Managed Auth feature automates logging in to all of your favorite sites (and keeping them logged in) so that you can ask Hermes to do stuff on already-logged-in sessions
+    
+    Happy to answer questions here or go into more detail about some of my use cases 🙂
+    [embed] GitHub - kernel/hermes-browser-plugin: Kernel cloud browser provide... https://github.com/kernel/hermes-browser-plugin
+

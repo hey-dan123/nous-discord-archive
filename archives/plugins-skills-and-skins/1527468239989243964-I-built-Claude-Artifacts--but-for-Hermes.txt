@@ -1,0 +1,8 @@
+# Thread 'I built Claude Artifacts, but for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1527468239989243964 forum_id=1485392832154832906
+# Started 2026-07-17T02:45:46.083389+00:00
+
+[2026-07-17T00:13:27.401000+00:00] ceifa (id=1527468239989243964)
+    https://agenthost.page/
+    [embed] agenthost: one command in, a private link out https://agenthost.page/
+

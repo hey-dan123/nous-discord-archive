@@ -1,0 +1,12 @@
+# Thread 'Venice model provider plugin' in forum #plugins-skills-and-skins
+# thread_id=1527453773453070346 forum_id=1485392832154832906
+# Started 2026-07-17T02:45:47.535554+00:00
+
+[2026-07-16T23:15:58.310000+00:00] joshmo_dev (id=1527453773453070346)
+    Hey everyone! I made a Venice model provider plugin for Hermes. This is a significant upgrade over connecting through OpenAI compatible connectors, as it allows models (via Venice) to be patched properly for reasoning options, tool options and additionally context length.
+    
+    Venice is a privacy-first inference provider.
+    
+    You can check it out here: https://github.com/joshua-mo-143/hermes-provider-venice
+    [embed] GitHub - joshua-mo-143/hermes-provider-venice: A community-maintain... https://github.com/joshua-mo-143/hermes-provider-venice
+

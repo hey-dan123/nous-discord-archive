@@ -47794,3 +47794,145 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     desktop plugins dont work when connected to a gateway, am i doing something wrong?
     [attachment] ktx936r.png https://cdn.discordapp.com/attachments/1491258766648283238/1527382243616624750/ktx936r.png?ex=6a5a7510&is=6a592390&hm=2d19beaebc83130aae45c887e312ae4086e84c2c9d1bad1668940d947ebe91f9&
 
+[2026-07-16T19:09:20.732000+00:00] meshnetz (id=1527391707912601610)
+    Lemonade v11 just released if you are looking for local AMD gateway instead of paying for models
+
+[2026-07-16T20:35:40.653000+00:00] watchdominion (id=1527413434075844749)
+    Some bug fixes here i am going to sleep soon lmk if we can put them in so some bugs gets squashed <a:bongo_blob:1151299871274455060>
+    [reply to watchdominion msg=1526982335260790784]
+
+[2026-07-16T20:40:43.821000+00:00] 0zi57 (id=1527414705654857828)
+    Windows compatibility fix for skill_view file categorization  replaces hardcoded / separators with Path.parts for platform-agnostic path handling. Includes regression test covering all four support directories <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/24016
+
+[2026-07-16T21:44:40.150000+00:00] gottz.de (id=1527430796384800768)
+    given the activity around my PR, anyone willing to throw another code review at it?
+    I made it with 5.6 sol and reviewed via fable, copilot and manually reading it.
+    Tested it all, using it for days..
+    Just want to make sure I did not mess anything up.
+    [reply to gottz.de msg=1526867122222006296]
+
+[2026-07-16T22:03:09.436000+00:00] bendezium (id=1527435449067638857)
+    What is the proper way to provide API keys and secrets for things Hermes isn't already expecting to be on .env? I thought it would be to still add it to the .env. but I've seen enough times now with different models Hermes do really weird shit to access them, like this:
+    
+    ```
+    source ~/.hermes/.env && python3 << 'PYEOF'
+    import json, urllib.request
+    
+    env = {}
+    with open('/home/ben/.hermes/.env') as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                key, _, val = line.partition('=')
+                env[key.strip()] = val.strip()
+    ```
+
+[2026-07-16T22:20:50.551000+00:00] tomrevo.x (id=1527439899706261606)
+    <@387972437901312000> Nothing urgent at all -- just wanted to know if I'm following the expected rules for contributions.  https://github.com/NousResearch/hermes-agent/pull/52191 review has been resolved and latest is ready for another pass.
+
+[2026-07-16T22:33:06.481000+00:00] tarragonnia (id=1527442986420670474)
+    Wheres everyone hiring devs with Hermes expertise? Any recs? Feeling a little wary about Upwork
+
+[2026-07-16T22:39:46.922000+00:00] gottz.de (id=1527444665991696607)
+    honestly.. it's still a niche.
+    [reply to tarragonnia msg=1527442986420670474]
+
+[2026-07-16T22:40:00.878000+00:00] gottz.de (id=1527444724527665275)
+    we are early. make the best of it.
+
+[2026-07-16T22:43:04.069000+00:00] isaac8268215 (id=1527445492886274069)
+    hello guys.
+    do we have here hermes agent developers? ( like the ones developing hermes agent itself).
+    or is it for overall devs that work with hermes agent?
+
+[2026-07-16T22:45:25.617000+00:00] tarragonnia (id=1527446086581616780)
+    just devs that work with hermes, because a lot arent familiar with it. although finding an expert/ tutor to teach me more would be cool too.
+    [reply to isaac8268215 msg=1527445492886274069]
+
+[2026-07-16T22:47:04.804000+00:00] isaac8268215 (id=1527446502601916478)
+    thank you 🙂
+    do you know how do i pass a feedback or a problem i have to the actually hermes agent devs?
+    [reply to tarragonnia msg=1527446086581616780]
+
+[2026-07-16T22:47:10.925000+00:00] promptsiren (id=1527446528275386479)
+    no, this channel in particular is for devs to share their hermes agent prs or proposed prs with maintainers
+    [reply to isaac8268215 msg=1527445492886274069]
+
+[2026-07-16T22:47:37.706000+00:00] promptsiren (id=1527446640603037706)
+    if you need to troubleshoot an issue you can open a <#1485307775444844625>
+
+[2026-07-16T22:48:42.662000+00:00] isaac8268215 (id=1527446913048248471)
+    well its not like an actually issue but more of a feedbcak and feature request xD.
+    [reply to promptsiren msg=1527446640603037706]
+
+[2026-07-16T23:25:20.860000+00:00] drexux (id=1527456132958916608)
+    https://github.com/NousResearch/hermes-agent/pull/65954 — On DeepSeek, minimal reasoning effort matched no arm in the mapping, so it was silently dropped and the API fell back to its high default — asking for the least thinking gave you the most. Added the missing minimal → low clamp (the floor), mirroring the existing xhigh/max → max ceiling clamp. +tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/65966 — The Weixin poll loop dispatched every inbound message with a bare asyncio.create_task(...) and never kept the reference. asyncio only holds a weak ref to a task, so a still-pending handler can be garbage-collected mid-flight → the user's message is silently dropped, never answered. Anchored the tasks in a _background_tasks set (same pattern yuanbao/gateway/mcp-oauth already use). +tests.
+    
+    https://github.com/NousResearch/hermes-agent/pull/65973 — The Bedrock cost lookup stripped ("us.", "eu.", "ap.", ...) before pricing, but AWS's Asia-Pacific profiles are prefixed apac. (Australia au.), not ap. — "apac.".startswith("ap.") is False, so every APAC/AU Bedrock session priced as unknown. Added apac./au.. An open PR (#46297) fixed the same list in the caching gate but missed this cost-lookup copy. <@387972437901312000>
+
+[2026-07-16T23:38:46.049000+00:00] .blockops (id=1527459510166491147)
+    Is there a preferred method for listing/checking updates for plugins?
+
+[2026-07-17T00:34:25.866000+00:00] 0xatakan (id=1527473518374158576)
+    Quick Update <@387972437901312000> 
+    
+    - Updated #63164 with the reviewer-requested fallback regression test for local Ollama `num_ctx` ordering. The branch was rebased onto the latest main, retested, and pushed.
+    https://github.com/NousResearch/hermes-agent/pull/63164
+    
+    - Updated #62856 with a real two-process MCP discovery contention regression instead of a synthetic in-process test. The cross-process retry behavior was verified, and the branch was rebased, retested, and pushed.
+    https://github.com/NousResearch/hermes-agent/pull/62856
+    
+    - Reworked #65040 based on the sweeper review. Removed the registry-presence guard and reproduced the actual failure path: detached background batches were still observing the foreground parent’s interrupt flag.
+    
+      The new integration regression:
+      - dispatches a real three-child background delegation
+      - submits a prompt mid-turn under interrupt mode
+      - verifies the foreground parent is interrupted
+      - verifies the prompt is queued
+      - verifies all three detached children still complete
+      - verifies the completion belongs to and is consumable by the owning TUI session
+    
+      Validation:
+      - Delegation/TUI regression suite: 233 passed
+      - Full TUI gateway server suite: 349 passed
+      - Repository-wide Ruff check: passed
+      - Changed-line type-check diagnostics: 0
+    
+    https://github.com/NousResearch/hermes-agent/pull/65040
+    
+    ### Other open PRs
+    
+    https://github.com/NousResearch/hermes-agent/pull/65254
+    
+    https://github.com/NousResearch/hermes-agent/pull/65002
+    
+    https://github.com/NousResearch/hermes-agent/pull/64686
+    
+    https://github.com/NousResearch/hermes-agent/pull/64623
+    
+    https://github.com/NousResearch/hermes-agent/pull/63318
+    
+    https://github.com/NousResearch/hermes-agent/pull/62718
+
+[2026-07-17T00:44:35.811000+00:00] .blockops (id=1527476076668784721)
+    My Hermes integration into my iOS app is coming along nicely.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1527476074307649576/image.png?ex=6a5acc73&is=6a597af3&hm=250cc8164629bb162400bcb24f599a4ebd727b7ab24acb3956ca88a590d37f72&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1527476074869690378/image.png?ex=6a5acc73&is=6a597af3&hm=bb6ca12d3a77015836d6aeb1b659b19b35bbd7ecfe47ec8c20fcced9f1e75a82&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1527476075184132157/image.png?ex=6a5acc73&is=6a597af3&hm=e350f0b40bb5a8bdc7ab6913b8f32bbd0f4449f78aa12f58b25cccee8e7657ef&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1527476075456888863/image.png?ex=6a5acc73&is=6a597af3&hm=6316cf688a6bd63eb0f2efd6c35172a8b5fd90e6cbbfc809c67d96c2a9e13537&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1527476075746037861/image.png?ex=6a5acc73&is=6a597af3&hm=707cf9ea6b937a7404327df36a2ca8250d44812c8b921cc412075f7efbec879e&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1527476076064935956/image.png?ex=6a5acc73&is=6a597af3&hm=9dfde3d9d423e4eaa7838fecb8d273b7ff83713ac49a94238d375e007a92b573&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1527476076413190275/image.png?ex=6a5acc73&is=6a597af3&hm=4d22ac7e629d7d16b724af2ead3b41e27eb64d796d09ea5bf0cd226ca5a162ce&
+
+[2026-07-17T00:45:15.245000+00:00] .blockops (id=1527476242067226634)
+    I'll have in test flight soon for any folks that want to try it out.
+
+[2026-07-17T01:14:07.149000+00:00] techdox (id=1527483506198839450)
+    Added reply/changes - https://github.com/NousResearch/hermes-agent/pull/65560#issuecomment-4997330508
+    [reply to techdox msg=1527252754391765052]
+
+[2026-07-17T01:42:39.231000+00:00] alphakilo (id=1527490687191224320)
+    Found a bug and opened a PR. Then two people opened PRs from my issue. Bot slop? Or the charitable take that their ran into the same problem and their agents patched, but when going to gh saw  duplicate ticket and chose to still post their fix? lol
+

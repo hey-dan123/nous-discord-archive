@@ -26,3 +26,9 @@
 [2026-07-16T16:46:08.914000+00:00] dusilen (id=1527355671216132196)
     this is such a small thing but i’d genuinely use it. untitled session 47 is painfully real xd
 
+[2026-07-17T02:21:18.999000+00:00] nuffun (id=1527500417003688029)
+    Currently depends on PR #46581 (pre_command hook — not merged yet): https://github.com/NousResearch/hermes-agent/pull/46581
+    
+    Without that hook, the plugin loads cleanly but title-on-quit won't fire. Once the PR lands, the dependency section in the README comes out.
+    [embed] feat(plugins): add pre_command, post_command, and on_quit plugin ho... https://github.com/NousResearch/hermes-agent/pull/46581
+

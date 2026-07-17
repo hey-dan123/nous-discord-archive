@@ -8,3 +8,6 @@
     As for F&B and Service Businesses, it is a generic ordering bot. It takes the order of the user, is knowledgeable on the menu/services, files support tickets for things like: "My order came in wrong and others..." but one thing about these bots is that they are great at upselling. I wouldn't feel honest if I would tell you a specific number like: Hermes increased my average order price by 20%, but what I can say is users tend to order the thing that the agent is trying to upsell them on. 
     I am open to any questions, for a more detailed breakdown of the financial structure, the business decisions, the agent archeticture, I'm happy to connect.
 
+[2026-07-16T22:48:49.320000+00:00] creator0000 (id=1527446940973928538)
+    super cool ill send you a dm shortly working on something similar
+

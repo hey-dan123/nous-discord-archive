@@ -648,3 +648,10 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1527386155677384825/image.png?ex=6a5a78b4&is=6a592734&hm=36696d5cb4f4bd40fbc7bcb6ef9609667cda3a565d069ab798c88e8f2c64df00&
     [attachment] image.png https://cdn.discordapp.com/attachments/1519175108697264238/1527386156331958272/image.png?ex=6a5a78b5&is=6a592735&hm=8f329f45ee78d2bc48c65ac7ba1593961e62e410f7e70677a8a0fe082abbed1d&
 
+[2026-07-16T19:43:55.815000+00:00] jonkomet (id=1527400411441397792)
+    Submit a PR for it if you can so I can review it
+    [reply to billyelusiv msg=1527386156604457052]
+
+[2026-07-16T21:09:47.952000+00:00] jonkomet (id=1527422021070356481)
+    <:catlick:1151260427645366375> v0.2 the release of all releases🤫
+

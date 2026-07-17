@@ -35,3 +35,11 @@
 [2026-07-16T17:28:43.968000+00:00] jobs3286 (id=1527366387889213562)
     I will be excited to try this out also, been looking for a way to set up a system to help manage my projects in davinci
 
+[2026-07-16T23:36:43.732000+00:00] samjwasserman (id=1527458997131677766)
+    Just fyi I have another full Davinci MCP on my github that can do a lot more, feel free to check that out too.
+
+[2026-07-16T23:39:23.673000+00:00] samjwasserman (id=1527459667972722839)
+    https://github.com/wassermanproductions/unofficial-davinci-mcp in case you wanted you use prior to it officially merging with Hermes which that part I've submitted to Nous etc already. But just point your agent here and it should be able to work. I also turned in 3 other apps I built to have them integrate with Hermes as plugins if the merge is allowed, all are here - hope it helps everyone 🙂 https://github.com/wassermanproductions/wassermans-filmmaker-suite
+    [embed] GitHub - wassermanproductions/unofficial-davinci-mcp: Let any AI ag... https://github.com/wassermanproductions/unofficial-davinci-mcp
+    [embed] GitHub - wassermanproductions/wassermans-filmmaker-suite: Wasserman... https://github.com/wassermanproductions/wassermans-filmmaker-suite
+

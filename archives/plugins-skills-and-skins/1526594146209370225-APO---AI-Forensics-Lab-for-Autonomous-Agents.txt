@@ -14,3 +14,6 @@
 [2026-07-14T14:43:11.625000+00:00] leerenmos (id=1526599952892170403)
     <@1371850071158685726> sure APO is building a new category: AI Forensics. Think of it as a black box flight recorder for AI agents. Every execution becomes an investigation with evidence, causality, replay, autopsy, and prevention, making autonomous AI systems explainable, auditable, and recoverable<:nousgirl:1341983870752653352>
 
+[2026-07-17T01:33:20.787000+00:00] alphakilo (id=1527488344907321446)
+    So Evals?
+
