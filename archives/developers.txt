@@ -48231,3 +48231,176 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     **Problem**: Fix cron edit button unclickable in desktop sidebar. Previous tooltip fix used preventDefault() on focus events which broke clicks in Electron. Use context-based suppression instead.
 
+[2026-07-18T13:09:26.665000+00:00] kerozelvin (id=1528025911562080317)
+    Anyone else on LINUX having issues with the CUA X11 idle render-loop bug locking down Hermes?  It becomes completely unresponsive and you can't enter anything by keyboard in Hermes (running CLI in .zsh) or VS CODE.   I thought I had a solution (https://github.com/trycua/cua/pull/2258), but I had another lock down last night after trying this fix locally.  No kernel/GPU/OOM/coredump evidence survived  after the second lock.  Basically the keyboard becomes unresponsive everywhere, but I can restart the box by mouse in the GUI...  I've had to disable Hermes computer use for now.  
+    
+    I know this isn't technically a Hermes issue, but it does make CUA unworkable in Hermes on Linux when it hits (more likely on multi-monitor set-ups) so I am hoping someone here has possibly already tackled the issue and can share the fix!  The issue has already been patched for CUA in Win and macOS, so it is really only a problem for Linux folk.
+
+[2026-07-18T13:21:06.161000+00:00] robertotomas_2023 (id=1528028845460947115)
+    It was suggested to me here that I could make my own PR if there is no action to cherry pick my work here https://github.com/NousResearch/hermes-agent/pull/19159 -- I saw you commented on this PR recently, and I actually need the solution. I'm happy to make tht branch and PR but i feel like I just corrected their work. Are you amenable to that? Would it work a a solution? (It is not so much that the author is unresponsive, its only been a couple of days. but i really want a solution and am probably being too impatient)
+    [reply to teknium msg=1528004139626266704]
+
+[2026-07-18T13:30:47.105000+00:00] robertotomas_2023 (id=1528031282116694038)
+    actually, I just realized I'm thinking about this wrong. I only need it on 4 machines, I can do it manually for now
+
+[2026-07-18T13:33:58.700000+00:00] frowtek (id=1528032085724369008)
+    <@387972437901312000> mind reviewing this pr? Thx!
+    
+    fix(state): stop a lone surrogate from silently killing session persistence
+    https://github.com/NousResearch/hermes-agent/pull/66924
+
+[2026-07-18T13:42:02.411000+00:00] realadolan (id=1528034114555351100)
+    **Agent / Session**
+    
+    • [#66751](https://github.com/NousResearch/hermes-agent/pull/66751) Unwrap nested OpenAI-compat response envelopes
+    • [#65409](https://github.com/NousResearch/hermes-agent/pull/65409) Prefer ContextVar over process env for session identity
+    • [#52641](https://github.com/NousResearch/hermes-agent/pull/52641) Reconcile session counts on rewind
+    • [#52603](https://github.com/NousResearch/hermes-agent/pull/52603) Stop leaking intermediate images in `cache/images`
+    
+    **Security**
+    
+    • [#65393](https://github.com/NousResearch/hermes-agent/pull/65393) Hardline busybox/toybox multi-call applet verbs
+    • [#63920](https://github.com/NousResearch/hermes-agent/pull/63920) Revalidate Skills Hub redirect targets on fetch
+    • [#63905](https://github.com/NousResearch/hermes-agent/pull/63905) Peel exec wrappers before MCP hermes-0day scan
+    • [#61411](https://github.com/NousResearch/hermes-agent/pull/61411) Neutralize control characters in formatted log records
+    • [#58742](https://github.com/NousResearch/hermes-agent/pull/58742) Scan commands carried by `sh -c` and `env --split-string`
+    • [#58663](https://github.com/NousResearch/hermes-agent/pull/58663) Scope the cron-session approval marker to the job context
+    • [#58643](https://github.com/NousResearch/hermes-agent/pull/58643) Close leading-wrapper and path bypass of the hardline approval floor
+    
+    **Desktop / Dashboard**
+    
+    • [#58726](https://github.com/NousResearch/hermes-agent/pull/58726) Confine fs preview and git diff reads to the managed root
+    • [#47911](https://github.com/NousResearch/hermes-agent/pull/47911) Tables follow RTL message direction
+    
+    **Gateway / Integrations**
+    
+    • [#52583](https://github.com/NousResearch/hermes-agent/pull/52583) Ack buffered `passthrough_forward` deliveries
+    • [#58712](https://github.com/NousResearch/hermes-agent/pull/58712) Require TLS before SMTP login in programmatic send
+    
+    **Features**
+    
+    • [#49473](https://github.com/NousResearch/hermes-agent/pull/49473) Add official TickTick support (MCP catalog entry and skill)
+
+[2026-07-18T15:09:31.418000+00:00] teknium (id=1528056130486403292)
+    I wish but not a lot. You can help by doing thorough reviews of them to add context for when we do get to them which will help avoid regressions, new pitfalls, and bugs created from those PRs though
+    [reply to gottz.de msg=1528009494011969626]
+
+[2026-07-18T15:24:10.528000+00:00] muddlebee (id=1528059817741123605)
+    how to best contribute to hermes agent? apart from the PRs/reviews? I see its already crowded a lot
+    [reply to teknium msg=1528056130486403292]
+
+[2026-07-18T15:26:38.202000+00:00] muddlebee (id=1528060437130907738)
+    also if someone looking to work fulltime at nous research what stuff you folks look at? what skills/showcase etc?
+
+[2026-07-18T15:27:07.962000+00:00] realadolan (id=1528060561953259520)
+    https://nousresearch.com/careers
+    [reply to muddlebee msg=1528060437130907738]
+
+[2026-07-18T15:28:30.056000+00:00] muddlebee (id=1528060906280583268)
+    I know that, doesn't answer my question <:bhob:1151299900496158830>
+    [reply to realadolan msg=1528060561953259520]
+
+[2026-07-18T15:29:55.477000+00:00] realadolan (id=1528061264561963008)
+    How?
+
+[2026-07-18T15:30:11.013000+00:00] realadolan (id=1528061329724669993)
+    Full Stack Engineer, for example
+    [attachment] nmxhj9r.png https://cdn.discordapp.com/attachments/1491258766648283238/1528061329443782726/nmxhj9r.png?ex=6a5ced82&is=6a5b9c02&hm=3bd3842f08cf3189bd401e2f63b3b4425feb3dc6d061782f9a2e0c8bf0ed9980&
+
+[2026-07-18T15:31:27.972000+00:00] muddlebee (id=1528061652514246778)
+    thank you, I already read it. let me reframe my question, so these are quite common skillsets to have, "how does one standout" while applying to nous-research?
+    [reply to realadolan msg=1528061329724669993]
+
+[2026-07-18T15:32:34.848000+00:00] realadolan (id=1528061933012385845)
+    Usually not something interviewers reveal in advance 😉
+
+[2026-07-18T15:32:53.330000+00:00] realadolan (id=1528062010531512430)
+    But I can appreciate the grind
+
+[2026-07-18T15:33:13.457000+00:00] muddlebee (id=1528062094950268959)
+    yeah thats why I asked to teknium, as he's core team
+    [reply to realadolan msg=1528062010531512430]
+
+[2026-07-18T15:37:03.551000+00:00] frowtek (id=1528063060034715849)
+    P0 : https://github.com/NousResearch/hermes-agent/pull/66924 - fix(state): stop a lone surrogate from silently killing session persistence
+    P1 : https://github.com/NousResearch/hermes-agent/pull/66984 - fix(agent): persist the delivered response when the turn tail is a tool-call row
+    P2 : https://github.com/NousResearch/hermes-agent/pull/66974 - fix(agent): consume every tool_call id variant when pairing tool results
+
+[2026-07-18T15:50:08.538000+00:00] zentropylabs.ai (id=1528066352508702903)
+    I am working on AI model/harness infrastructure and R&D tooling - for more capable model design based on a concept I have been working on. I am currently focused on building a model centric environment, all the way from the compiler to the engine, then finally, the harness itself. I have successfully modularized my tooling in order to allow some of the smaller pieces to be used in the community, while I pursue the larger project, in whole. My name is Zain Harper, and I aim to truly launch Zentropy Labs for full time focused development in the next 3 months if things gain traction. 
+    
+    https://github.com/HarperZ9
+    
+    This is my github profile, and the funnel for every project I support and maintain. Please give them a look, and test out the tooling. I received my first organizational sponsorship yesterday, and am hoping to become a participating researcher in the advancement of building next generations AI models, and infra. 
+    
+    Cheers.
+
+[2026-07-18T16:23:39.897000+00:00] teknium (id=1528074788759670914)
+    Being a contributor to hermes agent or having done really well building on top of it
+    [reply to muddlebee msg=1528060437130907738]
+
+[2026-07-18T16:36:32.974000+00:00] watchdominion (id=1528078031279624192)
+    Doing my part <:salute:688049964743524376>
+    [reply to teknium msg=1528056130486403292]
+
+[2026-07-18T16:39:43.996000+00:00] watchdominion (id=1528078832483959026)
+    Got some bug fix PRs open with link to issues. Feel free to community review guys.
+    [reply to watchdominion msg=1527689744992174092]
+
+[2026-07-18T16:57:10.631000+00:00] sparkling_fawn_60318 (id=1528083222389592179)
+    Anyone else on LINUX having issues with
+
+[2026-07-18T17:48:02.177000+00:00] gottz.de (id=1528096021501055068)
+    ok. so thoroughly digging through related pr's, comparing them in-depth, figuring out the golden nuggets and giving a yep or nope based on this assessment as well as quality judgement.
+    will do so.
+    any keywords i should use for yep and nope or is it enough, if I just unfold the findings?
+    [reply to teknium msg=1528056130486403292]
+
+[2026-07-18T18:32:26.771000+00:00] teknium (id=1528107197618327594)
+    not exactly a yes or no, I mean reference duplicates, reference which ones do better, present reviews to the PR authors in their PR, etc
+
+[2026-07-18T18:34:20.783000+00:00] smithangshu (id=1528107675819315301)
+    Hi <@387972437901312000>, can you please approve the pull https://github.com/NousResearch/hermes-agent/pull/59367 ? Our work is completely halted waiting for this. So if you have some time and kindly approve it.
+
+[2026-07-18T18:37:02.101000+00:00] isodl (id=1528108352435916840)
+    Hi everyone! 
+    
+    I just built and verified a lightweight blueprint to slash your daily AI API spend by offloading routine background agent tasks (formatting, summaries, heartbeats) straight to your local Apple Silicon hardware.
+    
+    🔗 https://github.com/JackTheGit/hermes-hybrid-compute-bridge
+    
+    **Why use it?**
+    • Zero Global System Pollution: Runs entirely in sandboxed user spaces.
+    • Privacy & Security: Uses a secure, ad-hoc SSH Remote Reverse Tunnel (no public ports exposed, no public URLs, no Tailscale/WireGuard required).
+    • Ultra-Lightweight: Powered by a simple FastAPI async proxy router that seamlessly handles local Ollama streaming endpoints without framework overhead.
+    
+    Check out the README and the performance benchmarks in the repo. Let me know what you think or if you route your Hermes Agent workloads through it!
+
+[2026-07-18T18:41:57.459000+00:00] okpencil (id=1528109591257415771)
+    One issue I'm running into is I'm I've been building out a bunch of things for teams on top of Hermes but they'll be like custom automations.
+    
+    ie. Asana ticket comes in -> update a notion board -> send a slack thread, watch the slack thread and update notion.
+    
+    And then each hermes bot might have 5-6 responsibilities like that.
+    
+    Technically - I can just deploy a hermes agent on a server, ssh and set up webhooks manually and cron jobs and build out the cli/plugins in hermes through the server.
+    
+    What I'd prefer is be able to version control everything and be able to have server update based on the code. I do have some examples going but I'm wondering if I've really overcomplicated things. But I like the extra things built into hermes & ability to use AI subscriptions which saves tons on token costs.
+    
+    I'm also unsure about if these should've just been 100% coded automations/custom slackbots and maybe just have that version controlled but give a hermes bot on top that can control them.
+    
+    Would love to chat with anyone who's been thinking through stuff like this or get ideas.
+    [reply to teknium msg=1527967168937984021]
+
+[2026-07-18T18:42:38.522000+00:00] muddlebee (id=1528109763487858919)
+    Ideas/suggestions on building on top of hermes?
+    I see lot of stuff being built already?
+    [reply to teknium msg=1528074788759670914]
+
+[2026-07-18T18:43:31.495000+00:00] gottz.de (id=1528109985672728577)
+    so you essentially filter out walking skill issues. that's a good approach.
+    [reply to teknium msg=1528074788759670914]
+
+[2026-07-18T18:43:42.255000+00:00] muddlebee (id=1528110030803439878)
+    rn I'm tinkering around  autonomous hermes sre agent, which listens to alerts via webhook and pings you on telegram, and provides resolution.
+

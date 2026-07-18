@@ -1,0 +1,17 @@
+# Thread 'Venice Media Generation skill' in forum #plugins-skills-and-skins
+# thread_id=1528077270835663028 forum_id=1485392832154832906
+# Started 2026-07-18T19:06:27.044217+00:00
+
+[2026-07-18T16:33:31.670000+00:00] ancientalies (id=1528077270835663028)
+    Dropped a new repo: **Venice Media Skill**
+    
+    It lets AI CLI agents like Kimi, Codex, Claude Code, Gemini CLI, OpenCode, and other shell-capable tools generate media through the Venice API while keeping the original agent in control.
+    
+    Basically: your agent still reasons, plans, and manages the conversation — this repo gives it a clean bridge for images, video, TTS, audio, transcription, model discovery, queued jobs, metadata, and request manifests.
+    
+    Repo: https://github.com/spearchucker667/Venice-Media-Skill
+    
+    Built for agent workflows, subprocess safety, auditable outputs, and public-ready usage. Feedback welcome.
+    [attachment] preview.png https://cdn.discordapp.com/attachments/1528077270835663028/1528077271804674098/preview.png?ex=6a5cfc5b&is=6a5baadb&hm=55dee2aa473e76e6c11de3f832f82225ff135802351a14ba738e7d13c6ba0f23&
+    [embed] GitHub - spearchucker667/Venice-Media-Skill: Extend any AI CLI or a... https://github.com/spearchucker667/Venice-Media-Skill
+

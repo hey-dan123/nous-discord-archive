@@ -6038,3 +6038,19 @@
     CPU consuming are high? (Windows 11, hermes run on Ubuntu WSL)
     I installed both webui rust desktop and native hermes desktop. In one task the webui desktop use about 40-50%  CPU. Then I switch to native hermes desktop (continue this session) and it reduce to 20%.
 
+[2026-07-18T17:33:19.986000+00:00] gust7314 (id=1528092321323810928)
+    Isn't the best interface the desktop app?
+
+[2026-07-18T18:35:59.753000+00:00] avidfuturist (id=1528108090929582092)
+    Official desktop app is great but this one can be used seamlessly from any device, including native iOS and Android apps, as well as anywhere you can access a browser
+    [reply to gust7314 msg=1528092321323810928]
+
+[2026-07-18T18:36:32.184000+00:00] avidfuturist (id=1528108226955182162)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And **native iOS and Android app support**! 
+    
+    GitHub repo: https://github.com/nesquena/hermes-webui
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+

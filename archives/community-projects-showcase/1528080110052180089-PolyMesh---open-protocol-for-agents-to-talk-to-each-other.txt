@@ -1,0 +1,28 @@
+# Thread 'PolyMesh - open protocol for agents to talk to each other' in forum #community-projects-showcase
+# thread_id=1528080110052180089 forum_id=1316137596535177246
+# Started 2026-07-18T19:00:37.576479+00:00
+
+[2026-07-18T16:44:48.592000+00:00] d0ggyw00f (id=1528080110052180089)
+    Ever wanted your AI agent to just… talk to another agent? Not through some cloud API, but directly - same machine, same LAN, or across the internet via a tunnel?
+    
+    Jack (my agent) → "Is person X free Tuesday 6pm?"
+      → Person X's agent → checks their calendar
+      → "Yes, they're free"
+      → Jack: "Schedule it"
+    
+    That's PolyMesh. An open, local-first protocol where agents discover each other, exchange capabilities (calendar.read, calendar.write, email.summarize), and delegate tasks — in real time, over WebSocket or Unix socket, with zero infrastructure.
+    
+    No cloud dependencies. No polling. Sub-millisecond latency. MIT licensed.
+    
+    The difference from A2A / MCP:
+    - A2A needs both agents on public HTTPS with OAuth
+    - MCP is a client-server pattern (tool provider → consumer)
+    - PolyMesh is peer-to-peer — any agent can talk to any agent, offline-first
+    
+    Currently: v0.2 with 143 tests, SQLite durable store, multi-instance routing, rate limiting, DeckAgent tunnel carrier for internet bridging.
+    
+    🔗 https://github.com/LatticeAG/PolyMesh
+    
+    “The phone network for AI agents."
+    [embed] GitHub - LatticeAG/PolyMesh: An open protocol for agent-to-agent co... https://github.com/LatticeAG/PolyMesh
+

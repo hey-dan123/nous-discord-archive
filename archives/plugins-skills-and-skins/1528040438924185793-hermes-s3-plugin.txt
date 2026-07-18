@@ -1,0 +1,41 @@
+# Thread 'hermes-s3-plugin' in forum #plugins-skills-and-skins
+# thread_id=1528040438924185793 forum_id=1485392832154832906
+# Started 2026-07-18T19:06:27.481940+00:00
+
+[2026-07-18T14:07:10.258000+00:00] beyondaspects (id=1528040438924185793)
+    🚀 Introducing s3 — a Hermes plugin for S3-compatible backups
+    
+    ---
+    
+    Tired of cobbling together s3 cp one-liners for your agent's backups? I built a proper Hermes plugin that backs up files and directory trees to any S3-compatible store — AWS S3, Cloudflare R2, MinIO, you name it — and restores, lists, or safely removes remote objects.
+    
+    It uses boto3 directly and ships four tools:
+    
+    - s3-push — upload a file or dir tree to your bucket (skips existing objects unless --force)
+    - s3-pull — download a prefix to a local dir (validates every path, including symlink resolution, before writing)
+    - s3-ls — list objects under a prefix
+    - s3-rm — delete an object (requires --confirm)
+    
+    Rules for repeatable jobs — define named push/pull targets in ~/.hermes/s3-backup.rules.yaml with {date}/{ts} placeholders:
+    
+    ```
+    daily-backup:
+      prefix: backups/my-project/{date}
+      source: ~/my-project
+    ```
+    
+    ```
+    hermes s3 push --rule daily-backup
+    ```
+    
+    Install (v0.1.1):
+    
+    ```
+    hermes plugins install https://github.com/tanepiper/hermes-s3-plugin --enable
+    ```
+    
+    Everything emits JSON to stdout and credentials stay in ~/.hermes/.env (never committed). MIT licensed, contributions welcome.
+    
+    🔗 https://github.com/tanepiper/hermes-s3-plugin
+    [embed] GitHub - tanepiper/hermes-s3-plugin: Generic S3-compatible backup p... https://github.com/tanepiper/hermes-s3-plugin
+

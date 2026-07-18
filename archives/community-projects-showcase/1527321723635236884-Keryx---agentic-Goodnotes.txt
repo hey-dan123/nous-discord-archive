@@ -22,3 +22,59 @@
     finally. some good design
     [attachment] image.png https://cdn.discordapp.com/attachments/1527321723635236884/1527838880576045106/image.png?ex=6a5c1e57&is=6a5accd7&hm=65cf8da651d806e7bff9bc9fe040320dc697127a732dbc6617bcfa5525ed2d7c&
 
+[2026-07-18T15:01:57.217000+00:00] parallelcontinuities (id=1528054225429332050)
+    laptop overheated but it’s mostly ready
+    
+    https://github.com/gh0stprince/keryx-tldraw
+    [embed] GitHub - gh0stprince/keryx-tldraw: Keryx standalone notebook app ... https://github.com/gh0stprince/keryx-tldraw
+
+[2026-07-18T15:50:51.766000+00:00] parallelcontinuities (id=1528066533820072139)
+    we got a compose/yaml and a Dockerfile for your installation pleasure now! tests and bug reports would be appreciated.
+
+[2026-07-18T16:26:42.067000+00:00] ainzooalgown1305 (id=1528075552836288552)
+    Nice interface, but a bit difficult to configure; a script to automatically compile for Windows and Android would be great. It is better to use local OCR models.
+
+[2026-07-18T16:32:10.620000+00:00] parallelcontinuities (id=1528076930887188531)
+    i am designing this so low-grade devices can easily access it as well, tho ill put in some config for local ocr, and ill consider the scripts as well. theres a dockerfile now to make it a bit easier for the time being
+    [reply to ainzooalgown1305 msg=1528075552836288552]
+
+[2026-07-18T16:35:10.725000+00:00] parallelcontinuities (id=1528077686302441623)
+    i also have to work on the ocr routing anyway because the machine spirits Lied to me.
+
+[2026-07-18T16:42:49.830000+00:00] ainzooalgown1305 (id=1528079611928252557)
+    Is there an Android version?
+
+[2026-07-18T16:43:56.192000+00:00] parallelcontinuities (id=1528079890270916699)
+    i am working on a termux install script for android atm, but an actual apk will be in the cards eventually!
+
+[2026-07-18T16:47:20.722000+00:00] d0ggyw00f (id=1528080748131651584)
+    I’m doing some kind of knowledge ingestion too!!
+    
+    https://github.com/mosesman831/dendrite
+    [embed] GitHub - mosesman831/dendrite: Knowledge ingestion daemon for Obsid... https://github.com/mosesman831/dendrite
+
+[2026-07-18T16:47:28.826000+00:00] d0ggyw00f (id=1528080782122553599)
+    It is for Obsidian vault tho
+
+[2026-07-18T16:47:59.727000+00:00] parallelcontinuities (id=1528080911730606120)
+    oh this might actually be useful to integrate, since it does file into obsidian
+    [reply to d0ggyw00f msg=1528080748131651584]
+
+[2026-07-18T16:49:39.930000+00:00] d0ggyw00f (id=1528081332012454078)
+    When I wrote this it’s just bypassing Hermes so it doesn’t depend on any agents to do the note taking - so anyone can use it no matter if they use an agent or not
+
+[2026-07-18T17:02:07.214000+00:00] parallelcontinuities (id=1528084466348851311)
+    love that! there is the option to send OCR to hermes but there's also the option to file it right to your vault in keryx
+    [reply to d0ggyw00f msg=1528081332012454078]
+
+[2026-07-18T17:02:16.202000+00:00] parallelcontinuities (id=1528084504047128687)
+    also ocr is working again :^) i hate regressions
+
+[2026-07-18T17:20:16.233000+00:00] parallelcontinuities (id=1528089034025599057)
+    obsidian flow is working okay
+    [attachment] image.png https://cdn.discordapp.com/attachments/1527321723635236884/1528089033580740669/image.png?ex=6a5d0750&is=6a5bb5d0&hm=c3a61c8fa9f1c2d0d4e57b7f8b067ce119399008bdd3920513037c9a9667b0ec&
+
+[2026-07-18T18:40:33.002000+00:00] parallelcontinuities (id=1528109237019086858)
+    PDF exports are technically functional but still require some tweaking for the export (light mode for printing rather than dark mode)
+    [attachment] video-output-8FF033DA-5398-4733-8503-C73B065523BD-1.mov https://cdn.discordapp.com/attachments/1527321723635236884/1528109236800720896/video-output-8FF033DA-5398-4733-8503-C73B065523BD-1.mov?ex=6a5d1a20&is=6a5bc8a0&hm=4f7a3d409f76fbff02cd2405f2bc249136643c35104b7969ed3b78a5d5eeeec0&
+

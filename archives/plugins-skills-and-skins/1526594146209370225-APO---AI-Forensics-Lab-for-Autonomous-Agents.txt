@@ -20,3 +20,7 @@
 [2026-07-17T23:26:14.182000+00:00] gr3enarr0w (id=1527818744473325569)
     It’s still a black box…you can’t see the information in the llm that’s answering your question. Thus you explain your question, you can see the output. But non black box models you can also mathematically explain the answer.
 
+[2026-07-18T17:34:27.356000+00:00] leerenmos (id=1528092603894075563)
+    I will draw up a report and you will have but with the LLM models we can see
+    [reply to alphakilo msg=1527488344907321446]
+
