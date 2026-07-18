@@ -18,3 +18,16 @@
 [2026-07-17T16:34:33.824000+00:00] k1n0sa (id=1527715143662702662)
     this is good stuff! Thanks a bunch!
 
+[2026-07-17T21:45:44.874000+00:00] magnus919 (id=1527793455722664049)
+    I pushed up some PR’s earlier. Hope it helps.
+
+[2026-07-17T23:03:10.750000+00:00] drahcir_rahl (id=1527812941938950257)
+    Yep saw that I wanted to take a look at em :)So saved em for after work
+    [reply to magnus919 msg=1527793455722664049]
+
+[2026-07-17T23:04:54.389000+00:00] drahcir_rahl (id=1527813376632164433)
+    not that I dont trust you but to learn lol
+
+[2026-07-17T23:30:31.153000+00:00] drahcir_rahl (id=1527819822287818934)
+    and what I learned is not how to do it and not how to let hermes try to fix it
+

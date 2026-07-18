@@ -10,3 +10,10 @@
     You can check it out here: https://github.com/joshua-mo-143/hermes-provider-venice
     [embed] GitHub - joshua-mo-143/hermes-provider-venice: A community-maintain... https://github.com/joshua-mo-143/hermes-provider-venice
 
+[2026-07-17T19:12:12.484000+00:00] joshmo_dev (id=1527754816158302238)
+    Updated to v0.2.1:
+    - Added an `update` command to the package itself for easy updates
+    - Adds new pricing injection so that models used through this plugin can be accurately priced
+    - Improved coverage for reasoning effort options
+    - Added changes so that the plugin is now usable with Hermes Desktop
+

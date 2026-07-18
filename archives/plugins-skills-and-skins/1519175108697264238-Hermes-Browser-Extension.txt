@@ -663,3 +663,7 @@
 [2026-07-17T17:19:08.707000+00:00] theboss121 (id=1527726362935427184)
     so question but will this also work for Opra GX as well?
 
+[2026-07-18T00:52:57.950000+00:00] jonkomet (id=1527840570658259194)
+    technically, yes
+    [reply to theboss121 msg=1527726362935427184]
+

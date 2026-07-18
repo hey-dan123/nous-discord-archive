@@ -17,3 +17,6 @@
 [2026-07-17T01:33:20.787000+00:00] alphakilo (id=1527488344907321446)
     So Evals?
 
+[2026-07-17T23:26:14.182000+00:00] gr3enarr0w (id=1527818744473325569)
+    It’s still a black box…you can’t see the information in the llm that’s answering your question. Thus you explain your question, you can see the output. But non black box models you can also mathematically explain the answer.
+

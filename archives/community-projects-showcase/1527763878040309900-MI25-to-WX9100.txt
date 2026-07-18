@@ -1,0 +1,53 @@
+# Thread 'MI25 to WX9100' in forum #community-projects-showcase
+# thread_id=1527763878040309900 forum_id=1316137596535177246
+# Started 2026-07-18T02:12:25.518184+00:00
+
+[2026-07-17T19:48:13.005000+00:00] ronaldsrunk (id=1527763878040309900)
+    MI25 -> WX9100 FLASH (quick ref)
+    Card: AMD MI25 (server, passive, no display, 220W, dev 0x6860) -> WX 9100
+    (dev 0x6861). Same Vega10 GLXT / gfx900 / 16GB HBM2 — BIOS cross-flashable.
+    After: miniDP ON, fan header ON, 170W limit, boots on consumer boards.
+    
+    HARDWARE: CH341A SPI programmer + SOIC8 clip + flashrom 1.4.0. MI25 card
+    loose on a desk (not in a PC). Backplate removed to reach the 8-pin chip.
+    
+    THE CHIP: ST/Micron M25P80, 1 MiB, 3.3V SPI (text "25P80").
+    !! DO NOT use the 1.8V adapter — chip is 3.3V, adapter underpowers it =
+    all 0xFF. Connect clip DIRECT to CH341A stock 3.3V. (This was bug #1.)
+    
+    GET BIOS: TechPowerUp ID 218718 (date 171219). Direct (Wayback, TPU blocks
+    some IPs):
+    web.archive.org/web/20241117031505/https://www.techpowerup.com/vgabios/218718/AMD.WX9100.16384.171219.rom
+    = 256 KiB. Pad to 1 MiB: dd if=/dev/zero of=pad.bin bs=1k count=768
+    cat WX9100_BIOS.rom pad.bin > WX9100_171219_padded.rom (1048576 B)
+    
+    DETECT: flashrom -p ch341a_spi  -> "M25P80 (1024 kB, SPI)".
+    All 0xFF? = data lines not connected. Card LEDs/coil-whine = only
+    VCC+GND ok. When flashrom runs and coil whine STOPS, CS/CLK/DI work,
+    only DO (pin 2) left — press clip down on pin-2 side, wiggle, flip green
+    ZIF adapter 180 (flip ONE thing at a time, not both). ~30 min to sweet spot.
+    
+    BACKUP (mandatory): flashrom -p ch341a_spi -c M25P80 -r mi25_backup1.rom
+    read twice, sha1sum must match. Ours: ce861229e5d96f5cfc89ae88b56bb11f26f6eeff
+    KEEP SAFE — only way back to stock MI25.
+    
+    FLASH: flashrom -p ch341a_spi -c M25P80 -w WX9100_171219_padded.rom -V
+    -> "Verifying flash... VERIFIED." Done.
+    
+    BOOT: reinstall card, CONNECT 6-pin PCIe power (forget = piezo EEEE alarm,
+    not damage), zip-tie a fan to heatsink (passive card WILL overheat), plug
+    display into miniDP. lspci shows 1002:6861 WX9100.
+    
+    REVERSE: flashrom ... -w mi25_backup1.rom -V
+    PENDING: 2nd MI25 still to flash — same steps, swap clip.
+    [attachment] IMG20260716191249.jpg https://cdn.discordapp.com/attachments/1527763878040309900/1527763878514135170/IMG20260716191249.jpg?ex=6a5bd87d&is=6a5a86fd&hm=879a0b9800140fd203fb954ef45cbbd1bc0ca742413e7509e82059ef5ec75bb6&
+    [attachment] 095192ad-2886-4f61-89a8-4438a6a0cd34.jpg https://cdn.discordapp.com/attachments/1527763878040309900/1527763879122178149/095192ad-2886-4f61-89a8-4438a6a0cd34.jpg?ex=6a5bd87d&is=6a5a86fd&hm=2bf7d15a6a0901f8706ad359a2a39873ebc715088fe84f9ae2cac8b05f277bd0&
+    [attachment] 293ad3fd-cd52-4bc9-b4f9-9a31e2f3d75c.jpg https://cdn.discordapp.com/attachments/1527763878040309900/1527763879718031478/293ad3fd-cd52-4bc9-b4f9-9a31e2f3d75c.jpg?ex=6a5bd87d&is=6a5a86fd&hm=d78d2f9b992bed1cc53a95a458f5e9550db0d57511f686880fc645ad9e9d53d4&
+    [attachment] MI25-to-WX9100-FLASH-GUIDE.txt https://cdn.discordapp.com/attachments/1527763878040309900/1527763880124874822/MI25-to-WX9100-FLASH-GUIDE.txt?ex=6a5bd87d&is=6a5a86fd&hm=bfbf209b2c63aaeeaa3cf9b774ed2576a188b54d82992bbe107ace9d50ca1c9b&
+
+[2026-07-17T23:46:32.893000+00:00] ronaldsrunk (id=1527823856117481643)
+    [attachment] Screenshot_20260717_194558.png https://cdn.discordapp.com/attachments/1527763878040309900/1527823855673151588/Screenshot_20260717_194558.png?ex=6a5c1058&is=6a5abed8&hm=807078cb7ec47e7a15d1e1097e0ee428f141d485841e76b954f7f58121740f80&
+
+[2026-07-17T23:54:08.196000+00:00] ronaldsrunk (id=1527825765796806807)
+    [attachment] Screenshot_20260717_195344.png https://cdn.discordapp.com/attachments/1527763878040309900/1527825765532434513/Screenshot_20260717_195344.png?ex=6a5c1220&is=6a5ac0a0&hm=4689a0fcd1860aaef4330bdeb6ddb27cae881048f85ae9ba57efb3dbe6067661&
+

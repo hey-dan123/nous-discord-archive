@@ -1,0 +1,13 @@
+# Thread 'Talaria theme editor for Hermes' in forum #community-projects-showcase
+# thread_id=1527856803319124198 forum_id=1316137596535177246
+# Started 2026-07-18T02:12:24.998959+00:00
+
+[2026-07-18T01:57:28.118000+00:00] drahcir_rahl (id=1527856803319124198)
+    Ok so I had some issues with the when I first brought this out, but now its BACK
+    
+    Please make certain to backup. This is an early beta. 
+    Feedback/PR etc welcome
+    https://github.com/rahlquist/talaria-theme-editor
+    [attachment] Screenshot_20260702_110440.png https://cdn.discordapp.com/attachments/1527856803319124198/1527856803533291620/Screenshot_20260702_110440.png?ex=6a5c2f08&is=6a5add88&hm=d1af45e1fac919f8c6b9f95102115503322dc1e1d74cc0d6a781c2febb223c41&
+    [embed] GitHub - rahlquist/talaria-theme-editor https://github.com/rahlquist/talaria-theme-editor
+

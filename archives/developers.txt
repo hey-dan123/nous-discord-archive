@@ -48075,3 +48075,17 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     https://github.com/NousResearch/hermes-agent/pull/66468
 
+[2026-07-17T19:34:04.777000+00:00] sassyfatcat (id=1527760320313954518)
+    https://github.com/NousResearch/hermes-agent/pull/60489
+
+[2026-07-17T23:12:27.700000+00:00] teknium (id=1527815277956305058)
+    dm me
+    [reply to minddragon msg=1527340939247354107]
+
+[2026-07-17T23:28:44.958000+00:00] minddragon (id=1527819376873705630)
+    Sent
+    [reply to teknium msg=1527815277956305058]
+
+[2026-07-18T01:08:53.379000+00:00] trivunous (id=1527844578017808384)
+    https://github.com/NousResearch/hermes-agent/pull/66627
+

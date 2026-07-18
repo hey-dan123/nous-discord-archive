@@ -18,3 +18,7 @@
     using nvidia nim ocr for now until I get apple developer but that’s my laptop Hermes in the chat tab
     [attachment] video-output-454C1AE8-C881-481E-AB71-AD7E5189457C-1.mov https://cdn.discordapp.com/attachments/1527321723635236884/1527512843505631283/video-output-454C1AE8-C881-481E-AB71-AD7E5189457C-1.mov?ex=6a5aeeb1&is=6a599d31&hm=3feb13d3e2f0c71f296431b8e1050b281ef563106620db41630b259d7d95e026&
 
+[2026-07-18T00:46:15.102000+00:00] parallelcontinuities (id=1527838880991150130)
+    finally. some good design
+    [attachment] image.png https://cdn.discordapp.com/attachments/1527321723635236884/1527838880576045106/image.png?ex=6a5c1e57&is=6a5accd7&hm=65cf8da651d806e7bff9bc9fe040320dc697127a732dbc6617bcfa5525ed2d7c&
+

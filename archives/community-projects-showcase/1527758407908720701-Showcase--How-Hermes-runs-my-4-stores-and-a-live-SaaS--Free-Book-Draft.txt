@@ -1,0 +1,14 @@
+# Thread 'Showcase: How Hermes runs my 4 stores and a live SaaS (Free Book Draft)' in forum #community-projects-showcase
+# thread_id=1527758407908720701 forum_id=1316137596535177246
+# Started 2026-07-18T02:12:26.007025+00:00
+
+[2026-07-17T19:26:28.824000+00:00] zerginggamer (id=1527758407908720701)
+    Hey everyone, I’ve been heavily using Hermes for some complex, real-world business automation and ended up writing a practical guide about the whole system. It’s called The Agent Advantage, and I wanted to share it with this community first to get your feedback.  What I Built:
+    After losing a month babysitting a different open-source framework (OpenClaw) that kept crashing, I moved my operations to Hermes because it is built to keep running and get better. I now run two always-on agents powered by Hermes: Johnny5 (living on a rented server) and Marvin (living on a Mac mini on my desk).  Together, these agents help me fully operate:Four print-on-demand merchandise stores.  A live web application (atsresumedesigner.com) built entirely with AI coding tools.  A reviews and news site (agenticbotsitter.com).  Social media posting, email marketing flows, and continuous ad copy iteration.  Read it for free:I’ve put the full PDF in a Google Drive folder for this community. I’d love to know what you think of the architecture, my approach to creating reusable "skills" for the agents, and if you see ways I could optimize the memory management and workflow limits I've set up. https://drive.google.com/file/d/1j6UxxTIAZav-6Fz36TaXe3UMmb7YbPFw/view?usp=sharing
+    
+    Support the project:
+    If you find the breakdown valuable and want to support it, or if you know a solo operator outside the Discord who could use this, the official e-book is up on Amazon here: https://amzn.to/4hjVKcQ 
+    Thanks for building the tools that made this possible—this operation literally wouldn't exist without it. Let me know what you think of the setup!
+    [attachment] The_Agent_Advantage_-_Book_Cover.jpg https://cdn.discordapp.com/attachments/1527758407908720701/1527758409166754045/The_Agent_Advantage_-_Book_Cover.jpg?ex=6a5bd365&is=6a5a81e5&hm=d8c526231e01e40238939239bc37b2173186dd815cd881debde154ce64ae535a&
+    [embed] The Agent Advantage: A Practical Guide to Using AI Agents to Build,... https://amzn.to/4hjVKcQ
+

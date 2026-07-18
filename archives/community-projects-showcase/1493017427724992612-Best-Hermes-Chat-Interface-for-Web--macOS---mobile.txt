@@ -5986,3 +5986,51 @@
     https://github.com/nesquena/hermes-webui/pull/6191
     [reply to phospheneoverdrive msg=1527699971715891201]
 
+[2026-07-17T22:36:35.782000+00:00] _123321_ (id=1527806252158029877)
+    the reverting to previous model is back
+    [attachment] Screencast_From_2026-07-18_00-35-33.mp4 https://cdn.discordapp.com/attachments/1493017427724992612/1527806252057493574/Screencast_From_2026-07-18_00-35-33.mp4?ex=6a5bfff3&is=6a5aae73&hm=768abf50f2af5d179d21ecbe771339d0e0c7fba8fbbd5d90a82a6fe6dea0a942&
+
+[2026-07-17T22:41:16.347000+00:00] avidfuturist (id=1527807428933062849)
+    Can you elaborate a bit more on when this reversion happens? I’ll look into it. And on which app version in settings -> system?
+    [reply to _123321_ msg=1527806252158029877]
+
+[2026-07-17T22:45:33.607000+00:00] _123321_ (id=1527808507959709857)
+    i was on stable on 52.41, now on experimental, previous turn ended, finished using the quotas on this particular Key on another machine, then switched to a different one, when sending a new command or pressing the refresh button it switches back to the last known provider, really not sure why
+    [reply to avidfuturist msg=1527807428933062849]
+
+[2026-07-17T22:46:00.284000+00:00] _123321_ (id=1527808619851157685)
+    switching to latest, updating hermes, restarting the gate, non worked, it's back to reverting to last known model
+
+[2026-07-17T22:47:23.727000+00:00] avidfuturist (id=1527808969836466189)
+    Thanks will take a look!
+
+[2026-07-17T23:42:16.521000+00:00] avidfuturist (id=1527822780815376404)
+    Does this look right? https://github.com/nesquena/hermes-webui/issues/6195
+    [embed] bug(models): picked model reverts to the default group when its bar... https://github.com/nesquena/hermes-webui/issues/6195
+    [reply to _123321_ msg=1527808507959709857]
+
+[2026-07-17T23:52:18.233000+00:00] avidfuturist (id=1527825304578691152)
+    Thanks will take a look at each of these. Are you using the WebUI rust desktop app?
+    [reply to digital_love_two msg=1527535459188867246]
+
+[2026-07-17T23:54:00.590000+00:00] avidfuturist (id=1527825733895065941)
+    Thank you I think will be fixed in next stable release
+    [reply to phospheneoverdrive msg=1527699971715891201]
+
+[2026-07-17T23:54:57.994000+00:00] _123321_ (id=1527825974664757249)
+    looks good, i've tried with multiple models, only solution was to start a new session picking a provider and sticking with it
+    [reply to avidfuturist msg=1527822780815376404]
+
+[2026-07-17T23:55:22.255000+00:00] avidfuturist (id=1527826076422770779)
+    Thanks will take a look and do my best to patch this as soon as we can
+    [reply to _123321_ msg=1527825974664757249]
+
+[2026-07-18T01:45:09.420000+00:00] digital_love_two (id=1527853704995405824)
+    I'm using rust desktop app on zorin. Maybe there are some conflict between tauri and wayland.
+    And default model always revert back, not choose last working model.
+    [reply to avidfuturist msg=1527825304578691152]
+
+[2026-07-18T01:45:28.403000+00:00] avidfuturist (id=1527853784615747736)
+    Will look into it thanks
+    [reply to digital_love_two msg=1527853704995405824]
+
