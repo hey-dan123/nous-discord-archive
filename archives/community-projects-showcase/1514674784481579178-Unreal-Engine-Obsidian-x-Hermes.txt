@@ -357,3 +357,57 @@
     been taking a minute. i have a the basics down on building landscapes. still learning blueprints and animations. but i am seeing things come together.
     [reply to liquid_machine msg=1527708993273860238]
 
+[2026-07-18T10:44:48.578000+00:00] liquid_machine (id=1527989513027059732)
+    im working on some large node packs for asset creation use in comfyui <@968599126101098547>
+    [attachment] Screenshot_2026-07-18_at_12.44.11_PM.png https://cdn.discordapp.com/attachments/1514674784481579178/1527989512758759434/Screenshot_2026-07-18_at_12.44.11_PM.png?ex=6a5caaa0&is=6a5b5920&hm=9e974c7a60c0dd2f94df3dd5043d3d6973d8004ee117722f99a7611f140038f0&
+    [reply to iam_rxpii msg=1527712058265567323]
+
+[2026-07-18T11:24:25.164000+00:00] jw_mushroom_man (id=1527999481151357038)
+    Have u tried trellis.2
+    [attachment] IMG_1988.mov https://cdn.discordapp.com/attachments/1514674784481579178/1527999479993597972/IMG_1988.mov?ex=6a5cb3e8&is=6a5b6268&hm=e798f2cf95cc42cc5c3b49996fb30ad6ee2c10d85fca05135ebba92af411e93f&
+    [reply to liquid_machine msg=1527989513027059732]
+
+[2026-07-18T11:25:44.336000+00:00] jw_mushroom_man (id=1527999813222928536)
+    [attachment] goblin.png https://cdn.discordapp.com/attachments/1514674784481579178/1527999813285707786/goblin.png?ex=6a5cb438&is=6a5b62b8&hm=e382b324e8366c46d76d4c6bdc05eeca08b9af4ab4c906e10605eb67e076c25c&
+
+[2026-07-18T11:25:47.483000+00:00] jw_mushroom_man (id=1527999826422403183)
+    source image
+
+[2026-07-18T11:28:27.149000+00:00] liquid_machine (id=1528000496110145627)
+    i have
+
+[2026-07-18T11:29:17.439000+00:00] liquid_machine (id=1528000707041689662)
+    i pref Rodin3D right now <@874265192383529010>
+    [attachment] Screenshot_2026-07-15_at_2.51.06_PM.png https://cdn.discordapp.com/attachments/1514674784481579178/1528000706169143306/Screenshot_2026-07-15_at_2.51.06_PM.png?ex=6a5cb50d&is=6a5b638d&hm=9c8df95ecf29dc2c4ed79cfc8f407089e1b5a1748dc92caead3bd27d55e28bb0&
+    [attachment] Screenshot_2026-07-15_at_3.03.53_PM.png https://cdn.discordapp.com/attachments/1514674784481579178/1528000706630385736/Screenshot_2026-07-15_at_3.03.53_PM.png?ex=6a5cb50d&is=6a5b638d&hm=7b14b6bf29fae9526bd572bd564e99fde90c3983602171d32ab8afff0a4cfb29&
+
+[2026-07-18T11:30:33.009000+00:00] liquid_machine (id=1528001024005111879)
+    been using trellis 2 mixed with some  nodes from Hunyuan to get decent results locally but rodin is king right now
+
+[2026-07-18T11:30:51.471000+00:00] liquid_machine (id=1528001101440352399)
+    think Hunyuan will release a new 3d model soon its been a while
+
+[2026-07-18T11:31:39.462000+00:00] jw_mushroom_man (id=1528001302729064568)
+    will check it out rn. looks really interesting
+
+[2026-07-18T11:31:43.274000+00:00] jw_mushroom_man (id=1528001318718017627)
+    im new to all this
+
+[2026-07-18T11:33:15.060000+00:00] liquid_machine (id=1528001703696142537)
+    https://80.lv/articles/how-hyper3d-rodin-gen-2-5-is-bringing-production-level-control-to-ai-3d-generation <@874265192383529010>
+    [embed] Hyper3D Rodin Gen-2.5 Brings Production-Level Control to 3D AI Content https://80.lv/articles/how-hyper3d-rodin-gen-2-5-is-bringing-production-level-control-to-ai-3d-generation
+
+[2026-07-18T11:33:20.183000+00:00] jw_mushroom_man (id=1528001725183688806)
+    can i run it locally
+    [reply to liquid_machine msg=1528000707041689662]
+
+[2026-07-18T11:33:30.737000+00:00] liquid_machine (id=1528001769450246296)
+    nope, well api node
+
+[2026-07-18T11:33:47.031000+00:00] jw_mushroom_man (id=1528001837792231555)
+    damn. i try to use local models for everything
+
+[2026-07-18T12:25:14.490000+00:00] iam_rxpii (id=1528014787533869077)
+    I love rodin. Haven’t used them in a while tbh. That workflow looks clean
+    [reply to liquid_machine msg=1528001703696142537]
+

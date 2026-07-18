@@ -48103,3 +48103,131 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-18T06:42:42.411000+00:00] okpencil (id=1527928585866711192)
     What’s the best way to setup custom Hermes bots to be deployable and updatable like regular software
 
+[2026-07-18T07:52:00.841000+00:00] kyssta69 (id=1527946027586420837)
+    https://github.com/NousResearch/hermes-agent/pull/66805
+    
+    **Problem**: Fix uvx-based MCP servers breaking under watchdog wrapper by adding per-server disable_watchdog config option
+
+[2026-07-18T09:14:07.921000+00:00] 0xpoli (id=1527966693257642106)
+    hey <@387972437901312000>1, hope this isn't a bother — I've been trying to contribute to hermes-agent for a while and was wondering if I'd qualify for the developer role, not totally sure if I do but figured I'd ask.
+    
+    a few of my PRs have gotten salvaged and merged so far, leaving them here in case it helps:
+    
+    - #59521 (fixed a crash in the background review, salvaged from my #59455)
+    - #63052 (filtering out unresolvable providers from the model picker, from #57568)
+    - #64762 (hard ceiling on codex request time, from #64553)
+    
+    authorship looks preserved on all three but honestly not sure exactly how these roles get decided, leaving that up to you.
+    
+    also still have like 28 open PRs sitting there waiting on review, no pressure at all, just mentioning it in case it's useful context. let me know if something's missing here or if I should go about this differently, no rush 🙂
+
+[2026-07-18T09:15:46.595000+00:00] teknium (id=1527967107126399016)
+    Welcome to the club 🙂
+    [reply to 0xpoli msg=1527966693257642106]
+
+[2026-07-18T09:15:53.450000+00:00] teknium (id=1527967135878615050)
+    the official docker
+    [reply to okpencil msg=1527928585866711192]
+
+[2026-07-18T09:16:01.332000+00:00] teknium (id=1527967168937984021)
+    https://hub.docker.com/r/nousresearch/hermes-agent
+
+[2026-07-18T09:16:07.403000+00:00] teknium (id=1527967194401472613)
+    Would you agree <@428014785045725184> ?
+
+[2026-07-18T09:16:52.635000+00:00] 0xpoli (id=1527967384118362142)
+    I'm very happy brooo , thank you. :)))
+    [reply to teknium msg=1527967107126399016]
+
+[2026-07-18T09:17:44.027000+00:00] definitely_not_cthulhu (id=1527967599672168478)
+    Absolutely, yep
+    [reply to teknium msg=1527967194401472613]
+
+[2026-07-18T10:07:08.556000+00:00] trivunous (id=1527980033807876306)
+    https://github.com/NousResearch/hermes-agent/pull/66857
+
+[2026-07-18T10:09:57.696000+00:00] trivunous (id=1527980743232454666)
+    Can I get for the Developer role? I’ve already had 6 PRs merged.<:bigeyethonk:1151299901616050237>
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1527980742955761746/image.png?ex=6a5ca275&is=6a5b50f5&hm=34d02ff070bfde5d4da0c86585bb3804e55bca88c936f86c9f9168dd14ec45ae&
+    [reply to teknium msg=1527967107126399016]
+
+[2026-07-18T10:10:07.970000+00:00] teknium (id=1527980786324865127)
+    Yes
+    [reply to trivunous msg=1527980743232454666]
+
+[2026-07-18T10:11:08.080000+00:00] trivunous (id=1527981038444351538)
+    Thank Bro
+    [reply to teknium msg=1527980786324865127]
+
+[2026-07-18T11:42:55.831000+00:00] teknium (id=1528004139626266704)
+    merged
+    [reply to kyssta69 msg=1527946027586420837]
+
+[2026-07-18T12:04:12.416000+00:00] gottz.de (id=1528009494011969626)
+    is there anything we users can do to help go through all the dangling pr's? I got a ton of token left to donate to the cause
+    [reply to teknium msg=1528004139626266704]
+
+[2026-07-18T12:20:11.794000+00:00] kyssta69 (id=1528013517934952489)
+    Recent PRs (still valid according to hermes)
+    
+    **Agent / Models**
+    
+    * [#66678](https://github.com/NousResearch/hermes-agent/pull/66678) Close Codex sessions to prevent subprocess leaks
+    * [#66594](https://github.com/NousResearch/hermes-agent/pull/66594) Use LM Studio model max context by default
+    * [#66593](https://github.com/NousResearch/hermes-agent/pull/66593) Add missing Gemini tool-call thought signatures
+    * [#66421](https://github.com/NousResearch/hermes-agent/pull/66421) Check `auth.json` credential pools during setup
+    * [#66374](https://github.com/NousResearch/hermes-agent/pull/66374) Preserve provider names in config
+    * [#66274](https://github.com/NousResearch/hermes-agent/pull/66274) Detect aliased Claude model names
+    * [#65396](https://github.com/NousResearch/hermes-agent/pull/65396) Improve Codex OAuth 401 errors
+    
+    **Desktop / TUI**
+    
+    * [#66771](https://github.com/NousResearch/hermes-agent/pull/66771) Improve stale auxiliary-model warning visibility
+    * [#66458](https://github.com/NousResearch/hermes-agent/pull/66458) Fix flipped sidebar toggle mappings
+    * [#66418](https://github.com/NousResearch/hermes-agent/pull/66418) Forward `--profile` to Electron
+    * [#66079](https://github.com/NousResearch/hermes-agent/pull/66079) Stop auto-opening file tree
+    * [#65524](https://github.com/NousResearch/hermes-agent/pull/65524) Pass Ctrl+W through to terminal
+    * [#65081](https://github.com/NousResearch/hermes-agent/pull/65081) Fix up-arrow overwriting edited prompts
+    * [#65025](https://github.com/NousResearch/hermes-agent/pull/65025) Prevent idle terminal jitter
+    
+    **Gateway / Integrations**
+    
+    * [#66633](https://github.com/NousResearch/hermes-agent/pull/66633) Parse `gateway.api_server` config
+    * [#66323](https://github.com/NousResearch/hermes-agent/pull/66323) Survive gateway handler crashes
+    * [#64910](https://github.com/NousResearch/hermes-agent/pull/64910) Add Discord typing-request timeout
+    * [#64865](https://github.com/NousResearch/hermes-agent/pull/64865) Clean Feishu auto-generated links
+    * [#64741](https://github.com/NousResearch/hermes-agent/pull/64741) Reconnect after Lark SDK exhaustion
+    * [#64740](https://github.com/NousResearch/hermes-agent/pull/64740) Pass Weixin upload context token
+    * [#64644](https://github.com/NousResearch/hermes-agent/pull/64644) Shut down memory providers on eviction
+    
+    **Build / System**
+    
+    * [#66768](https://github.com/NousResearch/hermes-agent/pull/66768) Include built-in skills in wheel
+    * [#66219](https://github.com/NousResearch/hermes-agent/pull/66219) Use OS-aware profile paths
+    * [#65962](https://github.com/NousResearch/hermes-agent/pull/65962) Register Vertex AI in `hermes doctor`
+    * [#65873](https://github.com/NousResearch/hermes-agent/pull/65873) Support scoped conventional commits
+    * [#65580](https://github.com/NousResearch/hermes-agent/pull/65580) Handle links during profile imports
+    * [#65360](https://github.com/NousResearch/hermes-agent/pull/65360) Prevent fabricated OOB markers
+    * [#65278](https://github.com/NousResearch/hermes-agent/pull/65278) Remove broken Blackbox CLI link
+    * [#65212](https://github.com/NousResearch/hermes-agent/pull/65212) Add Docker `HERMES_HOME` fallback
+    * [#64964](https://github.com/NousResearch/hermes-agent/pull/64964) Respect background-review skills flag
+
+[2026-07-18T12:21:20.073000+00:00] smithangshu (id=1528013804317708480)
+    Hi <@387972437901312000> 
+    
+    Can you please make this little feature available or at least a workaround of it as it is causing tremendous problem for us? The matter is it is not possible set how many block recurrence will be allowed before sending to triage for a kanban task apart from what is hard-coded by default 2, neither globally nor per task basis during creation. 
+    https://github.com/NousResearch/hermes-agent/issues/66909
+    
+    I found this issue at the testing phase of my plugin, if it is not solved then unfortunately I could not able to continue with hermes for my plugin development(which I really don't want to). 
+    
+    So my humble request to at least make the workaround available for the issue.
+
+[2026-07-18T12:47:08.617000+00:00] scottermonkey (id=1528020299382259895)
+    run.py is over 12,599 lines of code! Hoping someone sees that as a problem.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1528020298992058389/image.png?ex=6a5cc74c&is=6a5b75cc&hm=081689746d209d09df96f5377cb4438a76a439a3eb765eacb2fd6c5eb640be58&
+
+[2026-07-18T12:48:16.163000+00:00] kyssta69 (id=1528020582690459829)
+    https://github.com/NousResearch/hermes-agent/pull/66919
+    
+    **Problem**: Fix cron edit button unclickable in desktop sidebar. Previous tooltip fix used preventDefault() on focus events which broke clicks in Electron. Use context-based suppression instead.
+
