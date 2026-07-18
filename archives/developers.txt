@@ -48089,3 +48089,17 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-18T01:08:53.379000+00:00] trivunous (id=1527844578017808384)
     https://github.com/NousResearch/hermes-agent/pull/66627
 
+[2026-07-18T02:46:06.914000+00:00] drexux (id=1527869045637120090)
+    hii <@387972437901312000>  whenever you've got a spare minute, could you quickly glance at a few open PRs I've got up
+    
+    https://github.com/NousResearch/hermes-agent/pull/66614
+    https://github.com/NousResearch/hermes-agent/pull/66624
+    https://github.com/NousResearch/hermes-agent/pull/66659
+    https://github.com/NousResearch/hermes-agent/pull/66644
+
+[2026-07-18T05:29:30.026000+00:00] atlasfx. (id=1527910162868736070)
+    How do i earn the dev tag Without spilling all my beans?
+
+[2026-07-18T06:42:42.411000+00:00] okpencil (id=1527928585866711192)
+    What’s the best way to setup custom Hermes bots to be deployable and updatable like regular software
+

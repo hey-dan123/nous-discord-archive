@@ -6034,3 +6034,7 @@
     Will look into it thanks
     [reply to digital_love_two msg=1527853704995405824]
 
+[2026-07-18T06:16:39.224000+00:00] digital_love_two (id=1527922029385220257)
+    CPU consuming are high? (Windows 11, hermes run on Ubuntu WSL)
+    I installed both webui rust desktop and native hermes desktop. In one task the webui desktop use about 40-50%  CPU. Then I switch to native hermes desktop (continue this session) and it reduce to 20%.
+
