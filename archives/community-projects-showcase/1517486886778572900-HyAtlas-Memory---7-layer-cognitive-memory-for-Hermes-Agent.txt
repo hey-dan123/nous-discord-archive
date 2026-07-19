@@ -263,3 +263,30 @@
 [2026-07-18T16:30:47.078000+00:00] rafafafa951512 (id=1528076580486778890)
     Is it working with Kimi K3 or Kimi K2.6?
 
+[2026-07-19T03:52:13.721000+00:00] _big_owen_ (id=1528248071497060353)
+    I said do a test but I’m going to be doing a test of my own soon when I get home because my memory for some reason is very weird and I think I’d like to test this
+
+[2026-07-19T05:31:38.771000+00:00] tunacookie (id=1528273090730131528)
+    Any model is okay. Can ask hermes set up model for you, i think best model is model with no reasoning, but it can also support thinking models
+    [reply to rafafafa951512 msg=1528076580486778890]
+
+[2026-07-19T05:34:28.199000+00:00] tunacookie (id=1528273801362542602)
+    thank you <:Prayge:1151275585000185968> hope its okay… im still trying to improve things and clean up stuff so its more lightweight
+    [reply to _big_owen_ msg=1528248071497060353]
+
+[2026-07-19T05:41:21.223000+00:00] _big_owen_ (id=1528275533710758009)
+    Yeah, definitely will give feedback
+
+[2026-07-19T06:55:39.883000+00:00] tunacookie (id=1528294234686361603)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1517486886778572900/1528294234673905685/image.png?ex=6a5dc66b&is=6a5c74eb&hm=5d5db30b903571f47e64db85242b5a34af6a3bf90b96ec10e8efcb2db310799d&
+
+[2026-07-19T07:00:32.735000+00:00] halibusal (id=1528295462996807701)
+    should ask LLM to fix it so it can run on raspberry pi 🙂
+    [reply to tunacookie msg=1528273801362542602]
+
+[2026-07-19T07:00:38.623000+00:00] halibusal (id=1528295487692865667)
+    works wonders
+
+[2026-07-19T07:02:37.287000+00:00] tunacookie (id=1528295985405497445)
+    interesting, will try
+

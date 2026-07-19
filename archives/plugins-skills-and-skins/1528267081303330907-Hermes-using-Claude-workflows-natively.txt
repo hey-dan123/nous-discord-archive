@@ -1,0 +1,11 @@
+# Thread 'Hermes using Claude workflows natively' in forum #plugins-skills-and-skins
+# thread_id=1528267081303330907 forum_id=1485392832154832906
+# Started 2026-07-19T08:18:11.020474+00:00
+
+[2026-07-19T05:07:46.012000+00:00] akirohz (id=1528267081303330907)
+    Hey! I’m building an independent Hermes ↔ Claude Code connector. The idea is that if you already have a mature Claude Code workflow—CLAUDE.md, skills, hooks, agents or MCP; Hermes could orchestrate that existing native workflow instead of forcing you to rebuild it inside Hermes.  
+    The private prototype currently passes one-shot and isolated read-only workflow delegation; the full human question/resume loop is still in development.  
+    Would this be useful as an opt-in Hermes plugin?  Thanks for the feedback!
+    [attachment] Topologia_corregida_Persona-Hermes-Claude_1.png https://cdn.discordapp.com/attachments/1528267081303330907/1528267082838577215/Topologia_corregida_Persona-Hermes-Claude_1.png?ex=6a5dad22&is=6a5c5ba2&hm=02cc674d3f05fc42f367f5ead81d3ecedf4df1d73d456f130c09dde901054c44&
+    [attachment] ChatGPT_Image_Jul_19_2026_07_06_40_AM.png https://cdn.discordapp.com/attachments/1528267081303330907/1528267083690016969/ChatGPT_Image_Jul_19_2026_07_06_40_AM.png?ex=6a5dad22&is=6a5c5ba2&hm=427748d7585d16e24a919c914aba6c142a467c8850dd7a954f8e2faa518c8b06&
+

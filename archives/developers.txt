@@ -48460,3 +48460,30 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-19T01:28:32.711000+00:00] architex_ (id=1528211912360333462)
     Running Deepseek v4 Flash on a 4090 ^^^
 
+[2026-07-19T03:34:05.099000+00:00] thehybrid1337 (id=1528243505485582377)
+    bro id rather pay than 14tok/s
+
+[2026-07-19T05:38:52.118000+00:00] tetsujinoni (id=1528274908319060109)
+    So I'm working on setting up a infrastructure management agent in hermes, and one of my first tasks hit an interesting roadblock. I need to gate SSH invocations to remote servers, where its not "run the agent's environment on the remote server", but "have the agent use an MCP server to invoke remote execution", with a shell-hook pretool call.
+    
+    That pretool call really wants to be able to return "approve" as well as "block" responses, as #60504 does. 
+    
+    Does this seem like a worthwhile issue to propose and pursue?
+
+[2026-07-19T07:17:46.072000+00:00] jethac (id=1528299797126320169)
+    i've got some PRs in flight and would appreciate a review:
+    
+    **Features**
+      - https://github.com/NousResearch/hermes-agent/pull/62944 — single gateway, multiple agents (supersedes #25660): run several agent profiles behind one gateway with per-agent routing, home dirs, models, and fail-closed credential scoping. Review feedback addressed, rebased onto current main, e2e integration suite  included, CI green
+      - https://github.com/NousResearch/hermes-agent/pull/40933 — LINE: opt-in smart reply modality (quick-reply suggestions), built on #40931
+      - https://github.com/NousResearch/hermes-agent/pull/40931 — gateway: adapter reply delivery policy — refactors how adapters decide reply delivery so platform adapters share one policy instead of ad-hoc logic
+    
+    **Fixes**
+      - https://github.com/NousResearch/hermes-agent/pull/35785 — LINE: fix media caching and message type mapping
+    
+    **CI / test health** (small, merge-ready — favorable sweeper reviews, required checks green)
+      - https://github.com/NousResearch/hermes-agent/pull/63522 — deflake blocking-approval E2E tests: replace fixed-deadline polls with bounded condition waits
+     - https://github.com/NousResearch/hermes-agent/pull/63523 — deflake docker dashboard test: poll for the settled 'down' slot instead of racing container boot
+    
+    and of course https://github.com/NousResearch/hermes-agent/pull/63560 — one-line AUTHOR_MAP entry so my non-Google commit email passes the attribution check
+

@@ -441,3 +441,29 @@
     [embed] yantrikdb-hermes-plugin/assets/demos/self-directing at main · yant... https://github.com/yantrikos/yantrikdb-hermes-plugin/tree/main/assets/demos/self-directing
     [embed] Release v0.8.0 — The self-directing substrate · yantrikos/yantri... https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.8.0
 
+[2026-07-19T05:36:53.385000+00:00] spranab (id=1528274410316759141)
+    🧠 yantrikdb-hermes-plugin v0.9.1 — memory that manages itself
+    
+    The headline since v0.7: the self-directing substrate. Your agent's memory now notices what it doesn't know, queues the work, and hands the agent its own agenda — then closes the loop when the gap gets answered.
+    
+    (attach demo.gif here — the gap→task→agenda→close loop)
+    
+    The loop:
+    🔹 Gap → task — questions your agent keeps asking but can't answer become durable tasks on session end
+    🔹 "Your memory's agenda" — each session opens with the memory's open tasks + top unresolved gaps
+    🔹 Closes itself — learn the answer → the task closes → the agenda shrinks
+    
+    Plus a reliability layer (v0.9.x), built in the open with the YantrikDB engine team:
+    🔹 Idempotent writes — remember(idempotency_key=…); retries dedupe to zero writes, divergent payloads surface a conflict (embedded and HTTP)
+    🔹 Typed error handling + a consumer-simulation contract gate that catches engine behavioral changes before they reach you
+    
+    All opt-in, no new deps, embedded by default (no server needed). Runnable demo: python demos/self_directing_memory.py
+    
+    
+    pip install -U yantrikdb-hermes-plugin
+    🔗 https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.9.1
+    [embed] Release v0.9.1 — HTTP idempotency (capability-gated) · yantrikos... https://github.com/yantrikos/yantrikdb-hermes-plugin/releases/tag/v0.9.1
+
+[2026-07-19T05:39:08.113000+00:00] spranab (id=1528274975407079474)
+    [attachment] demo.gif https://cdn.discordapp.com/attachments/1504168688759078952/1528274975113347213/demo.gif?ex=6a5db47c&is=6a5c62fc&hm=f60b45160bcdfc865d997707f7888931b6ef570776ebd2f6084e268736f8411c&
+

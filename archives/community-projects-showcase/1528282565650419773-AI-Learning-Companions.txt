@@ -1,0 +1,10 @@
+# Thread 'AI Learning Companions' in forum #community-projects-showcase
+# thread_id=1528282565650419773 forum_id=1316137596535177246
+# Started 2026-07-19T08:12:32.374266+00:00
+
+[2026-07-19T06:09:17.768000+00:00] sic_warmersun (id=1528282565650419773)
+    agent skills for Hermes Agent *Desktop*  to learn history and chemistry. Learning should be curiosity driven and fun.
+    The skills use the free Wolfram MCP server for grounding and visualization. Enjoy!
+    https://warmersun.com/ailc/
+    [embed] AI Learning Companions — Free agent skills · Warmer Sun https://warmersun.com/ailc/
+
