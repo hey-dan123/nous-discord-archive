@@ -118,3 +118,22 @@
     <@427613574995771414>
     [embed] Release Noisegate v0.3.0 · Tosko4/noisegate https://github.com/Tosko4/noisegate/releases/tag/v0.3.0
 
+[2026-07-19T10:55:43.585000+00:00] _voscko_ (id=1528354648191402045)
+    Noisegate 0.3.1 is out 🎉
+    
+    Small release, useful fixes:
+    
+    - strict JSON stays byte-exact
+    - `hermes sessions list/browse` stays untouched
+    - recovery tests no longer trip over long temp paths
+    - docs and review guidance got the cupboard-cleaning treatment. Not glamorous, but fewer mystery cables for future us.
+    
+    Update:
+    
+    ```bash
+    uvx --from noisegate-hermes noisegate install-hermes
+    ```
+    
+    https://github.com/Tosko4/noisegate/releases/tag/v0.3.1
+    [embed] Release Noisegate v0.3.1 · Tosko4/noisegate https://github.com/Tosko4/noisegate/releases/tag/v0.3.1
+

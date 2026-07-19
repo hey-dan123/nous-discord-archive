@@ -48487,3 +48487,73 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     and of course https://github.com/NousResearch/hermes-agent/pull/63560 — one-line AUTHOR_MAP entry so my non-Google commit email passes the attribution check
 
+[2026-07-19T10:44:57.869000+00:00] gottz.de (id=1528351939862073364)
+    Hey! I ran a systematic cross-PR triage over the hermes-agent backlog (~16.2k open PRs, ~7.4k open issues): filtered for small, mergeable, low-risk PRs, correlated them with the issues they reference, and verified every PR↔issue link by reading each diff against the issue — verdicts reflect diff content, not PR names.
+    
+    The first 5 consolidation summaries are now posted as issue comments. Each one lists every competing open PR with a verdict (fixes root cause / partial / unrelated), flags duplicates, and suggests what to merge, what to close, and what stays open:
+    
+    - **#42409** (Desktop artifacts render as Jan 1970) — merge #42670 (normalizes at the data boundary, the variant the issue prefers); #42415/#42618 are render-path duplicates
+    https://github.com/NousResearch/hermes-agent/issues/42409#issuecomment-5015382533
+    - **#59386** (`delegate_task` schema causes HTTP 400) — merge #59459 (only PR that actually changes the outgoing payload); two linked PRs verifiably don't affect this bug
+    https://github.com/NousResearch/hermes-agent/issues/59386#issuecomment-5015382600
+    - **#5926** (repo-centric agent pattern docs) — three complementary PRs, merge as a set (#23170 first); no duplicates, issue stays partially open
+    https://github.com/NousResearch/hermes-agent/issues/5926#issuecomment-5015382640
+    - **#47650** (`memory.provider` accepts invalid values silently) — merge #47657 (handles both failure modes, with tests); #47700 is a weaker duplicate
+    https://github.com/NousResearch/hermes-agent/issues/47650#issuecomment-5015382684
+    - **#65092** (Gemini `thought_signature` missing in MoA) — merge #65294 (sentinel fallback covers all cases); #66212 is complementary, not a duplicate
+    https://github.com/NousResearch/hermes-agent/issues/65092#issuecomment-5015382716
+    
+    There are 112 more verified clusters like these ready to go (87 with confirmed duplicate PRs racing for the same issue).
+    I've posted them autonomously too. If you want a different format, let me know. I can edit them post-mortem and no context is lost.
+    [reply to teknium msg=1528056130486403292]
+
+[2026-07-19T11:12:05.094000+00:00] gottz.de (id=1528358764938395740)
+    this is what it took. essentialla one 5h limit 🙂
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1528358764531552266/image.png?ex=6a5e0284&is=6a5cb104&hm=ba3248a1f044cd89c0dc6a72a35467a5f6a412a22b24f5f93bb58542325c3014&
+    [reply to gottz.de msg=1528351939862073364]
+
+[2026-07-19T11:22:33.316000+00:00] turgut.k (id=1528361399892312175)
+    hello <@387972437901312000>, i was looking for my low cache ratio and found that your PR (https://github.com/NousResearch/hermes-agent/pull/1474)  causing cache prefix change and thats broking cache, so created a PR that makes it an option (default behavior is protecting yours) 
+    https://github.com/NousResearch/hermes-agent/pull/67449
+
+[2026-07-19T11:24:06.985000+00:00] teknium (id=1528361792768835614)
+    Are you regularly enabling and disabling mcps?
+    [reply to turgut.k msg=1528361399892312175]
+
+[2026-07-19T11:24:56.467000+00:00] turgut.k (id=1528362000311390322)
+    I am not but I change model/reasonings and sometimes it triggers mcp reload too, i think its about indent changes triggered sometimes
+
+[2026-07-19T11:25:17.997000+00:00] turgut.k (id=1528362090614620243)
+    not really sure what is the real trigger
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1528362090434134090/image.png?ex=6a5e059d&is=6a5cb41d&hm=b862cfb5d487977dda40f98e5d9a928ae7a9b73d53f890b470f3c77ac3df1b17&
+
+[2026-07-19T11:26:31.486000+00:00] teknium (id=1528362398849695814)
+    Thanks will do the config option and also look into why reasoning changes is reloading it
+    [reply to turgut.k msg=1528362000311390322]
+
+[2026-07-19T11:26:59.539000+00:00] teknium (id=1528362516512636928)
+    If you happen to have logs thatd be helpful too <:Prayge:1151275585000185968>
+
+[2026-07-19T11:29:17.923000+00:00] turgut.k (id=1528363096937201755)
+    dm'ed
+
+[2026-07-19T11:32:48.373000+00:00] brokeskill (id=1528363979628482742)
+    since when did you have to conect your nous portal account to stripe?
+
+[2026-07-19T11:34:11.354000+00:00] brokeskill (id=1528364327676018690)
+    is that new? it forces me to input a stripe connection when conecting to nous portal
+
+[2026-07-19T11:38:37.240000+00:00] turgut.k (id=1528365442882732164)
+    I think its here for a long time, I still have the initial credits that coming from that
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1528365442375225495/image.png?ex=6a5e08bd&is=6a5cb73d&hm=4dbf9c2c24923bfaf945d8c46f80a6b9cff5e7a6236c51134705245e41d81bee&
+
+[2026-07-19T11:39:11.949000+00:00] turgut.k (id=1528365588462698498)
+    just checked and its from 15 may so not really new
+
+[2026-07-19T11:40:28.226000+00:00] brokeskill (id=1528365908391755827)
+    idk i always had 0.00 there
+
+[2026-07-19T12:33:28.791000+00:00] architex_ (id=1528379248648392807)
+    Its the thought that counts
+    [reply to thehybrid1337 msg=1528243505485582377]
+

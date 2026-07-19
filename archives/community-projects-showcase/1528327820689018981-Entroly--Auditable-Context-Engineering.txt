@@ -1,0 +1,9 @@
+# Thread 'Entroly- Auditable Context Engineering' in forum #community-projects-showcase
+# thread_id=1528327820689018981 forum_id=1316137596535177246
+# Started 2026-07-19T13:13:09.133419+00:00
+
+[2026-07-19T09:09:07.410000+00:00] adalako6028 (id=1528327820689018981)
+    Auditable context engineering for AI agents: context optimization, recoverable context compression, receipts, answer verification, and MCP for Claude Code, Codex, OpenClaw. - juyterman1000/entroly                                                                          https://github.com/juyterman1000/entroly
+    [attachment] image.png https://cdn.discordapp.com/attachments/1528327820689018981/1528327820932022272/image.png?ex=6a5de5b3&is=6a5c9433&hm=53ea57ccb6538a9ee0c85ffc494300aff91ba772a10505d33f1b4bb664f6393a&
+    [embed] GitHub - juyterman1000/entroly: Auditable context engineering for A... https://github.com/juyterman1000/entroly
+

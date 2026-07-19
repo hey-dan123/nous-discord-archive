@@ -99,3 +99,21 @@
 [2026-07-08T21:30:55.983000+00:00] gokberkb. (id=1524528236653187102)
     This dual-engine architecture and the autonomous patching feature are absolute game-changers for the ecosystem. Huge respect for pushing the boundaries of what Hermes can do in security, keep building this beast!
 
+[2026-07-19T13:03:17.472000+00:00] baileys344 (id=1528386750920003696)
+    🚀 Release Notes
+    Infrastructure Overhaul: External API dependency for target analysis has been removed, shifting to direct core system querying. The platform now directly verifies whether the target is a standard user account or an automated executable code.
+    
+    API Block Bypass: The issue of hitting rate limits from external data providers has been completely resolved. Even if API access is restricted, the system remains uninterrupted and successfully renders the security score analysis on the screen.
+    
+    Unified Dashboard Experience: Fixed the UI conflict where asset analysis and security analysis would overwrite each other. The queried target's "Portfolio Balance" and "Audit Score" metrics are now displayed simultaneously.
+    
+    Advanced Code Audit: Activated the security module that grades the target code out of 100, audits the administrative ownership status (Owner Renounced / Active), and detects potentially malicious or risky patterns.
+    
+    Automated Account Detection: If the target is an individual account with no associated executable code, the system automatically detects this and displays a specific informational note instead of attempting to calculate a security score.
+    
+    Suspicious Target Filter: Implemented a strict filter for targets with locked or unverified source code. Instead of attempting to calculate an inaccurate risk score, the system now issues a direct warning for these opaque entities.
+
+[2026-07-19T13:03:48.361000+00:00] baileys344 (id=1528386880477991012)
+    https://hermes-dedektif-7mej6r7vhihgjrfuzayqgi.streamlit.app/
+    https://github.com/negroni334/Hermes-Dedektif
+

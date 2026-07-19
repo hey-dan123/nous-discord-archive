@@ -1,0 +1,31 @@
+# Thread 'Kenari model provider for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1528383448337879160 forum_id=1485392832154832906
+# Started 2026-07-19T13:18:57.338668+00:00
+
+[2026-07-19T12:50:10.075000+00:00] hoshii (id=1528383448337879160)
+    I published a standalone Kenari provider plugin for Hermes Agent. Kenari is an OpenAI-compatible LLM gateway.
+    
+      Features:
+      • live model and context-length discovery
+      • live IDR pricing metadata, with no static prices or zero placeholders
+      • tested against Hermes Agent 0.18.2 and current main
+      • supports Python 3.11, 3.12, and 3.13
+    
+      Repository:
+      https://github.com/kenarihq/hermes-kenari-provider
+    
+      Release:
+      https://github.com/kenarihq/hermes-kenari-provider/releases/tag/v1.0.0
+    
+      Install:
+      git clone https://github.com/kenarihq/hermes-kenari-provider.git ~/.hermes/plugins/model-providers/kenari
+    
+      Set KENARI_API_KEY, restart Hermes Agent, then select Kenari as the provider.
+    
+      Related provider-neutral pricing PR:
+      https://github.com/NousResearch/hermes-agent/pull/67489
+    [embed] GitHub - kenarihq/hermes-kenari-provider: Kenari model-provider plu... https://github.com/kenarihq/hermes-kenari-provider
+    [embed] Release v1.0.0 · kenarihq/hermes-kenari-provider https://github.com/kenarihq/hermes-kenari-provider/releases/tag/v1.0.0
+    [embed] GitHub - kenarihq/hermes-kenari-provider: Kenari model-provider plu... https://github.com/kenarihq/hermes-kenari-provider.git
+    [embed] fix(models): ignore non-USD catalog pricing by doedja · Pull Reque... https://github.com/NousResearch/hermes-agent/pull/67489
+
