@@ -48404,3 +48404,59 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-18T18:43:42.255000+00:00] muddlebee (id=1528110030803439878)
     rn I'm tinkering around  autonomous hermes sre agent, which listens to alerts via webhook and pings you on telegram, and provides resolution.
 
+[2026-07-18T19:03:53.681000+00:00] warofchange (id=1528115111892488242)
+    PR #67081 — docs(links): update moved boto3 credential-chain URL in aws-bedrock guide
+    
+    The AWS Bedrock guide linked the boto3 credential-chain docs at the legacy host boto3.amazonaws.com, which no longer serves the page directly:
+    
+    $ curl -sI https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html
+    HTTP/1.1 301 Moved Permanently
+    Location: https://docs.aws.amazon.com/boto3/latest/guide/credentials.html
+    AWS consolidated the boto3 documentation under docs.aws.amazon.com; the old host survives only via the 301, and the redirect target is a direct 200 OK. This points the link straight at the canonical URL the server itself redirects to — so there's no ambiguity about the destination. The same link appears in the English guide and its zh-Hans mirror, so both are updated to keep the translation in sync. Docs-only, no behavior change.
+    
+    https://github.com/NousResearch/hermes-agent/pull/67081
+
+[2026-07-18T19:26:33.084000+00:00] teknium (id=1528120813642059996)
+    You might want this: https://hermes-agent.nousresearch.com/docs/user-guide/profile-distributions
+    [embed] Profile Distributions: Share a Whole Agent | Hermes Agent https://hermes-agent.nousresearch.com/docs/user-guide/profile-distributions
+    [reply to okpencil msg=1528109591257415771]
+
+[2026-07-18T19:27:01.686000+00:00] teknium (id=1528120933607280761)
+    Check all the hackathons <#1478473466352238796> <#1494773540711432394> <#1516437550548648077>
+    [reply to muddlebee msg=1528109763487858919]
+
+[2026-07-18T19:50:27.924000+00:00] muddlebee (id=1528126831796949124)
+    Thank you so much
+
+[2026-07-18T19:52:05.844000+00:00] warofchange (id=1528127242503327805)
+    I’d like to ask a question: how is the developer role assigned, and is it checked manually?
+    [reply to teknium msg=1528120933607280761]
+
+[2026-07-18T19:59:57.614000+00:00] drexux (id=1528129221249994983)
+    https://github.com/NousResearch/hermes-agent/pull/67022 — `@diff`/`@git:`/`@file:` refs run sync `git`/disk work inline in an async path, so one message freezes the whole gateway loop (up to the 30s git timeout) and kills the `asyncio.gather` concurrency. Moved to `asyncio.to_thread`.
+    
+    https://github.com/NousResearch/hermes-agent/pull/67028 — a quoted `"minutes": "60"` in jobs.json raises TypeError in every consumer; the due-scan guard swallows it so the job is silently skipped forever, while `advance_next_run`/`mark_job_run` raise. Now coerced + persisted so it self-heals
+
+[2026-07-18T21:35:52.930000+00:00] 0xatakan (id=1528153360795177033)
+    https://github.com/NousResearch/hermes-agent/pull/65254 is currently waiting for CI workflow approval. I resolved its merge conflict against `main`, updated the branch, and reran the focused Desktop tests successfully (17/17 passing). When someone has a chance, could a maintainer approve the workflow run? Thanks!
+
+[2026-07-18T21:36:07.952000+00:00] okpencil (id=1528153423801876591)
+    Maybe this is the right way to think about it.
+    
+    I have some custom tooling in a git repo. Just have Hermes download those tools when we need to push an update.
+    
+    It does start to get more complicated though, one of the "tools" is a webhook listener. Which now requires a public URL. what owns that? Hermes? Or this tooling.
+    [reply to okpencil msg=1528109591257415771]
+
+[2026-07-18T23:35:16.372000+00:00] .dotnet_ (id=1528183406448480417)
+    Hey its Sam building AgentLine - Telephony services for AI agents. AI agents like Hermes and Openclaw get stuck whenever they have to call or use a phone number to login/signup. AgentLine solves this by giving every AI agent a phone number of its own to call and recieve sms. Give it a try at https://agentline.cloud/?utm_source=discord&utm_medium=community&utm_campaign=discord-invite
+
+[2026-07-19T01:16:52.271000+00:00] wxrrior_v (id=1528208974502035506)
+    https://github.com/NousResearch/hermes-agent/pull/13058 Updated PR for time-window session searches to address review comments. Appreciate any further feedback or comments, thank you!
+
+[2026-07-19T01:28:15.859000+00:00] architex_ (id=1528211841678049300)
+    https://x.com/FreakinFrick/status/2078652654239031645?s=20
+
+[2026-07-19T01:28:32.711000+00:00] architex_ (id=1528211912360333462)
+    Running Deepseek v4 Flash on a 4090 ^^^
+

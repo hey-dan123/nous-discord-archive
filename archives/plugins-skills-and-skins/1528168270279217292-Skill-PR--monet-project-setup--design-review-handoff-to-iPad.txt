@@ -1,0 +1,16 @@
+# Thread 'Skill PR: monet-project-setup (design review handoff to iPad)' in forum #plugins-skills-and-skins
+# thread_id=1528168270279217292 forum_id=1485392832154832906
+# Started 2026-07-19T02:35:24.219467+00:00
+
+[2026-07-18T22:35:07.628000+00:00] bengartoniammonet_37265 (id=1528168270279217292)
+    Hi all, I just opened a PR adding a skill to optional-skills/software-development/: https://github.com/NousResearch/hermes-agent/pull/67153
+    
+    The skill lets Hermes inspect a website or app repo and build a validated, secret-free project package for Monet, an iPad design review app (annotate rendered pages with Apple Pencil, then hand feedback back to the agent). One prompt in Telegram, a review-ready project in your inbox.
+    
+    I followed the optional-skills conventions (category DESCRIPTION scoping, long-form frontmatter, platforms field) and kept it strictly secret-free: no credentials, raw HTML, or cookies ever land in a package. It's been running as a tap (benwgarton/hermes-monet) and there's a setup walkthrough at https://iammonet.com/hermes
+    
+    Happy to adjust anything to fit — naming, category, scope, whatever the maintainers prefer. I'm the developer of Monet, so flagging that up front.
+    [attachment] IMG_3493.PNG https://cdn.discordapp.com/attachments/1528168270279217292/1528168270857764989/IMG_3493.PNG?ex=6a5d511b&is=6a5bff9b&hm=375231dbe0941168f677288f7c6021bd9ceecce2c7e420d4de20e667dad54af6&
+    [embed] Add monet-project-setup optional skill (software-development) by be... https://github.com/NousResearch/hermes-agent/pull/67153
+    [embed] Monet x Hermes: the connector · Monet by IamMonet https://iammonet.com/hermes
+

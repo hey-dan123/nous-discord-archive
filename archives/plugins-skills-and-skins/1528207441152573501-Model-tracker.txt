@@ -1,0 +1,11 @@
+# Thread 'Model-tracker' in forum #plugins-skills-and-skins
+# thread_id=1528207441152573501 forum_id=1485392832154832906
+# Started 2026-07-19T02:35:23.743204+00:00
+
+[2026-07-19T01:10:46.692000+00:00] drahcir_rahl (id=1528207441152573501)
+    So if you are leaning heavy into trying various models, maybe you want to take some notes, and know what you might have found. Keep some records about if you are happy with it or want to remember why you ditched it. 
+    
+    This is why I crated model tracker. Initial build so expect bugs, is has been passed through Magnus919's excellent hermes-SkillOpt. If you have ideas, comments, pr's etc, hit me with them if you want. 
+    https://github.com/rahlquist/model-tracker
+    [embed] GitHub - rahlquist/model-tracker: Agent skill to track AI models yo... https://github.com/rahlquist/model-tracker
+

@@ -1,0 +1,8 @@
+# Thread 'VM AI GATEWAY DASHBOARD GUI TUI UNIVERSAL' in forum #community-projects-showcase
+# thread_id=1528142631819808808 forum_id=1316137596535177246
+# Started 2026-07-19T02:29:31.807866+00:00
+
+[2026-07-18T20:53:14.943000+00:00] asshole1678 (id=1528142631819808808)
+    https://github.com/Baal-TehDriverman/vm-ai-gateway<:suprise:1151275539789774898>
+    [embed] GitHub - Baal-TehDriverman/vm-ai-gateway: VM AI Gateway and Dashboa... https://github.com/Baal-TehDriverman/vm-ai-gateway
+

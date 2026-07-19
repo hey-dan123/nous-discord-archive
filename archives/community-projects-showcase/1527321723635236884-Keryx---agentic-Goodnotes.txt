@@ -78,3 +78,9 @@
     PDF exports are technically functional but still require some tweaking for the export (light mode for printing rather than dark mode)
     [attachment] video-output-8FF033DA-5398-4733-8503-C73B065523BD-1.mov https://cdn.discordapp.com/attachments/1527321723635236884/1528109236800720896/video-output-8FF033DA-5398-4733-8503-C73B065523BD-1.mov?ex=6a5d1a20&is=6a5bc8a0&hm=4f7a3d409f76fbff02cd2405f2bc249136643c35104b7969ed3b78a5d5eeeec0&
 
+[2026-07-18T20:18:33.664000+00:00] parallelcontinuities (id=1528133902303101131)
+    huh you know what. I think I am going to pivot to local embedding/ocr after all. Then Hermes can just have a small plugin
+
+[2026-07-19T00:54:26.439000+00:00] parallelcontinuities (id=1528203329673363507)
+    exploring a way to have this run as a server on yr iphone
+
