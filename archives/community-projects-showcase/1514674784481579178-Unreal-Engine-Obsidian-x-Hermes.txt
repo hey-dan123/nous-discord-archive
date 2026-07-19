@@ -411,3 +411,25 @@
     I love rodin. Haven’t used them in a while tbh. That workflow looks clean
     [reply to liquid_machine msg=1528001703696142537]
 
+[2026-07-19T16:01:55.878000+00:00] jw_mushroom_man (id=1528431707173290198)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1514674784481579178/1528431706745602248/image.png?ex=6a5e4673&is=6a5cf4f3&hm=3afebbe3e9ddfceddbd3a7bf9a6214f4d2ca6773562926e89bfe75b4accfcaba&
+
+[2026-07-19T16:04:37.533000+00:00] jw_mushroom_man (id=1528432385203638482)
+    [attachment] IMG_2018.mov https://cdn.discordapp.com/attachments/1514674784481579178/1528432384804917449/IMG_2018.mov?ex=6a5e4715&is=6a5cf595&hm=6ef495f5675fbdcc01d59e3a854b51df97d7fac0bad2541d17b0483a177db287&
+
+[2026-07-19T16:04:41.742000+00:00] jw_mushroom_man (id=1528432402857328810)
+    https://klipy.com/gifs/its-something-here-you-go
+    [embed] It's Something Here You Go Meme https://klipy.com/gifs/its-something-here-you-go
+
+[2026-07-19T17:17:31.301000+00:00] liquid_machine (id=1528450730116251829)
+    i like hunyuan for rigging and motion
+
+[2026-07-19T17:19:27.031000+00:00] liquid_machine (id=1528451215522791546)
+    im using hunyuan studio where i can upload a model to optimize for game engine rig and skin then i have hunyuan motion locally for generating motion https://github.com/Tencent-Hunyuan/HY-Motion-1.0 <@874265192383529010>
+    [embed] GitHub - Tencent-Hunyuan/HY-Motion-1.0: HY-Motion model for 3D huma... https://github.com/Tencent-Hunyuan/HY-Motion-1.0
+
+[2026-07-19T17:20:38.377000+00:00] liquid_machine (id=1528451514769870909)
+    this is also interesting https://www.youtube.com/watch?v=xBrMjPnH3_w https://github.com/Tencent-Hunyuan/R-DMesh
+    [embed] [Siggraph 2026] R-DMesh: Video-Guided 3D Animation via Rectified Dy... https://www.youtube.com/watch?v=xBrMjPnH3_w
+    [embed] GitHub - Tencent-Hunyuan/R-DMesh: [SIGGRAPH2026] Official code for ... https://github.com/Tencent-Hunyuan/R-DMesh
+

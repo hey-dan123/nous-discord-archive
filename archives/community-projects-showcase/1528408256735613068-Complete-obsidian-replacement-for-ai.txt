@@ -1,0 +1,9 @@
+# Thread 'Complete obsidian replacement for ai' in forum #community-projects-showcase
+# thread_id=1528408256735613068 forum_id=1316137596535177246
+# Started 2026-07-19T19:02:52.231135+00:00
+
+[2026-07-19T14:28:44.858000+00:00] jaixii (id=1528408256735613068)
+    Now there's a comprehensive replacement for any memory system. Update 1.0 coming today, daily updates https://github.com/Coding-Dev-Tools/engraphis
+    [attachment] 9.png https://cdn.discordapp.com/attachments/1528408256735613068/1528408256912035840/9.png?ex=6a5e309c&is=6a5cdf1c&hm=205b70954aeb1854e9fd7c57b11248a8319bf367ea2b473b3e45aa51f860835d&
+    [embed] GitHub - Coding-Dev-Tools/engraphis: Self-hosted AI memory engine -... https://github.com/Coding-Dev-Tools/engraphis
+

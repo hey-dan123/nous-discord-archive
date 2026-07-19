@@ -1,0 +1,25 @@
+# Thread 'Standalone MLX Whisper STT Plugin' in forum #plugins-skills-and-skins
+# thread_id=1528393630560026774 forum_id=1485392832154832906
+# Started 2026-07-19T19:08:49.841799+00:00
+
+[2026-07-19T13:30:37.706000+00:00] andrew_60786 (id=1528393630560026774)
+    The MLX Whisper STT provider from PR #67172 has been extracted into a standalone, pip-installable plugin that complies with the in-tree provider integration policy.
+    
+    Repository: https://github.com/ajzrva-sys/hermes-mlx-whisper
+    
+    **Installation**
+    
+    ```bash
+    pip install hermes-mlx-whisper
+    hermes config set stt.provider mlx_whisper
+    ```
+    
+    Or manually copy the `hermes_mlx_whisper/` directory into:
+    
+    ```text
+    ~/.hermes/plugins/
+    ```
+    
+    Feedback, bug reports, and pull requests are welcome.
+    [embed] GitHub - ajzrva-sys/hermes-mlx-whisper: MLX Whisper STT provider fo... https://github.com/ajzrva-sys/hermes-mlx-whisper
+

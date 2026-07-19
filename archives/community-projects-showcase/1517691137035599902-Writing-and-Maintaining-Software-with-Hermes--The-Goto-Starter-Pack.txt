@@ -12,3 +12,7 @@
 [2026-07-15T20:11:49.710000+00:00] avidfuturist (id=1527045044400558280)
     Writing and Maintaining Software with Hermes, The Goto Starter Pack!
 
+[2026-07-19T17:36:14.220000+00:00] avidfuturist (id=1528455439979909162)
+    Cofounder of Hermes Agent Teknium and his agents have reviewed tens of thousands of PRs as part of this project, he generously agreed to share his agents’ reflections as a part of Steward: https://nesquena.github.io/steward-os/docs/reference/reviewing-at-volume.html
+    [embed] Reviewing at volume https://nesquena.github.io/steward-os/docs/reference/reviewing-at-volume.html
+

@@ -1,0 +1,23 @@
+# Thread 'Hermes Mem — Hermes with better memory and a simple, minimal interface' in forum #community-projects-showcase
+# thread_id=1528461188873060362 forum_id=1316137596535177246
+# Started 2026-07-19T19:02:50.753591+00:00
+
+[2026-07-19T17:59:04.863000+00:00] fodor_pro_pro (id=1528461188873060362)
+    Hermes Mem is an independent community fork of Hermes Agent with improved memory and a simpler, more minimal desktop interface.
+    
+    It installs separately from your existing Hermes installation, uses its own folder, and does not modify your regular Hermes setup.
+    Hermes Mem uses three types of memory:
+    10-day memory — detailed recent context is kept for 10 days and then gradually forgotten.
+    Permanent memory — only important information that should always be remembered is stored here.
+    Events — temporary situations with their own time period, so the AI can understand what is happening now and avoid mixing up past and current information.
+    
+    You can explore the source code, read more about the project, or ask questions and report bugs through GitHub Issues:
+    **https://github.com/FPP-Labs/hermes_mem**
+    Install on Linux or macOS:
+    **git clone https://github.com/FodorProPro/hermes_fpp.git && cd hermes_fpp && ./install.sh**
+    When the installer menu appears, choose 1.
+    [attachment] image.png https://cdn.discordapp.com/attachments/1528461188873060362/1528461189363924992/image.png?ex=6a5e61e8&is=6a5d1068&hm=eb84a32596a311b8472bc88ac0bd89ed690a2f799a88221824a725e0da0c429e&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1528461188873060362/1528461190232281088/image.png?ex=6a5e61e9&is=6a5d1069&hm=208bfe72f14e2de9f5b6c30b4a1e1f5ee6c806f4eefd2f1a7983eb34ebad5b6a&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1528461188873060362/1528461190571884736/image.png?ex=6a5e61e9&is=6a5d1069&hm=03874b936b483a8fb3a08f55f6abae023a3b2cbf61c9727069575bcad6943728&
+    [embed] GitHub - FPP-Labs/hermes_mem: Hermes Mem is an independent communit... https://github.com/FodorProPro/hermes_fpp.git
+

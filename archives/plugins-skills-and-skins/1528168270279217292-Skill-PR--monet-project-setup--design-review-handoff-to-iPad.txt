@@ -14,3 +14,12 @@
     [embed] Add monet-project-setup optional skill (software-development) by be... https://github.com/NousResearch/hermes-agent/pull/67153
     [embed] Monet x Hermes: the connector · Monet by IamMonet https://iammonet.com/hermes
 
+[2026-07-19T18:47:08.488000+00:00] bengartoniammonet_37265 (id=1528473283673194526)
+    Update: Monet 4.0 cleared App Store review this morning, so the full loop now works end to end with the store version, iPhone included: https://apps.apple.com/app/id6773097950
+    
+    Also addressed the maintainer review on the PR the same evening it came in. The verifier now inspects every package member (including decoded config blobs and screenshot bytes) before it reports a package secret-free, with a regression test suite covering each channel: https://github.com/NousResearch/hermes-agent/pull/67153
+    
+    Happy to answer anything about the skill or the handoff format.
+    [embed] Monet - Design Review App - App Store https://apps.apple.com/app/id6773097950
+    [embed] Add monet-project-setup optional skill (software-development) by be... https://github.com/NousResearch/hermes-agent/pull/67153
+

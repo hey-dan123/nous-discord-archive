@@ -1,0 +1,22 @@
+# Thread 'AxioRank: Security Gateway plugin for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1528404377470107728 forum_id=1485392832154832906
+# Started 2026-07-19T19:08:49.414715+00:00
+
+[2026-07-19T14:13:19.969000+00:00] axiorank_08772 (id=1528404377470107728)
+    🛡️ hermes-axiorank routes every Hermes tool call and tool result through AxioRank, the security gateway for AI agents. It scores actions for live secrets, prompt injection, destructive operations, PII, and risky egress, offline and keyless by default.
+    
+    What it does:
+    • 3 guard tools the agent can call: `axiorank_inspect`, `axiorank_scan_mcp` (verify an MCP server or agent card), `axiorank_verify`
+    • Injects a live guardrail policy into the model turn, plus a one-shot taint warning when a tool result is poisoned (agentjacking defense)
+    • Optional hard block: `hermes axiorank init` installs a pre_tool_call shell hook that denies a dangerous action before it runs
+    • Bundled `secure-tool-use` skill; per-session audit and a signed Coding Session Seal with a key
+    
+    Install:
+    `pip install hermes-axiorank && hermes plugins enable axiorank`
+    Works with no key (local detectors). Set `AXIORANK_API_KEY` to apply your workspace policy and central audit.
+    
+    Repo: https://github.com/AxioRank/hermes-plugin
+    PyPI: https://pypi.org/project/hermes-axiorank/
+    [attachment] axiorank-hermes-banner.png https://cdn.discordapp.com/attachments/1528404377470107728/1528404377700667584/axiorank-hermes-banner.png?ex=6a5e2d00&is=6a5cdb80&hm=7dfd1954dde319cb28ce9b9ba60e6c99aecf43e32c3616408d69563cbc7f34ae&
+    [embed] GitHub - AxioRank/hermes-plugin: AxioRank security gateway plugin f... https://github.com/AxioRank/hermes-plugin
+

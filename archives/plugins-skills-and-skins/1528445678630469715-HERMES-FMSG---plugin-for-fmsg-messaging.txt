@@ -1,0 +1,29 @@
+# Thread 'HERMES FMSG - plugin for fmsg messaging' in forum #plugins-skills-and-skins
+# thread_id=1528445678630469715 forum_id=1485392832154832906
+# Started 2026-07-19T19:08:48.838358+00:00
+
+[2026-07-19T16:57:26.933000+00:00] markmnl (id=1528445678630469715)
+    I've just published **hermes-fmsg**, a plugin which connects Hermes Agent to use fmsg, allowing **agent-to-human, agent-to-agent, and human-to-agent messaging at scale**.
+    
+    👉 **Try it out:** https://github.com/markmnl/hermes-fmsg
+    
+    fmsg is a new messaging protocol built on structured threads. Addresses look like `@alice@example.com`, and service providers can support sub-accounts that are perfect for agents, for example: `@alice_hermes@example.com` or you could self-host and have however many addresses and message quotas your server can handle - like email fmsg is domain distributed you can message other hosts at other domains.
+    
+    > Set `FMSG_HOME_CHANNEL=@your@address.com` for comms from hermes-gateway
+    
+    fmsg is something I've been working on for years, and I'm publishing it here first because I'm using and loving Hermes!
+    
+    * **Self-hostable**: self-host an fmsg host on your own domain and choose your own storage, quotas etc. Your messages are handled by you, ensuring data sovereignty and privacy. There is OSS stack: fmsg-docker, but no open UI yet (through there is a CLI); otherwise im running the first fmsg provider over at https://fmsg.io where its all free right now just with message quotas and up to 5 sub-accounts..
+    * **A durable agent identity**: people and other agents can contact a stable `@agent@domain` address without sharing a human login.
+    * **Context-native threads**: fmsg's message tree maps to Hermes sessions and branch context instead of flattening every conversation into one chat.
+    * **Federated reach**: addresses on independently operated fmsg hosts can communicate without going via a 3rd party.
+    * **Rich workflows**: text, attachments, reply-all, cron delivery, and agent-to-agent messaging all use the same address.
+    
+    This is the first time I'm publishing the fmsg white paper discussing the motivations of fmsg - any questions please ask!
+    
+    📄 **fmsg White Paper:** https://github.com/markmnl/fmsg/blob/main/FMSG_WHITE_PAPER.pdf
+    [attachment] fmsg-falcon.png https://cdn.discordapp.com/attachments/1528445678630469715/1528445679100236009/fmsg-falcon.png?ex=6a5e5377&is=6a5d01f7&hm=50e530fa2a47efe5fd18a5a13fa1f6637fe69578aaca0f84a958d6bbc72ac57a&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1528445678630469715/1528445679989559366/image.png?ex=6a5e5377&is=6a5d01f7&hm=8221a571bd79da48e99dc8b9087f722eb4f0388f4c1403379e6e8e91c6688be8&
+    [embed] GitHub - markmnl/hermes-fmsg: Hermes fmsg integration https://github.com/markmnl/hermes-fmsg
+    [embed] fmsg/FMSG_WHITE_PAPER.pdf at main · markmnl/fmsg https://github.com/markmnl/fmsg/blob/main/FMSG_WHITE_PAPER.pdf
+

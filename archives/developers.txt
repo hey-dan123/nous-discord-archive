@@ -48557,3 +48557,114 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     Its the thought that counts
     [reply to thehybrid1337 msg=1528243505485582377]
 
+[2026-07-19T13:22:09.994000+00:00] warofchange (id=1528391501061554296)
+    PR #67504 — docs(links): update moved Agent Client Protocol repo URL
+    
+    The programmatic-integration guide linked the Agent Client Protocol repo at github.com/zed-industries/agent-client-protocol, which now permanently redirects:
+    
+    $ curl -sI https://github.com/zed-industries/agent-client-protocol
+    HTTP/1.1 301 Moved Permanently
+    Location: https://github.com/agentclientprotocol/agent-client-protocol
+    ACP moved out of the zed-industries org into its own agentclientprotocol org; the new location is a direct 200 OK. This points the link at the canonical URL GitHub itself redirects to — no ambiguity about the destination. The link appears in the English guide and its zh-Hans mirror and nowhere else in the repo, so both are updated for a complete fix. Docs-only, no behavior change.
+    
+    https://github.com/NousResearch/hermes-agent/pull/67504
+
+[2026-07-19T13:40:12.641000+00:00] alelpoan (id=1528396042012332042)
+    How about adding tooltips across the entire left sidebar, to improve UX for both new and existing users?
+    
+    Opened a PR adding missing tooltips to several icon-only buttons across the left sidebar (had aria-label but no visual tooltip on hover).
+    Mechanical fix — wraps existing buttons in the existing <Tip> component, no behavior change.
+    
+    Includes vitest coverage for 6/7 files; PR description explains why the 7th (a 1500+ line page component) was verified manually via screenshots instead.
+    
+    CI is green ✅ — all checks pass.
+    
+    PR: https://github.com/NousResearch/hermes-agent/pull/67500
+
+[2026-07-19T14:11:51.049000+00:00] frowtek (id=1528404004512469114)
+    Hey everyone 👋
+    
+    https://github.com/NousResearch/hermes-agent/pull/67488 a credential you delete through the UI isn't actually deleted. load_env() accepts KEY = value, the writers only matched KEY= — so delete 404s while the key stays live, and a rotate brings the old key back later.
+    
+    https://github.com/NousResearch/hermes-agent/pull/67262 cached async auxiliary clients never release their transport, so shutdown_cached_clients and every credential refresh leak an fd. Review caught a fourth wrapper I'd missed (native Gemini) — now covered too.
+    
+    https://github.com/NousResearch/hermes-agent/pull/67281 the same voice transcript gets echoed to you twice. A merge clears the flag recording that it was *already delivered* — that's a delivery record, not a cache.
+    
+    https://github.com/NousResearch/hermes-agent/pull/67255 the async auth-recovery retry drops main_runtime (its sync twin forwards it), so the retry rebuilds against an empty runtime and hits the wrong endpoint.
+
+[2026-07-19T14:33:14.812000+00:00] alelpoan (id=1528409389004882061)
+    Fixed both, restored to match current main, only the Tip wrappers remain on top. <@387972437901312000>
+    [reply to alelpoan msg=1528396042012332042]
+
+[2026-07-19T15:05:59.086000+00:00] warofchange (id=1528417627767308308)
+    <@387972437901312000> I’d like to ask a question: how is the developer role assigned, and is it checked manually?
+
+[2026-07-19T15:34:18.623000+00:00] tdamre (id=1528424756141883483)
+    yes manually
+    [reply to warofchange msg=1528417627767308308]
+
+[2026-07-19T16:11:17.768000+00:00] alelpoan (id=1528434063910764685)
+    Fixed the components you flagged (removed `ToolCall`, added `ConfirmDialog`, `DeleteConfirmDialog`, `ModelReloadConfirm`, `HermesConsoleModal`) and reconciled the rest of the `src/` tree against `main` too  should be accurate now. PR updated, ready for another look whenever you have time 🫡  <@387972437901312000>
+    [reply to alelpoan msg=1522201964849533050]
+
+[2026-07-19T16:29:05.386000+00:00] tdamre (id=1528438541825212477)
+    <@387972437901312000> https://github.com/NousResearch/hermes-agent/pull/67163
+
+[2026-07-19T17:10:35.341000+00:00] sassyfatcat (id=1528448985453564016)
+    https://github.com/NousResearch/hermes-agent/pull/60489
+
+[2026-07-19T17:11:00.274000+00:00] sassyfatcat (id=1528449090029879296)
+    Adds desktop only/connect to remote backend option when first launching the desktop app
+
+[2026-07-19T17:11:13.842000+00:00] sassyfatcat (id=1528449146938195970)
+    A much needed QOL as everyone I know uses a remote backend
+
+[2026-07-19T17:37:23.316000+00:00] sahaun (id=1528455729789538536)
+    Would be great to know why my message is getting "content blocked by server".
+
+[2026-07-19T17:37:46.794000+00:00] sahaun (id=1528455828263272555)
+    Ah seems to be my github PR link, that's weird.
+
+[2026-07-19T17:38:27.266000+00:00] sahaun (id=1528455998015017072)
+    Was gonna say I requested a re-review of PR 67571, whenever time permits.
+
+[2026-07-19T17:39:06.304000+00:00] promptsiren (id=1528456161752256576)
+    don't wrap in <>
+    [reply to sahaun msg=1528455998015017072]
+
+[2026-07-19T17:39:39.249000+00:00] sahaun (id=1528456299933728778)
+    Tried again, it fails. Pretty sure I did that in my first message as well, it's a habit.
+
+[2026-07-19T17:39:57.756000+00:00] sahaun (id=1528456377557586090)
+    Might be because I'm a new user in the server? 😩
+
+[2026-07-19T17:40:48.446000+00:00] promptsiren (id=1528456590166855813)
+    it's because you're wrapping the link in <> instead of just pasting it normally
+    [reply to sahaun msg=1528456377557586090]
+
+[2026-07-19T17:41:20.079000+00:00] sahaun (id=1528456722845270137)
+    https://github.com/NousResearch/hermes-agent/pull/67571
+
+[2026-07-19T17:41:31.089000+00:00] sahaun (id=1528456769024692314)
+    Hah. Thanks firefly.
+
+[2026-07-19T17:41:51.572000+00:00] sahaun (id=1528456854936621299)
+    Out of interest, why is <> blocked?
+
+[2026-07-19T18:28:23.080000+00:00] drexux (id=1528468563369918757)
+    stop the progress floor from splitting a tool group
+    https://github.com/NousResearch/hermes-agent/pull/67553
+    
+    don't spend a redelivery attempt when the platform is down
+    https://github.com/NousResearch/hermes-agent/pull/67568
+    
+    stop /api/config/schema leaking config.yaml to anonymous callers
+    https://github.com/NousResearch/hermes-agent/pull/67587
+
+[2026-07-19T18:42:19.384000+00:00] _hwrd_ (id=1528472071083004034)
+    <a:alert:811034039838048326><a:alert:811034039838048326><a:alert:811034039838048326><a:alert:811034039838048326><a:alert:811034039838048326><a:alert:811034039838048326>
+    
+    A review on this would be great please! https://github.com/NousResearch/hermes-agent/pull/39946 
+    
+    Simple one line fix
+

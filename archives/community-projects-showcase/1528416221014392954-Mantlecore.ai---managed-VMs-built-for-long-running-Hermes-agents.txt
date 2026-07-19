@@ -1,0 +1,37 @@
+# Thread 'Mantlecore.ai — managed VMs built for long-running Hermes agents' in forum #community-projects-showcase
+# thread_id=1528416221014392954 forum_id=1316137596535177246
+# Started 2026-07-19T19:02:51.730558+00:00
+
+[2026-07-19T15:00:23.690000+00:00] theta_90 (id=1528416221014392954)
+    First of all, thank you to all the community members who helped us with the private beta testing! ❤️ 
+    
+    We've spent the last 5 months building cloud infrastructure specifically for open-source AI agents, for anyone who wants Hermes running 24/7 without owning the machine it lives on.
+    
+    Two barriers kept coming up in our conversations with agent users:
+    - **Non-technical users** hit a wall before the agent gets its first task - servers, Docker, networking, SSL, updates.
+    - **Technical users** discover deployment is the easy part. A long-running Hermes accumulates memory, skills, files, and OAuth integrations, and one bad update, or one of the agent's own self-modifications, can wipe out weeks of accumulated state.
+    
+    Mantlecore solves both:
+    → Hermes runs in a dedicated VM with kernel-level isolation, not a shared container, no noisy neighbors
+    → Persistent storage for memory, skills, and integrations
+    → Snapshot before anything risky, one-click restore, daily off-site backups
+    → Bring your own API keys or oAuth subscriptions, or use our managed LLM access
+    
+    A self-improving agent connected to 18+ platforms is exactly the kind of thing you don't want to lose to its own experiments. The idea: let the agent evolve freely, and if something goes sideways, roll back to a known-good state in minutes. Self-hosting control, minus the ops.
+    
+    We're in beta, and I'd genuinely value input from people who run Hermes seriously:
+    -What would stop you from trusting a cloud platform with a self-modifying agent?
+    -What failure mode worries you most with a long-running instance?
+    
+    There's a 7-day trial at https://mantlecore.ai - break things and tell me what broke. Follow the build at @mantlecoreai on X.
+    
+    *Mantlecore is independent and not affiliated with the Hermes project.*
+    
+    Cheers,
+    [attachment] slide-01.png https://cdn.discordapp.com/attachments/1528416221014392954/1528416221752459314/slide-01.png?ex=6a5e3807&is=6a5ce687&hm=90765f6d9bb9edd1b7cfd7fcd9041a9d6073015b00be5da49d4c926ab38ce0af&
+    [attachment] slide-02.png https://cdn.discordapp.com/attachments/1528416221014392954/1528416222453174402/slide-02.png?ex=6a5e3808&is=6a5ce688&hm=41cb57e1676d896fb5d93938ce7a36b107daad1dc44c681e03868105fa41403c&
+    [attachment] slide-04.png https://cdn.discordapp.com/attachments/1528416221014392954/1528416222939582555/slide-04.png?ex=6a5e3808&is=6a5ce688&hm=ccfa19e52eb97c70e02631d971e59938c3179ec6ab3de2500d1d34b693d587c4&
+    [attachment] slide-05.png https://cdn.discordapp.com/attachments/1528416221014392954/1528416223745015878/slide-05.png?ex=6a5e3808&is=6a5ce688&hm=3e845b076b2a0261b8e5a17581947c5c8d3f48094bc8d17631210ac1a4880094&
+    [attachment] slide-03.png https://cdn.discordapp.com/attachments/1528416221014392954/1528416226114801705/slide-03.png?ex=6a5e3808&is=6a5ce688&hm=7929bc9f2dd04cd1beb24d792184070d0b1a5e93c30e4d8ed661dafce54a1ee4&
+    [embed] Stop Chatting With AI. Give Your Agent a Computer. — Mantlecore https://mantlecore.ai/
+

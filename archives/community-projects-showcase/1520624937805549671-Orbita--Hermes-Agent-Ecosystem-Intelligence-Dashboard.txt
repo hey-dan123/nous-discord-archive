@@ -47,3 +47,22 @@
     [embed] Orbita https://orbita-three-liard.vercel.app/
     [embed] GitHub - waroffchange/orbita https://github.com/waroffchange/orbita
 
+[2026-07-19T14:18:52.212000+00:00] warofchange (id=1528405770998386849)
+    🛰️ Orbita — v1.2 Update
+    
+    Just shipped four new features to the dashboard:
+    
+    What's new in v1.2:
+    
+    🧠 AI Daily Brief — every morning the dashboard automatically generates a narrative summary from the day's data: who led star growth, which repos are most active, what shipped, how many articles were tracked
+    ⚡ Spike Detector — flags any repo gaining stars at 3x+ its 7-day average with a live alert banner. Catches viral moments before they hit your feed
+    🔍 Trending AI Repos — GitHub Search API now scans for new AI repos outside the tracked list every day. Discover what's emerging before it blows up
+    📊 Repo Score Card — each repo card now shows Growth, Activity, and Release scores (0–100) based on the last 7 days of data
+    
+    🔗 Live: https://orbita-three-liard.vercel.app
+    ⭐ Repo: https://github.com/waroffchange/orbita
+    
+    Feedback and repo suggestions still welcome! 👇
+    [embed] Orbita https://orbita-three-liard.vercel.app/
+    [embed] GitHub - waroffchange/orbita https://github.com/waroffchange/orbita
+

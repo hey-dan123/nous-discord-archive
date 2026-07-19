@@ -84,3 +84,10 @@
 [2026-07-19T00:54:26.439000+00:00] parallelcontinuities (id=1528203329673363507)
     exploring a way to have this run as a server on yr iphone
 
+[2026-07-19T17:06:00.606000+00:00] parallelcontinuities (id=1528447833131450600)
+    getting launcher scripts going
+
+[2026-07-19T17:23:05.189000+00:00] parallelcontinuities (id=1528452130543894799)
+    nods sagely. onboarding is a lot better now
+    [attachment] image.png https://cdn.discordapp.com/attachments/1527321723635236884/1528452130250428426/image.png?ex=6a5e5979&is=6a5d07f9&hm=a3d53ad7e6f208152f8f08c0164beef68fd14adc753013d9a32d7c759b1e56d8&
+

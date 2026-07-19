@@ -390,3 +390,13 @@
 [2026-07-14T13:50:06.645000+00:00] lymeswold (id=1526586594117681274)
     I just had my agent install o2b on my Windows laptop. She struggled a bit with the Linux/Windows differences but was eventually successful. One small point she noted: "`This version (v1.30.0) has moved past the event_log_append tool referenced in the install doc — it now exposes a richer brain_* tool set. The identity check is version-specific and no longer applies.`"
 
+[2026-07-19T17:36:41.258000+00:00] autoferrit (id=1528455553385500754)
+    Whoah what is this Hermes UI? Link? As much as I love the sci-fi aesthetic the Hermes dashboard isn’t my favorite
+    [reply to lipebez msg=1525255222727938058]
+
+[2026-07-19T17:41:56.303000+00:00] autoferrit (id=1528456874779869366)
+    Also where do I check out this osb plugin?
+
+[2026-07-19T18:51:30.529000+00:00] seasite (id=1528474382752551162)
+    serg, i just want to thank you for your excellent work, i set  up the osb and it works like a charm!
+
