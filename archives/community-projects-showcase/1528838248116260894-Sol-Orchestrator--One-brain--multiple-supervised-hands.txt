@@ -1,0 +1,46 @@
+# Thread 'Sol Orchestrator: One brain, multiple supervised hands' in forum #community-projects-showcase
+# thread_id=1528838248116260894 forum_id=1316137596535177246
+# Started 2026-07-20T19:41:21.203097+00:00
+
+[2026-07-20T18:57:22.792000+00:00] reyartage (id=1528838248116260894)
+    Give one model many hands without splitting the brain
+    
+    Most multi-agent systems add more agents, but lose the intelligence that should stay in control.
+    
+    The strongest model should keep the actual goal, architecture, reasoning, tradeoffs, and final decisions. Workers should handle bounded research, implementation, verification, and command execution.
+    
+    That is what Sol Orchestrator does for OpenCode.
+    
+    Keep one brain. Give it many hands.
+    
+    Sol owns the outcome across multiple workflows. It can delegate jobs in parallel, see what workers are doing, steer them while they work, inspect only the result or diff it needs, reject weak output, retry or interrupt work, and revise the plan when new evidence changes the problem.
+    
+    Worker transcripts stay outside the main context unless Sol asks for them, so orchestration does not become context bloat.
+    
+    Goal: ship the complete feature
+    │
+    ├── Workflow 1: understand the real boundary
+    │   ├── Graph v1
+    │   │   ├── Step: frame the problem
+    │   │   │   └── Job: Sol defines the questions
+    │   │   └── Step: gather evidence
+    │   │       ├── Job: worker inspects the runtime
+    │   │       └── Job: worker maps affected callers
+    │   └── Graph v2              replaces unfinished v1 after new evidence
+    │       └── ...
+    │
+    ├── Workflow 2: implement the chosen design
+    │   └── ...
+    │
+    └── Workflow 3: verify, integrate, and close the goal
+        └── ...
+    
+    The harness includes durable goals, versioned workflow DAGs, supervised child sessions, review gates, steering, waiting, interruption, retries, targeted diff and artifact inspection, guarded undo/redo, compaction-aware state, and a TUI showing the graph, blockers, workers, review state, and valid next actions.
+    
+    The point is not a committee of agents. It is one capable model acting as architect and decision-maker, with several coordinated hands.
+    
+    MIT licensed:
+    https://github.com/ReyJ94/Sol-Orchestrator
+    [attachment] file_00000000dec47243a59654ff8fd0ec55.png https://cdn.discordapp.com/attachments/1528838248116260894/1528838248577765437/file_00000000dec47243a59654ff8fd0ec55.png?ex=6a5fc112&is=6a5e6f92&hm=b71ec02b0c13e59c24e7890caa483a09a4ee21397a7b36e4e6e749c844f355a5&
+    [embed] GitHub - ReyJ94/Sol-Orchestrator: Graph-native multi-agent orchestr... https://github.com/ReyJ94/Sol-Orchestrator
+

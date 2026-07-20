@@ -14,3 +14,10 @@
 [2026-07-10T14:42:40.046000+00:00] javi089985 (id=1525150268977840178)
     Cool! Any special skill of feedback loop to iterate or it is just prompting the description of the part u are making?
 
+[2026-07-20T17:36:30.707000+00:00] mburhop (id=1528817896996864030)
+    No, I wrote a bunch of code in the MCP Server between the prompt and the API calls.  Part of this is to keep the AI thinking symbolically becuse of the problems tokenizing numbers.
+
+[2026-07-20T17:37:04.679000+00:00] mburhop (id=1528818039485632673)
+    More info here: https://burhop.substack.com/p/the-problems-of-tokenization-in-design
+    [embed] The Problems of Tokenization in Design and Manufacturing https://burhop.substack.com/p/the-problems-of-tokenization-in-design
+

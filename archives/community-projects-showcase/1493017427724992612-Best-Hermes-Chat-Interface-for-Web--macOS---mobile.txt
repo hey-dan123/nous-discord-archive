@@ -6057,3 +6057,16 @@
 [2026-07-20T12:23:14.471000+00:00] cryptobredda (id=1528739059869155428)
     I have a bug on the android app where to keeps redirecting me to the browser each time I login in the app.. whats the resolution to that?
 
+[2026-07-20T16:20:10.449000+00:00] josephcy (id=1528798686002548867)
+    I asked fable to make a theme that is good for eyes for long session... it gave me this... which i am not sure about it. Do you guys think it's even worth making a pr?
+    [attachment] brave_21_July_2026_1712_1784563811.png https://cdn.discordapp.com/attachments/1493017427724992612/1528798684991459498/brave_21_July_2026_1712_1784563811.png?ex=6a5f9c3a&is=6a5e4aba&hm=7eb8f01047b373146f36092ec347c67c1cb39460b30ee9f260bff51c8c4f1ec7&
+    [attachment] brave_21_July_2026_1711_1784563802.png https://cdn.discordapp.com/attachments/1493017427724992612/1528798685503295518/brave_21_July_2026_1711_1784563802.png?ex=6a5f9c3a&is=6a5e4aba&hm=61147ac11a006d1853fb8e820f0489d0d67ffb658328f0ede1d09c072577321e&
+
+[2026-07-20T19:24:32.143000+00:00] avidfuturist (id=1528845082109673585)
+    Looks good! Feel free to submit, or even add as an extension which can register extra themes https://github.com/hermes-webui/hermes-webui-extensions/pulls - I’m starting to move more into our official extensions library, any theme submitted here will be available for install!
+    [reply to josephcy msg=1528798686002548867]
+
+[2026-07-20T19:25:48.363000+00:00] avidfuturist (id=1528845401799790632)
+    Can you elaborate, is this the Hermex Android app https://github.com/computerbyte/hermex-android or the other one? What do you think is leading to it redirecting you? Is it your with setup?
+    [reply to cryptobredda msg=1528739059869155428]
+

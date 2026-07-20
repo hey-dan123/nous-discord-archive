@@ -1,0 +1,32 @@
+# Thread 'engRAM - superior agentic memory, encrypted at rest' in forum #community-projects-showcase
+# thread_id=1528807731065262261 forum_id=1316137596535177246
+# Started 2026-07-20T19:41:21.812531+00:00
+
+[2026-07-20T16:56:06.960000+00:00] maxfreedompollard (id=1528807731065262261)
+    engRAM is agentic vector memory that stores greater context more efficiently than other memory backends: decisions bound to their questions, importance-weighted hybrid recall, and AEAD on every byte at rest - including the embedding vectors. 100% offline, 100% portable, 100% encrypted. 
+    
+    Cross platform - one vector memory file can be used by Hermes, Claude, OpenClaw, and other agents all at once. 
+    
+    Memory behavior
+    • Short answers are not discarded - "OK" is stored with the question it answered, so you don't need to repeat yourself or remember how to do the same task twice. 
+    • Deterministic importance ranks recall (consent/decisions and personal/machine context above noise)
+    • Hybrid search (vector + keyword), exact SIMD top-k (recall 1.0 by construction)
+    • Pinned embedding model (SHA-256 enforced) so cosine space does not silently rot
+    • No LLM inside the memory layer - capture/rank/encrypt are deterministic and reproducible
+    
+    Security / offline
+    • Vectors encrypted at rest (most memory stacks leave them plaintext)
+    • Crypto-shred forget: destroy the per-record key, content is gone
+    • Fully offline: bundled ONNX embedder, runtime aborts on any network attempt
+    • Lock/unlock on demand; default unlock stays open until restart or you lock
+    • Hash-chained audit, per-caller namespaces, portable single-file vault
+    
+    Agent wiring
+    • Hermes native provider - hermes memory setup, "no setup needed" (no API key/cloud/daemon)
+    • Claude + OpenClaw via MCP; CLI for anything else
+    • One vault shared across agents and machines (lock → move file → unlock)
+    
+    
+    https://github.com/MaxFreedomPollard/engRAM
+    [embed] GitHub - MaxFreedomPollard/engRAM: engRAM - superior agentic memory... https://github.com/MaxFreedomPollard/engRAM
+

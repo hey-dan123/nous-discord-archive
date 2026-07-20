@@ -48901,3 +48901,119 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     yet, teknium is here.
     ## yo people.. throw in some tokens for quality and overlap PR triaging.
 
+[2026-07-20T14:20:42.415000+00:00] blooddragon90 (id=1528768621088604202)
+    consolidating the auths can get messy quickly, OpenClaw put them in a SQlite and it was a huge headache and led to all kinds of bugs, codex alone has added to and changed oauth numerous times. <@335419754640572419> you can locally just copy auth.json and it should work fine if you want to dupe credentials versus re-auth each, achieves the same goal you're trying to achieve (actually better than multiple auths)
+    [reply to teknium msg=1528709076442288289]
+
+[2026-07-20T14:32:28.303000+00:00] sassyfatcat (id=1528771581797597326)
+    https://github.com/NousResearch/hermes-agent/pull/60489
+
+[2026-07-20T14:32:51.828000+00:00] sassyfatcat (id=1528771680468471929)
+    Adds proper on-boarding/setup to the Hermes’ desktop app for remote instances
+
+[2026-07-20T14:32:59.230000+00:00] sassyfatcat (id=1528771711514710147)
+    Much needed QOL addition
+
+[2026-07-20T14:33:20.196000+00:00] sassyfatcat (id=1528771799452487893)
+    Idk who uses local Hermes’ instances but it cannot be the majority in my mind
+
+[2026-07-20T14:42:40.230000+00:00] blooddragon90 (id=1528774148405592195)
+    I run several meetups >50% do from my surveys given it's quick to setup, maybe majority of developers use cloud but I don't see majority of hermes users as developers only
+    [reply to sassyfatcat msg=1528771799452487893]
+
+[2026-07-20T14:44:10.359000+00:00] blooddragon90 (id=1528774526433759273)
+    that being said I'm for the PR as I use it this way
+    [reply to sassyfatcat msg=1528771680468471929]
+
+[2026-07-20T14:45:01.879000+00:00] blooddragon90 (id=1528774742524559401)
+    try <#1485307775444844625> + file issue with version and screenshots (and relink it here and edit post)
+
+[2026-07-20T14:56:43.927000+00:00] drexux (id=1528777687127294103)
+    Hi <@387972437901312000> , whenever you have a chance, could you please take a look at my PR? Thanks! 
+    
+    https://github.com/NousResearch/hermes-agent/pull/68085
+
+[2026-07-20T14:59:27.174000+00:00] drexux (id=1528778371834708138)
+    totally forgot to send these two PRs lol
+    
+    https://github.com/NousResearch/hermes-agent/pull/68049 
+    
+    https://github.com/NousResearch/hermes-agent/pull/68068
+
+[2026-07-20T15:01:05.222000+00:00] cyberyellowninja (id=1528778783077695648)
+    https://discord.com/channels/1053877538025386074/1528778644116340846
+    [reply to blooddragon90 msg=1528774742524559401]
+
+[2026-07-20T15:48:18.006000+00:00] sahaun (id=1528790664635220175)
+    I was under the assumption people with dev role can review.
+    [reply to gottz.de msg=1528758178555367434]
+
+[2026-07-20T15:49:36.165000+00:00] promptsiren (id=1528790992457568357)
+    dev role is just a discord role, there's nothing special attached to it beyond a shiny name pretty much
+    [reply to sahaun msg=1528790664635220175]
+
+[2026-07-20T16:09:25.915000+00:00] cyberyellowninja (id=1528795982630879262)
+    Thank you all.
+
+[2026-07-20T16:24:27.382000+00:00] gottz.de (id=1528799763657523201)
+    dev role is just like wearing golden armor. it doesn't come with responsibilities.
+    [reply to promptsiren msg=1528790992457568357]
+
+[2026-07-20T17:51:27.143000+00:00] sahaun (id=1528821656922099792)
+    Gentle ping. <@387972437901312000> 
+    You reviewed the PR yesterday. Small one about model sorting in resolving alias. I left a comment and requested a re-review.
+    https://github.com/NousResearch/hermes-agent/pull/67571
+
+[2026-07-20T18:07:06.186000+00:00] teknium (id=1528825595553775616)
+    the automated sweeper reviewed it. Gotta be patient from there <:V_pepoBlush:1206931681961967616>
+    [reply to sahaun msg=1528821656922099792]
+
+[2026-07-20T18:09:57.779000+00:00] sahaun (id=1528826315267117176)
+    I think it doesn't look into replies?
+    I'm happy with automated reviews, but how do I re-trigger it? It re-requesting good enough? Do I need to tag?
+
+[2026-07-20T18:36:12.988000+00:00] gottz.de (id=1528832922172522598)
+    I'll queue pr triage for it right away.
+    [reply to sahaun msg=1528826315267117176]
+
+[2026-07-20T18:50:33.966000+00:00] gottz.de (id=1528836533375996117)
+    done.
+    [reply to sahaun msg=1528821656922099792]
+
+[2026-07-20T18:52:19.207000+00:00] sahaun (id=1528836974788608061)
+    Thank you! I will check.
+
+[2026-07-20T18:54:51.934000+00:00] gottz.de (id=1528837615372075008)
+    I made it do a very deep triage, unbiased and brutally honest.
+
+[2026-07-20T18:55:01.875000+00:00] sahaun (id=1528837657067651152)
+    Hmm... the issue is, this has no good solution lol.
+
+[2026-07-20T18:55:10.947000+00:00] sahaun (id=1528837695118376970)
+    And I recognize this.
+
+[2026-07-20T18:56:18.568000+00:00] gottz.de (id=1528837978741411942)
+    session is still in memory. if you want it steered into any direction, let me know what it should share
+
+[2026-07-20T18:58:57.495000+00:00] gottz.de (id=1528838645329428701)
+    letting it do a improvement suggestion run rn
+
+[2026-07-20T18:59:03.646000+00:00] sahaun (id=1528838671128858646)
+    Thanks.
+
+[2026-07-20T18:59:12.687000+00:00] sahaun (id=1528838709049425950)
+    Do you know what the source of truth of available models is?
+
+[2026-07-20T18:59:36.236000+00:00] sahaun (id=1528838807820959855)
+    I feel like there should be a SSOT, is it models.dev?
+
+[2026-07-20T19:09:35.375000+00:00] sahaun (id=1528841320792064071)
+    I see the new comment. Thanks GottZ.
+
+[2026-07-20T19:25:01.535000+00:00] jez_wikitribune (id=1528845205388656731)
+    https://github.com/NousResearch/hermes-agent/pull/68182
+    Another Discord backtick related formatting change 💚
+
+[2026-07-20T19:25:33.240000+00:00] jez_wikitribune (id=1528845338369069086)
+    Keep being awesome, everyone ✨
+

@@ -78,3 +78,9 @@
     - mid-tool steering changed the final result to`LIVE_STEER_OK`;
     - cancellation completed cleanly with no surviving TUI process.
 
+[2026-07-20T19:15:26.694000+00:00] _big_owen_ (id=1528842794331017236)
+    I'm definitely going to give this a try and test it out due to the fact that whenever my agent tries delegating tasks to  kanban  Because this would be a lot more useful and stuff especially if you have a research agent that you can have your agent delegate that particular research task to that profile and stuff like that so you deserve a star in my opinion
+
+[2026-07-20T19:15:32.564000+00:00] _big_owen_ (id=1528842818951315566)
+    10/10
+
