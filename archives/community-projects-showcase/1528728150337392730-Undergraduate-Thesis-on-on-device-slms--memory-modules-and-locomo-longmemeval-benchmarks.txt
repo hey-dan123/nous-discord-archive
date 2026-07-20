@@ -1,0 +1,7 @@
+# Thread 'Undergraduate Thesis on on device slms, memory modules and locomo/longmemeval benchmarks' in forum #community-projects-showcase
+# thread_id=1528728150337392730 forum_id=1316137596535177246
+# Started 2026-07-20T14:00:57.735500+00:00
+
+[2026-07-20T11:39:53.436000+00:00] johnbouz (id=1528728150337392730)
+    Hello everyone, so i am doing my undergraduate thesis on on device slms, memory modules and long context benchmarks and i wanted to show that my results are not only theoretical but they can also been used with an agent harness like herms. I am using an S23 ultra for the benchmarks because i am testing ram, cpu , battery and thermal numbers and currently i have seen that out of the 3 memory modules that i have (full context, vector rag, graph rag) vr is the best one . the models that i am using are gemma4 e2b and e4b. So i was wondering if it will be feasible to showcase that a slm with hermes harness and this memory module could be useful for an effective and powerful on device agent. Thank you everyone in advance
+

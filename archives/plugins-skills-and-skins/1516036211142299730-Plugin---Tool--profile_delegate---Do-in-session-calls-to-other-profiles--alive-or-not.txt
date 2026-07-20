@@ -48,3 +48,33 @@
     📄 Clarified transport: prompts use @file:<prompt.txt>, results are parsed from captured stdout/stderr — not stdin.
     ✅ Verified with 45 passed, syntax checks, live smoke after gateway restart.
 
+[2026-07-20T12:01:35.969000+00:00] heeervas (id=1528733613556891749)
+    **🤝 Profile Delegate v1.7 — live steering, cancellation & safer orchestration**
+    
+    🎛️ Replaced detached `hermes chat -q` workers with isolated persistent TUI Gateway JSON-RPC stdio sessions.
+    
+    🧭 Added live control:
+    - `profile_delegate_steer` corrects an active delegated run mid-execution.
+    - `profile_delegate_cancel` uses native interrupt with bounded cleanup escalation.
+    - Live status now exposes safe phase, activity, transport health, session ID and control acknowledgements.
+    
+    🔐 Hardened execution boundaries with exact-origin authorization, private durable control inboxes, idempotent cancellation, bounded event handling and verified process cleanup.
+    
+    🧠 Added discoverable execution policy, YAML/env precedence, explicit reasoning inheritance/override semantics, capability presets and safer child approval handling.
+    
+    ♻️ Added same-session transient recovery, origin-scoped run inspection, durable background notifications and lifecycle-safe run artifacts.
+    
+    🛑 Prevented duplicate delegation:
+    - identical active requests reuse the existing run;
+    - deterministic preflight failures return one complete corrective response;
+    - intentional duplicates remain explicitly available.
+    
+    ⚙️ Added per-call model, provider, reasoning, max-turn, toolset and skill controls without mutating target-profile configuration.
+    
+    🧪 Expanded regression coverage from 45 to **113 passing tests**, plus Ruff, syntax and diff checks.
+    
+    ✅ Verified after gateway restart with real live smokes:
+    - persistent TUI execution completed successfully;
+    - mid-tool steering changed the final result to`LIVE_STEER_OK`;
+    - cancellation completed cleanly with no surviving TUI process.
+

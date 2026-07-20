@@ -1,0 +1,24 @@
+# Thread 'MattCha - a native Mattermost client for Hermes, with voice messages' in forum #community-projects-showcase
+# thread_id=1528714930579177627 forum_id=1316137596535177246
+# Started 2026-07-20T14:00:58.159516+00:00
+
+[2026-07-20T10:47:21.600000+00:00] johannes0910 (id=1528714930579177627)
+    MattCha is a free, **native Mattermost client** that connects directly to your existing server—there’s no MattCha account, tracking, analytics, or intermediary service. Your Mattermost chat history stays on infrastructure you control, and your credentials remain in Apple Keychain.
+    
+    I built MattCha because I wanted a convenient way to use Hermes from my iPhone, iPad, and Mac without moving my conversations into another hosted thirdparty chat service.
+    
+    It’s particularly tuned for AI conversations: threaded chats, readable Markdown and code, and a cleaner presentation when Hermes splits a long answer across multiple messages.
+    
+    The feature I find especially useful is **voice messages**. MattCha lets me record a message and send it to Hermes through Mattermost, where Hermes can transcribe it and respond normally. That workflow isn’t available in the standard Mattermost client.
+    
+    MattCha is free and available for iPhone, iPad, and Mac on the App store:
+    
+    https://mattcha.app
+    
+    I’d be glad to hear feedback from other Hermes users - especially anyone already running Hermes through a self-hosted Mattermost server.
+    [attachment] iPad_Workspace_2000x1500.webp https://cdn.discordapp.com/attachments/1528714930579177627/1528714930902270062/iPad_Workspace_2000x1500.webp?ex=6a5f4e39&is=6a5dfcb9&hm=775f3f39d3826f052f791a4e8d89a850c3b430ae1a622de5e1012ebae3a3f3e1&
+    [attachment] iPhone_Voice_Chat.webp https://cdn.discordapp.com/attachments/1528714930579177627/1528714931468505209/iPhone_Voice_Chat.webp?ex=6a5f4e39&is=6a5dfcb9&hm=792102830cea4825280c0db13add9fd130c81e7392c3072cb7092065ed17cb11&
+    [attachment] MattCha_iPhone_Thread.webp https://cdn.discordapp.com/attachments/1528714930579177627/1528714931917029396/MattCha_iPhone_Thread.webp?ex=6a5f4e39&is=6a5dfcb9&hm=cba829a7e819309dcea379071499e25e703bc053fd1610d4bb4fb60e6cf57f88&
+    [attachment] AppIcon-512.png https://cdn.discordapp.com/attachments/1528714930579177627/1528714932248510624/AppIcon-512.png?ex=6a5f4e39&is=6a5dfcb9&hm=94615b6ee0c933273c0984c5d3f641602fee4d1e304f6a344b5917913e4fe807&
+    [embed] MattCha — Native Mattermost chat https://mattcha.app/
+

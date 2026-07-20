@@ -1,0 +1,7 @@
+# Thread 'Hermes Meetup in Jakarta' in forum #community-projects-showcase
+# thread_id=1528745253719507005 forum_id=1316137596535177246
+# Started 2026-07-20T14:00:57.256968+00:00
+
+[2026-07-20T12:47:51.200000+00:00] prmartinow (id=1528745253719507005)
+    Dear Hermes/Nous Research Team, I'd love to organize a Hermes meetup in Jakarta. Are there any community resources available for meetup organizers?
+

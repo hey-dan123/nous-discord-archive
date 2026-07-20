@@ -1,0 +1,29 @@
+# Thread 'Hermes World' in forum #community-projects-showcase
+# thread_id=1528761544286928906 forum_id=1316137596535177246
+# Started 2026-07-20T14:00:56.685710+00:00
+
+[2026-07-20T13:52:35.174000+00:00] mgf.654 (id=1528761544286928906)
+    Hello. I can show you my project - Hermes World. 
+    
+    Hermes World is not a game, a cinematic demo, or a collection of mockups.
+    
+    Everything you see is real. Every panel, every event, every timeline, every interaction, and every visualization is backed by a working system running in real time. There are no fake animations, prerecorded sequences, or placeholder features designed only for presentation.
+    
+    Hermes World was built to make complex AI systems visible and understandable. It observes, records, and visualizes what autonomous agents are actually doing as they make decisions, communicate, execute tasks, and evolve over time.
+    
+    Every feature shown in the videos is implemented. Every interaction works. Every event comes from the system itself.
+    
+    What you’re looking at isn’t a concept of the future - it’s a working platform. 
+    
+    This is project for Hackaton Bulid Week from OpenAI. 
+    
+    https://devpost.com/software/hermes-world
+    
+    I’d be very grateful for any likes. If anyone else is participating, I’d be happy to return the favor. And, of course, thanks in advance for any feedback.
+    [attachment] ScreenRecording_07-18-2026_22-14-31_1.mov https://cdn.discordapp.com/attachments/1528761544286928906/1528761544933113866/ScreenRecording_07-18-2026_22-14-31_1.mov?ex=6a5f79a3&is=6a5e2823&hm=ed7078f4197a95e97b2ab4a34d4c66cf98e007790e8b289ea9c833083ba7ea12&
+    [embed] Hermes World https://devpost.com/software/hermes-world
+
+[2026-07-20T13:58:27.109000+00:00] mgf.654 (id=1528763020409573548)
+    Idle/work on buliding all character
+    [attachment] ScreenRecording_07-15-2026_14-10-50_1.mov https://cdn.discordapp.com/attachments/1528761544286928906/1528763019910316164/ScreenRecording_07-15-2026_14-10-50_1.mov?ex=6a5f7b02&is=6a5e2982&hm=15abb76de47d8066b7a42bd07e3c7ddcf71ee80568ae6039938e8f95cb592a38&
+

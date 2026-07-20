@@ -48790,3 +48790,114 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     **Problem**: Fix: pressing voice hotkey (Ctrl+B) during STT or agent turn now disarms continuous recording mode, preventing the loop from auto-restarting
 
+[2026-07-20T08:59:40.075000+00:00] markmnl (id=1528687828979159070)
+    FYI Raised  https://github.com/NousResearch/hermes-agent/issues/67941
+    following the spirit of contributing guidelines specifically around: **widen the generic plugin surface** 
+    Idea is add a hook for parsing so Hermes core does not assume it understands every plugin’s chat_id format..
+
+[2026-07-20T09:12:25.621000+00:00] techdox (id=1528691039911673998)
+    Do we get a dev role if one of our PRs get merged? >.>
+
+[2026-07-20T09:23:28.668000+00:00] egilewski (id=1528693820932489226)
+    If the developer role will be handed out again today, <@305793092131356694> deserved one for a while (newest merged PR: https://github.com/NousResearch/hermes-agent/pull/67805).
+    
+    I told him a while ago that it will be given eventually, and now I feel bad when he's not bugging anyone and waits longer than average.
+
+[2026-07-20T09:43:59.595000+00:00] gottz.de (id=1528698983814533170)
+    thank you <@387972437901312000> for merging this! you are awesome!
+    [reply to gottz.de msg=1528516153570234501]
+
+[2026-07-20T10:04:31.295000+00:00] teknium (id=1528704149938634844)
+    yes
+    [reply to techdox msg=1528691039911673998]
+
+[2026-07-20T10:04:47.739000+00:00] teknium (id=1528704218909904897)
+    do you mean it ends a voice chat
+    [reply to kyssta69 msg=1528681533127528548]
+
+[2026-07-20T10:05:16.918000+00:00] teknium (id=1528704341295497278)
+    consolidating all into this: https://github.com/NousResearch/hermes-agent/issues/64182
+    [embed] Tracking: Plugin Interface Expansion — community ideas, July 2026... https://github.com/NousResearch/hermes-agent/issues/64182
+    [reply to markmnl msg=1528687828979159070]
+
+[2026-07-20T10:05:42.861000+00:00] techdox (id=1528704450108063744)
+    Let me know if you need anymore from me regarding - https://github.com/NousResearch/hermes-agent/pull/65560
+    
+    🙂
+    [reply to teknium msg=1528704149938634844]
+
+[2026-07-20T10:06:26.300000+00:00] isodl (id=1528704632304435290)
+    I have 6 merged PR's from the early days. 1 skill waiting in the pipeline to get merged after the review. One of my 3 hermes repos has 28 stars which I'm so proud of. Participated in the hackhatlons, maybe it not that much idk. Still trying to contribute, the dev role I don't have either tho 🙁 Is there anything else I need to do for dev perm <@387972437901312000> ?
+
+[2026-07-20T10:22:19.303000+00:00] turgut.k (id=1528708629488992420)
+    <@387972437901312000> what do you think about consolidating the auth.json files (and maybe even custom providers) so that all profiles can share the same credentials? Right now, I have three profiles, and keeping the credentials updated and adding new custom providers across all of them is getting annoying. Was there a specific reason they were split up and isolated in the first place?
+
+[2026-07-20T10:24:05.865000+00:00] teknium (id=1528709076442288289)
+    pretty sure oauth just works like that
+    [reply to turgut.k msg=1528708629488992420]
+
+[2026-07-20T10:24:14.926000+00:00] teknium (id=1528709114446745641)
+    .env files contain a unified variables list of all API keys
+
+[2026-07-20T10:24:19.587000+00:00] teknium (id=1528709133996527696)
+    but oauth is stupid and lame
+
+[2026-07-20T10:24:24.732000+00:00] mariaosake (id=1528709155576352948)
+    https://github.com/NousResearch/hermes-agent/pull/67966   My first PR
+
+[2026-07-20T10:24:48.663000+00:00] teknium (id=1528709255950110820)
+    wait you mean cross profile credentials?
+
+[2026-07-20T10:25:01.598000+00:00] teknium (id=1528709310203560020)
+    We explicitly dont want that because many people use them to use different accounts on different profiles
+
+[2026-07-20T10:25:15.721000+00:00] teknium (id=1528709369439453329)
+    a profile should be considered a loose barriered fully isolated hermes agent
+
+[2026-07-20T10:25:23.602000+00:00] turgut.k (id=1528709402495029288)
+    for providers yes, for example i'm adding new api key for opencode but I need to do it for every agent
+
+[2026-07-20T10:25:30.529000+00:00] teknium (id=1528709431548973250)
+    not isolated enough for multi-tenancy but functionally isolated in all configurations
+
+[2026-07-20T10:27:13.831000+00:00] turgut.k (id=1528709864828702870)
+    okay i'll just symlink auth.json then 😄
+    [reply to teknium msg=1528709310203560020]
+
+[2026-07-20T10:35:31.121000+00:00] notgeorgesoros (id=1528711950614396988)
+    IDK What I did but it runs all the time in the background and I have built it into some kind of thing I no longer understand.
+
+[2026-07-20T11:49:44.804000+00:00] warofchange (id=1528730630714822748)
+    thank you
+    [reply to egilewski msg=1528693820932489226]
+
+[2026-07-20T11:52:20.672000+00:00] warofchange (id=1528731284472467487)
+    I got the role, thanks everyone
+
+[2026-07-20T12:29:18.438000+00:00] teknium (id=1528740586457137322)
+    Very nice
+    [reply to notgeorgesoros msg=1528711950614396988]
+
+[2026-07-20T12:38:15.977000+00:00] frowtek (id=1528742841059119234)
+    dropping 5 P2 labeled PRs here 🤘  mostly credential handling stuff small and scoped, each one's a single commit
+    
+    https://github.com/NousResearch/hermes-agent/pull/67806
+    https://github.com/NousResearch/hermes-agent/pull/67802
+    https://github.com/NousResearch/hermes-agent/pull/67797
+    https://github.com/NousResearch/hermes-agent/pull/67640
+    https://github.com/NousResearch/hermes-agent/pull/67635
+
+[2026-07-20T13:09:07.671000+00:00] nv.cho (id=1528750607626932264)
+    hey! dropping my first PR!  🙂
+    https://github.com/NousResearch/hermes-agent/pull/67125
+
+[2026-07-20T13:24:00.042000+00:00] antiraedus (id=1528754350502183093)
+    Fuck it might as well, yo <@387972437901312000>   if you guys are still looking for full stack devs, hmu I am EXTREMELY motivated to lock in https://raeduslabs.com/ (example of frontend is https://raeduslabs.com/mend, have made multiple full stack projects before and learn new things RAPIDLY, know my way around service providers like AWS etc (GitHub https://github.com/antimatter543), and currently work FT as a software engineer and built tons of this during the free time I had
+    
+    Okay, self disclosure done good night all :)
+
+[2026-07-20T13:39:12.721000+00:00] gottz.de (id=1528758178555367434)
+    gosh how does teknium keep up with this. hundreds of new pr's each day, massive demand for attention, big slop, ...
+    yet, teknium is here.
+    ## yo people.. throw in some tokens for quality and overlap PR triaging.
+

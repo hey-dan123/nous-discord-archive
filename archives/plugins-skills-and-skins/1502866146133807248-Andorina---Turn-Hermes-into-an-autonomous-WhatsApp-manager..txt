@@ -619,3 +619,22 @@
     Welcome back! Good to read!
     [reply to vayaperson msg=1527055213943591162]
 
+[2026-07-20T11:24:35.973000+00:00] vayaperson (id=1528724302218657833)
+    Since the last post, we've found more gaps to move the project forward. Right now, LID resolution is working properly in the development environment.
+    
+    The installer has been unified. Now, when you start the installation, it will detect if it's a headless system and also ask if you'll be working in a Docker container.
+    
+    We've added an instruction that lets you bring up the panel from headless systems and expose it to a temporary or custom URL, so you can manage the headless system's panel from any other device that has a graphical environment.
+    
+    A patch has been applied to fix note-taking for contacts and groups.
+    
+    We've also refactored and split up several files to make the code easier to understand and to simplify future improvements or fixes.
+    
+    Just keep in mind that we're not releasing the update yet. We need to test everything thoroughly. We've done a lot of coding, but we haven't actually tested it all, and we don't want to break anyone's installation.
+    
+    There's still a lot of work ahead, but things are moving along nicely. We're making a big effort to make sure everything works correctly, even though we don't really have any programming knowledge ourselves.
+    
+    Remember, constructive criticism is always welcome, and so is any kind of help with the project.
+    
+    Many thanks to everyone🫶🏻
+

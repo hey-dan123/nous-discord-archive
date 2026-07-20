@@ -6054,3 +6054,6 @@
     
     ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
 
+[2026-07-20T12:23:14.471000+00:00] cryptobredda (id=1528739059869155428)
+    I have a bug on the android app where to keeps redirecting me to the browser each time I login in the app.. whats the resolution to that?
+

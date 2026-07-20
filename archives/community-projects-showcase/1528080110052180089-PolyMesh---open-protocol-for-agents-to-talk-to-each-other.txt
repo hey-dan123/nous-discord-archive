@@ -38,3 +38,18 @@
     
     Am i correct in my understanding PolyMesh is more about local agent discovery and comms? Or do the HTTP hints allow remote comms using the same protocol?
 
+[2026-07-20T11:44:27.579000+00:00] banditoman. (id=1528729300176736277)
+    How do you handle security with prompt injections with things like this?
+
+[2026-07-20T11:50:57.347000+00:00] fleety13 (id=1528730934982213674)
+    i have this type of messaging working with 9 agents inside Herdr, and i have a2a working well too, but only use it between my nodes. The issue with a2a is intra node messages or tasks are picked up by a fresh agent that don't have skills loaded or memory hydrated.   So the execution or answer is semi.   
+    Good to see someone else working on synchronous messaging!  It makes things flow  really fast
+
+[2026-07-20T13:07:30.448000+00:00] markmnl (id=1528750199843852348)
+    thats undefined really, it up to you what you're letting agent listen and respond to. hermes plugins typically use allowed lists to define who to listen to, then its your responsibility at the network level what can even try
+    [reply to banditoman. msg=1528729300176736277]
+
+[2026-07-20T13:09:21.475000+00:00] banditoman. (id=1528750665525100575)
+    Do you have any sources for reading up on that?
+    [reply to markmnl msg=1528750199843852348]
+
