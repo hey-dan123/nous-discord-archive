@@ -33,3 +33,8 @@
     Just ask your agent to connect with their agents!
     [reply to grokklyrob7502 msg=1528577697654247454]
 
+[2026-07-20T08:22:38.705000+00:00] markmnl (id=1528678511877820506)
+    Hey this is super interesting, iv been working on an open agent-to-agent protocol as well: https://discordapp.com/channels/1053877538025386074/1528445678630469715 (fmsg is more like email but more efficient with structured threads)
+    
+    Am i correct in my understanding PolyMesh is more about local agent discovery and comms? Or do the HTTP hints allow remote comms using the same protocol?
+

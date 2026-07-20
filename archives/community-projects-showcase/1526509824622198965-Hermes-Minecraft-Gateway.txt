@@ -12,3 +12,12 @@
 [2026-07-14T08:45:36.480000+00:00] kyssta69 (id=1526509963491545189)
     taking ideas and cool things to add lmk
 
+[2026-07-20T03:24:27.977000+00:00] _big_owen_ (id=1528603472725934230)
+    Honestly I think this is a cool idea Especially in the future if you want to integrate your Hermes agent into Minecraft just for yourself and have it let you know whenever a plug in is done or have it control things I don't know this is a cool thing though and I might definitely work on my own little fork and let you know how it goes but also I will be doing modded minecraft neo forge
+
+[2026-07-20T03:24:56.937000+00:00] _big_owen_ (id=1528603594192982127)
+    But let me know if you want to work on the idea together I can always appreciate an extra opinion
+
+[2026-07-20T03:25:50.078000+00:00] kyssta69 (id=1528603817082622013)
+    sure you can sumbit PRs or make your own version idm i just made this for fun not a serious project, feel free to fork and make your own version
+

@@ -1,0 +1,23 @@
+# Thread 'Hermes Zotero Suite — Paper Import & Citation Verification for Hermes Agent' in forum #plugins-skills-and-skins
+# thread_id=1528646834325688410 forum_id=1485392832154832906
+# Started 2026-07-20T08:59:19.136484+00:00
+
+[2026-07-20T06:16:46.188000+00:00] nuffun (id=1528646834325688410)
+    # Hermes Zotero Suite — Paper Import & Citation Verification for Hermes Agent
+    
+    Four scripts, one Zotero backend. Covers the full pipeline from paper discovery to pre-submission citation audit.
+    
+    **📥 Three Import Paths**
+    - `arxiv_to_zotero.py` — batch import by arXiv ID, auto-fetches metadata + PDF
+    - `doi_to_zotero.py` — DOI import, works with Nature / PNAS / Elsevier / APA / ACM / IEEE
+    - `web_to_zotero.py` — blog posts, open-source repos, documentation sites as Zotero items
+    
+    **🔍 Citation Verification**
+    - `verify_citations.py` — scans a .tex bibliography, resolves every DOI/arXiv ID through Zotero, flags year mismatches and broken references
+    
+    **Wired into refceris** — the verification script plugs into refceris' 5-step citation audit as a fourth data source alongside arXiv API / CrossRef / Semantic Scholar, with dual-source cross-validation.
+    
+    GitHub: https://github.com/nuffin/hermes-zotero-suite
+    Requires: Zotero running + local-write-api plugin v3.3.1+
+    [embed] GitHub - nuffin/hermes-zotero-suite: Search arXiv → one-click imp... https://github.com/nuffin/hermes-zotero-suite
+

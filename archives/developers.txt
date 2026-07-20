@@ -48761,3 +48761,32 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     https://github.com/NousResearch/hermes-agent/pull/67805
 
+[2026-07-20T03:36:47.250000+00:00] kyssta69 (id=1528606573461639178)
+    https://github.com/NousResearch/hermes-agent/pull/67840
+    
+    **Problem**: Add claude-sonnet-5 to the curated Anthropic model list so the desktop app model picker shows it for Anthropic-direct API keys
+
+[2026-07-20T07:01:55.552000+00:00] turgut.k (id=1528658198221951057)
+    thanks for the fix sir, I see you're going to merge soon. btw can I get a developer perm? <:pepeshy:1151299913322332191>
+    [reply to teknium msg=1528362398849695814]
+
+[2026-07-20T07:52:53.847000+00:00] teknium (id=1528671025641033880)
+    which PR was yours?
+    [reply to turgut.k msg=1528658198221951057]
+
+[2026-07-20T07:54:25.733000+00:00] turgut.k (id=1528671411038847016)
+    https://github.com/NousResearch/hermes-agent/pull/67449
+
+[2026-07-20T07:54:54.252000+00:00] teknium (id=1528671530655944784)
+    welcome to the club <:tekcheer:1453863338537779242>
+    [reply to turgut.k msg=1528671411038847016]
+
+[2026-07-20T08:33:36.326000+00:00] 0xhellno (id=1528681270140207126)
+    https://github.com/NousResearch/hermes-agent/pull/49019
+    small ping on this PR for a bug fix
+
+[2026-07-20T08:34:39.027000+00:00] kyssta69 (id=1528681533127528548)
+    https://github.com/NousResearch/hermes-agent/pull/67550
+    
+    **Problem**: Fix: pressing voice hotkey (Ctrl+B) during STT or agent turn now disarms continuous recording mode, preventing the loop from auto-restarting
+

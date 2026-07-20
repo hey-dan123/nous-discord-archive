@@ -48,3 +48,9 @@
     Very cool!
     [reply to jcrabapple msg=1523712936873562132]
 
+[2026-07-20T05:05:08.422000+00:00] alexkucera (id=1528628808188428408)
+    The weekly update just ran. The registry is now sitting at 756 entries. Up from 496 when I started it.
+    
+    https://babylondreams.de/hermes-registry/
+    [embed] Hermes Community Registry https://babylondreams.de/hermes-registry/
+

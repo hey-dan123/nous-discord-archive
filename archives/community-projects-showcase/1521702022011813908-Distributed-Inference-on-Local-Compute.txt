@@ -33,3 +33,6 @@
 [2026-07-05T14:49:15.567000+00:00] bigsmollbrain (id=1523339988585152533)
     Let us know which models you'd like hosted, no matter how niche, and we'll try to get it.
 
+[2026-07-20T03:39:19.924000+00:00] _big_owen_ (id=1528607213822677053)
+    I think the idea is really cool as I've been thinking about this exact same thing Everybody gets to have a certain percentage of their GPU like be part of the network to help people use it
+

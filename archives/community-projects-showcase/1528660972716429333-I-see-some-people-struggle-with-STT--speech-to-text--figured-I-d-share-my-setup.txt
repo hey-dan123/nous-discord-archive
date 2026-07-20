@@ -1,0 +1,10 @@
+# Thread 'I see some people struggle with STT (speech to text) figured I'd share my setup' in forum #community-projects-showcase
+# thread_id=1528660972716429333 forum_id=1316137596535177246
+# Started 2026-07-20T08:53:46.413206+00:00
+
+[2026-07-20T07:12:57.043000+00:00] drahcir_rahl (id=1528660972716429333)
+    So because I have multiple devices on my network at home where I also work. I wanted to have a relatively fast speech to text box that can handle input from multiple devices without having to worry about complex setups on every device. This is the resulting setup that Hermes came up for me and actually did itself with guidance as to what was working, what wasn't. and what needed fixing. Despite being a networked instance, it's pretty snappy and I can't complain at all about it. I could probably write about it. 40 word sentence and it'd be done transcribing it about two seconds. after I let my finger up. 
+    https://github.com/rahlquist/whisper-stt-stack
+    If you have any questions, feel free to ask.
+    [embed] GitHub - rahlquist/whisper-stt-stack: Self-hosted Whisper STT stack... https://github.com/rahlquist/whisper-stt-stack
+
