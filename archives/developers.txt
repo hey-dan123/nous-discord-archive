@@ -48668,3 +48668,96 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     
     Simple one line fix
 
+[2026-07-19T19:10:17.962000+00:00] egilewski (id=1528479111549419591)
+    Aren't you overdoing it for a P2?
+    [reply to _hwrd_ msg=1528472071083004034]
+
+[2026-07-19T19:13:39.601000+00:00] turgut.k (id=1528479957284683916)
+    its probably p0 for him tho xd
+
+[2026-07-19T19:13:49.897000+00:00] bexli (id=1528480000469110844)
+    My daughter is in the hospital, I've been poking around with this to distract myself. It's good for another review I believe 
+    
+    https://github.com/NousResearch/hermes-agent/pull/64696
+
+[2026-07-19T19:14:20.622000+00:00] bexli (id=1528480129339363348)
+    Very tired, may not be the best representation of my feature implementation lol
+
+[2026-07-19T19:22:11.695000+00:00] _hwrd_ (id=1528482105162731752)
+    haha maybe a little
+    [reply to egilewski msg=1528479111549419591]
+
+[2026-07-19T19:22:25.713000+00:00] _hwrd_ (id=1528482163958349865)
+    but it’s also super easy to review!
+
+[2026-07-19T19:22:43.260000+00:00] watchdominion (id=1528482237555937571)
+    wish you all the best
+    [reply to bexli msg=1528480000469110844]
+
+[2026-07-19T19:31:19.721000+00:00] watchdominion (id=1528484403750244452)
+    Open — 8 bug-fix PRs, all CI-green on current main:
+    
+    - #60797 — huggingface-hub pin → range; stops hermes update breaking Hindsight. Independent triage this week recommended merging it as the root-cause fix
+    https://github.com/NousResearch/hermes-agent/pull/60797 · fixes https://github.com/NousResearch/hermes-agent/issues/60783 (6c — one report measured a silent crash loop that fired 41,550× over three weeks)
+    - #61611 — Hindsight surfaces the real exception chain on local-runtime failures (both upstream swallow sites, via __context__)
+    https://github.com/NousResearch/hermes-agent/pull/61611
+    - #61613 — dispatch logs kwarg keys + middleware trace on unexpected-kwarg TypeErrors; turns the 13-comment #60821 hunt into a one-log diagnosis
+    https://github.com/NousResearch/hermes-agent/pull/61613
+    - #61615 — Windows planned stops report PLANNED_STOP, not signal=UNKNOWN
+    https://github.com/NousResearch/hermes-agent/pull/61615 · fixes https://github.com/NousResearch/hermes-agent/issues/61596
+    - #60085 — kanban notify subscriptions reach TUI/desktop sessions (a community member rebased it to current main as #66435, my authorship preserved)
+    https://github.com/NousResearch/hermes-agent/pull/60085 · fixes https://github.com/NousResearch/hermes-agent/issues/59890 (3c, production confirmation this week)
+    - #64525 — disabled browser toolset no longer strips web_search
+    https://github.com/NousResearch/hermes-agent/pull/64525 · fixes https://github.com/NousResearch/hermes-agent/issues/64503
+    - #65452 — string-typed disabled_toolsets was iterated character-by-character, silently disabling nothing
+    https://github.com/NousResearch/hermes-agent/pull/65452 · fixes https://github.com/NousResearch/hermes-agent/issues/61264, addresses https://github.com/NousResearch/hermes-agent/issues/61265 (6c)
+    - #67023 — surface image-routing downgrades instead of silently sending a text description
+    https://github.com/NousResearch/hermes-agent/pull/67023 · addresses https://github.com/NousResearch/hermes-agent/issues/66829 (7c)
+
+[2026-07-19T19:31:27.071000+00:00] watchdominion (id=1528484434578378942)
+    reviewed!
+    [reply to bexli msg=1528480000469110844]
+
+[2026-07-19T21:29:57.349000+00:00] gottz.de (id=1528514257245831209)
+    I guess this answers <@1387527976224297133> question too.
+    I did a very deep $50 review of your pr. enjoy!
+    https://github.com/NousResearch/hermes-agent/pull/39946#issuecomment-5017442632
+    [reply to _hwrd_ msg=1528472071083004034]
+
+[2026-07-19T21:37:29.468000+00:00] gottz.de (id=1528516153570234501)
+    would be fun if my P3 was reviewed and merged too but one can only dream, right?
+    https://github.com/NousResearch/hermes-agent/pull/64342
+
+[2026-07-19T21:40:39.554000+00:00] _hwrd_ (id=1528516950848966877)
+    beautiful
+    [reply to gottz.de msg=1528514257245831209]
+
+[2026-07-19T22:16:36.819000+00:00] kerozelvin (id=1528525999074185246)
+    Loving the desktop development!  I think it would be helpful to have a worktree specific Start Work (new thread) that works like changing directory and opening a Hermes CLI in a specific worktree.  (I've had some weirdness with accidentally launching a new thread or /goal in the wrong worktree with the navigation in current Desktop, surely user error but might be nice UI to have a more discreet way to launch work in a specific worktree.)  Here is a brainstorm PR draft, any hermes desktop devs have thoughts?
+    https://github.com/NousResearch/hermes-agent/pull/67650
+
+[2026-07-19T23:20:01.283000+00:00] warofchange (id=1528541956152627210)
+    Since I haven't received the role yet, I guess I haven't been selected yet.
+    [reply to tdamre msg=1528424756141883483]
+
+[2026-07-19T23:42:43.081000+00:00] gottz.de (id=1528547667947290825)
+    cut them some slack tho.
+    there is a ton of work to do
+    [reply to warofchange msg=1528541956152627210]
+
+[2026-07-20T00:11:29.908000+00:00] warofchange (id=1528554910784819412)
+    Yeah, I know that.
+    [reply to gottz.de msg=1528547667947290825]
+
+[2026-07-20T02:23:31.075000+00:00] warofchange (id=1528588134567116951)
+    PR #67805 — docs(links): update moved Cloudflare Tunnel docs URL
+    
+    The WhatsApp Cloud guide pointed readers at Cloudflare's named-tunnel docs using a path Cloudflare has since reorganized:
+    
+    $ curl -sI https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
+    HTTP/1.1 301 Moved Permanently
+    Location: /cloudflare-one/networks/connectors/cloudflare-tunnel/
+    Cloudflare restructured the Cloudflare One docs, moving connections/connect-networks to networks/connectors/cloudflare-tunnel; the new location is a direct 200 OK. This points the link at the canonical URL Cloudflare itself redirects to, and the destination is the Cloudflare Tunnel / named-tunnel workflow the paragraph is actually sending readers to — so the reference stays semantically correct. The URL appears in exactly one file and nowhere else in the repo, so the fix is complete. Docs-only, no behavior change.
+    
+    https://github.com/NousResearch/hermes-agent/pull/67805
+
