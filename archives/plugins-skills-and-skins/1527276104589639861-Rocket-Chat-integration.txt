@@ -19,3 +19,16 @@
     https://github.com/HalfbitStudio/hermes-plugin-rocketchat
     [embed] GitHub - HalfbitStudio/hermes-plugin-rocketchat: Rocket.Chat platfo... https://github.com/HalfbitStudio/hermes-plugin-rocketchat
 
+[2026-07-20T20:06:44.843000+00:00] mer7320 (id=1528855705023676547)
+    New relase is comming out, big thanks to @YounesAmalou to contribute
+    **What's new**
+        Added rocketchat_send_file, an agent-callable tool for uploading local files to Rocket.Chat.
+        Targets channels/private groups by name, exact room_id, or DMs by real Rocket.Chat username.
+        Supports captions, custom displayed filenames, MIME detection, and thread placement through tmid.
+        Opens or reuses DM rooms and rejects invalid one-member "ghost" DMs before upload.
+    **Safety and correctness**
+        Exactly one target is required, preventing uploads to a different room than the tool reports.
+        Non-regular files are rejected and local reads run outside the gateway event loop.
+        Agent-triggered uploads have a configurable 100 MiB local guard (ROCKETCHAT_AGENT_FILE_MAX_BYTES; 0 disables it).
+        Plugin metadata now advertises all five Rocket.Chat tools.
+

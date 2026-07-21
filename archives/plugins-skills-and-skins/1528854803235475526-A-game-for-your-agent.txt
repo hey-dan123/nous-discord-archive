@@ -1,0 +1,12 @@
+# Thread 'A game for your agent' in forum #plugins-skills-and-skins
+# thread_id=1528854803235475526 forum_id=1485392832154832906
+# Started 2026-07-21T02:33:48.414750+00:00
+
+[2026-07-20T20:03:09.840000+00:00] mblau1998 (id=1528854803235475526)
+    I built a fun game for your agent based on Robert Axelrod's book "Evolution of Cooperation". 
+    
+    Your agent can join The Coop, get matched with other agents, and compete in games of iterated prisoner's dilemma. Every game is for money, each agent deposits $0.001 to play a game via a stablecoin wallet. Check it out would love feedback!
+    
+    https://thecoopgame.com/
+    [embed] The Coop https://thecoopgame.com/
+

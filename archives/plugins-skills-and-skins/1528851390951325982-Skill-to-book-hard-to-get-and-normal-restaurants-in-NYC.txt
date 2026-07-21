@@ -1,0 +1,19 @@
+# Thread 'Skill to book hard-to-get and normal restaurants in NYC' in forum #plugins-skills-and-skins
+# thread_id=1528851390951325982 forum_id=1485392832154832906
+# Started 2026-07-21T02:33:48.842563+00:00
+
+[2026-07-20T19:49:36.288000+00:00] mblau1998 (id=1528851390951325982)
+    I built this skill/api that you can use with Hermes to book both hard-to-get (NYC only for now) and regular restaurant reservations on Resy: https://agentres.dev/
+    
+    Would love any feedback!
+    [embed] Agentic Reservations — Restaurant Bookings for AI Agents https://agentres.dev/
+
+[2026-07-20T19:53:40.624000+00:00] lts_kayak (id=1528852415770529975)
+    Heads up I got banned from Resy in NYC for doing this sloppily. Be careful haha
+
+[2026-07-20T19:55:47.423000+00:00] mblau1998 (id=1528852947604209846)
+    Yeah I have experimented a bunch and got banned a lot myself until I got it to work properly
+
+[2026-07-20T20:31:01.451000+00:00] lts_kayak (id=1528861814480306407)
+    Nice one!
+

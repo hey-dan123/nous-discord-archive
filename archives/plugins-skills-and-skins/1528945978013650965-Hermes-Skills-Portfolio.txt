@@ -1,0 +1,32 @@
+# Thread 'Hermes Skills Portfolio' in forum #plugins-skills-and-skins
+# thread_id=1528945978013650965 forum_id=1485392832154832906
+# Started 2026-07-21T02:33:48.001215+00:00
+
+[2026-07-21T02:05:27.601000+00:00] _big_owen_ (id=1528945978013650965)
+    Hey — I built a public portfolio of 51 empowering skills for the Hermes agent, and you can fork it and make your own.
+    
+        What it is: A curated collection of agent skills — each one teaches your Hermes agent how to do a specific task. Install one skill, your agent can now do that thing. Deploy on Tailscale, write a non-AI-slop README, set up a Discord bot, generate invoices, run local LLMs, and 46 more.
+    
+        Browse them all here: https://therocksss.github.io/hermes-skills-portfolio/
+    
+        Source repo: https://github.com/THEROCKSSS/hermes-skills-portfolio
+    
+        What's inside:
+        - 51 skills across 6 categories (DevOps, Backend, Frontend, Integrations, Utility, Meta)
+        - Ranked by usefulness — Core / Featured / Utility tiers
+        - Each skill has a detail page with what it does, how an agent uses it, how a human uses it, and the full SKILL.md + README
+        - Sortable, filterable, searchable site — click any skill card to see the details
+        - MIT licensed, open to contributions
+    
+        How to install a skill:
+    
+        hermes skills install https://github.com/THEROCKSSS/hermes-skills-portfolio/blob/main/skills/<skill-name>/SKILL.md
+    
+    
+        How to make your own portfolio:
+        The repo includes a skill called hermes-portfolio-template that walks you through setting up your own skills portfolio repo — same structure, same site, same CI. Fork the repo, swap in your skills, update the index, and you've got your own browseable portfolio with GitHub Pages.
+    
+        There's also CONTRIBUTING.md in the repo if you want to add a skill to this one instead of starting your own. Issue templates are set up for skill requests, bug reports, and site improvements.
+    
+        CI runs on every push — validates frontmatter, checks index sync, and makes sure the site files are in sync. So you can't accidentally break the portfolio by forgetting a field.
+

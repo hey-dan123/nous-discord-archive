@@ -7,3 +7,9 @@
     [attachment] 9.png https://cdn.discordapp.com/attachments/1528408256735613068/1528408256912035840/9.png?ex=6a5e309c&is=6a5cdf1c&hm=205b70954aeb1854e9fd7c57b11248a8319bf367ea2b473b3e45aa51f860835d&
     [embed] GitHub - Coding-Dev-Tools/engraphis: Self-hosted AI memory engine -... https://github.com/Coding-Dev-Tools/engraphis
 
+[2026-07-20T20:48:37.756000+00:00] jaixii (id=1528866244944465940)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1528408256735613068/1528866244663705670/image.png?ex=6a5fdb25&is=6a5e89a5&hm=d9c70ccda93b3a95aca0ea4d95f93e7b8fc4a16617a35fd170037e63d8db0d08&
+
+[2026-07-20T20:50:25.537000+00:00] jaixii (id=1528866697010745414)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1528408256735613068/1528866696604024934/image.png?ex=6a5fdb91&is=6a5e8a11&hm=6f6fa5925844f32ee38f1df37ebb30d474f4579bf268e1b7cd561deb5e8b7c7d&
+

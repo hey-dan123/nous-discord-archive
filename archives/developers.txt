@@ -49017,3 +49017,186 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-20T19:25:33.240000+00:00] jez_wikitribune (id=1528845338369069086)
     Keep being awesome, everyone ✨
 
+[2026-07-20T19:41:19.552000+00:00] sahaun (id=1528849307489533974)
+    Updated the PR! <@190818731734204416>
+    [reply to sahaun msg=1528841320792064071]
+
+[2026-07-20T19:48:20.159000+00:00] gottz.de (id=1528851071643029526)
+    wonderful! will run it again
+    [reply to sahaun msg=1528849307489533974]
+
+[2026-07-20T19:51:44.758000+00:00] gottz.de (id=1528851929793429604)
+    > All items from the two triage comments above are addressed. LGTM.
+    [reply to sahaun msg=1528849307489533974]
+
+[2026-07-20T19:53:27.450000+00:00] sahaun (id=1528852360514768936)
+    <:pacha5:622602070897328158>
+
+[2026-07-20T19:58:34.808000+00:00] colorado.rob1459 (id=1528853649667788890)
+    Does hermes have a plugin registry or distribution systems? I have a couple plugins that may be generally useful. What's the recommended way to distribute them? pypi?
+
+[2026-07-20T20:00:44.503000+00:00] gottz.de (id=1528854193647910954)
+    registries are prone to abuse / ransomware unless carefully moderated.
+    would be fun but someone would have to take care of it full-time.
+    [reply to colorado.rob1459 msg=1528853649667788890]
+
+[2026-07-20T20:00:49.170000+00:00] wpnx330 (id=1528854213222989825)
+    Really wish they'd merge my PR. Then I can get all these updates that keep coming out without a bunch of hassle
+
+[2026-07-20T20:01:18.437000+00:00] gottz.de (id=1528854335977427187)
+    it's amazing how many pr's are opened each day.
+    [reply to wpnx330 msg=1528854213222989825]
+
+[2026-07-20T20:01:34.966000+00:00] wpnx330 (id=1528854405305077941)
+    But so few fix compression 🙁
+
+[2026-07-20T20:01:52.706000+00:00] gottz.de (id=1528854479712161923)
+    gimme your pr
+    [reply to wpnx330 msg=1528854405305077941]
+
+[2026-07-20T20:01:56.825000+00:00] gottz.de (id=1528854496988626965)
+    wanna take a peek
+
+[2026-07-20T20:02:15.251000+00:00] gottz.de (id=1528854574272876655)
+    -# (my merged one was improving compression)
+
+[2026-07-20T20:02:58.776000+00:00] brokeskill (id=1528854756829691994)
+    im stuck on this tab for the past 10 minutes, is that normal
+    [attachment] 7d9qszd.png https://cdn.discordapp.com/attachments/1491258766648283238/1528854756548804842/7d9qszd.png?ex=6a5fd072&is=6a5e7ef2&hm=9167846f2984bf658e09ccc2eb808b412ca9bc626f61b90f7976c5956a7fdc2a&
+
+[2026-07-20T20:03:34.638000+00:00] gottz.de (id=1528854907245826059)
+    might be caused by anti virus software. just let it run for half an hour
+    [reply to brokeskill msg=1528854756829691994]
+
+[2026-07-20T20:04:03.697000+00:00] gottz.de (id=1528855029128368161)
+    -# wild guess tho
+
+[2026-07-20T20:04:13.004000+00:00] colorado.rob1459 (id=1528855068164751380)
+    Right, but hermes is moving towards a heavily plugin-based system. Would be nice to have a curated system. Or should I add them to Hermes directly? Just trying to figure out what a plugin developer should target.
+    [reply to gottz.de msg=1528854193647910954]
+
+[2026-07-20T20:04:55.342000+00:00] gottz.de (id=1528855245743198440)
+    I guess nous would have to share their wisdom with us
+    [reply to colorado.rob1459 msg=1528855068164751380]
+
+[2026-07-20T20:05:42.328000+00:00] brokeskill (id=1528855442816766003)
+    i doubt raspbian comes with a built in antivirus ngl
+    [reply to gottz.de msg=1528854907245826059]
+
+[2026-07-20T20:06:26.231000+00:00] brokeskill (id=1528855626959028305)
+    huh pulled trough, weird
+
+[2026-07-20T20:08:43.396000+00:00] wpnx330 (id=1528856202270998789)
+    https://github.com/NousResearch/hermes-agent/pull/60451
+    [reply to gottz.de msg=1528854479712161923]
+
+[2026-07-20T20:09:07.493000+00:00] watchdominion (id=1528856303340884118)
+    Some small PRs - fixing some bugs for users. 
+    
+    Open — 8 bug-fix PRs, all CI-green on current main:
+    
+    #60797 — huggingface-hub pin → range; stops hermes update breaking Hindsight. Independent triage this week recommended merging it as the root-cause fix
+    https://github.com/NousResearch/hermes-agent/pull/60797 · fixes https://github.com/NousResearch/hermes-agent/issues/60783 (6c — one report measured a silent crash loop that fired 41,550× over three weeks)
+    #61611 — Hindsight surfaces the real exception chain on local-runtime failures (both upstream swallow sites, via context)
+    https://github.com/NousResearch/hermes-agent/pull/61611
+    #61613 — dispatch logs kwarg keys + middleware trace on unexpected-kwarg TypeErrors; turns the 13-comment #60821 hunt into a one-log diagnosis
+    https://github.com/NousResearch/hermes-agent/pull/61613
+    #61615 — Windows planned stops report PLANNED_STOP, not signal=UNKNOWN
+    https://github.com/NousResearch/hermes-agent/pull/61615 · fixes https://github.com/NousResearch/hermes-agent/issues/61596
+    #60085 — kanban notify subscriptions reach TUI/desktop sessions (a community member rebased it to current main as #66435, my authorship preserved)
+    https://github.com/NousResearch/hermes-agent/pull/60085 · fixes https://github.com/NousResearch/hermes-agent/issues/59890 (3c, production confirmation this week)
+    #64525 — disabled browser toolset no longer strips web_search
+    https://github.com/NousResearch/hermes-agent/pull/64525 · fixes https://github.com/NousResearch/hermes-agent/issues/64503
+    #65452 — string-typed disabled_toolsets was iterated character-by-character, silently disabling nothing
+    https://github.com/NousResearch/hermes-agent/pull/65452 · fixes https://github.com/NousResearch/hermes-agent/issues/61264, addresses https://github.com/NousResearch/hermes-agent/issues/61265 (6c)
+    #67023 — surface image-routing downgrades instead of silently sending a text description
+    https://github.com/NousResearch/hermes-agent/pull/67023 · addresses https://github.com/NousResearch/hermes-agent/issues/66829 (7c)
+    
+    <@387972437901312000>
+
+[2026-07-20T20:09:48.098000+00:00] wpnx330 (id=1528856473650724924)
+    it was solid, but then it took so long to be reviewed upstream caused changes, i fixed / adjusted for it, and now its taking so long i am sure more upstream stuff will break something else or require me to re-write something to make it work again. <@190818731734204416>
+
+[2026-07-20T20:11:10.299000+00:00] gottz.de (id=1528856818426843277)
+    reviewing
+    [reply to wpnx330 msg=1528856473650724924]
+
+[2026-07-20T20:19:11.037000+00:00] gottz.de (id=1528858834788155423)
+    https://github.com/NousResearch/hermes-agent/pull/60451#issuecomment-5026868937 welcome to my wall of text
+    [reply to wpnx330 msg=1528856473650724924]
+
+[2026-07-20T20:21:23.094000+00:00] wpnx330 (id=1528859388675096623)
+    ill dig in. thanks
+    [reply to gottz.de msg=1528858834788155423]
+
+[2026-07-20T20:22:03.277000+00:00] gottz.de (id=1528859557214945331)
+    my merged pr literally introduced a merge conflict to yours. sorry <:nousgirl:1341983870752653352>
+
+[2026-07-20T20:27:22.454000+00:00] wpnx330 (id=1528860895940448266)
+    Womp womp
+
+[2026-07-20T20:28:30.939000+00:00] gottz.de (id=1528861183187226784)
+    I should create a graph over all 50k pull requests..
+
+[2026-07-20T20:30:59.405000+00:00] gottz.de (id=1528861805898629240)
+    I'm letting it build a comment that suggests how to patch it.
+    [reply to wpnx330 msg=1528860895940448266]
+
+[2026-07-20T20:39:01.219000+00:00] iamchristopher8007 (id=1528863826773278866)
+    If we have created our own eco system for Hermes Agent like Google has . Like Hermes Agent (Orchestrator) + NotebookLLM ( our own not google's, exactly has all capabilities of Notebook LLM ) + Our own storage Vault. A PROPRIETARY LEVEL INFRASTRUCTURE. If this is built means , where and how to sell it.. Can we make money if we sell it outright complete licence.? How much will this product get!?
+
+[2026-07-20T20:39:49.842000+00:00] 0xatakan (id=1528864030712791172)
+    I’ve opened PR #68203 to fix the P2 issue #68197:
+    
+    https://github.com/NousResearch/hermes-agent/pull/68203
+
+[2026-07-20T20:42:48.794000+00:00] gottz.de (id=1528864781292011681)
+    https://github.com/NousResearch/hermes-agent/pull/60451#issuecomment-5027070552 there you go
+    [reply to wpnx330 msg=1528860895940448266]
+
+[2026-07-20T20:49:27.792000+00:00] wpnx330 (id=1528866454810661034)
+    Awesome thanks so much!
+    [reply to gottz.de msg=1528864781292011681]
+
+[2026-07-20T20:50:45.290000+00:00] gottz.de (id=1528866779860963489)
+    https://github.com/NousResearch/hermes-agent/pull/68203#issuecomment-5027148631 looks mergeable according to my fable 5 triage
+    [reply to 0xatakan msg=1528864030712791172]
+
+[2026-07-20T20:56:07.073000+00:00] gottz.de (id=1528868129516683406)
+    gosh.. I do not even want to know how many notifications teknium might get
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1528868129449443582/image.png?ex=6a5fdce7&is=6a5e8b67&hm=7be7e89722608c265af615b54f2f3e7d8a91ce372e9d7a4895b09d66fd647eeb&
+
+[2026-07-20T22:01:08.332000+00:00] 0xatakan (id=1528884492582781099)
+    Yeah, you're right — that inbox looks a little crowded 😅 Thanks for taking the time to triage mine <:Prayge:1151275585000185968>
+    [reply to gottz.de msg=1528868129516683406]
+
+[2026-07-20T22:01:43.685000+00:00] gottz.de (id=1528884640864141392)
+    I'll continue to do this. there is just so much backlog.. everything helps them
+    [reply to 0xatakan msg=1528884492582781099]
+
+[2026-07-20T22:45:24.907000+00:00] gottz.de (id=1528895635066191973)
+    I'm now building a graph database that will house every single PR and Issue as well as comment this repo houses..
+    Then I'll triage it as a second pass, check for updates, triage the updates, spawn a review fleet for each case and review everything.
+    I guess that works, eh?
+
+[2026-07-21T01:38:01.167000+00:00] wickem (id=1528939072368803941)
+    Hi!! I’m trying to figure out how to scale our internal tool (built on Hermes agents) in to a self-service solution. I’m not a developer, but I’ve spent the last two years building a managed service around a large collection of skills, SOPs, and processes. I’m now moving the work from Claude/Codex into Hermes so we can be less human-in-the-loop and our clients are asking for their own agent and not have us as middle man lol (but still have all of our data/skills/workflows behind it).
+    
+    We currently run a separate Hermes agent for each client (we manage/drive it internally on the clients behalf) because they have their own data, soul, memories, etc. But I have no idea how to turn it into something production-ready that customers can access directly - or what kind of developer/help I should hire to help.
+    
+    Anyone seen any guides or know how to transition from an internal tool to a self-service model like this? Ideally, all of our clients would have their own Hermes agent they are interacting directly with in Slack, and we’d manage the data, hosting, skills, etc. on their behalf still. I’d really appreciate a DM or any ideas! (Sorry if this is the wrong channel and I should post elsewhere!).
+
+[2026-07-21T02:05:26.384000+00:00] jm_atx (id=1528945972908920915)
+    Is anyone here having issues with Hermes tokenomics?
+    
+    I love the agent Hermes, but I'm finding that no matter what model I'm using, the cost to use Hermes with it seems much higher than a base subscription to something like Claude. For example, I'm often using my Claude Max subscription at $100 a month to make major changes, updates, and fixes across Hermes and various projects / workflows I have it managing. 
+    
+    If I were to try to do the same *within* Hermes using something like Open Router using a similar model (Fable) or even a much cheaper one (Inkling, Qwen), it can quickly surpass that $100. I can't quite tell if I'm missing something, the setup is missing something, or the Claude subscription is heavily subsidized. Anyone else seeing the same?
+
+[2026-07-21T02:24:58.396000+00:00] wpnx330 (id=1528950888683802715)
+    Split the PR into 2 as you suggested. Thanks again for the help
+    
+    https://github.com/NousResearch/hermes-agent/pull/68333
+    https://github.com/NousResearch/hermes-agent/pull/68334
+    [reply to gottz.de msg=1528895635066191973]
+

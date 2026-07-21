@@ -467,3 +467,24 @@
 [2026-07-19T05:39:08.113000+00:00] spranab (id=1528274975407079474)
     [attachment] demo.gif https://cdn.discordapp.com/attachments/1504168688759078952/1528274975113347213/demo.gif?ex=6a5db47c&is=6a5c62fc&hm=f60b45160bcdfc865d997707f7888931b6ef570776ebd2f6084e268736f8411c&
 
+[2026-07-21T00:55:06.293000+00:00] 2gigadestroyer2 (id=1528928272564621414)
+    Are you supposed to disable herme's built in memory system when this plugin is installed?
+
+[2026-07-21T00:55:25.304000+00:00] 2gigadestroyer2 (id=1528928352302268416)
+    <@1488594733659062343>
+
+[2026-07-21T01:07:29.350000+00:00] spranab (id=1528931389171568841)
+    No need to disable anything - YantrikDB is designed to sit alongside Hermes' built-in memory, not replace it.
+    
+    Two things people mean by "built-in memory," and they're handled differently:
+    
+    • The memory provider slot - installing this plugin makes YantrikDB your active provider (hermes memory status will show Provider: yantrikdb). Hermes only runs one external provider at a time, so selecting yantrikdb is the switch - nothing to disable by hand. If you'd previously picked a different external provider, hermes memory setup swaps it out.
+    
+    • The built-in MEMORY.md / USER.md files - leave these on. The plugin has an on_memory_write hook that automatically mirrors anything Hermes writes there into YantrikDB, so those notes also become semantic, recall-able memory. Disabling them would just lose that capture path.
+    
+    So: install it, confirm hermes memory status shows yantrikdb, and leave the rest as-is.
+    [reply to 2gigadestroyer2 msg=1528928272564621414]
+
+[2026-07-21T01:07:55.162000+00:00] 2gigadestroyer2 (id=1528931497434677360)
+    Thanks
+

@@ -1,0 +1,23 @@
+# Thread 'Unleash the KAREN!' in forum #community-projects-showcase
+# thread_id=1528892520417722368 forum_id=1316137596535177246
+# Started 2026-07-21T02:28:12.500048+00:00
+
+[2026-07-20T22:33:02.317000+00:00] drahcir_rahl (id=1528892520417722368)
+    Ok this is pretty much tongue in cheek, but it does work and is fairly brutal. 
+    
+    https://github.com/rahlquist/karen_strikes_back
+    
+    Run it against part of your codebase,
+    [embed] GitHub - rahlquist/karen_strikes_back: 5-profile Hermes Agent fleet... https://github.com/rahlquist/karen_strikes_back
+
+[2026-07-20T22:40:03.366000+00:00] magnus919 (id=1528894286425227418)
+    I’m in the middle of a major refactor of Hermes-council in case there might be something worth stealing
+
+[2026-07-20T22:42:36.538000+00:00] drahcir_rahl (id=1528894928875421788)
+    Have at it! I tossed this together on a whim this morning and it cut me when I ran it against one of my repos.
+    [reply to magnus919 msg=1528894286425227418]
+
+[2026-07-21T00:53:58.737000+00:00] drahcir_rahl (id=1528927989214089388)
+    The best part is this profile set picked apart one of my repo after Opus 4.8 has already said it was good to publish.  Here is the report
+    [attachment] modeltrackerreport.txt https://cdn.discordapp.com/attachments/1528892520417722368/1528927988823888082/modeltrackerreport.txt?ex=6a6014a6&is=6a5ec326&hm=b3672cf42bc6fb658862dc42de2d73c1334d4ab67ac66fe3e1e69f6d29a91b67&
+

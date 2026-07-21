@@ -6070,3 +6070,71 @@
     Can you elaborate, is this the Hermex Android app https://github.com/computerbyte/hermex-android or the other one? What do you think is leading to it redirecting you? Is it your with setup?
     [reply to cryptobredda msg=1528739059869155428]
 
+[2026-07-20T20:11:52.391000+00:00] cryptobredda (id=1528856994973352107)
+    yup that is the one, when I try to login on the app, I get redirect to Brave my browser and continue there with the account logged in. rather than remaining on the app. 
+    
+    I dont know why this happens
+    [reply to avidfuturist msg=1528845401799790632]
+
+[2026-07-20T20:12:47.882000+00:00] cryptobredda (id=1528857227719348274)
+    I would share a video but it shows the IP of the server and me typing the password so I would need to edit the vidoe. so I will send one later if this issue still presist and I have failed to deliver the point
+
+[2026-07-20T20:34:06.256000+00:00] avidfuturist (id=1528862589608656976)
+    Same issue with 1.0 candidate? https://github.com/ComputerByte/hermex-android/releases/tag/v1.0.0
+    [embed] Release Hermex Android v1.0.0 — First Stable Release · ComputerB... https://github.com/ComputerByte/hermex-android/releases/tag/v1.0.0
+    [reply to cryptobredda msg=1528856994973352107]
+
+[2026-07-20T20:56:34.171000+00:00] smidelis (id=1528868243173933208)
+    The most recent android App doesn't seem to work on Android 16 anymore. Don't know if you've seen it yet https://github.com/hermes-webui/hermes-android/issues/49
+    [embed] Regression in v0.1.26: LAN-hosted WebUI no longer loads on ColorOS ... https://github.com/hermes-webui/hermes-android/issues/49
+    [reply to avidfuturist msg=1528108090929582092]
+
+[2026-07-20T20:57:18.156000+00:00] avidfuturist (id=1528868427660394637)
+    Thanks we’ll look into it!
+    [reply to smidelis msg=1528868243173933208]
+
+[2026-07-20T21:00:24.601000+00:00] cryptobredda (id=1528869209667539165)
+    my version is 0.1.25 based o nthe APK that I got
+    [reply to avidfuturist msg=1528862589608656976]
+
+[2026-07-20T21:00:58.852000+00:00] avidfuturist (id=1528869353326379270)
+    Ah… so the other Android app then I’m guessing
+    [reply to cryptobredda msg=1528869209667539165]
+
+[2026-07-20T21:01:05.289000+00:00] avidfuturist (id=1528869380325376154)
+    Let me file an issue
+
+[2026-07-20T21:01:17.708000+00:00] cryptobredda (id=1528869432414437541)
+    I think I downloaded it using the website
+    [reply to avidfuturist msg=1528869353326379270]
+
+[2026-07-20T21:01:27.680000+00:00] avidfuturist (id=1528869474239906012)
+    Yup all good I got you
+
+[2026-07-20T21:01:36.394000+00:00] avidfuturist (id=1528869510788944032)
+    We’ll look into it
+
+[2026-07-20T21:02:02.315000+00:00] cryptobredda (id=1528869619509624833)
+    https://get-hermes.ai/
+    https://github.com/hermes-webui/hermes-android/releases
+
+[2026-07-20T21:02:15.069000+00:00] cryptobredda (id=1528869673003909321)
+    thats the one I got
+
+[2026-07-20T21:02:22.112000+00:00] avidfuturist (id=1528869702544261171)
+    Got it thanks
+
+[2026-07-20T21:02:35.497000+00:00] cryptobredda (id=1528869758685024388)
+    sure! let me know if anything else is needed
+
+[2026-07-20T21:03:26.633000+00:00] avidfuturist (id=1528869973165084766)
+    Thanks for all the reports, will update here when we’ve fixed the Android release for you to test
+
+[2026-07-21T01:24:10.244000+00:00] avidfuturist (id=1528935587225145415)
+    Should be fixed in latest, please confirm
+    [reply to cryptobredda msg=1528869758685024388]
+
+[2026-07-21T01:24:20.540000+00:00] avidfuturist (id=1528935630409830463)
+    Should be fixed in latest please confirm
+    [reply to smidelis msg=1528868243173933208]
+
