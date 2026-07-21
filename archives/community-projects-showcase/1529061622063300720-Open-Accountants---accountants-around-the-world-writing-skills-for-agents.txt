@@ -1,0 +1,12 @@
+# Thread 'Open Accountants - accountants around the world writing skills for agents' in forum #community-projects-showcase
+# thread_id=1529061622063300720 forum_id=1316137596535177246
+# Started 2026-07-21T13:43:47.239695+00:00
+
+[2026-07-21T09:44:59.291000+00:00] mikefrommalta (id=1529061622063300720)
+    Hey all, we just published OpenAccountants as Skills. Were trying to get many of them  checked by licensed accountants. Drop them into Hermes (~/.hermes/skills) or any skills-compatible agent.
+    Repo: https://github.com/openaccountants/openaccountants
+    There is also a live MCP (openaccountants-mcp) for always-current figures and the named accountant behind each Guide. 
+    
+    If getting it into the Hermes MCP catalog or the Skills Hub is a thing, who is the right person to talk to?
+    [embed] GitHub - openaccountants/openaccountants: Open-source Tax Guides fo... https://github.com/openaccountants/openaccountants
+

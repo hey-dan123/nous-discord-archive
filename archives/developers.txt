@@ -49259,3 +49259,140 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     paying api prices is generally worse than subs (even before the limit resets), but one disadvantage of using OR on a model with too many providers is you're not hitting the caches. try explicitly specifying providers on your OR workspace/key, and use a model with cheap caching (a few cents per M or even lower), and you'll see your costs dissolve
     [reply to jm_atx msg=1528945972908920915]
 
+[2026-07-21T09:16:05.380000+00:00] gottz.de (id=1529054349513199636)
+    quality PR triage is one of the best and fastest ways to get started contributing to the cause
+    [reply to watergard msg=1528958524280017019]
+
+[2026-07-21T09:25:41.700000+00:00] mariaosake (id=1529056766774476893)
+    https://github.com/NousResearch/hermes-agent/pull/68496   P1 bug. Please check help me
+
+[2026-07-21T09:54:33.429000+00:00] mariaosake (id=1529064030172348516)
+    https://github.com/NousResearch/hermes-agent/pull/68518
+
+[2026-07-21T09:54:58.756000+00:00] mariaosake (id=1529064136401490082)
+    fix(config): check credential pool in get_env_value
+    [reply to mariaosake msg=1529064030172348516]
+
+[2026-07-21T10:17:55.465000+00:00] teknium (id=1529069910737551471)
+    It will be addressed soon, do not fret
+    [reply to mariaosake msg=1529056766774476893]
+
+[2026-07-21T10:20:07.483000+00:00] realadolan (id=1529070464461443152)
+    https://github.com/NousResearch/hermes-agent/pull/58663 <@387972437901312000>
+
+[2026-07-21T12:11:09.662000+00:00] sahaun (id=1529098407665467434)
+    How does the PR triaging work? For both review and merging.
+
+[2026-07-21T12:25:51.871000+00:00] gottz.de (id=1529102107918078023)
+    it gives a short insight into the value of a pr. it is common to have multiple pr's open that try to achieve the same, similar or overlapping goals.
+    triaging them helps making quick decisions.
+    [reply to sahaun msg=1529098407665467434]
+
+[2026-07-21T12:26:50.821000+00:00] sahaun (id=1529102355172298873)
+    I know *what* PR triaging is. 😄 (I'm a software engg by profession)
+    I was interested in *how* it works here.
+
+[2026-07-21T12:26:56.589000+00:00] gottz.de (id=1529102379364909188)
+    who knows how far I get today but I'm ingesting ALL 16k issues and 50k PR's right now, to cross reference them in total.
+
+[2026-07-21T12:27:13.220000+00:00] realadolan (id=1529102449120645314)
+    Huge
+    [reply to gottz.de msg=1529102379364909188]
+
+[2026-07-21T12:27:22.086000+00:00] gottz.de (id=1529102486307082290)
+    tokens go wroom
+    [reply to realadolan msg=1529102449120645314]
+
+[2026-07-21T12:27:27.406000+00:00] realadolan (id=1529102508620779530)
+    what model
+
+[2026-07-21T12:27:31.799000+00:00] gottz.de (id=1529102527046615162)
+    sol + fable
+
+[2026-07-21T12:27:45.129000+00:00] realadolan (id=1529102582956560545)
+    do you really need sol + fable for this
+
+[2026-07-21T12:28:05.156000+00:00] sahaun (id=1529102666955886744)
+    Sol + fable vs sol + fable.
+
+[2026-07-21T12:28:22.471000+00:00] realadolan (id=1529102739580129351)
+    fol + sable
+
+[2026-07-21T12:28:22.705000+00:00] sahaun (id=1529102740561858600)
+    How much of OSS PRs are slop these days
+
+[2026-07-21T12:28:26.932000+00:00] gottz.de (id=1529102758290915419)
+    my hermes runs on sol.
+    fable is outside, building tools for hermes.
+    [reply to realadolan msg=1529102582956560545]
+
+[2026-07-21T12:28:35.424000+00:00] realadolan (id=1529102793909076050)
+    most
+    [reply to sahaun msg=1529102740561858600]
+
+[2026-07-21T12:28:58.522000+00:00] gottz.de (id=1529102890788982894)
+    they tend to lack prior research
+    [reply to sahaun msg=1529102740561858600]
+
+[2026-07-21T12:29:29.452000+00:00] gottz.de (id=1529103020518805515)
+    often times a new pr adresses something that was already solved prior by another open pr
+
+[2026-07-21T12:30:01.789000+00:00] sahaun (id=1529103156150272081)
+    Lol
+
+[2026-07-21T12:30:03.505000+00:00] gottz.de (id=1529103163347701972)
+    so the triage is essentially doing the job the contributor should have done
+
+[2026-07-21T12:30:04.139000+00:00] sahaun (id=1529103166006886470)
+    If only the sloperators read guidelines. 😔
+
+[2026-07-21T12:30:33.939000+00:00] gottz.de (id=1529103290996887612)
+    well. one can't "easily" dig through all pr's to find overlaps
+    [reply to sahaun msg=1529103166006886470]
+
+[2026-07-21T12:30:51.435000+00:00] sahaun (id=1529103364380692491)
+    Def. I asked my hermes to go through em before opening my PR.
+
+[2026-07-21T12:30:56.271000+00:00] sahaun (id=1529103384664346665)
+    Fixing hermes with hermes.
+
+[2026-07-21T12:31:32.845000+00:00] gottz.de (id=1529103538066821301)
+    chance it misses something is still given
+
+[2026-07-21T12:31:58.792000+00:00] gottz.de (id=1529103646896160800)
+    my pr was merged but someone elses with slight overlap was not seen by my efforts. I did reference a good amount of other PR's tho
+
+[2026-07-21T12:32:19.102000+00:00] gottz.de (id=1529103732082479196)
+    thus, I do a full triage now and build a graph.. maybe even make it available.
+
+[2026-07-21T12:32:23.250000+00:00] awwaiid (id=1529103749480710254)
+    If we had infinite compute and everyone wrote behavior (black box) tests that verify their PR then you could run your behavior test against all of the open PRs to see if any of them fix it already 🙂
+
+[2026-07-21T12:32:54.411000+00:00] gottz.de (id=1529103880179417118)
+    I'm kind of shortcutting this right now.
+    [reply to awwaiid msg=1529103749480710254]
+
+[2026-07-21T12:33:33.558000+00:00] gottz.de (id=1529104044373839923)
+    just takes me 52 loop waves with a ton of tasks to build that backend right now.
+
+[2026-07-21T12:33:41.946000+00:00] gottz.de (id=1529104079555661884)
+    15/52 done
+
+[2026-07-21T12:33:52.341000+00:00] sahaun (id=1529104123155447871)
+    V cool. Is the graph available for us to view? I see your comment mentions related PRs.
+    [reply to gottz.de msg=1529103732082479196]
+
+[2026-07-21T12:34:42.101000+00:00] gottz.de (id=1529104331863752887)
+    I'm literally building it from scratch now.. my previous efforts did comment on a decent amount of issues and pr's but I think they could bump up further in quality.
+    [reply to sahaun msg=1529104123155447871]
+
+[2026-07-21T12:37:09.328000+00:00] gottz.de (id=1529104949378682900)
+    after extracting everything, it will all run chunked through https://openrouter.ai/qwen/qwen3-embedding-8b
+
+[2026-07-21T13:25:56.901000+00:00] drexux (id=1529117228509691994)
+    Hey everyone Hope you all have a wonderful week ahead.<:Prayge:1151275585000185968> 
+    
+    inject cache breakpoints after message normalization - https://github.com/NousResearch/hermes-agent/pull/68085
+    flatten top-level anyOf/oneOf so the sanitizer can't emit a type+union 400 - https://github.com/NousResearch/hermes-agent/pull/68273
+    scrub the keyed providers schema on rotate/remove - https://github.com/NousResearch/hermes-agent/pull/68295
+

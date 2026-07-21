@@ -1,0 +1,21 @@
+# Thread 'We turned our Hermes instance into a project manager living on Rocket.Chat (plugin + write-up)"' in forum #community-projects-showcase
+# thread_id=1529117275729170632 forum_id=1316137596535177246
+# Started 2026-07-21T13:43:46.811386+00:00
+
+[2026-07-21T13:26:08.159000+00:00] mer7320 (id=1529117275729170632)
+    We run Hermes on self-hosted Rocket.Chat and gave it a project-manager profile plus access to YouTrack and our company knowledge base, then wired it into chat with an MIT platform plugin (DDP inbound / REST outbound). The team calls it HalfPM.
+    
+    What it does on the channel:
+    
+    "where are we on project X?" → grouped ticket status + what it flags as risk
+    "summary of open tickets by person" → with clickable links
+    "check tomorrow if Tom updated the contract ticket; if not, DM him and report back here" → finds the ticket, schedules a cron, delivers the DM (survives a gateway restart)
+    "open a ticket for Peter to order coffee" → picks the project, maps the name to a YouTrack user, sets sane defaults — all from the knowledge base
+    Full write-up: how the plugin, profile, thread context and cron delivery fit together — plus an honest security lesson from red-teaming a bot with real access:
+    
+    https://halfbitstudio.com/en/ai-virtual-project-manager/
+    
+    Plugin's open source if you want the same setup.
+    [attachment] hermes-rocketchat-cover-en.png https://cdn.discordapp.com/attachments/1529117275729170632/1529117275972698193/hermes-rocketchat-cover-en.png?ex=6a60c4f0&is=6a5f7370&hm=7d7bf6538c6e7be7f722d6a295e6a87180a794b5a869b9916e702b839ffc5f95&
+    [embed] AI project manager: how we built one from Hermes and RocketChat https://halfbitstudio.com/en/ai-virtual-project-manager/
+

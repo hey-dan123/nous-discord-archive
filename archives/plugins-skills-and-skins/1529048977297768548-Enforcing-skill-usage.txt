@@ -1,0 +1,18 @@
+# Thread 'Enforcing skill usage' in forum #plugins-skills-and-skins
+# thread_id=1529048977297768548 forum_id=1485392832154832906
+# Started 2026-07-21T13:49:10.725460+00:00
+
+[2026-07-21T08:54:44.544000+00:00] patrickzhukovbartley (id=1529048977297768548)
+    I work with a Hermes agent  on a scholarly book manuscript — LaTeX, ~250 pages, heavy theoretical content. We have a detailed editing skill loaded at every session start that mandates: read the file, state what exists, state what will change, WAIT for explicit approval, then edit. No writing to disk without a "yes."
+    
+    The skill is comprehensive and regularly updated with pitfalls from past failures. It's loaded. The agent reads it. The agent can recite it back. 
+    
+    And then, in the moment, the agent writes a full chapter revision to disk without showing me the draft first. The impulse to complete the task overrides the protocol to wait. This has happened repeatedly across sessions. Its not from ignorance of the rules, but from what seems like training toward speed and completion.
+    
+    I have a constitution and soul system that solved content issues (banned words, framing, tone, overcoming training ideological content) because those are pre-output checks. But this is a ￼￼tempo￼￼ and enforcement of a process problem — when to act, not what to produce. The violation happens before any self-review fires.
+    
+    Question: has anyone found a way to make execution-level protocols stick beyond just writing them in a skill? Tagging, enforcement, different skill architecture, something else? Welcome ideas.
+
+[2026-07-21T10:44:18.700000+00:00] wryrye (id=1529076551306575882)
+    First, you're not wrong. LLMs take skills as suggestions and the training data / MoE drives behaviour contrary to skills. Working on the meta harness that drives the process, checks work, and loops is what I see as ways to minimize those failure modes. I use my CI, GitHub actions, with extensive workflows to cross check the plan and Linear issues against the PR so that it can catch the fails and push back until the work is satisfied. You may want to extract the definition of done at the project level and acceptance criteria at the ticket level into a workflow you can add to your CI. I also run an adversarial skill with different models to break down the plan for each session. the refined plan goes into Linear. each session and sub session pull from the linear issues. this is more of a memory structure approach, attention is all you need, for more sub tasks run by sub or parallel agents (mono taskers). if you have a big, detailed skill running inline in one session, that can be part of the problem. by orchestrating the top level agent to break work into smaller pieces, smaller sub tickets, each with smaller skills, the behaviour better aligns to what you expect. hope that helps! I use RuFlo as an orchestrator for Skillsmith which has a meta harness for similarly detailed workflows.
+

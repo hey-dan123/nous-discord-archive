@@ -84,3 +84,15 @@
 [2026-07-20T19:15:32.564000+00:00] _big_owen_ (id=1528842818951315566)
     10/10
 
+[2026-07-21T13:24:40.371000+00:00] heeervas (id=1529116907519873065)
+    Have you tested it? 
+    I use it heavily and working good for me.
+    
+    Adding more stuff today I thought off
+    ----
+    One thing for example I played with is this: 
+    -> Run a custom benchmark of different models against the same harness
+    [attachment] image.png https://cdn.discordapp.com/attachments/1516036211142299730/1529116906647322654/image.png?ex=6a60c498&is=6a5f7318&hm=7796837ccf8b3e5efb85eed55914c66c1f19ce1ca35fd594b399a5f7e9cd4e2e&
+    [attachment] WhatsApp_Video_2026-07-19_at_13.36.12.mp4 https://cdn.discordapp.com/attachments/1516036211142299730/1529116907083534476/WhatsApp_Video_2026-07-19_at_13.36.12.mp4?ex=6a60c498&is=6a5f7318&hm=42a5d46188eec271d705c00a306a19b1d17c8306e40cbef97766becb88149d5a&
+    [reply to _big_owen_ msg=1528842794331017236]
+

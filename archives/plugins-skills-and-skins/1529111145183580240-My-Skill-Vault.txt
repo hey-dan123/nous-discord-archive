@@ -1,0 +1,12 @@
+# Thread 'My Skill Vault' in forum #plugins-skills-and-skins
+# thread_id=1529111145183580240 forum_id=1485392832154832906
+# Started 2026-07-21T13:49:10.205939+00:00
+
+[2026-07-21T13:01:46.523000+00:00] kyssta69 (id=1529111145183580240)
+    Battle-tested Hermes Agent skills — custom-built through real projects, not synthetic tutorials. Urdu poetry, stealth web scraping, LLM API provider patterns, game dev, and more.
+    
+    https://github.com/kyssta-exe/skills
+    
+    Updating constantly.
+    [embed] GitHub - kyssta-exe/skills: 55 battle-tested Hermes Agent skills ... https://github.com/kyssta-exe/skills
+
