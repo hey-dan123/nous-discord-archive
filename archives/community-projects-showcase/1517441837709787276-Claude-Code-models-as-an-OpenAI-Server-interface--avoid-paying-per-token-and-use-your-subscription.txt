@@ -33,3 +33,10 @@
     I’m about to pull the trigger as I want to set a Hermes’ profile that uses Claude model… is it robust now? (No updates to the repo in 3 weeks is why I ask). 
     Thanks!!!
 
+[2026-07-21T17:25:58.609000+00:00] aaa555_07610 (id=1529177633651163357)
+    i am running the "backend" in docker can i create/find docker image that would have installed claude code and from hermes give instruction to claude code ? I am paying the Claude Pro
+    i am Asking because i can't install Claude Code on my device hermes lives on "Pi" and has access to my personal project i would like from hermes orchestrate claude code
+
+[2026-07-21T18:47:20.937000+00:00] aaa555_07610 (id=1529198111619153970)
+    i did it it works
+

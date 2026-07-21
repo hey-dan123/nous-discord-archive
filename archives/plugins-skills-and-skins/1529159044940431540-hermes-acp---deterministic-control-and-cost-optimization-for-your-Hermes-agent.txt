@@ -1,0 +1,43 @@
+# Thread 'hermes-acp — deterministic control and cost optimization for your Hermes agent' in forum #plugins-skills-and-skins
+# thread_id=1529159044940431540 forum_id=1485392832154832906
+# Started 2026-07-21T19:23:35.278144+00:00
+
+[2026-07-21T16:12:06.715000+00:00] david_014149 (id=1529159044940431540)
+    Hi, I'm David, founder of Agentic Control Plane. We just shipped hermes-acp 0.2.2, an open-source (MIT) plugin that gives your Hermes agent a control plane.
+    
+    Two ways to run it.
+    
+    1/ Local (no login, nothing leaves your machine)
+    - every model call metered into a local SQLite ledger: per-model spend, token counts, prompt-cache hit rate
+    - every tool call metered too: what ran, how long it took, how much output it added to your context
+    
+    Run local with:
+    pip install hermes-acp
+    hermes plugins enable acp
+    acp-hermes report (displays your agent's cost X-ray in the terminal)
+    
+    2/ Cloud (free for individual devs, adds deterministic control + a console, built for autonomous agents)
+    - every Hermes action logged and attributed in a web console: terminal actions, file writes, web fetches
+    - deterministic allow / ask / deny policies, e.g. ask before git push or any gh write, deny deploys outright, $2/day budget with warn-then-stop. Asks land as approval requests you respond to
+    - cost optimization suggestions from your real traffic: cache-killer detection, oversized tool results, drift alerts when a config change makes runs more expensive
+    
+    Run cloud with:
+    pip install hermes-acp
+    hermes plugins enable acp
+    acp-hermes login
+    
+    For more detail visit our GitHub page (https://github.com/agentic-control-plane/hermes-acp-plugin) or website (https://agenticcontrolplane.com). ACP works with the other agents your team runs too. Claude Code, Codex, and the major agent frameworks. 
+                                                
+    On a related note... we read Hermes's blocklist carefully while building this. It's top notch and we adopted several best practices. See the writeup: https://agenticcontrolplane.com/blog/hermes-blocklist-review
+                                                                                                                         
+    Feedback and outreach welcome!
+
+[2026-07-21T17:17:39.780000+00:00] lyons8812 (id=1529175541410955491)
+    So do I fork this and get rid of the whale away I’m trying to have a cloud set up
+
+[2026-07-21T18:39:28.409000+00:00] david_014149 (id=1529196129693073570)
+    They're complementary. Docker contains the process, ACP controls the actions inside the container.
+    
+    If you run Hermes without a container, ACP still controls the actions. For a cloud setup that covers a good chunk of the blast-radius. I'd still keep the container if the agent handles untrusted input, but ACP doesn't need a container to work.
+    [reply to lyons8812 msg=1529175541410955491]
+

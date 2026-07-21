@@ -21,3 +21,6 @@
 [2026-07-09T18:07:00.724000+00:00] synthalorian (id=1524839306122760222)
     Openshark- an open-source AI harness built on Rust. Inspired by Hermes Openclaw Opencode & Claw Code
 
+[2026-07-21T15:25:23.546000+00:00] synthalorian (id=1529147287597748415)
+    Working on an android version
+

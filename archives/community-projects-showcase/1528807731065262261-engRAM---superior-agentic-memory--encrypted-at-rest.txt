@@ -53,3 +53,6 @@
     
     Explicit relations between things the vault knows: memory_link memory_relations  memory_unlink over MCP, engram link / relations / unlink from the CLI. Subject-predicate-object with an optional source memory and validity window; entity matching is case-insensitive, re-links are idempotent, and as_of answers "what was true then". Deterministic storage with the same encryption, ACL, audit, and fsync'd crash-journal guarantees as every record - the judgment of what to link stays with the host model.
 
+[2026-07-21T13:45:22.326000+00:00] mariusztogo (id=1529122116656697545)
+    This looks like exactly the missing piece for "learn locally" as a real, selectable mode, not the whole-provider-must-be-local workaround. Quick question: does engRAM's Hermes native provider let you keep a cloud model for the chat/reasoning turn while forcing only the memory-write step through engRAM locally? Or does the split still happen at the main provider level? Asking because right now Hermes ties the learning loop to whatever provider is set for the conversation, so there's no way to mix "frontier model for chat" with "local-only for memory" - curious if your plugin already solves that at the wiring level.
+

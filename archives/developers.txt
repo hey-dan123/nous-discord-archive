@@ -49396,3 +49396,93 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     flatten top-level anyOf/oneOf so the sanitizer can't emit a type+union 400 - https://github.com/NousResearch/hermes-agent/pull/68273
     scrub the keyed providers schema on rotate/remove - https://github.com/NousResearch/hermes-agent/pull/68295
 
+[2026-07-21T14:12:14.802000+00:00] warofchange (id=1529128879871098911)
+    PR #68672 — docs(links): update moved torchtune repo URL in torchtitan skill
+    
+    The torchtitan skill's checkpointing reference linked torchtune at its former location, which now permanently redirects:
+    
+    $ curl -sI https://github.com/pytorch/torchtune
+    HTTP/1.1 301 Moved Permanently
+    Location: https://github.com/meta-pytorch/torchtune
+    PyTorch moved the project out of the pytorch org into meta-pytorch; the new location is a direct 200 OK. This points the interoperability reference at the canonical URL GitHub itself redirects to, so there's no ambiguity about the destination. The URL occurs in exactly one file across the whole repo — no generated website mirror carries it — so the fix is complete in a single line. Docs-only, no behavior change.
+    
+    https://github.com/NousResearch/hermes-agent/pull/68672
+
+[2026-07-21T14:52:27.721000+00:00] aakash0 (id=1529139000386912316)
+    Hi! I'm Aakash and I work on honcho at plastic labs with <@429384745374187523> . I recently put up this PR to add a device-code oauth flow to the honcho setup https://github.com/NousResearch/hermes-agent/pull/61608, which should fix honcho connection for users on remote machines. It's fully ready now so I could use a second review and approval from a maintainer 🙏
+
+[2026-07-21T15:13:42.793000+00:00] erosika (id=1529144348426502299)
+    can confirm, great stuff <@396104842013310988><a:k_sparks2:895210898480852992>
+    [reply to aakash0 msg=1529139000386912316]
+
+[2026-07-21T15:41:35.695000+00:00] lyons8812 (id=1529151365085925396)
+    Hello everyone, and thank you for welcoming me into the community.
+    
+    I’m a veteran who has developed a real passion for coding and building AI systems. I’m currently working within some hardware and system constraints, and I’ve been trying to deploy Hermes to Railway so I can begin implementing my AI workforce.
+    
+    Has anyone successfully deployed Hermes on Railway, or worked through similar resource limitations? Any guidance, suggestions, or lessons learned would be greatly appreciated.
+    
+    Thank you again. I’m glad to be here and looking forward to learning from the community.
+
+[2026-07-21T15:46:42.793000+00:00] talmax1124 (id=1529152653148557312)
+    https://github.com/NousResearch/hermes-agent/pull/68566
+
+[2026-07-21T15:46:47.335000+00:00] talmax1124 (id=1529152672198824138)
+    [attachment] Screen_Recording_2026-07-21_at_11.45.43_AM.mov https://cdn.discordapp.com/attachments/1491258766648283238/1529152672035504399/Screen_Recording_2026-07-21_at_11.45.43_AM.mov?ex=6a60e5e7&is=6a5f9467&hm=e0f7a1f0eb9ec7a32bb6f19d2a8c63b44132584e4cedebcad85217a9f9547725&
+
+[2026-07-21T15:46:54.600000+00:00] talmax1124 (id=1529152702670573649)
+    Got Cursor to move around on the field on mouse click.....
+
+[2026-07-21T16:42:01.909000+00:00] naroh091 (id=1529166574529941654)
+    Hi there! Today I was planning on connecting external services through webhooks when I found out that the support is quite limited because of those services using custom headers. For example, Patreon uses X-Patreon-Signature and X-Patreon-Event, so it's not supported right now. 
+    
+    There are a couple of PR adding support for specific services such as Gitea, but with this PR I've made the webhook system configurable so that custom signature and event headers can be used per route, making it much more flexible. 
+    
+    It would be great to have this merged so that Hermes becomes a truly compatible webhook listener! 
+    
+    https://github.com/NousResearch/hermes-agent/pull/68791
+
+[2026-07-21T18:04:09.634000+00:00] gottz.de (id=1529187242906484887)
+    just took me shy of 9 hours to ingest all pr's and issues. feels good that it succeeded crawling it all.
+
+[2026-07-21T18:07:53.464000+00:00] gottz.de (id=1529188181717549168)
+    already got 66868 mappings..
+
+[2026-07-21T18:20:58.917000+00:00] cyberyellowninja (id=1529191476146344149)
+    Sorry for the bother, but something strange is happening and I can't figure it out. I have compression set to 85%, but I keep seeing sessions being summarized at around 60–63%, and compression never seems to kick in.
+    
+    Am I misunderstanding how this works? Is session summarization the same thing as compression, or are they two different processes?
+    
+    What the hell have I messed up this time? 😅 I can't seem to make sense of it.
+    
+    Thanks, and sorry for the disturbance.
+
+[2026-07-21T18:24:41.895000+00:00] gottz.de (id=1529192411383730226)
+    what model?
+    [reply to cyberyellowninja msg=1529191476146344149]
+
+[2026-07-21T18:25:24.145000+00:00] cyberyellowninja (id=1529192588593201313)
+    Mimimax m2.7
+
+[2026-07-21T18:34:40.966000+00:00] gottz.de (id=1529194924069617864)
+    [attachment] image0.jpg https://cdn.discordapp.com/attachments/1491258766648283238/1529194923692261527/image0.jpg?ex=6a610d40&is=6a5fbbc0&hm=2f210e250e79d341bf0e1f34e23f780d941f1deebe078704cc52e7e97e914a07&
+    [reply to cyberyellowninja msg=1529192588593201313]
+
+[2026-07-21T18:36:23.986000+00:00] inuyasha44_88990 (id=1529195356166950932)
+    https://github.com/NousResearch/hermes-agent/pull/51604
+    
+    
+    
+    <@387972437901312000>
+
+[2026-07-21T18:37:18.652000+00:00] inuyasha44_88990 (id=1529195585452642486)
+    issue involving gateway of anthropic
+
+[2026-07-21T18:38:55.859000+00:00] inuyasha44_88990 (id=1529195993168609570)
+    fix(auth): scope-isolate resolve_anthropic_token() and cron credential reads
+
+[2026-07-21T18:52:03.721000+00:00] gottz.de (id=1529199297701351544)
+    i ingested all pr's and issues now.. it found 178112 connections..
+    let's see if this number will grow later..
+    aaand 190k edges now..
+

@@ -1,0 +1,30 @@
+# Thread 'Maia: adapting Hermes Agent for teams and companies' in forum #community-projects-showcase
+# thread_id=1529153521247584306 forum_id=1316137596535177246
+# Started 2026-07-21T19:17:44.784441+00:00
+
+[2026-07-21T15:50:09.764000+00:00] andre_loureiro (id=1529153521247584306)
+    Hey everyone  I’ve been working on Maia, a fork from Hermes Agent for teams that want to use capable agents through Slack, Discord, Mattermost, and other company chat systems without giving every user the same authority.
+    
+    The main experiment is moving security decisions outside the model:
+    
+    • Identity comes from the authenticated gateway sender (platform:user_id), not from claims in a prompt.
+    • File access is deny-by-default and checked again on every operation, with grants by role, team, or user.
+    • Conditional edits and governed commands are handed to an authorized reviewer in the shared conversation.
+    • Terminal/code execution only runs with authorized paths mounted into an isolated runtime. If that boundary is unavailable, Maia fails closed.
+    • Allows, denials, reviews, and executions go to an append-only audit log, with optional SIEM export.
+    • Models are replaceable: cloud APIs, OpenAI-compatible endpoints, or local inference.
+    
+    Repo: https://github.com/and270/maia
+    
+    It’s still early. Maia does not provide SSO, a VPN, or a zero-trust proxy; it integrates with an existing identity-aware access layer. I’m also not claiming that these controls alone make a deployment compliant.
+    
+    I’d especially value feedback from people already running Hermes for teams: are these identity, approval, and failure boundaries understandable? Which pieces would be useful upstream in Hermes, and which should remain distribution-specific?
+    [embed] GitHub - and270/maia: An AI agent for the enterprise https://github.com/and270/maia
+
+[2026-07-21T16:01:04.123000+00:00] andre_loureiro (id=1529156265828417726)
+    Maia: adapting Hermes Agent for teams and companies
+
+[2026-07-21T16:30:15.650000+00:00] andre_loureiro (id=1529163612264857942)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1529153521247584306/1529163611522596945/image.png?ex=6a60f017&is=6a5f9e97&hm=1e5ca9676f1ec06f25e5cef33168aee463c29d3eaf3fdd1fe0ea4858a07103e6&
+    [attachment] image.png https://cdn.discordapp.com/attachments/1529153521247584306/1529163611837300753/image.png?ex=6a60f017&is=6a5f9e97&hm=d6442e24c02255364d2bf810b933b2a3badbc4d96ef87499128df07373e60808&
+

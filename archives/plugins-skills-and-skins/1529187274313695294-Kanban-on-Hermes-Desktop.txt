@@ -1,0 +1,13 @@
+# Thread 'Kanban on Hermes Desktop' in forum #plugins-skills-and-skins
+# thread_id=1529187274313695294 forum_id=1485392832154832906
+# Started 2026-07-21T19:23:34.846977+00:00
+
+[2026-07-21T18:04:17.122000+00:00] 2gigadestroyer2 (id=1529187274313695294)
+    Probably will be a feature sooner or later. But I created an implementation in the meantime. To configure the styling, do so through hermes dashboard -> settings(on web ui) and customization. 
+    
+    Works by rendering only the kanban from the web dashboard within the hermes desktop app. 
+    
+    https://github.com/HaoGuo6536/HermesKanbanPluginDesktop
+    [attachment] image.png https://cdn.discordapp.com/attachments/1529187274313695294/1529187274636525850/image.png?ex=6a610621&is=6a5fb4a1&hm=d20dff953596b8540110810c4bb0292da5c30a7ce884d2b8bcb8cf97a570b9f3&
+    [embed] GitHub - HaoGuo6536/HermesKanbanPluginDesktop https://github.com/HaoGuo6536/HermesKanbanPluginDesktop
+

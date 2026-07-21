@@ -6155,3 +6155,10 @@
     Yes it is, thanks for your quick support!
     [reply to avidfuturist msg=1528935630409830463]
 
+[2026-07-21T16:49:59.029000+00:00] avidfuturist (id=1529168575716130856)
+    Great news!
+    [reply to smidelis msg=1529039735312486410]
+
+[2026-07-21T17:43:01.661000+00:00] phospheneoverdrive (id=1529181924642390036)
+    Loving webui so far. I am finding on iOS (I made a safari home screen shortcut to it) the page will often freeze up and require killing the webui “app” & restarting it. Not sure how to debug the issue and the workaround isn’t hard but just thought I’d mention it!
+
