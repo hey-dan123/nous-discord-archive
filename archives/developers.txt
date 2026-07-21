@@ -49200,3 +49200,62 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     https://github.com/NousResearch/hermes-agent/pull/68334
     [reply to gottz.de msg=1528895635066191973]
 
+[2026-07-21T02:28:17.797000+00:00] wpnx330 (id=1528951725032083624)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1528951724671238255/image.png?ex=6a602ac1&is=6a5ed941&hm=2fb8c802b914cf1173b5377880c16061add0f88425107560ebd118baa413a3d3&
+
+[2026-07-21T02:38:13.623000+00:00] markmnl (id=1528954224107327631)
+    i wanna see the Code (ornith still beating it on everything but Agent and World, but I really care about Code)
+    [reply to architex_ msg=1526961097477722113]
+
+[2026-07-21T02:40:44.547000+00:00] colorado.rob1459 (id=1528954857128591560)
+    Would really like to see this merged before the next release. https://github.com/NousResearch/hermes-agent/pull/58699
+
+[2026-07-21T02:42:27.909000+00:00] maxfreedompollard (id=1528955290660241448)
+    I couldn't find vector memory I liked so I made my own. Superior memory saving, superior retrieval, 100% offline, encrypted at rest ‼️ , portable and actually useful dashboard displays. 
+    
+    https://github.com/MaxFreedomPollard/engRAM
+
+[2026-07-21T02:42:53.263000+00:00] maxfreedompollard (id=1528955397002629160)
+    I also made a thread in Community Projects
+
+[2026-07-21T02:46:56.649000+00:00] markmnl (id=1528956417837371413)
+    Thanks for anchoring to #64900
+    
+    I salvaged #49919 you mentioned there as its much smaller blast radius and resolves the concrete issue #67941 and implemented your review comments from that PR 
+    https://github.com/NousResearch/hermes-agent/pull/68322#issuecomment-5029353216
+    [reply to teknium msg=1528704341295497278]
+
+[2026-07-21T02:55:18.864000+00:00] watergard (id=1528958524280017019)
+    I'm a bit new to OSS contributing, and I just wanted to get a feel from ya'll about contributing issues and possible fixes.
+    
+    I've been working on a dashboarding project I plan to post up on github.
+    With claude, I've been iterating pretty fast and found a few upstream hermes issues
+    
+    I'm going to vet everything out more by hand, and with AI (I don't want slop making its way in)
+    
+    so far I'm sitting on about 15-16 issues possibly.
+    any advice would be great, as I don't want to turn into "that guy"
+
+[2026-07-21T03:02:04.834000+00:00] hardcorefinesse (id=1528960227041607851)
+    focus on one issue at a time per PR , if you can.
+    [reply to watergard msg=1528958524280017019]
+
+[2026-07-21T03:03:32.807000+00:00] watergard (id=1528960596026982440)
+    yeah  thats the plan!
+    opening 16 issues/PRs at once(ish) is a lot, and just wanted to make sure it was alright
+
+[2026-07-21T03:05:28.370000+00:00] watergard (id=1528961080733470770)
+    I figured it was a bit more important since the new update didn't fix any of the finds I had.
+    I still need to do a pass at open/active issues too.
+    Just trying to vet it all out properly
+
+[2026-07-21T03:06:52.391000+00:00] roy_coinmarketcap (id=1528961433142825211)
+    Hey Teknium and devs. I'm Roy from the @CoinMarketCap team. We are building an agent skill hub for on-chain data and want to support Hermes natively. Who would be the best person on the team to chat with regarding a potential integration?
+
+[2026-07-21T05:04:43.014000+00:00] bhyrd (id=1528991089485283502)
+    Does anyone here  use composio?
+
+[2026-07-21T05:16:07.074000+00:00] ciorba (id=1528993958640877591)
+    paying api prices is generally worse than subs (even before the limit resets), but one disadvantage of using OR on a model with too many providers is you're not hitting the caches. try explicitly specifying providers on your OR workspace/key, and use a model with cheap caching (a few cents per M or even lower), and you'll see your costs dissolve
+    [reply to jm_atx msg=1528945972908920915]
+

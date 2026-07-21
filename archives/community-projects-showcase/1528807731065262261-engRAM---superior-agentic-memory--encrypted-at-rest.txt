@@ -30,3 +30,26 @@
     https://github.com/MaxFreedomPollard/engRAM
     [embed] GitHub - MaxFreedomPollard/engRAM: engRAM - superior agentic memory... https://github.com/MaxFreedomPollard/engRAM
 
+[2026-07-21T02:28:38.463000+00:00] maxfreedompollard (id=1528951811711701122)
+    Added live dashboard with how many memories of what kind, growth over time, the relation graph, top tags, per-agent counts, and live hybrid search. Served entirely from RAM over 127.0.0.1 behind a random URL token - read only, zero outbound requests, zero configuration, stops with Ctrl-C.
+
+[2026-07-21T02:33:05.205000+00:00] maxfreedompollard (id=1528952930508472511)
+    Another update: Added Two Factor Unlock, so you can use 2FA for your vector memory. I see vector memory as master memory - it contains all data from your computer, your storage, the internet, your mind, it's by far the most important memory store for someone using agentic memory. With 2FA you can trust it a bit more.
+
+[2026-07-21T02:35:50.050000+00:00] maxfreedompollard (id=1528953621918646422)
+    (This little update is not a feature required by 99% of users, just for techies who are curious, it is not visible or annoying to normal users)
+    
+    Test performance yourself. "engram setup download-longmemeval" can now fetch the public LongMemEval dataset;
+    engram bench --longmemeval scores the exact production retrieval
+    pipeline against it, with a checkpointed on-disk vector cache so re-runs
+    take seconds. Pure tooling - zero runtime impact.
+
+[2026-07-21T02:38:58.884000+00:00] maxfreedompollard (id=1528954413945979053)
+    https://klipy.com/gifs/cleavage-bosom
+    [embed] Cleavage Bosom https://klipy.com/gifs/cleavage-bosom
+
+[2026-07-21T02:39:37.310000+00:00] maxfreedompollard (id=1528954575116177438)
+    Update: Memory graph.
+    
+    Explicit relations between things the vault knows: memory_link memory_relations  memory_unlink over MCP, engram link / relations / unlink from the CLI. Subject-predicate-object with an optional source memory and validity window; entity matching is case-insensitive, re-links are idempotent, and as_of answers "what was true then". Deterministic storage with the same encryption, ACL, audit, and fsync'd crash-journal guarantees as every record - the judgment of what to link stays with the host model.
+

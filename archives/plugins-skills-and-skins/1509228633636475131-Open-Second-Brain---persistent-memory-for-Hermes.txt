@@ -410,3 +410,40 @@
 [2026-07-20T21:12:49.803000+00:00] holmeswow (id=1528872335271002133)
     or it has memory just not to this extent?
 
+[2026-07-21T04:51:30.516000+00:00] lipebez (id=1528987765507887325)
+    Thanks! It’s not a separate Hermes UI fork — the screenshot is the standard Hermes Agent Dashboard running the DAEDALUS theme from the Republic project:
+    
+    https://github.com/JustinPerea/Republic
+    
+    The repo includes the theme and installation instructions.
+    
+    The OSB part is a separate, strictly read-only visual companion panel I built for Hermes Dashboard. It isn’t public yet: I’ve just finished its MIT licensing, portability, privacy, responsive, and test-readiness pass, and I’m currently aligning with the OSB maintainer on whether it should live inside the official plugin repository or as an official companion repository.
+    
+    I’ll share the public OSB plugin link in this thread as soon as its official home is agreed.
+    [embed] GitHub - JustinPerea/Republic: Daedalus — a Hermes Agent dashboar... https://github.com/JustinPerea/Republic
+    [reply to autoferrit msg=1528455553385500754]
+
+[2026-07-21T04:52:31.724000+00:00] lipebez (id=1528988022232846397)
+    Thank you again — your message meant a lot.
+    
+    My preference is the second path: I would love to adapt this into an optional first-party visual companion for Open Second Brain, while keeping a small independent lab for experimental ideas before proposing them upstream.
+    
+    Since your message, I completed a full portability, privacy, security, responsive, and review-readiness pass.
+    
+    Data source: the local backend still reads the configured vault’s Markdown files directly, but that reader is now explicitly isolated as a read-only prototype. The browser-facing UI consumes a normalized, deterministic, provider-independent contract: open-second-brain.dashboard.snapshot.v1. I intentionally did not invent a production OSB adapter before agreeing with you on the preferred public boundary.
+    
+    Form factor: it is a Hermes Dashboard panel/plugin at /second-brain, not a separate memory application. It has a small read-only backend and does not mutate, reindex, dream, retire, or create a parallel memory store.
+    
+    Repository and license: the implementation is now in a clean local Git repository under MIT, with sanitized public fixtures, architecture and QA documentation, and no environment-specific defaults or private vault content. I have not created a public remote yet because I wanted to align on the permanent home first.
+    
+    Tests: the current suite has 42 automated tests plus 10 subtests using deterministic synthetic fixtures. There is also a separate browser/CDP integration harness. The final synthetic and authenticated local runs each passed 102 checks across 1440×900, 1280×577, 1024×768, and 390×844, covering 2D, optional 3D, touch, reduced motion, lifecycle, framing, responsive behavior, and privacy. No real-vault screenshots are retained.
+    
+    I also prepared two independently reviewable implementation slices:
+    an accessible 2D-only foundation;
+    an optional 3D enhancement layered on top.
+    
+    My preferred sequence is to agree on the official read/data boundary and repository location, then submit the portable 2D foundation as a focused first contribution, with the optional 3D mode as a separate follow-up.
+    
+    Would you prefer this to live as an optional module inside the current OSB plugin repository, or as an official companion repository consuming OSB’s public read contracts? Once we agree on that boundary, I can create the fork and prepare the first draft PR against the structure you prefer.
+    [reply to techmeat msg=1525535501287821502]
+

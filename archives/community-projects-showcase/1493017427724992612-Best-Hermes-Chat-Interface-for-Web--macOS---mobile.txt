@@ -6138,3 +6138,20 @@
     Should be fixed in latest please confirm
     [reply to smidelis msg=1528868243173933208]
 
+[2026-07-21T04:54:55.138000+00:00] avidfuturist (id=1528988623754625085)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And **native iOS and Android app support**! 
+    
+    GitHub repo: https://github.com/nesquena/hermes-webui
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+
+[2026-07-21T07:20:14.947000+00:00] cryptobredda (id=1529025197284266035)
+    lovely mate! thank you very much. I will look into soon and report back
+    [reply to avidfuturist msg=1528935587225145415]
+
+[2026-07-21T08:18:01.083000+00:00] smidelis (id=1529039735312486410)
+    Yes it is, thanks for your quick support!
+    [reply to avidfuturist msg=1528935630409830463]
+

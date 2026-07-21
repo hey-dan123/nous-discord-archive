@@ -80,3 +80,6 @@
     https://github.com/magnus919/hermes-council/pull/16
     [embed] fix: scope council state dir per-invocation with UUID to avoid conc... https://github.com/magnus919/hermes-council/pull/16
 
+[2026-07-21T06:41:47.896000+00:00] 2gigadestroyer2 (id=1529015520811028512)
+    whats the current state of this project?
+

@@ -1,0 +1,26 @@
+# Thread 'saandal 🪽 — reliability layer for self-hosted models on hermes-agent' in forum #community-projects-showcase
+# thread_id=1528985448855375952 forum_id=1316137596535177246
+# Started 2026-07-21T08:24:19.386483+00:00
+
+[2026-07-21T04:42:18.183000+00:00] protrener. (id=1528985448855375952)
+    If you run hermes-agent on a **self-hosted / small model** (vLLM, a local 7B–30B), you've probably hit it: corrupted output shipped as the answer, a tool-call loop that burns the whole budget, a 12-minute hung turn, or a reply that's just `(empty)`. hermes is tuned for frontier hosted models — a local model fails in ways it has no reason to defend against.
+    
+    **saandal** is an out-of-tree plugin that catches those failures and turns each into a correct answer — or an honest *"I couldn't do this reliably, here's why."* Never silent garbage.
+    
+    **A few of the things it handles:**
+    > • 40× repeated failing tool call → budget death → gated
+    > • token corruption / emoji-spew as the answer → withheld + honest fail
+    > • runaway 200k-token generation → capped
+    > • 12-min hung streaming turn → per-turn wall-clock abort
+    > • session poisoned by past failures → auto-reset
+    > • a secret echoed into a reply → scrubbed
+    > • coding turn truncated to a 0-byte file → task-aware caps
+    
+    It also collapses the ~40 KB tool-schema payload → ~10 KB so a small-context model has room to think. Every guard is **fail-safe** (any internal error passes the turn through unchanged) and **rollback-able** with a single config key.
+    
+    **Install:** `git clone` → `python bin/install.py` → restart your gateway(s).
+    🔗 https://github.com/Podwarden/saandal
+    
+    AGPL-3.0 · independent project, not affiliated with Nous — built on top of hermes-agent (named for the *talaria*, Hermes's winged sandals ⚡). Feedback and issues very welcome 🙏
+    [embed] GitHub - Podwarden/saandal https://github.com/Podwarden/saandal
+
