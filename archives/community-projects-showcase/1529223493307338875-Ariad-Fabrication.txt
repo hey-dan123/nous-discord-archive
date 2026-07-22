@@ -1,0 +1,12 @@
+# Thread 'Ariad Fabrication' in forum #community-projects-showcase
+# thread_id=1529223493307338875 forum_id=1316137596535177246
+# Started 2026-07-22T02:26:50.718387+00:00
+
+[2026-07-21T20:28:12.403000+00:00] tunacookie (id=1529223493307338875)
+    Ariad Fabrication, shortened to Ariad, is a local-first visual fabrication workspace for Codex. A locally authenticated Codex agent converses with the user while Ariad supplies constrained tools that turn confirmed requirements into editable parametric CAD, validate geometry and printability, slice against real printer profiles, and produce an auditable fabrication package.
+    
+    The project is being built as a long-term developer tool. A hackathon submission may be a checkpoint, but deadlines do not define the architecture or the evidence standard.
+    
+    https://github.com/tuancookiez-hub/AriadFabrication
+    [attachment] exec-ac9e510b-a8b7-48d8-84c3-70697f3ca8c6.png https://cdn.discordapp.com/attachments/1529223493307338875/1529223494322229379/exec-ac9e510b-a8b7-48d8-84c3-70697f3ca8c6.png?ex=6a6127dc&is=6a5fd65c&hm=2091462de5c30206f9cbdd8c58b3bebd43ddecb0bb72c2be3795012ebf50dce2&
+

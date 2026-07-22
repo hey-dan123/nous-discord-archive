@@ -667,3 +667,36 @@
     technically, yes
     [reply to theboss121 msg=1527726362935427184]
 
+[2026-07-21T21:12:00.189000+00:00] jonkomet (id=1529234515040407612)
+    **Hermes Browser Extension v0.2.0 — Hermes Assist 🪽**
+    
+    *Hermes now meets you where you write.*
+    
+    **v0.2.0 introduces Hermes Assist:** a compact, site-aware drafting surface beside supported text composers, with every model-backed action routed through your connected Hermes Agent.
+    
+    **What’s new**
+    
+    - **Hermes Assist With Site Awareness for 31 Sites** — X, GitHub, Gmail, ChatGPT, Claude, Reddit, Slack, Discord, Outlook, Google Chat, Atlassian surfaces, and more.
+    - **Site-aware actions** — Draft a reply, post, or message using bounded context from the surface you are actually on.
+    - **Review-first by design** — Preview, copy, or explicitly apply supported drafts. Hermes never sends, posts, submits, navigates, or purchases.
+    - **Current / new / background routing** — Choose where every Assist request runs.
+    - **Exact model fidelity** — Supported gateways must acknowledge the selected provider/model; otherwise Hermes falls back to the gateway default and tells you.
+    - **Better model discovery** — Per-gateway catalogs plus live canonical enrichment, including Kimi K3, Laguna S, and Laguna XS when available.
+    - **Real task progress** — Live per-session task stacks now appear in the side panel and Hermes Web.
+    - **Browser Context Protocol v2** — Typed turn envelopes, stronger identity binding, bounded delivery, and fail-closed redaction.
+    - **Major reliability pass** — Better startup readiness, remote reconnects, Arc/side-panel fallback, transcript recovery, clean copying, context windows, and stream completion.
+    - **Release-grade packaging** — Separate Chromium and Firefox archives, SHA-256 checksums, and a machine-readable release manifest.
+    
+    
+    **Download v0.2.0:**
+    https://github.com/abundantbeing/hermes-browser-extension
+    [attachment] Browser_Extension_v0.2_1_Update_Ad.png https://cdn.discordapp.com/attachments/1519175108697264238/1529234515267031161/Browser_Extension_v0.2_1_Update_Ad.png?ex=6a613220&is=6a5fe0a0&hm=2007e95ab43790e8523995feca1a5232811b980ebcb8e5449955627db1bbe85a&
+    [embed] GitHub - abundantbeing/hermes-browser-extension: Browser-native sid... https://github.com/abundantbeing/hermes-browser-extension
+
+[2026-07-21T21:19:30.960000+00:00] jean15123 (id=1529236405711147069)
+    does dis work good with local models?
+
+[2026-07-22T00:14:56.732000+00:00] jonkomet (id=1529280553998745763)
+    yes
+    [reply to jean15123 msg=1529236405711147069]
+

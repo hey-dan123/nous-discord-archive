@@ -49486,3 +49486,68 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     let's see if this number will grow later..
     aaand 190k edges now..
 
+[2026-07-21T19:32:20.534000+00:00] lordbartok (id=1529209434549784598)
+    **Hi Hermes team 👋 — small cross-runtime cron contribution for review**
+    
+    https://github.com/NousResearch/hermes-agent/pull/68824
+    `feat(cron): NO_WORK wake-gate parity with OpenClaw precheck`
+    
+    **Purpose:** Hermes already skips the agent when a pre-check script's last stdout line is `{"wakeAgent": false}`. This adds an OpenClaw-compatible **`NO_WORK`** stdout begin-line token (optionally `NO_WORK: reason`) to that same wake gate — so operators running **both** Hermes and OpenClaw can use **one identical check script** to gate a cron job on either runtime.
+    
+    Pairs with an OpenClaw feature (`job.precheck`, openclaw/openclaw#112375) using the same `WORK_NEEDED` / `NO_WORK` convention. Goal: zero-token skips on quiet poller jobs with unified grammar across agents.
+    
+    **Scope:** purely additive to `_parse_wake_gate` + a small `_stdout_signals_no_work` helper. No change to `_run_job_script`'s return shape or the no-agent path; existing `{"wakeAgent": false}` behavior unchanged.
+    
+    **Tests/docs:** 21 tests passing; new "Wake gate" section in `cron-script-only.md`; CI green.
+    
+    Would love a review when someone has a moment — happy to adjust to your conventions. Thanks! 🙏
+
+[2026-07-21T19:53:57.462000+00:00] .techtronix (id=1529214874260082809)
+    Can someone confirm whats the latest docker version of hermes rn
+    v0.19.0 ?
+
+[2026-07-21T20:00:23.668000+00:00] vildamusen_ (id=1529216494125322311)
+    Hi guys! New here. Love Hermes 🙂 Only been with it for a day and a half, and I made some bug fixes and improvements, especially for Gemini, but also a bug fix in the core..
+    
+    Submitted threePRs to fix the recent Gemini 3 and code skew issues:
+    *PR 68862 intercepts missing thought signatures on cross-provider tool replays: *https://github.com/NousResearch/hermes-agent/pull/68862
+    *PR 68863 fixes empty candidate responses by keeping human messages separate from preceding tool results: *https://github.com/NousResearch/hermes-agent/pull/68863
+    
+    And for the code skew guard:
+    *PR 68864 restores and stabilizes the reverted code-skew guard by promoting the lazy local finalize_turn import to a module-level global, resolving the UnboundLocalError crash:* https://github.com/NousResearch/hermes-agent/pull/68864
+
+[2026-07-21T20:01:12.062000+00:00] realadolan (id=1529216697104466101)
+    v0.19.0
+    [reply to .techtronix msg=1529214874260082809]
+
+[2026-07-21T20:01:19.369000+00:00] .techtronix (id=1529216727752376361)
+    Thanks
+
+[2026-07-21T23:15:31.583000+00:00] sassyfatcat (id=1529265600680165376)
+    https://github.com/NousResearch/hermes-agent/pull/60489
+
+[2026-07-21T23:15:50.010000+00:00] sassyfatcat (id=1529265677968605225)
+    adds proper onboarding to hermes desktop app for remote instances
+
+[2026-07-21T23:16:07.312000+00:00] sassyfatcat (id=1529265750538195105)
+    much needed addition
+
+[2026-07-22T00:04:01.747000+00:00] robertotomas_2023 (id=1529277806792540360)
+    its been almost a week since I posted this https://github.com/NousResearch/hermes-agent/pull/19159#issuecomment-4995652566 and locally I just manually fixed it for my homelab machines. I dont need this PR to land, but I imagine some people do -- this is not my PR, my work just addresses <@387972437901312000> 's requests, and is free to cherry pick or whatever you all prefer.
+
+[2026-07-22T00:06:16.050000+00:00] teknium (id=1529278370100285540)
+    Great - there are 17000 PRs in queue
+    [reply to robertotomas_2023 msg=1529277806792540360]
+
+[2026-07-22T00:06:31.486000+00:00] teknium (id=1529278434843295807)
+    All prs have been reviewed by an automated bot, it does not indicate we are actively pursuing merging it though
+
+[2026-07-22T00:06:50.224000+00:00] teknium (id=1529278513436299354)
+    somebody needs every PR on there and we just have to have patience
+
+[2026-07-22T00:07:24.100000+00:00] robertotomas_2023 (id=1529278655522541568)
+    fair enough 🙂 its a huge project. just thought -- like, Im not looking for credit even, like I said it is free to cherry pick. I  just lending a hand
+
+[2026-07-22T01:15:16.004000+00:00] mariaosake (id=1529295734325903554)
+    https://github.com/NousResearch/hermes-agent/pull/69011  fix(agent): delimit continuation prompts as system instructions
+

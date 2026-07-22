@@ -453,3 +453,14 @@
 [2026-07-21T17:50:48.880000+00:00] seasite (id=1529183884300783688)
     i hope i will make progress!
 
+[2026-07-21T21:06:50.175000+00:00] techmeat (id=1529233214747578498)
+    <@563508791010656306>  This is excellent either way. Whichever path you prefer works great for me. And if you ever need any adaptations to OSB itself for more effective/cleaner contracts, don't hesitate to send a PR to the OSB repo.
+    [reply to lipebez msg=1528988022232846397]
+
+[2026-07-21T21:08:59.186000+00:00] techmeat (id=1529233755858796715)
+    <@662772765342040104>  Love this, Daniel! I'd be really happy to see your PR. I haven't tried Kimi K3 myself yet, but I've read a lot of positive feedback about it, so it would be awesome to get it integrated. Keep me posted on your progress with the OpenHands integration!
+
+[2026-07-21T21:14:48.979000+00:00] techmeat (id=1529235222996979723)
+    <@662772765342040104>  I'm also really curious about your take on OpenHands. I'm currently building something new that takes development (and not only — honestly, I dream of it being used for business too, but it already handles coding tasks wonderfully) to a whole new level. The release will probably happen this week. Into this new tool I'm adding useful integrations with other tools, and OpenHands could well become one of them.
+    [reply to seasite msg=1529183711172493332]
+

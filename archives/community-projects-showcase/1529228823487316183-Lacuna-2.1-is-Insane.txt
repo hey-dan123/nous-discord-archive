@@ -1,0 +1,19 @@
+# Thread 'Lacuna 2.1 is Insane!!!!!' in forum #community-projects-showcase
+# thread_id=1529228823487316183 forum_id=1316137596535177246
+# Started 2026-07-22T02:26:50.172417+00:00
+
+[2026-07-21T20:49:23.217000+00:00] henrymascot_18739 (id=1529228823487316183)
+    https://x.com/poolsideai/status/2079613777343848465?s=20
+    [embed]  https://twitter.com/poolsideai/status/2079613777343848465?s=20
+
+[2026-07-21T20:49:56.277000+00:00] henrymascot_18739 (id=1529228962151010474)
+    https://x.com/WescheNex1q/status/2079651982474617110?s=20
+    [embed]  https://twitter.com/WescheNex1q/status/2079651982474617110?s=20
+
+[2026-07-21T20:50:37.243000+00:00] henrymascot_18739 (id=1529229133974863903)
+    https://x.com/iAmHenryMascot/status/2079646828866195943?s=20
+    [embed]  https://twitter.com/iAmHenryMascot/status/2079646828866195943?s=20
+
+[2026-07-22T00:40:32.240000+00:00] jcrabapple (id=1529286994386227250)
+    I tried it for research and it kept getting stuck in web search tool loops
+
