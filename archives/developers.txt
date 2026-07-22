@@ -49617,3 +49617,63 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     What do you mean? Break down how? If there's a technical error, then you know. If the quality isn't good, then you know..
     [reply to ciots_ingenio msg=1529392759025438810]
 
+[2026-07-22T09:04:45.071000+00:00] frowtek (id=1529413883956170762)
+    Oh cool bro, I'll do a quick review once I get home
+    [reply to dias4761 msg=1529374788978741281]
+
+[2026-07-22T10:31:59.198000+00:00] dongjiang_90131 (id=1529435837475852290)
+    https://github.com/NousResearch/hermes-agent/pull/51244  https://github.com/NousResearch/hermes-agent/pull/51178  https://github.com/NousResearch/hermes-agent/pull/50782
+
+[2026-07-22T10:32:21.103000+00:00] dongjiang_90131 (id=1529435929352081459)
+    Hey maintainer, PTAL, thanks
+
+[2026-07-22T10:40:51.276000+00:00] ethnical (id=1529438069172994088)
+    Hey guys, where can we talk about sandboxing?  
+    I want to know if there is some nice sandboxing integration that provides a webpage with logs, dashboards, and any honeypot, such as letting some secret inside your sandbox (here a Docker). If this is accessed, then you send an alert through a webhook.  
+    There are so many supply chain attacks right now, and I see agents going bananas downloading a lot of dependencies.  
+    I want to have multiple dashboards and detection of malicious activity.  
+    Also, do we have a nice webpage that makes agent integration better than the CLI? For example, when you are on the phone and want to go through your multiple agents running or waiting for your input?
+
+[2026-07-22T10:58:43.706000+00:00] vildamusen_ (id=1529442567270305863)
+    I'm working on fixing Bugs in Hermes Desktop .. The Hermes Core, that affects all OS's. Sending PR's as *rille111*
+
+[2026-07-22T10:59:44.292000+00:00] vildamusen_ (id=1529442821386407947)
+    AND the UX .. because it is confusing about message ordering, and the general experience ...
+
+[2026-07-22T11:09:09.729000+00:00] vildamusen_ (id=1529445193000947913)
+    I did fix the message ordering, because it get's f*d up when switching between sessions, some times message from one session shows in another, and the order of it gets messed up. It's fixed in this PR: https://github.com/NousResearch/hermes-agent/pull/69259
+
+[2026-07-22T12:56:12.140000+00:00] mariaosake (id=1529472130545356840)
+    https://github.com/NousResearch/hermes-agent/pull/69330
+
+[2026-07-22T12:57:28.269000+00:00] 2cb2 (id=1529472449853259886)
+    do you know who looks after security.md?
+
+[2026-07-22T13:03:15.873000+00:00] mariaosake (id=1529473907810242570)
+    pplease check help me <@387972437901312000>
+    [reply to mariaosake msg=1529472130545356840]
+
+[2026-07-22T13:03:56.085000+00:00] teknium (id=1529474076471464098)
+    <@153017054545444864>
+    [reply to 2cb2 msg=1529472449853259886]
+
+[2026-07-22T13:04:55.262000+00:00] 2cb2 (id=1529474324678053909)
+    <@153017054545444864> no rush but fyi https://github.com/NousResearch/hermes-agent/security/advisories
+
+[2026-07-22T13:19:46.028000+00:00] tragoose (id=1529478060821184654)
+    question... I'm trying to develop a guardian agent. An agent that monitors other agents every 30 seconds as a sign off to make sure they aren't hallucinating. Does anyone know a smart way of doing this that wont create even more problems?
+
+[2026-07-22T13:19:50.913000+00:00] mariaosake (id=1529478081310363679)
+    https://github.com/NousResearch/hermes-agent/pull/69341   P0 bug,   fix(caching): split system prompt into stable/volatile blocks for cross-session cache hits
+
+[2026-07-22T13:26:49.588000+00:00] 2cb2 (id=1529479837360586855)
+    a third loop that checks that one to make sure it makes no mistakes
+    [reply to tragoose msg=1529478060821184654]
+
+[2026-07-22T13:45:17.998000+00:00] 2cb2 (id=1529484486369349663)
+    just pushed a third and counting
+    [reply to teknium msg=1529474076471464098]
+
+[2026-07-22T13:45:28.538000+00:00] 2cb2 (id=1529484530577313905)
+    with fix 🙂
+

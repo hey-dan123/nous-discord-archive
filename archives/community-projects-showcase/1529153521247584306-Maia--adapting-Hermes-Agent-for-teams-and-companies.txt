@@ -28,3 +28,9 @@
     [attachment] image.png https://cdn.discordapp.com/attachments/1529153521247584306/1529163611522596945/image.png?ex=6a60f017&is=6a5f9e97&hm=1e5ca9676f1ec06f25e5cef33168aee463c29d3eaf3fdd1fe0ea4858a07103e6&
     [attachment] image.png https://cdn.discordapp.com/attachments/1529153521247584306/1529163611837300753/image.png?ex=6a60f017&is=6a5f9e97&hm=d6442e24c02255364d2bf810b933b2a3badbc4d96ef87499128df07373e60808&
 
+[2026-07-22T11:50:16.625000+00:00] evangineer (id=1529455539912704132)
+    Docs for connecting to Mattermost?
+
+[2026-07-22T12:16:58.641000+00:00] andre_loureiro (id=1529462259254821014)
+    working on it
+

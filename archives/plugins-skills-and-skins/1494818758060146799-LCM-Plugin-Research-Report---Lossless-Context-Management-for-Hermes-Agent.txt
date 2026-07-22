@@ -660,3 +660,9 @@
     
     Really appreciated the rigor here, including the diagrams/tables. They made it much easier to reason about what’s an implementation bug, what’s a missing feature, and what’s just a deliberate design trade-off.
 
+[2026-07-22T12:20:49.289000+00:00] heeervas (id=1529463226662781052)
+    Just found this, can we know how it compares against LCM? Thinking of integrating it in Hermes 
+    
+    https://github.com/algal/pi-openai-server-compaction
+    [embed] GitHub - algal/pi-openai-server-compaction https://github.com/algal/pi-openai-server-compaction
+

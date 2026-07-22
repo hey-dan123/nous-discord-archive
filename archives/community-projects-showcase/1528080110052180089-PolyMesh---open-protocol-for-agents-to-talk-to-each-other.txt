@@ -56,3 +56,6 @@
 [2026-07-20T15:34:53.830000+00:00] d0ggyw00f (id=1528787291676475624)
     https://github.com/mosesman831/polymesh/blob/main/SECURITY.md
 
+[2026-07-22T09:29:18.160000+00:00] d0ggyw00f (id=1529420062539120762)
+    @here ive updated this btw the link was wrong
+
