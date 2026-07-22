@@ -83,3 +83,24 @@
 [2026-07-21T06:41:47.896000+00:00] 2gigadestroyer2 (id=1529015520811028512)
     whats the current state of this project?
 
+[2026-07-22T04:36:02.691000+00:00] magnus919 (id=1529346261793243206)
+    I have a v2.0 almost completed that takes far better advantage of all of the improvements that have been made to Hermes since it was first released. But it's held up right now on a bug being fixed in hermes itself. There's a PR waiting for it.
+    [reply to 2gigadestroyer2 msg=1529015520811028512]
+
+[2026-07-22T04:36:37.962000+00:00] magnus919 (id=1529346409730412546)
+    my own PR is just waiting for it.
+    https://github.com/magnus919/hermes-council/pull/21
+    [embed] feat: add structured inference runtime by magnus919 · Pull Request... https://github.com/magnus919/hermes-council/pull/21
+
+[2026-07-22T04:38:50.790000+00:00] magnus919 (id=1529346966851686512)
+    and here's what we're waiting on. <@387972437901312000> asked for changes a few days ago but the contributor hasn't updated yet. I found some things still missing, also, and submitted a PR to the contributor to merge into their branch but haven't heard anything yet.
+    
+    https://github.com/NousResearch/hermes-agent/pull/65734
+    [embed] feat(plugins): route ctx.llm.complete(task=) through registered aux... https://github.com/NousResearch/hermes-agent/pull/65734
+
+[2026-07-22T04:39:37.504000+00:00] 2gigadestroyer2 (id=1529347162784268318)
+    Okay, thanks for catching me up.
+
+[2026-07-22T04:39:56.441000+00:00] 2gigadestroyer2 (id=1529347242211672106)
+    Will check in a week, hopefully I can try it out then!
+

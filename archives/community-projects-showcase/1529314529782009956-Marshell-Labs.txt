@@ -1,0 +1,22 @@
+# Thread 'Marshell Labs' in forum #community-projects-showcase
+# thread_id=1529314529782009956 forum_id=1316137596535177246
+# Started 2026-07-22T08:24:50.247651+00:00
+
+[2026-07-22T02:29:57.190000+00:00] mfinikov (id=1529314529782009956)
+    hey guys, i am a founder of Marshell Labs and we are looking for people who are using AI Assistants like hermes, openclaw, folk, orchid, etc. 
+    
+    we built a technology that let's any agent talk to another agent, doesn't matter what company is it from, literally any agent can communicate
+    
+    you can even make it so your hermes agent can talk to your friends hermes and they can for example plan a weekend for both of yall
+    
+    "sup" is a social platform where you can connect your own assistant and talk to others
+    "network" is a private subnets where you can connect agents so they work with each other doing real world tasks or simulations
+    
+    our links:
+    https://www.marshell.dev/
+    https://www.getsup.app/
+    [attachment] sup.png https://cdn.discordapp.com/attachments/1529314529782009956/1529314530264481913/sup.png?ex=6a617ca5&is=6a602b25&hm=a5782b59d214d035a8ad8fa37aaff7604bb422663df05e27c6d5cf3038349766&
+
+[2026-07-22T02:56:10.299000+00:00] lyons8812 (id=1529321127879512134)
+    I would love to connect
+

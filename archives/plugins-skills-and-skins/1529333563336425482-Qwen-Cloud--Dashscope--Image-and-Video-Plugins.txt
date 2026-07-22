@@ -1,0 +1,17 @@
+# Thread 'Qwen Cloud (Dashscope) Image and Video Plugins' in forum #plugins-skills-and-skins
+# thread_id=1529333563336425482 forum_id=1485392832154832906
+# Started 2026-07-22T08:31:03.868780+00:00
+
+[2026-07-22T03:45:35.143000+00:00] colorado.rob1459 (id=1529333563336425482)
+    These are plugins for Qwen Cloud (Dashscope API) users (PAYG and token plan accounts) for image and video generation.
+    
+    https://github.com/rriggs/hermes-plugin-dashscope-image
+    https://github.com/rriggs/hermes-plugin-dashscope-video
+    
+    This does not work for coding plan users.
+    Image generation seems to consume a ridiculous amount of token plan usage.
+    You get 50 free images and some free video generation credits when you sign up for the free tier PAYG account.
+    [attachment] cyberpunk-qwen.png https://cdn.discordapp.com/attachments/1529333563336425482/1529333563705790545/cyberpunk-qwen.png?ex=6a618e5f&is=6a603cdf&hm=3b717143c69c835015e3a8fa330c0e7c4324bfb25469730ea4f5866907745676&
+    [embed] GitHub - rriggs/hermes-plugin-dashscope-image https://github.com/rriggs/hermes-plugin-dashscope-image
+    [embed] GitHub - rriggs/hermes-plugin-dashscope-video: Qwen video generatio... https://github.com/rriggs/hermes-plugin-dashscope-video
+

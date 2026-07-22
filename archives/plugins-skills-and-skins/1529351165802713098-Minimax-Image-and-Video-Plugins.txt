@@ -1,0 +1,14 @@
+# Thread 'Minimax Image and Video Plugins' in forum #plugins-skills-and-skins
+# thread_id=1529351165802713098 forum_id=1485392832154832906
+# Started 2026-07-22T08:31:03.412352+00:00
+
+[2026-07-22T04:55:31.898000+00:00] colorado.rob1459 (id=1529351165802713098)
+    https://github.com/rriggs/hermes-plugin-minimax-image
+    https://github.com/rriggs/hermes-plugin-minimax-video
+    
+    These are image and video generation plugins for Minimax.
+    The plugins works with both coding/token plan and PAYG API keys. Not all token plan tiers support video generation.
+    [attachment] cyberpunk-i2i.png https://cdn.discordapp.com/attachments/1529351165802713098/1529351166729650267/cyberpunk-i2i.png?ex=6a619ec4&is=6a604d44&hm=449971490cdb506b7b678f8273e3963b07f07710f4c7cf0b4395cde5f3520ea1&
+    [embed] GitHub - rriggs/hermes-plugin-minimax-image: Image generation plugi... https://github.com/rriggs/hermes-plugin-minimax-image
+    [embed] GitHub - rriggs/hermes-plugin-minimax-video: Minimax video generati... https://github.com/rriggs/hermes-plugin-minimax-video
+

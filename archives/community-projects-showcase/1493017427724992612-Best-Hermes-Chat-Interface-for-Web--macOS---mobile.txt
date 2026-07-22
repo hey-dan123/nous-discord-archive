@@ -6162,3 +6162,9 @@
 [2026-07-21T17:43:01.661000+00:00] phospheneoverdrive (id=1529181924642390036)
     Loving webui so far. I am finding on iOS (I made a safari home screen shortcut to it) the page will often freeze up and require killing the webui “app” & restarting it. Not sure how to debug the issue and the workaround isn’t hard but just thought I’d mention it!
 
+[2026-07-22T08:07:44.346000+00:00] tonytran9899 (id=1529399536395489380)
+    +1 user
+
+[2026-07-22T08:26:02.762000+00:00] digital_love_two (id=1529404143486107708)
+    Has the high cpu usage been fixed yet? One session running and CPU usage are about 40%-50%.
+

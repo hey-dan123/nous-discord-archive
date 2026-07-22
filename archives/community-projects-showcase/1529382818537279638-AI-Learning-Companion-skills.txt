@@ -1,0 +1,16 @@
+# Thread 'AI Learning Companion skills' in forum #community-projects-showcase
+# thread_id=1529382818537279638 forum_id=1316137596535177246
+# Started 2026-07-22T08:24:49.729917+00:00
+
+[2026-07-22T07:01:18.498000+00:00] sic_warmersun (id=1529382818537279638)
+    I have built some skills for learning. They're optimized for Hermes Agent.
+    
+    https://warmersun.com/ailc/
+    
+    There is one for learning history and one for learning chemistry.
+    For history there are two skills. One for interactive mode, and one that takes its sweet time and prepares a personalized lesson.
+    
+    Both AILCs use the Wolfram MCP.
+    [attachment] Screenshot_from_2026-07-14_07-47-25.png https://cdn.discordapp.com/attachments/1529382818537279638/1529382818973483048/Screenshot_from_2026-07-14_07-47-25.png?ex=6a61bc3e&is=6a606abe&hm=e1556eac2d9dd45b980736191c482fcc7f852318d7408422d3b1b82caeeb6758&
+    [embed] AI Learning Companions — Free agent skills · Warmer Sun https://warmersun.com/ailc/
+

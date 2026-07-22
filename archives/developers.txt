@@ -49551,3 +49551,69 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-22T01:15:16.004000+00:00] mariaosake (id=1529295734325903554)
     https://github.com/NousResearch/hermes-agent/pull/69011  fix(agent): delimit continuation prompts as system instructions
 
+[2026-07-22T02:30:11.841000+00:00] mfinikov (id=1529314591232889034)
+    hey guys, i am a founder of Marshell Labs and we are looking for people who are using AI Assistants like hermes, openclaw, folk, orchid, etc. 
+    
+    we built a technology that let's any agent talk to another agent, doesn't matter what company is it from, literally any agent can communicate
+    
+    you can even make it so your hermes agent can talk to your friends hermes and they can for example plan a weekend for both of yall
+    
+    "sup" is a social platform where you can connect your own assistant and talk to others
+    "network" is a private subnets where you can connect agents so they work with each other doing real world tasks or simulations
+    
+    our links:
+    https://www.marshell.dev/
+    https://www.getsup.app/
+
+[2026-07-22T04:47:06.163000+00:00] dias4761 (id=1529349044596506656)
+    https://github.com/NousResearch/hermes-agent/pull/69106 P1 issue  fix(update): reconcile fleet restarts
+    
+    Fixes #68523
+
+[2026-07-22T05:01:03.121000+00:00] endo9001 (id=1529352555052929165)
+    <@81637470604627968> hey mate! do you remember the issue i had shared in <#1485307775444844625> about my hermes desktop (windows) not starting properly? (i had `hermes dashboard` and then define remote in hermes desktop) you said its already merging. i was wondering how long this takes to come into main because i already did updated like 3 times but its still not there yet i think. 🙈
+
+[2026-07-22T05:03:24.098000+00:00] endo9001 (id=1529353146353057864)
+    sorry if this aint the right channel. <:Prayge:1151275585000185968>
+
+[2026-07-22T05:09:40.421000+00:00] gille (id=1529354724766122095)
+    https://discord.com/channels/1053877538025386074/1527161146401095780 this one? opened it if you want to follow up. the right thing would be to just make a new thread and reference the old one.
+    [reply to endo9001 msg=1529352555052929165]
+
+[2026-07-22T05:19:26.051000+00:00] frowtek (id=1529357181076508725)
+    https://github.com/NousResearch/hermes-agent/pull/68782 - Scopes the model metadata cache by API key to prevent wrong limits or pricing across different user tiers. P2
+    
+    https://github.com/NousResearch/hermes-agent/pull/68792 - Prevents Microsoft Teams from displaying a false "Approved" or "Denied" status on expired or already processed requests. P3
+    
+    https://github.com/NousResearch/hermes-agent/pull/68811 - Drops stale sidecar data when stripping images from conversation history so they are not accidentally re-sent on subsequent turns. P2 
+    
+    https://github.com/NousResearch/hermes-agent/pull/68962 - Prevents wiping existing approved users when the pairing file is temporarily unreadable due to permission errors. P2
+    
+    https://github.com/NousResearch/hermes-agent/pull/69063 - Prevents automatic pruning from deleting the checkpoint history of projects located on temporarily unmounted drives. - P0
+
+[2026-07-22T05:23:46.786000+00:00] gille (id=1529358274678489141)
+    oops wc. u good.
+
+[2026-07-22T06:28:44.536000+00:00] dias4761 (id=1529374623026643137)
+    https://github.com/NousResearch/hermes-agent/pull/69141 p0 issue
+
+[2026-07-22T06:29:24.102000+00:00] dias4761 (id=1529374788978741281)
+    <@1342387611683258449>  I implemented something within the branch you created, building on the part you had done earlier
+
+[2026-07-22T06:35:19.557000+00:00] layla.bisou (id=1529376279865065543)
+    I am trying to use the new openbmb MiniCPM5-1B local model with hermes but it keeps giving me this error
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1529376279655219322/image.png?ex=6a61b627&is=6a6064a7&hm=c6f5e0d504918dcffeaf15e062df8433ede1ea8cb8f4b8a5612903158331d963&
+
+[2026-07-22T07:29:38.418000+00:00] vildamusen_ (id=1529389948518535199)
+    I love my Code skew fix, I can keep rewriting Hermes (or Hermes rewrite itself) without crashing .. 
+    Next, I want Hermes to just restart itself and continue work without interruption whenever it improves itself .... PR 68864
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1529389948262813767/image.png?ex=6a61c2e2&is=6a607162&hm=fca03d72f35457aa8fda9146929b13b5fcbc3710e7c66617afa3e73b97bf9430&
+
+[2026-07-22T07:40:48.495000+00:00] ciots_ingenio (id=1529392759025438810)
+    Hey folks, building Relay, a tool for teams using Claude Code/Cursor. 
+    I'm trying to understand where AI coding agents break down in real workflows. If any of you got 5 minutes to talk about this i'd greatly appreciate it.
+
+[2026-07-22T07:48:49.839000+00:00] vildamusen_ (id=1529394777928241152)
+    What do you mean? Break down how? If there's a technical error, then you know. If the quality isn't good, then you know..
+    [reply to ciots_ingenio msg=1529392759025438810]
+

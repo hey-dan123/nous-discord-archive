@@ -464,3 +464,6 @@
     <@662772765342040104>  I'm also really curious about your take on OpenHands. I'm currently building something new that takes development (and not only — honestly, I dream of it being used for business too, but it already handles coding tasks wonderfully) to a whole new level. The release will probably happen this week. Into this new tool I'm adding useful integrations with other tools, and OpenHands could well become one of them.
     [reply to seasite msg=1529183711172493332]
 
+[2026-07-22T03:55:18.387000+00:00] moonboi7 (id=1529336009639071976)
+    Is it like gbrain ? I've installed gbrain to my hermes, not sure if this is better
+

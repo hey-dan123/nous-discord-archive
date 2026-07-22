@@ -1,0 +1,20 @@
+# Thread 'Hermes Telegram Personal Assistant' in forum #community-projects-showcase
+# thread_id=1529388442843348992 forum_id=1316137596535177246
+# Started 2026-07-22T08:24:49.266622+00:00
+
+[2026-07-22T07:23:39.437000+00:00] realtimeuk (id=1529388442843348992)
+    I've made a Hermes Telegram Personal Assistant.  It can deliver your morning briefing, search, chat, issue reminders/notifications and you can connect your calendar to it (I use Cal.com since it's free)
+    
+    I've made the whole thing a free trial for 7 days. No card needed and no obligations. If you want to try it or show Hermes to someone in action then check it out.
+    
+    Just a token from BotFather and you're good to go. 
+    
+    The server will support a few instances and after 7 days is an optional $9.99 a month which includes a [US} phone number for your assistant and 30 mins of incoming calls. Over the phone the assistant can take a message or a booking only using your connected calendar.
+    
+    I hope you'll like it and I'm looking for feedback (bugs, experience etc).  In future, I can bring it here (Discord) or Slack perhaps. 
+    
+    Link: 
+    
+    https://your.pa
+    [embed] Your.PA | Your always-on personal assistant on Telegram https://your.pa/
+

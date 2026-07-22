@@ -178,3 +178,24 @@
     Kimi Report
     [attachment] report.zip https://cdn.discordapp.com/attachments/1508346129861841026/1523043745803665623/report.zip?ex=6a4aac85&is=6a495b05&hm=0d409bf9a56c85df0f300ff4c9195e1b72e333e6286b8f16eddb103c3fa2ca2f&
 
+[2026-07-22T04:52:16.860000+00:00] rostelinalise (id=1529350347754176583)
+    putting this here for easier view
+    [attachment] hermes_effectiveness_analysis.png https://cdn.discordapp.com/attachments/1508346129861841026/1529350347091611709/hermes_effectiveness_analysis.png?ex=6a619e00&is=6a604c80&hm=e6737e77fbadcf09028d0fcaa17624341dfa2886323eaf55c26dc7861f6eb33f&
+    [attachment] report.md https://cdn.discordapp.com/attachments/1508346129861841026/1529350347414442084/report.md?ex=6a619e00&is=6a604c80&hm=84c83efa3e31d54778f03050d2515dc778cc70d81e3e92db1bef842024aca4cc&
+
+[2026-07-22T04:56:34.646000+00:00] rostelinalise (id=1529351428986900550)
+    <@535288328832942083> <@217213209831145474> <@357137210941898752> <@1290874040923197541> do you guys use different memory for models or all shared the same memory pool?
+
+[2026-07-22T05:02:03.906000+00:00] rostelinalise (id=1529352810003693658)
+    https://github.com/xiaowu0162/longmemeval
+    https://github.com/snap-research/locomo
+    https://github.com/mohammadtavakoli78/BEAM
+    
+    three benchmark used
+    [embed] GitHub - xiaowu0162/LongMemEval: Benchmarking Chat Assistants on Lo... https://github.com/xiaowu0162/longmemeval
+    [embed] GitHub - snap-research/locomo https://github.com/snap-research/locomo
+    [embed] GitHub - mohammadtavakoli78/BEAM: [ICLR 2026] Beyond a Million Toke... https://github.com/mohammadtavakoli78/BEAM
+
+[2026-07-22T07:22:59.832000+00:00] digital_love_two (id=1529388276727939102)
+    I'm using Agentmemory. This is the fifth solution I had use. Just for testing. Before I used mnemosyne (good but not clear for multi-profile use, use too much tokens (?)), open-second-brain (don't remember while I ditched it).
+
