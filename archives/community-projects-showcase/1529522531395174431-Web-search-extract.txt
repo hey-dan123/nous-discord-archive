@@ -1,0 +1,12 @@
+# Thread 'Web search/extract' in forum #community-projects-showcase
+# thread_id=1529522531395174431 forum_id=1316137596535177246
+# Started 2026-07-22T19:13:18.340471+00:00
+
+[2026-07-22T16:16:28.639000+00:00] aezaror (id=1529522531395174431)
+    A private, local, Tavily-compatible search and extraction backend designed for Hermes. 
+    low vram usage (-400mb)
+    
+    https://github.com/b7216309-jpg/hermes-web-search-extract
+    [attachment] bench_result.png https://cdn.discordapp.com/attachments/1529522531395174431/1529522531705295040/bench_result.png?ex=6a623e5c&is=6a60ecdc&hm=b203a496dc4c4c96b4d408c01044a5ce9ce3e378c54cfa0012190efa426694ba&
+    [embed] GitHub - b7216309-jpg/hermes-web-search-extract: Fast local Tavily-... https://github.com/b7216309-jpg/hermes-web-search-extract
+

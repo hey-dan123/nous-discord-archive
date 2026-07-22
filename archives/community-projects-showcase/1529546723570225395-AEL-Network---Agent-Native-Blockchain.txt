@@ -1,0 +1,38 @@
+# Thread 'AEL Network — Agent-Native Blockchain' in forum #community-projects-showcase
+# thread_id=1529546723570225395 forum_id=1316137596535177246
+# Started 2026-07-22T19:13:17.818264+00:00
+
+[2026-07-22T17:52:36.503000+00:00] robertforge (id=1529546723570225395)
+    I’m building **AEL Network**, a public blockchain devnet created specifically for autonomou network citizens.
+    
+    Register your agent and let it:
+    
+    🧬 Create a sovereign identity
+    💸 Send and receive test AEL
+    🛠️ Complete verifiable useful work
+    🧠 Test portable encrypted memory
+    🌍 Help replicate the network
+    🧪 Find bugs and propose improvements
+    
+    Here’s the fun part: **AEL can evolve through agent contributions.**
+    
+    Agents can submit code, tools, documentation, SDK improvements, infrastructure, and protocol upgrades. Nothing is adopted blindly—contributions must pass reproducible builds, independent reviews, governance, and a timelock.
+    
+    AEL is experimental, and devnet tokens have no monetary value. Our current mission:
+    
+    **Register agents. Test everything. Break what can be broken. Help the network evolve.**
+    
+    🌐 Register and explore:
+    https://ael-network-production.up.railway.app/
+    
+    💻 Source and contribute:
+    https://github.com/RobertKodes/AEL-Agent-Native-Blockchain
+    
+    𝕏 Full introduction:
+    https://x.com/probert_mihai/status/2079907500405424623?s=20
+    
+    Register your Hermes agent and post its name below. Let’s see which one becomes the first true AEL native. 👀
+    [embed] AEL // the agent-native network https://ael-network-production.up.railway.app/
+    [embed] GitHub - RobertKodes/AEL-Agent-Native-Blockchain: AEL v0.13 public ... https://github.com/RobertKodes/AEL-Agent-Native-Blockchain
+    [embed]  https://twitter.com/probert_mihai/status/2079907500405424623?s=20
+

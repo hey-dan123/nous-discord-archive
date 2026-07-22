@@ -49677,3 +49677,134 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-22T13:45:28.538000+00:00] 2cb2 (id=1529484530577313905)
     with fix 🙂
 
+[2026-07-22T13:49:57.122000+00:00] teknium (id=1529485657099993169)
+    looking into this rn
+    [reply to vildamusen_ msg=1529445193000947913]
+
+[2026-07-22T13:50:58.630000+00:00] vildamusen_ (id=1529485915083247808)
+    Wait <@387972437901312000> - I'm still working on it because I noticed more bugs. Let me make sure this will be a 100% qualitative PR. So please wait, I will update PR accordingly.
+
+[2026-07-22T13:53:48.618000+00:00] 2cb2 (id=1529486628064854066)
+    cooking up a 4th too
+    [reply to teknium msg=1529474076471464098]
+
+[2026-07-22T13:54:58.930000+00:00] tragoose (id=1529486922974625994)
+    but then its just a russian doll situation no? an agent to check an agent to check an agent
+    [reply to 2cb2 msg=1529479837360586855]
+
+[2026-07-22T13:55:17.954000+00:00] 2cb2 (id=1529487002766934186)
+    yes but itll run for 2 seconds before you blow your budget anyway lmao
+    [reply to tragoose msg=1529486922974625994]
+
+[2026-07-22T14:13:46.649000+00:00] sassyfatcat (id=1529491652971069632)
+    https://github.com/NousResearch/hermes-agent/pull/60489
+
+[2026-07-22T14:14:04.222000+00:00] sassyfatcat (id=1529491726677577910)
+    Adds proper on-boarding to Hermes’ desktop app for remote instances
+
+[2026-07-22T14:14:14.195000+00:00] sassyfatcat (id=1529491768507105300)
+    Much needed addition to the desktop app
+
+[2026-07-22T14:26:34.021000+00:00] 2cb2 (id=1529494871562387587)
+    fyi the pulls there are buggy
+    [reply to teknium msg=1529474076471464098]
+
+[2026-07-22T15:07:12.820000+00:00] 2cb2 (id=1529505100626919588)
+    5th now
+    [reply to teknium msg=1529474076471464098]
+
+[2026-07-22T15:09:18.738000+00:00] ciots_ingenio (id=1529505628765294724)
+    breakdown as in a pain point, could be anything that still frustrates you like lack of context or retrieval or poor judgement implementation
+    [reply to vildamusen_ msg=1529394777928241152]
+
+[2026-07-22T15:37:56.542000+00:00] 2cb2 (id=1529512833757351967)
+    most painful part is easily debugging what's wrong - who hasn't had to ask claude or codex to fix their install of stuff?
+    [reply to ciots_ingenio msg=1529505628765294724]
+
+[2026-07-22T16:00:00.215000+00:00] wpnx330 (id=1529518385644310609)
+    is anybody getting their PRs approved? Seems to me that the number of people who are making improvements / PRs is so vast that NOUS is probably better served to just ignore us and focus on what they want to fix. ive had the same PR out there for a while, keep splitting it and rebasing the components trying to increase the likelihood that they will land, but if they literally cannot take the time to read it because the volume is so high, maybe we shouldn't be trying to help. I get that patience is king. just also trying to be pragmatic. it may not actually be reasonable to try helping
+
+[2026-07-22T16:02:04.173000+00:00] teknium (id=1529518905561846081)
+    We've merged 2000 prs since 0.18.0
+    [reply to wpnx330 msg=1529518385644310609]
+
+[2026-07-22T16:02:09.923000+00:00] teknium (id=1529518929679089726)
+    90%+ were salvaged from the community's
+
+[2026-07-22T16:03:39.624000+00:00] wpnx330 (id=1529519305912353000)
+    well, i guess that answers that question community people do get PRs approved and at a volume that it is worth trying to help
+
+[2026-07-22T16:17:55.723000+00:00] teknium (id=1529522896651685931)
+    Yes keep contributing
+    [reply to wpnx330 msg=1529519305912353000]
+
+[2026-07-22T16:30:11.683000+00:00] autumnn5389 (id=1529525983491788890)
+    I already have 50 commits merged. I’ll keep contributing.
+    [reply to wpnx330 msg=1529518385644310609]
+
+[2026-07-22T16:53:50.627000+00:00] scottermonkey (id=1529531934974414858)
+    Is Hermes repo using trunk-based development?
+
+[2026-07-22T16:54:48.758000+00:00] wpnx330 (id=1529532178793500772)
+    what is your secret?
+    [reply to autumnn5389 msg=1529525983491788890]
+
+[2026-07-22T17:02:05.583000+00:00] frowtek (id=1529534010970083533)
+    Sometimes even my contributions from a month ago get merged, just be patient bro <:catlick:1151260427645366375>
+    [reply to wpnx330 msg=1529532178793500772]
+
+[2026-07-22T17:02:14.446000+00:00] frowtek (id=1529534048144457769)
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1529534047968038932/image.png?ex=6a624916&is=6a60f796&hm=aa55f5bc2b6e30727cee477981677e3b70c1d907177ec18ef10ba167c631a50c&
+
+[2026-07-22T17:20:47.541000+00:00] spranab (id=1529538716803268720)
+    Hi <@387972437901312000>, can you please take a look at this one? I have updated as suggested.
+    
+    https://github.com/NousResearch/hermes-agent/pull/31316
+
+[2026-07-22T17:24:37.871000+00:00] robertforge (id=1529539682877051011)
+    hey, anyone here that want to help me test something ? im working on something for agents. doesnt involve money or whatever. im just a coder.
+
+[2026-07-22T17:50:24.508000+00:00] realadolan (id=1529546169942937671)
+    ### Command Execution and Approval Security
+    • [#65393](https://github.com/NousResearch/hermes-agent/pull/65393): Hardline BusyBox and ToyBox multi-call applet verbs
+    • [#63905](https://github.com/NousResearch/hermes-agent/pull/63905): Peel exec wrappers before the MCP hermes-0day scan
+    • [#58742](https://github.com/NousResearch/hermes-agent/pull/58742): Scan commands carried by `sh -c` and `env --split-string`
+    • [#58663](https://github.com/NousResearch/hermes-agent/pull/58663): Scope the cron-session approval marker to the job context
+    • [#58643](https://github.com/NousResearch/hermes-agent/pull/58643): Close leading-wrapper and path bypasses of the hardline approval floor
+    
+    ### Network, Data, and Platform Security
+    • [#63920](https://github.com/NousResearch/hermes-agent/pull/63920): Revalidate Skills Hub redirect targets on fetch
+    • [#61411](https://github.com/NousResearch/hermes-agent/pull/61411): Neutralize control characters in formatted log records
+    • [#58726](https://github.com/NousResearch/hermes-agent/pull/58726): Confine dashboard filesystem previews and Git diff reads
+    • [#58712](https://github.com/NousResearch/hermes-agent/pull/58712): Require TLS before SMTP login in Unbroker sends
+    
+    ### Agent Runtime and Session State
+    • [#66751](https://github.com/NousResearch/hermes-agent/pull/66751): Unwrap nested OpenAI-compatible response envelopes
+    • [#65409](https://github.com/NousResearch/hermes-agent/pull/65409): Prefer `ContextVar` over process environment for session identity
+    • [#52641](https://github.com/NousResearch/hermes-agent/pull/52641): Reconcile session counts on rewind
+    
+    ### Gateway and Message Delivery
+    • [#52583](https://github.com/NousResearch/hermes-agent/pull/52583): Acknowledge buffered `passthrough_forward` relay deliveries
+    
+    ### Desktop and User Experience
+    • [#52603](https://github.com/NousResearch/hermes-agent/pull/52603): Stop pet generation from leaking intermediate cached images
+    • [#47911](https://github.com/NousResearch/hermes-agent/pull/47911): Make desktop tables follow RTL message direction
+    
+    ### Integrations and Skills
+    • [#49473](https://github.com/NousResearch/hermes-agent/pull/49473): Add official TickTick support via an MCP catalog entry and skill
+
+[2026-07-22T18:13:42.833000+00:00] 2cb2 (id=1529552034943074355)
+    <@153017054545444864> just submitted a 7th advisory sorry for the spam
+
+[2026-07-22T18:13:57.893000+00:00] 2cb2 (id=1529552098109423719)
+    I also unrealted solved a conjecture just like the meme anthropic guy did
+
+[2026-07-22T18:14:06.957000+00:00] 2cb2 (id=1529552136126332938)
+    unrelated but Im just so happy lol
+
+[2026-07-22T19:02:27.927000+00:00] alelpoan (id=1529564303676539151)
+    UX fix: the code-block expand button sits on top of the horizontal scrollbar, making it dead you can't scroll wide code sideways.
+    Regression test (3/3 pass) · all CI checks green 🫡 
+    PR: https://github.com/NousResearch/hermes-agent/pull/69558
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1529564303328542872/image.png?ex=6a626543&is=6a6113c3&hm=a2d5518d4c5c346d9f555ecca4924ebe1e27007103b79d9dacea0326c441c822&
+

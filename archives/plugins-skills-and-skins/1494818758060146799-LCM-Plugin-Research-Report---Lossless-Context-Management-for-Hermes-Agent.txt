@@ -666,3 +666,8 @@
     https://github.com/algal/pi-openai-server-compaction
     [embed] GitHub - algal/pi-openai-server-compaction https://github.com/algal/pi-openai-server-compaction
 
+[2026-07-22T14:51:46.500000+00:00] axlarry (id=1529501215358976193)
+    Hello. I have a question, if anyone is kind enough to answer me.
+    I'm curious if this LCM plugin also works with the local AI model with a 75K context, or does it only work with AI apikey? Because I tested it and it didn't work correctly. It was doing a lot of compressions after which I would receive and after a short time I would receive errors that I had exceeded the context.
+    If it works, can someone give me a complete config?
+
