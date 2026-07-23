@@ -6168,3 +6168,33 @@
 [2026-07-22T08:26:02.762000+00:00] digital_love_two (id=1529404143486107708)
     Has the high cpu usage been fixed yet? One session running and CPU usage are about 40%-50%.
 
+[2026-07-22T22:19:37.193000+00:00] avidfuturist (id=1529613919214239965)
+    Thanks working on fixing this!
+    [reply to phospheneoverdrive msg=1529181924642390036]
+
+[2026-07-22T22:20:00.969000+00:00] avidfuturist (id=1529614018938146958)
+    Working on it should be resolved in part over next few stable releases
+    [reply to digital_love_two msg=1529404143486107708]
+
+[2026-07-22T22:20:41.618000+00:00] avidfuturist (id=1529614189432410153)
+    If you ask your agent to investigate feel free to send me anything that you think might help
+    [reply to digital_love_two msg=1529404143486107708]
+
+[2026-07-22T22:20:51.893000+00:00] avidfuturist (id=1529614232528748664)
+    👋 **Newcomers:** See https://discord.com/channels/1053877538025386074/1493017427724992612/1500206945850626121 for details on how to get started if you are new to this project, or why you would want to use this alongside your Hermes agent.
+    
+    Now **WebUI works for Windows/Linux/macOS** as both a web app and native desktop app! And **native iOS and Android app support**! 
+    
+    GitHub repo: https://github.com/nesquena/hermes-webui
+    
+    ⭐ Start by checking out the full setup guide here: https://get-hermes.ai/setup/
+
+[2026-07-23T01:23:13.470000+00:00] tonytran9899 (id=1529660124829057085)
+    Here is the simple android app i am currently dev to use Hermes-Webui on mobile. Will release and open source soon.
+    [attachment] Screenshot_20260723_081926_Hermes_Webui_Mobile.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1529660123310457013/Screenshot_20260723_081926_Hermes_Webui_Mobile.jpg?ex=6a62be81&is=6a616d01&hm=eb25879912fa7c787d2d348099bbd38a4bc926b46ac009a89c31f0f5e1a85aea&
+    [attachment] Screenshot_20260723_082200_Hermes_Webui_Mobile.jpg https://cdn.discordapp.com/attachments/1493017427724992612/1529660123952316558/Screenshot_20260723_082200_Hermes_Webui_Mobile.jpg?ex=6a62be81&is=6a616d01&hm=6eb3e1b84fc0077b57fed9a8fb1181df60332c24c71eb0ec848f3d66c8e9d90e&
+
+[2026-07-23T01:24:39.810000+00:00] avidfuturist (id=1529660486965006508)
+    Looks nice, very cool, thanks for working on that!
+    [reply to tonytran9899 msg=1529660124829057085]
+

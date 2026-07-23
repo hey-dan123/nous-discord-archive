@@ -49808,3 +49808,111 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     PR: https://github.com/NousResearch/hermes-agent/pull/69558
     [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1529564303328542872/image.png?ex=6a626543&is=6a6113c3&hm=a2d5518d4c5c346d9f555ecca4924ebe1e27007103b79d9dacea0326c441c822&
 
+[2026-07-22T19:21:55.122000+00:00] godsboy7777 (id=1529569199247065299)
+    Hey <@387972437901312000>, sorry for the consolidated bump. These three Hermes Agent PRs address user-facing issues I’m still hitting regularly:
+    
+    • Session lists can be starved by newer sessions from other chats, so `/sessions` and bare `/resume` fail to show useful same-chat history:
+    https://github.com/NousResearch/hermes-agent/pull/65509
+    All required checks are green, and the sweeper review found no substantive correctness issue.
+    
+    • After `/sessions search <query>`, `/resume <number>` can resume an unrelated session instead of the numbered search result:
+    https://github.com/NousResearch/hermes-agent/pull/60138
+    I addressed both review findings by clearing stale choices and adding a bounded LRU. The implementation checks pass, with the remaining gate requiring the `ci-reviewed` label.
+    
+    • When Hermes replies with a voice note or other media, Telegram captions can show broken/raw Markdown instead of rendered formatting:
+    https://github.com/NousResearch/hermes-agent/pull/57090
+    I addressed the UTF-16 caption-limit feedback and added the emoji-boundary regression coverage. All required checks are green.
+    
+    Could you please give these a maintainer pass when you have a gap? Happy to rebase or adjust anything needed.
+
+[2026-07-22T20:13:49.276000+00:00] aleksandr_1 (id=1529582260955910194)
+    First batch of reviewed PRs  all suggestions from the Automated hermes-sweeper review by teknium have been addressed across every PR below.
+    
+    **1. fix(conversation): persist sanitized system prompt to SessionDB after non-ASCII stripping**
+    Prevents repeated ASCII recovery on every subsequent turn by persisting the sanitized system prompt to SessionDB after UnicodeEncodeError.
+    https://github.com/NousResearch/hermes-agent/pull/48390
+    
+    **2. fix(conversation): prevent stale prefix cache on cwd or runtime surface change**
+    Replaces `os.getcwd()` with `resolve_agent_cwd()` and adds a `Platform:` line to detect runtime surface drift.
+    https://github.com/NousResearch/hermes-agent/pull/47915
+    
+    **3. fix(state): catch FK violation in append_message when session deleted**
+    Gates `IntegrityError` handling on `SQLITE_CONSTRAINT_FOREIGNKEY` only and updates the return type to `Optional[int]`.
+    https://github.com/NousResearch/hermes-agent/pull/44266
+    
+    **4. fix(state): retry `_connect_and_init` when concurrent repair is in progress**
+    Scopes the repair-claim comment to thread-only and adds a coordinated two-opener regression test.
+    https://github.com/NousResearch/hermes-agent/pull/43742
+    
+    **5. fix(profiles): use unique tmp file in set_active_profile**
+    Resolves the rebase conflict and confirms the unique tmp file prevents parallel-writer clobber.
+    https://github.com/NousResearch/hermes-agent/pull/43535
+    
+    **6. feat(tools): add pre-execution argument validation layer**
+    Moves the validation gate into `handle_function_call` after coercion with task-aware existence checks covering both sequential and concurrent paths. Implements the first part of issue #522.
+    https://github.com/NousResearch/hermes-agent/pull/43115
+    
+    **7. feat(skills): add Phase 2.5 acceptance filter and Best-of-N judge to simplify-code**
+    Treats `tool_trace` errors as advisory, replaces `delegate_task` with `call_llm`, and builds the survivor list dynamically with original `task_index`.
+    https://github.com/NousResearch/hermes-agent/pull/42275
+    
+    
+    **8. fix(approval): guard `_permanent_approved` reads under `_lock` before save**
+    Guards all five current `save_permanent_allowlist` call sites under `_lock` with an atomic snapshot and adds a concurrency regression test through the real production path.
+    https://github.com/NousResearch/hermes-agent/pull/39865
+    
+    **9. fix(config): guard config caches under `_CONFIG_LOCK` to prevent thread-safety issues**
+    Guards the check-then-add in `_CONFIG_PARSE_WARNED` under `_CONFIG_LOCK` with a deterministic `TrackingLock` spy test.
+    https://github.com/NousResearch/hermes-agent/pull/39715
+    
+    <:o7:1151261546111053924>
+
+[2026-07-22T20:30:08.785000+00:00] dias4761 (id=1529586369314426992)
+    https://github.com/NousResearch/hermes-agent/pull/69594 P1 Issue  : fix(cron): close sqlite connections deterministically in execution ledger
+    
+    
+    Closes #69567
+
+[2026-07-22T22:59:03.768000+00:00] tunacookie (id=1529623845349228656)
+    https://github.com/NousResearch/hermes-agent/pull/69667 
+    <:Prayge:1151275585000185968> please 
+    
+    Token Plan is the newest subscription tier (July 2026) and the way to access qwen3.8-max-preview. Currently, Token Plan users must manually configure a custom provider with the right base URL and type the model name by hand
+
+[2026-07-22T23:15:16.392000+00:00] 2cb2 (id=1529627924829962432)
+    <@153017054545444864> <@387972437901312000> 12 reports now will they get triaged soon?
+
+[2026-07-22T23:20:04.906000+00:00] 2cb2 (id=1529629134945517859)
+    I cant submit any more because the private forks are breaking
+
+[2026-07-22T23:20:12.535000+00:00] 2cb2 (id=1529629166943735909)
+    can you pls look at one or two of the high priority ones
+
+[2026-07-22T23:39:02.651000+00:00] tunacookie (id=1529633906993795305)
+    https://github.com/NousResearch/hermes-agent/pull/69685 <:Prayge:1151275585000185968> 
+    
+    Model switched on discord changes to time out after changing, i think it still changes tho, just that it shows time out after sometime
+    [attachment] IMG_6952.png https://cdn.discordapp.com/attachments/1491258766648283238/1529633906507120740/IMG_6952.png?ex=6a62a616&is=6a615496&hm=c61545ef57fe1e5d0538dcf6a54730ddc37068b3ae7f333e12c292aba11374f9&
+    [attachment] IMG_6953.png https://cdn.discordapp.com/attachments/1491258766648283238/1529633906775818280/IMG_6953.png?ex=6a62a616&is=6a615496&hm=473c9bc464977a7ce8fe9a5988861846887a675516c37de18ffe23126fb6dd5c&
+
+[2026-07-22T23:50:00.620000+00:00] teknium (id=1529636666715930635)
+    He will look at them in due time budday
+    [reply to 2cb2 msg=1529627924829962432]
+
+[2026-07-23T00:38:53.662000+00:00] drexux (id=1529648968785592421)
+    Found a nasty one in the API server it refuses to start on a weak key (log literally says "guessable key = RCE"), but the strength check is wrapped in a try/except that passes on ImportError and returns True. hermes_cli.auth pulls httpx at import, so on a partial install that import fails, the check silently vanishes and the server starts on a 4-char key. Made it fail closed: https://github.com/NousResearch/hermes-agent/pull/69510
+
+[2026-07-23T00:39:41.899000+00:00] drexux (id=1529649171106107445)
+    Also a billing leak in the voice tools the TTS/STT OpenAI key is read from os.environ instead of the profile scope. In a multiplex gateway one profile's voice replies get billed to another profile's OpenAI account. Routed it through the scope like the WeChat/QQ fixes: https://github.com/NousResearch/hermes-agent/pull/69469
+
+[2026-07-23T00:43:11.275000+00:00] dias4761 (id=1529650049292832880)
+    P0 https://github.com/NousResearch/hermes-agent/pull/69704 
+    
+    fix(agent): support stable cross-session prefix caching on Anthropic FIX #68191
+
+[2026-07-23T01:57:58.229000+00:00] tylerc_25568 (id=1529668868942073866)
+    I'm guessing this is not the channel for questions about a new plugin I am developing?
+
+[2026-07-23T01:59:20.015000+00:00] tylerc_25568 (id=1529669211977158677)
+    I was just seeing if anyone wanted to review the design of https://github.com/tconn93/nbd  or https://nbd.sh
+

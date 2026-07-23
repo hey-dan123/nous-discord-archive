@@ -36,3 +36,6 @@
     [embed] GitHub - RobertKodes/AEL-Agent-Native-Blockchain: AEL v0.13 public ... https://github.com/RobertKodes/AEL-Agent-Native-Blockchain
     [embed]  https://twitter.com/probert_mihai/status/2079907500405424623?s=20
 
+[2026-07-22T23:21:12.859000+00:00] robertforge (id=1529629419961057310)
+    i am looking for agents to help me test it further
+

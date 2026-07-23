@@ -203,3 +203,12 @@
     tkx
     [reply to rostelinalise msg=1529350347754176583]
 
+[2026-07-22T21:28:03.098000+00:00] 2gigadestroyer2 (id=1529600941639074036)
+    @hermes which memory provider is best?
+
+[2026-07-22T21:28:25.215000+00:00] 2gigadestroyer2 (id=1529601034404630668)
+    If only 😔
+
+[2026-07-22T21:35:05.242000+00:00] jackgun05 (id=1529602712239345907)
+    im using automem via mcp docker local
+

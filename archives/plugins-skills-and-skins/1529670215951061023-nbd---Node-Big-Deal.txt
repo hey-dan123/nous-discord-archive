@@ -1,0 +1,23 @@
+# Thread 'nbd - Node Big Deal' in forum #plugins-skills-and-skins
+# thread_id=1529670215951061023 forum_id=1485392832154832906
+# Started 2026-07-23T02:36:49.886123+00:00
+
+[2026-07-23T02:03:19.381000+00:00] tylerc_25568 (id=1529670215951061023)
+    Hey everyone 👋
+    I've built a new Hermes plugin that lets you connect multiple Node-based Hermes agents (running on separate VMs or machines) to a single master agent.
+    It turns your distributed network of agents into a coordinated swarm — perfect for scaling automation across infrastructure without losing centralized control.
+    Repo: https://github.com/tconn93/nbd
+    Docs: https://docs.nbd.sh
+    Website: https://nbd.sh
+    Would love some eyes on it! Specifically looking for:
+    
+    Code quality / security feedback
+    Ideas for additional features or edge cases
+    Testing on different setups (different Node versions, VM environments, etc.)
+    
+    If you’re working with Hermes agents or multi-agent orchestration, feel free to try it out and let me know how it works for you. PRs and issues are very welcome!
+    Thanks in advance! 🚀
+    [embed] GitHub - tconn93/nbd: Node Big Deal - hermes node system plugin. https://github.com/tconn93/nbd
+    [embed] Node Big Deal — Documentation https://docs.nbd.sh/
+    [embed] Node Big Deal — Hermes Fleet Orchestration https://nbd.sh/
+

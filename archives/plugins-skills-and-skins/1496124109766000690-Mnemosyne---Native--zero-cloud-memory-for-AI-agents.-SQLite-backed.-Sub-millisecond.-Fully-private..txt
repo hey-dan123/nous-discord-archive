@@ -2327,3 +2327,9 @@
 [2026-07-14T08:58:15.400000+00:00] digital_love_two (id=1526513146632732804)
     In the document show install for default profile. But if I switch to another profile, how to make it works? I have to install plugin again to this profile, or do something, or do nothing?
 
+[2026-07-23T00:44:04.256000+00:00] jcrabapple (id=1529650271511384074)
+    Giving this a try to see if it's a good replacement for hindsight
+
+[2026-07-23T00:44:15.486000+00:00] jcrabapple (id=1529650318613286932)
+    The built in hindsight import is already a great feature
+

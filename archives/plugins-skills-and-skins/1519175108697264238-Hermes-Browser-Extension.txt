@@ -702,3 +702,6 @@
 
 [2026-07-22T14:52:41.313000+00:00] jonkomet (id=1529501445261496435)
 
+[2026-07-22T20:38:25.581000+00:00] heeervas (id=1529588453027614771)
+    You said this accepts docker Hermes image?
+

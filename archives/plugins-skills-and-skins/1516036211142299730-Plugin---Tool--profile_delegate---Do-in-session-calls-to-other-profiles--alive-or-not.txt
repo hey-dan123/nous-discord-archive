@@ -96,3 +96,39 @@
     [attachment] WhatsApp_Video_2026-07-19_at_13.36.12.mp4 https://cdn.discordapp.com/attachments/1516036211142299730/1529116907083534476/WhatsApp_Video_2026-07-19_at_13.36.12.mp4?ex=6a60c498&is=6a5f7318&hm=42a5d46188eec271d705c00a306a19b1d17c8306e40cbef97766becb88149d5a&
     [reply to _big_owen_ msg=1528842794331017236]
 
+[2026-07-22T21:57:00.841000+00:00] heeervas (id=1529608230261489805)
+    **🛡️ Profile Delegate v1.9 — honest outcomes, resilient contracts & live inspection**
+    
+    Builds on v1.8’s persistent TUI workers, steering and cancellation.
+    
+    👁️ **Added spectator CLI**
+    - `hermes profile-delegate watch <task_id>` streams a sanitized delegated run live.
+    - `hermes profile-delegate inspect <task_id> --json` returns bounded machine-readable state and results.
+    - Supports plain, TTY and JSONL output without exposing prompts, reasoning or raw tool payloads.
+    
+    🧩 **Separated run outcomes**  
+    Execution, task result, contract quality, notification and transport are now independent. A finished worker no longer implies success.
+    
+    🚫 **Closed false-success paths**
+    - `blocked`, `failed`, `unknown`, timeout, cancellation, transport failure and nonzero exits remain non-successful.
+    - Late TUI failure overrides an earlier apparent completion.
+    - Useful child output is preserved instead of discarded.
+    
+    📦 **Added `output_mode`**  
+    `auto`, `json`, `markdown` and `text`, with legacy `output_contract` compatibility and deterministic conflict rejection.
+    
+    🧠 **Hardened parsing**  
+    Deterministic JSON selection and safe recovery of fenced JSON, Markdown, text and custom contracts. Ambiguous, malformed, conflicting or negated status claims fail closed.
+    
+    🔍 **Improved lifecycle parity**  
+    CLI/TUI share result semantics. Status, list, watch and inspect understand execution, contract, cancellation and timeout states. Blocked Reviewer reports are delivered honestly as blocked.
+    
+    🧪 Added portable real-run fixtures and adversarial regression coverage.
+    
+    🗂️ Added agent-ready project contracts: `AGENTS.md`, `BRIEF.md`, `STATE.md`, `TODO.md`, `.agents/`, `.hermes/` and decision records.
+    
+    🧱 Kept it plugin-only: no Hermes-core patches, durable outbox, compression-lineage router or fake guaranteed-delivery claims.
+    
+    https://github.com/Heeervas/profile-delegate-plugin/commit/cea073af7aaa9b763ba6445d71075c0eda899533
+    [embed] test: make runtime-dependent checks portable · Heeervas/profile-de... https://github.com/Heeervas/profile-delegate-plugin/commit/cea073af7aaa9b763ba6445d71075c0eda899533
+
