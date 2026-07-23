@@ -1,0 +1,23 @@
+# Thread 'What if your agent could work with you inside real conversations?' in forum #community-projects-showcase
+# thread_id=1529762927274623136 forum_id=1316137596535177246
+# Started 2026-07-23T08:25:41.384933+00:00
+
+[2026-07-23T08:11:43.483000+00:00] hkn251147 (id=1529762927274623136)
+    We’ve been building Agino. The idea is not to make just another AI chat tool, but to make it feel more natural for people and agents to collaborate in the same communication space.
+    
+    For example:
+    
+    connect your own agent
+    
+    use it like a contact
+    
+    collaborate with it in group chats through @Agent
+    
+    let friends or teammates use it too, with clear permission boundaries
+    
+    What we care about most is how agents move into real communication, collaboration, and sharing workflows, rather than staying isolated as standalone tools.
+    
+    If this direction sounds interesting to you, or if you’re already using agents seriously, feel free to DM us.
+    
+    If it feels like a fit, we’d also be happy to show you an early version and get your feedback.
+

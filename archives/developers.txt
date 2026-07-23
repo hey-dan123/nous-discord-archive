@@ -49916,3 +49916,27 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
 [2026-07-23T01:59:20.015000+00:00] tylerc_25568 (id=1529669211977158677)
     I was just seeing if anyone wanted to review the design of https://github.com/tconn93/nbd  or https://nbd.sh
 
+[2026-07-23T03:34:57.800000+00:00] liinx (id=1529693277991862342)
+    <@387972437901312000> — 7 PRs ready for review, all rebased on current main today, all sweeper feedback addressed with fix commits:
+    ▎ https://github.com/NousResearch/hermes-agent/pull/55946 — security: kanban workers could auto-approve dangerous commands; adds kanban_mode deny-by-default policy on the real worker path
+    ▎ https://github.com/NousResearch/hermes-agent/pull/64945 — refactor: extracts canonical RunRegistry owning run statuses/approval sessions (fixes the adapter-ownership gap flagged in review)
+    ▎ https://github.com/NousResearch/hermes-agent/pull/58550 — plugins: redaction pattern registry so vendor token formats ship as plugins
+    ▎ https://github.com/NousResearch/hermes-agent/pull/58524 — plugins: classify_api_error hook so provider plugins own their error quirks
+    ▎ https://github.com/NousResearch/hermes-agent/pull/56555 — fix: log silently-stripped pseudo tool calls, fix stale /tools output
+    ▎ https://github.com/NousResearch/hermes-agent/pull/55916 — fix: CJK future-ack detection in intent-ack continuation
+    ▎ https://github.com/NousResearch/hermes-agent/pull/58538 — docs: folds middleware/API-hook coverage into the canonical plugin guide
+
+[2026-07-23T07:00:08.536000+00:00] 5amyak_ (id=1529744912961114154)
+    Does anybody have any success scraping through LinkedIn data for their Hermes agent?
+
+[2026-07-23T07:31:05.257000+00:00] realadolan (id=1529752700613427210)
+    <@387972437901312000> A very nice addition to the Desktop apps UX, might want to take a look: https://github.com/NousResearch/hermes-agent/pull/69950
+
+[2026-07-23T07:38:45.484000+00:00] gust7314 (id=1529754630945378464)
+    What do u wanna scrape?
+    [reply to 5amyak_ msg=1529744912961114154]
+
+[2026-07-23T08:01:17.687000+00:00] jinzota (id=1529760302495830056)
+    please get system prompt forwarding working with -z <:Prayge:1151275585000185968> 
+    https://github.com/NousResearch/hermes-agent/pull/69957
+

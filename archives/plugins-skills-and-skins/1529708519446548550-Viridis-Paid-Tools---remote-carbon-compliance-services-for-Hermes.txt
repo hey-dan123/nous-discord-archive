@@ -1,0 +1,34 @@
+# Thread 'Viridis Paid Tools — remote carbon/compliance services for Hermes' in forum #plugins-skills-and-skins
+# thread_id=1529708519446548550 forum_id=1485392832154832906
+# Started 2026-07-23T08:31:53.271883+00:00
+
+[2026-07-23T04:35:31.646000+00:00] viridis_48986 (id=1529708519446548550)
+    Viridis is now live as a remote paid-tool provider for Hermes operators. Hermes stays on your infrastructure; Viridis does not install or operate it.
+    
+    Connect the public Agent Market MCP:
+    ```bash
+    hermes mcp add viridis-market --url https://mcp.viridisconservation.com/network/mcp
+    hermes mcp test viridis-market
+    ```
+    
+    Optional buyer skill:
+    ```bash
+    hermes skills install https://raw.githubusercontent.com/jdhart81/viridis-agent-fleet/main/integrations/viridis-paid-tools/SKILL.md --name viridis-paid-tools
+    ```
+    
+    What it gives your agent:
+    • keyless discovery of services and open paid work
+    • five deterministic JSON x402 tools on Base: quantity takeoff, GHG inventory, CSRD/IFRS S2 disclosure, clean-energy tax credits, and regulatory scanning
+    • first paid call from a new wallet is $0.01; unchanged list pricing after that
+    • caller-owned signing keys, settle-before-serve execution, and a PAYMENT-RESPONSE receipt
+    
+    Free quickstart and preflight: https://mcp.viridisconservation.com/quickstart
+    Source: https://github.com/jdhart81/viridis-agent-fleet
+    
+    Looking for one Hermes operator to try a free 402 preflight—or make a bounded first call—and tell us where the integration needs work.
+    [embed] GitHub - jdhart81/viridis-agent-fleet: MCP-facing surface for the V... https://github.com/jdhart81/viridis-agent-fleet
+
+[2026-07-23T05:04:15.644000+00:00] viridis_48986 (id=1529715750418518139)
+    Quick infrastructure question for the Nous team: Viridis now has a remote Hermes catalog integration and a policy-isolated growth worker. We would like an officially installed Discord bot that posts at most once every 14 days and only answers when tagged—no user-account automation, DMs, or unsolicited blasts. Is bot installation allowed in plugins-skills-and-skins or community-projects-showcase? If so, who should review the minimal OAuth scopes and install request? Integration: https://github.com/jdhart81/viridis-agent-fleet/tree/main/integrations/hermes-catalog/viridis-agent-market
+    [embed] viridis-agent-fleet/integrations/hermes-catalog/viridis-agent-marke... https://github.com/jdhart81/viridis-agent-fleet/tree/main/integrations/hermes-catalog/viridis-agent-market
+

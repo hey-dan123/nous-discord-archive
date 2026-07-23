@@ -212,3 +212,31 @@
 [2026-07-22T21:35:05.242000+00:00] jackgun05 (id=1529602712239345907)
     im using automem via mcp docker local
 
+[2026-07-23T04:44:16.185000+00:00] toomij (id=1529710719522705561)
+    i'm working on open source self-hosted memory infrastructure for AI agents: MCP-native, local-model friendly, with hybrid RAG, a temporal knowledge graph and ontology layer, durable memory, freshness checks, and agent-scoped context. https://github.com/mtrnix/metronix-memory. Last week i made support Hermes-native adapter layer https://github.com/mtrnix/hermes-memory-metronix.
+    [embed] GitHub - mtrnix/metronix-memory: Metronix Memory is self-hosted mem... https://github.com/mtrnix/metronix-memory
+    [embed] GitHub - mtrnix/hermes-memory-metronix: Native Metronix memory prov... https://github.com/mtrnix/hermes-memory-metronix
+
+[2026-07-23T04:59:36.520000+00:00] rostelinalise (id=1529714579687473274)
+    nicee good stuff, would totally try
+
+[2026-07-23T05:00:22.754000+00:00] rostelinalise (id=1529714773607059658)
+    may i know what's your opinion regarding these and maybe another memory benchmark that you are aware of? <@694142084709613568>
+    [reply to rostelinalise msg=1529352810003693658]
+
+[2026-07-23T05:11:41.801000+00:00] toomij (id=1529717621736345702)
+    treat memory benchmarks in two buckets: the ones that help you choose a tool, and the ones that mostly generate leaderboard screenshots. all three of these measure conversational memory (can the agent recall something said earlier in a long chat), not knowledge-base retrieval (can it pull the right fact from your org's docs). people quote them as if they're the same thing. they're not.
+    [reply to rostelinalise msg=1529714773607059658]
+
+[2026-07-23T06:51:27.949000+00:00] rostelinalise (id=1529742729460977664)
+    is there any benchmark regarding the knowledge base retrieval system?
+    [reply to toomij msg=1529717621736345702]
+
+[2026-07-23T08:05:01.205000+00:00] toomij (id=1529761239998398464)
+    MemoryAgentBench, LongMemEval-V2, GateMem, MSC, RULER, HELMET, InfiniteBench test "can the model use a huge context," BEIR and MTEB for retriever/embedding quality, and CRAG / FRAMES / MultiHop-RAG (plus domain ones like FinanceBench, LegalBench-RAG) for grounded multi-hop answering over a corpus
+    [reply to rostelinalise msg=1529742729460977664]
+
+[2026-07-23T08:16:09.687000+00:00] toomij (id=1529764043814994042)
+    read scores in pairs (accuracy + token cost, single- + multi-session, context-probe + memory-eval). for your own tool, your own data is the only benchmark that counts
+    [reply to rostelinalise msg=1529742729460977664]
+
