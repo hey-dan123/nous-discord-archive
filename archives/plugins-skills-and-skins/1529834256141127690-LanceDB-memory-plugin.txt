@@ -1,0 +1,26 @@
+# Thread 'LanceDB memory plugin' in forum #plugins-skills-and-skins
+# thread_id=1529834256141127690 forum_id=1485392832154832906
+# Started 2026-07-23T13:56:29.211502+00:00
+
+[2026-07-23T12:55:09.610000+00:00] prrao (id=1529834256141127690)
+    Hi everyone, I work at LanceDB, and I wanted to throw some light on the new LanceDB Memory Plugin for Hermes Agent that we released.
+    
+    The LanceDB memory plugin is designed for persistent, semantic memory across sessions for Hermes Agent, and exposes four tools: remember, recall, read, and forget.
+    
+    LanceDB is an embedded, open source retrieval library that runs directly inside the Hermes Python process. It stores a single table on your local disk containing content, metadata, and embeddings. This means there is no standalone memory server to deploy or manage, and it's also blazing fast (the blog post linked below shows some benchmark results).
+    
+    ### Key Technical Details
+    - **Retrieval Modes**: Supports vector similarity search, BM25 full-text search, hybrid search, and metadata filtering.
+    - **Architecture**: Content and embeddings live together in structured rows. Multimodal assets can also be stored in the same table
+    - **Model Agnostic**: Defaults to OpenAI for embeddings but supports any OpenAI-compatible endpoint (Ollama, vLLM, OpenRouter, etc.) via configuration without code changes.
+    
+    ### How to get started
+    - Install the plugin: `hermes plugins install lancedb/hermes-agent-memory`
+    - Set your embeddings API key
+    - Activate the provider: `hermes memory setup` (choose "lancedb").
+    - Verify activation: `hermes memory status`
+    
+    The docs contain all the configuration details: https://docs.lancedb.com/integrations/ai/hermes-agent
+    Release blog post: https://www.lancedb.com/blog/semantic-memory-for-hermes-agent-with-lancedb
+    GitHub repo (issues/PRs are welcome!): https://github.com/lancedb/hermes-agent-memory
+

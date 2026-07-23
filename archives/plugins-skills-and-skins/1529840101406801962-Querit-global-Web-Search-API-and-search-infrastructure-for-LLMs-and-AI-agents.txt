@@ -1,0 +1,31 @@
+# Thread 'Querit—global Web Search API and search infrastructure for LLMs and AI agents' in forum #plugins-skills-and-skins
+# thread_id=1529840101406801962 forum_id=1485392832154832906
+# Started 2026-07-23T13:56:28.842703+00:00
+
+[2026-07-23T13:18:23.230000+00:00] duanjh_04327 (id=1529840101406801962)
+    hey everyone
+    
+    I'm with Querit, and we're a Singapore-based company（https://www.querit.ai/）building a global Web Search API and search infrastructure for LLMs and AI agents, offers fresh web retrieval, structured extraction, source grounding, and configurable search controls. Querit is already available through integrations with LangChain, Dify, CAMEL-AI, Coze, Cherry Studio, and others. We're now exploring how Querit could fit into and assist the [Project] ecosystem.
+    
+    Here's what we think Querit could bring to its users:
+    1. Lower latency — roughly 1-2× faster than commonly integrated alternatives. Latency also degrades only 12% from average to P90, compared to 28–38% for the alternatives.
+    2. Lower cost - 4/1,000 requests with custom rate limits & enterprise grade support, with 10,000 free requests upon initial use
+    3. Broad multilingual coverage — over 40% of our index is non-English, spanning 7 languages.
+    
+    We'd be glad to provide API access and integration, free test credits tailored to your needs, help with integration/code examples/documentation (and keep them maintained going forward), and technical support. We can also work in multiple form of integration: direct API access, MCP, a skill, or another format already used in the agent ecosystem. Beyond the integration, joint tutorial and worked example are something we hope to develop down the line. 
+    
+    Let us know which integration format would you prefer, and how you'd like to proceed. Hope we can hear from you soon and stay connected! 
+    
+    You’re also welcome to join the Querit community
+    
+    If you have any questions, feel free to contact me directly or email us at:    
+    integration@querit.ai
+
+[2026-07-23T13:19:17.817000+00:00] duanjh_04327 (id=1529840330361409536)
+    https://github.com/querit-ai
+    [embed] Querit https://github.com/querit-ai
+
+[2026-07-23T13:19:28.784000+00:00] duanjh_04327 (id=1529840376360210523)
+    https://x.com/QueritAi
+    [embed] Querit.ai (@QueritAi) on X https://twitter.com/QueritAi
+

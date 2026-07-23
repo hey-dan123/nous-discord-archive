@@ -240,3 +240,22 @@
     read scores in pairs (accuracy + token cost, single- + multi-session, context-probe + memory-eval). for your own tool, your own data is the only benchmark that counts
     [reply to rostelinalise msg=1529742729460977664]
 
+[2026-07-23T10:10:47.690000+00:00] gdesmedt1 (id=1529792892250489012)
+    So after all this - which is best? 🙂
+    
+    or is there a "memory benchmark" to  help us decide?
+
+[2026-07-23T10:24:38.809000+00:00] vildamusen_ (id=1529796378216366172)
+    I also would like to know.
+
+[2026-07-23T10:52:28.274000+00:00] ruffer3000 (id=1529803380459962478)
+    ez - hindsight is the best
+
+[2026-07-23T11:51:28.363000+00:00] vildamusen_ (id=1529818228669284432)
+    Why? Tried several, and Mnemosyne in particular? Looks like it wins the benchmarks..
+    [reply to ruffer3000 msg=1529803380459962478]
+
+[2026-07-23T12:00:33.068000+00:00] toomij (id=1529820513327775847)
+    right way to choose your own for your own goals/purposes. Like cars: which is best? Tesla or Mustang? )
+    [reply to gdesmedt1 msg=1529792892250489012]
+

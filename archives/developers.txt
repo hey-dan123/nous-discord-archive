@@ -49940,3 +49940,121 @@ An under... https://www.linkedin.com/posts/sydney-runkle_deepagents-now-supports
     please get system prompt forwarding working with -z <:Prayge:1151275585000185968> 
     https://github.com/NousResearch/hermes-agent/pull/69957
 
+[2026-07-23T08:47:15.803000+00:00] realadolan (id=1529771870872666145)
+    And now a global one: https://github.com/NousResearch/hermes-agent/pull/69987
+    [reply to realadolan msg=1529752700613427210]
+
+[2026-07-23T08:59:51.318000+00:00] vildamusen_ (id=1529775039732518912)
+    Reaaally nice! Hope this PR gets in!
+    [reply to realadolan msg=1529771870872666145]
+
+[2026-07-23T10:43:41.371000+00:00] gottz.de (id=1529801170468732958)
+    someone please assess the quality of my triage output: https://github.com/NousResearch/hermes-agent/issues/60029#issuecomment-5057369625
+
+[2026-07-23T10:43:52.220000+00:00] gottz.de (id=1529801215972610049)
+    Need to know before I post thousands of these
+
+[2026-07-23T10:50:21.843000+00:00] owl_dv (id=1529802850169917440)
+    Hermes Cloud - Reconnecting
+    [attachment] image.png https://cdn.discordapp.com/attachments/1491258766648283238/1529802849913929828/image.png?ex=6a63436d&is=6a61f1ed&hm=9b533a82f4f5cf54e4f88d529ffa2d5fd064d5c1f3967213a4b4ac5e880ebee8&
+
+[2026-07-23T11:32:57.629000+00:00] egilewski (id=1529813569913356288)
+    Shouldn't "dup" vectors be reversed?
+    [reply to gottz.de msg=1529801170468732958]
+
+[2026-07-23T11:39:58.214000+00:00] egilewski (id=1529815333974577314)
+    Or, if "dup" stands for "duplicated by", then it wasn't obvious for me.
+
+[2026-07-23T11:42:55.848000+00:00] gottz.de (id=1529816079025574060)
+    will refine it
+    [reply to egilewski msg=1529815333974577314]
+
+[2026-07-23T12:21:32.962000+00:00] gottz.de (id=1529825797706350662)
+    dupe families will be sub-graphs instead of paired dupe edges too now.
+    legend will be added.
+    best-fix edge receives it's own label.
+    top down after ~5 pr so mobile users can read it too.
+    and more.
+    [reply to egilewski msg=1529813569913356288]
+
+[2026-07-23T12:37:16.361000+00:00] brooklyn (id=1529829754608554096)
+    Is this basically reverting back to what we used to have?
+    [reply to realadolan msg=1529752700613427210]
+
+[2026-07-23T12:44:32.141000+00:00] realadolan (id=1529831582402216016)
+    I don’t remember the desktop app ever having a settings search. I might be wrong, though, since I’ve only been using it for two months.
+    [reply to brooklyn msg=1529829754608554096]
+
+[2026-07-23T12:47:42.128000+00:00] realadolan (id=1529832379265454175)
+    I created the PR because these two settings pages are very long, and finding a specific setting can be kind of annoying. The second PR is a more general "all settngs filter" kinda like it works on macOS
+    [reply to brooklyn msg=1529829754608554096]
+
+[2026-07-23T12:47:49.114000+00:00] realadolan (id=1529832408566862005)
+    This one
+    [reply to realadolan msg=1529771870872666145]
+
+[2026-07-23T12:48:20.633000+00:00] brooklyn (id=1529832540767260802)
+    Yeah we used to have this type of search on panels like this, granular and overview
+
+[2026-07-23T12:48:22.339000+00:00] egilewski (id=1529832547922477172)
+    dupe families will be sub-graphs instead
+
+[2026-07-23T12:48:25.133000+00:00] realadolan (id=1529832559641362593)
+    [attachment] q5nm41t.png https://cdn.discordapp.com/attachments/1491258766648283238/1529832559083651072/q5nm41t.png?ex=6a635f19&is=6a620d99&hm=635f1f15a744e1386044b66f856c67c2c69912aabbf81098d27e8cebdab40f96&
+
+[2026-07-23T12:48:39.823000+00:00] realadolan (id=1529832621255823420)
+    Should bring it back then! 🙂
+    [reply to brooklyn msg=1529832540767260802]
+
+[2026-07-23T12:49:00.843000+00:00] brooklyn (id=1529832709420089375)
+    Maybe have your agent dig into the commit history and do a delta
+
+[2026-07-23T12:49:11.167000+00:00] brooklyn (id=1529832752722087996)
+    I’m for the idea in general but idk about the ui tbh
+
+[2026-07-23T12:49:24.712000+00:00] teknium (id=1529832809533935646)
+    Yes, needed
+    [reply to realadolan msg=1529752700613427210]
+
+[2026-07-23T12:49:27.336000+00:00] brooklyn (id=1529832820539789322)
+    Cmdk acts as the powerhouse atm
+
+[2026-07-23T12:49:29.241000+00:00] realadolan (id=1529832828529938634)
+    What's wrong with the UI
+
+[2026-07-23T12:49:35.886000+00:00] realadolan (id=1529832856401084616)
+    I see
+
+[2026-07-23T12:50:32.711000+00:00] brooklyn (id=1529833094742278144)
+    It’s not that it’s wrong necessarily! I’m just a little ambivalent. Did you do it in a way that it’s a generic reusable pattern for other panes?
+
+[2026-07-23T12:52:57.192000+00:00] realadolan (id=1529833700739645461)
+    It is generic, yes. However, there are some inconsistencies in other panes - like the pets section where the bespoke React section doesn't expose searchable metadata or stable targets
+
+[2026-07-23T12:54:53.389000+00:00] realadolan (id=1529834188105318541)
+    If cmdk is the intended reusable foundation for searchable panes, I can rework it around that instead
+    [reply to brooklyn msg=1529832820539789322]
+
+[2026-07-23T12:56:21.718000+00:00] brooklyn (id=1529834558583865415)
+    Maybe we can make the cmdk search component embeddable, and have it get scoped to wherever it’s embedded?
+
+[2026-07-23T12:57:12.911000+00:00] realadolan (id=1529834773303001262)
+    Yes this is the right direction
+
+[2026-07-23T12:57:46.592000+00:00] brooklyn (id=1529834914571223170)
+    That way cmdk could still focus it (with some sort of nice ui indicator) and the results just being curated to your view
+
+[2026-07-23T12:57:48.903000+00:00] realadolan (id=1529834924264263691)
+    I will rework the first PR as it's a smaller one of the two
+
+[2026-07-23T13:00:11.621000+00:00] brooklyn (id=1529835522866942073)
+    Thank you!!
+
+[2026-07-23T13:00:53.316000+00:00] brooklyn (id=1529835697748316383)
+    Really appreciate the work so far too
+
+[2026-07-23T13:50:33.458000+00:00] markmnl (id=1529848197370089703)
+    <@387972437901312000>  or any dev who can trigger the workflows (i know you have a lot of PRs to go through)
+    going to have market my hermes-fmsg plugin tomorrow, this would help but not essential for the hermes integration - home channel still works fine
+    [reply to markmnl msg=1528956417837371413]
+
